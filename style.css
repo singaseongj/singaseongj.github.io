@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header {
     background-color: #4CAF50;
@@ -10,12 +13,14 @@ header {
     padding: 1em 0;
 }
 main {
+    flex: 1;
     margin: 20px;
+    padding-bottom: 60px; /* Space for the footer */
 }
 footer {
     background-color: #f1f1f1;
     padding: 1em 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
