@@ -29,9 +29,11 @@ main {
 }
 
 .store-button img {
-    width: 180px; /* 버튼 크기 동일하게 설정 */
+    width: 160px; /* 버튼 크기를 동일하게 맞춤 */
     height: auto;
+    max-height: 50px; /* 버튼 높이 제한 */
 }
+
 
 footer {
     background-color: #f1f1f1;
