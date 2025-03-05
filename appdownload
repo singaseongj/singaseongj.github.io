@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store Redirect</title>
+</head>
+<body>
+    <script>
+        // Function to detect user's device and platform
+        function redirectToAppStore() {
+            // iOS devices (iPhone, iPad, iPod)
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            
+            // Android devices
+            const isAndroid = /Android/.test(navigator.userAgent);
+            
+            // Your app's specific store links
+            const appStoreLink = 'https://apps.apple.com/kr/app/manage-students/id6742710838';
+            const playStoreLink = 'https://play.google.com/store/apps/details?id=com.singaseongapp.managestudents';
+            
+            // Redirect based on device
+            if (isIOS) {
+                window.location.href = appStoreLink;
+            } else if (isAndroid) {
+                window.location.href = playStoreLink;
+            } else {
+                // Fallback for other devices (optional)
+                alert('Please download our app from the App Store or Google Play Store');
+            }
+        }
+
+        // Call the redirect function when the page loads
+        window.onload = redirectToAppStore;
+    </script>
+    
+    <noscript>
+        <p>Please download our app from the 
+            <a href="https://apps.apple.com/kr/app/manage-students/id6742710838">App Store</a> or 
+            <a href="https://play.google.com/store/apps/details?id=com.singaseongapp.managestudents">Google Play Store</a>
+        </p>
+    </noscript>
+</body>
+</html>
