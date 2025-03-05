@@ -7,16 +7,32 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 header {
     background-color: #4CAF50;
     color: white;
     padding: 1em 0;
 }
+
 main {
     flex: 1;
     margin: 20px;
     padding-bottom: 60px; /* Space for the footer */
 }
+
+/* 다운로드 버튼 정렬 및 스타일 */
+.download-buttons {
+    display: flex;
+    justify-content: center; /* 버튼을 가운데 정렬 */
+    gap: 20px; /* 버튼 사이 간격 */
+    margin-top: 20px;
+}
+
+.store-button img {
+    width: 180px; /* 버튼 크기 동일하게 설정 */
+    height: auto;
+}
+
 footer {
     background-color: #f1f1f1;
     padding: 1em 0;
