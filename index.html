@@ -837,14 +837,32 @@
         let animationId;
         let keys = {};
         let speedMultiplier = 1;
-        let leaderboard = JSON.parse(localStorage.getItem('spaceDogerLeaderboard') || '[]');
+        let leaderboard = [];
+        
+        // IMPORTANT: Replace this with your Google Apps Script Web App URL
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwU8wQXs1Fs4Ywk7SyZGSbcIwoUwffpR4mDQVuVsB0k2uy5z_Zrje589YtI2BviMbo0/exec';
 
         // Initialize game elements
         window.onload = function() {
             canvas = document.getElementById('gameCanvas');
             ctx = canvas.getContext('2d');
-            updateLeaderboard();
+            fetchLeaderboard();
         };
+
+        // Fetch global leaderboard from Google Sheets
+        async function fetchLeaderboard() {
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL);
+                const data = await response.json();
+                leaderboard = data.scores || [];
+                updateLeaderboard();
+            } catch (error) {
+                console.error('Failed to fetch leaderboard:', error);
+                // Fallback to local storage
+                leaderboard = JSON.parse(localStorage.getItem('spaceDogerLeaderboard') || '[]');
+                updateLeaderboard();
+            }
+        }
 
         // Keyboard controls
         document.addEventListener('keydown', (e) => {
@@ -1024,10 +1042,29 @@
         function saveScore() {
             const name = document.getElementById('playerName').value.trim();
             if (name) {
-                leaderboard.push({ name, score: parseFloat(elapsedTime) });
-                leaderboard.sort((a, b) => b.score - a.score);
-                leaderboard = leaderboard.slice(0, 10); // Keep top 10
-                localStorage.setItem('spaceDogerLeaderboard', JSON.stringify(leaderboard));
+                const newScore = { name, score: parseFloat(elapsedTime) };
+                
+                // Save to Google Sheets
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Important for Google Apps Script
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(newScore)
+                }).then(() => {
+                    // Also save locally as backup
+                    const localScores = JSON.parse(localStorage.getItem('spaceDogerLeaderboard') || '[]');
+                    localScores.push(newScore);
+                    localScores.sort((a, b) => b.score - a.score);
+                    localStorage.setItem('spaceDogerLeaderboard', JSON.stringify(localScores.slice(0, 10)));
+                    
+                    // Refresh leaderboard
+                    fetchLeaderboard();
+                }).catch(error => {
+                    console.error('Failed to save score:', error);
+                });
+                
                 restartGame();
             }
         }
