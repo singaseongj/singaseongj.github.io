@@ -305,6 +305,15 @@
             color: #a5b4fc;
         }
 
+        /* Show/hide instructions based on device */
+        .desktop-only { display: inline; }
+        .mobile-only { display: none; }
+        
+        @media (max-width: 768px) {
+            .desktop-only { display: none; }
+            .mobile-only { display: inline; }
+        }
+
         .game-btn {
             background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
             color: white;
@@ -687,7 +696,10 @@
                 <div class="game-screen" id="gameScreen">
                     <div class="game-menu" id="gameMenu">
                         <h3>🚀 Space Dodger</h3>
-                        <p>Use arrow keys to dodge the asteroids!</p>
+                        <p class="game-instructions">
+                            <span class="desktop-only">Use arrow keys to dodge the asteroids!</span>
+                            <span class="mobile-only">Touch and drag to move your ship!</span>
+                        </p>
                         <button class="game-btn" onclick="startGame()">START</button>
                         <div class="leaderboard" id="leaderboard">
                             <h4>🏆 Top Pilots</h4>
@@ -877,6 +889,10 @@
         let speedMultiplier = 1;
         let leaderboard = [];
         
+        // Touch controls
+        let touchActive = false;
+        let touchTarget = { x: 0, y: 0 };
+        
         // IMPORTANT: Replace this with your Google Apps Script Web App URL
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwU8wQXs1Fs4Ywk7SyZGSbcIwoUwffpR4mDQVuVsB0k2uy5z_Zrje589YtI2BviMbo0/exec';
 
@@ -941,15 +957,79 @@
             keys[e.key] = false;
         });
 
+        // Touch controls for mobile
+        function setupTouchControls() {
+            canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+            canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
+            canvas.addEventListener('touchend', handleTouchEnd, { passive: false });
+            
+            // Mouse controls as fallback
+            canvas.addEventListener('mousedown', handleMouseDown);
+            canvas.addEventListener('mousemove', handleMouseMove);
+            canvas.addEventListener('mouseup', handleMouseUp);
+        }
+
+        function handleTouchStart(e) {
+            e.preventDefault();
+            if (gameRunning) {
+                touchActive = true;
+                const touch = e.touches[0];
+                const rect = canvas.getBoundingClientRect();
+                touchTarget.x = (touch.clientX - rect.left) * (canvas.width / rect.width);
+                touchTarget.y = (touch.clientY - rect.top) * (canvas.height / rect.height);
+            }
+        }
+
+        function handleTouchMove(e) {
+            e.preventDefault();
+            if (gameRunning && touchActive) {
+                const touch = e.touches[0];
+                const rect = canvas.getBoundingClientRect();
+                touchTarget.x = (touch.clientX - rect.left) * (canvas.width / rect.width);
+                touchTarget.y = (touch.clientY - rect.top) * (canvas.height / rect.height);
+            }
+        }
+
+        function handleTouchEnd(e) {
+            e.preventDefault();
+            touchActive = false;
+        }
+
+        // Mouse controls (for testing on desktop)
+        function handleMouseDown(e) {
+            if (gameRunning) {
+                touchActive = true;
+                const rect = canvas.getBoundingClientRect();
+                touchTarget.x = (e.clientX - rect.left) * (canvas.width / rect.width);
+                touchTarget.y = (e.clientY - rect.top) * (canvas.height / rect.height);
+            }
+        }
+
+        function handleMouseMove(e) {
+            if (gameRunning && touchActive) {
+                const rect = canvas.getBoundingClientRect();
+                touchTarget.x = (e.clientX - rect.left) * (canvas.width / rect.width);
+                touchTarget.y = (e.clientY - rect.top) * (canvas.height / rect.height);
+            }
+        }
+
+        function handleMouseUp() {
+            touchActive = false;
+        }
+
         function startGame() {
             document.getElementById('gameMenu').style.display = 'none';
             canvas.style.display = 'block';
             document.getElementById('gameStats').style.display = 'block';
             
+            // Setup touch controls
+            setupTouchControls();
+            
             // Reset game state
             player = { x: canvas.width / 2, y: canvas.height / 2, size: 15, speed: 5 };
             asteroids = [];
             keys = {};
+            touchActive = false;
             speedMultiplier = 1;
             gameRunning = true;
             startTime = Date.now();
@@ -1001,10 +1081,30 @@
         }
 
         function updatePlayer() {
+            // Keyboard controls
             if (keys['ArrowUp'] && player.y > player.size) player.y -= player.speed;
             if (keys['ArrowDown'] && player.y < canvas.height - player.size) player.y += player.speed;
             if (keys['ArrowLeft'] && player.x > player.size) player.x -= player.speed;
             if (keys['ArrowRight'] && player.x < canvas.width - player.size) player.x += player.speed;
+            
+            // Touch/Mouse controls - smooth following
+            if (touchActive) {
+                const dx = touchTarget.x - player.x;
+                const dy = touchTarget.y - player.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance > 5) { // Dead zone to prevent jittering
+                    const moveX = (dx / distance) * player.speed;
+                    const moveY = (dy / distance) * player.speed;
+                    
+                    player.x += moveX;
+                    player.y += moveY;
+                    
+                    // Keep player in bounds
+                    player.x = Math.max(player.size, Math.min(canvas.width - player.size, player.x));
+                    player.y = Math.max(player.size, Math.min(canvas.height - player.size, player.y));
+                }
+            }
         }
 
         function updateAsteroids() {
@@ -1058,6 +1158,22 @@
             ctx.arc(0, player.size, player.size * 0.5, 0, Math.PI * 2);
             ctx.fill();
             ctx.restore();
+            
+            // Draw touch indicator on mobile
+            if (touchActive && window.innerWidth <= 768) {
+                ctx.strokeStyle = 'rgba(167, 139, 250, 0.5)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(player.x, player.y);
+                ctx.lineTo(touchTarget.x, touchTarget.y);
+                ctx.stroke();
+                
+                // Target indicator
+                ctx.fillStyle = 'rgba(167, 139, 250, 0.3)';
+                ctx.beginPath();
+                ctx.arc(touchTarget.x, touchTarget.y, 20, 0, Math.PI * 2);
+                ctx.fill();
+            }
             
             // Draw asteroids
             asteroids.forEach(asteroid => {
