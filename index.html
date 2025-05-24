@@ -209,10 +209,12 @@
         /* Game Styles */
         .game-container {
             margin: 3rem auto;
-            max-width: 600px;
+            max-width: 100%;
+            width: 90%;
+            max-width: 700px;
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
             border-radius: 16px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
             position: relative;
             overflow: hidden;
@@ -239,11 +241,47 @@
         .game-screen {
             background: rgba(0, 0, 0, 0.8);
             border-radius: 12px;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             height: 400px;
             position: relative;
             overflow: hidden;
             margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .game-container {
+                padding: 1rem;
+                margin: 2rem auto;
+            }
+            
+            .game-screen {
+                height: 300px;
+            }
+            
+            #gameCanvas {
+                width: 100% !important;
+                height: 300px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-screen {
+                height: 250px;
+            }
+            
+            #gameCanvas {
+                height: 250px !important;
+            }
+            
+            .game-menu h3 {
+                font-size: 2rem;
+            }
+            
+            .game-btn {
+                padding: 0.75rem 2rem;
+                font-size: 1rem;
+            }
         }
 
         .game-menu {
@@ -846,8 +884,35 @@
         window.onload = function() {
             canvas = document.getElementById('gameCanvas');
             ctx = canvas.getContext('2d');
+            
+            // Set canvas size dynamically
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            
             fetchLeaderboard();
         };
+
+        function resizeCanvas() {
+            const gameScreen = document.getElementById('gameScreen');
+            const screenWidth = gameScreen.offsetWidth;
+            
+            if (window.innerWidth <= 480) {
+                canvas.width = screenWidth;
+                canvas.height = 250;
+            } else if (window.innerWidth <= 768) {
+                canvas.width = screenWidth;
+                canvas.height = 300;
+            } else {
+                canvas.width = Math.min(screenWidth, 600);
+                canvas.height = 400;
+            }
+            
+            // Update player position to center
+            if (player) {
+                player.x = canvas.width / 2;
+                player.y = canvas.height / 2;
+            }
+        }
 
         // Fetch global leaderboard from Google Sheets
         async function fetchLeaderboard() {
@@ -882,7 +947,7 @@
             document.getElementById('gameStats').style.display = 'block';
             
             // Reset game state
-            player = { x: 300, y: 200, size: 15, speed: 5 };
+            player = { x: canvas.width / 2, y: canvas.height / 2, size: 15, speed: 5 };
             asteroids = [];
             keys = {};
             speedMultiplier = 1;
