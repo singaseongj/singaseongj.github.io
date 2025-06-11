@@ -725,6 +725,8 @@
             <div class="game-container">
                 <div class="game-screen" id="gameScreen">
                     <div class="game-menu" id="gameMenu">
+                        <h3>🫧 Pop the Bubbles</h3>
+                        
                         <button class="game-btn" onclick="startGame()">START</button>
                         <button class="game-btn" onclick="showLeaderboard()" id="highscoreBtn">HIGHSCORES</button>
                     </div>
@@ -751,6 +753,32 @@
                     <div>Time: <span id="timer">0.0</span>s</div>
                     <div>Bubbles: <span id="bubblesLeft">16</span></div>
                     <div>Score: <span id="score">0</span></div>
+                </div>
+            </div>
+
+            <!-- Full-screen game mode -->
+            <div class="game-fullscreen" id="gameFullscreen">
+                <div class="game-fullscreen-content">
+                    <div class="fullscreen-game-stats" id="fullscreenGameStats" style="display: none;">
+                        <div>Time: <span id="fullscreenTimer">0.0</span>s</div>
+                        <div>Bubbles: <span id="fullscreenBubblesLeft">16</span></div>
+                        <div>Score: <span id="fullscreenScore">0</span></div>
+                    </div>
+                    
+                    <div class="fullscreen-canvas-container">
+                        <canvas id="fullscreenGameCanvas" width="700" height="500"></canvas>
+                    </div>
+                    
+                    <button class="exit-game-btn" onclick="exitFullscreenGame()">EXIT GAME</button>
+                    
+                    <div class="game-over" id="fullscreenGameOver" style="display: none;">
+                        <h3>Bubble Pop Complete!</h3>
+                        <p>Time: <span id="fullscreenFinalTime"></span>s</p>
+                        <p>Score: <span id="fullscreenFinalScore"></span> points</p>
+                        <input type="text" id="fullscreenPlayerName" placeholder="Enter your name" maxlength="20">
+                        <button class="game-btn" onclick="saveFullscreenScore()">Save Score</button>
+                        <button class="game-btn" onclick="playAgain()">Play Again</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -860,6 +888,7 @@
         let leaderboard = [];
         let bubblesPopped = 0;
         let totalBubbles = 16;
+        let isFullscreen = false;
         
         // Google Apps Script URL for leaderboard
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwU8wQXs1Fs4Ywk7SyZGSbcIwoUwffpR4mDQVuVsB0k2uy5z_Zrje589YtI2BviMbo0/exec';
@@ -894,12 +923,21 @@
         }
 
         function setupEventListeners() {
+            // Remove existing event listeners
+            canvas.removeEventListener('touchstart', handleTouch);
+            canvas.removeEventListener('touchmove', preventScroll);
+            canvas.removeEventListener('click', handleClick);
+            
             // Touch events for mobile
             canvas.addEventListener('touchstart', handleTouch, { passive: false });
-            canvas.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+            canvas.addEventListener('touchmove', preventScroll, { passive: false });
             
             // Mouse events for desktop
             canvas.addEventListener('click', handleClick);
+        }
+
+        function preventScroll(e) {
+            e.preventDefault();
         }
 
         function handleTouch(e) {
@@ -1121,9 +1159,16 @@
 
         function updateStats() {
             elapsedTime = ((Date.now() - startTime) / 1000).toFixed(1);
-            document.getElementById('timer').textContent = elapsedTime;
-            document.getElementById('bubblesLeft').textContent = bubbles.length;
-            document.getElementById('score').textContent = score;
+            
+            if (isFullscreen) {
+                document.getElementById('fullscreenTimer').textContent = elapsedTime;
+                document.getElementById('fullscreenBubblesLeft').textContent = bubbles.length;
+                document.getElementById('fullscreenScore').textContent = score;
+            } else {
+                document.getElementById('timer').textContent = elapsedTime;
+                document.getElementById('bubblesLeft').textContent = bubbles.length;
+                document.getElementById('score').textContent = score;
+            }
         }
 
         function gameLoop() {
@@ -1144,9 +1189,15 @@
             const timeBonus = Math.max(0, 1000 - Math.floor(elapsedTime * 10));
             const finalScore = score + timeBonus;
             
-            document.getElementById('finalTime').textContent = elapsedTime;
-            document.getElementById('finalScore').textContent = finalScore;
-            document.getElementById('gameOver').style.display = 'block';
+            if (isFullscreen) {
+                document.getElementById('fullscreenFinalTime').textContent = elapsedTime;
+                document.getElementById('fullscreenFinalScore').textContent = finalScore;
+                document.getElementById('fullscreenGameOver').style.display = 'block';
+            } else {
+                document.getElementById('finalTime').textContent = elapsedTime;
+                document.getElementById('finalScore').textContent = finalScore;
+                document.getElementById('gameOver').style.display = 'block';
+            }
         }
 
         function saveScore() {
