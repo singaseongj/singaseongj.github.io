@@ -726,7 +726,10 @@
                 <div class="game-screen" id="gameScreen">
                     <div class="game-menu" id="gameMenu">
                         <h3>🫧 Pop the Bubbles</h3>
-                        
+                        <p class="game-instructions">
+                            Tap all the bubbles as fast as you can!<br>
+                            Smaller bubbles = More points!
+                        </p>
                         <button class="game-btn" onclick="startGame()">START</button>
                         <button class="game-btn" onclick="showLeaderboard()" id="highscoreBtn">HIGHSCORES</button>
                     </div>
@@ -769,7 +772,9 @@
                         <canvas id="fullscreenGameCanvas" width="700" height="500"></canvas>
                     </div>
                     
-                    <button class="exit-game-btn" onclick="exitFullscreenGame()">EXIT GAME</button>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <button class="exit-game-btn" onclick="exitFullscreenGame()">GO BACK</button>
+                    </div>
                     
                     <div class="game-over" id="fullscreenGameOver" style="display: none;">
                         <h3>Bubble Pop Complete!</h3>
@@ -903,7 +908,6 @@
             window.addEventListener('resize', resizeCanvas);
             
             fetchLeaderboard();
-            setupEventListeners();
         };
 
         function resizeCanvas() {
@@ -923,16 +927,16 @@
         }
 
         function setupEventListeners() {
-            // Remove existing event listeners
+            if (!canvas) return;
+            
+            // Remove existing event listeners first
             canvas.removeEventListener('touchstart', handleTouch);
             canvas.removeEventListener('touchmove', preventScroll);
             canvas.removeEventListener('click', handleClick);
             
-            // Touch events for mobile
+            // Add new event listeners
             canvas.addEventListener('touchstart', handleTouch, { passive: false });
             canvas.addEventListener('touchmove', preventScroll, { passive: false });
-            
-            // Mouse events for desktop
             canvas.addEventListener('click', handleClick);
         }
 
