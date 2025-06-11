@@ -727,8 +727,7 @@
                     <div class="game-menu" id="gameMenu">
                         <h3>🫧 Pop the Bubbles</h3>
                         <p class="game-instructions">
-                            Tap all the bubbles as fast as you can!<br>
-                            Smaller bubbles = More points!
+                            Pop all the bubbles to win!
                         </p>
                         <button class="game-btn" onclick="startGame()">START</button>
                         <button class="game-btn" onclick="showLeaderboard()" id="highscoreBtn">HIGHSCORES</button>
@@ -759,30 +758,30 @@
                 </div>
             </div>
 
-            <!-- Full-screen game mode -->
-            <div class="game-fullscreen" id="gameFullscreen">
-                <div class="game-fullscreen-content">
-                    <div class="fullscreen-game-stats" id="fullscreenGameStats" style="display: none;">
-                        <div>Time: <span id="fullscreenTimer">0.0</span>s</div>
-                        <div>Bubbles: <span id="fullscreenBubblesLeft">16</span></div>
-                        <div>Score: <span id="fullscreenScore">0</span></div>
+            <!-- Game overlay (like leaderboard) -->
+            <div class="game-overlay" id="gameOverlay">
+                <div class="game-overlay-content">
+                    <div class="overlay-game-stats" id="overlayGameStats" style="display: none;">
+                        <div>Time: <span id="overlayTimer">0.0</span>s</div>
+                        <div>Bubbles: <span id="overlayBubblesLeft">16</span></div>
+                        <div>Score: <span id="overlayScore">0</span></div>
                     </div>
                     
-                    <div class="fullscreen-canvas-container">
-                        <canvas id="fullscreenGameCanvas" width="700" height="500"></canvas>
+                    <div class="overlay-canvas-container">
+                        <canvas id="overlayGameCanvas" width="600" height="400"></canvas>
                     </div>
                     
-                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                        <button class="exit-game-btn" onclick="exitFullscreenGame()">GO BACK</button>
+                    <div style="text-align: center;">
+                        <button class="game-btn" onclick="exitGameOverlay()">GO BACK</button>
                     </div>
                     
-                    <div class="game-over" id="fullscreenGameOver" style="display: none;">
+                    <div class="game-over" id="overlayGameOver" style="display: none;">
                         <h3>Bubble Pop Complete!</h3>
-                        <p>Time: <span id="fullscreenFinalTime"></span>s</p>
-                        <p>Score: <span id="fullscreenFinalScore"></span> points</p>
-                        <input type="text" id="fullscreenPlayerName" placeholder="Enter your name" maxlength="20">
-                        <button class="game-btn" onclick="saveFullscreenScore()">Save Score</button>
-                        <button class="game-btn" onclick="playAgain()">Play Again</button>
+                        <p>Time: <span id="overlayFinalTime"></span>s</p>
+                        <p>Score: <span id="overlayFinalScore"></span> points</p>
+                        <input type="text" id="overlayPlayerName" placeholder="Enter your name" maxlength="20">
+                        <button class="game-btn" onclick="saveOverlayScore()">Save Score</button>
+                        <button class="game-btn" onclick="playAgainOverlay()">Play Again</button>
                     </div>
                 </div>
             </div>
@@ -1165,9 +1164,9 @@
             elapsedTime = ((Date.now() - startTime) / 1000).toFixed(1);
             
             if (isFullscreen) {
-                document.getElementById('fullscreenTimer').textContent = elapsedTime;
-                document.getElementById('fullscreenBubblesLeft').textContent = bubbles.length;
-                document.getElementById('fullscreenScore').textContent = score;
+                document.getElementById('overlayTimer').textContent = elapsedTime;
+                document.getElementById('overlayBubblesLeft').textContent = bubbles.length;
+                document.getElementById('overlayScore').textContent = score;
             } else {
                 document.getElementById('timer').textContent = elapsedTime;
                 document.getElementById('bubblesLeft').textContent = bubbles.length;
@@ -1194,9 +1193,9 @@
             const finalScore = score + timeBonus;
             
             if (isFullscreen) {
-                document.getElementById('fullscreenFinalTime').textContent = elapsedTime;
-                document.getElementById('fullscreenFinalScore').textContent = finalScore;
-                document.getElementById('fullscreenGameOver').style.display = 'block';
+                document.getElementById('overlayFinalTime').textContent = elapsedTime;
+                document.getElementById('overlayFinalScore').textContent = finalScore;
+                document.getElementById('overlayGameOver').style.display = 'block';
             } else {
                 document.getElementById('finalTime').textContent = elapsedTime;
                 document.getElementById('finalScore').textContent = finalScore;
