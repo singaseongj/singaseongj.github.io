@@ -727,7 +727,8 @@
                     <div class="game-menu" id="gameMenu">
                         <h3>🫧 Pop the Bubbles</h3>
                         <p class="game-instructions">
-                            Pop all the bubbles to win!
+                            Tap all the bubbles as fast as you can!<br>
+                            Smaller bubbles = More points!
                         </p>
                         <button class="game-btn" onclick="startGame()">START</button>
                         <button class="game-btn" onclick="showLeaderboard()" id="highscoreBtn">HIGHSCORES</button>
@@ -755,34 +756,6 @@
                     <div>Time: <span id="timer">0.0</span>s</div>
                     <div>Bubbles: <span id="bubblesLeft">16</span></div>
                     <div>Score: <span id="score">0</span></div>
-                </div>
-            </div>
-
-            <!-- Game overlay (like leaderboard) -->
-            <div class="game-overlay" id="gameOverlay">
-                <div class="game-overlay-content">
-                    <div class="overlay-game-stats" id="overlayGameStats" style="display: none;">
-                        <div>Time: <span id="overlayTimer">0.0</span>s</div>
-                        <div>Bubbles: <span id="overlayBubblesLeft">16</span></div>
-                        <div>Score: <span id="overlayScore">0</span></div>
-                    </div>
-                    
-                    <div class="overlay-canvas-container">
-                        <canvas id="overlayGameCanvas" width="600" height="400"></canvas>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                        <button class="game-btn" onclick="exitGameOverlay()">GO BACK</button>
-                    </div>
-                    
-                    <div class="game-over" id="overlayGameOver" style="display: none;">
-                        <h3>Bubble Pop Complete!</h3>
-                        <p>Time: <span id="overlayFinalTime"></span>s</p>
-                        <p>Score: <span id="overlayFinalScore"></span> points</p>
-                        <input type="text" id="overlayPlayerName" placeholder="Enter your name" maxlength="20">
-                        <button class="game-btn" onclick="saveOverlayScore()">Save Score</button>
-                        <button class="game-btn" onclick="playAgainOverlay()">Play Again</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -892,7 +865,6 @@
         let leaderboard = [];
         let bubblesPopped = 0;
         let totalBubbles = 16;
-        let isFullscreen = false;
         
         // Google Apps Script URL for leaderboard
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwU8wQXs1Fs4Ywk7SyZGSbcIwoUwffpR4mDQVuVsB0k2uy5z_Zrje589YtI2BviMbo0/exec';
@@ -907,6 +879,7 @@
             window.addEventListener('resize', resizeCanvas);
             
             fetchLeaderboard();
+            setupEventListeners();
         };
 
         function resizeCanvas() {
@@ -926,21 +899,12 @@
         }
 
         function setupEventListeners() {
-            if (!canvas) return;
-            
-            // Remove existing event listeners first
-            canvas.removeEventListener('touchstart', handleTouch);
-            canvas.removeEventListener('touchmove', preventScroll);
-            canvas.removeEventListener('click', handleClick);
-            
-            // Add new event listeners
+            // Touch events for mobile
             canvas.addEventListener('touchstart', handleTouch, { passive: false });
-            canvas.addEventListener('touchmove', preventScroll, { passive: false });
+            canvas.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+            
+            // Mouse events for desktop
             canvas.addEventListener('click', handleClick);
-        }
-
-        function preventScroll(e) {
-            e.preventDefault();
         }
 
         function handleTouch(e) {
@@ -1162,16 +1126,9 @@
 
         function updateStats() {
             elapsedTime = ((Date.now() - startTime) / 1000).toFixed(1);
-            
-            if (isFullscreen) {
-                document.getElementById('overlayTimer').textContent = elapsedTime;
-                document.getElementById('overlayBubblesLeft').textContent = bubbles.length;
-                document.getElementById('overlayScore').textContent = score;
-            } else {
-                document.getElementById('timer').textContent = elapsedTime;
-                document.getElementById('bubblesLeft').textContent = bubbles.length;
-                document.getElementById('score').textContent = score;
-            }
+            document.getElementById('timer').textContent = elapsedTime;
+            document.getElementById('bubblesLeft').textContent = bubbles.length;
+            document.getElementById('score').textContent = score;
         }
 
         function gameLoop() {
@@ -1192,15 +1149,9 @@
             const timeBonus = Math.max(0, 1000 - Math.floor(elapsedTime * 10));
             const finalScore = score + timeBonus;
             
-            if (isFullscreen) {
-                document.getElementById('overlayFinalTime').textContent = elapsedTime;
-                document.getElementById('overlayFinalScore').textContent = finalScore;
-                document.getElementById('overlayGameOver').style.display = 'block';
-            } else {
-                document.getElementById('finalTime').textContent = elapsedTime;
-                document.getElementById('finalScore').textContent = finalScore;
-                document.getElementById('gameOver').style.display = 'block';
-            }
+            document.getElementById('finalTime').textContent = elapsedTime;
+            document.getElementById('finalScore').textContent = finalScore;
+            document.getElementById('gameOver').style.display = 'block';
         }
 
         function saveScore() {
@@ -1249,7 +1200,10 @@
             document.getElementById('gameStats').style.display = 'none';
             document.getElementById('gameMenu').style.display = 'block';
             document.getElementById('playerName').value = '';
-            hideLeaderboard();
+            
+            // Reset leaderboard display
+            document.getElementById('leaderboard').style.display = 'none';
+            document.getElementById('highscoreBtn').textContent = 'HIGHSCORES';
         }
 
         // Fetch global leaderboard from Google Sheets
@@ -1272,26 +1226,12 @@
             list.innerHTML = '';
             
             if (leaderboard.length === 0) {
-                list.innerHTML = '<div class="leaderboard-entry" style="text-align: center; color: #a5b4fc; font-style: italic;">No scores yet! Be the first to play!</div>';
+                list.innerHTML = '<div class="leaderboard-entry">No scores yet!</div>';
             } else {
-                leaderboard.slice(0, 10).forEach((entry, index) => {
+                leaderboard.slice(0, 5).forEach((entry, index) => {
                     const div = document.createElement('div');
                     div.className = 'leaderboard-entry';
-                    
-                    // Add trophy emoji for top 3
-                    let trophy = '';
-                    if (index === 0) trophy = '🥇 ';
-                    else if (index === 1) trophy = '🥈 ';
-                    else if (index === 2) trophy = '🥉 ';
-                    else trophy = `${index + 1}. `;
-                    
-                    div.innerHTML = `
-                        <span>${trophy}${entry.name}</span>
-                        <span style="display: flex; flex-direction: column; align-items: flex-end;">
-                            <span style="font-weight: bold;">${entry.score} pts</span>
-                            <span style="font-size: 0.8rem; opacity: 0.7;">${entry.time}s</span>
-                        </span>
-                    `;
+                    div.innerHTML = `<span>${index + 1}. ${entry.name}</span><span>${entry.score}pts</span>`;
                     list.appendChild(div);
                 });
             }
