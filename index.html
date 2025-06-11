@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singaseong Apps - Powerful but Simple and Easy</title>
+    <title>Manage Students - Powerful Database Management App</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -699,8 +699,9 @@
                             Smaller bubbles = More points!
                         </p>
                         <button class="game-btn" onclick="startGame()">START</button>
-                        <div class="leaderboard" id="leaderboard">
-                            <h4>🏆 Fastest Poppers</h4>
+                        <button class="game-btn" onclick="toggleLeaderboard()" id="highscoreBtn">HIGHSCORES</button>
+                        <div class="leaderboard" id="leaderboard" style="display: none;">
+                            <h4>🏆 Top Bubble Poppers</h4>
                             <div id="leaderboardList"></div>
                         </div>
                     </div>
@@ -1208,13 +1209,30 @@
             }
         }
 
+        function toggleLeaderboard() {
+            const leaderboard = document.getElementById('leaderboard');
+            const btn = document.getElementById('highscoreBtn');
+            
+            if (leaderboard.style.display === 'none') {
+                leaderboard.style.display = 'block';
+                btn.textContent = 'HIDE SCORES';
+                fetchLeaderboard(); // Refresh scores when showing
+            } else {
+                leaderboard.style.display = 'none';
+                btn.textContent = 'HIGHSCORES';
+            }
+        }
+
         function restartGame() {
             document.getElementById('gameOver').style.display = 'none';
             canvas.style.display = 'none';
             document.getElementById('gameStats').style.display = 'none';
             document.getElementById('gameMenu').style.display = 'block';
             document.getElementById('playerName').value = '';
-            updateLeaderboard();
+            
+            // Reset leaderboard display
+            document.getElementById('leaderboard').style.display = 'none';
+            document.getElementById('highscoreBtn').textContent = 'HIGHSCORES';
         }
 
         // Fetch global leaderboard from Google Sheets
