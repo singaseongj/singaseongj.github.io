@@ -6,14 +6,12 @@
   <title>데일리 주식 리포트 자동화 페이지</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 1rem; }
-    h1, h2 { text-align: center; }
-    #marketData table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-    #marketData th, #marketData td { border: 1px solid #ccc; padding: 0.5rem; text-align: center; }
-    #reports { margin-top: 2rem; }
-    .btn { margin-top: 1rem; padding: 0.7rem 1.5rem; font-size: 1rem; cursor: pointer; }
-    .input-group { margin-bottom: 1rem; }
-    label { font-weight: bold; display: block; margin-bottom: 0.3rem; }
-    input[type="text"], textarea { width: 100%; padding: 0.5rem; }
+    h1, h2, h3 { text-align: center; }
+    section { margin-top: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: center; }
+    .portfolio-group { margin-bottom: 2rem; }
+    .portfolio-group table { margin: 0 auto; }
   </style>
 </head>
 <body>
@@ -23,14 +21,9 @@
     <h2>오늘의 마켓 스냅샷</h2>
     <table>
       <thead>
-        <tr>
-          <th>지수</th>
-          <th>현재가</th>
-          <th>등락(%)</th>
-        </tr>
+        <tr><th>지수</th><th>현재가</th><th>등락(%)</th></tr>
       </thead>
       <tbody id="marketBody">
-        <!-- 데이터 로드 중 -->
         <tr><td colspan="3">로딩 중...</td></tr>
       </tbody>
     </table>
@@ -38,15 +31,16 @@
 
   <section id="reports">
     <h2>안정형 포트폴리오 추천</h2>
-    <div id="stablePortfolio">로딩 중...</div>
+    <div id="stablePortfolio" class="portfolio-group"><p>로딩 중...</p></div>
+
     <h2>공격형 포트폴리오 추천</h2>
-    <div id="aggressivePortfolio">로딩 중...</div>
+    <div id="aggressivePortfolio" class="portfolio-group"><p>로딩 중...</p></div>
   </section>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetchMarketIndices();
-      fetchPortfolioRecommendations();
+    document.addEventListener('DOMContentLoaded', async () => {
+      await fetchMarketIndices();
+      await fetchPortfolioRecommendations();
     });
 
     async function fetchMarketIndices() {
@@ -69,11 +63,7 @@
           const changePct = (((meta.regularMarketPrice - prev) / prev) * 100).toFixed(2);
 
           const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${idx.name}</td>
-            <td>${price}</td>
-            <td>${changePct}%</td>
-          `;
+          row.innerHTML = `<td>${idx.name}</td><td>${price}</td><td>${changePct}%</td>`;
           tbody.appendChild(row);
         } catch (err) {
           console.error(err);
@@ -82,28 +72,84 @@
     }
 
     async function fetchPortfolioRecommendations() {
-      // 예시: 서버 또는 외부 API에서 추천 종목 데이터 가져오기
-      // 여기서는 더미 데이터로 표시
-      const stable = [
-        { ticker: '005930.KS', name: '삼성전자', reason: 'PER 8배, 배당수익률 3.5%' },
-        { ticker: '000660.KS', name: 'SK하이닉스', reason: '안정적 메모리 수요' }
+      const stableList = [
+        { market: '국내', ticker: '005930.KS', name: '삼성전자' },
+        { market: '국내', ticker: '000660.KS', name: 'SK하이닉스' },
+        { market: '국내', ticker: '005380.KS', name: '현대자동차' },
+        { market: '미국', ticker: 'AAPL', name: 'Apple' },
+        { market: '미국', ticker: 'MSFT', name: 'Microsoft' }
       ];
-      const aggressive = [
-        { ticker: '035720.KS', name: '카카오', reason: '플랫폼 성장 모멘텀' },
-        { ticker: '000270.KS', name: '기아', reason: '전기차 라인업 확대' }
+
+      const aggressiveList = [
+        { market: '국내', ticker: '035720.KS', name: '카카오' },
+        { market: '국내', ticker: '035420.KS', name: '네이버' },
+        { market: '미국', ticker: 'TSLA', name: 'Tesla' },
+        { market: '미국', ticker: 'NVDA', name: 'NVIDIA' },
+        { market: '미국', ticker: 'AMZN', name: 'Amazon' }
       ];
 
       const stableDiv = document.getElementById('stablePortfolio');
       const aggrDiv = document.getElementById('aggressivePortfolio');
 
-      stableDiv.innerHTML = generateListHTML(stable);
-      aggrDiv.innerHTML = generateListHTML(aggressive);
+      stableDiv.innerHTML = '<p>로딩 중...</p>';
+      aggrDiv.innerHTML = '<p>로딩 중...</p>';
+
+      const stableData = await Promise.all(stableList.map(async item => {
+        const metrics = await fetchTickerMetrics(item.ticker);
+        return { ...item, metrics };
+      }));
+
+      const aggressiveData = await Promise.all(aggressiveList.map(async item => {
+        const metrics = await fetchTickerMetrics(item.ticker);
+        return { ...item, metrics };
+      }));
+
+      stableDiv.innerHTML = generateTableHTML(stableData);
+      aggrDiv.innerHTML = generateTableHTML(aggressiveData);
     }
 
-    function generateListHTML(list) {
-      return '<ul>' + list.map(item => `
-        <li><strong>${item.name} (${item.ticker}):</strong> ${item.reason}</li>
-      `).join('') + '</ul>';
+    async function fetchTickerMetrics(ticker) {
+      try {
+        const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${ticker}?modules=summaryDetail,financialData`;
+        const res = await fetch(url);
+        const json = await res.json();
+        const result = json.quoteSummary.result[0];
+        const summary = result.summaryDetail;
+        const fin = result.financialData;
+        return {
+          pe: summary.trailingPE?.raw?.toFixed(2) || 'N/A',
+          pb: summary.priceToBook?.raw?.toFixed(2) || 'N/A',
+          dividendYield: fin.dividendYield?.raw ? (fin.dividendYield.raw * 100).toFixed(2) + '%' : 'N/A'
+        };
+      } catch (e) {
+        console.error(e);
+        return { pe: 'N/A', pb: 'N/A', dividendYield: 'N/A' };
+      }
+    }
+
+    function generateTableHTML(list) {
+      return `
+        <table>
+          <thead>
+            <tr>
+              <th>종목</th>
+              <th>PER</th>
+              <th>PBR</th>
+              <th>배당수익률</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${list.map(item => `
+              <tr>
+                <td>${item.name} (${item.ticker})</td>
+                <td>${item.metrics.pe}</td>
+                <td>${item.metrics.pb}</td>
+                <td>${item.metrics.dividendYield}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
     }
   </script>
 </body>
