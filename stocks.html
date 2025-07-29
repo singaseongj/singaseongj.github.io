@@ -30,12 +30,12 @@
   <h1>데일리 주식 리포트 자동화</h1>
   <p id="currentDate">로딩 중...</p>
   <p id="dataDate"></p>
-  
+
   <div id="debugInfo" class="debug" style="display: none;">
     <h4>디버그 정보:</h4>
     <div id="debugContent"></div>
   </div>
-  
+
   <div id="summary">
     <p>이 페이지는 매일 국내 및 미국(나스닥, NYSE) 시장을 분석하여 <strong>안정형</strong>과 <strong>공격형</strong> 포트폴리오를 추천합니다.</p>
     <ul>
@@ -98,20 +98,15 @@
         const debugContent = document.getElementById('debugContent');
         const logEntry = document.createElement('div');
         logEntry.innerHTML = `<strong>${new Date().toLocaleTimeString()}:</strong> ${message}`;
-        if (data) {
-          logEntry.innerHTML += `<br><pre>${JSON.stringify(data, null, 2)}</pre>`;
-        }
+        if (data) logEntry.innerHTML += `<br><pre>${JSON.stringify(data, null, 2)}</pre>`;
         debugContent.appendChild(logEntry);
       }
     }
 
     function toggleDebug() {
       debugMode = !debugMode;
-      const debugInfo = document.getElementById('debugInfo');
-      debugInfo.style.display = debugMode ? 'block' : 'none';
-      if (debugMode) {
-        document.getElementById('debugContent').innerHTML = '<p>디버그 모드 활성화</p>';
-      }
+      document.getElementById('debugInfo').style.display = debugMode ? 'block' : 'none';
+      if (debugMode) document.getElementById('debugContent').innerHTML = '<p>디버그 모드 활성화</p>';
     }
 
     async function refreshAllData() {
@@ -120,167 +115,82 @@
       await fetchPortfolioRecommendations();
     }
 
-    // 가장 최근 영업일 계산
     function getLastBusinessDay() {
       const today = new Date();
       let businessDay = new Date(today);
-      
-      // 한국 시간 기준으로 오후 4시 이전이면 전날 데이터 사용
-      if (today.getHours() < 16) {
-        businessDay.setDate(businessDay.getDate() - 1);
-      }
-      
-      // 주말 처리
-      while (businessDay.getDay() === 0 || businessDay.getDay() === 6) {
-        businessDay.setDate(businessDay.getDate() - 1);
-      }
-      
+      if (today.getHours() < 16) businessDay.setDate(businessDay.getDate() - 1);
+      while ([0, 6].includes(businessDay.getDay())) businessDay.setDate(businessDay.getDate() - 1);
       return businessDay;
     }
 
     function formatDate(date) {
-      return date.getFullYear() + 
-        String(date.getMonth() + 1).padStart(2, '0') + 
+      return date.getFullYear() +
+        String(date.getMonth() + 1).padStart(2, '0') +
         String(date.getDate()).padStart(2, '0');
     }
 
     document.addEventListener('DOMContentLoaded', async () => {
       debugLog('페이지 로드 시작');
-      
-      // 오늘 날짜 표시
-      const today = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
-      document.getElementById('currentDate').innerText = today;
-      
-      // 최근 영업일 계산 및 표시
+      const todayStr = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+      document.getElementById('currentDate').innerText = todayStr;
       lastBusinessDay = getLastBusinessDay();
-      const businessDayStr = lastBusinessDay.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
-      document.getElementById('dataDate').innerText = `데이터 기준일: ${businessDayStr}`;
-      
-      debugLog('날짜 설정 완료', { today, lastBusinessDay: businessDayStr });
-      
-      // 데이터 로드
+      document.getElementById('dataDate').innerText = `데이터 기준일: ${lastBusinessDay.toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric'})}`;
+      debugLog('날짜 설정 완료', { lastBusinessDay });
       await fetchMarketIndices();
       await fetchPortfolioRecommendations();
     });
 
     async function fetchMarketIndices() {
       debugLog('마켓 인덱스 가져오기 시작');
-      
       const indices = [
-        { name: 'KOSPI', yahooSymbol: '^KS11', naverCode: 'KOSPI', finanaceUrl: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI' },
-        { name: 'KOSDAQ', yahooSymbol: '^KQ11', naverCode: 'KOSDAQ', finanaceUrl: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ' },  
-        { name: 'S&P500', yahooSymbol: '^GSPC', finanaceUrl: 'https://finance.yahoo.com/quote/%5EGSPC' },
-        { name: 'NASDAQ', yahooSymbol: '^IXIC', finanaceUrl: 'https://finance.yahoo.com/quote/%5EIXIC' }
+        { name: 'KOSPI', naverCode: 'KOSPI', finanaceUrl: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI' },
+        { name: 'KOSDAQ', naverCode: 'KOSDAQ', finanaceUrl: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ' },
+        { name: 'S&P500', finanaceUrl: 'https://finance.yahoo.com/quote/%5EGSPC' },
+        { name: 'NASDAQ', finanaceUrl: 'https://finance.yahoo.com/quote/%5EIXIC' }
       ];
-      
       const tbody = document.getElementById('marketBody');
       tbody.innerHTML = '';
-      
       for (const idx of indices) {
-        try {
-          debugLog(`${idx.name} 데이터 요청 중`);
-          
-          let price = null, changePct = null;
-          let success = false;
-
-          // 한국 지수는 네이버 금융에서 스크래핑
-          if (idx.naverCode) {
-            try {
-              const scrapingUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(idx.finanaceUrl)}`;
-              debugLog(`${idx.name} 네이버 스크래핑 시도`, scrapingUrl);
-              
-              const response = await fetch(scrapingUrl);
-              if (response.ok) {
-                const data = await response.json();
-                const htmlContent = data.contents;
-                
-                // 네이버 금융 HTML 파싱
-                const priceMatch = htmlContent.match(/<em id="now_value">([0-9,\.]+)<\/em>/);
-                const changeMatch = htmlContent.match(/<span class="(?:plus|minus)"[^>]*>([0-9,\.]+)<\/span>/);
-                const changeRateMatch = htmlContent.match(/<span class="rate[^"]*"[^>]*>([+-]?[0-9\.]+)%<\/span>/);
-                
-                if (priceMatch) {
-                  price = priceMatch[1].replace(/,/g, '');
-                  if (changeRateMatch) {
-                    changePct = changeRateMatch[1];
-                  }
-                  success = true;
-                  debugLog(`${idx.name} 네이버 스크래핑 성공`, { price, changePct });
-                }
-              }
-            } catch (error) {
-              debugLog(`${idx.name} 네이버 스크래핑 실패`, error.message);
+        let price = null, changePct = null, success = false;
+        if (idx.naverCode) {
+          try {
+            const resp = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.finanaceUrl)}`);
+            const { contents } = await resp.json();
+            const doc = new DOMParser().parseFromString(contents, 'text/html');
+            const priceEl = doc.querySelector('em#now_value');
+            const rateEl = doc.querySelector('span#rate');
+            if (priceEl && rateEl) {
+              price = priceEl.textContent.trim().replace(/,/g, '');
+              changePct = rateEl.textContent.trim().replace('%', '');
+              success = true;
             }
-          }
-
-          // 미국 지수는 Yahoo Finance에서 스크래핑
-          if (!success) {
-            try {
-              const scrapingUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(idx.finanaceUrl)}`;
-              debugLog(`${idx.name} Yahoo 스크래핑 시도`, scrapingUrl);
-              
-              const response = await fetch(scrapingUrl);
-              if (response.ok) {
-                const data = await response.json();
-                const htmlContent = data.contents;
-                
-                // Yahoo Finance HTML 파싱
-                const priceMatch = htmlContent.match(/"regularMarketPrice":{"raw":([\d.]+)/);
-                const prevCloseMatch = htmlContent.match(/"regularMarketPreviousClose":{"raw":([\d.]+)/);
-                
-                if (priceMatch && prevCloseMatch) {
-                  price = parseFloat(priceMatch[1]).toFixed(2);
-                  const prevClose = parseFloat(prevCloseMatch[1]);
-                  changePct = (((parseFloat(price) - prevClose) / prevClose) * 100).toFixed(2);
-                  success = true;
-                  debugLog(`${idx.name} Yahoo 스크래핑 성공`, { price, changePct });
-                }
-              }
-            } catch (error) {
-              debugLog(`${idx.name} Yahoo 스크래핑 실패`, error.message);
-            }
-          }
-
-          // 데이터 획득 실패시
-          if (!success) {
-            tbody.insertAdjacentHTML('beforeend', 
-              `<tr>
-                <td>${idx.name}</td>
-                <td colspan="2" class="no-data">
-                  데이터 없음 - <a href="${idx.finanaceUrl}" target="_blank" class="reference-link">여기서 확인</a>
-                </td>
-              </tr>`
-            );
-            continue;
-          }
-          
-          // 색상 적용
-          let changeClass = 'neutral';
-          const changeNum = parseFloat(changePct);
-          if (changeNum > 0) changeClass = 'positive';
-          else if (changeNum < 0) changeClass = 'negative';
-          
-          tbody.insertAdjacentHTML('beforeend', 
-            `<tr><td>${idx.name}</td><td>${price}</td><td class="${changeClass}">${changePct}%</td></tr>`
-          );
-          
-        } catch (error) {
-          debugLog(`${idx.name} 전체 실패`, error.message);
-          tbody.insertAdjacentHTML('beforeend', 
-            `<tr>
-              <td>${idx.name}</td>
-              <td colspan="2" class="no-data">
-                데이터 없음 - <a href="${idx.finanaceUrl}" target="_blank" class="reference-link">여기서 확인</a>
-              </td>
-            </tr>`
-          );
+          } catch (e) {}
         }
+        if (!success) {
+          try {
+            const resp = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.finanaceUrl)}`);
+            const { contents } = await resp.json();
+            const priceMatch = contents.match(/"regularMarketPrice":\{"raw":([\d.]+)/);
+            const prevCloseMatch = contents.match(/"regularMarketPreviousClose":\{"raw":([\d.]+)/);
+            if (priceMatch && prevCloseMatch) {
+              price = parseFloat(priceMatch[1]).toFixed(2);
+              const prev = parseFloat(prevCloseMatch[1]);
+              changePct = (((parseFloat(price) - prev) / prev) * 100).toFixed(2);
+              success = true;
+            }
+          } catch (e) {}
+        }
+        if (!success) {
+          tbody.insertAdjacentHTML('beforeend', `<tr><td>${idx.name}</td><td colspan="2" class="no-data">데이터 없음 - <a href="${idx.finanaceUrl}" target="_blank" class="reference-link">여기서 확인</a></td></tr>`);
+          continue;
+        }
+        const cls = parseFloat(changePct) > 0 ? 'positive' : parseFloat(changePct) < 0 ? 'negative' : 'neutral';
+        tbody.insertAdjacentHTML('beforeend', `<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}%</td></tr>`);
       }
     }
 
     async function fetchPortfolioRecommendations() {
       debugLog('포트폴리오 추천 가져오기 시작');
-      
       const configs = [
         { id: 'domesticStable', isKorean: true, type: 'stable' },
         { id: 'domesticAggressive', isKorean: true, type: 'aggressive' },
@@ -289,443 +199,145 @@
         { id: 'nyseStable', market: 'NYSE', type: 'stable' },
         { id: 'nyseAggressive', market: 'NYSE', type: 'aggressive' }
       ];
-      
       for (const cfg of configs) {
         const container = document.getElementById(cfg.id);
-        container.innerHTML = `<p class="loading">로딩 중...</p>`;
-        
+        container.innerHTML = '<p class="loading">로딩 중...</p>';
         try {
-          debugLog(`${cfg.id} 데이터 요청 시작`, cfg);
-          
-          let data;
-          
-          if (cfg.isKorean) {
-            data = await fetchKoreanStocks(cfg.type);
-          } else {
-            data = await fetchUSStocks(cfg.market, cfg.type);
-          }
-          
-          if (data && data.length > 0) {
-            container.innerHTML = generateTableHTML(data, cfg.isKorean);
-          } else {
-            container.innerHTML = generateNoDataHTML(cfg);
-          }
-          
-          debugLog(`${cfg.id} 처리 완료`, data);
-          
-        } catch (error) {
-          debugLog(`${cfg.id} 에러`, error.message);
+          const data = cfg.isKorean ? await fetchKoreanStocks(cfg.type) : await fetchUSStocks(cfg.market, cfg.type);
+          container.innerHTML = data.length > 0 ? generateTableHTML(data, cfg.isKorean) : generateNoDataHTML(cfg);
+        } catch (e) {
           container.innerHTML = generateNoDataHTML(cfg);
         }
       }
     }
 
     async function fetchKoreanStocks(type = 'stable') {
-      try {
-        debugLog(`한국 주식 ${type} 데이터 요청 시작`);
-        
-        // 최근 영업일부터 최대 10일전까지 시도
-        const tryDates = [];
-        for (let i = 0; i < 10; i++) {
-          const tryDate = new Date(lastBusinessDay);
-          tryDate.setDate(tryDate.getDate() - i);
-          
-          // 주말 제외
-          if (tryDate.getDay() !== 0 && tryDate.getDay() !== 6) {
-            tryDates.push(formatDate(tryDate));
-          }
-        }
-        
-        debugLog('시도할 날짜들', tryDates);
-        
-        let allStocks = [];
-        const markets = type === 'stable' ? ['KOSPI'] : ['KOSDAQ', 'KOSPI'];
-        
-        for (const market of markets) {
-          for (const tryDate of tryDates) {
-            if (allStocks.length >= 20) break;
-            
-            try {
-              const stocks = await fetchKRXData(tryDate, market);
-              if (stocks.length > 0) {
-                allStocks = allStocks.concat(stocks);
-                debugLog(`${market} ${tryDate} 데이터 획득`, stocks.length);
-                break;
-              }
-            } catch (dateError) {
-              debugLog(`${market} ${tryDate} 실패`, dateError.message);
-            }
-          }
-        }
-        
-        if (allStocks.length === 0) {
-          throw new Error('KRX API에서 데이터를 가져올 수 없음');
-        }
-        
-        // 종목 분류 및 선택
-        const classifiedStocks = classifyKoreanStocks(allStocks, type);
-        const selectedStocks = classifiedStocks.slice(0, 5);
-        
-        // 실제 재무 지표 가져오기
-        const stocksWithMetrics = await Promise.all(
-          selectedStocks.map(async (stock) => {
-            const metrics = await fetchKoreanStockMetrics(stock.srtnCd, stock.itmsNm);
-            return {
-              name: stock.itmsNm || stock.corpNm,
-              ticker: stock.srtnCd,
-              market: stock.market,
-              metrics,
-              metricsDate: metrics.date
-            };
-          })
-        );
-        
-        debugLog(`한국 주식 ${type} 최종 데이터`, stocksWithMetrics);
-        return stocksWithMetrics;
-        
-      } catch (error) {
-        debugLog(`한국 주식 ${type} 에러`, error.message);
-        return [];
+      const dates = [];
+      for (let i = 0; i < 10; i++) {
+        const d = new Date(lastBusinessDay);
+        d.setDate(d.getDate() - i);
+        if (![0, 6].includes(d.getDay())) dates.push(formatDate(d));
       }
+      let all = [];
+      const markets = type === 'stable' ? ['KOSPI'] : ['KOSDAQ', 'KOSPI'];
+      for (const m of markets) {
+        for (const dt of dates) {
+          if (all.length >= 20) break;
+          try {
+            const items = await fetchKRXData(dt, m);
+            if (items.length) { all = all.concat(items); break; }
+          } catch (e) {}
+        }
+      }
+      if (!all.length) return [];
+      const sorted = classifyKoreanStocks(all, type).slice(0, 5);
+      return Promise.all(sorted.map(async s => {
+        const m = await fetchKoreanStockMetrics(s.srtnCd, s.itmsNm);
+        return { name: s.itmsNm || s.corpNm, ticker: s.srtnCd, market: s.market, metrics: m, metricsDate: m.date };
+      }));
     }
 
-    async function fetchKRXData(basDt, market = 'KOSPI') {
-      let url = `https://apis.data.go.kr/1160100/service/GetKrxListedInfoService/getItemInfo`;
-      url += `?serviceKey=${KRX_API_KEY}`;
-      url += `&resultType=json`;
-      url += `&numOfRows=100`;
-      url += `&pageNo=1`;
-      url += `&basDt=${basDt}`;
-      
-      debugLog(`KRX API 호출`, { url, market, basDt });
-      
+    async function fetchKRXData(basDt, market) {
+      const url = `https://apis.data.go.kr/1160100/service/GetKrxListedInfoService/getItemInfo?serviceKey=${KRX_API_KEY}&resultType=json&numOfRows=100&pageNo=1&basDt=${basDt}`;
       try {
-        const response = await fetch(url);
-        if (response.ok) {
-          const data = await response.json();
-          return processKRXResponse(data, market);
-        }
-      } catch (directError) {
-        debugLog('KRX 직접 호출 실패, 프록시 시도', directError.message);
-      }
-      
+        const r = await fetch(url);
+        if (r.ok) return processKRXResponse(await r.json(), market);
+      } catch {}
       try {
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-        const proxyResponse = await fetch(proxyUrl);
-        if (proxyResponse.ok) {
-          const proxyData = await proxyResponse.json();
-          return processKRXResponse(proxyData, market);
-        }
-      } catch (proxyError) {
-        debugLog('KRX 프록시 호출도 실패', proxyError.message);
-      }
-      
+        const r = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`);
+        if (r.ok) return processKRXResponse(await r.json(), market);
+      } catch {}
       return [];
     }
 
     function processKRXResponse(data, market) {
-      if (!data.response || !data.response.body || !data.response.body.items) {
-        return [];
-      }
-      
-      let items = data.response.body.items.item || [];
-      if (!Array.isArray(items)) {
-        items = [items];
-      }
-      
-      return items
-        .filter(item => item.mrktCtg === market)
-        .map(item => ({ ...item, market }));
+      const items = data.response?.body?.items?.item || [];
+      const arr = Array.isArray(items) ? items : [items];
+      return arr.filter(i => i.mrktCtg === market).map(i => ({ ...i, market }));
     }
 
     function classifyKoreanStocks(stocks, type) {
-      const stableKeywords = [
-        '삼성', 'sk', 'lg', '현대', '포스코', 
-        'kt', 'kb', '신한', 'nh', '하나',
-        '전력', '가스', '철강', '건설', '화학', '정유', '통신', '은행', '보험'
-      ];
-      
-      const aggressiveKeywords = [
-        '바이오', '제약', '진단', '치료', '신약', '의료',
-        '게임', '엔터', '소프트', 'it', '인터넷', '모바일', '플랫폼',
-        '테크', '스타트', '벤처', '성장', '콘텐츠', '미디어'
-      ];
-      
-      const classified = stocks.map(stock => {
-        const name = (stock.itmsNm || stock.corpNm || '').toLowerCase();
-        let score = 0;
-        
-        if (type === 'stable') {
-          score += stock.market === 'KOSPI' ? 10 : 3;
-        } else {
-          score += stock.market === 'KOSDAQ' ? 10 : 5;
-        }
-        
-        const targetKeywords = type === 'stable' ? stableKeywords : aggressiveKeywords;
-        const oppositeKeywords = type === 'stable' ? aggressiveKeywords : stableKeywords;
-        
-        for (const keyword of targetKeywords) {
-          if (name.includes(keyword)) {
-            score += 5;
-            debugLog(`${stock.itmsNm} - ${type} 키워드 매칭: ${keyword}`);
-          }
-        }
-        
-        for (const keyword of oppositeKeywords) {
-          if (name.includes(keyword)) {
-            score -= 3;
-            debugLog(`${stock.itmsNm} - 반대 키워드 감점: ${keyword}`);
-          }
-        }
-        
-        const code = stock.srtnCd || '';
-        if (type === 'stable') {
-          if (code.startsWith('000') || code.startsWith('005') || code.startsWith('010')) {
-            score += 3;
-          }
-        } else {
-          if (code.startsWith('2') || code.startsWith('3') || code.startsWith('4')) {
-            score += 3;
-          }
-        }
-        
-        return { ...stock, score };
-      });
-      
-      const sorted = classified.sort((a, b) => b.score - a.score);
-      
-      debugLog(`${type} 종목 분류 결과 (상위 10개)`, 
-        sorted.slice(0, 10).map(s => ({ 
-          name: s.itmsNm, 
-          market: s.market, 
-          score: s.score 
-        }))
-      );
-      
-      return sorted;
+      const stableKw = ['삼성','sk','lg','현대','포스코','kt','kb','신한','nh','하나','전력','가스','철강','건설','화학','정유','통신','은행','보험'];
+      const agrKw = ['바이오','제약','진단','치료','신약','의료','게임','엔터','소프트','it','인터넷','모바일','플랫폼','테크','스타트','벤처','성장','콘텐츠','미디어'];
+      return stocks.map(s => {
+        let score = type === 'stable' ? (s.market === 'KOSPI' ? 10 : 3) : (s.market === 'KOSDAQ' ? 10 : 5);
+        const name = (s.itmsNm || s.corpNm || '').toLowerCase();
+        const tgt = type === 'stable' ? stableKw : agrKw;
+        const opp = type === 'stable' ? agrKw : stableKw;
+        tgt.forEach(k => name.includes(k) && (score += 5));
+        opp.forEach(k => name.includes(k) && (score -= 3));
+        const code = s.srtnCd || '';
+        if ((type === 'stable' && /^(000|005|010)/.test(code)) || (type !== 'stable' && /^[234]/.test(code))) score += 3;
+        return { ...s, score };
+      }).sort((a,b) => b.score - a.score);
     }
 
     async function fetchKoreanStockMetrics(ticker, name) {
       try {
-        // 네이버 금융에서 재무 지표 스크래핑
-        const naverUrl = `https://finance.naver.com/item/main.naver?code=${ticker.substring(1)}`;
-        const scrapingUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(naverUrl)}`;
-        
-        debugLog(`${name} 재무지표 스크래핑 시도`, scrapingUrl);
-        
-        const response = await fetch(scrapingUrl);
-        if (response.ok) {
-          const data = await response.json();
-          const htmlContent = data.contents;
-          
-          // PER 추출
-          const perMatch = htmlContent.match(/PER.*?<em[^>]*>([0-9,\.]+)<\/em>/);
-          const per = perMatch ? perMatch[1].replace(/,/g, '') : 'N/A';
-          
-          // PBR 추출
-          const pbrMatch = htmlContent.match(/PBR.*?<em[^>]*>([0-9,\.]+)<\/em>/);
-          const pbr = pbrMatch ? pbrMatch[1].replace(/,/g, '') : 'N/A';
-          
-          // 배당수익률 추출
-          const dividendMatch = htmlContent.match(/배당수익률.*?<em[^>]*>([0-9,\.]+)%<\/em>/);
-          const dividendYield = dividendMatch ? dividendMatch[1] + '%' : 'N/A';
-          
-          // 기준 날짜 추출 (예: 2024.12 또는 2024년 12월)
-          const dateMatch = htmlContent.match(/(?:결산|기준).*?(\d{4})[년\.](\d{1,2})[월\.]?/);
-          const date = dateMatch ? `${dateMatch[1]}년 ${dateMatch[2]}월` : '최근 결산';
-          
-          debugLog(`${name} 재무지표 스크래핑 성공`, { per, pbr, dividendYield, date });
-          
-          return {
-            pe: per,
-            pb: pbr,
-            dividendYield: dividendYield,
-            date: date
-          };
-        }
-      } catch (error) {
-        debugLog(`${name} 재무지표 스크래핑 실패`, error.message);
-      }
-      
-      // 스크래핑 실패시 기본값
-      return {
-        pe: 'N/A',
-        pb: 'N/A',
-        dividendYield: 'N/A',
-        date: '데이터 없음'
-      };
+        const url = `https://finance.naver.com/item/main.naver?code=${ticker.substring(1)}`;
+        const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
+        const { contents } = await r.json();
+        const per = contents.match(/PER.*?<em[^>]*>([0-9.,]+)<\/em>/)?.[1]?.replace(/,/g,'') || 'N/A';
+        const pb = contents.match(/PBR.*?<em[^>]*>([0-9.,]+)<\/em>/)?.[1]?.replace(/,/g,'') || 'N/A';
+        const div = contents.match(/배당수익률.*?<em[^>]*>([0-9.,]+)%<\/em>/)?.[1] + '%' || 'N/A';
+        const dt = contents.match(/(?:결산|기준).*?(\d{4})[년.] *(\d{1,2})[월.]?/) || [];
+        const date = dt[1] ? `${dt[1]}년 ${dt[2]}월` : '최근 결산';
+        return { pe: per, pb, dividendYield: div, date };
+      } catch { return { pe:'N/A',pb:'N/A',dividendYield:'N/A',date:'데이터 없음' }; }
     }
 
     async function fetchUSStocks(market, type) {
-      try {
-        debugLog(`미국 주식 ${market} ${type} 데이터 요청`);
-        
-        const stocks = getUSStocksByMarket(market, type);
-        
-        const stocksWithMetrics = await Promise.all(
-          stocks.map(async (stock) => {
-            const metrics = await fetchUSStockMetrics(stock.symbol);
-            return {
-              name: stock.name,
-              ticker: stock.symbol,
-              market: market,
-              metrics,
-              metricsDate: metrics.date
-            };
-          })
-        );
-        
-        return stocksWithMetrics.slice(0, 5);
-        
-      } catch (error) {
-        debugLog(`미국 주식 ${market} ${type} 에러`, error.message);
-        return [];
-      }
-    }
-
-    function getUSStocksByMarket(market, type) {
-      const stockLists = {
-        'NASDAQ': {
-          'stable': [
-            { symbol: 'MSFT', name: 'Microsoft Corporation' },
-            { symbol: 'AAPL', name: 'Apple Inc.' },
-            { symbol: 'GOOGL', name: 'Alphabet Inc.' },
-            { symbol: 'META', name: 'Meta Platforms Inc.' },
-            { symbol: 'AMZN', name: 'Amazon.com Inc.' }
-          ],
-          'aggressive': [
-            { symbol: 'NVDA', name: 'NVIDIA Corporation' },
-            { symbol: 'TSLA', name: 'Tesla Inc.' },
-            { symbol: 'AMD', name: 'Advanced Micro Devices' },
-            { symbol: 'NFLX', name: 'Netflix Inc.' },
-            { symbol: 'CRM', name: 'Salesforce Inc.' }
-          ]
-        },
-        'NYSE': {
-          'stable': [
-            { symbol: 'JNJ', name: 'Johnson & Johnson' },
-            { symbol: 'PG', name: 'Procter & Gamble' },
-            { symbol: 'KO', name: 'The Coca-Cola Company' },
-            { symbol: 'WMT', name: 'Walmart Inc.' },
-            { symbol: 'JPM', name: 'JPMorgan Chase & Co.' }
-          ],
-          'aggressive': [
-            { symbol: 'BA', name: 'Boeing Company' },
-            { symbol: 'CAT', name: 'Caterpillar Inc.' },
-            { symbol: 'GE', name: 'General Electric' },
-            { symbol: 'F', name: 'Ford Motor Company' },
-            { symbol: 'GM', name: 'General Motors' }
-          ]
-        }
+      const lists = {
+        'NASDAQ': { stable:[{symbol:'MSFT',name:'Microsoft Corporation'},{symbol:'AAPL',name:'Apple Inc.'},{symbol:'GOOGL',name:'Alphabet Inc.'},{symbol:'META',name:'Meta Platforms Inc.'},{symbol:'AMZN',name:'Amazon.com Inc.'}],
+                    aggressive:[{symbol:'NVDA',name:'NVIDIA Corporation'},{symbol:'TSLA',name:'Tesla Inc.'},{symbol:'AMD',name:'Advanced Micro Devices'},{symbol:'NFLX',name:'Netflix Inc.'},{symbol:'CRM',name:'Salesforce Inc.'}] },
+        'NYSE':  { stable:[{symbol:'JNJ',name:'Johnson & Johnson'},{symbol:'PG',name:'Procter & Gamble'},{symbol:'KO',name:'The Coca-Cola Company'},{symbol:'WMT',name:'Walmart Inc.'},{symbol:'JPM',name:'JPMorgan Chase & Co.'}],
+                    aggressive:[{symbol:'BA',name:'Boeing Company'},{symbol:'CAT',name:'Caterpillar Inc.'},{symbol:'GE',name:'General Electric'},{symbol:'F',name:'Ford Motor Company'},{symbol:'GM',name:'General Motors'}] }
       };
-      
-      return stockLists[market]?.[type] || [];
+      return Promise.all(lists[market][type].slice(0,5).map(async s => {
+        const m = await fetchUSStockMetrics(s.symbol);
+        return { name:s.name, ticker:s.symbol, market, metrics:m, metricsDate:m.date };
+      }));
     }
 
     async function fetchUSStockMetrics(symbol) {
       try {
-        // Yahoo Finance에서 재무 지표 스크래핑
-        const yahooUrl = `https://finance.yahoo.com/quote/${symbol}`;
-        const scrapingUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(yahooUrl)}`;
-        
-        debugLog(`${symbol} 재무지표 스크래핑 시도`, scrapingUrl);
-        
-        const response = await fetch(scrapingUrl);
-        if (response.ok) {
-          const data = await response.json();
-          const htmlContent = data.contents;
-          
-          // PER (TTM) 추출
-          const peMatch = htmlContent.match(/"trailingPE":{"raw":([\d.]+)/);
-          const pe = peMatch ? parseFloat(peMatch[1]).toFixed(2) : 'N/A';
-          
-          // PBR 추출
-          const pbMatch = htmlContent.match(/"priceToBook":{"raw":([\d.]+)/);
-          const pb = pbMatch ? parseFloat(pbMatch[1]).toFixed(2) : 'N/A';
-          
-          // 배당수익률 추출
-          const dividendMatch = htmlContent.match(/"dividendYield":{"raw":([\d.]+)/);
-          const dividendYield = dividendMatch ? (parseFloat(dividendMatch[1]) * 100).toFixed(2) + '%' : 'N/A';
-          
-          // 기준 날짜 (최근 분기)
-          const today = new Date();
-          const lastQuarter = new Date(today.getFullYear(), Math.floor(today.getMonth() / 3) * 3 - 3, 1);
-          const date = `${lastQuarter.getFullYear()}년 ${lastQuarter.getMonth() + 1}월`;
-          
-          debugLog(`${symbol} 재무지표 스크래핑 성공`, { pe, pb, dividendYield, date });
-          
-          return {
-            pe: pe,
-            pb: pb,
-            dividendYield: dividendYield,
-            date: date
-          };
-        }
-      } catch (error) {
-        debugLog(`${symbol} 재무지표 스크래핑 실패`, error.message);
-      }
-      
-      // 스크래핑 실패시 기본값
-      return {
-        pe: 'N/A',
-        pb: 'N/A',
-        dividendYield: 'N/A',
-        date: '데이터 없음'
-      };
+        const r = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://finance.yahoo.com/quote/${symbol}`)}`);
+        const { contents } = await r.json();
+        const pe = contents.match(/"trailingPE":\{"raw":([0-9.]+)/)?.[1] ? parseFloat(contents.match(/"trailingPE":\{"raw":([0-9.]+)/)[1]).toFixed(2) : 'N/A';
+        const pb = contents.match(/"priceToBook":\{"raw":([0-9.]+)/)?.[1] ? parseFloat(contents.match(/"priceToBook":\{"raw":([0-9.]+)/)[1]).toFixed(2) : 'N/A';
+        const dyRaw = contents.match(/"dividendYield":\{"raw":([0-9.]+)/)?.[1];
+        const dividendYield = dyRaw ? (parseFloat(dyRaw)*100).toFixed(2)+'%' : 'N/A';
+        const today = new Date(); const lastQ = new Date(today.getFullYear(), Math.floor(today.getMonth()/3)*3-3,1);
+        const date = `${lastQ.getFullYear()}년 ${lastQ.getMonth()+1}월`;
+        return { pe, pb, dividendYield, date };
+      } catch { return { pe:'N/A',pb:'N/A',dividendYield:'N/A',date:'데이터 없음' }; }
     }
 
-    function generateTableHTML(data, isKorean = false) {
-      let html = `
-        <table>
-          <thead><tr><th>종목</th><th>시장</th><th>PER</th><th>PBR</th><th>배당수익률</th></tr></thead>
-          <tbody>`;
-      
-      for (const d of data) {
-        const naverLink = isKorean ? 
-          `https://finance.naver.com/item/main.naver?code=${d.ticker.substring(1)}` : 
-          `https://finance.yahoo.com/quote/${d.ticker}`;
-        
-        html += `
-          <tr>
-            <td><a href="${naverLink}" target="_blank" class="reference-link">${d.name} (${d.ticker})</a></td>
-            <td>${d.market || 'N/A'}</td>
-            <td>${d.metrics.pe}</td>
-            <td>${d.metrics.pb}</td>
-            <td>${d.metrics.dividendYield}</td>
-          </tr>`;
-      }
-      
-      html += `</tbody></table>`;
-      
-      // 재무지표 기준 날짜 표시
-      if (data.length > 0 && data[0].metricsDate) {
-        html += `<p class="metrics-date">재무지표 기준: ${data[0].metricsDate}</p>`;
-      }
-      
+    function generateTableHTML(data, isKorean) {
+      let html = '<table><thead><tr><th>종목</th><th>시장</th><th>PER</th><th>PBR</th><th>배당수익률</th></tr></thead><tbody>';
+      data.forEach(d => {
+        const link = isKorean ? `https://finance.naver.com/item/main.naver?code=${d.ticker.substring(1)}` : `https://finance.yahoo.com/quote/${d.ticker}`;
+        html += `<tr><td><a href="${link}" target="_blank" class="reference-link">${d.name} (${d.ticker})</a></td>` +
+                `<td>${d.market||'N/A'}</td><td>${d.metrics.pe}</td><td>${d.metrics.pb}</td><td>${d.metrics.dividendYield}</td></tr>`;
+      });
+      html += '</tbody></table>';
+      if (data[0] && data[0].metricsDate) html += `<p class="metrics-date">재무지표 기준: ${data[0].metricsDate}</p>`;
       return html;
     }
 
-    function generateNoDataHTML(config) {
-      let referenceUrl = '';
-      let siteName = '';
-      
-      if (config.isKorean) {
-        referenceUrl = config.type === 'stable' ? 
-          'https://finance.naver.com/sise/sise_market_sum.naver?sosok=0' : 
-          'https://finance.naver.com/sise/sise_market_sum.naver?sosok=1';
-        siteName = '네이버 금융';
-      } else if (config.market === 'NASDAQ') {
-        referenceUrl = 'https://www.nasdaq.com/market-activity/stocks/screener';
-        siteName = 'NASDAQ';
+    function generateNoDataHTML(cfg) {
+      let url, site;
+      if (cfg.isKorean) {
+        url = cfg.type==='stable' ? 'https://finance.naver.com/sise/sise_market_sum.naver?sosok=0' : 'https://finance.naver.com/sise/sise_market_sum.naver?sosok=1';
+        site = '네이버 금융';
+      } else if (cfg.market==='NASDAQ') {
+        url = 'https://www.nasdaq.com/market-activity/stocks/screener'; site = 'NASDAQ';
       } else {
-        referenceUrl = 'https://www.nyse.com/listings_directory/stock';
-        siteName = 'NYSE';
+        url = 'https://www.nyse.com/listings_directory/stock'; site = 'NYSE';
       }
-      
-      return `
-        <div class="no-data">
-          <p>데이터를 불러올 수 없습니다.</p>
-          <p><a href="${referenceUrl}" target="_blank" class="reference-link">${siteName}에서 직접 확인하기</a></p>
-        </div>
-      `;
+      return `<div class="no-data"><p>데이터를 불러올 수 없습니다.</p>` +
+             `<p><a href="${url}" target="_blank" class="reference-link">${site}에서 직접 확인하기</a></p></div>`;
     }
+  </script>
+</body>
+</html>
