@@ -12,6 +12,7 @@
     th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: center; }
     .portfolio-group { margin-bottom: 2rem; }
     .portfolio-group table { margin: 0 auto; }
+    .loading { text-align: center; color: #666; }
   </style>
 </head>
 <body>
@@ -24,7 +25,7 @@
         <tr><th>지수</th><th>현재가</th><th>등락(%)</th></tr>
       </thead>
       <tbody id="marketBody">
-        <tr><td colspan="3">로딩 중...</td></tr>
+        <tr><td colspan="3" class="loading">로딩 중...</td></tr>
       </tbody>
     </table>
   </section>
@@ -32,29 +33,33 @@
   <section id="reports">
     <h2>포트폴리오 추천</h2>
     <div class="portfolio-group">
-      <h3>국내 안정형</h3>
-      <div id="domesticStable">로딩 중...</div>
+      <h3>국내 안정형 (Stable Domestic)</h3>
+      <div id="domesticStable"><p class="loading">로딩 중...</p></div>
     </div>
     <div class="portfolio-group">
-      <h3>국내 공격형</h3>
-      <div id="domesticAggressive">로딩 중...</div>
+      <h3>국내 공격형 (Aggressive Domestic)</h3>
+      <div id="domesticAggressive"><p class="loading">로딩 중...</p></div>
     </div>
     <div class="portfolio-group">
-      <h3>미국 안정형</h3>
-      <div id="usStable">로딩 중...</div>
+      <h3>미국 안정형 (Stable US)</h3>
+      <div id="usStable"><p class="loading">로딩 중...</p></div>
     </div>
     <div class="portfolio-group">
-      <h3>미국 공격형</h3>
-      <div id="usAggressive">로딩 중...</div>
+      <h3>미국 공격형 (Aggressive US)</h3>
+      <div id="usAggressive"><p class="loading">로딩 중...</p></div>
     </div>
   </section>
 
   <script>
+    // Financial Modeling Prep API 설정 (무료 API 키 필요)
+    const FMP_API_KEY = 'YOUR_FMP_API_KEY';
+
     document.addEventListener('DOMContentLoaded', async () => {
       await fetchMarketIndices();
       await fetchPortfolioRecommendations();
     });
 
+    // 시장 지수 데이터 조회 (Yahoo Finance)
     async function fetchMarketIndices() {
       const symbols = [
         { name: 'KOSPI', symbol: '%5EKS11' },
@@ -67,7 +72,9 @@
 
       for (const idx of symbols) {
         try {
-          const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`);
+          const res = await fetch(
+            `https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`
+          );
           const data = await res.json();
           const meta = data.chart.result[0].meta;
           const price = meta.regularMarketPrice.toFixed(2);
@@ -83,54 +90,56 @@
       }
     }
 
+    // 포트폴리오 추천: 백엔드 스크리너 API 호출
     async function fetchPortfolioRecommendations() {
-      const domesticStableList = [
-        { ticker: '005930.KS', name: '삼성전자' },
-        { ticker: '000660.KS', name: 'SK하이닉스' },
-        { ticker: '005380.KS', name: '현대자동차' },
-        { ticker: '051910.KS', name: 'LG화학' },
-        { ticker: '017670.KS', name: 'SK텔레콤' }
-      ];
-      const domesticAggressiveList = [
-        { ticker: '035720.KS', name: '카카오' },
-        { ticker: '035420.KS', name: '네이버' },
-        { ticker: '068270.KS', name: '셀트리온' },
-        { ticker: '095570.KS', name: 'SK이노베이션' },
-        { ticker: '000270.KS', name: '기아' }
-      ];
-      const usStableList = [
-        { ticker: 'AAPL', name: 'Apple' },
-        { ticker: 'MSFT', name: 'Microsoft' },
-        { ticker: 'JNJ', name: 'Johnson & Johnson' },
-        { ticker: 'PG', name: 'Procter & Gamble' },
-        { ticker: 'KO', name: 'Coca-Cola' }
-      ];
-      const usAggressiveList = [
-        { ticker: 'TSLA', name: 'Tesla' },
-        { ticker: 'NVDA', name: 'NVIDIA' },
-        { ticker: 'AMZN', name: 'Amazon' },
-        { ticker: 'FB', name: 'Meta Platforms' },
-        { ticker: 'ROKU', name: 'Roku' }
+      const groupsConfig = [
+        { id: 'domesticStable', exchange: 'KRX', type: 'stable' },
+        { id: 'domesticAggressive', exchange: 'KRX', type: 'aggressive' },
+        { id: 'usStable', exchange: 'NASDAQ', type: 'stable' },
+        { id: 'usAggressive', exchange: 'NASDAQ', type: 'aggressive' }
       ];
 
-      const groups = [
-        { id: 'domesticStable', list: domesticStableList },
-        { id: 'domesticAggressive', list: domesticAggressiveList },
-        { id: 'usStable', list: usStableList },
-        { id: 'usAggressive', list: usAggressiveList }
-      ];
-
-      for (const group of groups) {
+      for (const group of groupsConfig) {
         const container = document.getElementById(group.id);
-        container.innerHTML = '<p>로딩 중...</p>';
-        const data = await Promise.all(group.list.map(async item => {
-          const metrics = await fetchTickerMetrics(item.ticker);
-          return { ...item, metrics };
-        }));
-        container.innerHTML = generateTableHTML(data);
+        container.innerHTML = `<p class="loading">로딩 중...</p>`;
+        try {
+          const list = await fetchScreener(group.exchange, group.type);
+          const data = await Promise.all(
+            list.map(async item => {
+              // 스크리너 결과의 symbol, companyName 사용
+              const metrics = await fetchTickerMetrics(item.symbol);
+              return {
+                name: item.companyName || item.symbol,
+                ticker: item.symbol,
+                metrics
+              };
+            })
+          );
+          container.innerHTML = generateTableHTML(data);
+        } catch (e) {
+          console.error(e);
+          container.innerHTML = `<p class="loading">데이터 로드 실패</p>`;
+        }
       }
     }
 
+    // 스크리너 API 호출: 안정형/공격형 분기
+    async function fetchScreener(exchange, type) {
+      let url = `https://financialmodelingprep.com/api/v3/stock-screener?` +
+        `exchange=${exchange}` +
+        `&limit=5` +
+        `&apikey=${FMP_API_KEY}`;
+      if (type === 'stable') {
+        url += `&marketCapMoreThan=100000000000&dividendMoreThan=2`;
+      } else {
+        url += `&orderBy=changesPercentage&sort=desc`;
+      }
+      const res = await fetch(url);
+      const json = await res.json();
+      return json;
+    }
+
+    // 개별 종목 지표 조회 (Yahoo Finance)
     async function fetchTickerMetrics(ticker) {
       try {
         const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${ticker}?modules=summaryDetail,financialData`;
@@ -142,14 +151,16 @@
         return {
           pe: summary.trailingPE?.raw?.toFixed(2) || 'N/A',
           pb: summary.priceToBook?.raw?.toFixed(2) || 'N/A',
-          dividendYield: fin.dividendYield?.raw ? (fin.dividendYield.raw * 100).toFixed(2) + '%' : 'N/A'
+          dividendYield: fin.dividendYield?.raw
+            ? (fin.dividendYield.raw * 100).toFixed(2) + '%'
+            : 'N/A'
         };
-      } catch (e) {
-        console.error(e);
+      } catch {
         return { pe: 'N/A', pb: 'N/A', dividendYield: 'N/A' };
       }
     }
 
+    // HTML 테이블 생성
     function generateTableHTML(list) {
       return `
         <table>
@@ -162,14 +173,18 @@
             </tr>
           </thead>
           <tbody>
-            ${list.map(item => `
+            ${list
+              .map(
+                item => `
               <tr>
                 <td>${item.name} (${item.ticker})</td>
                 <td>${item.metrics.pe}</td>
                 <td>${item.metrics.pb}</td>
                 <td>${item.metrics.dividendYield}</td>
               </tr>
-            `).join('')}
+            `
+              )
+              .join('')}
           </tbody>
         </table>
       `;
