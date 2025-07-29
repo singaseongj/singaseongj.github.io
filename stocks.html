@@ -30,11 +30,23 @@
   </section>
 
   <section id="reports">
-    <h2>안정형 포트폴리오 추천</h2>
-    <div id="stablePortfolio" class="portfolio-group"><p>로딩 중...</p></div>
-
-    <h2>공격형 포트폴리오 추천</h2>
-    <div id="aggressivePortfolio" class="portfolio-group"><p>로딩 중...</p></div>
+    <h2>포트폴리오 추천</h2>
+    <div class="portfolio-group">
+      <h3>국내 안정형</h3>
+      <div id="domesticStable">로딩 중...</div>
+    </div>
+    <div class="portfolio-group">
+      <h3>국내 공격형</h3>
+      <div id="domesticAggressive">로딩 중...</div>
+    </div>
+    <div class="portfolio-group">
+      <h3>미국 안정형</h3>
+      <div id="usStable">로딩 중...</div>
+    </div>
+    <div class="portfolio-group">
+      <h3>미국 공격형</h3>
+      <div id="usAggressive">로딩 중...</div>
+    </div>
   </section>
 
   <script>
@@ -72,40 +84,51 @@
     }
 
     async function fetchPortfolioRecommendations() {
-      const stableList = [
-        { market: '국내', ticker: '005930.KS', name: '삼성전자' },
-        { market: '국내', ticker: '000660.KS', name: 'SK하이닉스' },
-        { market: '국내', ticker: '005380.KS', name: '현대자동차' },
-        { market: '미국', ticker: 'AAPL', name: 'Apple' },
-        { market: '미국', ticker: 'MSFT', name: 'Microsoft' }
+      const domesticStableList = [
+        { ticker: '005930.KS', name: '삼성전자' },
+        { ticker: '000660.KS', name: 'SK하이닉스' },
+        { ticker: '005380.KS', name: '현대자동차' },
+        { ticker: '051910.KS', name: 'LG화학' },
+        { ticker: '017670.KS', name: 'SK텔레콤' }
+      ];
+      const domesticAggressiveList = [
+        { ticker: '035720.KS', name: '카카오' },
+        { ticker: '035420.KS', name: '네이버' },
+        { ticker: '068270.KS', name: '셀트리온' },
+        { ticker: '095570.KS', name: 'SK이노베이션' },
+        { ticker: '000270.KS', name: '기아' }
+      ];
+      const usStableList = [
+        { ticker: 'AAPL', name: 'Apple' },
+        { ticker: 'MSFT', name: 'Microsoft' },
+        { ticker: 'JNJ', name: 'Johnson & Johnson' },
+        { ticker: 'PG', name: 'Procter & Gamble' },
+        { ticker: 'KO', name: 'Coca-Cola' }
+      ];
+      const usAggressiveList = [
+        { ticker: 'TSLA', name: 'Tesla' },
+        { ticker: 'NVDA', name: 'NVIDIA' },
+        { ticker: 'AMZN', name: 'Amazon' },
+        { ticker: 'FB', name: 'Meta Platforms' },
+        { ticker: 'ROKU', name: 'Roku' }
       ];
 
-      const aggressiveList = [
-        { market: '국내', ticker: '035720.KS', name: '카카오' },
-        { market: '국내', ticker: '035420.KS', name: '네이버' },
-        { market: '미국', ticker: 'TSLA', name: 'Tesla' },
-        { market: '미국', ticker: 'NVDA', name: 'NVIDIA' },
-        { market: '미국', ticker: 'AMZN', name: 'Amazon' }
+      const groups = [
+        { id: 'domesticStable', list: domesticStableList },
+        { id: 'domesticAggressive', list: domesticAggressiveList },
+        { id: 'usStable', list: usStableList },
+        { id: 'usAggressive', list: usAggressiveList }
       ];
 
-      const stableDiv = document.getElementById('stablePortfolio');
-      const aggrDiv = document.getElementById('aggressivePortfolio');
-
-      stableDiv.innerHTML = '<p>로딩 중...</p>';
-      aggrDiv.innerHTML = '<p>로딩 중...</p>';
-
-      const stableData = await Promise.all(stableList.map(async item => {
-        const metrics = await fetchTickerMetrics(item.ticker);
-        return { ...item, metrics };
-      }));
-
-      const aggressiveData = await Promise.all(aggressiveList.map(async item => {
-        const metrics = await fetchTickerMetrics(item.ticker);
-        return { ...item, metrics };
-      }));
-
-      stableDiv.innerHTML = generateTableHTML(stableData);
-      aggrDiv.innerHTML = generateTableHTML(aggressiveData);
+      for (const group of groups) {
+        const container = document.getElementById(group.id);
+        container.innerHTML = '<p>로딩 중...</p>';
+        const data = await Promise.all(group.list.map(async item => {
+          const metrics = await fetchTickerMetrics(item.ticker);
+          return { ...item, metrics };
+        }));
+        container.innerHTML = generateTableHTML(data);
+      }
     }
 
     async function fetchTickerMetrics(ticker) {
