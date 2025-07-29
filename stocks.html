@@ -51,7 +51,7 @@
   </section>
 
   <script>
-    // Financial Modeling Prep API 설정 (무료 API 키 필요)
+    // Financial Modeling Prep API 설정 (발급된 API 키 사용)
     const FMP_API_KEY = 'H0dyisDN713ZUxytSP63ZwmgnM4cRPGu';
 
     document.addEventListener('DOMContentLoaded', async () => {
@@ -72,9 +72,7 @@
 
       for (const idx of symbols) {
         try {
-          const res = await fetch(
-            `https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`
-          );
+          const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`);
           const data = await res.json();
           const meta = data.chart.result[0].meta;
           const price = meta.regularMarketPrice.toFixed(2);
@@ -106,7 +104,6 @@
           const list = await fetchScreener(group.exchange, group.type);
           const data = await Promise.all(
             list.map(async item => {
-              // 스크리너 결과의 symbol, companyName 사용
               const metrics = await fetchTickerMetrics(item.symbol);
               return {
                 name: item.companyName || item.symbol,
@@ -125,25 +122,20 @@
 
     // 스크리너 API 호출: 안정형/공격형 분기
     async function fetchScreener(exchange, type) {
-      let url = `https://financialmodelingprep.com/api/v3/stock-screener?` +
-        `exchange=${exchange}` +
-        `&limit=5` +
-        `&apikey=${FMP_API_KEY}`;
+      let url = `https://financialmodelingprep.com/api/v3/stock-screener?exchange=${exchange}&limit=5&apikey=${FMP_API_KEY}`;
       if (type === 'stable') {
         url += `&marketCapMoreThan=100000000000&dividendMoreThan=2`;
       } else {
         url += `&orderBy=changesPercentage&sort=desc`;
       }
       const res = await fetch(url);
-      const json = await res.json();
-      return json;
+      return res.json();
     }
 
     // 개별 종목 지표 조회 (Yahoo Finance)
     async function fetchTickerMetrics(ticker) {
       try {
-        const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${ticker}?modules=summaryDetail,financialData`;
-        const res = await fetch(url);
+        const res = await fetch(`https://query1.finance.yahoo.com/v10/finance/quoteSummary/${ticker}?modules=summaryDetail,financialData`);
         const json = await res.json();
         const result = json.quoteSummary.result[0];
         const summary = result.summaryDetail;
@@ -151,9 +143,7 @@
         return {
           pe: summary.trailingPE?.raw?.toFixed(2) || 'N/A',
           pb: summary.priceToBook?.raw?.toFixed(2) || 'N/A',
-          dividendYield: fin.dividendYield?.raw
-            ? (fin.dividendYield.raw * 100).toFixed(2) + '%'
-            : 'N/A'
+          dividendYield: fin.dividendYield?.raw ? (fin.dividendYield.raw * 100).toFixed(2) + '%' : 'N/A'
         };
       } catch {
         return { pe: 'N/A', pb: 'N/A', dividendYield: 'N/A' };
@@ -173,18 +163,14 @@
             </tr>
           </thead>
           <tbody>
-            ${list
-              .map(
-                item => `
+            ${list.map(item => `
               <tr>
                 <td>${item.name} (${item.ticker})</td>
                 <td>${item.metrics.pe}</td>
                 <td>${item.metrics.pb}</td>
                 <td>${item.metrics.dividendYield}</td>
               </tr>
-            `
-              )
-              .join('')}
+            `).join('')}
           </tbody>
         </table>
       `;
