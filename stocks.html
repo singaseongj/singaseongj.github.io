@@ -20,10 +20,10 @@
   <h1>데일리 주식 리포트 자동화</h1>
   <p id="currentDate">로딩 중...</p>
   <div id="summary">
-    <p>이 페이지는 매일 국내 및 미국 시장을 분석하여 <strong>안정형</strong>과 <strong>공격형</strong> 포트폴리오를 추천합니다.</p>
+    <p>이 페이지는 매일 국내 및 미국(나스닥, NYSE) 시장을 분석하여 <strong>안정형</strong>과 <strong>공격형</strong> 포트폴리오를 추천합니다.</p>
     <ul>
-      <li><strong>안정형:</strong> 시가총액이 크고 배당수익률 및 밸류에이션(PER, PBR)이 안정적인 종목을 선별</li>
-      <li><strong>공격형:</strong> 최근 주가 모멘텀과 성장성이 높은 종목을 선별</li>
+      <li><strong>안정형:</strong> 시가총액이 크고 배당수익률 및 밸류에이션(PER, PBR)이 안정적인 종목</li>
+      <li><strong>공격형:</strong> 최근 주가 모멘텀과 성장성이 높은 종목</li>
     </ul>
   </div>
 
@@ -50,31 +50,36 @@
       <div id="domesticAggressive"><p class="loading">로딩 중...</p></div>
     </div>
     <div class="portfolio-group">
-      <h3>미국 안정형 (Stable US)</h3>
-      <div id="usStable"><p class="loading">로딩 중...</p></div>
+      <h3>나스닥 안정형 (Stable NASDAQ)</h3>
+      <div id="nasdaqStable"><p class="loading">로딩 중...</p></div>
     </div>
     <div class="portfolio-group">
-      <h3>미국 공격형 (Aggressive US)</h3>
-      <div id="usAggressive"><p class="loading">로딩 중...</p></div>
+      <h3>나스닥 공격형 (Aggressive NASDAQ)</h3>
+      <div id="nasdaqAggressive"><p class="loading">로딩 중...</p></div>
+    </div>
+    <div class="portfolio-group">
+      <h3>NYSE 안정형 (Stable NYSE)</h3>
+      <div id="nyseStable"><p class="loading">로딩 중...</p></div>
+    </div>
+    <div class="portfolio-group">
+      <h3>NYSE 공격형 (Aggressive NYSE)</h3>
+      <div id="nyseAggressive"><p class="loading">로딩 중...</p></div>
     </div>
   </section>
 
   <script>
-    // 오늘 날짜 표시
-    document.addEventListener('DOMContentLoaded', () => {
-      const today = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
-      document.getElementById('currentDate').innerText = today;
-    });
-
-    // Financial Modeling Prep API 키
     const FMP_API_KEY = 'H0dyisDN713ZUxytSP63ZwmgnM4cRPGu';
 
     document.addEventListener('DOMContentLoaded', async () => {
+      // 오늘 날짜 표시
+      const today = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+      document.getElementById('currentDate').innerText = today;
+      
+      // 데이터 로드
       await fetchMarketIndices();
       await fetchPortfolioRecommendations();
     });
 
-    // 시장 지수 조회 (Yahoo Finance)
     async function fetchMarketIndices() {
       const symbols = [
         { name: 'KOSPI', symbol: '%5EKS11' },
@@ -82,8 +87,7 @@
         { name: 'S&P500', symbol: '%5EGSPC' },
         { name: 'NASDAQ', symbol: '%5EIXIC' }
       ];
-      const tbody = document.getElementById('marketBody');
-      tbody.innerHTML = '';
+      const tbody = document.getElementById('marketBody'); tbody.innerHTML = '';
       for (const idx of symbols) {
         try {
           const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`);
@@ -91,98 +95,61 @@
           const price = meta.regularMarketPrice.toFixed(2);
           const prev = meta.chartPreviousClose;
           const changePct = (((meta.regularMarketPrice - prev) / prev) * 100).toFixed(2);
-          const row = document.createElement('tr');
-          row.innerHTML = `<td>${idx.name}</td><td>${price}</td><td>${changePct}%</td>`;
-          tbody.appendChild(row);
-        } catch (e) {
-          console.error(e);
-        }
+          tbody.insertAdjacentHTML('beforeend', `<tr><td>${idx.name}</td><td>${price}</td><td>${changePct}%</td></tr>`);
+        } catch (e) { console.error(e); }
       }
     }
 
-    // 포트폴리오 추천
     async function fetchPortfolioRecommendations() {
-      const groups = [
-        { id: 'domesticStable', type: 'stable', region: 'domestic' },
-        { id: 'domesticAggressive', type: 'aggressive', region: 'domestic' },
-        { id: 'usStable', type: 'stable', region: 'us' },
-        { id: 'usAggressive', type: 'aggressive', region: 'us' }
+      const configs = [
+        { id: 'domesticStable', query: 'exchange=KRX', type: 'stable' },
+        { id: 'domesticAggressive', query: 'exchange=KRX', type: 'aggressive' },
+        { id: 'nasdaqStable', query: 'exchange=NASDAQ', type: 'stable' },
+        { id: 'nasdaqAggressive', query: 'exchange=NASDAQ', type: 'aggressive' },
+        { id: 'nyseStable', query: 'exchange=NYSE', type: 'stable' },
+        { id: 'nyseAggressive', query: 'exchange=NYSE', type: 'aggressive' }
       ];
-      for (const g of groups) {
-        const container = document.getElementById(g.id);
+      for (const cfg of configs) {
+        const container = document.getElementById(cfg.id);
         container.innerHTML = `<p class="loading">로딩 중...</p>`;
         try {
-          const list = await fetchScreener(g);
-          const data = await Promise.all(
-            list.map(async (item) => {
-              const metrics = await fetchTickerMetrics(item.symbol);
-              return { name: item.companyName || item.symbol, ticker: item.symbol, metrics };
-            })
-          );
+          let url = `https://financialmodelingprep.com/api/v3/stock-screener?${cfg.query}&limit=5&apikey=${FMP_API_KEY}`;
+          if (cfg.type === 'stable') url += '&marketCapMoreThan=100000000000&dividendMoreThan=2';
+          else url += '&orderBy=changesPercentage&sort=desc';
+          const list = await (await fetch(url)).json();
+          const data = await Promise.all(list.map(async item => {
+            const metrics = await fetchTickerMetrics(item.symbol);
+            return { name: item.companyName || item.symbol, ticker: item.symbol, metrics };
+          }));
           container.innerHTML = generateTableHTML(data);
-        } catch {
+        } catch (e) {
+          console.error(e);
           container.innerHTML = `<p class="loading">데이터 로드 실패</p>`;
         }
       }
     }
 
-    // 스크리너 호출 (국내는 country 파라미터로 대체)
-    async function fetchScreener({ type, region }) {
-      let url;
-      if (region === 'domestic') {
-        url = `https://financialmodelingprep.com/api/v3/stock-screener?country=South Korea&limit=5&apikey=${FMP_API_KEY}`;
-        if (type === 'stable') url += `&marketCapMoreThan=100000000000&dividendMoreThan=2`;
-        else url += `&orderBy=changesPercentage&sort=desc`;
-      } else {
-        url = `https://financialmodelingprep.com/api/v3/stock-screener?exchange=NASDAQ&limit=5&apikey=${FMP_API_KEY}`;
-        if (type === 'stable') url += `&marketCapMoreThan=100000000000&dividendMoreThan=2`;
-        else url += `&orderBy=changesPercentage&sort=desc`;
-      }
-      const res = await fetch(url);
-      return res.json();
-    }
-
-    // 종목 지표 조회 (Yahoo Finance)
     async function fetchTickerMetrics(symbol) {
       try {
-        const res = await fetch(
-          `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=summaryDetail,financialData`
-        );
+        const res = await fetch(`https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=summaryDetail,financialData`);
         const result = (await res.json()).quoteSummary.result[0];
-        const { summaryDetail, financialData } = result;
+        const sd = result.summaryDetail, fd = result.financialData;
         return {
-          pe: summaryDetail.trailingPE?.raw?.toFixed(2) || 'N/A',
-          pb: summaryDetail.priceToBook?.raw?.toFixed(2) || 'N/A',
-          dividendYield: financialData.dividendYield?.raw
-            ? (financialData.dividendYield.raw * 100).toFixed(2) + '%'
-            : 'N/A'
+          pe: sd.trailingPE?.raw?.toFixed(2) || 'N/A',
+          pb: sd.priceToBook?.raw?.toFixed(2) || 'N/A',
+          dividendYield: fd.dividendYield?.raw ? (fd.dividendYield.raw * 100).toFixed(2) + '%' : 'N/A'
         };
       } catch {
         return { pe: 'N/A', pb: 'N/A', dividendYield: 'N/A' };
       }
     }
 
-    // HTML 테이블 생성
     function generateTableHTML(data) {
       return `
         <table>
-          <thead>
-            <tr><th>종목</th><th>PER</th><th>PBR</th><th>배당수익률</th></tr>
-          </thead>
-          <tbody>
-            ${data
-              .map(
-                (d) => `
-              <tr>
-                <td>${d.name} (${d.ticker})</td>
-                <td>${d.metrics.pe}</td>
-                <td>${d.metrics.pb}</td>
-                <td>${d.metrics.dividendYield}</td>
-              </tr>
-            `
-              )
-              .join('')}
-          </tbody>
+          <thead><tr><th>종목</th><th>PER</th><th>PBR</th><th>배당수익률</th></tr></thead>
+          <tbody>${data.map(d => `
+            <tr><td>${d.name} (${d.ticker})</td><td>${d.metrics.pe}</td><td>${d.metrics.pb}</td><td>${d.metrics.dividendYield}</td></tr>`).join('')}</tbody>
         </table>
       `;
     }
