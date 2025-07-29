@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데일리 주식 리포트 저장 페이지</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
+    h1, h2 { text-align: center; }
+    form { margin-bottom: 2rem; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    textarea, input, select { width: 100%; padding: 0.5rem; margin-top: 0.3rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    .btn { margin-top: 1rem; padding: 0.7rem 1.5rem; font-size: 1rem; cursor: pointer; }
+    #reports { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>데일리 주식 리포트 저장</h1>
+  <form id="reportForm">
+    <label for="reportDate">리포트 날짜</label>
+    <input type="date" id="reportDate" required>
+
+    <label for="marketSummary">마켓 스냅샷 요약</label>
+    <textarea id="marketSummary" rows="3" placeholder="국내·미국 지수 등락 요약"></textarea>
+
+    <h2>안정형 포트폴리오</h2>
+    <label for="stableList">종목 리스트 (쉼표로 구분)</label>
+    <input type="text" id="stableList" placeholder="예: 삼성전자, SK텔레콤, ...">
+    <label for="stableReasons">추천 근거 설명</label>
+    <textarea id="stableReasons" rows="3" placeholder="각 종목별 핵심 투자 포인트"></textarea>
+
+    <h2>공격형 포트폴리오</h2>
+    <label for="aggressiveList">종목 리스트 (쉼표로 구분)</label>
+    <input type="text" id="aggressiveList" placeholder="예: 카카오, 네이버, ...">
+    <label for="aggressiveReasons">추천 근거 설명</label>
+    <textarea id="aggressiveReasons" rows="3" placeholder="각 종목별 핵심 투자 포인트"></textarea>
+
+    <button type="submit" class="btn">저장하기</button>
+  </form>
+
+  <section id="reports">
+    <h2>저장된 리포트</h2>
+    <div id="reportsContainer"></div>
+  </section>
+
+  <script>
+    const form = document.getElementById('reportForm');
+    const container = document.getElementById('reportsContainer');
+
+    function loadReports() {
+      const data = JSON.parse(localStorage.getItem('dailyReports') || '[]');
+      container.innerHTML = '';
+      data.forEach(report => {
+        const div = document.createElement('div');
+        div.style.border = '1px solid #ddd';
+        div.style.padding = '1rem';
+        div.style.marginBottom = '1rem';
+        div.innerHTML = `
+          <h3>${report.date}</h3>
+          <p><strong>마켓 요약:</strong> ${report.marketSummary}</p>
+          <p><strong>안정형:</strong> ${report.stableList}</p>
+          <p><em>${report.stableReasons}</em></p>
+          <p><strong>공격형:</strong> ${report.aggressiveList}</p>
+          <p><em>${report.aggressiveReasons}</em></p>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const report = {
+        date: document.getElementById('reportDate').value,
+        marketSummary: document.getElementById('marketSummary').value,
+        stableList: document.getElementById('stableList').value,
+        stableReasons: document.getElementById('stableReasons').value,
+        aggressiveList: document.getElementById('aggressiveList').value,
+        aggressiveReasons: document.getElementById('aggressiveReasons').value
+      };
+
+      const data = JSON.parse(localStorage.getItem('dailyReports') || '[]');
+      data.unshift(report);
+      localStorage.setItem('dailyReports', JSON.stringify(data));
+      form.reset();
+      loadReports();
+    });
+
+    document.addEventListener('DOMContentLoaded', loadReports);
+  </script>
+</body>
+</html>
