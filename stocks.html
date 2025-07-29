@@ -14,17 +14,26 @@
     th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: center; }
     .portfolio-group { margin-bottom: 2rem; }
     .loading { text-align: center; color: #666; }
+    .error { text-align: center; color: #d32f2f; }
+    .debug { background: #fff3cd; border: 1px solid #ffeaa7; padding: 10px; margin: 10px 0; font-family: monospace; font-size: 12px; }
   </style>
 </head>
 <body>
   <h1>데일리 주식 리포트 자동화</h1>
   <p id="currentDate">로딩 중...</p>
+  
+  <div id="debugInfo" class="debug" style="display: none;">
+    <h4>디버그 정보:</h4>
+    <div id="debugContent"></div>
+  </div>
+  
   <div id="summary">
     <p>이 페이지는 매일 국내 및 미국(나스닥, NYSE) 시장을 분석하여 <strong>안정형</strong>과 <strong>공격형</strong> 포트폴리오를 추천합니다.</p>
     <ul>
       <li><strong>안정형:</strong> 시가총액이 크고 배당수익률 및 밸류에이션(PER, PBR)이 안정적인 종목</li>
       <li><strong>공격형:</strong> 최근 주가 모멘텀과 성장성이 높은 종목</li>
     </ul>
+    <button onclick="toggleDebug()">디버그 모드 토글</button>
   </div>
 
   <section id="marketData">
@@ -69,11 +78,37 @@
 
   <script>
     const FMP_API_KEY = 'H0dyisDN713ZUxytSP63ZwmgnM4cRPGu';
+    let debugMode = false;
+
+    function debugLog(message, data = null) {
+      console.log(message, data);
+      if (debugMode) {
+        const debugContent = document.getElementById('debugContent');
+        const logEntry = document.createElement('div');
+        logEntry.innerHTML = `<strong>${new Date().toLocaleTimeString()}:</strong> ${message}`;
+        if (data) {
+          logEntry.innerHTML += `<br><pre>${JSON.stringify(data, null, 2)}</pre>`;
+        }
+        debugContent.appendChild(logEntry);
+      }
+    }
+
+    function toggleDebug() {
+      debugMode = !debugMode;
+      const debugInfo = document.getElementById('debugInfo');
+      debugInfo.style.display = debugMode ? 'block' : 'none';
+      if (debugMode) {
+        document.getElementById('debugContent').innerHTML = '<p>디버그 모드 활성화</p>';
+      }
+    }
 
     document.addEventListener('DOMContentLoaded', async () => {
+      debugLog('페이지 로드 시작');
+      
       // 오늘 날짜 표시
       const today = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
       document.getElementById('currentDate').innerText = today;
+      debugLog('날짜 설정 완료', today);
       
       // 데이터 로드
       await fetchMarketIndices();
@@ -81,26 +116,64 @@
     });
 
     async function fetchMarketIndices() {
+      debugLog('마켓 인덱스 가져오기 시작');
+      
       const symbols = [
-        { name: 'KOSPI', symbol: '%5EKS11' },
-        { name: 'KOSDAQ', symbol: '%5EKQ11' },
-        { name: 'S&P500', symbol: '%5EGSPC' },
-        { name: 'NASDAQ', symbol: '%5EIXIC' }
+        { name: 'KOSPI', symbol: '^KS11' },
+        { name: 'KOSDAQ', symbol: '^KQ11' },
+        { name: 'S&P500', symbol: '^GSPC' },
+        { name: 'NASDAQ', symbol: '^IXIC' }
       ];
-      const tbody = document.getElementById('marketBody'); tbody.innerHTML = '';
+      
+      const tbody = document.getElementById('marketBody');
+      tbody.innerHTML = '';
+      
       for (const idx of symbols) {
         try {
-          const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`);
-          const { meta } = (await res.json()).chart.result[0];
-          const price = meta.regularMarketPrice.toFixed(2);
+          debugLog(`${idx.name} 데이터 요청 중`, idx.symbol);
+          
+          // Yahoo Finance API 대신 대체 방법 시도
+          const url = `https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`;
+          debugLog('요청 URL', url);
+          
+          const response = await fetch(url);
+          debugLog(`${idx.name} 응답 상태`, response.status);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          
+          const data = await response.json();
+          debugLog(`${idx.name} 데이터`, data);
+          
+          const result = data.chart.result[0];
+          if (!result || !result.meta) {
+            throw new Error('Invalid data structure');
+          }
+          
+          const meta = result.meta;
+          const price = meta.regularMarketPrice?.toFixed(2) || 'N/A';
           const prev = meta.chartPreviousClose;
-          const changePct = (((meta.regularMarketPrice - prev) / prev) * 100).toFixed(2);
-          tbody.insertAdjacentHTML('beforeend', `<tr><td>${idx.name}</td><td>${price}</td><td>${changePct}%</td></tr>`);
-        } catch (e) { console.error(e); }
+          const changePct = prev ? (((meta.regularMarketPrice - prev) / prev) * 100).toFixed(2) : 'N/A';
+          
+          tbody.insertAdjacentHTML('beforeend', 
+            `<tr><td>${idx.name}</td><td>${price}</td><td>${changePct}%</td></tr>`
+          );
+          
+          debugLog(`${idx.name} 데이터 처리 완료`, { price, changePct });
+          
+        } catch (error) {
+          debugLog(`${idx.name} 에러`, error.message);
+          tbody.insertAdjacentHTML('beforeend', 
+            `<tr><td>${idx.name}</td><td colspan="2" class="error">데이터 로드 실패: ${error.message}</td></tr>`
+          );
+        }
       }
     }
 
     async function fetchPortfolioRecommendations() {
+      debugLog('포트폴리오 추천 가져오기 시작');
+      
       const configs = [
         { id: 'domesticStable', query: 'exchange=KRX', type: 'stable' },
         { id: 'domesticAggressive', query: 'exchange=KRX', type: 'aggressive' },
@@ -109,37 +182,98 @@
         { id: 'nyseStable', query: 'exchange=NYSE', type: 'stable' },
         { id: 'nyseAggressive', query: 'exchange=NYSE', type: 'aggressive' }
       ];
+      
       for (const cfg of configs) {
         const container = document.getElementById(cfg.id);
         container.innerHTML = `<p class="loading">로딩 중...</p>`;
+        
         try {
+          debugLog(`${cfg.id} 데이터 요청 시작`, cfg);
+          
           let url = `https://financialmodelingprep.com/api/v3/stock-screener?${cfg.query}&limit=5&apikey=${FMP_API_KEY}`;
-          if (cfg.type === 'stable') url += '&marketCapMoreThan=100000000000&dividendMoreThan=2';
-          else url += '&orderBy=changesPercentage&sort=desc';
-          const list = await (await fetch(url)).json();
-          const data = await Promise.all(list.map(async item => {
+          if (cfg.type === 'stable') {
+            url += '&marketCapMoreThan=1000000000&dividendMoreThan=1';
+          } else {
+            url += '&orderBy=changesPercentage&sort=desc';
+          }
+          
+          debugLog(`${cfg.id} 요청 URL`, url);
+          
+          const response = await fetch(url);
+          debugLog(`${cfg.id} 응답 상태`, response.status);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+          
+          const list = await response.json();
+          debugLog(`${cfg.id} API 응답`, list);
+          
+          if (!Array.isArray(list) || list.length === 0) {
+            throw new Error('No data returned from API');
+          }
+          
+          const data = await Promise.all(list.slice(0, 5).map(async item => {
             const metrics = await fetchTickerMetrics(item.symbol);
-            return { name: item.companyName || item.symbol, ticker: item.symbol, metrics };
+            return { 
+              name: item.companyName || item.symbol, 
+              ticker: item.symbol, 
+              metrics 
+            };
           }));
+          
           container.innerHTML = generateTableHTML(data);
-        } catch (e) {
-          console.error(e);
-          container.innerHTML = `<p class="loading">데이터 로드 실패</p>`;
+          debugLog(`${cfg.id} 처리 완료`, data);
+          
+        } catch (error) {
+          debugLog(`${cfg.id} 에러`, error.message);
+          container.innerHTML = `<p class="error">데이터 로드 실패: ${error.message}</p>`;
         }
       }
     }
 
     async function fetchTickerMetrics(symbol) {
       try {
-        const res = await fetch(`https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=summaryDetail,financialData`);
-        const result = (await res.json()).quoteSummary.result[0];
-        const sd = result.summaryDetail, fd = result.financialData;
-        return {
-          pe: sd.trailingPE?.raw?.toFixed(2) || 'N/A',
-          pb: sd.priceToBook?.raw?.toFixed(2) || 'N/A',
-          dividendYield: fd.dividendYield?.raw ? (fd.dividendYield.raw * 100).toFixed(2) + '%' : 'N/A'
-        };
-      } catch {
+        debugLog(`${symbol} 메트릭 요청 중`);
+        
+        // FMP API를 사용해서 기본 메트릭 가져오기
+        const keyMetricsUrl = `https://financialmodelingprep.com/api/v3/key-metrics-ttm/${symbol}?apikey=${FMP_API_KEY}`;
+        const ratiosUrl = `https://financialmodelingprep.com/api/v3/ratios-ttm/${symbol}?apikey=${FMP_API_KEY}`;
+        
+        const [metricsResponse, ratiosResponse] = await Promise.all([
+          fetch(keyMetricsUrl),
+          fetch(ratiosUrl)
+        ]);
+        
+        let pe = 'N/A', pb = 'N/A', dividendYield = 'N/A';
+        
+        if (metricsResponse.ok) {
+          const metricsData = await metricsResponse.json();
+          if (metricsData && metricsData[0]) {
+            pe = metricsData[0].peRatioTTM?.toFixed(2) || 'N/A';
+            pb = metricsData[0].pbRatioTTM?.toFixed(2) || 'N/A';
+            dividendYield = metricsData[0].dividendYieldTTM ? 
+              (metricsData[0].dividendYieldTTM * 100).toFixed(2) + '%' : 'N/A';
+          }
+        }
+        
+        if (ratiosResponse.ok) {
+          const ratiosData = await ratiosResponse.json();
+          if (ratiosData && ratiosData[0]) {
+            if (pe === 'N/A') pe = ratiosData[0].priceEarningsRatioTTM?.toFixed(2) || 'N/A';
+            if (pb === 'N/A') pb = ratiosData[0].priceToBookRatioTTM?.toFixed(2) || 'N/A';
+            if (dividendYield === 'N/A') {
+              dividendYield = ratiosData[0].dividendYieldTTM ? 
+                (ratiosData[0].dividendYieldTTM * 100).toFixed(2) + '%' : 'N/A';
+            }
+          }
+        }
+        
+        debugLog(`${symbol} 메트릭 결과`, { pe, pb, dividendYield });
+        return { pe, pb, dividendYield };
+        
+      } catch (error) {
+        debugLog(`${symbol} 메트릭 에러`, error.message);
         return { pe: 'N/A', pb: 'N/A', dividendYield: 'N/A' };
       }
     }
