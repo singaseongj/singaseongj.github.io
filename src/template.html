@@ -250,8 +250,9 @@
   <section id="marketSnapshot">
     <h2>전일 종가 기준 마켓 스냅샷</h2>
     {{MARKET_TABLE}}
+    <div id="lastUpdated" class="last-updated"></div>
   </section>
-  
+
   <section id="portfolioRecommendations">
     <h2>포트폴리오 추천</h2>
     {{PORTFOLIO_SECTIONS}}
@@ -279,7 +280,7 @@
     }
 
     // 실시간 지수 데이터 로드
-    async function loadMarketData() {
+  async function loadMarketData() {
       const indices = [
         { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
         { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
@@ -331,14 +332,56 @@
       const ts = new Date().toLocaleString('ko-KR');
       document.getElementById('lastUpdated').textContent = ts;
     }
+
+    // 추천 종목 로드
+    async function loadRecommendations() {
+      try {
+        const res = await fetch('recommendations.json?_=' + Date.now());
+        const data = await res.json();
+        const container = document.getElementById('recommendations');
+        if (!container) return;
+        const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
+        const html = [];
+        for (const m of markets) {
+          const info = data[m];
+          if (!info) continue;
+          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+            info.safe.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+            info.aggressive.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+        }
+        container.innerHTML = html.join('');
+      } catch (err) {
+        console.error('추천 로드 실패', err);
+        const container = document.getElementById('recommendations');
+        if (container) container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+      }
+    }
+
+    // 모든 데이터 새로고침
+    function refreshAllData(e) {
+      const button = e ? e.target : document.querySelector('button[onclick*="refreshAllData"]');
+      if (button) {
+        button.disabled = true;
+        button.textContent = '새로고침 중...';
+      }
+      Promise.all([loadMarketData(), loadRecommendations()]).finally(() => {
+        if (button) {
+          button.disabled = false;
+          button.textContent = '데이터 새로고침';
+        }
+      });
+    }
     
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
 
-      // 지수 데이터 즉시 로드 후 5분마다 갱신
-      loadMarketData();
-      setInterval(loadMarketData, 5 * 60 * 1000);
+      // 지수 데이터와 추천 종목을 즉시 로드 후 5분마다 갱신
+      refreshAllData();
+      setInterval(refreshAllData, 5 * 60 * 1000);
       
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
