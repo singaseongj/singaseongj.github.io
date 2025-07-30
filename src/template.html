@@ -295,6 +295,7 @@
       let hadError = false;
       for (const idx of indices) {
         let price = 'N/A';
+        let prevClose = 'N/A';
         let changePct = 'N/A';
 
         try {
@@ -303,8 +304,10 @@
             const { contents } = await res.json();
             const priceMatch = contents.match(/now_value[^>]*>([0-9,.]+)/);
             const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,%]+)/);
+            const prevMatch = contents.match(/전일[^0-9]*?([0-9,.]+)/);
             if (priceMatch) price = priceMatch[1].replace(/,/g, '');
             if (rateMatch) changePct = rateMatch[1].trim();
+            if (prevMatch) prevClose = prevMatch[1].replace(/,/g, '');
           } else if (idx.type === 'yahoo') {
             // Yahoo Finance blocks CORS, so fetch through a proxy
             const yahooUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`;
@@ -316,8 +319,10 @@
               const info = data.quoteResponse.result[0];
               const current = info.regularMarketPrice;
               const changeVal = info.regularMarketChangePercent;
-              if (current != null && changeVal != null) {
+              const prev = info.regularMarketPreviousClose;
+              if (current != null && changeVal != null && prev != null) {
                 price = current.toFixed(2);
+                prevClose = prev.toFixed(2);
                 changePct = (changeVal > 0 ? '+' : '') + changeVal.toFixed(2) + '%';
               }
             }
@@ -329,7 +334,7 @@
 
         const chg = parseFloat(changePct);
         const cls = chg > 0 ? 'positive' : chg < 0 ? 'negative' : 'neutral';
-        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
+        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td>${prevClose}</td><td class="${cls}">${changePct}</td></tr>`);
       }
 
       const tbody = document.getElementById('marketBody');
