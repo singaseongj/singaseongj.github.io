@@ -1,1 +1,46 @@
+<!-- src/template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>데일리 주식 리포트 자동화</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>데일리 주식 리포트 자동화</h1>
+  <p id="currentDate">{{CURRENT_DATE}}</p>
+  <p id="dataDate">{{DATA_DATE}}</p>
+
+  <div id="debugInfo" class="debug" style="display: none;">
+    <h4>디버그 정보:</h4>
+    <div id="debugContent"></div>
+  </div>
+
+  <div id="summary">
+    <p>이 페이지는 매일 국내 및 미국(나스닥, NYSE) 시장을 분석하여 <strong>안정형</strong>과 <strong>공격형</strong> 포트폴리오를 추천합니다.</p>
+    <ul>
+      <li><strong>안정형:</strong> 시가총액이 크고 배당수익률 및 밸류에이션(PER, PBR)이 안정적인 종목</li>
+      <li><strong>공격형:</strong> 최근 주가 모멘텀과 성장성이 높은 종목</li>
+      <li><strong><a href="http://singaseongj.github.io/stocks_ex.html">국내주식 추천근거</a></strong></li>
+    </ul>
+    <button onclick="toggleDebug()">디버그 모드 토글</button>
+    <button onclick="refreshAllData()">데이터 새로고침</button>
+  </div>
+
+  <section id="marketSnapshot">
+    <h2>전일 종가 기준 마켓 스냅샷</h2>
+    {{MARKET_TABLE}}
+  </section>
+
+  <section id="portfolioRecommendations">
+    <h2>포트폴리오 추천</h2>
+    {{PORTFOLIO_SECTIONS}}
+  </section>
+
+  <p class="last-updated">마지막 갱신: {{BUILD_TIMESTAMP}} KST</p>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
 
