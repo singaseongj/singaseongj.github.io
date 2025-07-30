@@ -2,7 +2,8 @@
   "name": "daily-stock-report",
   "version": "1.0.0",
   "scripts": {
-    "build": "node src/build.js"
+    "update": "node scripts/update_recommendations.js",
+    "build": "npm run update && node src/build.js"
   },
   "dependencies": {
   },

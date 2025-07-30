@@ -250,8 +250,9 @@
   <section id="marketSnapshot">
     <h2>전일 종가 기준 마켓 스냅샷</h2>
     {{MARKET_TABLE}}
+    <div id="lastUpdated" class="last-updated"></div>
   </section>
-  
+
   <section id="portfolioRecommendations">
     <h2>포트폴리오 추천</h2>
     {{PORTFOLIO_SECTIONS}}
@@ -279,7 +280,7 @@
     }
 
     // 실시간 지수 데이터 로드
-    async function loadMarketData() {
+  async function loadMarketData() {
       const indices = [
         { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
         { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
@@ -331,14 +332,107 @@
       const ts = new Date().toLocaleString('ko-KR');
       document.getElementById('lastUpdated').textContent = ts;
     }
+
+    // 추천 종목 로드
+    async function loadRecommendations() {
+      const baseEl = document.getElementById('initialRecs');
+      const base = baseEl ? JSON.parse(baseEl.textContent) : null;
+      const defaultData = {
+        KOSPI: { safe: ['삼성전자', '현대차', 'LG화학', 'SK텔레콤', 'POSCO홀딩스'], aggressive: ['카카오', '네이버', '셀트리온', 'HMM', '두산에너빌리티'] },
+        KOSDAQ: { safe: ['셀트리온헬스케어', '에코프로비엠', '카카오게임즈', 'CJ ENM', '스튜디오드래곤'], aggressive: ['제넥신', '펄어비스', '에이치엘비', '알테오젠', '씨젠'] },
+        NASDAQ: { safe: ['Apple', 'Microsoft', 'Amazon', 'Alphabet', 'Meta'], aggressive: ['NVIDIA', 'Tesla', 'AMD', 'Netflix', 'Palantir'] },
+        NYSE: { safe: ['Coca-Cola', 'Johnson & Johnson', 'Procter & Gamble', 'Walmart', "McDonald's"], aggressive: ['Snowflake', 'Shopify', 'Uber', 'Block', 'Coinbase'] }
+      };
+
+      const safe = {
+        KOSPI: (base || defaultData).KOSPI.safe,
+        KOSDAQ: (base || defaultData).KOSDAQ.safe,
+        NASDAQ: (base || defaultData).NASDAQ.safe,
+        NYSE: (base || defaultData).NYSE.safe,
+      };
+
+      const fallbackAggressive = {
+        KOSPI: (base || defaultData).KOSPI.aggressive,
+        KOSDAQ: (base || defaultData).KOSDAQ.aggressive,
+        NASDAQ: (base || defaultData).NASDAQ.aggressive,
+        NYSE: (base || defaultData).NYSE.aggressive,
+      };
+
+      async function fetchTrending(region) {
+        try {
+          const res = await fetch(`https://query1.finance.yahoo.com/v1/finance/trending/${region}`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+          const quotes = data.finance?.result?.[0]?.quotes || [];
+          return quotes.map(q => q.symbol).slice(0, 10);
+        } catch (err) {
+          console.error('Trending fetch failed for', region, err);
+          return [];
+        }
+      }
+
+      const [krTrending, usTrending] = await Promise.all([
+        fetchTrending('KR'),
+        fetchTrending('US')
+      ]);
+
+      const data = {
+        KOSPI: {
+          safe: safe.KOSPI,
+          aggressive: krTrending.slice(0, 5).length === 5 ? krTrending.slice(0, 5) : fallbackAggressive.KOSPI
+        },
+        KOSDAQ: {
+          safe: safe.KOSDAQ,
+          aggressive: krTrending.slice(5, 10).length === 5 ? krTrending.slice(5, 10) : fallbackAggressive.KOSDAQ
+        },
+        NASDAQ: {
+          safe: safe.NASDAQ,
+          aggressive: usTrending.slice(0, 5).length === 5 ? usTrending.slice(0, 5) : fallbackAggressive.NASDAQ
+        },
+        NYSE: {
+          safe: safe.NYSE,
+          aggressive: usTrending.slice(5, 10).length === 5 ? usTrending.slice(5, 10) : fallbackAggressive.NYSE
+        }
+      };
+
+      const container = document.getElementById('recommendations');
+      if (!container) return;
+      const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
+      const html = [];
+      for (const m of markets) {
+        const info = data[m];
+        html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+          info.safe.map(s => `<li>${s}</li>`).join('') +
+          '</ul></div>');
+        html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+          info.aggressive.map(s => `<li>${s}</li>`).join('') +
+          '</ul></div>');
+      }
+      container.innerHTML = html.join('');
+    }
+
+    // 모든 데이터 새로고침
+    function refreshAllData(e) {
+      const button = e ? e.target : document.querySelector('button[onclick*="refreshAllData"]');
+      if (button) {
+        button.disabled = true;
+        button.textContent = '새로고침 중...';
+      }
+      Promise.all([loadMarketData(), loadRecommendations()]).finally(() => {
+        if (button) {
+          button.disabled = false;
+          button.textContent = '데이터 새로고침';
+        }
+      });
+    }
     
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
 
-      // 지수 데이터 즉시 로드 후 5분마다 갱신
-      loadMarketData();
-      setInterval(loadMarketData, 5 * 60 * 1000);
+      // 지수 데이터와 추천 종목을 즉시 로드 후 5분마다 갱신
+      refreshAllData();
+      setInterval(refreshAllData, 5 * 60 * 1000);
       
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {

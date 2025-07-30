@@ -155,53 +155,29 @@ async function fetchMarketIndices() {
   `;
 }
 
-// Fetch portfolio recommendations (구현 예시)
+// Fetch portfolio recommendations from local JSON and build HTML
+function buildRecommendationHTML(data) {
+  const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
+  const sections = [];
+  for (const m of markets) {
+    const info = data[m];
+    if (!info) continue;
+    sections.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+      info.safe.map(s => `<li>${s}</li>`).join('') +
+      '</ul></div>');
+    sections.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+      info.aggressive.map(s => `<li>${s}</li>`).join('') +
+      '</ul></div>');
+  }
+  return sections.join('');
+}
+
 async function fetchPortfolioRecommendations() {
-  return `
-    <div class="portfolio-group">
-      <h3>🇰🇷 KOSPI 추천</h3>
-      <p>대표적인 대형주 중심의 안정적인 포트폴리오</p>
-      <ul>
-        <li><strong>삼성전자</strong> - 반도체 업계 선도, 안정적 배당</li>
-        <li><strong>SK하이닉스</strong> - 메모리 반도체 강자</li>
-        <li><strong>NAVER</strong> - 국내 IT 플랫폼 대표</li>
-        <li><strong>카카오</strong> - 모바일 생태계 구축</li>
-      </ul>
-    </div>
-
-    <div class="portfolio-group">
-      <h3>🚀 KOSDAQ 추천</h3>
-      <p>성장 잠재력이 높은 중소형주 및 테마주</p>
-      <ul>
-        <li><strong>셀트리온</strong> - 바이오 의약품 선도</li>
-        <li><strong>LG에너지솔루션</strong> - 배터리 시장 급성장</li>
-        <li><strong>현대차</strong> - 전기차 전환 수혜</li>
-        <li><strong>포스코홀딩스</strong> - 철강/이차전지 소재</li>
-      </ul>
-    </div>
-
-    <div class="portfolio-group">
-      <h3>🇺🇸 NASDAQ 추천</h3>
-      <p>기술주와 성장주 중심의 포트폴리오</p>
-      <ul>
-        <li><strong>Apple (AAPL)</strong> - 기술주 대장, 안정적 현금흐름</li>
-        <li><strong>Microsoft (MSFT)</strong> - 클라우드 시장 선도</li>
-        <li><strong>Johnson & Johnson (JNJ)</strong> - 헬스케어 디펜시브</li>
-        <li><strong>Procter & Gamble (PG)</strong> - 소비재 안정주</li>
-      </ul>
-    </div>
-
-    <div class="portfolio-group">
-      <h3>🏙️ NYSE 추천</h3>
-      <p>S&P 500 편입 종목 등 미국을 대표하는 기업</p>
-      <ul>
-        <li><strong>NVIDIA (NVDA)</strong> - AI 칩 시장 독점</li>
-        <li><strong>Tesla (TSLA)</strong> - 전기차 및 자율주행</li>
-        <li><strong>Amazon (AMZN)</strong> - 이커머스/클라우드 성장</li>
-        <li><strong>Meta (META)</strong> - 메타버스 및 AI 투자</li>
-      </ul>
-    </div>
-  `;
+  const raw = fs.readFileSync(path.resolve('recommendations.json'), 'utf-8');
+  const data = JSON.parse(raw);
+  const html = buildRecommendationHTML(data);
+  const script = `<script id="initialRecs" type="application/json">${JSON.stringify(data)}</script>`;
+  return `<div id="recommendations">${html}</div>` + script;
 }
 
 // Main build function
