@@ -59,33 +59,6 @@
     #summary li {
       margin: 8px 0;
     }
-
-    #summary a {
-      color: #3498db;
-      text-decoration: none;
-    }
-
-    #summary a:hover {
-      text-decoration: underline;
-    }
-    
-    #summary a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    
-    #summary a:hover {
-      text-decoration: underline;
-    }
-    
-    #summary a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    
-    #summary a:hover {
-      text-decoration: underline;
-    }
     
     #summary a {
       color: #3498db;
@@ -209,6 +182,7 @@
       background-color: #f8f9fa;
       border-radius: 5px;
     }
+    
     .error {
       background-color: #f8d7da;
       color: #721c24;
@@ -222,19 +196,29 @@
       body {
         padding: 10px;
       }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
       table {
         font-size: 14px;
       }
-
+      
       th, td {
         padding: 8px;
         font-size: 13px;
       }
-
+      
       button {
         padding: 8px 12px;
         font-size: 12px;
       }
+      
+      #summary {
+        padding: 15px;
+      }
+      
       #marketSnapshot, #portfolioRecommendations {
         padding: 15px;
       }
@@ -270,64 +254,27 @@
       <thead>
         <tr><th>지수</th><th>전일 종가</th><th>등락(%)</th></tr>
       </thead>
+      <tbody id="marketBody">
         <tr><td>KOSPI</td><td>2,400.00</td><td class="positive">+0.5%</td></tr><tr><td>KOSDAQ</td><td>700.00</td><td class="negative">-0.3%</td></tr><tr><td>NYSE</td><td>N/A</td><td class="neutral">N/A</td></tr><tr><td>NASDAQ</td><td>N/A</td><td class="neutral">N/A</td></tr>
       </tbody>
     </table>
   
+    <div id="lastUpdated" class="last-updated"></div>
   </section>
-  
+
   <section id="portfolioRecommendations">
     <h2>포트폴리오 추천</h2>
-    
-    <div class="portfolio-group">
-      <h3>🇰🇷 KOSPI 추천</h3>
-      <p>대표적인 대형주 중심의 안정적인 포트폴리오</p>
-      <ul>
-        <li><strong>삼성전자</strong> - 반도체 업계 선도, 안정적 배당</li>
-        <li><strong>SK하이닉스</strong> - 메모리 반도체 강자</li>
-        <li><strong>NAVER</strong> - 국내 IT 플랫폼 대표</li>
-        <li><strong>카카오</strong> - 모바일 생태계 구축</li>
-      </ul>
-    </div>
-
-    <div class="portfolio-group">
-      <h3>🚀 KOSDAQ 추천</h3>
-      <p>성장 잠재력이 높은 중소형주 및 테마주</p>
-      <ul>
-        <li><strong>셀트리온</strong> - 바이오 의약품 선도</li>
-        <li><strong>LG에너지솔루션</strong> - 배터리 시장 급성장</li>
-        <li><strong>현대차</strong> - 전기차 전환 수혜</li>
-        <li><strong>포스코홀딩스</strong> - 철강/이차전지 소재</li>
-      </ul>
-    </div>
-
-    <div class="portfolio-group">
-      <h3>🇺🇸 NASDAQ 추천</h3>
-      <p>기술주와 성장주 중심의 포트폴리오</p>
-      <ul>
-        <li><strong>Apple (AAPL)</strong> - 기술주 대장, 안정적 현금흐름</li>
-        <li><strong>Microsoft (MSFT)</strong> - 클라우드 시장 선도</li>
-        <li><strong>Johnson & Johnson (JNJ)</strong> - 헬스케어 디펜시브</li>
-        <li><strong>Procter & Gamble (PG)</strong> - 소비재 안정주</li>
-      </ul>
-    </div>
-
-    <div class="portfolio-group">
-      <h3>🏙️ NYSE 추천</h3>
-      <p>S&P 500 편입 종목 등 미국을 대표하는 기업</p>
-      <ul>
-        <li><strong>NVIDIA (NVDA)</strong> - AI 칩 시장 독점</li>
-        <li><strong>Tesla (TSLA)</strong> - 전기차 및 자율주행</li>
-        <li><strong>Amazon (AMZN)</strong> - 이커머스/클라우드 성장</li>
-        <li><strong>Meta (META)</strong> - 메타버스 및 AI 투자</li>
-      </ul>
-    </div>
-
+    <div id="recommendations"><div class="loading">추천 로딩 중...</div></div>
+  </section>
+  
   <script>
     function toggleDebug() {
       const debugDiv = document.getElementById('debugInfo');
       const isVisible = debugDiv.style.display !== 'none';
       debugDiv.style.display = isVisible ? 'none' : 'block';
+      
+      if (!isVisible) {
+        // 디버그 정보 업데이트
         const debugContent = document.getElementById('debugContent');
         debugContent.innerHTML = `
           <p><strong>현재 시간:</strong> ${new Date().toLocaleString('ko-KR')}</p>
@@ -337,23 +284,12 @@
         `;
       }
     }
-    function refreshAllData(e) {
-      const button = e ? e.target : document.querySelector('button[onclick*="refreshAllData"]');
-      if (button) {
-        button.disabled = true;
-        button.textContent = '새로고침 중...';
-      }
-
-      loadMarketData().finally(() => {
-        if (button) {
-          button.disabled = false;
-          button.textContent = '데이터 새로고침';
-        }
+   
       });
     }
 
     // 실시간 지수 데이터 로드
-    async function loadMarketData() {
+  async function loadMarketData() {
       const indices = [
         { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
         { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
@@ -403,18 +339,58 @@
       }
 
       const ts = new Date().toLocaleString('ko-KR');
-    function refreshAllData() {
-      const button = event.target;
-      button.disabled = true;
-      button.textContent = '새로고침 중...';
+      document.getElementById('lastUpdated').textContent = ts;
     }
 
+    // 추천 종목 로드
+    async function loadRecommendations() {
+      try {
+        const res = await fetch('recommendations.json?_=' + Date.now());
+        const data = await res.json();
+        const container = document.getElementById('recommendations');
+        if (!container) return;
+        const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
+        const html = [];
+        for (const m of markets) {
+          const info = data[m];
+          if (!info) continue;
+          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+            info.safe.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+            info.aggressive.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+        }
+        container.innerHTML = html.join('');
+      } catch (err) {
+        console.error('추천 로드 실패', err);
+        const container = document.getElementById('recommendations');
+        if (container) container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+      }
+    }
+
+    // 모든 데이터 새로고침
+    function refreshAllData(e) {
+      const button = e ? e.target : document.querySelector('button[onclick*="refreshAllData"]');
+      if (button) {
+        button.disabled = true;
+        button.textContent = '새로고침 중...';
+      }
+      Promise.all([loadMarketData(), loadRecommendations()]).finally(() => {
+        if (button) {
+          button.disabled = false;
+          button.textContent = '데이터 새로고침';
+        }
+      });
+    }
+    
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
-      // 지수 데이터 즉시 로드 후 5분마다 갱신
-      loadMarketData();
-      setInterval(loadMarketData, 5 * 60 * 1000);
+
+      // 지수 데이터와 추천 종목을 즉시 로드 후 5분마다 갱신
+      refreshAllData();
+      setInterval(refreshAllData, 5 * 60 * 1000);
       
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
@@ -426,7 +402,8 @@
       if (loadingElements.length > 0) {
         console.log('⏳ 데이터 로딩 중...');
       }
-    });    
+    });
+    
     // 키보드 단축키
     document.addEventListener('keydown', function(e) {
       // Ctrl + D: 디버그 모드 토글
@@ -434,6 +411,8 @@
         e.preventDefault();
         toggleDebug();
       }
+      
+      // Ctrl + R: 데이터 새로고침 (기본 새로고침 대신)
       if (e.ctrlKey && e.key === 'r') {
         e.preventDefault();
         refreshAllData();
