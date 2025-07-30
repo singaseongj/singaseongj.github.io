@@ -2,7 +2,8 @@
   "name": "daily-stock-report",
   "version": "1.0.0",
   "scripts": {
-    "build": "node src/build.js"
+    "build": "node src/build.js",
+    "test": "node tests/apple_association.test.js"
   },
   "dependencies": {
   },
