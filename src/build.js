@@ -1,5 +1,6 @@
 // src/build.js
 import fs from 'fs';
+import fsp from 'fs/promises';
 import path from 'path';
 import { execSync } from 'child_process';
 // use the global fetch available in modern versions of Node
@@ -9,6 +10,18 @@ import { execSync } from 'child_process';
 
 // Load HTML template
 const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
+
+// offline mode for environments without network access
+const OFFLINE = process.env.OFFLINE === '1' || process.argv.includes('--offline');
+let sampleIndices = {};
+if (OFFLINE) {
+  try {
+    sampleIndices = JSON.parse(fs.readFileSync(path.resolve('data/sample_market_data.json'), 'utf-8'));
+    console.log('Using sample market data (offline mode)');
+  } catch (err) {
+    console.warn('Failed to load sample data:', err.message);
+  }
+}
 
 // Format date in Korean
 function formatDateKR(date) {
@@ -56,18 +69,22 @@ function getRecommendationsUpdateTime() {
 }
 
 // 재시도 함수
-async function fetchWithRetry(url, retries = 3) {
+async function fetchWithRetry(url, retries = 3, timeout = 10000) {
   for (let i = 0; i < retries; i++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeout);
     try {
       const response = await fetch(url, {
-        timeout: 10000,
         headers: {
           'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        }
+        },
+        signal: controller.signal
       });
+      clearTimeout(timer);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return await response.json();
     } catch (err) {
+      clearTimeout(timer);
       console.log(`Retry ${i + 1}/${retries} for ${url}: ${err.message}`);
       if (i === retries - 1) throw err;
       await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1))); // 1초, 2초, 3초 대기
@@ -85,6 +102,27 @@ async function fetchMarketIndices() {
   ];
 
   const rows = [];
+  if (OFFLINE) {
+    for (const idx of indices) {
+      const data = sampleIndices[idx.name] || {};
+      const price = data.price || 'N/A';
+      const prevClose = data.prevClose || 'N/A';
+      const changePct = data.changePct || 'N/A';
+      const changeNum = parseFloat(changePct);
+      const cls = changeNum > 0 ? 'positive' : changeNum < 0 ? 'negative' : 'neutral';
+      rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td>${prevClose}</td><td class="${cls}">${changePct}</td></tr>`);
+    }
+    return `
+    <table>
+      <thead>
+        <tr><th>지수</th><th>현재지수</th><th>전일종가</th><th>등락(%)</th></tr>
+      </thead>
+      <tbody id="marketBody">
+        ${rows.join('')}
+      </tbody>
+    </table>
+  `;
+  }
   for (const idx of indices) {
     let price = 'N/A';
     let prevClose = 'N/A';
@@ -213,7 +251,7 @@ async function build() {
     .replace('{{PORTFOLIO_SECTIONS}}', portfolioHTML)
     .replace('{{BUILD_TIMESTAMP}}', now.toISOString().replace('T', ' ').split('.')[0] + ' KST');
 
-  fs.writeFileSync(path.resolve('stocks.html'), result, 'utf-8');
+  await fsp.writeFile(path.resolve('stocks.html'), result, 'utf-8');
   console.log('✅ stocks.html 생성 완료');
   console.log(`📅 생성 시간: ${now.toLocaleString('ko-KR')}`);
 }
