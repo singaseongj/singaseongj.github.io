@@ -146,7 +146,7 @@ async function fetchMarketIndices() {
   return `
     <table>
       <thead>
-        <tr><th>지수</th><th>전일 종가</th><th>등락(%)</th></tr>
+        <tr><th>지수</th><th> 15:30기준 종가</th><th>등락(%)</th></tr>
       </thead>
       <tbody id="marketBody">
         ${rows.join('')}
