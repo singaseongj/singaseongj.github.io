@@ -27,7 +27,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: daily stock report update [skip ci]"
-          file_pattern: index.html
+          file_pattern: stocks.html
 
       - name: GitHub Pages 배포
         # gh-pages 브랜치를 사용 중이라면 branch 지정
