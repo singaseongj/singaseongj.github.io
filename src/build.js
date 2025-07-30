@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
-import { load } from 'cheerio';
+import * as cheerio from 'cheerio';  // 이 부분을 수정
 
 // Load HTML template
 const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
@@ -43,7 +43,8 @@ async function fetchMarketIndices() {
     try {
       const resp = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`);
       const { contents } = await resp.json();
-      const $ = load(contents);
+      const $ = cheerio.load(contents);  // 이 부분도 수정
+      
       const em = $('em#now_value').first();
       const sp = $('span#rate').first();
       if (em.length && sp.length) {
@@ -62,6 +63,7 @@ async function fetchMarketIndices() {
     } catch (err) {
       console.error(`Error fetching ${idx.name}:`, err);
     }
+
     const cls = parseFloat(changePct) > 0 ? 'positive' : parseFloat(changePct) < 0 ? 'negative' : 'neutral';
     rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
   }
