@@ -12,6 +12,7 @@
       padding: 20px;
       line-height: 1.6;
       background-color: #f8f9fa;
+      color: #2c3e50;
     }
     
     h1 {
@@ -19,6 +20,7 @@
       text-align: center;
       border-bottom: 3px solid #3498db;
       padding-bottom: 10px;
+      margin-bottom: 20px;
     }
     
     h2 {
@@ -31,6 +33,7 @@
     h3 {
       color: #2980b9;
       margin-top: 25px;
+      margin-bottom: 15px;
     }
     
     #currentDate, #dataDate {
@@ -56,6 +59,15 @@
     #summary li {
       margin: 8px 0;
     }
+
+    #summary a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    #summary a:hover {
+      text-decoration: underline;
+    }
     
     button {
       background-color: #3498db;
@@ -66,6 +78,7 @@
       cursor: pointer;
       margin: 5px;
       font-size: 14px;
+      transition: background-color 0.3s;
     }
     
     button:hover {
@@ -154,24 +167,49 @@
       font-size: 0.9rem;
       margin-top: 30px;
       font-style: italic;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #f5c6cb;
+      margin: 10px 0;
     }
     
     @media (max-width: 768px) {
       body {
         padding: 10px;
       }
-      
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
       table {
         font-size: 14px;
       }
-      
+
       th, td {
         padding: 8px;
+        font-size: 13px;
       }
-      
+
       button {
         padding: 8px 12px;
         font-size: 12px;
+      }
+
+      #summary {
+        padding: 15px;
+      }
+
+      #marketSnapshot, #portfolioRecommendations {
+        padding: 15px;
       }
     }
   </style>
@@ -229,20 +267,60 @@
   </section>
   
   <p class="last-updated">마지막 갱신: {{BUILD_TIMESTAMP}}</p>
+
+  <p class="error">본 페이지는 투자 자문을 제공하지 않습니다. 모든 투자 판단은 이용자 본인의 책임입니다.</p>
   
   <script>
     function toggleDebug() {
       const debugDiv = document.getElementById('debugInfo');
-      debugDiv.style.display = debugDiv.style.display === 'none' ? 'block' : 'none';
+      const isVisible = debugDiv.style.display !== 'none';
+      debugDiv.style.display = isVisible ? 'none' : 'block';
+
+      if (!isVisible) {
+        const debugContent = document.getElementById('debugContent');
+        debugContent.innerHTML = `
+          <p><strong>현재 시간:</strong> ${new Date().toLocaleString('ko-KR')}</p>
+          <p><strong>사용자 에이전트:</strong> ${navigator.userAgent}</p>
+          <p><strong>화면 크기:</strong> ${window.innerWidth} x ${window.innerHeight}</p>
+          <p><strong>페이지 로드 시간:</strong> ${performance.now().toFixed(2)}ms</p>
+        `;
+      }
     }
-    
+
     function refreshAllData() {
-      alert('데이터 새로고침 기능은 서버 빌드 시에만 작동합니다.');
+      const button = event.target;
+      button.disabled = true;
+      button.textContent = '새로고침 중...';
+
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     }
-    
+
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('페이지 로드 완료');
+      console.log('📊 데일리 주식 리포트 페이지 로드 완료');
+
+      window.addEventListener('error', function(e) {
+        console.error('페이지 에러:', e.error);
+      });
+
+      const loadingElements = document.querySelectorAll('.loading');
+      if (loadingElements.length > 0) {
+        console.log('⏳ 데이터 로딩 중...');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key === 'd') {
+        e.preventDefault();
+        toggleDebug();
+      }
+
+      if (e.ctrlKey && e.key === 'r') {
+        e.preventDefault();
+        refreshAllData();
+      }
     });
   </script>
 </body>
