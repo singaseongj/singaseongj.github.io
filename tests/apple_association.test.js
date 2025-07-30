@@ -1,5 +1,5 @@
-const fs = require('fs');
-const assert = require('assert');
+import fs from 'fs';
+import assert from 'assert';
 
 let data;
 try {
