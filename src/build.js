@@ -1,6 +1,7 @@
 // src/build.js
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 // use the global fetch available in modern versions of Node
 // parsing is done with simple regular expressions to avoid
 // external dependencies which cannot be installed in this
@@ -12,6 +13,20 @@ const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
 // Format date in Korean
 function formatDateKR(date) {
   return date.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+// Format full datetime in Korean (KST)
+function formatDateTimeKR(date) {
+  return date.toLocaleString('ko-KR', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  });
 }
 
 // Calculate last business day (KST 기준)
@@ -27,6 +42,17 @@ function getLastBusinessDay() {
     d.setDate(d.getDate() - 1);
   }
   return d;
+}
+
+// Get the last commit time for recommendations.json
+function getRecommendationsUpdateTime() {
+  try {
+    const iso = execSync('git log -1 --format=%cI -- recommendations.json').toString().trim();
+    return new Date(iso);
+  } catch (err) {
+    console.error('Failed to read update time', err);
+    return new Date();
+  }
 }
 
 // 재시도 함수
@@ -171,7 +197,7 @@ async function fetchPortfolioRecommendations() {
 async function build() {
   console.log('🚀 빌드 시작...');
   const now = new Date();
-  const lastBusiness = getLastBusinessDay();
+  const lastUpdate = getRecommendationsUpdateTime();
 
   console.log('📊 마켓 데이터 수집 중...');
   const [marketTable, portfolioHTML] = await Promise.all([
@@ -182,7 +208,7 @@ async function build() {
   console.log('📝 HTML 템플릿 처리 중...');
   const result = tpl
     .replace('{{CURRENT_DATE}}', formatDateKR(now))
-    .replace('{{DATA_DATE}}', formatDateKR(lastBusiness))
+    .replace('{{DATA_DATE}}', formatDateTimeKR(lastUpdate))
     .replace('{{MARKET_TABLE}}', marketTable)
     .replace('{{PORTFOLIO_SECTIONS}}', portfolioHTML)
     .replace('{{BUILD_TIMESTAMP}}', now.toISOString().replace('T', ' ').split('.')[0] + ' KST');
