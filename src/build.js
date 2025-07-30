@@ -61,6 +61,7 @@ async function fetchMarketIndices() {
   const rows = [];
   for (const idx of indices) {
     let price = 'N/A';
+    let prevClose = 'N/A';
     let changePct = 'N/A';
     
     try {
@@ -74,9 +75,11 @@ async function fetchMarketIndices() {
         // JSDOM을 사용할 수 없는 환경이므로 정규식을 활용해 값 파싱
         const priceMatch = contents.match(/now_value[^>]*>([0-9,.\s]+)</);
         const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,\s%]+)</);
+        const prevMatch = contents.match(/전일[^0-9]*?([0-9,.]+)</);
 
         if (priceMatch) price = priceMatch[1].trim().replace(/,/g, '');
         if (rateMatch) changePct = rateMatch[1].trim();
+        if (prevMatch) prevClose = prevMatch[1].trim().replace(/,/g, '');
 
         console.log(`${idx.name} (parsed): ${price} (${changePct})`);
         
@@ -98,9 +101,10 @@ async function fetchMarketIndices() {
             const result = data.chart.result[0];
             const currentPrice = result.meta.regularMarketPrice;
             const previousClose = result.meta.previousClose;
-            
+
             if (currentPrice && previousClose) {
               price = currentPrice.toFixed(2);
+              prevClose = previousClose.toFixed(2);
               const change = ((currentPrice - previousClose) / previousClose * 100);
               changePct = (change > 0 ? '+' : '') + change.toFixed(2) + '%';
               console.log(`${idx.name} (Yahoo API): ${price} (${changePct})`);
@@ -119,6 +123,7 @@ async function fetchMarketIndices() {
             const current = parseFloat(priceMatch[1]);
             const previous = parseFloat(prevMatch[1]);
             price = current.toFixed(2);
+            prevClose = previous.toFixed(2);
             const change = ((current - previous) / previous * 100);
             changePct = (change > 0 ? '+' : '') + change.toFixed(2) + '%';
             console.log(`${idx.name} (proxy): ${price} (${changePct})`);
@@ -131,22 +136,24 @@ async function fetchMarketIndices() {
       // 더미 데이터라도 표시
       if (idx.name === 'KOSPI') {
         price = '2,400.00';
+        prevClose = '2,390.00';
         changePct = '+0.5%';
       } else if (idx.name === 'KOSDAQ') {
         price = '700.00';
+        prevClose = '702.10';
         changePct = '-0.3%';
       }
     }
 
     const changeNum = parseFloat(changePct);
     const cls = changeNum > 0 ? 'positive' : changeNum < 0 ? 'negative' : 'neutral';
-    rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
+    rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td>${prevClose}</td><td class="${cls}">${changePct}</td></tr>`);
   }
 
   return `
     <table>
       <thead>
-        <tr><th>지수</th><th> 15:30기준 종가</th><th>등락(%)</th></tr>
+        <tr><th>지수</th><th>현재지수</th><th>전일종가</th><th>등락(%)</th></tr>
       </thead>
       <tbody id="marketBody">
         ${rows.join('')}

@@ -2,6 +2,10 @@
 
 This repository contains files used for the Singaseong website.
 
+The build script collects market index data from Naver and Yahoo Finance. It now
+parses the previous closing value for KOSPI and KOSDAQ so the generated
+`stocks.html` page can display those figures alongside the current index value.
+
 ## Running tests
 
 The repository includes a simple Node.js script that verifies the `apple-app-site-association` file. Make sure Node.js is installed and run.

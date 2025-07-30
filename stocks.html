@@ -143,11 +143,6 @@
       font-style: italic;
       padding: 20px;
     }
-
-    .details {
-      color: #7f8c8d;
-      font-size: 0.9em;
-    }
     
     .no-data {
       text-align: center;
@@ -261,10 +256,10 @@
     
     <table>
       <thead>
-        <tr><th>지수</th><th> 15:30기준 종가</th><th>등락(%)</th></tr>
+        <tr><th>지수</th><th>현재지수</th><th>전일종가</th><th>등락(%)</th></tr>
       </thead>
       <tbody id="marketBody">
-        <tr><td>KOSPI</td><td>2,400.00</td><td class="positive">+0.5%</td></tr><tr><td>KOSDAQ</td><td>700.00</td><td class="negative">-0.3%</td></tr><tr><td>NYSE</td><td>N/A</td><td class="neutral">N/A</td></tr><tr><td>NASDAQ</td><td>N/A</td><td class="neutral">N/A</td></tr>
+        <tr><td>KOSPI</td><td>2,400.00</td><td>2,390.00</td><td class="positive">+0.5%</td></tr><tr><td>KOSDAQ</td><td>700.00</td><td>702.10</td><td class="negative">-0.3%</td></tr><tr><td>NYSE</td><td>N/A</td><td>N/A</td><td class="neutral">N/A</td></tr><tr><td>NASDAQ</td><td>N/A</td><td>N/A</td><td class="neutral">N/A</td></tr>
       </tbody>
     </table>
   
@@ -309,6 +304,7 @@
       let hadError = false;
       for (const idx of indices) {
         let price = 'N/A';
+        let prevClose = 'N/A';
         let changePct = 'N/A';
 
         try {
@@ -317,8 +313,10 @@
             const { contents } = await res.json();
             const priceMatch = contents.match(/now_value[^>]*>([0-9,.]+)/);
             const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,%]+)/);
+            const prevMatch = contents.match(/전일[^0-9]*?([0-9,.]+)/);
             if (priceMatch) price = priceMatch[1].replace(/,/g, '');
             if (rateMatch) changePct = rateMatch[1].trim();
+            if (prevMatch) prevClose = prevMatch[1].replace(/,/g, '');
           } else if (idx.type === 'yahoo') {
             // Yahoo Finance blocks CORS, so fetch through a proxy
             const yahooUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`;
@@ -330,8 +328,10 @@
               const info = data.quoteResponse.result[0];
               const current = info.regularMarketPrice;
               const changeVal = info.regularMarketChangePercent;
-              if (current != null && changeVal != null) {
+              const prev = info.regularMarketPreviousClose;
+              if (current != null && changeVal != null && prev != null) {
                 price = current.toFixed(2);
+                prevClose = prev.toFixed(2);
                 changePct = (changeVal > 0 ? '+' : '') + changeVal.toFixed(2) + '%';
               }
             }
@@ -343,7 +343,7 @@
 
         const chg = parseFloat(changePct);
         const cls = chg > 0 ? 'positive' : chg < 0 ? 'negative' : 'neutral';
-        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
+        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td>${prevClose}</td><td class="${cls}">${changePct}</td></tr>`);
       }
 
       const tbody = document.getElementById('marketBody');
@@ -371,29 +371,18 @@
         const data = await res.json();
         const container = document.getElementById('recommendations');
         if (!container) return;
-
         const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
         const html = [];
         for (const m of markets) {
           const info = data[m];
           if (!info) continue;
-
-          const renderItem = item => {
-            if (typeof item === 'string') return `<li>${item}</li>`;
-            const details = [];
-            if (item.sector) details.push(item.sector);
-            if (item.prevClose) details.push(`전일종가: ${item.prevClose}`);
-            const suffix = details.length ? ` <span class="details">(${details.join(', ')})</span>` : '';
-            return `<li>${item.name}${suffix}</li>`;
-          };
-
-          const safeList = info.safe.map(renderItem).join('');
-          const aggressiveList = info.aggressive.map(renderItem).join('');
-
-          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>${safeList}</ul></div>`);
-          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>${aggressiveList}</ul></div>`);
+          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+            info.safe.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+            info.aggressive.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
         }
-
         container.innerHTML = html.join('');
       } catch (err) {
         console.error('추천 로드 실패', err);
