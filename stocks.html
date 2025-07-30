@@ -309,7 +309,11 @@
             if (priceMatch) price = priceMatch[1].replace(/,/g, '');
             if (rateMatch) changePct = rateMatch[1].trim();
           } else if (idx.type === 'yahoo') {
-            const res = await fetch(`https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`);
+            // Use a CORS proxy since Yahoo Finance does not allow cross origin requests
+            const yahooUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`;
+            const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(yahooUrl)}`;
+
+            const res = await fetch(proxy);
             const data = await res.json();
             if (data.quoteResponse && data.quoteResponse.result && data.quoteResponse.result[0]) {
               const info = data.quoteResponse.result[0];
