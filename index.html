@@ -1125,7 +1125,7 @@
 <script>
   (async function() {
     try {
-      const res = await fetch('/visit?page=index');
+      const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=index');
       const data = await res.json();
       document.getElementById('visitCounts').textContent =
         `Visits today: ${data.daily} | Total: ${data.total}`;
