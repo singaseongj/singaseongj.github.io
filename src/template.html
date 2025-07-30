@@ -246,10 +246,15 @@
     <button onclick="toggleDebug()">디버그 모드 토글</button>
     <button onclick="refreshAllData(event)">데이터 새로고침</button>
   </div>
-  
+
+  <div id="disclaimer" role="note">
+    본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.
+  </div>
+
   <section id="marketSnapshot">
     <h2>전일 종가 기준 마켓 스냅샷</h2>
     {{MARKET_TABLE}}
+    <div id="marketError" class="error" style="display:none;" role="alert"></div>
     <div id="lastUpdated" class="last-updated"></div>
   </section>
 
@@ -287,6 +292,7 @@
       ];
 
       const rows = [];
+      let hadError = false;
       for (const idx of indices) {
         let price = 'N/A';
         let changePct = 'N/A';
@@ -318,6 +324,7 @@
           }
         } catch (err) {
           console.error('지수 로드 실패', idx.name, err);
+          hadError = true;
         }
 
         const chg = parseFloat(changePct);
@@ -328,6 +335,15 @@
       const tbody = document.getElementById('marketBody');
       if (tbody) {
         tbody.innerHTML = rows.join('');
+      }
+      const errorDiv = document.getElementById('marketError');
+      if (errorDiv) {
+        if (hadError) {
+          errorDiv.textContent = '마켓 데이터를 불러오지 못했습니다.';
+          errorDiv.style.display = 'block';
+        } else {
+          errorDiv.style.display = 'none';
+        }
       }
 
       const ts = new Date().toLocaleString('ko-KR');

@@ -246,7 +246,11 @@
     <button onclick="toggleDebug()">디버그 모드 토글</button>
     <button onclick="refreshAllData(event)">데이터 새로고침</button>
   </div>
-  
+
+  <div id="disclaimer" role="note">
+    본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.
+  </div>
+
   <section id="marketSnapshot">
     <h2>전일 종가 기준 마켓 스냅샷</h2>
     
@@ -259,6 +263,7 @@
       </tbody>
     </table>
   
+    <div id="marketError" class="error" style="display:none;" role="alert"></div>
     <div id="lastUpdated" class="last-updated"></div>
   </section>
 
@@ -296,6 +301,7 @@
       ];
 
       const rows = [];
+      let hadError = false;
       for (const idx of indices) {
         let price = 'N/A';
         let changePct = 'N/A';
@@ -309,7 +315,7 @@
             if (priceMatch) price = priceMatch[1].replace(/,/g, '');
             if (rateMatch) changePct = rateMatch[1].trim();
           } else if (idx.type === 'yahoo') {
-            // Use a CORS proxy since Yahoo Finance does not allow cross origin requests
+            // Yahoo Finance blocks CORS, so fetch through a proxy
             const yahooUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`;
             const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(yahooUrl)}`;
 
@@ -327,6 +333,7 @@
           }
         } catch (err) {
           console.error('지수 로드 실패', idx.name, err);
+          hadError = true;
         }
 
         const chg = parseFloat(changePct);
@@ -338,21 +345,21 @@
       if (tbody) {
         tbody.innerHTML = rows.join('');
       }
+      const errorDiv = document.getElementById('marketError');
+      if (errorDiv) {
+        if (hadError) {
+          errorDiv.textContent = '마켓 데이터를 불러오지 못했습니다.';
+          errorDiv.style.display = 'block';
+        } else {
+          errorDiv.style.display = 'none';
+        }
+      }
 
       const ts = new Date().toLocaleString('ko-KR');
       document.getElementById('lastUpdated').textContent = ts;
     }
 
     // 추천 종목 로드
-    function makeTable(list) {
-      return '<table><thead><tr><th>종목명</th><th>분야</th><th>전날 종가</th></tr></thead><tbody>' +
-        list.map(item => {
-          const obj = typeof item === 'string' ? { name: item } : item;
-          return `<tr><td>${obj.name}</td><td>${obj.sector ?? 'N/A'}</td><td>${obj.prevClose ?? 'N/A'}</td></tr>`;
-        }).join('') +
-        '</tbody></table>';
-    }
-
     async function loadRecommendations() {
       try {
         const res = await fetch('recommendations.json?_=' + Date.now());
@@ -364,10 +371,12 @@
         for (const m of markets) {
           const info = data[m];
           if (!info) continue;
-          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3>` +
-            makeTable(info.safe) + '</div>');
-          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3>` +
-            makeTable(info.aggressive) + '</div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+            info.safe.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+            info.aggressive.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
         }
         container.innerHTML = html.join('');
       } catch (err) {
