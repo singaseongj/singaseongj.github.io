@@ -309,16 +309,15 @@
             if (priceMatch) price = priceMatch[1].replace(/,/g, '');
             if (rateMatch) changePct = rateMatch[1].trim();
           } else if (idx.type === 'yahoo') {
-            const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`);
+            const res = await fetch(`https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`);
             const data = await res.json();
-            if (data.chart && data.chart.result && data.chart.result[0]) {
-              const result = data.chart.result[0];
-              const current = result.meta.regularMarketPrice;
-              const prev = result.meta.previousClose;
-              if (current && prev) {
+            if (data.quoteResponse && data.quoteResponse.result && data.quoteResponse.result[0]) {
+              const info = data.quoteResponse.result[0];
+              const current = info.regularMarketPrice;
+              const changeVal = info.regularMarketChangePercent;
+              if (current != null && changeVal != null) {
                 price = current.toFixed(2);
-                const change = ((current - prev) / prev * 100);
-                changePct = (change > 0 ? '+' : '') + change.toFixed(2) + '%';
+                changePct = (changeVal > 0 ? '+' : '') + changeVal.toFixed(2) + '%';
               }
             }
           }
