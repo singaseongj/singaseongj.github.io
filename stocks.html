@@ -59,6 +59,33 @@
     #summary li {
       margin: 8px 0;
     }
+
+    #summary a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    #summary a:hover {
+      text-decoration: underline;
+    }
+    
+    #summary a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    
+    #summary a:hover {
+      text-decoration: underline;
+    }
+    
+    #summary a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    
+    #summary a:hover {
+      text-decoration: underline;
+    }
     
     #summary a {
       color: #3498db;
@@ -160,6 +187,17 @@
       padding: 15px;
       margin: 15px 0;
     }
+
+    #disclaimer {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 6px;
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      color: #856404;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
     
     .last-updated {
       text-align: center;
@@ -171,7 +209,6 @@
       background-color: #f8f9fa;
       border-radius: 5px;
     }
-    
     .error {
       background-color: #f8d7da;
       color: #721c24;
@@ -185,29 +222,19 @@
       body {
         padding: 10px;
       }
-      
-      h1 {
-        font-size: 1.5rem;
-      }
-      
       table {
         font-size: 14px;
       }
-      
+
       th, td {
         padding: 8px;
         font-size: 13px;
       }
-      
+
       button {
         padding: 8px 12px;
         font-size: 12px;
       }
-      
-      #summary {
-        padding: 15px;
-      }
-      
       #marketSnapshot, #portfolioRecommendations {
         padding: 15px;
       }
@@ -243,7 +270,6 @@
       <thead>
         <tr><th>지수</th><th>전일 종가</th><th>등락(%)</th></tr>
       </thead>
-      <tbody id="marketBody">
         <tr><td>KOSPI</td><td>2,400.00</td><td class="positive">+0.5%</td></tr><tr><td>KOSDAQ</td><td>700.00</td><td class="negative">-0.3%</td></tr><tr><td>NYSE</td><td>N/A</td><td class="neutral">N/A</td></tr><tr><td>NASDAQ</td><td>N/A</td><td class="neutral">N/A</td></tr>
       </tbody>
     </table>
@@ -296,19 +322,12 @@
         <li><strong>Meta (META)</strong> - 메타버스 및 AI 투자</li>
       </ul>
     </div>
-  
-  </section>
-  
-  <p class="last-updated">마지막 갱신: <span id="lastUpdated">2025-07-30 07:28:02 KST</span></p>
-  
+
   <script>
     function toggleDebug() {
       const debugDiv = document.getElementById('debugInfo');
       const isVisible = debugDiv.style.display !== 'none';
       debugDiv.style.display = isVisible ? 'none' : 'block';
-      
-      if (!isVisible) {
-        // 디버그 정보 업데이트
         const debugContent = document.getElementById('debugContent');
         debugContent.innerHTML = `
           <p><strong>현재 시간:</strong> ${new Date().toLocaleString('ko-KR')}</p>
@@ -318,7 +337,6 @@
         `;
       }
     }
-    
     function refreshAllData(e) {
       const button = e ? e.target : document.querySelector('button[onclick*="refreshAllData"]');
       if (button) {
@@ -385,13 +403,15 @@
       }
 
       const ts = new Date().toLocaleString('ko-KR');
-      document.getElementById('lastUpdated').textContent = ts;
+    function refreshAllData() {
+      const button = event.target;
+      button.disabled = true;
+      button.textContent = '새로고침 중...';
     }
-    
+
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
-
       // 지수 데이터 즉시 로드 후 5분마다 갱신
       loadMarketData();
       setInterval(loadMarketData, 5 * 60 * 1000);
@@ -406,8 +426,7 @@
       if (loadingElements.length > 0) {
         console.log('⏳ 데이터 로딩 중...');
       }
-    });
-    
+    });    
     // 키보드 단축키
     document.addEventListener('keydown', function(e) {
       // Ctrl + D: 디버그 모드 토글
@@ -415,8 +434,6 @@
         e.preventDefault();
         toggleDebug();
       }
-      
-      // Ctrl + R: 데이터 새로고침 (기본 새로고침 대신)
       if (e.ctrlKey && e.key === 'r') {
         e.preventDefault();
         refreshAllData();

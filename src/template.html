@@ -160,6 +160,17 @@
       padding: 15px;
       margin: 15px 0;
     }
+
+    #disclaimer {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 6px;
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      color: #856404;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
     
     .last-updated {
       text-align: center;
@@ -246,8 +257,6 @@
     {{PORTFOLIO_SECTIONS}}
   </section>
   
-  <p class="last-updated">마지막 갱신: <span id="lastUpdated">{{BUILD_TIMESTAMP}}</span></p>
-  
   <script>
     function toggleDebug() {
       const debugDiv = document.getElementById('debugInfo');
@@ -265,19 +274,7 @@
         `;
       }
     }
-    
-    function refreshAllData(e) {
-      const button = e ? e.target : document.querySelector('button[onclick*="refreshAllData"]');
-      if (button) {
-        button.disabled = true;
-        button.textContent = '새로고침 중...';
-      }
-
-      loadMarketData().finally(() => {
-        if (button) {
-          button.disabled = false;
-          button.textContent = '데이터 새로고침';
-        }
+   
       });
     }
 
