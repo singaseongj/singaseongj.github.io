@@ -276,8 +276,6 @@
       }
     }
    
-      });
-    }
 
     // 실시간 지수 데이터 로드
   async function loadMarketData() {
@@ -409,6 +407,29 @@
           '</ul></div>');
       }
       container.innerHTML = html.join('');
+      try {
+        const res = await fetch('recommendations.json?_=' + Date.now());
+        const data = await res.json();
+        const container = document.getElementById('recommendations');
+        if (!container) return;
+        const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
+        const html = [];
+        for (const m of markets) {
+          const info = data[m];
+          if (!info) continue;
+          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+            info.safe.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+            info.aggressive.map(s => `<li>${s}</li>`).join('') +
+            '</ul></div>');
+        }
+        container.innerHTML = html.join('');
+      } catch (err) {
+        console.error('추천 로드 실패', err);
+        const container = document.getElementById('recommendations');
+        if (container) container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+      }
     }
 
     // 모든 데이터 새로고침

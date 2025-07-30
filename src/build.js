@@ -154,7 +154,6 @@ async function fetchMarketIndices() {
     </table>
   `;
 }
-
 // Fetch portfolio recommendations from local JSON and build HTML
 function buildRecommendationHTML(data) {
   const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
@@ -178,6 +177,9 @@ async function fetchPortfolioRecommendations() {
   const html = buildRecommendationHTML(data);
   const script = `<script id="initialRecs" type="application/json">${JSON.stringify(data)}</script>`;
   return `<div id="recommendations">${html}</div>` + script;
+// Fetch portfolio recommendations - placeholder container
+async function fetchPortfolioRecommendations() {
+  return '<div id="recommendations"><div class="loading">추천 로딩 중...</div></div>';
 }
 
 // Main build function
