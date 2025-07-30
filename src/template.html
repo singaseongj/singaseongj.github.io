@@ -225,11 +225,12 @@
   </div>
   
   <div id="summary">
-    <p>이 페이지는 매일 국내 및 미국(나스닥, NYSE) 시장을 분석하여 <strong>안정형</strong>과 <strong>공격형</strong> 포트폴리오를 추천합니다.</p>
+    <p>이 페이지는 KOSPI, KOSDAQ, NASDAQ, NYSE 시장을 분석하여 추천 종목을 제공합니다.</p>
     <ul>
-      <li><strong>안정형:</strong> 시가총액이 크고 배당수익률 및 밸류에이션(PER, PBR)이 안정적인 종목</li>
-      <li><strong>공격형:</strong> 최근 주가 모멘텀과 성장성이 높은 종목</li>
-      <li><strong><a href="http://singaseongj.github.io/stocks_ex.html" target="_blank">국내주식 추천근거</a></strong></li>
+      <li><strong>KOSPI:</strong> 국내 대형 우량주 위주</li>
+      <li><strong>KOSDAQ:</strong> 성장 잠재력 높은 중소형주</li>
+      <li><strong>NASDAQ:</strong> 미국 기술주와 성장주</li>
+      <li><strong>NYSE:</strong> 미국 대표 블루칩 종목</li>
     </ul>
     <button onclick="toggleDebug()">디버그 모드 토글</button>
     <button onclick="refreshAllData()">데이터 새로고침</button>
@@ -245,7 +246,7 @@
     {{PORTFOLIO_SECTIONS}}
   </section>
   
-  <p class="last-updated">마지막 갱신: {{BUILD_TIMESTAMP}}</p>
+  <p class="last-updated">마지막 갱신: <span id="lastUpdated">{{BUILD_TIMESTAMP}}</span></p>
   
   <script>
     function toggleDebug() {
@@ -269,16 +270,74 @@
       const button = event.target;
       button.disabled = true;
       button.textContent = '새로고침 중...';
-      
-      // 실제로는 페이지 새로고침
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
+
+      loadMarketData().finally(() => {
+        button.disabled = false;
+        button.textContent = '데이터 새로고침';
+      });
+    }
+
+    // 실시간 지수 데이터 로드
+    async function loadMarketData() {
+      const indices = [
+        { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
+        { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
+        { name: 'NASDAQ', symbol: '^IXIC', type: 'yahoo' },
+        { name: 'NYSE', symbol: '^NYA', type: 'yahoo' },
+      ];
+
+      const rows = [];
+      for (const idx of indices) {
+        let price = 'N/A';
+        let changePct = 'N/A';
+
+        try {
+          if (idx.type === 'naver') {
+            const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`);
+            const { contents } = await res.json();
+            const priceMatch = contents.match(/now_value[^>]*>([0-9,.]+)/);
+            const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,%]+)/);
+            if (priceMatch) price = priceMatch[1].replace(/,/g, '');
+            if (rateMatch) changePct = rateMatch[1].trim();
+          } else if (idx.type === 'yahoo') {
+            const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${idx.symbol}`);
+            const data = await res.json();
+            if (data.chart && data.chart.result && data.chart.result[0]) {
+              const result = data.chart.result[0];
+              const current = result.meta.regularMarketPrice;
+              const prev = result.meta.previousClose;
+              if (current && prev) {
+                price = current.toFixed(2);
+                const change = ((current - prev) / prev * 100);
+                changePct = (change > 0 ? '+' : '') + change.toFixed(2) + '%';
+              }
+            }
+          }
+        } catch (err) {
+          console.error('지수 로드 실패', idx.name, err);
+        }
+
+        const chg = parseFloat(changePct);
+        const cls = chg > 0 ? 'positive' : chg < 0 ? 'negative' : 'neutral';
+        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
+      }
+
+      const tbody = document.getElementById('marketBody');
+      if (tbody) {
+        tbody.innerHTML = rows.join('');
+      }
+
+      const ts = new Date().toLocaleString('ko-KR');
+      document.getElementById('lastUpdated').textContent = ts;
     }
     
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
+
+      // 지수 데이터 즉시 로드 후 5분마다 갱신
+      loadMarketData();
+      setInterval(loadMarketData, 5 * 60 * 1000);
       
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
