@@ -453,6 +453,19 @@
         refreshAllData();
       }
     });
-  </script>
+</script>
+<div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
+<script>
+  (async function() {
+    try {
+      const res = await fetch('/visit?page=stocks');
+      const data = await res.json();
+      document.getElementById('visitCounts').textContent =
+        `Visits today: ${data.daily} | Total: ${data.total}`;
+    } catch (err) {
+      console.error('Visit count failed', err);
+    }
+  })();
+</script>
 </body>
 </html>
