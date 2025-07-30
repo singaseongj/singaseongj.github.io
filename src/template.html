@@ -368,10 +368,10 @@
           const info = data[m];
           if (!info) continue;
           html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
-            info.safe.map(s => `<li>${s}</li>`).join('') +
+            info.safe.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
             '</ul></div>');
           html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
-            info.aggressive.map(s => `<li>${s}</li>`).join('') +
+            info.aggressive.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
             '</ul></div>');
         }
         container.innerHTML = html.join('');
