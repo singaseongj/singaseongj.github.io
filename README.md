@@ -41,3 +41,15 @@ When network access isn't available, enable offline mode to use
 ```bash
 OFFLINE=1 node src/build.js
 ```
+
+## Visit count server
+
+A small Node.js script records page visits in `visits.json`. Start it before opening
+`index.html` or `stocks.html` so the pages can update the counts:
+
+```bash
+node server.js
+```
+
+The server exposes `/visit?page=index` and `/visit?page=stocks` endpoints and stores
+the daily and total visit numbers separately for each page.
