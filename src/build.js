@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
-import * as cheerio from 'cheerio';  // 이 부분을 수정
+import { JSDOM } from 'jsdom';
 
 // Load HTML template
 const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
@@ -41,30 +41,43 @@ async function fetchMarketIndices() {
     let price = 'N/A';
     let changePct = 'N/A';
     try {
+      console.log(`Fetching data for ${idx.name}...`);
       const resp = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`);
       const { contents } = await resp.json();
-      const $ = cheerio.load(contents);  // 이 부분도 수정
       
-      const em = $('em#now_value').first();
-      const sp = $('span#rate').first();
-      if (em.length && sp.length) {
-        price = em.text().trim().replace(/,/g, '');
-        changePct = sp.text().trim();
+      // JSDOM 사용
+      const dom = new JSDOM(contents);
+      const document = dom.window.document;
+      
+      // 네이버 파이낸스 (KOSPI, KOSDAQ)
+      const em = document.querySelector('em#now_value');
+      const sp = document.querySelector('span#rate');
+      
+      if (em && sp) {
+        price = em.textContent.trim().replace(/,/g, '');
+        changePct = sp.textContent.trim();
+        console.log(`${idx.name}: ${price} (${changePct})`);
       } else {
-        const m = contents.match(/"regularMarketPrice":\{"raw":([\d.]+)/);
-        const p = contents.match(/"regularMarketPreviousClose":\{"raw":([\d.]+)/);
-        if (m && p) {
-          const cur = parseFloat(m[1]);
-          const prev = parseFloat(p[1]);
-          price = cur.toFixed(2);
-          changePct = ((cur - prev) / prev * 100).toFixed(2) + '%';
+        // Yahoo Finance (S&P500, NASDAQ) - JSON 데이터에서 추출
+        const marketPriceMatch = contents.match(/"regularMarketPrice":\{"raw":([\d.]+)/);
+        const prevCloseMatch = contents.match(/"regularMarketPreviousClose":\{"raw":([\d.]+)/);
+        
+        if (marketPriceMatch && prevCloseMatch) {
+          const current = parseFloat(marketPriceMatch[1]);
+          const previous = parseFloat(prevCloseMatch[1]);
+          price = current.toFixed(2);
+          changePct = ((current - previous) / previous * 100).toFixed(2) + '%';
+          console.log(`${idx.name}: ${price} (${changePct})`);
+        } else {
+          console.log(`${idx.name}: 데이터 파싱 실패`);
         }
       }
     } catch (err) {
-      console.error(`Error fetching ${idx.name}:`, err);
+      console.error(`Error fetching ${idx.name}:`, err.message);
     }
 
-    const cls = parseFloat(changePct) > 0 ? 'positive' : parseFloat(changePct) < 0 ? 'negative' : 'neutral';
+    const changeNum = parseFloat(changePct);
+    const cls = changeNum > 0 ? 'positive' : changeNum < 0 ? 'negative' : 'neutral';
     rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
   }
 
@@ -73,20 +86,47 @@ async function fetchMarketIndices() {
 
 // Fetch portfolio recommendations (구현 예시)
 async function fetchPortfolioRecommendations() {
-  // TODO: 실제 로직 포팅
-  return `<div class="no-data"><p>데이터를 불러올 수 없습니다.</p></div>`;
+  // 임시 데모 데이터
+  return `
+    <div class="portfolio-group">
+      <h3>🇰🇷 국내 안정형 (Stable Domestic)</h3>
+      <p>삼성전자, SK하이닉스, NAVER 등 대형주 중심의 안정적인 포트폴리오</p>
+      <div class="no-data"><p>실제 데이터 연동 준비 중입니다.</p></div>
+    </div>
+    
+    <div class="portfolio-group">
+      <h3>🚀 국내 공격형 (Growth Domestic)</h3>
+      <p>성장성이 높은 중소형주 및 테마주 중심</p>
+      <div class="no-data"><p>실제 데이터 연동 준비 중입니다.</p></div>
+    </div>
+    
+    <div class="portfolio-group">
+      <h3>🇺🇸 미국 안정형 (Stable US)</h3>
+      <p>S&P 500 대형주 중심의 배당주 포트폴리오</p>
+      <div class="no-data"><p>실제 데이터 연동 준비 중입니다.</p></div>
+    </div>
+    
+    <div class="portfolio-group">
+      <h3>⚡ 미국 공격형 (Growth US)</h3>
+      <p>NASDAQ 성장주 및 기술주 중심</p>
+      <div class="no-data"><p>실제 데이터 연동 준비 중입니다.</p></div>
+    </div>
+  `;
 }
 
 // Main build function
 async function build() {
+  console.log('🚀 빌드 시작...');
   const now = new Date();
   const lastBusiness = getLastBusinessDay();
 
+  console.log('📊 마켓 데이터 수집 중...');
   const [marketTable, portfolioHTML] = await Promise.all([
     fetchMarketIndices(),
     fetchPortfolioRecommendations(),
   ]);
 
+  console.log('📝 HTML 템플릿 처리 중...');
   const result = tpl
     .replace('{{CURRENT_DATE}}', formatDateKR(now))
     .replace('{{DATA_DATE}}', formatDateKR(lastBusiness))
@@ -96,10 +136,11 @@ async function build() {
 
   fs.writeFileSync(path.resolve('stocks.html'), result, 'utf-8');
   console.log('✅ stocks.html 생성 완료');
+  console.log(`📅 생성 시간: ${now.toLocaleString('ko-KR')}`);
 }
 
 // Run build
 build().catch(err => {
-  console.error(err);
+  console.error('❌ 빌드 실패:', err);
   process.exit(1);
 });
