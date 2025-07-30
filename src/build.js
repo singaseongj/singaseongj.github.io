@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
-import cheerio from 'cheerio';
+import { load } from 'cheerio';
 
 // 1) 템플릿 로드
 const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
