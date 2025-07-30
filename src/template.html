@@ -160,6 +160,17 @@
       padding: 15px;
       margin: 15px 0;
     }
+
+    #disclaimer {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 6px;
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      color: #856404;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
     
     .last-updated {
       text-align: center;
@@ -244,7 +255,16 @@
     <h2>포트폴리오 추천</h2>
     {{PORTFOLIO_SECTIONS}}
   </section>
-  
+
+  <section id="disclaimer">
+    <h2>면책 조항</h2>
+    <p>
+      본 페이지는 투자 참고용 정보를 제공하기 위해 작성되었습니다. 제공
+      되는 데이터의 정확성이나 완전성이 보장되지 않으며, 이를 기반으로
+      한 투자 손실에 대해 제작자는 어떠한 책임도 지지 않습니다.
+    </p>
+  </section>
+
   <p class="last-updated">마지막 갱신: {{BUILD_TIMESTAMP}}</p>
   
   <script>
