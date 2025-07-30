@@ -26,3 +26,18 @@ Run the script with:
 ```bash
 node fetchStockInfo.js
 ```
+
+## Building `stocks.html`
+
+Generate the stock report page using the build script:
+
+```bash
+node src/build.js
+```
+
+When network access isn't available, enable offline mode to use
+`data/sample_market_data.json`:
+
+```bash
+OFFLINE=1 node src/build.js
+```
