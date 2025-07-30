@@ -143,6 +143,11 @@
       font-style: italic;
       padding: 20px;
     }
+
+    .details {
+      color: #7f8c8d;
+      font-size: 0.9em;
+    }
     
     .no-data {
       text-align: center;
@@ -366,18 +371,29 @@
         const data = await res.json();
         const container = document.getElementById('recommendations');
         if (!container) return;
+
         const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
         const html = [];
         for (const m of markets) {
           const info = data[m];
           if (!info) continue;
-          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
-            info.safe.map(s => `<li>${s}</li>`).join('') +
-            '</ul></div>');
-          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
-            info.aggressive.map(s => `<li>${s}</li>`).join('') +
-            '</ul></div>');
+
+          const renderItem = item => {
+            if (typeof item === 'string') return `<li>${item}</li>`;
+            const details = [];
+            if (item.sector) details.push(item.sector);
+            if (item.prevClose) details.push(`전일종가: ${item.prevClose}`);
+            const suffix = details.length ? ` <span class="details">(${details.join(', ')})</span>` : '';
+            return `<li>${item.name}${suffix}</li>`;
+          };
+
+          const safeList = info.safe.map(renderItem).join('');
+          const aggressiveList = info.aggressive.map(renderItem).join('');
+
+          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>${safeList}</ul></div>`);
+          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>${aggressiveList}</ul></div>`);
         }
+
         container.innerHTML = html.join('');
       } catch (err) {
         console.error('추천 로드 실패', err);

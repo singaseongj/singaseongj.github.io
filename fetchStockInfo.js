@@ -1,18 +1,63 @@
 import fs from 'fs/promises';
 
-const API_KEY = 'VQ7n0DBO8ssJTC6%2BKhDQujhh%2FU0sft03wYA7N81rQmCd7gnLWhJBVXL8oYSJqqIfEgFllrUsTJJ0NNVhKMoNzQ%3D%3D';
-const BASE_URL = 'https://apis.data.go.kr/1160100/service/GetKrxListedInfoService/getItemInfo';
+// Mapping of stock names to Yahoo Finance tickers
+const TICKER_MAP = {
+  '삼성전자': '005930.KS',
+  '현대차': '005380.KS',
+  'LG화학': '051910.KS',
+  'SK텔레콤': '017670.KS',
+  'POSCO홀딩스': '005490.KS',
+  '카카오': '035720.KS',
+  '네이버': '035420.KS',
+  '셀트리온': '068270.KS',
+  'HMM': '011200.KS',
+  '두산에너빌리티': '034020.KS',
+  '셀트리온헬스케어': '091990.KQ',
+  '에코프로비엠': '247540.KQ',
+  '카카오게임즈': '293490.KQ',
+  'CJ ENM': '035760.KQ',
+  '스튜디오드래곤': '253450.KQ',
+  '제넥신': '095700.KQ',
+  '펄어비스': '263750.KQ',
+  '에이치엘비': '028300.KQ',
+  '알테오젠': '196170.KQ',
+  '씨젠': '096530.KQ',
+  'Apple': 'AAPL',
+  'Microsoft': 'MSFT',
+  'Amazon': 'AMZN',
+  'Alphabet': 'GOOGL',
+  'Meta': 'META',
+  'NVIDIA': 'NVDA',
+  'Tesla': 'TSLA',
+  'AMD': 'AMD',
+  'Netflix': 'NFLX',
+  'Palantir': 'PLTR',
+  'Coca-Cola': 'KO',
+  'Johnson & Johnson': 'JNJ',
+  'Procter & Gamble': 'PG',
+  'Walmart': 'WMT',
+  "McDonald's": 'MCD',
+  'Snowflake': 'SNOW',
+  'Shopify': 'SHOP',
+  'Uber': 'UBER',
+  'Block': 'SQ',
+  'Coinbase': 'COIN'
+};
 
 async function fetchInfo(name) {
-  const url = `${BASE_URL}?serviceKey=${API_KEY}&itmsNm=${encodeURIComponent(name)}&resultType=json`;
+  const ticker = TICKER_MAP[name];
+  if (!ticker) {
+    throw new Error('Ticker not found');
+  }
+  const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(ticker)}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
-  const item = data?.response?.body?.items?.item?.[0];
+  const item = data?.quoteResponse?.result?.[0];
   if (!item) throw new Error('No data');
   return {
-    sector: item.sector || item.industClsNm || null,
-    prevClose: item.clpr || item.mkp || null,
+    sector: item.sector || null,
+    prevClose: item.regularMarketPreviousClose || null,
   };
 }
 
