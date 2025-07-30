@@ -14,12 +14,16 @@ function formatDateKR(date) {
 
 // Calculate last business day (KST 기준)
 function getLastBusinessDay() {
-  const today = new Date();
-  let d = new Date(today);
-  // KST 16시 이전은 전날
-  if (d.getHours() < 16) d.setDate(d.getDate() - 1);
-  // 주말 제외
-  while ([0, 6].includes(d.getDay())) d.setDate(d.getDate() - 1);
+  const now = new Date();
+  let d = new Date(now);
+  // KST 기준 16시 이전이면 전날
+  if (now.getHours() < 16) {
+    d.setDate(d.getDate() - 1);
+  }
+  // 주말 제외 (일요일=0, 토요일=6)
+  while (d.getDay() === 0 || d.getDay() === 6) {
+    d.setDate(d.getDate() - 1);
+  }
   return d;
 }
 
@@ -29,7 +33,7 @@ async function fetchMarketIndices() {
     { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI' },
     { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ' },
     { name: 'S&P500', url: 'https://finance.yahoo.com/quote/%5EGSPC' },
-    { name: 'NASDAQ', url: 'https://finance.yahoo.com/quote/%5EIXIC' }
+    { name: 'NASDAQ', url: 'https://finance.yahoo.com/quote/%5EIXIC' },
   ];
 
   const rows = [];
@@ -55,8 +59,8 @@ async function fetchMarketIndices() {
           changePct = ((cur - prev) / prev * 100).toFixed(2) + '%';
         }
       }
-    } catch (e) {
-      console.error(`Error fetching ${idx.name}:`, e);
+    } catch (err) {
+      console.error(`Error fetching ${idx.name}:`, err);
     }
     const cls = parseFloat(changePct) > 0 ? 'positive' : parseFloat(changePct) < 0 ? 'negative' : 'neutral';
     rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
@@ -71,13 +75,14 @@ async function fetchPortfolioRecommendations() {
   return `<div class="no-data"><p>데이터를 불러올 수 없습니다.</p></div>`;
 }
 
-// Main build function\ async function build() {
+// Main build function
+async function build() {
   const now = new Date();
   const lastBusiness = getLastBusinessDay();
 
   const [marketTable, portfolioHTML] = await Promise.all([
     fetchMarketIndices(),
-    fetchPortfolioRecommendations()
+    fetchPortfolioRecommendations(),
   ]);
 
   const result = tpl
