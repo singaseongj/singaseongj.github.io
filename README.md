@@ -42,14 +42,17 @@ When network access isn't available, enable offline mode to use
 OFFLINE=1 node src/build.js
 ```
 
-## Visit count server
+## Visit counting
 
-A small Node.js script records page visits in `visits.json`. Start it before opening
-`index.html` or `stocks.html` so the pages can update the counts:
+Page visits are tracked via a Google Apps Script. Send a request with the
+`page` parameter to update and retrieve the visit totals:
 
 ```bash
-node server.js
+# Visit index.html
+curl 'https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=index'
+
+# Visit stocks.html
+curl 'https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks'
 ```
 
-The server exposes `/visit?page=index` and `/visit?page=stocks` endpoints and stores
-the daily and total visit numbers separately for each page.
+The script responds with JSON containing the `daily` and `total` fields.
