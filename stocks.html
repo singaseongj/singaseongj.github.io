@@ -258,7 +258,7 @@
       <thead>
         <tr><th>지수</th><th>현재지수</th><th>전일종가</th><th>등락(%)</th></tr>
       </thead>
-      <tbody id="marketBody" aria-live="polite">
+      <tbody id="marketBody">
         <tr><td>KOSPI</td><td>2,400.00</td><td>2,390.00</td><td class="positive">+0.5%</td></tr><tr><td>KOSDAQ</td><td>700.00</td><td>702.10</td><td class="negative">-0.3%</td></tr><tr><td>NYSE</td><td>N/A</td><td>N/A</td><td class="neutral">N/A</td></tr><tr><td>NASDAQ</td><td>N/A</td><td>N/A</td><td class="neutral">N/A</td></tr>
       </tbody>
     </table>
@@ -269,7 +269,7 @@
 
   <section id="portfolioRecommendations">
     <h2>포트폴리오 추천</h2>
-    <div id="recommendations" aria-live="polite"><div class="loading">추천 로딩 중...</div></div>
+    <div id="recommendations"><div class="loading">추천 로딩 중...</div></div>
   </section>
   
   <script>
@@ -409,11 +409,6 @@
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
-
-      const dateEl = document.getElementById('currentDate');
-      if (dateEl) {
-        dateEl.textContent = '오늘: ' + new Date().toLocaleDateString('ko-KR');
-      }
 
       // 지수 데이터와 추천 종목을 즉시 로드 후 5분마다 갱신
       refreshAllData();
