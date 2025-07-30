@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>데일리 주식 리포트 자동화</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #2c3e50;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      color: #34495e;
+      border-left: 4px solid #3498db;
+      padding-left: 15px;
+      margin-top: 30px;
+    }
+    
+    h3 {
+      color: #2980b9;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    
+    #currentDate, #dataDate {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      margin: 10px 0;
+    }
+    
+    #summary {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    
+    #summary ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    
+    #summary li {
+      margin: 8px 0;
+    }
+
+    #summary a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    #summary a:hover {
+      text-decoration: underline;
+    }
+    
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+    
+    #marketSnapshot, #portfolioRecommendations {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f8f9fa;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    
+    tr:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .positive {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    
+    .negative {
+      color: #3498db;
+      font-weight: bold;
+    }
+    
+    .neutral {
+      color: #7f8c8d;
+    }
+    
+    .portfolio-group {
+      margin: 25px 0;
+      padding: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      background-color: #fdfdfd;
+    }
+    
+    .loading {
+      text-align: center;
+      color: #7f8c8d;
+      font-style: italic;
+      padding: 20px;
+    }
+    
+    .no-data {
+      text-align: center;
+      color: #e74c3c;
+      padding: 20px;
+      background-color: #fdf2f2;
+      border-radius: 6px;
+      border: 1px solid #f5c6cb;
+    }
+    
+    .debug {
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 6px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    #disclaimer {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 6px;
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      color: #856404;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    
+    .last-updated {
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      margin-top: 30px;
+      font-style: italic;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #f5c6cb;
+      margin: 10px 0;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th, td {
+        padding: 8px;
+        font-size: 13px;
+      }
+
+      button {
+        padding: 8px 12px;
+        font-size: 12px;
+      }
+
+      #summary {
+        padding: 15px;
+      }
+
+      #marketSnapshot, #portfolioRecommendations {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>데일리 주식 리포트 자동화</h1>
+  <p id="currentDate">{{CURRENT_DATE}}</p>
+  <p id="dataDate">데이터 기준일: {{DATA_DATE}}</p>
+  
+  <div id="debugInfo" class="debug" style="display: none;">
+    <h4>디버그 정보:</h4>
+    <div id="debugContent"></div>
+  </div>
+  
+  <div id="summary">
+    <p>이 페이지는 매일 국내 및 미국(나스닥, NYSE) 시장을 분석하여 <strong>안정형</strong>과 <strong>공격형</strong> 포트폴리오를 추천합니다.</p>
+    <ul>
+      <li><strong>안정형:</strong> 시가총액이 크고 배당수익률 및 밸류에이션(PER, PBR)이 안정적인 종목</li>
+      <li><strong>공격형:</strong> 최근 주가 모멘텀과 성장성이 높은 종목</li>
+      <li><strong><a href="http://singaseongj.github.io/stocks_ex.html">국내주식 추천근거</a></strong></li>
+    </ul>
+    <button onclick="toggleDebug()">디버그 모드 토글</button>
+    <button onclick="refreshAllData()">데이터 새로고침</button>
+  </div>
+  
+  <section id="marketSnapshot">
+    <h2>전일 종가 기준 마켓 스냅샷</h2>
+    {{MARKET_TABLE}}
+  </section>
+  
+  <section id="portfolioRecommendations">
+    <h2>포트폴리오 추천</h2>
+    
+    <div class="portfolio-group">
+      <h3>🇰🇷 국내 안정형 (Stable Domestic)</h3>
+      <div class="loading">로딩 중...</div>
+    </div>
+    
+    <div class="portfolio-group">
+      <h3>🚀 국내 공격형 (Growth Domestic)</h3>
+      <div class="loading">로딩 중...</div>
+    </div>
+    
+    <div class="portfolio-group">
+      <h3>🇺🇸 미국 안정형 (Stable US)</h3>
+      <div class="loading">로딩 중...</div>
+    </div>
+    
+    <div class="portfolio-group">
+      <h3>⚡ 미국 공격형 (Growth US)</h3>
+      <div class="loading">로딩 중...</div>
+    </div>
+    
+    {{PORTFOLIO_SECTIONS}}
+  </section>
+
+  <section id="disclaimer">
+    <h2>면책 조항</h2>
+    <p>
+      본 페이지는 투자 참고용 정보를 제공하기 위해 작성되었습니다. 제공
+      되는 데이터의 정확성이나 완전성이 보장되지 않으며, 이를 기반으로
+      한 투자 손실에 대해 제작자는 어떠한 책임도 지지 않습니다.
+    </p>
+  </section>
+
+  <p class="last-updated">마지막 갱신: {{BUILD_TIMESTAMP}}</p>
+
+  <p class="error">본 페이지는 투자 자문을 제공하지 않습니다. 모든 투자 판단은 이용자 본인의 책임입니다.</p>
+  
+  <script>
+    function toggleDebug() {
+      const debugDiv = document.getElementById('debugInfo');
+      const isVisible = debugDiv.style.display !== 'none';
+      debugDiv.style.display = isVisible ? 'none' : 'block';
+
+      if (!isVisible) {
+        const debugContent = document.getElementById('debugContent');
+        debugContent.innerHTML = `
+          <p><strong>현재 시간:</strong> ${new Date().toLocaleString('ko-KR')}</p>
+          <p><strong>사용자 에이전트:</strong> ${navigator.userAgent}</p>
+          <p><strong>화면 크기:</strong> ${window.innerWidth} x ${window.innerHeight}</p>
+          <p><strong>페이지 로드 시간:</strong> ${performance.now().toFixed(2)}ms</p>
+        `;
+      }
+    }
+
+    function refreshAllData() {
+      const button = event.target;
+      button.disabled = true;
+      button.textContent = '새로고침 중...';
+
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    }
+
+    // 페이지 로드 시 실행
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('📊 데일리 주식 리포트 페이지 로드 완료');
+
+      window.addEventListener('error', function(e) {
+        console.error('페이지 에러:', e.error);
+      });
+
+      const loadingElements = document.querySelectorAll('.loading');
+      if (loadingElements.length > 0) {
+        console.log('⏳ 데이터 로딩 중...');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key === 'd') {
+        e.preventDefault();
+        toggleDebug();
+      }
+
+      if (e.ctrlKey && e.key === 'r') {
+        e.preventDefault();
+        refreshAllData();
+      }
+    });
+  </script>
+</body>
+</html>
