@@ -12,3 +12,13 @@ node tests/apple_association.test.js
 ```
 
 If the file is valid you will see `All tests passed`.
+
+## Updating recommendation data
+
+`fetchStockInfo.js` fetches sector and previous close information from the Yahoo Finance API and stores the result in `recommendations.json`.
+
+Run the script with:
+
+```bash
+node fetchStockInfo.js
+```
