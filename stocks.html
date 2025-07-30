@@ -344,6 +344,15 @@
     }
 
     // 추천 종목 로드
+    function makeTable(list) {
+      return '<table><thead><tr><th>종목명</th><th>분야</th><th>전날 종가</th></tr></thead><tbody>' +
+        list.map(item => {
+          const obj = typeof item === 'string' ? { name: item } : item;
+          return `<tr><td>${obj.name}</td><td>${obj.sector ?? 'N/A'}</td><td>${obj.prevClose ?? 'N/A'}</td></tr>`;
+        }).join('') +
+        '</tbody></table>';
+    }
+
     async function loadRecommendations() {
       try {
         const res = await fetch('recommendations.json?_=' + Date.now());
@@ -355,12 +364,10 @@
         for (const m of markets) {
           const info = data[m];
           if (!info) continue;
-          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
-            info.safe.map(s => `<li>${s}</li>`).join('') +
-            '</ul></div>');
-          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
-            info.aggressive.map(s => `<li>${s}</li>`).join('') +
-            '</ul></div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3>` +
+            makeTable(info.safe) + '</div>');
+          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3>` +
+            makeTable(info.aggressive) + '</div>');
         }
         container.innerHTML = html.join('');
       } catch (err) {
