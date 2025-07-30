@@ -1,8 +1,10 @@
 // src/build.js
 import fs from 'fs';
 import path from 'path';
-import fetch from 'node-fetch';
-import { JSDOM } from 'jsdom';
+// use the global fetch available in modern versions of Node
+// parsing is done with simple regular expressions to avoid
+// external dependencies which cannot be installed in this
+// environment
 
 // Load HTML template
 const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
@@ -52,7 +54,7 @@ async function fetchMarketIndices() {
   const indices = [
     { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
     { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
-    { name: 'S&P500', url: 'https://finance.yahoo.com/quote/%5EGSPC', type: 'yahoo' },
+    { name: 'NYSE', url: 'https://finance.yahoo.com/quote/%5ENYA', type: 'yahoo' },
     { name: 'NASDAQ', url: 'https://finance.yahoo.com/quote/%5EIXIC', type: 'yahoo' },
   ];
 
@@ -68,45 +70,20 @@ async function fetchMarketIndices() {
         // 네이버 파이낸스 직접 호출 (CORS 우회)
         const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`;
         const { contents } = await fetchWithRetry(proxyUrl);
-        
-        const dom = new JSDOM(contents);
-        const document = dom.window.document;
-        
-        // 여러 가능한 선택자 시도
-        const priceSelectors = ['em#now_value', '.num', '.blind'];
-        const changeSelectors = ['span#rate', '.num2', '.change_rate'];
-        
-        let priceEl = null;
-        let changeEl = null;
-        
-        for (const selector of priceSelectors) {
-          priceEl = document.querySelector(selector);
-          if (priceEl && priceEl.textContent.trim()) break;
-        }
-        
-        for (const selector of changeSelectors) {
-          changeEl = document.querySelector(selector);
-          if (changeEl && changeEl.textContent.trim()) break;
-        }
-        
-        if (priceEl && changeEl) {
-          price = priceEl.textContent.trim().replace(/,/g, '');
-          changePct = changeEl.textContent.trim();
-          console.log(`${idx.name}: ${price} (${changePct})`);
-        } else {
-          // HTML에서 숫자 패턴 직접 추출
-          const priceMatch = contents.match(/now_value[^>]*>([0-9,.\s]+)</);
-          const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,\s%]+)</);
-          
-          if (priceMatch) price = priceMatch[1].trim().replace(/,/g, '');
-          if (rateMatch) changePct = rateMatch[1].trim();
-          
-          console.log(`${idx.name} (regex): ${price} (${changePct})`);
-        }
+
+        // JSDOM을 사용할 수 없는 환경이므로 정규식을 활용해 값 파싱
+        const priceMatch = contents.match(/now_value[^>]*>([0-9,.\s]+)</);
+        const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,\s%]+)</);
+
+        if (priceMatch) price = priceMatch[1].trim().replace(/,/g, '');
+        if (rateMatch) changePct = rateMatch[1].trim();
+
+        console.log(`${idx.name} (parsed): ${price} (${changePct})`);
         
       } else if (idx.type === 'yahoo') {
         // Yahoo Finance API 직접 호출
-        const symbol = idx.name === 'S&P500' ? '^GSPC' : '^IXIC';
+        // 각 지수에 대응하는 야후 파이낸스 심볼 지정
+        const symbol = idx.name === 'NYSE' ? '^NYA' : '^IXIC';
         const yahooUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`;
         
         try {
@@ -182,8 +159,8 @@ async function fetchMarketIndices() {
 async function fetchPortfolioRecommendations() {
   return `
     <div class="portfolio-group">
-      <h3>🇰🇷 국내 안정형 (Stable Domestic)</h3>
-      <p>시가총액 상위 대형주 중심의 안정적인 포트폴리오</p>
+      <h3>🇰🇷 KOSPI 추천</h3>
+      <p>대표적인 대형주 중심의 안정적인 포트폴리오</p>
       <ul>
         <li><strong>삼성전자</strong> - 반도체 업계 선도, 안정적 배당</li>
         <li><strong>SK하이닉스</strong> - 메모리 반도체 강자</li>
@@ -191,9 +168,9 @@ async function fetchPortfolioRecommendations() {
         <li><strong>카카오</strong> - 모바일 생태계 구축</li>
       </ul>
     </div>
-    
+
     <div class="portfolio-group">
-      <h3>🚀 국내 공격형 (Growth Domestic)</h3>
+      <h3>🚀 KOSDAQ 추천</h3>
       <p>성장 잠재력이 높은 중소형주 및 테마주</p>
       <ul>
         <li><strong>셀트리온</strong> - 바이오 의약품 선도</li>
@@ -202,10 +179,10 @@ async function fetchPortfolioRecommendations() {
         <li><strong>포스코홀딩스</strong> - 철강/이차전지 소재</li>
       </ul>
     </div>
-    
+
     <div class="portfolio-group">
-      <h3>🇺🇸 미국 안정형 (Stable US)</h3>
-      <p>S&P 500 대형주 중심의 배당 중시 포트폴리오</p>
+      <h3>🇺🇸 NASDAQ 추천</h3>
+      <p>기술주와 성장주 중심의 포트폴리오</p>
       <ul>
         <li><strong>Apple (AAPL)</strong> - 기술주 대장, 안정적 현금흐름</li>
         <li><strong>Microsoft (MSFT)</strong> - 클라우드 시장 선도</li>
@@ -213,10 +190,10 @@ async function fetchPortfolioRecommendations() {
         <li><strong>Procter & Gamble (PG)</strong> - 소비재 안정주</li>
       </ul>
     </div>
-    
+
     <div class="portfolio-group">
-      <h3>⚡ 미국 공격형 (Growth US)</h3>
-      <p>NASDAQ 성장주 및 혁신 기술주 중심</p>
+      <h3>🏙️ NYSE 추천</h3>
+      <p>S&P 500 편입 종목 등 미국을 대표하는 기업</p>
       <ul>
         <li><strong>NVIDIA (NVDA)</strong> - AI 칩 시장 독점</li>
         <li><strong>Tesla (TSLA)</strong> - 전기차 및 자율주행</li>
