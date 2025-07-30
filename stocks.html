@@ -369,6 +369,11 @@
       try {
         const res = await fetch('recommendations.json?_=' + Date.now());
         const data = await res.json();
+        const dateElem = document.getElementById('dataDate');
+        if (dateElem && data.lastUpdated) {
+          const dt = new Date(data.lastUpdated);
+          dateElem.textContent = '자료기준시각: ' + dt.toLocaleString('ko-KR');
+        }
         const container = document.getElementById('recommendations');
         if (!container) return;
         const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
@@ -409,6 +414,14 @@
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
+
+      // 오늘 날짜 갱신
+      const curr = document.getElementById('currentDate');
+      if (curr) {
+        curr.textContent = '오늘: ' + new Date().toLocaleDateString('ko-KR', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        });
+      }
 
       // 지수 데이터와 추천 종목을 즉시 로드 후 5분마다 갱신
       refreshAllData();
