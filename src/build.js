@@ -58,7 +58,7 @@ function getLastBusinessDay() {
 
 // URLs of the recommendation data
 const SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
+  'https://script.google.com/macros/s/AKfycbzUM6vcUH8a6sw7pKFxtnABL3kdy0HBxFyo-dmV-Zaw8dg8q45CbQ5xk0CJUhkHV9jA-w/exec';
 const DRIVE_URL =
   'https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ';
 
