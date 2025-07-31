@@ -282,11 +282,12 @@
         let pieChart = null;
         let barChart = null;
 
-        // Load data from JSON file
+        // Load data from Google Apps Script
         async function loadData() {
             try {
-                const response = await window.fs.readFile('recommendations.json', { encoding: 'utf8' });
-                portfolioData = JSON.parse(response);
+                const response = await fetch('https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec');
+                if (!response.ok) throw new Error('Network response was not ok');
+                portfolioData = await response.json();
                 initializeDashboard();
             } catch (error) {
                 console.error('Error loading data:', error);
@@ -639,6 +640,18 @@
 
         // Initialize on load
         loadData();
-    </script>
+</script>
+<div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
+<script>
+  (async function() {
+    try {
+      const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks');
+      const data = await res.json();
+      document.getElementById('visitCounts').textContent = `Visits today: ${data.daily} | Total: ${data.total}`;
+    } catch (err) {
+      console.error('Visit count failed', err);
+    }
+  })();
+</script>
 </body>
 </html>
