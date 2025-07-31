@@ -1,60 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stock Portfolio</title>
+  <meta charset="utf-8">
+  <title>Stock Recommendations</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f8f9fa; line-height: 1.6; }
-    h1 { text-align: center; }
-    section { margin-top: 30px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ddd; padding: 8px; }
-    th { background: #eee; }
-    .visit { text-align: center; margin-top: 20px; color: #555; font-size: 0.9rem; }
+    body { font-family: sans-serif; margin: 2rem; }
+    h1, h2, h3 { margin-top: 1.5rem; }
+    ul { list-style: disc inside; padding-left: 0; }
+    li { margin: 0.3rem 0; }
+    .error { color: red; }
   </style>
 </head>
 <body>
-<h1>Stock Portfolio Recommendations</h1>
-<div id="content">Loading...</div>
-<div id="visit" class="visit"></div>
-<script>
-async function loadData() {
-  try {
-    const res = await fetch('recommendations.json');
-    const data = await res.json();
-    const markets = ['KOSPI','KOSDAQ','NASDAQ','NYSE'];
-    let html = '';
-    for (const m of markets) {
-      const info = data[m];
-      if (!info) continue;
-      html += `<section><h2>${m}</h2>`;
-      html += '<table><tr><th colspan="2">Safe</th></tr>';
-      info.safe.forEach(item => { html += `<tr><td>${item.name}</td><td>${item.sector ?? ''}</td></tr>`; });
-      html += '<tr><th colspan="2">Aggressive</th></tr>';
-      info.aggressive.forEach(item => { html += `<tr><td>${item.name}</td><td>${item.sector ?? ''}</td></tr>`; });
-      html += '</table></section>';
+  <h1>Live Stock Recommendations</h1>
+  <div id="status">Loading…</div>
+  <div id="content"></div>
+
+  <script>
+    // 1) Your Web App endpoint
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
+
+    // 2) Fetch the JSON and call render()
+    async function fetchRecs() {
+      const statusEl = document.getElementById('status');
+      try {
+        const url = ENDPOINT + '?_=' + Date.now();   // cache-buster
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        statusEl.textContent = '';                  // clear "Loading…"
+        render(data);
+      } catch (err) {
+        statusEl.textContent = 'Error loading data';
+        statusEl.classList.add('error');
+        console.error(err);
+      }
     }
-    document.getElementById('content').innerHTML = html;
-  } catch (err) {
-    document.getElementById('content').textContent = 'Failed to load data.';
-  }
-}
 
-async function loadVisits() {
-  try {
-    const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks');
-    const data = await res.json();
-    document.getElementById('visit').textContent = `Visits today: ${data.daily} | Total: ${data.total}`;
-  } catch (err) {
-    console.error('Visit count failed', err);
-  }
-}
+    // 3) Render the fetched data into the page
+    function render(data) {
+      const container = document.getElementById('content');
+      container.innerHTML = `<p><em>Last updated:</em> ${new Date(data.lastUpdated).toLocaleString()}</p>`;
 
-window.addEventListener('DOMContentLoaded', () => {
-  loadData();
-  loadVisits();
-});
-</script>
+      ['KOSPI','KOSDAQ','NASDAQ','NYSE'].forEach(market => {
+        if (!data[market]) return;
+        const sec = document.createElement('section');
+        sec.innerHTML = `<h2>${market}</h2>`;
+
+        ['safe','aggressive'].forEach(bucket => {
+          const list = document.createElement('ul');
+          const header = document.createElement('h3');
+          header.textContent = bucket.toUpperCase();
+          sec.appendChild(header);
+
+          (data[market][bucket] || []).forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} — ${item.sector || 'N/A'} @ ${item.prevClose ?? '–'}`;
+            list.appendChild(li);
+          });
+
+          sec.appendChild(list);
+        });
+
+        container.appendChild(sec);
+      });
+    }
+
+    // 4) Run on page load
+    window.addEventListener('DOMContentLoaded', fetchRecs);
+  </script>
 </body>
 </html>
