@@ -1,73 +1,76 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Stock Recommendations</title>
-  <style>
-    body { font-family: sans-serif; margin: 2rem; }
-    h1, h2, h3 { margin-top: 1.5rem; }
-    ul { list-style: disc inside; padding-left: 0; }
-    li { margin: 0.3rem 0; }
-    .error { color: red; }
-  </style>
-</head>
-<body>
-  <h1>Live Stock Recommendations</h1>
-  <div id="status">Loading…</div>
-  <div id="content"></div>
+  <head>
+    <meta charset="utf-8">
+    <title>Stock Recommendations (HTMLService)</title>
+    <style>
+      body { font-family: sans-serif; margin: 2rem; }
+      .error { color: red; }
+      section { margin-bottom: 1.5rem; }
+      h2 { margin-bottom: 0.5rem; }
+      ul { list-style: disc inside; padding-left: 0; }
+      li { margin: 0.3rem 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Live Stock Recommendations</h1>
+    <div id="status">Loading…</div>
+    <div id="content"></div>
 
-  <script>
-    // 1) Your Web App endpoint
-    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
+    <script>
+      // Success handler: render the data
+      function onSuccess(data) {
+        document.getElementById('status').textContent = '';
+        const container = document.getElementById('content');
+        container.innerHTML = '';
 
-    // 2) Fetch the JSON and call render()
-    async function fetchRecs() {
-      const statusEl = document.getElementById('status');
-      try {
-        const url = ENDPOINT + '?_=' + Date.now();   // cache-buster
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        statusEl.textContent = '';                  // clear "Loading…"
-        render(data);
-      } catch (err) {
-        statusEl.textContent = 'Error loading data';
-        statusEl.classList.add('error');
+        // timestamp
+        if (data.lastUpdated) {
+          const p = document.createElement('p');
+          p.innerHTML = `<em>Last updated:</em> ${new Date(data.lastUpdated).toLocaleString()}`;
+          container.appendChild(p);
+        }
+
+        ['KOSPI','KOSDAQ','NASDAQ','NYSE'].forEach(market => {
+          if (!data[market]) return;
+          const sec = document.createElement('section');
+          sec.innerHTML = `<h2>${market}</h2>`;
+          ['safe','aggressive'].forEach(bucket => {
+            const h3 = document.createElement('h3');
+            h3.textContent = bucket.toUpperCase();
+            sec.appendChild(h3);
+            const ul = document.createElement('ul');
+            (data[market][bucket] || []).forEach(item => {
+              const li = document.createElement('li');
+              li.textContent = 
+                `${item.name} — ${item.sector||'N/A'} @ ${item.prevClose ?? '–'}`;
+              ul.appendChild(li);
+            });
+            sec.appendChild(ul);
+          });
+          container.appendChild(sec);
+        });
+      }
+
+      // Failure handler: show error
+      function onFailure(err) {
+        const st = document.getElementById('status');
+        st.textContent = 'Error loading data: ' + err.message;
+        st.classList.add('error');
         console.error(err);
       }
-    }
 
-    // 3) Render the fetched data into the page
-    function render(data) {
-      const container = document.getElementById('content');
-      container.innerHTML = `<p><em>Last updated:</em> ${new Date(data.lastUpdated).toLocaleString()}</p>`;
+      // Kick off the server call
+      function fetchData() {
+        const st = document.getElementById('status');
+        st.textContent = 'Loading…';
+        google.script.run
+          .withSuccessHandler(onSuccess)
+          .withFailureHandler(onFailure)
+          .readRecommendations();
+      }
 
-      ['KOSPI','KOSDAQ','NASDAQ','NYSE'].forEach(market => {
-        if (!data[market]) return;
-        const sec = document.createElement('section');
-        sec.innerHTML = `<h2>${market}</h2>`;
-
-        ['safe','aggressive'].forEach(bucket => {
-          const list = document.createElement('ul');
-          const header = document.createElement('h3');
-          header.textContent = bucket.toUpperCase();
-          sec.appendChild(header);
-
-          (data[market][bucket] || []).forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = `${item.name} — ${item.sector || 'N/A'} @ ${item.prevClose ?? '–'}`;
-            list.appendChild(li);
-          });
-
-          sec.appendChild(list);
-        });
-
-        container.appendChild(sec);
-      });
-    }
-
-    // 4) Run on page load
-    window.addEventListener('DOMContentLoaded', fetchRecs);
-  </script>
-</body>
+      window.addEventListener('DOMContentLoaded', fetchData);
+    </script>
+  </body>
 </html>
