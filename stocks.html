@@ -284,14 +284,24 @@
 
         // Load data from Google Apps Script
         async function loadData() {
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
+            const DRIVE_URL = 'https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ';
             try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec');
-                if (!response.ok) throw new Error('Network response was not ok');
-                portfolioData = await response.json();
+                const res = await fetch(SCRIPT_URL);
+                if (!res.ok) throw new Error('Network response was not ok');
+                portfolioData = await res.json();
                 initializeDashboard();
             } catch (error) {
-                console.error('Error loading data:', error);
-                document.getElementById('app').innerHTML = '<div class="loading error">Error loading portfolio data</div>';
+                console.warn('Script fetch failed, trying Drive fallback', error);
+                try {
+                    const driveRes = await fetch(DRIVE_URL);
+                    if (!driveRes.ok) throw new Error('Drive file not found');
+                    portfolioData = await driveRes.json();
+                    initializeDashboard();
+                } catch (err2) {
+                    console.error('Error loading data:', err2);
+                    document.getElementById('app').innerHTML = '<div class="loading error">Error loading portfolio data</div>';
+                }
             }
         }
 
