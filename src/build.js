@@ -50,7 +50,7 @@ function getLastBusinessDay() {
 
 // URLs of the recommendation data
 const SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzwMGmZ9Si_TIgB-kgk_b8TC2O30nyq1v1ZHjUFzpnFO4BHbJY1Ktvv5f_vhF5l0s9aLQ/exec';
+  'https://script.google.com/macros/s/AKfycbzgzE7psPX5rfMLsDprAy8jmYqwUphiKuzCDUc2ji3-dRKWSgIhb1O4Kgnrg7zk1FCyrA/exec';
 
 // 재시도 함수
 async function fetchWithRetry(url, retries = 3, timeout = 10000) {
