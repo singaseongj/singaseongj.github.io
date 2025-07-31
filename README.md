@@ -27,10 +27,8 @@ Run the script with:
 node fetchStockInfo.js
 ```
 
-`src/build.js` no longer reads `recommendations.json` directly. Instead it pulls
-the latest recommendation data from a public Google Drive file
-([link](https://drive.google.com/file/d/1ovWzGZdJy9k6fsDn8FJuHtk1mil4BDLt/view))
-so the build can run without local JSON updates.
+`src/build.js` no longer reads `recommendations.json` directly. It first tries to fetch the data through a Google Apps Script and, if that fails, falls back to a public Google Drive file
+([link](https://drive.google.com/file/d/1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ/view?usp=drive_link)). This lets the build run without local JSON updates.
 
 ## Building `stocks.html`
 

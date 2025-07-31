@@ -361,7 +361,11 @@
       const container = document.getElementById('recommendations');
       if (!container) return;
       try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec');
+        let res = await fetch('https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec');
+        if (!res.ok) {
+          console.warn('Script fetch failed, falling back to Drive:', res.status);
+          res = await fetch('https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ');
+        }
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 

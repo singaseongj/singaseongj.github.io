@@ -56,9 +56,11 @@ function getLastBusinessDay() {
   return d;
 }
 
-// URL of the recommendation data on Google Drive
-const RECOMMENDATIONS_URL =
-  'https://drive.google.com/uc?export=download&id=1ovWzGZdJy9k6fsDn8FJuHtk1mil4BDLt';
+// URLs of the recommendation data
+const SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
+const DRIVE_URL =
+  'https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ';
 
 // 재시도 함수
 async function fetchWithRetry(url, retries = 3, timeout = 10000) {
@@ -230,14 +232,19 @@ async function fetchPortfolioRecommendations() {
     }
   } else {
     try {
-      data = await fetchWithRetry(RECOMMENDATIONS_URL);
+      data = await fetchWithRetry(SCRIPT_URL);
     } catch (err) {
-      console.warn('Failed to fetch recommendations from Drive:', err.message);
+      console.warn('Script fetch failed:', err.message);
       try {
-        data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
-        console.log('Using local recommendations.json as fallback');
-      } catch (fallbackErr) {
-        console.error('Failed to load local recommendations', fallbackErr);
+        data = await fetchWithRetry(DRIVE_URL);
+      } catch (driveErr) {
+        console.warn('Drive fetch failed:', driveErr.message);
+        try {
+          data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
+          console.log('Using local recommendations.json as fallback');
+        } catch (fallbackErr) {
+          console.error('Failed to load local recommendations', fallbackErr);
+        }
       }
     }
   }
