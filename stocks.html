@@ -365,37 +365,43 @@
       document.getElementById('lastUpdated').textContent = ts;
     }
 
-    // 추천 종목 로드
-    async function loadRecommendations() {
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
+
+    async function fetchRecs() {
+      try {
+        const url = ENDPOINT + '?_=' + Date.now();
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        console.log('Recommendations:', data);
+        render(data);
+      } catch (err) {
+        console.error('Failed to load recommendations:', err);
+        const container = document.getElementById('recommendations');
+        if (container) {
+          container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+        }
+      }
+    }
+
+    function render(data) {
       const container = document.getElementById('recommendations');
       if (!container) return;
-      try {
-        let res = await fetch('https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec');
-        if (!res.ok) {
-          console.warn('Script fetch failed, falling back to Drive:', res.status);
-          res = await fetch('https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ');
+      const markets = Object.keys(data).filter(k => k !== 'lastUpdated');
+      const html = [];
+      for (const m of markets) {
+        const info = data[m];
+        for (const bucket of ['safe', 'aggressive']) {
+          const items = (info?.[bucket] || []).map(item =>
+            `<li>${item.name} — ${item.sector || 'N/A'} @ ${item.prevClose}</li>`
+          ).join('');
+          html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
         }
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-
-        const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
-        const html = [];
-        for (const m of markets) {
-          for (const bucket of ['safe', 'aggressive']) {
-            const items = (data[m]?.[bucket] || []).map(item =>
-              `<li>${item.name} — ${item.sector || 'N/A'} @ ${item.prevClose}</li>`
-            ).join('');
-            html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
-          }
-        }
-        container.innerHTML = html.join('');
-        const upd = document.getElementById('portfolioUpdated');
-        if (upd && data.lastUpdated) {
-          upd.textContent = '업데이트: ' + new Date(data.lastUpdated).toLocaleString('ko-KR');
-        }
-      } catch (err) {
-        console.error('추천 로드 실패', err);
-        container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+      }
+      container.innerHTML = html.join('');
+      const upd = document.getElementById('portfolioUpdated');
+      if (upd && data.lastUpdated) {
+        upd.textContent = '업데이트: ' + new Date(data.lastUpdated).toLocaleString('ko-KR');
       }
     }
 
@@ -406,7 +412,7 @@
         button.disabled = true;
         button.textContent = '새로고침 중...';
       }
-      Promise.all([loadMarketData(), loadRecommendations()]).finally(() => {
+      Promise.all([loadMarketData(), fetchRecs()]).finally(() => {
         if (button) {
           button.disabled = false;
           button.textContent = '데이터 새로고침';
