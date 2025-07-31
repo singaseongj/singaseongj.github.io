@@ -58,7 +58,7 @@ function getLastBusinessDay() {
 
 // URLs of the recommendation data
 const SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzUM6vcUH8a6sw7pKFxtnABL3kdy0HBxFyo-dmV-Zaw8dg8q45CbQ5xk0CJUhkHV9jA-w/exec';
+  'https://script.google.com/macros/s/AKfycbxh5coNBREtZ6XHChDBiAASphgibbcNDwziAp-tbDwfbypJl_hrMIYLdJlENe-1BrRzdw/exec';
 const DRIVE_URL =
   'https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ';
 
@@ -314,13 +314,11 @@ async function build() {
     fetchMarketIndices(),
     fetchPortfolioRecommendations(),
   ]);
-  const { html: portfolioHTML, lastUpdated } = portfolioData;
-  const lastUpdate = lastUpdated;
+  const { html: portfolioHTML } = portfolioData;
 
   console.log('📝 HTML 템플릿 처리 중...');
   const result = tpl
     .replace('{{CURRENT_DATE}}', formatDateKR(now))
-    .replace('{{DATA_DATE}}', formatDateTimeKR(lastUpdate))
     .replace('{{MARKET_TABLE}}', marketTable)
     .replace('{{PORTFOLIO_SECTIONS}}', portfolioHTML)
     .replace('{{BUILD_TIMESTAMP}}', now.toISOString().replace('T', ' ').split('.')[0] + ' KST');

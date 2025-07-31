@@ -36,7 +36,7 @@
       margin-bottom: 15px;
     }
     
-    #currentDate, #dataDate {
+    #currentDate {
       text-align: center;
       font-size: 1.1rem;
       color: #7f8c8d;
@@ -228,7 +228,6 @@
 <body>
   <h1>데일리 주식 리포트 자동화</h1>
   <p id="currentDate">오늘: {{CURRENT_DATE}}</p>
-  <p id="dataDate">자료기준시각: {{DATA_DATE}}</p>
   
   <div id="debugInfo" class="debug" style="display: none;">
     <h4>디버그 정보:</h4>
@@ -245,6 +244,7 @@
     </ul>
     <button onclick="toggleDebug()">디버그 모드 토글</button>
     <button onclick="refreshAllData(event)">데이터 새로고침</button>
+    <button onclick="runWebAppAndReload(event)">웹앱 실행 후 새로고침</button>
   </div>
 
   <div id="disclaimer" role="note">
@@ -372,7 +372,7 @@
     }
 
     // 추천 종목 로드
-    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzUM6vcUH8a6sw7pKFxtnABL3kdy0HBxFyo-dmV-Zaw8dg8q45CbQ5xk0CJUhkHV9jA-w/exec';
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxh5coNBREtZ6XHChDBiAASphgibbcNDwziAp-tbDwfbypJl_hrMIYLdJlENe-1BrRzdw/exec';
 
     const FULL_NAME_MAP = {
       'AMD': 'Advanced Micro Devices',
@@ -433,6 +433,22 @@
           button.textContent = '데이터 새로고침';
         }
       });
+    }
+
+    // 웹앱 실행 후 페이지 새로고침
+    async function runWebAppAndReload(e) {
+      const button = e ? e.target : document.querySelector('button[onclick*="runWebAppAndReload"]');
+      if (button) {
+        button.disabled = true;
+        button.textContent = '업데이트 중...';
+      }
+      try {
+        await fetch(ENDPOINT);
+      } catch (err) {
+        console.error('Web app run failed:', err);
+      } finally {
+        location.reload();
+      }
     }
     
     // 페이지 로드 시 실행
