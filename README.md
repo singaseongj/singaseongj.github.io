@@ -2,7 +2,8 @@
 
 This repository contains files used for the Singaseong website.
 
-The build script collects market index data from Naver and Yahoo Finance. It now
+The build script collects market index data from Naver for the Korean indices
+(KOSPI, KOSDAQ) and from Investing.com for the S&P 500 and NASDAQ 100. It now
 parses the previous closing value for KOSPI and KOSDAQ so the generated
 `stocks.html` page can display those figures alongside the current index value.
 
