@@ -100,16 +100,15 @@ async function fetchMarketIndices() {
     for (const idx of indices) {
       const data = sampleIndices[idx.name] || {};
       const price = data.price || 'N/A';
-      const prevClose = data.prevClose || 'N/A';
       const changePct = data.changePct || 'N/A';
       const changeNum = parseFloat(changePct);
       const cls = changeNum > 0 ? 'positive' : changeNum < 0 ? 'negative' : 'neutral';
-      rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td>${prevClose}</td><td class="${cls}">${changePct}</td></tr>`);
+      rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
     }
     return `
     <table>
       <thead>
-        <tr><th>지수</th><th>현재지수</th><th>전일종가</th><th>등락(%)</th></tr>
+        <tr><th>지수</th><th>현재지수</th><th>등락(%)</th></tr>
       </thead>
       <tbody id="marketBody">
         ${rows.join('')}
@@ -230,13 +229,13 @@ async function fetchMarketIndices() {
 
     const changeNum = parseFloat(changePct);
     const cls = changeNum > 0 ? 'positive' : changeNum < 0 ? 'negative' : 'neutral';
-    rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td>${prevClose}</td><td class="${cls}">${changePct}</td></tr>`);
+    rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
   }
 
   return `
     <table>
       <thead>
-        <tr><th>지수</th><th>현재지수</th><th>전일종가</th><th>등락(%)</th></tr>
+        <tr><th>지수</th><th>현재지수</th><th>등락(%)</th></tr>
       </thead>
       <tbody id="marketBody">
         ${rows.join('')}

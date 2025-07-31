@@ -252,7 +252,7 @@
   </div>
 
   <section id="marketSnapshot">
-    <h2>전일 종가 기준 마켓 스냅샷</h2>
+    <h2>마켓 스냅샷</h2>
     {{MARKET_TABLE}}
     <div id="marketError" class="error" style="display:none;" role="alert"></div>
     <div id="lastUpdated" class="last-updated"></div>
@@ -350,7 +350,7 @@
 
         const chg = parseFloat(changePct);
         const cls = chg > 0 ? 'positive' : chg < 0 ? 'negative' : 'neutral';
-        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td>${prevClose}</td><td class="${cls}">${changePct}</td></tr>`);
+        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
       }
 
       const tbody = document.getElementById('marketBody');
@@ -408,7 +408,7 @@
         for (const bucket of ['safe', 'aggressive']) {
           const items = (info?.[bucket] || []).map(item => {
             const name = FULL_NAME_MAP[item.name] || item.name;
-            return `<li>${name} — ${item.sector || 'N/A'} @ ${item.prevClose}</li>`;
+            return `<li>${name}</li>`;
           }).join('');
           html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
         }
