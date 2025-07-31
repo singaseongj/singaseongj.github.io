@@ -261,6 +261,7 @@
   <section id="portfolioRecommendations">
     <h2>포트폴리오 추천</h2>
     {{PORTFOLIO_SECTIONS}}
+    <div id="portfolioUpdated" class="last-updated"></div>
   </section>
   
   <script>
@@ -357,28 +358,31 @@
 
     // 추천 종목 로드
     async function loadRecommendations() {
+      const container = document.getElementById('recommendations');
+      if (!container) return;
       try {
-        const res = await fetch('https://drive.google.com/uc?export=download&id=1ovWzGZdJy9k6fsDn8FJuHtk1mil4BDLt');
+        const res = await fetch('https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-        const container = document.getElementById('recommendations');
-        if (!container) return;
+
         const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
         const html = [];
         for (const m of markets) {
-          const info = data[m];
-          if (!info) continue;
-          html.push(`<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
-            info.safe.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
-            '</ul></div>');
-          html.push(`<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
-            info.aggressive.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
-            '</ul></div>');
+          for (const bucket of ['safe', 'aggressive']) {
+            const items = (data[m]?.[bucket] || []).map(item =>
+              `<li>${item.name} — ${item.sector || 'N/A'} @ ${item.prevClose}</li>`
+            ).join('');
+            html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
+          }
         }
         container.innerHTML = html.join('');
+        const upd = document.getElementById('portfolioUpdated');
+        if (upd && data.lastUpdated) {
+          upd.textContent = '업데이트: ' + new Date(data.lastUpdated).toLocaleString('ko-KR');
+        }
       } catch (err) {
         console.error('추천 로드 실패', err);
-        const container = document.getElementById('recommendations');
-        if (container) container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+        container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
       }
     }
 
