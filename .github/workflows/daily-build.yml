@@ -28,6 +28,7 @@ jobs:
         with:
           commit_message: "chore: daily stock report update [skip ci]"
           file_pattern: stocks.html
+          skip_dirty_check: true
 
       - name: GitHub Pages 배포
         # gh-pages 브랜치를 사용 중이라면 branch 지정

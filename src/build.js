@@ -58,7 +58,7 @@ function getLastBusinessDay() {
 
 // URL of the recommendation data on Google Drive
 const RECOMMENDATIONS_URL =
-  'https://drive.google.com/uc?export=download&id=1ZLvR4Clg_FxiaZQYBA4AD2ujoZiulZfP';
+  'https://drive.google.com/uc?export=download&id=1ovWzGZdJy9k6fsDn8FJuHtk1mil4BDLt';
 
 // 재시도 함수
 async function fetchWithRetry(url, retries = 3, timeout = 10000) {
@@ -220,8 +220,29 @@ async function fetchMarketIndices() {
 
 // Fetch portfolio recommendations from Google Drive and build HTML
 async function fetchPortfolioRecommendations() {
+  let data;
+  if (OFFLINE) {
+    try {
+      data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
+      console.log('Using local recommendations data (offline mode)');
+    } catch (err) {
+      console.warn('Failed to load local recommendations:', err.message);
+    }
+  } else {
+    try {
+      data = await fetchWithRetry(RECOMMENDATIONS_URL);
+    } catch (err) {
+      console.warn('Failed to fetch recommendations from Drive:', err.message);
+      try {
+        data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
+        console.log('Using local recommendations.json as fallback');
+      } catch (fallbackErr) {
+        console.error('Failed to load local recommendations', fallbackErr);
+      }
+    }
+  }
+
   try {
-    const data = await fetchWithRetry(RECOMMENDATIONS_URL);
     const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
     const htmlParts = [];
     for (const m of markets) {
@@ -243,7 +264,7 @@ async function fetchPortfolioRecommendations() {
       lastUpdated: data.lastUpdated ? new Date(data.lastUpdated) : new Date()
     };
   } catch (err) {
-    console.error('Failed to fetch recommendations', err);
+    console.error('Failed to process recommendations', err);
     return {
       html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
       lastUpdated: new Date()
