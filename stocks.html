@@ -447,13 +447,14 @@
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
-      // 빌드된 데이터가 기본으로 표시되며, 새로고침 버튼을 눌러야 업데이트됩니다.
-      
+      // 페이지가 초기화되면 자동으로 데이터를 새로 불러옵니다.
+      refreshAllData();
+
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
         console.error('페이지 에러:', e.error);
       });
-      
+
       // 데이터 로딩 상태 확인
       const loadingElements = document.querySelectorAll('.loading');
       if (loadingElements.length > 0) {
