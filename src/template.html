@@ -358,7 +358,7 @@
     // 추천 종목 로드
     async function loadRecommendations() {
       try {
-        const res = await fetch('recommendations.json?_=' + Date.now());
+        const res = await fetch('https://drive.google.com/uc?export=download&id=1ovWzGZdJy9k6fsDn8FJuHtk1mil4BDLt');
         const data = await res.json();
         const container = document.getElementById('recommendations');
         if (!container) return;

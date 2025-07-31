@@ -27,3 +27,4 @@ jobs:
         with:
           commit_message: "chore: update recommendations [skip ci]"
           file_pattern: recommendations.json
+          skip_dirty_check: true
