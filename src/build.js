@@ -10,9 +10,9 @@ import path from 'path';
 // Load HTML template
 const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
 
-// offline mode previously allowed using sample data, but this build strictly
-// fetches live information so that no stale placeholders appear in the output
-const OFFLINE = false;
+// offline mode can be enabled with the OFFLINE environment variable. When set
+// the build will use local sample data rather than fetching from the network.
+const OFFLINE = process.env.OFFLINE === '1';
 
 // Format date in Korean
 function formatDateKR(date) {
@@ -78,6 +78,28 @@ async function fetchWithRetry(url, retries = 3, timeout = 10000) {
 
 // Fetch market indices data
 async function fetchMarketIndices() {
+  if (OFFLINE) {
+    const data = JSON.parse(fs.readFileSync(
+      path.resolve('data/sample_market_data.json'),
+      'utf-8'
+    ));
+    const rows = Object.keys(data).map(key => {
+      const info = data[key];
+      const changeNum = parseFloat(info.changePct);
+      const cls = changeNum > 0 ? 'positive' : changeNum < 0 ? 'negative' : 'neutral';
+      return `<tr><td>${key}</td><td>${info.price}</td><td class="${cls}">${info.changePct}</td></tr>`;
+    });
+    return `
+    <table>
+      <thead>
+        <tr><th>지수</th><th>현재지수</th><th>등락(%)</th></tr>
+      </thead>
+      <tbody id="marketBody">
+        ${rows.join('')}
+      </tbody>
+    </table>
+    `;
+  }
   const indices = [
     { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
     { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
@@ -199,14 +221,26 @@ async function fetchMarketIndices() {
 // Fetch portfolio recommendations from Google Drive and build HTML
 async function fetchPortfolioRecommendations() {
   let data;
-  try {
-    data = await fetchWithRetry(SCRIPT_URL);
-  } catch (err) {
-    console.error('Failed to fetch recommendations:', err.message);
-    return {
-      html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
-      lastUpdated: new Date(),
-    };
+  if (OFFLINE) {
+    try {
+      data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
+    } catch (err) {
+      console.error('Failed to load local recommendations:', err.message);
+      return {
+        html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
+        lastUpdated: new Date(),
+      };
+    }
+  } else {
+    try {
+      data = await fetchWithRetry(SCRIPT_URL);
+    } catch (err) {
+      console.error('Failed to fetch recommendations:', err.message);
+      return {
+        html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
+        lastUpdated: new Date(),
+      };
+    }
   }
 
   try {
