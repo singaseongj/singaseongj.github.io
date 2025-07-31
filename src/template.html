@@ -236,12 +236,12 @@
   </div>
   
   <div id="summary">
-    <p>이 페이지는 KOSPI, KOSDAQ, NASDAQ, NYSE 시장을 분석하여 추천 종목을 제공합니다.</p>
+    <p>이 페이지는 KOSPI, KOSDAQ, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.</p>
     <ul>
       <li><strong>KOSPI:</strong> 국내 대형 우량주 위주</li>
       <li><strong>KOSDAQ:</strong> 성장 잠재력 높은 중소형주</li>
-      <li><strong>NASDAQ:</strong> 미국 기술주와 성장주</li>
-      <li><strong>NYSE:</strong> 미국 대표 블루칩 종목</li>
+      <li><strong>S&P 500:</strong> 미국 대표 대형주 지수</li>
+      <li><strong>NASDAQ 100:</strong> 미국 주요 기술주 지수</li>
     </ul>
     <button onclick="toggleDebug()">디버그 모드 토글</button>
     <button onclick="refreshAllData(event)">데이터 새로고침</button>
@@ -288,8 +288,8 @@
       const indices = [
         { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
         { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
-        { name: 'NASDAQ', symbol: '^IXIC', type: 'yahoo' },
-        { name: 'NYSE', symbol: '^NYA', type: 'yahoo' },
+        { name: 'S&P500', url: 'https://www.investing.com/indices/us-spx-500', type: 'invest' },
+        { name: 'NASDAQ100', url: 'https://www.investing.com/indices/nq-100', type: 'invest' },
       ];
 
       const rows = [];
@@ -309,6 +309,21 @@
             if (priceMatch) price = priceMatch[1].replace(/,/g, '');
             if (rateMatch) changePct = rateMatch[1].trim();
             if (prevMatch) prevClose = prevMatch[1].replace(/,/g, '');
+          } else if (idx.type === 'invest') {
+            const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`);
+            const { contents } = await res.json();
+            const priceMatch = contents.match(/id="last_last"[^>]*>([0-9.,]+)/);
+            const prevMatch = contents.match(/Prev\.\s?Close[^0-9]*([0-9.,]+)/i);
+            if (priceMatch) price = priceMatch[1].replace(/,/g, '');
+            if (prevMatch) {
+              prevClose = prevMatch[1].replace(/,/g, '');
+              const current = parseFloat(price);
+              const previous = parseFloat(prevClose);
+              if (!isNaN(current) && !isNaN(previous)) {
+                const change = ((current - previous) / previous) * 100;
+                changePct = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+              }
+            }
           } else if (idx.type === 'yahoo') {
             // Yahoo Finance blocks CORS, so fetch through a proxy
             const yahooUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`;
@@ -359,6 +374,13 @@
     // 추천 종목 로드
     const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
 
+    const FULL_NAME_MAP = {
+      'AMD': 'Advanced Micro Devices',
+      'Meta': 'Meta Platforms',
+      'Block': 'Block, Inc.',
+      'HMM': 'Hyundai Merchant Marine'
+    };
+
     async function fetchRecs() {
       try {
         const url = ENDPOINT + '?_=' + Date.now();
@@ -384,9 +406,10 @@
       for (const m of markets) {
         const info = data[m];
         for (const bucket of ['safe', 'aggressive']) {
-          const items = (info?.[bucket] || []).map(item =>
-            `<li>${item.name} — ${item.sector || 'N/A'} @ ${item.prevClose}</li>`
-          ).join('');
+          const items = (info?.[bucket] || []).map(item => {
+            const name = FULL_NAME_MAP[item.name] || item.name;
+            return `<li>${name} — ${item.sector || 'N/A'} @ ${item.prevClose}</li>`;
+          }).join('');
           html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
         }
       }
@@ -415,10 +438,7 @@
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
-
-      // 지수 데이터와 추천 종목을 즉시 로드 후 5분마다 갱신
-      refreshAllData();
-      setInterval(refreshAllData, 5 * 60 * 1000);
+      // 빌드된 데이터가 기본으로 표시되며, 새로고침 버튼을 눌러야 업데이트됩니다.
       
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
@@ -446,6 +466,19 @@
         refreshAllData();
       }
     });
+  </script>
+  <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
+  <script>
+    (async function() {
+      try {
+        const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks');
+        const data = await res.json();
+        document.getElementById('visitCounts').textContent =
+          `Visits today: ${data.daily} | Total: ${data.total}`;
+      } catch (err) {
+        console.error('Visit count failed', err);
+      }
+    })();
   </script>
 </body>
 </html>

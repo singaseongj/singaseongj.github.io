@@ -91,8 +91,8 @@ async function fetchMarketIndices() {
   const indices = [
     { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
     { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
-    { name: 'NYSE', url: 'https://finance.yahoo.com/quote/%5ENYA', type: 'yahoo' },
-    { name: 'NASDAQ', url: 'https://finance.yahoo.com/quote/%5EIXIC', type: 'yahoo' },
+    { name: 'S&P500', url: 'https://www.investing.com/indices/us-spx-500', type: 'invest' },
+    { name: 'NASDAQ100', url: 'https://www.investing.com/indices/nq-100', type: 'invest' },
   ];
 
   const rows = [];
@@ -141,6 +141,23 @@ async function fetchMarketIndices() {
 
         console.log(`${idx.name} (parsed): ${price} (${changePct})`);
         
+      } else if (idx.type === 'invest') {
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`;
+        const { contents } = await fetchWithRetry(proxyUrl);
+
+        const priceMatch = contents.match(/id="last_last"[^>]*>([0-9.,]+)/);
+        const prevMatch = contents.match(/Prev\.\s?Close[^0-9]*([0-9.,]+)/i);
+
+        if (priceMatch) price = priceMatch[1].replace(/,/g, '');
+        if (prevMatch) prevClose = prevMatch[1].replace(/,/g, '');
+        if (price !== 'N/A' && prevClose !== 'N/A') {
+          const current = parseFloat(price);
+          const previous = parseFloat(prevClose);
+          const change = ((current - previous) / previous) * 100;
+          changePct = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+        }
+        console.log(`${idx.name} (Investing): ${price} (${changePct})`);
+
       } else if (idx.type === 'yahoo') {
         // Yahoo Finance API 직접 호출
         // 각 지수에 대응하는 야후 파이낸스 심볼 지정
@@ -200,6 +217,14 @@ async function fetchMarketIndices() {
         price = '700.00';
         prevClose = '702.10';
         changePct = '-0.3%';
+      } else if (idx.name === 'S&P500') {
+        price = '4,500.00';
+        prevClose = '4,490.00';
+        changePct = '+0.22%';
+      } else if (idx.name === 'NASDAQ100') {
+        price = '15,000.00';
+        prevClose = '14,900.00';
+        changePct = '+0.67%';
       }
     }
 
