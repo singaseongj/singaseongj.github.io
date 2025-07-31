@@ -27,6 +27,10 @@ Run the script with:
 node fetchStockInfo.js
 ```
 
+`src/build.js` no longer reads `recommendations.json` directly. Instead it pulls
+the latest recommendation data from a public Google Drive file so the build can
+run without local JSON updates.
+
 ## Building `stocks.html`
 
 Generate the stock report page using the build script:

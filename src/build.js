@@ -2,7 +2,6 @@
 import fs from 'fs';
 import fsp from 'fs/promises';
 import path from 'path';
-import { execSync } from 'child_process';
 // use the global fetch available in modern versions of Node
 // parsing is done with simple regular expressions to avoid
 // external dependencies which cannot be installed in this
@@ -57,16 +56,9 @@ function getLastBusinessDay() {
   return d;
 }
 
-// Get the last commit time for recommendations.json
-function getRecommendationsUpdateTime() {
-  try {
-    const iso = execSync('git log -1 --format=%cI -- recommendations.json').toString().trim();
-    return new Date(iso);
-  } catch (err) {
-    console.error('Failed to read update time', err);
-    return new Date();
-  }
-}
+// URL of the recommendation data on Google Drive
+const RECOMMENDATIONS_URL =
+  'https://drive.google.com/uc?export=download&id=1ZLvR4Clg_FxiaZQYBA4AD2ujoZiulZfP';
 
 // 재시도 함수
 async function fetchWithRetry(url, retries = 3, timeout = 10000) {
@@ -226,22 +218,51 @@ async function fetchMarketIndices() {
   `;
 }
 
-// Fetch portfolio recommendations - placeholder container
+// Fetch portfolio recommendations from Google Drive and build HTML
 async function fetchPortfolioRecommendations() {
-  return '<div id="recommendations"><div class="loading">추천 로딩 중...</div></div>';
+  try {
+    const data = await fetchWithRetry(RECOMMENDATIONS_URL);
+    const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
+    const htmlParts = [];
+    for (const m of markets) {
+      const info = data[m];
+      if (!info) continue;
+      htmlParts.push(
+        `<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
+          info.safe.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
+        '</ul></div>'
+      );
+      htmlParts.push(
+        `<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+          info.aggressive.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
+        '</ul></div>'
+      );
+    }
+    return {
+      html: `<div id="recommendations">${htmlParts.join('')}</div>`,
+      lastUpdated: data.lastUpdated ? new Date(data.lastUpdated) : new Date()
+    };
+  } catch (err) {
+    console.error('Failed to fetch recommendations', err);
+    return {
+      html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
+      lastUpdated: new Date()
+    };
+  }
 }
 
 // Main build function
 async function build() {
   console.log('🚀 빌드 시작...');
   const now = new Date();
-  const lastUpdate = getRecommendationsUpdateTime();
 
   console.log('📊 마켓 데이터 수집 중...');
-  const [marketTable, portfolioHTML] = await Promise.all([
+  const [marketTable, portfolioData] = await Promise.all([
     fetchMarketIndices(),
     fetchPortfolioRecommendations(),
   ]);
+  const { html: portfolioHTML, lastUpdated } = portfolioData;
+  const lastUpdate = lastUpdated;
 
   console.log('📝 HTML 템플릿 처리 중...');
   const result = tpl
