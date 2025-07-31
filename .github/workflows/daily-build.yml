@@ -28,7 +28,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: daily stock report update [skip ci]"
-          file_pattern: stocks.html
+          file_pattern: stocks.html src/template.html
           skip_dirty_check: true
 
       - name: GitHub Pages 배포
