@@ -284,29 +284,30 @@
 
         // Load data from Google Apps Script
         async function loadData() {
+            const LOCAL_URL = 'recommendations.json';
             const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhgArNymgUf-osMztvh348yzxX8HuKAqE4FVt4sQyPE_5Rn7hXy5vtg0u3n7jjrvttxQ/exec';
             const DRIVE_URL = 'https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ';
             try {
-                const res = await fetch(SCRIPT_URL);
-                if (!res.ok) throw new Error('Network response was not ok');
-                portfolioData = await res.json();
+                const localRes = await fetch(LOCAL_URL);
+                if (!localRes.ok) throw new Error('Local file not found');
+                portfolioData = await localRes.json();
                 initializeDashboard();
-            } catch (error) {
-                console.warn('Script fetch failed, trying Drive fallback', error);
+            } catch (errLocal) {
+                console.warn('Local fetch failed, trying script', errLocal);
                 try {
-                    const driveRes = await fetch(DRIVE_URL);
-                    if (!driveRes.ok) throw new Error('Drive file not found');
-                    portfolioData = await driveRes.json();
+                    const res = await fetch(SCRIPT_URL);
+                    if (!res.ok) throw new Error('Network response was not ok');
+                    portfolioData = await res.json();
                     initializeDashboard();
-                } catch (err2) {
-                    console.warn('Drive fetch failed, trying local fallback', err2);
+                } catch (error) {
+                    console.warn('Script fetch failed, trying Drive fallback', error);
                     try {
-                        const localRes = await fetch('recommendations.json');
-                        if (!localRes.ok) throw new Error('Local file not found');
-                        portfolioData = await localRes.json();
+                        const driveRes = await fetch(DRIVE_URL);
+                        if (!driveRes.ok) throw new Error('Drive file not found');
+                        portfolioData = await driveRes.json();
                         initializeDashboard();
-                    } catch (err3) {
-                        console.error('Error loading data:', err3);
+                    } catch (err2) {
+                        console.error('Error loading data:', err2);
                         document.getElementById('app').innerHTML = '<div class="loading error">Error loading portfolio data</div>';
                     }
                 }
