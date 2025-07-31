@@ -299,8 +299,16 @@
                     portfolioData = await driveRes.json();
                     initializeDashboard();
                 } catch (err2) {
-                    console.error('Error loading data:', err2);
-                    document.getElementById('app').innerHTML = '<div class="loading error">Error loading portfolio data</div>';
+                    console.warn('Drive fetch failed, trying local fallback', err2);
+                    try {
+                        const localRes = await fetch('recommendations.json');
+                        if (!localRes.ok) throw new Error('Local file not found');
+                        portfolioData = await localRes.json();
+                        initializeDashboard();
+                    } catch (err3) {
+                        console.error('Error loading data:', err3);
+                        document.getElementById('app').innerHTML = '<div class="loading error">Error loading portfolio data</div>';
+                    }
                 }
             }
         }
