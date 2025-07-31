@@ -10,17 +10,9 @@ import path from 'path';
 // Load HTML template
 const tpl = fs.readFileSync(path.resolve('src/template.html'), 'utf-8');
 
-// offline mode for environments without network access
-const OFFLINE = process.env.OFFLINE === '1' || process.argv.includes('--offline');
-let sampleIndices = {};
-if (OFFLINE) {
-  try {
-    sampleIndices = JSON.parse(fs.readFileSync(path.resolve('data/sample_market_data.json'), 'utf-8'));
-    console.log('Using sample market data (offline mode)');
-  } catch (err) {
-    console.warn('Failed to load sample data:', err.message);
-  }
-}
+// offline mode previously allowed using sample data, but this build strictly
+// fetches live information so that no stale placeholders appear in the output
+const OFFLINE = false;
 
 // Format date in Korean
 function formatDateKR(date) {
@@ -59,8 +51,6 @@ function getLastBusinessDay() {
 // URLs of the recommendation data
 const SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbzwMGmZ9Si_TIgB-kgk_b8TC2O30nyq1v1ZHjUFzpnFO4BHbJY1Ktvv5f_vhF5l0s9aLQ/exec';
-const DRIVE_URL =
-  'https://drive.google.com/uc?export=download&id=1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ';
 
 // 재시도 함수
 async function fetchWithRetry(url, retries = 3, timeout = 10000) {
@@ -96,26 +86,6 @@ async function fetchMarketIndices() {
   ];
 
   const rows = [];
-  if (OFFLINE) {
-    for (const idx of indices) {
-      const data = sampleIndices[idx.name] || {};
-      const price = data.price || 'N/A';
-      const changePct = data.changePct || 'N/A';
-      const changeNum = parseFloat(changePct);
-      const cls = changeNum > 0 ? 'positive' : changeNum < 0 ? 'negative' : 'neutral';
-      rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
-    }
-    return `
-    <table>
-      <thead>
-        <tr><th>지수</th><th>현재지수</th><th>등락(%)</th></tr>
-      </thead>
-      <tbody id="marketBody">
-        ${rows.join('')}
-      </tbody>
-    </table>
-  `;
-  }
   for (const idx of indices) {
     let price = 'N/A';
     let prevClose = 'N/A';
@@ -207,24 +177,6 @@ async function fetchMarketIndices() {
       
     } catch (err) {
       console.error(`Error fetching ${idx.name}:`, err.message);
-      // 더미 데이터라도 표시
-      if (idx.name === 'KOSPI') {
-        price = '2,400.00';
-        prevClose = '2,390.00';
-        changePct = '+0.5%';
-      } else if (idx.name === 'KOSDAQ') {
-        price = '700.00';
-        prevClose = '702.10';
-        changePct = '-0.3%';
-      } else if (idx.name === 'S&P500') {
-        price = '4,500.00';
-        prevClose = '4,490.00';
-        changePct = '+0.22%';
-      } else if (idx.name === 'NASDAQ100') {
-        price = '15,000.00';
-        prevClose = '14,900.00';
-        changePct = '+0.67%';
-      }
     }
 
     const changeNum = parseFloat(changePct);
@@ -247,30 +199,14 @@ async function fetchMarketIndices() {
 // Fetch portfolio recommendations from Google Drive and build HTML
 async function fetchPortfolioRecommendations() {
   let data;
-  if (OFFLINE) {
-    try {
-      data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
-      console.log('Using local recommendations data (offline mode)');
-    } catch (err) {
-      console.warn('Failed to load local recommendations:', err.message);
-    }
-  } else {
-    try {
-      data = await fetchWithRetry(SCRIPT_URL);
-    } catch (err) {
-      console.warn('Script fetch failed:', err.message);
-      try {
-        data = await fetchWithRetry(DRIVE_URL);
-      } catch (driveErr) {
-        console.warn('Drive fetch failed:', driveErr.message);
-        try {
-          data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
-          console.log('Using local recommendations.json as fallback');
-        } catch (fallbackErr) {
-          console.error('Failed to load local recommendations', fallbackErr);
-        }
-      }
-    }
+  try {
+    data = await fetchWithRetry(SCRIPT_URL);
+  } catch (err) {
+    console.error('Failed to fetch recommendations:', err.message);
+    return {
+      html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
+      lastUpdated: new Date(),
+    };
   }
 
   try {
