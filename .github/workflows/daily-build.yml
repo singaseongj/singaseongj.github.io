@@ -3,7 +3,7 @@ name: Daily Stock Report Build
 # KST 오전 9시 → UTC 오전 0시 (cron은 UTC 기준)
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '* * * * *'
 
 jobs:
   build-and-deploy:
