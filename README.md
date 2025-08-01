@@ -6,9 +6,10 @@ The build script collects market index data from Naver for the Korean indices
 (KOSPI, KOSDAQ) and from Investing.com for the S&P 500 and NASDAQ 100. It now
 parses the previous closing value for KOSPI and KOSDAQ so the generated
 `stocks.html` page can display those figures alongside the current index value.
-The page also shows a "latest market news" section. Headlines are fetched from
-Yahoo Finance with a fallback to `data/sample_market_news.json` when network
-access is unavailable.
+The page also shows a "latest market news" section. A helper script pulls
+headlines from Yahoo Finance and several Korean sources every six hours and
+writes them to `data/market_news.json`. When the page loads it reads this file,
+falling back to `data/sample_market_news.json` if needed.
 
 The S&P 500 tracks 500 large companies listed on U.S. exchanges, while the
 NASDAQ 100 focuses on major non‑financial companies trading on the Nasdaq
@@ -43,6 +44,19 @@ fetch fresh data through a Google Apps Script and writes the result back to the 
 If the fetch fails it will still fall back to the local file
 ([link](https://drive.google.com/file/d/1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ/view?usp=drive_link)).
 This prevents unnecessary network requests during daily builds.
+
+## Updating market news
+
+`fetchNews.js` gathers the latest headlines from several RSS feeds, including
+three Korean sources, and writes them to `data/market_news.json`. The script
+keeps the file fresh by skipping the download when it was updated within the
+last six hours.
+
+Run it manually whenever you want to refresh the news:
+
+```bash
+node fetchNews.js
+```
 
 ## Building `stocks.html`
 
