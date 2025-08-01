@@ -16,10 +16,11 @@
   </div>
   
   <div id="summary">
-    <p>이 페이지는 KOSPI, KOSDAQ, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.</p>
+    <p>이 페이지는 KOSPI, KOSDAQ, NYSE, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.</p>
     <ul>
       <li><strong>KOSPI:</strong> 국내 대형 우량주 위주</li>
       <li><strong>KOSDAQ:</strong> 성장 잠재력 높은 중소형주</li>
+      <li><strong>NYSE:</strong> 미국 전통 대기업 중심 지수</li>
       <li><strong>S&P 500:</strong> 미국 대표 대형주 지수</li>
       <li><strong>NASDAQ 100:</strong> 미국 주요 기술주 지수</li>
     </ul>
@@ -190,8 +191,13 @@
         const parser = new DOMParser();
         const xml = parser.parseFromString(contents, 'text/xml');
         const items = Array.from(xml.querySelectorAll('item')).slice(0,5);
-        const headlines = items.map(it => it.querySelector('title').textContent);
-        document.getElementById('newsList').innerHTML = headlines.map(h => `<li>${h}</li>`).join('');
+        const headlines = items.map(it => ({
+          title: it.querySelector('title').textContent,
+          link: it.querySelector('link').textContent
+        }));
+        document.getElementById('newsList').innerHTML = headlines
+          .map(h => `<li><a href="${h.link}" target="_blank" rel="noopener">${h.title}</a></li>`)
+          .join('');
         document.getElementById('newsError').style.display = 'none';
       } catch (err) {
         console.error('news load failed', err);
@@ -268,10 +274,12 @@
     function render(data) {
       const container = document.getElementById('recommendations');
       if (!container) return;
-      const markets = Object.keys(data).filter(k => k !== 'lastUpdated').map(k => k === 'NYSE' ? 'S&P 500' : k);
+      const markets = Array.from(new Set(
+        Object.keys(data).filter(k => k !== 'lastUpdated')
+      ));
       const html = [];
       for (const m of markets) {
-        const key = m === 'S&P 500' && !data[m] && data['NYSE'] ? 'NYSE' : m;
+        const key = m;
         const info = data[key];
         for (const bucket of ['safe', 'aggressive']) {
           const items = (info?.[bucket] || []).map(item => {
