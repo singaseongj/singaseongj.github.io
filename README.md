@@ -10,6 +10,12 @@ The page also shows a "latest market news" section. Headlines are fetched from
 Yahoo Finance with a fallback to `data/sample_market_news.json` when network
 access is unavailable.
 
+The S&P 500 tracks 500 large companies listed on U.S. exchanges, while the
+NASDAQ 100 focuses on major non‑financial companies trading on the Nasdaq
+exchange. Many technology giants such as Apple and Microsoft are members of
+both indices, so an individual stock may appear in each section of the
+recommendations.
+
 ## Running tests
 
 The repository includes a simple Node.js script that verifies the `apple-app-site-association` file. Make sure Node.js is installed and run.
@@ -65,3 +71,9 @@ Page visits are tracked via a Google Apps Script. Send a request with the
 
 
 The script responds with JSON containing the `daily` and `total` fields.
+
+## Ideas for improvement
+
+- Add a dark mode toggle for better readability at night
+- Provide filters to sort recommendations by sector
+- Show small charts next to each index for quick visual trends

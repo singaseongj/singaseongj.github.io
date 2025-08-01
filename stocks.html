@@ -31,17 +31,15 @@
     본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.
   </div>
 
-
   <section id="marketNews">
     <h2>최신 마켓 뉴스</h2>
     <ul id="newsList" class="news-list"></ul>
     <div id="newsError" class="error" style="display:none;" role="alert"></div>
   </section>
 
-
   <section id="portfolioRecommendations">
     <h2>포트폴리오 추천</h2>
-    <div id="recommendations"><div class="portfolio-group"><h3>KOSPI 안전주</h3><ul><li>삼성전자</li><li>현대차</li><li>LG화학</li><li>SK텔레콤</li><li>POSCO홀딩스</li></ul></div><div class="portfolio-group"><h3>KOSPI 공격적 종목</h3><ul><li>카카오</li><li>네이버</li><li>셀트리온</li><li>HMM</li><li>두산에너빌리티</li></ul></div><div class="portfolio-group"><h3>KOSDAQ 안전주</h3><ul><li>셀트리온헬스케어</li><li>에코프로비엠</li><li>카카오게임즈</li><li>CJ ENM</li><li>스튜디오드래곤</li></ul></div><div class="portfolio-group"><h3>KOSDAQ 공격적 종목</h3><ul><li>제넥신</li><li>펄어비스</li><li>에이치엘비</li><li>알테오젠</li><li>씨젠</li></ul></div><div class="portfolio-group"><h3>NASDAQ 안전주</h3><ul><li>Apple</li><li>Microsoft</li><li>Amazon</li><li>Alphabet</li><li>Meta</li></ul></div><div class="portfolio-group"><h3>NASDAQ 공격적 종목</h3><ul><li>NVIDIA</li><li>Tesla</li><li>AMD</li><li>Netflix</li><li>Coinbase</li></ul></div><div class="portfolio-group"><h3>S&P 500 안전주</h3><ul><li>Coca-Cola</li><li>Johnson & Johnson</li><li>Procter & Gamble</li><li>Walmart</li><li>McDonald's</li></ul></div><div class="portfolio-group"><h3>S&P 500 공격적 종목</h3><ul><li>Snowflake</li><li>Shopify</li><li>Uber</li><li>Block</li><li>Palantir</li></ul></div></div>
+    <div id="recommendations"><div class="portfolio-group"><h3>KOSPI 안전주</h3><ul><li>삼성전자</li><li>현대차</li><li>LG화학</li><li>SK텔레콤</li><li>POSCO홀딩스</li></ul></div><div class="portfolio-group"><h3>KOSPI 공격적 종목</h3><ul><li>카카오</li><li>네이버</li><li>셀트리온</li><li>HMM</li><li>두산에너빌리티</li></ul></div><div class="portfolio-group"><h3>KOSDAQ 안전주</h3><ul><li>셀트리온헬스케어</li><li>에코프로비엠</li><li>카카오게임즈</li><li>CJ ENM</li><li>스튜디오드래곤</li></ul></div><div class="portfolio-group"><h3>KOSDAQ 공격적 종목</h3><ul><li>제넥신</li><li>펄어비스</li><li>에이치엘비</li><li>알테오젠</li><li>씨젠</li></ul></div><div class="portfolio-group"><h3>NASDAQ 안전주</h3><ul><li>Apple<span class="sector">Technology</span></li><li>Microsoft<span class="sector">Technology</span></li><li>Amazon<span class="sector">Consumer Cyclical</span></li><li>Alphabet<span class="sector">Communication Services</span></li><li>Meta<span class="sector">Communication Services</span></li></ul></div><div class="portfolio-group"><h3>NASDAQ 공격적 종목</h3><ul><li>NVIDIA<span class="sector">Technology</span></li><li>Tesla<span class="sector">Consumer Cyclical</span></li><li>AMD<span class="sector">Technology</span></li><li>Netflix<span class="sector">Communication Services</span></li><li>Coinbase<span class="sector">Financial Services</span></li></ul></div><div class="portfolio-group"><h3>S&P 500 안전주</h3><ul><li>Coca-Cola<span class="sector">Consumer Defensive</span></li><li>Johnson & Johnson<span class="sector">Healthcare</span></li><li>Procter & Gamble<span class="sector">Consumer Defensive</span></li><li>Walmart<span class="sector">Consumer Defensive</span></li><li>McDonald's<span class="sector">Consumer Cyclical</span></li></ul></div><div class="portfolio-group"><h3>S&P 500 공격적 종목</h3><ul><li>Snowflake<span class="sector">Technology</span></li><li>Shopify<span class="sector">Technology</span></li><li>Uber<span class="sector">Industrials</span></li><li>Block<span class="sector">Technology</span></li><li>Palantir<span class="sector">Technology</span></li></ul></div></div>
     <div id="portfolioUpdated" class="last-updated"></div>
   </section>
   
@@ -73,39 +71,7 @@
         sample = await res.json();
       } catch (e) {
         console.warn('sample market data load failed', e);
-  }
-
-  // 최신 마켓 뉴스 로드
-  async function loadNews() {
-      const rss = "https://news.google.com/rss/search?q=stock+market&hl=en-US&gl=US&ceid=US:en";
-      let sample = [];
-      try {
-        const res = await fetch('data/sample_market_news.json');
-        sample = await res.json();
-      } catch (e) {
-        console.warn('sample market news load failed', e);
       }
-
-      try {
-        const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rss)}`);
-        const { contents } = await res.json();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(contents, 'application/xml');
-        const items = Array.from(doc.querySelectorAll('item')).slice(0,5);
-        const headlines = items.map(it => it.querySelector('title').textContent);
-        document.getElementById('newsList').innerHTML = headlines.map(h => `<li>${h}</li>`).join('');
-        document.getElementById('newsError').style.display = 'none';
-      } catch (err) {
-        console.error('news load failed', err);
-        if (sample.length) {
-          document.getElementById('newsList').innerHTML = sample.map(h => `<li>${h}</li>`).join('');
-          document.getElementById('newsError').style.display = 'none';
-        } else {
-          document.getElementById('newsError').textContent = '뉴스를 불러오지 못했습니다.';
-          document.getElementById('newsError').style.display = 'block';
-        }
-      }
-  }
 
       const indices = [
         { name: 'KOSPI', code: 'KOSPI', type: 'naver' },
@@ -207,6 +173,38 @@
       document.getElementById('lastUpdated').textContent = ts;
     }
 
+  // 최신 마켓 뉴스 로드
+  async function loadMarketNews() {
+      let sample = [];
+      try {
+        const res = await fetch('data/sample_market_news.json');
+        sample = await res.json();
+      } catch (e) {
+        console.warn('sample market news load failed', e);
+      }
+
+      try {
+        const feedUrl = 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US';
+        const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`);
+        const { contents } = await res.json();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(contents, 'text/xml');
+        const items = Array.from(xml.querySelectorAll('item')).slice(0,5);
+        const headlines = items.map(it => it.querySelector('title').textContent);
+        document.getElementById('newsList').innerHTML = headlines.map(h => `<li>${h}</li>`).join('');
+        document.getElementById('newsError').style.display = 'none';
+      } catch (err) {
+        console.error('news load failed', err);
+        if (sample.length) {
+          document.getElementById('newsList').innerHTML = sample.map(h => `<li>${h}</li>`).join('');
+          document.getElementById('newsError').style.display = 'none';
+        } else {
+          document.getElementById('newsError').textContent = '뉴스를 불러오지 못했습니다.';
+          document.getElementById('newsError').style.display = 'block';
+        }
+      }
+  }
+
     // 추천 종목 로드
     const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzgzE7psPX5rfMLsDprAy8jmYqwUphiKuzCDUc2ji3-dRKWSgIhb1O4Kgnrg7zk1FCyrA/exec';
 
@@ -270,14 +268,16 @@
     function render(data) {
       const container = document.getElementById('recommendations');
       if (!container) return;
-      const markets = Object.keys(data).filter(k => k !== 'lastUpdated');
+      const markets = Object.keys(data).filter(k => k !== 'lastUpdated').map(k => k === 'NYSE' ? 'S&P 500' : k);
       const html = [];
       for (const m of markets) {
-        const info = data[m];
+        const key = m === 'S&P 500' && !data[m] && data['NYSE'] ? 'NYSE' : m;
+        const info = data[key];
         for (const bucket of ['safe', 'aggressive']) {
           const items = (info?.[bucket] || []).map(item => {
             const name = FULL_NAME_MAP[item.name] || item.name;
-            return `<li>${name}</li>`;
+            const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
+            return `<li>${name}${sector}</li>`;
           }).join('');
           html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
         }
@@ -296,7 +296,7 @@
         button.disabled = true;
         button.textContent = '새로고침 중...';
       }
-      Promise.all([loadMarketData(), fetchRecs(), loadNews()]).finally(() => {
+      Promise.all([loadMarketData(), fetchRecs(), loadMarketNews()]).finally(() => {
         if (button) {
           button.disabled = false;
           button.textContent = '데이터 새로고침';
