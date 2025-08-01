@@ -271,16 +271,24 @@ async function fetchPortfolioRecommendations() {
     const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'S&P 500'];
     const htmlParts = [];
     for (const m of markets) {
-      const info = data[m];
+      const info = data[m] || (m === 'S&P 500' ? data['NYSE'] : undefined);
       if (!info) continue;
       htmlParts.push(
         `<div class="portfolio-group"><h3>${m} 안전주</h3><ul>` +
-          info.safe.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
+          info.safe.map(s => {
+            const name = typeof s === 'string' ? s : s.name;
+            const sector = s.sector ? `<span class="sector">${s.sector}</span>` : '';
+            return `<li>${name}${sector}</li>`;
+          }).join('') +
         '</ul></div>'
       );
       htmlParts.push(
         `<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
-          info.aggressive.map(s => `<li>${typeof s === 'string' ? s : s.name}</li>`).join('') +
+          info.aggressive.map(s => {
+            const name = typeof s === 'string' ? s : s.name;
+            const sector = s.sector ? `<span class="sector">${s.sector}</span>` : '';
+            return `<li>${name}${sector}</li>`;
+          }).join('') +
         '</ul></div>'
       );
     }

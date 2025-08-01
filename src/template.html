@@ -31,11 +31,10 @@
     본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.
   </div>
 
-  <section id="marketSnapshot">
-    <h2>마켓 스냅샷</h2>
-    {{MARKET_TABLE}}
-    <div id="marketError" class="error" style="display:none;" role="alert"></div>
-    <div id="lastUpdated" class="last-updated"></div>
+  <section id="marketNews">
+    <h2>최신 마켓 뉴스</h2>
+    <ul id="newsList" class="news-list"></ul>
+    <div id="newsError" class="error" style="display:none;" role="alert"></div>
   </section>
 
   <section id="portfolioRecommendations">
@@ -174,6 +173,38 @@
       document.getElementById('lastUpdated').textContent = ts;
     }
 
+  // 최신 마켓 뉴스 로드
+  async function loadMarketNews() {
+      let sample = [];
+      try {
+        const res = await fetch('data/sample_market_news.json');
+        sample = await res.json();
+      } catch (e) {
+        console.warn('sample market news load failed', e);
+      }
+
+      try {
+        const feedUrl = 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US';
+        const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`);
+        const { contents } = await res.json();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(contents, 'text/xml');
+        const items = Array.from(xml.querySelectorAll('item')).slice(0,5);
+        const headlines = items.map(it => it.querySelector('title').textContent);
+        document.getElementById('newsList').innerHTML = headlines.map(h => `<li>${h}</li>`).join('');
+        document.getElementById('newsError').style.display = 'none';
+      } catch (err) {
+        console.error('news load failed', err);
+        if (sample.length) {
+          document.getElementById('newsList').innerHTML = sample.map(h => `<li>${h}</li>`).join('');
+          document.getElementById('newsError').style.display = 'none';
+        } else {
+          document.getElementById('newsError').textContent = '뉴스를 불러오지 못했습니다.';
+          document.getElementById('newsError').style.display = 'block';
+        }
+      }
+  }
+
     // 추천 종목 로드
     const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzgzE7psPX5rfMLsDprAy8jmYqwUphiKuzCDUc2ji3-dRKWSgIhb1O4Kgnrg7zk1FCyrA/exec';
 
@@ -237,14 +268,16 @@
     function render(data) {
       const container = document.getElementById('recommendations');
       if (!container) return;
-      const markets = Object.keys(data).filter(k => k !== 'lastUpdated');
+      const markets = Object.keys(data).filter(k => k !== 'lastUpdated').map(k => k === 'NYSE' ? 'S&P 500' : k);
       const html = [];
       for (const m of markets) {
-        const info = data[m];
+        const key = m === 'S&P 500' && !data[m] && data['NYSE'] ? 'NYSE' : m;
+        const info = data[key];
         for (const bucket of ['safe', 'aggressive']) {
           const items = (info?.[bucket] || []).map(item => {
             const name = FULL_NAME_MAP[item.name] || item.name;
-            return `<li>${name}</li>`;
+            const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
+            return `<li>${name}${sector}</li>`;
           }).join('');
           html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
         }
@@ -263,7 +296,7 @@
         button.disabled = true;
         button.textContent = '새로고침 중...';
       }
-      Promise.all([loadMarketData(), fetchRecs()]).finally(() => {
+      Promise.all([loadMarketData(), fetchRecs(), loadMarketNews()]).finally(() => {
         if (button) {
           button.disabled = false;
           button.textContent = '데이터 새로고침';
