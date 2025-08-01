@@ -65,6 +65,15 @@
 
     // 실시간 지수 데이터 로드
   async function loadMarketData() {
+      // Load fallback data in case external requests fail
+      let sample = {};
+      try {
+        const res = await fetch('data/sample_market_data.json');
+        sample = await res.json();
+      } catch (e) {
+        console.warn('sample market data load failed', e);
+      }
+
       const indices = [
         { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
         { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
@@ -126,6 +135,20 @@
         } catch (err) {
           console.error('지수 로드 실패', idx.name, err);
           hadError = true;
+          // fallback to sample data when available
+          if (sample[idx.name]) {
+            const info = sample[idx.name];
+            price = info.price;
+            prevClose = info.prevClose;
+            changePct = info.changePct;
+          }
+        }
+
+        if ((price === 'N/A' || changePct === 'N/A') && sample[idx.name]) {
+          const info = sample[idx.name];
+          price = price === 'N/A' ? info.price : price;
+          prevClose = prevClose === 'N/A' ? info.prevClose : prevClose;
+          changePct = changePct === 'N/A' ? info.changePct : changePct;
         }
 
         const chg = parseFloat(changePct);

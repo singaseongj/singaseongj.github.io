@@ -100,6 +100,9 @@ async function fetchMarketIndices() {
     </table>
     `;
   }
+  const fallbackData = JSON.parse(
+    fs.readFileSync(path.resolve('data/sample_market_data.json'), 'utf-8')
+  );
   const indices = [
     { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
     { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
@@ -199,6 +202,13 @@ async function fetchMarketIndices() {
       
     } catch (err) {
       console.error(`Error fetching ${idx.name}:`, err.message);
+    }
+
+    if ((price === 'N/A' || changePct === 'N/A') && fallbackData[idx.name]) {
+      const info = fallbackData[idx.name];
+      price = info.price;
+      prevClose = info.prevClose;
+      changePct = info.changePct;
     }
 
     const changeNum = parseFloat(changePct);

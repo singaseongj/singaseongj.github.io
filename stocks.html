@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>데일리 주식 리포트 자동화</h1>
-  <p id="currentDate">오늘: 2025년 7월 31일</p>
+  <p id="currentDate">오늘: 2025년 8월 1일</p>
   
   <div id="debugInfo" class="debug" style="display: none;">
     <h4>디버그 정보:</h4>
@@ -42,7 +42,7 @@
         <tr><td>KOSPI</td><td>2400.00</td><td class="positive">+0.5%</td></tr><tr><td>KOSDAQ</td><td>700.00</td><td class="negative">-0.3%</td></tr><tr><td>S&P500</td><td>4500.00</td><td class="positive">+0.22%</td></tr><tr><td>NASDAQ100</td><td>15000.00</td><td class="positive">+0.67%</td></tr>
       </tbody>
     </table>
-    
+  
     <div id="marketError" class="error" style="display:none;" role="alert"></div>
     <div id="lastUpdated" class="last-updated"></div>
   </section>
@@ -74,6 +74,15 @@
 
     // 실시간 지수 데이터 로드
   async function loadMarketData() {
+      // Load fallback data in case external requests fail
+      let sample = {};
+      try {
+        const res = await fetch('data/sample_market_data.json');
+        sample = await res.json();
+      } catch (e) {
+        console.warn('sample market data load failed', e);
+      }
+
       const indices = [
         { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
         { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
@@ -135,6 +144,20 @@
         } catch (err) {
           console.error('지수 로드 실패', idx.name, err);
           hadError = true;
+          // fallback to sample data when available
+          if (sample[idx.name]) {
+            const info = sample[idx.name];
+            price = info.price;
+            prevClose = info.prevClose;
+            changePct = info.changePct;
+          }
+        }
+
+        if ((price === 'N/A' || changePct === 'N/A') && sample[idx.name]) {
+          const info = sample[idx.name];
+          price = price === 'N/A' ? info.price : price;
+          prevClose = prevClose === 'N/A' ? info.prevClose : prevClose;
+          changePct = changePct === 'N/A' ? info.changePct : changePct;
         }
 
         const chg = parseFloat(changePct);
