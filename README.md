@@ -57,10 +57,8 @@ Page visits are tracked via a Google Apps Script. Send a request with the
 
 ```bash
 # Visit index.html
-curl 'https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=index'
 
 # Visit stocks.html
-curl 'https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks'
-```
+
 
 The script responds with JSON containing the `daily` and `total` fields.
