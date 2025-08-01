@@ -46,7 +46,6 @@ jobs:
             src/template.html
             data/market_news.json
             recommendations.json
-          skip_dirty_check: true
 
       - name: GitHub Pages 배포
         uses: peaceiris/actions-gh-pages@v4
