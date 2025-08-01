@@ -104,8 +104,8 @@ async function fetchMarketIndices() {
     fs.readFileSync(path.resolve('data/sample_market_data.json'), 'utf-8')
   );
   const indices = [
-    { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
-    { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
+    { name: 'KOSPI', code: 'KOSPI', type: 'naver' },
+    { name: 'KOSDAQ', code: 'KOSDAQ', type: 'naver' },
     { name: 'S&P500', url: 'https://www.investing.com/indices/us-spx-500', type: 'invest' },
     { name: 'NASDAQ100', url: 'https://www.investing.com/indices/nq-100', type: 'invest' },
   ];
@@ -120,20 +120,15 @@ async function fetchMarketIndices() {
       console.log(`Fetching data for ${idx.name}...`);
       
       if (idx.type === 'naver') {
-        // 네이버 파이낸스 직접 호출 (CORS 우회)
-        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`;
-        const { contents } = await fetchWithRetry(proxyUrl);
-
-        // JSDOM을 사용할 수 없는 환경이므로 정규식을 활용해 값 파싱
-        const priceMatch = contents.match(/now_value[^>]*>([0-9,.\s]+)</);
-        const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,\s%]+)</);
-        const prevMatch = contents.match(/전일[^0-9]*?([0-9,.]+)</);
-
-        if (priceMatch) price = priceMatch[1].trim().replace(/,/g, '');
-        if (rateMatch) changePct = rateMatch[1].trim();
-        if (prevMatch) prevClose = prevMatch[1].trim().replace(/,/g, '');
-
-        console.log(`${idx.name} (parsed): ${price} (${changePct})`);
+        const api = `https://polling.finance.naver.com/api/realtime?query=SERVICE_INDEX:${idx.code}`;
+        const data = await fetchWithRetry(api);
+        const info = data?.result?.areas?.[0]?.datas?.[0];
+        if (info) {
+          price = (info.nv / 100).toFixed(2);
+          prevClose = ((info.nv - info.cv) / 100).toFixed(2);
+          changePct = (info.cr >= 0 ? '+' : '') + info.cr.toFixed(2) + '%';
+        }
+        console.log(`${idx.name} (api): ${price} (${changePct})`);
         
       } else if (idx.type === 'invest') {
         const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`;

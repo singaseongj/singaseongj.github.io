@@ -75,8 +75,8 @@
       }
 
       const indices = [
-        { name: 'KOSPI', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSPI', type: 'naver' },
-        { name: 'KOSDAQ', url: 'https://finance.naver.com/sise/sise_index.naver?code=KOSDAQ', type: 'naver' },
+        { name: 'KOSPI', code: 'KOSPI', type: 'naver' },
+        { name: 'KOSDAQ', code: 'KOSDAQ', type: 'naver' },
         { name: 'S&P500', url: 'https://www.investing.com/indices/us-spx-500', type: 'invest' },
         { name: 'NASDAQ100', url: 'https://www.investing.com/indices/nq-100', type: 'invest' },
       ];
@@ -90,14 +90,14 @@
 
         try {
           if (idx.type === 'naver') {
-            const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`);
-            const { contents } = await res.json();
-            const priceMatch = contents.match(/now_value[^>]*>([0-9,.]+)/);
-            const rateMatch = contents.match(/rate[^>]*>([+-]?[0-9.,%]+)/);
-            const prevMatch = contents.match(/전일[^0-9]*?([0-9,.]+)/);
-            if (priceMatch) price = priceMatch[1].replace(/,/g, '');
-            if (rateMatch) changePct = rateMatch[1].trim();
-            if (prevMatch) prevClose = prevMatch[1].replace(/,/g, '');
+            const api = `https://polling.finance.naver.com/api/realtime?query=SERVICE_INDEX:${idx.code}`;
+            const data = await (await fetch(api)).json();
+            const info = data?.result?.areas?.[0]?.datas?.[0];
+            if (info) {
+              price = (info.nv / 100).toFixed(2);
+              prevClose = ((info.nv - info.cv) / 100).toFixed(2);
+              changePct = (info.cr >= 0 ? '+' : '') + info.cr.toFixed(2) + '%';
+            }
           } else if (idx.type === 'invest') {
             const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`);
             const { contents } = await res.json();
@@ -184,19 +184,52 @@
       'HMM': 'Hyundai Merchant Marine'
     };
 
+    async function loadLocalRecs() {
+      try {
+        const res = await fetch('recommendations.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return await res.json();
+      } catch (e) {
+        console.warn('Local recommendations load failed', e);
+        return null;
+      }
+    }
+
+    function mergeWithFallback(remote, local) {
+      if (!local) return remote;
+      const result = { ...remote };
+      for (const m of Object.keys(local)) {
+        if (!result[m]) result[m] = local[m];
+        else {
+          for (const bucket of ['safe', 'aggressive']) {
+            const items = result[m]?.[bucket];
+            if (!Array.isArray(items) || items.every(it => !it.name)) {
+              result[m][bucket] = local[m][bucket];
+            }
+          }
+        }
+      }
+      return result;
+    }
+
     async function fetchRecs() {
+      const local = await loadLocalRecs();
       try {
         const url = ENDPOINT + '?_=' + Date.now();
         const res = await fetch(url);
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
         console.log('Recommendations:', data);
-        render(data);
+        render(mergeWithFallback(data, local));
       } catch (err) {
         console.error('Failed to load recommendations:', err);
-        const container = document.getElementById('recommendations');
-        if (container) {
-          container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+        if (local) {
+          render(local);
+        } else {
+          const container = document.getElementById('recommendations');
+          if (container) {
+            container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+          }
         }
       }
     }
