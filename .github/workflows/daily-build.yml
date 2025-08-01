@@ -1,10 +1,11 @@
+---
 name: Daily Stock Report Build
 
 # KST 오전 9시 → UTC 오전 0시 (cron은 UTC 기준)
 on:
   schedule:
-    # 매일 KST 오전 9시(UTC 0시)에 실행
-    - cron: '0 0 * * *'
+    # 매 6시간마다 실행 (UTC 기준)
+    - cron: '0 */6 * * *'
 
 jobs:
   build-and-deploy:
@@ -23,6 +24,12 @@ jobs:
       - name: 의존성 설치
         run: npm ci
 
+      - name: 주식 추천 정보 업데이트
+        run: node fetchStockInfo.js
+
+      - name: 뉴스 데이터 업데이트
+        run: node fetchNews.js
+
       - name: 빌드 실행
         run: npm run build
 
@@ -30,7 +37,11 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: daily stock report update [skip ci]"
-          file_pattern: stocks.html src/template.html
+          file_pattern: |
+            stocks.html
+            src/template.html
+            data/market_news.json
+            recommendations.json
           skip_dirty_check: true
 
       - name: GitHub Pages 배포
@@ -40,4 +51,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./
-
