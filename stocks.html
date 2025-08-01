@@ -94,7 +94,8 @@
       }
     };
 
-    const currentLang = (navigator.language || 'en').startsWith('ko') ? 'ko' : 'en';
+    let currentLang = (navigator.language || 'en').startsWith('ko') ? 'ko' : 'en';
+    let visitData = null;
 
     function applyTranslations() {
       const t = translations[currentLang];
@@ -124,6 +125,22 @@
           <p><strong>화면 크기:</strong> ${window.innerWidth} x ${window.innerHeight}</p>
           <p><strong>페이지 로드 시간:</strong> ${performance.now().toFixed(2)}ms</p>
         `;
+      }
+    }
+
+    function updateCurrentDate() {
+      const dateEl = document.getElementById('currentDate');
+      if (dateEl) {
+        const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+        const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
+        dateEl.innerHTML = `<span id="datePrefix" data-i18n="today">${translations[currentLang].today}</span> ` + new Date().toLocaleDateString(locale, opts);
+      }
+    }
+
+    function updateVisitCounts() {
+      if (visitData) {
+        document.getElementById('visitCounts').textContent =
+          translations[currentLang].visitsToday.replace('{daily}', visitData.daily).replace('{total}', visitData.total);
       }
     }
    
@@ -381,15 +398,23 @@
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
       applyTranslations();
-      const dateEl = document.getElementById('currentDate');
-      if (dateEl) {
-        const opts = { year: 'numeric', month: 'long', day: 'numeric' };
-        const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
-        dateEl.innerHTML = `<span id="datePrefix" data-i18n="today">${translations[currentLang].today}</span> ` + new Date().toLocaleDateString(locale, opts);
-      }
+      updateCurrentDate();
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
       // 페이지가 초기화되면 자동으로 데이터를 새로 불러옵니다.
       refreshAllData();
+
+      document.getElementById('btnKo').addEventListener('click', function() {
+        currentLang = 'ko';
+        applyTranslations();
+        updateCurrentDate();
+        updateVisitCounts();
+      });
+      document.getElementById('btnEn').addEventListener('click', function() {
+        currentLang = 'en';
+        applyTranslations();
+        updateCurrentDate();
+        updateVisitCounts();
+      });
 
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
@@ -418,14 +443,18 @@
       }
     });
   </script>
+  <div id="languageToggle" style="text-align:center;margin-top:20px;">
+    <button id="btnKo">한국어</button> |
+    <button id="btnEn">English</button>
+  </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <script>
     (async function() {
       try {
         const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks');
         const data = await res.json();
-        document.getElementById('visitCounts').textContent =
-          translations[currentLang].visitsToday.replace('{daily}', data.daily).replace('{total}', data.total);
+        visitData = data;
+        updateVisitCounts();
       } catch (err) {
         console.error('Visit count failed', err);
       }
