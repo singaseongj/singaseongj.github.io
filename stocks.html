@@ -342,27 +342,23 @@
     }
 
     async function fetchRecs() {
-      let remote = null;
+      const local = await loadLocalRecs();
       try {
         const url = ENDPOINT + '?_=' + Date.now();
         const res = await fetch(url);
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        remote = await res.json();
-        console.log('Recommendations:', remote);
+        const data = await res.json();
+        console.log('Recommendations:', data);
+        render(mergeWithFallback(data, local));
       } catch (err) {
-        console.error('Failed to load remote recommendations:', err);
-      }
-
-      const local = await loadLocalRecs();
-
-      if (remote) {
-        render(mergeWithFallback(remote, local));
-      } else if (local) {
-        render(local);
-      } else {
-        const container = document.getElementById('recommendations');
-        if (container) {
-          container.innerHTML = `<p class="error">${translations[currentLang].recsError}</p>`;
+        console.error('Failed to load recommendations:', err);
+        if (local) {
+          render(local);
+        } else {
+          const container = document.getElementById('recommendations');
+          if (container) {
+            container.innerHTML = `<p class="error">${translations[currentLang].recsError}</p>`;
+          }
         }
       }
     }
