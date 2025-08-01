@@ -25,6 +25,9 @@ This project hosts the Singaseong website files.
   OFFLINE=1 node src/build.js
   ```
 
+The page also loads recent market headlines from Yahoo Finance.
+When offline, it falls back to `data/sample_market_news.json`.
+
 ## Visit counts
 To check page visit counts, send a request using the `page` parameter, e.g.:
 ```bash
