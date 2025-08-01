@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+}
+
+main {
+    flex: 1;
+    margin: 20px;
+    padding-bottom: 60px; /* Space for the footer */
+}
+
+/* 다운로드 버튼 정렬 및 스타일 */
+.download-buttons {
+    display: flex;
+    justify-content: center; /* 버튼을 가운데 정렬 */
+    gap: 20px; /* 버튼 사이 간격 */
+    margin-top: 20px;
+}
+
+.store-button img {
+    width: 160px; /* 버튼 크기를 동일하게 맞춤 */
+    height: auto;
+    max-height: 50px; /* 버튼 높이 제한 */
+}
+
+
+footer {
+    background-color: #f1f1f1;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log for Everything</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .store-badge {
+            max-width: 200px;
+            transition: transform 0.3s ease;
+        }
+        .store-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Log for Everything</h1>
+    <p>Download our app from your device's app store</p>
+    <p>플레이스토어 또는 앱스토어에서 다운로드하세요.</p>
+    <div class="download-buttons" id="download-links">
+        <!-- Links will be dynamically populated -->
+    </div>
+
+    <script>
+        function detectDevice() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            
+            return {
+                isIOS: /iPad|iPhone|iPod/.test(ua) && !window.MSStream,
+                isAndroid: /Android/.test(ua),
+                isDesktop: !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
+            };
+        }
+
+        function redirectToAppStore() {
+            // Your specific app store links
+            const links = {
+                appStore: 'https://apps.apple.com/kr/app/log-for-everything/id6743027247',
+                playStore: 'https://play.google.com/store/apps/details?id=com.singaseongapp.logforeverything'
+            };
+
+            const device = detectDevice();
+
+            // Redirect mobile devices directly to their respective app stores
+            if (device.isIOS) {
+                window.location.href = links.appStore;
+            } else if (device.isAndroid) {
+                window.location.href = links.playStore;
+            }
+
+            // For desktop, show download buttons
+            if (device.isDesktop) {
+                const downloadLinksContainer = document.getElementById('download-links');
+                
+                // App Store Badge
+                const appStoreBadge = document.createElement('a');
+                appStoreBadge.href = links.appStore;
+                appStoreBadge.innerHTML = `<img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge">`;
+                
+                // Google Play Badge
+                const playStoreBadge = document.createElement('a');
+                playStoreBadge.href = links.playStore;
+                playStoreBadge.innerHTML = `<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="store-badge">`;
+                
+                downloadLinksContainer.appendChild(appStoreBadge);
+                downloadLinksContainer.appendChild(playStoreBadge);
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = redirectToAppStore;
+    </script>
+    
+    <noscript>
+        <p>Please download our app from:</p>
+        <div class="download-buttons">
+            <a href="https://apps.apple.com/kr/app/log-for-everything/id6743027247">
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.singaseongapp.logforeverything">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="store-badge">
+            </a>
+        </div>
+    </noscript>
+</body>
+</html>
