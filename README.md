@@ -47,10 +47,10 @@ This prevents unnecessary network requests during daily builds.
 
 ## Updating market news
 
-`fetchNews.js` gathers the latest headlines from several RSS feeds, including
-three Korean sources, and writes them to `data/market_news.json`. The script
-keeps the file fresh by skipping the download when it was updated within the
-last six hours.
+`fetchNews.js` gathers the latest headlines from several RSS feeds. It collects
+five US market items from Yahoo Finance and one headline from each of three
+Korean Google News queries, then writes them to `data/market_news.json`. The
+file is only refreshed when the previous update is older than six hours.
 
 Run it manually whenever you want to refresh the news:
 
