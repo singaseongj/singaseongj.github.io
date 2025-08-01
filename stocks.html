@@ -32,7 +32,6 @@
   </div>
 
   <section id="marketSnapshot">
-    <h2>마켓 스냅샷</h2>
     
     <table>
       <thead>
@@ -45,6 +44,11 @@
   
     <div id="marketError" class="error" style="display:none;" role="alert"></div>
     <div id="lastUpdated" class="last-updated"></div>
+  </section>
+
+  <section id="marketNews">
+    <h2>Stock Market News</h2>
+    <ul id="newsList"><li class="loading">Loading news...</li></ul>
   </section>
 
   <section id="portfolioRecommendations">
@@ -243,6 +247,25 @@
       }
     }
 
+    async function loadNews() {
+      const rss = "https://news.google.com/rss/search?q=stock+market&hl=en-US&gl=US&ceid=US:en";
+      try {
+        const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rss)}`);
+        const { contents } = await res.json();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(contents, "application/xml");
+        const items = Array.from(doc.querySelectorAll("item")).slice(0, 5);
+        const html = items.map(it => {
+          const title = it.querySelector("title").textContent;
+          const link = it.querySelector("link").textContent;
+          return `<li><a href="${link}" target="_blank" rel="noopener">${title}</a></li>`;
+        }).join('');
+        document.getElementById("newsList").innerHTML = html;
+      } catch (e) {
+        console.error("News load failed", e);
+        document.getElementById("newsList").innerHTML = '<li class="error">뉴스를 불러오지 못했습니다.</li>';
+      }
+    }
     function render(data) {
       const container = document.getElementById('recommendations');
       if (!container) return;
@@ -285,6 +308,7 @@
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
       // 페이지가 초기화되면 자동으로 데이터를 새로 불러옵니다.
       refreshAllData();
+        loadNews();
 
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
