@@ -58,6 +58,8 @@ When network access isn't available, enable offline mode to use
 ```bash
 OFFLINE=1 node src/build.js
 ```
+The HTML layout is defined in `src/template.html`. This template represents our preferred design for `stocks.html`. Update the template and rebuild if you wish to change the page.
+
 
 ## Visit counting
 
