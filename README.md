@@ -31,6 +31,7 @@ If the file is valid you will see `All tests passed`.
 ## Updating recommendation data
 
 `fetchStockInfo.js` fetches sector and previous close information from the Yahoo Finance API and stores the result in `recommendations.json`.
+The script now checks the file's `lastUpdated` timestamp and only refreshes the data when it is more than six hours old.
 
 Run the script with:
 
