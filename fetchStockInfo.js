@@ -1,4 +1,9 @@
 import fs from 'fs/promises';
+import fetch from 'node-fetch';
+import { HttpsProxyAgent } from 'https-proxy-agent';
+
+const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
+const agent = proxy ? new HttpsProxyAgent(proxy) : undefined;
 
 // Mapping of stock names to Yahoo Finance tickers
 const TICKER_MAP = {
@@ -50,7 +55,7 @@ async function fetchInfo(name) {
     throw new Error('Ticker not found');
   }
   const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(ticker)}`;
-  const res = await fetch(url);
+  const res = await fetch(url, { agent });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
   const item = data?.quoteResponse?.result?.[0];
@@ -64,6 +69,7 @@ async function fetchInfo(name) {
 async function updateRecommendations() {
   const json = JSON.parse(await fs.readFile('recommendations.json', 'utf-8'));
   for (const market of Object.keys(json)) {
+    if (!json[market].safe || !json[market].aggressive) continue;
     for (const group of ['safe', 'aggressive']) {
       json[market][group] = await Promise.all(
         json[market][group].map(async entry => {
@@ -79,6 +85,7 @@ async function updateRecommendations() {
       );
     }
   }
+  json.lastUpdated = new Date().toISOString();
   await fs.writeFile('recommendations.json', JSON.stringify(json, null, 2));
   console.log('recommendations.json updated');
 }
