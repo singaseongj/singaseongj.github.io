@@ -6,10 +6,11 @@
     "test": "node tests/apple_association.test.js"
   },
   "dependencies": {
+    "https-proxy-agent": "^7.0.6",
+    "node-fetch": "^3.3.2"
   },
   "engines": {
     "node": ">=18"
   },
   "type": "module"
 }
-
