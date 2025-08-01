@@ -2,6 +2,8 @@ import fs from 'fs/promises';
 import fetch from 'node-fetch';
 import { HttpsProxyAgent } from 'https-proxy-agent';
 
+const SIX_HOURS = 6 * 60 * 60 * 1000;
+
 const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
 const agent = proxy ? new HttpsProxyAgent(proxy) : undefined;
 
@@ -67,7 +69,21 @@ async function fetchInfo(name) {
 }
 
 async function updateRecommendations() {
-  const json = JSON.parse(await fs.readFile('recommendations.json', 'utf-8'));
+  let json;
+  try {
+    json = JSON.parse(await fs.readFile('recommendations.json', 'utf-8'));
+  } catch {
+    console.log('recommendations.json not found. A new file will be created.');
+    json = {};
+  }
+
+  if (json.lastUpdated) {
+    const age = Date.now() - new Date(json.lastUpdated).getTime();
+    if (age < SIX_HOURS) {
+      console.log('recommendations.json is up to date.');
+      return;
+    }
+  }
   for (const market of Object.keys(json)) {
     if (!json[market].safe || !json[market].aggressive) continue;
     for (const group of ['safe', 'aggressive']) {
