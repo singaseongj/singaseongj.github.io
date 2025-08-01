@@ -76,7 +76,8 @@
   }
 
   // 최신 마켓 뉴스 로드
-  async function loadMarketNews() {
+  async function loadNews() {
+      const rss = "https://news.google.com/rss/search?q=stock+market&hl=en-US&gl=US&ceid=US:en";
       let sample = [];
       try {
         const res = await fetch('data/sample_market_news.json');
@@ -86,12 +87,11 @@
       }
 
       try {
-        const feedUrl = 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US';
-        const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`);
+        const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rss)}`);
         const { contents } = await res.json();
         const parser = new DOMParser();
-        const xml = parser.parseFromString(contents, 'text/xml');
-        const items = Array.from(xml.querySelectorAll('item')).slice(0,5);
+        const doc = parser.parseFromString(contents, 'application/xml');
+        const items = Array.from(doc.querySelectorAll('item')).slice(0,5);
         const headlines = items.map(it => it.querySelector('title').textContent);
         document.getElementById('newsList').innerHTML = headlines.map(h => `<li>${h}</li>`).join('');
         document.getElementById('newsError').style.display = 'none';
@@ -296,7 +296,7 @@
         button.disabled = true;
         button.textContent = '새로고침 중...';
       }
-      Promise.all([loadMarketData(), fetchRecs(), loadMarketNews()]).finally(() => {
+      Promise.all([loadMarketData(), fetchRecs(), loadNews()]).finally(() => {
         if (button) {
           button.disabled = false;
           button.textContent = '데이터 새로고침';
