@@ -1,8 +1,10 @@
----
 name: Daily Stock Report Build
 
-# KST 오전 9시 → UTC 오전 0시 (cron은 UTC 기준)
-"on":
+on:
+  # Enable manual runs from the GitHub UI
+  workflow_dispatch:
+
+  # KST 오전 9시 → UTC 오전 0시 (cron은 UTC 기준)
   schedule:
     # 매 6시간마다 실행 (UTC 기준)
     - cron: '0 */6 * * *'
@@ -46,7 +48,6 @@ jobs:
           skip_dirty_check: true
 
       - name: GitHub Pages 배포
-        # gh-pages 브랜치를 사용 중이라면 branch 지정
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
