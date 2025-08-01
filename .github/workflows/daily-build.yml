@@ -34,16 +34,16 @@ jobs:
         run: npm run build
 
       - name: Commit & push changes
-  uses: stefanzweifel/git-auto-commit-action@v4
-  with:
-    github_token: ${{ secrets.GITHUB_TOKEN }}
-    commit_message: "chore: daily stock report update [skip ci]"
-    file_pattern: |
-      stocks.html
-      src/template.html
-      data/market_news.json
-      recommendations.json
-    skip_dirty_check: true
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: daily stock report update [skip ci]"
+          file_pattern: |
+            stocks.html
+            src/template.html
+            data/market_news.json
+            recommendations.json
+          skip_dirty_check: true
 
       - name: GitHub Pages 배포
         # gh-pages 브랜치를 사용 중이라면 branch 지정
