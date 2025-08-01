@@ -283,7 +283,7 @@ async function fetchPortfolioRecommendations() {
         '</ul></div>'
       );
       htmlParts.push(
-        `<div class="portfolio-group"><h3>${m} 공격적 종목</h3><ul>` +
+        `<div class="portfolio-group"><h3>${m} 공격주</h3><ul>` +
           info.aggressive.map(s => {
             const name = typeof s === 'string' ? s : s.name;
             const sector = s.sector ? `<span class="sector">${s.sector}</span>` : '';
