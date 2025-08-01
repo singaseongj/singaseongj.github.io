@@ -32,11 +32,12 @@
     본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.
   </div>
 
-  <section id="marketNews">
-    <h2 data-i18n="marketNews">최신 마켓 뉴스</h2>
-    <ul id="newsList" class="news-list"></ul>
-    <div id="newsError" class="error" style="display:none;" role="alert"></div>
-  </section>
+    <section id="marketNews">
+      <h2 data-i18n="marketNews">최신 마켓 뉴스</h2>
+      <ul id="newsList" class="news-list"></ul>
+      <div id="newsError" class="error" style="display:none;" role="alert"></div>
+      <div id="newsUpdated" class="last-updated"></div>
+    </section>
 
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
@@ -290,6 +291,11 @@
           document.getElementById('newsError').textContent = translations[currentLang].newsError;
           document.getElementById('newsError').style.display = 'block';
         }
+      }
+      const upd = document.getElementById('newsUpdated');
+      if (upd) {
+        const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
+        upd.textContent = translations[currentLang].updated + new Date().toLocaleString(locale);
       }
   }
 
