@@ -56,14 +56,14 @@ async function main() {
   const all = [];
   try {
     const items = await fetchFeed(FEEDS.en);
-    all.push(...items.slice(0, 2));
+    all.push(...items.slice(0, 5));
   } catch (e) {
     console.error('Failed EN feed', e.message);
   }
   for (const key of ['kr1', 'kr2', 'kr3']) {
     try {
       const items = await fetchFeed(FEEDS[key]);
-      all.push(...items.slice(0, 2));
+      all.push(...items.slice(0, 1));
     } catch (e) {
       console.error('Failed', key, e.message);
     }
