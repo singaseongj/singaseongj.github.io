@@ -2,7 +2,7 @@
 name: Daily Stock Report Build
 
 # KST 오전 9시 → UTC 오전 0시 (cron은 UTC 기준)
-on:
+"on":
   schedule:
     # 매 6시간마다 실행 (UTC 기준)
     - cron: '0 */6 * * *'
@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 코드 체크아웃
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Node.js 설정
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -34,7 +34,7 @@ jobs:
         run: npm run build
 
       - name: Commit & push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "chore: daily stock report update [skip ci]"
@@ -47,7 +47,7 @@ jobs:
 
       - name: GitHub Pages 배포
         # gh-pages 브랜치를 사용 중이라면 branch 지정
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
