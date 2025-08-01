@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>데일리 주식 리포트 자동화</title>
+  <title data-i18n="title">데일리 주식 리포트 자동화</title>
   <link rel="stylesheet" href="stocks.css">
 </head>
 <body>
-  <h1>데일리 주식 리포트 자동화</h1>
-  <p id="currentDate">오늘: {{CURRENT_DATE}}</p>
+  <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
+  <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> {{CURRENT_DATE}}</p>
   
   <div id="debugInfo" class="debug" style="display: none;">
     <h4>디버그 정보:</h4>
@@ -16,35 +16,100 @@
   </div>
   
   <div id="summary">
-    <p>이 페이지는 KOSPI, KOSDAQ, NYSE, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.</p>
+    <p data-i18n="summary">이 페이지는 KOSPI, KOSDAQ, NYSE, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.</p>
     <ul>
-      <li><strong>KOSPI:</strong> 국내 대형 우량주 위주</li>
-      <li><strong>KOSDAQ:</strong> 성장 잠재력 높은 중소형주</li>
-      <li><strong>NYSE:</strong> 뉴욕 증권거래소 상장 종목 전체를 반영한 지수</li>
-      <li><strong>S&P 500:</strong> 미국 대표 대형주 지수</li>
-      <li><strong>NASDAQ 100:</strong> 나스닥 상장 비금융 대형주 100종목으로 기술주 비중 높음</li>
+      <li><strong>KOSPI:</strong> <span data-i18n="kospiDesc">국내 대형 우량주 위주</span></li>
+      <li><strong>KOSDAQ:</strong> <span data-i18n="kosdaqDesc">성장 잠재력 높은 중소형주</span></li>
+      <li><strong>NYSE:</strong> <span data-i18n="nyseDesc">뉴욕 증권거래소 상장 종목 전체를 반영한 지수</span></li>
+      <li><strong>S&P 500:</strong> <span data-i18n="spDesc">미국 대표 대형주 지수</span></li>
+      <li><strong>NASDAQ 100:</strong> <span data-i18n="nasdaqDesc">나스닥 상장 비금융 대형주 100종목으로 기술주 비중 높음</span></li>
     </ul>
-    <button onclick="toggleDebug()">디버그 모드 토글</button>
-    <button onclick="refreshAllData(event)">데이터 새로고침</button>
+    <button onclick="toggleDebug()" data-i18n="toggleDebug">디버그 모드 토글</button>
+    <button onclick="refreshAllData(event)" data-i18n="refreshData">데이터 새로고침</button>
   </div>
 
-  <div id="disclaimer" role="note">
+  <div id="disclaimer" role="note" data-i18n="disclaimer">
     본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.
   </div>
 
   <section id="marketNews">
-    <h2>최신 마켓 뉴스</h2>
+    <h2 data-i18n="marketNews">최신 마켓 뉴스</h2>
     <ul id="newsList" class="news-list"></ul>
     <div id="newsError" class="error" style="display:none;" role="alert"></div>
   </section>
 
   <section id="portfolioRecommendations">
-    <h2>포트폴리오 추천</h2>
+    <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
     {{PORTFOLIO_SECTIONS}}
     <div id="portfolioUpdated" class="last-updated"></div>
   </section>
   
   <script>
+    const translations = {
+      ko: {
+        title: '데일리 주식 리포트 자동화',
+        today: '오늘:',
+        summary: '이 페이지는 KOSPI, KOSDAQ, NYSE, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.',
+        kospiDesc: '국내 대형 우량주 위주',
+        kosdaqDesc: '성장 잠재력 높은 중소형주',
+        nyseDesc: '뉴욕 증권거래소 상장 종목 전체를 반영한 지수',
+        spDesc: '미국 대표 대형주 지수',
+        nasdaqDesc: '나스닥 상장 비금융 대형주 100종목으로 기술주 비중 높음',
+        toggleDebug: '디버그 모드 토글',
+        refreshData: '데이터 새로고침',
+        refreshing: '새로고침 중...',
+        disclaimer: '본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.',
+        marketNews: '최신 마켓 뉴스',
+        portfolioRecs: '포트폴리오 추천',
+        marketDataError: '마켓 데이터를 불러오지 못했습니다.',
+        newsError: '뉴스를 불러오지 못했습니다.',
+        recsError: '추천 데이터를 불러오지 못했습니다.',
+        safe: '안전주',
+        aggressive: '공격적 종목',
+        updated: '업데이트: ',
+        visitsToday: '오늘 방문: {daily} | 총 방문: {total}'
+      },
+      en: {
+        title: 'Daily Stock Report Automation',
+        today: 'Today:',
+        summary: 'This page analyzes KOSPI, KOSDAQ, NYSE, S&P 500 and NASDAQ 100 markets to provide recommended stocks.',
+        kospiDesc: 'Domestic large-cap stocks',
+        kosdaqDesc: 'High growth potential small and mid-caps',
+        nyseDesc: 'Index reflecting all NYSE listings',
+        spDesc: 'Major U.S. large-cap index',
+        nasdaqDesc: 'Tech-heavy index of 100 non-financial NASDAQ stocks',
+        toggleDebug: 'Toggle Debug Mode',
+        refreshData: 'Refresh Data',
+        refreshing: 'Refreshing...',
+        disclaimer: 'Information on this page is for reference only and accuracy is not guaranteed. Investment decisions are your responsibility.',
+        marketNews: 'Latest Market News',
+        portfolioRecs: 'Portfolio Recommendations',
+        marketDataError: 'Failed to load market data.',
+        newsError: 'Failed to load news.',
+        recsError: 'Failed to load recommendations.',
+        safe: 'Safe Picks',
+        aggressive: 'Aggressive Picks',
+        updated: 'Updated: ',
+        visitsToday: 'Visits today: {daily} | Total: {total}'
+      }
+    };
+
+    const currentLang = (navigator.language || 'en').startsWith('ko') ? 'ko' : 'en';
+
+    function applyTranslations() {
+      const t = translations[currentLang];
+      document.documentElement.lang = currentLang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (key === 'title') {
+          document.title = t[key];
+        }
+        if (t[key]) {
+          el.textContent = t[key];
+        }
+      });
+    }
+
     function toggleDebug() {
       const debugDiv = document.getElementById('debugInfo');
       const isVisible = debugDiv.style.display !== 'none';
@@ -163,7 +228,7 @@
       const errorDiv = document.getElementById('marketError');
       if (errorDiv) {
         if (hadError) {
-          errorDiv.textContent = '마켓 데이터를 불러오지 못했습니다.';
+          errorDiv.textContent = translations[currentLang].marketDataError;
           errorDiv.style.display = 'block';
         } else {
           errorDiv.style.display = 'none';
@@ -205,7 +270,7 @@
           document.getElementById('newsList').innerHTML = sample.map(h => `<li>${h}</li>`).join('');
           document.getElementById('newsError').style.display = 'none';
         } else {
-          document.getElementById('newsError').textContent = '뉴스를 불러오지 못했습니다.';
+          document.getElementById('newsError').textContent = translations[currentLang].newsError;
           document.getElementById('newsError').style.display = 'block';
         }
       }
@@ -265,7 +330,7 @@
         } else {
           const container = document.getElementById('recommendations');
           if (container) {
-            container.innerHTML = '<p class="error">추천 데이터를 불러오지 못했습니다.</p>';
+            container.innerHTML = `<p class="error">${translations[currentLang].recsError}</p>`;
           }
         }
       }
@@ -287,13 +352,14 @@
             const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
             return `<li>${name}${sector}</li>`;
           }).join('');
-          html.push(`<div class="portfolio-group"><h3>${m} ${bucket === 'safe' ? '안전주' : '공격적 종목'}</h3><ul>${items}</ul></div>`);
+          const label = bucket === 'safe' ? translations[currentLang].safe : translations[currentLang].aggressive;
+          html.push(`<div class="portfolio-group"><h3>${m} ${label}</h3><ul>${items}</ul></div>`);
         }
       }
       container.innerHTML = html.join('');
       const upd = document.getElementById('portfolioUpdated');
       if (upd && data.lastUpdated) {
-        upd.textContent = '업데이트: ' + new Date(data.lastUpdated).toLocaleString('ko-KR');
+        upd.textContent = translations[currentLang].updated + new Date(data.lastUpdated).toLocaleString(currentLang === 'ko' ? 'ko-KR' : 'en-US');
       }
     }
 
@@ -302,18 +368,25 @@
       const button = e ? e.target : document.querySelector('button[onclick*="refreshAllData"]');
       if (button) {
         button.disabled = true;
-        button.textContent = '새로고침 중...';
+        button.textContent = translations[currentLang].refreshing;
       }
       Promise.all([loadMarketData(), fetchRecs(), loadMarketNews()]).finally(() => {
         if (button) {
           button.disabled = false;
-          button.textContent = '데이터 새로고침';
+          button.textContent = translations[currentLang].refreshData;
         }
       });
     }
     
     // 페이지 로드 시 실행
     document.addEventListener('DOMContentLoaded', function() {
+      applyTranslations();
+      const dateEl = document.getElementById('currentDate');
+      if (dateEl) {
+        const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+        const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
+        dateEl.innerHTML = `<span id="datePrefix" data-i18n="today">${translations[currentLang].today}</span> ` + new Date().toLocaleDateString(locale, opts);
+      }
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
       // 페이지가 초기화되면 자동으로 데이터를 새로 불러옵니다.
       refreshAllData();
@@ -352,7 +425,7 @@
         const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks');
         const data = await res.json();
         document.getElementById('visitCounts').textContent =
-          `Visits today: ${data.daily} | Total: ${data.total}`;
+          translations[currentLang].visitsToday.replace('{daily}', data.daily).replace('{total}', data.total);
       } catch (err) {
         console.error('Visit count failed', err);
       }
