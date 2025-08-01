@@ -258,45 +258,49 @@
     }
 
   // 최신 마켓 뉴스 로드
-  async function loadMarketNews() {
-      let sample = [];
-      try {
-        const res = await fetch('data/sample_market_news.json');
-        sample = await res.json();
-      } catch (e) {
-        console.warn('sample market news load failed', e);
-      }
+  let newsTimestamp = null;
 
+  function renderNewsUpdated() {
+      const upd = document.getElementById('newsUpdated');
+      if (upd && newsTimestamp) {
+        const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
+        upd.textContent = translations[currentLang].updated + newsTimestamp.toLocaleString(locale);
+      }
+  }
+
+  async function loadMarketNews() {
+      let data = null;
       try {
-        const feedUrl = 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US';
-        const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`);
-        const { contents } = await res.json();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(contents, 'text/xml');
-        const items = Array.from(xml.querySelectorAll('item')).slice(0,5);
-        const headlines = items.map(it => ({
-          title: it.querySelector('title').textContent,
-          link: it.querySelector('link').textContent
-        }));
-        document.getElementById('newsList').innerHTML = headlines
-          .map(h => `<li><a href="${h.link}" target="_blank" rel="noopener">${h.title}</a></li>`)
-          .join('');
-        document.getElementById('newsError').style.display = 'none';
-      } catch (err) {
-        console.error('news load failed', err);
-        if (sample.length) {
-          document.getElementById('newsList').innerHTML = sample.map(h => `<li>${h}</li>`).join('');
-          document.getElementById('newsError').style.display = 'none';
-        } else {
-          document.getElementById('newsError').textContent = translations[currentLang].newsError;
-          document.getElementById('newsError').style.display = 'block';
+        const res = await fetch('data/market_news.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        data = await res.json();
+      } catch (e) {
+        console.warn('market_news.json load failed', e);
+        try {
+          const res = await fetch('data/sample_market_news.json');
+          data = await res.json();
+        } catch (err) {
+          console.warn('sample market news load failed', err);
+          data = null;
         }
       }
-      const upd = document.getElementById('newsUpdated');
-      if (upd) {
-        const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
-        upd.textContent = translations[currentLang].updated + new Date().toLocaleString(locale);
+
+      if (data) {
+        if (Array.isArray(data)) {
+          newsTimestamp = new Date();
+          document.getElementById('newsList').innerHTML = data.map(t => `<li>${t}</li>`).join('');
+        } else if (Array.isArray(data.items)) {
+          newsTimestamp = new Date(data.lastUpdated);
+          document.getElementById('newsList').innerHTML = data.items
+            .map(h => `<li><a href="${h.link}" target="_blank" rel="noopener">${h.title}</a></li>`)
+            .join('');
+        }
+        document.getElementById('newsError').style.display = 'none';
+      } else {
+        document.getElementById('newsError').textContent = translations[currentLang].newsError;
+        document.getElementById('newsError').style.display = 'block';
       }
+      renderNewsUpdated();
   }
 
     // 추천 종목 로드
@@ -359,7 +363,10 @@
       }
     }
 
+    let lastRecommendations = null;
+
     function render(data) {
+      lastRecommendations = data;
       const container = document.getElementById('recommendations');
       if (!container) return;
       const markets = Array.from(new Set(
@@ -413,12 +420,16 @@
         currentLang = 'ko';
         applyTranslations();
         updateCurrentDate();
+        renderNewsUpdated();
+        if (lastRecommendations) render(lastRecommendations);
         updateVisitCounts();
       });
       document.getElementById('btnEn').addEventListener('click', function() {
         currentLang = 'en';
         applyTranslations();
         updateCurrentDate();
+        renderNewsUpdated();
+        if (lastRecommendations) render(lastRecommendations);
         updateVisitCounts();
       });
 
