@@ -150,7 +150,7 @@ async function fetchMarketIndices() {
       } else if (idx.type === 'yahoo') {
         // Yahoo Finance API 직접 호출
         // 각 지수에 대응하는 야후 파이낸스 심볼 지정
-        const symbol = idx.name === 'NYSE' ? '^NYA' : '^IXIC';
+        const symbol = idx.name === 'S&P 500' ? '^GSPC' : '^IXIC';
         const yahooUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`;
         
         try {
@@ -268,7 +268,7 @@ async function fetchPortfolioRecommendations() {
   }
 
   try {
-    const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'NYSE'];
+    const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'S&P 500'];
     const htmlParts = [];
     for (const m of markets) {
       const info = data[m];
