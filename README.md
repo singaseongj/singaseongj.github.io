@@ -28,8 +28,12 @@ Run the script with:
 node fetchStockInfo.js
 ```
 
-`src/build.js` no longer reads `recommendations.json` directly. It first tries to fetch the data through a Google Apps Script and, if that fails, falls back to a public Google Drive file
-([link](https://drive.google.com/file/d/1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ/view?usp=drive_link)). This lets the build run without local JSON updates.
+`src/build.js` now uses `recommendations.json` as a cache. It first checks if the file was
+updated within the last 24 hours and, if so, uses the cached data. Otherwise it attempts to
+fetch fresh data through a Google Apps Script and writes the result back to the JSON file.
+If the fetch fails it will still fall back to the local file
+([link](https://drive.google.com/file/d/1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ/view?usp=drive_link)).
+This prevents unnecessary network requests during daily builds.
 
 ## Building `stocks.html`
 

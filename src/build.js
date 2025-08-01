@@ -220,22 +220,41 @@ async function fetchMarketIndices() {
 
 // Fetch portfolio recommendations from Google Drive and build HTML
 async function fetchPortfolioRecommendations() {
+  const filePath = path.resolve('recommendations.json');
+  const CACHE_MAX_AGE = 1000 * 60 * 60 * 24; // 24 hours
   let data;
-  if (OFFLINE) {
+
+  // Try to use cached data if it is recent
+  if (fs.existsSync(filePath)) {
     try {
-      data = JSON.parse(fs.readFileSync(path.resolve('recommendations.json'), 'utf-8'));
+      const stat = fs.statSync(filePath);
+      if (Date.now() - stat.mtimeMs < CACHE_MAX_AGE) {
+        console.log('Using cached recommendations.json');
+        data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      }
     } catch (err) {
-      console.error('Failed to load local recommendations:', err.message);
-      return {
-        html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
-        lastUpdated: new Date(),
-      };
+      console.error('Failed to read cached recommendations:', err.message);
     }
-  } else {
+  }
+
+  // Fetch from remote if no valid cache and not in offline mode
+  if (!data && !OFFLINE) {
     try {
       data = await fetchWithRetry(SCRIPT_URL);
+      data.lastUpdated = new Date().toISOString();
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      console.log('recommendations.json updated');
     } catch (err) {
       console.error('Failed to fetch recommendations:', err.message);
+    }
+  }
+
+  // Fallback to local file when fetch failed or offline
+  if (!data) {
+    try {
+      data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    } catch (err) {
+      console.error('Failed to load local recommendations:', err.message);
       return {
         html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
         lastUpdated: new Date(),
