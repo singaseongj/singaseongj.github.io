@@ -343,22 +343,26 @@
 
     async function fetchRecs() {
       const local = await loadLocalRecs();
+      let data = local;
       try {
         const url = ENDPOINT + '?_=' + Date.now();
         const res = await fetch(url);
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
-        console.log('Recommendations:', data);
-        render(mergeWithFallback(data, local));
+        const remote = await res.json();
+        data = mergeWithFallback(remote, local);
+        console.log('Recommendations (remote):', remote);
       } catch (err) {
         console.error('Failed to load recommendations:', err);
-        if (local) {
-          render(local);
-        } else {
-          const container = document.getElementById('recommendations');
-          if (container) {
-            container.innerHTML = `<p class="error">${translations[currentLang].recsError}</p>`;
-          }
+      }
+      if (local) {
+        data = local;
+      }
+      if (data) {
+        render(data);
+      } else {
+        const container = document.getElementById('recommendations');
+        if (container) {
+          container.innerHTML = `<p class="error">${translations[currentLang].recsError}</p>`;
         }
       }
     }

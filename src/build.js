@@ -294,13 +294,15 @@ async function fetchPortfolioRecommendations() {
     }
     return {
       html: `<div id="recommendations">${htmlParts.join('')}</div>`,
-      lastUpdated: data.lastUpdated ? new Date(data.lastUpdated) : new Date()
+      lastUpdated: data.lastUpdated ? new Date(data.lastUpdated) : new Date(),
+      data
     };
   } catch (err) {
     console.error('Failed to process recommendations', err);
     return {
       html: '<div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>',
-      lastUpdated: new Date()
+      lastUpdated: new Date(),
+      data: null
     };
   }
 }
@@ -323,8 +325,9 @@ async function build() {
     .replace('{{MARKET_TABLE}}', marketTable)
     .replace('{{PORTFOLIO_SECTIONS}}', portfolioHTML)
     .replace('{{BUILD_TIMESTAMP}}', now.toISOString().replace('T', ' ').split('.')[0] + ' KST');
-
   await fsp.writeFile(path.resolve('stocks.html'), result, 'utf-8');
+
+  // recommendations.js is no longer generated; data is kept in recommendations.json
   console.log('✅ stocks.html 생성 완료');
   console.log(`📅 생성 시간: ${now.toLocaleString('ko-KR')}`);
 }
