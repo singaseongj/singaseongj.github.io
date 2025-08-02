@@ -317,7 +317,7 @@ async function build() {
     fetchMarketIndices(),
     fetchPortfolioRecommendations(),
   ]);
-  const { html: portfolioHTML, data: portfolioJSON } = portfolioData;
+  const { html: portfolioHTML } = portfolioData;
 
   console.log('📝 HTML 템플릿 처리 중...');
   const result = tpl
@@ -327,9 +327,7 @@ async function build() {
     .replace('{{BUILD_TIMESTAMP}}', now.toISOString().replace('T', ' ').split('.')[0] + ' KST');
   await fsp.writeFile(path.resolve('stocks.html'), result, 'utf-8');
 
-  // Write JS override file
-  const jsContent = 'window.recommendationsOverride = ' + JSON.stringify(portfolioJSON, null, 2) + ';\n';
-  await fsp.writeFile(path.resolve('recommendations.js'), jsContent, 'utf-8');
+  // recommendations.js is no longer generated; data is kept in recommendations.json
   console.log('✅ stocks.html 생성 완료');
   console.log(`📅 생성 시간: ${now.toLocaleString('ko-KR')}`);
 }
