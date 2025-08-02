@@ -343,15 +343,18 @@
 
     async function fetchRecs() {
       const local = await loadLocalRecs();
-      let data;
+      let data = local;
       try {
         const url = ENDPOINT + '?_=' + Date.now();
         const res = await fetch(url);
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        data = mergeWithFallback(await res.json(), local);
-        console.log('Recommendations:', data);
+        const remote = await res.json();
+        data = mergeWithFallback(remote, local);
+        console.log('Recommendations (remote):', remote);
       } catch (err) {
         console.error('Failed to load recommendations:', err);
+      }
+      if (local) {
         data = local;
       }
       if (data) {
@@ -361,10 +364,6 @@
         if (container) {
           container.innerHTML = `<p class="error">${translations[currentLang].recsError}</p>`;
         }
-      }
-      if (window.recommendationsOverride) {
-        console.log('Using recommendations override');
-        render(window.recommendationsOverride);
       }
     }
 
@@ -482,6 +481,5 @@
       }
     })();
   </script>
-  <script src="recommendations.js"></script>
 </body>
 </html>
