@@ -68,7 +68,8 @@
         safe: '안전주',
         aggressive: '공격주',
         updated: '업데이트: ',
-        visitsToday: '오늘 방문: {daily} | 총 방문: {total}'
+        visitsToday: '오늘 방문: {daily} | 총 방문: {total}',
+        prevCloseLabel: '전일 종가:'
       },
       en: {
         title: 'Daily Stock Report Automation',
@@ -91,7 +92,8 @@
         safe: 'Safe Picks',
         aggressive: 'Aggressive Picks',
         updated: 'Updated: ',
-        visitsToday: 'Visits today: {daily} | Total: {total}'
+        visitsToday: 'Visits today: {daily} | Total: {total}',
+        prevCloseLabel: 'Prev Close:'
       }
     };
 
@@ -383,8 +385,11 @@
         for (const bucket of ['safe', 'aggressive']) {
           const items = (info?.[bucket] || []).map(item => {
             const name = FULL_NAME_MAP[item.name] || item.name;
-            const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
-            return `<li>${name}${sector}</li>`;
+            const sector = item.sector ? `<span class=\"sector\">${item.sector}</span>` : '';
+            const prevClose = (item.prevClose ?? null) !== null
+              ? `<span class=\"prev-close\">${translations[currentLang].prevCloseLabel} ${Number(item.prevClose).toLocaleString(currentLang === 'ko' ? 'ko-KR' : 'en-US')}</span>`
+              : '';
+            return `<li>${name}${sector}${prevClose}</li>`;
           }).join('');
           const label = bucket === 'safe' ? translations[currentLang].safe : translations[currentLang].aggressive;
           html.push(`<div class="portfolio-group"><h3>${m} ${label}</h3><ul>${items}</ul></div>`);
