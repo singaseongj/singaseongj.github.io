@@ -1,227 +1,67 @@
 {
   "KOSPI": {
     "safe": [
-      {
-        "name": "삼성전자",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "SK하이닉스",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "삼성바이오로직스",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "현대차",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "POSCO홀딩스",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "삼성전자",        "sector": "Technology",             "prevClose": 84300 },
+      { "name": "SK하이닉스",      "sector": "Technology",             "prevClose": 218000 },
+      { "name": "삼성바이오로직스",  "sector": "Healthcare",             "prevClose": 880000 },
+      { "name": "현대차",          "sector": "Consumer Discretionary", "prevClose": 265500 },
+      { "name": "POSCO홀딩스",     "sector": "Materials",              "prevClose": 391000 }
     ],
     "aggressive": [
-      {
-        "name": "효성중공업",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "HD현대일렉트릭",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "BGF리테일",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "두산에너빌리티",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "카카오",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "효성중공업",      "sector": "Industrials",            "prevClose": 1169000 },
+      { "name": "HD현대일렉트릭",   "sector": "Industrials",            "prevClose": 90800 },
+      { "name": "BGF리테일",       "sector": "Consumer Staples",       "prevClose": 166000 },
+      { "name": "두산에너빌리티",  "sector": "Industrials",            "prevClose": 17880 },
+      { "name": "한화에어로스페이스", "sector": "Industrials",            "prevClose": 216000 }
     ]
   },
   "KOSDAQ": {
     "safe": [
-      {
-        "name": "에코프로비엠",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "셀트리온헬스케어",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "천보",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "리노공업",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "S&S테크",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "에코프로비엠",     "sector": "Materials",              "prevClose": 256000 },
+      { "name": "셀트리온헬스케어", "sector": "Healthcare",             "prevClose": 72800 },
+      { "name": "천보",             "sector": "Materials",              "prevClose": 157700 },
+      { "name": "리노공업",         "sector": "Technology",             "prevClose": 262000 },
+      { "name": "박셀바이오",       "sector": "Healthcare",             "prevClose": 109000 }
     ],
     "aggressive": [
-      {
-        "name": "HLB",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "레인보우로보틱스",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "알테오젠",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "지아이이노베이션",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "펩트론",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "HLB",             "sector": "Healthcare",             "prevClose": 58900 },
+      { "name": "레인보우로보틱스", "sector": "Industrials",            "prevClose": 169000 },
+      { "name": "알테오젠",         "sector": "Healthcare",             "prevClose": 95300 },
+      { "name": "지아이이노베이션", "sector": "Healthcare",             "prevClose": 44700 },
+      { "name": "에이프로젠",       "sector": "Healthcare",             "prevClose": 19200 }
     ]
   },
   "NASDAQ": {
     "safe": [
-      {
-        "name": "Microsoft",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Apple",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "NVIDIA",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Alphabet",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Amazon",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "Microsoft",       "sector": "Technology",             "prevClose": 436.54 },
+      { "name": "Apple",           "sector": "Technology",             "prevClose": 209.43 },
+      { "name": "NVIDIA",          "sector": "Technology",             "prevClose": 125.10 },
+      { "name": "Amazon",          "sector": "Consumer Discretionary", "prevClose": 204.56 },
+      { "name": "Meta Platforms",  "sector": "Communication Services", "prevClose": 498.70 }
     ],
     "aggressive": [
-      {
-        "name": "Super Micro Computer",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Palantir",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Arm Holdings",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Micron Technology",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Tesla",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "Super Micro Computer", "sector": "Technology",        "prevClose": 855.44 },
+      { "name": "Palantir",             "sector": "Technology",        "prevClose": 25.45 },
+      { "name": "Arm Holdings",         "sector": "Technology",        "prevClose": 153.21 },
+      { "name": "Micron Technology",    "sector": "Technology",        "prevClose": 128.90 },
+      { "name": "UiPath",               "sector": "Technology",        "prevClose": 18.77 }
     ]
   },
   "S&P 500": {
     "safe": [
-      {
-        "name": "Berkshire Hathaway (B)",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Microsoft",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Johnson & Johnson",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Procter & Gamble",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Visa",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "Berkshire Hathaway (B)", "sector": "Financial Services", "prevClose": 412.30 },
+      { "name": "Microsoft",              "sector": "Technology",         "prevClose": 436.54 },
+      { "name": "Johnson & Johnson",      "sector": "Healthcare",         "prevClose": 159.21 },
+      { "name": "Procter & Gamble",       "sector": "Consumer Defensive", "prevClose": 168.05 },
+      { "name": "Visa",                   "sector": "Financial Services", "prevClose": 276.12 }
     ],
     "aggressive": [
-      {
-        "name": "Palantir",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "GE Vernova",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Eli Lilly",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "Super Micro Computer",
-        "sector": null,
-        "prevClose": null
-      },
-      {
-        "name": "NRG Energy",
-        "sector": null,
-        "prevClose": null
-      }
+      { "name": "Palantir",          "sector": "Technology",          "prevClose": 25.45 },
+      { "name": "Super Micro Computer","sector": "Technology",        "prevClose": 855.44 },
+      { "name": "Eli Lilly",         "sector": "Healthcare",          "prevClose": 890.11 },
+      { "name": "Uber Technologies", "sector": "Technology",          "prevClose": 69.12 },
+      { "name": "NRG Energy",        "sector": "Utilities",           "prevClose": 162.33 }
     ]
   },
-  "lastUpdated": "2025-08-04T18:21:50.916Z"
+  "lastUpdated": "2025-08-05T09:00:00+09:00"
 }
