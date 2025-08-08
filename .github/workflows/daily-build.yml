@@ -1,27 +1,32 @@
 name: Daily Stock Report Build
 
 on:
-  # Enable manual runs from the GitHub UI
   workflow_dispatch:
-
-  # KST 오전 9시 → UTC 오전 0시 (cron은 UTC 기준)
   schedule:
-    # 매 6시간마다 실행 (UTC 기준)
-    - cron: '0 */6 * * *'
+    - cron: '0 */6 * * *'  # every 6 hours (UTC)
 
 jobs:
   build-and-deploy:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+
+    concurrency:
+      group: daily-stock-report
+      cancel-in-progress: false
+
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Node.js 설정
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'     # fewer ESM/fetch issues than 18
+          cache: 'npm'
 
       - name: 의존성 설치
         run: npm ci
@@ -32,15 +37,18 @@ jobs:
       - name: 뉴스 데이터 업데이트
         run: node fetchNews.js
 
-      - name: 빌드 실행
-        run: npm run build
+      # Optional sanity check to catch path/case mistakes
+      - name: Verify generated files
+        run: |
+          ls -la
+          test -f data/market_news.json && echo "market_news.json OK" || (echo "❌ data/market_news.json missing"; exit 1)
+          test -f stocks.html && echo "stocks.html OK" || (echo "❌ stocks.html missing"; exit 1)
 
       - name: Commit & push changes
         uses: stefanzweifel/git-auto-commit-action@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           commit_message: "chore: daily stock report update [skip ci]"
+          # Make sure these are the exact paths & casing produced by your scripts
           file_pattern: |
             stocks.html
             src/template.html
@@ -52,4 +60,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./
+          publish_dir: ./     # keep root since stocks.html is here
+          # Optionally keep the gh-pages history small
+          # force_orphan: true
