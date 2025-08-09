@@ -4,11 +4,9 @@
   "scripts": {
     "build": "node src/build.js",
     "test": "node tests/apple_association.test.js",
-    "news:fetch": "node fetchNews.js"
+    "stocks:refresh": "node fetchStockInfo.js --force"
   },
-  "dependencies": {
-    "fast-xml-parser": "^4.5.3"
-  },
+  "dependencies": {},
   "engines": { "node": ">=18" },
   "type": "module"
 }
