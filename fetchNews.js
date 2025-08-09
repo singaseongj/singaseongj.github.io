@@ -1,4 +1,4 @@
-// fetchStockInfo.js — expanded static map + auto-resolver fallback
+// fetchStockInfo.js — static map + auto-resolver + Yahoo profile-page fallback
 // Node >= 18 (uses built-in fetch), ESM
 import fs from 'fs/promises';
 import { existsSync } from 'fs';
@@ -8,30 +8,27 @@ import path from 'node:path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Headers for Yahoo APIs (JSON) and HTML profile fallback
 const HEADERS_JSON = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36',
   'Accept': 'application/json',
   'Accept-Language': 'en-US,en;q=0.8,ko-KR;q=0.7',
   'Connection': 'keep-alive'
 };
-
 const HEADERS_HTML = {
   ...HEADERS_JSON,
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
   'Referer': 'https://finance.yahoo.com/'
 };
 
-
 const SIX_HOURS = 6 * 60 * 60 * 1000;
 const FORCE = process.argv.includes('--force');
 const CACHE_FILE = path.join(__dirname, 'ticker-cache.json');
 const RECS_FILE  = path.join(__dirname, 'recommendations.json');
 
-const UA = { 'User-Agent': 'stock-sector-updater/1.0 (+https://example.local)' };
-
 // -------- Static ticker map (first priority) --------
 const TICKER_MAP = {
-  // --- KOSPI (KS) core + common alternates ---
+  // --- KOSPI (KS) ---
   '삼성전자': '005930.KS',
   'SK하이닉스': '000660.KS',
   '삼성바이오로직스': '207940.KS',
@@ -50,7 +47,7 @@ const TICKER_MAP = {
   '셀트리온': '068270.KS',
   'HMM': '011200.KS',
 
-  // --- KOSDAQ (KQ) core + alternates/synonyms ---
+  // --- KOSDAQ (KQ) ---
   '에코프로비엠': '247540.KQ',
   '셀트리온헬스케어': '091990.KQ',
   '천보': '278280.KQ',
@@ -59,7 +56,7 @@ const TICKER_MAP = {
   '알테오젠': '196170.KQ',
   '레인보우로보틱스': '277810.KQ',
   'HLB': '028300.KQ',
-  '에이치엘비': '028300.KQ', // synonym
+  '에이치엘비': '028300.KQ',
   '지아이이노베이션': '358570.KQ',
   '펩트론': '087010.KQ',
   '카카오게임즈': '293490.KQ',
@@ -69,7 +66,7 @@ const TICKER_MAP = {
   '씨젠': '096530.KQ',
   '펄어비스': '263750.KQ',
 
-  // --- US (NASDAQ/NYSE) core + common alternates ---
+  // --- US (NASDAQ/NYSE) ---
   'Microsoft': 'MSFT',
   'Apple': 'AAPL',
   'NVIDIA': 'NVDA',
@@ -105,14 +102,11 @@ const TICKER_MAP = {
   'UiPath': 'PATH'
 };
 
-// --------- Cache helpers (for auto-resolved tickers) ----------
+// -------- Cache helpers (for auto-resolved tickers) --------
 async function loadCache() {
   if (!existsSync(CACHE_FILE)) return {};
-  try {
-    return JSON.parse(await fs.readFile(CACHE_FILE, 'utf-8'));
-  } catch {
-    return {};
-  }
+  try { return JSON.parse(await fs.readFile(CACHE_FILE, 'utf-8')); }
+  catch { return {}; }
 }
 async function saveCache(cache) {
   await fs.writeFile(CACHE_FILE, JSON.stringify(cache, null, 2));
@@ -124,29 +118,21 @@ function pickSymbol(name, searchJson) {
   const quotes = searchJson?.quotes || [];
   if (!quotes.length) return null;
 
-  // Prefer KRX tickers (.KS/.KQ) for Korean names
   if (looksKorean(name)) {
     const krx = quotes.find(q => /\.K[QS]$/.test(q.symbol));
     if (krx) return krx.symbol;
   }
-
-  // Otherwise pick an equity-like symbol
   const eq = quotes.find(q => q.quoteType === 'EQUITY' || q.isYahooFinance);
   return (eq && eq.symbol) || quotes[0].symbol || null;
 }
 
 async function resolveTicker(name, cache) {
-  // 1) static map
   if (TICKER_MAP[name]) return TICKER_MAP[name];
-  // 2) cache
   if (cache[name]) return cache[name];
 
-  // 3) Yahoo search
   const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
   const region = looksKorean(name) ? 'KR' : 'US';
-  const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(
-    name
-  )}&lang=${lang}&region=${region}`;
+  const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(name)}&lang=${lang}&region=${region}`;
 
   const res = await fetch(url, { headers: HEADERS_JSON });
   if (!res.ok) throw new Error(`Search HTTP ${res.status}`);
@@ -161,23 +147,38 @@ async function resolveTicker(name, cache) {
   return symbol;
 }
 
-// --------- Sector lookup ----------
+// -------- Sector lookup (JSON first, then HTML profile fallback) --------
+async function fetchSectorFromProfile(ticker) {
+  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(ticker)}/profile`;
+  const res = await fetch(url, { headers: HEADERS_HTML });
+  if (!res.ok) throw new Error(`profile HTTP ${res.status}`);
+  const html = await res.text();
+
+  // Try embedded JSON
+  let m = html.match(/"sector":"([^"]+)"/);
+  if (m && m[1]) return m[1];
+
+  // Fallback to visible text
+  m = html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
+  if (m && m[1]) return m[1].trim();
+
+  return null;
+}
+
 async function fetchSectorByTicker(ticker) {
-  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(
-    ticker
-  )}?modules=assetProfile`;
+  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(ticker)}?modules=assetProfile`;
   const res = await fetch(url, { headers: HEADERS_JSON });
+
   if (!res.ok) {
     if (res.status === 401 || res.status === 403) {
-      // fallback to profile HTML
       return await fetchSectorFromProfile(ticker);
     }
     throw new Error(`quoteSummary HTTP ${res.status}`);
   }
+
   const json = await res.json();
   const qsum = json?.quoteSummary;
   if (qsum?.error) {
-    // Some 200 responses still carry an error in body
     if (qsum.error.code === 'Unauthorized' || qsum.error.code === 'Forbidden') {
       return await fetchSectorFromProfile(ticker);
     }
@@ -185,6 +186,7 @@ async function fetchSectorByTicker(ticker) {
   }
   const result = qsum?.result?.[0];
   const sector = result?.assetProfile?.sector ?? null;
+
   return sector ?? await fetchSectorFromProfile(ticker);
 }
 
@@ -194,24 +196,8 @@ async function fetchSector(name, cache) {
   if (!sector) throw new Error(`Sector not found for ${name} (${ticker})`);
   return sector;
 }
-async function fetchSectorFromProfile(ticker) {
-  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(ticker)}/profile`;
-  const res = await fetch(url, { headers: HEADERS_HTML });
-  if (!res.ok) throw new Error(`profile HTTP ${res.status}`);
-  const html = await res.text();
 
-  // Try JSON embedded in HTML first
-  let m = html.match(/"sector":"([^"]+)"/);
-  if (m && m[1]) return m[1];
-
-  // Fallback to visible text: Sector(s) ... </span><span>Technology</span>
-  m = html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
-  if (m && m[1]) return m[1].trim();
-
-  return null;
-}
-
-// --------- Utility: warn missing static mappings (optional) ----------
+// -------- Optional: warn which names aren’t in the static map --------
 function findMissingStaticMappings(recos) {
   const missing = new Set();
   for (const mkt of Object.keys(recos)) {
@@ -227,7 +213,7 @@ function findMissingStaticMappings(recos) {
   return [...missing];
 }
 
-// --------- Main update ---------
+// -------- Main update --------
 async function updateRecommendations() {
   let data;
   try {
@@ -237,7 +223,6 @@ async function updateRecommendations() {
     process.exit(1);
   }
 
-  // Freshness gate (skip if recent unless --force)
   if (data.lastUpdated && !FORCE) {
     const age = Date.now() - new Date(data.lastUpdated).getTime();
     if (age < SIX_HOURS) {
@@ -246,15 +231,14 @@ async function updateRecommendations() {
     }
   }
 
-  // Optional warning to grow the static map over time
   const missingStatic = findMissingStaticMappings(data);
   if (missingStatic.length) {
     console.warn('[INFO] Not in static map (will auto-resolve):', missingStatic.join(', '));
   }
 
   const cache = await loadCache();
-
   const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
+
   for (const market of markets) {
     const bucket = data[market];
     if (!bucket?.safe || !bucket?.aggressive) continue;
@@ -273,8 +257,7 @@ async function updateRecommendations() {
             return { name, sector: sector ?? prevSector ?? null };
           } catch (err) {
             console.error(`[WARN] ${name}: ${err.message}`);
-            // Keep existing sector if fetch fails; don't write nulls over good data
-            return { name, sector: prevSector };
+            return { name, sector: prevSector }; // keep existing if fetch fails
           }
         })
       );
@@ -286,7 +269,6 @@ async function updateRecommendations() {
   console.log(`Updated ${RECS_FILE}`);
 }
 
-// Run
 updateRecommendations().catch(err => {
   console.error(err);
   process.exit(1);
