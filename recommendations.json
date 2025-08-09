@@ -1,187 +1,67 @@
 {
   "KOSPI": {
     "safe": [
-      {
-        "name": "삼성전자",
-        "sector": "Technology"
-      },
-      {
-        "name": "SK하이닉스",
-        "sector": "Technology"
-      },
-      {
-        "name": "삼성바이오로직스",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "현대차",
-        "sector": "Consumer Discretionary"
-      },
-      {
-        "name": "LG에너지솔루션",
-        "sector": "Industrials"
-      }
+      { "name": "삼성전자",         "sector": "Technology",             "prevClose": null },
+      { "name": "SK하이닉스",       "sector": "Technology",             "prevClose": null },
+      { "name": "삼성바이오로직스",  "sector": "Healthcare",             "prevClose": null },
+      { "name": "현대차",           "sector": "Consumer Discretionary", "prevClose": null },
+      { "name": "POSCO홀딩스",      "sector": "Materials",              "prevClose": null }
     ],
     "aggressive": [
-      {
-        "name": "한화에어로스페이스",
-        "sector": "Industrials"
-      },
-      {
-        "name": "HD현대일렉트릭",
-        "sector": "Industrials"
-      },
-      {
-        "name": "POSCO퓨처엠",
-        "sector": "Materials"
-      },
-      {
-        "name": "두산에너빌리티",
-        "sector": "Industrials"
-      },
-      {
-        "name": "HD한국조선해양",
-        "sector": "Industrials"
-      }
+      { "name": "한화에어로스페이스", "sector": "Industrials",            "prevClose": null },
+      { "name": "HD현대일렉트릭",    "sector": "Industrials",            "prevClose": null },
+      { "name": "POSCO퓨처엠",      "sector": "Materials",              "prevClose": null },
+      { "name": "두산에너빌리티",    "sector": "Industrials",            "prevClose": null },
+      { "name": "HD한국조선해양",    "sector": "Industrials",            "prevClose": null }
     ]
   },
   "KOSDAQ": {
     "safe": [
-      {
-        "name": "에코프로비엠",
-        "sector": "Materials"
-      },
-      {
-        "name": "셀트리온헬스케어",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "천보",
-        "sector": "Materials"
-      },
-      {
-        "name": "리노공업",
-        "sector": "Technology"
-      },
-      {
-        "name": "JYP엔터테인먼트",
-        "sector": "Communication Services"
-      }
+      { "name": "에코프로비엠",       "sector": "Materials",              "prevClose": null },
+      { "name": "셀트리온헬스케어",   "sector": "Healthcare",             "prevClose": null },
+      { "name": "천보",              "sector": "Materials",              "prevClose": null },
+      { "name": "리노공업",           "sector": "Technology",             "prevClose": null },
+      { "name": "JYP엔터테인먼트",    "sector": "Communication Services", "prevClose": null }
     ],
     "aggressive": [
-      {
-        "name": "알테오젠",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "레인보우로보틱스",
-        "sector": "Industrials"
-      },
-      {
-        "name": "HLB",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "지아이이노베이션",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "펩트론",
-        "sector": "Healthcare"
-      }
+      { "name": "알테오젠",          "sector": "Healthcare",             "prevClose": null },
+      { "name": "레인보우로보틱스",    "sector": "Industrials",            "prevClose": null },
+      { "name": "HLB",              "sector": "Healthcare",             "prevClose": null },
+      { "name": "지아이이노베이션",    "sector": "Healthcare",             "prevClose": null },
+      { "name": "펩트론",            "sector": "Healthcare",             "prevClose": null }
     ]
   },
   "NASDAQ": {
     "safe": [
-      {
-        "name": "Microsoft",
-        "sector": "Technology"
-      },
-      {
-        "name": "Apple",
-        "sector": "Technology"
-      },
-      {
-        "name": "NVIDIA",
-        "sector": "Technology"
-      },
-      {
-        "name": "Amazon",
-        "sector": "Consumer Discretionary"
-      },
-      {
-        "name": "Alphabet",
-        "sector": "Communication Services"
-      }
+      { "name": "Microsoft",        "sector": "Technology",             "prevClose": null },
+      { "name": "Apple",            "sector": "Technology",             "prevClose": null },
+      { "name": "NVIDIA",           "sector": "Technology",             "prevClose": null },
+      { "name": "Amazon",           "sector": "Consumer Discretionary", "prevClose": null },
+      { "name": "Alphabet",         "sector": "Communication Services", "prevClose": null }
     ],
     "aggressive": [
-      {
-        "name": "Super Micro Computer",
-        "sector": "Technology"
-      },
-      {
-        "name": "Advanced Micro Devices",
-        "sector": "Technology"
-      },
-      {
-        "name": "Arm Holdings",
-        "sector": "Technology"
-      },
-      {
-        "name": "Micron Technology",
-        "sector": "Technology"
-      },
-      {
-        "name": "CrowdStrike",
-        "sector": "Technology"
-      }
+      { "name": "Super Micro Computer", "sector": "Technology",         "prevClose": null },
+      { "name": "Advanced Micro Devices", "sector": "Technology",       "prevClose": null },
+      { "name": "Arm Holdings",      "sector": "Technology",            "prevClose": null },
+      { "name": "Micron Technology", "sector": "Technology",            "prevClose": null },
+      { "name": "CrowdStrike",       "sector": "Technology",            "prevClose": null }
     ]
   },
   "S&P 500": {
     "safe": [
-      {
-        "name": "Berkshire Hathaway (B)",
-        "sector": "Financial Services"
-      },
-      {
-        "name": "Microsoft",
-        "sector": "Technology"
-      },
-      {
-        "name": "Johnson & Johnson",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "Procter & Gamble",
-        "sector": "Consumer Staples"
-      },
-      {
-        "name": "Visa",
-        "sector": "Financial Services"
-      }
+      { "name": "Berkshire Hathaway (B)", "sector": "Financial Services", "prevClose": null },
+      { "name": "Microsoft",              "sector": "Technology",         "prevClose": null },
+      { "name": "Johnson & Johnson",      "sector": "Healthcare",         "prevClose": null },
+      { "name": "Procter & Gamble",       "sector": "Consumer Staples",   "prevClose": null },
+      { "name": "Visa",                   "sector": "Financial Services", "prevClose": null }
     ],
     "aggressive": [
-      {
-        "name": "Palantir",
-        "sector": "Technology"
-      },
-      {
-        "name": "Super Micro Computer",
-        "sector": "Technology"
-      },
-      {
-        "name": "Eli Lilly",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "Uber Technologies",
-        "sector": "Industrials"
-      },
-      {
-        "name": "NRG Energy",
-        "sector": "Utilities"
-      }
+      { "name": "Palantir",               "sector": "Technology",         "prevClose": null },
+      { "name": "Super Micro Computer",   "sector": "Technology",         "prevClose": null },
+      { "name": "Eli Lilly",              "sector": "Healthcare",         "prevClose": null },
+      { "name": "Uber Technologies",      "sector": "Industrials",        "prevClose": null },
+      { "name": "NRG Energy",             "sector": "Utilities",          "prevClose": null }
     ]
   },
-  "lastUpdated": "2025-08-08T23:59:32.133Z"
+  "lastUpdated": "2025-08-10T13:00:00+09:00"
 }
