@@ -1,85 +1,275 @@
-import fs from 'fs';
-import fetch from 'node-fetch';
-import { HttpsProxyAgent } from 'https-proxy-agent';
+// fetchStockInfo.js — static map + auto-resolver + Yahoo profile-page fallback
+// Node >= 18 (uses built-in fetch), ESM
+import fs from 'fs/promises';
+import { existsSync } from 'fs';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
 
-const OUTPUT = 'data/market_news.json';
-const SIX_HOURS = 6 * 60 * 60 * 1000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
-const agent = proxy ? new HttpsProxyAgent(proxy) : undefined;
-
-const FEEDS = {
-  en: 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US',
-  kr1: 'https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C&hl=ko&gl=KR&ceid=KR:ko',
-  kr2: 'https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC&hl=ko&gl=KR&ceid=KR:ko',
-  kr3: 'https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%ED%99%A9&hl=ko&gl=KR&ceid=KR:ko'
+// Headers for Yahoo APIs (JSON) and HTML profile fallback
+const HEADERS_JSON = {
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36',
+  'Accept': 'application/json',
+  'Accept-Language': 'en-US,en;q=0.8,ko-KR;q=0.7',
+  'Connection': 'keep-alive'
+};
+const HEADERS_HTML = {
+  ...HEADERS_JSON,
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Referer': 'https://finance.yahoo.com/'
 };
 
-function parseItems(xml) {
-  const items = [];
-  const regex = /<item>([\s\S]*?)<\/item>/g;
-  let m;
-  while ((m = regex.exec(xml)) && items.length < 5) {
-    const item = m[1];
-    const titleMatch = item.match(/<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/);
-    const linkMatch = item.match(/<link>([\s\S]*?)<\/link>/);
-    if (titleMatch && linkMatch) {
-      const title = titleMatch[1].trim();
-      const link = linkMatch[1].trim();
-      items.push({ title, link });
+const SIX_HOURS = 6 * 60 * 60 * 1000;
+const FORCE = process.argv.includes('--force');
+const CACHE_FILE = path.join(__dirname, 'ticker-cache.json');
+const RECS_FILE  = path.join(__dirname, 'recommendations.json');
+
+// -------- Static ticker map (first priority) --------
+const TICKER_MAP = {
+  // --- KOSPI (KS) ---
+  '삼성전자': '005930.KS',
+  'SK하이닉스': '000660.KS',
+  '삼성바이오로직스': '207940.KS',
+  '현대차': '005380.KS',
+  'LG에너지솔루션': '373220.KS',
+  '한화에어로스페이스': '012450.KS',
+  'HD현대일렉트릭': '267260.KS',
+  'POSCO퓨처엠': '003670.KS',
+  '두산에너빌리티': '034020.KS',
+  'HD한국조선해양': '009540.KS',
+  'POSCO홀딩스': '005490.KS',
+  'LG화학': '051910.KS',
+  'SK텔레콤': '017670.KS',
+  '카카오': '035720.KS',
+  '네이버': '035420.KS',
+  '셀트리온': '068270.KS',
+  'HMM': '011200.KS',
+
+  // --- KOSDAQ (KQ) ---
+  '에코프로비엠': '247540.KQ',
+  '셀트리온헬스케어': '091990.KQ',
+  '천보': '278280.KQ',
+  '리노공업': '058470.KQ',
+  'JYP엔터테인먼트': '035900.KQ',
+  '알테오젠': '196170.KQ',
+  '레인보우로보틱스': '277810.KQ',
+  'HLB': '028300.KQ',
+  '에이치엘비': '028300.KQ',
+  '지아이이노베이션': '358570.KQ',
+  '펩트론': '087010.KQ',
+  '카카오게임즈': '293490.KQ',
+  'CJ ENM': '035760.KQ',
+  '스튜디오드래곤': '253450.KQ',
+  '제넥신': '095700.KQ',
+  '씨젠': '096530.KQ',
+  '펄어비스': '263750.KQ',
+
+  // --- US (NASDAQ/NYSE) ---
+  'Microsoft': 'MSFT',
+  'Apple': 'AAPL',
+  'NVIDIA': 'NVDA',
+  'Amazon': 'AMZN',
+  'Alphabet': 'GOOGL',
+  'Alphabet (Class A)': 'GOOGL',
+  'Alphabet (Class C)': 'GOOG',
+  'Meta': 'META',
+  'Meta Platforms': 'META',
+  'Super Micro Computer': 'SMCI',
+  'Advanced Micro Devices': 'AMD',
+  'Arm Holdings': 'ARM',
+  'Micron Technology': 'MU',
+  'CrowdStrike': 'CRWD',
+  'Berkshire Hathaway (A)': 'BRK-A',
+  'Berkshire Hathaway (B)': 'BRK-B',
+  'Johnson & Johnson': 'JNJ',
+  'Procter & Gamble': 'PG',
+  'Visa': 'V',
+  'Palantir': 'PLTR',
+  'Eli Lilly': 'LLY',
+  'Uber Technologies': 'UBER',
+  'NRG Energy': 'NRG',
+  'Netflix': 'NFLX',
+  'Tesla': 'TSLA',
+  'Coca-Cola': 'KO',
+  'Walmart': 'WMT',
+  "McDonald's": 'MCD',
+  'Snowflake': 'SNOW',
+  'Shopify': 'SHOP',
+  'Block': 'SQ',
+  'Coinbase': 'COIN',
+  'UiPath': 'PATH'
+};
+
+// -------- Cache helpers (for auto-resolved tickers) --------
+async function loadCache() {
+  if (!existsSync(CACHE_FILE)) return {};
+  try { return JSON.parse(await fs.readFile(CACHE_FILE, 'utf-8')); }
+  catch { return {}; }
+}
+async function saveCache(cache) {
+  await fs.writeFile(CACHE_FILE, JSON.stringify(cache, null, 2));
+}
+const looksKorean = s => /[가-힣]/.test(s);
+
+// Choose a symbol from Yahoo search results
+function pickSymbol(name, searchJson) {
+  const quotes = searchJson?.quotes || [];
+  if (!quotes.length) return null;
+
+  if (looksKorean(name)) {
+    const krx = quotes.find(q => /\.K[QS]$/.test(q.symbol));
+    if (krx) return krx.symbol;
+  }
+  const eq = quotes.find(q => q.quoteType === 'EQUITY' || q.isYahooFinance);
+  return (eq && eq.symbol) || quotes[0].symbol || null;
+}
+
+async function resolveTicker(name, cache) {
+  if (TICKER_MAP[name]) return TICKER_MAP[name];
+  if (cache[name]) return cache[name];
+
+  const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
+  const region = looksKorean(name) ? 'KR' : 'US';
+  const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(name)}&lang=${lang}&region=${region}`;
+
+  const res = await fetch(url, { headers: HEADERS_JSON });
+  if (!res.ok) throw new Error(`Search HTTP ${res.status}`);
+  const data = await res.json();
+
+  const symbol = pickSymbol(name, data);
+  if (!symbol) throw new Error(`Could not resolve ticker for "${name}"`);
+
+  cache[name] = symbol;
+  await saveCache(cache);
+  console.log(`[auto-resolve] ${name} -> ${symbol}`);
+  return symbol;
+}
+
+// -------- Sector lookup (JSON first, then HTML profile fallback) --------
+async function fetchSectorFromProfile(ticker) {
+  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(ticker)}/profile`;
+  const res = await fetch(url, { headers: HEADERS_HTML });
+  if (!res.ok) throw new Error(`profile HTTP ${res.status}`);
+  const html = await res.text();
+
+  // Try embedded JSON
+  let m = html.match(/"sector":"([^"]+)"/);
+  if (m && m[1]) return m[1];
+
+  // Fallback to visible text
+  m = html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
+  if (m && m[1]) return m[1].trim();
+
+  return null;
+}
+
+async function fetchSectorByTicker(ticker) {
+  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(ticker)}?modules=assetProfile`;
+  const res = await fetch(url, { headers: HEADERS_JSON });
+
+  if (!res.ok) {
+    if (res.status === 401 || res.status === 403) {
+      return await fetchSectorFromProfile(ticker);
+    }
+    throw new Error(`quoteSummary HTTP ${res.status}`);
+  }
+
+  const json = await res.json();
+  const qsum = json?.quoteSummary;
+  if (qsum?.error) {
+    if (qsum.error.code === 'Unauthorized' || qsum.error.code === 'Forbidden') {
+      return await fetchSectorFromProfile(ticker);
+    }
+    throw new Error(`quoteSummary error: ${qsum.error.code || 'unknown'}`);
+  }
+  const result = qsum?.result?.[0];
+  const sector = result?.assetProfile?.sector ?? null;
+
+  return sector ?? await fetchSectorFromProfile(ticker);
+}
+
+async function fetchSector(name, cache) {
+  const ticker = await resolveTicker(name, cache);
+  const sector = await fetchSectorByTicker(ticker);
+  if (!sector) throw new Error(`Sector not found for ${name} (${ticker})`);
+  return sector;
+}
+
+// -------- Optional: warn which names aren’t in the static map --------
+function findMissingStaticMappings(recos) {
+  const missing = new Set();
+  for (const mkt of Object.keys(recos)) {
+    const grp = recos[mkt];
+    if (!grp?.safe || !grp?.aggressive) continue;
+    for (const bucket of ['safe', 'aggressive']) {
+      for (const entry of grp[bucket]) {
+        const name = typeof entry === 'string' ? entry : entry.name;
+        if (name && !TICKER_MAP[name]) missing.add(name);
+      }
     }
   }
-  return items;
+  return [...missing];
 }
 
-async function fetchFeed(url) {
-  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-  const res = await fetch(proxyUrl, { agent });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const { contents } = await res.json();
-  return parseItems(contents);
-}
-
-async function main() {
-  let current;
+// -------- Main update --------
+async function updateRecommendations() {
+  let data;
   try {
-    current = JSON.parse(fs.readFileSync(OUTPUT, 'utf8'));
-  } catch {}
-  if (current && current.lastUpdated) {
-    const age = Date.now() - new Date(current.lastUpdated).getTime();
-    if (age < SIX_HOURS && current.items?.length) {
-      console.log('News is up to date.');
+    data = JSON.parse(await fs.readFile(RECS_FILE, 'utf-8'));
+  } catch {
+    console.error(`${RECS_FILE} not found. Save your JSON file first.`);
+    process.exit(1);
+  }
+
+  if (data.lastUpdated && !FORCE) {
+    const age = Date.now() - new Date(data.lastUpdated).getTime();
+    if (age < SIX_HOURS) {
+      console.log(`${RECS_FILE} is up to date (<6h). Use --force to override.`);
       return;
     }
   }
 
-  const all = [];
-  try {
-    const items = await fetchFeed(FEEDS.en);
-    all.push(...items.slice(0, 5));
-  } catch (e) {
-    console.error('Failed EN feed', e.message);
+  const missingStatic = findMissingStaticMappings(data);
+  if (missingStatic.length) {
+    console.warn('[INFO] Not in static map (will auto-resolve):', missingStatic.join(', '));
   }
-  for (const key of ['kr1', 'kr2', 'kr3']) {
-    try {
-      const items = await fetchFeed(FEEDS[key]);
-      all.push(...items.slice(0, 1));
-    } catch (e) {
-      console.error('Failed', key, e.message);
+
+  const cache = await loadCache();
+  const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
+
+  for (const market of markets) {
+    const bucket = data[market];
+    if (!bucket?.safe || !bucket?.aggressive) continue;
+
+    for (const group of ['safe', 'aggressive']) {
+      const entries = bucket[group];
+      if (!Array.isArray(entries)) continue;
+
+      data[market][group] = await Promise.all(
+        entries.map(async entry => {
+          const name = typeof entry === 'string' ? entry : entry.name;
+          const prevSector = typeof entry === 'object' ? entry.sector ?? null : null;
+
+          try {
+            const sector = await fetchSector(name, cache);
+            return { name, sector: sector ?? prevSector ?? null };
+          } catch (err) {
+            console.error(`[WARN] ${name}: ${err.message}`);
+            return { name, sector: prevSector }; // keep existing if fetch fails
+          }
+        })
+      );
     }
   }
 
-  if (all.length === 0 && current) {
-    console.log('Using existing news due to failures.');
-    return;
-  }
-
-  const out = { lastUpdated: new Date().toISOString(), items: all.slice(0, 8) };
-  fs.writeFileSync(OUTPUT, JSON.stringify(out, null, 2));
-  console.log('Updated', OUTPUT);
+  data.lastUpdated = new Date().toISOString();
+  await fs.writeFile(RECS_FILE, JSON.stringify(data, null, 2));
+  console.log(`Updated ${RECS_FILE}`);
 }
 
-main().catch(err => {
+updateRecommendations().catch(err => {
   console.error(err);
   process.exit(1);
 });

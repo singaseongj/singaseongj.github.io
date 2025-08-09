@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node src/build.js",
-    "test": "node tests/apple_association.test.js"
-  },
-  "dependencies": {
-    "https-proxy-agent": "^7.0.6",
-    "node-fetch": "^3.3.2"
+    "test": "node tests/apple_association.test.js",
+    "stocks:refresh": "node fetchStockInfo.js --force"
   },
   "engines": {
     "node": ">=18"
