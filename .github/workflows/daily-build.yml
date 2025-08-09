@@ -11,6 +11,10 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
 
+    # make timestamps consistent with KR
+    env:
+      TZ: Asia/Seoul
+
     concurrency:
       group: daily-stock-report
       cancel-in-progress: false
@@ -25,41 +29,52 @@ jobs:
       - name: Node.js 설정
         uses: actions/setup-node@v4
         with:
-          node-version: '20'     # fewer ESM/fetch issues than 18
+          node-version: '20'
           cache: 'npm'
 
       - name: 의존성 설치
         run: npm ci
 
+      # Safety net: remove legacy imports that break Node 20's built-in fetch
+      - name: Remove legacy imports (node-fetch / https-proxy-agent)
+        run: |
+          set -eux
+          for f in fetchStockInfo.js fetchNews.js; do
+            if [ -f "$f" ]; then
+              sed -i 's/^.*node-fetch.*$//' "$f" || true
+              sed -i 's/^.*https-proxy-agent.*$//' "$f" || true
+            fi
+          done
+          # Assert we didn't miss any in fetchStockInfo.js
+          ! grep -nE "node-fetch|https-proxy-agent" fetchStockInfo.js || (echo "❌ Remove node-fetch/https-proxy-agent imports from fetchStockInfo.js" && exit 1)
+
       - name: 주식 추천 정보 업데이트
-        run: node fetchStockInfo.js
+        run: node fetchStockInfo.js --force
 
       - name: 뉴스 데이터 업데이트
         run: node fetchNews.js
 
-      # Optional sanity check to catch path/case mistakes
       - name: Verify generated files
         run: |
           ls -la
-          test -f data/market_news.json && echo "market_news.json OK" || (echo "❌ data/market_news.json missing"; exit 1)
-          test -f stocks.html && echo "stocks.html OK" || (echo "❌ stocks.html missing"; exit 1)
+          test -f data/market_news.json && echo "✅ market_news.json OK" || (echo "❌ data/market_news.json missing"; exit 1)
+          test -f recommendations.json && echo "✅ recommendations.json OK" || (echo "❌ recommendations.json missing"; exit 1)
 
       - name: Commit & push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: daily stock report update [skip ci]"
-          # Make sure these are the exact paths & casing produced by your scripts
           file_pattern: |
+            recommendations.json
+            ticker-cache.json
+            data/market_news.json
             stocks.html
             src/template.html
-            data/market_news.json
-            recommendations.json
 
       - name: GitHub Pages 배포
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./     # keep root since stocks.html is here
-          # Optionally keep the gh-pages history small
-          # force_orphan: true
+          publish_dir: ./
+          # force_orphan: true  # optional
