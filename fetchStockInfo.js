@@ -7,105 +7,131 @@ const SIX_HOURS = 6 * 60 * 60 * 1000;
 const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
 const agent = proxy ? new HttpsProxyAgent(proxy) : undefined;
 
-// Mapping of stock names to Yahoo Finance tickers
+const FORCE = process.argv.includes('--force');
+
+// Yahoo Finance ticker mapping for every name in your JSON
 const TICKER_MAP = {
+  // --- KOSPI (KS) ---
   '삼성전자': '005930.KS',
+  'SK하이닉스': '000660.KS',
+  '삼성바이오로직스': '207940.KS',
   '현대차': '005380.KS',
-  'LG화학': '051910.KS',
-  'SK텔레콤': '017670.KS',
-  'POSCO홀딩스': '005490.KS',
-  '카카오': '035720.KS',
-  '네이버': '035420.KS',
-  '셀트리온': '068270.KS',
-  'HMM': '011200.KS',
+  'LG에너지솔루션': '373220.KS',
+  '한화에어로스페이스': '012450.KS',
+  'HD현대일렉트릭': '267260.KS',
+  'POSCO퓨처엠': '003670.KS',
   '두산에너빌리티': '034020.KS',
-  '셀트리온헬스케어': '091990.KQ',
+  'HD한국조선해양': '009540.KS',
+
+  // --- KOSDAQ (KQ) ---
   '에코프로비엠': '247540.KQ',
-  '카카오게임즈': '293490.KQ',
-  'CJ ENM': '035760.KQ',
-  '스튜디오드래곤': '253450.KQ',
-  '제넥신': '095700.KQ',
-  '펄어비스': '263750.KQ',
-  '에이치엘비': '028300.KQ',
+  '셀트리온헬스케어': '091990.KQ',
+  '천보': '278280.KQ',
+  '리노공업': '058470.KQ',
+  'JYP엔터테인먼트': '035900.KQ',
   '알테오젠': '196170.KQ',
-  '씨젠': '096530.KQ',
-  'Apple': 'AAPL',
+  '레인보우로보틱스': '277810.KQ',
+  'HLB': '028300.KQ',
+  '지아이이노베이션': '358570.KQ',
+  '펩트론': '087010.KQ',
+
+  // --- NASDAQ / S&P 500 (US) ---
   'Microsoft': 'MSFT',
+  'Apple': 'AAPL',
+  'NVIDIA': 'NVDA',
   'Amazon': 'AMZN',
   'Alphabet': 'GOOGL',
-  'Meta': 'META',
-  'NVIDIA': 'NVDA',
-  'Tesla': 'TSLA',
-  'AMD': 'AMD',
-  'Netflix': 'NFLX',
-  'Palantir': 'PLTR',
-  'Coca-Cola': 'KO',
+  'Super Micro Computer': 'SMCI',
+  'Advanced Micro Devices': 'AMD',
+  'Arm Holdings': 'ARM',
+  'Micron Technology': 'MU',
+  'CrowdStrike': 'CRWD',
+  'Berkshire Hathaway (B)': 'BRK-B',
   'Johnson & Johnson': 'JNJ',
   'Procter & Gamble': 'PG',
-  'Walmart': 'WMT',
-  "McDonald's": 'MCD',
-  'Snowflake': 'SNOW',
-  'Shopify': 'SHOP',
-  'Uber': 'UBER',
-  'Block': 'SQ',
-  'Coinbase': 'COIN'
+  'Visa': 'V',
+  'Palantir': 'PLTR',
+  'Eli Lilly': 'LLY',
+  'Uber Technologies': 'UBER',
+  'NRG Energy': 'NRG'
 };
 
-async function fetchInfo(name) {
+async function fetchSector(name) {
   const ticker = TICKER_MAP[name];
-  if (!ticker) {
-    throw new Error('Ticker not found');
-  }
-  const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(ticker)}`;
-  const res = await fetch(url, { agent });
+  if (!ticker) throw new Error(`Ticker not found for ${name}`);
+
+  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(
+    ticker
+  )}?modules=assetProfile`;
+
+  const res = await fetch(url, { agent, headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json();
-  const item = data?.quoteResponse?.result?.[0];
-  if (!item) throw new Error('No data');
-  return {
-    sector: item.sector || null,
-    prevClose: item.regularMarketPreviousClose || null,
-  };
+
+  const json = await res.json();
+  const result = json?.quoteSummary?.result?.[0];
+  const sector = result?.assetProfile?.sector ?? null;
+
+  if (!sector) throw new Error('Sector not found');
+  return sector;
 }
 
 async function updateRecommendations() {
-  let json;
+  let data;
   try {
-    json = JSON.parse(await fs.readFile('recommendations.json', 'utf-8'));
+    data = JSON.parse(await fs.readFile('recommendations.json', 'utf-8'));
   } catch {
-    console.log('recommendations.json not found. A new file will be created.');
-    json = {};
+    console.error('recommendations.json not found. Save your JSON file first.');
+    process.exit(1);
   }
 
-  if (json.lastUpdated) {
-    const age = Date.now() - new Date(json.lastUpdated).getTime();
+  // Cache guard (skipped with --force)
+  if (data.lastUpdated && !FORCE) {
+    const age = Date.now() - new Date(data.lastUpdated).getTime();
     if (age < SIX_HOURS) {
-      console.log('recommendations.json is up to date.');
+      console.log('recommendations.json is up to date (<6h). Use --force to override.');
       return;
     }
   }
-  for (const market of Object.keys(json)) {
-    if (!json[market].safe || !json[market].aggressive) continue;
+
+  const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
+  for (const market of markets) {
+    const bucket = data[market];
+    if (!bucket?.safe || !bucket?.aggressive) continue;
+
     for (const group of ['safe', 'aggressive']) {
-      json[market][group] = await Promise.all(
-        json[market][group].map(async entry => {
+      const entries = bucket[group];
+      if (!Array.isArray(entries)) continue;
+
+      // Refresh every name's sector, but never replace a good value with null
+      data[market][group] = await Promise.all(
+        entries.map(async entry => {
           const name = typeof entry === 'string' ? entry : entry.name;
+          const prevSector = typeof entry === 'object' ? entry.sector ?? null : null;
+
+          if (!TICKER_MAP[name]) {
+            console.warn(`[WARN] No ticker mapping for "${name}". Add it to TICKER_MAP.`);
+            return { name, sector: prevSector };
+          }
+
           try {
-            const info = await fetchInfo(name);
-            return { name, sector: info.sector, prevClose: info.prevClose };
+            const sector = await fetchSector(name);
+            return { name, sector: sector ?? prevSector ?? null };
           } catch (err) {
-            console.error('Failed to fetch', name, err.message);
-            return { name, sector: null, prevClose: null };
+            console.error(`[WARN] Sector fetch failed for "${name}": ${err.message}`);
+            // Keep whatever was there before rather than nulling it out
+            return { name, sector: prevSector };
           }
         })
       );
     }
   }
-  json.lastUpdated = new Date().toISOString();
-  await fs.writeFile('recommendations.json', JSON.stringify(json, null, 2));
+
+  data.lastUpdated = new Date().toISOString();
+  await fs.writeFile('recommendations.json', JSON.stringify(data, null, 2));
   console.log('recommendations.json updated');
 }
 
 updateRecommendations().catch(err => {
   console.error('Update failed', err);
+  process.exit(1);
 });
