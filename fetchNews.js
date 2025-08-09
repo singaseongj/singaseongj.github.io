@@ -1,14 +1,12 @@
+// fetchNews.js (ESM, no proxy, built-in fetch)
 import fs from 'fs';
-import { HttpsProxyAgent } from 'https-proxy-agent';
+import path from 'node:path';
 import { XMLParser } from 'fast-xml-parser';
 
 const OUTPUT = 'data/market_news.json';
 const SIX_HOURS = 6 * 60 * 60 * 1000;
 const TIMEOUT_MS = 12_000;
 const RETRIES = 2;
-
-const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
-const agent = proxy ? new HttpsProxyAgent(proxy) : undefined;
 
 const HEADERS = {
   // Many RSS endpoints reject default UA
@@ -27,7 +25,6 @@ const FEEDS = {
 const parser = new XMLParser({
   ignoreAttributes: false,
   attributeNamePrefix: '',
-  // Handle CDATA safely
   cdataPropName: 'cdata',
   processEntities: true,
 });
@@ -60,13 +57,12 @@ async function get(url) {
   let lastErr;
   for (let i = 0; i <= RETRIES; i++) {
     try {
-      const res = await fetchWithTimeout(url, { headers: HEADERS, agent });
+      const res = await fetchWithTimeout(url, { headers: HEADERS });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.text();
     } catch (e) {
       lastErr = e;
-      // brief backoff
-      await new Promise(r => setTimeout(r, 300 * (i + 1)));
+      await new Promise(r => setTimeout(r, 300 * (i + 1))); // brief backoff
     }
   }
   throw lastErr;
@@ -80,20 +76,15 @@ function normalizeItems(rawXml, preferGoogleNewsLink = true) {
   let items = channel.item || channel.entry || [];
   if (!Array.isArray(items)) items = [items];
 
-  // Map to {title, link}
   return items.map(it => {
-    // Google News sometimes puts original link under <link href=""> or in <link> with redirects.
-    let title =
-      it.title?.cdata || it.title?._ || it.title || '';
+    let title = it.title?.cdata || it.title?._ || it.title || '';
     if (typeof title === 'object') title = String(title?.cdata || '');
 
-    // Prefer typical RSS <link>, else Atom <link href="...">
     let link = it.link;
     if (typeof link === 'object') {
       link = link.href || link._ || link.cdata || '';
     }
     if (Array.isArray(link)) {
-      // choose first reasonable href
       const atom = link.find(l => typeof l === 'object' && l.href)?.href;
       link = atom || link[0];
     }
@@ -135,16 +126,13 @@ async function main() {
     }
   }
 
-  // Fetch in parallel
   const keys = ['en', 'kr1', 'kr2', 'kr3'];
   const results = await Promise.allSettled(keys.map(k => fetchFeed(FEEDS[k])));
 
   const enItems = results[0].status === 'fulfilled' ? results[0].value.slice(0, 5) : [];
   const krItems = results.slice(1).flatMap(r => (r.status === 'fulfilled' ? r.value.slice(0, 3) : []));
 
-  // If KR is too long, trim; but ensure at least 3 KR headlines if available
-  let combined = [...enItems, ...krItems];
-  combined = dedup(combined);
+  let combined = dedup([...enItems, ...krItems]);
 
   if (combined.length === 0 && current?.items?.length) {
     console.log('Using existing news due to failures.');
@@ -152,20 +140,21 @@ async function main() {
   }
 
   // Final cap: 8 items, but try to keep at least 3 KR
-  const krFiltered = combined.filter(x => x.link.includes('news.google.com') || /kr|hankyun|chosun|yonhap|koreatimes|mk\.co\.kr/i.test(x.link));
+  const krFiltered = combined.filter(x =>
+    x.link.includes('news.google.com') ||
+    /kr|hankyun|chosun|yonhap|koreatimes|mk\.co\.kr/i.test(x.link)
+  );
   const enFiltered = combined.filter(x => !krFiltered.includes(x));
 
-  let finalItems = [];
-  // Take up to 5 EN and 3 KR by default, but adapt if one side lacks items
   const KR_TARGET = 3;
   const EN_TARGET = 5;
 
   const takeKR = Math.min(KR_TARGET, krFiltered.length);
   const takeEN = Math.min(EN_TARGET, enFiltered.length);
 
-  finalItems = [
-    ...enFiltered.slice(0, EN_TARGET + Math.max(0, KR_TARGET - takeKR)), // give KR slack to EN if KR short
-    ...krFiltered.slice(0, KR_TARGET + Math.max(0, EN_TARGET - takeEN)), // and vice versa
+  const finalItems = [
+    ...enFiltered.slice(0, EN_TARGET + Math.max(0, KR_TARGET - takeKR)),
+    ...krFiltered.slice(0, KR_TARGET + Math.max(0, EN_TARGET - takeEN)),
   ].slice(0, 8);
 
   const out = {
@@ -173,7 +162,7 @@ async function main() {
     items: finalItems
   };
 
-  fs.mkdirSync(require('path').dirname(OUTPUT), { recursive: true });
+  fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
   fs.writeFileSync(OUTPUT, JSON.stringify(out, null, 2), 'utf8');
   console.log('Updated', OUTPUT);
 }
