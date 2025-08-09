@@ -1,6 +1,4 @@
 import fs from 'fs/promises';
-import fetch from 'node-fetch';
-import { HttpsProxyAgent } from 'https-proxy-agent';
 
 const SIX_HOURS = 6 * 60 * 60 * 1000;
 
