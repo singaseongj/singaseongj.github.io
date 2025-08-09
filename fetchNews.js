@@ -1,5 +1,5 @@
-// fetchStockInfo.js — static map + auto-resolver + Yahoo profile-page fallback
-// Node >= 18 (uses built-in fetch), ESM
+// fetchStockInfo.js — static map + auto-resolver + Yahoo profile fallback + throttling
+// Node >= 18 (built-in fetch), ESM
 import fs from 'fs/promises';
 import { existsSync } from 'fs';
 import { fileURLToPath } from 'node:url';
@@ -8,7 +8,7 @@ import path from 'node:path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Headers for Yahoo APIs (JSON) and HTML profile fallback
+// Request headers (JSON API + HTML fallback)
 const HEADERS_JSON = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36',
   'Accept': 'application/json',
@@ -23,6 +23,8 @@ const HEADERS_HTML = {
 
 const SIX_HOURS = 6 * 60 * 60 * 1000;
 const FORCE = process.argv.includes('--force');
+const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 300;
+
 const CACHE_FILE = path.join(__dirname, 'ticker-cache.json');
 const RECS_FILE  = path.join(__dirname, 'recommendations.json');
 
@@ -102,7 +104,7 @@ const TICKER_MAP = {
   'UiPath': 'PATH'
 };
 
-// -------- Cache helpers (for auto-resolved tickers) --------
+// -------- Cache helpers --------
 async function loadCache() {
   if (!existsSync(CACHE_FILE)) return {};
   try { return JSON.parse(await fs.readFile(CACHE_FILE, 'utf-8')); }
@@ -111,9 +113,10 @@ async function loadCache() {
 async function saveCache(cache) {
   await fs.writeFile(CACHE_FILE, JSON.stringify(cache, null, 2));
 }
+
 const looksKorean = s => /[가-힣]/.test(s);
 
-// Choose a symbol from Yahoo search results
+// -------- Ticker resolution (map -> cache -> Yahoo search) --------
 function pickSymbol(name, searchJson) {
   const quotes = searchJson?.quotes || [];
   if (!quotes.length) return null;
@@ -154,11 +157,11 @@ async function fetchSectorFromProfile(ticker) {
   if (!res.ok) throw new Error(`profile HTTP ${res.status}`);
   const html = await res.text();
 
-  // Try embedded JSON
+  // Embedded JSON often contains "sector":"..."
   let m = html.match(/"sector":"([^"]+)"/);
   if (m && m[1]) return m[1];
 
-  // Fallback to visible text
+  // Visible text fallback: Sector(s) ... <span>Technology</span>
   m = html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
   if (m && m[1]) return m[1].trim();
 
@@ -184,9 +187,8 @@ async function fetchSectorByTicker(ticker) {
     }
     throw new Error(`quoteSummary error: ${qsum.error.code || 'unknown'}`);
   }
-  const result = qsum?.result?.[0];
-  const sector = result?.assetProfile?.sector ?? null;
 
+  const sector = qsum?.result?.[0]?.assetProfile?.sector ?? null;
   return sector ?? await fetchSectorFromProfile(ticker);
 }
 
@@ -197,7 +199,7 @@ async function fetchSector(name, cache) {
   return sector;
 }
 
-// -------- Optional: warn which names aren’t in the static map --------
+// -------- Utility --------
 function findMissingStaticMappings(recos) {
   const missing = new Set();
   for (const mkt of Object.keys(recos)) {
@@ -213,7 +215,9 @@ function findMissingStaticMappings(recos) {
   return [...missing];
 }
 
-// -------- Main update --------
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// -------- Main --------
 async function updateRecommendations() {
   let data;
   try {
@@ -247,20 +251,24 @@ async function updateRecommendations() {
       const entries = bucket[group];
       if (!Array.isArray(entries)) continue;
 
-      data[market][group] = await Promise.all(
-        entries.map(async entry => {
-          const name = typeof entry === 'string' ? entry : entry.name;
-          const prevSector = typeof entry === 'object' ? entry.sector ?? null : null;
+      // Sequential with throttle to avoid rate limits
+      const updated = [];
+      for (const entry of entries) {
+        const name = typeof entry === 'string' ? entry : entry.name;
+        const prevSector = typeof entry === 'object' ? entry.sector ?? null : null;
 
-          try {
-            const sector = await fetchSector(name, cache);
-            return { name, sector: sector ?? prevSector ?? null };
-          } catch (err) {
-            console.error(`[WARN] ${name}: ${err.message}`);
-            return { name, sector: prevSector }; // keep existing if fetch fails
-          }
-        })
-      );
+        try {
+          const sector = await fetchSector(name, cache);
+          updated.push({ name, sector: sector ?? prevSector ?? null });
+        } catch (err) {
+          console.error(`[WARN] ${name}: ${err.message}`);
+          updated.push({ name, sector: prevSector });
+        }
+
+        await sleep(SLEEP_MS);
+      }
+
+      data[market][group] = updated;
     }
   }
 
