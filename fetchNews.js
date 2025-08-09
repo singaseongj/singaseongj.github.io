@@ -1,173 +1,243 @@
-// fetchNews.js (ESM, no proxy, built-in fetch)
-import fs from 'fs';
-import path from 'node:path';
-import { XMLParser } from 'fast-xml-parser';
+// fetchStockInfo.js — expanded static map + auto-resolver fallback
+// Node >= 18 (uses built-in fetch), ESM
+import fs from 'fs/promises';
+import { existsSync } from 'fs';
 
-const OUTPUT = 'data/market_news.json';
 const SIX_HOURS = 6 * 60 * 60 * 1000;
-const TIMEOUT_MS = 12_000;
-const RETRIES = 2;
+const FORCE = process.argv.includes('--force');
+const CACHE_FILE = 'ticker-cache.json';
+const RECS_FILE = 'recommendations.json';
 
-const HEADERS = {
-  // Many RSS endpoints reject default UA
-  'User-Agent': 'market-news-bot/1.0 (+https://example.local)',
-  'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.8'
+const UA = { 'User-Agent': 'stock-sector-updater/1.0 (+https://example.local)' };
+
+// -------- Static ticker map (first priority) --------
+const TICKER_MAP = {
+  // --- KOSPI (KS) core + common alternates ---
+  '삼성전자': '005930.KS',
+  'SK하이닉스': '000660.KS',
+  '삼성바이오로직스': '207940.KS',
+  '현대차': '005380.KS',
+  'LG에너지솔루션': '373220.KS',
+  '한화에어로스페이스': '012450.KS',
+  'HD현대일렉트릭': '267260.KS',
+  'POSCO퓨처엠': '003670.KS',
+  '두산에너빌리티': '034020.KS',
+  'HD한국조선해양': '009540.KS',
+  'POSCO홀딩스': '005490.KS',
+  'LG화학': '051910.KS',
+  'SK텔레콤': '017670.KS',
+  '카카오': '035720.KS',
+  '네이버': '035420.KS',
+  '셀트리온': '068270.KS',
+  'HMM': '011200.KS',
+
+  // --- KOSDAQ (KQ) core + alternates/synonyms ---
+  '에코프로비엠': '247540.KQ',
+  '셀트리온헬스케어': '091990.KQ',
+  '천보': '278280.KQ',
+  '리노공업': '058470.KQ',
+  'JYP엔터테인먼트': '035900.KQ',
+  '알테오젠': '196170.KQ',
+  '레인보우로보틱스': '277810.KQ',
+  'HLB': '028300.KQ',
+  '에이치엘비': '028300.KQ', // synonym
+  '지아이이노베이션': '358570.KQ',
+  '펩트론': '087010.KQ',
+  '카카오게임즈': '293490.KQ',
+  'CJ ENM': '035760.KQ',
+  '스튜디오드래곤': '253450.KQ',
+  '제넥신': '095700.KQ',
+  '씨젠': '096530.KQ',
+  '펄어비스': '263750.KQ',
+
+  // --- US (NASDAQ/NYSE) core + common alternates ---
+  'Microsoft': 'MSFT',
+  'Apple': 'AAPL',
+  'NVIDIA': 'NVDA',
+  'Amazon': 'AMZN',
+  'Alphabet': 'GOOGL',
+  'Alphabet (Class A)': 'GOOGL',
+  'Alphabet (Class C)': 'GOOG',
+  'Meta': 'META',
+  'Meta Platforms': 'META',
+  'Super Micro Computer': 'SMCI',
+  'Advanced Micro Devices': 'AMD',
+  'Arm Holdings': 'ARM',
+  'Micron Technology': 'MU',
+  'CrowdStrike': 'CRWD',
+  'Berkshire Hathaway (A)': 'BRK-A',
+  'Berkshire Hathaway (B)': 'BRK-B',
+  'Johnson & Johnson': 'JNJ',
+  'Procter & Gamble': 'PG',
+  'Visa': 'V',
+  'Palantir': 'PLTR',
+  'Eli Lilly': 'LLY',
+  'Uber Technologies': 'UBER',
+  'NRG Energy': 'NRG',
+  'Netflix': 'NFLX',
+  'Tesla': 'TSLA',
+  'Coca-Cola': 'KO',
+  'Walmart': 'WMT',
+  "McDonald's": 'MCD',
+  'Snowflake': 'SNOW',
+  'Shopify': 'SHOP',
+  'Block': 'SQ',
+  'Coinbase': 'COIN',
+  'UiPath': 'PATH'
 };
 
-// US + KR feeds (KR via Google News search terms)
-const FEEDS = {
-  en: 'https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US',
-  kr1: 'https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C&hl=ko&gl=KR&ceid=KR:ko',
-  kr2: 'https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC&hl=ko&gl=KR&ceid=KR:ko',
-  kr3: 'https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%ED%99%A9&hl=ko&gl=KR&ceid=KR:ko'
-};
-
-const parser = new XMLParser({
-  ignoreAttributes: false,
-  attributeNamePrefix: '',
-  cdataPropName: 'cdata',
-  processEntities: true,
-});
-
-function toKSTISOString(d = new Date()) {
-  // Force KST (+09:00) regardless of server TZ
-  const kst = new Date(d.getTime() + (9 * 60 - d.getTimezoneOffset()) * 60_000);
-  const pad = n => String(n).padStart(2, '0');
-  const yyyy = kst.getFullYear();
-  const mm = pad(kst.getMonth() + 1);
-  const dd = pad(kst.getDate());
-  const hh = pad(kst.getHours());
-  const mi = pad(kst.getMinutes());
-  const ss = pad(kst.getSeconds());
-  return `${yyyy}-${mm}-${dd}T${hh}:${mi}:${ss}+09:00`;
-}
-
-async function fetchWithTimeout(url, opts = {}, timeoutMs = TIMEOUT_MS) {
-  const ctrl = new AbortController();
-  const id = setTimeout(() => ctrl.abort(), timeoutMs);
+// --------- Cache helpers (for auto-resolved tickers) ----------
+async function loadCache() {
+  if (!existsSync(CACHE_FILE)) return {};
   try {
-    const res = await fetch(url, { ...opts, signal: ctrl.signal });
-    return res;
-  } finally {
-    clearTimeout(id);
+    return JSON.parse(await fs.readFile(CACHE_FILE, 'utf-8'));
+  } catch {
+    return {};
   }
 }
+async function saveCache(cache) {
+  await fs.writeFile(CACHE_FILE, JSON.stringify(cache, null, 2));
+}
+const looksKorean = s => /[가-힣]/.test(s);
 
-async function get(url) {
-  let lastErr;
-  for (let i = 0; i <= RETRIES; i++) {
-    try {
-      const res = await fetchWithTimeout(url, { headers: HEADERS });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.text();
-    } catch (e) {
-      lastErr = e;
-      await new Promise(r => setTimeout(r, 300 * (i + 1))); // brief backoff
+// Choose a symbol from Yahoo search results
+function pickSymbol(name, searchJson) {
+  const quotes = searchJson?.quotes || [];
+  if (!quotes.length) return null;
+
+  // Prefer KRX tickers (.KS/.KQ) for Korean names
+  if (looksKorean(name)) {
+    const krx = quotes.find(q => /\.K[QS]$/.test(q.symbol));
+    if (krx) return krx.symbol;
+  }
+
+  // Otherwise pick an equity-like symbol
+  const eq = quotes.find(q => q.quoteType === 'EQUITY' || q.isYahooFinance);
+  return (eq && eq.symbol) || quotes[0].symbol || null;
+}
+
+async function resolveTicker(name, cache) {
+  // 1) static map
+  if (TICKER_MAP[name]) return TICKER_MAP[name];
+  // 2) cache
+  if (cache[name]) return cache[name];
+
+  // 3) Yahoo search
+  const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
+  const region = looksKorean(name) ? 'KR' : 'US';
+  const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(
+    name
+  )}&lang=${lang}&region=${region}`;
+
+  const res = await fetch(url, { headers: UA });
+  if (!res.ok) throw new Error(`Search HTTP ${res.status}`);
+  const data = await res.json();
+
+  const symbol = pickSymbol(name, data);
+  if (!symbol) throw new Error(`Could not resolve ticker for "${name}"`);
+
+  cache[name] = symbol;
+  await saveCache(cache);
+  console.log(`[auto-resolve] ${name} -> ${symbol}`);
+  return symbol;
+}
+
+// --------- Sector lookup ----------
+async function fetchSectorByTicker(ticker) {
+  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(
+    ticker
+  )}?modules=assetProfile`;
+  const res = await fetch(url, { headers: UA });
+  if (!res.ok) throw new Error(`quoteSummary HTTP ${res.status}`);
+  const json = await res.json();
+  const result = json?.quoteSummary?.result?.[0];
+  return result?.assetProfile?.sector ?? null;
+}
+
+async function fetchSector(name, cache) {
+  const ticker = await resolveTicker(name, cache);
+  const sector = await fetchSectorByTicker(ticker);
+  if (!sector) throw new Error(`Sector not found for ${name} (${ticker})`);
+  return sector;
+}
+
+// --------- Utility: warn missing static mappings (optional) ----------
+function findMissingStaticMappings(recos) {
+  const missing = new Set();
+  for (const mkt of Object.keys(recos)) {
+    const grp = recos[mkt];
+    if (!grp?.safe || !grp?.aggressive) continue;
+    for (const bucket of ['safe', 'aggressive']) {
+      for (const entry of grp[bucket]) {
+        const name = typeof entry === 'string' ? entry : entry.name;
+        if (name && !TICKER_MAP[name]) missing.add(name);
+      }
     }
   }
-  throw lastErr;
+  return [...missing];
 }
 
-function normalizeItems(rawXml, preferGoogleNewsLink = true) {
-  const xml = parser.parse(rawXml);
-  const channel = xml?.rss?.channel || xml?.feed; // RSS vs Atom
-  if (!channel) return [];
-
-  let items = channel.item || channel.entry || [];
-  if (!Array.isArray(items)) items = [items];
-
-  return items.map(it => {
-    let title = it.title?.cdata || it.title?._ || it.title || '';
-    if (typeof title === 'object') title = String(title?.cdata || '');
-
-    let link = it.link;
-    if (typeof link === 'object') {
-      link = link.href || link._ || link.cdata || '';
-    }
-    if (Array.isArray(link)) {
-      const atom = link.find(l => typeof l === 'object' && l.href)?.href;
-      link = atom || link[0];
-    }
-    link = String(link || '').replace(/&amp;/g, '&').trim();
-
-    return { title: (title || '').trim(), link: (link || '').trim() };
-  }).filter(x => x.title && x.link);
-}
-
-function dedup(items) {
-  const seen = new Set();
-  const out = [];
-  for (const it of items) {
-    const key = it.link || it.title;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(it);
-  }
-  return out;
-}
-
-async function fetchFeed(url) {
-  const xml = await get(url);
-  return normalizeItems(xml);
-}
-
-async function main() {
-  // Load current for fallback + freshness check
-  let current;
+// --------- Main update ---------
+async function updateRecommendations() {
+  let data;
   try {
-    current = JSON.parse(fs.readFileSync(OUTPUT, 'utf8'));
-  } catch {}
+    data = JSON.parse(await fs.readFile(RECS_FILE, 'utf-8'));
+  } catch {
+    console.error(`${RECS_FILE} not found. Save your JSON file first.`);
+    process.exit(1);
+  }
 
-  if (current?.lastUpdated) {
-    const age = Date.now() - new Date(current.lastUpdated).getTime();
-    if (age < SIX_HOURS && current.items?.length) {
-      console.log('News is up to date.');
+  // Freshness gate (skip if recent unless --force)
+  if (data.lastUpdated && !FORCE) {
+    const age = Date.now() - new Date(data.lastUpdated).getTime();
+    if (age < SIX_HOURS) {
+      console.log(`${RECS_FILE} is up to date (<6h). Use --force to override.`);
       return;
     }
   }
 
-  const keys = ['en', 'kr1', 'kr2', 'kr3'];
-  const results = await Promise.allSettled(keys.map(k => fetchFeed(FEEDS[k])));
-
-  const enItems = results[0].status === 'fulfilled' ? results[0].value.slice(0, 5) : [];
-  const krItems = results.slice(1).flatMap(r => (r.status === 'fulfilled' ? r.value.slice(0, 3) : []));
-
-  let combined = dedup([...enItems, ...krItems]);
-
-  if (combined.length === 0 && current?.items?.length) {
-    console.log('Using existing news due to failures.');
-    return; // keep existing file untouched
+  // Optional warning to grow the static map over time
+  const missingStatic = findMissingStaticMappings(data);
+  if (missingStatic.length) {
+    console.warn('[INFO] Not in static map (will auto-resolve):', missingStatic.join(', '));
   }
 
-  // Final cap: 8 items, but try to keep at least 3 KR
-  const krFiltered = combined.filter(x =>
-    x.link.includes('news.google.com') ||
-    /kr|hankyun|chosun|yonhap|koreatimes|mk\.co\.kr/i.test(x.link)
-  );
-  const enFiltered = combined.filter(x => !krFiltered.includes(x));
+  const cache = await loadCache();
 
-  const KR_TARGET = 3;
-  const EN_TARGET = 5;
+  const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
+  for (const market of markets) {
+    const bucket = data[market];
+    if (!bucket?.safe || !bucket?.aggressive) continue;
 
-  const takeKR = Math.min(KR_TARGET, krFiltered.length);
-  const takeEN = Math.min(EN_TARGET, enFiltered.length);
+    for (const group of ['safe', 'aggressive']) {
+      const entries = bucket[group];
+      if (!Array.isArray(entries)) continue;
 
-  const finalItems = [
-    ...enFiltered.slice(0, EN_TARGET + Math.max(0, KR_TARGET - takeKR)),
-    ...krFiltered.slice(0, KR_TARGET + Math.max(0, EN_TARGET - takeEN)),
-  ].slice(0, 8);
+      data[market][group] = await Promise.all(
+        entries.map(async entry => {
+          const name = typeof entry === 'string' ? entry : entry.name;
+          const prevSector = typeof entry === 'object' ? entry.sector ?? null : null;
 
-  const out = {
-    lastUpdated: toKSTISOString(new Date()),
-    items: finalItems
-  };
+          try {
+            const sector = await fetchSector(name, cache);
+            return { name, sector: sector ?? prevSector ?? null };
+          } catch (err) {
+            console.error(`[WARN] ${name}: ${err.message}`);
+            // Keep existing sector if fetch fails; don't write nulls over good data
+            return { name, sector: prevSector };
+          }
+        })
+      );
+    }
+  }
 
-  fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
-  fs.writeFileSync(OUTPUT, JSON.stringify(out, null, 2), 'utf8');
-  console.log('Updated', OUTPUT);
+  data.lastUpdated = new Date().toISOString();
+  await fs.writeFile(RECS_FILE, JSON.stringify(data, null, 2));
+  console.log(`Updated ${RECS_FILE}`);
 }
 
-main().catch(err => {
+// Run
+updateRecommendations().catch(err => {
   console.error(err);
   process.exit(1);
 });
