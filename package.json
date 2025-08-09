@@ -6,7 +6,8 @@
     "test": "node tests/apple_association.test.js",
     "stocks:refresh": "node fetchStockInfo.js --force"
   },
-  "dependencies": {},
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "type": "module"
 }
