@@ -475,7 +475,8 @@
   <script>
     (async function() {
       try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks');
+        const url = 'https://script.google.com/macros/s/AKfycbxBiwioYKbne1bcGebEvflVvgBAVvAt7DwkCrTGDXBUti9NNd6kVF3kS-pst_uMlQObzA/exec?page=stocks&_=' + Date.now();
+        const res = await fetch(url, { cache: 'no-store' });
         const data = await res.json();
         visitData = data;
         updateVisitCounts();
