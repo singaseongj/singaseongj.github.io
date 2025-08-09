@@ -2,11 +2,30 @@
 // Node >= 18 (uses built-in fetch), ESM
 import fs from 'fs/promises';
 import { existsSync } from 'fs';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const HEADERS_JSON = {
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36',
+  'Accept': 'application/json',
+  'Accept-Language': 'en-US,en;q=0.8,ko-KR;q=0.7',
+  'Connection': 'keep-alive'
+};
+
+const HEADERS_HTML = {
+  ...HEADERS_JSON,
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Referer': 'https://finance.yahoo.com/'
+};
+
 
 const SIX_HOURS = 6 * 60 * 60 * 1000;
 const FORCE = process.argv.includes('--force');
-const CACHE_FILE = 'ticker-cache.json';
-const RECS_FILE = 'recommendations.json';
+const CACHE_FILE = path.join(__dirname, 'ticker-cache.json');
+const RECS_FILE  = path.join(__dirname, 'recommendations.json');
 
 const UA = { 'User-Agent': 'stock-sector-updater/1.0 (+https://example.local)' };
 
@@ -129,7 +148,7 @@ async function resolveTicker(name, cache) {
     name
   )}&lang=${lang}&region=${region}`;
 
-  const res = await fetch(url, { headers: UA });
+  const res = await fetch(url, { headers: HEADERS_JSON });
   if (!res.ok) throw new Error(`Search HTTP ${res.status}`);
   const data = await res.json();
 
@@ -147,11 +166,26 @@ async function fetchSectorByTicker(ticker) {
   const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(
     ticker
   )}?modules=assetProfile`;
-  const res = await fetch(url, { headers: UA });
-  if (!res.ok) throw new Error(`quoteSummary HTTP ${res.status}`);
+  const res = await fetch(url, { headers: HEADERS_JSON });
+  if (!res.ok) {
+    if (res.status === 401 || res.status === 403) {
+      // fallback to profile HTML
+      return await fetchSectorFromProfile(ticker);
+    }
+    throw new Error(`quoteSummary HTTP ${res.status}`);
+  }
   const json = await res.json();
-  const result = json?.quoteSummary?.result?.[0];
-  return result?.assetProfile?.sector ?? null;
+  const qsum = json?.quoteSummary;
+  if (qsum?.error) {
+    // Some 200 responses still carry an error in body
+    if (qsum.error.code === 'Unauthorized' || qsum.error.code === 'Forbidden') {
+      return await fetchSectorFromProfile(ticker);
+    }
+    throw new Error(`quoteSummary error: ${qsum.error.code || 'unknown'}`);
+  }
+  const result = qsum?.result?.[0];
+  const sector = result?.assetProfile?.sector ?? null;
+  return sector ?? await fetchSectorFromProfile(ticker);
 }
 
 async function fetchSector(name, cache) {
@@ -159,6 +193,22 @@ async function fetchSector(name, cache) {
   const sector = await fetchSectorByTicker(ticker);
   if (!sector) throw new Error(`Sector not found for ${name} (${ticker})`);
   return sector;
+}
+async function fetchSectorFromProfile(ticker) {
+  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(ticker)}/profile`;
+  const res = await fetch(url, { headers: HEADERS_HTML });
+  if (!res.ok) throw new Error(`profile HTTP ${res.status}`);
+  const html = await res.text();
+
+  // Try JSON embedded in HTML first
+  let m = html.match(/"sector":"([^"]+)"/);
+  if (m && m[1]) return m[1];
+
+  // Fallback to visible text: Sector(s) ... </span><span>Technology</span>
+  m = html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
+  if (m && m[1]) return m[1].trim();
+
+  return null;
 }
 
 // --------- Utility: warn missing static mappings (optional) ----------
