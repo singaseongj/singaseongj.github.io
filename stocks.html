@@ -4,28 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="title">데일리 주식 리포트 자동화</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
   <link rel="stylesheet" href="stocks.css">
-  <script>
-    (function() {
-      const canvas = document.createElement('canvas');
-      const size = 64;
-      canvas.width = size;
-      canvas.height = size;
-      const ctx = canvas.getContext('2d');
-      ctx.fillStyle = '#FF69B4';
-      ctx.fillRect(0, 0, size, size);
-      ctx.fillStyle = '#ffffff';
-      ctx.font = 'bold 48px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText('성', size / 2, size / 2);
-      const link = document.createElement('link');
-      link.rel = 'icon';
-      link.type = 'image/png';
-      link.href = canvas.toDataURL('image/png');
-      document.head.appendChild(link);
-    })();
-  </script>
 </head>
 <body>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
@@ -493,7 +475,8 @@
   <script>
     (async function() {
       try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbyM94HyV7c_eqq3SPLMZlBcJVh6KeyygmR4bq_NM80_li9MIM2WWQ25wnd3S51FR4igLw/exec?page=stocks');
+        const url = 'https://script.google.com/macros/s/AKfycbxBiwioYKbne1bcGebEvflVvgBAVvAt7DwkCrTGDXBUti9NNd6kVF3kS-pst_uMlQObzA/exec?page=stocks&_=' + Date.now();
+        const res = await fetch(url, { cache: 'no-store' });
         const data = await res.json();
         visitData = data;
         updateVisitCounts();
