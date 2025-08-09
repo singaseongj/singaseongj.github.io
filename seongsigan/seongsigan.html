@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeongSigan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="app-bar">
+    <h1 class="logo">SeongSigan</h1>
+    <select id="teacherSelect" aria-label="선생님 선택"></select>
+    <button id="overviewToggle" aria-pressed="false">개요</button>
+    <div class="actions">
+      <button id="undoBtn" aria-label="되돌리기">Undo</button>
+      <button id="resetBtn" aria-label="초기화">Reset</button>
+    </div>
+  </header>
+  <main class="layout">
+    <section id="timetableSection">
+      <div id="timetable" class="timetable" tabindex="0"></div>
+      <div id="overview" class="overview hidden"></div>
+    </section>
+    <aside id="chatSection">
+      <div id="chatPanel" class="chat">
+        <h2>스케줄 변경 요청</h2>
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+        <div class="chips">
+          <button class="chip">김선생 수요일 3교시를 목요일 2교시로 옮겨줘</button>
+          <button class="chip">이선생 금요일 1교시 비워줘</button>
+          <button class="chip">박선생 목요일 5교시에 과학 추가</button>
+        </div>
+        <div class="input-row">
+          <textarea id="chatInput" rows="2" placeholder="메시지를 입력하세요"></textarea>
+          <button id="sendBtn" aria-label="보내기">Send</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <div id="modalContainer" class="modal hidden" role="dialog" aria-modal="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
