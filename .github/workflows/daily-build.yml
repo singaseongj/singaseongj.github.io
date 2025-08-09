@@ -11,9 +11,8 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
 
-    # make timestamps consistent with KR
     env:
-      TZ: Asia/Seoul
+      TZ: Asia/Seoul  # make timestamps consistent with KST
 
     concurrency:
       group: daily-stock-report
@@ -32,24 +31,23 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      # Keep lockfile in sync with package.json (we removed node-fetch/proxy)
+      - name: Sync lockfile with package.json
+        run: npm install --package-lock-only
+
       - name: 의존성 설치
         run: npm ci
 
-      # Safety net: remove legacy imports that break Node 20's built-in fetch
-      - name: Remove legacy imports (node-fetch / https-proxy-agent)
+      # Guardrail: fail fast if legacy imports reappear
+      - name: Assert no legacy imports (node-fetch / https-proxy-agent)
         run: |
-          set -eux
-          for f in fetchStockInfo.js fetchNews.js; do
-            if [ -f "$f" ]; then
-              sed -i 's/^.*node-fetch.*$//' "$f" || true
-              sed -i 's/^.*https-proxy-agent.*$//' "$f" || true
-            fi
-          done
-          # Assert we didn't miss any in fetchStockInfo.js
+          set -e
           ! grep -nE "node-fetch|https-proxy-agent" fetchStockInfo.js || (echo "❌ Remove node-fetch/https-proxy-agent imports from fetchStockInfo.js" && exit 1)
+          ! grep -nE "node-fetch|https-proxy-agent" fetchNews.js || (echo "❌ Remove node-fetch/https-proxy-agent imports from fetchNews.js" && exit 1)
+        shell: bash
 
       - name: 주식 추천 정보 업데이트
-        run: node fetchStockInfo.js --force
+        run: node fetchStockInfo.js
 
       - name: 뉴스 데이터 업데이트
         run: node fetchNews.js
@@ -57,7 +55,7 @@ jobs:
       - name: Verify generated files
         run: |
           ls -la
-          test -f data/market_news.json && echo "✅ market_news.json OK" || (echo "❌ data/market_news.json missing"; exit 1)
+          test -f data/market_news.json && echo "✅ data/market_news.json OK" || (echo "❌ data/market_news.json missing"; exit 1)
           test -f recommendations.json && echo "✅ recommendations.json OK" || (echo "❌ recommendations.json missing"; exit 1)
 
       - name: Commit & push changes
@@ -65,11 +63,11 @@ jobs:
         with:
           commit_message: "chore: daily stock report update [skip ci]"
           file_pattern: |
+            package.json
+            package-lock.json
             recommendations.json
             ticker-cache.json
             data/market_news.json
-            stocks.html
-            src/template.html
 
       - name: GitHub Pages 배포
         uses: peaceiris/actions-gh-pages@v4
