@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>1-2반 2학기 시간표</title>
+  <style>
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    body {
+      font-family: "Apple SD Gothic Neo", sans-serif;
+      padding: 20px;
+      background: #fafafa;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    thead th {
+      background: #f0f0f0;
+      font-size: 1.1em;
+      padding: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 8px;
+      vertical-align: middle;
+    }
+    tbody tr:nth-child(even) {
+      background: #fcfcfc;
+    }
+    tbody tr:hover {
+      background: #f9f9f9;
+    }
+    .period {
+      font-weight: bold;
+      background: #fafafa;
+      width: 80px;
+    }
+    /* 과목 글씨와 교사명 크기 구분 */
+    .subject-name {
+      display: block;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .teacher-name {
+      display: block;
+      font-size: 0.9em;
+    }
+    /* 과목별 색상 */
+    .subject-국어       { background: #ffcccc; }
+    .subject-영어       { background: #ccffcc; }
+    .subject-대수       { background: #ccccff; }
+    .subject-미적분     { background: #fff2cc; }
+    .subject-체육       { background: #f2dfff; }
+    .subject-화학       { background: #ffe5e5; }
+    .subject-생명과학   { background: #e0f7f1; }
+    .subject-정보       { background: #e5e5ff; }
+    .subject-역학       { background: #d1e7dd; }
+    .subject-통사       { background: #f8d7da; }
+    .subject-지구과학   { background: #dbe7fa; }
+    .subject-진로       { background: #fff4e5; }
+    .subject-창체       { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h2>1-2반 2학기 시간표</h2>
+  <table>
+    <thead>
+      <tr>
+        <th class="period">교시</th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="period">1교시</td>
+        <td class="subject-국어">
+          <span class="subject-name">국어</span>
+          <span class="teacher-name">박주희</span>
+        </td>
+        <td class="subject-대수">
+          <span class="subject-name">대수</span>
+          <span class="teacher-name">하서영</span>
+        </td>
+        <td class="subject-생명과학">
+          <span class="subject-name">생명</span>
+          <span class="teacher-name">육진경</span>
+        </td>
+        <td class="subject-정보">
+          <span class="subject-name">정보</span>
+          <span class="teacher-name">최민지</span>
+        </td>
+        <td class="subject-역학">
+          <span class="subject-name">역학</span>
+          <span class="teacher-name">양명수</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="period">2교시</td>
+        <td class="subject-영어">
+          <span class="subject-name">영어</span>
+          <span class="teacher-name">정성</span>
+        </td>
+        <td class="subject-대수">"</td>
+        <td class="subject-생명과학">"</td>
+        <td class="subject-정보">
+          <span class="subject-name">정보</span>
+          <span class="teacher-name">서광운</span>
+        </td>
+        <td class="subject-통사">
+          <span class="subject-name">통사</span>
+          <span class="teacher-name">김하원</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="period">3교시</td>
+        <td class="subject-대수">
+          <span class="subject-name">대수</span>
+          <span class="teacher-name">손민욱</span>
+        </td>
+        <td class="subject-통사">
+          <span class="subject-name">통사</span>
+          <span class="teacher-name">김하원</span>
+        </td>
+        <td class="subject-영어">
+          <span class="subject-name">영어</span>
+          <span class="teacher-name">정성</span>
+        </td>
+        <td class="subject-역학">
+          <span class="subject-name">역학</span>
+          <span class="teacher-name">노영우</span>
+        </td>
+        <td class="subject-체육">
+          <span class="subject-name">체육</span>
+          <span class="teacher-name">장병주</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="period">4교시</td>
+        <td class="subject-미적분">
+          <span class="subject-name">미적</span>
+          <span class="teacher-name">손민욱</span>
+        </td>
+        <td class="subject-국어">
+          <span class="subject-name">국어</span>
+          <span class="teacher-name">박주희</span>
+        </td>
+        <td class="subject-화학">
+          <span class="subject-name">화학</span>
+          <span class="teacher-name">복정식</span>
+        </td>
+        <td class="subject-역학">"</td>
+        <td class="subject-지구과학">
+          <span class="subject-name">지학</span>
+          <span class="teacher-name">이종진</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="period">5교시</td>
+        <td class="subject-체육">
+          <span class="subject-name">체육</span>
+          <span class="teacher-name">장병주</span>
+        </td>
+        <td class="subject-지구과학">
+          <span class="subject-name">지학</span>
+          <span class="teacher-name">이종진</span>
+        </td>
+        <td class="subject-진로">
+          <span class="subject-name">진로</span>
+          <span class="teacher-name">이정표</span>
+        </td>
+        <td class="subject-통사">
+          <span class="subject-name">통사</span>
+          <span class="teacher-name">김하원</span>
+        </td>
+        <td class="subject-미적분">
+          <span class="subject-name">미적</span>
+          <span class="teacher-name">곽수진</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="period">6교시</td>
+        <td class="subject-화학">
+          <span class="subject-name">화학</span>
+          <span class="teacher-name">복정식</span>
+        </td>
+        <td class="subject-지구과학">"</td>
+        <td class="subject-창체">
+          <span class="subject-name">창체</span>
+        </td>
+        <td class="subject-국어">
+          <span class="subject-name">국어</span>
+          <span class="teacher-name">박주희</span>
+        </td>
+        <td class="subject-미적분">"</td>
+      </tr>
+      <tr>
+        <td class="period">7교시</td>
+        <td class="subject-화학">"</td>
+        <td class="subject-생명과학">
+          <span class="subject-name">생명</span>
+          <span class="teacher-name">육진경</span>
+        </td>
+        <td class="subject-창체">
+          <span class="subject-name">창체</span>
+        </td>
+        <td></td>
+        <td class="subject-영어">
+          <span class="subject-name">영어</span>
+          <span class="teacher-name">정성</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
