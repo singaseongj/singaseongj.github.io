@@ -2,7 +2,7 @@ import { TEACHERS, loadState, saveState, pushHistory, popHistory, initialTimetab
 import { renderTimetable, renderOverview, applyChange } from './timetable.js';
 import { initChat, assistantMessage } from './chat.js';
 import { interpret } from './mock-gpt.js';
-import { sendToLLM } from './integration.js';
+import { sendToLLM, checkHealth } from './integration.js';
 
 export let appState = loadState();
 window.appState = appState; // for modal access
@@ -52,4 +52,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
   initChat(handleSend);
   refresh();
+  checkHealth().then(ok=>{
+    const badge=document.getElementById('backendStatus');
+    if(badge){
+      badge.classList.add(ok?'ok':'error');
+      badge.title= ok? 'Backend reachable':'Backend unreachable';
+    }
+  });
 });

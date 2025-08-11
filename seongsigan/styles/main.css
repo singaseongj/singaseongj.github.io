@@ -19,6 +19,9 @@ body {
   box-shadow:var(--shadow);
 }
 .app-bar .logo {margin-right:auto;font-size:1.25rem;font-weight:700;}
+.status{width:10px;height:10px;border-radius:50%;display:inline-block;margin-left:0.5rem;background:#ccc;vertical-align:middle;}
+.status.ok{background:#4caf50;}
+.status.error{background:#f44336;}
 .app-bar select,.app-bar button{font-size:0.9rem;padding:0.25rem 0.5rem;}
 .layout{display:flex;gap:1rem;padding:1rem;}
 @media(max-width:1023px){.layout{flex-direction:column;}}

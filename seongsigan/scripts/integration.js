@@ -1,13 +1,25 @@
-// Placeholder for future LLM integration
+const API_BASE = "https://solitary-base-9458.seongj1589.workers.dev";
+
 export async function sendToLLM(userMessage){
-  // TODO: integrate a real API call here (e.g., OpenAI)
-  // Example:
-  // const response = await fetch('https://api.openai.com/v1/chat/completions', {
-  //   method:'POST',
-  //   headers:{'Content-Type':'application/json','Authorization':'Bearer YOUR_KEY'},
-  //   body:JSON.stringify({model:'gpt-4o-mini',messages:[{role:'user',content:userMessage}]})
-  // });
-  // const data = await response.json();
-  // return data; // expected to be { text:"...", plan:{...} }
-  return null; // return null to fallback to mock parser
+  try{
+    const res = await fetch(`${API_BASE}/chat`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ message: userMessage })
+    });
+    if(!res.ok) throw new Error(`status ${res.status}`);
+    return await res.json();
+  }catch(err){
+    console.error('LLM request failed', err);
+    return null; // fallback to mock
+  }
+}
+
+export async function checkHealth(){
+  try{
+    const res = await fetch(`${API_BASE}/health`);
+    return res.ok;
+  }catch(_){
+    return false;
+  }
 }
