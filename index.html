@@ -23,11 +23,7 @@
             --gradient-dark: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -39,506 +35,183 @@
 
         /* Animated background */
         .bg-animation {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background: var(--dark-bg);
-            overflow: hidden;
+            position: fixed; width: 100%; height: 100%;
+            top: 0; left: 0; z-index: -1; background: var(--dark-bg); overflow: hidden;
         }
-
         .bg-animation::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+            content: ''; position: absolute; width: 200%; height: 200%; top: -50%; left: -50%;
+            background:
+              radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 40% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
             animation: rotate 30s linear infinite;
         }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
         /* Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
+            position: fixed; top: 0; width: 100%;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(241, 245, 249, 1);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            z-index: 1000;
-            padding: 1rem 0;
+            z-index: 1000; padding: 1rem 0;
         }
-
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+            display: flex; justify-content: space-between; align-items: center;
         }
-
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.5rem; font-weight: 700; background: var(--gradient-primary);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary-color); }
 
         /* Hero Section */
-        header {
-            margin-top: 80px;
-            padding: 100px 0 80px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
+        header { margin-top: 80px; padding: 100px 0 80px; text-align: center; position: relative; }
+        .hero-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
+            font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 1.5rem;
+            background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;
         }
-
-        .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
+        .subtitle { font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 3rem; font-weight: 300; }
 
         /* Game Styles */
         .game-container {
-            margin: 3rem auto;
-            width: 90%;
-            max-width: 700px;
+            margin: 3rem auto; width: 90%; max-width: 700px;
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
-            position: relative;
-            overflow: hidden;
+            border-radius: 16px; padding: 1.5rem; box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+            position: relative; overflow: hidden;
         }
-
         .game-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
             background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            animation: moveStars 50s linear infinite;
-            pointer-events: none;
+            background-size: 20px 20px; animation: moveStars 50s linear infinite; pointer-events: none;
         }
-
-        @keyframes moveStars {
-            from { transform: translate(0, 0); }
-            to { transform: translate(20px, 20px); }
-        }
+        @keyframes moveStars { from { transform: translate(0, 0); } to { transform: translate(20px, 20px); } }
 
         .game-screen {
             background: linear-gradient(45deg, #0f0f23 0%, #1a1a3a 100%);
-            border-radius: 12px;
-            width: 100%;
-            max-width: 600px;
-            height: 400px;
-            position: relative;
-            overflow: hidden;
-            margin: 0 auto;
-            border: 2px solid rgba(124, 58, 237, 0.3);
+            border-radius: 12px; width: 100%; max-width: 600px; height: 400px;
+            position: relative; overflow: hidden; margin: 0 auto; border: 2px solid rgba(124, 58, 237, 0.3);
         }
 
         @media (max-width: 768px) {
-            .game-container {
-                padding: 1rem;
-                margin: 2rem auto;
-            }
-            
-            .game-screen {
-                height: 350px;
-            }
-            
-            #gameCanvas {
-                width: 100% !important;
-                height: 350px !important;
-            }
+            .game-container { padding: 1rem; margin: 2rem auto; }
+            .game-screen { height: 350px; }
+            #gameCanvas { width: 100% !important; height: 350px !important; }
         }
-
         @media (max-width: 480px) {
-            .game-screen {
-                height: 300px;
-            }
-            
-            #gameCanvas {
-                height: 300px !important;
-            }
-            
-            .game-menu h3 {
-                font-size: 2rem;
-            }
-            
-            .game-btn {
-                padding: 0.75rem 2rem;
-                font-size: 1rem;
-            }
+            .game-screen { height: 300px; }
+            #gameCanvas { height: 300px !important; }
+            .game-menu h3 { font-size: 2rem; }
+            .game-btn { padding: 0.75rem 2rem; font-size: 1rem; }
         }
 
         .game-menu {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            z-index: 10;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; color: white; z-index: 10;
         }
-
-        .game-menu h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
-        }
-
-        .game-menu p {
-            margin-bottom: 2rem;
-            color: #a5b4fc;
-            font-size: 1.1rem;
-        }
+        .game-menu h3 { font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(124, 58, 237, 0.8); }
+        .game-menu p { margin-bottom: 2rem; color: #a5b4fc; font-size: 1.1rem; }
 
         .game-btn {
             background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-            color: white;
-            border: none;
-            padding: 0.75rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: white; border: none; padding: 0.75rem 2rem; font-size: 1rem; font-weight: 600;
+            border-radius: 50px; cursor: pointer; transition: all 0.3s ease; margin: 0.5rem;
+            text-transform: uppercase; letter-spacing: 1px;
         }
+        .game-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4); }
 
-        .game-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
-        }
-
-        #gameCanvas {
-            border-radius: 8px;
-            cursor: pointer;
-        }
+        #gameCanvas { border-radius: 8px; cursor: pointer; }
 
         .game-stats {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: space-around;
-            color: white;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.1rem;
+            margin-top: 1rem; display: flex; justify-content: space-around; color: white;
+            font-family: 'JetBrains Mono', monospace; font-size: 1.1rem;
         }
 
         .game-over {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid #7c3aed;
-            z-index: 20;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; color: white; background: rgba(0, 0, 0, 0.9);
+            padding: 2rem; border-radius: 12px; border: 2px solid #7c3aed; z-index: 20;
         }
-
-        .game-over h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #fbbf24;
-        }
-
+        .game-over h3 { font-size: 2rem; margin-bottom: 1rem; color: #fbbf24; }
         .game-over input {
-            padding: 0.75rem;
-            margin: 1rem 0;
-            border: 2px solid #7c3aed;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border-radius: 8px;
-            font-size: 1rem;
-            width: 200px;
+            padding: 0.75rem; margin: 1rem 0; border: 2px solid #7c3aed;
+            background: rgba(255, 255, 255, 0.1); color: white; border-radius: 8px; font-size: 1rem; width: 200px;
         }
-
-        .game-over input:focus {
-            outline: none;
-            border-color: #a78bfa;
-        }
+        .game-over input:focus { outline: none; border-color: #a78bfa; }
 
         .leaderboard {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 1000;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            color: white;
-            backdrop-filter: blur(10px);
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95); z-index: 1000; display: none;
+            flex-direction: column; justify-content: center; align-items: center; padding: 2rem;
+            color: white; backdrop-filter: blur(10px);
         }
-
         .leaderboard-content {
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-            border-radius: 16px;
-            padding: 2rem;
-            max-width: 500px;
-            width: 100%;
-            max-height: 80vh;
-            overflow-y: auto;
-            border: 2px solid #7c3aed;
-            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+            border-radius: 16px; padding: 2rem; max-width: 500px; width: 100%;
+            max-height: 80vh; overflow-y: auto; border: 2px solid #7c3aed; box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
         }
-
-        .leaderboard-content h4 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #fbbf24;
-            font-size: 1.5rem;
-        }
-
-        .leaderboard-list {
-            margin-bottom: 2rem;
-        }
-
-        .leaderboard-entry {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.25rem 0;
-            color: #e0e7ff;
-            font-size: 0.9rem;
-        }
-
-        .leaderboard-entry:first-child {
-            color: #fbbf24;
-            font-weight: bold;
-        }
+        .leaderboard-content h4 { text-align: center; margin-bottom: 1.5rem; color: #fbbf24; font-size: 1.5rem; }
+        .leaderboard-list { margin-bottom: 2rem; }
+        .leaderboard-entry { display: flex; justify-content: space-between; padding: 0.25rem 0; color: #e0e7ff; font-size: 0.9rem; }
+        .leaderboard-entry:first-child { color: #fbbf24; font-weight: bold; }
 
         /* Particle effects */
-        .particle {
-            position: absolute;
-            pointer-events: none;
-            border-radius: 50%;
-            animation: particleFloat 1s ease-out forwards;
-        }
-
+        .particle { position: absolute; pointer-events: none; border-radius: 50%; animation: particleFloat 1s ease-out forwards; }
         @keyframes particleFloat {
-            0% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-            100% {
-                opacity: 0;
-                transform: scale(0.3) translateY(-50px);
-            }
+            0% { opacity: 1; transform: scale(1) translateY(0); }
+            100% { opacity: 0; transform: scale(0.3) translateY(-50px); }
         }
 
         /* Features Section */
-        .features-section {
-            padding: 80px 0;
-            background: rgba(248, 250, 252, 0.5);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .section-description {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        .features-section { padding: 80px 0; background: rgba(248, 250, 252, 0.5); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .section-description { font-size: 1.125rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
 
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .feature-card {
-            background: #ffffff;
-            border: 1px solid rgba(241, 245, 249, 1);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            background: #ffffff; border: 1px solid rgba(241, 245, 249, 1);
+            border-radius: 12px; padding: 2rem; transition: all 0.3s ease; position: relative; overflow: hidden;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
-
         .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: var(--gradient-primary); transform: scaleX(0); transition: transform 0.3s ease;
         }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(124, 58, 237, 0.3);
-            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.1);
-        }
-
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-
+        .feature-card:hover { transform: translateY(-5px); border-color: rgba(124, 58, 237, 0.3); box-shadow: 0 10px 20px rgba(124, 58, 237, 0.1); }
+        .feature-card:hover::before { transform: scaleX(1); }
         .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;
         }
-
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .feature-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
+        .feature-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .feature-description { color: var(--text-secondary); line-height: 1.6; }
 
         /* Footer */
-        footer {
-            padding: 40px 0;
-            background: var(--darker-bg);
-            text-align: center;
-            border-top: 1px solid rgba(241, 245, 249, 1);
-        }
-
-        footer a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-
-        footer a:hover {
-            opacity: 0.8;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
+        footer { padding: 40px 0; background: var(--darker-bg); text-align: center; border-top: 1px solid rgba(241, 245, 249, 1); }
+        footer a { color: var(--secondary-color); text-decoration: none; transition: opacity 0.3s ease; }
+        footer a:hover { opacity: 0.8; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-                display: flex;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .subtitle {
-                font-size: 1.25rem;
-            }
+            .nav-links { flex-direction: column; align-items: center; display: flex; }
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.25rem; }
         }
 
         /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-in {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-in { animation: fadeInUp 0.6s ease-out forwards; }
     </style>
 </head>
 <body>
@@ -550,7 +223,7 @@
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="https://github.com" target="_blank">GitHub</a></li>
-                <li><a href="https://singaseongj.github.io/stocks.html">Stocks</a></li>
+                <li><a href="./stocks.html">Stocks</a></li>
             </ul>
         </div>
     </nav>
@@ -559,7 +232,7 @@
         <div class="hero-content animate-in">
             <h1>Singaseong Apps</h1>
             <p class="subtitle">Creative mobile applications for productivity and organization</p>
-            
+
             <div style="margin: 2rem 0;">
                 <a href="http://singaseongj.github.io/appdownload.html" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
                     📊 Manage Students
@@ -568,15 +241,22 @@
                     📝 Log for Everything
                 </a>
                 <a href="http://singaseongj.github.io/appdownloadGS.html" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
-        🎮 Gridlock Shooter
+                    🎮 Gridlock Shooter
+                </a>
+                <!-- Added quick links -->
+                <a href="./stocks.html" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
+                    📈 Daily Stock Report
+                </a>
+                <a href="./seongsigan/seongsigan.html" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
+                    🗓️ SeongSigan 시간표
                 </a>
             </div>
-            
+
             <div class="game-container">
                 <div class="game-screen" id="gameScreen">
                     <div class="game-menu" id="gameMenu">
                         <h3>🫧 Pop the Bubbles</h3>
-                        
+
                         <button class="game-btn" onclick="startGame()">START</button>
                         <button class="game-btn" onclick="showLeaderboard()" id="highscoreBtn">HIGHSCORES</button>
                     </div>
@@ -671,39 +351,27 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
 
         // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '0';
                     entry.target.style.transform = 'translateY(30px)';
-                    
                     setTimeout(() => {
                         entry.target.style.transition = 'all 0.6s ease-out';
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
                     }, 100);
-                    
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
-
-        // Observe all feature cards and sections
-        document.querySelectorAll('.feature-card, .stat-item, .tech-item').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.feature-card, .stat-item, .tech-item').forEach(el => observer.observe(el));
 
         // Bubble Pop Game Code
         let canvas, ctx;
@@ -715,7 +383,7 @@
         let leaderboard = [];
         let bubblesPopped = 0;
         let totalBubbles = 16;
-        
+
         // Google Apps Script URL for leaderboard
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwU8wQXs1Fs4Ywk7SyZGSbcIwoUwffpR4mDQVuVsB0k2uy5z_Zrje589YtI2BviMbo0/exec';
 
@@ -723,11 +391,11 @@
         window.onload = function() {
             canvas = document.getElementById('gameCanvas');
             ctx = canvas.getContext('2d');
-            
+
             // Set canvas size dynamically
             resizeCanvas();
             window.addEventListener('resize', resizeCanvas);
-            
+
             fetchLeaderboard();
             setupEventListeners();
         };
@@ -735,7 +403,7 @@
         function resizeCanvas() {
             const gameScreen = document.getElementById('gameScreen');
             const screenWidth = gameScreen.offsetWidth;
-            
+
             if (window.innerWidth <= 480) {
                 canvas.width = screenWidth - 4;
                 canvas.height = 300;
@@ -753,38 +421,36 @@
             canvas.removeEventListener('touchstart', handleTouch);
             canvas.removeEventListener('touchmove', preventScroll);
             canvas.removeEventListener('click', handleClick);
-            
+
             // Touch events for mobile
             canvas.addEventListener('touchstart', handleTouch, { passive: false });
             canvas.addEventListener('touchmove', preventScroll, { passive: false });
-            
+
             // Mouse events for desktop
             canvas.addEventListener('click', handleClick);
         }
 
-        function preventScroll(e) {
-            e.preventDefault();
-        }
+        function preventScroll(e) { e.preventDefault(); }
 
         function handleTouch(e) {
             e.preventDefault();
             if (!gameRunning) return;
-            
+
             const rect = canvas.getBoundingClientRect();
             const touch = e.touches[0];
             const x = (touch.clientX - rect.left) * (canvas.width / rect.width);
             const y = (touch.clientY - rect.top) * (canvas.height / rect.height);
-            
+
             checkBubbleClick(x, y);
         }
 
         function handleClick(e) {
             if (!gameRunning) return;
-            
+
             const rect = canvas.getBoundingClientRect();
             const x = (e.clientX - rect.left) * (canvas.width / rect.width);
             const y = (e.clientY - rect.top) * (canvas.height / rect.height);
-            
+
             checkBubbleClick(x, y);
         }
 
@@ -792,7 +458,7 @@
             for (let i = bubbles.length - 1; i >= 0; i--) {
                 const bubble = bubbles[i];
                 const distance = Math.sqrt((x - bubble.x) ** 2 + (y - bubble.y) ** 2);
-                
+
                 if (distance < bubble.radius) {
                     popBubble(i, x, y);
                     break;
@@ -802,29 +468,22 @@
 
         function popBubble(index, x, y) {
             const bubble = bubbles[index];
-            
-            // Calculate score based on bubble size (smaller = more points)
             const sizeBonus = Math.round(100 / bubble.radius * 10);
             score += sizeBonus;
-            
-            // Create pop effect
+
             createPopEffect(bubble.x, bubble.y, bubble.color);
-            
-            // Remove bubble
+
             bubbles.splice(index, 1);
             bubblesPopped++;
-            
-            // Update stats
+
             updateStats();
-            
-            // Check if all bubbles are popped
+
             if (bubbles.length === 0) {
                 gameOver();
             }
         }
 
         function createPopEffect(x, y, color) {
-            // Create particle explosion
             for (let i = 0; i < 8; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
@@ -833,13 +492,13 @@
                 particle.style.background = color;
                 particle.style.width = '6px';
                 particle.style.height = '6px';
-                
+
                 const angle = (i / 8) * Math.PI * 2;
                 const distance = 30 + Math.random() * 20;
                 particle.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`;
-                
+
                 canvas.parentElement.appendChild(particle);
-                
+
                 setTimeout(() => {
                     if (particle.parentElement) {
                         particle.parentElement.removeChild(particle);
@@ -854,11 +513,8 @@
                 '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43',
                 '#48dbfb', '#0abde3', '#ee5a24', '#009432', '#006ba6'
             ];
-            
             return {
-                x: x,
-                y: y,
-                radius: size,
+                x, y, radius: size,
                 color: colors[Math.floor(Math.random() * colors.length)],
                 vx: (Math.random() - 0.5) * 1.5,
                 vy: (Math.random() - 0.5) * 1.5,
@@ -872,25 +528,22 @@
             canvas.style.display = 'block';
             document.getElementById('gameStats').style.display = 'flex';
             document.getElementById('gameBackBtn').style.display = 'block';
-            
-            // Reset game state
+
             bubbles = [];
             score = 0;
             bubblesPopped = 0;
             gameRunning = true;
             startTime = Date.now();
-            
-            // Create bubbles with different sizes
+
             const bubbleSizes = [
-                20, 25, 30, 20, 35, 25, 40, 30,  // Mix of small, medium, and large
-                20, 25, 20, 35, 25, 30, 20, 25   // More small bubbles for challenge
+                20, 25, 30, 20, 35, 25, 40, 30,
+                20, 25, 20, 35, 25, 30, 20, 25
             ];
-            
+
             for (let i = 0; i < totalBubbles; i++) {
                 let x, y, attempts = 0;
                 const radius = bubbleSizes[i];
-                
-                // Find a position that doesn't overlap with existing bubbles
+
                 do {
                     x = radius + Math.random() * (canvas.width - radius * 2);
                     y = radius + Math.random() * (canvas.height - radius * 2);
@@ -899,104 +552,71 @@
                     const distance = Math.sqrt((x - bubble.x) ** 2 + (y - bubble.y) ** 2);
                     return distance < radius + bubble.radius + 10;
                 }));
-                
+
                 bubbles.push(createBubble(x, y, radius));
             }
-            
+
             updateStats();
             gameLoop();
         }
 
         function goBackToMenu() {
             gameRunning = false;
-            if (animationId) {
-                cancelAnimationFrame(animationId);
-            }
-            
-            // Hide game elements
+            if (animationId) cancelAnimationFrame(animationId);
+
             document.getElementById('gameCanvas').style.display = 'none';
             document.getElementById('gameStats').style.display = 'none';
             document.getElementById('gameBackBtn').style.display = 'none';
             document.getElementById('gameOver').style.display = 'none';
-            
-            // Show main menu
+
             document.getElementById('gameMenu').style.display = 'block';
         }
 
         function updateBubbles() {
             bubbles.forEach(bubble => {
-                // Gentle floating motion
                 bubble.floatOffset += bubble.floatSpeed;
                 bubble.x += Math.sin(bubble.floatOffset) * 0.5;
                 bubble.y += Math.cos(bubble.floatOffset * 0.7) * 0.3;
-                
-                // Subtle movement
+
                 bubble.x += bubble.vx * 0.3;
                 bubble.y += bubble.vy * 0.3;
-                
-                // Bounce off walls
-                if (bubble.x - bubble.radius < 0 || bubble.x + bubble.radius > canvas.width) {
-                    bubble.vx *= -1;
-                }
-                if (bubble.y - bubble.radius < 0 || bubble.y + bubble.radius > canvas.height) {
-                    bubble.vy *= -1;
-                }
-                
-                // Keep bubbles in bounds
+
+                if (bubble.x - bubble.radius < 0 || bubble.x + bubble.radius > canvas.width) bubble.vx *= -1;
+                if (bubble.y - bubble.radius < 0 || bubble.y + bubble.radius > canvas.height) bubble.vy *= -1;
+
                 bubble.x = Math.max(bubble.radius, Math.min(canvas.width - bubble.radius, bubble.x));
                 bubble.y = Math.max(bubble.radius, Math.min(canvas.height - bubble.radius, bubble.y));
             });
         }
 
         function draw() {
-            // Clear canvas with gradient background
             const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
             gradient.addColorStop(0, '#0f0f23');
             gradient.addColorStop(1, '#1a1a3a');
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // Draw bubbles
+
             bubbles.forEach(bubble => {
-                // Bubble shadow
-                ctx.save();
-                ctx.globalAlpha = 0.3;
-                ctx.fillStyle = '#000';
-                ctx.beginPath();
-                ctx.arc(bubble.x + 2, bubble.y + 2, bubble.radius, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.restore();
-                
-                // Main bubble
+                ctx.save(); ctx.globalAlpha = 0.3; ctx.fillStyle = '#000';
+                ctx.beginPath(); ctx.arc(bubble.x + 2, bubble.y + 2, bubble.radius, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+
                 const bubbleGradient = ctx.createRadialGradient(
-                    bubble.x - bubble.radius * 0.3, 
-                    bubble.y - bubble.radius * 0.3, 
-                    0,
-                    bubble.x, 
-                    bubble.y, 
-                    bubble.radius
+                    bubble.x - bubble.radius * 0.3, bubble.y - bubble.radius * 0.3, 0,
+                    bubble.x, bubble.y, bubble.radius
                 );
                 bubbleGradient.addColorStop(0, 'rgba(255, 255, 255, 0.8)');
                 bubbleGradient.addColorStop(0.3, bubble.color + 'CC');
                 bubbleGradient.addColorStop(1, bubble.color);
-                
+
                 ctx.fillStyle = bubbleGradient;
-                ctx.beginPath();
-                ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);
-                ctx.fill();
-                
-                // Bubble highlight
+                ctx.beginPath(); ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2); ctx.fill();
+
                 ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-                ctx.beginPath();
-                ctx.arc(bubble.x - bubble.radius * 0.3, bubble.y - bubble.radius * 0.3, bubble.radius * 0.3, 0, Math.PI * 2);
-                ctx.fill();
-                
-                // Bubble outline
+                ctx.beginPath(); ctx.arc(bubble.x - bubble.radius * 0.3, bubble.y - bubble.radius * 0.3, bubble.radius * 0.3, 0, Math.PI * 2); ctx.fill();
+
                 ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
                 ctx.lineWidth = 2;
-                ctx.beginPath();
-                ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);
-                ctx.stroke();
+                ctx.beginPath(); ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2); ctx.stroke();
             });
         }
 
@@ -1009,22 +629,17 @@
 
         function gameLoop() {
             if (!gameRunning) return;
-            
-            updateBubbles();
-            draw();
-            updateStats();
-            
+            updateBubbles(); draw(); updateStats();
             animationId = requestAnimationFrame(gameLoop);
         }
 
         function gameOver() {
             gameRunning = false;
             cancelAnimationFrame(animationId);
-            
-            // Calculate final score (time bonus + points)
+
             const timeBonus = Math.max(0, 1000 - Math.floor(elapsedTime * 10));
             const finalScore = score + timeBonus;
-            
+
             document.getElementById('finalTime').textContent = elapsedTime;
             document.getElementById('finalScore').textContent = finalScore;
             document.getElementById('gameOver').style.display = 'block';
@@ -1035,40 +650,30 @@
             if (name) {
                 const finalScore = score + Math.max(0, 1000 - Math.floor(elapsedTime * 10));
                 const newScore = { name, score: finalScore, time: parseFloat(elapsedTime) };
-                
-                // Save to Google Sheets
+
                 fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    method: 'POST', mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(newScore)
                 }).then(() => {
-                    // Also save locally as backup
                     const localScores = JSON.parse(localStorage.getItem('bubblePopLeaderboard') || '[]');
                     localScores.push(newScore);
                     localScores.sort((a, b) => b.score - a.score);
                     localStorage.setItem('bubblePopLeaderboard', JSON.stringify(localScores.slice(0, 10)));
-                    
-                    // Refresh leaderboard
                     fetchLeaderboard();
                 }).catch(error => {
                     console.error('Failed to save score:', error);
                 });
-                
+
                 restartGame();
             }
         }
 
         function showLeaderboard() {
             document.getElementById('leaderboard').style.display = 'flex';
-            fetchLeaderboard(); // Refresh scores when showing
+            fetchLeaderboard();
         }
-
-        function hideLeaderboard() {
-            document.getElementById('leaderboard').style.display = 'none';
-        }
+        function hideLeaderboard() { document.getElementById('leaderboard').style.display = 'none'; }
 
         function restartGame() {
             document.getElementById('gameOver').style.display = 'none';
@@ -1089,56 +694,59 @@
                 updateLeaderboard();
             } catch (error) {
                 console.error('Failed to fetch leaderboard:', error);
-                // Fallback to local storage
                 leaderboard = JSON.parse(localStorage.getItem('bubblePopLeaderboard') || '[]');
                 updateLeaderboard();
             }
         }
 
+        // FIXED: brace/call structure
         function updateLeaderboard() {
             const list = document.getElementById('leaderboardList');
             list.innerHTML = '';
-            
-            if (leaderboard.length === 0) {
+
+            if (!leaderboard || leaderboard.length === 0) {
                 list.innerHTML = '<div class="leaderboard-entry" style="text-align: center; color: #a5b4fc; font-style: italic;">No scores yet! Be the first to play!</div>';
-            } else {
-                leaderboard.slice(0, 10).forEach((entry, index) => {
-                    const div = document.createElement('div');
-                    div.className = 'leaderboard-entry';
-                    
-                    // Add trophy emoji for top 3
-                    let trophy = '';
-                    if (index === 0) trophy = '🥇 ';
-                    else if (index === 1) trophy = '🥈 ';
-                    else if (index === 2) trophy = '🥉 ';
-                    else trophy = `${index + 1}. `;
-                    
-                    div.innerHTML = `
-                        <span>${trophy}${entry.name}</span>
-                        <span style="display: flex; flex-direction: column; align-items: flex-end;">
-                            <span style="font-weight: bold;">${entry.score} pts</span>
-                            <span style="font-size: 0.8rem; opacity: 0.7;">${entry.time}s</span>
-                        </span>
-                    `;
+                return;
+            }
+
+            leaderboard.slice(0, 10).forEach((entry, index) => {
+                const div = document.createElement('div');
+                div.className = 'leaderboard-entry';
+
+                let trophy = '';
+                if (index === 0) trophy = '🥇 ';
+                else if (index === 1) trophy = '🥈 ';
+                else if (index === 2) trophy = '🥉 ';
+                else trophy = `${index + 1}. `;
+
+                div.innerHTML = `
+                    <span>${trophy}${entry.name}</span>
+                    <span style="display: flex; flex-direction: column; align-items: flex-end;">
+                        <span style="font-weight: bold;">${entry.score} pts</span>
+                        <span style="font-size: 0.8rem; opacity: 0.7;">${entry.time}s</span>
+                    </span>
+                `;
                 list.appendChild(div);
             });
         }
+    </script>
+
+    <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
+    <script>
+      (async function() {
+        try {
+          const url = 'https://script.google.com/macros/s/AKfycbxBiwioYKbne1bcGebEvflVvgBAVvAt7DwkCrTGDXBUti9NNd6kVF3kS-pst_uMlQObzA/exec?page=index&_=' + Date.now();
+          const res = await fetch(url, { cache: 'no-store' });
+          const data = await res.json();
+          document.getElementById('visitCounts').textContent =
+            `Visits today: ${data.daily} | Total: ${data.total}`;
+        } catch (err) {
+          console.error('Visit count failed', err);
         }
-</script>
-<div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
-<script>
-  (async function() {
-    try {
-      const url = 'https://script.google.com/macros/s/AKfycbxBiwioYKbne1bcGebEvflVvgBAVvAt7DwkCrTGDXBUti9NNd6kVF3kS-pst_uMlQObzA/exec?page=index&_=' + Date.now();
-      const res = await fetch(url, { cache: 'no-store' });
-      const data = await res.json();
-      document.getElementById('visitCounts').textContent =
-        `Visits today: ${data.daily} | Total: ${data.total}`;
-    } catch (err) {
-      console.error('Visit count failed', err);
-    }
-  })();
-</script>
-<p style="text-align:center;margin-top:40px;"><a href="seongsigan/seongsigan.html">SeongSigan 시간표 매니저</a></p>
+      })();
+    </script>
+
+    <p style="text-align:center;margin-top:40px;"><a href="seongsigan/seongsigan.html">SeongSigan 시간표 매니저</a></p>
+    <p style="text-align:center;"><a href="./stocks.html">Daily Stock Report</a></p>
 </body>
 </html>
