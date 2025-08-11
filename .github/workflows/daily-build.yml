@@ -56,6 +56,7 @@ jobs:
         run: |
           ls -la
           test -f data/market_news.json && echo "✅ data/market_news.json OK" || (echo "❌ data/market_news.json missing"; exit 1)
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('data/market_news.json','utf8'));console.log('market_news lastUpdated:',d.lastUpdated)"
           test -f recommendations.json && echo "✅ recommendations.json OK" || (echo "❌ recommendations.json missing"; exit 1)
 
       - name: Commit & push changes
@@ -68,6 +69,8 @@ jobs:
             recommendations.json
             ticker-cache.json
             data/market_news.json
+            stocks.html
+            src/template.html
 
       - name: GitHub Pages 배포
         uses: peaceiris/actions-gh-pages@v4
