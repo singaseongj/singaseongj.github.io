@@ -29,10 +29,10 @@
   </header>
   <main>
     <div class="keyboard-container">
-      <img src="assets/keyboard.svg" alt="Keyboard" id="keyboardSvg">
+      <div class="kb-wrap"></div>
     </div>
     <div id="transcript" class="transcript" aria-live="polite"></div>
-    <div id="result" class="result"></div>
+    <div id="result" class="result" aria-live="polite"></div>
     <div class="controls">
       <button id="micBtn" aria-label="Toggle microphone"><img id="micImg" src="assets/icons/mic.svg" alt="" aria-hidden="true"></button>
       <select id="examples" aria-label="Test examples">
@@ -48,6 +48,18 @@
       <label>Model <input id="model" type="text"></label>
       <label>API Key <input id="apiKey" type="password"></label>
       <p class="note">Stored in localStorage. Do not use secrets on shared devices.</p>
+      <fieldset>
+        <legend>Visualization</legend>
+        <label><input type="checkbox" id="pingToggle" checked> Show press ping</label>
+        <label><input type="checkbox" id="heatToggle"> Heatmap mode</label>
+        <button type="button" id="resetHeat" aria-label="Reset heatmap">Reset heatmap</button>
+      </fieldset>
+      <fieldset>
+        <legend>Eye tracking (experimental)</legend>
+        <label><input type="checkbox" id="eyeToggle"> Enable eye tracking</label>
+        <label>Dwell time (ms) <input type="number" id="eyeDwell" min="100" step="100" value="700"></label>
+        <label>Sensitivity <input type="range" id="eyeSensitivity" min="0" max="1" step="0.1" value="0.5"></label>
+      </fieldset>
       <menu>
         <button id="saveSettings" value="default">Save</button>
         <button id="closeSettings" value="cancel">Close</button>

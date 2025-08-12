@@ -1,3 +1,13 @@
+:root{
+  --key-fill: hsl(220 8% 18%);
+  --key-stroke: hsl(220 10% 32%);
+  --key-pressed-fill: hsl(205 85% 55%);
+  --key-pressed-stroke: hsl(205 90% 40%);
+  --key-ping: hsla(205, 90%, 60%, 0.35);
+  --key-heatmap-min: hsl(50 95% 65%);
+  --key-heatmap-max: hsl(10 85% 55%);
+}
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
@@ -28,10 +38,8 @@ main {
   max-width: 900px;
   width: 100%;
 }
-.keyboard-container img {
-  width: 100%;
-  height: auto;
-}
+.kb-wrap { position:relative; display:inline-block; }
+svg.keyboard { display:block; height:auto; max-width:100%; }
 .controls {
   display: flex;
   gap: 0.5rem;
@@ -59,15 +67,23 @@ main {
 .transcript, .result {
   min-height: 1.5rem;
 }
-.pressed rect {
-  stroke: #f59e0b;
-  filter: drop-shadow(0 0 4px #fbbf24);
-  animation: fade 1.5s forwards;
+.key { transition: fill .18s ease, stroke .18s ease, filter .18s ease; }
+.key.pressed {
+  fill: var(--key-pressed-fill) !important;
+  stroke: var(--key-pressed-stroke) !important;
+  filter: drop-shadow(0 0 .4rem hsla(205, 90%, 45%, .55));
 }
-@keyframes fade {
-  from { filter: drop-shadow(0 0 8px #fbbf24); }
-  to { filter: drop-shadow(0 0 0 transparent); }
+/* Optional ping overlay */
+.press-ping {
+  position:absolute; pointer-events:none;
+  width:18px;height:18px;border-radius:50%;
+  background: var(--key-ping);
+  transform: translate(-50%,-50%) scale(0.7);
+  animation: ping 600ms ease-out forwards;
 }
+@keyframes ping { 60%{transform:translate(-50%,-50%) scale(1.6); opacity:.6} 100%{opacity:0} }
+/* Heatmap utility (applied inline via style attr or class) */
+.heatmap { transition: fill .2s ease; }
 .settings-form label {
   display: flex;
   flex-direction: column;

@@ -1,20 +1,91 @@
 import { inferShortcut } from './llm.js';
 import { KEYS } from './keymap.js';
 import { isWebSpeechAvailable, startWebSpeech } from './stt.js';
+import { isEyeTrackingAvailable, configureEyeTracking, startEyeTracking, stopEyeTracking } from './eye.js';
 
 const EXAMPLES = ['ctrl w', '탭 닫아', 'close the tab', '새 탭', 'new tab', 'refresh the page', '새로 고침'];
 let controller = null;
+
+const heat = new Map();
+let options = { ping: true, heatmap: false, eye: { enabled: false, dwell: 700, sensitivity: 0.5 } };
+
+function loadKeyboardSvg(){
+  fetch('assets/keyboard.svg').then(r=>r.text()).then(txt=>{
+    const wrap = document.querySelector('.kb-wrap');
+    if(wrap){
+      wrap.innerHTML = txt;
+    }
+  });
+}
+
+function lerpColorHSL(a,b,t){
+  const pa=a.match(/[\d.]+/g).map(Number);
+  const pb=b.match(/[\d.]+/g).map(Number);
+  const h=pa[0]+(pb[0]-pa[0])*t;
+  const s=pa[1]+(pb[1]-pa[1])*t;
+  const l=pa[2]+(pb[2]-pa[2])*t;
+  return `hsl(${h} ${s}% ${l}%)`;
+}
+
+function applyHeatmap(){
+  const max=Math.max(...heat.values(),0);
+  const cs=getComputedStyle(document.documentElement);
+  const cMin=cs.getPropertyValue('--key-heatmap-min').trim();
+  const cMax=cs.getPropertyValue('--key-heatmap-max').trim();
+  heat.forEach((count,id)=>{
+    const g=document.getElementById(id);
+    if(!g) return;
+    if(options.heatmap && max){
+      const t=count/max;
+      g.classList.add('heatmap');
+      g.style.fill=lerpColorHSL(cMin,cMax,t);
+    }else{
+      g.classList.remove('heatmap');
+      g.style.fill='';
+    }
+  });
+}
+
+function saveHeat(){ localStorage.setItem('vkHeat', JSON.stringify(Object.fromEntries(heat))); }
+function loadHeat(){
+  try{
+    const obj=JSON.parse(localStorage.getItem('vkHeat')||'{}');
+    Object.entries(obj).forEach(([k,v])=>heat.set(k,Number(v)));
+  }catch{}
+}
+
+function showPressPing(g){
+  const svg = document.querySelector('svg.keyboard');
+  if(!svg) return;
+  const b = g.getBBox();
+  const pt = svg.createSVGPoint();
+  pt.x = b.x + b.width/2; pt.y = b.y + b.height/2;
+  const screen = pt.matrixTransform(g.getScreenCTM());
+  const host = document.querySelector('.kb-wrap');
+  const ping = document.createElement('div');
+  ping.className = 'press-ping';
+  const rect = host.getBoundingClientRect();
+  ping.style.left = (screen.x - rect.left) + 'px';
+  ping.style.top  = (screen.y - rect.top)  + 'px';
+  host.appendChild(ping);
+  setTimeout(()=> ping.remove(), 650);
+}
 
 function highlightKeys(labels) {
   labels.forEach(label => {
     const item = KEYS.find(k => k.label === label);
     if (!item) return;
-    const el = document.getElementById(item.svgId);
-    if (el) {
-      el.classList.add('pressed');
-      setTimeout(() => el.classList.remove('pressed'), 1500);
+    const g = document.getElementById(item.svgId);
+    if (g) {
+      g.classList.add('pressed');
+      const count=(heat.get(item.svgId)||0)+1;
+      heat.set(item.svgId,count);
+      if(options.ping) showPressPing(g);
+      setTimeout(() => g.classList.remove('pressed'), 1500);
     }
   });
+  applyHeatmap();
+  saveHeat();
 }
 
 async function processText(text) {
@@ -84,7 +155,70 @@ function saveEnv() {
   window.ENV = env;
 }
 
+function loadOptions(){
+  try{
+    const opts=JSON.parse(localStorage.getItem('vkOptions')||'{}');
+    options.ping = opts.ping !== false;
+    options.heatmap = !!opts.heatmap;
+    options.eye = Object.assign(options.eye, opts.eye||{});
+  }catch{}
+  document.getElementById('pingToggle').checked = options.ping;
+  document.getElementById('heatToggle').checked = options.heatmap;
+  document.getElementById('eyeToggle').checked = options.eye.enabled;
+  document.getElementById('eyeDwell').value = options.eye.dwell;
+  document.getElementById('eyeSensitivity').value = options.eye.sensitivity;
+}
+
+function saveOptions(){
+  localStorage.setItem('vkOptions', JSON.stringify(options));
+}
+
+function handleEyeToggle(){
+  options.eye.enabled = document.getElementById('eyeToggle').checked;
+  if(options.eye.enabled){
+    startEye();
+  } else {
+    stopEyeTracking();
+  }
+  saveOptions();
+}
+
+function startEye(){
+  options.eye.dwell = parseInt(document.getElementById('eyeDwell').value,10) || 700;
+  options.eye.sensitivity = parseFloat(document.getElementById('eyeSensitivity').value) || 0.5;
+  const regionResolver = (x,y)=>{
+    const el=document.elementFromPoint(x,y);
+    let n=el;
+    while(n){
+      if(n.classList && n.classList.contains('key') && n.id.startsWith('key-')) return n.id;
+      n=n.parentNode;
+    }
+    return null;
+  };
+  let current=null, timer=null;
+  function maybePress(id){
+    const label = KEYS.find(k=>k.svgId===id)?.label;
+    if(label) highlightKeys([label]);
+  }
+  function onGaze({x,y}){
+    const id=regionResolver(x,y);
+    if(id!==current){
+      current=id;
+      clearTimeout(timer);
+      if(id) timer=setTimeout(()=>maybePress(id), options.eye.dwell);
+    }
+  }
+  configureEyeTracking({ onGaze, onFixation: maybePress, regionResolver });
+  if(!startEyeTracking()){
+    alert('Eye tracking not available');
+    document.getElementById('eyeToggle').checked=false;
+    options.eye.enabled=false;
+    saveOptions();
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  loadKeyboardSvg();
   const examplesSel = document.getElementById('examples');
   EXAMPLES.forEach(ex => {
     const opt = document.createElement('option');
@@ -110,5 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
     saveEnv();
     document.getElementById('settingsModal').close();
   });
+  document.getElementById('pingToggle').addEventListener('change', e=>{ options.ping = e.target.checked; saveOptions(); });
+  document.getElementById('heatToggle').addEventListener('change', e=>{ options.heatmap = e.target.checked; applyHeatmap(); saveOptions(); });
+  document.getElementById('resetHeat').addEventListener('click', ()=>{ heat.clear(); applyHeatmap(); saveHeat(); });
+  document.getElementById('eyeToggle').addEventListener('change', handleEyeToggle);
+  document.getElementById('eyeDwell').addEventListener('change', ()=>{ options.eye.dwell = parseInt(document.getElementById('eyeDwell').value,10)||700; saveOptions(); });
+  document.getElementById('eyeSensitivity').addEventListener('input', ()=>{ options.eye.sensitivity = parseFloat(document.getElementById('eyeSensitivity').value)||0.5; saveOptions(); });
   loadEnv();
+  loadOptions();
+  loadHeat();
+  applyHeatmap();
+  if(!isEyeTrackingAvailable()) document.getElementById("eyeToggle").disabled = true;
+  if(options.eye.enabled) startEye();
 });
