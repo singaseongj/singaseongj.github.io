@@ -4,6 +4,7 @@ import path from 'node:path';
 import { XMLParser } from 'fast-xml-parser';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { nowKSTISO } from './utils/time.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,13 +28,6 @@ const KR_FEEDS = [
   'https://news.google.com/rss/search?q=%EC%A6%9D%EC%8B%9C&hl=ko&gl=KR&ceid=KR:ko',
   'https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC&hl=ko&gl=KR&ceid=KR:ko'
 ];
-
-function toKSTISOString(d = new Date()) {
-  const kst = new Date(d.getTime() + (9 * 60 - d.getTimezoneOffset()) * 60000);
-  const p = n => String(n).padStart(2, '0');
-  return `${kst.getFullYear()}-${p(kst.getMonth() + 1)}-${p(kst.getDate())}` +
-    `T${p(kst.getHours())}:${p(kst.getMinutes())}:${p(kst.getSeconds())}+09:00`;
-}
 
 const parser = new XMLParser({ ignoreAttributes: false });
 const execFileP = promisify(execFile);
@@ -109,7 +103,7 @@ async function gather() {
 async function main() {
   const items = await gather();
   if (!items.length) throw new Error('No news items after filtering');
-  const out = { lastUpdated: toKSTISOString(), items };
+  const out = { lastUpdated: nowKSTISO(), items };
   await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
   console.log(`Wrote ${items.length} items to ${OUT_FILE}`);
 }
