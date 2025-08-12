@@ -22,7 +22,8 @@ export const ALIASES = {
   command: 'Cmd', cmd: 'Cmd', '⌘': 'Cmd', 커맨드: 'Cmd',
   option: 'Alt', alt: 'Alt', 알트: 'Alt',
   shift: 'Shift', 쉬프트: 'Shift',
-  windows: 'Win', window: 'Win', win: 'Win', 윈도우: 'Win', 윈키: 'Win'
+  windows: 'Win', window: 'Win', win: 'Win', 윈도우: 'Win', 윈키: 'Win',
+  '-': 'Minus', '=': 'Equal', '[': 'BracketLeft', ']': 'BracketRight'
 };
 
 export const COMMON_INTENTS = {

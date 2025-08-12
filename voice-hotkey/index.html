@@ -14,8 +14,9 @@
   <header class="top-bar">
     <div class="title-block">
       <h1>voice to keys</h1>
-      <!-- preview SVG goes here -->
-      <div id="kb-preview" class="kb-preview" aria-hidden="true"></div>
+      <div class="kb-card">
+        <div id="kb-preview" class="kb-preview" aria-hidden="false"></div>
+      </div>
     </div>
 
     <div class="top-controls">
@@ -98,44 +99,42 @@
   <script type="module">
   import { validateKeyboardSVG } from './app.js';
 
-  async function injectSVG() {
+  async function injectKeyboardSVG() {
     const res = await fetch('./assets/keyboard.svg', { cache: 'no-store' });
     if (!res.ok) throw new Error('SVG fetch failed: ' + res.status);
     const svgText = await res.text();
 
-    function mountInto(el) {
+    function mountInto(el){
       if (!el) return;
       el.innerHTML = svgText;
       const svg = el.querySelector('svg');
       if (!svg) return;
       svg.classList.add('keyboard');
 
-      // baseline styles INSIDE the SVG (namespace matters)
+      /* ensure base styles even if external CSS fails */
       const style = document.createElementNS('http://www.w3.org/2000/svg','style');
       style.textContent = `
         .key rect, .key path { fill: var(--key-fill); stroke: var(--key-stroke); }
-        .key text { fill:#333; }
+        .key text { fill: var(--key-text); }
         .key.pressed rect, .key.pressed path {
           fill: var(--key-pressed-fill) !important;
           stroke: var(--key-pressed-stroke) !important;
-          filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
+          filter: drop-shadow(0 0 .35rem hsla(205, 90%, 45%, .55));
         }
       `;
       svg.appendChild(style);
     }
 
-    // main (interactive) — existed before
-    mountInto(document.getElementById('kb-mount'));
-    // new preview (static) — just the image
-    mountInto(document.getElementById('kb-preview'));
+    mountInto(document.getElementById('kb-mount'));   // main
+    mountInto(document.getElementById('kb-preview')); // picture
 
     if (typeof validateKeyboardSVG === 'function') validateKeyboardSVG();
   }
 
-  injectSVG().catch(e => {
-    console.error(e);
-    document.getElementById('kb-mount').textContent = 'Keyboard SVG failed to load.';
-  });
+  if (document.readyState === 'loading')
+    document.addEventListener('DOMContentLoaded', injectKeyboardSVG);
+  else
+    injectKeyboardSVG();
   </script>
 </body>
 </html>

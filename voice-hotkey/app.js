@@ -9,6 +9,17 @@ let controller = null;
 const heat = new Map();
 let options = { ping: true, heatmap: false, eye: { enabled: false, dwell: 700, sensitivity: 0.5 } };
 
+function getKeyboardSvgs(){
+  const mainHost = document.getElementById('kb-mount');
+  const previewHost = document.getElementById('kb-preview');
+  return {
+    mainHost,
+    previewHost,
+    mainSvg: mainHost?.querySelector('svg.keyboard') || null,
+    previewSvg: previewHost?.querySelector('svg.keyboard') || null,
+  };
+}
+
 function lerpColorHSL(a,b,t){
   const pa=a.match(/[\d.]+/g).map(Number);
   const pb=b.match(/[\d.]+/g).map(Number);
@@ -19,23 +30,24 @@ function lerpColorHSL(a,b,t){
 }
 
 function applyHeatmap(){
-  const svg = document.querySelector('#kb-mount svg.keyboard');
-  if(!svg) return;
   const max=Math.max(...heat.values(),0);
   const cs=getComputedStyle(document.documentElement);
   const cMin=cs.getPropertyValue('--key-heatmap-min').trim();
   const cMax=cs.getPropertyValue('--key-heatmap-max').trim();
-  heat.forEach((count,id)=>{
-    const g=svg.querySelector('#'+CSS.escape(id));
-    if(!g) return;
-    if(options.heatmap && max){
-      const t=count/max;
-      g.classList.add('heatmap');
-      g.style.fill=lerpColorHSL(cMin,cMax,t);
-    }else{
-      g.classList.remove('heatmap');
-      g.style.fill='';
-    }
+
+  applyHeatmapToBoth(svg=>{
+    heat.forEach((count,id)=>{
+      const g=svg.querySelector('#'+CSS.escape(id));
+      if(!g) return;
+      if(options.heatmap && max){
+        const t=count/max;
+        g.classList.add('heatmap');
+        g.style.fill=lerpColorHSL(cMin,cMax,t);
+      }else{
+        g.classList.remove('heatmap');
+        g.style.fill='';
+      }
+    });
   });
 }
 
@@ -93,10 +105,9 @@ function resolveIdsFromLabels(inputKeys) {
   return [...new Set(out)];
 }
 
-export function highlightKeys(keys) {
-  const svg = document.querySelector('#kb-mount svg.keyboard');
-  const host = document.getElementById('kb-mount');
-  if (!svg || !host) return;
+export function highlightKeys(keys, { mirrorPreview = true } = {}){
+  const { mainSvg, previewSvg, mainHost, previewHost } = getKeyboardSvgs();
+  if (!mainSvg && !previewSvg) return;
 
   const ids = resolveIdsFromLabels(keys);
 
@@ -105,16 +116,21 @@ export function highlightKeys(keys) {
     heat.set(id, count);
   });
 
-  ids.forEach(id => {
-    const g = svg.querySelector(`#${CSS.escape(id)}.key`);
-    if (!g) return;
-    g.classList.add('pressed');
+  const targets = [mainSvg].filter(Boolean);
+  if (mirrorPreview && previewSvg) targets.push(previewSvg);
 
-    if (options.ping && typeof showPressPing === 'function') {
-      showPressPing(g, { host });
-    }
-
-    setTimeout(() => g.classList.remove('pressed'), 1200);
+  targets.forEach(svg => {
+    ids.forEach(id => {
+      const g = svg.querySelector(`#${CSS.escape(id)}.key`);
+      if (!g) return;
+      g.classList.add('pressed');
+      if (options.ping && typeof showPressPing === 'function'){
+        const host = (svg === mainSvg) ? mainHost : previewHost;
+        const scale = (svg === mainSvg) ? 1 : 0.65;
+        showPressPing(g, { host, scale });
+      }
+      setTimeout(()=> g.classList.remove('pressed'), 1200);
+    });
   });
 
   applyHeatmap();
@@ -122,12 +138,17 @@ export function highlightKeys(keys) {
 }
 window.VoiceKeys = Object.assign({}, window.VoiceKeys, { highlightKeys });
 
+function applyHeatmapToBoth(updateFnPerKey){
+  const { mainSvg, previewSvg } = getKeyboardSvgs();
+  [mainSvg, previewSvg].filter(Boolean).forEach(svg => updateFnPerKey(svg));
+}
+
 export function validateKeyboardSVG(){
-  const svg = document.querySelector('#kb-mount svg.keyboard');
-  if(!svg) return;
+  const { mainSvg } = getKeyboardSvgs();
+  if(!mainSvg) return;
   const miss=[];
   for(const k of KEYS){
-    if(!svg.querySelector(`#${CSS.escape(k.svgId)}.key`)) miss.push(k.svgId);
+    if(!mainSvg.querySelector(`#${CSS.escape(k.svgId)}.key`)) miss.push(k.svgId);
   }
   if(miss.length) console.warn('[keyboard.svg] Missing key ids:', miss);
 }
