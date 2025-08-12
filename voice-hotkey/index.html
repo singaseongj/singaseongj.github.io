@@ -12,7 +12,12 @@
 </head>
 <body>
   <header class="top-bar">
-    <h1>voice to keys</h1>
+    <div class="title-block">
+      <h1>voice to keys</h1>
+      <!-- preview SVG goes here -->
+      <div id="kb-preview" class="kb-preview" aria-hidden="true"></div>
+    </div>
+
     <div class="top-controls">
       <label class="sr-only" for="os">OS</label>
       <select id="os">
@@ -91,30 +96,42 @@
   </dialog>
   <script type="module" src="./kb-map.js"></script>
   <script type="module">
-  import { validateKeyboardSVG } from './app.js'; // export a no-op if not present
+  import { validateKeyboardSVG } from './app.js';
 
   async function injectSVG() {
-    const mount = document.getElementById('kb-mount');
     const res = await fetch('./assets/keyboard.svg', { cache: 'no-store' });
     if (!res.ok) throw new Error('SVG fetch failed: ' + res.status);
-    mount.innerHTML = await res.text();
-    const svg = mount.querySelector('svg');
-    if (svg) {
+    const svgText = await res.text();
+
+    function mountInto(el) {
+      if (!el) return;
+      el.innerHTML = svgText;
+      const svg = el.querySelector('svg');
+      if (!svg) return;
       svg.classList.add('keyboard');
+
+      // baseline styles INSIDE the SVG (namespace matters)
       const style = document.createElementNS('http://www.w3.org/2000/svg','style');
       style.textContent = `
-  .key rect, .key path { fill: var(--key-fill); stroke: var(--key-stroke); }
-  .key text { fill:#333; }
-  .key.pressed rect, .key.pressed path {
-    fill: var(--key-pressed-fill) !important;
-    stroke: var(--key-pressed-stroke) !important;
-    filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
-  }
-`;
+        .key rect, .key path { fill: var(--key-fill); stroke: var(--key-stroke); }
+        .key text { fill:#333; }
+        .key.pressed rect, .key.pressed path {
+          fill: var(--key-pressed-fill) !important;
+          stroke: var(--key-pressed-stroke) !important;
+          filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
+        }
+      `;
       svg.appendChild(style);
     }
+
+    // main (interactive) — existed before
+    mountInto(document.getElementById('kb-mount'));
+    // new preview (static) — just the image
+    mountInto(document.getElementById('kb-preview'));
+
     if (typeof validateKeyboardSVG === 'function') validateKeyboardSVG();
   }
+
   injectSVG().catch(e => {
     console.error(e);
     document.getElementById('kb-mount').textContent = 'Keyboard SVG failed to load.';
