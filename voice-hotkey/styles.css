@@ -68,7 +68,10 @@ svg.keyboard { display:block; height:auto; max-width:100%; }
   min-height: 1.5rem;
 }
 svg.keyboard .key rect,
-svg.keyboard .key path { fill:#fff; stroke:#ccc; }
+svg.keyboard .key path {
+  fill: var(--key-fill);       /* hsl(220 8% 18%) */
+  stroke: var(--key-stroke);   /* hsl(220 10% 32%) */
+}
 svg.keyboard .key text { fill:#333; }
 svg.keyboard .key.pressed rect,
 svg.keyboard .key.pressed path {
