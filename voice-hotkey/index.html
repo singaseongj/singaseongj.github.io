@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>voice to keys</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="keymap.js"></script>
+  <script type="module" src="llm.js"></script>
+  <script type="module" src="stt.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="top-bar">
+    <h1>voice to keys</h1>
+    <div class="top-controls">
+      <label class="sr-only" for="os">OS</label>
+      <select id="os">
+        <option value="windows">Windows</option>
+        <option value="macos">macOS</option>
+      </select>
+      <label class="sr-only" for="lang">Language</label>
+      <select id="lang">
+        <option value="ko-KR">ko-KR</option>
+        <option value="en-US">en-US</option>
+      </select>
+      <button id="settingsBtn" aria-label="Settings"><img src="assets/icons/settings.svg" alt="" aria-hidden="true"></button>
+    </div>
+  </header>
+  <main>
+    <div class="keyboard-container">
+      <div class="kb-wrap" id="kb-mount"></div>
+    </div>
+    <div id="transcript" class="transcript" aria-live="polite"></div>
+    <div id="result" class="result" aria-live="polite"></div>
+    <div class="controls">
+      <button id="micBtn" aria-label="Toggle microphone"><img id="micImg" src="assets/icons/mic.svg" alt="" aria-hidden="true"></button>
+      <select id="examples" aria-label="Test examples">
+        <option value="">Examples</option>
+      </select>
+      <button id="clearBtn">Clear</button>
+    </div>
+    <section id="keyboard-map" class="kb-section">
+      <h2 class="kb-title">Keyboard Map</h2>
+      <p class="kb-desc">Click an example to visualize the keys.</p>
+
+      <div class="kb-controls">
+        <div class="kb-examples" aria-label="Common shortcuts"></div>
+      </div>
+
+      <p id="kb-status" class="sr-only" aria-live="polite"></p>
+    </section>
+
+    <style>
+      /* Scoped styles */
+      #keyboard-map { margin-top: 1.25rem; }
+      #keyboard-map .kb-title { font-size: 1.1rem; margin: 0 0 .25rem; }
+      #keyboard-map .kb-desc { margin: 0 0 .5rem; opacity: .8; }
+      #keyboard-map .kb-examples { display: flex; flex-wrap: wrap; gap: .5rem; }
+      #keyboard-map .kb-examples button {
+        padding: .4rem .6rem; border: 1px solid #d0d0d0; border-radius: .5rem; background: #fff; cursor: pointer;
+      }
+      #keyboard-map .kb-examples button:hover { background: #f7f7f7; }
+      .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+    </style>
+  </main>
+  <dialog id="settingsModal">
+    <form method="dialog" class="settings-form">
+      <h2>Settings</h2>
+      <label>API Base URL <input id="baseUrl" type="text"></label>
+      <label>Model <input id="model" type="text"></label>
+      <label>API Key <input id="apiKey" type="password"></label>
+      <p class="note">Stored in localStorage. Do not use secrets on shared devices.</p>
+      <fieldset>
+        <legend>Visualization</legend>
+        <label><input type="checkbox" id="pingToggle" checked> Show press ping</label>
+        <label><input type="checkbox" id="heatToggle"> Heatmap mode</label>
+        <button type="button" id="resetHeat" aria-label="Reset heatmap">Reset heatmap</button>
+      </fieldset>
+      <fieldset>
+        <legend>Eye tracking (experimental)</legend>
+        <label><input type="checkbox" id="eyeToggle"> Enable eye tracking</label>
+        <label>Dwell time (ms) <input type="number" id="eyeDwell" min="100" step="100" value="700"></label>
+        <label>Sensitivity <input type="range" id="eyeSensitivity" min="0" max="1" step="0.1" value="0.5"></label>
+      </fieldset>
+      <menu>
+        <button id="saveSettings" value="default">Save</button>
+        <button id="closeSettings" value="cancel">Close</button>
+      </menu>
+    </form>
+  </dialog>
+  <script type="module" src="./kb-map.js"></script>
+  <script type="module">
+  import { validateKeyboardSVG } from './app.js'; // export a no-op if not present
+
+  async function injectSVG() {
+    const mount = document.getElementById('kb-mount');
+    const res = await fetch('./assets/keyboard.svg', { cache: 'no-store' });
+    if (!res.ok) throw new Error('SVG fetch failed: ' + res.status);
+    mount.innerHTML = await res.text();
+    const svg = mount.querySelector('svg');
+    if (svg) {
+      svg.classList.add('keyboard');
+      const style = document.createElement('style');
+      style.textContent = `svg.keyboard .key rect,
+svg.keyboard .key path { fill:#fff; stroke:#ccc; }
+svg.keyboard .key text { fill:#333; }
+svg.keyboard .key.pressed rect,
+svg.keyboard .key.pressed path {
+  fill: var(--key-pressed-fill, hsl(205 85% 55%)) !important;
+  stroke: var(--key-pressed-stroke, hsl(205 90% 40%)) !important;
+  filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
+}`;
+      svg.appendChild(style);
+    }
+    if (typeof validateKeyboardSVG === 'function') validateKeyboardSVG();
+  }
+  injectSVG().catch(e => {
+    console.error(e);
+    document.getElementById('kb-mount').textContent = 'Keyboard SVG failed to load.';
+  });
+  </script>
+</body>
+</html>

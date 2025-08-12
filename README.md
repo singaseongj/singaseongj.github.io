@@ -17,6 +17,22 @@ exchange. Many technology giants such as Apple and Microsoft are members of
 both indices, so an individual stock may appear in each section of the
 recommendations.
 
+## Voice to Keys Demo / 음성으로 단축키 데모
+
+### English
+`voice-hotkey/` is a small demo that listens for phrases like "ctrl w" or "close the tab" and shows the matching keyboard shortcut.
+Open `voice-hotkey/index.html` directly to run it locally. To deploy on GitHub Pages, commit the folder and visit `/voice-hotkey/`.
+The app first tries the browser's Web Speech API for speech‑to‑text. A placeholder `transcribeAudio` function exists to wire up Whisper or another API later.
+If you provide an OpenAI‑compatible API key and model in the **Settings** dialog, the app will use it to interpret natural language. Keys are stored in `localStorage`; avoid using real secrets on shared devices.
+Shortcuts default to Windows mappings, with macOS overrides when the OS selector is set to macOS.
+
+### 한국어
+`voice-hotkey/` 폴더에는 "ctrl w", "탭 닫아" 같은 말을 인식해 해당 키 조합을 보여주는 데모가 있습니다.
+로컬에서는 `voice-hotkey/index.html` 파일을 직접 열면 되고, GitHub Pages에 배포하려면 폴더를 커밋한 뒤 `/voice-hotkey/` 주소로 접속하면 됩니다.
+브라우저의 Web Speech API를 기본 음성 인식으로 사용하며, Whisper 등 외부 STT API를 연결할 수 있도록 `transcribeAudio` 함수를 비워 두었습니다.
+**Settings** 창에 OpenAI 호환 API 키와 모델을 입력하면 자연어 명령을 해석합니다. 정보는 `localStorage`에 저장되므로 공용 기기에서는 실제 키 사용을 피하세요.
+단축키는 기본적으로 Windows 기준이며, OS 선택을 macOS로 바꾸면 맵핑이 달라집니다.
+
 ## Running tests
 
 The repository includes a simple Node.js script that verifies the `apple-app-site-association` file. Make sure Node.js is installed and run.
