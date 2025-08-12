@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>voice to keys</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="keymap.js"></script>
+  <script type="module" src="llm.js"></script>
+  <script type="module" src="stt.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="top-bar">
+    <h1>voice to keys</h1>
+    <div class="top-controls">
+      <label class="sr-only" for="os">OS</label>
+      <select id="os">
+        <option value="windows">Windows</option>
+        <option value="macos">macOS</option>
+      </select>
+      <label class="sr-only" for="lang">Language</label>
+      <select id="lang">
+        <option value="ko-KR">ko-KR</option>
+        <option value="en-US">en-US</option>
+      </select>
+      <button id="settingsBtn" aria-label="Settings"><img src="assets/icons/settings.svg" alt="" aria-hidden="true"></button>
+    </div>
+  </header>
+  <main>
+    <div class="keyboard-container">
+      <img src="assets/keyboard.svg" alt="Keyboard" id="keyboardSvg">
+    </div>
+    <div id="transcript" class="transcript" aria-live="polite"></div>
+    <div id="result" class="result"></div>
+    <div class="controls">
+      <button id="micBtn" aria-label="Toggle microphone"><img id="micImg" src="assets/icons/mic.svg" alt="" aria-hidden="true"></button>
+      <select id="examples" aria-label="Test examples">
+        <option value="">Examples</option>
+      </select>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </main>
+  <dialog id="settingsModal">
+    <form method="dialog" class="settings-form">
+      <h2>Settings</h2>
+      <label>API Base URL <input id="baseUrl" type="text"></label>
+      <label>Model <input id="model" type="text"></label>
+      <label>API Key <input id="apiKey" type="password"></label>
+      <p class="note">Stored in localStorage. Do not use secrets on shared devices.</p>
+      <menu>
+        <button id="saveSettings" value="default">Save</button>
+        <button id="closeSettings" value="cancel">Close</button>
+      </menu>
+    </form>
+  </dialog>
+</body>
+</html>
