@@ -196,3 +196,49 @@ svg.keyboard .key.pressed path {
 }
 @keyframes ping { 60%{transform:translate(-50%,-50%) scale(1.55); opacity:.65} 100%{opacity:0} }
 
+/* Center title and both keyboards */
+h1 { text-align: center; margin: 0 0 .5rem; }
+.title-block, .kb-card, .kb-preview, .kb-wrap, .keyboard-container { margin-left: auto; margin-right: auto; }
+
+/* Base keyboard look */
+:root{
+  --key-fill: #ffffff;
+  --key-stroke: #cfcfcf;
+  --key-text: #333333;
+  /* Pressed shading only (slightly darker) */
+  --key-pressed-fill: #e9eef7;
+  --key-pressed-stroke: #b7c2d9;
+}
+
+/* Apply base to both preview & main */
+svg.keyboard .key rect,
+svg.keyboard .key path { fill: var(--key-fill); stroke: var(--key-stroke); }
+svg.keyboard .key text { fill: var(--key-text); }
+
+/* HIGHLIGHT channel: just shading — no glow */
+svg.keyboard .key.pressed rect,
+svg.keyboard .key.pressed path {
+  fill: var(--key-pressed-fill) !important;
+  stroke: var(--key-pressed-stroke) !important;
+  filter: none !important;           /* no glow */
+  transition: fill .18s ease, stroke .18s ease;
+}
+
+/* PING channel: simple dot, no sparkle animation */
+.press-ping {
+  position: absolute; pointer-events: none;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: rgba(50, 140, 255, .35);
+  transform: translate(-50%, -50%);
+  opacity: .85;
+  animation: none;
+}
+
+/* HEATMAP channel (colorize by data-heat; JS sets inline style or data-attr) */
+.key[data-heat] rect, .key[data-heat] path {
+  /* JS will set an inline fill via HSL ramp; leave as-is */
+}
+
+/* Optional: make preview/main bigger and centered */
+.kb-preview { max-width: clamp(900px, 95vw, 1200px); max-height: 280px; }
+.keyboard-container, .kb-wrap { max-width: clamp(900px, 95vw, 1200px); }

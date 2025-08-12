@@ -3,11 +3,19 @@ import { KEYS, ALIASES } from './keymap.js';
 import { isWebSpeechAvailable, startWebSpeech } from './stt.js';
 import { isEyeTrackingAvailable, configureEyeTracking, startEyeTracking, stopEyeTracking } from './eye.js';
 
+const VIS_DEFAULT = { highlight: true, ping: false, heatmap: false };
+function loadVis() {
+  try { return Object.assign({}, VIS_DEFAULT, JSON.parse(localStorage.getItem('vk.vis') || '{}')); }
+  catch { return { ...VIS_DEFAULT }; }
+}
+function saveVis(v){ localStorage.setItem('vk.vis', JSON.stringify(v)); }
+export const VIS = loadVis();    // { highlight, ping, heatmap }
+
 const EXAMPLES = ['ctrl w', '탭 닫아', 'close the tab', '새 탭', 'new tab', 'refresh the page', '새로 고침'];
 let controller = null;
 
 const heat = new Map();
-let options = { ping: true, heatmap: false, eye: { enabled: false, dwell: 700, sensitivity: 0.5 } };
+let options = { eye: { enabled: false, dwell: 700, sensitivity: 0.5 } };
 
 function getKeyboardSvgs(){
   const mainHost = document.getElementById('kb-mount');
@@ -39,7 +47,7 @@ function applyHeatmap(){
     heat.forEach((count,id)=>{
       const g=svg.querySelector('#'+CSS.escape(id));
       if(!g) return;
-      if(options.heatmap && max){
+      if(VIS.heatmap && max){
         const t=count/max;
         g.classList.add('heatmap');
         g.style.fill=lerpColorHSL(cMin,cMax,t);
@@ -59,24 +67,31 @@ function loadHeat(){
   }catch{}
 }
 
+function updateHeatCount(ids){
+  ids.forEach(id=>{
+    const count=(heat.get(id)||0)+1;
+    heat.set(id,count);
+  });
+  saveHeat();
+}
+
 // place a ping overlay centered on <g> within its ownerSVGElement
-export function showPressPing(g, { host, scale = 1 } = {}) {
+export function showPressPing(g, { host, scale = 1 } = {}){
   const svg = g.ownerSVGElement;
   if (!svg || !host) return;
   const b = g.getBBox();
   const pt = svg.createSVGPoint();
-  pt.x = b.x + b.width / 2;
-  pt.y = b.y + b.height / 2;
+  pt.x = b.x + b.width/2; pt.y = b.y + b.height/2;
   const screen = pt.matrixTransform(g.getScreenCTM());
-
   const rect = host.getBoundingClientRect();
-  const ping = document.createElement('div');
-  ping.className = 'press-ping';
-  ping.style.left = (screen.x - rect.left) + 'px';
-  ping.style.top  = (screen.y - rect.top)  + 'px';
-  ping.style.transform = `translate(-50%,-50%) scale(${0.7 * scale})`;
-  host.appendChild(ping);
-  setTimeout(() => ping.remove(), 650);
+
+  const dot = document.createElement('div');
+  dot.className = 'press-ping';
+  dot.style.left = (screen.x - rect.left) + 'px';
+  dot.style.top  = (screen.y - rect.top)  + 'px';
+  dot.style.transform = `translate(-50%,-50%) scale(${scale})`;
+  host.appendChild(dot);
+  setTimeout(()=> dot.remove(), 550);
 }
 window.showPressPing = showPressPing;
 
@@ -111,30 +126,36 @@ export function highlightKeys(keys, { mirrorPreview = true } = {}){
 
   const ids = resolveIdsFromLabels(keys);
 
-  ids.forEach(id => {
-    const count = (heat.get(id) || 0) + 1;
-    heat.set(id, count);
-  });
-
-  const targets = [mainSvg].filter(Boolean);
-  if (mirrorPreview && previewSvg) targets.push(previewSvg);
-
-  targets.forEach(svg => {
-    ids.forEach(id => {
-      const g = svg.querySelector(`#${CSS.escape(id)}.key`);
-      if (!g) return;
-      g.classList.add('pressed');
-      if (options.ping && typeof showPressPing === 'function'){
-        const host = (svg === mainSvg) ? mainHost : previewHost;
-        const scale = (svg === mainSvg) ? 1 : 0.65;
-        showPressPing(g, { host, scale });
-      }
-      setTimeout(()=> g.classList.remove('pressed'), 1200);
+  // HIGHLIGHT channel
+  if (VIS.highlight){
+    const targets = [mainSvg, mirrorPreview ? previewSvg : null].filter(Boolean);
+    targets.forEach(svg => {
+      ids.forEach(id => {
+        const g = svg.querySelector(`#${CSS.escape(id)}.key`);
+        if (!g) return;
+        g.classList.add('pressed');
+        setTimeout(()=> g.classList.remove('pressed'), 900);
+      });
     });
-  });
+  }
 
-  applyHeatmap();
-  saveHeat();
+  // PING channel
+  if (VIS.ping && typeof showPressPing === 'function'){
+    const doPing = (svg, host, scale) => {
+      ids.forEach(id => {
+        const g = svg?.querySelector(`#${CSS.escape(id)}.key`); if (!g) return;
+        showPressPing(g, { host, scale });
+      });
+    };
+    doPing(mainSvg, mainHost, 1);
+    if (mirrorPreview && previewSvg) doPing(previewSvg, previewHost, 0.8);
+  }
+
+  // HEATMAP channel
+  if (VIS.heatmap && typeof updateHeatCount === 'function'){
+    updateHeatCount(ids);
+    if (typeof applyHeatmap === 'function') applyHeatmap();
+  }
 }
 window.VoiceKeys = Object.assign({}, window.VoiceKeys, { highlightKeys });
 
@@ -223,12 +244,8 @@ function saveEnv() {
 function loadOptions(){
   try{
     const opts=JSON.parse(localStorage.getItem('vkOptions')||'{}');
-    options.ping = opts.ping !== false;
-    options.heatmap = !!opts.heatmap;
     options.eye = Object.assign(options.eye, opts.eye||{});
   }catch{}
-  document.getElementById('pingToggle').checked = options.ping;
-  document.getElementById('heatToggle').checked = options.heatmap;
   document.getElementById('eyeToggle').checked = options.eye.enabled;
   document.getElementById('eyeDwell').value = options.eye.dwell;
   document.getElementById('eyeSensitivity').value = options.eye.sensitivity;
@@ -237,6 +254,18 @@ function loadOptions(){
 function saveOptions(){
   localStorage.setItem('vkOptions', JSON.stringify(options));
 }
+
+function bindVisToggles(){
+  const $ = (s)=>document.querySelector(s);
+  const boxH = $('#vis-highlight'); const boxP = $('#vis-ping'); const boxM = $('#vis-heatmap');
+  if (boxH){ boxH.checked = !!VIS.highlight; boxH.onchange = ()=> { VIS.highlight = boxH.checked; saveVis(VIS); }; }
+  if (boxP){ boxP.checked = !!VIS.ping;      boxP.onchange = ()=> { VIS.ping      = boxP.checked; saveVis(VIS); }; }
+  if (boxM){
+    boxM.checked = !!VIS.heatmap;
+    boxM.onchange = ()=> { VIS.heatmap = boxM.checked; saveVis(VIS); if (typeof applyHeatmap === 'function') applyHeatmap(); };
+  }
+}
+document.addEventListener('DOMContentLoaded', bindVisToggles);
 
 function handleEyeToggle(){
   options.eye.enabled = document.getElementById('eyeToggle').checked;
@@ -308,8 +337,6 @@ document.addEventListener('DOMContentLoaded', () => {
     saveEnv();
     document.getElementById('settingsModal').close();
   });
-  document.getElementById('pingToggle').addEventListener('change', e=>{ options.ping = e.target.checked; saveOptions(); });
-  document.getElementById('heatToggle').addEventListener('change', e=>{ options.heatmap = e.target.checked; applyHeatmap(); saveOptions(); });
   document.getElementById('resetHeat').addEventListener('click', ()=>{ heat.clear(); applyHeatmap(); saveHeat(); });
   document.getElementById('eyeToggle').addEventListener('change', handleEyeToggle);
   document.getElementById('eyeDwell').addEventListener('change', ()=>{ options.eye.dwell = parseInt(document.getElementById('eyeDwell').value,10)||700; saveOptions(); });

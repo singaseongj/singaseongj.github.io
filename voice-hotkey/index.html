@@ -79,8 +79,11 @@
       <p class="note">Stored in localStorage. Do not use secrets on shared devices.</p>
       <fieldset>
         <legend>Visualization</legend>
-        <label><input type="checkbox" id="pingToggle" checked> Show press ping</label>
-        <label><input type="checkbox" id="heatToggle"> Heatmap mode</label>
+        <div class="vis-toggles">
+          <label><input type="checkbox" id="vis-highlight"> Highlight</label>
+          <label><input type="checkbox" id="vis-ping"> Ping</label>
+          <label><input type="checkbox" id="vis-heatmap"> Heatmap</label>
+        </div>
         <button type="button" id="resetHeat" aria-label="Reset heatmap">Reset heatmap</button>
       </fieldset>
       <fieldset>
@@ -119,7 +122,6 @@
         .key.pressed rect, .key.pressed path {
           fill: var(--key-pressed-fill) !important;
           stroke: var(--key-pressed-stroke) !important;
-          filter: drop-shadow(0 0 .35rem hsla(205, 90%, 45%, .55));
         }
       `;
       svg.appendChild(style);
