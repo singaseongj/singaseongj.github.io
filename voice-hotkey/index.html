@@ -99,7 +99,20 @@
     if (!res.ok) throw new Error('SVG fetch failed: ' + res.status);
     mount.innerHTML = await res.text();
     const svg = mount.querySelector('svg');
-    if (svg) svg.classList.add('keyboard');
+    if (svg) {
+      svg.classList.add('keyboard');
+      const style = document.createElement('style');
+      style.textContent = `svg.keyboard .key rect,
+svg.keyboard .key path { fill:#fff; stroke:#ccc; }
+svg.keyboard .key text { fill:#333; }
+svg.keyboard .key.pressed rect,
+svg.keyboard .key.pressed path {
+  fill: var(--key-pressed-fill, hsl(205 85% 55%)) !important;
+  stroke: var(--key-pressed-stroke, hsl(205 90% 40%)) !important;
+  filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
+}`;
+      svg.appendChild(style);
+    }
     if (typeof validateKeyboardSVG === 'function') validateKeyboardSVG();
   }
   injectSVG().catch(e => {

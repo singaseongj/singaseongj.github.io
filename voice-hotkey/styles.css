@@ -67,6 +67,15 @@ svg.keyboard { display:block; height:auto; max-width:100%; }
 .transcript, .result {
   min-height: 1.5rem;
 }
+svg.keyboard .key rect,
+svg.keyboard .key path { fill:#fff; stroke:#ccc; }
+svg.keyboard .key text { fill:#333; }
+svg.keyboard .key.pressed rect,
+svg.keyboard .key.pressed path {
+  fill: var(--key-pressed-fill, hsl(205 85% 55%)) !important;
+  stroke: var(--key-pressed-stroke, hsl(205 90% 40%)) !important;
+  filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
+}
 .key { transition: fill .18s ease, stroke .18s ease, filter .18s ease; }
 .key.pressed {
   fill: var(--key-pressed-fill) !important;
