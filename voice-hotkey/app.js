@@ -1,5 +1,5 @@
 import { inferShortcut } from './llm.js';
-import { KEYS } from './keymap.js';
+import { KEYS, ALIASES } from './keymap.js';
 import { isWebSpeechAvailable, startWebSpeech } from './stt.js';
 import { isEyeTrackingAvailable, configureEyeTracking, startEyeTracking, stopEyeTracking } from './eye.js';
 
@@ -8,6 +8,17 @@ let controller = null;
 
 const heat = new Map();
 let options = { ping: true, heatmap: false, eye: { enabled: false, dwell: 700, sensitivity: 0.5 } };
+
+function getKeyboardSvgs() {
+  const mainHost = document.getElementById('kb-mount');
+  const previewHost = document.getElementById('kb-preview');
+  return {
+    mainHost,
+    previewHost,
+    mainSvg: mainHost?.querySelector('svg.keyboard') || null,
+    previewSvg: previewHost?.querySelector('svg.keyboard') || null,
+  };
+}
 
 function lerpColorHSL(a,b,t){
   const pa=a.match(/[\d.]+/g).map(Number);
@@ -19,23 +30,26 @@ function lerpColorHSL(a,b,t){
 }
 
 function applyHeatmap(){
-  const svg = document.querySelector('svg.keyboard');
-  if(!svg) return;
+  const { mainSvg, previewSvg } = getKeyboardSvgs();
+  const svgs = [mainSvg, previewSvg].filter(Boolean);
+  if(!svgs.length) return;
   const max=Math.max(...heat.values(),0);
   const cs=getComputedStyle(document.documentElement);
   const cMin=cs.getPropertyValue('--key-heatmap-min').trim();
   const cMax=cs.getPropertyValue('--key-heatmap-max').trim();
-  heat.forEach((count,id)=>{
-    const g=svg.querySelector('#'+CSS.escape(id));
-    if(!g) return;
-    if(options.heatmap && max){
-      const t=count/max;
-      g.classList.add('heatmap');
-      g.style.fill=lerpColorHSL(cMin,cMax,t);
-    }else{
-      g.classList.remove('heatmap');
-      g.style.fill='';
-    }
+  svgs.forEach(svg=>{
+    heat.forEach((count,id)=>{
+      const g=svg.querySelector('#'+CSS.escape(id));
+      if(!g) return;
+      if(options.heatmap && max){
+        const t=count/max;
+        g.classList.add('heatmap');
+        g.style.fill=lerpColorHSL(cMin,cMax,t);
+      }else{
+        g.classList.remove('heatmap');
+        g.style.fill='';
+      }
+    });
   });
 }
 
@@ -47,43 +61,86 @@ function loadHeat(){
   }catch{}
 }
 
-function showPressPing(g){
-  const svg = document.querySelector('svg.keyboard');
-  if(!svg) return;
+// place a ping overlay centered on <g> within its ownerSVGElement
+export function showPressPing(g, { host, scale = 1 } = {}) {
+  const svg = g.ownerSVGElement;
+  if (!svg || !host) return;
   const b = g.getBBox();
   const pt = svg.createSVGPoint();
-  pt.x = b.x + b.width/2; pt.y = b.y + b.height/2;
+  pt.x = b.x + b.width / 2;
+  pt.y = b.y + b.height / 2;
   const screen = pt.matrixTransform(g.getScreenCTM());
-  const host = document.querySelector('.kb-wrap');
+
+  const rect = host.getBoundingClientRect();
   const ping = document.createElement('div');
   ping.className = 'press-ping';
-  const rect = host.getBoundingClientRect();
   ping.style.left = (screen.x - rect.left) + 'px';
   ping.style.top  = (screen.y - rect.top)  + 'px';
+  // make preview pings smaller via scale
+  ping.style.transform = `translate(-50%,-50%) scale(${0.7 * scale})`;
   host.appendChild(ping);
-  setTimeout(()=> ping.remove(), 650);
+  setTimeout(() => ping.remove(), 650);
+}
+window.showPressPing = showPressPing;
+
+// existing resolver (use yours if you already have one)
+function resolveIdsFromLabels(inputKeys) {
+  if (!window.__labelIndex) {
+    const m = new Map();
+    for (const k of KEYS) {
+      const L = k.label.toLowerCase();
+      if (!m.has(L)) m.set(L, []);
+      m.get(L).push(k.svgId);
+    }
+    window.__labelIndex = m;
+  }
+  const idx = window.__labelIndex;
+  const out = [];
+  for (let raw of inputKeys) {
+    if (!raw) continue;
+    let norm = String(raw).trim();
+    const alias = ALIASES[norm] || ALIASES[norm.toLowerCase()];
+    if (alias) norm = alias;
+    const L = norm.toLowerCase();
+    if (idx.has(L)) out.push(...idx.get(L));
+    else out.push(`key-${L}`); // fallback for letters/digits
+  }
+  return [...new Set(out)];
 }
 
-function highlightKeys(labels) {
-  const svg = document.querySelector('svg.keyboard');
-  if(!svg) return;
-  labels.forEach(label => {
-    const item = KEYS.find(k => k.label === label);
-    if (!item) return;
-    const g = svg.querySelector('#' + CSS.escape(item.svgId));
-    if (g) {
+export function highlightKeys(keys, { mirrorPreview = true } = {}) {
+  const { mainSvg, previewSvg, mainHost, previewHost } = getKeyboardSvgs();
+  if (!mainSvg && !previewSvg) return;
+
+  const ids = resolveIdsFromLabels(keys);
+
+  ids.forEach(id => {
+    const count = (heat.get(id) || 0) + 1;
+    heat.set(id, count);
+  });
+
+  const targets = [mainSvg].filter(Boolean);
+  if (mirrorPreview && previewSvg) targets.push(previewSvg);
+
+  targets.forEach((svg) => {
+    ids.forEach((id) => {
+      const g = svg.querySelector(`#${CSS.escape(id)}.key`);
+      if (!g) return;
       g.classList.add('pressed');
-      const count=(heat.get(item.svgId)||0)+1;
-      heat.set(item.svgId,count);
-      if(options.ping) showPressPing(g);
-      setTimeout(() => g.classList.remove('pressed'), 1500);
-    }
+
+      // ping in both; preview gets smaller scale
+      if (options.ping && typeof showPressPing === 'function') {
+        const host = (svg === mainSvg) ? mainHost : previewHost;
+        const scale = (svg === mainSvg) ? 1 : 0.6;
+        showPressPing(g, { host, scale });
+      }
+
+      setTimeout(() => g.classList.remove('pressed'), 1200);
+    });
   });
   applyHeatmap();
   saveHeat();
 }
-
-export { highlightKeys };
 window.VoiceKeys = Object.assign({}, window.VoiceKeys, { highlightKeys });
 
 export function validateKeyboardSVG(){

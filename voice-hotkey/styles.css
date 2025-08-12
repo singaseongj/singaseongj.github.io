@@ -105,3 +105,11 @@ svg.keyboard .key.pressed path {
   font-size: 0.8rem;
   color: #4b5563;
 }
+
+/* Smaller/softer glow for the preview */
+#kb-preview .key.pressed rect,
+#kb-preview .key.pressed path {
+  filter: drop-shadow(0 0 .25rem hsla(205,90%,45%,.45));
+}
+
+/* The ping in preview will be smaller; no extra CSS needed if we scale in JS */
