@@ -209,6 +209,8 @@ async function updateRecommendations() {
     const age = Date.now() - new Date(data.lastUpdated).getTime();
     if (age < SIX_HOURS) {
       console.log(`${RECS_FILE} is up to date (<6h). Use --force to override.`);
+      data.lastUpdated = nowKSTISO();
+      await fs.writeFile(RECS_FILE, JSON.stringify(data, null, 2));
       return;
     }
   }
