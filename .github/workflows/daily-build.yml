@@ -74,6 +74,12 @@ jobs:
           head -n 5 data/market_news.json || true
           head -n 5 recommendations.json || true
 
+      - name: Stage changes (pre-commit)
+        run: |
+          git add -A
+          git status
+          git diff --staged --name-only || true
+
       - name: Commit & push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -86,6 +92,12 @@ jobs:
             data/market_news.json
             stocks.html
             src/template.html
+          add_options: '-A'
+          skip_dirty_check: true
+
+      - name: Show last commit (debug)
+        if: always()
+        run: git log -1 --name-only --pretty=fuller || true
 
       - name: GitHub Pages 배포
         uses: peaceiris/actions-gh-pages@v4
