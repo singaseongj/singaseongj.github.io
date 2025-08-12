@@ -101,16 +101,16 @@
     const svg = mount.querySelector('svg');
     if (svg) {
       svg.classList.add('keyboard');
-      const style = document.createElement('style');
-      style.textContent = `svg.keyboard .key rect,
-svg.keyboard .key path { fill:#fff; stroke:#ccc; }
-svg.keyboard .key text { fill:#333; }
-svg.keyboard .key.pressed rect,
-svg.keyboard .key.pressed path {
-  fill: var(--key-pressed-fill, hsl(205 85% 55%)) !important;
-  stroke: var(--key-pressed-stroke, hsl(205 90% 40%)) !important;
-  filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
-}`;
+      const style = document.createElementNS('http://www.w3.org/2000/svg','style');
+      style.textContent = `
+  .key rect, .key path { fill: var(--key-fill); stroke: var(--key-stroke); }
+  .key text { fill:#333; }
+  .key.pressed rect, .key.pressed path {
+    fill: var(--key-pressed-fill) !important;
+    stroke: var(--key-pressed-stroke) !important;
+    filter: drop-shadow(0 0 .4rem hsla(205,90%,45%,.55));
+  }
+`;
       svg.appendChild(style);
     }
     if (typeof validateKeyboardSVG === 'function') validateKeyboardSVG();
