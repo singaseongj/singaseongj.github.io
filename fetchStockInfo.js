@@ -4,6 +4,7 @@ import fs from 'fs/promises';
 import { existsSync } from 'fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { nowKSTISO } from './utils/time.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,19 +29,7 @@ const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '')
 const CACHE_FILE = path.join(__dirname, 'ticker-cache.json');
 const RECS_FILE  = path.join(__dirname, 'recommendations.json');
 
-// --- KST timestamp helper ---
-function toKSTISOString(d = new Date()) {
-  const utc = d.getTime();
-  const kst = new Date(utc + 9 * 60 * 60 * 1000);
-  const pad = n => String(n).padStart(2, '0');
-  const yyyy = kst.getUTCFullYear();
-  const mm   = pad(kst.getUTCMonth() + 1);
-  const dd   = pad(kst.getUTCDate());
-  const hh   = pad(kst.getUTCHours());
-  const mi   = pad(kst.getUTCMinutes());
-  const ss   = pad(kst.getUTCSeconds());
-  return `${yyyy}-${mm}-${dd}T${hh}:${mi}:${ss}+09:00`;
-}
+// KST timestamp helper is provided by utils/time.js
 
 // -------- Static ticker map (first priority) --------
 const TICKER_MAP = {
@@ -261,7 +250,7 @@ async function updateRecommendations() {
     }
   }
 
-  data.lastUpdated = toKSTISOString(new Date());
+  data.lastUpdated = nowKSTISO();
   await fs.writeFile(RECS_FILE, JSON.stringify(data, null, 2));
   console.log(`Updated ${RECS_FILE}`);
 }
