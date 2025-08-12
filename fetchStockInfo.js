@@ -252,7 +252,7 @@ async function updateRecommendations() {
 
   data.lastUpdated = nowKSTISO();
   await fs.writeFile(RECS_FILE, JSON.stringify(data, null, 2));
-  console.log(`Updated ${RECS_FILE}`);
+  console.log(`Wrote recommendations to recommendations.json at ${data.lastUpdated}`);
 }
 
 updateRecommendations().catch(err => {
