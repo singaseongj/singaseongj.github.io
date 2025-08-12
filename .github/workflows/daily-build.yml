@@ -52,12 +52,21 @@ jobs:
       - name: 뉴스 데이터 업데이트
         run: node fetchNews.js
 
-      - name: Verify generated files
+      - name: Verify generated files (enhanced)
         run: |
-          ls -la
-          test -f data/market_news.json && echo "✅ data/market_news.json OK" || (echo "❌ data/market_news.json missing"; exit 1)
-          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('data/market_news.json','utf8'));console.log('market_news lastUpdated:',d.lastUpdated)"
-          test -f recommendations.json && echo "✅ recommendations.json OK" || (echo "❌ recommendations.json missing"; exit 1)
+          set -e
+          echo "== list files ==" && ls -la
+          echo "== check targets exist =="
+          test -f data/market_news.json && echo "✅ data/market_news.json OK" || (echo "❌ missing"; exit 1)
+          test -f recommendations.json && echo "✅ recommendations.json OK" || (echo "❌ missing"; exit 1)
+          echo "== show lastUpdated =="
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('data/market_news.json','utf8'));console.log('market_news lastUpdated:', d.lastUpdated)"
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('recommendations.json','utf8'));console.log('recommendations lastUpdated:', d.lastUpdated)"
+          echo "== git status & diff =="
+          git status
+          git diff --name-only
+          git diff -- data/market_news.json || true
+          git diff -- recommendations.json || true
 
       - name: Commit & push changes
         uses: stefanzweifel/git-auto-commit-action@v5
