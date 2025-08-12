@@ -22,6 +22,45 @@ const HEADERS_HTML = {
   'Referer': 'https://finance.yahoo.com/'
 };
 
+const POOLS = {
+  'KOSPI': {
+    safe: ['삼성전자', 'SK하이닉스', '현대차', 'POSCO홀딩스', 'LG에너지솔루션', 'LG화학', 'NAVER', '카카오'],
+    aggressive: ['HD현대일렉트릭', '두산에너빌리티', '한화에어로스페이스', 'POSCO퓨처엠', 'BGF리테일', 'HD한국조선해양']
+  },
+  'KOSDAQ': {
+    safe: ['에코프로비엠', '셀트리온헬스케어', '천보', '리노공업', 'JYP엔터테인먼트', '엘앤에프', '카카오게임즈'],
+    aggressive: ['레인보우로보틱스', '한미반도체', '알테오젠', '지아이이노베이션', '펩트론', 'HLB', '레고켐바이오']
+  },
+  'NASDAQ': {
+    safe: ['Microsoft', 'Apple', 'NVIDIA', 'Amazon', 'Alphabet', 'Advanced Micro Devices', 'Qualcomm', 'Broadcom'],
+    aggressive: ['Super Micro Computer', 'Palantir', 'Arm Holdings', 'Micron Technology', 'UiPath', 'Snowflake', 'Datadog']
+  },
+  'S&P 500': {
+    safe: ['Berkshire Hathaway (B)', 'Johnson & Johnson', 'Procter & Gamble', 'Visa', 'Coca-Cola', 'PepsiCo', 'Walmart'],
+    aggressive: ['Eli Lilly', 'Uber Technologies', 'NRG Energy', 'CrowdStrike', 'ServiceNow', 'Tesla', 'Meta Platforms']
+  }
+};
+
+function seededRandom(seed) {
+  // simple LCG
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
+  return () => (
+    (h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909),
+    (h >>> 0) / 2 ** 32)
+  );
+}
+
+function pickDeterministic(arr, k, seed) {
+  const rnd = seededRandom(seed);
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a.slice(0, k);
+}
+
 const SIX_HOURS = 6 * 60 * 60 * 1000;
 const FORCE = process.argv.includes('--force');
 const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 300;
@@ -215,13 +254,38 @@ async function updateRecommendations() {
     }
   }
 
+  const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
+  const todaySeed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
+  for (const market of markets) {
+    const pool = POOLS[market];
+    if (!pool) continue;
+    for (const bucket of ['safe', 'aggressive']) {
+      if (process.env.FIXED_RECS === '1') continue;
+      const source = pool[bucket] || [];
+      const selected = pickDeterministic(source, 5, `${todaySeed}:${market}:${bucket}`);
+      data[market][bucket] = selected.map(x => (typeof x === 'string' ? { name: x } : x));
+    }
+  }
+  console.log(
+    '[COMPOSE]',
+    JSON.stringify(
+      Object.fromEntries(
+        markets.map(m => [m, {
+          safe: data[m]?.safe?.map(it => it.name),
+          aggressive: data[m]?.aggressive?.map(it => it.name)
+        }])
+      ),
+      null,
+      2
+    )
+  );
+
   const missingStatic = findMissingStaticMappings(data);
   if (missingStatic.length) {
     console.warn('[INFO] Not in static map (will auto-resolve):', missingStatic.join(', '));
   }
 
   const cache = await loadCache();
-  const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
 
   for (const market of markets) {
     const bucket = data[market];

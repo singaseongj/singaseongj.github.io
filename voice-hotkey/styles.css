@@ -68,7 +68,10 @@ svg.keyboard { display:block; height:auto; max-width:100%; }
   min-height: 1.5rem;
 }
 svg.keyboard .key rect,
-svg.keyboard .key path { fill:#fff; stroke:#ccc; }
+svg.keyboard .key path {
+  fill: var(--key-fill);       /* hsl(220 8% 18%) */
+  stroke: var(--key-stroke);   /* hsl(220 10% 32%) */
+}
 svg.keyboard .key text { fill:#333; }
 svg.keyboard .key.pressed rect,
 svg.keyboard .key.pressed path {
@@ -102,3 +105,94 @@ svg.keyboard .key.pressed path {
   font-size: 0.8rem;
   color: #4b5563;
 }
+
+/* Smaller/softer glow for the preview */
+#kb-preview .key.pressed rect,
+#kb-preview .key.pressed path {
+  filter: drop-shadow(0 0 .25rem hsla(205,90%,45%,.45));
+}
+
+/* The ping in preview will be smaller; no extra CSS needed if we scale in JS */
+.title-block{ display:flex; flex-direction:column; gap:.5rem; }
+.kb-preview{ max-width:640px; max-height:140px; pointer-events:none; opacity:.98; }
+.kb-preview svg{ display:block; width:100%; height:auto; }
+
+:root{
+  --bg: #f7f8fa;
+  --text: #1b1f23;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --surface-border: #e5e7eb;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+  --radius: 14px;
+
+  /* keyboard colors */
+  --key-fill: #ffffff;
+  --key-stroke: #cfcfcf;
+  --key-text: #333333;
+  --key-pressed-fill: hsl(205 85% 55%);
+  --key-pressed-stroke: hsl(205 90% 40%);
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b0f14;
+    --text: #e5e7eb;
+    --muted: #9aa3af;
+    --surface: #111827;
+    --surface-border: #1f2937;
+    --shadow: 0 8px 24px rgba(0,0,0,.35);
+
+    --key-fill: #1a2230;
+    --key-stroke: #2a3342;
+    --key-text: #d1d5db;
+    --key-pressed-fill: hsl(205 90% 55%);
+    --key-pressed-stroke: hsl(205 95% 40%);
+  }
+}
+
+/* page chrome */
+body{ background: var(--bg); color: var(--text); }
+h1{ font-weight:700; letter-spacing:.2px; margin: 0 0 .4rem 0; }
+
+/* preview card */
+.kb-card{
+  margin: .25rem 0 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: .75rem 1rem;
+}
+.kb-preview{ max-width: 860px; max-height: 160px; }
+.kb-preview svg{ display:block; width:100%; height:auto; }
+
+/* baseline keyboard visuals (apply to BOTH preview & main) */
+svg.keyboard .key rect,
+svg.keyboard .key path { fill: var(--key-fill); stroke: var(--key-stroke); }
+svg.keyboard .key text { fill: var(--key-text); }
+
+/* pressed state (both) */
+svg.keyboard .key.pressed rect,
+svg.keyboard .key.pressed path {
+  fill: var(--key-pressed-fill) !important;
+  stroke: var(--key-pressed-stroke) !important;
+  filter: drop-shadow(0 0 .35rem hsla(205, 90%, 45%, .55));
+}
+
+/* preview: slightly softer glow */
+#kb-preview .key.pressed rect,
+#kb-preview .key.pressed path {
+  filter: drop-shadow(0 0 .25rem hsla(205, 90%, 45%, .4));
+}
+
+/* ping overlay dot */
+.press-ping {
+  position:absolute; pointer-events:none;
+  width:16px;height:16px;border-radius:50%;
+  background: hsla(205, 90%, 60%, .35);
+  transform: translate(-50%,-50%) scale(.7);
+  animation: ping 600ms ease-out forwards;
+}
+@keyframes ping { 60%{transform:translate(-50%,-50%) scale(1.55); opacity:.65} 100%{opacity:0} }
+
