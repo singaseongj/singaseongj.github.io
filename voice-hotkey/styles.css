@@ -113,3 +113,7 @@ svg.keyboard .key.pressed path {
 }
 
 /* The ping in preview will be smaller; no extra CSS needed if we scale in JS */
+.title-block{ display:flex; flex-direction:column; gap:.5rem; }
+.kb-preview{ max-width:640px; max-height:140px; pointer-events:none; opacity:.98; }
+.kb-preview svg{ display:block; width:100%; height:auto; }
+

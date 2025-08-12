@@ -9,17 +9,6 @@ let controller = null;
 const heat = new Map();
 let options = { ping: true, heatmap: false, eye: { enabled: false, dwell: 700, sensitivity: 0.5 } };
 
-function getKeyboardSvgs() {
-  const mainHost = document.getElementById('kb-mount');
-  const previewHost = document.getElementById('kb-preview');
-  return {
-    mainHost,
-    previewHost,
-    mainSvg: mainHost?.querySelector('svg.keyboard') || null,
-    previewSvg: previewHost?.querySelector('svg.keyboard') || null,
-  };
-}
-
 function lerpColorHSL(a,b,t){
   const pa=a.match(/[\d.]+/g).map(Number);
   const pb=b.match(/[\d.]+/g).map(Number);
@@ -30,26 +19,23 @@ function lerpColorHSL(a,b,t){
 }
 
 function applyHeatmap(){
-  const { mainSvg, previewSvg } = getKeyboardSvgs();
-  const svgs = [mainSvg, previewSvg].filter(Boolean);
-  if(!svgs.length) return;
+  const svg = document.querySelector('#kb-mount svg.keyboard');
+  if(!svg) return;
   const max=Math.max(...heat.values(),0);
   const cs=getComputedStyle(document.documentElement);
   const cMin=cs.getPropertyValue('--key-heatmap-min').trim();
   const cMax=cs.getPropertyValue('--key-heatmap-max').trim();
-  svgs.forEach(svg=>{
-    heat.forEach((count,id)=>{
-      const g=svg.querySelector('#'+CSS.escape(id));
-      if(!g) return;
-      if(options.heatmap && max){
-        const t=count/max;
-        g.classList.add('heatmap');
-        g.style.fill=lerpColorHSL(cMin,cMax,t);
-      }else{
-        g.classList.remove('heatmap');
-        g.style.fill='';
-      }
-    });
+  heat.forEach((count,id)=>{
+    const g=svg.querySelector('#'+CSS.escape(id));
+    if(!g) return;
+    if(options.heatmap && max){
+      const t=count/max;
+      g.classList.add('heatmap');
+      g.style.fill=lerpColorHSL(cMin,cMax,t);
+    }else{
+      g.classList.remove('heatmap');
+      g.style.fill='';
+    }
   });
 }
 
@@ -76,7 +62,6 @@ export function showPressPing(g, { host, scale = 1 } = {}) {
   ping.className = 'press-ping';
   ping.style.left = (screen.x - rect.left) + 'px';
   ping.style.top  = (screen.y - rect.top)  + 'px';
-  // make preview pings smaller via scale
   ping.style.transform = `translate(-50%,-50%) scale(${0.7 * scale})`;
   host.appendChild(ping);
   setTimeout(() => ping.remove(), 650);
@@ -108,9 +93,10 @@ function resolveIdsFromLabels(inputKeys) {
   return [...new Set(out)];
 }
 
-export function highlightKeys(keys, { mirrorPreview = true } = {}) {
-  const { mainSvg, previewSvg, mainHost, previewHost } = getKeyboardSvgs();
-  if (!mainSvg && !previewSvg) return;
+export function highlightKeys(keys) {
+  const svg = document.querySelector('#kb-mount svg.keyboard');
+  const host = document.getElementById('kb-mount');
+  if (!svg || !host) return;
 
   const ids = resolveIdsFromLabels(keys);
 
@@ -119,32 +105,25 @@ export function highlightKeys(keys, { mirrorPreview = true } = {}) {
     heat.set(id, count);
   });
 
-  const targets = [mainSvg].filter(Boolean);
-  if (mirrorPreview && previewSvg) targets.push(previewSvg);
+  ids.forEach(id => {
+    const g = svg.querySelector(`#${CSS.escape(id)}.key`);
+    if (!g) return;
+    g.classList.add('pressed');
 
-  targets.forEach((svg) => {
-    ids.forEach((id) => {
-      const g = svg.querySelector(`#${CSS.escape(id)}.key`);
-      if (!g) return;
-      g.classList.add('pressed');
+    if (options.ping && typeof showPressPing === 'function') {
+      showPressPing(g, { host });
+    }
 
-      // ping in both; preview gets smaller scale
-      if (options.ping && typeof showPressPing === 'function') {
-        const host = (svg === mainSvg) ? mainHost : previewHost;
-        const scale = (svg === mainSvg) ? 1 : 0.6;
-        showPressPing(g, { host, scale });
-      }
-
-      setTimeout(() => g.classList.remove('pressed'), 1200);
-    });
+    setTimeout(() => g.classList.remove('pressed'), 1200);
   });
+
   applyHeatmap();
   saveHeat();
 }
 window.VoiceKeys = Object.assign({}, window.VoiceKeys, { highlightKeys });
 
 export function validateKeyboardSVG(){
-  const svg = document.querySelector('svg.keyboard');
+  const svg = document.querySelector('#kb-mount svg.keyboard');
   if(!svg) return;
   const miss=[];
   for(const k of KEYS){
