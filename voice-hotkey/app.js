@@ -88,6 +88,9 @@ function highlightKeys(labels) {
   saveHeat();
 }
 
+export { highlightKeys };
+window.VoiceKeys = Object.assign({}, window.VoiceKeys, { highlightKeys });
+
 async function processText(text) {
   const transcriptEl = document.getElementById('transcript');
   const resultEl = document.getElementById('result');

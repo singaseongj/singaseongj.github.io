@@ -40,6 +40,29 @@
       </select>
       <button id="clearBtn">Clear</button>
     </div>
+    <section id="keyboard-map" class="kb-section">
+      <h2 class="kb-title">Keyboard Map</h2>
+      <p class="kb-desc">Click an example to visualize the keys.</p>
+
+      <div class="kb-controls">
+        <div class="kb-examples" aria-label="Common shortcuts"></div>
+      </div>
+
+      <p id="kb-status" class="sr-only" aria-live="polite"></p>
+    </section>
+
+    <style>
+      /* Scoped styles */
+      #keyboard-map { margin-top: 1.25rem; }
+      #keyboard-map .kb-title { font-size: 1.1rem; margin: 0 0 .25rem; }
+      #keyboard-map .kb-desc { margin: 0 0 .5rem; opacity: .8; }
+      #keyboard-map .kb-examples { display: flex; flex-wrap: wrap; gap: .5rem; }
+      #keyboard-map .kb-examples button {
+        padding: .4rem .6rem; border: 1px solid #d0d0d0; border-radius: .5rem; background: #fff; cursor: pointer;
+      }
+      #keyboard-map .kb-examples button:hover { background: #f7f7f7; }
+      .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+    </style>
   </main>
   <dialog id="settingsModal">
     <form method="dialog" class="settings-form">
@@ -66,5 +89,6 @@
       </menu>
     </form>
   </dialog>
+  <script type="module" src="./kb-map.js"></script>
 </body>
 </html>
