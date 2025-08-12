@@ -9,15 +9,6 @@ let controller = null;
 const heat = new Map();
 let options = { ping: true, heatmap: false, eye: { enabled: false, dwell: 700, sensitivity: 0.5 } };
 
-function loadKeyboardSvg(){
-  fetch('assets/keyboard.svg').then(r=>r.text()).then(txt=>{
-    const wrap = document.querySelector('.kb-wrap');
-    if(wrap){
-      wrap.innerHTML = txt;
-    }
-  });
-}
-
 function lerpColorHSL(a,b,t){
   const pa=a.match(/[\d.]+/g).map(Number);
   const pb=b.match(/[\d.]+/g).map(Number);
@@ -28,12 +19,14 @@ function lerpColorHSL(a,b,t){
 }
 
 function applyHeatmap(){
+  const svg = document.querySelector('svg.keyboard');
+  if(!svg) return;
   const max=Math.max(...heat.values(),0);
   const cs=getComputedStyle(document.documentElement);
   const cMin=cs.getPropertyValue('--key-heatmap-min').trim();
   const cMax=cs.getPropertyValue('--key-heatmap-max').trim();
   heat.forEach((count,id)=>{
-    const g=document.getElementById(id);
+    const g=svg.querySelector('#'+CSS.escape(id));
     if(!g) return;
     if(options.heatmap && max){
       const t=count/max;
@@ -72,10 +65,12 @@ function showPressPing(g){
 }
 
 function highlightKeys(labels) {
+  const svg = document.querySelector('svg.keyboard');
+  if(!svg) return;
   labels.forEach(label => {
     const item = KEYS.find(k => k.label === label);
     if (!item) return;
-    const g = document.getElementById(item.svgId);
+    const g = svg.querySelector('#' + CSS.escape(item.svgId));
     if (g) {
       g.classList.add('pressed');
       const count=(heat.get(item.svgId)||0)+1;
@@ -90,6 +85,16 @@ function highlightKeys(labels) {
 
 export { highlightKeys };
 window.VoiceKeys = Object.assign({}, window.VoiceKeys, { highlightKeys });
+
+export function validateKeyboardSVG(){
+  const svg = document.querySelector('svg.keyboard');
+  if(!svg) return;
+  const miss=[];
+  for(const k of KEYS){
+    if(!svg.querySelector(`#${CSS.escape(k.svgId)}.key`)) miss.push(k.svgId);
+  }
+  if(miss.length) console.warn('[keyboard.svg] Missing key ids:', miss);
+}
 
 async function processText(text) {
   const transcriptEl = document.getElementById('transcript');
@@ -221,7 +226,6 @@ function startEye(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadKeyboardSvg();
   const examplesSel = document.getElementById('examples');
   EXAMPLES.forEach(ex => {
     const opt = document.createElement('option');

@@ -29,7 +29,7 @@
   </header>
   <main>
     <div class="keyboard-container">
-      <div class="kb-wrap"></div>
+      <div class="kb-wrap" id="kb-mount"></div>
     </div>
     <div id="transcript" class="transcript" aria-live="polite"></div>
     <div id="result" class="result" aria-live="polite"></div>
@@ -90,5 +90,22 @@
     </form>
   </dialog>
   <script type="module" src="./kb-map.js"></script>
+  <script type="module">
+  import { validateKeyboardSVG } from './app.js'; // export a no-op if not present
+
+  async function injectSVG() {
+    const mount = document.getElementById('kb-mount');
+    const res = await fetch('./assets/keyboard.svg', { cache: 'no-store' });
+    if (!res.ok) throw new Error('SVG fetch failed: ' + res.status);
+    mount.innerHTML = await res.text();
+    const svg = mount.querySelector('svg');
+    if (svg) svg.classList.add('keyboard');
+    if (typeof validateKeyboardSVG === 'function') validateKeyboardSVG();
+  }
+  injectSVG().catch(e => {
+    console.error(e);
+    document.getElementById('kb-mount').textContent = 'Keyboard SVG failed to load.';
+  });
+  </script>
 </body>
 </html>
