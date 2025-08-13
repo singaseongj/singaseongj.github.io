@@ -11,6 +11,28 @@ const FORCE = process.argv.includes('--force');
 const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 300;
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+async function fetchWithRetry(url, options={}, {retries=3, base=400, jitter=true}={}) {
+  let lastErr;
+  for (let attempt=0; attempt<=retries; attempt++) {
+    try {
+      const res = await fetch(url, options);
+      if (res.ok) return res;
+      if (![429,500,502,503,504].includes(res.status)) throw new Error(`HTTP ${res.status}`);
+      lastErr = new Error(`HTTP ${res.status}`);
+    } catch (e) { lastErr = e; }
+    if (attempt < retries) {
+      const backoff = base * 2**attempt + (jitter ? Math.floor(Math.random()*base) : 0);
+      await sleep(backoff);
+    }
+  }
+  throw lastErr;
+}
+
+let consecutive429 = 0;
+function noteStatus(err){ if ((/HTTP 429/).test(String(err))) consecutive429++; else consecutive429=0; }
+
 async function isFreshFile(p) {
   try { const s = await fs.stat(p); return (Date.now() - s.mtimeMs) < MAX_AGE_MS; }
   catch { return false; }
@@ -118,7 +140,62 @@ async function loadCache() {
 async function saveCache(cache) {
   await fs.writeFile(CACHE_FILE, JSON.stringify(cache, null, 2));
 }
+
+const SECTOR_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+function cacheGetSector(cache, symbol) {
+  const e = cache._sectors?.[symbol];
+  if (!e) return null;
+  if (Date.now() - e.ts > SECTOR_TTL_MS) return null;
+  return e.value || null;
+}
+function cachePutSector(cache, symbol, sector) {
+  cache._sectors = cache._sectors || {};
+  cache._sectors[symbol] = { value: sector, ts: Date.now() };
+}
 const looksKorean = s => /[가-힣]/.test(s);
+
+async function yahooSearchSymbol(name, lang, region) {
+  const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(name)}&lang=${lang}&region=${region}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  return res.json();
+}
+async function yahooQuoteSummarySector(symbol) {
+  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}?modules=assetProfile`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  const json = await res.json();
+  const sector = json?.quoteSummary?.result?.[0]?.assetProfile?.sector ?? null;
+  if (!sector) throw new Error('no sector in quoteSummary');
+  return sector;
+}
+async function yahooProfileSectorScrape(symbol) {
+  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(symbol)}/profile`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_HTML });
+  const html = await res.text();
+  let m = html.match(/"sector":"([^"]+)"/) || html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
+  return (m && (m[1] || m[2])) ? (m[1] || m[2]).trim() : null;
+}
+
+async function alphaVantageSector(symbol) {
+  const key = process.env.ALPHA_VANTAGE_KEY;
+  if (!key) return null;
+  const url = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${encodeURIComponent(symbol)}&apikey=${key}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  const j = await res.json(); return j?.Sector || null;
+}
+async function finnhubSector(symbol) {
+  const key = process.env.FINNHUB_KEY;
+  if (!key) return null;
+  const url = `https://finnhub.io/api/v1/stock/profile2?symbol=${encodeURIComponent(symbol)}&token=${key}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  const j = await res.json(); return j?.finnhubIndustry || j?.sector || null;
+}
+async function twelveDataSector(symbol) {
+  const key = process.env.TWELVEDATA_KEY;
+  if (!key) return null;
+  const url = `https://api.twelvedata.com/profile?symbol=${encodeURIComponent(symbol)}&apikey=${key}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  const j = await res.json(); return j?.sector || null;
+}
 
 // -------- Ticker resolution (map -> cache -> Yahoo search) --------
 function pickSymbol(name, searchJson) {
@@ -139,11 +216,7 @@ async function resolveTicker(name, cache) {
 
   const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
   const region = looksKorean(name) ? 'KR' : 'US';
-  const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(name)}&lang=${lang}&region=${region}`;
-
-  const res = await fetch(url, { headers: HEADERS_JSON });
-  if (!res.ok) throw new Error(`Search HTTP ${res.status}`);
-  const data = await res.json();
+  const data = await yahooSearchSymbol(name, lang, region);
 
   const symbol = pickSymbol(name, data);
   if (!symbol) throw new Error(`Could not resolve ticker for "${name}"`);
@@ -154,51 +227,35 @@ async function resolveTicker(name, cache) {
   return symbol;
 }
 
-// -------- Sector lookup (JSON first, then HTML profile fallback) --------
-async function fetchSectorFromProfile(ticker) {
-  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(ticker)}/profile`;
-  const res = await fetch(url, { headers: HEADERS_HTML });
-  if (!res.ok) throw new Error(`profile HTTP ${res.status}`);
-  const html = await res.text();
-
-  // Embedded JSON often contains "sector":"..."
-  let m = html.match(/"sector":"([^"]+)"/);
-  if (m && m[1]) return m[1];
-
-  // Visible text fallback: Sector(s) ... <span>Technology</span>
-  m = html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
-  if (m && m[1]) return m[1].trim();
-
+// -------- Sector lookup with multi-provider chain --------
+async function fetchSectorByTicker(ticker, cache) {
+  const cached = cacheGetSector(cache, ticker);
+  if (cached) return cached;
+  const providers = [
+    () => yahooQuoteSummarySector(ticker),
+    () => alphaVantageSector(ticker),
+    () => finnhubSector(ticker),
+    () => twelveDataSector(ticker),
+    () => yahooProfileSectorScrape(ticker),
+  ];
+  for (const p of providers) {
+    try {
+      const sector = await p();
+      if (sector) {
+        cachePutSector(cache, ticker, sector);
+        await saveCache(cache);
+        return sector;
+      }
+    } catch (e) {
+      // continue to next provider
+    }
+  }
   return null;
-}
-
-async function fetchSectorByTicker(ticker) {
-  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(ticker)}?modules=assetProfile`;
-  const res = await fetch(url, { headers: HEADERS_JSON });
-
-  if (!res.ok) {
-    if (res.status === 401 || res.status === 403) {
-      return await fetchSectorFromProfile(ticker);
-    }
-    throw new Error(`quoteSummary HTTP ${res.status}`);
-  }
-
-  const json = await res.json();
-  const qsum = json?.quoteSummary;
-  if (qsum?.error) {
-    if (qsum.error.code === 'Unauthorized' || qsum.error.code === 'Forbidden') {
-      return await fetchSectorFromProfile(ticker);
-    }
-    throw new Error(`quoteSummary error: ${qsum.error.code || 'unknown'}`);
-  }
-
-  const sector = qsum?.result?.[0]?.assetProfile?.sector ?? null;
-  return sector ?? await fetchSectorFromProfile(ticker);
 }
 
 async function fetchSector(name, cache) {
   const ticker = await resolveTicker(name, cache);
-  const sector = await fetchSectorByTicker(ticker);
+  const sector = await fetchSectorByTicker(ticker, cache);
   if (!sector) throw new Error(`Sector not found for ${name} (${ticker})`);
   return sector;
 }
@@ -218,7 +275,6 @@ function findMissingStaticMappings(recos) {
   }
   return [...missing];
 }
-const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // -------- Main flow --------
 async function tryFetchAndEnrich() {
@@ -268,6 +324,8 @@ async function tryFetchAndEnrich() {
         } catch (err) {
           console.error(`[WARN] ${name}: ${err.message}`);
           updated.push({ name, sector: prevSector });
+          noteStatus(err);
+          if (consecutive429 >= 5) throw new Error('Too many 429s');
         }
 
         await sleep(SLEEP_MS);
