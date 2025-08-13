@@ -8,7 +8,7 @@ import { nowKSTISO } from './utils/time.js';
 const OUT_FILE = path.resolve(process.cwd(), 'recommendations.json');
 const MAX_AGE_MS = 6 * 60 * 60 * 1000;
 const FORCE = process.argv.includes('--force');
-const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 300;
+const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 900;
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -76,6 +76,8 @@ const HEADERS_HTML = {
   'Referer': 'https://finance.yahoo.com/'
 };
 
+const normalizeForYahoo = s => s.replace(/\./g, '-');
+
 // KST timestamp helper is provided by utils/time.js
 
 // -------- Static ticker map (first priority) --------
@@ -96,7 +98,9 @@ const TICKER_MAP = {
   'SK텔레콤': '017670.KS',
   '카카오': '035720.KS',
   '네이버': '035420.KS',
+  'NAVER': '035420.KS',
   '셀트리온': '068270.KS',
+  'BGF리테일': '282330.KS',
 
   // --- KOSDAQ (KQ) ---
   '에코프로비엠': '247540.KQ',
@@ -115,17 +119,21 @@ const TICKER_MAP = {
   'Apple': 'AAPL',
   'NVIDIA': 'NVDA',
   'Amazon': 'AMZN',
+  'Meta Platforms': 'META',
   'Alphabet': 'GOOGL',
   'Super Micro Computer': 'SMCI',
   'Advanced Micro Devices': 'AMD',
   'Arm Holdings': 'ARM',
   'Micron Technology': 'MU',
+  'UiPath': 'PATH',
   'CrowdStrike': 'CRWD',
   'Berkshire Hathaway (B)': 'BRK-B',
   'Johnson & Johnson': 'JNJ',
   'Procter & Gamble': 'PG',
   'Visa': 'V',
   'Palantir': 'PLTR',
+  'Coca-Cola': 'KO',
+  'ServiceNow': 'NOW',
   'Eli Lilly': 'LLY',
   'Uber Technologies': 'UBER',
   'NRG Energy': 'NRG'
@@ -144,9 +152,9 @@ async function saveCache(cache) {
 const SECTOR_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 function cacheGetSector(cache, symbol) {
   const e = cache._sectors?.[symbol];
-  if (!e) return null;
-  if (Date.now() - e.ts > SECTOR_TTL_MS) return null;
-  return e.value || null;
+  if (!e) return undefined;
+  if (Date.now() - e.ts > SECTOR_TTL_MS) return undefined;
+  return e.value;
 }
 function cachePutSector(cache, symbol, sector) {
   cache._sectors = cache._sectors || {};
@@ -160,7 +168,7 @@ async function yahooSearchSymbol(name, lang, region) {
   return res.json();
 }
 async function yahooQuoteSummarySector(symbol) {
-  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}?modules=assetProfile`;
+  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(normalizeForYahoo(symbol))}?modules=assetProfile`;
   const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
   const json = await res.json();
   const sector = json?.quoteSummary?.result?.[0]?.assetProfile?.sector ?? null;
@@ -168,7 +176,7 @@ async function yahooQuoteSummarySector(symbol) {
   return sector;
 }
 async function yahooProfileSectorScrape(symbol) {
-  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(symbol)}/profile`;
+  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(normalizeForYahoo(symbol))}/profile`;
   const res = await fetchWithRetry(url, { headers: HEADERS_HTML });
   const html = await res.text();
   let m = html.match(/"sector":"([^"]+)"/) || html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
@@ -230,14 +238,16 @@ async function resolveTicker(name, cache) {
 // -------- Sector lookup with multi-provider chain --------
 async function fetchSectorByTicker(ticker, cache) {
   const cached = cacheGetSector(cache, ticker);
-  if (cached) return cached;
+  if (cached !== undefined) return cached;
+
   const providers = [
     () => yahooQuoteSummarySector(ticker),
-    () => alphaVantageSector(ticker),
-    () => finnhubSector(ticker),
-    () => twelveDataSector(ticker),
     () => yahooProfileSectorScrape(ticker),
   ];
+  if (process.env.ALPHA_VANTAGE_KEY) providers.push(() => alphaVantageSector(ticker));
+  if (process.env.FINNHUB_KEY) providers.push(() => finnhubSector(ticker));
+  if (process.env.TWELVEDATA_KEY) providers.push(() => twelveDataSector(ticker));
+
   for (const p of providers) {
     try {
       const sector = await p();
@@ -250,6 +260,8 @@ async function fetchSectorByTicker(ticker, cache) {
       // continue to next provider
     }
   }
+  cachePutSector(cache, ticker, null);
+  await saveCache(cache);
   return null;
 }
 
@@ -323,7 +335,7 @@ async function tryFetchAndEnrich() {
           successCount++;
         } catch (err) {
           console.error(`[WARN] ${name}: ${err.message}`);
-          updated.push({ name, sector: prevSector });
+          updated.push({ name, sector: prevSector ?? null });
           noteStatus(err);
           if (consecutive429 >= 5) throw new Error('Too many 429s');
         }
@@ -336,7 +348,7 @@ async function tryFetchAndEnrich() {
   }
 
   if (successCount === 0) {
-    throw new Error('No sectors fetched');
+    console.warn('[WARN] No sectors fetched');
   }
 
   return data;
