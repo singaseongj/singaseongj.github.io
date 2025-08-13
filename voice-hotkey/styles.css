@@ -157,14 +157,14 @@ h1{ font-weight:700; letter-spacing:.2px; margin: 0 0 .4rem 0; }
 
 /* preview card */
 .kb-card{
-  margin: .25rem 0 1.25rem;
+  margin: 1.5rem auto 0;
   background: var(--surface);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: .75rem 1rem;
 }
-.kb-preview{ max-width: 860px; max-height: 160px; }
+.kb-preview{ max-width: clamp(1000px, 95vw, 1400px); max-height: 400px; }
 .kb-preview svg{ display:block; width:100%; height:auto; }
 
 /* baseline keyboard visuals (apply to BOTH preview & main) */
@@ -240,5 +240,5 @@ svg.keyboard .key.pressed path {
 }
 
 /* Optional: make preview/main bigger and centered */
-.kb-preview { max-width: clamp(900px, 95vw, 1200px); max-height: 280px; }
-.keyboard-container, .kb-wrap { max-width: clamp(900px, 95vw, 1200px); }
+.kb-preview { max-width: clamp(1000px, 95vw, 1400px); max-height: 400px; }
+.keyboard-container, .kb-wrap { max-width: clamp(1000px, 95vw, 1400px); }
