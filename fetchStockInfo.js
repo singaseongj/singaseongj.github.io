@@ -2,12 +2,44 @@
 // Node >= 18 (built-in fetch), ESM
 import fs from 'fs/promises';
 import { existsSync } from 'fs';
-import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const OUT_FILE = path.resolve(process.cwd(), 'recommendations.json');
+const MAX_AGE_MS = 6 * 60 * 60 * 1000;
+const FORCE = process.argv.includes('--force');
+const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 300;
+const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
+
+async function isFreshFile(p) {
+  try { const s = await fs.stat(p); return (Date.now() - s.mtimeMs) < MAX_AGE_MS; }
+  catch { return false; }
+}
+
+function seededRandom(seed){let h=2166136261>>>0;for(let i=0;i<seed.length;i++)h=Math.imul(h^seed.charCodeAt(i),16777619);return()=> (h=Math.imul(h^(h>>>15),2246822507)^Math.imul(h^(h>>>13),3266489909),(h>>>0)/2**32);}
+function pickDeterministic(arr,k,seed){const rnd=seededRandom(seed),a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a.slice(0,k);}
+
+// Define POOLS with larger candidate sets per market/bucket.
+const POOLS = {
+  KOSPI: { safe: ['삼성전자','SK하이닉스','현대차','POSCO홀딩스','LG화학','NAVER','카카오'], aggressive: ['HD현대일렉트릭','두산에너빌리티','한화에어로스페이스','POSCO퓨처엠','BGF리테일'] },
+  KOSDAQ: { safe: [], aggressive: [] },
+  NASDAQ: { safe: ['Microsoft','Apple','NVIDIA','Amazon','Meta Platforms','Alphabet'], aggressive: ['Super Micro Computer','Palantir','Arm Holdings','Micron Technology','UiPath'] },
+  'S&P 500': { safe: ['Berkshire Hathaway (B)','Johnson & Johnson','Procter & Gamble','Visa','Coca-Cola'], aggressive: ['Eli Lilly','Uber Technologies','NRG Energy','CrowdStrike','ServiceNow'] }
+};
+
+function rotateFromPools(prevData) {
+  const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
+  const out = structuredClone(prevData || { KOSPI:{}, KOSDAQ:{}, NASDAQ:{}, 'S&P 500':{} });
+  for (const [market, buckets] of Object.entries(POOLS)) {
+    for (const bucket of ['safe','aggressive']) {
+      const src = buckets[bucket] || [];
+      if (src.length === 0) continue;
+      const picked = pickDeterministic(src, 5, `${seed}:${market}:${bucket}`);
+      out[market][bucket] = picked.map(n => ({ name: n }));
+    }
+  }
+  return out;
+}
 
 // Request headers (JSON API + HTML fallback)
 const HEADERS_JSON = {
@@ -21,52 +53,6 @@ const HEADERS_HTML = {
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
   'Referer': 'https://finance.yahoo.com/'
 };
-
-const POOLS = {
-  'KOSPI': {
-    safe: ['삼성전자', 'SK하이닉스', '현대차', 'POSCO홀딩스', 'LG에너지솔루션', 'LG화학', 'NAVER', '카카오'],
-    aggressive: ['HD현대일렉트릭', '두산에너빌리티', '한화에어로스페이스', 'POSCO퓨처엠', 'BGF리테일', 'HD한국조선해양']
-  },
-  'KOSDAQ': {
-    safe: ['에코프로비엠', '셀트리온헬스케어', '천보', '리노공업', 'JYP엔터테인먼트', '엘앤에프', '카카오게임즈'],
-    aggressive: ['레인보우로보틱스', '한미반도체', '알테오젠', '지아이이노베이션', '펩트론', 'HLB', '레고켐바이오']
-  },
-  'NASDAQ': {
-    safe: ['Microsoft', 'Apple', 'NVIDIA', 'Amazon', 'Alphabet', 'Advanced Micro Devices', 'Qualcomm', 'Broadcom'],
-    aggressive: ['Super Micro Computer', 'Palantir', 'Arm Holdings', 'Micron Technology', 'UiPath', 'Snowflake', 'Datadog']
-  },
-  'S&P 500': {
-    safe: ['Berkshire Hathaway (B)', 'Johnson & Johnson', 'Procter & Gamble', 'Visa', 'Coca-Cola', 'PepsiCo', 'Walmart'],
-    aggressive: ['Eli Lilly', 'Uber Technologies', 'NRG Energy', 'CrowdStrike', 'ServiceNow', 'Tesla', 'Meta Platforms']
-  }
-};
-
-function seededRandom(seed) {
-  // simple LCG
-  let h = 2166136261 >>> 0;
-  for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
-  return () => (
-    (h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909),
-    (h >>> 0) / 2 ** 32)
-  );
-}
-
-function pickDeterministic(arr, k, seed) {
-  const rnd = seededRandom(seed);
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rnd() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a.slice(0, k);
-}
-
-const SIX_HOURS = 6 * 60 * 60 * 1000;
-const FORCE = process.argv.includes('--force');
-const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 300;
-
-const CACHE_FILE = path.join(__dirname, 'ticker-cache.json');
-const RECS_FILE  = path.join(__dirname, 'recommendations.json');
 
 // KST timestamp helper is provided by utils/time.js
 
@@ -234,44 +220,28 @@ function findMissingStaticMappings(recos) {
 }
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-// -------- Main --------
-async function updateRecommendations() {
-  let data;
-  try {
-    data = JSON.parse(await fs.readFile(RECS_FILE, 'utf-8'));
-  } catch {
-    console.error(`${RECS_FILE} not found. Save your JSON file first.`);
-    process.exit(1);
-  }
-
+// -------- Main flow --------
+async function tryFetchAndEnrich() {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
+  const data = {};
   const log = {};
   for (const [market, buckets] of Object.entries(POOLS)) {
-    data[market] = data[market] || {};
+    data[market] = {};
     for (const bucket of ['safe', 'aggressive']) {
       const source = buckets[bucket] || [];
+      if (source.length === 0) continue;
       const chosen = process.env.FIXED_RECS === '1'
         ? source.slice(0, 5)
         : pickDeterministic(source, 5, `${seed}:${market}:${bucket}`);
       data[market][bucket] = chosen.map(n => (typeof n === 'string' ? { name: n } : n));
     }
     log[market] = {
-      safe: data[market].safe.map(x => x.name),
-      aggressive: data[market].aggressive.map(x => x.name)
+      safe: data[market].safe?.map(x => x.name) || [],
+      aggressive: data[market].aggressive?.map(x => x.name) || []
     };
   }
   console.log('[SELECTED]', JSON.stringify(log, null, 2));
 
-  const age = data.lastUpdated ? Date.now() - new Date(data.lastUpdated).getTime() : Infinity;
-  const isFresh = age < SIX_HOURS;
-  if (isFresh && !FORCE) {
-    const out = { ...data, lastUpdated: nowKSTISO() };
-    await fs.writeFile(RECS_FILE, JSON.stringify(out, null, 2));
-    console.log(`[SKIP] Cache <6h. Wrote rotated selection at ${out.lastUpdated}`);
-    return;
-  }
-
-  const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
   const missingStatic = findMissingStaticMappings(data);
   if (missingStatic.length) {
     console.warn('[INFO] Not in static map (will auto-resolve):', missingStatic.join(', '));
@@ -279,15 +249,13 @@ async function updateRecommendations() {
 
   const cache = await loadCache();
 
-  for (const market of markets) {
+  let successCount = 0;
+  for (const market of Object.keys(data)) {
     const bucket = data[market];
-    if (!bucket?.safe || !bucket?.aggressive) continue;
-
     for (const group of ['safe', 'aggressive']) {
       const entries = bucket[group];
       if (!Array.isArray(entries)) continue;
 
-      // Sequential with throttle to avoid rate limits
       const updated = [];
       for (const entry of entries) {
         const name = typeof entry === 'string' ? entry : entry.name;
@@ -296,6 +264,7 @@ async function updateRecommendations() {
         try {
           const sector = await fetchSector(name, cache);
           updated.push({ name, sector: sector ?? prevSector ?? null });
+          successCount++;
         } catch (err) {
           console.error(`[WARN] ${name}: ${err.message}`);
           updated.push({ name, sector: prevSector });
@@ -308,13 +277,42 @@ async function updateRecommendations() {
     }
   }
 
-  data.lastUpdated = nowKSTISO();
-  await fs.writeFile(RECS_FILE, JSON.stringify(data, null, 2));
-  console.log(`Wrote recommendations to recommendations.json at ${data.lastUpdated}`);
+  if (successCount === 0) {
+    throw new Error('No sectors fetched');
+  }
+
+  return data;
 }
 
-updateRecommendations().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+async function main() {
+  const fresh = await isFreshFile(OUT_FILE);
+  if (fresh && !FORCE) {
+    // Fresh: no network, no rotation — just touch timestamp
+    const prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8'));
+    prev.lastUpdated = nowKSTISO();
+    await fs.writeFile(OUT_FILE, JSON.stringify(prev, null, 2));
+    console.log(`[FRESH] <6h, touched timestamp at ${prev.lastUpdated}`);
+    return;
+  }
+
+  // Stale or forced: try heavy fetch/enrich
+  let base = null;
+  try {
+    base = await tryFetchAndEnrich(); // returns full recommendations object WITHOUT lastUpdated
+    const out = { ...base, lastUpdated: nowKSTISO() };
+    await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
+    console.log(`[FETCH] success at ${out.lastUpdated}`);
+  } catch (e) {
+    console.warn('[FETCH] failed, using rotation fallback:', e?.message || e);
+    // Load previous if exists to preserve structure; else start empty
+    let prev = null;
+    try { prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8')); } catch {}
+    const rotated = rotateFromPools(prev);
+    const out = { ...rotated, lastUpdated: nowKSTISO() };
+    await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
+    console.log(`[FALLBACK] rotated selection written at ${out.lastUpdated}`);
+  }
+}
+
+main().catch(err => { console.error(err); process.exit(1); });
 
