@@ -244,42 +244,34 @@ async function updateRecommendations() {
     process.exit(1);
   }
 
-  if (data.lastUpdated && !FORCE) {
-    const age = Date.now() - new Date(data.lastUpdated).getTime();
-    if (age < SIX_HOURS) {
-      console.log(`${RECS_FILE} is up to date (<6h). Use --force to override.`);
-      data.lastUpdated = nowKSTISO();
-      await fs.writeFile(RECS_FILE, JSON.stringify(data, null, 2));
-      return;
+  const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
+  const log = {};
+  for (const [market, buckets] of Object.entries(POOLS)) {
+    data[market] = data[market] || {};
+    for (const bucket of ['safe', 'aggressive']) {
+      const source = buckets[bucket] || [];
+      const chosen = process.env.FIXED_RECS === '1'
+        ? source.slice(0, 5)
+        : pickDeterministic(source, 5, `${seed}:${market}:${bucket}`);
+      data[market][bucket] = chosen.map(n => (typeof n === 'string' ? { name: n } : n));
     }
+    log[market] = {
+      safe: data[market].safe.map(x => x.name),
+      aggressive: data[market].aggressive.map(x => x.name)
+    };
+  }
+  console.log('[SELECTED]', JSON.stringify(log, null, 2));
+
+  const age = data.lastUpdated ? Date.now() - new Date(data.lastUpdated).getTime() : Infinity;
+  const isFresh = age < SIX_HOURS;
+  if (isFresh && !FORCE) {
+    const out = { ...data, lastUpdated: nowKSTISO() };
+    await fs.writeFile(RECS_FILE, JSON.stringify(out, null, 2));
+    console.log(`[SKIP] Cache <6h. Wrote rotated selection at ${out.lastUpdated}`);
+    return;
   }
 
   const markets = Object.keys(data).filter(k => typeof data[k] === 'object' && data[k] !== null);
-  const todaySeed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
-  for (const market of markets) {
-    const pool = POOLS[market];
-    if (!pool) continue;
-    for (const bucket of ['safe', 'aggressive']) {
-      if (process.env.FIXED_RECS === '1') continue;
-      const source = pool[bucket] || [];
-      const selected = pickDeterministic(source, 5, `${todaySeed}:${market}:${bucket}`);
-      data[market][bucket] = selected.map(x => (typeof x === 'string' ? { name: x } : x));
-    }
-  }
-  console.log(
-    '[COMPOSE]',
-    JSON.stringify(
-      Object.fromEntries(
-        markets.map(m => [m, {
-          safe: data[m]?.safe?.map(it => it.name),
-          aggressive: data[m]?.aggressive?.map(it => it.name)
-        }])
-      ),
-      null,
-      2
-    )
-  );
-
   const missingStatic = findMissingStaticMappings(data);
   if (missingStatic.length) {
     console.warn('[INFO] Not in static map (will auto-resolve):', missingStatic.join(', '));
