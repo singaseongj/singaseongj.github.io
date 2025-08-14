@@ -25,6 +25,27 @@
       background-color: #45a049;
     }
   </style>
+  <style>
+  .fx-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid #eee;
+    padding: .4rem 0;
+    font-size: 0.95rem;
+  }
+  .fx-track {
+    display: inline-block;
+    padding-left: 100%;
+    animation: fx-scroll 25s linear infinite;
+    will-change: transform;
+  }
+  .fx-item { margin: 0 .75rem; }
+  .fx-time { opacity: .65; margin-left: 1rem; font-size: .9em; }
+  @keyframes fx-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  </style>
 </head>
 <body>
   <a href="index.html" class="home-button">Home</a>
@@ -62,7 +83,7 @@
 
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
-    <div id="recommendations"><div class="portfolio-group"><h3>KOSPI 안전주</h3><ul><li>POSCO홀딩스</li><li>NAVER</li><li>카카오</li><li>SK하이닉스</li><li>삼성전자</li></ul></div><div class="portfolio-group"><h3>KOSPI 공격주</h3><ul><li>BGF리테일</li><li>POSCO퓨처엠</li><li>한화에어로스페이스</li><li>HD현대일렉트릭</li><li>두산에너빌리티</li></ul></div><div class="portfolio-group"><h3>KOSDAQ 안전주</h3><ul><li>JYP엔터테인먼트</li><li>리노공업</li><li>천보</li><li>카카오게임즈</li><li>엘앤에프</li></ul></div><div class="portfolio-group"><h3>KOSDAQ 공격주</h3><ul><li>레고켐바이오</li><li>HLB</li><li>지아이이노베이션</li><li>펩트론</li><li>한미반도체</li></ul></div><div class="portfolio-group"><h3>NASDAQ 안전주</h3><ul><li>NVIDIA</li><li>Alphabet</li><li>Amazon</li><li>Meta Platforms</li><li>Apple</li></ul></div><div class="portfolio-group"><h3>NASDAQ 공격주</h3><ul><li>UiPath</li><li>Super Micro Computer</li><li>Palantir</li><li>Micron Technology</li><li>Arm Holdings</li></ul></div><div class="portfolio-group"><h3>S&P 500 안전주</h3><ul><li>Visa</li><li>Johnson & Johnson</li><li>Procter & Gamble</li><li>Coca-Cola</li><li>Berkshire Hathaway (B)</li></ul></div><div class="portfolio-group"><h3>S&P 500 공격주</h3><ul><li>Uber Technologies</li><li>CrowdStrike</li><li>ServiceNow</li><li>NRG Energy</li><li>Eli Lilly</li></ul></div></div>
+    <div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>
     <div id="portfolioUpdated" class="last-updated"></div>
   </section>
   
@@ -490,7 +511,10 @@
     <button id="btnEn">English</button>
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
-  <div id="fxTicker" class="fx-ticker" aria-live="polite"></div>
+  <!-- FX ticker (below view count) -->
+  <div id="fx-ticker" class="fx-ticker" aria-live="polite">
+    <div id="fx-track" class="fx-track">환율 불러오는 중…</div>
+  </div>
   <script>
     (async function() {
       try {
@@ -504,6 +528,34 @@
       }
     })();
   </script>
-  <script src="fx-ticker.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', async function () {
+  const track = document.getElementById('fx-track');
+  if (!track) return;
+
+  // Path for GitHub Pages at the repo root:
+  const url = './data/fx_rates.json';
+
+  try {
+    const res = await fetch(url, { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+
+    const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
+    const parts = (data.items || []).map(it => {
+      const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
+      return `<span class="fx-item">${it.label} = ${v}</span>`;
+    });
+
+    // duplicate once for seamless scroll
+    const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
+    const line = parts.join(' • ') + ' • ' + parts.join(' • ') + ' ' + stamp;
+    track.innerHTML = line;
+  } catch (e) {
+    console.warn('FX load error:', e);
+    track.textContent = '환율 정보를 불러올 수 없습니다';
+  }
+});
+  </script>
 </body>
 </html>
