@@ -1,13 +1,15 @@
 // fetchStockInfo.js — static map + auto-resolver + Yahoo profile fallback + throttling
 // Node >= 18 (built-in fetch), ESM
-import fs from 'fs/promises';
+import fs, { writeFile, rename } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
 
 const OUT_FILE = path.resolve(process.cwd(), 'recommendations.json');
 const MAX_AGE_MS = 6 * 60 * 60 * 1000;
-const FORCE = process.argv.includes('--force');
+const ARGS = new Set(process.argv.slice(2));
+const FORCE = ARGS.has('--force');
+const SKIP_FRESH = ARGS.has('--skip-fresh');
 const DELAY_ARG = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]);
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
 
@@ -374,6 +376,38 @@ function findMissingStaticMappings(recos) {
   return [...missing];
 }
 
+function sortData(data) {
+  const out = {};
+  for (const market of Object.keys(data).sort()) {
+    const buckets = data[market] || {};
+    out[market] = {};
+    for (const bucket of ['safe', 'aggressive']) {
+      const arr = Array.isArray(buckets[bucket]) ? buckets[bucket].slice() : [];
+      arr.sort((a, b) => a.name.localeCompare(b.name));
+      out[market][bucket] = arr;
+    }
+  }
+  return out;
+}
+
+async function writeAtomically(dest, data) {
+  const tmp = `${dest}.tmp`;
+  await writeFile(tmp, data);
+  await rename(tmp, dest);
+}
+
+function ensureNonEmpty(out) {
+  for (const [market, buckets] of Object.entries(out)) {
+    if (market === 'lastUpdated') continue;
+    const safe = buckets?.safe?.length || 0;
+    const aggressive = buckets?.aggressive?.length || 0;
+    if (safe + aggressive === 0) {
+      console.error('[ERROR] No recommendations produced');
+      process.exit(1);
+    }
+  }
+}
+
 // -------- Main flow --------
 async function tryFetchAndEnrich() {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
@@ -446,33 +480,39 @@ async function tryFetchAndEnrich() {
 }
 
 async function main() {
-  const fresh = await isFreshFile(OUT_FILE);
-  if (fresh && !FORCE) {
-    // Fresh: no network, no rotation — just touch timestamp
-    const prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8'));
-    prev.lastUpdated = nowKSTISO();
-    await fs.writeFile(OUT_FILE, JSON.stringify(prev, null, 2));
-    console.log(`[FRESH] <6h, touched timestamp at ${prev.lastUpdated}`);
-    return;
+  if (FORCE) {
+    console.log('[FORCE] Rebuilding recommendations');
   }
 
-  // Stale or forced: try heavy fetch/enrich
-  let base = null;
+  let fresh = false;
+  if (!FORCE) {
+    fresh = await isFreshFile(OUT_FILE);
+    if (fresh && SKIP_FRESH) {
+      console.log('[SKIP] <6h, unchanged');
+      return;
+    }
+    if (fresh) {
+      console.log('[FRESH] <6h, rebuilding');
+    }
+  }
+
   try {
     const { data, successCount } = await tryFetchAndEnrich();
     if (successCount === 0) throw new Error('no sectors fetched');
-    const out = { ...data, lastUpdated: nowKSTISO() };
-    await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
+    const sorted = sortData(data);
+    const out = { ...sorted, lastUpdated: nowKSTISO() };
+    await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
+    ensureNonEmpty(out);
     console.log(`[FETCH] success at ${out.lastUpdated}`);
   } catch (e) {
     console.warn('[FETCH] failed or insufficient data, using rotation fallback:', e?.message || e);
-    // Load previous if exists to preserve structure; else start empty
     let prev = null;
     try { prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8')); } catch {}
-    const rotated = rotateFromPools(prev);
+    const rotated = sortData(rotateFromPools(prev));
     const out = { ...rotated, lastUpdated: nowKSTISO() };
-    await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
-    console.log(`[FALLBACK] rotated selection written at ${out.lastUpdated}`);
+    await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
+    ensureNonEmpty(out);
+    console.log('[FALLBACK] rotated selection due to fetch errors');
   }
 }
 
