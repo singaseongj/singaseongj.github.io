@@ -32,7 +32,7 @@
   background: #000;
   color: #ffd400;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   padding: 6px 0 8px;
   white-space: nowrap;
 }
@@ -555,7 +555,7 @@
           const contentW = line.scrollWidth;
           const viewW = wrap.clientWidth;
           const distancePx = contentW + viewW;
-          const dur = Math.max(8, Math.round(distancePx / 150));
+          const dur = Math.max(8, Math.round(distancePx / 130));
           wrap.style.setProperty('--fx-dur', dur + 's');
           wrap.style.setProperty('--fx-end', `-${contentW}px`);
           line.style.animation = `fx-left ${dur}s linear infinite`;
