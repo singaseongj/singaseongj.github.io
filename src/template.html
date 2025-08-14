@@ -34,13 +34,15 @@
     padding: 8px 0;
     overflow: hidden;
     position: relative;
-    height: 2.5em;
+    height: 2em;
+    line-height: calc(2em - 16px);
+    box-sizing: border-box;
   }
   .fx-ticker .fx-track {
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
-    animation: ticker-loop 120s linear infinite;
+    animation: ticker-loop 100s linear infinite;
   }
   .fx-item { margin: 0 .6rem; }
   .fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
@@ -551,7 +553,7 @@
         line.style.animation = 'none';
         afterFonts.then(() => {
           void line.offsetWidth;
-          line.style.animation = 'ticker-loop 120s linear infinite';
+          line.style.animation = 'ticker-loop 100s linear infinite';
         });
       });
   }
