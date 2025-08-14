@@ -52,6 +52,9 @@ jobs:
       - name: 뉴스 데이터 업데이트
         run: node fetchNews.js
 
+      - name: 환율 데이터 업데이트
+        run: node fetchFxRates.js
+
       - name: Verify generated files (enhanced)
         run: |
           set -e
@@ -59,10 +62,12 @@ jobs:
           echo "== check targets exist =="
           test -f data/market_news.json && echo "✅ data/market_news.json OK" || (echo "❌ missing"; exit 1)
           test -f recommendations.json && echo "✅ recommendations.json OK" || (echo "❌ missing"; exit 1)
+          test -f data/fx_rates.json && echo "✅ data/fx_rates.json OK" || (echo "❌ missing"; exit 1)
 
           echo "== show lastUpdated =="
           node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('data/market_news.json','utf8'));console.log('market_news lastUpdated:', d.lastUpdated)"
           node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('recommendations.json','utf8'));console.log('recommendations lastUpdated:', d.lastUpdated)"
+          node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('data/fx_rates.json','utf8'));console.log('fx base:', d.base, 'updated:', d.timestamp, 'KRW:', d.rates?.KRW)"
 
           echo "== git status & diff =="
           git status
@@ -90,6 +95,7 @@ jobs:
             recommendations.json
             ticker-cache.json
             data/market_news.json
+            data/fx_rates.json
             stocks.html
             src/template.html
           add_options: '-A'
