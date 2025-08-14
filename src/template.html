@@ -26,24 +26,34 @@
     }
   </style>
   <style>
+  /* FX ticker (seamless twin-tracks) */
   .fx-ticker {
+    position: relative;
     overflow: hidden;
     white-space: nowrap;
     border-top: 1px solid #eee;
-    padding: .4rem 0;
+    padding: .45rem 0;
     font-size: 0.95rem;
   }
   .fx-track {
-    display: inline-block;
-    padding-left: 100%;
-    animation: fx-scroll 25s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
     will-change: transform;
+  }
+  .fx-track.b {
+    left: 100%;
   }
   .fx-item { margin: 0 .75rem; }
   .fx-time { opacity: .65; margin-left: 1rem; font-size: .9em; }
-  @keyframes fx-scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  @keyframes fx-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+  }
+  /* optional: honor reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .fx-track { animation: none !important; }
   }
   </style>
 </head>
@@ -513,7 +523,8 @@
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
   <div id="fx-ticker" class="fx-ticker" aria-live="polite">
-    <div id="fx-track" class="fx-track">환율 불러오는 중…</div>
+    <div id="fx-a" class="fx-track a"></div>
+    <div id="fx-b" class="fx-track b" aria-hidden="true"></div>
   </div>
   <script>
     (async function() {
@@ -530,8 +541,10 @@
   </script>
   <script>
 document.addEventListener('DOMContentLoaded', async function () {
-  const track = document.getElementById('fx-track');
-  if (!track) return;
+  const a = document.getElementById('fx-a');
+  const b = document.getElementById('fx-b');
+  const wrap = document.getElementById('fx-ticker');
+  if (!a || !b || !wrap) return;
 
   // Path for GitHub Pages at the repo root:
   const url = './data/fx_rates.json';
@@ -547,13 +560,31 @@ document.addEventListener('DOMContentLoaded', async function () {
       return `<span class="fx-item">${it.label} = ${v}</span>`;
     });
 
-    // duplicate once for seamless scroll
+    // timestamp (KST text)
     const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
-    const line = parts.join(' • ') + ' • ' + parts.join(' • ') + ' ' + stamp;
-    track.innerHTML = line;
+
+    // build one line with a spacer “gap” so the loop breathes
+    const gap = '<span class="fx-item" aria-hidden="true">    •    </span>';
+    const line = parts.join(' • ') + gap + stamp;
+
+    // fill both tracks with the same content
+    a.innerHTML = line;
+    b.innerHTML = line;
+
+    // compute duration based on content width (pixels per second)
+    // tweak pxPerSec to make it faster/slower (e.g., 90~140)
+    await Promise.resolve(); // allow layout
+    const pxPerSec = 110;
+    const w = a.scrollWidth;              // content width
+    const dur = Math.max(10, Math.round(w / pxPerSec)); // seconds
+
+    // start animations
+    a.style.animation = `fx-left ${dur}s linear infinite`;
+    b.style.animation = `fx-left ${dur}s linear infinite`;
   } catch (e) {
     console.warn('FX load error:', e);
-    track.textContent = '환율 정보를 불러올 수 없습니다';
+    a.textContent = '환율 정보를 불러올 수 없습니다';
+    b.textContent = '';
   }
 });
   </script>
