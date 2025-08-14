@@ -26,20 +26,18 @@
     }
   </style>
   <style>
-.fx-ticker{
+.fx-ticker {
   position: relative;
   overflow: hidden;
-  white-space: nowrap;
   background: #000;
   color: #ffd400;
   font-weight: 700;
   font-size: 0.95rem;
-  line-height: 1.5;
-  padding: 10px 0 12px;
+  padding: 6px 0 8px;
+  white-space: nowrap;
 }
-.fx-track{
+.fx-track {
   position: absolute;
-  left: 0;
   top: 0; bottom: 0;
   display: flex;
   align-items: center;
@@ -47,10 +45,10 @@
   will-change: transform;
   animation: fx-left var(--fx-dur, 20s) linear infinite;
 }
-.fx-item{ margin: 0 .6rem; }
-.fx-time{ opacity: .75; margin-left: .85rem; font-size: .9em; }
-@keyframes fx-left{
-  from { transform: translateX(0); }
+.fx-item { margin: 0 .6rem; }
+.fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
+@keyframes fx-left {
+  from { transform: translateX(100%); }
   to   { transform: translateX(var(--fx-end, -100%)); }
 }
   </style>
@@ -527,7 +525,7 @@
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
-  <div id="fx-ticker" class="fx-ticker" aria-live="polite">
+  <div id="fx-ticker" class="fx-ticker">
     <div id="fx-line" class="fx-track"></div>
   </div>
   <script>
@@ -566,7 +564,7 @@
           const distancePx = contentW + viewW;
           const dur = Math.max(8, Math.round(distancePx / 150));
           wrap.style.setProperty('--fx-dur', dur + 's');
-          wrap.style.setProperty('--fx-end', `-${distancePx}px`);
+          wrap.style.setProperty('--fx-end', `-${contentW}px`);
           line.style.animation = `fx-left ${dur}s linear infinite`;
         });
       });
