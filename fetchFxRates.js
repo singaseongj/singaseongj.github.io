@@ -5,23 +5,48 @@ import { nowKSTISO } from './utils/time.js';
 
 const OUT = path.resolve(process.cwd(), 'data', 'fx_rates.json');
 
-const YF = (symbols) =>
-  `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbols)}`;
-
 const FR_USD = 'https://api.frankfurter.app/latest?from=USD&to=KRW,EUR,GBP,CNY,HKD';
 const FR_JPY = 'https://api.frankfurter.app/latest?from=JPY&to=KRW';
 
 const EH_USD = 'https://api.exchangerate.host/latest?base=USD&symbols=KRW,EUR,GBP,CNY,HKD';
 const EH_JPY = 'https://api.exchangerate.host/latest?base=JPY&symbols=KRW';
 
+const NAVER_LIST = 'https://finance.naver.com/marketindex/exchangeList.naver';
+
 const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
-async function get(url,{retries=3,base=400}={}) {
+
+async function getJson(url,{retries=3,base=400,headers}={}) {
   let err;
   for (let i=0;i<=retries;i++){
     try{
-      const res = await fetch(url,{headers:{'User-Agent':'Mozilla/5.0','Accept':'application/json'}});
+      const res = await fetch(url,{
+        headers: {
+          'User-Agent':'Mozilla/5.0',
+          'Accept':'application/json',
+          ...(headers||{})
+        }
+      });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.json();
+    }catch(e){ err=e; if(i<retries) await sleep(base*2**i); }
+  }
+  throw err;
+}
+
+async function getText(url,{retries=3,base=400,headers}={}) {
+  let err;
+  for (let i=0;i<=retries;i++){
+    try{
+      const res = await fetch(url,{
+        headers: {
+          'User-Agent':'Mozilla/5.0',
+          'Accept':'text/html, */*;q=0.1',
+          'Referer': 'https://finance.naver.com/',
+          ...(headers||{})
+        }
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.text();
     }catch(e){ err=e; if(i<retries) await sleep(base*2**i); }
   }
   throw err;
@@ -38,28 +63,46 @@ function itemsFromRates(map) {
   ];
 }
 
-async function yahooProvider() {
-  // Yahoo currency pairs return KRW directly
-  const symbols = [
-    'USDKRW=X','JPYKRW=X','EURKRW=X','CNYKRW=X','GBPKRW=X','HKDKRW=X'
-  ].join(',');
-  const j = await get(YF(symbols));
-  const q = j?.quoteResponse?.result || [];
-  const by = Object.fromEntries(q.map(r => [r.symbol, r.regularMarketPrice]));
-  const map = {
-    USD_KRW: by['USDKRW=X'],
-    JPY100_KRW: by['JPYKRW=X'] ? by['JPYKRW=X']*100 : null,
-    EUR_KRW: by['EURKRW=X'],
-    CNY_KRW: by['CNYKRW=X'],
-    GBP_KRW: by['GBPKRW=X'],
-    HKD_KRW: by['HKDKRW=X'],
+/* --- Provider 1: Naver Finance (환전 고시 환율) --- */
+async function naverProvider() {
+  // Parse rows like:
+  // <td class="tit"><a>미국 USD</a>...</td><td class="sale">1,378.36</td>
+  const html = await getText(NAVER_LIST);
+  const re = /<td class="tit">[\s\S]*?<a[^>]*>([^<]+)<\/a>[\s\S]*?<\/td>\s*<td class="sale">([^<]+)<\/td>/g;
+
+  const wanted = new Set(['USD','JPY','EUR','CNY','GBP','HKD']);
+  const map = {}; // code -> KRW number (JPY is already 100JPY on Naver)
+  let m;
+  while ((m = re.exec(html))) {
+    const name = m[1].replace(/\s+/g,' ').trim();      // e.g., "미국 USD", "일본 JPY (100엔)"
+    const saleStr = m[2].replace(/,/g,'').trim();      // "1378.36"
+    const codeMatch = name.match(/\b([A-Z]{3})\b/);
+    if (!codeMatch) continue;
+    const code = codeMatch[1];
+    if (!wanted.has(code)) continue;
+    const val = Number(saleStr);
+    if (!Number.isFinite(val)) continue;
+    map[code] = val;
+  }
+
+  // Require at least USD+JPY+EUR from Naver
+  if (!(map.USD && map.JPY && map.EUR)) throw new Error('Naver parse incomplete');
+
+  const outMap = {
+    USD_KRW: map.USD ?? null,
+    JPY100_KRW: map.JPY ?? null,        // Naver provides 100 JPY already
+    EUR_KRW: map.EUR ?? null,
+    CNY_KRW: map.CNY ?? null,
+    GBP_KRW: map.GBP ?? null,
+    HKD_KRW: map.HKD ?? null,
   };
-  return itemsFromRates(map);
+  return itemsFromRates(outMap);
 }
 
+/* --- Provider 2: Frankfurter fallback --- */
 async function frankfurterProvider() {
-  const usd = await get(FR_USD);
-  const jpy = await get(FR_JPY);
+  const usd = await getJson(FR_USD);
+  const jpy = await getJson(FR_JPY);
   const map = {
     USD_KRW: usd?.rates?.KRW ?? null,
     JPY100_KRW: jpy?.rates?.KRW ? jpy.rates.KRW*100 : null,
@@ -71,9 +114,10 @@ async function frankfurterProvider() {
   return itemsFromRates(map);
 }
 
+/* --- Provider 3: Exchangerate.host fallback --- */
 async function exchangerateHostProvider() {
-  const usd = await get(EH_USD);
-  const jpy = await get(EH_JPY);
+  const usd = await getJson(EH_USD);
+  const jpy = await getJson(EH_JPY);
   const map = {
     USD_KRW: usd?.rates?.KRW ?? null,
     JPY100_KRW: jpy?.rates?.KRW ? jpy.rates.KRW*100 : null,
@@ -89,13 +133,25 @@ async function main(){
   await fs.mkdir(path.dirname(OUT), { recursive:true });
 
   let items = null;
-  const providers = [yahooProvider, frankfurterProvider, exchangerateHostProvider];
+  const providers = [naverProvider, frankfurterProvider, exchangerateHostProvider];
+
   for (const p of providers) {
-    try { items = await p(); if (items.some(x=>typeof x.krw==='number')) break; } catch {}
+    try {
+      items = await p();
+      if (items.some(x => typeof x.krw === 'number')) { 
+        // Found at least one numeric value
+        break;
+      }
+    } catch(e) {
+      console.warn(`[FX] Provider failed: ${p.name}: ${e.message}`);
+    }
   }
 
   if (!items) {
-    if (existsSync(OUT)) { console.warn('FX: all providers failed; keeping previous file'); return; }
+    if (existsSync(OUT)) {
+      console.warn('FX: all providers failed; keeping previous file');
+      return;
+    }
     items = itemsFromRates({}); // all nulls
   }
 
@@ -104,5 +160,4 @@ async function main(){
   console.log(`FX: wrote ${OUT} at ${out.lastUpdated}`);
 }
 
-main().catch(e=>{ console.error(e); process.exit(1); });
-
+main().catch(e => { console.error(e); process.exit(1); });
