@@ -4,11 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SeongSigan</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../src/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .home-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 1000;
+    }
+    .home-button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
+  <a href="../index.html" class="home-button">Home</a>
   <header class="app-bar">
     <h1 class="logo">SeongSigan <span id="backendStatus" class="status" aria-label="백엔드 상태" title="Backend status"></span></h1>
     <select id="teacherSelect" aria-label="선생님 선택"></select>
