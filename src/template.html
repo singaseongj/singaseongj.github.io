@@ -26,17 +26,19 @@
     }
   </style>
   <style>
-  /* FX ticker (black/yellow, extra bottom space) */
+  /* FX ticker (black background, yellow text, fully visible) */
   .fx-ticker {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
     background: #000;
     color: #ffeb3b;
-    padding: .6rem 0 .9rem;   /* extra bottom so text isn’t clipped */
-    margin-bottom: 12px;
-    font-size: .95rem;
-    line-height: 1.7;
+    /* extra vertical padding so text isn't cut */
+    padding: 0.8rem 0 1.2rem;
+    /* gap below ticker so it’s not flush with the bottom */
+    margin-bottom: 18px;
+    font-size: 1rem;
+    line-height: 1.8;
   }
   .fx-track {
     position: absolute;
@@ -519,7 +521,7 @@
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
-  <div id="fx-ticker" class="fx-ticker" aria-live="polite">
+  <div id="fx-ticker" class="fx-ticker" aria-live="polite" style="min-height: 2.2em;">
     <div id="fx-a" class="fx-track"></div>
     <div id="fx-b" class="fx-track" aria-hidden="true"></div>
   </div>
@@ -560,7 +562,9 @@ document.addEventListener('DOMContentLoaded', async function () {
       return `<span class="fx-item">${it.label} = ${v}</span>`;
     });
 
-    const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
+    const stampRaw = data.timestamp || data.lastUpdated;
+    const stampText = stampRaw ? new Date(stampRaw).toLocaleString('ko-KR') : '';
+    const stamp = stampText ? `<span class="fx-time">업데이트 ${stampText}</span>` : '';
 
     // a visible spacer between loops, plus an extra fixed-width gap
     const dotGap = '<span class="fx-item" aria-hidden="true">•</span>';
@@ -578,8 +582,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const contentWidth = a.scrollWidth;     // width of one full line
     const distance = contentWidth + gapPx;  // animate across content + gap
-    const pxPerSec = 120;                   // <— requested speed
-    const dur = Math.max(12, Math.round(distance / pxPerSec));
+    const dur = 120;                        // seconds per full loop
 
     // position tracks: B starts immediately to the right of A (with the same gap)
     a.style.left = '0px';
