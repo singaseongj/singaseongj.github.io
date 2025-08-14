@@ -24,33 +24,6 @@
     .home-button:hover {
       background-color: #45a049;
     }
-    .fx-ticker {
-      overflow: hidden;
-      background: #1f2937;
-      color: #f8fafc;
-      white-space: nowrap;
-      font-size: 0.9rem;
-      margin-top: 10px;
-    }
-    .fx-ticker__inner {
-      display: flex;
-      width: max-content;
-      animation: fx-scroll 40s linear infinite;
-    }
-    .fx-ticker__inner span {
-      padding: 0.5rem 1.5rem;
-      flex-shrink: 0;
-    }
-    @keyframes fx-scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .fx-ticker__inner {
-        animation: none;
-        transform: none;
-      }
-    }
   </style>
 </head>
 <body>
@@ -517,8 +490,7 @@
     <button id="btnEn">English</button>
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
-  <div id="fxTicker" class="fx-ticker" aria-live="polite"></div>
-  <script src="fx-ticker.js"></script>
+  <marquee id="fxRates" style="font-size:0.9rem;color:#64748b;"></marquee>
   <script>
     (async function() {
       try {
@@ -531,6 +503,24 @@
         console.error('Visit count failed', err);
       }
     })();
+  </script>
+  <script>
+    async function loadFxRates() {
+      try {
+        const res = await fetch('data/fx_rates.json', { cache: 'no-store' });
+        const data = await res.json();
+        const r = data.rates || {};
+        const fmt = n => Number(n).toLocaleString('en-US', { maximumFractionDigits: 2 });
+        const updated = new Date(data.lastUpdated)
+          .toLocaleString('sv-SE', { timeZone: 'Asia/Seoul', hour12: false })
+          .slice(0, 16);
+        const line = `1 USD = ${fmt(r.USD)} KRW | 100 JPY = ${fmt(r.JPY)} KRW | 1 EUR = ${fmt(r.EUR)} KRW | 1 CNY = ${fmt(r.CNY)} KRW | 1 GBP = ${fmt(r.GBP)} KRW (Updated: ${updated} KST)`;
+        document.getElementById('fxRates').textContent = line;
+      } catch (err) {
+        console.error('FX rates failed', err);
+      }
+    }
+    loadFxRates();
   </script>
 </body>
 </html>
