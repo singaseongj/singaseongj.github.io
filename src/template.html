@@ -31,8 +31,8 @@
     color: yellow;
     font-weight: bold;
     font-size: 1.3em;
-    height: 1.8em;
-    line-height: 1.8em;
+    height: 1.6em;
+    line-height: 1.6em;
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
@@ -40,14 +40,13 @@
   .fx-ticker .fx-track {
     display: inline-block;
     white-space: nowrap;
-    padding-left: 100%;
     line-height: inherit;
-    animation: ticker-loop 80s linear infinite;
+    animation: ticker-loop 40s linear infinite;
   }
   .fx-item { margin: 0 .6rem; }
   .fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
   @keyframes ticker-loop {
-    0%   { transform: translateX(0%); }
+    0%   { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
   }
   </style>
@@ -553,7 +552,7 @@
         line.style.animation = 'none';
         afterFonts.then(() => {
           void line.offsetWidth;
-          line.style.animation = 'ticker-loop 80s linear infinite';
+          line.style.animation = 'ticker-loop 40s linear infinite';
         });
       });
   }
