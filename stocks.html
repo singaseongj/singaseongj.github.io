@@ -86,15 +86,9 @@
 
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
-    <div class="portfolio-group"><h3>KOSPI 안전주</h3><ul><li>현대차</li><li>SK하이닉스</li><li>삼성전자</li><li>LG화학</li><li>카카오</li></ul></div>
-<div class="portfolio-group"><h3>KOSPI 공격주</h3><ul><li>BGF리테일</li><li>한화에어로스페이스</li><li>HD현대일렉트릭</li><li>두산에너빌리티</li><li>POSCO퓨처엠</li></ul></div>
-<div class="portfolio-group"><h3>KOSDAQ 안전주</h3><ul></ul></div>
-<div class="portfolio-group"><h3>KOSDAQ 공격주</h3><ul></ul></div>
-<div class="portfolio-group"><h3>NASDAQ 안전주</h3><ul><li>Meta Platforms</li><li>Amazon</li><li>NVIDIA</li><li>Microsoft</li><li>Alphabet</li></ul></div>
-<div class="portfolio-group"><h3>NASDAQ 공격주</h3><ul><li>Super Micro Computer</li><li>Arm Holdings</li><li>Palantir</li><li>Micron Technology</li><li>UiPath</li></ul></div>
-<div class="portfolio-group"><h3>S&P 500 안전주</h3><ul><li>Coca-Cola</li><li>Johnson & Johnson</li><li>Berkshire Hathaway (B)</li><li>Procter & Gamble</li><li>Visa</li></ul></div>
-<div class="portfolio-group"><h3>S&P 500 공격주</h3><ul><li>Uber Technologies</li><li>Eli Lilly</li><li>CrowdStrike</li><li>NRG Energy</li><li>ServiceNow</li></ul></div>
+    <div id="recommendations"><p class="error" style="display:none"></p></div>
     <div id="portfolioUpdated" class="last-updated"></div>
+    <noscript>자바스크립트를 활성화하면 추천 종목이 표시됩니다.</noscript>
   </section>
   
   <script>
@@ -356,8 +350,6 @@
   }
 
     // 추천 종목 로드
-    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzgzE7psPX5rfMLsDprAy8jmYqwUphiKuzCDUc2ji3-dRKWSgIhb1O4Kgnrg7zk1FCyrA/exec';
-
     const FULL_NAME_MAP = {
       'AMD': 'Advanced Micro Devices',
       'Meta': 'Meta Platforms',
@@ -365,57 +357,29 @@
       'HMM': 'Hyundai Merchant Marine'
     };
 
-    async function loadLocalRecs() {
-      try {
-        const res = await fetch('recommendations.json');
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return await res.json();
-      } catch (e) {
-        console.warn('Local recommendations load failed', e);
-        return null;
-      }
-    }
-
-    function mergeWithFallback(remote, local) {
-      if (!local) return remote;
-      const result = { ...remote };
-      for (const m of Object.keys(local)) {
-        if (!result[m]) result[m] = local[m];
-        else {
-          for (const bucket of ['safe', 'aggressive']) {
-            const items = result[m]?.[bucket];
-            if (!Array.isArray(items) || items.every(it => !it.name)) {
-              result[m][bucket] = local[m][bucket];
-            }
-          }
-        }
-      }
-      return result;
-    }
-
     async function fetchRecs() {
-      const local = await loadLocalRecs();
-      let data = local;
+      let data = null;
       try {
-        const url = ENDPOINT + '?_=' + Date.now();
-        const res = await fetch(url);
+        // cache-buster to avoid stale GH-Pages content
+        const res = await fetch('recommendations.json?_=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        const remote = await res.json();
-        data = mergeWithFallback(remote, local);
-        console.log('Recommendations (remote):', remote);
+        data = await res.json();
       } catch (err) {
         console.error('Failed to load recommendations:', err);
       }
-      if (local) {
-        data = local;
-      }
+
+      const container = document.getElementById('recommendations');
+      if (!container) return;
+
       if (data) {
         render(data);
       } else {
-        const container = document.getElementById('recommendations');
-        if (container) {
-          container.innerHTML = `<p class="error">${translations[currentLang].recsError}</p>`;
-        }
+        const p = container.querySelector('.error') || document.createElement('p');
+        p.className = 'error';
+        p.textContent = translations[currentLang].recsError;
+        p.style.display = 'block';
+        container.innerHTML = '';
+        container.appendChild(p);
       }
     }
 
