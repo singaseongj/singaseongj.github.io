@@ -255,7 +255,17 @@ async function yahooProfileEmbeddedSector(symbol) {
   let data;
   try { data = JSON.parse(jsonStr); }
   catch { throw new Error('root.App.main JSON parse error'); }
-  const sector = data?.context?.dispatcher?.stores?.QuoteSummaryStore?.assetProfile?.sector ?? null;
+  function findSector(obj) {
+    if (!obj || typeof obj !== 'object') return null;
+    if (typeof obj.sector === 'string') return obj.sector;
+    if (obj.assetProfile && typeof obj.assetProfile.sector === 'string') return obj.assetProfile.sector;
+    for (const v of Object.values(obj)) {
+      const found = findSector(v);
+      if (found) return found;
+    }
+    return null;
+  }
+  const sector = findSector(data);
   if (!sector) throw new Error('no sector in embedded JSON');
   return sector;
 }
@@ -345,8 +355,7 @@ async function fetchSectorByTicker(ticker, cache) {
 async function fetchSector(name, cache) {
   const ticker = await resolveTicker(name, cache);
   const sector = await fetchSectorByTicker(ticker, cache);
-  if (!sector) throw new Error(`Sector not found for ${name} (${ticker})`);
-  return sector;
+  return { sector, ticker };
 }
 
 // -------- Utility --------
@@ -407,9 +416,14 @@ async function tryFetchAndEnrich() {
         const prevSector = typeof entry === 'object' ? entry.sector ?? null : null;
 
         try {
-          const sector = await fetchSector(name, cache);
-          updated.push({ name, sector: sector ?? prevSector ?? null });
-          successCount++;
+          const { sector } = await fetchSector(name, cache);
+          if (!sector) {
+            console.warn(`[WARN] ${name}: sector not resolved`);
+            updated.push({ name, sector: prevSector ?? null });
+          } else {
+            updated.push({ name, sector });
+            successCount++;
+          }
         } catch (err) {
           console.error(`[WARN] ${name}: ${err.message}`);
           updated.push({ name, sector: prevSector ?? null });
@@ -428,7 +442,7 @@ async function tryFetchAndEnrich() {
     console.warn('[WARN] No sectors fetched');
   }
 
-  return data;
+  return { data, successCount };
 }
 
 async function main() {
@@ -445,12 +459,13 @@ async function main() {
   // Stale or forced: try heavy fetch/enrich
   let base = null;
   try {
-    base = await tryFetchAndEnrich(); // returns full recommendations object WITHOUT lastUpdated
-    const out = { ...base, lastUpdated: nowKSTISO() };
+    const { data, successCount } = await tryFetchAndEnrich();
+    if (successCount === 0) throw new Error('no sectors fetched');
+    const out = { ...data, lastUpdated: nowKSTISO() };
     await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
     console.log(`[FETCH] success at ${out.lastUpdated}`);
   } catch (e) {
-    console.warn('[FETCH] failed, using rotation fallback:', e?.message || e);
+    console.warn('[FETCH] failed or insufficient data, using rotation fallback:', e?.message || e);
     // Load previous if exists to preserve structure; else start empty
     let prev = null;
     try { prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8')); } catch {}
