@@ -15,21 +15,19 @@
       position: fixed;
       top: 10px;
       left: 10px;
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 4px;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 24px;
+      color: #000;
+      opacity: 0.6;
       z-index: 1000;
     }
     .home-button:hover {
-      background-color: #45a049;
+      opacity: 1;
     }
   </style>
 </head>
 <body>
-  <a href="../index.html" class="home-button">Home</a>
+  <a href="../index.html" class="home-button" aria-label="Home">&#x21A9;</a>
   <header class="app-bar">
     <h1 class="logo">SeongSigan <span id="backendStatus" class="status" aria-label="백엔드 상태" title="Backend status"></span></h1>
     <select id="teacherSelect" aria-label="선생님 선택"></select>
