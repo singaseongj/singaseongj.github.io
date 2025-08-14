@@ -574,7 +574,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     // compute duration based on content width (pixels per second)
     // tweak pxPerSec to make it faster/slower (e.g., 90~140)
     await Promise.resolve(); // allow layout
-    const pxPerSec = 110;
+    const pxPerSec = 150;
     const w = a.scrollWidth;              // content width
     const dur = Math.max(10, Math.round(w / pxPerSec)); // seconds
 
