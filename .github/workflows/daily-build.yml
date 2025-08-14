@@ -13,6 +13,10 @@ jobs:
 
     env:
       TZ: Asia/Seoul  # make timestamps consistent with KST
+      FMP_KEY: ${{ secrets.FMP_KEY }}                 # optional
+      ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}  # optional
+      FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}         # optional
+      TWELVEDATA_KEY: ${{ secrets.TWELVEDATA_KEY }}   # optional
 
     concurrency:
       group: daily-stock-report
