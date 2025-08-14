@@ -29,23 +29,27 @@ async function fetchWithRetry(url, { retries = 3, base = 400 } = {}) {
 
 async function main() {
   await ensureDir(OUT);
-  let data;
   try {
     const j = await fetchWithRetry(API);
-    const rates = j?.rates || {};
+    const r = j?.rates || {};
+    const KRW = Number(r.KRW ?? 0);
+    const JPY = Number(r.JPY ?? 0);
+    const EUR = Number(r.EUR ?? 0);
+    const CNY = Number(r.CNY ?? 0);
+    const GBP = Number(r.GBP ?? 0);
+
     const out = {
-      base: 'USD',
-      timestamp: nowKSTISO(),
+      lastUpdated: nowKSTISO(),
       rates: {
-        KRW: Number(rates.KRW ?? 0),
-        JPY: Number(rates.JPY ?? 0),
-        EUR: Number(rates.EUR ?? 0),
-        CNY: Number(rates.CNY ?? 0),
-        GBP: Number(rates.GBP ?? 0),
+        USD: Number(KRW.toFixed(2)),
+        JPY: JPY ? Number(((KRW / JPY) * 100).toFixed(2)) : 0,
+        EUR: EUR ? Number((KRW / EUR).toFixed(2)) : 0,
+        CNY: CNY ? Number((KRW / CNY).toFixed(2)) : 0,
+        GBP: GBP ? Number((KRW / GBP).toFixed(2)) : 0,
       }
     };
     await fs.writeFile(OUT, JSON.stringify(out, null, 2));
-    console.log(`FX: wrote ${OUT} at ${out.timestamp}`);
+    console.log(`FX: wrote ${OUT} at ${out.lastUpdated}`);
     return;
   } catch (err) {
     console.warn('FX fetch failed:', err?.message || err);
@@ -54,9 +58,8 @@ async function main() {
       return;
     }
     const fallback = {
-      base: 'USD',
-      timestamp: nowKSTISO(),
-      rates: { KRW: 0, JPY: 0, EUR: 0, CNY: 0, GBP: 0 }
+      lastUpdated: nowKSTISO(),
+      rates: { USD: 0, JPY: 0, EUR: 0, CNY: 0, GBP: 0 }
     };
     await fs.writeFile(OUT, JSON.stringify(fallback, null, 2));
     console.log('FX: wrote fallback fx_rates.json');
