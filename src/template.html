@@ -4,9 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="title">데일리 주식 리포트 자동화</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
   <link rel="stylesheet" href="stocks.css">
+  <style>
+    .home-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 1000;
+    }
+    .home-button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
+  <a href="index.html" class="home-button">Home</a>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
   <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> {{CURRENT_DATE}}</p>
   
@@ -469,6 +490,7 @@
     <button id="btnEn">English</button>
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
+  <div id="fxTicker" class="fx-ticker" aria-live="polite"></div>
   <script>
     (async function() {
       try {
@@ -482,5 +504,6 @@
       }
     })();
   </script>
+  <script src="fx-ticker.js"></script>
 </body>
 </html>
