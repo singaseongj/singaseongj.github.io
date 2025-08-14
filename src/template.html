@@ -490,7 +490,7 @@
     <button id="btnEn">English</button>
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
-  <marquee id="fxRates" style="font-size:0.9rem;color:#64748b;"></marquee>
+  <div id="fxTicker" class="fx-ticker" aria-live="polite"></div>
   <script>
     (async function() {
       try {
@@ -504,23 +504,6 @@
       }
     })();
   </script>
-  <script>
-    async function loadFxRates() {
-      try {
-        const res = await fetch('data/fx_rates.json', { cache: 'no-store' });
-        const data = await res.json();
-        const r = data.rates || {};
-        const fmt = n => Number(n).toLocaleString('en-US', { maximumFractionDigits: 2 });
-        const updated = new Date(data.lastUpdated)
-          .toLocaleString('sv-SE', { timeZone: 'Asia/Seoul', hour12: false })
-          .slice(0, 16);
-        const line = `1 USD = ${fmt(r.USD)} KRW | 100 JPY = ${fmt(r.JPY)} KRW | 1 EUR = ${fmt(r.EUR)} KRW | 1 CNY = ${fmt(r.CNY)} KRW | 1 GBP = ${fmt(r.GBP)} KRW (Updated: ${updated} KST)`;
-        document.getElementById('fxRates').textContent = line;
-      } catch (err) {
-        console.error('FX rates failed', err);
-      }
-    }
-    loadFxRates();
-  </script>
+  <script src="fx-ticker.js"></script>
 </body>
 </html>
