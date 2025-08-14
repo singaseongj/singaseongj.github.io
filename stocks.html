@@ -26,42 +26,28 @@
     }
   </style>
   <style>
-  /* FX ticker (seamless twin-tracks) */
-  .fx-ticker {
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    border-top: 1px solid #eee;
-    padding: .45rem 0;
-    font-size: 0.95rem;
-    font-variant-numeric: tabular-nums;
-    line-height: 1.4;
-    height: 1.4em;
-  }
-  .fx-track {
-    position: absolute;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    will-change: transform;
-    animation: fx-left var(--fx-dur,22s) linear infinite;
-    height: 100%;
-    line-height: inherit;
-  }
-  .fx-track.b {
-    left: 100%;
-  }
-  .fx-item { margin: 0 .75rem; }
-  .fx-time { opacity: .65; margin-left: 1rem; font-size: .9em; }
-  .fx-gap { display: inline-block; width: 2rem; }
-  @keyframes fx-left {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
-  }
-  /* optional: honor reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    .fx-track { animation: none !important; }
-  }
+    /* FX ticker */
+    .fx-ticker {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      border-top: 1px solid #eee;
+      padding: .5rem 0;
+      font-size: .95rem;
+      line-height: 1.6;
+    }
+    .fx-track {
+      position: absolute;
+      top: 0;
+      white-space: nowrap;
+      will-change: transform;
+    }
+    .fx-item { margin: 0 .75rem; }
+    .fx-time { opacity: .7; margin-left: 1rem; font-size: .9em; }
+    @keyframes fx-left {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-100%); }
+    }
   </style>
 </head>
 <body>
@@ -100,7 +86,14 @@
 
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
-    <div id="recommendations"><p class="error">추천 데이터를 불러오지 못했습니다.</p></div>
+    <div class="portfolio-group"><h3>KOSPI 안전주</h3><ul><li>현대차</li><li>SK하이닉스</li><li>삼성전자</li><li>LG화학</li><li>카카오</li></ul></div>
+<div class="portfolio-group"><h3>KOSPI 공격주</h3><ul><li>BGF리테일</li><li>한화에어로스페이스</li><li>HD현대일렉트릭</li><li>두산에너빌리티</li><li>POSCO퓨처엠</li></ul></div>
+<div class="portfolio-group"><h3>KOSDAQ 안전주</h3><ul></ul></div>
+<div class="portfolio-group"><h3>KOSDAQ 공격주</h3><ul></ul></div>
+<div class="portfolio-group"><h3>NASDAQ 안전주</h3><ul><li>Meta Platforms</li><li>Amazon</li><li>NVIDIA</li><li>Microsoft</li><li>Alphabet</li></ul></div>
+<div class="portfolio-group"><h3>NASDAQ 공격주</h3><ul><li>Super Micro Computer</li><li>Arm Holdings</li><li>Palantir</li><li>Micron Technology</li><li>UiPath</li></ul></div>
+<div class="portfolio-group"><h3>S&P 500 안전주</h3><ul><li>Coca-Cola</li><li>Johnson & Johnson</li><li>Berkshire Hathaway (B)</li><li>Procter & Gamble</li><li>Visa</li></ul></div>
+<div class="portfolio-group"><h3>S&P 500 공격주</h3><ul><li>Uber Technologies</li><li>Eli Lilly</li><li>CrowdStrike</li><li>NRG Energy</li><li>ServiceNow</li></ul></div>
     <div id="portfolioUpdated" class="last-updated"></div>
   </section>
   
@@ -530,8 +523,8 @@
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
   <div id="fx-ticker" class="fx-ticker" aria-live="polite">
-    <div id="fx-a" class="fx-track a"></div>
-    <div id="fx-b" class="fx-track b" aria-hidden="true"></div>
+    <div id="fx-a" class="fx-track"></div>
+    <div id="fx-b" class="fx-track" aria-hidden="true"></div>
   </div>
   <script>
     (async function() {
@@ -548,40 +541,57 @@
   </script>
   <script>
 document.addEventListener('DOMContentLoaded', async function () {
+  const wrap = document.getElementById('fx-ticker');
   const a = document.getElementById('fx-a');
   const b = document.getElementById('fx-b');
-  const wrap = document.getElementById('fx-ticker');
-  if (!a || !b || !wrap) return;
+  if (!wrap || !a || !b) return;
 
-  // Path for GitHub Pages at the repo root:
   const url = './data/fx_rates.json';
-
   try {
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
 
+    const items = Array.isArray(data.items) ? data.items : [];
+    const hasNum = items.some(it => typeof it?.krw === 'number');
+
+    if (!hasNum) throw new Error('No numeric rates');
+
     const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
-    const parts = (data.items || []).map(it => {
+    const parts = items.map(it => {
       const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
       return `<span class="fx-item">${it.label} = ${v}</span>`;
     });
 
+    // timestamp at end
     const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
+    const gap = '<span class="fx-item" aria-hidden="true">•</span>';
 
-    // build line with bullet separators and an extra spacer before looping
-    const line = parts.join(' • ') + ' • ' + stamp + '<span class="fx-gap" aria-hidden="true"></span>';
+    // one full line
+    const line = parts.join(' • ') + gap + stamp;
 
-    // fill both tracks
     a.innerHTML = line;
     b.innerHTML = line;
 
-    // compute duration based on content width at 120px/sec (min 22s)
-    await Promise.resolve();
-    const pxPerSec = 120;
-    const w = a.scrollWidth;
-    const dur = Math.max(22, w / pxPerSec);
-    wrap.style.setProperty('--fx-dur', dur + 's');
+    // allow layout to settle before measuring
+    await new Promise(requestAnimationFrame);
+    await new Promise(requestAnimationFrame);
+
+    // measure and set up speeds/positions
+    const aWidth = a.scrollWidth;
+    const pxPerSec = 120;                      // ← speed
+    const dur = Math.max(12, Math.round(aWidth / pxPerSec)); // seconds
+
+    // place A at x=0 and B immediately to its right (in px)
+    a.style.left = '0px';
+    b.style.left = aWidth + 'px';
+
+    // kick off animations
+    const anim = `fx-left ${dur}s linear infinite`;
+    a.style.animation = anim;
+    b.style.animation = anim;
+    // start B halfway so the stream looks continuous
+    b.style.animationDelay = (dur / 2) + 's';
   } catch (e) {
     console.warn('FX load error:', e);
     a.textContent = '환율 정보를 불러올 수 없습니다';
