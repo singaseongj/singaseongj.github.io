@@ -517,9 +517,8 @@
     <button id="btnEn">English</button>
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
-  <div class="fx-ticker" role="marquee" aria-label="Live foreign exchange rates" aria-live="polite">
-    <div class="fx-ticker__inner" id="fx-ticker-content"></div>
-  </div>
+  <div id="fxTicker" class="fx-ticker" aria-live="polite"></div>
+  <script src="fx-ticker.js"></script>
   <script>
     (async function() {
       try {
@@ -530,34 +529,6 @@
         updateVisitCounts();
       } catch (err) {
         console.error('Visit count failed', err);
-      }
-    })();
-  </script>
-  <script>
-    (async function() {
-      const currencies = [
-        { code: 'USD', amount: 1 },
-        { code: 'JPY', amount: 100 },
-        { code: 'EUR', amount: 1 },
-        { code: 'CNY', amount: 1 },
-        { code: 'GBP', amount: 1 },
-        { code: 'HKD', amount: 1 }
-      ];
-      const formatter = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
-      try {
-        const results = await Promise.all(
-          currencies.map(async ({ code, amount }) => {
-            const res = await fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${code}&to=KRW`);
-            const data = await res.json();
-            return `${amount} ${code} → ${formatter.format(data.rates.KRW)}원`;
-          })
-        );
-        const timestamp = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
-        const text = results.join(' • ') + ` • ${timestamp} KST`;
-        const track = document.getElementById('fx-ticker-content');
-        track.innerHTML = `<span>${text}</span><span aria-hidden="true">${text}</span>`;
-      } catch (err) {
-        console.error('FX ticker failed', err);
       }
     })();
   </script>
