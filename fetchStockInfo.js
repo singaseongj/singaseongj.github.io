@@ -1,5 +1,4 @@
-// fetchStockInfo.js — static map + auto-resolver + Yahoo profile fallback + throttling
-// Node >= 18 (built-in fetch), ESM
+// fetchStockInfo.js — improved version with fallbacks and KOSDAQ stocks
 import fs, { writeFile, rename } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'node:path';
@@ -15,55 +14,101 @@ const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-const nextDelay = () => {
+// 429-aware delay
+let consecutive429 = 0;
+function nextDelay() {
   if (Number.isFinite(DELAY_ARG) && DELAY_ARG > 0) return DELAY_ARG;
-  if (FORCE) return 250 + Math.floor(Math.random() * 100); // faster on --force
-  return 900 + Math.floor(Math.random() * 301);
-};
+  const base = FORCE ? 500 : 1200;
+  const jitter = Math.floor(Math.random() * (FORCE ? 200 : 800));
+  const penalty = Math.min(consecutive429 * 500, 5000); // back off when throttled
+  return base + jitter + penalty;
+}
 
-async function fetchWithRetry(url, options={}, {retries=3, base=400, jitter=true}={}) {
+async function fetchWithRetry(url, options = {}, { retries = 3, base = 800, jitter = true } = {}) {
   let lastErr;
-  for (let attempt=0; attempt<=retries; attempt++) {
+  for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const res = await fetch(url, options);
       if (res.ok) return res;
-      if (![429,500,502,503,504].includes(res.status)) throw new Error(`HTTP ${res.status}`);
+      if (![429, 500, 502, 503, 504].includes(res.status)) throw new Error(`HTTP ${res.status}`);
       lastErr = new Error(`HTTP ${res.status}`);
-    } catch (e) { lastErr = e; }
+    } catch (e) {
+      lastErr = e;
+    }
     if (attempt < retries) {
-      const backoff = base * 2**attempt + (jitter ? Math.floor(Math.random()*base) : 0);
+      const backoff = base * Math.pow(2, attempt) + (jitter ? Math.floor(Math.random() * base) : 0);
+      console.log(`[RETRY] ${attempt + 1}/${retries} after ${backoff}ms`);
       await sleep(backoff);
     }
   }
   throw lastErr;
 }
 
-let consecutive429 = 0;
-function noteStatus(err){ if ((/HTTP 429/).test(String(err))) consecutive429++; else consecutive429=0; }
-
-async function isFreshFile(p) {
-  try { const s = await fs.stat(p); return (Date.now() - s.mtimeMs) < MAX_AGE_MS; }
-  catch { return false; }
+function noteStatus(err) {
+  if ((/HTTP 429/).test(String(err))) {
+    consecutive429++;
+    if (consecutive429 >= 3) {
+      console.log(`[THROTTLE] Detected ${consecutive429} consecutive 429s, slowing down`);
+    }
+  } else {
+    consecutive429 = 0;
+  }
 }
 
-function seededRandom(seed){let h=2166136261>>>0;for(let i=0;i<seed.length;i++)h=Math.imul(h^seed.charCodeAt(i),16777619);return()=> (h=Math.imul(h^(h>>>15),2246822507)^Math.imul(h^(h>>>13),3266489909),(h>>>0)/2**32);}
-function pickDeterministic(arr,k,seed){const rnd=seededRandom(seed),a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a.slice(0,k);}
+async function isFreshFile(p) {
+  try {
+    const s = await fs.stat(p);
+    return (Date.now() - s.mtimeMs) < MAX_AGE_MS;
+  } catch {
+    return false;
+  }
+}
 
-// Define POOLS with larger candidate sets per market/bucket.
+function seededRandom(seed) {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
+  return () => (
+    h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909),
+    (h >>> 0) / 2 ** 32
+  );
+}
+
+function pickDeterministic(arr, k, seed) {
+  const rnd = seededRandom(seed), a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a.slice(0, k);
+}
+
+// KOSDAQ stocks added and more comprehensive pools
 const POOLS = {
-  KOSPI: { safe: ['삼성전자','SK하이닉스','현대차','POSCO홀딩스','LG화학','NAVER','카카오'], aggressive: ['HD현대일렉트릭','두산에너빌리티','한화에어로스페이스','POSCO퓨처엠','BGF리테일'] },
-  KOSDAQ: { safe: [], aggressive: [] },
-  NASDAQ: { safe: ['Microsoft','Apple','NVIDIA','Amazon','Meta Platforms','Alphabet'], aggressive: ['Super Micro Computer','Palantir','Arm Holdings','Micron Technology','UiPath'] },
-  'S&P 500': { safe: ['Berkshire Hathaway (B)','Johnson & Johnson','Procter & Gamble','Visa','Coca-Cola'], aggressive: ['Eli Lilly','Uber Technologies','NRG Energy','CrowdStrike','ServiceNow'] }
+  KOSPI: {
+    safe: ['삼성전자', 'SK하이닉스', '현대차', 'POSCO홀딩스', 'LG화학', 'NAVER', '카카오', '기아', 'LG전자', '삼성SDI'],
+    aggressive: ['HD현대일렉트릭', '두산에너빌리티', '한화에어로스페이스', 'POSCO퓨처엠', 'BGF리테일', '에코프로', '삼성바이오로직스', '셀트리온']
+  },
+  KOSDAQ: {
+    safe: ['셀트리온헬스케어', 'JYP엔터테인먼트', '펄어비스', '아이오케이', 'CJ ENM'],
+    aggressive: ['에코프로비엠', '천보', '리노공업', '알테오젠', '레인보우로보틱스', 'HLB', '지아이이노베이션', '펩트론']
+  },
+  NASDAQ: {
+    safe: ['Microsoft', 'Apple', 'NVIDIA', 'Amazon', 'Meta Platforms', 'Alphabet', 'Tesla', 'Netflix'],
+    aggressive: ['Super Micro Computer', 'Palantir', 'Arm Holdings', 'Micron Technology', 'UiPath', 'CrowdStrike', 'MongoDB', 'Snowflake']
+  },
+  'S&P 500': {
+    safe: ['Berkshire Hathaway (B)', 'Johnson & Johnson', 'Procter & Gamble', 'Visa', 'Coca-Cola', 'JPMorgan Chase', 'UnitedHealth'],
+    aggressive: ['Eli Lilly', 'Uber Technologies', 'NRG Energy', 'CrowdStrike', 'ServiceNow', 'Moderna', 'Zoom']
+  }
 };
 
 function rotateFromPools(prevData) {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
   const out = structuredClone(prevData || {});
   for (const [market, buckets] of Object.entries(POOLS)) {
-    if (!hasAnyCandidates(buckets)) continue; // NEW: skip empty market
+    if (!hasAnyCandidates(buckets)) continue;
     out[market] = out[market] || {};
-    for (const bucket of ['safe','aggressive']) {
+    for (const bucket of ['safe', 'aggressive']) {
       const src = buckets[bucket] || [];
       if (src.length === 0) continue;
       const picked = pickDeterministic(src, 5, `${seed}:${market}:${bucket}`);
@@ -98,365 +143,255 @@ function totalCount(out) {
   return n;
 }
 
-// Request headers (JSON API + HTML fallback)
+// More stable headers
+const HEADERS_HTML = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
+  'Accept-Encoding': 'gzip, deflate, br',
+  'Connection': 'keep-alive',
+  'Upgrade-Insecure-Requests': '1',
+  'Sec-Fetch-Dest': 'document',
+  'Sec-Fetch-Mode': 'navigate',
+  'Sec-Fetch-Site': 'none'
+};
+
 const HEADERS_JSON = {
-  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36',
-  'Accept': 'application/json',
-  'Accept-Language': 'en-US,en;q=0.8,ko-KR;q=0.7',
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Accept': 'application/json, text/plain, */*',
+  'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
   'Connection': 'keep-alive'
 };
-const HEADERS_HTML = {
-  ...HEADERS_JSON,
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'Referer': 'https://finance.yahoo.com/'
-};
 
-const normalizeForYahoo = s => s.replace(/\./g, '-');
+const normalizeForYahoo = s => s.replace(/\./g, '-'); // if you decide to use it later
 
-// KST timestamp helper is provided by utils/time.js
-
-// -------- Static ticker map (first priority) --------
+// Extended static ticker mapping including KOSDAQ
 const TICKER_MAP = {
-  // --- KOSPI (KS) ---
-  '삼성전자': '005930.KS',
-  'SK하이닉스': '000660.KS',
-  '삼성바이오로직스': '207940.KS',
-  '현대차': '005380.KS',
-  'LG에너지솔루션': '373220.KS',
-  '한화에어로스페이스': '012450.KS',
-  'HD현대일렉트릭': '267260.KS',
-  'POSCO퓨처엠': '003670.KS',
-  '두산에너빌리티': '034020.KS',
-  'HD한국조선해양': '009540.KS',
-  'POSCO홀딩스': '005490.KS',
-  'LG화학': '051910.KS',
-  'SK텔레콤': '017670.KS',
-  '카카오': '035720.KS',
-  '네이버': '035420.KS',
-  'NAVER': '035420.KS',
-  '셀트리온': '068270.KS',
-  'BGF리테일': '282330.KS',
+  // KOSPI
+  '삼성전자': '005930.KS', 'SK하이닉스': '000660.KS', '삼성바이오로직스': '207940.KS',
+  '현대차': '005380.KS', 'LG에너지솔루션': '373220.KS', '한화에어로스페이스': '012450.KS',
+  'HD현대일렉트릭': '267260.KS', 'POSCO퓨처엠': '003670.KS', '두산에너빌리티': '034020.KS',
+  'HD한국조선해양': '009540.KS', 'POSCO홀딩스': '005490.KS', 'LG화학': '051910.KS',
+  'SK텔레콤': '017670.KS', '카카오': '035720.KS', '네이버': '035420.KS', 'NAVER': '035420.KS',
+  '셀트리온': '068270.KS', 'BGF리테일': '282330.KS', '기아': '000270.KS', 'LG전자': '066570.KS',
+  '삼성SDI': '006400.KS', '에코프로': '086520.KS',
 
-  'Samsung Electronics': '005930.KS',
-  'SK Hynix': '000660.KS',
-  'Samsung Biologics': '207940.KS',
-  'Hyundai Motor': '005380.KS',
-  'LG Energy Solution': '373220.KS',
-  'Hanwha Aerospace': '012450.KS',
-  'HD Hyundai Electric': '267260.KS',
-  'POSCO Future M': '003670.KS',
-  'Doosan Enerbility': '034020.KS',
-  'HD Korea Shipbuilding': '009540.KS',
-  'POSCO Holdings': '005490.KS',
-  'LG Chem': '051910.KS',
-  'SK Telecom': '017670.KS',
-  'Kakao': '035720.KS',
-  'Naver': '035420.KS',
-  'Celltrion': '068270.KS',
-  'BGF Retail': '282330.KS',
-  'Samsung SDI': '006400.KS',
-  'Hyundai Mobis': '012330.KS',
-  'Kia': '000270.KS',
-  'LG Electronics': '066570.KS',
-  'KB Financial': '105560.KS',
-  'KakaoBank': '323410.KS',
+  // KOSDAQ added
+  '에코프로비엠': '247540.KQ', '셀트리온헬스케어': '091990.KQ', '천보': '278280.KQ',
+  '리노공업': '058470.KQ', 'JYP엔터테인먼트': '035900.KQ', '알테오젠': '196170.KQ',
+  '레인보우로보틱스': '277810.KQ', 'HLB': '028300.KQ', '지아이이노베이션': '358570.KQ',
+  '펩트론': '087010.KQ', '펄어비스': '263750.KQ', '아이오케이': '078860.KQ',
+  'CJ ENM': '035760.KQ',
 
-  // --- KOSDAQ (KQ) ---
-  '에코프로비엠': '247540.KQ',
-  '셀트리온헬스케어': '091990.KQ',
-  '천보': '278280.KQ',
-  '리노공업': '058470.KQ',
-  'JYP엔터테인먼트': '035900.KQ',
-  '알테오젠': '196170.KQ',
-  '레인보우로보틱스': '277810.KQ',
-  'HLB': '028300.KQ',
-  '지아이이노베이션': '358570.KQ',
-  '펩트론': '087010.KQ',
-
-  'EcoPro BM': '247540.KQ',
-  'Celltrion Healthcare': '091990.KQ',
-  'JYP Entertainment': '035900.KQ',
-  'Rainbow Robotics': '277810.KQ',
-  'GI Innovation': '358570.KQ',
-  'Peptron': '087010.KQ',
-
-  // --- US (NASDAQ/NYSE) ---
-  'Microsoft': 'MSFT',
-  'Apple': 'AAPL',
-  'NVIDIA': 'NVDA',
-  'Amazon': 'AMZN',
-  'Meta Platforms': 'META',
-  'Alphabet': 'GOOGL',
-  'Super Micro Computer': 'SMCI',
-  'Advanced Micro Devices': 'AMD',
-  'Arm Holdings': 'ARM',
-  'Micron Technology': 'MU',
-  'UiPath': 'PATH',
-  'CrowdStrike': 'CRWD',
-  'Berkshire Hathaway (B)': 'BRK-B',
-  'Johnson & Johnson': 'JNJ',
-  'Procter & Gamble': 'PG',
-  'Visa': 'V',
-  'Palantir': 'PLTR',
-  'Coca-Cola': 'KO',
-  'ServiceNow': 'NOW',
-  'Eli Lilly': 'LLY',
-  'Uber Technologies': 'UBER',
-  'NRG Energy': 'NRG',
-  'Tesla': 'TSLA',
-  'TSLA': 'TSLA',
-  'Netflix': 'NFLX',
-  'NFLX': 'NFLX',
-  'Google': 'GOOGL',
-  'Alphabet Inc.': 'GOOGL',
-  'Meta': 'META',
-  'Facebook': 'META',
-  'SMCI': 'SMCI',
-  'Supermicro': 'SMCI',
-  'AMD': 'AMD',
-  'Intel': 'INTC',
-  'INTC': 'INTC',
-  'Broadcom': 'AVGO',
-  'AVGO': 'AVGO',
-  'Adobe': 'ADBE',
-  'ADBE': 'ADBE',
-  'Salesforce': 'CRM',
-  'CRM': 'CRM',
-  'Oracle': 'ORCL',
-  'ORCL': 'ORCL',
-  'Cisco': 'CSCO',
-  'CSCO': 'CSCO',
-  'IBM': 'IBM',
-  'PayPal': 'PYPL',
-  'PYPL': 'PYPL',
-  'Shopify': 'SHOP',
-  'SHOP': 'SHOP',
-  'JPMorgan Chase': 'JPM',
-  'JPM': 'JPM'
+  // US stocks
+  'Microsoft': 'MSFT', 'Apple': 'AAPL', 'NVIDIA': 'NVDA', 'Amazon': 'AMZN',
+  'Meta Platforms': 'META', 'Alphabet': 'GOOGL', 'Tesla': 'TSLA', 'Netflix': 'NFLX',
+  'Super Micro Computer': 'SMCI', 'Palantir': 'PLTR', 'Arm Holdings': 'ARM',
+  'Micron Technology': 'MU', 'UiPath': 'PATH', 'CrowdStrike': 'CRWD',
+  'Berkshire Hathaway (B)': 'BRK-B', 'Johnson & Johnson': 'JNJ',
+  'Procter & Gamble': 'PG', 'Visa': 'V', 'Coca-Cola': 'KO',
+  'ServiceNow': 'NOW', 'Eli Lilly': 'LLY', 'Uber Technologies': 'UBER',
+  'NRG Energy': 'NRG', 'JPMorgan Chase': 'JPM', 'UnitedHealth': 'UNH',
+  'Moderna': 'MRNA', 'Zoom': 'ZM', 'MongoDB': 'MDB', 'Snowflake': 'SNOW'
 };
 
-// -------- Cache helpers --------
+// Extended static sector mapping (consistent naming)
+const STATIC_SECTORS = {
+  // KOSPI
+  '005930.KS': 'Technology', '000660.KS': 'Technology', '005380.KS': 'Consumer Discretionary',
+  '051910.KS': 'Materials', '035720.KS': 'Communication Services', '035420.KS': 'Communication Services',
+  '005490.KS': 'Materials', '267260.KS': 'Industrials', '012450.KS': 'Industrials',
+  '034020.KS': 'Industrials', '282330.KS': 'Consumer Staples', '000270.KS': 'Consumer Discretionary',
+  '066570.KS': 'Technology', '006400.KS': 'Technology', '086520.KS': 'Materials',
+
+  // KOSDAQ
+  '247540.KQ': 'Materials', '091990.KQ': 'Healthcare', '278280.KQ': 'Industrials',
+  '058470.KQ': 'Industrials', '035900.KQ': 'Communication Services', '196170.KQ': 'Healthcare',
+  '277810.KQ': 'Industrials', '028300.KQ': 'Healthcare', '358570.KQ': 'Technology',
+  '087010.KQ': 'Healthcare', '263750.KQ': 'Communication Services', '078860.KQ': 'Technology',
+  '035760.KQ': 'Communication Services',
+
+  // US
+  'MSFT': 'Technology', 'AAPL': 'Technology', 'NVDA': 'Technology', 'AMZN': 'Consumer Discretionary',
+  'META': 'Communication Services', 'GOOGL': 'Communication Services', 'TSLA': 'Consumer Discretionary',
+  'NFLX': 'Communication Services', 'SMCI': 'Technology', 'PLTR': 'Technology', 'ARM': 'Technology',
+  'MU': 'Technology', 'PATH': 'Technology', 'CRWD': 'Technology', 'BRK-B': 'Financial Services',
+  'JNJ': 'Healthcare', 'PG': 'Consumer Staples', 'V': 'Financial Services', 'KO': 'Consumer Staples',
+  'NOW': 'Technology', 'LLY': 'Healthcare', 'UBER': 'Technology', 'NRG': 'Utilities',
+  'JPM': 'Financial Services', 'UNH': 'Healthcare', 'MRNA': 'Healthcare', 'ZM': 'Technology',
+  'MDB': 'Technology', 'SNOW': 'Technology'
+};
+
+// Cache related functions
 async function loadCache() {
   if (!existsSync(CACHE_FILE)) return {};
   try { return JSON.parse(await fs.readFile(CACHE_FILE, 'utf-8')); }
   catch { return {}; }
 }
+
 async function saveCache(cache) {
-  await fs.writeFile(CACHE_FILE, JSON.stringify(cache, null, 2));
+  try {
+    await fs.writeFile(CACHE_FILE, JSON.stringify(cache, null, 2));
+  } catch (e) {
+    console.warn('[CACHE] Failed to save:', e.message);
+  }
 }
 
 const SECTOR_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+
 function cacheGetSector(cache, symbol) {
   const e = cache._sectors?.[symbol];
   if (!e) return undefined;
   if (Date.now() - e.ts > SECTOR_TTL_MS) return undefined;
   return e.value;
 }
+
 function cachePutSector(cache, symbol, sector) {
   cache._sectors = cache._sectors || {};
   cache._sectors[symbol] = { value: sector, ts: Date.now() };
 }
+
 const looksKorean = s => /[가-힣]/.test(s);
 
-async function yahooSearchSymbol(name, lang, region) {
-  const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(name)}&lang=${lang}&region=${region}`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
-  return res.json();
-}
-async function yahooQuoteSummarySector(symbol) {
-  const url = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(normalizeForYahoo(symbol))}?modules=assetProfile`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
-  const json = await res.json();
-  const sector = json?.quoteSummary?.result?.[0]?.assetProfile?.sector ?? null;
-  if (!sector) throw new Error('no sector in quoteSummary');
-  return sector;
-}
-async function yahooProfileEmbeddedSector(symbol) {
-  const url = `https://finance.yahoo.com/quote/${encodeURIComponent(normalizeForYahoo(symbol))}/profile`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_HTML });
-  const html = await res.text();
-  const marker = 'root.App.main = ';
-  const idx = html.indexOf(marker);
-  if (idx === -1) throw new Error('root.App.main not found');
-  const start = idx + marker.length;
-  const end = html.indexOf('</script>', start);
-  if (end === -1) throw new Error('root.App.main script end not found');
-  const jsonStr = html.slice(start, end).replace(/;\s*$/, '');
-  let data;
-  try { data = JSON.parse(jsonStr); }
-  catch { throw new Error('root.App.main JSON parse error'); }
-  function findSector(obj) {
-    if (!obj || typeof obj !== 'object') return null;
-    if (typeof obj.sector === 'string') return obj.sector;
-    if (obj.assetProfile && typeof obj.assetProfile.sector === 'string') return obj.assetProfile.sector;
-    for (const v of Object.values(obj)) {
-      const found = findSector(v);
-      if (found) return found;
+// Improved Naver scraping with multiple patterns
+async function naverSectorKR(symbol) {
+  const m = String(symbol).match(/^(\d{6}).K[QS]$/);
+  if (!m) return null;
+
+  const code = m[1];
+  const url = `https://finance.naver.com/item/main.naver?code=${code}`;
+
+  try {
+    const res = await fetchWithRetry(url, { headers: HEADERS_HTML });
+    const html = await res.text();
+
+    const patterns = [
+      />업종<\/th>\s*<td[^>]*>([^<]+)/i,
+      />업종명<\/dt>\s*<dd[^>]*>([^<]+)/i,
+      /"sector"\s*:\s*"([^"]+)"/i,
+      /업종\s*<\/span>\s*<span[^>]*>([^<]+)/i
+    ];
+
+    for (const pattern of patterns) {
+      const match = html.match(pattern);
+      if (match && match[1]) {
+        const sector = match[1].trim();
+        if (sector && sector !== '-' && sector !== 'N/A') {
+          console.log(`[NAVER] ${symbol}: ${sector}`);
+          return sector;
+        }
+      }
     }
     return null;
+  } catch (e) {
+    console.warn(`[NAVER] ${symbol}: ${e.message}`);
+    return null;
   }
-  const sector = findSector(data);
-  if (!sector) throw new Error('no sector in embedded JSON');
-  return sector;
 }
 
-// --- NEW: Naver sector for KRX tickers ---
-async function naverSectorKR(symbol) {
-  // Expect '005930.KS' → '005930'
-  const m = String(symbol).match(/^(\d{6})\.K[QS]$/);
-  if (!m) return null;
-  const code = m[1];
-  const url = `https://finance.naver.com/item/main.nhn?code=${code}`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_HTML });
-  const html = await res.text();
-
-  // Pattern 1: summary table “업종”
-  let rx = />(?:업종|업종명)<\/(?:th|dt)>\s*<(?:td|dd)[^>]*>.*?>([^<]+)</i;
-  let m1 = html.match(rx);
-  if (m1 && m1[1]) return m1[1].trim();
-
-  // Pattern 2: embedded JSON fallback
-  rx = /"sector"\s*:\s*"([^"]+)"/i;
-  let m2 = html.match(rx);
-  if (m2 && m2[1]) return m2[1].trim();
-
-  return null;
+// Improved Yahoo search
+async function yahooSearchSymbol(name, lang, region) {
+  try {
+    const url = `https://query2.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(name)}&lang=${lang}&region=${region}`;
+    const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+    return await res.json();
+  } catch (e) {
+    console.warn(`[YAHOO_SEARCH] ${name}: ${e.message}`);
+    throw e;
+  }
 }
 
-// --- NEW: US sector via FMP (demo key works for many large caps) ---
-async function fmpSectorUS(symbol) {
-  const key = process.env.FMP_KEY || 'demo';
-  const url = `https://financialmodelingprep.com/api/v3/profile/${encodeURIComponent(symbol)}?apikey=${key}`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
-  const j = await res.json();
-  const row = Array.isArray(j) ? j[0] : null;
-  return row?.sector || null;
-}
-
-async function alphaVantageSector(symbol) {
-  const key = process.env.ALPHA_VANTAGE_KEY;
-  if (!key) return null;
-  const url = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${encodeURIComponent(symbol)}&apikey=${key}`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
-  const j = await res.json(); return j?.Sector || null;
-}
-async function finnhubSector(symbol) {
-  const key = process.env.FINNHUB_KEY;
-  if (!key) return null;
-  const url = `https://finnhub.io/api/v1/stock/profile2?symbol=${encodeURIComponent(symbol)}&token=${key}`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
-  const j = await res.json(); return j?.finnhubIndustry || j?.sector || null;
-}
-async function twelveDataSector(symbol) {
-  const key = process.env.TWELVEDATA_KEY;
-  if (!key) return null;
-  const url = `https://api.twelvedata.com/profile?symbol=${encodeURIComponent(symbol)}&apikey=${key}`;
-  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
-  const j = await res.json(); return j?.sector || null;
-}
-
-// -------- Ticker resolution (map -> cache -> Yahoo search) --------
+// More lenient symbol selection
 function pickSymbol(name, searchJson) {
   const quotes = searchJson?.quotes || [];
   if (!quotes.length) return null;
 
+  // For Korean stocks, prioritize KRX
   if (looksKorean(name)) {
-    const krx = quotes.find(q => /\.K[QS]$/.test(q.symbol));
+    const krx = quotes.find(q => /.K[QS]$/.test(q.symbol));
     if (krx) return krx.symbol;
   }
-  const eq = quotes.find(q => q.quoteType === 'EQUITY' || q.isYahooFinance);
-  return (eq && eq.symbol) || quotes[0].symbol || null;
+
+  // Prioritize EQUITY type, fallback to first result
+  const equity = quotes.find(q => q.quoteType === 'EQUITY');
+  if (equity && equity.symbol) return equity.symbol;
+
+  // Just use first result
+  return quotes[0]?.symbol || null;
 }
 
 async function resolveTicker(name, cache) {
+  // Check static mapping first
   if (TICKER_MAP[name]) return TICKER_MAP[name];
+
+  // Check cache
   if (cache[name]) return cache[name];
 
-  const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
-  const region = looksKorean(name) ? 'KR' : 'US';
-  const data = await yahooSearchSymbol(name, lang, region);
+  try {
+    const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
+    const region = looksKorean(name) ? 'KR' : 'US';
+    const data = await yahooSearchSymbol(name, lang, region);
 
-  const symbol = pickSymbol(name, data);
-  if (!symbol) throw new Error(`Could not resolve ticker for "${name}"`);
+    const symbol = pickSymbol(name, data);
+    if (!symbol) throw new Error(`Could not resolve ticker for "${name}"`);
 
-  cache[name] = symbol;
-  await saveCache(cache);
-  console.log(`[auto-resolve] ${name} -> ${symbol}`);
-  return symbol;
+    cache[name] = symbol;
+    await saveCache(cache);
+    console.log(`[RESOLVE] ${name} -> ${symbol}`);
+    return symbol;
+  } catch (e) {
+    console.warn(`[RESOLVE] ${name}: ${e.message}`);
+    throw e;
+  }
 }
 
-// -------- Sector lookup with multi-provider chain --------
+// Sector fetching with static mapping priority
 async function fetchSectorByTicker(ticker, cache) {
+  // Check cache first
   const cached = cacheGetSector(cache, ticker);
   if (cached !== undefined) return cached;
 
-  const providers = [];
+  // Check static sector mapping first
+  if (STATIC_SECTORS[ticker]) {
+    const sector = STATIC_SECTORS[ticker];
+    cachePutSector(cache, ticker, sector);
+    await saveCache(cache);
+    console.log(`[STATIC] ${ticker}: ${sector}`);
+    return sector;
+  }
 
-  // Prefer KR Naver for KRX tickers
-  if (/\.K[QS]$/.test(ticker)) providers.push(() => naverSectorKR(ticker));
-
-  // Prefer FMP for US tickers (demo/KEY)
-  if (!/\.K[QS]$/.test(ticker)) providers.push(() => fmpSectorUS(ticker));
-
-  // Keep Yahoo HTML embed (works better than JSON on CI)
-  providers.push(() => yahooProfileEmbeddedSector(ticker));
-
-  // Yahoo JSON last (often 401 in CI)
-  providers.push(() => yahooQuoteSummarySector(ticker));
-
-  if (process.env.ALPHA_VANTAGE_KEY) providers.push(() => alphaVantageSector(ticker));
-  if (process.env.FINNHUB_KEY)       providers.push(() => finnhubSector(ticker));
-  if (process.env.TWELVEDATA_KEY)    providers.push(() => twelveDataSector(ticker));
-
-  for (const p of providers) {
+  // For Korean stocks, try Naver
+  if (/.K[QS]$/.test(ticker)) {
     try {
-      const sector = await p();
+      const sector = await naverSectorKR(ticker);
       if (sector) {
         cachePutSector(cache, ticker, sector);
         await saveCache(cache);
-        console.log(`[SECTOR] ${ticker}: ${sector}`);
         return sector;
       }
-    } catch {}
+    } catch (e) {
+      console.warn(`[NAVER_FAIL] ${ticker}: ${e.message}`);
+    }
   }
 
-  // Optional tiny static fallback for top names (won't block output)
-  const STATIC_SECTOR = {
-    '005930.KS': 'Information Technology',
-    '000660.KS': 'Information Technology',
-    '005380.KS': 'Consumer Discretionary',
-    '051910.KS': 'Materials',
-    '035720.KS': 'Communication Services',
-    'MSFT': 'Information Technology',
-    'AAPL': 'Information Technology',
-    'NVDA': 'Information Technology',
-    'AMZN': 'Consumer Discretionary',
-    'GOOGL': 'Communication Services',
-    'META': 'Communication Services',
-    'V': 'Financials',
-    'PG': 'Consumer Staples',
-    'JNJ': 'Health Care',
-    'KO': 'Consumer Staples'
-  };
-  if (STATIC_SECTOR[ticker]) {
-    cachePutSector(cache, ticker, STATIC_SECTOR[ticker]);
-    await saveCache(cache);
-    console.log(`[SECTOR:STATIC] ${ticker}: ${STATIC_SECTOR[ticker]}`);
-    return STATIC_SECTOR[ticker];
-  }
-
+  // Cache null on failure
   cachePutSector(cache, ticker, null);
   await saveCache(cache);
   return null;
 }
 
 async function fetchSector(name, cache) {
-  const ticker = await resolveTicker(name, cache);
-  const sector = await fetchSectorByTicker(ticker, cache);
-  return { sector, ticker };
+  try {
+    const ticker = await resolveTicker(name, cache);
+    const sector = await fetchSectorByTicker(ticker, cache);
+    return { sector, ticker };
+  } catch (e) {
+    console.warn(`[FETCH_SECTOR] ${name}: ${e.message}`);
+    return { sector: null, ticker: null };
+  }
 }
 
-// -------- Utility --------
+// Utility functions
 function findMissingStaticMappings(recos) {
   const missing = new Set();
   for (const mkt of Object.keys(recos)) {
@@ -500,14 +435,14 @@ function ensureNonEmpty(out) {
   }
 }
 
-// -------- Main flow --------
+// Main data fetching function
 async function tryFetchAndEnrich() {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
   const data = {};
   const log = {};
 
+  // Select stocks for each market
   for (const [market, buckets] of Object.entries(POOLS)) {
-    // Skip markets that have no source candidates at all (e.g., empty KOSDAQ)
     if (!hasAnyCandidates(buckets)) continue;
 
     data[market] = {};
@@ -528,14 +463,16 @@ async function tryFetchAndEnrich() {
 
   console.log('[SELECTED]', JSON.stringify(log, null, 2));
 
+  // Log missing static mappings for future improvement
   const missingStatic = findMissingStaticMappings(data);
   if (missingStatic.length) {
-    console.warn('[INFO] Not in static map (will auto-resolve):', missingStatic.join(', '));
+    console.log('[INFO] Missing from static map (will auto-resolve):', missingStatic.join(', '));
   }
 
   const cache = await loadCache();
-
   let successCount = 0;
+
+  // Collect sector information
   for (const market of Object.keys(data)) {
     const bucket = data[market];
     for (const group of ['safe', 'aggressive']) {
@@ -545,38 +482,41 @@ async function tryFetchAndEnrich() {
       const updated = [];
       for (const entry of entries) {
         const name = typeof entry === 'string' ? entry : entry.name;
-        const prevSector = typeof entry === 'object' ? entry.sector ?? null : null;
+        const prevSector = typeof entry === 'object' ? (entry.sector ?? null) : null;
 
         try {
           const { sector } = await fetchSector(name, cache);
-          if (!sector) {
-            console.warn(`[WARN] ${name}: sector not resolved`);
-            updated.push({ name, sector: prevSector ?? null });
-          } else {
+          if (sector) {
             updated.push({ name, sector });
             successCount++;
+          } else {
+            console.warn(`[WARN] ${name}: sector not resolved`);
+            updated.push({ name, sector: prevSector });
           }
         } catch (err) {
-          console.error(`[WARN] ${name}: ${err.message}`);
-          updated.push({ name, sector: prevSector ?? null });
+          console.error(`[ERROR] ${name}: ${err.message}`);
+          updated.push({ name, sector: prevSector });
           noteStatus(err);
-          if (consecutive429 >= 5) throw new Error('Too many 429s');
+
+          // Bail out if too many 429s
+          if (consecutive429 >= 5) {
+            throw new Error('Too many consecutive 429s, aborting');
+          }
         }
 
-        await sleep(nextDelay());
+        // Adaptive delay based on consecutive 429s
+        const delay = consecutive429 >= 3 ? nextDelay() * 2 : nextDelay();
+        await sleep(delay);
       }
 
       data[market][group] = updated;
     }
   }
 
-  if (successCount === 0) {
-    console.warn('[WARN] No sectors fetched');
-  }
-
   return { data, successCount };
 }
 
+// Main function
 async function main() {
   if (FORCE) {
     console.log('[FORCE] Rebuilding recommendations');
@@ -596,27 +536,35 @@ async function main() {
 
   try {
     const { data, successCount } = await tryFetchAndEnrich();
-    if (successCount === 0) {
-      console.warn('[WARN] No sectors fetched from providers; writing names only.');
-    }
+
     const sorted = sortData(data);
     let out = { ...sorted, lastUpdated: nowKSTISO() };
     pruneEmptyMarkets(out);
     ensureNonEmpty(out);
+
     await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
-    console.log(`[FETCH] wrote recommendations at ${out.lastUpdated} (sectors resolved: ${successCount})`);
+    console.log(`[SUCCESS] Wrote recommendations at ${out.lastUpdated} (sectors resolved: ${successCount})`);
   } catch (e) {
-    console.warn('[FETCH] error:', e?.message || e);
+    console.warn('[FETCH ERROR]:', e?.message || e);
+
+    // Fallback: rotation from existing data
     let prev = null;
-    try { prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8')); } catch {}
+    try {
+      prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8'));
+    } catch {}
+
     const rotated = sortData(rotateFromPools(prev));
     let out = { ...rotated, lastUpdated: nowKSTISO() };
     pruneEmptyMarkets(out);
     ensureNonEmpty(out);
+
     await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
-    console.log('[FALLBACK] rotated selection due to fetch error/empty selection');
+    console.log('[FALLBACK] Used rotated selection due to fetch error');
   }
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+main().catch(err => {
+  console.error('[FATAL]', err);
+  process.exit(1);
+});
 
