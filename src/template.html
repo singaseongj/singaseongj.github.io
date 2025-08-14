@@ -26,49 +26,33 @@
     }
   </style>
   <style>
-  /* FX ticker (sequential, no overlap) */
-  .fx-ticker{
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    background: #000;
-    color: #ffd400;
-    font-weight: 700;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    padding: 10px 0 12px;                 /* enough vertical room to avoid clipping */
-    border-top: 1px solid rgba(255,255,255,.08);
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-  }
-
-  .fx-track{
-    position: absolute;
-    left: 0;
-    top: 0; bottom: 0;                    /* fill container height */
-    display: flex;
-    align-items: center;                  /* vertical centering */
-    white-space: nowrap;
-    will-change: transform;
-    animation: fx-left var(--fx-dur, 20s) linear infinite;
-  }
-
-  .fx-track.b{
-    left: 100%;
-    animation-delay: var(--fx-delay, 0s); /* set by JS so B starts after A ends */
-  }
-
-  .fx-item{ margin: 0 .6rem; }
-  .fx-time{ opacity: .75; margin-left: .85rem; font-size: .9em; }
-
-  @keyframes fx-left{
-    from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .fx-track{ animation: none !important; }
-  }
+.fx-ticker{
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #000;
+  color: #ffd400;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 10px 0 12px;
+}
+.fx-track{
+  position: absolute;
+  left: 0;
+  top: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: fx-left var(--fx-dur, 20s) linear infinite;
+}
+.fx-item{ margin: 0 .6rem; }
+.fx-time{ opacity: .75; margin-left: .85rem; font-size: .9em; }
+@keyframes fx-left{
+  from { transform: translateX(0); }
+  to   { transform: translateX(var(--fx-end, -100%)); }
+}
   </style>
 </head>
 <body>
@@ -537,8 +521,7 @@
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
   <div id="fx-ticker" class="fx-ticker" aria-live="polite">
-    <div id="fx-a" class="fx-track a"></div>
-    <div id="fx-b" class="fx-track b" aria-hidden="true"></div>
+    <div id="fx-line" class="fx-track"></div>
   </div>
   <script>
     (async function() {
@@ -554,63 +537,33 @@
     })();
   </script>
   <script>
-(function initFxTicker(){
+(function initSingleFxTicker(){
   function start() {
-    const a = document.getElementById('fx-a');
-    const b = document.getElementById('fx-b');
+    const line = document.getElementById('fx-line');
     const wrap = document.getElementById('fx-ticker');
-    if (!a || !b || !wrap) return;
-
-    const url = './data/fx_rates.json';
-
-    fetch(url, { cache: 'no-store' })
-      .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+    if (!line || !wrap) return;
+    fetch('./data/fx_rates.json', { cache: 'no-store' })
+      .then(res => res.json())
       .then(data => {
         const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
         const parts = (data.items || []).map(it => {
           const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
           return `<span class="fx-item">${it.label} = ${v}</span>`;
         });
-
-        // timestamp (KST text)
         const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
-
-        // add a gap bullet to give breathing space at loop boundary
-        const gap = '<span class="fx-item" aria-hidden="true"> • </span>';
-        const line = parts.join(' • ') + gap + stamp;
-
-        a.innerHTML = line;
-        b.innerHTML = line;
-
-        // wait a tick for layout with final fonts applied
+        line.innerHTML = parts.join(' • ') + ' • ' + stamp;
         const afterFonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
         afterFonts.then(() => {
-          // speed: 150 px/s
-          const pxPerSec = 150;
-          const w = a.scrollWidth;
-          const dur = Math.max(10, Math.round(w / pxPerSec)); // seconds
-
-          // drive both tracks with same duration, but delay B so it starts after A finishes
+          const contentW = line.scrollWidth;
+          const viewW = wrap.clientWidth;
+          const distancePx = contentW + viewW;
+          const dur = Math.max(8, Math.round(distancePx / 150));
           wrap.style.setProperty('--fx-dur', dur + 's');
-          wrap.style.setProperty('--fx-delay', dur + 's');
-
-          // also set inline in case CSS vars are cached differently
-          a.style.animation = `fx-left ${dur}s linear infinite`;
-          a.style.animationDelay = '0s';
-          b.style.animation = `fx-left ${dur}s linear infinite`;
-          b.style.animationDelay = `${dur}s`;
+          wrap.style.setProperty('--fx-end', `-${distancePx}px`);
+          line.style.animation = `fx-left ${dur}s linear infinite`;
         });
-      })
-      .catch(e => {
-        console.warn('FX load error:', e);
-        const a = document.getElementById('fx-a');
-        const b = document.getElementById('fx-b');
-        if (a) a.textContent = '환율 정보를 불러올 수 없습니다';
-        if (b) b.textContent = '';
       });
   }
-
-  // start after DOM + fonts to get correct widths
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(start);
