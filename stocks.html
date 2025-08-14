@@ -26,38 +26,48 @@
     }
   </style>
   <style>
-  /* FX ticker (seamless twin-tracks, bold, compact) */
+  /* FX ticker (twin-tracks, centered vertically, no clipping) */
   .fx-ticker{
-    position: relative;           /* or fixed if you already use fixed */
-    /* if you use fixed, keep: bottom: 8px; left: 0; width: 100%; */
+    position: relative;          /* if you used fixed, keep bottom/left/width from before */
     overflow: hidden;
     white-space: nowrap;
-    background:#000;
-    color:#ffd400;                /* yellow */
-    font-weight:700;              /* bold text */
-    font-size:0.95rem;
-    line-height:1.35;             /* taller line to avoid clipping */
-    padding:6px 0;                /* reduced top/bottom space */
-    border-top:1px solid rgba(255,255,255,.08);
-    -webkit-font-smoothing:antialiased;
+    background: #000;
+    color: #ffd400;              /* yellow */
+    font-weight: 700;
+    font-size: 0.95rem;
+    /* Make the lane tall enough so glyphs aren't cut */
+    line-height: 1.5;
+    padding: 8px 0 10px;         /* compact but safe padding to avoid chop */
+    border-top: 1px solid rgba(255,255,255,.08);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
   }
+
   .fx-track{
-    position:absolute;
-    top:0;
-    left:0;
-    white-space:nowrap;
-    will-change:transform;
-    display:inline-block;
+    position: absolute;
+    left: 0;
+    /* Center the track vertically WITHOUT using transform (X animation stays clean) */
+    top: 0; 
+    bottom: 0;                   /* fills container height */
+    display: flex;
+    align-items: center;         /* vertical centering of text */
+    white-space: nowrap;
+    will-change: transform;
   }
-  .fx-track.b{ left:100%; }
-  .fx-item{ margin:0 .6rem; }     /* slightly tighter spacing */
-  .fx-time{ opacity:.7; margin-left:.75rem; font-size:.9em; }
+
+  .fx-track.b{ left: 100%; }
+
+  .fx-item{ margin: 0 .6rem; }
+  .fx-time{ opacity: .75; margin-left: .85rem; font-size: .9em; }
+
   @keyframes fx-left{
-    from{ transform:translateX(0); }
-    to  { transform:translateX(-100%); }
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
   }
+
+  /* Motion preference */
   @media (prefers-reduced-motion: reduce){
-    .fx-track{ animation:none !important; }
+    .fx-track{ animation: none !important; }
   }
   </style>
 </head>
@@ -587,9 +597,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // compute duration based on content width (pixels per second)
     await Promise.resolve(); // allow layout
-    const pxPerSec = 200;                  // faster scroll (increase = faster)
+    const pxPerSec = 150;
     const w = a.scrollWidth;
-    const dur = Math.max(8, Math.round(w / pxPerSec));
+    const dur = Math.max(10, Math.round(w / pxPerSec));
 
     // start animations (leave as-is otherwise)
     a.style.animation = `fx-left ${dur}s linear infinite`;
