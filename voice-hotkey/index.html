@@ -4,13 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>voice to keys</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../src/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="keymap.js"></script>
   <script type="module" src="llm.js"></script>
   <script type="module" src="stt.js"></script>
   <script type="module" src="app.js"></script>
+  <style>
+    .home-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 1000;
+    }
+    .home-button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
+  <a href="../index.html" class="home-button">Home</a>
   <header class="top-bar">
     <div class="title-block">
       <h1>voice to keys</h1>
