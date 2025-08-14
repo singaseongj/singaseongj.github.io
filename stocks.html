@@ -26,28 +26,32 @@
     }
   </style>
   <style>
-    /* FX ticker */
-    .fx-ticker {
-      position: relative;
-      overflow: hidden;
-      white-space: nowrap;
-      border-top: 1px solid #eee;
-      padding: .5rem 0;
-      font-size: .95rem;
-      line-height: 1.6;
-    }
-    .fx-track {
-      position: absolute;
-      top: 0;
-      white-space: nowrap;
-      will-change: transform;
-    }
-    .fx-item { margin: 0 .75rem; }
-    .fx-time { opacity: .7; margin-left: 1rem; font-size: .9em; }
-    @keyframes fx-left {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-100%); }
-    }
+  /* FX ticker (black/yellow, extra bottom space) */
+  .fx-ticker {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #000;
+    color: #ffeb3b;
+    padding: .6rem 0 .9rem;   /* extra bottom so text isn’t clipped */
+    margin-bottom: 12px;
+    font-size: .95rem;
+    line-height: 1.7;
+  }
+  .fx-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  .fx-item { margin: 0 .75rem; }
+  .fx-time { opacity: .85; margin-left: 1rem; font-size: .9em; }
+  /* distance is controlled by --fx-distance set from JS */
+  @keyframes fx-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-1 * var(--fx-distance, 100%))); }
+  }
   </style>
 </head>
 <body>
@@ -547,6 +551,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   if (!wrap || !a || !b) return;
 
   const url = './data/fx_rates.json';
+
   try {
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -554,7 +559,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const items = Array.isArray(data.items) ? data.items : [];
     const hasNum = items.some(it => typeof it?.krw === 'number');
-
     if (!hasNum) throw new Error('No numeric rates');
 
     const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
@@ -563,39 +567,45 @@ document.addEventListener('DOMContentLoaded', async function () {
       return `<span class="fx-item">${it.label} = ${v}</span>`;
     });
 
-    // timestamp at end
     const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
-    const gap = '<span class="fx-item" aria-hidden="true">•</span>';
 
-    // one full line
-    const line = parts.join(' • ') + gap + stamp;
+    // a visible spacer between loops, plus an extra fixed-width gap
+    const dotGap = '<span class="fx-item" aria-hidden="true">•</span>';
+    const gapPx = 120; // <— tune this to make the “space before repeat” bigger/smaller
+    const gapSpan = `<span class="fx-item" aria-hidden="true" style="display:inline-block;width:${gapPx}px"></span>`;
+
+    const line = parts.join(' • ') + dotGap + stamp + gapSpan;
 
     a.innerHTML = line;
     b.innerHTML = line;
 
-    // allow layout to settle before measuring
+    // let layout settle, then measure
     await new Promise(requestAnimationFrame);
     await new Promise(requestAnimationFrame);
 
-    // measure and set up speeds/positions
-    const aWidth = a.scrollWidth;
-    const pxPerSec = 120;                      // ← speed
-    const dur = Math.max(12, Math.round(aWidth / pxPerSec)); // seconds
+    const contentWidth = a.scrollWidth;     // width of one full line
+    const distance = contentWidth + gapPx;  // animate across content + gap
+    const pxPerSec = 120;                   // <— requested speed
+    const dur = Math.max(12, Math.round(distance / pxPerSec));
 
-    // place A at x=0 and B immediately to its right (in px)
+    // position tracks: B starts immediately to the right of A (with the same gap)
     a.style.left = '0px';
-    b.style.left = aWidth + 'px';
+    b.style.left = distance + 'px';
 
-    // kick off animations
+    // set CSS distance so keyframes use the exact pixels
+    a.style.setProperty('--fx-distance', distance + 'px');
+    b.style.setProperty('--fx-distance', distance + 'px');
+
     const anim = `fx-left ${dur}s linear infinite`;
     a.style.animation = anim;
     b.style.animation = anim;
-    // start B halfway so the stream looks continuous
+
+    // offset B by half cycle so the stream is seamless
     b.style.animationDelay = (dur / 2) + 's';
   } catch (e) {
     console.warn('FX load error:', e);
-    a.textContent = '환율 정보를 불러올 수 없습니다';
-    b.textContent = '';
+    if (a) a.textContent = '환율 정보를 불러올 수 없습니다';
+    if (b) b.textContent = '';
   }
 });
   </script>
