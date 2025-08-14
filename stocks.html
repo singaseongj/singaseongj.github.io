@@ -34,6 +34,9 @@
     border-top: 1px solid #eee;
     padding: .45rem 0;
     font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.4;
+    height: 1.4em;
   }
   .fx-track {
     position: absolute;
@@ -41,12 +44,16 @@
     left: 0;
     white-space: nowrap;
     will-change: transform;
+    animation: fx-left var(--fx-dur,22s) linear infinite;
+    height: 100%;
+    line-height: inherit;
   }
   .fx-track.b {
     left: 100%;
   }
   .fx-item { margin: 0 .75rem; }
   .fx-time { opacity: .65; margin-left: 1rem; font-size: .9em; }
+  .fx-gap { display: inline-block; width: 2rem; }
   @keyframes fx-left {
     from { transform: translateX(0); }
     to   { transform: translateX(-100%); }
@@ -560,27 +567,21 @@ document.addEventListener('DOMContentLoaded', async function () {
       return `<span class="fx-item">${it.label} = ${v}</span>`;
     });
 
-    // timestamp (KST text)
     const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
 
-    // build one line with a spacer “gap” so the loop breathes
-    const gap = '<span class="fx-item" aria-hidden="true">    •    </span>';
-    const line = parts.join(' • ') + gap + stamp;
+    // build line with bullet separators and an extra spacer before looping
+    const line = parts.join(' • ') + ' • ' + stamp + '<span class="fx-gap" aria-hidden="true"></span>';
 
-    // fill both tracks with the same content
+    // fill both tracks
     a.innerHTML = line;
     b.innerHTML = line;
 
-    // compute duration based on content width (pixels per second)
-    // tweak pxPerSec to make it faster/slower (e.g., 90~140)
-    await Promise.resolve(); // allow layout
-    const pxPerSec = 150;
-    const w = a.scrollWidth;              // content width
-    const dur = Math.max(10, Math.round(w / pxPerSec)); // seconds
-
-    // start animations
-    a.style.animation = `fx-left ${dur}s linear infinite`;
-    b.style.animation = `fx-left ${dur}s linear infinite`;
+    // compute duration based on content width at 120px/sec (min 22s)
+    await Promise.resolve();
+    const pxPerSec = 120;
+    const w = a.scrollWidth;
+    const dur = Math.max(22, w / pxPerSec);
+    wrap.style.setProperty('--fx-dur', dur + 's');
   } catch (e) {
     console.warn('FX load error:', e);
     a.textContent = '환율 정보를 불러올 수 없습니다';
