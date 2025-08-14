@@ -26,31 +26,28 @@
     }
   </style>
   <style>
-.fx-ticker {
-  position: relative;
-  overflow: hidden;
-  background: #000;
-  color: #ffd400;
-  font-weight: 700;
-  font-size: 1.05rem;
-  padding: 6px 0 8px;
-  white-space: nowrap;
-}
-.fx-track {
-  position: absolute;
-  top: 0; bottom: 0;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  will-change: transform;
-  animation: fx-left var(--fx-dur, 20s) linear infinite;
-}
-.fx-item { margin: 0 .6rem; }
-.fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
-@keyframes fx-left {
-  from { transform: translateX(100%); }
-  to   { transform: translateX(var(--fx-end, -100%)); }
-}
+  .fx-ticker {
+    background-color: #000;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 8px 0;
+    overflow: hidden;
+    position: relative;
+    height: 2.5em;
+  }
+  .fx-ticker .fx-track {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: ticker-loop 120s linear infinite;
+  }
+  .fx-item { margin: 0 .6rem; }
+  .fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
+  @keyframes ticker-loop {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
   </style>
 </head>
 <body>
@@ -551,14 +548,10 @@
         const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
         line.innerHTML = parts.join(' • ') + ' • ' + stamp;
         const afterFonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+        line.style.animation = 'none';
         afterFonts.then(() => {
-          const contentW = line.scrollWidth;
-          const viewW = wrap.clientWidth;
-          const distancePx = contentW + viewW;
-          const dur = Math.max(8, Math.round(distancePx / 130));
-          wrap.style.setProperty('--fx-dur', dur + 's');
-          wrap.style.setProperty('--fx-end', `-${contentW}px`);
-          line.style.animation = `fx-left ${dur}s linear infinite`;
+          void line.offsetWidth;
+          line.style.animation = 'ticker-loop 120s linear infinite';
         });
       });
   }
