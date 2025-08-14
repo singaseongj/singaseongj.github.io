@@ -8,10 +8,15 @@ import { nowKSTISO } from './utils/time.js';
 const OUT_FILE = path.resolve(process.cwd(), 'recommendations.json');
 const MAX_AGE_MS = 6 * 60 * 60 * 1000;
 const FORCE = process.argv.includes('--force');
-const SLEEP_MS = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]) || 900;
+const DELAY_ARG = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]);
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+const nextDelay = () => {
+  if (Number.isFinite(DELAY_ARG) && DELAY_ARG > 0) return DELAY_ARG;
+  return 900 + Math.floor(Math.random() * 301);
+};
 
 async function fetchWithRetry(url, options={}, {retries=3, base=400, jitter=true}={}) {
   let lastErr;
@@ -102,6 +107,30 @@ const TICKER_MAP = {
   '셀트리온': '068270.KS',
   'BGF리테일': '282330.KS',
 
+  'Samsung Electronics': '005930.KS',
+  'SK Hynix': '000660.KS',
+  'Samsung Biologics': '207940.KS',
+  'Hyundai Motor': '005380.KS',
+  'LG Energy Solution': '373220.KS',
+  'Hanwha Aerospace': '012450.KS',
+  'HD Hyundai Electric': '267260.KS',
+  'POSCO Future M': '003670.KS',
+  'Doosan Enerbility': '034020.KS',
+  'HD Korea Shipbuilding': '009540.KS',
+  'POSCO Holdings': '005490.KS',
+  'LG Chem': '051910.KS',
+  'SK Telecom': '017670.KS',
+  'Kakao': '035720.KS',
+  'Naver': '035420.KS',
+  'Celltrion': '068270.KS',
+  'BGF Retail': '282330.KS',
+  'Samsung SDI': '006400.KS',
+  'Hyundai Mobis': '012330.KS',
+  'Kia': '000270.KS',
+  'LG Electronics': '066570.KS',
+  'KB Financial': '105560.KS',
+  'KakaoBank': '323410.KS',
+
   // --- KOSDAQ (KQ) ---
   '에코프로비엠': '247540.KQ',
   '셀트리온헬스케어': '091990.KQ',
@@ -113,6 +142,13 @@ const TICKER_MAP = {
   'HLB': '028300.KQ',
   '지아이이노베이션': '358570.KQ',
   '펩트론': '087010.KQ',
+
+  'EcoPro BM': '247540.KQ',
+  'Celltrion Healthcare': '091990.KQ',
+  'JYP Entertainment': '035900.KQ',
+  'Rainbow Robotics': '277810.KQ',
+  'GI Innovation': '358570.KQ',
+  'Peptron': '087010.KQ',
 
   // --- US (NASDAQ/NYSE) ---
   'Microsoft': 'MSFT',
@@ -136,7 +172,37 @@ const TICKER_MAP = {
   'ServiceNow': 'NOW',
   'Eli Lilly': 'LLY',
   'Uber Technologies': 'UBER',
-  'NRG Energy': 'NRG'
+  'NRG Energy': 'NRG',
+  'Tesla': 'TSLA',
+  'TSLA': 'TSLA',
+  'Netflix': 'NFLX',
+  'NFLX': 'NFLX',
+  'Google': 'GOOGL',
+  'Alphabet Inc.': 'GOOGL',
+  'Meta': 'META',
+  'Facebook': 'META',
+  'SMCI': 'SMCI',
+  'Supermicro': 'SMCI',
+  'AMD': 'AMD',
+  'Intel': 'INTC',
+  'INTC': 'INTC',
+  'Broadcom': 'AVGO',
+  'AVGO': 'AVGO',
+  'Adobe': 'ADBE',
+  'ADBE': 'ADBE',
+  'Salesforce': 'CRM',
+  'CRM': 'CRM',
+  'Oracle': 'ORCL',
+  'ORCL': 'ORCL',
+  'Cisco': 'CSCO',
+  'CSCO': 'CSCO',
+  'IBM': 'IBM',
+  'PayPal': 'PYPL',
+  'PYPL': 'PYPL',
+  'Shopify': 'SHOP',
+  'SHOP': 'SHOP',
+  'JPMorgan Chase': 'JPM',
+  'JPM': 'JPM'
 };
 
 // -------- Cache helpers --------
@@ -175,12 +241,23 @@ async function yahooQuoteSummarySector(symbol) {
   if (!sector) throw new Error('no sector in quoteSummary');
   return sector;
 }
-async function yahooProfileSectorScrape(symbol) {
+async function yahooProfileEmbeddedSector(symbol) {
   const url = `https://finance.yahoo.com/quote/${encodeURIComponent(normalizeForYahoo(symbol))}/profile`;
   const res = await fetchWithRetry(url, { headers: HEADERS_HTML });
   const html = await res.text();
-  let m = html.match(/"sector":"([^"]+)"/) || html.match(/Sector\(s\)<\/span>\s*<span[^>]*>([^<]+)/i);
-  return (m && (m[1] || m[2])) ? (m[1] || m[2]).trim() : null;
+  const marker = 'root.App.main = ';
+  const idx = html.indexOf(marker);
+  if (idx === -1) throw new Error('root.App.main not found');
+  const start = idx + marker.length;
+  const end = html.indexOf('</script>', start);
+  if (end === -1) throw new Error('root.App.main script end not found');
+  const jsonStr = html.slice(start, end).replace(/;\s*$/, '');
+  let data;
+  try { data = JSON.parse(jsonStr); }
+  catch { throw new Error('root.App.main JSON parse error'); }
+  const sector = data?.context?.dispatcher?.stores?.QuoteSummaryStore?.assetProfile?.sector ?? null;
+  if (!sector) throw new Error('no sector in embedded JSON');
+  return sector;
 }
 
 async function alphaVantageSector(symbol) {
@@ -242,7 +319,7 @@ async function fetchSectorByTicker(ticker, cache) {
 
   const providers = [
     () => yahooQuoteSummarySector(ticker),
-    () => yahooProfileSectorScrape(ticker),
+    () => yahooProfileEmbeddedSector(ticker),
   ];
   if (process.env.ALPHA_VANTAGE_KEY) providers.push(() => alphaVantageSector(ticker));
   if (process.env.FINNHUB_KEY) providers.push(() => finnhubSector(ticker));
@@ -340,7 +417,7 @@ async function tryFetchAndEnrich() {
           if (consecutive429 >= 5) throw new Error('Too many 429s');
         }
 
-        await sleep(SLEEP_MS);
+        await sleep(nextDelay());
       }
 
       data[market][group] = updated;
