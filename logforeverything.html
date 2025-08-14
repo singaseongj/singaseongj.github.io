@@ -11,24 +11,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            z-index: 1000;
-        }
-        .home-button:hover {
-            background-color: #45a049;
-        }
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #000;
+      opacity: 0.6;
+      z-index: 1000;
+    }
+    .home-button:hover {
+      opacity: 1;
+    }
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <a href="index.html" class="home-button">Home</a>
+    <a href="index.html" class="home-button" aria-label="Home">&#x21A9;</a>
     <div class="container mx-auto p-8">
         <header class="mb-8">
             <h1 class="text-4xl font-bold text-gray-800 mb-2">Privacy Policy</h1>

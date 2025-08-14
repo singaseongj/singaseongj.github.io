@@ -13,56 +13,45 @@
       position: fixed;
       top: 10px;
       left: 10px;
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 4px;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 24px;
+      color: #000;
+      opacity: 0.6;
       z-index: 1000;
     }
     .home-button:hover {
-      background-color: #45a049;
+      opacity: 1;
     }
   </style>
   <style>
-  /* FX ticker (seamless twin-tracks, bold, compact) */
-  .fx-ticker{
-    position: relative;           /* or fixed if you already use fixed */
-    /* if you use fixed, keep: bottom: 8px; left: 0; width: 100%; */
+  .fx-ticker {
+    background-color: #000;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.3em;
+    height: 1.5em;
+    line-height: 1.5em;
     overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+  }
+  .fx-ticker .fx-track {
+    display: inline-block;
     white-space: nowrap;
-    background:#000;
-    color:#ffd400;                /* yellow */
-    font-weight:700;              /* bold text */
-    font-size:0.95rem;
-    line-height:1.35;             /* taller line to avoid clipping */
-    padding:6px 0;                /* reduced top/bottom space */
-    border-top:1px solid rgba(255,255,255,.08);
-    -webkit-font-smoothing:antialiased;
+    line-height: inherit;
+    animation: ticker-loop 30s linear infinite;
   }
-  .fx-track{
-    position:absolute;
-    top:0;
-    left:0;
-    white-space:nowrap;
-    will-change:transform;
-    display:inline-block;
-  }
-  .fx-track.b{ left:100%; }
-  .fx-item{ margin:0 .6rem; }     /* slightly tighter spacing */
-  .fx-time{ opacity:.7; margin-left:.75rem; font-size:.9em; }
-  @keyframes fx-left{
-    from{ transform:translateX(0); }
-    to  { transform:translateX(-100%); }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .fx-track{ animation:none !important; }
+  .fx-item { margin: 0 .6rem; }
+  .fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
+  @keyframes ticker-loop {
+    0%   { transform: translateX(50%); }
+    100% { transform: translateX(-100%); }
   }
   </style>
 </head>
 <body>
-  <a href="index.html" class="home-button">Home</a>
+  <a href="index.html" class="home-button" aria-label="Home">&#x21A9;</a>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
   <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> {{CURRENT_DATE}}</p>
   
@@ -526,9 +515,8 @@
   </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
-  <div id="fx-ticker" class="fx-ticker" aria-live="polite">
-    <div id="fx-a" class="fx-track a"></div>
-    <div id="fx-b" class="fx-track b" aria-hidden="true"></div>
+  <div id="fx-ticker" class="fx-ticker">
+    <div id="fx-line" class="fx-track"></div>
   </div>
   <script>
     (async function() {
@@ -544,55 +532,37 @@
     })();
   </script>
   <script>
-document.addEventListener('DOMContentLoaded', async function () {
-  const wrap = document.getElementById('fx-ticker');
-  const a = document.getElementById('fx-a');
-  const b = document.getElementById('fx-b');
-  if (!wrap || !a || !b) return;
-
-  const url = './data/fx_rates.json';
-
-  try {
-    const res = await fetch(url, { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-
-    const items = Array.isArray(data.items) ? data.items : [];
-    const hasNum = items.some(it => typeof it?.krw === 'number');
-    if (!hasNum) throw new Error('No numeric rates');
-
-    const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
-    const parts = items.map(it => {
-      const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
-      return `<span class="fx-item">${it.label} = ${v}</span>`;
-    });
-
-    const stampRaw = data.timestamp || data.lastUpdated;
-    const stampText = stampRaw ? new Date(stampRaw).toLocaleString('ko-KR') : '';
-    const stamp = stampText ? `<span class="fx-time">업데이트 ${stampText}</span>` : '';
-
-    // build one line with a compact spacer and timestamp
-    const gap = '<span class="fx-item" aria-hidden="true">•</span>';
-    const line = parts.join(' • ') + gap + stamp;
-
-    a.innerHTML = line;
-    b.innerHTML = line;
-
-    // compute duration based on content width (pixels per second)
-    await Promise.resolve(); // allow layout
-    const pxPerSec = 200;                  // faster scroll (increase = faster)
-    const w = a.scrollWidth;
-    const dur = Math.max(8, Math.round(w / pxPerSec));
-
-    // start animations (leave as-is otherwise)
-    a.style.animation = `fx-left ${dur}s linear infinite`;
-    b.style.animation = `fx-left ${dur}s linear infinite`;
-  } catch (e) {
-    console.warn('FX load error:', e);
-    if (a) a.textContent = '환율 정보를 불러올 수 없습니다';
-    if (b) b.textContent = '';
+(function initSingleFxTicker(){
+  function start() {
+    const line = document.getElementById('fx-line');
+    const wrap = document.getElementById('fx-ticker');
+    if (!line || !wrap) return;
+    fetch('./data/fx_rates.json', { cache: 'no-store' })
+      .then(res => res.json())
+      .then(data => {
+        const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
+        const parts = (data.items || []).map(it => {
+          const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
+          return `<span class="fx-item">${it.label} = ${v}</span>`;
+        });
+        const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
+        line.innerHTML = parts.join(' • ') + ' • ' + stamp;
+        const afterFonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+        line.style.animation = 'none';
+        afterFonts.then(() => {
+          void line.offsetWidth;
+          line.style.animation = 'ticker-loop 30s linear infinite';
+        });
+      });
   }
-});
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(start);
+    });
+  } else {
+    (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(start);
+  }
+})();
   </script>
 </body>
 </html>

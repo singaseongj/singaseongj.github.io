@@ -1,13 +1,15 @@
 // fetchStockInfo.js — static map + auto-resolver + Yahoo profile fallback + throttling
 // Node >= 18 (built-in fetch), ESM
-import fs from 'fs/promises';
+import fs, { writeFile, rename } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
 
 const OUT_FILE = path.resolve(process.cwd(), 'recommendations.json');
 const MAX_AGE_MS = 6 * 60 * 60 * 1000;
-const FORCE = process.argv.includes('--force');
+const ARGS = new Set(process.argv.slice(2));
+const FORCE = ARGS.has('--force');
+const SKIP_FRESH = ARGS.has('--skip-fresh');
 const DELAY_ARG = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]);
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
 
@@ -15,6 +17,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 const nextDelay = () => {
   if (Number.isFinite(DELAY_ARG) && DELAY_ARG > 0) return DELAY_ARG;
+  if (FORCE) return 250 + Math.floor(Math.random() * 100); // faster on --force
   return 900 + Math.floor(Math.random() * 301);
 };
 
@@ -56,8 +59,10 @@ const POOLS = {
 
 function rotateFromPools(prevData) {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
-  const out = structuredClone(prevData || { KOSPI:{}, KOSDAQ:{}, NASDAQ:{}, 'S&P 500':{} });
+  const out = structuredClone(prevData || {});
   for (const [market, buckets] of Object.entries(POOLS)) {
+    if (!hasAnyCandidates(buckets)) continue; // NEW: skip empty market
+    out[market] = out[market] || {};
     for (const bucket of ['safe','aggressive']) {
       const src = buckets[bucket] || [];
       if (src.length === 0) continue;
@@ -66,6 +71,31 @@ function rotateFromPools(prevData) {
     }
   }
   return out;
+}
+
+function hasAnyCandidates(buckets) {
+  if (!buckets) return false;
+  const s = Array.isArray(buckets.safe) ? buckets.safe.length : 0;
+  const a = Array.isArray(buckets.aggressive) ? buckets.aggressive.length : 0;
+  return (s + a) > 0;
+}
+
+function pruneEmptyMarkets(out) {
+  for (const m of Object.keys(out)) {
+    if (m === 'lastUpdated') continue;
+    const s = out[m]?.safe?.length || 0;
+    const a = out[m]?.aggressive?.length || 0;
+    if ((s + a) === 0) delete out[m];
+  }
+}
+
+function totalCount(out) {
+  let n = 0;
+  for (const m of Object.keys(out)) {
+    if (m === 'lastUpdated') continue;
+    n += (out[m]?.safe?.length || 0) + (out[m]?.aggressive?.length || 0);
+  }
+  return n;
 }
 
 // Request headers (JSON API + HTML fallback)
@@ -270,6 +300,39 @@ async function yahooProfileEmbeddedSector(symbol) {
   return sector;
 }
 
+// --- NEW: Naver sector for KRX tickers ---
+async function naverSectorKR(symbol) {
+  // Expect '005930.KS' → '005930'
+  const m = String(symbol).match(/^(\d{6})\.K[QS]$/);
+  if (!m) return null;
+  const code = m[1];
+  const url = `https://finance.naver.com/item/main.nhn?code=${code}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_HTML });
+  const html = await res.text();
+
+  // Pattern 1: summary table “업종”
+  let rx = />(?:업종|업종명)<\/(?:th|dt)>\s*<(?:td|dd)[^>]*>.*?>([^<]+)</i;
+  let m1 = html.match(rx);
+  if (m1 && m1[1]) return m1[1].trim();
+
+  // Pattern 2: embedded JSON fallback
+  rx = /"sector"\s*:\s*"([^"]+)"/i;
+  let m2 = html.match(rx);
+  if (m2 && m2[1]) return m2[1].trim();
+
+  return null;
+}
+
+// --- NEW: US sector via FMP (demo key works for many large caps) ---
+async function fmpSectorUS(symbol) {
+  const key = process.env.FMP_KEY || 'demo';
+  const url = `https://financialmodelingprep.com/api/v3/profile/${encodeURIComponent(symbol)}?apikey=${key}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  const j = await res.json();
+  const row = Array.isArray(j) ? j[0] : null;
+  return row?.sector || null;
+}
+
 async function alphaVantageSector(symbol) {
   const key = process.env.ALPHA_VANTAGE_KEY;
   if (!key) return null;
@@ -327,13 +390,23 @@ async function fetchSectorByTicker(ticker, cache) {
   const cached = cacheGetSector(cache, ticker);
   if (cached !== undefined) return cached;
 
-  const providers = [
-    () => yahooQuoteSummarySector(ticker),
-    () => yahooProfileEmbeddedSector(ticker),
-  ];
+  const providers = [];
+
+  // Prefer KR Naver for KRX tickers
+  if (/\.K[QS]$/.test(ticker)) providers.push(() => naverSectorKR(ticker));
+
+  // Prefer FMP for US tickers (demo/KEY)
+  if (!/\.K[QS]$/.test(ticker)) providers.push(() => fmpSectorUS(ticker));
+
+  // Keep Yahoo HTML embed (works better than JSON on CI)
+  providers.push(() => yahooProfileEmbeddedSector(ticker));
+
+  // Yahoo JSON last (often 401 in CI)
+  providers.push(() => yahooQuoteSummarySector(ticker));
+
   if (process.env.ALPHA_VANTAGE_KEY) providers.push(() => alphaVantageSector(ticker));
-  if (process.env.FINNHUB_KEY) providers.push(() => finnhubSector(ticker));
-  if (process.env.TWELVEDATA_KEY) providers.push(() => twelveDataSector(ticker));
+  if (process.env.FINNHUB_KEY)       providers.push(() => finnhubSector(ticker));
+  if (process.env.TWELVEDATA_KEY)    providers.push(() => twelveDataSector(ticker));
 
   for (const p of providers) {
     try {
@@ -341,12 +414,37 @@ async function fetchSectorByTicker(ticker, cache) {
       if (sector) {
         cachePutSector(cache, ticker, sector);
         await saveCache(cache);
+        console.log(`[SECTOR] ${ticker}: ${sector}`);
         return sector;
       }
-    } catch (e) {
-      // continue to next provider
-    }
+    } catch {}
   }
+
+  // Optional tiny static fallback for top names (won't block output)
+  const STATIC_SECTOR = {
+    '005930.KS': 'Information Technology',
+    '000660.KS': 'Information Technology',
+    '005380.KS': 'Consumer Discretionary',
+    '051910.KS': 'Materials',
+    '035720.KS': 'Communication Services',
+    'MSFT': 'Information Technology',
+    'AAPL': 'Information Technology',
+    'NVDA': 'Information Technology',
+    'AMZN': 'Consumer Discretionary',
+    'GOOGL': 'Communication Services',
+    'META': 'Communication Services',
+    'V': 'Financials',
+    'PG': 'Consumer Staples',
+    'JNJ': 'Health Care',
+    'KO': 'Consumer Staples'
+  };
+  if (STATIC_SECTOR[ticker]) {
+    cachePutSector(cache, ticker, STATIC_SECTOR[ticker]);
+    await saveCache(cache);
+    console.log(`[SECTOR:STATIC] ${ticker}: ${STATIC_SECTOR[ticker]}`);
+    return STATIC_SECTOR[ticker];
+  }
+
   cachePutSector(cache, ticker, null);
   await saveCache(cache);
   return null;
@@ -374,26 +472,60 @@ function findMissingStaticMappings(recos) {
   return [...missing];
 }
 
+function sortData(data) {
+  const out = {};
+  for (const market of Object.keys(data).sort()) {
+    const buckets = data[market] || {};
+    out[market] = {};
+    for (const bucket of ['safe', 'aggressive']) {
+      const arr = Array.isArray(buckets[bucket]) ? buckets[bucket].slice() : [];
+      arr.sort((a, b) => a.name.localeCompare(b.name));
+      out[market][bucket] = arr;
+    }
+  }
+  return out;
+}
+
+async function writeAtomically(dest, data) {
+  const tmp = `${dest}.tmp`;
+  await writeFile(tmp, data);
+  await rename(tmp, dest);
+}
+
+function ensureNonEmpty(out) {
+  const n = totalCount(out);
+  if (n === 0) {
+    console.error('[ERROR] No recommendations produced (all markets empty)');
+    process.exit(1);
+  }
+}
+
 // -------- Main flow --------
 async function tryFetchAndEnrich() {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
   const data = {};
   const log = {};
+
   for (const [market, buckets] of Object.entries(POOLS)) {
+    // Skip markets that have no source candidates at all (e.g., empty KOSDAQ)
+    if (!hasAnyCandidates(buckets)) continue;
+
     data[market] = {};
     for (const bucket of ['safe', 'aggressive']) {
       const source = buckets[bucket] || [];
       if (source.length === 0) continue;
-      const chosen = process.env.FIXED_RECS === '1'
-        ? source.slice(0, 5)
-        : pickDeterministic(source, 5, `${seed}:${market}:${bucket}`);
+
+      const seedKey = `${seed}:${market}:${bucket}`;
+      const chosen = process.env.FIXED_RECS === '1' ? source.slice(0, 5) : pickDeterministic(source, 5, seedKey);
       data[market][bucket] = chosen.map(n => (typeof n === 'string' ? { name: n } : n));
     }
+
     log[market] = {
       safe: data[market].safe?.map(x => x.name) || [],
       aggressive: data[market].aggressive?.map(x => x.name) || []
     };
   }
+
   console.log('[SELECTED]', JSON.stringify(log, null, 2));
 
   const missingStatic = findMissingStaticMappings(data);
@@ -446,33 +578,43 @@ async function tryFetchAndEnrich() {
 }
 
 async function main() {
-  const fresh = await isFreshFile(OUT_FILE);
-  if (fresh && !FORCE) {
-    // Fresh: no network, no rotation — just touch timestamp
-    const prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8'));
-    prev.lastUpdated = nowKSTISO();
-    await fs.writeFile(OUT_FILE, JSON.stringify(prev, null, 2));
-    console.log(`[FRESH] <6h, touched timestamp at ${prev.lastUpdated}`);
-    return;
+  if (FORCE) {
+    console.log('[FORCE] Rebuilding recommendations');
   }
 
-  // Stale or forced: try heavy fetch/enrich
-  let base = null;
+  let fresh = false;
+  if (!FORCE) {
+    fresh = await isFreshFile(OUT_FILE);
+    if (fresh && SKIP_FRESH) {
+      console.log('[SKIP] <6h, unchanged');
+      return;
+    }
+    if (fresh) {
+      console.log('[FRESH] <6h, rebuilding');
+    }
+  }
+
   try {
     const { data, successCount } = await tryFetchAndEnrich();
-    if (successCount === 0) throw new Error('no sectors fetched');
-    const out = { ...data, lastUpdated: nowKSTISO() };
-    await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
-    console.log(`[FETCH] success at ${out.lastUpdated}`);
+    if (successCount === 0) {
+      console.warn('[WARN] No sectors fetched from providers; writing names only.');
+    }
+    const sorted = sortData(data);
+    let out = { ...sorted, lastUpdated: nowKSTISO() };
+    pruneEmptyMarkets(out);
+    ensureNonEmpty(out);
+    await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
+    console.log(`[FETCH] wrote recommendations at ${out.lastUpdated} (sectors resolved: ${successCount})`);
   } catch (e) {
-    console.warn('[FETCH] failed or insufficient data, using rotation fallback:', e?.message || e);
-    // Load previous if exists to preserve structure; else start empty
+    console.warn('[FETCH] error:', e?.message || e);
     let prev = null;
     try { prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8')); } catch {}
-    const rotated = rotateFromPools(prev);
-    const out = { ...rotated, lastUpdated: nowKSTISO() };
-    await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
-    console.log(`[FALLBACK] rotated selection written at ${out.lastUpdated}`);
+    const rotated = sortData(rotateFromPools(prev));
+    let out = { ...rotated, lastUpdated: nowKSTISO() };
+    pruneEmptyMarkets(out);
+    ensureNonEmpty(out);
+    await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
+    console.log('[FALLBACK] rotated selection due to fetch error/empty selection');
   }
 }
 
