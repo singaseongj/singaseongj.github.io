@@ -3,8 +3,7 @@ name: Daily Stock Report Build
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */4 * * *'  # every 4 hours (UTC)
-
+    - cron: '0 1,6,11,15,20 * * *'  # 00/05/10/15/20 KST
 jobs:
   build-and-deploy:
     permissions:
