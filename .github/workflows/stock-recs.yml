@@ -1,0 +1,110 @@
+name: Build & Publish Stock Recommendations
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 5 hours (cron is UTC; cadence doesn't depend on timezone)
+    - cron: '0 */5 * * *'
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    concurrency:
+      group: daily-stock-report
+      cancel-in-progress: false
+
+    env:
+      TZ: Asia/Seoul
+      NODE_OPTIONS: --dns-result-order=ipv4first
+      # Keep the run under typical 60s shells; script respects this.
+      HARD_DEADLINE_MS: "55000"
+      # GitHub often has flaky access to Naver; feel free to unset.
+      SKIP_NAVER: "1"
+
+      # Optional: hybrid remote cache (leave empty if not used)
+      # REMOTE_URL: ${{ secrets.REMOTE_URL }}   # e.g. public GET or signed GET to last-good recommendations.json
+      # REMOTE_PUT: ${{ secrets.REMOTE_PUT }}   # signed PUT (S3/R2/GCS/Gist API) to upload latest file
+
+      # Optional: API keys for your other steps if you integrate them later
+      FMP_KEY: ${{ secrets.FMP_KEY }}
+      ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
+      FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
+      TWELVEDATA_KEY: ${{ secrets.TWELVEDATA_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      # If you're still on single-file (fetchStockInfo.js), this just works.
+      # If you split into modules, it runs src/index.js instead.
+      - name: Build recommendations (deadline-aware)
+        run: |
+          if [ -f "src/index.js" ]; then
+            echo "→ Running modular entry (src/index.js)"
+            timeout 60 node src/index.js --force
+          else
+            echo "→ Running single-file (fetchStockInfo.js)"
+            timeout 60 node fetchStockInfo.js --force --delay=120
+          fi
+
+      # Add a validator (from earlier) at tools/validate-recs.js
+      # This will fail-fast if the JSON is incomplete.
+      - name: Validate recommendations.json
+        run: |
+          if [ -f "tools/validate-recs.js" ]; then
+            node tools/validate-recs.js recommendations.json
+          else
+            echo "⚠️ tools/validate-recs.js not found; skipping schema check"
+          fi
+
+      - name: Verify generated files (brief)
+        run: |
+          test -f recommendations.json
+          echo "Last updated:"
+          node -e "console.log(require('./recommendations.json').lastUpdated || 'n/a')"
+          echo "Mode:"
+          node -e "console.log(require('./recommendations.json').mode || 'unknown')"
+
+      - name: Commit & push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: stock recommendations update [skip ci]"
+          file_pattern: |
+            recommendations.json
+            metrics-cache.json
+            ticker-cache.json
+            data/market_news.json
+            data/fx_rates.json
+            stocks.html
+            src/template.html
+          add_options: '-A'
+          skip_dirty_check: true
+
+      - name: Show last commit (debug)
+        if: always()
+        run: git log -1 --name-only --pretty=fuller || true
+
+      # Optional: publish to GitHub Pages if your repo uses it
+      - name: Deploy to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./
+          # force_orphan: true  # uncomment if you want a clean history on gh-pages

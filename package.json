@@ -1,16 +1,20 @@
 {
   "name": "daily-stock-report",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "build": "node src/build.js",
     "test": "node tests/apple_association.test.js",
-    "stocks:refresh": "node fetchStockInfo.js --force"
+    "stocks:refresh": "node fetchStockInfo.js --force",
+    "build:recs": "node src/index.js --force",
+    "check:recs": "node tools/validate-recs.js recommendations.json",
+    "check:structure": "node tools/validate-structure.js"
   },
   "engines": {
     "node": ">=18"
   },
-  "type": "module",
   "dependencies": {
-    "fast-xml-parser": "^4.5.3"
+    "fast-xml-parser": "^4.5.3",
+    "cheerio": "^1.0.0"
   }
 }
