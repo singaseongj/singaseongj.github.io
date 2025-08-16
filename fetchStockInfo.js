@@ -11,6 +11,12 @@ const FORCE = ARGS.has('--force');
 const SKIP_FRESH = ARGS.has('--skip-fresh');
 const DELAY_ARG = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]);
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
+const POOLS_FILE = path.resolve(process.cwd(), 'pools.json');
+const POOLS_CACHE_FILE = path.resolve(process.cwd(), 'pools-cache.json');
+const DEFAULT_POOLS_TTL_HOURS = 24;
+const TTL_ARG = Number((process.argv.find(a => a.startsWith('--pools-ttl=')) || '').split('=')[1]);
+const POOLS_TTL_MS = (Number.isFinite(TTL_ARG) && TTL_ARG > 0 ? TTL_ARG : DEFAULT_POOLS_TTL_HOURS) * 60 * 60 * 1000;
+const REFRESH_POOLS = ARGS.has('--refresh-pools');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -82,8 +88,8 @@ function pickDeterministic(arr, k, seed) {
   return a.slice(0, k);
 }
 
-// KOSDAQ stocks added and more comprehensive pools
-const POOLS = {
+// Embedded fallback pools used when external files are unavailable
+const POOLS_FALLBACK = {
   KOSPI: {
     safe: ['삼성전자', 'SK하이닉스', '현대차', 'POSCO홀딩스', 'LG화학', 'NAVER', '카카오', '기아', 'LG전자', '삼성SDI'],
     aggressive: ['HD현대일렉트릭', '두산에너빌리티', '한화에어로스페이스', 'POSCO퓨처엠', 'BGF리테일', '에코프로', '삼성바이오로직스', '셀트리온']
@@ -102,10 +108,83 @@ const POOLS = {
   }
 };
 
-function rotateFromPools(prevData) {
+function validatePoolsSchema(pools) {
+  const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'S&P 500'];
+  if (typeof pools !== 'object' || pools === null) return false;
+  for (const m of markets) {
+    const b = pools[m];
+    if (!b || !Array.isArray(b.safe) || !Array.isArray(b.aggressive)) return false;
+    for (const bucket of ['safe', 'aggressive']) {
+      for (const item of b[bucket]) {
+        if (!(typeof item === 'string' || (item && typeof item === 'object'))) return false;
+      }
+    }
+  }
+  return true;
+}
+
+async function writeAtomically(dest, data) {
+  const tmp = dest + '.tmp';
+  await writeFile(tmp, data);
+  await rename(tmp, dest);
+}
+
+async function loadPools() {
+  const url = process.env.POOLS_URL;
+  const now = Date.now();
+
+  if (url) {
+    let cache;
+    try {
+      cache = JSON.parse(await fs.readFile(POOLS_CACHE_FILE, 'utf8'));
+    } catch {}
+
+    const cacheFresh = cache?.fetchedAt && (now - Date.parse(cache.fetchedAt) < POOLS_TTL_MS);
+    if (REFRESH_POOLS || !cacheFresh) {
+      try {
+        const res = await fetchWithRetry(url, {}, { retries: 2, base: 500 });
+        const json = await res.json();
+        if (validatePoolsSchema(json)) {
+          await writeAtomically(POOLS_CACHE_FILE, JSON.stringify({ fetchedAt: new Date().toISOString(), pools: json }, null, 2));
+          return json;
+        } else {
+          console.warn('[POOLS] Remote schema invalid');
+        }
+      } catch (e) {
+        console.warn('[POOLS] Remote fetch failed:', e.message);
+      }
+    }
+    if (cacheFresh && validatePoolsSchema(cache.pools)) return cache.pools;
+  }
+
+  if (existsSync(POOLS_CACHE_FILE)) {
+    try {
+      const cache = JSON.parse(await fs.readFile(POOLS_CACHE_FILE, 'utf8'));
+      if (cache?.fetchedAt && (now - Date.parse(cache.fetchedAt) < POOLS_TTL_MS) && validatePoolsSchema(cache.pools)) {
+        return cache.pools;
+      }
+    } catch (e) {
+      console.warn('[POOLS] Failed reading cache:', e.message);
+    }
+  }
+
+  if (existsSync(POOLS_FILE)) {
+    try {
+      const local = JSON.parse(await fs.readFile(POOLS_FILE, 'utf8'));
+      if (validatePoolsSchema(local)) return local;
+    } catch (e) {
+      console.warn('[POOLS] Failed reading pools.json:', e.message);
+    }
+  }
+
+  console.warn('[POOLS] Falling back to embedded pools');
+  return POOLS_FALLBACK;
+}
+
+function rotateFromPools(pools, prevData) {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
   const out = structuredClone(prevData || {});
-  for (const [market, buckets] of Object.entries(POOLS)) {
+  for (const [market, buckets] of Object.entries(pools)) {
     if (!hasAnyCandidates(buckets)) continue;
     out[market] = out[market] || {};
     for (const bucket of ['safe', 'aggressive']) {
@@ -203,6 +282,7 @@ const STATIC_SECTORS = {
   '005490.KS': 'Materials', '267260.KS': 'Industrials', '012450.KS': 'Industrials',
   '034020.KS': 'Industrials', '282330.KS': 'Consumer Staples', '000270.KS': 'Consumer Discretionary',
   '066570.KS': 'Technology', '006400.KS': 'Technology', '086520.KS': 'Materials',
+  '003670.KS': 'Materials', '068270.KS': 'Healthcare', '207940.KS': 'Healthcare',
 
   // KOSDAQ
   '247540.KQ': 'Materials', '091990.KQ': 'Healthcare', '278280.KQ': 'Industrials',
@@ -421,12 +501,6 @@ function sortData(data) {
   return out;
 }
 
-async function writeAtomically(dest, data) {
-  const tmp = `${dest}.tmp`;
-  await writeFile(tmp, data);
-  await rename(tmp, dest);
-}
-
 function ensureNonEmpty(out) {
   const n = totalCount(out);
   if (n === 0) {
@@ -435,14 +509,20 @@ function ensureNonEmpty(out) {
   }
 }
 
+function validateRecommendations(out) {
+  if (!out.lastUpdated || totalCount(out) === 0) {
+    throw new Error('Invalid recommendations structure');
+  }
+}
+
 // Main data fetching function
-async function tryFetchAndEnrich() {
+async function tryFetchAndEnrich(pools) {
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
   const data = {};
   const log = {};
 
   // Select stocks for each market
-  for (const [market, buckets] of Object.entries(POOLS)) {
+  for (const [market, buckets] of Object.entries(pools)) {
     if (!hasAnyCandidates(buckets)) continue;
 
     data[market] = {};
@@ -534,13 +614,16 @@ async function main() {
     }
   }
 
+  const pools = await loadPools();
+
   try {
-    const { data, successCount } = await tryFetchAndEnrich();
+    const { data, successCount } = await tryFetchAndEnrich(pools);
 
     const sorted = sortData(data);
     let out = { ...sorted, lastUpdated: nowKSTISO() };
     pruneEmptyMarkets(out);
     ensureNonEmpty(out);
+    validateRecommendations(out);
 
     await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
     console.log(`[SUCCESS] Wrote recommendations at ${out.lastUpdated} (sectors resolved: ${successCount})`);
@@ -553,10 +636,11 @@ async function main() {
       prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8'));
     } catch {}
 
-    const rotated = sortData(rotateFromPools(prev));
+    const rotated = sortData(rotateFromPools(pools, prev));
     let out = { ...rotated, lastUpdated: nowKSTISO() };
     pruneEmptyMarkets(out);
     ensureNonEmpty(out);
+    validateRecommendations(out);
 
     await writeAtomically(OUT_FILE, JSON.stringify(out, null, 2));
     console.log('[FALLBACK] Used rotated selection due to fetch error');

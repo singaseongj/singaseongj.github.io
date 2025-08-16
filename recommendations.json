@@ -1,58 +1,32 @@
 {
-  "NASDAQ": {
-    "safe": [
-      {
-        "name": "Amazon",
-        "sector": "Consumer Discretionary"
-      },
-      {
-        "name": "Apple",
-        "sector": "Technology"
-      },
-      {
-        "name": "Meta Platforms",
-        "sector": "Communication Services"
-      },
-      {
-        "name": "Microsoft",
-        "sector": "Technology"
-      },
-      {
-        "name": "NVIDIA",
-        "sector": "Technology"
-      }
-    ],
-    "aggressive": [
-      {
-        "name": "Arm Holdings",
-        "sector": "Technology"
-      },
-      {
-        "name": "Micron Technology",
-        "sector": "Technology"
-      },
-      {
-        "name": "Palantir",
-        "sector": "Technology"
-      },
-      {
-        "name": "Super Micro Computer",
-        "sector": "Technology"
-      },
-      {
-        "name": "UiPath",
-        "sector": "Technology"
-      }
-    ]
-  },
   "KOSPI": {
     "safe": [
+      {
+        "name": "LG전자",
+        "sector": "Technology"
+      },
+      {
+        "name": "LG화학",
+        "sector": "Materials"
+      },
       {
         "name": "NAVER",
         "sector": "Communication Services"
       },
       {
+        "name": "POSCO홀딩스",
+        "sector": "Materials"
+      },
+      {
         "name": "SK하이닉스",
+        "sector": "Technology"
+      },
+      {
+        "name": "기아",
+        "sector": "Consumer Discretionary"
+      },
+      {
+        "name": "삼성SDI",
         "sector": "Technology"
       },
       {
@@ -70,12 +44,24 @@
     ],
     "aggressive": [
       {
+        "name": "BGF리테일",
+        "sector": "Consumer Staples"
+      },
+      {
         "name": "HD현대일렉트릭",
         "sector": "Industrials"
       },
       {
+        "name": "POSCO퓨처엠",
+        "sector": null
+      },
+      {
         "name": "두산에너빌리티",
         "sector": "Industrials"
+      },
+      {
+        "name": "삼성바이오로직스",
+        "sector": null
       },
       {
         "name": "셀트리온",
@@ -116,6 +102,10 @@
     ],
     "aggressive": [
       {
+        "name": "HLB",
+        "sector": "Healthcare"
+      },
+      {
         "name": "레인보우로보틱스",
         "sector": "Industrials"
       },
@@ -132,11 +122,151 @@
         "sector": "Materials"
       },
       {
+        "name": "지아이이노베이션",
+        "sector": "Technology"
+      },
+      {
         "name": "천보",
         "sector": "Industrials"
+      },
+      {
+        "name": "펩트론",
+        "sector": "Healthcare"
       }
     ]
   },
-  "lastUpdated": "2025-08-16T05:21:12+09:00",
+  "NASDAQ": {
+    "safe": [
+      {
+        "name": "Alphabet",
+        "sector": "Communication Services"
+      },
+      {
+        "name": "Amazon",
+        "sector": "Consumer Discretionary"
+      },
+      {
+        "name": "Apple",
+        "sector": "Technology"
+      },
+      {
+        "name": "Meta Platforms",
+        "sector": "Communication Services"
+      },
+      {
+        "name": "Microsoft",
+        "sector": "Technology"
+      },
+      {
+        "name": "Netflix",
+        "sector": "Communication Services"
+      },
+      {
+        "name": "NVIDIA",
+        "sector": "Technology"
+      },
+      {
+        "name": "Tesla",
+        "sector": "Consumer Discretionary"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "Arm Holdings",
+        "sector": "Technology"
+      },
+      {
+        "name": "CrowdStrike",
+        "sector": "Technology"
+      },
+      {
+        "name": "Micron Technology",
+        "sector": "Technology"
+      },
+      {
+        "name": "MongoDB",
+        "sector": "Technology"
+      },
+      {
+        "name": "Palantir",
+        "sector": "Technology"
+      },
+      {
+        "name": "Snowflake",
+        "sector": "Technology"
+      },
+      {
+        "name": "Super Micro Computer",
+        "sector": "Technology"
+      },
+      {
+        "name": "UiPath",
+        "sector": "Technology"
+      }
+    ]
+  },
+  "S&P 500": {
+    "safe": [
+      {
+        "name": "Berkshire Hathaway (B)",
+        "sector": "Financial Services"
+      },
+      {
+        "name": "Coca-Cola",
+        "sector": "Consumer Staples"
+      },
+      {
+        "name": "Johnson & Johnson",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "JPMorgan Chase",
+        "sector": "Financial Services"
+      },
+      {
+        "name": "Procter & Gamble",
+        "sector": "Consumer Staples"
+      },
+      {
+        "name": "UnitedHealth",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "Visa",
+        "sector": "Financial Services"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "CrowdStrike",
+        "sector": "Technology"
+      },
+      {
+        "name": "Eli Lilly",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "Moderna",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "NRG Energy",
+        "sector": "Utilities"
+      },
+      {
+        "name": "ServiceNow",
+        "sector": "Technology"
+      },
+      {
+        "name": "Uber Technologies",
+        "sector": "Technology"
+      },
+      {
+        "name": "Zoom",
+        "sector": "Technology"
+      }
+    ]
+  },
+  "lastUpdated": "2025-08-16T10:27:55+09:00",
   "mode": "live"
 }
