@@ -57,7 +57,7 @@ jobs:
       - name: "Guard: no hardcoded secrets"
         shell: bash
         run: |
-          set -euo pipefail
+          set -Eeo pipefail
           # Fail on likely secret assignments in source code (exclude workflows/docs)
           if git grep -nI -E '(?i)(api[_-]?key|token|secret)\s*[:=]\s*["'\''][A-Za-z0-9_\-]{12,}["'\'']' -- \
               ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
@@ -73,7 +73,7 @@ jobs:
       - name: "Guard: no env/key files (allow examples)"
         shell: bash
         run: |
-          set -euo pipefail
+          set -Eeo pipefail
           offenders="$(git ls-files -z \
             | tr '\\0' '\\n' \
             | grep -E '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|(^|/)credentials\\.json$|_creds\\.' \
