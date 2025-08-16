@@ -16,6 +16,13 @@ jobs:
       ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}  # optional
       FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}         # optional
       TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}   # optional
+      GLOBAL_BUDGET_MS: 90000
+      MAX_CONCURRENCY: 2
+      REQ_TIMEOUT_MS: 5000
+      RETRIES: 1
+      BACKOFF_BASE_MS: 400
+      CIRCUIT_MAX_ERRORS: 6
+      COVERAGE_MIN: 0.3
 
     concurrency:
       group: daily-stock-report

@@ -15,28 +15,82 @@ const FEEDBACK_FILE = 'feedback.json';
 const MARKETS = ["KOSPI","KOSDAQ","NASDAQ","S&P 500"];
 const PICK_COUNT = 5;
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
+// ---- flags
+const ARGS = new Set(process.argv.slice(2));
+const OFFLINE = ARGS.has('--offline');                // skip all network
+const COVERAGE_MIN = Number(process.env.COVERAGE_MIN || 0.3); // need ≥30% metrics to replace pools
+const GLOBAL_BUDGET_MS = Number(process.env.GLOBAL_BUDGET_MS || 90000); // 90s soft budget
+const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
+const DEMO_MODE = !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
 
-const REQ_TIMEOUT_MS = 8000;   // 8 seconds per HTTP request
-const RETRIES = 3;
-const BACKOFF_BASE_MS = 600;
+// ---- time budget
+const START_TS = Date.now();
+function timeLeft() { return Math.max(0, GLOBAL_BUDGET_MS - (Date.now() - START_TS)); }
+function budgetOk(ms=0) { return timeLeft() > ms; }
+
+// ---- circuit breaker
+let consecutiveErrors = 0;
+const CIRCUIT_MAX_ERRORS = Number(process.env.CIRCUIT_MAX_ERRORS || 8);
+function tripOnError(e) {
+  consecutiveErrors++;
+  if (consecutiveErrors >= CIRCUIT_MAX_ERRORS) {
+    console.warn(`[circuit] too many errors (${consecutiveErrors}), entering offline fallback`);
+    return true;
+  }
+  return false;
+}
+function resetErrors(){ consecutiveErrors = 0; }
+
+// try to import existing map if available (non-fatal if missing)
+let NAME_TO_SYMBOL = {};
+try {
+  NAME_TO_SYMBOL = (await import('../data/tickerMap.js')).NAME_TO_SYMBOL || {};
+} catch {}
+
+NAME_TO_SYMBOL = {
+  ...NAME_TO_SYMBOL,
+  '삼성전자':'005930.KS','SK하이닉스':'000660.KS','현대차':'005380.KS','POSCO홀딩스':'005490.KS','LG화학':'051910.KS',
+  'NAVER':'035420.KS','네이버':'035420.KS','카카오':'035720.KS','기아':'000270.KS','LG전자':'066570.KS','삼성SDI':'006400.KS',
+  '에코프로':'086520.KS','셀트리온':'068270.KS','두산에너빌리티':'034020.KS','HD현대일렉트릭':'267260.KS','POSCO퓨처엠':'003670.KS',
+  '셀트리온헬스케어':'091990.KQ','에코프로비엠':'247540.KQ','천보':'278280.KQ','리노공업':'058470.KQ','JYP엔터테인먼트':'035900.KQ',
+  '알테오젠':'196170.KQ','레인보우로보틱스':'277810.KQ','HLB':'028300.KQ','펩트론':'087010.KQ','펄어비스':'263750.KQ','아이오케이':'078860.KQ',
+  'CJ ENM':'035760.KQ',
+  'Apple':'AAPL','Microsoft':'MSFT','NVIDIA':'NVDA','Amazon':'AMZN','Meta Platforms':'META','Alphabet':'GOOGL','Tesla':'TSLA','Netflix':'NFLX',
+  'Super Micro Computer':'SMCI','Palantir':'PLTR','Arm Holdings':'ARM','Micron Technology':'MU','UiPath':'PATH','CrowdStrike':'CRWD',
+  'Berkshire Hathaway (B)':'BRK-B','Johnson & Johnson':'JNJ','Procter & Gamble':'PG','Visa':'V','Coca-Cola':'KO','JPMorgan Chase':'JPM','UnitedHealth':'UNH',
+  'Eli Lilly':'LLY','Uber Technologies':'UBER','NRG Energy':'NRG','ServiceNow':'NOW','Moderna':'MRNA','Zoom':'ZM','MongoDB':'MDB','Snowflake':'SNOW'
+};
+
+function nameToSymbol(name){
+  if (NAME_TO_SYMBOL[name]) return NAME_TO_SYMBOL[name];
+  if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
+  return null;
+}
+
+const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 8000));
+const RETRIES = Number(process.env.RETRIES || (DEMO_MODE ? 1 : 3));
+const BACKOFF_BASE_MS = Number(process.env.BACKOFF_BASE_MS || (DEMO_MODE ? 400 : 600));
 
 async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE_MS) {
   let lastErr;
   for (let attempt = 0; attempt <= retries; attempt++) {
+    if (!budgetOk()) throw new Error('global budget exhausted');
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), REQ_TIMEOUT_MS);
+    const perReq = Math.min(REQ_TIMEOUT_MS, timeLeft());
+    const timer = setTimeout(() => controller.abort(), perReq);
     try {
       const res = await fetch(url, { headers, signal: controller.signal });
       clearTimeout(timer);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      resetErrors();
       return await res.json();
     } catch (e) {
       clearTimeout(timer);
       lastErr = e;
-      if (attempt < retries) {
+      if (tripOnError(e)) throw lastErr;
+      if (attempt < retries && budgetOk()) {
         const backoff = base * Math.pow(2, attempt);
-        console.log(`[net] retry ${attempt + 1}/${retries} after ${backoff}ms :: ${url}`);
+        console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${url}`);
         await new Promise(r => setTimeout(r, backoff));
         continue;
       }
@@ -152,6 +206,16 @@ function computeMetrics(c, v){
   return { ret5, ret20, vol20, turnover };
 }
 
+function coverageRatio(metrics) {
+  // count entries with at least one non-null metric or news/earn flag
+  const vals = Object.values(metrics || {});
+  if (!vals.length) return 0;
+  const ok = vals.filter(m => {
+    return [m.ret5, m.ret20, m.vol20, m.turnover].some(x => Number.isFinite(x)) || m.news72 > 0 || m.earn === true;
+  }).length;
+  return ok / vals.length;
+}
+
 // ---------- Universe & name→symbol mapping ----------
 /*
   We will reuse your existing TICKER_MAP and Yahoo resolution inside fetchStockInfo.js for KR/US names.
@@ -190,15 +254,16 @@ function maybeDecayFeedback(feedback){
 
 async function mapLimit(items, limit, worker) {
   const out = new Array(items.length);
-  let i = 0, active = 0;
+  let i = 0, active = 0, aborted = false;
   return await new Promise((resolve, reject) => {
     const next = () => {
+      if (aborted) return;
       while (active < limit && i < items.length) {
         const idx = i++;
         active++;
         Promise.resolve(worker(items[idx], idx))
           .then(val => { out[idx] = val; active--; next(); })
-          .catch(err => reject(err));
+          .catch(err => { aborted = true; reject(err); });
       }
       if (i >= items.length && active === 0) resolve(out);
     };
@@ -213,15 +278,11 @@ async function main(){
     console.log('[buildPools] No pools.json; nothing to do.');
     process.exit(0);
   }
-  if (!FINNHUB && !TWELVE){
-    console.log('[buildPools] No API endpoints configured; skipping generation');
-    process.exit(0);
-  }
-
-  console.log(`[buildPools] start :: FINNHUB=${!!FINNHUB} TWELVE=${!!TWELVE}`);
+  console.log(`[buildPools] start :: FINNHUB=${!!process.env.FINNHUB_API_KEY} TWELVE=${!!process.env.TWELVEDATA_API_KEY} OFFLINE=${OFFLINE} DEMO=${DEMO_MODE} budget=${GLOBAL_BUDGET_MS}ms`);
 
   const feedback = await loadJson(FEEDBACK_FILE, { version:1, weights:{}, decay:{ half_life_days:14, last_decay_ts:null }});
   const metricsOut = {};
+  const marketCoverage = {};
 
   for (const market of MARKETS){
     const buckets = pools[market];
@@ -230,26 +291,28 @@ async function main(){
     console.log(`[buildPools] market=${market} names=${names.length}`);
     if (names.length === 0) continue;
 
-    // Fetch signals per "symbol" best-effort (names may not be symbols; we compute where possible)
+    // Fetch signals per name best-effort
     const byName = {};
-    await mapLimit(names, 4, async (name) => {
-      console.log(`[buildPools] ${market} :: ${name}`);
-      const looksSymbol =
-        /^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name);
-
+    await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
+      if (!budgetOk(200)) return; // skip if no time left
+      const sym = OFFLINE ? null : nameToSymbol(name);
       let c=null, v=null; let ret5=null, ret20=null, vol20=null, turnover=null; let news72=0; let earn=false;
 
-      if (looksSymbol) {
-        const candles = await getCandles(name).catch(()=>null);
-        if (candles) { c = candles.c; v = candles.v; }
-        if (c && v) {
-          const m = computeMetrics(c,v);
-          ret5=m.ret5; ret20=m.ret20; vol20=m.vol20; turnover=m.turnover;
+      try {
+        if (sym) {
+          const candles = budgetOk(REQ_TIMEOUT_MS) ? await getCandles(sym).catch(e => { tripOnError(e); return null; }) : null;
+          if (candles) { c = candles.c; v = candles.v; }
+          if (c && v) {
+            const m = computeMetrics(c, v);
+            ret5=m.ret5; ret20=m.ret20; vol20=m.vol20; turnover=m.turnover;
+          }
+          if (process.env.FINNHUB_API_KEY && budgetOk(REQ_TIMEOUT_MS)) {
+            news72 = await finnhubNewsCount(sym).catch(e => { tripOnError(e); return 0; });
+            earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
+          }
         }
-        if (FINNHUB) {
-          news72 = await finnhubNewsCount(name).catch(()=>0);
-          earn   = await finnhubRecentEarnings(name).catch(()=>false);
-        }
+      } catch (e) {
+        tripOnError(e);
       }
 
       byName[name] = { ret5, ret20, vol20, turnover, news72, earn };
@@ -298,6 +361,20 @@ async function main(){
       };
       return acc;
     }, {});
+
+    marketCoverage[market] = coverageRatio(byName);
+  }
+
+  const covs = Object.values(marketCoverage);
+  const avgCoverage = covs.length ? covs.reduce((a,b)=>a+b,0)/covs.length : 0;
+  console.log(`[buildPools] avg coverage=${(avgCoverage*100).toFixed(1)}% (min=${(Math.min(...covs)*100||0).toFixed(1)}%)`);
+
+  if (OFFLINE || avgCoverage < COVERAGE_MIN) {
+    console.warn(`[buildPools] insufficient coverage or offline (avg=${(avgCoverage*100).toFixed(1)}%), leaving pools.json unchanged`);
+    // still write metrics file for debugging
+    await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
+    console.log('[buildPools] wrote pools-metrics.json (pools.json unchanged)');
+    return;
   }
 
   // Decay feedback periodically
