@@ -203,34 +203,3 @@ jobs:
           publish_dir: ./
           # force_orphan: true  # optional
 
-  autofix:
-    if: github.repository == 'singaseongj/singaseongj.github.io'
-    needs: test
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: 코드 체크아웃
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
-        with:
-          fetch-depth: 0
-
-      - name: "Guard autofix: remove tracked secrets"
-        shell: bash
-        run: |
-          set -Eeo pipefail
-          candidates="$(git ls-files -z |
-            tr '\0' '\n' |
-            grep -E '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|(^|/)credentials\\.json$|_creds\\.')"
-          offenders="$(printf '%s\n' "$candidates" |
-            grep -Ev '(^|/)\\.env\\.example$|\\.example($|\\.|/)|\\.sample($|\\.|/)|\\.template($|\\.|/)')"
-          if [ -n "$offenders" ]; then
-            echo "$offenders" | xargs -r git rm -f --cached
-          fi
-
-      - name: Commit guard fixes
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
-        with:
-          commit_message: "chore: remove tracked secret files"
-          add_options: '-A'
-          skip_dirty_check: true
