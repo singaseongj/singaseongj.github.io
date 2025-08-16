@@ -32,6 +32,12 @@ function budgetOk(ms=0) { return timeLeft() > ms; }
 let consecutiveErrors = 0;
 const CIRCUIT_MAX_ERRORS = Number(process.env.CIRCUIT_MAX_ERRORS || 8);
 function tripOnError(e) {
+  const msg = String(e?.message || e || '');
+  // If this came from KR news/earnings (which we now skip), do not escalate
+  if (/company-news|calendar\/earnings/i.test(msg) && /K[QS]\b/.test(msg)) {
+    console.warn(`[soft] ${msg}`);
+    return false;
+  }
   consecutiveErrors++;
   if (consecutiveErrors >= CIRCUIT_MAX_ERRORS) {
     console.warn(`[circuit] too many errors (${consecutiveErrors}), entering offline fallback`);
@@ -65,6 +71,15 @@ function nameToSymbol(name){
   if (NAME_TO_SYMBOL[name]) return NAME_TO_SYMBOL[name];
   if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
   return null;
+}
+
+function isKR(symbolOrName) {
+  // KR symbols end with .KS (KOSPI) or .KQ (KOSDAQ)
+  return /\.K[QS]$/.test(symbolOrName);
+}
+function isUS(symbolOrName) {
+  // rough: typical US symbols are A–Z with optional dot/dash, not ending .KQ/.KS
+  return /^[A-Z][A-Z.\-]{0,6}$/.test(symbolOrName) && !/\.K[QS]$/.test(symbolOrName);
 }
 
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 8000));
@@ -155,15 +170,30 @@ async function twelveCandles(symbol){
 }
 
 async function getCandles(symbol){
-  if (FINNHUB){
-    const j = await finnhubCandles(symbol).catch(()=>null);
-    if (j) return { c: j.c, v: j.v };
+  // KR: prefer TwelveData; US: prefer Finnhub (fallback TwelveData)
+  if (isKR(symbol)) {
+    if (TWELVE) {
+      const j = await twelveCandles(symbol).catch(()=>null);
+      if (j) return j;
+    }
+    // As a last resort, try Finnhub candles (may fail on free tier)
+    if (FINNHUB) {
+      const j = await finnhubCandles(symbol).catch(()=>null);
+      if (j) return { c: j.c, v: j.v };
+    }
+    return null;
+  } else {
+    // US or other
+    if (FINNHUB) {
+      const j = await finnhubCandles(symbol).catch(()=>null);
+      if (j) return { c: j.c, v: j.v };
+    }
+    if (TWELVE) {
+      const j = await twelveCandles(symbol).catch(()=>null);
+      if (j) return j;
+    }
+    return null;
   }
-  if (TWELVE){
-    const j = await twelveCandles(symbol).catch(()=>null);
-    if (j) return j;
-  }
-  return null;
 }
 
 // Finnhub company news count (72h)
@@ -295,7 +325,13 @@ async function main(){
     const byName = {};
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
       if (!budgetOk(200)) return; // skip if no time left
-      const sym = OFFLINE ? null : nameToSymbol(name);
+      let sym = OFFLINE ? null : nameToSymbol(name);
+      // If no symbol detected but name is Korean and we have a map entry, use it
+      if (!sym && NAME_TO_SYMBOL[name]) {
+        sym = NAME_TO_SYMBOL[name];
+      }
+      const route = sym ? (isKR(sym) ? 'KR→TwelveData' : 'US→Finnhub') : 'no-symbol';
+      console.log(`[buildPools] ${market} :: ${name} (${route})`);
       let c=null, v=null; let ret5=null, ret20=null, vol20=null, turnover=null; let news72=0; let earn=false;
 
       try {
@@ -306,16 +342,20 @@ async function main(){
             const m = computeMetrics(c, v);
             ret5=m.ret5; ret20=m.ret20; vol20=m.vol20; turnover=m.turnover;
           }
-          if (process.env.FINNHUB_API_KEY && budgetOk(REQ_TIMEOUT_MS)) {
+          if (FINNHUB && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
             news72 = await finnhubNewsCount(sym).catch(e => { tripOnError(e); return 0; });
             earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
+          } else {
+            // KR or no Finnhub: skip to avoid 4xx floods
+            news72 = 0;
+            earn = false;
           }
         }
       } catch (e) {
         tripOnError(e);
       }
 
-      byName[name] = { ret5, ret20, vol20, turnover, news72, earn };
+      byName[name] = { ret5, ret20, vol20, turnover, news72, earn, sym };
     });
 
     // Normalize within market
@@ -330,8 +370,10 @@ async function main(){
     const scoreAggrRaw = {};
     names.forEach((n, i) => {
       const earnBonus = byName[n].earn ? 0.10 : 0;
-      const safe = 0.35*nNews[i] + 0.35*nRet20[i] + 0.20*nRet5[i] + 0.10*(1 - nVol[i]) + earnBonus;
-      const aggr = 0.45*nNews[i] + 0.35*nRet5[i]  + 0.20*nTurn[i]                        + earnBonus;
+      const sym = byName[n].sym;
+      const baseKR = sym && isKR(sym) ? 0.05 : 0; // small boost so KR without news still compete
+      const safe = baseKR + 0.35*nNews[i] + 0.35*nRet20[i] + 0.20*nRet5[i] + 0.10*(1 - nVol[i]) + earnBonus;
+      const aggr = baseKR + 0.45*nNews[i] + 0.35*nRet5[i]  + 0.20*nTurn[i]                        + earnBonus;
       scoreSafeRaw[n] = clamp01(safe);
       scoreAggrRaw[n] = clamp01(aggr);
     });
