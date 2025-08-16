@@ -15,6 +15,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Verify refresh-pools policy
+        run: bash .github/scripts/check-refresh-pools.sh
+
       - name: Node.js 설정
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
@@ -33,7 +36,7 @@ jobs:
           OFFLINE: 1
         run: |
           set -Eeo pipefail
-          node fetchStockInfo.js --force
+          node fetchStockInfo.js --refresh-pools --force
           node src/build.js
 
       - name: "Validate recommendations.json"
@@ -77,6 +80,9 @@ jobs:
         with:
           persist-credentials: true
           fetch-depth: 0
+
+      - name: Verify refresh-pools policy
+        run: bash .github/scripts/check-refresh-pools.sh
 
       - name: "Guard: no hardcoded secrets"
         shell: bash
