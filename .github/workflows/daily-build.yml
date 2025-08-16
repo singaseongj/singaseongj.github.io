@@ -33,7 +33,7 @@ jobs:
           OFFLINE: 1
         run: |
           set -Eeo pipefail
-          node fetchStockInfo.js --refresh-pools --force
+          node fetchStockInfo.js --force
           node src/build.js
 
       - name: "Validate recommendations.json"
