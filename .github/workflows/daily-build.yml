@@ -40,39 +40,36 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: "Guard: no secrets in code/logs"
+      - name: "Guard: no hardcoded secrets"
         shell: bash
         run: |
-          set -e
-          echo "== scanning for hardcoded secrets =="
-          pattern_assign='(api|token|secret)[[:space:]]*[:=][[:space:]]*["'"'"'][A-Za-z0-9_-]{12,}["'"'"']'
-          pattern_echo='echo[[:space:]]+.*\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY)\}?'
-          if grep -RInE "$pattern_assign" \
-              --exclude-dir=.git \
-              --exclude-dir=workflows \
-              --exclude=README \
-              --exclude=*.md \
-              --exclude=*.yml \
-              --exclude=*.yaml .; then
-            echo '❌ Hardcoded secret detected'
-            exit 1
+          set -euo pipefail
+          # Fail on likely secret assignments in source code (exclude workflows/docs)
+          if git grep -nI -E '(?i)(api[_-]?key|token|secret)\s*[:=]\s*["'\''][A-Za-z0-9_\-]{12,}["'\'']' -- \
+              ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
+            echo "❌ Possible hardcoded secret detected"; exit 1
           fi
-          if grep -RInE "$pattern_echo" \
-              --exclude-dir=.git \
-              --exclude-dir=workflows \
-              --exclude=README \
-              --exclude=*.md \
-              --exclude=*.yml \
-              --exclude=*.yaml .; then
-            echo '❌ Echoing secret env vars detected'
-            exit 1
+          # Fail if someone echoes secret env vars
+          if git grep -nI -E 'echo\s+(\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY)\}?|%(\1)%)' -- \
+              ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
+            echo "❌ Attempt to echo a secret environment variable"; exit 1
           fi
-          echo '✅ no secrets found'
+          echo "✅ No hardcoded secrets found."
 
-      - name: "Guard: no env/key files"
+      - name: "Guard: no env/key files (allow examples)"
+        shell: bash
         run: |
-          set -e
-          ! git ls-files | grep -E '\.env(\..*)?$|\.pem$|\.key$|_creds\.|credentials\.json$' || (echo '❌ remove secret files'; exit 1)
+          set -euo pipefail
+          offenders="$(git ls-files -z \
+            | tr '\\0' '\\n' \
+            | grep -E '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|(^|/)credentials\\.json$|_creds\\.' \
+            | grep -Ev '\\.example($|\\.)|\\.sample($|\\.)|\\.template($|\\.)|(^|/)\\.env\\.example($|\\.)')"
+          if [ -n "${offenders}" ]; then
+            echo "${offenders}"
+            echo "❌ remove secret files"
+            exit 1
+          fi
+          echo "✅ no secret files tracked"
 
       - name: Node.js 설정
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
