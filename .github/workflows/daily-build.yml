@@ -1,6 +1,8 @@
+# yamllint disable rule:line-length
+---
 name: Daily Stock Report Build
 
-on:
+'on':
   workflow_dispatch:
   schedule:
     - cron: '0 1,6,11,15,20 * * *'  # 00/05/10/15/20 KST
@@ -38,15 +40,15 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: Guard: no secrets in code/logs
+      - name: "Guard: no secrets in code/logs"
         run: |
           set -e
           ! git grep -nE 'FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY'
 
-      - name: Guard: no env/key files
+      - name: "Guard: no env/key files"
         run: |
           set -e
-          ! git ls-files | grep -E '\\.env(\\..*)?$|\\.pem$|\\.key$|_creds\\.|credentials\\.json$' || (echo "❌ remove secret files"; exit 1)
+          ! git ls-files | grep -E '\.env(\..*)?$|\.pem$|\.key$|_creds\.|credentials\.json$' || (echo '❌ remove secret files'; exit 1)
 
       - name: Node.js 설정
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
@@ -62,11 +64,11 @@ jobs:
         run: npm ci
 
       # Guardrail: fail fast if legacy imports reappear
-      - name: Assert no legacy imports (node-fetch / https-proxy-agent)
+      - name: "Assert no legacy imports (node-fetch / https-proxy-agent)"
         run: |
           set -e
-          ! grep -nE "node-fetch|https-proxy-agent" fetchStockInfo.js || (echo "❌ Remove node-fetch/https-proxy-agent imports from fetchStockInfo.js" && exit 1)
-          ! grep -nE "node-fetch|https-proxy-agent" fetchNews.js || (echo "❌ Remove node-fetch/https-proxy-agent imports from fetchNews.js" && exit 1)
+          ! grep -nE 'node-fetch|https-proxy-agent' fetchStockInfo.js || (echo '❌ Remove node-fetch/https-proxy-agent imports from fetchStockInfo.js' && exit 1)
+          ! grep -nE 'node-fetch|https-proxy-agent' fetchNews.js || (echo '❌ Remove node-fetch/https-proxy-agent imports from fetchNews.js' && exit 1)
         shell: bash
 
       - name: Build trend-aware pools
@@ -84,7 +86,7 @@ jobs:
           COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
         run: node tools/buildPoolsTrendy.js || true
 
-      - name: Build recommendations (primary path)
+      - name: "Build recommendations (primary path)"
         run: node fetchStockInfo.js --refresh-pools --force
 
       - name: 뉴스 데이터 업데이트
@@ -93,14 +95,14 @@ jobs:
       - name: 환율 데이터 업데이트
         run: node fetchFxRates.js
 
-      - name: Verify generated files (enhanced)
+      - name: "Verify generated files (enhanced)"
         run: |
           set -e
           echo "== list files ==" && ls -la
           echo "== check targets exist =="
-          test -f data/market_news.json && echo "✅ data/market_news.json OK" || (echo "❌ missing"; exit 1)
-          test -f recommendations.json && echo "✅ recommendations.json OK" || (echo "❌ missing"; exit 1)
-          test -f data/fx_rates.json && echo "✅ data/fx_rates.json OK" || (echo "❌ missing"; exit 1)
+          test -f data/market_news.json && echo "✅ data/market_news.json OK" || (echo '❌ missing'; exit 1)
+          test -f recommendations.json && echo "✅ recommendations.json OK" || (echo '❌ missing'; exit 1)
+          test -f data/fx_rates.json && echo "✅ data/fx_rates.json OK" || (echo '❌ missing'; exit 1)
 
           echo "== show lastUpdated =="
           node -e "const fs=require('fs');const d=JSON.parse(fs.readFileSync('data/market_news.json','utf8'));console.log('market_news lastUpdated:', d.lastUpdated)"
@@ -117,7 +119,7 @@ jobs:
           head -n 5 data/market_news.json || true
           head -n 5 recommendations.json || true
 
-      - name: Stage changes (pre-commit)
+      - name: "Stage changes (pre-commit)"
         run: |
           git add -A
           git status
@@ -144,7 +146,7 @@ jobs:
           add_options: '-A'
           skip_dirty_check: true
 
-      - name: Show last commit (debug)
+      - name: "Show last commit (debug)"
         if: always()
         run: git log -1 --name-only --pretty=fuller || true
 
