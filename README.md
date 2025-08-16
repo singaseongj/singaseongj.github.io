@@ -80,7 +80,7 @@ Key files:
 - `pools.json` – current editable pools
 - `pools-cache.json` – last successful remote download
 - `pools-metrics.json` – scoring diagnostics from the generator
-- `feedback.json` – learning memory; adjust with `node tools/feedback.js --market=KOSPI --name=삼성전자 --delta=0.05`
+- `feedback.json` – learning memory; weights are applied during pool scoring to nudge future selections; adjust with `node tools/feedback.js --market=KOSPI --name=삼성전자 --delta=0.05`
 
 Optional environment variables:
 
