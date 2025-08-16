@@ -1,0 +1,88 @@
+name: Verify Pools & Recommendations (manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pools-test
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm i --production || true
+          fi
+
+      - name: Show secret presence (masked)
+        shell: bash
+        env:
+          FMP_KEY: ${{ secrets.FMP_KEY }}
+          ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+        run: |
+          echo "FMP_KEY len=${#FMP_KEY}"
+          echo "ALPHA_VANTAGE_KEY len=${#ALPHA_VANTAGE_KEY}"
+          echo "FINNHUB_API_KEY len=${#FINNHUB_API_KEY}"
+          echo "TWELVEDATA_API_KEY len=${#TWELVEDATA_API_KEY}"
+
+      - name: Build trend-aware pools
+        env:
+          FMP_KEY: ${{ secrets.FMP_KEY }}
+          ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          # Demo-friendly throttles; adjust if you have paid tiers
+          GLOBAL_BUDGET_MS: 90000
+          MAX_CONCURRENCY: 2
+          REQ_TIMEOUT_MS: 5000
+          RETRIES: 1
+          BACKOFF_BASE_MS: 400
+          CIRCUIT_MAX_ERRORS: 6
+          COVERAGE_MIN: 0.3
+        run: |
+          node tools/buildPoolsTrendy.js || true
+
+      - name: Build recommendations from pools
+        env:
+          FMP_KEY: ${{ secrets.FMP_KEY }}
+          ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          POOLS_TTL_MS: 86400000
+        run: |
+          node fetchStockInfo.js --refresh-pools --force
+
+      - name: Validate outputs
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y jq
+          test -s pools.json
+          jq -e . pools.json >/dev/null
+          test -s recommendations.json
+          jq -e . recommendations.json >/dev/null
+          test -s pools-metrics.json || echo "pools-metrics.json not present (ok if generator no-op)"
+
+      - name: Preview summary
+        run: |
+          echo "===== recommendations.json (head) ====="
+          head -n 60 recommendations.json || true
+          echo "===== pools.json ====="
+          jq -c 'to_entries|map({k:.key, safe:(.value.safe|length), aggr:(.value.aggressive|length)})' pools.json || true
