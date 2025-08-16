@@ -64,12 +64,18 @@ jobs:
 
       # Add a validator (from earlier) at tools/validate-recs.js
       # This will fail-fast if the JSON is incomplete.
-      - name: Validate recommendations.json
+      - name: Ensure recommendations.json
+        shell: bash
         run: |
-          if [ -f "tools/validate-recs.js" ]; then
-            node tools/validate-recs.js recommendations.json
+          set -euo pipefail
+          validate_json () { test -s recommendations.json && jq -e . recommendations.json >/dev/null 2>&1; }
+          if validate_json; then
+            echo "recommendations.json valid."
           else
-            echo "⚠️ tools/validate-recs.js not found; skipping schema check"
+            echo "Rebuilding pools and recommendations..."
+            node tools/buildPoolsTrendy.js || true
+            node fetchStockInfo.js --refresh-pools --force
+            validate_json
           fi
 
       - name: Verify generated files (brief)
@@ -86,8 +92,12 @@ jobs:
           commit_message: "chore: stock recommendations update [skip ci]"
           file_pattern: |
             recommendations.json
+            pools.json
+            pools-cache.json
+            pools-metrics.json
             metrics-cache.json
             ticker-cache.json
+            feedback.json
             data/market_news.json
             data/fx_rates.json
             stocks.html

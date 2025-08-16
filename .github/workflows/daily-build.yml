@@ -49,8 +49,11 @@ jobs:
           ! grep -nE "node-fetch|https-proxy-agent" fetchNews.js || (echo "❌ Remove node-fetch/https-proxy-agent imports from fetchNews.js" && exit 1)
         shell: bash
 
-      - name: 주식 추천 정보 업데이트
-        run: node fetchStockInfo.js --force
+      - name: Build trend-aware pools
+        run: node tools/buildPoolsTrendy.js || true
+
+      - name: Build recommendations (primary path)
+        run: node fetchStockInfo.js --refresh-pools --force
 
       - name: 뉴스 데이터 업데이트
         run: node fetchNews.js
@@ -96,7 +99,11 @@ jobs:
             package.json
             package-lock.json
             recommendations.json
+            pools.json
+            pools-cache.json
+            pools-metrics.json
             ticker-cache.json
+            feedback.json
             data/market_news.json
             data/fx_rates.json
             stocks.html

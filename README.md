@@ -62,6 +62,45 @@ If the fetch fails it will still fall back to the local file
 ([link](https://drive.google.com/file/d/1OE6OGkhextQCBRG_jG3TC05LdV6RKRHZ/view?usp=drive_link)).
 This prevents unnecessary network requests during daily builds.
 
+## Trend-Aware Pools & Learning
+
+Ticker pools are now stored in `pools.json`. The loader checks for a remote
+endpoint first (`POOLS_URL`) with a configurable TTL (default 24 h, override via
+`--pools-ttl=HOURS` or force with `--refresh-pools`). If remote fetch fails or
+TTL is not met it falls back to `pools-cache.json`, then the versioned
+`pools.json`, and finally an embedded list.
+
+`tools/buildPoolsTrendy.js` can refresh pools daily using lightweight signals.
+It writes diagnostics to `pools-metrics.json` and updates `feedback.json` which
+stores user feedback with gradual decay. Missing APIs are tolerated—the script
+logs a warning and leaves existing pools untouched.
+
+Key files:
+
+- `pools.json` – current editable pools
+- `pools-cache.json` – last successful remote download
+- `pools-metrics.json` – scoring diagnostics from the generator
+- `feedback.json` – learning memory; adjust with `node tools/feedback.js --market=KOSPI --name=삼성전자 --delta=0.05`
+
+Optional environment variables:
+
+- `POOLS_URL` – remote JSON endpoint for pools
+- `NEWS_API_URL` / `NEWS_API_KEY`
+- `QUOTES_API_URL` / `QUOTES_API_KEY`
+- `EARNINGS_API_URL` / `EARNINGS_API_KEY`
+
+Run the generator manually:
+
+```bash
+node tools/buildPoolsTrendy.js
+```
+
+Then rebuild recommendations with remote refresh:
+
+```bash
+node fetchStockInfo.js --refresh-pools --force
+```
+
 ## Updating market news
 
 `fetchNews.js` gathers the latest headlines from several RSS feeds. It collects
