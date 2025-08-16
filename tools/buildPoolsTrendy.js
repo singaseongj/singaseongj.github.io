@@ -117,7 +117,8 @@ async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE
       if (tripOnError(e)) throw lastErr;
       if (attempt < retries && budgetOk()) {
         const backoff = base * Math.pow(2, attempt);
-        console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${url}`);
+        const redacted = url.replace(/token=[^&]+/i, 'token=***').replace(/apikey=[^&]+/i, 'apikey=***');
+        console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${redacted}`);
         await new Promise(r => setTimeout(r, backoff));
         continue;
       }
