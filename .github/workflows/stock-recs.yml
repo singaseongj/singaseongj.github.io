@@ -29,6 +29,7 @@ jobs:
       HARD_DEADLINE_MS: "55000"
       # GitHub often has flaky access to Naver; feel free to unset.
       SKIP_NAVER: "1"
+      IS_CRON: ${{ github.event_name == 'schedule' }}
 
       # Optional: hybrid remote cache (leave empty if not used)
       # REMOTE_URL: ${{ secrets.REMOTE_URL }}   # e.g. public GET or signed GET to last-good recommendations.json
@@ -53,6 +54,9 @@ jobs:
         with:
           persist-credentials: true
           fetch-depth: 0
+
+      - name: Verify refresh-pools policy
+        run: bash .github/scripts/check-refresh-pools.sh
 
       - name: "Guard: no hardcoded secrets"
         shell: bash
@@ -94,16 +98,23 @@ jobs:
           COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
         run: node tools/buildPoolsTrendy.js || true
 
-      # If you're still on single-file (fetchStockInfo.js), this just works.
-      # If you split into modules, it runs src/index.js instead.
-      - name: "Build recommendations (deadline-aware)"
+      - name: Build recommendations (conditional refresh)
+        shell: bash
         run: |
-          if [ -f "src/index.js" ]; then
+          set -euo pipefail
+          if [ -f fetchStockInfo.js ]; then
+            if [ "${IS_CRON}" = "true" ]; then
+              echo "Cron run → using --refresh-pools"
+              timeout 60 node fetchStockInfo.js --refresh-pools --force --delay=120
+            else
+              echo "Non-cron run → no forced refresh"
+              timeout 60 node fetchStockInfo.js --force --delay=120
+            fi
+          elif [ -f src/index.js ]; then
             echo "Running modular entry (src/index.js)"
             timeout 60 node src/index.js --force
           else
-            echo "Running single-file (fetchStockInfo.js)"
-            timeout 60 node fetchStockInfo.js --force --delay=120
+            echo "No entrypoint found"; exit 1
           fi
 
       # Add a validator (from earlier) at tools/validate-recs.js
@@ -118,7 +129,13 @@ jobs:
           else
             echo "Rebuilding pools and recommendations..."
             node tools/buildPoolsTrendy.js || true
-            node fetchStockInfo.js --refresh-pools --force
+            if [ "${IS_CRON}" = "true" ]; then
+              echo "Cron run → using --refresh-pools"
+              node fetchStockInfo.js --refresh-pools --force
+            else
+              echo "Non-cron run → no forced refresh"
+              node fetchStockInfo.js --force
+            fi
             validate_json
           fi
 
