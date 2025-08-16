@@ -70,11 +70,11 @@ jobs:
           fi
           echo "✅ No hardcoded secrets found."
 
-        - name: Setup Node
-          uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4
-          with:
-            node-version: '20'
-            cache: 'npm'
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install deps
         run: npm ci
@@ -96,7 +96,7 @@ jobs:
 
       # If you're still on single-file (fetchStockInfo.js), this just works.
       # If you split into modules, it runs src/index.js instead.
-      - name: Build recommendations (deadline-aware)
+      - name: "Build recommendations (deadline-aware)"
         run: |
           if [ -f "src/index.js" ]; then
             echo "→ Running modular entry (src/index.js)"
@@ -122,7 +122,7 @@ jobs:
             validate_json
           fi
 
-      - name: Verify generated files (brief)
+      - name: "Verify generated files (brief)"
         run: |
           test -f recommendations.json
           echo "Last updated:"
@@ -130,7 +130,7 @@ jobs:
           echo "Mode:"
           node -e "console.log(require('./recommendations.json').mode || 'unknown')"
 
-      - name: Commit & push changes
+      - name: "Commit & push changes"
         uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403  # v5
         with:
           commit_message: "chore: stock recommendations update [skip ci]"
@@ -149,7 +149,7 @@ jobs:
           add_options: '-A'
           skip_dirty_check: true
 
-      - name: Show last commit (debug)
+      - name: "Show last commit (debug)"
         if: always()
         run: git log -1 --name-only --pretty=fuller || true
 
