@@ -1,6 +1,8 @@
+---
+# yamllint disable rule:line-length
 name: Build & Publish Stock Recommendations
 
-on:
+'on':
   workflow_dispatch:
   schedule:
     # Every 5 hours (cron is UTC; cadence doesn't depend on timezone)
@@ -11,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
+    environment:
+      name: production
+      url: https://singaseongj.github.io
 
     concurrency:
       group: daily-stock-report
@@ -43,23 +49,23 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955  # v4
         with:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: Guard: no secrets in code/logs
+      - name: "Guard: no secrets in code/logs"
         run: |
           set -e
           ! git grep -nE 'FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY'
 
-      - name: Guard: no env/key files
+      - name: "Guard: no env/key files"
         run: |
           set -e
           ! git ls-files | grep -E '\\.env(\\..*)?$|\\.pem$|\\.key$|_creds\\.|credentials\\.json$' || (echo "❌ remove secret files"; exit 1)
 
       - name: Setup Node
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4
         with:
           node-version: '20'
           cache: 'npm'
@@ -119,7 +125,7 @@ jobs:
           node -e "console.log(require('./recommendations.json').mode || 'unknown')"
 
       - name: Commit & push changes
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403  # v5
         with:
           commit_message: "chore: stock recommendations update [skip ci]"
           file_pattern: |
@@ -144,10 +150,7 @@ jobs:
       # Optional: publish to GitHub Pages if your repo uses it
       - name: Deploy to GitHub Pages
         if: always()
-        environment:
-          name: production
-          url: https://singaseongj.github.io
-        uses: peaceiris/actions-gh-pages@e9c66a37f080288a11235e32cbe2dc5fb3a679cc # v4
+        uses: peaceiris/actions-gh-pages@e9c66a37f080288a11235e32cbe2dc5fb3a679cc  # v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
