@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "weights": {},
+  "weights": {
+    "KOSPI": {
+      "삼성전자": 0.15,
+      "LG화학": 0.10,
+      "현대차": -0.05
+    },
+    "KOSDAQ": {
+      "에코프로": 0.20,
+      "셀트리온헬스케어": -0.10
+    },
+    "NASDAQ": {
+      "NVIDIA": 0.25,
+      "Tesla": -0.10,
+      "Apple": 0.10
+    },
+    "S&P 500": {
+      "Johnson & Johnson": 0.05,
+      "ServiceNow": 0.10,
+      "Coca-Cola": -0.05
+    }
+  },
   "decay": {
     "half_life_days": 14,
-    "last_decay_ts": "2025-08-16T06:14:58.229Z"
+    "last_decay_ts": "2025-08-16T00:00:00.000Z"
   }
 }

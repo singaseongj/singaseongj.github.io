@@ -67,6 +67,12 @@ NAME_TO_SYMBOL = {
   'Eli Lilly':'LLY','Uber Technologies':'UBER','NRG Energy':'NRG','ServiceNow':'NOW','Moderna':'MRNA','Zoom':'ZM','MongoDB':'MDB','Snowflake':'SNOW'
 };
 
+Object.assign(NAME_TO_SYMBOL, {
+  '한화에어로스페이스': '012450.KS',
+  'BGF리테일': '282330.KS',
+  '삼성바이오로직스': '207940.KS'
+});
+
 function nameToSymbol(name){
   if (NAME_TO_SYMBOL[name]) return NAME_TO_SYMBOL[name];
   if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
@@ -75,11 +81,17 @@ function nameToSymbol(name){
 
 function isKR(symbolOrName) {
   // KR symbols end with .KS (KOSPI) or .KQ (KOSDAQ)
-  return /\.K[QS]$/.test(symbolOrName);
+  return /\.K[QS]$/.test(String(symbolOrName));
 }
 function isUS(symbolOrName) {
-  // rough: typical US symbols are A–Z with optional dot/dash, not ending .KQ/.KS
-  return /^[A-Z][A-Z.\-]{0,6}$/.test(symbolOrName) && !/\.K[QS]$/.test(symbolOrName);
+  // US-ish symbols: letters, optional dot/dash, but not KR suffix
+  return /^[A-Z][A-Z.\-]{0,6}$/.test(String(symbolOrName)) && !/\.K[QS]$/.test(String(symbolOrName));
+}
+
+// TwelveData expects colon format for KRX (e.g., 005930:KS, 091990:KQ)
+function toTwelveSymbol(sym) {
+  const m = String(sym).match(/^(\d{6})\.(K[QS])$/);
+  return m ? `${m[1]}:${m[2]}` : sym;
 }
 
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 8000));
@@ -105,7 +117,8 @@ async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE
       if (tripOnError(e)) throw lastErr;
       if (attempt < retries && budgetOk()) {
         const backoff = base * Math.pow(2, attempt);
-        console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${url}`);
+        const redacted = url.replace(/token=[^&]+/i, 'token=***').replace(/apikey=[^&]+/i, 'apikey=***');
+        console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${redacted}`);
         await new Promise(r => setTimeout(r, backoff));
         continue;
       }
@@ -156,40 +169,35 @@ async function finnhubCandles(symbol){
 
 // TwelveData time series (fallback)
 async function twelveCandles(symbol){
-  const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(symbol)}&interval=1day&outputsize=40&apikey=${TWELVE}`;
+  const tsym = toTwelveSymbol(symbol);
+  const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(tsym)}&interval=1day&outputsize=40&apikey=${TWELVE}`;
   const j = await getJSON(url);
   const data = j?.values;
   if (!Array.isArray(data)) return null;
-  // Normalize to { c[], v[] } descending chronological order → reverse to oldest..newest
   const closes = [], vols = [];
-  for (let i=data.length-1; i>=0; i--){
+  for (let i = data.length - 1; i >= 0; i--) {
     closes.push(Number(data[i].close));
     vols.push(Number(data[i].volume || 0));
   }
-  return { c: closes, v: vols };
+  return { c: closes, v: vols, _tsym: tsym };
 }
 
 async function getCandles(symbol){
-  // KR: prefer TwelveData; US: prefer Finnhub (fallback TwelveData)
   if (isKR(symbol)) {
     if (TWELVE) {
-      const j = await twelveCandles(symbol).catch(()=>null);
-      if (j) return j;
+      const j = await twelveCandles(symbol).catch(() => null);
+      if (j) return j; // { c, v, _tsym }
     }
-    // As a last resort, try Finnhub candles (may fail on free tier)
-    if (FINNHUB) {
-      const j = await finnhubCandles(symbol).catch(()=>null);
-      if (j) return { c: j.c, v: j.v };
-    }
+    // Do NOT try Finnhub for KR; return null to avoid error storms
     return null;
   } else {
-    // US or other
+    // US/other: prefer Finnhub, then TwelveData
     if (FINNHUB) {
-      const j = await finnhubCandles(symbol).catch(()=>null);
-      if (j) return { c: j.c, v: j.v };
+      const j = await finnhubCandles(symbol).catch(() => null);
+      if (j) return { c: j.c, v: j.v, _tsym: symbol };
     }
     if (TWELVE) {
-      const j = await twelveCandles(symbol).catch(()=>null);
+      const j = await twelveCandles(symbol).catch(() => null);
       if (j) return j;
     }
     return null;
@@ -326,30 +334,40 @@ async function main(){
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
       if (!budgetOk(200)) return; // skip if no time left
       let sym = OFFLINE ? null : nameToSymbol(name);
-      // If no symbol detected but name is Korean and we have a map entry, use it
-      if (!sym && NAME_TO_SYMBOL[name]) {
-        sym = NAME_TO_SYMBOL[name];
-      }
-      const route = sym ? (isKR(sym) ? 'KR→TwelveData' : 'US→Finnhub') : 'no-symbol';
-      console.log(`[buildPools] ${market} :: ${name} (${route})`);
-      let c=null, v=null; let ret5=null, ret20=null, vol20=null, turnover=null; let news72=0; let earn=false;
+      // ensure KR names use map if available
+      if (!sym && NAME_TO_SYMBOL[name]) sym = NAME_TO_SYMBOL[name];
 
+      let route = 'no-symbol';
+      let routeDetail = '';
+      if (sym) {
+        if (isKR(sym)) {
+          const tsym = toTwelveSymbol(sym);
+          route = 'KR→TwelveData';
+          routeDetail = ` (${tsym})`;
+        } else if (isUS(sym)) {
+          route = 'US→Finnhub';
+          routeDetail = ` (${sym})`;
+        } else {
+          route = 'Other';
+          routeDetail = ` (${sym})`;
+        }
+      }
+      console.log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
+
+      let ret5=null, ret20=null, vol20=null, turnover=null; let news72=0; let earn=false;
       try {
-        if (sym) {
-          const candles = budgetOk(REQ_TIMEOUT_MS) ? await getCandles(sym).catch(e => { tripOnError(e); return null; }) : null;
-          if (candles) { c = candles.c; v = candles.v; }
-          if (c && v) {
-            const m = computeMetrics(c, v);
-            ret5=m.ret5; ret20=m.ret20; vol20=m.vol20; turnover=m.turnover;
-          }
-          if (FINNHUB && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
-            news72 = await finnhubNewsCount(sym).catch(e => { tripOnError(e); return 0; });
-            earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
-          } else {
-            // KR or no Finnhub: skip to avoid 4xx floods
-            news72 = 0;
-            earn = false;
-          }
+        const candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym).catch(e => { tripOnError(e); return null; }) : null;
+        if (candles && Array.isArray(candles.c) && Array.isArray(candles.v)) {
+          const m = computeMetrics(candles.c, candles.v);
+          ret5 = m.ret5; ret20 = m.ret20; vol20 = m.vol20; turnover = m.turnover;
+        }
+        if (FINNHUB && sym && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
+          news72 = await finnhubNewsCount(sym).catch(e => { tripOnError(e); return 0; });
+          earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
+        } else {
+          // KR or no Finnhub: skip these to avoid 4xx floods
+          news72 = 0;
+          earn = false;
         }
       } catch (e) {
         tripOnError(e);
@@ -371,11 +389,13 @@ async function main(){
     names.forEach((n, i) => {
       const earnBonus = byName[n].earn ? 0.10 : 0;
       const sym = byName[n].sym;
-      const baseKR = sym && isKR(sym) ? 0.05 : 0; // small boost so KR without news still compete
-      const safe = baseKR + 0.35*nNews[i] + 0.35*nRet20[i] + 0.20*nRet5[i] + 0.10*(1 - nVol[i]) + earnBonus;
-      const aggr = baseKR + 0.45*nNews[i] + 0.35*nRet5[i]  + 0.20*nTurn[i]                        + earnBonus;
-      scoreSafeRaw[n] = clamp01(safe);
-      scoreAggrRaw[n] = clamp01(aggr);
+      const isKRName = sym ? isKR(sym) : false;
+      const baseKR = isKRName ? 0.05 : 0;
+
+      const safe = clamp01(baseKR + 0.35*nNews[i] + 0.35*nRet20[i] + 0.20*nRet5[i] + 0.10*(1 - nVol[i]) + earnBonus);
+      const aggr = clamp01(baseKR + 0.45*nNews[i] + 0.35*nRet5[i]  + 0.20*nTurn[i]                        + earnBonus);
+      scoreSafeRaw[n] = safe;
+      scoreAggrRaw[n] = aggr;
     });
 
     // Apply feedback nudges
