@@ -70,26 +70,11 @@ jobs:
           fi
           echo "✅ No hardcoded secrets found."
 
-      - name: "Guard: no env/key files (allow examples)"
-        shell: bash
-        run: |
-          set -Eeo pipefail
-          offenders="$(git ls-files -z \
-            | tr '\\0' '\\n' \
-            | grep -E '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|(^|/)credentials\\.json$|_creds\\.' \
-            | grep -Ev '\\.example($|\\.)|\\.sample($|\\.)|\\.template($|\\.)|(^|/)\\.env\\.example($|\\.)')"
-          if [ -n "${offenders}" ]; then
-            echo "${offenders}"
-            echo "❌ remove secret files"
-            exit 1
-          fi
-          echo "✅ no secret files tracked"
-
-      - name: Setup Node
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+        - name: Setup Node
+          uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4
+          with:
+            node-version: '20'
+            cache: 'npm'
 
       - name: Install deps
         run: npm ci

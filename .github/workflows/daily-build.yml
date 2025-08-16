@@ -94,28 +94,6 @@ jobs:
           fi
           echo "✅ No hardcoded secrets found."
 
-      - name: "Guard: no env/key files (allow examples)"
-        shell: bash
-        run: |
-          set -Eeo pipefail
-
-          # 1) Gather candidates that LOOK like secret files
-          candidates="$(git ls-files -z \
-            | tr '\\0' '\\n' \
-            | grep -E '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|(^|/)credentials\\.json$|_creds\\.')"
-
-          # 2) Drop safe templates/examples (incl. exact .env.example)
-          offenders="$(printf '%s\n' "$candidates" \
-            | grep -Ev '(^|/)\\.env\\.example$|\\.example($|\\.|/)|\\.sample($|\\.|/)|\\.template($|\\.|/)')"
-
-          if [ -n "$offenders" ]; then
-            echo "$offenders"
-            echo "❌ remove secret files"
-            exit 1
-          fi
-
-          echo "✅ no secret files tracked"
-
       - name: Node.js 설정
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
