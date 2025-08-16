@@ -2,7 +2,7 @@
 # yamllint disable rule:line-length
 name: Build & Publish Stock Recommendations
 
-'on':
+on:
   workflow_dispatch:
   schedule:
     # Every 5 hours (cron is UTC; cadence doesn't depend on timezone)
@@ -99,10 +99,10 @@ jobs:
       - name: "Build recommendations (deadline-aware)"
         run: |
           if [ -f "src/index.js" ]; then
-            echo "→ Running modular entry (src/index.js)"
+            echo "Running modular entry (src/index.js)"
             timeout 60 node src/index.js --refresh-pools --force
           else
-            echo "→ Running single-file (fetchStockInfo.js)"
+            echo "Running single-file (fetchStockInfo.js)"
             timeout 60 node fetchStockInfo.js --refresh-pools --force --delay=120
           fi
 
