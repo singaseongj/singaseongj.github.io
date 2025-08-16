@@ -60,15 +60,22 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          offenders="$(git ls-files -z \
+
+          # 1) Gather candidates that LOOK like secret files
+          candidates="$(git ls-files -z \
             | tr '\\0' '\\n' \
-            | grep -E '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|(^|/)credentials\\.json$|_creds\\.' \
-            | grep -Ev '\\.example($|\\.)|\\.sample($|\\.)|\\.template($|\\.)|(^|/)\\.env\\.example($|\\.)')"
-          if [ -n "${offenders}" ]; then
-            echo "${offenders}"
+            | grep -E '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|(^|/)credentials\\.json$|_creds\\.')"
+
+          # 2) Drop safe templates/examples (incl. exact .env.example)
+          offenders="$(printf '%s\n' "$candidates" \
+            | grep -Ev '(^|/)\\.env\\.example$|\\.example($|\\.|/)|\\.sample($|\\.|/)|\\.template($|\\.|/)')"
+
+          if [ -n "$offenders" ]; then
+            echo "$offenders"
             echo "❌ remove secret files"
             exit 1
           fi
+
           echo "✅ no secret files tracked"
 
       - name: Node.js 설정
