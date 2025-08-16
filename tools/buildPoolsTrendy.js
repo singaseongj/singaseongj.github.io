@@ -17,6 +17,34 @@ const PICK_COUNT = 5;
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+const REQ_TIMEOUT_MS = 8000;   // 8 seconds per HTTP request
+const RETRIES = 3;
+const BACKOFF_BASE_MS = 600;
+
+async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE_MS) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQ_TIMEOUT_MS);
+    try {
+      const res = await fetch(url, { headers, signal: controller.signal });
+      clearTimeout(timer);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (e) {
+      clearTimeout(timer);
+      lastErr = e;
+      if (attempt < retries) {
+        const backoff = base * Math.pow(2, attempt);
+        console.log(`[net] retry ${attempt + 1}/${retries} after ${backoff}ms :: ${url}`);
+        await new Promise(r => setTimeout(r, backoff));
+        continue;
+      }
+    }
+  }
+  throw lastErr;
+}
+
 async function writeAtomic(p, data) {
   const tmp = `${p}.tmp`;
   await fs.writeFile(tmp, data);
@@ -42,21 +70,6 @@ function clamp01(x){ return Math.max(0, Math.min(1, x)); }
 function todayYMD(offsetDays=0){
   const d = new Date(Date.now() + offsetDays*86400000);
   return d.toISOString().slice(0,10);
-}
-
-async function getJSON(url, headers={}, retries=3, base=500) {
-  let lastErr;
-  for (let a=0; a<=retries; a++){
-    try{
-      const res = await fetch(url, { headers });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    }catch(e){
-      lastErr = e;
-      if (a < retries){ await sleep(base * Math.pow(2,a)); }
-    }
-  }
-  throw lastErr;
 }
 
 // ---------- Data fetchers ----------
@@ -175,6 +188,24 @@ function maybeDecayFeedback(feedback){
   }catch{ return feedback; }
 }
 
+async function mapLimit(items, limit, worker) {
+  const out = new Array(items.length);
+  let i = 0, active = 0;
+  return await new Promise((resolve, reject) => {
+    const next = () => {
+      while (active < limit && i < items.length) {
+        const idx = i++;
+        active++;
+        Promise.resolve(worker(items[idx], idx))
+          .then(val => { out[idx] = val; active--; next(); })
+          .catch(err => reject(err));
+      }
+      if (i >= items.length && active === 0) resolve(out);
+    };
+    next();
+  });
+}
+
 // ---------- Main ----------
 async function main(){
   const pools = await loadJson(POOLS_FILE);
@@ -187,6 +218,8 @@ async function main(){
     process.exit(0);
   }
 
+  console.log(`[buildPools] start :: FINNHUB=${!!FINNHUB} TWELVE=${!!TWELVE}`);
+
   const feedback = await loadJson(FEEDBACK_FILE, { version:1, weights:{}, decay:{ half_life_days:14, last_decay_ts:null }});
   const metricsOut = {};
 
@@ -194,24 +227,33 @@ async function main(){
     const buckets = pools[market];
     if (!buckets) continue;
     const names = Array.from(new Set([...(buckets.safe||[]), ...(buckets.aggressive||[])].map(x => typeof x==='string'? x : x.name).filter(Boolean)));
+    console.log(`[buildPools] market=${market} names=${names.length}`);
     if (names.length === 0) continue;
 
     // Fetch signals per "symbol" best-effort (names may not be symbols; we compute where possible)
     const byName = {};
-    for (const name of names){
-      // Heuristic: if looks like a symbol (e.g., MSFT, AAPL, 005930.KS) use it; else skip API metrics (nulls)
-      const looksSymbol = /^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name);
+    await mapLimit(names, 4, async (name) => {
+      console.log(`[buildPools] ${market} :: ${name}`);
+      const looksSymbol =
+        /^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name);
+
       let c=null, v=null; let ret5=null, ret20=null, vol20=null, turnover=null; let news72=0; let earn=false;
 
-      if (looksSymbol){
+      if (looksSymbol) {
         const candles = await getCandles(name).catch(()=>null);
-        if (candles){ c=candles.c; v=candles.v; }
-        if (c && v){ const m = computeMetrics(c,v); ret5=m.ret5; ret20=m.ret20; vol20=m.vol20; turnover=m.turnover; }
-        if (FINNHUB){ news72 = await finnhubNewsCount(name).catch(()=>0); earn = await finnhubRecentEarnings(name).catch(()=>false); }
+        if (candles) { c = candles.c; v = candles.v; }
+        if (c && v) {
+          const m = computeMetrics(c,v);
+          ret5=m.ret5; ret20=m.ret20; vol20=m.vol20; turnover=m.turnover;
+        }
+        if (FINNHUB) {
+          news72 = await finnhubNewsCount(name).catch(()=>0);
+          earn   = await finnhubRecentEarnings(name).catch(()=>false);
+        }
       }
+
       byName[name] = { ret5, ret20, vol20, turnover, news72, earn };
-      await sleep(120); // gentle pacing
-    }
+    });
 
     // Normalize within market
     const nRet5   = rank01(names.map(n => byName[n].ret5));
@@ -268,7 +310,7 @@ async function main(){
   // Write outputs
   await writeAtomic(POOLS_FILE, JSON.stringify(pools, null, 2));
   await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
-  console.log('[buildPools] wrote pools.json and pools-metrics.json');
+  console.log('[buildPools] wrote pools.json and pools-metrics.json :: done');
 }
 
 main().catch(e => { console.error('[buildPools] failed:', e.message); process.exit(0); });
