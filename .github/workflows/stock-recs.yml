@@ -100,10 +100,10 @@ jobs:
         run: |
           if [ -f "src/index.js" ]; then
             echo "Running modular entry (src/index.js)"
-            timeout 60 node src/index.js --refresh-pools --force
+            timeout 60 node src/index.js --force
           else
             echo "Running single-file (fetchStockInfo.js)"
-            timeout 60 node fetchStockInfo.js --refresh-pools --force --delay=120
+            timeout 60 node fetchStockInfo.js --force --delay=120
           fi
 
       # Add a validator (from earlier) at tools/validate-recs.js
