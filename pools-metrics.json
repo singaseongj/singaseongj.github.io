@@ -19,7 +19,45 @@
         "aggressive": 0.42500000000000004
       }
     },
+    "LG화학": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 0,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.5
+      },
+      "score": {
+        "safe": 0.42499999999999993,
+        "aggressive": 0.375
+      }
+    },
     "SK하이닉스": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 0,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.5
+      },
+      "score": {
+        "safe": 0.32499999999999996,
+        "aggressive": 0.275
+      }
+    },
+    "POSCO홀딩스": {
       "ret5": null,
       "ret20": null,
       "vol20": null,
@@ -56,66 +94,9 @@
         "safe": 0.27499999999999997,
         "aggressive": 0.22500000000000003
       }
-    },
-    "POSCO홀딩스": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 0,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.5
-      },
-      "score": {
-        "safe": 0.32499999999999996,
-        "aggressive": 0.275
-      }
-    },
-    "LG화학": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 0,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.5
-      },
-      "score": {
-        "safe": 0.42499999999999993,
-        "aggressive": 0.375
-      }
     }
   },
   "KOSDAQ": {
-    "셀트리온헬스케어": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 0,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.5
-      },
-      "score": {
-        "safe": 0.22499999999999995,
-        "aggressive": 0.17500000000000002
-      }
-    },
     "JYP엔터테인먼트": {
       "ret5": null,
       "ret20": null,
@@ -191,6 +172,25 @@
         "safe": 0.32499999999999996,
         "aggressive": 0.275
       }
+    },
+    "셀트리온헬스케어": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 0,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.5
+      },
+      "score": {
+        "safe": 0.22499999999999995,
+        "aggressive": 0.17500000000000002
+      }
     }
   },
   "NASDAQ": {
@@ -218,18 +218,18 @@
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 142,
+      "news72h": 143,
       "recentEarnings": false,
       "norm": {
         "ret5": 0,
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.96
+        "news72h": 1
       },
       "score": {
-        "safe": 0.43599999999999994,
-        "aggressive": 0.432
+        "safe": 0.44999999999999996,
+        "aggressive": 0.45
       }
     },
     "Microsoft": {
@@ -237,18 +237,18 @@
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 140,
+      "news72h": 141,
       "recentEarnings": false,
       "norm": {
         "ret5": 0,
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.88
+        "news72h": 0.92
       },
       "score": {
-        "safe": 0.40800000000000003,
-        "aggressive": 0.396
+        "safe": 0.42200000000000004,
+        "aggressive": 0.41400000000000003
       }
     },
     "Alphabet": {
@@ -334,18 +334,18 @@
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 62,
+      "news72h": 63,
       "recentEarnings": false,
       "norm": {
         "ret5": 0,
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.6666666666666666
+        "news72h": 0.6781609195402298
       },
       "score": {
-        "safe": 0.3333333333333333,
-        "aggressive": 0.3
+        "safe": 0.33735632183908043,
+        "aggressive": 0.30517241379310345
       }
     },
     "JPMorgan Chase": {
@@ -384,25 +384,6 @@
       "score": {
         "safe": 0.2,
         "aggressive": 0.1
-      }
-    },
-    "Visa": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 23,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.21839080459770116
-      },
-      "score": {
-        "safe": 0.1764367816091954,
-        "aggressive": 0.09827586206896552
       }
     }
   }
