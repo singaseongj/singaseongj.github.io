@@ -59,8 +59,17 @@ jobs:
 
       - name: Build trend-aware pools
         env:
+          FMP_KEY: ${{ secrets.FMP_KEY }}
+          ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          GLOBAL_BUDGET_MS: ${{ env.GLOBAL_BUDGET_MS }}
+          MAX_CONCURRENCY: ${{ env.MAX_CONCURRENCY }}
+          REQ_TIMEOUT_MS: ${{ env.REQ_TIMEOUT_MS }}
+          RETRIES: ${{ env.RETRIES }}
+          BACKOFF_BASE_MS: ${{ env.BACKOFF_BASE_MS }}
+          CIRCUIT_MAX_ERRORS: ${{ env.CIRCUIT_MAX_ERRORS }}
+          COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
         run: node tools/buildPoolsTrendy.js || true
 
       # If you're still on single-file (fetchStockInfo.js), this just works.
