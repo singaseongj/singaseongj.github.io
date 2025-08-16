@@ -95,6 +95,19 @@ Run the generator manually:
 node tools/buildPoolsTrendy.js
 ```
 
+Examples:
+
+```bash
+# Full online
+FINNHUB_API_KEY=... TWELVEDATA_API_KEY=... node tools/buildPoolsTrendy.js
+
+# Demo / slow networks
+FINNHUB_API_KEY=demo TWELVEDATA_API_KEY=demo GLOBAL_BUDGET_MS=60000 MAX_CONCURRENCY=2 node tools/buildPoolsTrendy.js
+
+# Offline but still complete run
+node tools/buildPoolsTrendy.js --offline
+```
+
 Then rebuild recommendations with remote refresh:
 
 ```bash
