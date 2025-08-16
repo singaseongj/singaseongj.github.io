@@ -14,8 +14,8 @@ jobs:
       TZ: Asia/Seoul  # make timestamps consistent with KST
       FMP_KEY: ${{ secrets.FMP_KEY }}                 # optional
       ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}  # optional
-      FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}         # optional
-      TWELVEDATA_KEY: ${{ secrets.TWELVEDATA_KEY }}   # optional
+      FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}         # optional
+      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}   # optional
 
     concurrency:
       group: daily-stock-report
@@ -50,6 +50,9 @@ jobs:
         shell: bash
 
       - name: Build trend-aware pools
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
         run: node tools/buildPoolsTrendy.js || true
 
       - name: Build recommendations (primary path)

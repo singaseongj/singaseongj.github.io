@@ -31,8 +31,8 @@ jobs:
       # Optional: API keys for your other steps if you integrate them later
       FMP_KEY: ${{ secrets.FMP_KEY }}
       ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
-      FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
-      TWELVEDATA_KEY: ${{ secrets.TWELVEDATA_KEY }}
+      FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
 
     steps:
       - name: Checkout
@@ -50,16 +50,22 @@ jobs:
       - name: Install deps
         run: npm ci
 
+      - name: Build trend-aware pools
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+        run: node tools/buildPoolsTrendy.js || true
+
       # If you're still on single-file (fetchStockInfo.js), this just works.
       # If you split into modules, it runs src/index.js instead.
       - name: Build recommendations (deadline-aware)
         run: |
           if [ -f "src/index.js" ]; then
             echo "→ Running modular entry (src/index.js)"
-            timeout 60 node src/index.js --force
+            timeout 60 node src/index.js --refresh-pools --force
           else
             echo "→ Running single-file (fetchStockInfo.js)"
-            timeout 60 node fetchStockInfo.js --force --delay=120
+            timeout 60 node fetchStockInfo.js --refresh-pools --force --delay=120
           fi
 
       # Add a validator (from earlier) at tools/validate-recs.js

@@ -1,5 +1,5 @@
 // fetchStockInfo.js — improved version with fallbacks and KOSDAQ stocks
-import fs, { writeFile, rename } from 'fs/promises';
+import fs, { writeFile, rename, readFile } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
@@ -11,11 +11,10 @@ const FORCE = ARGS.has('--force');
 const SKIP_FRESH = ARGS.has('--skip-fresh');
 const DELAY_ARG = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]);
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
-const POOLS_FILE = path.resolve(process.cwd(), 'pools.json');
-const POOLS_CACHE_FILE = path.resolve(process.cwd(), 'pools-cache.json');
-const DEFAULT_POOLS_TTL_HOURS = 24;
-const TTL_ARG = Number((process.argv.find(a => a.startsWith('--pools-ttl=')) || '').split('=')[1]);
-const POOLS_TTL_MS = (Number.isFinite(TTL_ARG) && TTL_ARG > 0 ? TTL_ARG : DEFAULT_POOLS_TTL_HOURS) * 60 * 60 * 1000;
+const POOLS_PATH = path.resolve(process.cwd(), 'pools.json');
+const POOLS_CACHE = path.resolve(process.cwd(), 'pools-cache.json');
+const POOLS_TTL_MS = Number(process.env.POOLS_TTL_MS || 24 * 60 * 60 * 1000); // default 24h
+const POOLS_URL = process.env.POOLS_URL || ''; // optional remote JSON endpoint
 const REFRESH_POOLS = ARGS.has('--refresh-pools');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -88,97 +87,56 @@ function pickDeterministic(arr, k, seed) {
   return a.slice(0, k);
 }
 
-// Embedded fallback pools used when external files are unavailable
-const POOLS_FALLBACK = {
-  KOSPI: {
-    safe: ['삼성전자', 'SK하이닉스', '현대차', 'POSCO홀딩스', 'LG화학', 'NAVER', '카카오', '기아', 'LG전자', '삼성SDI'],
-    aggressive: ['HD현대일렉트릭', '두산에너빌리티', '한화에어로스페이스', 'POSCO퓨처엠', 'BGF리테일', '에코프로', '삼성바이오로직스', '셀트리온']
-  },
-  KOSDAQ: {
-    safe: ['셀트리온헬스케어', 'JYP엔터테인먼트', '펄어비스', '아이오케이', 'CJ ENM'],
-    aggressive: ['에코프로비엠', '천보', '리노공업', '알테오젠', '레인보우로보틱스', 'HLB', '지아이이노베이션', '펩트론']
-  },
-  NASDAQ: {
-    safe: ['Microsoft', 'Apple', 'NVIDIA', 'Amazon', 'Meta Platforms', 'Alphabet', 'Tesla', 'Netflix'],
-    aggressive: ['Super Micro Computer', 'Palantir', 'Arm Holdings', 'Micron Technology', 'UiPath', 'CrowdStrike', 'MongoDB', 'Snowflake']
-  },
-  'S&P 500': {
-    safe: ['Berkshire Hathaway (B)', 'Johnson & Johnson', 'Procter & Gamble', 'Visa', 'Coca-Cola', 'JPMorgan Chase', 'UnitedHealth'],
-    aggressive: ['Eli Lilly', 'Uber Technologies', 'NRG Energy', 'CrowdStrike', 'ServiceNow', 'Moderna', 'Zoom']
-  }
-};
-
-function validatePoolsSchema(pools) {
-  const markets = ['KOSPI', 'KOSDAQ', 'NASDAQ', 'S&P 500'];
-  if (typeof pools !== 'object' || pools === null) return false;
-  for (const m of markets) {
-    const b = pools[m];
-    if (!b || !Array.isArray(b.safe) || !Array.isArray(b.aggressive)) return false;
-    for (const bucket of ['safe', 'aggressive']) {
-      for (const item of b[bucket]) {
-        if (!(typeof item === 'string' || (item && typeof item === 'object'))) return false;
-      }
-    }
-  }
-  return true;
-}
-
 async function writeAtomically(dest, data) {
   const tmp = dest + '.tmp';
   await writeFile(tmp, data);
   await rename(tmp, dest);
 }
 
+async function loadJsonSafe(p) { try { return JSON.parse(await readFile(p, 'utf8')); } catch { return null; } }
+async function isFresh(p, ttlMs) { try { const s = await fs.stat(p); return (Date.now() - s.mtimeMs) < ttlMs; } catch { return false; } }
+
+function validatePoolsSchema(pools) {
+  if (!pools || typeof pools !== 'object') throw new Error('pools not object');
+  for (const [m, b] of Object.entries(pools)) {
+    if (!b || !Array.isArray(b.safe) || !Array.isArray(b.aggressive)) {
+      throw new Error(`invalid pools schema at ${m}`);
+    }
+  }
+}
+
+async function fetchPoolsRemote() {
+  if (!POOLS_URL) return null;
+  try {
+    const res = await fetchWithRetry(POOLS_URL, { headers: HEADERS_JSON });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const j = await res.json();
+    validatePoolsSchema(j);
+    await writeAtomically(POOLS_CACHE, JSON.stringify(j, null, 2));
+    return j;
+  } catch (e) {
+    console.warn('[POOLS] Remote fetch failed:', e.message);
+    return null;
+  }
+}
+
 async function loadPools() {
-  const url = process.env.POOLS_URL;
-  const now = Date.now();
-
-  if (url) {
-    let cache;
-    try {
-      cache = JSON.parse(await fs.readFile(POOLS_CACHE_FILE, 'utf8'));
-    } catch {}
-
-    const cacheFresh = cache?.fetchedAt && (now - Date.parse(cache.fetchedAt) < POOLS_TTL_MS);
-    if (REFRESH_POOLS || !cacheFresh) {
-      try {
-        const res = await fetchWithRetry(url, {}, { retries: 2, base: 500 });
-        const json = await res.json();
-        if (validatePoolsSchema(json)) {
-          await writeAtomically(POOLS_CACHE_FILE, JSON.stringify({ fetchedAt: new Date().toISOString(), pools: json }, null, 2));
-          return json;
-        } else {
-          console.warn('[POOLS] Remote schema invalid');
-        }
-      } catch (e) {
-        console.warn('[POOLS] Remote fetch failed:', e.message);
-      }
-    }
-    if (cacheFresh && validatePoolsSchema(cache.pools)) return cache.pools;
+  if (POOLS_URL && (REFRESH_POOLS || !(await isFresh(POOLS_CACHE, POOLS_TTL_MS)))) {
+    const remote = await fetchPoolsRemote();
+    if (remote) return remote;
   }
+  const cached = await loadJsonSafe(POOLS_CACHE);
+  if (cached) { try { validatePoolsSchema(cached); return cached; } catch {} }
+  const local = await loadJsonSafe(POOLS_PATH);
+  if (local) { validatePoolsSchema(local); return local; }
 
-  if (existsSync(POOLS_CACHE_FILE)) {
-    try {
-      const cache = JSON.parse(await fs.readFile(POOLS_CACHE_FILE, 'utf8'));
-      if (cache?.fetchedAt && (now - Date.parse(cache.fetchedAt) < POOLS_TTL_MS) && validatePoolsSchema(cache.pools)) {
-        return cache.pools;
-      }
-    } catch (e) {
-      console.warn('[POOLS] Failed reading cache:', e.message);
-    }
-  }
-
-  if (existsSync(POOLS_FILE)) {
-    try {
-      const local = JSON.parse(await fs.readFile(POOLS_FILE, 'utf8'));
-      if (validatePoolsSchema(local)) return local;
-    } catch (e) {
-      console.warn('[POOLS] Failed reading pools.json:', e.message);
-    }
-  }
-
-  console.warn('[POOLS] Falling back to embedded pools');
-  return POOLS_FALLBACK;
+  // Embedded last-resort fallback — (optional) keep a tiny minimal set
+  return {
+    KOSPI: { safe: ['삼성전자'], aggressive: ['POSCO퓨처엠'] },
+    KOSDAQ: { safe: ['셀트리온헬스케어'], aggressive: ['에코프로비엠'] },
+    NASDAQ: { safe: ['Apple','Microsoft'], aggressive: ['NVIDIA'] },
+    'S&P 500': { safe: ['Berkshire Hathaway (B)'], aggressive: ['Eli Lilly'] }
+  };
 }
 
 function rotateFromPools(pools, prevData) {
@@ -516,13 +474,14 @@ function validateRecommendations(out) {
 }
 
 // Main data fetching function
-async function tryFetchAndEnrich(pools) {
+async function tryFetchAndEnrich() {
+  const POOLS = await loadPools();
   const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
   const data = {};
   const log = {};
 
   // Select stocks for each market
-  for (const [market, buckets] of Object.entries(pools)) {
+  for (const [market, buckets] of Object.entries(POOLS)) {
     if (!hasAnyCandidates(buckets)) continue;
 
     data[market] = {};
@@ -614,10 +573,8 @@ async function main() {
     }
   }
 
-  const pools = await loadPools();
-
   try {
-    const { data, successCount } = await tryFetchAndEnrich(pools);
+    const { data, successCount } = await tryFetchAndEnrich();
 
     const sorted = sortData(data);
     let out = { ...sorted, lastUpdated: nowKSTISO() };
@@ -636,6 +593,7 @@ async function main() {
       prev = JSON.parse(await fs.readFile(OUT_FILE, 'utf8'));
     } catch {}
 
+    const pools = await loadPools();
     const rotated = sortData(rotateFromPools(pools, prev));
     let out = { ...rotated, lastUpdated: nowKSTISO() };
     pruneEmptyMarkets(out);
