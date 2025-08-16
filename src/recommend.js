@@ -1,7 +1,12 @@
+import fs from 'fs';
+import path from 'node:path';
+
 import { TICKER_MAP, STATIC_SECTORS } from './maps.js';
 import { pickDeterministic, nowKSTISO } from './util.js';
 
-const POOLS_STATIC = {
+const POOLS_PATH = path.resolve(process.cwd(), 'pools.json');
+
+const POOLS_FALLBACK = {
   NASDAQ: {
     safe: ['Microsoft','Apple','NVIDIA','Amazon','Meta Platforms'],
     aggressive: ['Super Micro Computer','Palantir','Arm Holdings','Micron Technology','UiPath']
@@ -16,8 +21,17 @@ const POOLS_STATIC = {
   }
 };
 
+function loadPoolsSync() {
+  try {
+    const txt = fs.readFileSync(POOLS_PATH, 'utf8');
+    return JSON.parse(txt);
+  } catch {
+    return POOLS_FALLBACK;
+  }
+}
+
 export async function buildTrendingPools() {
-  return structuredClone(POOLS_STATIC);
+  return structuredClone(loadPoolsSync());
 }
 
 export async function fetchSectorByTicker(ticker) {
@@ -69,9 +83,10 @@ export function pruneEmptyMarkets(out) {
 }
 
 export function rotateFromPools(prevData) {
+  const pools = loadPoolsSync();
   const seed = new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'});
   const out = {};
-  for (const [market,buckets] of Object.entries(POOLS_STATIC)) {
+  for (const [market,buckets] of Object.entries(pools)) {
     out[market] = {};
     for (const bucket of ['safe','aggressive']) {
       const arr = pickDeterministic(buckets[bucket],5,`${seed}:${market}:${bucket}`);
@@ -84,7 +99,7 @@ export function rotateFromPools(prevData) {
 export async function writeSmartFallback(reason = 'unknown', paths) {
   const seed = new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'});
   const out = { lastUpdated: nowKSTISO(), mode: 'fallback', fallbackReason: reason };
-  for (const [market,buckets] of Object.entries(POOLS_STATIC)) {
+  for (const [market,buckets] of Object.entries(POOLS_FALLBACK)) {
     out[market] = {};
     for (const bucket of ['safe','aggressive']) {
       const arr = pickDeterministic(buckets[bucket],5,`fallback:${seed}:${market}:${bucket}`);
