@@ -10,7 +10,7 @@
         "sector": "Industrials"
       },
       {
-        "name": "셀트리온헬스케어",
+        "name": "알테오젠",
         "sector": "Healthcare"
       },
       {
@@ -24,11 +24,11 @@
     ],
     "aggressive": [
       {
-        "name": "HLB",
-        "sector": "Healthcare"
+        "name": "JYP엔터테인먼트",
+        "sector": "Communication Services"
       },
       {
-        "name": "레인보우로보틱스",
+        "name": "리노공업",
         "sector": "Industrials"
       },
       {
@@ -36,17 +36,21 @@
         "sector": "Healthcare"
       },
       {
-        "name": "펄어비스",
-        "sector": "Communication Services"
+        "name": "에코프로비엠",
+        "sector": "Materials"
       },
       {
-        "name": "펩트론",
-        "sector": "Healthcare"
+        "name": "천보",
+        "sector": "Industrials"
       }
     ]
   },
   "KOSPI": {
     "safe": [
+      {
+        "name": "LG화학",
+        "sector": "Materials"
+      },
       {
         "name": "POSCO홀딩스",
         "sector": "Materials"
@@ -62,10 +66,6 @@
       {
         "name": "삼성전자",
         "sector": "Technology"
-      },
-      {
-        "name": "현대차",
-        "sector": "Consumer Discretionary"
       }
     ],
     "aggressive": [
@@ -74,24 +74,70 @@
         "sector": "Materials"
       },
       {
-        "name": "POSCO퓨처엠",
+        "name": "POSCO홀딩스",
         "sector": "Materials"
       },
       {
-        "name": "네이버",
-        "sector": "Communication Services"
+        "name": "SK하이닉스",
+        "sector": "Technology"
       },
       {
-        "name": "두산에너빌리티",
-        "sector": "Industrials"
+        "name": "삼성바이오로직스",
+        "sector": "Healthcare"
       },
       {
-        "name": "카카오",
-        "sector": "Communication Services"
+        "name": "삼성전자",
+        "sector": "Technology"
       }
     ]
   },
   "NASDAQ 100": {
+    "safe": [
+      {
+        "name": "Alphabet",
+        "sector": "Communication Services"
+      },
+      {
+        "name": "Amazon",
+        "sector": "Consumer Discretionary"
+      },
+      {
+        "name": "Apple",
+        "sector": "Technology"
+      },
+      {
+        "name": "Microsoft",
+        "sector": "Technology"
+      },
+      {
+        "name": "NVIDIA",
+        "sector": "Technology"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "Alphabet",
+        "sector": "Communication Services"
+      },
+      {
+        "name": "Amazon",
+        "sector": "Consumer Discretionary"
+      },
+      {
+        "name": "Apple",
+        "sector": "Technology"
+      },
+      {
+        "name": "Microsoft",
+        "sector": "Technology"
+      },
+      {
+        "name": "NVIDIA",
+        "sector": "Technology"
+      }
+    ]
+  },
+  "S&P 500": {
     "safe": [
       {
         "name": "Amazon",
@@ -116,52 +162,6 @@
     ],
     "aggressive": [
       {
-        "name": "Alphabet",
-        "sector": "Communication Services"
-      },
-      {
-        "name": "Arm Holdings",
-        "sector": "Technology"
-      },
-      {
-        "name": "Palantir",
-        "sector": "Technology"
-      },
-      {
-        "name": "Super Micro Computer",
-        "sector": "Technology"
-      },
-      {
-        "name": "Tesla",
-        "sector": "Consumer Discretionary"
-      }
-    ]
-  },
-  "S&P 500": {
-    "safe": [
-      {
-        "name": "Berkshire Hathaway (B)",
-        "sector": "Financial Services"
-      },
-      {
-        "name": "Coca-Cola",
-        "sector": "Consumer Staples"
-      },
-      {
-        "name": "Johnson & Johnson",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "Procter & Gamble",
-        "sector": "Consumer Staples"
-      },
-      {
-        "name": "Visa",
-        "sector": "Financial Services"
-      }
-    ],
-    "aggressive": [
-      {
         "name": "Amazon",
         "sector": "Consumer Discretionary"
       },
@@ -170,8 +170,8 @@
         "sector": "Technology"
       },
       {
-        "name": "Eli Lilly",
-        "sector": "Healthcare"
+        "name": "Meta Platforms",
+        "sector": "Communication Services"
       },
       {
         "name": "Microsoft",
@@ -183,5 +183,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-08-17T14:20:50+09:00"
+  "lastUpdated": "2025-08-17T14:25:32+09:00"
 }
