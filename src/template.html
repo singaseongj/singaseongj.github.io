@@ -86,6 +86,7 @@
 
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
+    <div id="loading" class="loading" style="display:none">Loading data…</div>
     <div id="recommendations"><p class="error" style="display:none"></p></div>
     <div id="portfolioUpdated" class="last-updated"></div>
     <noscript>자바스크립트를 활성화하면 추천 종목이 표시됩니다.</noscript>
@@ -113,6 +114,7 @@
         recsError: '추천 데이터를 불러오지 못했습니다.',
         safe: '안전주',
         aggressive: '공격주',
+        pickNote: '안전주는 변동성이 낮고 최근 수익률이 안정적인 종목, 공격주는 모멘텀과 거래대금이 높은 종목입니다.',
         updated: '업데이트: ',
         visitsToday: '오늘 방문: {daily} | 총 방문: {total}'
       },
@@ -136,6 +138,7 @@
         recsError: 'Failed to load recommendations.',
         safe: 'Safe Picks',
         aggressive: 'Aggressive Picks',
+        pickNote: 'Safe Picks emphasise consistent performance and lower volatility; Aggressive Picks highlight higher momentum and volume.',
         updated: 'Updated: ',
         visitsToday: 'Visits today: {daily} | Total: {total}'
       }
@@ -358,28 +361,37 @@
     };
 
     async function fetchRecs() {
+      const loading = document.getElementById('loading');
+      if (loading) loading.style.display = 'block';
       let data = null;
+      const container = document.getElementById('recommendations');
       try {
         // cache-buster to avoid stale GH-Pages content
         const res = await fetch('recommendations.json?_=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         data = await res.json();
+        if (container && data) {
+          render(data);
+        } else if (container) {
+          const p = container.querySelector('.error') || document.createElement('p');
+          p.className = 'error';
+          p.textContent = translations[currentLang].recsError;
+          p.style.display = 'block';
+          container.innerHTML = '';
+          container.appendChild(p);
+        }
       } catch (err) {
         console.error('Failed to load recommendations:', err);
-      }
-
-      const container = document.getElementById('recommendations');
-      if (!container) return;
-
-      if (data) {
-        render(data);
-      } else {
-        const p = container.querySelector('.error') || document.createElement('p');
-        p.className = 'error';
-        p.textContent = translations[currentLang].recsError;
-        p.style.display = 'block';
-        container.innerHTML = '';
-        container.appendChild(p);
+        if (container) {
+          const p = container.querySelector('.error') || document.createElement('p');
+          p.className = 'error';
+          p.textContent = translations[currentLang].recsError;
+          p.style.display = 'block';
+          container.innerHTML = '';
+          container.appendChild(p);
+        }
+      } finally {
+        if (loading) loading.style.display = 'none';
       }
     }
 
@@ -405,6 +417,7 @@
           const label = bucket === 'safe' ? translations[currentLang].safe : translations[currentLang].aggressive;
           html.push(`<div class="portfolio-group"><h3>${m} ${label}</h3><ul>${items}</ul></div>`);
         }
+        html.push(`<small class="tooltip">${translations[currentLang].pickNote}</small>`);
       }
       container.innerHTML = html.join('');
       const upd = document.getElementById('portfolioUpdated');

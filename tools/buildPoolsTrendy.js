@@ -5,6 +5,7 @@
 
 import fs from 'fs/promises';
 import { yahooTrending, yahooPredefined } from '../src/sources/yahoo.js';
+import { TICKER_MAP } from '../src/maps.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -12,6 +13,12 @@ const TWELVE = process.env.TWELVEDATA_API_KEY || '';
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
+const TRENDING_CACHE_FILE = 'trending-cache.json';
+
+let trendingCache = {};
+try {
+  trendingCache = JSON.parse(await fs.readFile(TRENDING_CACHE_FILE, 'utf8'));
+} catch {}
 
 // Include NYSE and NASDAQ 100 so all markets get pools
 const MARKETS = ["KOSPI","KOSDAQ","NASDAQ","S&P 500","NYSE","NASDAQ 100"];
@@ -77,8 +84,8 @@ Object.assign(NAME_TO_SYMBOL, {
 
 // Build reverse lookup to convert tickers back to display names
 const SYMBOL_TO_NAME = {};
-for (const [n, s] of Object.entries(NAME_TO_SYMBOL)) {
-  SYMBOL_TO_NAME[s] = n;
+for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP })) {
+  SYMBOL_TO_NAME[symbol] = name;
 }
 
 function nameToSymbol(name){
@@ -104,20 +111,42 @@ function toTwelveSymbol(sym) {
 
 // Fetch trending tickers and convert them to display names
 async function getTrendingNamesForMarket(market) {
+  if (OFFLINE) return trendingCache[market] || [];
   let tickers = [];
-  if (market === 'KOSPI' || market === 'KOSDAQ') {
-    tickers = await yahooTrending('KR');
-  } else {
-    tickers = [
-      ...(await yahooTrending('US')),
-      ...(await yahooPredefined('day_gainers'))
-    ];
+  try {
+    if (market === 'KOSPI' || market === 'KOSDAQ') {
+      tickers = await yahooTrending('KR');
+    } else if (market === 'NYSE') {
+      tickers = [
+        ...(await yahooTrending('NYSE')),
+        ...(await yahooPredefined('day_gainers_nyse'))
+      ];
+    } else if (market === 'NASDAQ 100') {
+      tickers = [
+        ...(await yahooTrending('NASDAQ 100')),
+        ...(await yahooPredefined('day_gainers_nasdaq100'))
+      ];
+    } else if (market === 'NASDAQ') {
+      tickers = [
+        ...(await yahooTrending('NASDAQ')),
+        ...(await yahooPredefined('day_gainers'))
+      ];
+    } else {
+      tickers = [
+        ...(await yahooTrending('US')),
+        ...(await yahooPredefined('day_gainers'))
+      ];
+    }
+  } catch (e) {
+    console.warn(`[buildPools] trending unavailable for ${market}:`, e.message);
+    return trendingCache[market] || [];
   }
   const names = new Set();
   for (const t of tickers) {
-    names.add(SYMBOL_TO_NAME[t] || t);
+    const name = SYMBOL_TO_NAME[t] || t;
+    names.add(name);
   }
-  return [...names];
+  return Array.from(names);
 }
 
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 8000));
@@ -360,6 +389,8 @@ async function main(){
       .map(x => typeof x === 'string' ? x : x.name)
       .filter(Boolean);
     const extraNames = await getTrendingNamesForMarket(market);
+    trendingCache[market] = extraNames;
+    await fs.writeFile(TRENDING_CACHE_FILE, JSON.stringify(trendingCache, null, 2));
     const names = Array.from(new Set([...baseNames, ...extraNames]));
     console.log(`[buildPools] market=${market} names=${names.length}`);
     if (names.length === 0) continue;
