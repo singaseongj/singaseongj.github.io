@@ -20,8 +20,7 @@ try {
   trendingCache = JSON.parse(await fs.readFile(TRENDING_CACHE_FILE, 'utf8'));
 } catch {}
 
-// Include NYSE and NASDAQ 100 so all markets get pools
-const MARKETS = ["KOSPI","KOSDAQ","NASDAQ","S&P 500","NYSE","NASDAQ 100"];
+const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 const PICK_COUNT = 5;
 
 // ---- flags
@@ -114,27 +113,19 @@ async function getTrendingNamesForMarket(market) {
   if (OFFLINE) return trendingCache[market] || [];
   let tickers = [];
   try {
-    if (market === 'KOSPI' || market === 'KOSDAQ') {
-      tickers = await yahooTrending('KR');
-    } else if (market === 'NYSE') {
+    if (market === 'KOSPI') {
+      tickers = (await yahooTrending('KR')).filter(t => /\.KS$/.test(t));
+    } else if (market === 'KOSDAQ') {
+      tickers = (await yahooTrending('KR')).filter(t => /\.KQ$/.test(t));
+    } else if (market === 'S&P 500') {
       tickers = [
-        ...(await yahooTrending('NYSE')),
-        ...(await yahooPredefined('day_gainers_nyse'))
+        ...(await yahooTrending('US')),
+        ...(await yahooPredefined('day_gainers'))
       ];
     } else if (market === 'NASDAQ 100') {
       tickers = [
         ...(await yahooTrending('NASDAQ 100')),
         ...(await yahooPredefined('day_gainers_nasdaq100'))
-      ];
-    } else if (market === 'NASDAQ') {
-      tickers = [
-        ...(await yahooTrending('NASDAQ')),
-        ...(await yahooPredefined('day_gainers'))
-      ];
-    } else {
-      tickers = [
-        ...(await yahooTrending('US')),
-        ...(await yahooPredefined('day_gainers'))
       ];
     }
   } catch (e) {

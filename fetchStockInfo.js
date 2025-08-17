@@ -134,7 +134,7 @@ async function loadPools() {
   return {
     KOSPI: { safe: ['삼성전자'], aggressive: ['POSCO퓨처엠'] },
     KOSDAQ: { safe: ['셀트리온헬스케어'], aggressive: ['에코프로비엠'] },
-    NASDAQ: { safe: ['Apple','Microsoft'], aggressive: ['NVIDIA'] },
+    'NASDAQ 100': { safe: ['Apple','Microsoft'], aggressive: ['NVIDIA'] },
     'S&P 500': { safe: ['Berkshire Hathaway (B)'], aggressive: ['Eli Lilly'] }
   };
 }
