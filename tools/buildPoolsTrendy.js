@@ -1,5 +1,5 @@
 // tools/buildPoolsTrendy.js
-// Builds trend-aware pools using Finnhub (primary) and TwelveData (fallback for quotes).
+// Builds trend-aware pools using Finnhub (primary) and TwelveData or FMP as fallbacks for quotes.
 // Writes: pools.json (names only) and pools-metrics.json (diagnostics).
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
@@ -9,6 +9,7 @@ import { TICKER_MAP } from '../src/maps.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
+const FMP = process.env.FMP_KEY || '';
 
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
@@ -109,7 +110,7 @@ function toTwelveSymbol(sym) {
 }
 
 async function fmpKosdaqActive() {
-  const url = `https://financialmodelingprep.com/api/v3/actives?apikey=${process.env.FMP_KEY}`;
+  const url = `https://financialmodelingprep.com/api/v3/actives?apikey=${FMP}`;
   const data = await getJSON(url).catch(() => []);
   return (Array.isArray(data) ? data : [])
     .filter(item => item.exchangeShortName === 'KOSDAQ')
@@ -244,22 +245,43 @@ async function twelveCandles(symbol){
   return { c: closes, v: vols, _tsym: tsym };
 }
 
+// FMP time series (fallback)
+async function fmpCandles(symbol) {
+  const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?serietype=line&timeseries=40&apikey=${FMP}`;
+  const data = await getJSON(url).catch(() => null);
+  const hist = data?.historical;
+  if (!Array.isArray(hist) || hist.length === 0) return null;
+  const closes = hist.slice(0, 40).map(d => Number(d.close));
+  const urlVolume = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?timeseries=40&apikey=${FMP}`;
+  const volData = await getJSON(urlVolume).catch(() => null);
+  const volumes = volData?.historical?.slice(0, 40).map(d => Number(d.volume)) || closes.map(() => 0);
+  return { c: closes.reverse(), v: volumes.reverse() };
+}
+
 async function getCandles(symbol){
   if (isKR(symbol)) {
     if (TWELVE) {
       const j = await twelveCandles(symbol).catch(() => null);
       if (j) return j; // { c, v, _tsym }
     }
+    if (FMP) {
+      const j = await fmpCandles(symbol).catch(() => null);
+      if (j) return j;
+    }
     // Do NOT try Finnhub for KR; return null to avoid error storms
     return null;
   } else {
-    // US/other: prefer Finnhub, then TwelveData
+    // US/other: prefer Finnhub, then TwelveData, then FMP
     if (FINNHUB) {
       const j = await finnhubCandles(symbol).catch(() => null);
       if (j) return { c: j.c, v: j.v, _tsym: symbol };
     }
     if (TWELVE) {
       const j = await twelveCandles(symbol).catch(() => null);
+      if (j) return j;
+    }
+    if (FMP) {
+      const j = await fmpCandles(symbol).catch(() => null);
       if (j) return j;
     }
     return null;
@@ -505,12 +527,14 @@ async function main(){
   const avgCoverage = covs.length ? covs.reduce((a,b)=>a+b,0)/covs.length : 0;
   console.log(`[buildPools] avg coverage=${(avgCoverage*100).toFixed(1)}% (min=${(Math.min(...covs)*100||0).toFixed(1)}%)`);
 
-  if (OFFLINE || avgCoverage < COVERAGE_MIN) {
-    console.warn(`[buildPools] insufficient coverage or offline (avg=${(avgCoverage*100).toFixed(1)}%), leaving pools.json unchanged`);
-    // still write metrics file for debugging
+  if (OFFLINE) {
+    console.warn(`[buildPools] offline mode, leaving pools.json unchanged`);
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
     console.log('[buildPools] wrote pools-metrics.json (pools.json unchanged)');
     return;
+  }
+  if (avgCoverage < COVERAGE_MIN) {
+    console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using names-only ranking`);
   }
 
   // Decay feedback periodically
