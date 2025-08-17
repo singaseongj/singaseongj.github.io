@@ -61,11 +61,11 @@
   </div>
   
   <div id="summary">
-    <p data-i18n="summary">이 페이지는 KOSPI, KOSDAQ, NYSE, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.</p>
+    <p data-i18n="summary">이 페이지는 KOSPI, KOSDAQ, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.</p>
     <ul>
       <li><strong>KOSPI:</strong> <span data-i18n="kospiDesc">국내 대형 우량주 위주</span></li>
       <li><strong>KOSDAQ:</strong> <span data-i18n="kosdaqDesc">성장 잠재력 높은 중소형주</span></li>
-      <li><strong>NYSE:</strong> <span data-i18n="nyseDesc">뉴욕 증권거래소 상장 종목 전체를 반영한 지수</span></li>
+      <!-- NYSE description removed -->
       <li><strong>S&P 500:</strong> <span data-i18n="spDesc">미국 대표 대형주 지수</span></li>
       <li><strong>NASDAQ 100:</strong> <span data-i18n="nasdaqDesc">나스닥 상장 비금융 대형주 100종목으로 기술주 비중 높음</span></li>
     </ul>
@@ -97,10 +97,10 @@
       ko: {
         title: '데일리 주식 리포트 자동화',
         today: '오늘:',
-        summary: '이 페이지는 KOSPI, KOSDAQ, NYSE, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.',
+        summary: '이 페이지는 KOSPI, KOSDAQ, S&P 500, NASDAQ 100 시장을 분석하여 추천 종목을 제공합니다.',
         kospiDesc: '국내 대형 우량주 위주',
         kosdaqDesc: '성장 잠재력 높은 중소형주',
-        nyseDesc: '뉴욕 증권거래소 상장 종목 전체를 반영한 지수',
+        // nyseDesc: '뉴욕 증권거래소 상장 종목 전체를 반영한 지수', // removed: site no longer covers NYSE
         spDesc: '미국 대표 대형주 지수',
         nasdaqDesc: '나스닥 상장 비금융 대형주 100종목으로 기술주 비중 높음',
         toggleDebug: '디버그 모드 토글',
@@ -121,10 +121,10 @@
       en: {
         title: 'Daily Stock Report Automation',
         today: 'Today:',
-        summary: 'This page analyzes KOSPI, KOSDAQ, NYSE, S&P 500 and NASDAQ 100 markets to provide recommended stocks.',
+        summary: 'This page analyzes KOSPI, KOSDAQ, S&P 500 and NASDAQ 100 markets to provide recommended stocks.',
         kospiDesc: 'Domestic large-cap stocks',
         kosdaqDesc: 'High growth potential small and mid-caps',
-        nyseDesc: 'Index reflecting all NYSE listings',
+        // nyseDesc: 'Index reflecting all NYSE listings', // removed: site no longer covers NYSE
         spDesc: 'Major U.S. large-cap index',
         nasdaqDesc: 'Tech-heavy index of 100 non-financial NASDAQ stocks',
         toggleDebug: 'Toggle Debug Mode',
@@ -206,11 +206,12 @@
         console.warn('sample market data load failed', e);
       }
 
+      const FMP_KEY = 'demo';
       const indices = [
         { name: 'KOSPI', code: 'KOSPI', type: 'naver' },
         { name: 'KOSDAQ', code: 'KOSDAQ', type: 'naver' },
-        { name: 'S&P500', url: 'https://www.investing.com/indices/us-spx-500', type: 'invest' },
-        { name: 'NASDAQ100', url: 'https://www.investing.com/indices/nq-100', type: 'invest' },
+        { name: 'S&P500', symbol: '^GSPC', type: 'fmp' },
+        { name: 'NASDAQ100', symbol: '^NDX', type: 'fmp' },
       ];
 
       const rows = [];
@@ -230,18 +231,15 @@
               prevClose = ((info.nv - info.cv) / 100).toFixed(2);
               changePct = (info.cr >= 0 ? '+' : '') + info.cr.toFixed(2) + '%';
             }
-          } else if (idx.type === 'invest') {
-            const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(idx.url)}`);
-            const { contents } = await res.json();
-            const priceMatch = contents.match(/id="last_last"[^>]*>([0-9.,]+)/);
-            const prevMatch = contents.match(/Prev\.\s?Close[^0-9]*([0-9.,]+)/i);
-            if (priceMatch) price = priceMatch[1].replace(/,/g, '');
-            if (prevMatch) {
-              prevClose = prevMatch[1].replace(/,/g, '');
-              const current = parseFloat(price);
-              const previous = parseFloat(prevClose);
-              if (!isNaN(current) && !isNaN(previous)) {
-                const change = ((current - previous) / previous) * 100;
+          } else if (idx.type === 'fmp') {
+            const api = `https://financialmodelingprep.com/api/v3/quote/${encodeURIComponent(idx.symbol)}?apikey=${FMP_KEY}`;
+            const data = await (await fetch(api)).json();
+            const info = data && data[0];
+            if (info) {
+              price = String(info.price);
+              prevClose = String(info.previousClose);
+              const change = info.changesPercentage;
+              if (Number.isFinite(change)) {
                 changePct = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
               }
             }
