@@ -148,7 +148,12 @@ function rotateFromPools(pools, prevData) {
     for (const bucket of ['safe', 'aggressive']) {
       const src = buckets[bucket] || [];
       if (src.length === 0) continue;
-      const picked = pickDeterministic(src, 5, `${seed}:${market}:${bucket}`);
+      let candidates = src.slice();
+      if (bucket === 'aggressive' && out[market]?.safe) {
+        const safeNames = new Set(out[market].safe.map(e => typeof e === 'string' ? e : e.name));
+        candidates = candidates.filter(n => !safeNames.has(n));
+      }
+      const picked = pickDeterministic(candidates, 5, `${seed}:${market}:${bucket}`);
       out[market][bucket] = picked.map(n => ({ name: n }));
     }
   }
@@ -483,16 +488,18 @@ async function tryFetchAndEnrich() {
   // Select stocks for each market
   for (const [market, buckets] of Object.entries(POOLS)) {
     if (!hasAnyCandidates(buckets)) continue;
-
     data[market] = {};
-    for (const bucket of ['safe', 'aggressive']) {
-      const source = buckets[bucket] || [];
-      if (source.length === 0) continue;
+    const safeSource = buckets.safe || [];
+    const safeKey = `${seed}:${market}:safe`;
+    const chosenSafe = process.env.FIXED_RECS === '1' ? safeSource.slice(0, 5) : pickDeterministic(safeSource, 5, safeKey);
+    data[market].safe = chosenSafe.map(n => (typeof n === 'string' ? { name: n } : n));
+    const safeSet = new Set(chosenSafe.map(n => (typeof n === 'string' ? n : n.name)));
 
-      const seedKey = `${seed}:${market}:${bucket}`;
-      const chosen = process.env.FIXED_RECS === '1' ? source.slice(0, 5) : pickDeterministic(source, 5, seedKey);
-      data[market][bucket] = chosen.map(n => (typeof n === 'string' ? { name: n } : n));
-    }
+    let aggrSource = buckets.aggressive || [];
+    aggrSource = aggrSource.filter(n => !safeSet.has(typeof n === 'string' ? n : n.name));
+    const aggrKey = `${seed}:${market}:aggressive`;
+    const chosenAggr = process.env.FIXED_RECS === '1' ? aggrSource.slice(0, 5) : pickDeterministic(aggrSource, 5, aggrKey);
+    data[market].aggressive = chosenAggr.map(n => (typeof n === 'string' ? { name: n } : n));
 
     log[market] = {
       safe: data[market].safe?.map(x => x.name) || [],
