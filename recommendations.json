@@ -10,7 +10,7 @@
         "sector": "Industrials"
       },
       {
-        "name": "셀트리온헬스케어",
+        "name": "알테오젠",
         "sector": "Healthcare"
       },
       {
@@ -32,7 +32,7 @@
         "sector": "Industrials"
       },
       {
-        "name": "알테오젠",
+        "name": "셀트리온헬스케어",
         "sector": "Healthcare"
       },
       {
@@ -48,6 +48,10 @@
   "KOSPI": {
     "safe": [
       {
+        "name": "LG화학",
+        "sector": "Materials"
+      },
+      {
         "name": "POSCO홀딩스",
         "sector": "Materials"
       },
@@ -62,17 +66,9 @@
       {
         "name": "삼성전자",
         "sector": "Technology"
-      },
-      {
-        "name": "현대차",
-        "sector": "Consumer Discretionary"
       }
     ],
     "aggressive": [
-      {
-        "name": "LG화학",
-        "sector": "Materials"
-      },
       {
         "name": "POSCO퓨처엠",
         "sector": "Materials"
@@ -88,15 +84,61 @@
       {
         "name": "카카오",
         "sector": "Communication Services"
+      },
+      {
+        "name": "현대차",
+        "sector": "Consumer Discretionary"
       }
     ]
   },
   "NASDAQ 100": {
     "safe": [
       {
+        "name": "Alphabet",
+        "sector": "Communication Services"
+      },
+      {
         "name": "Amazon",
         "sector": "Consumer Discretionary"
       },
+      {
+        "name": "Apple",
+        "sector": "Technology"
+      },
+      {
+        "name": "Microsoft",
+        "sector": "Technology"
+      },
+      {
+        "name": "NVIDIA",
+        "sector": "Technology"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "AMD",
+        "sector": null
+      },
+      {
+        "name": "Arm Holdings",
+        "sector": "Technology"
+      },
+      {
+        "name": "Meta Platforms",
+        "sector": "Communication Services"
+      },
+      {
+        "name": "Palantir",
+        "sector": "Technology"
+      },
+      {
+        "name": "Tesla",
+        "sector": "Consumer Discretionary"
+      }
+    ]
+  },
+  "S&P 500": {
+    "safe": [
       {
         "name": "Apple",
         "sector": "Technology"
@@ -110,54 +152,12 @@
         "sector": "Technology"
       },
       {
-        "name": "NVIDIA",
-        "sector": "Technology"
-      }
-    ],
-    "aggressive": [
-      {
-        "name": "Alphabet",
+        "name": "Netflix",
         "sector": "Communication Services"
-      },
-      {
-        "name": "Arm Holdings",
-        "sector": "Technology"
-      },
-      {
-        "name": "Palantir",
-        "sector": "Technology"
-      },
-      {
-        "name": "Super Micro Computer",
-        "sector": "Technology"
       },
       {
         "name": "Tesla",
         "sector": "Consumer Discretionary"
-      }
-    ]
-  },
-  "S&P 500": {
-    "safe": [
-      {
-        "name": "Berkshire Hathaway (B)",
-        "sector": "Financial Services"
-      },
-      {
-        "name": "Coca-Cola",
-        "sector": "Consumer Staples"
-      },
-      {
-        "name": "Johnson & Johnson",
-        "sector": "Healthcare"
-      },
-      {
-        "name": "Procter & Gamble",
-        "sector": "Consumer Staples"
-      },
-      {
-        "name": "Visa",
-        "sector": "Financial Services"
       }
     ],
     "aggressive": [
@@ -166,22 +166,22 @@
         "sector": "Consumer Discretionary"
       },
       {
-        "name": "Apple",
-        "sector": "Technology"
-      },
-      {
         "name": "Eli Lilly",
         "sector": "Healthcare"
       },
       {
-        "name": "Microsoft",
-        "sector": "Technology"
+        "name": "Johnson & Johnson",
+        "sector": "Healthcare"
       },
       {
         "name": "NVIDIA",
         "sector": "Technology"
+      },
+      {
+        "name": "Super Micro Computer",
+        "sector": "Technology"
       }
     ]
   },
-  "lastUpdated": "2025-08-17T15:15:56+09:00"
+  "lastUpdated": "2025-08-17T15:21:29+09:00"
 }
