@@ -4,6 +4,7 @@
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
 import fs from 'fs/promises';
+import { yahooTrending, yahooPredefined } from '../src/sources/yahoo.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -12,7 +13,8 @@ const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
 
-const MARKETS = ["KOSPI","KOSDAQ","NASDAQ","S&P 500"];
+// Include NYSE and NASDAQ 100 so all markets get pools
+const MARKETS = ["KOSPI","KOSDAQ","NASDAQ","S&P 500","NYSE","NASDAQ 100"];
 const PICK_COUNT = 5;
 
 // ---- flags
@@ -73,6 +75,12 @@ Object.assign(NAME_TO_SYMBOL, {
   '삼성바이오로직스': '207940.KS'
 });
 
+// Build reverse lookup to convert tickers back to display names
+const SYMBOL_TO_NAME = {};
+for (const [n, s] of Object.entries(NAME_TO_SYMBOL)) {
+  SYMBOL_TO_NAME[s] = n;
+}
+
 function nameToSymbol(name){
   if (NAME_TO_SYMBOL[name]) return NAME_TO_SYMBOL[name];
   if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
@@ -92,6 +100,24 @@ function isUS(symbolOrName) {
 function toTwelveSymbol(sym) {
   const m = String(sym).match(/^(\d{6})\.(K[QS])$/);
   return m ? `${m[1]}:${m[2]}` : sym;
+}
+
+// Fetch trending tickers and convert them to display names
+async function getTrendingNamesForMarket(market) {
+  let tickers = [];
+  if (market === 'KOSPI' || market === 'KOSDAQ') {
+    tickers = await yahooTrending('KR');
+  } else {
+    tickers = [
+      ...(await yahooTrending('US')),
+      ...(await yahooPredefined('day_gainers'))
+    ];
+  }
+  const names = new Set();
+  for (const t of tickers) {
+    names.add(SYMBOL_TO_NAME[t] || t);
+  }
+  return [...names];
 }
 
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 8000));
@@ -318,6 +344,11 @@ async function main(){
   }
   console.log(`[buildPools] start :: FINNHUB=${!!process.env.FINNHUB_API_KEY} TWELVE=${!!process.env.TWELVEDATA_API_KEY} OFFLINE=${OFFLINE} DEMO=${DEMO_MODE} budget=${GLOBAL_BUDGET_MS}ms`);
 
+  // Ensure pools object has entries for all markets
+  for (const m of MARKETS) {
+    if (!pools[m]) pools[m] = { safe: [], aggressive: [] };
+  }
+
   const feedback = await loadJson(FEEDBACK_FILE, { version:1, weights:{}, decay:{ half_life_days:14, last_decay_ts:null }});
   const metricsOut = {};
   const marketCoverage = {};
@@ -325,7 +356,11 @@ async function main(){
   for (const market of MARKETS){
     const buckets = pools[market];
     if (!buckets) continue;
-    const names = Array.from(new Set([...(buckets.safe||[]), ...(buckets.aggressive||[])].map(x => typeof x==='string'? x : x.name).filter(Boolean)));
+    const baseNames = [...(buckets.safe || []), ...(buckets.aggressive || [])]
+      .map(x => typeof x === 'string' ? x : x.name)
+      .filter(Boolean);
+    const extraNames = await getTrendingNamesForMarket(market);
+    const names = Array.from(new Set([...baseNames, ...extraNames]));
     console.log(`[buildPools] market=${market} names=${names.length}`);
     if (names.length === 0) continue;
 
