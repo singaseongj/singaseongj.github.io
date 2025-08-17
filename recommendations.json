@@ -10,8 +10,8 @@
         "sector": "Communication Services"
       },
       {
-        "name": "셀트리온헬스케어",
-        "sector": "Healthcare"
+        "name": "삼성전자",
+        "sector": "Technology"
       },
       {
         "name": "아이오케이",
@@ -32,8 +32,8 @@
         "sector": "Communication Services"
       },
       {
-        "name": "셀트리온헬스케어",
-        "sector": "Healthcare"
+        "name": "삼성전자",
+        "sector": "Technology"
       },
       {
         "name": "아이오케이",
@@ -60,12 +60,12 @@
         "sector": "Technology"
       },
       {
-        "name": "삼성전자",
-        "sector": "Technology"
+        "name": "네이버",
+        "sector": "Communication Services"
       },
       {
-        "name": "현대차",
-        "sector": "Consumer Discretionary"
+        "name": "삼성전자",
+        "sector": "Technology"
       }
     ],
     "aggressive": [
@@ -82,32 +82,32 @@
         "sector": "Technology"
       },
       {
-        "name": "삼성전자",
-        "sector": "Technology"
+        "name": "네이버",
+        "sector": "Communication Services"
       },
       {
-        "name": "현대차",
-        "sector": "Consumer Discretionary"
+        "name": "삼성전자",
+        "sector": "Technology"
       }
     ]
   },
   "NASDAQ": {
     "safe": [
       {
-        "name": "Alphabet",
-        "sector": "Communication Services"
-      },
-      {
         "name": "Amazon",
         "sector": "Consumer Discretionary"
+      },
+      {
+        "name": "Apple",
+        "sector": "Technology"
       },
       {
         "name": "Meta Platforms",
         "sector": "Communication Services"
       },
       {
-        "name": "Microsoft",
-        "sector": "Technology"
+        "name": "Netflix",
+        "sector": "Communication Services"
       },
       {
         "name": "NVIDIA",
@@ -116,16 +116,36 @@
     ],
     "aggressive": [
       {
-        "name": "Alphabet",
-        "sector": "Communication Services"
-      },
-      {
         "name": "Amazon",
         "sector": "Consumer Discretionary"
       },
       {
+        "name": "Apple",
+        "sector": "Technology"
+      },
+      {
         "name": "Meta Platforms",
         "sector": "Communication Services"
+      },
+      {
+        "name": "Netflix",
+        "sector": "Communication Services"
+      },
+      {
+        "name": "NVIDIA",
+        "sector": "Technology"
+      }
+    ]
+  },
+  "NASDAQ 100": {
+    "safe": [
+      {
+        "name": "AMD",
+        "sector": null
+      },
+      {
+        "name": "Apple",
+        "sector": "Technology"
       },
       {
         "name": "Microsoft",
@@ -134,22 +154,94 @@
       {
         "name": "NVIDIA",
         "sector": "Technology"
+      },
+      {
+        "name": "Tesla",
+        "sector": "Consumer Discretionary"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "AMD",
+        "sector": null
+      },
+      {
+        "name": "Apple",
+        "sector": "Technology"
+      },
+      {
+        "name": "Microsoft",
+        "sector": "Technology"
+      },
+      {
+        "name": "NVIDIA",
+        "sector": "Technology"
+      },
+      {
+        "name": "Tesla",
+        "sector": "Consumer Discretionary"
+      }
+    ]
+  },
+  "NYSE": {
+    "safe": [
+      {
+        "name": "Coca-Cola",
+        "sector": "Consumer Staples"
+      },
+      {
+        "name": "Johnson & Johnson",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "JPMorgan Chase",
+        "sector": "Financial Services"
+      },
+      {
+        "name": "Procter & Gamble",
+        "sector": "Consumer Staples"
+      },
+      {
+        "name": "Visa",
+        "sector": "Financial Services"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "Coca-Cola",
+        "sector": "Consumer Staples"
+      },
+      {
+        "name": "Johnson & Johnson",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "JPMorgan Chase",
+        "sector": "Financial Services"
+      },
+      {
+        "name": "Procter & Gamble",
+        "sector": "Consumer Staples"
+      },
+      {
+        "name": "Visa",
+        "sector": "Financial Services"
       }
     ]
   },
   "S&P 500": {
     "safe": [
       {
-        "name": "Eli Lilly",
-        "sector": "Healthcare"
+        "name": "Amazon",
+        "sector": "Consumer Discretionary"
       },
       {
-        "name": "JPMorgan Chase",
-        "sector": "Financial Services"
+        "name": "Microsoft",
+        "sector": "Technology"
       },
       {
-        "name": "NRG Energy",
-        "sector": "Utilities"
+        "name": "NVIDIA",
+        "sector": "Technology"
       },
       {
         "name": "Uber Technologies",
@@ -162,19 +254,19 @@
     ],
     "aggressive": [
       {
+        "name": "Amazon",
+        "sector": "Consumer Discretionary"
+      },
+      {
         "name": "Eli Lilly",
         "sector": "Healthcare"
       },
       {
-        "name": "JPMorgan Chase",
-        "sector": "Financial Services"
+        "name": "Microsoft",
+        "sector": "Technology"
       },
       {
-        "name": "NRG Energy",
-        "sector": "Utilities"
-      },
-      {
-        "name": "Uber Technologies",
+        "name": "NVIDIA",
         "sector": "Technology"
       },
       {
@@ -183,5 +275,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-08-17T05:25:46+09:00"
+  "lastUpdated": "2025-08-17T11:12:20+09:00"
 }
