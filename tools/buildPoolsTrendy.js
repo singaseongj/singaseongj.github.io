@@ -4,6 +4,8 @@
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
 import fs from 'fs/promises';
+import { yahooTrending, yahooPredefined } from '../src/sources/yahoo.js';
+import { TICKER_MAP } from '../src/maps.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -11,8 +13,15 @@ const TWELVE = process.env.TWELVEDATA_API_KEY || '';
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
+const TRENDING_CACHE_FILE = 'trending-cache.json';
 
-const MARKETS = ["KOSPI","KOSDAQ","NASDAQ","S&P 500"];
+let trendingCache = {};
+try {
+  trendingCache = JSON.parse(await fs.readFile(TRENDING_CACHE_FILE, 'utf8'));
+} catch {}
+
+// Include NYSE and NASDAQ 100 so all markets get pools
+const MARKETS = ["KOSPI","KOSDAQ","NASDAQ","S&P 500","NYSE","NASDAQ 100"];
 const PICK_COUNT = 5;
 
 // ---- flags
@@ -73,6 +82,12 @@ Object.assign(NAME_TO_SYMBOL, {
   '삼성바이오로직스': '207940.KS'
 });
 
+// Build reverse lookup to convert tickers back to display names
+const SYMBOL_TO_NAME = {};
+for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP })) {
+  SYMBOL_TO_NAME[symbol] = name;
+}
+
 function nameToSymbol(name){
   if (NAME_TO_SYMBOL[name]) return NAME_TO_SYMBOL[name];
   if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
@@ -92,6 +107,46 @@ function isUS(symbolOrName) {
 function toTwelveSymbol(sym) {
   const m = String(sym).match(/^(\d{6})\.(K[QS])$/);
   return m ? `${m[1]}:${m[2]}` : sym;
+}
+
+// Fetch trending tickers and convert them to display names
+async function getTrendingNamesForMarket(market) {
+  if (OFFLINE) return trendingCache[market] || [];
+  let tickers = [];
+  try {
+    if (market === 'KOSPI' || market === 'KOSDAQ') {
+      tickers = await yahooTrending('KR');
+    } else if (market === 'NYSE') {
+      tickers = [
+        ...(await yahooTrending('NYSE')),
+        ...(await yahooPredefined('day_gainers_nyse'))
+      ];
+    } else if (market === 'NASDAQ 100') {
+      tickers = [
+        ...(await yahooTrending('NASDAQ 100')),
+        ...(await yahooPredefined('day_gainers_nasdaq100'))
+      ];
+    } else if (market === 'NASDAQ') {
+      tickers = [
+        ...(await yahooTrending('NASDAQ')),
+        ...(await yahooPredefined('day_gainers'))
+      ];
+    } else {
+      tickers = [
+        ...(await yahooTrending('US')),
+        ...(await yahooPredefined('day_gainers'))
+      ];
+    }
+  } catch (e) {
+    console.warn(`[buildPools] trending unavailable for ${market}:`, e.message);
+    return trendingCache[market] || [];
+  }
+  const names = new Set();
+  for (const t of tickers) {
+    const name = SYMBOL_TO_NAME[t] || t;
+    names.add(name);
+  }
+  return Array.from(names);
 }
 
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 8000));
@@ -318,6 +373,11 @@ async function main(){
   }
   console.log(`[buildPools] start :: FINNHUB=${!!process.env.FINNHUB_API_KEY} TWELVE=${!!process.env.TWELVEDATA_API_KEY} OFFLINE=${OFFLINE} DEMO=${DEMO_MODE} budget=${GLOBAL_BUDGET_MS}ms`);
 
+  // Ensure pools object has entries for all markets
+  for (const m of MARKETS) {
+    if (!pools[m]) pools[m] = { safe: [], aggressive: [] };
+  }
+
   const feedback = await loadJson(FEEDBACK_FILE, { version:1, weights:{}, decay:{ half_life_days:14, last_decay_ts:null }});
   const metricsOut = {};
   const marketCoverage = {};
@@ -325,7 +385,13 @@ async function main(){
   for (const market of MARKETS){
     const buckets = pools[market];
     if (!buckets) continue;
-    const names = Array.from(new Set([...(buckets.safe||[]), ...(buckets.aggressive||[])].map(x => typeof x==='string'? x : x.name).filter(Boolean)));
+    const baseNames = [...(buckets.safe || []), ...(buckets.aggressive || [])]
+      .map(x => typeof x === 'string' ? x : x.name)
+      .filter(Boolean);
+    const extraNames = await getTrendingNamesForMarket(market);
+    trendingCache[market] = extraNames;
+    await fs.writeFile(TRENDING_CACHE_FILE, JSON.stringify(trendingCache, null, 2));
+    const names = Array.from(new Set([...baseNames, ...extraNames]));
     console.log(`[buildPools] market=${market} names=${names.length}`);
     if (names.length === 0) continue;
 
