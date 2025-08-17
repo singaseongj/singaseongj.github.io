@@ -1,11 +1,17 @@
 import { TICKER_MAP } from '../maps.js';
 
 export async function yahooTrending(region = 'US', count = 60) {
-  if (region === 'US') return ['MSFT','AAPL','NVDA','AMZN','META'];
-  return ['005930.KS','000660.KS','035420.KS'];
+  if (region === 'NYSE') return ['BRK-B','JNJ','PG','V','KO'];
+  if (region === 'NASDAQ') return ['AAPL','MSFT','NVDA','AMZN','META'];
+  if (region === 'NASDAQ 100') return ['AAPL','MSFT','NVDA','AMD','TSLA'];
+  if (region === 'KR') return ['005930.KS','000660.KS','035420.KS','035720.KS','051910.KS'];
+  // default to US if unknown
+  return ['AAPL','MSFT','NVDA','AMZN','META'];
 }
 
 export async function yahooPredefined(scrId = 'day_gainers', count = 60) {
+  if (scrId === 'day_gainers_nyse') return ['V','KO','JPM'];
+  if (scrId === 'day_gainers_nasdaq100') return ['AMD','TSLA','PEP'];
   return ['TSLA','NFLX','SMCI'];
 }
 
