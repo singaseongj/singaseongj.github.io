@@ -26,7 +26,7 @@ const PICK_COUNT = 5;
 // ---- flags
 const ARGS = new Set(process.argv.slice(2));
 const OFFLINE = ARGS.has('--offline');                // skip all network
-const COVERAGE_MIN = Number(process.env.COVERAGE_MIN || 0.3); // need ≥30% metrics to replace pools
+const COVERAGE_MIN = Number(process.env.COVERAGE_MIN || 0.1); // need ≥10% metrics to replace pools
 const GLOBAL_BUDGET_MS = Number(process.env.GLOBAL_BUDGET_MS || 90000); // 90s soft budget
 const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
 const DEMO_MODE = !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
@@ -108,6 +108,14 @@ function toTwelveSymbol(sym) {
   return m ? `${m[1]}:${m[2]}` : sym;
 }
 
+async function fmpKosdaqActive() {
+  const url = `https://financialmodelingprep.com/api/v3/actives?apikey=${process.env.FMP_KEY}`;
+  const data = await getJSON(url).catch(() => []);
+  return (Array.isArray(data) ? data : [])
+    .filter(item => item.exchangeShortName === 'KOSDAQ')
+    .map(item => SYMBOL_TO_NAME[item.ticker] || item.ticker);
+}
+
 // Fetch trending tickers and convert them to display names
 async function getTrendingNamesForMarket(market) {
   if (OFFLINE) return trendingCache[market] || [];
@@ -136,6 +144,14 @@ async function getTrendingNamesForMarket(market) {
   for (const t of tickers) {
     const name = SYMBOL_TO_NAME[t] || t;
     names.add(name);
+  }
+  if (market === 'KOSDAQ') {
+    try {
+      const extra = await fmpKosdaqActive();
+      extra.forEach(n => names.add(n));
+    } catch (e) {
+      console.warn(`[buildPools] FMP KOSDAQ actives failed:`, e.message);
+    }
   }
   return Array.from(names);
 }
@@ -449,8 +465,8 @@ async function main(){
       const isKRName = sym ? isKR(sym) : false;
       const baseKR = isKRName ? 0.05 : 0;
 
-      const safe = clamp01(baseKR + 0.35*nNews[i] + 0.35*nRet20[i] + 0.20*nRet5[i] + 0.10*(1 - nVol[i]) + earnBonus);
-      const aggr = clamp01(baseKR + 0.45*nNews[i] + 0.35*nRet5[i]  + 0.20*nTurn[i]                        + earnBonus);
+      const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + 0.20*nNews[i] + 0.10*earnBonus);
+      const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + 0.10*nNews[i] + earnBonus);
       scoreSafeRaw[n] = safe;
       scoreAggrRaw[n] = aggr;
     });
@@ -464,7 +480,8 @@ async function main(){
       return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
     }
     const chosenSafe = topK(scoreSafe, PICK_COUNT);
-    const chosenAggr = topK(scoreAggr, PICK_COUNT);
+    const aggrCandidates = topK(scoreAggr, PICK_COUNT * 2);
+    const chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, PICK_COUNT);
 
     pools[market] = {
       safe: chosenSafe,
