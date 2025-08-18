@@ -4,8 +4,9 @@
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
 import fs from 'fs/promises';
-import { yahooTrending, yahooPredefined } from '../src/sources/yahoo.js';
 import { TICKER_MAP } from '../src/maps.js';
+import { getCandles, providerState } from '../src/data/candles.js';
+import { buildUniverse } from '../src/universe/index.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -14,23 +15,37 @@ const FMP = process.env.FMP_KEY || '';
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
-const TRENDING_CACHE_FILE = 'trending-cache.json';
-
-let trendingCache = {};
-try {
-  trendingCache = JSON.parse(await fs.readFile(TRENDING_CACHE_FILE, 'utf8'));
-} catch {}
+const NEWS_FEATURES_FILE = 'data/news-features.json';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 const PICK_COUNT = 5;
 
+let NEWS_FEATURES = {};
+try {
+  NEWS_FEATURES = JSON.parse(await fs.readFile(NEWS_FEATURES_FILE, 'utf8'));
+} catch {}
+
 // ---- flags
 const ARGS = new Set(process.argv.slice(2));
 const OFFLINE = ARGS.has('--offline');                // skip all network
+const DRY_RUN = ARGS.has('--dry-run');
+let MAX_PER_PROVIDER = Infinity;
+let CACHE_TTL_MS = Number(process.env.CACHE_TTL_MS || 3600000);
+let COOLOFF_MS = Number(process.env.COOLOFF_MS || 60000);
+for (const a of process.argv.slice(2)) {
+  if (a.startsWith('--max-per-provider=')) MAX_PER_PROVIDER = Number(a.split('=')[1]);
+  if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
+  if (a.startsWith('--cooloff-ms=')) COOLOFF_MS = Number(a.split('=')[1]);
+}
 const COVERAGE_MIN = Number(process.env.COVERAGE_MIN || 0.1); // need ≥10% metrics to replace pools
 const GLOBAL_BUDGET_MS = Number(process.env.GLOBAL_BUDGET_MS || 90000); // 90s soft budget
 const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
 const DEMO_MODE = !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
+const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
+const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
+const MIN_PRICE_USD = Number(process.env.MIN_PRICE_USD || 2);
+const MIN_PRICE_KRW = Number(process.env.MIN_PRICE_KRW || 1000);
+const ALLOWLIST = new Set(Object.values(TICKER_MAP));
 
 // ---- time budget
 const START_TS = Date.now();
@@ -109,53 +124,6 @@ function toTwelveSymbol(sym) {
   return m ? `${m[1]}:${m[2]}` : sym;
 }
 
-async function fmpKosdaqActive() {
-  const url = `https://financialmodelingprep.com/api/v3/actives?apikey=${FMP}`;
-  const data = await getJSON(url).catch(() => []);
-  return (Array.isArray(data) ? data : [])
-    .filter(item => item.exchangeShortName === 'KOSDAQ')
-    .map(item => SYMBOL_TO_NAME[item.ticker] || item.ticker);
-}
-
-// Fetch trending tickers and convert them to display names
-async function getTrendingNamesForMarket(market) {
-  if (OFFLINE) return trendingCache[market] || [];
-  let tickers = [];
-  try {
-    if (market === 'KOSPI') {
-      tickers = (await yahooTrending('KR')).filter(t => /\.KS$/.test(t));
-    } else if (market === 'KOSDAQ') {
-      tickers = (await yahooTrending('KR')).filter(t => /\.KQ$/.test(t));
-    } else if (market === 'S&P 500') {
-      tickers = [
-        ...(await yahooTrending('US')),
-        ...(await yahooPredefined('day_gainers'))
-      ];
-    } else if (market === 'NASDAQ 100') {
-      tickers = [
-        ...(await yahooTrending('NASDAQ 100')),
-        ...(await yahooPredefined('day_gainers_nasdaq100'))
-      ];
-    }
-  } catch (e) {
-    console.warn(`[buildPools] trending unavailable for ${market}:`, e.message);
-    return trendingCache[market] || [];
-  }
-  const names = new Set();
-  for (const t of tickers) {
-    const name = SYMBOL_TO_NAME[t] || t;
-    names.add(name);
-  }
-  if (market === 'KOSDAQ') {
-    try {
-      const extra = await fmpKosdaqActive();
-      extra.forEach(n => names.add(n));
-    } catch (e) {
-      console.warn(`[buildPools] FMP KOSDAQ actives failed:`, e.message);
-    }
-  }
-  return Array.from(names);
-}
 
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 8000));
 const RETRIES = Number(process.env.RETRIES || (DEMO_MODE ? 1 : 3));
@@ -217,85 +185,6 @@ function todayYMD(offsetDays=0){
   return d.toISOString().slice(0,10);
 }
 
-// ---------- Data fetchers ----------
-
-// Finnhub candles (primary for quotes/vol)
-async function finnhubCandles(symbol){
-  const to = Math.floor(Date.now()/1000);
-  const from = to - 60*60*24*40; // ~40 days
-  const url = `https://finnhub.io/api/v1/stock/candle?symbol=${encodeURIComponent(symbol)}&resolution=D&from=${from}&to=${to}&token=${FINNHUB}`;
-  const j = await getJSON(url);
-  // j: { s: 'ok', c:[], v:[], t:[] }
-  if (j?.s !== 'ok') return null;
-  return j;
-}
-
-// TwelveData time series (fallback)
-async function twelveCandles(symbol){
-  const tsym = toTwelveSymbol(symbol);
-  const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(tsym)}&interval=1day&outputsize=40&apikey=${TWELVE}`;
-  const j = await getJSON(url);
-  const data = j?.values;
-  if (!Array.isArray(data)) return null;
-  const closes = [], vols = [];
-  for (let i = data.length - 1; i >= 0; i--) {
-    closes.push(Number(data[i].close));
-    vols.push(Number(data[i].volume || 0));
-  }
-  return { c: closes, v: vols, _tsym: tsym };
-}
-
-// FMP time series (fallback)
-async function fmpCandles(symbol) {
-  const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?serietype=line&timeseries=40&apikey=${FMP}`;
-  const data = await getJSON(url).catch(() => null);
-  const hist = data?.historical;
-  if (!Array.isArray(hist) || hist.length === 0) return null;
-  const closes = hist.slice(0, 40).map(d => Number(d.close));
-  const urlVolume = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?timeseries=40&apikey=${FMP}`;
-  const volData = await getJSON(urlVolume).catch(() => null);
-  const volumes = volData?.historical?.slice(0, 40).map(d => Number(d.volume)) || closes.map(() => 0);
-  return { c: closes.reverse(), v: volumes.reverse() };
-}
-
-async function getCandles(symbol){
-  if (isKR(symbol)) {
-    if (TWELVE) {
-      const j = await twelveCandles(symbol).catch(() => null);
-      if (j) return j; // { c, v, _tsym }
-    }
-    if (FMP) {
-      const j = await fmpCandles(symbol).catch(() => null);
-      if (j) return j;
-    }
-    // Do NOT try Finnhub for KR; return null to avoid error storms
-    return null;
-  } else {
-    // US/other: prefer Finnhub, then TwelveData, then FMP
-    if (FINNHUB) {
-      const j = await finnhubCandles(symbol).catch(() => null);
-      if (j) return { c: j.c, v: j.v, _tsym: symbol };
-    }
-    if (TWELVE) {
-      const j = await twelveCandles(symbol).catch(() => null);
-      if (j) return j;
-    }
-    if (FMP) {
-      const j = await fmpCandles(symbol).catch(() => null);
-      if (j) return j;
-    }
-    return null;
-  }
-}
-
-// Finnhub company news count (72h)
-async function finnhubNewsCount(symbol){
-  const from = todayYMD(-3), to = todayYMD(0);
-  const url = `https://finnhub.io/api/v1/company-news?symbol=${encodeURIComponent(symbol)}&from=${from}&to=${to}&token=${FINNHUB}`;
-  const arr = await getJSON(url).catch(()=>null);
-  return Array.isArray(arr) ? arr.length : 0;
-}
-
 // Finnhub earnings window ±10d
 async function finnhubRecentEarnings(symbol){
   const from = todayYMD(-10), to = todayYMD(+10);
@@ -325,7 +214,9 @@ function computeMetrics(c, v){
   const avg = (arr, s, e)=>arr.slice(s,e).reduce((a,b)=>a+b,0)/(e-s);
   const v5 = avg(v, n-5, n), v20 = avg(v, n-20, n);
   const turnover = v20 ? (v5 / v20) : null;
-  return { ret5, ret20, vol20, turnover };
+  const adv20 = v20 || null;
+  const close = c[n-1];
+  return { ret5, ret20, vol20, turnover, adv20, close };
 }
 
 function coverageRatio(metrics) {
@@ -333,7 +224,7 @@ function coverageRatio(metrics) {
   const vals = Object.values(metrics || {});
   if (!vals.length) return 0;
   const ok = vals.filter(m => {
-    return [m.ret5, m.ret20, m.vol20, m.turnover].some(x => Number.isFinite(x)) || m.news72 > 0 || m.earn === true;
+    return [m.ret5, m.ret20, m.vol20, m.turnover].some(x => Number.isFinite(x)) || m.newsCount > 0 || m.earn === true;
   }).length;
   return ok / vals.length;
 }
@@ -411,22 +302,19 @@ async function main(){
   const metricsOut = {};
   const marketCoverage = {};
 
+  const universe = await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
+
   for (const market of MARKETS){
     const buckets = pools[market];
     if (!buckets) continue;
-    const baseNames = [...(buckets.safe || []), ...(buckets.aggressive || [])]
-      .map(x => typeof x === 'string' ? x : x.name)
-      .filter(Boolean);
-    const extraNames = await getTrendingNamesForMarket(market);
-    trendingCache[market] = extraNames;
-    await fs.writeFile(TRENDING_CACHE_FILE, JSON.stringify(trendingCache, null, 2));
-    const names = Array.from(new Set([...baseNames, ...extraNames]));
+    const names = universe[market] || [];
     console.log(`[buildPools] market=${market} names=${names.length}`);
     if (names.length === 0) continue;
 
     // Fetch signals per name best-effort
     const byName = {};
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
+      if (timeLeft() < GLOBAL_BUDGET_MS * 0.1) return; // 90% budget used
       if (!budgetOk(200)) return; // skip if no time left
       let sym = OFFLINE ? null : nameToSymbol(name);
       // ensure KR names use map if available
@@ -449,46 +337,65 @@ async function main(){
       }
       console.log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
-      let ret5=null, ret20=null, vol20=null, turnover=null; let news72=0; let earn=false;
+      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let earn=false; let candles=null;
       try {
-        const candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym).catch(e => { tripOnError(e); return null; }) : null;
+        candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; }) : null;
         if (candles && Array.isArray(candles.c) && Array.isArray(candles.v)) {
           const m = computeMetrics(candles.c, candles.v);
-          ret5 = m.ret5; ret20 = m.ret20; vol20 = m.vol20; turnover = m.turnover;
+          ret5 = m.ret5; ret20 = m.ret20; vol20 = m.vol20; turnover = m.turnover; adv20 = m.adv20; close = m.close;
+        }
+        const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name];
+        if (nf) {
+          newsCount = nf.count || 0;
+          sentiment = typeof nf.sentiment === 'number' ? nf.sentiment : null;
         }
         if (FINNHUB && sym && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
-          news72 = await finnhubNewsCount(sym).catch(e => { tripOnError(e); return 0; });
           earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
         } else {
-          // KR or no Finnhub: skip these to avoid 4xx floods
-          news72 = 0;
           earn = false;
         }
       } catch (e) {
         tripOnError(e);
       }
 
-      byName[name] = { ret5, ret20, vol20, turnover, news72, earn, sym };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, earn, sym, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+    });
+
+    const filteredNames = names.filter(n => {
+      const m = byName[n];
+      const sym = m.sym;
+      if (!sym) return false;
+      const isKRName = isKR(sym);
+      const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || ALLOWLIST.has(sym);
+      const priceOk = m.close == null || m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD);
+      return advOk && priceOk;
     });
 
     // Normalize within market
-    const nRet5   = rank01(names.map(n => byName[n].ret5));
-    const nRet20  = rank01(names.map(n => byName[n].ret20));
-    const nTurn   = rank01(names.map(n => byName[n].turnover));
-    const nVol    = rank01(names.map(n => byName[n].vol20));   // higher vol = riskier
-    const nNews   = rank01(names.map(n => byName[n].news72));
+    const nRet5   = rank01(filteredNames.map(n => byName[n].ret5));
+    const nRet20  = rank01(filteredNames.map(n => byName[n].ret20));
+    const nTurn   = rank01(filteredNames.map(n => byName[n].turnover));
+    const nVol    = rank01(filteredNames.map(n => byName[n].vol20));   // higher vol = riskier
+    const nCount  = rank01(filteredNames.map(n => byName[n].newsCount));
+    const newsScoreArr = filteredNames.map((n,i) => {
+      const s = byName[n].sentiment;
+      return typeof s === 'number' ? nCount[i] * s : nCount[i];
+    });
 
     // Scores
     const scoreSafeRaw = {};
     const scoreAggrRaw = {};
-    names.forEach((n, i) => {
+    filteredNames.forEach((n, i) => {
       const earnBonus = byName[n].earn ? 0.10 : 0;
       const sym = byName[n].sym;
       const isKRName = sym ? isKR(sym) : false;
       const baseKR = isKRName ? 0.05 : 0;
 
-      const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + 0.20*nNews[i] + 0.10*earnBonus);
-      const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + 0.10*nNews[i] + earnBonus);
+      const ns = newsScoreArr[i];
+      const newsSafe = 0.20 * Math.min(1, ns) * (byName[n].sentiment != null && byName[n].sentiment < 0.5 ? byName[n].sentiment : 1);
+      const newsAggr = 0.20 * Math.min(1, ns);
+      const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsSafe + 0.10*earnBonus);
+      const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsAggr + earnBonus);
       scoreSafeRaw[n] = safe;
       scoreAggrRaw[n] = aggr;
     });
@@ -510,11 +417,12 @@ async function main(){
       aggressive: chosenAggr
     };
 
-    metricsOut[market] = names.reduce((acc, n, i) => {
+    metricsOut[market] = filteredNames.reduce((acc, n, i) => {
       acc[n] = {
         ret5: byName[n].ret5, ret20: byName[n].ret20, vol20: byName[n].vol20, turnover: byName[n].turnover,
-        news72h: byName[n].news72, recentEarnings: byName[n].earn,
-        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], news72h: nNews[i] },
+        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, recentEarnings: byName[n].earn,
+        source: byName[n].source, attempts: byName[n].attempts, fetchMs: byName[n].fetchMs,
+        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], news: newsScoreArr[i] },
         score: { safe: scoreSafe[n], aggressive: scoreAggr[n] }
       };
       return acc;
@@ -527,10 +435,31 @@ async function main(){
   const avgCoverage = covs.length ? covs.reduce((a,b)=>a+b,0)/covs.length : 0;
   console.log(`[buildPools] avg coverage=${(avgCoverage*100).toFixed(1)}% (min=${(Math.min(...covs)*100||0).toFixed(1)}%)`);
 
+  const providerSummary = {};
+  for (const [p, s] of Object.entries(providerState)) {
+    providerSummary[p] = { ok: s.ok || 0, err: s.err || 0, '429': s[429] || 0 };
+  }
+  const marketSizes = {};
+  for (const m of MARKETS) {
+    marketSizes[m] = { safe: pools[m].safe.length, aggressive: pools[m].aggressive.length };
+  }
+  metricsOut.summary = {
+    markets: marketSizes,
+    providers: providerSummary,
+    coverage: { ...marketCoverage, avg: avgCoverage },
+    timingMs: { total: Date.now() - START_TS }
+  };
+
   if (OFFLINE) {
     console.warn(`[buildPools] offline mode, leaving pools.json unchanged`);
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
     console.log('[buildPools] wrote pools-metrics.json (pools.json unchanged)');
+    return;
+  }
+  if (DRY_RUN) {
+    console.warn(`[buildPools] dry-run, no writes`);
+    await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
+    console.log('[buildPools] wrote pools-metrics.json (dry-run)');
     return;
   }
   if (avgCoverage < COVERAGE_MIN) {
