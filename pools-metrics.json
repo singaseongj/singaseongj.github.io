@@ -504,6 +504,56 @@
     }
   },
   "S&P 500": {
+    "Apple": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "adv20": null,
+      "close": null,
+      "newsCount": 2,
+      "sentiment": 0.8,
+      "recentEarnings": false,
+      "source": null,
+      "attempts": [],
+      "fetchMs": 0,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news": 0.8
+      },
+      "score": {
+        "safe": 0.46,
+        "aggressive": 0.16000000000000003
+      }
+    },
+    "Johnson & Johnson": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "adv20": null,
+      "close": null,
+      "newsCount": 0,
+      "sentiment": null,
+      "recentEarnings": false,
+      "source": null,
+      "attempts": [],
+      "fetchMs": 0,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news": 0
+      },
+      "score": {
+        "safe": 0.35,
+        "aggressive": 0.05
+      }
+    },
     "NVIDIA": {
       "ret5": null,
       "ret20": null,
@@ -579,31 +629,6 @@
         "aggressive": 0
       }
     },
-    "Apple": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "adv20": null,
-      "close": null,
-      "newsCount": 2,
-      "sentiment": 0.8,
-      "recentEarnings": false,
-      "source": null,
-      "attempts": [],
-      "fetchMs": 0,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news": 0.8
-      },
-      "score": {
-        "safe": 0.46,
-        "aggressive": 0.16000000000000003
-      }
-    },
     "Meta Platforms": {
       "ret5": null,
       "ret20": null,
@@ -627,31 +652,6 @@
       "score": {
         "safe": 0.3,
         "aggressive": 0
-      }
-    },
-    "Johnson & Johnson": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "adv20": null,
-      "close": null,
-      "newsCount": 0,
-      "sentiment": null,
-      "recentEarnings": false,
-      "source": null,
-      "attempts": [],
-      "fetchMs": 0,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news": 0
-      },
-      "score": {
-        "safe": 0.35,
-        "aggressive": 0.05
       }
     },
     "Eli Lilly": {
@@ -931,6 +931,31 @@
     }
   },
   "NASDAQ 100": {
+    "Apple": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "adv20": null,
+      "close": null,
+      "newsCount": 2,
+      "sentiment": 0.8,
+      "recentEarnings": false,
+      "source": null,
+      "attempts": [],
+      "fetchMs": 0,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news": 0.8
+      },
+      "score": {
+        "safe": 0.46,
+        "aggressive": 0.16000000000000003
+      }
+    },
     "NVIDIA": {
       "ret5": null,
       "ret20": null,
@@ -1004,31 +1029,6 @@
       "score": {
         "safe": 0.3,
         "aggressive": 0
-      }
-    },
-    "Apple": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "adv20": null,
-      "close": null,
-      "newsCount": 2,
-      "sentiment": 0.8,
-      "recentEarnings": false,
-      "source": null,
-      "attempts": [],
-      "fetchMs": 0,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news": 0.8
-      },
-      "score": {
-        "safe": 0.46,
-        "aggressive": 0.16000000000000003
       }
     },
     "Alphabet": {
@@ -1213,7 +1213,7 @@
         "err": 7
       },
       "fmp": {
-        "429": 2,
+        "429": 0,
         "ok": 0,
         "err": 2
       }
@@ -1226,7 +1226,7 @@
       "avg": 0.10441176470588236
     },
     "timingMs": {
-      "total": 7086
+      "total": 4723
     }
   }
 }
