@@ -385,41 +385,41 @@
   },
   "S&P 500": {
     "Apple": {
-      "ret5": 0.976668804156584,
-      "ret20": 9.664746172210728,
-      "vol20": 0.01808585573747912,
-      "turnover": 0.924031557042136,
-      "news72h": 50,
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 51,
       "recentEarnings": false,
       "norm": {
-        "ret5": 1,
-        "ret20": 1,
-        "vol20": 1,
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
         "turnover": 0,
-        "news72h": 0.8
+        "news72h": 0.7741935483870968
       },
       "score": {
-        "safe": 0.56,
-        "aggressive": 0.6800000000000002
+        "safe": 0.45483870967741935,
+        "aggressive": 0.07741935483870968
       }
     },
     "NVIDIA": {
-      "ret5": -1.2315270935960592,
-      "ret20": 4.6633025926570335,
-      "vol20": 0.015250044162412144,
-      "turnover": 0.9724813579594226,
-      "news72h": 61,
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 63,
       "recentEarnings": true,
       "norm": {
         "ret5": 0,
         "ret20": 0,
         "vol20": 0,
-        "turnover": 1,
-        "news72h": 0.9833333333333333
+        "turnover": 0,
+        "news72h": 0.967741935483871
       },
       "score": {
-        "safe": 0.5066666666666666,
-        "aggressive": 0.4983333333333333
+        "safe": 0.5035483870967742,
+        "aggressive": 0.1967741935483871
       }
     },
     "Microsoft": {
@@ -427,7 +427,7 @@
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 62,
+      "news72h": 65,
       "recentEarnings": false,
       "norm": {
         "ret5": 0,
@@ -439,6 +439,25 @@
       "score": {
         "safe": 0.5,
         "aggressive": 0.1
+      }
+    },
+    "Amazon": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 61,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.9354838709677419
+      },
+      "score": {
+        "safe": 0.48709677419354835,
+        "aggressive": 0.0935483870967742
       }
     },
     "Meta Platforms": {
@@ -453,11 +472,11 @@
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.5833333333333334
+        "news72h": 0.5483870967741935
       },
       "score": {
-        "safe": 0.4166666666666667,
-        "aggressive": 0.05833333333333334
+        "safe": 0.4096774193548387,
+        "aggressive": 0.054838709677419356
       }
     },
     "Johnson & Johnson": {
@@ -465,7 +484,7 @@
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 2,
+      "news72h": 3,
       "recentEarnings": false,
       "norm": {
         "ret5": 0,
@@ -491,30 +510,11 @@
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.4166666666666667
+        "news72h": 0.3870967741935484
       },
       "score": {
-        "safe": 0.3833333333333333,
-        "aggressive": 0.04166666666666667
-      }
-    },
-    "Amazon": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 60,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.9666666666666667
-      },
-      "score": {
-        "safe": 0.49333333333333335,
-        "aggressive": 0.09666666666666668
+        "safe": 0.3774193548387097,
+        "aggressive": 0.03870967741935484
       }
     },
     "Tesla": {
@@ -529,30 +529,11 @@
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.38333333333333336
+        "news72h": 0.3548387096774194
       },
       "score": {
-        "safe": 0.37666666666666665,
-        "aggressive": 0.03833333333333334
-      }
-    },
-    "Super Micro Computer": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 2,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0
-      },
-      "score": {
-        "safe": 0.3,
-        "aggressive": 0
+        "safe": 0.3709677419354839,
+        "aggressive": 0.035483870967741936
       }
     },
     "Netflix": {
@@ -567,70 +548,51 @@
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.11666666666666667
+        "news72h": 0.0967741935483871
       },
       "score": {
-        "safe": 0.3233333333333333,
-        "aggressive": 0.011666666666666667
+        "safe": 0.3193548387096774,
+        "aggressive": 0.00967741935483871
+      }
+    },
+    "Super Micro Computer": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 3,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0
+      },
+      "score": {
+        "safe": 0.3,
+        "aggressive": 0
       }
     }
   },
   "NASDAQ 100": {
-    "Alphabet": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 41,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.6379310344827587
-      },
-      "score": {
-        "safe": 0.4275862068965517,
-        "aggressive": 0.06379310344827586
-      }
-    },
-    "Apple": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 50,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.7931034482758621
-      },
-      "score": {
-        "safe": 0.45862068965517244,
-        "aggressive": 0.07931034482758621
-      }
-    },
     "NVIDIA": {
       "ret5": null,
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 61,
+      "news72h": 63,
       "recentEarnings": true,
       "norm": {
         "ret5": 0,
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.9827586206896551
+        "news72h": 0.9672131147540983
       },
       "score": {
-        "safe": 0.506551724137931,
-        "aggressive": 0.19827586206896552
+        "safe": 0.5034426229508197,
+        "aggressive": 0.19672131147540983
       }
     },
     "Microsoft": {
@@ -638,7 +600,7 @@
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 62,
+      "news72h": 65,
       "recentEarnings": false,
       "norm": {
         "ret5": 0,
@@ -652,61 +614,61 @@
         "aggressive": 0.1
       }
     },
-    "Palantir": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 22,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.3103448275862069
-      },
-      "score": {
-        "safe": 0.3620689655172414,
-        "aggressive": 0.031034482758620693
-      }
-    },
-    "AMD": {
-      "ret5": null,
-      "ret20": null,
-      "vol20": null,
-      "turnover": null,
-      "news72h": 28,
-      "recentEarnings": false,
-      "norm": {
-        "ret5": 0,
-        "ret20": 0,
-        "vol20": 0,
-        "turnover": 0,
-        "news72h": 0.41379310344827586
-      },
-      "score": {
-        "safe": 0.38275862068965516,
-        "aggressive": 0.041379310344827586
-      }
-    },
     "Amazon": {
       "ret5": null,
       "ret20": null,
       "vol20": null,
       "turnover": null,
-      "news72h": 60,
+      "news72h": 61,
       "recentEarnings": false,
       "norm": {
         "ret5": 0,
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.9655172413793104
+        "news72h": 0.9344262295081968
       },
       "score": {
-        "safe": 0.49310344827586206,
-        "aggressive": 0.09655172413793105
+        "safe": 0.48688524590163934,
+        "aggressive": 0.09344262295081968
+      }
+    },
+    "Apple": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 51,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.7704918032786885
+      },
+      "score": {
+        "safe": 0.4540983606557377,
+        "aggressive": 0.07704918032786885
+      }
+    },
+    "Alphabet": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 43,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.639344262295082
+      },
+      "score": {
+        "safe": 0.4278688524590164,
+        "aggressive": 0.0639344262295082
       }
     },
     "Meta Platforms": {
@@ -721,11 +683,30 @@
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.5689655172413793
+        "news72h": 0.5409836065573771
       },
       "score": {
-        "safe": 0.41379310344827586,
-        "aggressive": 0.056896551724137934
+        "safe": 0.40819672131147544,
+        "aggressive": 0.05409836065573771
+      }
+    },
+    "AMD": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 28,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.39344262295081966
+      },
+      "score": {
+        "safe": 0.37868852459016394,
+        "aggressive": 0.03934426229508197
       }
     },
     "Tesla": {
@@ -740,11 +721,30 @@
         "ret20": 0,
         "vol20": 0,
         "turnover": 0,
-        "news72h": 0.3620689655172414
+        "news72h": 0.3442622950819672
       },
       "score": {
-        "safe": 0.37241379310344824,
-        "aggressive": 0.03620689655172414
+        "safe": 0.3688524590163934,
+        "aggressive": 0.03442622950819672
+      }
+    },
+    "Palantir": {
+      "ret5": null,
+      "ret20": null,
+      "vol20": null,
+      "turnover": null,
+      "news72h": 22,
+      "recentEarnings": false,
+      "norm": {
+        "ret5": 0,
+        "ret20": 0,
+        "vol20": 0,
+        "turnover": 0,
+        "news72h": 0.29508196721311475
+      },
+      "score": {
+        "safe": 0.3590163934426229,
+        "aggressive": 0.029508196721311476
       }
     },
     "PEP": {
