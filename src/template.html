@@ -22,6 +22,11 @@
     .home-button:hover {
       opacity: 1;
     }
+    .skeleton li {
+      background: #eee;
+      height: 1em;
+      margin: 0.3em 0;
+    }
   </style>
   <style>
   .fx-ticker {
@@ -86,7 +91,7 @@
 
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
-    <div id="loading" class="loading" style="display:none">Loading data…</div>
+    <div id="loading" class="loading" style="display:none"><ul class="skeleton"><li></li><li></li><li></li></ul></div>
     <div id="recommendations"><p class="error" style="display:none"></p></div>
     <div id="portfolioUpdated" class="last-updated"></div>
     <noscript>자바스크립트를 활성화하면 추천 종목이 표시됩니다.</noscript>
@@ -116,7 +121,8 @@
         aggressive: '공격주',
         pickNote: '안전주는 변동성이 낮고 최근 수익률이 안정적인 종목, 공격주는 모멘텀과 거래대금이 높은 종목입니다.',
         updated: '업데이트: ',
-        visitsToday: '오늘 방문: {daily} | 총 방문: {total}'
+        visitsToday: '오늘 방문: {daily} | 총 방문: {total}',
+        noPicks: 'No picks available'
       },
       en: {
         title: 'Daily Stock Report Automation',
@@ -140,7 +146,8 @@
         aggressive: 'Aggressive Picks',
         pickNote: 'Safe Picks emphasise consistent performance and lower volatility; Aggressive Picks highlight higher momentum and volume.',
         updated: 'Updated: ',
-        visitsToday: 'Visits today: {daily} | Total: {total}'
+        visitsToday: 'Visits today: {daily} | Total: {total}',
+        noPicks: 'No picks available'
       }
     };
 
@@ -361,15 +368,16 @@
     async function fetchRecs() {
       const loading = document.getElementById('loading');
       if (loading) loading.style.display = 'block';
-      let data = null;
       const container = document.getElementById('recommendations');
       try {
-        // cache-buster to avoid stale GH-Pages content
+        const cached = JSON.parse(localStorage.getItem('recommendations') || 'null');
+        if (cached?.data && container) render(cached.data);
         const res = await fetch('recommendations.json?_=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        data = await res.json();
+        const data = await res.json();
         if (container && data) {
           render(data);
+          localStorage.setItem('recommendations', JSON.stringify({ data, ts: Date.now() }));
         } else if (container) {
           const p = container.querySelector('.error') || document.createElement('p');
           p.className = 'error';
@@ -407,21 +415,58 @@
         const key = m;
         const info = data[key];
         for (const bucket of ['safe', 'aggressive']) {
-          const items = (info?.[bucket] || []).map(item => {
+          const itemsArr = (info?.[bucket] || []).map(item => {
             const name = FULL_NAME_MAP[item.name] || item.name;
             const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
             return `<li>${name}${sector}</li>`;
-          }).join('');
+          });
+          const list = itemsArr.length ? itemsArr.join('') : `<li class="empty">${translations[currentLang].noPicks}</li>`;
           const label = bucket === 'safe' ? translations[currentLang].safe : translations[currentLang].aggressive;
-          html.push(`<div class="portfolio-group"><h3>${m} ${label}</h3><ul>${items}</ul></div>`);
+          html.push(`<div class="portfolio-group"><h3>${m} ${label}</h3><ul>${list}</ul></div>`);
         }
         html.push(`<small class="tooltip">${translations[currentLang].pickNote}</small>`);
       }
       container.innerHTML = html.join('');
+      attachTooltips();
       const upd = document.getElementById('portfolioUpdated');
       if (upd && data.lastUpdated) {
         upd.textContent = translations[currentLang].updated + new Date(data.lastUpdated).toLocaleString(currentLang === 'ko' ? 'ko-KR' : 'en-US');
       }
+    }
+
+    let metricsCache = null;
+    async function loadMetrics(){
+      if (metricsCache) return metricsCache;
+      try {
+        const res = await fetch('pools-metrics.json');
+        metricsCache = await res.json();
+      } catch {
+        metricsCache = {};
+      }
+      return metricsCache;
+    }
+
+    async function showMetricTooltip(e){
+      const li = e.currentTarget;
+      const name = li.textContent.trim().replace(/\s.+/, '');
+      const metrics = await loadMetrics();
+      let m;
+      for (const market of Object.keys(metrics)){
+        if (market === 'summary') continue;
+        if (metrics[market] && metrics[market][name]) { m = metrics[market][name]; break; }
+      }
+      if (m){
+        const vol = m.vol20 == null ? '-' : m.vol20 < 0.02 ? 'low' : (m.vol20 < 0.05 ? 'med' : 'high');
+        const news = m.sentiment == null ? '-' : (m.sentiment > 0.5 ? '+' : '-');
+        const earn = m.recentEarnings ? 'yes' : 'no';
+        li.title = `5d:${m.ret5?.toFixed(1)??'-'}%, 20d:${m.ret20?.toFixed(1)??'-'}%, Vol:${vol}, News:${news}, Earn:${earn}`;
+      }
+    }
+
+    function attachTooltips(){
+      document.querySelectorAll('#recommendations li').forEach(li => {
+        li.addEventListener('mouseenter', showMetricTooltip, { once: true });
+      });
     }
 
     // 모든 데이터 새로고침
