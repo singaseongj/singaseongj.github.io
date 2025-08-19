@@ -197,7 +197,7 @@ async function finnhubRecentEarnings(symbol){
 // ---------- Metrics from candles ----------
 function computeMetrics(c, v){
   // c: closes oldest..newest, v: volumes oldest..newest
-  if (!Array.isArray(c) || c.length < 21) return { ret5: null, ret20: null, vol20: null, turnover: null };
+  if (!Array.isArray(c) || c.length < 21) return { ret5: null, ret20: null, vol20: null, turnover: null, adv20: null, close: null };
   const n = c.length;
   const ret5  = (c[n-1] - c[n-6]) / c[n-6] * 100;   // %
   const ret20 = (c[n-1] - c[n-21]) / c[n-21] * 100; // %
@@ -212,9 +212,9 @@ function computeMetrics(c, v){
   const vol20 = Math.sqrt(variance); // daily stdev
   // turnover proxy: avg volume last 5 relative to last 20
   const avg = (arr, s, e)=>arr.slice(s,e).reduce((a,b)=>a+b,0)/(e-s);
-  const v5 = avg(v, n-5, n), v20 = avg(v, n-20, n);
-  const turnover = v20 ? (v5 / v20) : null;
-  const adv20 = v20 || null;
+  const v5 = avg(v, n-5, n), v20avg = avg(v, n-20, n);
+  const turnover = v20avg ? (v5 / v20avg) : null;
+  const adv20 = v20avg || null;
   const close = c[n-1];
   return { ret5, ret20, vol20, turnover, adv20, close };
 }
@@ -437,7 +437,7 @@ async function main(){
 
   const providerSummary = {};
   for (const [p, s] of Object.entries(providerState)) {
-    providerSummary[p] = { ok: s.ok || 0, err: s.err || 0, '429': s[429] || 0 };
+    providerSummary[p] = { ok: s.ok || 0, err: s.err || 0, '429': s['429'] || 0 };
   }
   const marketSizes = {};
   for (const m of MARKETS) {
