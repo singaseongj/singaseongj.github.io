@@ -13,9 +13,9 @@ const COOLOFF_MS = Number(process.env.COOLOFF_MS || 60000);
 const CACHE_DIR = path.join('data','cache','candles');
 
 const state = {
-  finnhub: { errors: 0, coolUntil: 0, count: 0, ok:0, err:0, 429:0 },
-  twelvedata: { errors: 0, coolUntil: 0, count: 0, ok:0, err:0, 429:0 },
-  fmp: { errors: 0, coolUntil: 0, count: 0, ok:0, err:0, 429:0 }
+  finnhub: { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
+  twelvedata: { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
+  fmp: { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 }
 };
 
 function toTwelveSymbol(sym){
@@ -38,7 +38,11 @@ async function withCache(provider, symbol, ttl, fetcher){
     const txt = await fs.readFile(file, 'utf8');
     const data = JSON.parse(txt);
     if (age < ttl) return data;
-    fetcher().then(res => writeAtomic(file, JSON.stringify(res))).catch(()=>{});
+    fetcher()
+      .then(res => writeAtomic(file, JSON.stringify(res)))
+      .catch(e => {
+        if (process.env.DEBUG) console.warn('[cache] refresh failed:', e.message);
+      });
     return data;
   } catch {
     const data = await fetcher();
