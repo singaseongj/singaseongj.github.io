@@ -141,7 +141,7 @@ export async function getCandles(symbol, opts={}){
     } catch(e){
       s.errors++;
       s.err++;
-      if (e.status===429){ s[429]++; }
+      if (e.status===429){ s['429']++; }
       if (e.status===429 || e.status===403 || s.errors >= CIRCUIT_MAX_ERRORS){
         s.coolUntil = Date.now() + cooloffMs;
         s.errors = 0;
