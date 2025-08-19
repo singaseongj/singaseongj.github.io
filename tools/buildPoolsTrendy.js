@@ -305,6 +305,9 @@ async function main(){
   const universe = await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
 
   for (const market of MARKETS){
+    if (Number.isFinite(MAX_PER_PROVIDER)) {
+      for (const s of Object.values(providerState)) s.count = 0;
+    }
     const buckets = pools[market];
     if (!buckets) continue;
     const names = universe[market] || [];
