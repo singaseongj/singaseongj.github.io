@@ -58,7 +58,7 @@
 <body>
   <a href="index.html" class="home-button" aria-label="Home">&#x21A9;</a>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
-  <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> 2025년 8월 18일</p>
+  <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> 2025년 8월 19일</p>
   
   <div id="debugInfo" class="debug" style="display: none;">
     <h4>디버그 정보:</h4>
@@ -91,7 +91,9 @@
 
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
-    <div id="loading" class="loading" style="display:none"><ul class="skeleton"><li></li><li></li><li></li></ul></div>
+    <div id="loading" class="loading" style="display:none">
+      <ul class="skeleton"><li></li><li></li><li></li></ul>
+    </div>
     <div id="recommendations"><p class="error" style="display:none"></p></div>
     <div id="portfolioUpdated" class="last-updated"></div>
     <noscript>자바스크립트를 활성화하면 추천 종목이 표시됩니다.</noscript>
@@ -368,13 +370,14 @@
     async function fetchRecs() {
       const loading = document.getElementById('loading');
       if (loading) loading.style.display = 'block';
+      let data = null;
       const container = document.getElementById('recommendations');
       try {
         const cached = JSON.parse(localStorage.getItem('recommendations') || 'null');
         if (cached?.data && container) render(cached.data);
         const res = await fetch('recommendations.json?_=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
+        data = await res.json();
         if (container && data) {
           render(data);
           localStorage.setItem('recommendations', JSON.stringify({ data, ts: Date.now() }));
