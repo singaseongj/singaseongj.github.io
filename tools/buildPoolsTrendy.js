@@ -4,9 +4,11 @@
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
 import fs from 'fs/promises';
+import { execSync } from 'node:child_process';
 import { TICKER_MAP } from '../src/maps.js';
 import { getCandles, providerState } from '../src/data/candles.js';
 import { buildUniverse } from '../src/universe/index.js';
+import { buildNewsFeatures } from '../src/news/fetchByTicker.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -18,12 +20,32 @@ const FEEDBACK_FILE = 'feedback.json';
 const NEWS_FEATURES_FILE = 'data/news-features.json';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
-const PICK_COUNT = 5;
+const PICK_COUNT = 12;
 
 let NEWS_FEATURES = {};
 try {
   NEWS_FEATURES = JSON.parse(await fs.readFile(NEWS_FEATURES_FILE, 'utf8'));
 } catch {}
+
+async function enrichWithNewsFeatures(symbols) {
+  const feats = await buildNewsFeatures(symbols);
+  try {
+    await fs.mkdir('data', { recursive: true });
+    await fs.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
+  } catch (e) {
+    console.warn('Failed to persist news-features.json:', e.message);
+  }
+  return feats;
+}
+
+async function readPrevPools() {
+  try {
+    const txt = execSync('git show HEAD~1:pools.json', { stdio: ['ignore', 'pipe', 'ignore'] }).toString('utf8');
+    return JSON.parse(txt);
+  } catch {
+    return null;
+  }
+}
 
 // ---- flags
 const ARGS = new Set(process.argv.slice(2));
@@ -180,6 +202,24 @@ function rank01(values) {
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
 
+function namesOnlyRank(universe, features) {
+  const out = {};
+  for (const m of MARKETS) {
+    const names = universe[m] || [];
+    const scored = names.map(n => {
+      const sym = nameToSymbol(n) || n;
+      const nf = features[sym] || {};
+      const count = Math.min(nf.count || 0, 30) / 30;
+      const sentiment = ((nf.sentiment ?? 0) + 1) / 2;
+      const pop = nf.naverPopularity ?? 0;
+      const score = count * 0.12 + (sentiment - 0.5) * 0.08 + (/\.K[QS]$/.test(sym) ? pop * 0.20 : 0);
+      return { name: n, score };
+    }).sort((a,b)=>b.score-a.score).map(s=>s.name);
+    out[m] = { safe: scored.slice(0, PICK_COUNT), aggressive: scored.slice(PICK_COUNT, PICK_COUNT*2) };
+  }
+  return out;
+}
+
 function todayYMD(offsetDays=0){
   const d = new Date(Date.now() + offsetDays*86400000);
   return d.toISOString().slice(0,10);
@@ -284,6 +324,41 @@ async function mapLimit(items, limit, worker) {
   });
 }
 
+function enforceRotationForMarket({ market, chosenSafe, chosenAggr, scoreSafe, scoreAggr, prevSet, minSwaps = Number(process.env.ROTATE_MIN_SWAPS || 1) }) {
+  const safeRanked = Object.entries(scoreSafe).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
+  const aggrRanked = Object.entries(scoreAggr).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
+
+  let swaps = 0;
+
+  function swapIn(arr, ranked) {
+    // find first candidate not already present that’s in the ranked list
+    const curSet = new Set(arr);
+    for (const cand of ranked) {
+      if (!curSet.has(cand)) {
+        // replace the last element (lowest score) to minimize disruption
+        arr[arr.length - 1] = cand;
+        swaps++;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  const combined = new Set([...chosenSafe, ...chosenAggr]);
+  let identical = true;
+  for (const n of combined) if (!prevSet.has(n)) { identical = false; break; }
+
+  if (!identical) return { chosenSafe, chosenAggr, swaps };
+
+  // try to introduce at least one outsider
+  swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked);
+
+  // If more swaps requested, keep swapping aggr first, then safe
+  while (swaps < minSwaps && (swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked))) {}
+
+  return { chosenSafe, chosenAggr, swaps };
+}
+
 // ---------- Main ----------
 async function main(){
   const pools = await loadJson(POOLS_FILE);
@@ -303,6 +378,16 @@ async function main(){
   const marketCoverage = {};
 
   const universe = await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
+
+  const symbolSet = new Set();
+  for (const names of Object.values(universe)) {
+    for (const n of names) {
+      const sym = nameToSymbol(n);
+      if (sym) symbolSet.add(sym);
+    }
+  }
+  NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
+  const prevPools = await readPrevPools();
 
   for (const market of MARKETS){
     if (Number.isFinite(MAX_PER_PROVIDER)) {
@@ -340,7 +425,7 @@ async function main(){
       }
       console.log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
-      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let earn=false; let candles=null;
+      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let earn=false; let candles=null;
       try {
         candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; }) : null;
         if (candles && Array.isArray(candles.c) && Array.isArray(candles.v)) {
@@ -351,6 +436,7 @@ async function main(){
         if (nf) {
           newsCount = nf.count || 0;
           sentiment = typeof nf.sentiment === 'number' ? nf.sentiment : null;
+          naverPopularity = typeof nf.naverPopularity === 'number' ? nf.naverPopularity : 0;
         }
         if (FINNHUB && sym && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
           earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
@@ -361,7 +447,7 @@ async function main(){
         tripOnError(e);
       }
 
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, earn, sym, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, earn, sym, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
     });
 
     const filteredNames = names.filter(n => {
@@ -379,11 +465,6 @@ async function main(){
     const nRet20  = rank01(filteredNames.map(n => byName[n].ret20));
     const nTurn   = rank01(filteredNames.map(n => byName[n].turnover));
     const nVol    = rank01(filteredNames.map(n => byName[n].vol20));   // higher vol = riskier
-    const nCount  = rank01(filteredNames.map(n => byName[n].newsCount));
-    const newsScoreArr = filteredNames.map((n,i) => {
-      const s = byName[n].sentiment;
-      return typeof s === 'number' ? nCount[i] * s : nCount[i];
-    });
 
     // Scores
     const scoreSafeRaw = {};
@@ -394,11 +475,13 @@ async function main(){
       const isKRName = sym ? isKR(sym) : false;
       const baseKR = isKRName ? 0.05 : 0;
 
-      const ns = newsScoreArr[i];
-      const newsSafe = 0.20 * Math.min(1, ns) * (byName[n].sentiment != null && byName[n].sentiment < 0.5 ? byName[n].sentiment : 1);
-      const newsAggr = 0.20 * Math.min(1, ns);
-      const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsSafe + 0.10*earnBonus);
-      const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsAggr + earnBonus);
+      const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
+      const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
+      const pop = byName[n].naverPopularity ?? 0;
+      const newsBoost = newsCountNorm * 0.12 + (sentimentNorm - 0.5) * 0.08 + (isKRName ? pop * 0.20 : 0);
+
+      const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsBoost + 0.10*earnBonus);
+      const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsBoost + earnBonus);
       scoreSafeRaw[n] = safe;
       scoreAggrRaw[n] = aggr;
     });
@@ -411,9 +494,16 @@ async function main(){
     function topK(scores, k){
       return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
     }
-    const chosenSafe = topK(scoreSafe, PICK_COUNT);
+    let chosenSafe = topK(scoreSafe, PICK_COUNT);
     const aggrCandidates = topK(scoreAggr, PICK_COUNT * 2);
-    const chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, PICK_COUNT);
+    let chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, PICK_COUNT);
+
+    if (prevPools) {
+      const prevSet = new Set([...(prevPools[market]?.safe || []), ...(prevPools[market]?.aggressive || [])]);
+      const enforced = enforceRotationForMarket({ market, chosenSafe, chosenAggr, scoreSafe, scoreAggr, prevSet });
+      chosenSafe = enforced.chosenSafe;
+      chosenAggr = enforced.chosenAggr;
+    }
 
     pools[market] = {
       safe: chosenSafe,
@@ -421,11 +511,14 @@ async function main(){
     };
 
     metricsOut[market] = filteredNames.reduce((acc, n, i) => {
+      const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
+      const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
+      const pop = byName[n].naverPopularity ?? 0;
       acc[n] = {
         ret5: byName[n].ret5, ret20: byName[n].ret20, vol20: byName[n].vol20, turnover: byName[n].turnover,
-        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, recentEarnings: byName[n].earn,
+        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, recentEarnings: byName[n].earn,
         source: byName[n].source, attempts: byName[n].attempts, fetchMs: byName[n].fetchMs,
-        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], news: newsScoreArr[i] },
+        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], newsCount: newsCountNorm, sentiment: sentimentNorm, popularity: pop },
         score: { safe: scoreSafe[n], aggressive: scoreAggr[n] }
       };
       return acc;
@@ -467,6 +560,11 @@ async function main(){
   }
   if (avgCoverage < COVERAGE_MIN) {
     console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using names-only ranking`);
+    const ranked = namesOnlyRank(universe, NEWS_FEATURES);
+    await writeAtomic(POOLS_FILE, JSON.stringify(ranked, null, 2));
+    await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
+    console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
+    return;
   }
 
   // Decay feedback periodically
