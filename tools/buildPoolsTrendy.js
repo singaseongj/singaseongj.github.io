@@ -381,7 +381,9 @@ async function main(){
   const metricsOut = {};
   const marketCoverage = {};
 
-  const universe = await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
+  const universe = OFFLINE
+    ? Object.fromEntries(MARKETS.map(m => [m, Array.from(new Set([...(pools[m]?.safe || []), ...(pools[m]?.aggressive || [])]))]))
+    : await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
 
   const symbolSet = new Set();
   for (const names of Object.values(universe)) {
@@ -390,7 +392,11 @@ async function main(){
       if (sym) symbolSet.add(sym);
     }
   }
-  NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
+  if (!OFFLINE) {
+    NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
+  } else {
+    console.warn('[buildPools] offline mode, using cached news features');
+  }
   const prevPools = await readPrevPools();
 
   for (const market of MARKETS){
@@ -429,7 +435,7 @@ async function main(){
       }
       console.log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
-      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let earn=false; let candles=null;
+      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let earn=false; let candles=null;
       try {
         candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; }) : null;
         if (candles && Array.isArray(candles.c) && Array.isArray(candles.v)) {
@@ -441,6 +447,7 @@ async function main(){
           newsCount = nf.count || 0;
           sentiment = typeof nf.sentiment === 'number' ? nf.sentiment : null;
           naverPopularity = typeof nf.naverPopularity === 'number' ? nf.naverPopularity : 0;
+          blogMentions = typeof nf.blogMentions === 'number' ? nf.blogMentions : 0;
         }
         if (FINNHUB && sym && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
           earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
@@ -451,7 +458,7 @@ async function main(){
         tripOnError(e);
       }
 
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
     });
     const filteredNames = names.filter(n => {
       const m = byName[n];
@@ -467,6 +474,7 @@ async function main(){
     const nRet20  = rank01(filteredNames.map(n => byName[n].ret20));
     const nTurn   = rank01(filteredNames.map(n => byName[n].turnover));
     const nVol    = rank01(filteredNames.map(n => byName[n].vol20));   // higher vol = riskier
+    const nBlog   = rank01(filteredNames.map(n => byName[n].blogMentions));
 
     // Scores
     const scoreSafeRaw = {};
@@ -480,7 +488,8 @@ async function main(){
       const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
       const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
       const pop = byName[n].naverPopularity ?? 0;
-      const newsBoost = newsCountNorm * 0.12 + (sentimentNorm - 0.5) * 0.08 + (isKRName ? pop * 0.20 : 0);
+      const blogNorm = nBlog[i];
+      const newsBoost = newsCountNorm * 0.12 + (sentimentNorm - 0.5) * 0.08 + (isKRName ? pop * 0.20 : 0) + blogNorm * 0.05;
 
       const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsBoost + 0.10*earnBonus);
       const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsBoost + earnBonus);
@@ -494,8 +503,12 @@ async function main(){
 
     // Pick top K distinct names for each bucket
     const total = filteredNames.length;
-    const kSafe = Math.min(8, Math.ceil(total * 0.7));
-    const kAggr = Math.min(4, Math.max(0, total - kSafe));
+    let kSafe = Math.min(6, Math.ceil(total * 0.5));
+    let kAggr = Math.min(6, total - kSafe);
+    if (total >= 2 && kAggr === 0) {
+      kAggr = 1;
+      if (kSafe > 0) kSafe = Math.min(kSafe, total - kAggr);
+    }
 
     function topK(scores, k){
       return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
@@ -536,11 +549,12 @@ async function main(){
       const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
       const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
       const pop = byName[n].naverPopularity ?? 0;
+      const blogNorm = nBlog[i];
       acc[n] = {
         ret5: byName[n].ret5, ret20: byName[n].ret20, vol20: byName[n].vol20, turnover: byName[n].turnover,
-        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, recentEarnings: byName[n].earn,
+        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, blogMentions: byName[n].blogMentions, recentEarnings: byName[n].earn,
         source: byName[n].source, attempts: byName[n].attempts, fetchMs: byName[n].fetchMs,
-        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], newsCount: newsCountNorm, sentiment: sentimentNorm, popularity: pop },
+        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], newsCount: newsCountNorm, sentiment: sentimentNorm, popularity: pop, blogMentions: blogNorm },
         score: { safe: scoreSafe[n], aggressive: scoreAggr[n] }
       };
       return acc;

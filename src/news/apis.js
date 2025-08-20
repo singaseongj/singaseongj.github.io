@@ -58,4 +58,30 @@ export async function fetchNaverTrends(keyword) {
   }
 }
 
+export async function fetchNaverBlogCount(keyword) {
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) return null;
+  try {
+    const url = `https://openapi.naver.com/v1/search/blog?query=${encodeURIComponent(keyword)}&display=1`;
+    const res = await withRetry(() =>
+      fetchWithTimeout(
+        url,
+        {
+          headers: {
+            'X-Naver-Client-Id': NAVER_CLIENT_ID,
+            'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+            'User-Agent': UA
+          }
+        },
+        Number(process.env.REQ_TIMEOUT_MS || 5000)
+      )
+    );
+    if (!res.ok) throw new Error(`Naver Blog API HTTP ${res.status}`);
+    const data = await res.json();
+    return typeof data.total === 'number' ? data.total : null;
+  } catch (err) {
+    console.warn('fetchNaverBlogCount failed', err.message);
+    return null;
+  }
+}
+
 export { NEWSAPI_KEY, NAVER_CLIENT_ID, NAVER_CLIENT_SECRET };
