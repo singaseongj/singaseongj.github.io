@@ -62,6 +62,9 @@ jobs:
       ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}  # optional
       FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}         # optional
       TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}   # optional
+      NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+      NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+      NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
       GLOBAL_BUDGET_MS: 90000
       MAX_CONCURRENCY: 2
       REQ_TIMEOUT_MS: 5000

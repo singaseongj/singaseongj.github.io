@@ -1,5 +1,6 @@
 import { aggregate } from './sentiment.js';
 import { TICKER_MAP } from '../maps.js';
+import { fetchNews, NEWSAPI_KEY } from './apis.js';
 
 export async function fetchByTicker(symbol, name){
   const out = { count:0, sentiment:null, top:null };
@@ -19,6 +20,11 @@ export async function fetchByTicker(symbol, name){
       const res = await fetch(url);
       const data = await res.json();
       const titles = Array.isArray(data) ? data.map(d=>d.headline) : [];
+      const agg = aggregate(titles, 'en');
+      return { count: titles.length, sentiment: agg.sentiment, top: agg.top };
+    } else if (NEWSAPI_KEY) {
+      const data = await fetchNews(name || symbol);
+      const titles = Array.isArray(data?.articles) ? data.articles.map(a => a.title) : [];
       const agg = aggregate(titles, 'en');
       return { count: titles.length, sentiment: agg.sentiment, top: agg.top };
     }
