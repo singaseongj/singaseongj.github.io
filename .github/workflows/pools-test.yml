@@ -38,11 +38,17 @@ jobs:
           ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: |
           echo "FMP_KEY len=${#FMP_KEY}"
           echo "ALPHA_VANTAGE_KEY len=${#ALPHA_VANTAGE_KEY}"
           echo "FINNHUB_API_KEY len=${#FINNHUB_API_KEY}"
           echo "TWELVEDATA_API_KEY len=${#TWELVEDATA_API_KEY}"
+          echo "NEWSAPI_KEY len=${#NEWSAPI_KEY}"
+          echo "NAVER_CLIENT_ID len=${#NAVER_CLIENT_ID}"
+          echo "NAVER_CLIENT_SECRET len=${#NAVER_CLIENT_SECRET}"
 
       - name: Build trend-aware pools
         env:
@@ -50,6 +56,9 @@ jobs:
           ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           # Demo-friendly throttles; adjust if you have paid tiers
           GLOBAL_BUDGET_MS: 90000
           MAX_CONCURRENCY: 2
@@ -67,6 +76,9 @@ jobs:
           ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           POOLS_TTL_MS: 86400000
         run: |
           node fetchStockInfo.js --refresh-pools --force
