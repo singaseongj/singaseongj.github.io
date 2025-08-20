@@ -1,6 +1,6 @@
 import { aggregate } from './sentiment.js';
 import { TICKER_MAP } from '../maps.js';
-import { fetchNews, fetchNaverTrends, NEWSAPI_KEY } from './apis.js';
+import { fetchNews, fetchNaverTrends, fetchNaverBlogCount, NEWSAPI_KEY } from './apis.js';
 import { withRetry, fetchWithTimeout } from '../util/limiter.js';
 
 const UA = 'ddsciencehs-trender/1.0 (+github actions)';
@@ -15,8 +15,14 @@ async function naverPopularityScore(name) {
   return Math.max(0, Math.min(1, avg));
 }
 
+async function naverBlogMentions(name) {
+  if (process.env.SKIP_NAVER === '1') return null;
+  const total = await fetchNaverBlogCount(name);
+  return total == null ? null : Number(total);
+}
+
 export async function fetchByTicker(symbol, name){
-  const out = { count:0, sentiment:null, top:null, naverPopularity:null };
+  const out = { count:0, sentiment:null, top:null, naverPopularity:null, blogMentions:null };
   try {
     if (/\.K[QS]$/.test(symbol)) {
       const query = encodeURIComponent(name || symbol);
@@ -32,7 +38,8 @@ export async function fetchByTicker(symbol, name){
       const titles = Array.from(txt.matchAll(/<title><!\[CDATA\[(.*?)\]\]><\/title>/g)).slice(1).map(m=>m[1]);
       const agg = aggregate(titles, 'kr');
       const pop = await naverPopularityScore(name || symbol);
-      return { count: titles.length, sentiment: agg.sentiment, top: agg.top, naverPopularity: pop };
+      const blog = await naverBlogMentions(name || symbol);
+      return { count: titles.length, sentiment: agg.sentiment, top: agg.top, naverPopularity: pop, blogMentions: blog };
     } else if (process.env.FINNHUB_API_KEY) {
       const from = new Date(Date.now()-72*3600*1000).toISOString().slice(0,10);
       const to = new Date().toISOString().slice(0,10);

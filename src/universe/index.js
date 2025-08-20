@@ -30,6 +30,12 @@ async function fmpActives(exchange){
 
 const SP_MEGA = ['AAPL','MSFT','NVDA','AMZN','META','GOOGL','TSLA','BRK-B','JNJ','PG','V','KO','JPM','UNH','LLY'];
 const ETF_LIST = ['SPY','QQQ','XLK','XLF','ARKK'];
+const EXTRA_TICKERS = {
+  KOSPI: (process.env.EXTRA_TICKERS_KOSPI || '').split(',').map(t=>t.trim()).filter(Boolean),
+  KOSDAQ: (process.env.EXTRA_TICKERS_KOSDAQ || '').split(',').map(t=>t.trim()).filter(Boolean),
+  'S&P 500': (process.env.EXTRA_TICKERS_SP500 || '').split(',').map(t=>t.trim()).filter(Boolean),
+  'NASDAQ 100': (process.env.EXTRA_TICKERS_NASDAQ100 || '').split(',').map(t=>t.trim()).filter(Boolean)
+};
 
 export async function buildUniverse(basePools={}, {limitPerMarket=60}={}){
   const out = {};
@@ -67,6 +73,7 @@ export async function buildUniverse(basePools={}, {limitPerMarket=60}={}){
         if (INCLUDE_ETFS) tickers.push(...ETF_LIST);
       }
     } catch {}
+    tickers.push(...(EXTRA_TICKERS[m] || []));
     for (const t of tickers){
       const sym = t;
       if (seen.has(sym)) continue;
