@@ -17,6 +17,31 @@ exchange. Many technology giants such as Apple and Microsoft are members of
 both indices, so an individual stock may appear in each section of the
 recommendations.
 
+## Trendy pools builder
+
+The script `src/buildPoolsTrendy.js` assembles daily stock pools with a safe and an aggressive bucket per market. It supports an offline mode for fast smoke tests.
+
+```bash
+# offline dry run
+node src/buildPoolsTrendy.js --offline
+
+# full build
+node src/buildPoolsTrendy.js --markets=KOSPI,KOSDAQ,SPX,NDX --total=12
+```
+
+Environment variables:
+
+- `NEWSAPI_KEY`
+- `FINNHUB_API_KEY`
+- `ALPHAVANTAGE_API_KEY`
+- `FMP_API_KEY`
+- `TWELVEDATA_API_KEY`
+- `NAVER_CLIENT_ID`
+- `NAVER_CLIENT_SECRET`
+- `SKIP_NAVER` ("1" to skip Naver providers)
+- `UNIVERSE_LIMIT` (default 200)
+- `GLOBAL_BUDGET_MS` (default 90000)
+
 ## Voice to Keys Demo / 음성으로 단축키 데모
 
 ### English

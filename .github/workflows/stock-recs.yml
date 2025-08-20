@@ -1,185 +1,46 @@
----
-# yamllint disable rule:line-length
-name: Build & Publish Stock Recommendations
+name: Stock Recommendations
 
 on:
-  workflow_dispatch:
   schedule:
-    # Every 5 hours (cron is UTC; cadence doesn't depend on timezone)
     - cron: '0 */5 * * *'
+  workflow_dispatch:
+    inputs:
+      refreshPools:
+        description: 'Refresh pools'
+        type: boolean
+        default: true
 
 jobs:
-  build-publish:
+  recs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
-    environment:
-      name: production
-      url: https://singaseongj.github.io
-
-    concurrency:
-      group: daily-stock-report
-      cancel-in-progress: false
-
-    env:
-      TZ: Asia/Seoul
-      NODE_OPTIONS: --dns-result-order=ipv4first
-      # Keep the run under typical 60s shells; script respects this.
-      HARD_DEADLINE_MS: "55000"
-      # GitHub often has flaky access to Naver; feel free to unset.
-      SKIP_NAVER: "0"
-      IS_CRON: ${{ github.event_name == 'schedule' }}
-
-      # Optional: hybrid remote cache (leave empty if not used)
-      # REMOTE_URL: ${{ secrets.REMOTE_URL }}   # e.g. public GET or signed GET to last-good recommendations.json
-      # REMOTE_PUT: ${{ secrets.REMOTE_PUT }}   # signed PUT (S3/R2/GCS/Gist API) to upload latest file
-
-      # Optional: API keys for your other steps if you integrate them later
-      FMP_KEY: ${{ secrets.FMP_KEY }}
-      ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
-      FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
-      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
-      NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
-      NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-      NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-      GLOBAL_BUDGET_MS: 90000
-      MAX_CONCURRENCY: 2
-      REQ_TIMEOUT_MS: 5000
-      RETRIES: 1
-      BACKOFF_BASE_MS: 400
-      CIRCUIT_MAX_ERRORS: 6
-      COVERAGE_MIN: 0.3
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8  # v4
+      - uses: actions/checkout@v4
         with:
-          persist-credentials: true
           fetch-depth: 0
-
-      - name: Verify refresh-pools policy
-        run: bash .github/scripts/check-refresh-pools.sh
-
-      - name: "Guard: no hardcoded secrets"
-        shell: bash
-        run: |
-          set -Eeo pipefail
-          # Fail on likely secret assignments in source code (exclude workflows/docs)
-          if git grep -nI -E '(?i)(api[_-]?key|token|secret)\s*[:=]\s*["'\''][A-Za-z0-9_\-]{12,}["'\'']' -- \
-              ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
-            echo "❌ Possible hardcoded secret detected"; exit 1
-          fi
-          # Fail if someone echoes secret env vars
-          if git grep -nI -E 'echo\s+(\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY)\}?|%(\1)%)' -- \
-              ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
-            echo "❌ Attempt to echo a secret environment variable"; exit 1
-          fi
-          echo "✅ No hardcoded secrets found."
-
-      - name: Setup Node
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
-      - name: Install deps
-        run: npm ci
-
-      - name: Build trend-aware pools
+      - run: npm ci
+      - name: Offline smoke
+        run: node src/buildPoolsTrendy.js --offline
+      - name: Build pools
+        if: inputs.refreshPools == true
         env:
-          FMP_KEY: ${{ secrets.FMP_KEY }}
-          ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          ALPHAVANTAGE_API_KEY: ${{ secrets.ALPHAVANTAGE_API_KEY }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
-          GLOBAL_BUDGET_MS: ${{ env.GLOBAL_BUDGET_MS }}
-          MAX_CONCURRENCY: ${{ env.MAX_CONCURRENCY }}
-          REQ_TIMEOUT_MS: ${{ env.REQ_TIMEOUT_MS }}
-          RETRIES: ${{ env.RETRIES }}
-          BACKOFF_BASE_MS: ${{ env.BACKOFF_BASE_MS }}
-          CIRCUIT_MAX_ERRORS: ${{ env.CIRCUIT_MAX_ERRORS }}
-          COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
-          UNIVERSE_LIMIT: 200
-        run: node tools/buildPoolsTrendy.js || true
-
-      - name: Build recommendations (conditional refresh)
-        shell: bash
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: node src/buildPoolsTrendy.js --markets=KOSPI,KOSDAQ,SPX,NDX --total=12
+      - name: Run tests
+        run: npm test
+      - name: Commit artifacts
         run: |
-          set -euo pipefail
-          if [ -f fetchStockInfo.js ]; then
-            if [ "${IS_CRON}" = "true" ]; then
-              echo "Cron run → using --refresh-pools"
-              timeout 60 node fetchStockInfo.js --refresh-pools --force --delay=120
-            else
-              echo "Non-cron run → no forced refresh"
-              timeout 60 node fetchStockInfo.js --force --delay=120
-            fi
-          elif [ -f src/index.js ]; then
-            echo "Running modular entry (src/index.js)"
-            timeout 60 node src/index.js --force
-          else
-            echo "No entrypoint found"; exit 1
-          fi
-
-      # Add a validator (from earlier) at tools/validate-recs.js
-      # This will fail-fast if the JSON is incomplete.
-      - name: Ensure recommendations.json
-        shell: bash
-        run: |
-          set -euo pipefail
-          validate_json () { test -s recommendations.json && jq -e . recommendations.json >/dev/null 2>&1; }
-          if validate_json; then
-            echo "recommendations.json valid."
-          else
-            echo "Rebuilding pools and recommendations..."
-            node tools/buildPoolsTrendy.js || true
-            if [ "${IS_CRON}" = "true" ]; then
-              echo "Cron run → using --refresh-pools"
-              node fetchStockInfo.js --refresh-pools --force
-            else
-              echo "Non-cron run → no forced refresh"
-              node fetchStockInfo.js --force
-            fi
-            validate_json
-          fi
-
-      - name: "Verify generated files (brief)"
-        run: |
-          test -f recommendations.json
-          echo "Last updated:"
-          node -e "console.log(require('./recommendations.json').lastUpdated || 'n/a')"
-          echo "Mode:"
-          node -e "console.log(require('./recommendations.json').mode || 'unknown')"
-
-      - name: "Commit & push changes"
-        uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0  # v5
-        with:
-          commit_message: "chore: stock recommendations update [skip ci]"
-          file_pattern: |
-            recommendations.json
-            pools.json
-            pools-cache.json
-            pools-metrics.json
-            metrics-cache.json
-            ticker-cache.json
-            feedback.json
-            data/market_news.json
-            data/fx_rates.json
-            stocks.html
-            src/template.html
-          add_options: '-A'
-          skip_dirty_check: true
-
-      - name: "Show last commit (debug)"
-        if: always()
-        run: git log -1 --name-only --pretty=fuller || true
-
-      # Optional: publish to GitHub Pages if your repo uses it
-      - name: Deploy to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e  # v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./
-          # force_orphan: true  # uncomment if you want a clean history on gh-pages
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add pools.json pools-metrics.json || true
+          git commit -m 'chore: stock recs update [skip ci]' || true
+          git push

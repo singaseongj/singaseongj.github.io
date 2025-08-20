@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node src/build.js",
-    "test": "node tests/apple_association.test.js",
+    "test": "node tests/apple_association.test.js && node tests/pools_rotation.test.js",
     "stocks:refresh": "node fetchStockInfo.js --force",
     "build:recs": "node src/index.js --force",
     "check:recs": "node tools/validate-recs.js recommendations.json",

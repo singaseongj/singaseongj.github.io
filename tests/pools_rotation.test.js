@@ -16,15 +16,16 @@ function readPrevPoolsFromGit() {
     const txt = execSync('git show HEAD~1:pools.json', { stdio: ['ignore', 'pipe', 'ignore'] }).toString('utf8');
     return JSON.parse(txt);
   } catch {
-    return null; // first run / file not in previous commit
+    return null;
   }
 }
 
 function setFromPools(pools) {
   const out = {};
-  for (const m of Object.keys(pools || {})) {
-    const s = pools[m]?.safe || [];
-    const a = pools[m]?.aggressive || [];
+  const mObj = pools?.markets || {};
+  for (const m of Object.keys(mObj)) {
+    const s = mObj[m]?.safe || [];
+    const a = mObj[m]?.aggressive || [];
     out[m] = new Set([...s, ...a]);
   }
   return out;
@@ -36,14 +37,12 @@ test('pools show at least some rotation vs previous commit', () => {
 
   const prev = readPrevPoolsFromGit();
   if (!prev) {
-    // Nothing to compare; do not fail on first run
-    return;
+    return; // first run
   }
 
   const A = setFromPools(cur);
   const B = setFromPools(prev);
 
-  // Require change in at least one key KR market
   const targets = ['KOSPI', 'KOSDAQ'];
   let changed = false;
   for (const m of targets) {
@@ -59,4 +58,14 @@ test('pools show at least some rotation vs previous commit', () => {
   }
 
   assert.ok(changed, 'no new names introduced in KOSPI or KOSDAQ');
+});
+
+test('aggressive bucket never empty', () => {
+  const cur = readJSONSafe('pools.json');
+  assert.ok(cur, 'missing pools.json');
+  const mObj = cur.markets || {};
+  for (const m of Object.keys(mObj)) {
+    const aggr = mObj[m]?.aggressive || [];
+    assert.ok(aggr.length >= 1, `aggressive bucket empty for ${m}`);
+  }
 });
