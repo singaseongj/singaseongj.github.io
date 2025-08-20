@@ -33,6 +33,7 @@ jobs:
           FMP_KEY: demo
           ALPHA_VANTAGE_KEY: demo
           TWELVEDATA_API_KEY: demo
+          UNIVERSE_LIMIT: 200
           OFFLINE: 1
         run: |
           set -Eeo pipefail
@@ -138,6 +139,7 @@ jobs:
           BACKOFF_BASE_MS: ${{ env.BACKOFF_BASE_MS }}
           CIRCUIT_MAX_ERRORS: ${{ env.CIRCUIT_MAX_ERRORS }}
           COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
+          UNIVERSE_LIMIT: 200
         run: node tools/buildPoolsTrendy.js || true
 
       - name: "Build recommendations (primary path)"
