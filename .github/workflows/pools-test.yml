@@ -69,6 +69,7 @@ jobs:
           BACKOFF_BASE_MS: 400
           CIRCUIT_MAX_ERRORS: 6
           COVERAGE_MIN: 0.3
+          UNIVERSE_LIMIT: 200
         run: |
           node tools/buildPoolsTrendy.js || true
 

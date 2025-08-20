@@ -99,6 +99,7 @@ jobs:
           BACKOFF_BASE_MS: ${{ env.BACKOFF_BASE_MS }}
           CIRCUIT_MAX_ERRORS: ${{ env.CIRCUIT_MAX_ERRORS }}
           COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
+          UNIVERSE_LIMIT: 200
         run: node tools/buildPoolsTrendy.js || true
 
       - name: Build recommendations (conditional refresh)

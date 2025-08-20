@@ -206,6 +206,10 @@ function namesOnlyRank(universe, features) {
   const out = {};
   for (const m of MARKETS) {
     const names = universe[m] || [];
+    const total = names.length;
+    const kSafe = Math.min(PICK_COUNT, total);
+    const kAggr = Math.min(PICK_COUNT, Math.max(0, total - kSafe));
+
     const scored = names.map(n => {
       const sym = nameToSymbol(n) || n;
       const nf = features[sym] || {};
@@ -215,7 +219,7 @@ function namesOnlyRank(universe, features) {
       const score = count * 0.12 + (sentiment - 0.5) * 0.08 + (/\.K[QS]$/.test(sym) ? pop * 0.20 : 0);
       return { name: n, score };
     }).sort((a,b)=>b.score-a.score).map(s=>s.name);
-    out[m] = { safe: scored.slice(0, PICK_COUNT), aggressive: scored.slice(PICK_COUNT, PICK_COUNT*2) };
+    out[m] = { safe: scored.slice(0, kSafe), aggressive: scored.slice(kSafe, kSafe + kAggr) };
   }
   return out;
 }
@@ -447,15 +451,13 @@ async function main(){
         tripOnError(e);
       }
 
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, earn, sym, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
     });
-
     const filteredNames = names.filter(n => {
       const m = byName[n];
       const sym = m.sym;
-      if (!sym) return false;
-      const isKRName = isKR(sym);
-      const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || ALLOWLIST.has(sym);
+      const isKRName = sym ? isKR(sym) : false;
+      const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym));
       const priceOk = m.close == null || m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD);
       return advOk && priceOk;
     });
@@ -491,12 +493,29 @@ async function main(){
     const scoreAggr = applyFeedback(scoreAggrRaw, feedback, market);
 
     // Pick top K distinct names for each bucket
+    const total = filteredNames.length;
+    const kSafe = Math.min(PICK_COUNT, total);
+    const kAggr = Math.min(PICK_COUNT, Math.max(0, total - kSafe));
+
     function topK(scores, k){
       return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
     }
-    let chosenSafe = topK(scoreSafe, PICK_COUNT);
-    const aggrCandidates = topK(scoreAggr, PICK_COUNT * 2);
-    let chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, PICK_COUNT);
+
+    let chosenSafe = topK(scoreSafe, kSafe);
+    const aggrCandidates = topK(scoreAggr, Math.min(kSafe + kAggr * 2, total));
+    let chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, kAggr);
+
+    if (chosenAggr.length < kAggr) {
+      const need = kAggr - chosenAggr.length;
+      const backfill = aggrCandidates.filter(n => !chosenSafe.includes(n) && !chosenAggr.includes(n)).slice(0, need);
+      chosenAggr = chosenAggr.concat(backfill);
+    }
+    if (chosenAggr.length < kAggr) {
+      const everything = Object.keys(scoreAggr);
+      const need = kAggr - chosenAggr.length;
+      const tail = everything.filter(n => !chosenAggr.includes(n)).slice(-need);
+      chosenAggr = chosenAggr.concat(tail);
+    }
 
     if (prevPools) {
       const prevSet = new Set([...(prevPools[market]?.safe || []), ...(prevPools[market]?.aggressive || [])]);
@@ -504,6 +523,9 @@ async function main(){
       chosenSafe = enforced.chosenSafe;
       chosenAggr = enforced.chosenAggr;
     }
+
+    console.log(`[buildPools] ${market} total=${names.length} filtered=${filteredNames.length} kSafe=${kSafe} kAggr=${kAggr}`);
+    console.log(`[buildPools] chosenSafe=${chosenSafe.length} chosenAggr=${chosenAggr.length}`);
 
     pools[market] = {
       safe: chosenSafe,
