@@ -207,8 +207,8 @@ function namesOnlyRank(universe, features) {
   for (const m of MARKETS) {
     const names = universe[m] || [];
     const total = names.length;
-    const kSafe = Math.min(PICK_COUNT, total);
-    const kAggr = Math.min(PICK_COUNT, Math.max(0, total - kSafe));
+    const kSafe = Math.min(8, Math.ceil(total * 0.7));
+    const kAggr = Math.min(4, Math.max(0, total - kSafe));
 
     const scored = names.map(n => {
       const sym = nameToSymbol(n) || n;
@@ -494,8 +494,8 @@ async function main(){
 
     // Pick top K distinct names for each bucket
     const total = filteredNames.length;
-    const kSafe = Math.min(PICK_COUNT, total);
-    const kAggr = Math.min(PICK_COUNT, Math.max(0, total - kSafe));
+    const kSafe = Math.min(8, Math.ceil(total * 0.7));
+    const kAggr = Math.min(4, Math.max(0, total - kSafe));
 
     function topK(scores, k){
       return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
