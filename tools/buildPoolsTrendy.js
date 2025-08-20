@@ -28,6 +28,10 @@ try {
 } catch {}
 
 async function enrichWithNewsFeatures(symbols) {
+  if (OFFLINE) {
+    // Don’t touch network in offline mode; reuse cached features if present.
+    return NEWS_FEATURES; // whatever was loaded at startup or {}
+  }
   const feats = await buildNewsFeatures(symbols);
   try {
     await fs.mkdir('data', { recursive: true });
@@ -207,8 +211,12 @@ function namesOnlyRank(universe, features) {
   for (const m of MARKETS) {
     const names = universe[m] || [];
     const total = names.length;
-    const kSafe = Math.min(8, Math.ceil(total * 0.7));
-    const kAggr = Math.min(4, Math.max(0, total - kSafe));
+    let kSafe = Math.min(8, Math.ceil(total * 0.7));
+    let kAggr = Math.min(5, Math.max(0, total - kSafe));
+    if (total >= 5 && kAggr < 5) {
+      kAggr = Math.min(5, total);
+      kSafe = Math.min(8, Math.max(0, total - kAggr));
+    }
 
     const scored = names.map(n => {
       const sym = nameToSymbol(n) || n;
@@ -319,8 +327,9 @@ async function mapLimit(items, limit, worker) {
         const idx = i++;
         active++;
         Promise.resolve(worker(items[idx], idx))
-          .then(val => { out[idx] = val; active--; next(); })
-          .catch(err => { aborted = true; reject(err); });
+          .then(val => { out[idx] = val; })
+          .catch(err => { aborted = true; return reject(err); })
+          .finally(() => { active--; next(); });
       }
       if (i >= items.length && active === 0) resolve(out);
     };
@@ -390,7 +399,7 @@ async function main(){
       if (sym) symbolSet.add(sym);
     }
   }
-  NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
+  NEWS_FEATURES = OFFLINE ? (NEWS_FEATURES || {}) : await enrichWithNewsFeatures(Array.from(symbolSet));
   const prevPools = await readPrevPools();
 
   for (const market of MARKETS){
@@ -442,7 +451,7 @@ async function main(){
           sentiment = typeof nf.sentiment === 'number' ? nf.sentiment : null;
           naverPopularity = typeof nf.naverPopularity === 'number' ? nf.naverPopularity : 0;
         }
-        if (FINNHUB && sym && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
+        if (!OFFLINE && FINNHUB && sym && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
           earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
         } else {
           earn = false;
@@ -453,13 +462,19 @@ async function main(){
 
       byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
     });
+    if (timeLeft() <= 0) {
+      console.warn(`[buildPools] budget exhausted, stopping early (market=${market})`);
+      break;
+    }
     const filteredNames = names.filter(n => {
-      const m = byName[n];
+      const m = byName[n] || {};
       const sym = m.sym;
       const isKRName = sym ? isKR(sym) : false;
       const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym));
       const priceOk = m.close == null || m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD);
-      return advOk && priceOk;
+      // If no symbol, keep it (in online runs we may still have news/popularity);
+      // In offline runs, it won’t fetch anyway, but it shouldn’t block.
+      return sym ? (advOk && priceOk) : true;
     });
 
     // Normalize within market
@@ -494,8 +509,12 @@ async function main(){
 
     // Pick top K distinct names for each bucket
     const total = filteredNames.length;
-    const kSafe = Math.min(8, Math.ceil(total * 0.7));
-    const kAggr = Math.min(4, Math.max(0, total - kSafe));
+    let kSafe = Math.min(8, Math.ceil(total * 0.7));
+    let kAggr = Math.min(5, Math.max(0, total - kSafe));
+    if (total >= 5 && kAggr < 5) {
+      kAggr = Math.min(5, total);
+      kSafe = Math.min(8, Math.max(0, total - kAggr));
+    }
 
     function topK(scores, k){
       return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
@@ -602,4 +621,4 @@ async function main(){
   console.log('[buildPools] wrote pools.json and pools-metrics.json :: done');
 }
 
-main().catch(e => { console.error('[buildPools] failed:', e.message); process.exit(0); });
+main().catch(e => { console.error('[buildPools] failed:', e.stack || e.message); process.exit(0); });
