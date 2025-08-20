@@ -257,7 +257,7 @@ const STATIC_SECTORS = {
   // US
   'MSFT': 'Technology', 'AAPL': 'Technology', 'NVDA': 'Technology', 'AMZN': 'Consumer Discretionary',
   'META': 'Communication Services', 'GOOGL': 'Communication Services', 'TSLA': 'Consumer Discretionary',
-  'NFLX': 'Communication Services', 'SMCI': 'Technology', 'PLTR': 'Technology', 'ARM': 'Technology',
+  'NFLX': 'Communication Services', 'SMCI': 'Technology', 'AMD': 'Technology', 'PEP': 'Consumer Staples', 'PLTR': 'Technology', 'ARM': 'Technology',
   'MU': 'Technology', 'PATH': 'Technology', 'CRWD': 'Technology', 'BRK-B': 'Financial Services',
   'JNJ': 'Healthcare', 'PG': 'Consumer Staples', 'V': 'Financial Services', 'KO': 'Consumer Staples',
   'NOW': 'Technology', 'LLY': 'Healthcare', 'UBER': 'Technology', 'NRG': 'Utilities',
@@ -364,6 +364,9 @@ function pickSymbol(name, searchJson) {
 }
 
 async function resolveTicker(name, cache) {
+  // Direct ticker pass-through
+  if (/^[A-Z.\-]+$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
+
   // Check static mapping first
   if (TICKER_MAP[name]) return TICKER_MAP[name];
 
