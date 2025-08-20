@@ -65,6 +65,7 @@ jobs:
       NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
       NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
       NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+      SKIP_NAVER: "0"
       GLOBAL_BUDGET_MS: 90000
       MAX_CONCURRENCY: 2
       REQ_TIMEOUT_MS: 5000

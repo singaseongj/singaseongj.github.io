@@ -4,6 +4,7 @@
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
 import fs from 'fs/promises';
+import { execSync } from 'node:child_process';
 import { TICKER_MAP } from '../src/maps.js';
 import { getCandles, providerState } from '../src/data/candles.js';
 import { buildUniverse } from '../src/universe/index.js';
@@ -35,6 +36,15 @@ async function enrichWithNewsFeatures(symbols) {
     console.warn('Failed to persist news-features.json:', e.message);
   }
   return feats;
+}
+
+async function readPrevPools() {
+  try {
+    const txt = execSync('git show HEAD~1:pools.json', { stdio: ['ignore', 'pipe', 'ignore'] }).toString('utf8');
+    return JSON.parse(txt);
+  } catch {
+    return null;
+  }
 }
 
 // ---- flags
@@ -314,6 +324,41 @@ async function mapLimit(items, limit, worker) {
   });
 }
 
+function enforceRotationForMarket({ market, chosenSafe, chosenAggr, scoreSafe, scoreAggr, prevSet, minSwaps = Number(process.env.ROTATE_MIN_SWAPS || 1) }) {
+  const safeRanked = Object.entries(scoreSafe).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
+  const aggrRanked = Object.entries(scoreAggr).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
+
+  let swaps = 0;
+
+  function swapIn(arr, ranked) {
+    // find first candidate not already present that’s in the ranked list
+    const curSet = new Set(arr);
+    for (const cand of ranked) {
+      if (!curSet.has(cand)) {
+        // replace the last element (lowest score) to minimize disruption
+        arr[arr.length - 1] = cand;
+        swaps++;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  const combined = new Set([...chosenSafe, ...chosenAggr]);
+  let identical = true;
+  for (const n of combined) if (!prevSet.has(n)) { identical = false; break; }
+
+  if (!identical) return { chosenSafe, chosenAggr, swaps };
+
+  // try to introduce at least one outsider
+  swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked);
+
+  // If more swaps requested, keep swapping aggr first, then safe
+  while (swaps < minSwaps && (swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked))) {}
+
+  return { chosenSafe, chosenAggr, swaps };
+}
+
 // ---------- Main ----------
 async function main(){
   const pools = await loadJson(POOLS_FILE);
@@ -342,6 +387,7 @@ async function main(){
     }
   }
   NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
+  const prevPools = await readPrevPools();
 
   for (const market of MARKETS){
     if (Number.isFinite(MAX_PER_PROVIDER)) {
@@ -448,9 +494,16 @@ async function main(){
     function topK(scores, k){
       return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
     }
-    const chosenSafe = topK(scoreSafe, PICK_COUNT);
+    let chosenSafe = topK(scoreSafe, PICK_COUNT);
     const aggrCandidates = topK(scoreAggr, PICK_COUNT * 2);
-    const chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, PICK_COUNT);
+    let chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, PICK_COUNT);
+
+    if (prevPools) {
+      const prevSet = new Set([...(prevPools[market]?.safe || []), ...(prevPools[market]?.aggressive || [])]);
+      const enforced = enforceRotationForMarket({ market, chosenSafe, chosenAggr, scoreSafe, scoreAggr, prevSet });
+      chosenSafe = enforced.chosenSafe;
+      chosenAggr = enforced.chosenAggr;
+    }
 
     pools[market] = {
       safe: chosenSafe,

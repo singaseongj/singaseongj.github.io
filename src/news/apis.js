@@ -1,4 +1,4 @@
-import { withRetry } from '../util/limiter.js';
+import { withRetry, fetchWithTimeout } from '../util/limiter.js';
 
 const NEWSAPI_KEY = process.env.NEWSAPI_KEY || '';
 const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID || '';
@@ -9,7 +9,13 @@ export async function fetchNews(topic) {
   if (!NEWSAPI_KEY) return null;
   try {
     const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(topic)}&apiKey=${NEWSAPI_KEY}`;
-    const res = await withRetry(() => fetch(url, { headers: { 'User-Agent': UA } }));
+    const res = await withRetry(() =>
+      fetchWithTimeout(
+        url,
+        { headers: { 'User-Agent': UA } },
+        Number(process.env.REQ_TIMEOUT_MS || 5000)
+      )
+    );
     if (!res.ok) throw new Error(`NewsAPI HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
@@ -28,16 +34,22 @@ export async function fetchNaverTrends(keyword) {
       timeUnit: 'date',
       keywordGroups: [{ groupName: 'trend', keywords: [keyword] }]
     };
-    const res = await withRetry(() => fetch(url, {
-      method: 'POST',
-      headers: {
-        'X-Naver-Client-Id': NAVER_CLIENT_ID,
-        'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
-        'Content-Type': 'application/json',
-        'User-Agent': UA
-      },
-      body: JSON.stringify(body)
-    }));
+    const res = await withRetry(() =>
+      fetchWithTimeout(
+        url,
+        {
+          method: 'POST',
+          headers: {
+            'X-Naver-Client-Id': NAVER_CLIENT_ID,
+            'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+            'Content-Type': 'application/json',
+            'User-Agent': UA
+          },
+          body: JSON.stringify(body)
+        },
+        Number(process.env.REQ_TIMEOUT_MS || 5000)
+      )
+    );
     if (!res.ok) throw new Error(`Naver API HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
