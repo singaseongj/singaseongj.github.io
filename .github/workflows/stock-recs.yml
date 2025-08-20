@@ -28,7 +28,7 @@ jobs:
       # Keep the run under typical 60s shells; script respects this.
       HARD_DEADLINE_MS: "55000"
       # GitHub often has flaky access to Naver; feel free to unset.
-      SKIP_NAVER: "1"
+      SKIP_NAVER: "0"
       IS_CRON: ${{ github.event_name == 'schedule' }}
 
       # Optional: hybrid remote cache (leave empty if not used)
