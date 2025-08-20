@@ -4,7 +4,12 @@ export async function yahooTrending(region = 'US', count = 60) {
   if (region === 'NYSE') return ['BRK-B','JNJ','PG','V','KO'];
   if (region === 'NASDAQ') return ['AAPL','MSFT','NVDA','AMZN','META'];
   if (region === 'NASDAQ 100') return ['AAPL','MSFT','NVDA','AMD','TSLA'];
-  if (region === 'KR') return ['005930.KS','000660.KS','035420.KS','035720.KS','051910.KS'];
+  if (region === 'KR') return [
+    '005930.KS','000660.KS','035420.KS','035720.KS','051910.KS',
+    '003670.KS','267260.KS','068270.KS','005490.KS','373220.KS',
+    '247540.KQ','091990.KQ','086520.KQ','278280.KQ','058470.KQ',
+    '196170.KQ','277810.KQ','028300.KQ','035760.KQ','263750.KQ'
+  ];
   // default to US if unknown
   return ['AAPL','MSFT','NVDA','AMZN','META'];
 }
