@@ -24,6 +24,8 @@ const NAVER_TRENDS_FILE = 'data/naver-trends.json';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 const PICK_COUNT = 12;
+// Track picks from earlier markets in this run
+const USED = {};
 
 let NEWS_FEATURES = {};
 try {
@@ -573,6 +575,23 @@ async function main(){
     const scoreSafe = applyFeedback(scoreSafeRaw, feedback, market);
     const scoreAggr = applyFeedback(scoreAggrRaw, feedback, market);
 
+    // -------- Small overlap penalty for later U.S. markets ----------
+    // If this is NASDAQ 100, penalize names that already appear in S&P 500 SAFE
+    if (market === 'NASDAQ 100' && USED['S&P 500']?.safe?.length) {
+      const earlierSafeNames = USED['S&P 500'].safe;
+      const earlierSafeSyms = new Set(
+        earlierSafeNames.map(n => nameToSymbol(n) || n)
+      );
+      for (const n of Object.keys(scoreSafe)) {
+        const sym = nameToSymbol(n) || n;
+        if (earlierSafeSyms.has(sym)) {
+          // clamp01 handles floor/ceil
+          scoreSafe[n] = clamp01(scoreSafe[n] - 0.15);
+          scoreAggr[n] = clamp01(scoreAggr[n] - 0.10);
+        }
+      }
+    }
+
     // Pick top K distinct names for each bucket
     const total = filteredNames.length;
     let kSafe = Math.min(6, Math.ceil(total * 0.5));
@@ -601,6 +620,39 @@ async function main(){
       const tail = everything.filter(n => !chosenAggr.includes(n)).slice(-need);
       chosenAggr = chosenAggr.concat(tail);
     }
+    
+    // -------- Cross-market de-duplication guard ----------
+    const earlierAll = Object.values(USED).flatMap(u => [...(u.safe||[]), ...(u.aggressive||[])]);
+    const earlierSet = new Set(earlierAll.map(n => nameToSymbol(n) || n));
+
+    function dedupAndBackfill(list, scoreMap, k, candidateOrder) {
+      const out = [];
+      const seen = new Set();
+      for (const n of list) {
+        const sym = nameToSymbol(n) || n;
+        if (!earlierSet.has(sym) && !seen.has(sym)) {
+          out.push(n); seen.add(sym);
+        }
+        if (out.length >= k) break;
+      }
+      if (out.length < k) {
+        for (const cand of candidateOrder) {
+          const sym = nameToSymbol(cand) || cand;
+          if (!earlierSet.has(sym) && !seen.has(sym)) {
+            out.push(cand); seen.add(sym);
+          }
+          if (out.length >= k) break;
+        }
+      }
+      return out;
+    }
+
+    // Build a global descending order for backfill
+    const safeOrder = Object.keys(scoreSafe).sort((a,b)=>scoreSafe[b]-scoreSafe[a]);
+    const aggrOrder = Object.keys(scoreAggr).sort((a,b)=>scoreAggr[b]-scoreAggr[a]);
+
+    chosenSafe = dedupAndBackfill(chosenSafe, scoreSafe, kSafe, safeOrder);
+    chosenAggr = dedupAndBackfill(chosenAggr, scoreAggr, kAggr, aggrCandidates.concat(aggrOrder));
 
     if (prevPools) {
       const prevSet = new Set([...(prevPools[market]?.safe || []), ...(prevPools[market]?.aggressive || [])]);
@@ -616,6 +668,9 @@ async function main(){
       safe: chosenSafe,
       aggressive: chosenAggr
     };
+
+    // Record for later markets (used by penalty & de-dup)
+    USED[market] = { safe: chosenSafe.slice(), aggressive: chosenAggr.slice() };
 
     metricsOut[market] = filteredNames.reduce((acc, n, i) => {
       const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
