@@ -10,6 +10,7 @@ import { getCandles, providerState } from '../src/data/candles.js';
 import { buildUniverse } from '../src/universe/index.js';
 import { buildNewsFeatures } from '../src/news/fetchByTicker.js';
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverDatalab.js';
+import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -40,12 +41,12 @@ async function enrichWithNewsFeatures(symbols) {
   return feats;
 }
 
-async function enrichWithNaverTrends(universe){
+async function enrichWithNaverTrends(universe, keywordDict){
   try{
     const baskets = buildBasketsFromUniverse({
       universe,
       nameToSymbol,
-      keywordDict: NAVER_KEYWORDS
+      keywordDict
     });
     if (baskets.length === 0) return {};
     // pick a safe 12-month window to compute baseline
@@ -171,8 +172,8 @@ function nameToSymbol(name){
   return null;
 }
 
-// --- Provide keywords per symbol (keep it next to NAME_TO_SYMBOL for maintainability)
-const NAVER_KEYWORDS = {
+// --- Seed keywords per symbol (minimal list; expanded dynamically)
+const NAVER_SEEDS = {
   '005930.KS': ['삼성전자','삼성전자 주가','갤럭시','반도체'],
   '000660.KS': ['SK하이닉스','하이닉스','반도체','HBM','주가'],
   '005380.KS': ['현대차','현대자동차','아이오닉','전기차','주가'],
@@ -447,7 +448,14 @@ async function main(){
   }
   if (!OFFLINE) {
     NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
-    const NAVER_TRENDS = await enrichWithNaverTrends(universe);
+    const symbols = Array.from(symbolSet);
+    const KEYWORDS = await buildKeywordDict({
+      symbols,
+      seeds: NAVER_SEEDS,
+      symbolToName: SYMBOL_TO_NAME,
+      newsFeatures: NEWS_FEATURES,
+    });
+    const NAVER_TRENDS = await enrichWithNaverTrends(universe, KEYWORDS);
     // Merge trends into NEWS_FEATURES (non-destructive)
     for (const [k, v] of Object.entries(NAVER_TRENDS)){
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
