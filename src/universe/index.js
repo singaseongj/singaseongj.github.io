@@ -1,5 +1,10 @@
 import { yahooTrending, yahooPredefined } from '../sources/yahoo.js';
 import { TICKER_MAP } from '../maps.js';
+import fs from 'fs/promises';
+
+async function loadJsonIfExists(p) {
+  try { return JSON.parse(await fs.readFile(p, 'utf8')); } catch { return null; }
+}
 
 const FMP = process.env.FMP_KEY || '';
 const INCLUDE_ETFS = process.env.INCLUDE_ETFS === '1';
@@ -59,16 +64,18 @@ export async function buildUniverse(basePools={}, {limitPerMarket=60}={}){
         tickers = (await yahooTrending('KR')).filter(t=>/\.KQ$/.test(t));
         tickers.push(...await fmpActives('KOSDAQ'));
       } else if (m === 'S&P 500') {
-        tickers = [
-          ...(await yahooTrending('US')),
-          ...(await yahooPredefined('day_gainers')),
+        const sp = await loadJsonIfExists('data/index-constituents/sp500.json');
+        tickers = Array.isArray(sp) && sp.length ? sp : [
+          ...(await yahooPredefined('sp500_constituents') || []),
+          ...(await yahooTrending('US') || []),
           ...SP_MEGA
         ];
         if (INCLUDE_ETFS) tickers.push(...ETF_LIST);
       } else if (m === 'NASDAQ 100') {
-        tickers = [
-          ...(await yahooTrending('NASDAQ 100')),
-          ...(await yahooPredefined('day_gainers_nasdaq100'))
+        const ndx = await loadJsonIfExists('data/index-constituents/nasdaq100.json');
+        tickers = Array.isArray(ndx) && ndx.length ? ndx : [
+          ...(await yahooPredefined('nasdaq100_constituents') || []),
+          ...(await yahooTrending('NASDAQ 100') || []),
         ];
         if (INCLUDE_ETFS) tickers.push(...ETF_LIST);
       }
