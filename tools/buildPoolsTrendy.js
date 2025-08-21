@@ -9,6 +9,7 @@ import { TICKER_MAP } from '../src/maps.js';
 import { getCandles, providerState } from '../src/data/candles.js';
 import { buildUniverse } from '../src/universe/index.js';
 import { buildNewsFeatures } from '../src/news/fetchByTicker.js';
+import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverDatalab.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -18,6 +19,7 @@ const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
 const NEWS_FEATURES_FILE = 'data/news-features.json';
+const NAVER_TRENDS_FILE = 'data/naver-trends.json';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 const PICK_COUNT = 12;
@@ -36,6 +38,44 @@ async function enrichWithNewsFeatures(symbols) {
     console.warn('Failed to persist news-features.json:', e.message);
   }
   return feats;
+}
+
+async function enrichWithNaverTrends(universe){
+  try{
+    const baskets = buildBasketsFromUniverse({
+      universe,
+      nameToSymbol,
+      keywordDict: NAVER_KEYWORDS
+    });
+    if (baskets.length === 0) return {};
+    // pick a safe 12-month window to compute baseline
+    const today = new Date();
+    const end = today.toISOString().slice(0,10);
+    const startDt = new Date(today.getTime() - 365*24*3600*1000);
+    const start = startDt.toISOString().slice(0,10);
+
+    const { perSymbol, raw } = await fetchNaverTrends({
+      baskets, startDate: start, endDate: end, timeUnit: 'date',
+      cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
+      budgetLeftMs: timeLeft()
+    });
+    try {
+      await fs.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+    } catch {}
+    const out = {};
+    for (const [sym, t] of Object.entries(perSymbol)){
+      out[sym] = {
+        naverPopularity: t.naverPopularity,
+        naverSpike: t.spike,
+        naverPersist: t.persist,
+        naverAsvi: t.lastAsvi
+      };
+    }
+    return out;
+  }catch(e){
+    console.warn('[naver] trends enrichment failed:', e.message);
+    return {};
+  }
 }
 
 async function readPrevPools() {
@@ -130,6 +170,19 @@ function nameToSymbol(name){
   if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
   return null;
 }
+
+// --- Provide keywords per symbol (keep it next to NAME_TO_SYMBOL for maintainability)
+const NAVER_KEYWORDS = {
+  '005930.KS': ['삼성전자','삼성전자 주가','갤럭시','반도체'],
+  '000660.KS': ['SK하이닉스','하이닉스','반도체','HBM','주가'],
+  '005380.KS': ['현대차','현대자동차','아이오닉','전기차','주가'],
+  '035420.KS': ['네이버','NAVER','네이버 주가','클로바'],
+  '035720.KS': ['카카오','카카오 주가','톡','카카오페이'],
+  // ... add more as needed; US names can mix EN/KR: e.g. AAPL -> ['애플','Apple','아이폰','애플 주가']
+  'AAPL': ['애플','Apple','아이폰','애플 주가'],
+  'MSFT': ['마이크로소프트','Microsoft','윈도우','MS 주가'],
+  'TSLA': ['테슬라','Tesla','일론 머스크','테슬라 주가'],
+};
 
 function isKR(symbolOrName) {
   // KR symbols end with .KS (KOSPI) or .KQ (KOSDAQ)
@@ -394,6 +447,11 @@ async function main(){
   }
   if (!OFFLINE) {
     NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
+    const NAVER_TRENDS = await enrichWithNaverTrends(universe);
+    // Merge trends into NEWS_FEATURES (non-destructive)
+    for (const [k, v] of Object.entries(NAVER_TRENDS)){
+      NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
+    }
   } else {
     console.warn('[buildPools] offline mode, using cached news features');
   }
