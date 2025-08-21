@@ -10,6 +10,7 @@ import { getCandles, providerState } from '../src/data/candles.js';
 import { buildUniverse } from '../src/universe/index.js';
 import { buildNewsFeatures } from '../src/news/fetchByTicker.js';
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverDatalab.js';
+import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -40,12 +41,12 @@ async function enrichWithNewsFeatures(symbols) {
   return feats;
 }
 
-async function enrichWithNaverTrends(universe){
+async function enrichWithNaverTrends(universe, keywordDict){
   try{
     const baskets = buildBasketsFromUniverse({
       universe,
       nameToSymbol,
-      keywordDict: NAVER_KEYWORDS
+      keywordDict
     });
     if (baskets.length === 0) return {};
     // pick a safe 12-month window to compute baseline
@@ -171,17 +172,16 @@ function nameToSymbol(name){
   return null;
 }
 
-// --- Provide keywords per symbol (keep it next to NAME_TO_SYMBOL for maintainability)
-const NAVER_KEYWORDS = {
-  '005930.KS': ['삼성전자','삼성전자 주가','갤럭시','반도체'],
-  '000660.KS': ['SK하이닉스','하이닉스','반도체','HBM','주가'],
+// Small seed list; everything else (aliases/brands/news/templates) is auto-expanded
+const NAVER_SEED_KEYWORDS = {
+  '005930.KS': ['삼성전자','갤럭시','반도체','삼성전자 주가'],
+  '000660.KS': ['SK하이닉스','하이닉스','HBM','반도체','주가'],
   '005380.KS': ['현대차','현대자동차','아이오닉','전기차','주가'],
   '035420.KS': ['네이버','NAVER','네이버 주가','클로바'],
   '035720.KS': ['카카오','카카오 주가','톡','카카오페이'],
-  // ... add more as needed; US names can mix EN/KR: e.g. AAPL -> ['애플','Apple','아이폰','애플 주가']
   'AAPL': ['애플','Apple','아이폰','애플 주가'],
   'MSFT': ['마이크로소프트','Microsoft','윈도우','MS 주가'],
-  'TSLA': ['테슬라','Tesla','일론 머스크','테슬라 주가'],
+  'TSLA': ['테슬라','Tesla','테슬라 주가','사이버트럭'],
 };
 
 function isKR(symbolOrName) {
@@ -445,9 +445,23 @@ async function main(){
       if (sym) symbolSet.add(sym);
     }
   }
+  // Build scalable Naver keywords (seeds + aliases/brands + mined news + templates)
+  const symbols = Array.from(symbolSet);
+  const KEYWORDS = await buildKeywordDict({
+    symbols,
+    seeds: NAVER_SEED_KEYWORDS,
+    symbolToName: SYMBOL_TO_NAME,
+    newsFeatures: NEWS_FEATURES,
+  });
+  // Persist for visibility/debugging
+  try {
+    await fs.mkdir('data', { recursive: true });
+    await fs.writeFile('data/naver-keywords.json', JSON.stringify(KEYWORDS, null, 2));
+  } catch {}
+
   if (!OFFLINE) {
     NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
-    const NAVER_TRENDS = await enrichWithNaverTrends(universe);
+    const NAVER_TRENDS = await enrichWithNaverTrends(universe, KEYWORDS);
     // Merge trends into NEWS_FEATURES (non-destructive)
     for (const [k, v] of Object.entries(NAVER_TRENDS)){
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
