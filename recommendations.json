@@ -86,10 +86,6 @@
   "NASDAQ 100": {
     "safe": [
       {
-        "name": "ADBE",
-        "sector": null
-      },
-      {
         "name": "ADI",
         "sector": null
       },
@@ -104,9 +100,17 @@
       {
         "name": "GOOG",
         "sector": null
+      },
+      {
+        "name": "NVIDIA",
+        "sector": null
       }
     ],
     "aggressive": [
+      {
+        "name": "ADBE",
+        "sector": null
+      },
       {
         "name": "AMAT",
         "sector": null
@@ -118,15 +122,15 @@
       {
         "name": "AMGN",
         "sector": null
-      },
-      {
-        "name": "NVIDIA",
-        "sector": null
       }
     ]
   },
   "S&P 500": {
     "safe": [
+      {
+        "name": "Alphabet",
+        "sector": "Communication Services"
+      },
       {
         "name": "Amazon",
         "sector": "Consumer Discretionary"
@@ -142,10 +146,6 @@
       {
         "name": "Microsoft",
         "sector": "Technology"
-      },
-      {
-        "name": "UnitedHealth",
-        "sector": "Healthcare"
       }
     ],
     "aggressive": [
@@ -167,5 +167,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-08-23T05:18:03+09:00"
+  "lastUpdated": "2025-08-23T05:27:57+09:00"
 }
