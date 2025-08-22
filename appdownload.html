@@ -1,125 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-3360521146359419">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Students App</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .download-buttons {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
-        }
-        .store-badge {
-            max-width: 200px;
-            transition: transform 0.3s ease;
-        }
-        .store-badge:hover {
-            transform: scale(1.05);
-        }
-        .home-button {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      text-decoration: none;
-      font-size: 24px;
-      color: #000;
-      opacity: 0.6;
-      z-index: 1000;
-    }
-    .home-button:hover {
-      opacity: 1;
-    }
-    </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-3360521146359419">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Students — Teacher’s Guide & Download (Android & iOS)</title>
+  <meta name="description" content="Step-by-step setup for Manage Students. Learn features, import class rosters, take quick notes, export to CSV, and download the app for your device.">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+    header, section { margin-bottom: 2rem; }
+    h1 { text-align: center; }
+    .download-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+    .store-badge { max-width: 200px; transition: transform 0.3s ease; }
+    .store-badge:hover { transform: scale(1.05); }
+    nav { text-align: left; margin-bottom: 1rem; }
+  </style>
 </head>
 <body>
-    <a href="index.html" class="home-button" aria-label="Home">&#x21A9;</a>
-    <h1>Manage Students App</h1>
-    <p>Download our app from your device's app store</p>
-    <p>플레이스토어 또는 앱스토어에서 다운로드하세요.</p>
-    <div class="download-buttons" id="download-links">
-        <!-- Links will be dynamically populated -->
-    </div>
+  <nav><a href="index.html" aria-label="Home">&#x21A9; Home</a></nav>
+  <header>
+    <h1>Manage Students — Teacher’s Guide & Download</h1>
+    <p><strong>Manage Students</strong> is a lightweight app that helps teachers keep rosters, quick notes, and attendance in one place. It’s built for speed—so you can record what matters during class without breaking flow—and for longevity, so your notes become a helpful record over time.</p>
+    <p><em>Who it’s for</em></p>
+    <ul>
+      <li>Classroom teachers who need fast, reliable note-taking tied to student names</li>
+      <li>Club advisors tracking attendance and participation</li>
+      <li>Tutors who want a simple, portable way to maintain session notes</li>
+    </ul>
+    <p><em>Key benefits</em></p>
+    <ul>
+      <li><strong>One-tap capture:</strong> note ideas before you forget them</li>
+      <li><strong>CSV import/export:</strong> move data to spreadsheets or share with colleagues</li>
+      <li><strong>Lightweight & responsive:</strong> works well on modest devices and spotty networks</li>
+    </ul>
+  </header>
 
-    <script>
-        function detectDevice() {
-            const ua = navigator.userAgent || navigator.vendor || window.opera;
-            
-            return {
-                isIOS: /iPad|iPhone|iPod/.test(ua) && !window.MSStream,
-                isAndroid: /Android/.test(ua),
-                isDesktop: !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
-            };
-        }
+  <main>
+    <section>
+      <h2>Quick Start</h2>
+      <ol>
+        <li><strong>Install the app</strong> (see Download below).</li>
+        <li><strong>Create your first class:</strong> name it, set term or subject, choose color.</li>
+        <li><strong>Add students:</strong> add individually or <strong>import CSV</strong> (template provided).</li>
+        <li><strong>Daily use:</strong> tap a student to add quick notes; mark attendance; star important items.</li>
+        <li><strong>Export:</strong> at the end of week/month/term, export to CSV for backup or reporting.</li>
+      </ol>
+      <figure>
+        <img src="https://via.placeholder.com/1200x675?text=Class+list+overview" alt="Class list overview">
+        <figcaption>Class list overview</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/1200x675?text=Student+detail+and+notes" alt="Student detail and notes">
+        <figcaption>Student detail and quick notes</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/1200x675?text=CSV+export+dialog" alt="CSV export dialog">
+        <figcaption>CSV export dialog</figcaption>
+      </figure>
+    </section>
 
-        function redirectToAppStore() {
-            // Your specific app store links
-            const links = {
-                appStore: 'https://apps.apple.com/kr/app/manage-students/id6742710838',
-                playStore: 'https://play.google.com/store/apps/details?id=com.singaseongapp.managestudents'
-            };
+    <section>
+      <h2>Feature Deep-Dive</h2>
+      <p><strong>Rosters & sections:</strong> Organize multiple classes; filter by period or subject.</p>
+      <p><strong>Quick notes:</strong> Each note is timestamped; keep them short and actionable (e.g., “Great progress on lab safety today”).</p>
+      <p><strong>Attendance:</strong> Mark present/absent quickly; optionally add reasons or labels for interventions.</p>
+      <p><strong>Search & tags:</strong> Find patterns by searching student names, tags, or keywords.</p>
+      <p><strong>Exports:</strong> Export selected classes or time ranges. Use CSV to open in Excel/Sheets.</p>
+      <p><strong>Shortcuts:</strong> Pin common actions (e.g., “Late arrival,” “Needs follow-up”) to reduce typing during class transitions.</p>
+    </section>
 
-            const device = detectDevice();
+    <section>
+      <h2>Classroom Use Cases</h2>
+      <ul>
+        <li><strong>Parent meetings:</strong> pull up recent notes to discuss progress with specific examples.</li>
+        <li><strong>Interventions:</strong> track frequency of behaviors or supports over weeks.</li>
+        <li><strong>Clubs:</strong> take attendance and activity notes without maintaining separate files.</li>
+        <li><strong>Project-based learning:</strong> note milestones after each session to inform assessment.</li>
+      </ul>
+    </section>
 
-            // Redirect mobile devices directly to their respective app stores
-            if (device.isIOS) {
-                window.location.href = links.appStore;
-            } else if (device.isAndroid) {
-                window.location.href = links.playStore;
-            }
+    <section>
+      <h2>Permissions & Data Safety</h2>
+      <p><strong>Local-first design:</strong> Core data lives on your device. If cloud features are used, they are limited to what’s necessary for sync/backup.</p>
+      <p><strong>What’s collected:</strong> Only the minimum needed for features you enable.</p>
+      <p><strong>Privacy in practice:</strong> Avoid sensitive identifiers when not needed; prefer initials or student IDs if your policy requires. Follow your school’s data rules.</p>
+    </section>
 
-            // For desktop, show download buttons
-            if (device.isDesktop) {
-                const downloadLinksContainer = document.getElementById('download-links');
-                
-                // App Store Badge
-                const appStoreBadge = document.createElement('a');
-                appStoreBadge.href = links.appStore;
-                appStoreBadge.innerHTML = `<img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge">`;
-                
-                // Google Play Badge
-                const playStoreBadge = document.createElement('a');
-                playStoreBadge.href = links.playStore;
-                playStoreBadge.innerHTML = `<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="store-badge">`;
-                
-                downloadLinksContainer.appendChild(appStoreBadge);
-                downloadLinksContainer.appendChild(playStoreBadge);
-            }
-        }
+    <section>
+      <h2>Troubleshooting & FAQs</h2>
+      <details><summary>Can I import from Excel?</summary><p>Yes. Export your sheet as <strong>CSV</strong> and use the import option in the app.</p></details>
+      <details><summary>How do I restore after reinstall?</summary><p>Keep a periodic CSV backup. After reinstall, import the CSV to restore classes and notes.</p></details>
+      <details><summary>What if I teach multiple sections?</summary><p>Create a class per section and use color-coding to avoid confusion.</p></details>
+      <details><summary>How do I keep notes short?</summary><p>Use tags or quick labels; you can expand details later when you export.</p></details>
+      <details><summary>The app feels slow on my device.</summary><p>Try closing background apps and ensuring you have free storage. Lightweight mode reduces animations.</p></details>
+      <details><summary>I need to share with a co-teacher.</summary><p>Export weekly to CSV and share via Drive/Email. (Co-editing depends on your workflow requirements.)</p></details>
+    </section>
 
-        // Call the function when the page loads
-        window.onload = redirectToAppStore;
-    </script>
-    
-    <noscript>
-        <p>Please download our app from:</p>
-        <div class="download-buttons">
-            <a href="https://apps.apple.com/kr/app/manage-students/id6742710838">
-                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.singaseongapp.managestudents">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="store-badge">
-            </a>
-        </div>
-    </noscript>
+    <section>
+      <h2>Version History</h2>
+      <ul>
+        <li><strong>2025-08-10: v1.4.2 –</strong> Added grade export; fixed crash on CSV import.</li>
+        <li><strong>2025-07-02: v1.4.1 –</strong> Improved dark mode and large-class performance.</li>
+      </ul>
+    </section>
+
+    <section id="download">
+      <h2>Download</h2>
+      <p>Below are the store links. The page detects your device and shows the appropriate button; both links are also available for cross-install.</p>
+      <div class="download-buttons" id="store-buttons"></div>
+      <p><small>Note: If the detector misidentifies your device, use the alternate link.</small></p>
+    </section>
+  </main>
+
+  <script>
+    function detectDevice() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      return {
+        isIOS: /iPad|iPhone|iPod/.test(ua) && !window.MSStream,
+        isAndroid: /Android/.test(ua)
+      };
+    }
+
+    function renderStoreButtons() {
+      const links = {
+        appStore: 'https://apps.apple.com/kr/app/manage-students/id6742710838',
+        playStore: 'https://play.google.com/store/apps/details?id=com.singaseongapp.managestudents'
+      };
+      const device = detectDevice();
+      const container = document.getElementById('store-buttons');
+      if (device.isIOS) {
+        container.innerHTML = `<a href="${links.appStore}"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge"></a>`;
+      } else if (device.isAndroid) {
+        container.innerHTML = `<a href="${links.playStore}"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="store-badge"></a>`;
+      } else {
+        container.innerHTML = `
+          <a href="${links.appStore}"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge"></a>
+          <a href="${links.playStore}"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="store-badge"></a>
+        `;
+      }
+    }
+    window.onload = renderStoreButtons;
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Manage Students",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "publisher": {"@type": "Person", "name": "Seong Jeong"},
+    "url": "https://singaseongj.github.io/appdownload.html"
+  }
+  </script>
 </body>
 </html>

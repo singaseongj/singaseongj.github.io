@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-3360521146359419">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping a mobile puzzle game: lessons learned</title>
+</head>
+<body>
+    <h1>Shipping a mobile puzzle game: lessons learned</h1>
+    <p>Earlier this year I wrapped up Gridlock Shooter, a small puzzle game that combines sliding blocks with physics. Building it in my spare time taught me more about project scope and player expectations than any book. While the game itself is modest, the journey from prototype to app store release was full of surprises. Here are the lessons that stood out.</p>
+    <p>I started with a simple premise: move blocks to clear a path for a projectile. The prototype used plain rectangles and circles on a gray background. Friends enjoyed the concept but quickly found exploits that trivialized levels. Balancing the mechanics took weeks of iteration. I kept a spreadsheet of every tweak—friction values, block mass, spawn delays—and played each level dozens of times. The lesson was that puzzle games live or die by the tiny numbers hidden under the hood. There is no substitute for playtesting, even if it means scrapping entire level sets.</p>
+    <img src="https://via.placeholder.com/800x400" alt="Screenshot of Gridlock Shooter puzzle layout">
+    <p>Another challenge was designing a user interface that communicated the rules without a wall of text. Early builds opened with a long tutorial that players skipped. I replaced it with contextual tips that appear when needed and disappear once the action is understood. Animations became a teaching tool; a block jiggles when it can move, and the projectile traces a faint path to hint at the solution. By the final build the game required almost no written instructions, which dramatically improved engagement.</p>
+    <p>Performance on low-end devices forced me to rethink my technology choices. I had been using a physics library that handled collisions and forces, but it struggled on older phones. Profiling revealed that I was updating far more objects than necessary. Switching to a custom lightweight solver cut CPU usage in half. The experience taught me to profile early and often instead of assuming the engine can handle anything I throw at it.</p>
+    <p>Marketing was a completely different skillset. I built a simple landing page, recorded a short gameplay trailer, and posted in a few puzzle game forums. The response was mild, but the feedback highlighted which features players cared about. Surprisingly, the hardest puzzles were not the main draw; people wanted daily challenges and a level editor. Those ideas went on the roadmap for future updates. Shipping the game was only the starting point for an ongoing conversation with players.</p>
+    <p>Perhaps the biggest lesson was learning to cut features. I dreamed of online leaderboards, achievements, and elaborate graphics. Each addition delayed release and introduced new bugs. Eventually I drew a line: the 1.0 version would focus on polished core levels and robust physics. Anything else could wait. This discipline meant launching earlier, gathering real feedback, and staying motivated. It also kept the codebase small enough for one person to manage.</p>
+    <p>If you are considering making a mobile puzzle game, start with the smallest playable concept and iterate in public. Keep a log of design decisions and monitor performance on the lowest spec hardware you can find. Treat marketing as part of development, not an afterthought. Most importantly, finish something. Even a tiny game will teach you more than another unfinished prototype. Gridlock Shooter may never top the charts, but releasing it turned abstract dreams into concrete experience, and that alone made the journey worthwhile.</p>
+</body>
+</html>
