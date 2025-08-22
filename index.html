@@ -176,6 +176,10 @@
         .section-header { text-align: center; margin-bottom: 4rem; }
         .section-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
         .section-description { font-size: 1.125rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+        .articles-section { padding: 80px 0; }
+        .article-links { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; text-align: center; }
+        .article-links a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+        .article-links a:hover { text-decoration: underline; }
 
         .features-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -339,6 +343,18 @@
                     <p class="feature-description">Your data stays secure on your device. No tracking, no ads, just pure functionality with local encryption.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="articles-section" id="articles">
+        <div class="section-header">
+            <h2 class="section-title">Articles</h2>
+            <p class="section-description">Insights from our projects</p>
+        </div>
+        <div class="article-links">
+            <a href="articles/manage-students-tracking.html">How I track classroom data with Manage Students</a>
+            <a href="articles/universal-logging-schema.html">Designing a universal logging schema for real life workflows</a>
+            <a href="articles/mobile-puzzle-game-lessons.html">Shipping a mobile puzzle game: lessons learned</a>
         </div>
     </section>
 
