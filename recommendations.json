@@ -2,11 +2,7 @@
   "KOSDAQ": {
     "safe": [
       {
-        "name": "HLB",
-        "sector": null
-      },
-      {
-        "name": "JYP엔터테인먼트",
+        "name": "CJ ENM",
         "sector": "Communication Services"
       },
       {
@@ -16,6 +12,10 @@
       {
         "name": "리노공업",
         "sector": "Industrials"
+      },
+      {
+        "name": "셀트리온헬스케어",
+        "sector": "Healthcare"
       },
       {
         "name": "펩트론",
@@ -44,6 +44,10 @@
   "KOSPI": {
     "safe": [
       {
+        "name": "HD현대일렉트릭",
+        "sector": "Industrials"
+      },
+      {
         "name": "LG화학",
         "sector": "Materials"
       },
@@ -54,10 +58,6 @@
       {
         "name": "네이버",
         "sector": "Communication Services"
-      },
-      {
-        "name": "셀트리온",
-        "sector": "Healthcare"
       },
       {
         "name": "에코프로",
@@ -86,54 +86,12 @@
   "NASDAQ 100": {
     "safe": [
       {
-        "name": "Alphabet",
-        "sector": "Communication Services"
-      },
-      {
-        "name": "Amazon",
-        "sector": "Consumer Discretionary"
-      },
-      {
-        "name": "GOOG",
-        "sector": null
-      },
-      {
-        "name": "Meta Platforms",
-        "sector": "Communication Services"
-      },
-      {
-        "name": "Microsoft",
-        "sector": "Technology"
-      }
-    ],
-    "aggressive": [
-      {
-        "name": "ADBE",
-        "sector": null
-      },
-      {
         "name": "ADI",
         "sector": null
       },
       {
-        "name": "AMAT",
-        "sector": null
-      },
-      {
-        "name": "AMGN",
-        "sector": null
-      }
-    ]
-  },
-  "S&P 500": {
-    "safe": [
-      {
-        "name": "Alphabet",
-        "sector": "Communication Services"
-      },
-      {
-        "name": "Amazon",
-        "sector": "Consumer Discretionary"
+        "name": "AMD",
+        "sector": "Technology"
       },
       {
         "name": "Apple",
@@ -144,8 +102,50 @@
         "sector": null
       },
       {
+        "name": "Meta Platforms",
+        "sector": "Communication Services"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "ADBE",
+        "sector": null
+      },
+      {
+        "name": "AMAT",
+        "sector": null
+      },
+      {
+        "name": "Amazon",
+        "sector": "Consumer Discretionary"
+      },
+      {
+        "name": "AMGN",
+        "sector": null
+      }
+    ]
+  },
+  "S&P 500": {
+    "safe": [
+      {
+        "name": "Apple",
+        "sector": "Technology"
+      },
+      {
+        "name": "Eli Lilly",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "GOOG",
+        "sector": null
+      },
+      {
         "name": "JPMorgan Chase",
         "sector": "Financial Services"
+      },
+      {
+        "name": "UnitedHealth",
+        "sector": "Healthcare"
       }
     ],
     "aggressive": [
@@ -154,18 +154,18 @@
         "sector": null
       },
       {
+        "name": "Amazon",
+        "sector": "Consumer Discretionary"
+      },
+      {
         "name": "AMD",
         "sector": "Technology"
       },
       {
         "name": "Meta Platforms",
         "sector": "Communication Services"
-      },
-      {
-        "name": "UnitedHealth",
-        "sector": "Healthcare"
       }
     ]
   },
-  "lastUpdated": "2025-08-23T20:12:57+09:00"
+  "lastUpdated": "2025-08-24T00:13:59+09:00"
 }
