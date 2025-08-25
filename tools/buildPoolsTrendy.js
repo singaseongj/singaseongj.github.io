@@ -20,6 +20,9 @@ fs.mkdirSync('cache', { recursive: true });
 const CACHE_DIR = 'cache';
 const TTL_MS = 1000 * 60 * 60 * 12; // 12h
 
+const VERBOSE = process.env.VERBOSE === '1';
+const log = (...a) => VERBOSE && console.log(...a);
+
 function cacheKeyFor(url) {
   const h = crypto.createHash('sha1').update(url).digest('hex');
   return path.join(CACHE_DIR, `${h}.json`);
@@ -286,6 +289,7 @@ for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP }
 }
 
 function nameToSymbol(name){
+  name = String(name).trim();
   const learned = lookupLearnedMapping(name);
   if (learned) return learned;
 
@@ -655,7 +659,7 @@ async function main(){
           routeDetail = ` (${sym})`;
         }
       }
-      console.log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
+      log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
       let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let earn=false; let candles=null;
       try {
