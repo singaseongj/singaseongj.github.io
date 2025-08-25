@@ -133,6 +133,17 @@ jobs:
       - name: Update market news
         run: node fetchNews.js
 
+      - name: Verify market_news has lastUpdated
+        run: |
+          test -f data/market_news.json
+          node -e "const j=require('./data/market_news.json'); if(!j.lastUpdated){console.error('ERROR: lastUpdated missing'); process.exit(1)} console.log('market_news lastUpdated:', j.lastUpdated)"
+          head -n 20 data/market_news.json
+
+      - name: Show git status for market_news
+        run: |
+          git status --porcelain -- data/market_news.json || true
+          git --no-pager diff -- data/market_news.json | sed -n '1,80p' || true
+
       - name: Update FX rates
         run: node fetchFxRates.js
 
@@ -161,7 +172,6 @@ jobs:
             stocks.html
             src/template.html
           add_options: '-A'
-          skip_dirty_check: true
 
       - name: "Show last commit (debug)"
         if: always()
