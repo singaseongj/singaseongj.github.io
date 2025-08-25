@@ -3,7 +3,10 @@
 // Writes: pools.json (names only) and pools-metrics.json (diagnostics).
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
-import fs from 'fs/promises';
+import fs from 'fs';
+import path from 'path';
+import fsp from 'fs/promises';
+import crypto from 'crypto';
 import { execSync } from 'node:child_process';
 import { TICKER_MAP } from '../src/maps.js';
 import { getCandles, providerState } from '../src/data/candles.js';
@@ -11,6 +14,91 @@ import { buildUniverse } from '../src/universe/index.js';
 import { buildNewsFeatures } from '../src/news/fetchByTicker.js';
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverDatalab.js';
 import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
+
+fs.mkdirSync('cache', { recursive: true });
+
+const CACHE_DIR = 'cache';
+const TTL_MS = 1000 * 60 * 60 * 12; // 12h
+
+function cacheKeyFor(url) {
+  const h = crypto.createHash('sha1').update(url).digest('hex');
+  return path.join(CACHE_DIR, `${h}.json`);
+}
+
+async function cachedJsonFetch(url, fetchFn) {
+  const key = cacheKeyFor(url);
+  try {
+    const st = fs.statSync(key);
+    if (Date.now() - st.mtimeMs < TTL_MS) {
+      return JSON.parse(fs.readFileSync(key, 'utf8'));
+    }
+  } catch {}
+
+  const data = await fetchFn(url);
+  try { fs.writeFileSync(key, JSON.stringify(data)); } catch {}
+  return data;
+}
+
+const SYMBOL_MAP_FILE = path.join(CACHE_DIR, 'name-to-symbol.json');
+function loadNameToSymbol() {
+  try { return JSON.parse(fs.readFileSync(SYMBOL_MAP_FILE, 'utf8')); }
+  catch { return {}; }
+}
+function saveNameToSymbol(map) {
+  try { fs.writeFileSync(SYMBOL_MAP_FILE, JSON.stringify(map, null, 2)); } catch {}
+}
+const NAME_TO_SYMBOL = loadNameToSymbol();
+
+function rememberMapping(humanNameOrTicker, providerSymbol) {
+  if (!humanNameOrTicker || !providerSymbol) return;
+  if (NAME_TO_SYMBOL[humanNameOrTicker] !== providerSymbol) {
+    NAME_TO_SYMBOL[humanNameOrTicker] = providerSymbol;
+    saveNameToSymbol(NAME_TO_SYMBOL);
+  }
+}
+
+function lookupLearnedMapping(key) {
+  return NAME_TO_SYMBOL[key] || NAME_TO_SYMBOL[key.replace('.', '-')] || null;
+}
+
+const PROVIDER_SCORE_FILE = path.join(CACHE_DIR, 'provider-score.json');
+function loadProviderScore() {
+  try { return JSON.parse(fs.readFileSync(PROVIDER_SCORE_FILE, 'utf8')); }
+  catch { return {}; }
+}
+function saveProviderScore(score) {
+  try { fs.writeFileSync(PROVIDER_SCORE_FILE, JSON.stringify(score, null, 2)); } catch {}
+}
+const providerScore = loadProviderScore();
+
+function bump(provider, ok) {
+  providerScore[provider] ||= { ok: 0, fail: 0, lastFail: 0 };
+  if (ok) providerScore[provider].ok++;
+  else { providerScore[provider].fail++; providerScore[provider].lastFail = Date.now(); }
+  saveProviderScore(providerScore);
+}
+
+function providerPenalty(provider) {
+  const p = providerScore[provider];
+  if (!p) return 0;
+  const ageH = (Date.now() - (p.lastFail || 0)) / 36e5;
+  const recency = Math.max(0, 6 - ageH) / 6;
+  return p.fail * (1 + recency);
+}
+
+const LAST_GOOD = path.join(CACHE_DIR, 'last-good-pools.json');
+function snapshotPools(pools) {
+  try { fs.writeFileSync(LAST_GOOD, JSON.stringify(pools, null, 2)); } catch {}
+}
+function loadLastGoodPools() {
+  try { return JSON.parse(fs.readFileSync(LAST_GOOD, 'utf8')); }
+  catch { return null; }
+}
+
+function tryRead(file) {
+  try { return fs.readFileSync(file, 'utf8'); }
+  catch { return null; }
+}
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
@@ -29,14 +117,14 @@ const USED = {};
 
 let NEWS_FEATURES = {};
 try {
-  NEWS_FEATURES = JSON.parse(await fs.readFile(NEWS_FEATURES_FILE, 'utf8'));
+  NEWS_FEATURES = JSON.parse(await fsp.readFile(NEWS_FEATURES_FILE, 'utf8'));
 } catch {}
 
 async function enrichWithNewsFeatures(symbols) {
   const feats = await buildNewsFeatures(symbols);
   try {
-    await fs.mkdir('data', { recursive: true });
-    await fs.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
+    await fsp.mkdir('data', { recursive: true });
+    await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
   } catch (e) {
     console.warn('Failed to persist news-features.json:', e.message);
   }
@@ -61,9 +149,9 @@ async function enrichWithNaverTrends(universe, keywordDict){
       baskets, startDate: start, endDate: end, timeUnit: 'date',
       cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
       budgetLeftMs: timeLeft()
-    });
+    }).then(r => { bump('naver', true); return r; });
     try {
-      await fs.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+      await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
     } catch {}
     const out = {};
     for (const [sym, t] of Object.entries(perSymbol)){
@@ -76,6 +164,7 @@ async function enrichWithNaverTrends(universe, keywordDict){
     }
     return out;
   }catch(e){
+    bump('naver', false);
     console.warn('[naver] trends enrichment failed:', e.message);
     return {};
   }
@@ -102,8 +191,8 @@ for (const a of process.argv.slice(2)) {
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
   if (a.startsWith('--cooloff-ms=')) COOLOFF_MS = Number(a.split('=')[1]);
 }
-const COVERAGE_MIN = Number(process.env.COVERAGE_MIN || 0.1); // need ≥10% metrics to replace pools
-const GLOBAL_BUDGET_MS = Number(process.env.GLOBAL_BUDGET_MS || 90000); // 90s soft budget
+const COVERAGE_MIN = +process.env.COVERAGE_MIN || 0.3; // need ≥30% metrics to replace pools
+const GLOBAL_BUDGET_MS = +process.env.GLOBAL_BUDGET_MS || 90000; // 90s soft budget
 const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
 const DEMO_MODE = !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
 const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
@@ -119,7 +208,7 @@ function budgetOk(ms=0) { return timeLeft() > ms; }
 
 // ---- circuit breaker
 let consecutiveErrors = 0;
-const CIRCUIT_MAX_ERRORS = Number(process.env.CIRCUIT_MAX_ERRORS || 8);
+const CIRCUIT_MAX_ERRORS = +process.env.CIRCUIT_MAX_ERRORS || 6;
 function tripOnError(e) {
   const msg = String(e?.message || e || '');
   // If this came from KR news/earnings (which we now skip), do not escalate
@@ -137,13 +226,11 @@ function tripOnError(e) {
 function resetErrors(){ consecutiveErrors = 0; }
 
 // try to import existing map if available (non-fatal if missing)
-let NAME_TO_SYMBOL = {};
 try {
-  NAME_TO_SYMBOL = (await import('../data/tickerMap.js')).NAME_TO_SYMBOL || {};
+  Object.assign(NAME_TO_SYMBOL, (await import('../data/tickerMap.js')).NAME_TO_SYMBOL || {});
 } catch {}
 
-NAME_TO_SYMBOL = {
-  ...NAME_TO_SYMBOL,
+Object.assign(NAME_TO_SYMBOL, {
   '삼성전자':'005930.KS','SK하이닉스':'000660.KS','현대차':'005380.KS','POSCO홀딩스':'005490.KS','LG화학':'051910.KS',
   'NAVER':'035420.KS','네이버':'035420.KS','카카오':'035720.KS','기아':'000270.KS','LG전자':'066570.KS','삼성SDI':'006400.KS',
   '에코프로':'086520.KS','셀트리온':'068270.KS','두산에너빌리티':'034020.KS','HD현대일렉트릭':'267260.KS','POSCO퓨처엠':'003670.KS',
@@ -154,7 +241,7 @@ NAME_TO_SYMBOL = {
   'Super Micro Computer':'SMCI','Palantir':'PLTR','Arm Holdings':'ARM','Micron Technology':'MU','UiPath':'PATH','CrowdStrike':'CRWD',
   'Berkshire Hathaway (B)':'BRK-B','Johnson & Johnson':'JNJ','Procter & Gamble':'PG','Visa':'V','Coca-Cola':'KO','JPMorgan Chase':'JPM','UnitedHealth':'UNH',
   'Eli Lilly':'LLY','Uber Technologies':'UBER','NRG Energy':'NRG','ServiceNow':'NOW','Moderna':'MRNA','Zoom':'ZM','MongoDB':'MDB','Snowflake':'SNOW'
-};
+});
 
 Object.assign(NAME_TO_SYMBOL, {
   '한화에어로스페이스': '012450.KS',
@@ -169,7 +256,8 @@ for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP }
 }
 
 function nameToSymbol(name){
-  if (NAME_TO_SYMBOL[name]) return NAME_TO_SYMBOL[name];
+  const learned = lookupLearnedMapping(name);
+  if (learned) return learned;
   if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
   return null;
 }
@@ -207,42 +295,45 @@ const RETRIES = Number(process.env.RETRIES || (DEMO_MODE ? 1 : 3));
 const BACKOFF_BASE_MS = Number(process.env.BACKOFF_BASE_MS || (DEMO_MODE ? 400 : 600));
 
 async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE_MS) {
-  let lastErr;
-  for (let attempt = 0; attempt <= retries; attempt++) {
-    if (!budgetOk()) throw new Error('global budget exhausted');
-    const controller = new AbortController();
-    const perReq = Math.min(REQ_TIMEOUT_MS, timeLeft());
-    const timer = setTimeout(() => controller.abort(), perReq);
-    try {
-      const res = await fetch(url, { headers, signal: controller.signal });
-      clearTimeout(timer);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      resetErrors();
-      return await res.json();
-    } catch (e) {
-      clearTimeout(timer);
-      lastErr = e;
-      if (tripOnError(e)) throw lastErr;
-      if (attempt < retries && budgetOk()) {
-        const backoff = base * Math.pow(2, attempt);
-        const redacted = url.replace(/token=[^&]+/i, 'token=***').replace(/apikey=[^&]+/i, 'apikey=***');
-        console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${redacted}`);
-        await new Promise(r => setTimeout(r, backoff));
-        continue;
+  return cachedJsonFetch(url, async (u) => {
+    let lastErr;
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      if (!budgetOk()) throw new Error('global budget exhausted');
+      const controller = new AbortController();
+      const perReq = Math.min(REQ_TIMEOUT_MS, timeLeft());
+      const timer = setTimeout(() => controller.abort(), perReq);
+      try {
+        const res = await fetch(u, { headers, signal: controller.signal, timeout: REQ_TIMEOUT_MS });
+        clearTimeout(timer);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        resetErrors();
+        return await res.json();
+      } catch (e) {
+        clearTimeout(timer);
+        lastErr = e;
+        if (tripOnError(e)) throw lastErr;
+        if (attempt < retries && budgetOk()) {
+          const backoff = base * Math.pow(2, attempt);
+          const redacted = u.replace(/token=[^&]+/i, 'token=***').replace(/apikey=[^&]+/i, 'apikey=***');
+          console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${redacted}`);
+          await new Promise(r => setTimeout(r, backoff));
+          continue;
+        }
+        break;
       }
     }
-  }
-  throw lastErr;
+    throw lastErr;
+  });
 }
 
 async function writeAtomic(p, data) {
   const tmp = `${p}.tmp`;
-  await fs.writeFile(tmp, data);
-  await fs.rename(tmp, p);
+  await fsp.writeFile(tmp, data);
+  await fsp.rename(tmp, p);
 }
 
 async function loadJson(p, fallback=null) {
-  try { return JSON.parse(await fs.readFile(p,'utf8')); } catch { return fallback; }
+  try { return JSON.parse(await fsp.readFile(p,'utf8')); } catch { return fallback; }
 }
 
 function rank01(values) {
@@ -267,6 +358,7 @@ function namesOnlyRank(universe, features) {
 
     const scored = names.map(n => {
       const sym = nameToSymbol(n) || n;
+      rememberMapping(n, sym);
       const nf = features[sym] || {};
       const count = Math.min(nf.count || 0, 30) / 30;
       const sentiment = ((nf.sentiment ?? 0) + 1) / 2;
@@ -288,7 +380,7 @@ function todayYMD(offsetDays=0){
 async function finnhubRecentEarnings(symbol){
   const from = todayYMD(-10), to = todayYMD(+10);
   const url = `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&symbol=${encodeURIComponent(symbol)}&token=${FINNHUB}`;
-  const j = await getJSON(url).catch(()=>null);
+  const j = await getJSON(url).then(d => { bump('finnhub', true); return d; }).catch(() => { bump('finnhub', false); return null; });
   const rows = j?.earningsCalendar || [];
   return rows.some(x => (x.symbol || x.ticker) === symbol);
 }
@@ -444,7 +536,7 @@ async function main(){
   for (const names of Object.values(universe)) {
     for (const n of names) {
       const sym = nameToSymbol(n);
-      if (sym) symbolSet.add(sym);
+      if (sym) { rememberMapping(n, sym); symbolSet.add(sym); }
     }
   }
   // Build scalable Naver keywords (seeds + aliases/brands + mined news + templates)
@@ -457,8 +549,8 @@ async function main(){
   });
   // Persist for visibility/debugging
   try {
-    await fs.mkdir('data', { recursive: true });
-    await fs.writeFile('data/naver-keywords.json', JSON.stringify(KEYWORDS, null, 2));
+    await fsp.mkdir('data', { recursive: true });
+    await fsp.writeFile('data/naver-keywords.json', JSON.stringify(KEYWORDS, null, 2));
   } catch {}
 
   if (!OFFLINE) {
@@ -491,6 +583,7 @@ async function main(){
       let sym = OFFLINE ? null : nameToSymbol(name);
       // ensure KR names use map if available
       if (!sym && NAME_TO_SYMBOL[name]) sym = NAME_TO_SYMBOL[name];
+      rememberMapping(name, sym);
 
       let route = 'no-symbol';
       let routeDetail = '';
@@ -512,6 +605,7 @@ async function main(){
       let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let earn=false; let candles=null;
       try {
         candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; }) : null;
+        if (candles?.source) bump(candles.source, true);
         if (candles && Array.isArray(candles.c) && Array.isArray(candles.v)) {
           const m = computeMetrics(candles.c, candles.v);
           ret5 = m.ret5; ret20 = m.ret20; vol20 = m.vol20; turnover = m.turnover; adv20 = m.adv20; close = m.close;
@@ -580,10 +674,10 @@ async function main(){
     if (market === 'NASDAQ 100' && USED['S&P 500']?.safe?.length) {
       const earlierSafeNames = USED['S&P 500'].safe;
       const earlierSafeSyms = new Set(
-        earlierSafeNames.map(n => nameToSymbol(n) || n)
+        earlierSafeNames.map(n => { const s = nameToSymbol(n) || n; rememberMapping(n, s); return s; })
       );
       for (const n of Object.keys(scoreSafe)) {
-        const sym = nameToSymbol(n) || n;
+        const sym = nameToSymbol(n) || n; rememberMapping(n, sym);
         if (earlierSafeSyms.has(sym)) {
           // clamp01 handles floor/ceil
           scoreSafe[n] = clamp01(scoreSafe[n] - 0.15);
@@ -623,13 +717,13 @@ async function main(){
     
     // -------- Cross-market de-duplication guard ----------
     const earlierAll = Object.values(USED).flatMap(u => [...(u.safe||[]), ...(u.aggressive||[])]);
-    const earlierSet = new Set(earlierAll.map(n => nameToSymbol(n) || n));
+    const earlierSet = new Set(earlierAll.map(n => { const s = nameToSymbol(n) || n; rememberMapping(n, s); return s; }));
 
     function dedupAndBackfill(list, scoreMap, k, candidateOrder) {
       const out = [];
       const seen = new Set();
       for (const n of list) {
-        const sym = nameToSymbol(n) || n;
+        const sym = nameToSymbol(n) || n; rememberMapping(n, sym);
         if (!earlierSet.has(sym) && !seen.has(sym)) {
           out.push(n); seen.add(sym);
         }
@@ -637,7 +731,7 @@ async function main(){
       }
       if (out.length < k) {
         for (const cand of candidateOrder) {
-          const sym = nameToSymbol(cand) || cand;
+          const sym = nameToSymbol(cand) || cand; rememberMapping(cand, sym);
           if (!earlierSet.has(sym) && !seen.has(sym)) {
             out.push(cand); seen.add(sym);
           }
@@ -722,11 +816,13 @@ async function main(){
     return;
   }
   if (avgCoverage < COVERAGE_MIN) {
-    console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using names-only ranking`);
-    const ranked = namesOnlyRank(universe, NEWS_FEATURES);
-    await writeAtomic(POOLS_FILE, JSON.stringify(ranked, null, 2));
+    console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using fallback`);
+    const last = loadLastGoodPools();
+    const outPools = last || namesOnlyRank(universe, NEWS_FEATURES);
+    await writeAtomic(POOLS_FILE, JSON.stringify(outPools, null, 2));
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
-    console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
+    if (last) console.log('[buildPools] wrote pools.json from last good snapshot');
+    else console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
     return;
   }
 
@@ -740,6 +836,7 @@ async function main(){
   // Write outputs
   await writeAtomic(POOLS_FILE, JSON.stringify(pools, null, 2));
   await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
+  snapshotPools(pools);
   console.log('[buildPools] wrote pools.json and pools-metrics.json :: done');
 }
 
