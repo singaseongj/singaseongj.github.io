@@ -578,7 +578,8 @@
           const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
           return `<span class="fx-item">${it.label} = ${v}</span>`;
         });
-        const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
+        const stampTs = data.refreshedAt || data.lastUpdated;
+        const stamp = `<span class="fx-time">업데이트 ${String(stampTs).replace('T',' ').replace('+09:00',' KST')}</span>`;
         line.innerHTML = parts.join(' • ') + ' • ' + stamp;
         const afterFonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
         line.style.animation = 'none';
@@ -586,6 +587,9 @@
           void line.offsetWidth;
           line.style.animation = 'ticker-loop 30s linear infinite';
         });
+      })
+      .catch(() => {
+        line.textContent = 'FX: unavailable';
       });
   }
   if (document.readyState === 'loading') {

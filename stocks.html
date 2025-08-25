@@ -61,7 +61,7 @@
 <body>
   <a href="index.html" class="home-button" aria-label="Home">&#x21A9;</a>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
-  <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> 2025년 8월 19일</p>
+  <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> 2025년 8월 25일</p>
   
   <div id="debugInfo" class="debug" style="display: none;">
     <h4>디버그 정보:</h4>
@@ -578,7 +578,8 @@
           const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
           return `<span class="fx-item">${it.label} = ${v}</span>`;
         });
-        const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
+        const stampTs = data.refreshedAt || data.lastUpdated;
+        const stamp = `<span class="fx-time">업데이트 ${String(stampTs).replace('T',' ').replace('+09:00',' KST')}</span>`;
         line.innerHTML = parts.join(' • ') + ' • ' + stamp;
         const afterFonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
         line.style.animation = 'none';
@@ -586,6 +587,9 @@
           void line.offsetWidth;
           line.style.animation = 'ticker-loop 30s linear infinite';
         });
+      })
+      .catch(() => {
+        line.textContent = 'FX: unavailable';
       });
   }
   if (document.readyState === 'loading') {

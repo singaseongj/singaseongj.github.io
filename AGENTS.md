@@ -15,14 +15,16 @@ This project hosts the Singaseong website files.
   ```
   This updates `recommendations.json`.
 
+- Refresh FX rates with:
+  ```bash
+  node fetchFxRates.js
+  ```
+- If all providers fail, the script keeps the existing `data/fx_rates.json` so the last successful rates remain available.
+
 ## Building the stock page
 - Generate `stocks.html` with:
   ```bash
   node src/build.js
-  ```
-- If offline, set the environment variable to use sample data:
-  ```bash
-  OFFLINE=1 node src/build.js
   ```
 
 The page also loads recent market headlines from Yahoo Finance.

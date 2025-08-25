@@ -96,7 +96,7 @@ async function naverProvider() {
     GBP_KRW: map.GBP ?? null,
     HKD_KRW: map.HKD ?? null,
   };
-  return itemsFromRates(outMap);
+  return { items: itemsFromRates(outMap), providerTimestamp: null };
 }
 
 /* --- Provider 2: Frankfurter fallback --- */
@@ -111,7 +111,7 @@ async function frankfurterProvider() {
     GBP_KRW: (usd?.rates?.KRW && usd?.rates?.GBP) ? usd.rates.KRW/usd.rates.GBP : null,
     HKD_KRW: (usd?.rates?.KRW && usd?.rates?.HKD) ? usd.rates.KRW/usd.rates.HKD : null,
   };
-  return itemsFromRates(map);
+  return { items: itemsFromRates(map), providerTimestamp: usd?.date ?? null };
 }
 
 /* --- Provider 3: Exchangerate.host fallback --- */
@@ -126,20 +126,20 @@ async function exchangerateHostProvider() {
     GBP_KRW: (usd?.rates?.KRW && usd?.rates?.GBP) ? usd.rates.KRW/usd.rates.GBP : null,
     HKD_KRW: (usd?.rates?.KRW && usd?.rates?.HKD) ? usd.rates.KRW/usd.rates.HKD : null,
   };
-  return itemsFromRates(map);
+  return { items: itemsFromRates(map), providerTimestamp: usd?.date ?? null };
 }
 
 async function main(){
   await fs.mkdir(path.dirname(OUT), { recursive:true });
 
-  let items = null;
+  let result = null;
   const providers = [naverProvider, frankfurterProvider, exchangerateHostProvider];
 
   for (const p of providers) {
     try {
-      items = await p();
-      if (items.some(x => typeof x.krw === 'number')) { 
-        // Found at least one numeric value
+      const r = await p();
+      if (r.items.some(x => typeof x.krw === 'number')) {
+        result = r;
         break;
       }
     } catch(e) {
@@ -147,17 +147,40 @@ async function main(){
     }
   }
 
-  if (!items) {
+  if (!result) {
     if (existsSync(OUT)) {
-      console.warn('FX: all providers failed; keeping previous file');
-      return;
+      try {
+        const prev = JSON.parse(await fs.readFile(OUT, 'utf8'));
+        const since = prev.refreshedAt || prev.lastUpdated || 'unknown';
+        console.warn(`FX: all providers failed; keeping last rates from ${since}`);
+      } catch {
+        console.warn('FX: all providers failed; keeping existing fx_rates.json');
+      }
+    } else {
+      console.warn('FX: all providers failed; no previous rates');
     }
-    items = itemsFromRates({}); // all nulls
+    return;
   }
 
-  const out = { lastUpdated: nowKSTISO(), items };
+  const out = {
+    providerTimestamp: result.providerTimestamp || null,
+    refreshedAt: nowKSTISO(),
+    items: result.items,
+  };
+
+  if (existsSync(OUT)) {
+    try {
+      const prev = JSON.parse(await fs.readFile(OUT, 'utf8'));
+      if (JSON.stringify(prev.items) === JSON.stringify(out.items)) {
+        const since = prev.refreshedAt || prev.lastUpdated || 'unknown';
+        console.log(`FX: no change (rates unchanged since ${since}), skipping write`);
+        return;
+      }
+    } catch {}
+  }
+
   await fs.writeFile(OUT, JSON.stringify(out, null, 2));
-  console.log(`FX: wrote ${OUT} at ${out.lastUpdated}`);
+  console.log(`FX: refreshed at ${out.refreshedAt}`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

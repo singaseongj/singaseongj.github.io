@@ -147,6 +147,12 @@ jobs:
       - name: Update FX rates
         run: node fetchFxRates.js
 
+      - name: Assert fx_rates freshness
+        run: |
+          test -f data/fx_rates.json
+          node -e "const j=require('./data/fx_rates.json'); const ts=j.refreshedAt||j.timestamp||j.lastUpdated; if(!ts){console.error('ERROR: timestamp missing'); process.exit(1)} console.log('fx_rates timestamp:', ts)"
+          if git diff --quiet --exit-code -- data/fx_rates.json; then echo 'fx_rates.json unchanged'; exit 1; fi
+
       - name: "Verify generated files (brief)"
         run: |
           test -f recommendations.json
@@ -172,6 +178,7 @@ jobs:
             stocks.html
             src/template.html
           add_options: '-A'
+          skip_dirty_check: true
 
       - name: "Show last commit (debug)"
         if: always()
