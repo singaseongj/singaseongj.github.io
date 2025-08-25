@@ -184,21 +184,28 @@ jobs:
 
       # ⬇️ Added from daily-build.yml
       - name: Update market news
-        run: node fetchNews.js
-
-      - name: Verify market_news has lastUpdated
+        shell: bash
         run: |
-          test -f data/market_news.json
-          node -e "const j=require('./data/market_news.json'); if(!j.lastUpdated){console.error('ERROR: lastUpdated missing'); process.exit(1)} console.log('market_news lastUpdated:', j.lastUpdated)"
-          head -n 20 data/market_news.json
-
-      - name: Show git status for market_news
-        run: |
+          set -Eeuo pipefail
+          node fetchNews.js
+          test -s data/market_news.json
+          echo "market_news lastUpdated:"
+          node -e "console.log(require('./data/market_news.json').lastUpdated || 'missing')"
+          echo "--- git status/diff (market_news) ---"
           git status --porcelain -- data/market_news.json || true
           git --no-pager diff -- data/market_news.json | sed -n '1,80p' || true
 
       - name: Update FX rates
-        run: node fetchFxRates.js
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          node fetchFxRates.js
+          test -s data/fx_rates.json
+          echo "fx_rates lastUpdated:"
+          node -e "console.log(require('./data/fx_rates.json').lastUpdated || 'missing')"
+          echo "--- git status/diff (fx_rates) ---"
+          git status --porcelain -- data/fx_rates.json || true
+          git --no-pager diff -- data/fx_rates.json | sed -n '1,80p' || true
 
       - name: "Verify generated files (brief)"
         run: |
@@ -211,7 +218,7 @@ jobs:
       - name: "Commit & push changes"
         uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0  # v5
         with:
-          commit_message: "chore: stock recommendations update [skip ci]"
+          commit_message: "chore: data update (news/fx) [skip ci]"
           file_pattern: |
             recommendations.json
             pools.json
