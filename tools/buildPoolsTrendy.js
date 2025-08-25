@@ -41,8 +41,8 @@ async function cachedJsonFetch(url, fetchFn) {
 
 const SYMBOL_MAP_FILE = path.join(CACHE_DIR, 'name-to-symbol.json');
 function loadNameToSymbol() {
-  try { return JSON.parse(fs.readFileSync(SYMBOL_MAP_FILE, 'utf8')); }
-  catch { return {}; }
+  const txt = tryRead(SYMBOL_MAP_FILE);
+  return txt ? JSON.parse(txt) : {};
 }
 function saveNameToSymbol(map) {
   try { fs.writeFileSync(SYMBOL_MAP_FILE, JSON.stringify(map, null, 2)); } catch {}
@@ -61,10 +61,41 @@ function lookupLearnedMapping(key) {
   return NAME_TO_SYMBOL[key] || NAME_TO_SYMBOL[key.replace('.', '-')] || null;
 }
 
+function tryProviders(sym) {
+  const providers = ['finnhub', 'twelvedata'];
+  providers.sort((a, b) => providerPenalty(a) - providerPenalty(b));
+  for (const p of providers) {
+    if (!sym) continue;
+    // For now, assume candidate symbol is valid when provider key exists
+    // Real-time validation happens later when fetching candles.
+    if (p === 'finnhub' && FINNHUB) return sym;
+    if (p === 'twelvedata' && TWELVE) return sym;
+  }
+  return null;
+}
+
+function mapOne(rawKey) {
+  const learned = lookupLearnedMapping(rawKey);
+  if (learned) return { sym: learned, raw: rawKey, source: 'learned' };
+
+  const t = String(rawKey).trim();
+  const variants = [t, t.replace('.', '-'), t.replace('.', '/'), t.replace('.', '')];
+
+  for (const v of variants) {
+    const sym = tryProviders(v);
+    if (sym) {
+      rememberMapping(rawKey, sym);
+      return { sym, raw: rawKey, source: 'provider' };
+    }
+  }
+
+  return null;
+}
+
 const PROVIDER_SCORE_FILE = path.join(CACHE_DIR, 'provider-score.json');
 function loadProviderScore() {
-  try { return JSON.parse(fs.readFileSync(PROVIDER_SCORE_FILE, 'utf8')); }
-  catch { return {}; }
+  const txt = tryRead(PROVIDER_SCORE_FILE);
+  return txt ? JSON.parse(txt) : {};
 }
 function saveProviderScore(score) {
   try { fs.writeFileSync(PROVIDER_SCORE_FILE, JSON.stringify(score, null, 2)); } catch {}
@@ -91,8 +122,8 @@ function snapshotPools(pools) {
   try { fs.writeFileSync(LAST_GOOD, JSON.stringify(pools, null, 2)); } catch {}
 }
 function loadLastGoodPools() {
-  try { return JSON.parse(fs.readFileSync(LAST_GOOD, 'utf8')); }
-  catch { return null; }
+  const txt = tryRead(LAST_GOOD);
+  return txt ? JSON.parse(txt) : null;
 }
 
 function tryRead(file) {
@@ -533,10 +564,23 @@ async function main(){
     : await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
 
   const symbolSet = new Set();
-  for (const names of Object.values(universe)) {
-    for (const n of names) {
-      const sym = nameToSymbol(n);
-      if (sym) { rememberMapping(n, sym); symbolSet.add(sym); }
+  for (const [market, names] of Object.entries(universe)) {
+    const mapped = [];
+    for (const raw of names) {
+      const m = mapOne(raw);
+      if (!m || !m.sym) {
+        const learned = lookupLearnedMapping(raw);
+        if (!learned) console.warn('[universe] unmapped:', raw);
+        continue;
+      }
+      mapped.push(m);
+    }
+    if (mapped.length === 0) {
+      console.warn(`[buildPools] no valid ${market} symbols after mapping`);
+    }
+    for (const m of mapped) {
+      rememberMapping(m.raw, m.sym);
+      symbolSet.add(m.sym);
     }
   }
   // Build scalable Naver keywords (seeds + aliases/brands + mined news + templates)
@@ -580,9 +624,14 @@ async function main(){
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
       if (timeLeft() < GLOBAL_BUDGET_MS * 0.1) return; // 90% budget used
       if (!budgetOk(200)) return; // skip if no time left
-      let sym = OFFLINE ? null : nameToSymbol(name);
-      // ensure KR names use map if available
-      if (!sym && NAME_TO_SYMBOL[name]) sym = NAME_TO_SYMBOL[name];
+      const mappedOne = OFFLINE ? null : mapOne(name);
+      if (!mappedOne || !mappedOne.sym) {
+        console.warn('[map] skip (no symbol):', name);
+        rememberMapping(name, null);
+        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, sym:null, source:null, attempts:[], fetchMs:0 };
+        return;
+      }
+      const sym = mappedOne.sym;
       rememberMapping(name, sym);
 
       let route = 'no-symbol';
@@ -604,8 +653,16 @@ async function main(){
 
       let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let earn=false; let candles=null;
       try {
+        const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; }) : null;
-        if (candles?.source) bump(candles.source, true);
+        if (candles?.source) {
+          bump(candles.source, true);
+        } else {
+          const countsAfter = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
+          for (const [p, after] of Object.entries(countsAfter)) {
+            if (after > countsBefore[p]) bump(p, false);
+          }
+        }
         if (candles && Array.isArray(candles.c) && Array.isArray(candles.v)) {
           const m = computeMetrics(candles.c, candles.v);
           ret5 = m.ret5; ret20 = m.ret20; vol20 = m.vol20; turnover = m.turnover; adv20 = m.adv20; close = m.close;
