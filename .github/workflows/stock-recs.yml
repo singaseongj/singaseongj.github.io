@@ -42,6 +42,7 @@ jobs:
       NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
       NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
       NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+      NAVER_TRENDS_CACHE_TTL_MS: 21600000   # 6h (matches the code)
       GLOBAL_BUDGET_MS: 90000
       MAX_CONCURRENCY: 2
       REQ_TIMEOUT_MS: 5000
