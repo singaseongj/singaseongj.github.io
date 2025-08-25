@@ -15,6 +15,17 @@ const NAVER_LIST = 'https://finance.naver.com/marketindex/exchangeList.naver';
 
 const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
 
+function nowKST() {
+  const t = Date.now() + (new Date().getTimezoneOffset() * 60000) + 9 * 3600 * 1000;
+  return new Date(t);
+}
+function yyyymmddKST(d = nowKST()) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${y}${m}${dd}`;
+}
+
 async function getJson(url,{retries=3,base=400,headers}={}) {
   let err;
   for (let i=0;i<=retries;i++){
@@ -63,6 +74,32 @@ function itemsFromRates(map) {
   ];
 }
 
+// -------- Exim helpers --------
+async function fetchEximFor(dateStr, key) {
+  const url = new URL('https://oapi.koreaexim.go.kr/site/program/financial/exchangeJSON');
+  url.searchParams.set('authkey', key);
+  url.searchParams.set('searchdate', dateStr);
+  url.searchParams.set('data', 'AP01');
+  const res = await fetch(url.toString(), { redirect: 'follow' });
+  if (!res.ok) throw new Error(`EXIM HTTP ${res.status}`);
+  return await res.json();
+}
+function isValidEximPayload(j) {
+  return Array.isArray(j) && j.length > 0 && Number(j[0]?.result) === 1;
+}
+async function getEximLatestWithin(key, lookbackDays = 7) {
+  let d = nowKST();
+  for (let i = 0; i < lookbackDays; i++) {
+    const ds = yyyymmddKST(d);
+    const j = await fetchEximFor(ds, key);
+    if (isValidEximPayload(j)) {
+      return { date: ds, data: j };
+    }
+    d.setDate(d.getDate() - 1);
+  }
+  throw new Error('No valid FX data from Exim in last 7 days');
+}
+
 /* --- Provider 1: Naver Finance (환전 고시 환율) --- */
 async function naverProvider() {
   // Parse rows like:
@@ -99,7 +136,31 @@ async function naverProvider() {
   return itemsFromRates(outMap);
 }
 
-/* --- Provider 2: Frankfurter fallback --- */
+/* --- Provider 2: Korea Eximbank fallback --- */
+async function eximProvider() {
+  const key =
+    process.env.EXIM_AUTH_KEY ||
+    process.env.EXIM_API_KEY ||
+    process.env.DATA_API_KEY ||
+    process.env.KRX_API_KEY || '';
+  if (!key) throw new Error('EXIM auth key missing');
+  const latest = await getEximLatestWithin(key, 7);
+  const map = {};
+  for (const row of latest.data) {
+    const unit = row.cur_unit;
+    const rate = Number(row.deal_bas_r.replace(/,/g, ''));
+    if (!Number.isFinite(rate)) continue;
+    if (unit === 'USD') map.USD_KRW = rate;
+    else if (unit.startsWith('JPY')) map.JPY100_KRW = rate;
+    else if (unit === 'EUR') map.EUR_KRW = rate;
+    else if (unit === 'CNY') map.CNY_KRW = rate;
+    else if (unit === 'GBP') map.GBP_KRW = rate;
+    else if (unit === 'HKD') map.HKD_KRW = rate;
+  }
+  return itemsFromRates(map);
+}
+
+/* --- Provider 3: Frankfurter fallback --- */
 async function frankfurterProvider() {
   const usd = await getJson(FR_USD);
   const jpy = await getJson(FR_JPY);
@@ -114,7 +175,7 @@ async function frankfurterProvider() {
   return itemsFromRates(map);
 }
 
-/* --- Provider 3: Exchangerate.host fallback --- */
+/* --- Provider 4: Exchangerate.host fallback --- */
 async function exchangerateHostProvider() {
   const usd = await getJson(EH_USD);
   const jpy = await getJson(EH_JPY);
@@ -133,7 +194,11 @@ async function main(){
   await fs.mkdir(path.dirname(OUT), { recursive:true });
 
   let items = null;
-  const providers = [naverProvider, frankfurterProvider, exchangerateHostProvider];
+  const providers = [naverProvider];
+  if (process.env.USE_EXIM_FX_BACKUP === '1') {
+    providers.push(eximProvider);
+  }
+  providers.push(frankfurterProvider, exchangerateHostProvider);
 
   for (const p of providers) {
     try {
