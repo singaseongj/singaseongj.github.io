@@ -49,9 +49,10 @@ export async function fetchKotraOverseasPage({ pageNo = 1, numOfRows = 50 } = {}
     serviceKey: apiKeyRaw(),
     numOfRows: String(numOfRows),
     pageNo: String(pageNo),
+    _type: "json",
   });
   const url = `${BASE}?${qs.toString()}`;
-  const res = await fetch(url);
+  const res = await fetch(url, { headers: { Accept: "application/json" } });
   if (!res.ok) throw new Error(`KOTRA HTTP ${res.status}`);
   const json = await res.json();
 

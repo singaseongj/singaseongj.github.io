@@ -423,8 +423,9 @@
         for (const bucket of ['safe', 'aggressive']) {
           const itemsArr = (info?.[bucket] || []).map(item => {
             const name = FULL_NAME_MAP[item.name] || item.name;
+            const link = item.searchUrl ? `<a href="${item.searchUrl}" target="_blank" rel="noopener">${name}</a>` : name;
             const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
-            return `<li>${name}${sector}</li>`;
+            return `<li>${link}${sector}</li>`;
           });
           const list = itemsArr.length ? itemsArr.join('') : `<li class="empty">${translations[currentLang].noPicks}</li>`;
           const label = bucket === 'safe' ? translations[currentLang].safe : translations[currentLang].aggressive;
