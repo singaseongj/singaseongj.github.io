@@ -1,5 +1,5 @@
 // tools/buildPoolsTrendy.js
-// Builds trend-aware pools using Finnhub (primary) and TwelveData as fallback for quotes.
+// Builds trend-aware pools using Finnhub (primary) with TwelveData and FMP as fallbacks for quotes.
 // Writes: pools.json (names only) and pools-metrics.json (diagnostics).
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
@@ -65,7 +65,7 @@ function lookupLearnedMapping(key) {
 }
 
 function tryProviders(sym) {
-  const providers = ['finnhub', 'twelvedata'];
+  const providers = ['finnhub', 'twelvedata', 'fmp'];
   providers.sort((a, b) => providerPenalty(a) - providerPenalty(b));
   for (const p of providers) {
     if (!sym) continue;
@@ -73,6 +73,7 @@ function tryProviders(sym) {
     // Real-time validation happens later when fetching candles.
     if (p === 'finnhub' && FINNHUB) return sym;
     if (p === 'twelvedata' && TWELVE) return sym;
+    if (p === 'fmp' && FMP) return sym;
   }
   return null;
 }
@@ -135,6 +136,7 @@ function tryRead(file) {
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
+const FMP = process.env.FMP_KEY || '';
 
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
@@ -556,7 +558,7 @@ async function main(){
     console.log('[buildPools] No pools.json; nothing to do.');
     process.exit(0);
   }
-  console.log(`[buildPools] start :: FINNHUB=${!!process.env.FINNHUB_API_KEY} TWELVE=${!!process.env.TWELVEDATA_API_KEY} OFFLINE=${OFFLINE} DEMO=${DEMO_MODE} budget=${GLOBAL_BUDGET_MS}ms`);
+  console.log(`[buildPools] start :: FINNHUB=${!!process.env.FINNHUB_API_KEY} TWELVE=${!!process.env.TWELVEDATA_API_KEY} FMP=${!!process.env.FMP_KEY} OFFLINE=${OFFLINE} DEMO=${DEMO_MODE} budget=${GLOBAL_BUDGET_MS}ms`);
 
   // Ensure pools object has entries for all markets
   for (const m of MARKETS) {
