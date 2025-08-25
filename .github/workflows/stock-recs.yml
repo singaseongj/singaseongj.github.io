@@ -35,6 +35,7 @@ jobs:
       # Use the portal key for KOTRA + (optionally KRX if you share it)
       DATA_API_KEY: ${{ secrets.KRX_API_KEY }}
       USE_KOTRA_BACKUP: "1"
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Optional: hybrid remote cache (leave empty if not used)
       # REMOTE_URL: ${{ secrets.REMOTE_URL }}   # e.g. public GET or signed GET to last-good recommendations.json
@@ -109,8 +110,8 @@ jobs:
           npm config set fund false
 
       - name: Authenticate npm (optional)
-        if: ${{ secrets.NPM_TOKEN != '' }}
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        if: ${{ env.NPM_TOKEN != '' }}
+        run: echo "//registry.npmjs.org/:_authToken=${{ env.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Use temporary npm mirror (optional)
         if: ${{ vars.USE_NPM_MIRROR == '1' }}
