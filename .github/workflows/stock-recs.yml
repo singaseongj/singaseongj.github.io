@@ -85,21 +85,29 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      # NOTE: Removed the separate "Build trend-aware pools" step to avoid duplicate pool builds.
-      # fetchStockInfo.js will handle pool refresh itself on scheduled runs.
+      - name: Build trend-aware pools
+        env:
+          FMP_KEY: ${{ secrets.FMP_KEY }}
+          ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          GLOBAL_BUDGET_MS: ${{ env.GLOBAL_BUDGET_MS }}
+          MAX_CONCURRENCY: ${{ env.MAX_CONCURRENCY }}
+          REQ_TIMEOUT_MS: ${{ env.REQ_TIMEOUT_MS }}
+          RETRIES: ${{ env.RETRIES }}
+          BACKOFF_BASE_MS: ${{ env.BACKOFF_BASE_MS }}
+          CIRCUIT_MAX_ERRORS: ${{ env.CIRCUIT_MAX_ERRORS }}
+          COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
+          UNIVERSE_LIMIT: 200
+        run: node tools/buildPoolsTrendy.js || true
 
-      - name: Build recommendations (conditional refresh)
+      - name: Build recommendations (no pool refresh here)
         shell: bash
         run: |
           set -euo pipefail
           if [ -f fetchStockInfo.js ]; then
-            if [ "${IS_CRON}" = "true" ]; then
-              echo "Cron run → using --refresh-pools"
-              timeout 60 node fetchStockInfo.js --refresh-pools --force --delay=120
-            else
-              echo "Non-cron run → no forced refresh"
-              timeout 60 node fetchStockInfo.js --force --delay=120
-            fi
+            # No --refresh-pools here, because we already ran buildPoolsTrendy.js
+            timeout 60 node fetchStockInfo.js --force --delay=120
           elif [ -f src/index.js ]; then
             echo "Running modular entry (src/index.js)"
             timeout 60 node src/index.js --force
@@ -115,14 +123,8 @@ jobs:
           if validate_json; then
             echo "recommendations.json valid."
           else
-            echo "Rebuilding pools and recommendations..."
-            if [ "${IS_CRON}" = "true" ]; then
-              echo "Cron run → using --refresh-pools"
-              node fetchStockInfo.js --refresh-pools --force
-            else
-              echo "Non-cron run → no forced refresh"
-              node fetchStockInfo.js --force
-            fi
+            echo "Rebuilding recommendations (pools already built this run)..."
+            node fetchStockInfo.js --force
             validate_json
           fi
 
