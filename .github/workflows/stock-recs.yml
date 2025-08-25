@@ -88,9 +88,49 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'  # ensure cache hits on the lockfile
 
-      - name: Install deps
-        run: npm ci
+      - name: Cache npm directory (extra safety)
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Tune npm for CI
+        run: |
+          npm config set fetch-retries 5
+          npm config set fetch-retry-factor 2
+          npm config set fetch-retry-mintimeout 10000
+          npm config set fetch-retry-maxtimeout 120000
+          npm config set prefer-offline true
+          npm config set audit false
+          npm config set fund false
+
+      - name: Authenticate npm (optional)
+        if: ${{ secrets.NPM_TOKEN != '' }}
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Use temporary npm mirror (optional)
+        if: ${{ vars.USE_NPM_MIRROR == '1' }}
+        run: npm config set registry https://registry.npmmirror.com
+
+      - name: Install deps (with retry)
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          tries=0
+          until [ $tries -ge 5 ]; do
+            if npm ci --cache ~/.npm --no-audit --fund=false --prefer-offline; then
+              exit 0
+            fi
+            tries=$((tries+1))
+            echo "npm ci failed (attempt $tries). Sleeping $((tries*10))s…"
+            sleep $((tries*10))
+          done
+          echo "npm ci failed after retries."
+          exit 1
 
       - name: Build trend-aware pools
         env:
