@@ -5,6 +5,7 @@ import { XMLParser } from 'fast-xml-parser';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { nowKSTISO } from './utils/time.js';
+import { fetchKotraOverseasRecent } from './src/news/kotraOverseas.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -101,7 +102,29 @@ async function gather() {
 }
 
 async function main() {
-  const items = await gather();
+  let items = await gather();
+  const NEED_BACKUP = process.env.USE_KOTRA_BACKUP === "1" && (!items?.length || items.length < 12);
+  if (NEED_BACKUP) {
+    try {
+      const kotraRaw = await fetchKotraOverseasRecent(2, 50);
+      const kotra = kotraRaw.map(it => ({ title: it.title, link: it.url })).filter(it => it.link);
+      const combined = [...(items || []), ...kotra];
+      const seen = new Set();
+      const deduped = [];
+      for (const it of combined) {
+        const key = it.link || it.title;
+        const key2 = it.title;
+        if (seen.has(key) || seen.has(key2)) continue;
+        seen.add(key);
+        seen.add(key2);
+        deduped.push(it);
+      }
+      items = deduped.slice(0, 120);
+      console.log(`[kotra-backup] merged ${kotra.length} items (recent overseas market news)`);
+    } catch (e) {
+      console.error('[kotra-backup] failed:', e.message);
+    }
+  }
   if (!items.length) throw new Error('No news items after filtering');
   const out = { lastUpdated: nowKSTISO(), items };
   await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
