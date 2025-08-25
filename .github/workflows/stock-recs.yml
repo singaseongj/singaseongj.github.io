@@ -31,9 +31,9 @@ jobs:
       IS_CRON: ${{ github.event_name == 'schedule' }}
       # FX backup via Korea Eximbank (oapi.koreaexim.go.kr)
       USE_EXIM_FX_BACKUP: "1"
-      EXIM_AUTH_KEY: ${{ secrets.KRX_API_KEY }}  # <- you stored FNOdFh... under KRX_API_KEY
+      EXIM_AUTH_KEY: ${{ secrets.EXIM_AUTH_KEY }}   # Exim
       # Use the portal key for KOTRA + (optionally KRX if you share it)
-      DATA_API_KEY: ${{ secrets.KRX_API_KEY }}
+      DATA_API_KEY: ${{ secrets.DATA_API_KEY }}     # data.go.kr (KRX & KOTRA)
       USE_KOTRA_BACKUP: "1"
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
