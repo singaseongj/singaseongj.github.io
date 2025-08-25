@@ -2,6 +2,7 @@ import { aggregate } from './sentiment.js';
 import { TICKER_MAP } from '../maps.js';
 import { fetchNews, fetchNaverTrends, fetchNaverBlogCount, NEWSAPI_KEY } from './apis.js';
 import { withRetry, fetchWithTimeout } from '../util/limiter.js';
+import { getTickerArticlesBackup } from './fetchByTicker.kotraBackup.js';
 
 const UA = 'ddsciencehs-trender/1.0 (+github actions)';
 
@@ -24,6 +25,8 @@ async function naverBlogMentions(name) {
 export async function fetchByTicker(symbol, name){
   const out = { count:0, sentiment:null, top:null, naverPopularity:null, blogMentions:null };
   try {
+    let titles = [];
+    let lang = 'en';
     if (/\.K[QS]$/.test(symbol)) {
       const query = encodeURIComponent(name || symbol);
       const url = `https://news.google.com/rss/search?q=${query}&hl=ko&gl=KR&ceid=KR:ko`;
@@ -35,11 +38,8 @@ export async function fetchByTicker(symbol, name){
         )
       );
       const txt = await res.text();
-      const titles = Array.from(txt.matchAll(/<title><!\[CDATA\[(.*?)\]\]><\/title>/g)).slice(1).map(m=>m[1]);
-      const agg = aggregate(titles, 'kr');
-      const pop = await naverPopularityScore(name || symbol);
-      const blog = await naverBlogMentions(name || symbol);
-      return { count: titles.length, sentiment: agg.sentiment, top: agg.top, naverPopularity: pop, blogMentions: blog };
+      titles = Array.from(txt.matchAll(/<title><!\[CDATA\[(.*?)\]\]><\/title>/g)).slice(1).map(m=>m[1]);
+      lang = 'kr';
     } else if (process.env.FINNHUB_API_KEY) {
       const from = new Date(Date.now()-72*3600*1000).toISOString().slice(0,10);
       const to = new Date().toISOString().slice(0,10);
@@ -52,16 +52,46 @@ export async function fetchByTicker(symbol, name){
         )
       );
       const data = await res.json();
-      const titles = Array.isArray(data) ? data.map(d=>d.headline) : [];
-      const agg = aggregate(titles, 'en');
-      return { count: titles.length, sentiment: agg.sentiment, top: agg.top };
+      titles = Array.isArray(data) ? data.map(d=>d.headline) : [];
     } else if (NEWSAPI_KEY) {
       const data = await fetchNews(name || symbol);
-      const titles = Array.isArray(data?.articles) ? data.articles.map(a => a.title) : [];
-      const agg = aggregate(titles, 'en');
+      titles = Array.isArray(data?.articles) ? data.articles.map(a => a.title) : [];
+    }
+
+    if (!titles.length && process.env.USE_KOTRA_BACKUP === '1') {
+      try {
+        const backup = await getTickerArticlesBackup(symbol);
+        titles = backup.map(x => x.title);
+        if (titles.length) console.log(`[kotra-backup] ${symbol}: ${titles.length} items from KOTRA`);
+      } catch (e) {
+        console.error(`[kotra-backup] ${symbol} backup failed:`, e.message);
+      }
+    }
+
+    if (titles.length) {
+      const agg = aggregate(titles, lang);
+      if (/\.K[QS]$/.test(symbol)) {
+        const pop = await naverPopularityScore(name || symbol);
+        const blog = await naverBlogMentions(name || symbol);
+        return { count: titles.length, sentiment: agg.sentiment, top: agg.top, naverPopularity: pop, blogMentions: blog };
+      }
       return { count: titles.length, sentiment: agg.sentiment, top: agg.top };
     }
-  } catch {}
+  } catch (e) {
+    console.error(`[news] primary failed for ${symbol}:`, e.message);
+    if (process.env.USE_KOTRA_BACKUP === '1') {
+      try {
+        const backup = await getTickerArticlesBackup(symbol);
+        const titles = backup.map(x => x.title);
+        if (titles.length) {
+          const agg = aggregate(titles, /\.K[QS]$/.test(symbol)?'kr':'en');
+          return { count: titles.length, sentiment: agg.sentiment, top: agg.top };
+        }
+      } catch (e2) {
+        console.error(`[kotra-backup] ${symbol} backup failed:`, e2.message);
+      }
+    }
+  }
   return out;
 }
 

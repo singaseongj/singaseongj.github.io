@@ -29,6 +29,9 @@ jobs:
       # GitHub often has flaky access to Naver; feel free to unset.
       SKIP_NAVER: "0"
       IS_CRON: ${{ github.event_name == 'schedule' }}
+      # Use the portal key for KOTRA + (optionally KRX if you share it)
+      DATA_API_KEY: ${{ secrets.KRX_API_KEY }}
+      USE_KOTRA_BACKUP: "1"
 
       # Optional: hybrid remote cache (leave empty if not used)
       # REMOTE_URL: ${{ secrets.REMOTE_URL }}   # e.g. public GET or signed GET to last-good recommendations.json
