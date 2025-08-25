@@ -19,6 +19,10 @@ const HEADERS = {
   'User-Agent': 'Mozilla/5.0'
 };
 
+const NAVER_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
+const NAVER_US_QUERIES = ['NASDAQ', '"S&P 500"'];
+const NAVER_KR_QUERIES = ['한국 금리', '한국 증시 전망'];
+
 const US_FEEDS = [
   'https://www.marketwatch.com/rss/topstories',
   'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',
@@ -69,7 +73,48 @@ async function fetchFeed(url) {
   }
 }
 
-async function gather() {
+function dedupe(items) {
+  const seen = new Set();
+  const out = [];
+  for (const it of items) {
+    const key = it.link || it.title;
+    const key2 = it.title;
+    if (seen.has(key) || seen.has(key2)) continue;
+    seen.add(key);
+    seen.add(key2);
+    out.push(it);
+  }
+  return out;
+}
+
+async function naverSearch(query, headers, display = 20) {
+  const url = `${NAVER_ENDPOINT}?query=${encodeURIComponent(query)}&display=${display}&sort=date`;
+  const res = await fetch(url, { headers });
+  if (!res.ok) throw new Error(`Naver HTTP ${res.status}`);
+  const data = await res.json();
+  return (data.items || []).map(it => {
+    const title = it.title ? it.title.replace(/<[^>]*>/g, '').trim() : '';
+    const link = (it.link || it.originallink || '').trim();
+    return title && link ? { title, link } : null;
+  }).filter(Boolean);
+}
+
+async function fetchNaverNews() {
+  const id = process.env.NAVER_CLIENT_ID;
+  const secret = process.env.NAVER_CLIENT_SECRET;
+  if (!id || !secret) throw new Error('NAVER client credentials missing');
+  const headers = {
+    'X-Naver-Client-Id': id,
+    'X-Naver-Client-Secret': secret,
+  };
+  const usRaw = await Promise.all(NAVER_US_QUERIES.map(q => naverSearch(q, headers)));
+  const krRaw = await Promise.all(NAVER_KR_QUERIES.map(q => naverSearch(q, headers)));
+  const us = dedupe(usRaw.flat()).slice(0, 5);
+  const kr = dedupe(krRaw.flat()).slice(0, 5);
+  return [...us, ...kr];
+}
+
+async function gatherFeeds() {
   const all = [];
   for (const url of [...US_FEEDS, ...KR_FEEDS]) {
     try {
@@ -81,16 +126,7 @@ async function gather() {
   }
   if (!all.length) throw new Error('No items fetched');
 
-  const seen = new Set();
-  const deduped = [];
-  for (const it of all) {
-    const key = it.link || it.title;
-    const key2 = it.title;
-    if (seen.has(key) || seen.has(key2)) continue;
-    seen.add(key);
-    seen.add(key2);
-    deduped.push(it);
-  }
+  const deduped = dedupe(all);
 
   const us = [];
   const kr = [];
@@ -98,7 +134,22 @@ async function gather() {
     (isKR(it) ? kr : us).push(it);
   }
 
-  return [...us.slice(0, 5), ...kr.slice(0, 3)];
+  return [...us.slice(0, 5), ...kr.slice(0, 5)];
+}
+
+async function gather() {
+  if (process.env.SKIP_NAVER !== '1') {
+    try {
+      const naverItems = await fetchNaverNews();
+      if (naverItems.length >= 10) return naverItems;
+      console.warn('Naver returned insufficient items; falling back to feeds');
+    } catch (e) {
+      console.warn('Naver fetch failed', e.message);
+    }
+  } else {
+    console.log('SKIP_NAVER=1: skipping Naver news');
+  }
+  return await gatherFeeds();
 }
 
 async function main() {

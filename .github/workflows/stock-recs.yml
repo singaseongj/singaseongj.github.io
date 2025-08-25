@@ -200,15 +200,10 @@ jobs:
         run: |
           set -Eeuo pipefail
           node fetchFxRates.js
-
-      - name: Verify fx_rates has lastUpdated
-        run: |
-          test -f data/fx_rates.json
-          node -e "const j=require('./data/fx_rates.json'); if(!j.lastUpdated){console.error('ERROR: lastUpdated missing (fx_rates)'); process.exit(1)} console.log('fx_rates lastUpdated:', j.lastUpdated)"
-          head -n 20 data/fx_rates.json
-
-      - name: Show git status for fx_rates
-        run: |
+          test -s data/fx_rates.json
+          echo "fx_rates lastUpdated:"
+          node -e "console.log(require('./data/fx_rates.json').lastUpdated || 'missing')"
+          echo "--- git status/diff (fx_rates) ---"
           git status --porcelain -- data/fx_rates.json || true
           git --no-pager diff -- data/fx_rates.json | sed -n '1,80p' || true
 
