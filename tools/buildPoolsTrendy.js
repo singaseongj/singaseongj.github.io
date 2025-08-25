@@ -1,5 +1,5 @@
 // tools/buildPoolsTrendy.js
-// Builds trend-aware pools using Finnhub (primary) and TwelveData or FMP as fallbacks for quotes.
+// Builds trend-aware pools using Finnhub (primary) and TwelveData as fallback for quotes.
 // Writes: pools.json (names only) and pools-metrics.json (diagnostics).
 // Safe: if no API keys or endpoints fail, it logs and leaves pools.json unchanged.
 
@@ -132,7 +132,6 @@ function tryRead(file) {
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
-const FMP = process.env.FMP_KEY || '';
 
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
@@ -141,7 +140,6 @@ const NEWS_FEATURES_FILE = 'data/news-features.json';
 const NAVER_TRENDS_FILE = 'data/naver-trends.json';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
-const PICK_COUNT = 12;
 // Track picks from earlier markets in this run
 const USED = {};
 
@@ -181,6 +179,7 @@ async function enrichWithNaverTrends(universe, keywordDict){
       budgetLeftMs: timeLeft()
     }).then(r => { bump('naver', true); return r; });
     try {
+      await fsp.mkdir('data', { recursive: true });
       await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
     } catch {}
     const out = {};
@@ -276,7 +275,8 @@ Object.assign(NAME_TO_SYMBOL, {
 Object.assign(NAME_TO_SYMBOL, {
   '한화에어로스페이스': '012450.KS',
   'BGF리테일': '282330.KS',
-  '삼성바이오로직스': '207940.KS'
+  '삼성바이오로직스': '207940.KS',
+  'LG에너지솔루션': '373220.KS'
 });
 
 // Build reverse lookup to convert tickers back to display names
@@ -587,29 +587,31 @@ async function main(){
       symbolSet.add(m.sym);
     }
   }
-  // Build scalable Naver keywords (seeds + aliases/brands + mined news + templates)
   const symbols = Array.from(symbolSet);
+
+  if (!OFFLINE) {
+    // get fresh features first
+    NEWS_FEATURES = await enrichWithNewsFeatures(symbols);
+  }
+
+  // now build keywords using up-to-date features
   const KEYWORDS = await buildKeywordDict({
     symbols,
     seeds: NAVER_SEED_KEYWORDS,
     symbolToName: SYMBOL_TO_NAME,
     newsFeatures: NEWS_FEATURES,
   });
-  // Persist for visibility/debugging
+
   try {
     await fsp.mkdir('data', { recursive: true });
     await fsp.writeFile('data/naver-keywords.json', JSON.stringify(KEYWORDS, null, 2));
   } catch {}
 
   if (!OFFLINE) {
-    NEWS_FEATURES = await enrichWithNewsFeatures(Array.from(symbolSet));
     const NAVER_TRENDS = await enrichWithNaverTrends(universe, KEYWORDS);
-    // Merge trends into NEWS_FEATURES (non-destructive)
-    for (const [k, v] of Object.entries(NAVER_TRENDS)){
+    for (const [k, v] of Object.entries(NAVER_TRENDS)) {
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
     }
-  } else {
-    console.warn('[buildPools] offline mode, using cached news features');
   }
   const prevPools = await readPrevPools();
 
