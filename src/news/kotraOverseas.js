@@ -9,10 +9,10 @@ import fetch from "node-fetch";
 
 const BASE = "https://apis.data.go.kr/B410001/kotra_overseasMarketNews/ovseaMrktNews/ovseaMrktNews";
 
-function apiKey() {
+function apiKeyRaw() {
   const k = process.env.DATA_API_KEY;
   if (!k) throw new Error("DATA_API_KEY missing");
-  return encodeURIComponent(k); // safe for decoded/encoded
+  return k; // RAW
 }
 
 function toISO(d) {
@@ -46,7 +46,7 @@ function dedupeByUrl(arr) {
 // Fetch a single page (default larger page to reduce calls)
 export async function fetchKotraOverseasPage({ pageNo = 1, numOfRows = 50 } = {}) {
   const qs = new URLSearchParams({
-    serviceKey: apiKey(),
+    serviceKey: apiKeyRaw(),
     numOfRows: String(numOfRows),
     pageNo: String(pageNo),
   });

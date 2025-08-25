@@ -17,6 +17,15 @@ const POOLS_TTL_MS = Number(process.env.POOLS_TTL_MS || 24 * 60 * 60 * 1000); //
 const POOLS_URL = process.env.POOLS_URL || ''; // optional remote JSON endpoint
 const REFRESH_POOLS = ARGS.has('--refresh-pools');
 
+// Naver News API (presence check only; we link to SERP)
+const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID || process.env.NAVER_ID || '';
+const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET || process.env.NAVER_SECRET || '';
+const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
+const NAVER_ENABLED = Boolean(NAVER_CLIENT_ID && NAVER_CLIENT_SECRET);
+
+// Cache TTLs
+const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 12 * 60 * 60 * 1000);
+
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // 429-aware delay
@@ -294,6 +303,18 @@ function cachePutSector(cache, symbol, sector) {
   cache._sectors[symbol] = { value: sector, ts: Date.now() };
 }
 
+function cacheGetSearchUrl(cache, name) {
+  const e = cache._searchUrls?.[name];
+  if (!e) return undefined;
+  if (Date.now() - e.ts > NEWS_TTL_MS) return undefined;
+  return e.value; // string URL
+}
+
+function cachePutSearchUrl(cache, name, url) {
+  cache._searchUrls = cache._searchUrls || {};
+  cache._searchUrls[name] = { value: url, ts: Date.now() };
+}
+
 const looksKorean = s => /[가-힣]/.test(s);
 
 // Improved Naver scraping with multiple patterns
@@ -330,6 +351,73 @@ async function naverSectorKR(symbol) {
     console.warn(`[NAVER] ${symbol}: ${e.message}`);
     return null;
   }
+}
+
+async function naverNewsSearchPresence(query) {
+  if (!NAVER_ENABLED) return false;
+  const params = new URLSearchParams({
+    query,
+    display: '1',
+    start: '1',
+    sort: 'date'
+  });
+  try {
+    const res = await fetchWithRetry(`${NAVER_NEWS_ENDPOINT}?${params}`, {
+      headers: {
+        'X-Naver-Client-Id': NAVER_CLIENT_ID,
+        'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+        'Accept': 'application/json'
+      }
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    return Array.isArray(json?.items) && json.items.length > 0;
+  } catch (e) {
+    console.warn(`[NAVER_NEWS_PRESENCE] ${query}: ${e.message}`);
+    noteStatus(e);
+    return false;
+  }
+}
+
+const buildNaverNewsSERP = q =>
+  `https://search.naver.com/search.naver?where=news&sm=tab_jum&query=${encodeURIComponent(q)}`;
+
+const buildGoogleNewsSERP = q =>
+  `https://www.google.com/search?tbm=nws&q=${encodeURIComponent(q)}`;
+
+const buildYahooNewsSERP = q =>
+  `https://news.search.yahoo.com/search?p=${encodeURIComponent(q)}`;
+
+function makeSearchQuery(name, ticker) {
+  // Include ticker if resolved; simple and language-agnostic
+  return ticker ? `${name} ${ticker}` : name;
+}
+
+async function fetchSearchUrl(name, ticker, cache) {
+  // 1) cache
+  const cached = cacheGetSearchUrl(cache, name);
+  if (cached !== undefined) return cached;
+
+  const query = makeSearchQuery(name, ticker);
+
+  // 2) prefer Naver if API confirms presence
+  let url = null;
+  try {
+    const ok = await naverNewsSearchPresence(query);
+    if (ok) {
+      url = buildNaverNewsSERP(query);
+    }
+  } catch (e) {
+    // already logged in presence checker
+  }
+
+  // 3) fallbacks
+  if (!url) url = buildGoogleNewsSERP(query);
+  if (!url) url = buildYahooNewsSERP(query); // practically never hit, but keeps the intent clear
+
+  cachePutSearchUrl(cache, name, url);
+  await saveCache(cache);
+  return url;
 }
 
 // Improved Yahoo search
@@ -521,7 +609,7 @@ async function tryFetchAndEnrich() {
   const cache = await loadCache();
   let successCount = 0;
 
-  // Collect sector information
+  // Collect sector and search URL information
   for (const market of Object.keys(data)) {
     const bucket = data[market];
     for (const group of ['safe', 'aggressive']) {
@@ -534,20 +622,29 @@ async function tryFetchAndEnrich() {
         const prevSector = typeof entry === 'object' ? (entry.sector ?? null) : null;
 
         try {
-          const { sector } = await fetchSector(name, cache);
-          if (sector) {
-            updated.push({ name, sector });
-            successCount++;
-          } else {
-            console.warn(`[WARN] ${name}: sector not resolved`);
-            updated.push({ name, sector: prevSector });
+          const { sector, ticker } = await fetchSector(name, cache);
+
+          // Build a SERP URL with fallback: Naver → Google → Yahoo
+          let searchUrl = null;
+          try {
+            searchUrl = await fetchSearchUrl(name, ticker, cache);
+          } catch (e) {
+            console.warn(`[SEARCH_URL_FAIL] ${name}: ${e.message}`);
           }
+
+          updated.push({
+            name,
+            sector: sector || prevSector || null,
+            ticker: ticker || null,
+            searchUrl: searchUrl || null
+          });
+
+          if (sector) successCount++;
         } catch (err) {
           console.error(`[ERROR] ${name}: ${err.message}`);
-          updated.push({ name, sector: prevSector });
+          updated.push({ name, sector: prevSector || null, ticker: null, searchUrl: null });
           noteStatus(err);
 
-          // Bail out if too many 429s
           if (consecutive429 >= 5) {
             throw new Error('Too many consecutive 429s, aborting');
           }
