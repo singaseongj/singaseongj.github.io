@@ -1,4 +1,5 @@
-import fs from 'fs/promises';
+import fs from 'fs';
+import path from 'path';
 import crypto from 'crypto';
 
 const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
@@ -7,19 +8,31 @@ const NAVER_URL = 'https://openapi.naver.com/v1/datalab/search';
 const MAX_GROUPS_PER_REQ = 5; // DataLab hard limit
 const DEFAULT_TTL_MS = Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6 * 60 * 60 * 1000);
 const REQ_TIMEOUT_MS = Number(process.env.NAVER_REQ_TIMEOUT_MS || 8000);
-const RETRIES = Number(process.env.NAVER_RETRIES || 3);
-const BACKOFF_BASE_MS = Number(process.env.NAVER_BACKOFF_BASE_MS || 600);
-const CACHE_DIR = process.env.NAVER_CACHE_DIR || 'cache';
-const QPS = Number(process.env.NAVER_QPS || 2); // crude throttle
-let lastReqTs = 0;
 
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-function now(){ return Date.now(); }
-function hash(obj){
-  return crypto.createHash('sha1').update(JSON.stringify(obj)).digest('hex').slice(0, 16);
+const NAVER_CACHE_DIR = path.join('cache', 'naver');
+fs.mkdirSync(NAVER_CACHE_DIR, { recursive: true });
+
+function keyForNaver(objOrStr) {
+  const s = typeof objOrStr === 'string' ? objOrStr : JSON.stringify(objOrStr);
+  return crypto.createHash('sha1').update(s).digest('hex');
 }
-
-async function ensureDir(p){ await fs.mkdir(p, { recursive: true }); }
+function cachePath(key) {
+  return path.join(NAVER_CACHE_DIR, `${key}.json`);
+}
+async function readCache(key, ttlMs) {
+  const p = cachePath(key);
+  try {
+    const st = await fs.promises.stat(p);
+    if (Date.now() - st.mtimeMs > ttlMs) return null;
+    return JSON.parse(await fs.promises.readFile(p, 'utf8'));
+  } catch { return null; }
+}
+async function writeCache(key, data) {
+  const p = cachePath(key);
+  const tmp = `${p}.tmp`;
+  await fs.promises.writeFile(tmp, JSON.stringify(data));
+  await fs.promises.rename(tmp, p);
+}
 
 export function rollingMedian(arr, win) {
   const out = new Array(arr.length).fill(null);
@@ -62,55 +75,6 @@ export function asvi(series, win=8) {
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
 
-async function readCacheOrNull(path, ttlMs){
-  try{
-    const stat = await fs.stat(path);
-    if (now() - stat.mtimeMs > ttlMs) return null;
-    return JSON.parse(await fs.readFile(path, 'utf8'));
-  }catch{ return null; }
-}
-
-async function writeAtomic(p, data){
-  const tmp = `${p}.tmp`;
-  await fs.writeFile(tmp, data);
-  await fs.rename(tmp, p);
-}
-
-async function postJSONWithBackoff({ url, headers, body, retries=RETRIES, timeoutMs=REQ_TIMEOUT_MS, budgetLeftMs=Infinity }) {
-  let lastErr;
-  for (let attempt=0; attempt<=retries; attempt++){
-    if (budgetLeftMs <= 0) throw new Error('naver budget exhausted');
-    // simple qps throttle
-    const gap = 1000 / Math.max(QPS, 1);
-    const wait = Math.max(0, lastReqTs + gap - now());
-    if (wait > 0) await sleep(wait);
-    lastReqTs = now();
-
-    const controller = new AbortController();
-    const perReq = Math.min(timeoutMs, Math.max(500, budgetLeftMs));
-    const t = setTimeout(() => controller.abort(), perReq);
-    try{
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type':'application/json', ...headers },
-        body: JSON.stringify(body),
-        signal: controller.signal
-      });
-      clearTimeout(t);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    }catch(e){
-      clearTimeout(t);
-      lastErr = e;
-      if (attempt < retries && budgetLeftMs > 0){
-        const backoff = BACKOFF_BASE_MS * Math.pow(2, attempt);
-        await sleep(backoff);
-      }
-    }
-  }
-  throw lastErr;
-}
-
 /**
  * baskets: Array<{ groupName: string, keywords: string[], weight?: number, symbol?: string }>
  * Returns: { perSymbol: { [symbol]: { naverPopularity, spike, persist, lastAsvi, debug } }, raw: ... }
@@ -120,8 +84,6 @@ export async function fetchNaverTrends({ baskets, startDate, endDate, timeUnit='
     console.warn('[naver] missing NAVER_CLIENT_ID/SECRET; returning empty');
     return { perSymbol:{}, raw:[] };
   }
-  await ensureDir(CACHE_DIR);
-
   // Build requests in chunks of 5 groups
   const chunks = [];
   for (let i=0;i<baskets.length;i+=MAX_GROUPS_PER_REQ){
@@ -130,27 +92,38 @@ export async function fetchNaverTrends({ baskets, startDate, endDate, timeUnit='
 
   const results = [];
   for (const chunk of chunks){
+    const endpoint = NAVER_URL;
     const body = {
       startDate, endDate, timeUnit, keywordGroups: chunk.map(g => ({ groupName: g.groupName, keywords: g.keywords })),
       device, ages, gender
     };
-    const cacheKey = `${NAVER_URL}-${hash(body)}.json`;
-    const cachePath = `${CACHE_DIR}/${cacheKey}`;
 
-    const cached = await readCacheOrNull(cachePath, cacheTtlMs);
-    if (cached) { results.push(cached); continue; }
+    const cacheKey = keyForNaver({ endpoint, body });
+    const ttl = Number(cacheTtlMs ?? DEFAULT_TTL_MS);
 
-    try{
-      const j = await postJSONWithBackoff({
-        url: NAVER_URL,
-        headers: { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET },
-        body, budgetLeftMs
-      });
-      await writeAtomic(cachePath, JSON.stringify(j));
-      results.push(j);
-    }catch(e){
-      console.warn('[naver] chunk failed:', e.message);
+    let json = await readCache(cacheKey, ttl);
+    if (!json) {
+      const controller = new AbortController();
+      const perReq = Math.min(budgetLeftMs ?? 30000, REQ_TIMEOUT_MS);
+      const timer = setTimeout(() => controller.abort(), perReq);
+
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'X-Naver-Client-Id': NAVER_ID,
+          'X-Naver-Client-Secret': NAVER_SECRET,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal,
+      }).finally(() => clearTimeout(timer));
+
+      if (!res.ok) throw new Error(`Naver HTTP ${res.status}`);
+      json = await res.json();
+      await writeCache(cacheKey, json);
     }
+
+    results.push(json);
   }
 
   // Flatten and compute ASVI per group
