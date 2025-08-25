@@ -110,8 +110,14 @@ jobs:
           npm config set fund false
 
       - name: Authenticate npm (optional)
-        if: ${{ env.NPM_TOKEN != '' }}
-        run: echo "//registry.npmjs.org/:_authToken=${{ env.NPM_TOKEN }}" > ~/.npmrc
+        shell: bash
+        run: |
+          if [ -n "${NPM_TOKEN:-}" ]; then
+            printf "//registry.npmjs.org/:_authToken=%s\n" "$NPM_TOKEN" > ~/.npmrc
+            echo "✅ npm auth configured"
+          else
+            echo "ℹ️ NPM_TOKEN not set; skipping npm auth"
+          fi
 
       - name: Use temporary npm mirror (optional)
         if: ${{ vars.USE_NPM_MIRROR == '1' }}
