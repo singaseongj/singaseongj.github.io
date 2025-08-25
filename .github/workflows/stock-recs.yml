@@ -29,6 +29,9 @@ jobs:
       # GitHub often has flaky access to Naver; feel free to unset.
       SKIP_NAVER: "0"
       IS_CRON: ${{ github.event_name == 'schedule' }}
+      # FX backup via Korea Eximbank (oapi.koreaexim.go.kr)
+      USE_EXIM_FX_BACKUP: "1"
+      EXIM_AUTH_KEY: ${{ secrets.KRX_API_KEY }}  # <- you stored FNOdFh... under KRX_API_KEY
       # Use the portal key for KOTRA + (optionally KRX if you share it)
       DATA_API_KEY: ${{ secrets.KRX_API_KEY }}
       USE_KOTRA_BACKUP: "1"
