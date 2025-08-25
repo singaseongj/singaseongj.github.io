@@ -75,8 +75,8 @@ function tryProviders(sym) {
 }
 
 function mapOne(rawKey) {
-  const learned = lookupLearnedMapping(rawKey);
-  if (learned) return { sym: learned, raw: rawKey, source: 'learned' };
+  const direct = nameToSymbol(rawKey);
+  if (direct) return { sym: direct, raw: rawKey, source: (direct === rawKey ? 'ticker' : 'dict') };
 
   const t = String(rawKey).trim();
   const variants = [t, t.replace('.', '-'), t.replace('.', '/'), t.replace('.', '')];
@@ -88,7 +88,6 @@ function mapOne(rawKey) {
       return { sym, raw: rawKey, source: 'provider' };
     }
   }
-
   return null;
 }
 
@@ -289,7 +288,12 @@ for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP }
 function nameToSymbol(name){
   const learned = lookupLearnedMapping(name);
   if (learned) return learned;
-  if (/^[A-Z.\-]{1,7}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
+
+  const dict = NAME_TO_SYMBOL[name] || TICKER_MAP[name];
+  if (dict) return dict;
+
+  if (/^[A-Z][A-Z.\-]{0,6}(\.[A-Z]{1,3})?$/.test(name)) return name;
+  if (/^\d{6}\.K[QS]$/.test(name)) return name;
   return null;
 }
 
@@ -685,8 +689,18 @@ async function main(){
 
       byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
     });
+    for (const n of names) {
+      if (!byName[n]) {
+        byName[n] = {
+          ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
+          newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false,
+          sym:null, source:null, attempts:[], fetchMs:0
+        };
+      }
+    }
+
     const filteredNames = names.filter(n => {
-      const m = byName[n];
+      const m = byName[n] || {};
       const sym = m.sym;
       const isKRName = sym ? isKR(sym) : false;
       const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym));
