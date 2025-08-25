@@ -86,11 +86,15 @@
   "NASDAQ 100": {
     "safe": [
       {
+        "name": "Alphabet",
+        "sector": "Communication Services"
+      },
+      {
         "name": "Amazon",
         "sector": "Consumer Discretionary"
       },
       {
-        "name": "AMD",
+        "name": "Apple",
         "sector": "Technology"
       },
       {
@@ -100,19 +104,11 @@
       {
         "name": "Meta Platforms",
         "sector": "Communication Services"
-      },
-      {
-        "name": "Microsoft",
-        "sector": "Technology"
       }
     ],
     "aggressive": [
       {
         "name": "ABNB",
-        "sector": null
-      },
-      {
-        "name": "ADBE",
         "sector": null
       },
       {
@@ -122,40 +118,22 @@
       {
         "name": "AMAT",
         "sector": null
+      },
+      {
+        "name": "AMGN",
+        "sector": null
       }
     ]
   },
   "S&P 500": {
     "safe": [
       {
-        "name": "Alphabet",
-        "sector": "Communication Services"
-      },
-      {
-        "name": "AMD",
-        "sector": "Technology"
-      },
-      {
-        "name": "JPMorgan Chase",
-        "sector": "Financial Services"
-      },
-      {
-        "name": "Microsoft",
-        "sector": "Technology"
-      },
-      {
-        "name": "NVIDIA",
-        "sector": null
-      }
-    ],
-    "aggressive": [
-      {
-        "name": "ABBV",
-        "sector": null
-      },
-      {
         "name": "Amazon",
         "sector": "Consumer Discretionary"
+      },
+      {
+        "name": "Apple",
+        "sector": "Technology"
       },
       {
         "name": "GOOG",
@@ -164,8 +142,30 @@
       {
         "name": "Meta Platforms",
         "sector": "Communication Services"
+      },
+      {
+        "name": "Microsoft",
+        "sector": "Technology"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "AXP",
+        "sector": null
+      },
+      {
+        "name": "Eli Lilly",
+        "sector": "Healthcare"
+      },
+      {
+        "name": "JPMorgan Chase",
+        "sector": "Financial Services"
+      },
+      {
+        "name": "UnitedHealth",
+        "sector": "Healthcare"
       }
     ]
   },
-  "lastUpdated": "2025-08-25T05:27:07+09:00"
+  "lastUpdated": "2025-08-25T11:03:08+09:00"
 }
