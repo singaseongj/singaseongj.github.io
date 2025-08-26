@@ -109,9 +109,9 @@ async function fetchNaverNews() {
   };
   const usRaw = await Promise.all(NAVER_US_QUERIES.map(q => naverSearch(q, headers)));
   const krRaw = await Promise.all(NAVER_KR_QUERIES.map(q => naverSearch(q, headers)));
-  const us = dedupe(usRaw.flat()).slice(0, 5);
-  const kr = dedupe(krRaw.flat()).slice(0, 5);
-  return [...us, ...kr];
+  const us = dedupe(usRaw.flat()).slice(0, 6);
+  const kr = dedupe(krRaw.flat()).slice(0, 6);
+  return [...us, ...kr].slice(0, 12);
 }
 
 async function gatherFeeds() {
@@ -134,14 +134,14 @@ async function gatherFeeds() {
     (isKR(it) ? kr : us).push(it);
   }
 
-  return [...us.slice(0, 5), ...kr.slice(0, 5)];
+  return [...us.slice(0, 6), ...kr.slice(0, 6)].slice(0, 12);
 }
 
 async function gather() {
   if (process.env.SKIP_NAVER !== '1') {
     try {
       const naverItems = await fetchNaverNews();
-      if (naverItems.length >= 10) return naverItems;
+      if (naverItems.length >= 8) return naverItems;
       console.warn('Naver returned insufficient items; falling back to feeds');
     } catch (e) {
       console.warn('Naver fetch failed', e.message);
@@ -154,7 +154,7 @@ async function gather() {
 
 async function main() {
   let items = await gather();
-  const NEED_BACKUP = process.env.USE_KOTRA_BACKUP === "1" && (!items?.length || items.length < 10);
+  const NEED_BACKUP = process.env.USE_KOTRA_BACKUP === "1" && (!items?.length || items.length < 8);
   if (NEED_BACKUP) {
     try {
       const kotraRaw = await fetchKotraOverseasRecent(2, 50);
@@ -170,8 +170,8 @@ async function main() {
   for (const it of items) {
     (isKR(it) ? kr : us).push(it);
   }
-  items = [...us.slice(0, 5), ...kr.slice(0, 5)];
-  if (!items.length) throw new Error('No news items after filtering');
+  items = [...us.slice(0, 6), ...kr.slice(0, 6)].slice(0, 12);
+  if (items.length < 8) throw new Error('No news items after filtering');
   const out = { lastUpdated: nowKSTISO(), items };
   await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
   console.log(`Wrote ${items.length} items to ${OUT_FILE}`);
