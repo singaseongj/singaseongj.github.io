@@ -5,6 +5,7 @@ const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
 const NEWS_CONCURRENCY = Number(process.env.NEWS_CONCURRENCY || 2);
 const ALLOW_STALE_NEWS = process.env.ALLOW_STALE_NEWS !== '0';
+const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
 
 function looksLikeXmlOrHtml(s){ const t=String(s||'').trim(); return !!t && t.startsWith('<'); }
 function cacheKey(url){ return path.join(CACHE_DIR, `news-${Buffer.from(url).toString('base64url')}.json`); }
@@ -41,13 +42,8 @@ function buildQueries(symbols, { symbolToName={} }={}){
   const q = {};
   for (const s of symbols){
     const name = symbolToName[s] || s;
-    if (isKR(s)){
-      // KR: name is often Korean; fallback to raw symbol if not
-      q[s] = encodeURIComponent(name || s);
-    } else {
-      // US: include both ticker and name to reduce ambiguity
-      q[s] = encodeURIComponent(`${s} ${name}`);
-    }
+    if (isKR(s)) q[s] = `${name} ${s}`;
+    else q[s] = `${s} ${name}`;
   }
   return q;
 }
@@ -70,6 +66,16 @@ async function mapLimit(items, limit, worker){
   return out;
 }
 
+async function with429Retry(fn, max=1, baseMs=400){
+  let last; for (let i=0;i<=max;i++){
+    try { return await fn(); } catch(e){
+      last = e;
+      if (!/HTTP 429/.test(String(e))) break;
+      if (i<max) await new Promise(r=>setTimeout(r, Math.floor(baseMs*Math.pow(2,i)*(0.6+Math.random()*0.6))));
+    }
+  } throw last;
+}
+
 /**
  * Provider calls (each returns a {count, sentiment?, blogMentions?} shape or null)
  */
@@ -78,15 +84,15 @@ async function newsFromFinnhub(sym, FINNHUB){
   const to = new Date().toISOString().slice(0,10);
   const from = new Date(Date.now()-7*864e5).toISOString().slice(0,10);
   const url = `https://finnhub.io/api/v1/company-news?symbol=${encodeURIComponent(sym)}&from=${from}&to=${to}&token=${FINNHUB}`;
-  const j = await cachedJson(url, (u)=>safeGetJson(u), 20*60*1000, true);
+  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
   const arr = Array.isArray(j) ? j : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
 async function newsFromNewsAPI(sym, q, NEWSAPI){
   if (!NEWSAPI) return null;
-  const url = `https://newsapi.org/v2/everything?q=${q}&language=en&pageSize=20&sortBy=publishedAt&apiKey=${NEWSAPI}`;
-  const j = await cachedJson(url, (u)=>safeGetJson(u), 20*60*1000, true);
+  const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(q)}&language=en&pageSize=10&sortBy=publishedAt&apiKey=${NEWSAPI}`;
+  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
   const arr = Array.isArray(j?.articles) ? j.articles : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
@@ -94,11 +100,20 @@ async function newsFromNewsAPI(sym, q, NEWSAPI){
 async function newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET){
   if (!NAVER_ID || !NAVER_SECRET) return null;
   // news search (date-sorted); we only need a small page to decide "non-zero"
-  const url = `https://openapi.naver.com/v1/search/news.json?query=${q}&display=10&sort=date`;
-  const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+  const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
+  const headers = { ...defaultUA, 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
   const j = await cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true);
   const arr = Array.isArray(j?.items) ? j.items : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
+async function blogFromNaver(q, NAVER_ID, NAVER_SECRET){
+  if (!NAVER_ID || !NAVER_SECRET) return 0;
+  const url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
+  const headers = { ...defaultUA, 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+  const j = await cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true);
+  const arr = Array.isArray(j?.items) ? j.items : [];
+  return Math.min(arr.length, 30);
 }
 
 /**
@@ -117,33 +132,27 @@ export async function buildNewsFeatures(symbols, opts={}){
   await mapLimit(symbols, NEWS_CONCURRENCY, async (sym)=>{
     const q = queries[sym];
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
-
-    // 1) Finnhub (fast)
+    const isKr = /\.K[QS]$/.test(sym);
+    const providers = isKr ? ['naver', 'finnhub', 'newsapi'] : ['finnhub', 'newsapi', 'naver'];
+    let v = null;
     try {
-      const v = await newsFromFinnhub(sym, FINNHUB);
-      if (v && v.count > 0) { out[sym] = v; return; }
+      for (const p of providers) {
+        if (p === 'finnhub') v = await newsFromFinnhub(sym, FINNHUB);
+        else if (p === 'newsapi') v = await with429Retry(() => newsFromNewsAPI(sym, q, NEWSAPI), 1);
+        else v = await newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET);
+        if (v && v.count > 0) break;
+      }
     } catch (e) {
-      console.warn(`[news] Finnhub failed for ${sym}: ${e.message}`);
+      console.warn(`[news] providers failed for ${sym}: ${e.message}`);
     }
-
-    // 2) NewsAPI fallback
     try {
-      const v = await newsFromNewsAPI(sym, q, NEWSAPI);
-      if (v && v.count > 0) { out[sym] = v; return; }
-    } catch (e) {
-      console.warn(`[news] NewsAPI failed for ${sym}: ${e.message}`);
-    }
-
-    // 3) NAVER news fallback (works well for KR, tolerable for US)
-    try {
-      const v = await newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET);
-      if (v && v.count > 0) { out[sym] = v; return; }
-    } catch (e) {
-      console.warn(`[news] NAVER failed for ${sym}: ${e.message}`);
-    }
-
-    // Nothing landed: return neutral
-    out[sym] = feat;
+      const blogs = await blogFromNaver(q, NAVER_ID, NAVER_SECRET);
+      const base = v || feat;
+      base.blogMentions = blogs;
+      out[sym] = base;
+      return;
+    } catch {}
+    out[sym] = v || feat;
   });
 
   return out;
