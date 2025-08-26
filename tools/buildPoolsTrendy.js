@@ -243,8 +243,8 @@ try {
   NEWS_FEATURES = JSON.parse(await fsp.readFile(NEWS_FEATURES_FILE, 'utf8'));
 } catch {}
 
-async function enrichWithNewsFeatures(symbols) {
-  const feats = await buildNewsFeatures(symbols);
+async function enrichWithNewsFeatures(symbols, opts = {}) {
+  const feats = await buildNewsFeatures(symbols, opts);
   try {
     await fsp.mkdir('data', { recursive: true });
     await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
@@ -764,7 +764,7 @@ async function main(){
 
   if (!OFFLINE) {
     NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.35
-      ? await enrichWithNewsFeatures(symbols)
+      ? await enrichWithNewsFeatures(symbols, { symbolToName: SYMBOL_TO_NAME })
       : {};
   }
 
@@ -785,6 +785,14 @@ async function main(){
     const NAVER_TRENDS = await enrichWithNaverTrends(universe, KEYWORDS);
     for (const [k, v] of Object.entries(NAVER_TRENDS)) {
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
+      // If news providers were throttled (count = 0) but NAVER shows interest,
+      // synthesize a minimal newsCount so coverage can count this symbol.
+      const cur = NEWS_FEATURES[k];
+      if ((cur.count == null || cur.count === 0) && typeof cur.naverPopularity === 'number') {
+        if (cur.naverPopularity > 0.05 || cur.naverSpike > 0.0) {
+          cur.count = Math.max(1, Math.round(cur.naverPopularity * 5));
+        }
+      }
     }
   }
   const prevPools = await readPrevPools();
