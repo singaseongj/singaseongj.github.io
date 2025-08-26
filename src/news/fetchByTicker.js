@@ -7,6 +7,17 @@ const NEWS_CONCURRENCY = Number(process.env.NEWS_CONCURRENCY || 2);
 const ALLOW_STALE_NEWS = process.env.ALLOW_STALE_NEWS !== '0';
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
 
+// Prefer explicitly encoded key if provided; otherwise encode decoded/plain
+function chooseEncodedServiceKey() {
+  const enc = process.env.DATA_API_KEY || '';
+  const dec = process.env.DATA_API_KEY_DECODED || '';
+  const looksEncoded = /%[0-9a-fA-F]{2}/.test(enc);
+  if (enc && looksEncoded) return enc;
+  if (!enc && dec) return encodeURIComponent(dec);
+  if (enc) return encodeURIComponent(enc);
+  return '';
+}
+
 function looksLikeXmlOrHtml(s){ const t=String(s||'').trim(); return !!t && t.startsWith('<'); }
 function cacheKey(url){ return path.join(CACHE_DIR, `news-${Buffer.from(url).toString('base64url')}.json`); }
 
@@ -116,6 +127,53 @@ async function blogFromNaver(q, NAVER_ID, NAVER_SECRET){
   return Math.min(arr.length, 30);
 }
 
+const KOTRA_BASE =
+  'https://apis.data.go.kr/B410001/kotra_overseasMarketNews/ovseaMrktNews/ovseaMrktNews';
+
+function natnForSym(sym) {
+  if (/\.K[QS]$/.test(sym)) return '대한민국';
+  return '미국';
+}
+
+function buildKotraUrl({ serviceKey, natn, title, rows = 10, page = 1, includeText = true }) {
+  const params = new URLSearchParams();
+  params.set('serviceKey', serviceKey);
+  params.set('type', 'json');
+  params.set('numOfRows', String(rows));
+  params.set('pageNo', String(page));
+  if (includeText) params.set('search8', 'Y');
+  if (natn) params.set('search1', natn);
+  if (title) params.set('search2', title);
+  return `${KOTRA_BASE}?${params.toString()}`;
+}
+
+async function newsFromKotra(sym, rawQuery) {
+  const serviceKey = chooseEncodedServiceKey();
+  if (!serviceKey) return null;
+
+  const natn = natnForSym(sym);
+  const url = buildKotraUrl({
+    serviceKey,
+    natn,
+    title: rawQuery,
+    rows: 10,
+    page: 1,
+    includeText: true
+  });
+
+  const headers = { Accept: 'application/json' };
+  const j = await cachedJson(url, (u) => safeGetJson(u, headers), 20 * 60 * 1000, true);
+
+  const header = j?.response?.header;
+  if (!header || header.resultCode !== '00') return { count: 0, sentiment: 0, blogMentions: 0 };
+
+  const itemsNode = j?.response?.body?.itemList?.item;
+  const items = Array.isArray(itemsNode) ? itemsNode : (itemsNode ? [itemsNode] : []);
+  const count = Math.min(items.length, 30);
+  const hasKw = items.some(it => typeof it?.kwrd === 'string' && it.kwrd.trim());
+  return { count, sentiment: 0, blogMentions: hasKw ? Math.min(count, 10) : 0 };
+}
+
 /**
  * Main: buildNewsFeatures(symbols, { symbolToName })
  * Returns shape: { [symbol]: { count, sentiment, blogMentions } }
@@ -133,26 +191,29 @@ export async function buildNewsFeatures(symbols, opts={}){
     const q = queries[sym];
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
     const isKr = /\.K[QS]$/.test(sym);
-    const providers = isKr ? ['naver', 'finnhub', 'newsapi'] : ['finnhub', 'newsapi', 'naver'];
-    let v = null;
+    const providers = isKr
+      ? ['naver', 'kotra', 'finnhub', 'newsapi']
+      : ['finnhub', 'newsapi', 'kotra', 'naver'];
     try {
       for (const p of providers) {
+        let v = null;
         if (p === 'finnhub') v = await newsFromFinnhub(sym, FINNHUB);
         else if (p === 'newsapi') v = await with429Retry(() => newsFromNewsAPI(sym, q, NEWSAPI), 1);
+        else if (p === 'kotra') v = await newsFromKotra(sym, q);
         else v = await newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET);
-        if (v && v.count > 0) break;
+        if (v && v.count > 0) {
+          try {
+            const blogs = await blogFromNaver(q, NAVER_ID, NAVER_SECRET);
+            v.blogMentions = Math.max(v.blogMentions || 0, blogs);
+          } catch {}
+          out[sym] = v;
+          return;
+        }
       }
     } catch (e) {
       console.warn(`[news] providers failed for ${sym}: ${e.message}`);
     }
-    try {
-      const blogs = await blogFromNaver(q, NAVER_ID, NAVER_SECRET);
-      const base = v || feat;
-      base.blogMentions = blogs;
-      out[sym] = base;
-      return;
-    } catch {}
-    out[sym] = v || feat;
+    out[sym] = feat;
   });
 
   return out;
