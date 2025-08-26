@@ -91,15 +91,23 @@ function saveNameToSymbol(map) {
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
 
-// Canonicalize keys: NFC/K, strip zero-width, collapse whitespace, unify ASCII dash
+// Canonicalize keys and strip invisible characters
 function normalizeKey(s) {
   if (s == null) return '';
-  return String(s)
-    .normalize('NFKC')
-    .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width
-    .replace(/\u2212/g, '-')               // minus sign -> hyphen
-    .replace(/\s+/g, '')
-    .trim();
+  let t = String(s).normalize('NFKC');
+  // Remove all format controls (Cf) if supported
+  try { t = t.replace(/\p{Cf}/gu, ''); } catch {}
+  // Remove common invisibles (soft hyphen, word joiner, bidi, etc.)
+  t = t.replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '');
+  // Remove ASCII/Latin control chars (Cc)
+  t = t.replace(/[\u0000-\u001F\u007F-\u009F]/g, '');
+  // Unify Unicode minus to hyphen
+  t = t.replace(/\u2212/g, '-');
+  // Remove all space separators (Zs) and then any remaining whitespace
+  t = t.replace(/\u00A0|\u1680|[\u2000-\u200A]|\u202F|\u205F|\u3000/g, '');
+  t = t.replace(/\s+/g, '').trim();
+  // Uppercase for stable ticker comparisons (safe for KR codes)
+  return t.toUpperCase();
 }
 
 function keyVariants(k) {
@@ -168,7 +176,8 @@ function mapOne(rawKey) {
 function fallbackSymbolFromRaw(raw) {
   const s = normalizeKey(raw);
   if (/^\d{6}\.K[QS]$/.test(s)) return s;
-  if (/^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(s)) return s;
+  if (ALLOWLIST.has(s)) return s;
+  if (/^[A-Z]{1,5}\.[A-Z]{1,3}$/.test(s)) return s;
   if (/^[A-Z]{1,5}[-/][A-Z]{1,3}$/.test(s)) {
     const [a,b] = s.split(/[-/]/);
     return `${a}.${b}`;
@@ -234,8 +243,8 @@ try {
   NEWS_FEATURES = JSON.parse(await fsp.readFile(NEWS_FEATURES_FILE, 'utf8'));
 } catch {}
 
-async function enrichWithNewsFeatures(symbols) {
-  const feats = await buildNewsFeatures(symbols);
+async function enrichWithNewsFeatures(symbols, opts = {}) {
+  const feats = await buildNewsFeatures(symbols, opts);
   try {
     await fsp.mkdir('data', { recursive: true });
     await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
@@ -373,6 +382,22 @@ Object.assign(NAME_TO_SYMBOL, {
   'LG에너지솔루션': '373220.KS'
 });
 
+// Reindex NAME_TO_SYMBOL and also merge TICKER_MAP by normalized keys
+(function normalizeDictionaries() {
+  const entries = Object.entries(NAME_TO_SYMBOL);
+  for (const [k, v] of entries) {
+    const nk = normalizeKey(k);
+    if (nk !== k) {
+      delete NAME_TO_SYMBOL[k];
+      if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
+    }
+  }
+  for (const [k, v] of Object.entries(TICKER_MAP)) {
+    const nk = normalizeKey(k);
+    if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
+  }
+})();
+
 // Build reverse lookup to convert tickers back to display names
 const SYMBOL_TO_NAME = {};
 for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP })) {
@@ -422,6 +447,29 @@ function isUS(symbolOrName) {
 function toTwelveSymbol(sym) {
   const m = String(sym).match(/^(\d{6})\.(K[QS])$/);
   return m ? `${m[1]}:${m[2]}` : sym;
+}
+
+// Try fetching candles with alternate symbol variants
+async function getCandlesWithVariants(sym, opts) {
+  const tried = new Set();
+  const candidates = [sym];
+  if (isKR(sym)) candidates.push(toTwelveSymbol(sym));
+  else {
+    const dash = sym.includes('.') ? sym.replace(/\./g, '-') : null;
+    const slsh = sym.includes('.') ? sym.replace(/\./g, '/') : null;
+    const dot1 = sym.includes('-') ? sym.replace(/-/g, '.') : null;
+    const dot2 = sym.includes('/') ? sym.replace(/\//g, '.') : null;
+    for (const c of [dash, slsh, dot1, dot2]) if (c && c !== sym) candidates.push(c);
+  }
+  for (const c of candidates) {
+    if (tried.has(c)) continue;
+    tried.add(c);
+    try {
+      const res = await getCandles(c, opts);
+      if (res && Array.isArray(res.c) && res.c.length >= 21) return res;
+    } catch (_) {}
+  }
+  return null;
 }
 
 
@@ -527,14 +575,6 @@ async function finnhubEarningsWindowSet() {
 }
 
 // Finnhub earnings window ±10d
-async function finnhubRecentEarnings(symbol){
-  const from = todayYMD(-10), to = todayYMD(+10);
-  const url = `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&symbol=${encodeURIComponent(symbol)}&token=${FINNHUB}`;
-  const j = await getJSON(url, {}, RETRIES, BACKOFF_BASE_MS, 1000*60*60*4 /* 4h */).then(d => { bump('finnhub', true); return d; }).catch(() => { bump('finnhub', false); return null; });
-  const rows = j?.earningsCalendar || [];
-  return rows.some(x => (x.symbol || x.ticker) === symbol);
-}
-
 // ---------- Metrics from candles ----------
 function computeMetrics(c, v){
   // c: closes oldest..newest, v: volumes oldest..newest
@@ -699,7 +739,10 @@ async function main(){
           count++;
         } else {
           const learned = lookupLearnedMapping(raw);
-          if (!learned) console.warn('[universe] unmapped:', raw);
+          if (!learned) {
+            const hex = [...String(raw)].map(c=>c.charCodeAt(0).toString(16)).join(' ');
+            console.warn('[universe] unmapped:', raw, 'hex=', hex);
+          }
         }
       }
     }
@@ -720,8 +763,9 @@ async function main(){
   }
 
   if (!OFFLINE) {
-    // get fresh features first
-    NEWS_FEATURES = await enrichWithNewsFeatures(symbols);
+    NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.35
+      ? await enrichWithNewsFeatures(symbols, { symbolToName: SYMBOL_TO_NAME })
+      : {};
   }
 
   // now build keywords using up-to-date features
@@ -741,6 +785,14 @@ async function main(){
     const NAVER_TRENDS = await enrichWithNaverTrends(universe, KEYWORDS);
     for (const [k, v] of Object.entries(NAVER_TRENDS)) {
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
+      // If news providers were throttled (count = 0) but NAVER shows interest,
+      // synthesize a minimal newsCount so coverage can count this symbol.
+      const cur = NEWS_FEATURES[k];
+      if ((cur.count == null || cur.count === 0) && typeof cur.naverPopularity === 'number') {
+        if (cur.naverPopularity > 0.05 || cur.naverSpike > 0.0) {
+          cur.count = Math.max(1, Math.round(cur.naverPopularity * 5));
+        }
+      }
     }
   }
   const prevPools = await readPrevPools();
@@ -792,7 +844,10 @@ async function main(){
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
-          ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; })
+          ? await getCandlesWithVariants(
+              sym,
+              { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }
+            ).catch(e => { tripOnError(e); return null; })
           : null;
         if (candles?.source) {
           bump(candles.source, true);
@@ -829,6 +884,12 @@ async function main(){
         };
       }
     }
+
+    const withSignals = [...processed].filter(n => {
+      const m = byName[n];
+      return [m.ret5, m.ret20, m.vol20, m.turnover].some(Number.isFinite) || m.newsCount > 0 || m.earn;
+    }).length;
+    console.log(`[metrics] ${market} processed=${processed.size}/${names.length} withSignals=${withSignals}`);
 
     const filteredNames = names.filter(n => {
       const m = byName[n] || {};
@@ -892,6 +953,9 @@ async function main(){
     const total = filteredNames.filter(n => processed.has(n)).length || filteredNames.length;
     let kSafe = Math.min(6, Math.ceil(total * 0.5));
     let kAggr = Math.min(6, total - kSafe);
+    if (kSafe + kAggr > total) {
+      kAggr = Math.max(0, total - kSafe);
+    }
     if (total >= 2 && kAggr === 0) {
       kAggr = 1;
       if (kSafe > 0) kSafe = Math.min(kSafe, total - kAggr);
