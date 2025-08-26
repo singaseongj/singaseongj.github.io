@@ -1,10 +1,71 @@
+import fs from 'fs';
+import path from 'path';
 import { aggregate } from './sentiment.js';
 import { TICKER_MAP } from '../maps.js';
-import { fetchNews, fetchNaverTrends, fetchNaverBlogCount, NEWSAPI_KEY } from './apis.js';
+import { fetchNaverTrends, fetchNaverBlogCount, NEWSAPI_KEY } from './apis.js';
 import { withRetry, fetchWithTimeout } from '../util/limiter.js';
 import { getTickerArticlesBackup } from './fetchByTicker.kotraBackup.js';
 
+const CACHE_DIR = 'cache';
+const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 60 * 60 * 1000); // 1h
+const NEWS_CONCURRENCY = Number(process.env.NEWS_CONCURRENCY || 3);
+const ALLOW_STALE_NEWS = process.env.ALLOW_STALE_NEWS !== '0';
+
 const UA = 'ddsciencehs-trender/1.0 (+github actions)';
+
+function looksLikeXmlOrHtml(s) {
+  const t = String(s || '').trim();
+  return !!t && t.startsWith('<');
+}
+function cacheKey(url) {
+  const h = Buffer.from(url).toString('base64url');
+  return path.join(CACHE_DIR, `news-${h}.json`);
+}
+async function cachedJson(url, fetcher, ttlMs = NEWS_TTL_MS, allowStale = ALLOW_STALE_NEWS) {
+  const key = cacheKey(url);
+  try {
+    const st = fs.statSync(key);
+    const age = Date.now() - st.mtimeMs;
+    if (age < ttlMs) return JSON.parse(fs.readFileSync(key, 'utf8'));
+    if (allowStale) return JSON.parse(fs.readFileSync(key, 'utf8'));
+  } catch {}
+  const data = await fetcher(url);
+  try { fs.mkdirSync(CACHE_DIR, { recursive: true }); fs.writeFileSync(key, JSON.stringify(data)); } catch {}
+  return data;
+}
+async function safeGetJson(url, headers = {}) {
+  const res = await fetch(url, { headers });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const ct = (res.headers && res.headers.get && res.headers.get('content-type')) || '';
+  if (/json/i.test(ct)) return await res.json();
+  const text = await res.text();
+  if (looksLikeXmlOrHtml(text)) {
+    throw new Error(`non-JSON payload (${ct || 'unknown'})`);
+  }
+  try { return JSON.parse(text); }
+  catch (e) { throw new Error(`JSON parse failed (${ct || 'unknown'}): ${e.message}`); }
+}
+
+// Simple concurrency gate
+async function mapLimit(items, limit, worker) {
+  const out = new Array(items.length);
+  let i = 0, active = 0, rejectOnce;
+  await new Promise((resolve, reject) => {
+    rejectOnce = reject;
+    const next = () => {
+      while (active < limit && i < items.length) {
+        const idx = i++;
+        active++;
+        Promise.resolve(worker(items[idx], idx))
+          .then(v => { out[idx] = v; active--; next(); })
+          .catch(e => { rejectOnce(e); });
+      }
+      if (i >= items.length && active === 0) resolve();
+    };
+    next();
+  });
+  return out;
+}
 
 async function naverPopularityScore(name) {
   if (process.env.SKIP_NAVER === '1') return null;
@@ -22,7 +83,7 @@ async function naverBlogMentions(name) {
   return total == null ? null : Number(total);
 }
 
-export async function fetchByTicker(symbol, name){
+export async function fetchByTicker(symbol, name) {
   const out = { count:0, sentiment:null, top:null, naverPopularity:null, blogMentions:null };
   try {
     let titles = [];
@@ -44,17 +105,12 @@ export async function fetchByTicker(symbol, name){
       const from = new Date(Date.now()-72*3600*1000).toISOString().slice(0,10);
       const to = new Date().toISOString().slice(0,10);
       const url = `https://finnhub.io/api/v1/company-news?symbol=${encodeURIComponent(symbol)}&from=${from}&to=${to}&token=${process.env.FINNHUB_API_KEY}`;
-      const res = await withRetry(() =>
-        fetchWithTimeout(
-          url,
-          { headers: { 'User-Agent': UA } },
-          Number(process.env.REQ_TIMEOUT_MS || 5000)
-        )
-      );
-      const data = await res.json();
+      const data = await cachedJson(url, (u)=>safeGetJson(u), 30*60*1000, true);
       titles = Array.isArray(data) ? data.map(d=>d.headline) : [];
     } else if (NEWSAPI_KEY) {
-      const data = await fetchNews(name || symbol);
+      const q = encodeURIComponent(name || symbol);
+      const url = `https://newsapi.org/v2/everything?q=${q}&language=en&pageSize=20&sortBy=publishedAt&apiKey=${NEWSAPI_KEY}`;
+      const data = await cachedJson(url, (u)=>safeGetJson(u), 30*60*1000, true);
       titles = Array.isArray(data?.articles) ? data.articles.map(a => a.title) : [];
     }
 
@@ -78,7 +134,7 @@ export async function fetchByTicker(symbol, name){
       return { count: titles.length, sentiment: agg.sentiment, top: agg.top };
     }
   } catch (e) {
-    console.error(`[news] primary failed for ${symbol}:`, e.message);
+    console.warn(`[news] primary failed for ${symbol}: ${e.message}`);
     if (process.env.USE_KOTRA_BACKUP === '1') {
       try {
         const backup = await getTickerArticlesBackup(symbol);
@@ -97,9 +153,10 @@ export async function fetchByTicker(symbol, name){
 
 export async function buildNewsFeatures(symbols){
   const feats = {};
-  for (const sym of symbols){
+  await mapLimit(symbols, NEWS_CONCURRENCY, async (sym) => {
     const name = Object.keys(TICKER_MAP).find(k => TICKER_MAP[k] === sym) || sym;
     feats[sym] = await fetchByTicker(sym, name);
-  }
+  });
   return feats;
 }
+
