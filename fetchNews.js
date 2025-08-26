@@ -154,28 +154,23 @@ async function gather() {
 
 async function main() {
   let items = await gather();
-  const NEED_BACKUP = process.env.USE_KOTRA_BACKUP === "1" && (!items?.length || items.length < 12);
+  const NEED_BACKUP = process.env.USE_KOTRA_BACKUP === "1" && (!items?.length || items.length < 10);
   if (NEED_BACKUP) {
     try {
       const kotraRaw = await fetchKotraOverseasRecent(2, 50);
       const kotra = kotraRaw.map(it => ({ title: it.title, link: it.url })).filter(it => it.link);
-      const combined = [...(items || []), ...kotra];
-      const seen = new Set();
-      const deduped = [];
-      for (const it of combined) {
-        const key = it.link || it.title;
-        const key2 = it.title;
-        if (seen.has(key) || seen.has(key2)) continue;
-        seen.add(key);
-        seen.add(key2);
-        deduped.push(it);
-      }
-      items = deduped.slice(0, 120);
+      items = dedupe([...(items || []), ...kotra]);
       console.log(`[kotra-backup] merged ${kotra.length} items (recent overseas market news)`);
     } catch (e) {
       console.error('[kotra-backup] failed:', e.message);
     }
   }
+  const us = [];
+  const kr = [];
+  for (const it of items) {
+    (isKR(it) ? kr : us).push(it);
+  }
+  items = [...us.slice(0, 5), ...kr.slice(0, 5)];
   if (!items.length) throw new Error('No news items after filtering');
   const out = { lastUpdated: nowKSTISO(), items };
   await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
