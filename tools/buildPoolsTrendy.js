@@ -91,15 +91,22 @@ function saveNameToSymbol(map) {
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
 
-// Canonicalize keys: NFC/K, strip zero-width, collapse whitespace, unify ASCII dash
+// Canonicalize keys and strip invisible characters
 function normalizeKey(s) {
   if (s == null) return '';
-  return String(s)
-    .normalize('NFKC')
-    .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width
-    .replace(/\u2212/g, '-')               // minus sign -> hyphen
+  let t = String(s).normalize('NFKC');
+  // Remove format controls (Cf), bidi marks, soft-hyphen, word joiner, etc.
+  try { t = t.replace(/\p{Cf}/gu, ''); } catch { /* older engines */ }
+  t = t
+    .replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '')
+    .replace(/\u2212/g, '-') // minus sign → hyphen
+    // Remove all space separators (Zs) and regular whitespace
+    .replace(/\u00A0|\u1680|[\u2000-\u200A]|\u202F|\u205F|\u3000/g, '')
     .replace(/\s+/g, '')
     .trim();
+  // Uppercase to normalize mixed-case tickers safely (Korean/nums unaffected)
+  t = t.toUpperCase();
+  return t;
 }
 
 function keyVariants(k) {
@@ -527,14 +534,6 @@ async function finnhubEarningsWindowSet() {
 }
 
 // Finnhub earnings window ±10d
-async function finnhubRecentEarnings(symbol){
-  const from = todayYMD(-10), to = todayYMD(+10);
-  const url = `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&symbol=${encodeURIComponent(symbol)}&token=${FINNHUB}`;
-  const j = await getJSON(url, {}, RETRIES, BACKOFF_BASE_MS, 1000*60*60*4 /* 4h */).then(d => { bump('finnhub', true); return d; }).catch(() => { bump('finnhub', false); return null; });
-  const rows = j?.earningsCalendar || [];
-  return rows.some(x => (x.symbol || x.ticker) === symbol);
-}
-
 // ---------- Metrics from candles ----------
 function computeMetrics(c, v){
   // c: closes oldest..newest, v: volumes oldest..newest
@@ -699,7 +698,10 @@ async function main(){
           count++;
         } else {
           const learned = lookupLearnedMapping(raw);
-          if (!learned) console.warn('[universe] unmapped:', raw);
+          if (!learned) {
+            const hex = [...String(raw)].map(c=>c.charCodeAt(0).toString(16)).join(' ');
+            console.warn('[universe] unmapped:', raw, 'hex=', hex);
+          }
         }
       }
     }
@@ -720,8 +722,12 @@ async function main(){
   }
 
   if (!OFFLINE) {
-    // get fresh features first
-    NEWS_FEATURES = await enrichWithNewsFeatures(symbols);
+    // get fresh features first, but skip if we’re tight on time
+    if (timeLeft() > GLOBAL_BUDGET_MS * 0.35) {
+      NEWS_FEATURES = await enrichWithNewsFeatures(symbols);
+    } else {
+      NEWS_FEATURES = {};
+    }
   }
 
   // now build keywords using up-to-date features
@@ -830,6 +836,12 @@ async function main(){
       }
     }
 
+    const withSignals = [...processed].filter(n => {
+      const m = byName[n];
+      return [m.ret5, m.ret20, m.vol20, m.turnover].some(Number.isFinite) || m.newsCount > 0 || m.earn;
+    }).length;
+    console.log(`[metrics] ${market} processed=${processed.size}/${names.length} withSignals=${withSignals}`);
+
     const filteredNames = names.filter(n => {
       const m = byName[n] || {};
       const sym = m.sym;
@@ -892,6 +904,9 @@ async function main(){
     const total = filteredNames.filter(n => processed.has(n)).length || filteredNames.length;
     let kSafe = Math.min(6, Math.ceil(total * 0.5));
     let kAggr = Math.min(6, total - kSafe);
+    if (kSafe + kAggr > total) {
+      kAggr = Math.max(0, total - kSafe);
+    }
     if (total >= 2 && kAggr === 0) {
       kAggr = 1;
       if (kSafe > 0) kSafe = Math.min(kSafe, total - kAggr);
