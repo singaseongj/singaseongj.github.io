@@ -95,18 +95,19 @@ const NAME_TO_SYMBOL = loadNameToSymbol();
 function normalizeKey(s) {
   if (s == null) return '';
   let t = String(s).normalize('NFKC');
-  // Remove format controls (Cf), bidi marks, soft-hyphen, word joiner, etc.
-  try { t = t.replace(/\p{Cf}/gu, ''); } catch { /* older engines */ }
-  t = t
-    .replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '')
-    .replace(/\u2212/g, '-') // minus sign → hyphen
-    // Remove all space separators (Zs) and regular whitespace
-    .replace(/\u00A0|\u1680|[\u2000-\u200A]|\u202F|\u205F|\u3000/g, '')
-    .replace(/\s+/g, '')
-    .trim();
-  // Uppercase to normalize mixed-case tickers safely (Korean/nums unaffected)
-  t = t.toUpperCase();
-  return t;
+  // Remove all format controls (Cf) if supported
+  try { t = t.replace(/\p{Cf}/gu, ''); } catch {}
+  // Remove common invisibles (soft hyphen, word joiner, bidi, etc.)
+  t = t.replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '');
+  // Remove ASCII/Latin control chars (Cc)
+  t = t.replace(/[\u0000-\u001F\u007F-\u009F]/g, '');
+  // Unify Unicode minus to hyphen
+  t = t.replace(/\u2212/g, '-');
+  // Remove all space separators (Zs) and then any remaining whitespace
+  t = t.replace(/\u00A0|\u1680|[\u2000-\u200A]|\u202F|\u205F|\u3000/g, '');
+  t = t.replace(/\s+/g, '').trim();
+  // Uppercase for stable ticker comparisons (safe for KR codes)
+  return t.toUpperCase();
 }
 
 function keyVariants(k) {
@@ -175,7 +176,8 @@ function mapOne(rawKey) {
 function fallbackSymbolFromRaw(raw) {
   const s = normalizeKey(raw);
   if (/^\d{6}\.K[QS]$/.test(s)) return s;
-  if (/^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(s)) return s;
+  if (ALLOWLIST.has(s)) return s;
+  if (/^[A-Z]{1,5}\.[A-Z]{1,3}$/.test(s)) return s;
   if (/^[A-Z]{1,5}[-/][A-Z]{1,3}$/.test(s)) {
     const [a,b] = s.split(/[-/]/);
     return `${a}.${b}`;
@@ -380,6 +382,22 @@ Object.assign(NAME_TO_SYMBOL, {
   'LG에너지솔루션': '373220.KS'
 });
 
+// Reindex NAME_TO_SYMBOL and also merge TICKER_MAP by normalized keys
+(function normalizeDictionaries() {
+  const entries = Object.entries(NAME_TO_SYMBOL);
+  for (const [k, v] of entries) {
+    const nk = normalizeKey(k);
+    if (nk !== k) {
+      delete NAME_TO_SYMBOL[k];
+      if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
+    }
+  }
+  for (const [k, v] of Object.entries(TICKER_MAP)) {
+    const nk = normalizeKey(k);
+    if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
+  }
+})();
+
 // Build reverse lookup to convert tickers back to display names
 const SYMBOL_TO_NAME = {};
 for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP })) {
@@ -429,6 +447,29 @@ function isUS(symbolOrName) {
 function toTwelveSymbol(sym) {
   const m = String(sym).match(/^(\d{6})\.(K[QS])$/);
   return m ? `${m[1]}:${m[2]}` : sym;
+}
+
+// Try fetching candles with alternate symbol variants
+async function getCandlesWithVariants(sym, opts) {
+  const tried = new Set();
+  const candidates = [sym];
+  if (isKR(sym)) candidates.push(toTwelveSymbol(sym));
+  else {
+    const dash = sym.includes('.') ? sym.replace(/\./g, '-') : null;
+    const slsh = sym.includes('.') ? sym.replace(/\./g, '/') : null;
+    const dot1 = sym.includes('-') ? sym.replace(/-/g, '.') : null;
+    const dot2 = sym.includes('/') ? sym.replace(/\//g, '.') : null;
+    for (const c of [dash, slsh, dot1, dot2]) if (c && c !== sym) candidates.push(c);
+  }
+  for (const c of candidates) {
+    if (tried.has(c)) continue;
+    tried.add(c);
+    try {
+      const res = await getCandles(c, opts);
+      if (res && Array.isArray(res.c) && res.c.length >= 21) return res;
+    } catch (_) {}
+  }
+  return null;
 }
 
 
@@ -722,12 +763,9 @@ async function main(){
   }
 
   if (!OFFLINE) {
-    // get fresh features first, but skip if we’re tight on time
-    if (timeLeft() > GLOBAL_BUDGET_MS * 0.35) {
-      NEWS_FEATURES = await enrichWithNewsFeatures(symbols);
-    } else {
-      NEWS_FEATURES = {};
-    }
+    NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.35
+      ? await enrichWithNewsFeatures(symbols)
+      : {};
   }
 
   // now build keywords using up-to-date features
@@ -798,7 +836,10 @@ async function main(){
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
-          ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; })
+          ? await getCandlesWithVariants(
+              sym,
+              { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }
+            ).catch(e => { tripOnError(e); return null; })
           : null;
         if (candles?.source) {
           bump(candles.source, true);
