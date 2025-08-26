@@ -91,16 +91,47 @@ function saveNameToSymbol(map) {
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
 
+// Canonicalize keys: NFC/K, strip zero-width, collapse whitespace, unify ASCII dash
+function normalizeKey(s) {
+  if (s == null) return '';
+  return String(s)
+    .normalize('NFKC')
+    .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width
+    .replace(/\u2212/g, '-')               // minus sign -> hyphen
+    .replace(/\s+/g, '')
+    .trim();
+}
+
+function keyVariants(k) {
+  const t = normalizeKey(k);
+  const v = new Set([t]);
+  // Produce dash/dot/slash variants for class B/C tickers, and dotless
+  if (/^[A-Z]{1,5}[-./][A-Z]{1,3}$/.test(t)) {
+    const dot  = t.replace(/[-/]/g, '.');
+    const dash = dot.replace(/\./g, '-');
+    const slsh = dot.replace(/\./g, '/');
+    v.add(dot); v.add(dash); v.add(slsh);
+  }
+  const dotless = t.replace(/\./g, '');
+  v.add(dotless);
+  return Array.from(v);
+}
+
 function rememberMapping(humanNameOrTicker, providerSymbol) {
   if (!humanNameOrTicker || !providerSymbol) return;
-  if (NAME_TO_SYMBOL[humanNameOrTicker] !== providerSymbol) {
-    NAME_TO_SYMBOL[humanNameOrTicker] = providerSymbol;
-    saveNameToSymbol(NAME_TO_SYMBOL);
+  for (const k of keyVariants(humanNameOrTicker)) {
+    if (NAME_TO_SYMBOL[k] !== providerSymbol) {
+      NAME_TO_SYMBOL[k] = providerSymbol;
+    }
   }
+  saveNameToSymbol(NAME_TO_SYMBOL);
 }
 
 function lookupLearnedMapping(key) {
-  return NAME_TO_SYMBOL[key] || NAME_TO_SYMBOL[key.replace('.', '-')] || null;
+  for (const k of keyVariants(key)) {
+    if (NAME_TO_SYMBOL[k]) return NAME_TO_SYMBOL[k];
+  }
+  return null;
 }
 
 function tryProviders(sym) {
@@ -118,10 +149,10 @@ function tryProviders(sym) {
 }
 
 function mapOne(rawKey) {
-  const direct = nameToSymbol(rawKey);
+  const direct = nameToSymbol(normalizeKey(rawKey));
   if (direct) return { sym: direct, raw: rawKey, source: (direct === rawKey ? 'ticker' : 'dict') };
 
-  const t = String(rawKey).trim();
+  const t = normalizeKey(rawKey);
   const variants = [t, t.replace('.', '-'), t.replace('.', '/'), t.replace('.', '')];
 
   for (const v of variants) {
@@ -130,6 +161,17 @@ function mapOne(rawKey) {
       rememberMapping(rawKey, sym);
       return { sym, raw: rawKey, source: 'provider' };
     }
+  }
+  return null;
+}
+
+function fallbackSymbolFromRaw(raw) {
+  const s = normalizeKey(raw);
+  if (/^\d{6}\.K[QS]$/.test(s)) return s;
+  if (/^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(s)) return s;
+  if (/^[A-Z]{1,5}[-/][A-Z]{1,3}$/.test(s)) {
+    const [a,b] = s.split(/[-/]/);
+    return `${a}.${b}`;
   }
   return null;
 }
@@ -338,10 +380,7 @@ for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP }
 }
 
 function nameToSymbol(name){
-  name = String(name)
-    .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width
-    .replace(/\s+/g, '')
-    .trim();
+  name = normalizeKey(name);
   const learned = lookupLearnedMapping(name);
   if (learned) return learned;
 
@@ -474,6 +513,17 @@ function namesOnlyRank(universe, features) {
 function todayYMD(offsetDays=0){
   const d = new Date(Date.now() + offsetDays*86400000);
   return d.toISOString().slice(0,10);
+}
+
+async function finnhubEarningsWindowSet() {
+  const from = todayYMD(-10), to = todayYMD(+10);
+  const url = `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&token=${FINNHUB}`;
+  const j = await getJSON(url, {}, RETRIES, BACKOFF_BASE_MS, 1000*60*60*4)
+    .then(d => { bump('finnhub', true); return d; })
+    .catch(() => { bump('finnhub', false); return null; });
+  const rows = j?.earningsCalendar || [];
+  const set = new Set(rows.map(x => (x.symbol || x.ticker)).filter(Boolean));
+  return set;
 }
 
 // Finnhub earnings window ±10d
@@ -634,25 +684,40 @@ async function main(){
 
   const symbolSet = new Set();
   for (const [market, names] of Object.entries(universe)) {
-    const mapped = [];
+    let count = 0;
     for (const raw of names) {
       const m = mapOne(raw);
-      if (!m || !m.sym) {
-        const learned = lookupLearnedMapping(raw);
-        if (!learned) console.warn('[universe] unmapped:', raw);
-        continue;
+      if (m && m.sym) {
+        rememberMapping(m.raw, m.sym);
+        symbolSet.add(m.sym);
+        count++;
+      } else {
+        const fb = fallbackSymbolFromRaw(raw);
+        if (fb) {
+          rememberMapping(raw, fb);
+          symbolSet.add(fb);
+          count++;
+        } else {
+          const learned = lookupLearnedMapping(raw);
+          if (!learned) console.warn('[universe] unmapped:', raw);
+        }
       }
-      mapped.push(m);
     }
-    if (mapped.length === 0) {
+    if (count === 0) {
       console.warn(`[buildPools] no valid ${market} symbols after mapping`);
-    }
-    for (const m of mapped) {
-      rememberMapping(m.raw, m.sym);
-      symbolSet.add(m.sym);
     }
   }
   const symbols = Array.from(symbolSet);
+
+  // Prefetch a single earnings window set for US tickers
+  let EARNINGS_SET = null;
+  if (!OFFLINE && FINNHUB) {
+    try {
+      EARNINGS_SET = await finnhubEarningsWindowSet();
+    } catch {
+      EARNINGS_SET = null;
+    }
+  }
 
   if (!OFFLINE) {
     // get fresh features first
@@ -692,6 +757,7 @@ async function main(){
 
     // Fetch signals per name best-effort
     const byName = {};
+    const processed = new Set();
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
       if (timeLeft() < GLOBAL_BUDGET_MS * 0.1) return; // 90% budget used
       if (!budgetOk(800)) return; // skip if no time left
@@ -725,7 +791,9 @@ async function main(){
       let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let earn=false; let candles=null;
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
-        candles = (sym && budgetOk(REQ_TIMEOUT_MS)) ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; }) : null;
+        candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
+          ? await getCandles(sym, { cacheTtlMs: CACHE_TTL_MS, cooloffMs: COOLOFF_MS, maxPerProvider: MAX_PER_PROVIDER }).catch(e => { tripOnError(e); return null; })
+          : null;
         if (candles?.source) {
           bump(candles.source, true);
         } else {
@@ -745,16 +813,12 @@ async function main(){
           naverPopularity = typeof nf.naverPopularity === 'number' ? nf.naverPopularity : 0;
           blogMentions = typeof nf.blogMentions === 'number' ? nf.blogMentions : 0;
         }
-        if (FINNHUB && sym && isUS(sym) && budgetOk(REQ_TIMEOUT_MS)) {
-          earn   = await finnhubRecentEarnings(sym).catch(e => { tripOnError(e); return false; });
-        } else {
-          earn = false;
-        }
+        earn = !!(EARNINGS_SET && sym && isUS(sym) && EARNINGS_SET.has(sym));
       } catch (e) {
         tripOnError(e);
       }
-
       byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      processed.add(name);
     });
     for (const n of names) {
       if (!byName[n]) {
@@ -825,7 +889,7 @@ async function main(){
     }
 
     // Pick top K distinct names for each bucket
-    const total = filteredNames.length;
+    const total = filteredNames.filter(n => processed.has(n)).length || filteredNames.length;
     let kSafe = Math.min(6, Math.ceil(total * 0.5));
     let kAggr = Math.min(6, total - kSafe);
     if (total >= 2 && kAggr === 0) {
@@ -919,7 +983,9 @@ async function main(){
       return acc;
     }, {});
 
-    const subset = filteredNames.reduce((acc,n)=>{ acc[n] = byName[n]; return acc; }, {});
+    const subset = filteredNames
+      .filter(n => processed.has(n))
+      .reduce((acc,n)=>{ acc[n] = byName[n]; return acc; }, {});
     marketCoverage[market] = coverageRatio(subset);
   }
 
