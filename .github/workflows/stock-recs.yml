@@ -53,9 +53,10 @@ jobs:
       GLOBAL_BUDGET_MS: 90000
       MAX_CONCURRENCY: 2
       REQ_TIMEOUT_MS: 5000
-      RETRIES: 1
-      BACKOFF_BASE_MS: 400
+      RETRIES: 2
+      BACKOFF_BASE_MS: 600
       CIRCUIT_MAX_ERRORS: 6
+      CIRCUIT_COOLDOWN_MS: 45000
       COVERAGE_MIN: 0.3
 
     steps:
@@ -151,9 +152,12 @@ jobs:
           RETRIES: ${{ env.RETRIES }}
           BACKOFF_BASE_MS: ${{ env.BACKOFF_BASE_MS }}
           CIRCUIT_MAX_ERRORS: ${{ env.CIRCUIT_MAX_ERRORS }}
+          CIRCUIT_COOLDOWN_MS: ${{ env.CIRCUIT_COOLDOWN_MS }}
           COVERAGE_MIN: ${{ env.COVERAGE_MIN }}
           UNIVERSE_LIMIT: 200
-        run: node tools/buildPoolsTrendy.js || true
+        run: |
+          set -euo pipefail
+          node tools/buildPoolsTrendy.js
 
       - name: Build recommendations (no pool refresh here)
         shell: bash

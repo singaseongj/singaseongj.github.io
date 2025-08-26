@@ -18,21 +18,40 @@ import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 fs.mkdirSync('cache', { recursive: true });
 
 const CACHE_DIR = 'cache';
-const TTL_MS = 1000 * 60 * 60 * 12; // 12h
+const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
 
 const VERBOSE = process.env.VERBOSE === '1';
 const log = (...a) => VERBOSE && console.log(...a);
+
+let CIRCUIT_OPEN = false;
+let CIRCUIT_OPENED_AT = 0;
+const CIRCUIT_COOLDOWN_MS = Number(process.env.CIRCUIT_COOLDOWN_MS || 30000); // 30s
+
+function circuitOpen() {
+  if (!CIRCUIT_OPEN) return false;
+  if (Date.now() - CIRCUIT_OPENED_AT > CIRCUIT_COOLDOWN_MS) {
+    CIRCUIT_OPEN = false;
+    consecutiveErrors = 0;
+    return false;
+  }
+  return true;
+}
 
 function cacheKeyFor(url) {
   const h = crypto.createHash('sha1').update(url).digest('hex');
   return path.join(CACHE_DIR, `${h}.json`);
 }
 
-async function cachedJsonFetch(url, fetchFn) {
+async function cachedJsonFetch(url, fetchFn, ttlMs = TTL_MS, allowStale = false) {
   const key = cacheKeyFor(url);
   try {
     const st = fs.statSync(key);
-    if (Date.now() - st.mtimeMs < TTL_MS) {
+    const age = Date.now() - st.mtimeMs;
+    if (age < ttlMs) {
+      return JSON.parse(fs.readFileSync(key, 'utf8'));
+    }
+    if (allowStale) {
+      console.warn(`[cache] serving STALE for ${url.split('?')[0]} (age=${Math.round(age/1000)}s)`);
       return JSON.parse(fs.readFileSync(key, 'utf8'));
     }
   } catch {}
@@ -40,6 +59,26 @@ async function cachedJsonFetch(url, fetchFn) {
   const data = await fetchFn(url);
   try { fs.writeFileSync(key, JSON.stringify(data)); } catch {}
   return data;
+}
+
+function looksLikeXmlOrHtml(s) {
+  const t = String(s || '').trim();
+  if (!t) return false;
+  if (t.startsWith('<')) return true; // tags or <!DOCTYPE …> or <?xml … ?>
+  return false;
+}
+
+async function safeParseBody(res) {
+  const ct = (res.headers && res.headers.get && res.headers.get('content-type')) || '';
+  if (/json/i.test(ct)) {
+    return await res.json();
+  }
+  const txt = await res.text();
+  if (looksLikeXmlOrHtml(txt)) {
+    throw new Error(`Non-JSON payload (${ct || 'unknown'}), startsWith="<". Likely HTML error/rate-limit page.`);
+  }
+  try { return JSON.parse(txt); }
+  catch (e) { throw new Error(`JSON parse failed (${ct || 'unknown'}): ${e.message}`); }
 }
 
 const SYMBOL_MAP_FILE = path.join(CACHE_DIR, 'name-to-symbol.json');
@@ -172,6 +211,7 @@ async function enrichWithNaverTrends(universe, keywordDict){
       keywordDict
     });
     if (baskets.length === 0) return {};
+    if (timeLeft() < GLOBAL_BUDGET_MS * 0.25) { return {}; }
     // pick a safe 12-month window to compute baseline
     const today = new Date();
     const end = today.toISOString().slice(0,10);
@@ -252,12 +292,19 @@ function tripOnError(e) {
   }
   consecutiveErrors++;
   if (consecutiveErrors >= CIRCUIT_MAX_ERRORS) {
-    console.warn(`[circuit] too many errors (${consecutiveErrors}), entering offline fallback`);
+    CIRCUIT_OPEN = true;
+    CIRCUIT_OPENED_AT = Date.now();
+    console.warn(`[circuit] too many errors (${consecutiveErrors}), entering offline fallback (cooldown ${CIRCUIT_COOLDOWN_MS}ms)`);
     return true;
   }
   return false;
 }
-function resetErrors(){ consecutiveErrors = 0; }
+function resetErrors(){
+  consecutiveErrors = 0;
+  if (CIRCUIT_OPEN) {
+    CIRCUIT_OPEN = false;
+  }
+}
 
 // try to import existing map if available (non-fatal if missing)
 try {
@@ -291,13 +338,21 @@ for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP }
 }
 
 function nameToSymbol(name){
-  name = String(name).trim();
+  name = String(name)
+    .replace(/[\u200B-\u200D\uFEFF]/g, '') // zero-width
+    .replace(/\s+/g, '')
+    .trim();
   const learned = lookupLearnedMapping(name);
   if (learned) return learned;
 
   const dict = NAME_TO_SYMBOL[name] || TICKER_MAP[name];
   if (dict) return dict;
 
+  // Normalize BRK-B / BRK.B / BRK/B styles
+  if (/^[A-Z]{1,5}[-/][A-Z]{1,3}$/.test(name)) {
+    const [a,b] = name.split(/[-/]/);
+    return `${a}.${b}`; // prefer dot form internally
+  }
   if (/^[A-Z][A-Z.\-]{0,6}(\.[A-Z]{1,3})?$/.test(name)) return name;
   if (/^\d{6}\.K[QS]$/.test(name)) return name;
   return null;
@@ -335,26 +390,30 @@ const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || (DEMO_MODE ? 5000 : 
 const RETRIES = Number(process.env.RETRIES || (DEMO_MODE ? 1 : 3));
 const BACKOFF_BASE_MS = Number(process.env.BACKOFF_BASE_MS || (DEMO_MODE ? 400 : 600));
 
-async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE_MS) {
+async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE_MS, ttlMs = TTL_MS) {
   return cachedJsonFetch(url, async (u) => {
     let lastErr;
     for (let attempt = 0; attempt <= retries; attempt++) {
+      if (OFFLINE || circuitOpen()) {
+        throw new Error('offline/circuit-open; fetch suppressed');
+      }
       if (!budgetOk()) throw new Error('global budget exhausted');
       const controller = new AbortController();
       const perReq = Math.min(REQ_TIMEOUT_MS, timeLeft());
       const timer = setTimeout(() => controller.abort(), perReq);
       try {
-        const res = await fetch(u, { headers, signal: controller.signal, timeout: REQ_TIMEOUT_MS });
+        const res = await fetch(u, { headers, signal: controller.signal });
         clearTimeout(timer);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         resetErrors();
-        return await res.json();
+        return await safeParseBody(res);
       } catch (e) {
         clearTimeout(timer);
         lastErr = e;
         if (tripOnError(e)) throw lastErr;
-        if (attempt < retries && budgetOk()) {
-          const backoff = base * Math.pow(2, attempt);
+        if (attempt < retries && budgetOk() && !circuitOpen()) {
+          const jitter = 0.2 + Math.random() * 0.6;
+          const backoff = Math.floor(base * Math.pow(2, attempt) * jitter);
           const redacted = u.replace(/token=[^&]+/i, 'token=***').replace(/apikey=[^&]+/i, 'apikey=***');
           console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${redacted}`);
           await new Promise(r => setTimeout(r, backoff));
@@ -364,7 +423,7 @@ async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE
       }
     }
     throw lastErr;
-  });
+  }, ttlMs, OFFLINE || circuitOpen());
 }
 
 async function writeAtomic(p, data) {
@@ -421,7 +480,7 @@ function todayYMD(offsetDays=0){
 async function finnhubRecentEarnings(symbol){
   const from = todayYMD(-10), to = todayYMD(+10);
   const url = `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&symbol=${encodeURIComponent(symbol)}&token=${FINNHUB}`;
-  const j = await getJSON(url).then(d => { bump('finnhub', true); return d; }).catch(() => { bump('finnhub', false); return null; });
+  const j = await getJSON(url, {}, RETRIES, BACKOFF_BASE_MS, 1000*60*60*4 /* 4h */).then(d => { bump('finnhub', true); return d; }).catch(() => { bump('finnhub', false); return null; });
   const rows = j?.earningsCalendar || [];
   return rows.some(x => (x.symbol || x.ticker) === symbol);
 }
@@ -635,7 +694,7 @@ async function main(){
     const byName = {};
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
       if (timeLeft() < GLOBAL_BUDGET_MS * 0.1) return; // 90% budget used
-      if (!budgetOk(200)) return; // skip if no time left
+      if (!budgetOk(800)) return; // skip if no time left
       const mappedOne = OFFLINE ? null : mapOne(name);
       if (!mappedOne || !mappedOne.sym) {
         console.warn('[map] skip (no symbol):', name);
@@ -860,7 +919,8 @@ async function main(){
       return acc;
     }, {});
 
-    marketCoverage[market] = coverageRatio(byName);
+    const subset = filteredNames.reduce((acc,n)=>{ acc[n] = byName[n]; return acc; }, {});
+    marketCoverage[market] = coverageRatio(subset);
   }
 
   const covs = Object.values(marketCoverage);
@@ -896,7 +956,7 @@ async function main(){
   }
   if (avgCoverage < COVERAGE_MIN) {
     console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using fallback`);
-    const last = loadLastGoodPools();
+    const last = loadLastGoodPools() || pools; // prefer last good; else keep current pools as-is
     const outPools = last || namesOnlyRank(universe, NEWS_FEATURES);
     await writeAtomic(POOLS_FILE, JSON.stringify(outPools, null, 2));
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
