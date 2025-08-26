@@ -65,13 +65,15 @@ jobs:
           GLOBAL_BUDGET_MS: 90000
           MAX_CONCURRENCY: 2
           REQ_TIMEOUT_MS: 5000
-          RETRIES: 1
-          BACKOFF_BASE_MS: 400
+          RETRIES: 2
+          BACKOFF_BASE_MS: 600
           CIRCUIT_MAX_ERRORS: 6
+          CIRCUIT_COOLDOWN_MS: 45000
           COVERAGE_MIN: 0.3
           UNIVERSE_LIMIT: 200
         run: |
-          node tools/buildPoolsTrendy.js || true
+          set -euo pipefail
+          node tools/buildPoolsTrendy.js
 
       - name: Build recommendations from pools
         env:
