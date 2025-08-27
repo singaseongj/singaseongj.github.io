@@ -1,4 +1,4 @@
-import { fetchKotraOverseasRecent, filterByKeyword } from "./kotraOverseas.js";
+import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 
 // When the primary fetch returns nothing for a ticker,
@@ -6,9 +6,7 @@ import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 export async function getTickerArticlesBackup(ticker) {
   const name = await getCompanyNameByYahooSymbol(ticker);
   if (!name) return [];
-  const recent = await fetchKotraOverseasRecent(3, 50); // ~150 latest
-  // very light heuristic: title OR summary contains company name
-  const filtered = filterByKeyword(recent, name);
-  return filtered.slice(0, 20); // cap for speed
+  const recent = await fetchKotraRecent({ pages: 3, pageSize: 50, keyword: name });
+  return recent.slice(0, 20); // cap for speed
 }
 

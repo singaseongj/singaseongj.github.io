@@ -5,7 +5,7 @@ import { XMLParser } from 'fast-xml-parser';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { nowKSTISO } from './utils/time.js';
-import { fetchKotraOverseasRecent } from './src/news/kotraOverseas.js';
+import { fetchKotraRecent } from './src/news/kotraOverseas.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -154,15 +154,15 @@ async function gather() {
 
 async function main() {
   let items = await gather();
-  const NEED_BACKUP = process.env.USE_KOTRA_BACKUP === "1" && (!items?.length || items.length < 8);
-  if (NEED_BACKUP) {
+  const NEED = process.env.USE_KOTRA_BACKUP === "1" && (!items?.length || items.length < 12);
+  if (NEED) {
     try {
-      const kotraRaw = await fetchKotraOverseasRecent(2, 50);
+      const kotraRaw = await fetchKotraRecent({ pages: 2, pageSize: 50 });
       const kotra = kotraRaw.map(it => ({ title: it.title, link: it.url })).filter(it => it.link);
-      items = dedupe([...(items || []), ...kotra]);
-      console.log(`[kotra-backup] merged ${kotra.length} items (recent overseas market news)`);
+      items = dedupe([...(items || []), ...kotra]).slice(0, 120);
+      console.log(`[kotra-backup] merged ${kotra.length} items`);
     } catch (e) {
-      console.error('[kotra-backup] failed:', e.message);
+      console.error('[kotra-backup] homepage backup failed:', e.message);
     }
   }
   const us = [];

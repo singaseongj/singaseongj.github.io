@@ -1,22 +1,14 @@
 import fs from 'fs';
 import path from 'path';
+import { fetchKotraRecent } from "./kotraOverseas.js";
+import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 
 const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
 const NEWS_CONCURRENCY = Number(process.env.NEWS_CONCURRENCY || 2);
 const ALLOW_STALE_NEWS = process.env.ALLOW_STALE_NEWS !== '0';
+const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || 8000);
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
-
-// Prefer explicitly encoded key if provided; otherwise encode decoded/plain
-function chooseEncodedServiceKey() {
-  const enc = process.env.DATA_API_KEY || '';
-  const dec = process.env.DATA_API_KEY_DECODED || '';
-  const looksEncoded = /%[0-9a-fA-F]{2}/.test(enc);
-  if (enc && looksEncoded) return enc;
-  if (!enc && dec) return encodeURIComponent(dec);
-  if (enc) return encodeURIComponent(enc);
-  return '';
-}
 
 function looksLikeXmlOrHtml(s){ const t=String(s||'').trim(); return !!t && t.startsWith('<'); }
 function cacheKey(url){ return path.join(CACHE_DIR, `news-${Buffer.from(url).toString('base64url')}.json`); }
@@ -33,7 +25,18 @@ async function cachedJson(url, fetcher, ttlMs=NEWS_TTL_MS, allowStale=ALLOW_STAL
   return data;
 }
 async function safeGetJson(url, headers={}){
-  const res = await fetch(url, { headers });
+  const ac = new AbortController();
+  const to = setTimeout(() => ac.abort(new Error('timeout')), REQ_TIMEOUT_MS);
+  let res;
+  try {
+    res = await fetch(url, { headers, signal: ac.signal });
+  } catch (e) {
+    const host = (()=>{ try { return new URL(url).host; } catch { return 'unknown-host'; }})();
+    const code = e?.cause?.code || e.name || 'ERR_FETCH';
+    throw new Error(`fetch failed (${host}): ${e.message} [${code}]`);
+  } finally {
+    clearTimeout(to);
+  }
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const ct = res.headers?.get?.('content-type') || '';
   if (/json/i.test(ct)) return await res.json();
@@ -108,6 +111,23 @@ async function newsFromNewsAPI(sym, q, NEWSAPI){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
+/**
+ * SerpApi (Google News)
+ * Docs: https://serpapi.com/google-news-api
+ * We localize KR vs US via gl/hl and add a recency hint (when:7d).
+ */
+async function newsFromSerpApi(sym, q, SERPAPI){
+  if (!SERPAPI) return null;
+  const isKr = isKR(sym);
+  const gl = isKr ? 'kr' : 'us';
+  const hl = isKr ? 'ko' : 'en';
+  const finalQ = /\bwhen:\d+[hdwmy]?\b/i.test(q) ? q : `${q} when:7d`;
+  const url = `https://serpapi.com/search.json?engine=google_news&q=${encodeURIComponent(finalQ)}&gl=${gl}&hl=${hl}&no_cache=false&api_key=${SERPAPI}`;
+  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
+  const arr = Array.isArray(j?.news_results) ? j.news_results : [];
+  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
 async function newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET){
   if (!NAVER_ID || !NAVER_SECRET) return null;
   // news search (date-sorted); we only need a small page to decide "non-zero"
@@ -148,7 +168,8 @@ function buildKotraUrl({ serviceKey, natn, title, rows = 10, page = 1, includeTe
 }
 
 async function newsFromKotra(sym, rawQuery) {
-  const serviceKey = chooseEncodedServiceKey();
+  // Prefer decoded service key so URLSearchParams encodes it exactly once.
+  const serviceKey = chooseServiceKeyForDataGoKr();
   if (!serviceKey) return null;
 
   const natn = natnForSym(sym);
@@ -162,7 +183,16 @@ async function newsFromKotra(sym, rawQuery) {
   });
 
   const headers = { Accept: 'application/json' };
-  const j = await cachedJson(url, (u) => safeGetJson(u, headers), 20 * 60 * 1000, true);
+  // KOTRA will often return XML on auth/param error; soft-fail to keep other providers running.
+  const j = await cachedJson(url, async (u) => {
+    try { return await safeGetJson(u, headers); }
+    catch (e) {
+      if (String(e.message).includes('non-JSON payload')) {
+        return { response: { header: { resultCode: 'XX' }, body: {} } };
+      }
+      throw e;
+    }
+  }, 20 * 60 * 1000, true);
 
   const header = j?.response?.header;
   if (!header || header.resultCode !== '00') return { count: 0, sentiment: 0, blogMentions: 0 };
@@ -174,6 +204,13 @@ async function newsFromKotra(sym, rawQuery) {
   return { count, sentiment: 0, blogMentions: hasKw ? Math.min(count, 10) : 0 };
 }
 
+async function newsFromGdelt(sym, q){
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(q)}&mode=artlist&format=jsonfeed&maxrecords=10&sort=DateDesc`;
+  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 15*60*1000, true);
+  const arr = Array.isArray(j?.items) ? j.items : [];
+  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
 /**
  * Main: buildNewsFeatures(symbols, { symbolToName })
  * Returns shape: { [symbol]: { count, sentiment, blogMentions } }
@@ -181,6 +218,7 @@ async function newsFromKotra(sym, rawQuery) {
 export async function buildNewsFeatures(symbols, opts={}){
   const FINNHUB = process.env.FINNHUB_API_KEY || '';
   const NEWSAPI = process.env.NEWSAPI_KEY || '';
+  const SERPAPI = process.env.SERP_API_KEY || '';
   const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
 
@@ -190,16 +228,20 @@ export async function buildNewsFeatures(symbols, opts={}){
   await mapLimit(symbols, NEWS_CONCURRENCY, async (sym)=>{
     const q = queries[sym];
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
-    const isKr = /\.K[QS]$/.test(sym);
-    const providers = isKr
-      ? ['naver', 'kotra', 'finnhub', 'newsapi']
-      : ['finnhub', 'newsapi', 'kotra', 'naver'];
-    try {
-      for (const p of providers) {
+    // Prefer SerpApi early; keep NewsAPI as a late fallback. GDELT is a last-resort fallback.
+    const providers = isKR(sym)
+      ? ['naver', 'serpapi', 'finnhub', 'kotra', 'newsapi', 'gdelt']
+      : ['finnhub', 'serpapi', 'newsapi', 'kotra', 'naver', 'gdelt'];
+
+    let lastErr = null;
+    for (const p of providers) {
+      try {
         let v = null;
         if (p === 'finnhub') v = await newsFromFinnhub(sym, FINNHUB);
-        else if (p === 'newsapi') v = await with429Retry(() => newsFromNewsAPI(sym, q, NEWSAPI), 1);
+        else if (p === 'serpapi') v = await with429Retry(() => newsFromSerpApi(sym, q, SERPAPI), 2, 600);
+        else if (p === 'newsapi') v = await with429Retry(() => newsFromNewsAPI(sym, q, NEWSAPI), 1, 600);
         else if (p === 'kotra') v = await newsFromKotra(sym, q);
+        else if (p === 'gdelt') v = await newsFromGdelt(sym, q);
         else v = await newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET);
         if (v && v.count > 0) {
           try {
@@ -209,12 +251,103 @@ export async function buildNewsFeatures(symbols, opts={}){
           out[sym] = v;
           return;
         }
+      } catch (e) {
+        lastErr = e;
+        console.warn(`[news] ${sym} provider ${p} failed: ${e.message}`);
       }
-    } catch (e) {
-      console.warn(`[news] providers failed for ${sym}: ${e.message}`);
     }
+    if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
     out[sym] = feat;
   });
 
   return out;
 }
+
+// --- helpers for KOTRA key handling (replace old chooseEncodedServiceKey) ---
+function chooseServiceKeyForDataGoKr() {
+  const dec = (process.env.DATA_API_KEY_DECODED || '').trim();
+  const enc = (process.env.DATA_API_KEY || '').trim();
+  if (dec) return dec;
+  try { return decodeURIComponent(enc); } catch { return enc; }
+}
+
+function normalizeNewsApiArticle(it) {
+  const title = it?.title || "";
+  const url = it?.url || "";
+  if (!title || !url) return null;
+  const date = it?.publishedAt ? new Date(it.publishedAt).toISOString() : new Date().toISOString();
+  const source = it?.source?.name || "NewsAPI";
+  return { title, url, source, publishedAt: date };
+}
+
+function normalizeNaverArticle(it) {
+  const title = (it?.title || "").replace(/<[^>]*>/g, "").trim();
+  const url = (it?.originallink || it?.link || "").trim();
+  if (!title || !url) return null;
+  const date = it?.pubDate ? new Date(it.pubDate).toISOString() : new Date().toISOString();
+  return { title, url, source: "Naver", publishedAt: date };
+}
+
+function dedupeArticles(items) {
+  const seen = new Set();
+  return items.filter(it => {
+    const u = (it?.url || "").trim();
+    if (!u || seen.has(u)) return false;
+    seen.add(u);
+    return true;
+  });
+}
+
+async function getTickerArticlesPrimary(ticker) {
+  const out = [];
+  const NEWSAPI = process.env.NEWSAPI_KEY || "";
+  if (NEWSAPI) {
+    try {
+      const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(ticker)}&language=en&pageSize=20&sortBy=publishedAt&apiKey=${NEWSAPI}`;
+      const res = await fetch(url, { headers: { 'User-Agent': 'stock-recs/1.0 (+github-actions)' } });
+      const j = await res.json();
+      const arr = Array.isArray(j?.articles) ? j.articles : [];
+      out.push(...arr.map(normalizeNewsApiArticle).filter(Boolean));
+    } catch {}
+  }
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || "";
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
+  if (NAVER_ID && NAVER_SECRET) {
+    try {
+      const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(ticker)}&display=20&sort=date`;
+      const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+      const res = await fetch(url, { headers });
+      const j = await res.json();
+      const arr = Array.isArray(j?.items) ? j.items : [];
+      out.push(...arr.map(normalizeNaverArticle).filter(Boolean));
+    } catch {}
+  }
+  return dedupeArticles(out);
+}
+
+export async function getTickerArticles(ticker) {
+  const primary = await getTickerArticlesPrimary(ticker).catch(e => {
+    console.error(`[news] primary failed for ${ticker}:`, e.message);
+    return [];
+  });
+  if (primary?.length) return primary;
+
+  if (process.env.USE_KOTRA_BACKUP === "1") {
+    try {
+      const name = await getCompanyNameByYahooSymbol(ticker);
+      if (name) {
+        // Pull ~100–150 recent items then keyword-match by company name
+        const kotra = await fetchKotraRecent({ pages: 3, pageSize: 50, keyword: name });
+        if (kotra.length) {
+          console.log(`[kotra-backup] ${ticker}: ${kotra.length} items`);
+          return kotra.slice(0, 20);
+        }
+      }
+    } catch (e) {
+      console.error(`[kotra-backup] ${ticker} backup failed:`, e.message);
+    }
+  }
+
+  return primary ?? [];
+}
+
