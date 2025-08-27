@@ -30,7 +30,31 @@
                 <!--행렬 순서 표시-->
                 <div class="matrixlog"></div>
                 <!--행렬 입력창-->
-                <div class="matrixinput"></div>
+                <div class="matrixinput">
+                    <form id="controls" style="font-size:12px; line-height:1.4">
+                      <div style="margin-bottom:6px">
+                        <strong>행렬 A</strong><br>
+                        <input id="a11" type="number" step="any" value="1" style="width:44px"> 
+                        <input id="a12" type="number" step="any" value="0" style="width:44px"><br>
+                        <input id="a21" type="number" step="any" value="0" style="width:44px"> 
+                        <input id="a22" type="number" step="any" value="1" style="width:44px">
+                      </div>
+                      <div style="margin-bottom:6px">
+                        <strong>벡터 v</strong><br>
+                        v<sub>i</sub>= <input id="vi_in" type="number" step="any" value="1" style="width:60px">
+        v<sub>j</sub>= <input id="vj_in" type="number" step="any" value="2" style="width:60px">
+                      </div>
+                      <div>
+                        <button type="button" id="applyA">적용</button>
+                        <button type="button" id="composeA" title="현재 변환 뒤에 곱합니다">누적</button>
+                        <button type="button" id="fitView">맞추기</button>
+                        <button type="button" id="resetAll">리셋</button>
+                      </div>
+                      <label style="display:block; margin-top:6px">
+                        <input type="checkbox" id="clickSet" checked> 평면 클릭으로 v 설정
+                      </label>
+                    </form>
+                </div>
             </div>
             <!--실제 좌표 평면-->
             <div id="plane">

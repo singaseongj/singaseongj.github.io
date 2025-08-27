@@ -3,6 +3,8 @@ const canvas=document.getElementById("graph");
 //2d 그림 도구 불러오기
 const ctx=canvas.getContext("2d");
 
+let DPR=1, CW=0, CH=0; // device pixel ratio & CSS canvas size
+
 //보이는 격자의 한 변의 길이
 let scale=70;
 //한 격자가 나타내는 값
@@ -35,10 +37,16 @@ let jvector=[0,1];
 
 //창 크기에 따라 자동으로 사이징
 function sizingCanvas(){
-    //가로 사이즈
-    canvas.width=window.innerWidth-205;
-    //세로 사이즈
-    canvas.height=window.innerHeight-50;
+    const dpr = window.devicePixelRatio || 1;
+    const cssWidth = window.innerWidth - 205;
+    const cssHeight = window.innerHeight - 50;
+    canvas.style.width = cssWidth + 'px';
+    canvas.style.height = cssHeight + 'px';
+    canvas.width = Math.floor(cssWidth * dpr);
+    canvas.height = Math.floor(cssHeight * dpr);
+    DPR = dpr; CW = cssWidth; CH = cssHeight;
+    if (ctx.resetTransform) ctx.resetTransform();
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 }
 
 //좌표평면 채우기
@@ -46,12 +54,12 @@ function drawPlane(){
     //배경색
     ctx.fillStyle = "#202020";////////////////////////////////////////////////////////////////////////////////////color
     //채우기
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, CW, CH);
 }
 
 //x축 표시
 function drawMainXAxis(){
-    let diagonal=((canvas.width)**2+(canvas.height)**2)**(1/2);
+    let diagonal=((CW)**2+(CH)**2)**(1/2);
     let ivangle=(Math.atan2(ivector[1], ivector[0])/Math.PI+2)%(2);
     let jvangle=(Math.atan2(jvector[1], jvector[0])/Math.PI+2)%(2);
     let iscale=((ivector[0])**2+(ivector[1])**2)**(1/2);
@@ -59,9 +67,9 @@ function drawMainXAxis(){
     //새로 시작
     ctx.beginPath();
     //시작점
-    ctx.moveTo((canvas.width)/2+Math.cos(ivangle*Math.PI)*iscale*diagonal/2, canvas.height/2-Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+    ctx.moveTo((CW)/2+Math.cos(ivangle*Math.PI)*iscale*diagonal/2, CH/2-Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
     //끝점
-    ctx.lineTo((canvas.width)/2-Math.cos(ivangle*Math.PI)*iscale*diagonal/2, canvas.height/2+Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+    ctx.lineTo((CW)/2-Math.cos(ivangle*Math.PI)*iscale*diagonal/2, CH/2+Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
     //선 색
     ctx.strokeStyle = "#ffffff";////////////////////////////////////////////////////////////////////////////////////color
     //선 굵기
@@ -75,7 +83,7 @@ function drawMainXAxis(){
     for(let i=-(axisnum);i<=axisnum;i++){
         if(i){
             //숫자 적기
-            ctx.fillText(scaleunit*(-i), (canvas.width)/2+labelgap, (canvas.height)/2+scale*i-labelgap);
+            ctx.fillText(scaleunit*(-i), (CW)/2+labelgap, (CH)/2+scale*i-labelgap);
         }
     }
 }
@@ -88,9 +96,9 @@ function drawBoldXAxis(){
             //새로 시작
             ctx.beginPath();
             //시작점
-            ctx.moveTo(0, (canvas.height)/2+scale*i);
+            ctx.moveTo(0, (CH)/2+scale*i);
             //끝점
-            ctx.lineTo(canvas.width, (canvas.height)/2+scale*i);
+            ctx.lineTo(CW, (CH)/2+scale*i);
             //선 색
             ctx.strokeStyle = "#ffffff";////////////////////////////////////////////////////////////////////////////////////color
             //선 두께
@@ -107,9 +115,9 @@ function drawLightXAxis(){
         //새로 시작
         ctx.beginPath();
         //시작점
-        ctx.moveTo(0, (canvas.height)/2+scale*i*0.5);
+        ctx.moveTo(0, (CH)/2+scale*i*0.5);
         //끝점
-        ctx.lineTo(canvas.width, (canvas.height)/2+scale*i*0.5);
+        ctx.lineTo(CW, (CH)/2+scale*i*0.5);
         //선 색, 투명도
         ctx.strokeStyle = "rgba(225, 225, 255, 1)";////////////////////////////////////////////////////////////////////////////////////color
         //선 두께
@@ -121,7 +129,7 @@ function drawLightXAxis(){
 
 //y축 표시
 function drawMainYAxis(){
-    let diagonal=((canvas.width)**2+(canvas.height)**2)**(1/2);
+    let diagonal=((CW)**2+(CH)**2)**(1/2);
     let ivangle=(Math.atan2(ivector[1], ivector[0])/Math.PI+2)%(2);
     let jvangle=(Math.atan2(jvector[1], jvector[0])/Math.PI+2)%(2);
     let iscale=((ivector[0])**2+(ivector[1])**2)**(1/2);
@@ -129,9 +137,9 @@ function drawMainYAxis(){
     //새로 시작
     ctx.beginPath();
     //시작점
-    ctx.moveTo((canvas.width)/2+Math.cos(jvangle*Math.PI)*jscale*diagonal/2, canvas.height/2-Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+    ctx.moveTo((CW)/2+Math.cos(jvangle*Math.PI)*jscale*diagonal/2, CH/2-Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
     //끝점
-    ctx.lineTo((canvas.width)/2-Math.cos(jvangle*Math.PI)*jscale*diagonal/2, canvas.height/2+Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+    ctx.lineTo((CW)/2-Math.cos(jvangle*Math.PI)*jscale*diagonal/2, CH/2+Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
     //선 색
     ctx.strokeStyle = "#ffffff";////////////////////////////////////////////////////////////////////////////////////color
     //선 두께
@@ -145,7 +153,7 @@ function drawMainYAxis(){
     for(let i=-(axisnum);i<=axisnum;i++){
         if(i){
             //숫자 적기
-            ctx.fillText(scaleunit*i, (canvas.width)/2+scale*i+labelgap, (canvas.height)/2-labelgap);
+            ctx.fillText(scaleunit*i, (CW)/2+scale*i+labelgap, (CH)/2-labelgap);
         }
     }
 }
@@ -158,9 +166,9 @@ function drawBoldYAxis(){
             //새로 시작
             ctx.beginPath();
             //시작점
-            ctx.moveTo((canvas.width)/2+scale*i, 0);
+            ctx.moveTo((CW)/2+scale*i, 0);
             //끝점
-            ctx.lineTo((canvas.width)/2+scale*i, canvas.height);
+            ctx.lineTo((CW)/2+scale*i, CH);
             //선 색
             ctx.strokeStyle = "#ffffff";////////////////////////////////////////////////////////////////////////////////////color
             //선 두께
@@ -178,9 +186,9 @@ function drawLightYAxis(){
         //새로 시작
         ctx.beginPath();
         //시작점
-        ctx.moveTo((canvas.width)/2+scale*i*0.5, 0);
+        ctx.moveTo((CW)/2+scale*i*0.5, 0);
         //끝점
-        ctx.lineTo((canvas.width)/2+scale*i*0.5, canvas.height);
+        ctx.lineTo((CW)/2+scale*i*0.5, CH);
         //선 색
         ctx.strokeStyle = "rgba(225, 225, 255, 1)";////////////////////////////////////////////////////////////////////////////////////color
         //선 두께
@@ -197,12 +205,12 @@ function drawOrigin(){
     //글자색
     ctx.fillStyle = "white";////////////////////////////////////////////////////////////////////////////////////color
     //원점 숫자
-    ctx.fillText(0, (canvas.width)/2+labelgap, (canvas.height)/2-labelgap);
+    ctx.fillText(0, (CW)/2+labelgap, (CH)/2-labelgap);
 
     //새로 시작
     ctx.beginPath();
     //점 위치
-    ctx.arc((canvas.width)/2, (canvas.height)/2, 2.25, 0, Math.PI * 2);
+    ctx.arc((CW)/2, (CH)/2, 2.25, 0, Math.PI * 2);
     //점 색
     ctx.fillStyle = "#ff8000";////////////////////////////////////////////////////////////////////////////////////color
     //점 그리기
@@ -230,9 +238,9 @@ function sizingPlane(sizing){
 //좌표평면 축 스케일 변화
 function scalingPlane(){
     //격자 단위 증가
-    if(scale*maxaxisnum<(canvas.width/2))scaleunit*=scalefactor;
+    if(scale*maxaxisnum<(CW/2))scaleunit*=scalefactor;
     //격자 단위 감소
-    if(scale*minaxisnum>(canvas.width/2))scaleunit*=1/scalefactor;
+    if(scale*minaxisnum>(CW/2))scaleunit*=1/scalefactor;
 }
 
 //종합
@@ -255,31 +263,31 @@ function handleResize() {
     drawMovingXAxis();//
 
     drawPoint();//
-    drawVecor();//
+    drawVector();//
     drawIvectorPoint();//
     drawJvectorPoint();//
-    drawIvecor();//
-    drawJvecor();//
+    drawIVector();//
+    drawJVector();//
 }
 
 function drawPoint(){
     //새로 시작
     ctx.beginPath();
     //점 위치
-    ctx.arc((canvas.width)/2+absscale*(vi*ivector[0]+vj*jvector[0]), (canvas.height)/2-absscale*(vi*ivector[1]+vj*jvector[1]), 2.25, 0, Math.PI * 2);
+    ctx.arc((CW)/2+absscale*(vi*ivector[0]+vj*jvector[0]), (CH)/2-absscale*(vi*ivector[1]+vj*jvector[1]), 2.25, 0, Math.PI * 2);
     //점 색
     ctx.fillStyle = "#ff8000";////////////////////////////////////////////////////////////////////////////////////color
     //점 그리기
     ctx.fill(); 
 }
 
-function drawVecor(){
+function drawVector(){
     //새로 시작
     ctx.beginPath();
     //시작점
-    ctx.moveTo((canvas.width)/2, (canvas.height)/2);
+    ctx.moveTo((CW)/2, (CH)/2);
     //끝점
-    ctx.lineTo((canvas.width)/2+absscale*(vi*ivector[0]+vj*jvector[0]), (canvas.height)/2-absscale*(vi*ivector[1]+vj*jvector[1]));
+    ctx.lineTo((CW)/2+absscale*(vi*ivector[0]+vj*jvector[0]), (CH)/2-absscale*(vi*ivector[1]+vj*jvector[1]));
     //선 색
     ctx.strokeStyle = "#ff8000";////////////////////////////////////////////////////////////////////////////////////color
     //선 두께
@@ -289,7 +297,7 @@ function drawVecor(){
 }
 
 function drawMovingYAxis(){
-    let diagonal=((canvas.width)**2+(canvas.height)**2)**(1/2);
+    let diagonal=((CW)**2+(CH)**2)**(1/2);
     let ivangle=(Math.atan2(ivector[1], ivector[0])/Math.PI+2)%(2);
     let jvangle=(Math.atan2(jvector[1], jvector[0])/Math.PI+2)%(2);
     let iscale=((ivector[0])**2+(ivector[1])**2)**(1/2);
@@ -297,7 +305,7 @@ function drawMovingYAxis(){
     let movingyaxisnum=1;
     if(jvangle%1===1/2){
         if(ivangle%1!=1/2){
-            movingyaxisnum=Math.floor(Math.abs((canvas.width/2)/(Math.cos(ivangle*Math.PI)*scale*iscale)));
+            movingyaxisnum=Math.floor(Math.abs((CW/2)/(Math.cos(ivangle*Math.PI)*scale*iscale)));
             console.log("1_11");
         }else{
             movingyaxisnum=1;
@@ -305,7 +313,7 @@ function drawMovingYAxis(){
         }
     }else if(jvangle%1===0){
         if(ivangle%1!=0){
-            movingyaxisnum=Math.floor(Math.abs((canvas.height/2)/(Math.sin(ivangle*Math.PI)*scale*iscale)));
+            movingyaxisnum=Math.floor(Math.abs((CH/2)/(Math.sin(ivangle*Math.PI)*scale*iscale)));
             console.log("1_21");
         }else{
             movingyaxisnum=1;
@@ -313,7 +321,7 @@ function drawMovingYAxis(){
         }
     }else{
         const tanAngle = Math.tan(jvangle*Math.PI);
-        movingyaxisnum = Math.floor((Math.abs((canvas.height/2)/tanAngle) + canvas.width/2)/scale);
+        movingyaxisnum = Math.floor((Math.abs((CH/2)/tanAngle) + CW/2)/scale);
         console.log("1_31");
     }
 
@@ -325,9 +333,9 @@ function drawMovingYAxis(){
             //새로 시작
             ctx.beginPath();
             //시작점
-            ctx.moveTo((canvas.width)/2+Math.cos(ivangle*Math.PI)*scale*iscale*i+Math.cos(jvangle*Math.PI)*jscale*diagonal/2, canvas.height/2-Math.sin(ivangle*Math.PI)*scale*iscale*i-Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+            ctx.moveTo((CW)/2+Math.cos(ivangle*Math.PI)*scale*iscale*i+Math.cos(jvangle*Math.PI)*jscale*diagonal/2, CH/2-Math.sin(ivangle*Math.PI)*scale*iscale*i-Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
             //끝점
-            ctx.lineTo((canvas.width)/2+Math.cos(ivangle*Math.PI)*scale*iscale*i-Math.cos(jvangle*Math.PI)*jscale*diagonal/2, canvas.height/2-Math.sin(ivangle*Math.PI)*scale*iscale*i+Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+            ctx.lineTo((CW)/2+Math.cos(ivangle*Math.PI)*scale*iscale*i-Math.cos(jvangle*Math.PI)*jscale*diagonal/2, CH/2-Math.sin(ivangle*Math.PI)*scale*iscale*i+Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
             //선 색
             ctx.strokeStyle = "#4868ff";////////////////////////////////////////////////////////////////////////////////////color
             //선 두께
@@ -339,7 +347,7 @@ function drawMovingYAxis(){
 }
 
 function drawMovingXAxis(){
-    let diagonal=((canvas.width)**2+(canvas.height)**2)**(1/2);
+    let diagonal=((CW)**2+(CH)**2)**(1/2);
     let ivangle=(Math.atan2(ivector[1], ivector[0])/Math.PI+2)%(2);
     let jvangle=(Math.atan2(jvector[1], jvector[0])/Math.PI+2)%(2);
     let iscale=((ivector[0])**2+(ivector[1])**2)**(1/2);
@@ -347,7 +355,7 @@ function drawMovingXAxis(){
     let movingxaxisnum=1;
     if(ivangle%1===1/2){
         if(jvangle%1!=1/2){
-            movingxaxisnum=Math.floor(Math.abs((canvas.width/2)/(Math.cos(jvangle*Math.PI)*scale*jscale)));
+            movingxaxisnum=Math.floor(Math.abs((CW/2)/(Math.cos(jvangle*Math.PI)*scale*jscale)));
             console.log("2_11");
         }else{
             movingxaxisnum=1;
@@ -355,7 +363,7 @@ function drawMovingXAxis(){
         }
     }else if(ivangle%1===0){
         if(jvangle%1!=0){
-            movingxaxisnum=Math.floor(Math.abs((canvas.height/2)/(Math.sin(jvangle*Math.PI)*scale*jscale)));
+            movingxaxisnum=Math.floor(Math.abs((CH/2)/(Math.sin(jvangle*Math.PI)*scale*jscale)));
             console.log("2_21");
         }else{
             movingxaxisnum=1;
@@ -363,7 +371,7 @@ function drawMovingXAxis(){
         }
     }else{
         const tanAngle = Math.tan(ivangle*Math.PI);
-        movingxaxisnum = Math.floor((Math.abs((canvas.width/2)*tanAngle) + canvas.height/2)/scale);
+        movingxaxisnum = Math.floor((Math.abs((CW/2)*tanAngle) + CH/2)/scale);
         console.log("2_31");
     }
 
@@ -375,9 +383,9 @@ function drawMovingXAxis(){
             //새로 시작
             ctx.beginPath();
             //시작점
-            ctx.moveTo((canvas.width)/2+Math.cos(jvangle*Math.PI)*scale*jscale*i+Math.cos(ivangle*Math.PI)*iscale*diagonal/2, canvas.height/2-Math.sin(jvangle*Math.PI)*jscale*scale*i-Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+            ctx.moveTo((CW)/2+Math.cos(jvangle*Math.PI)*scale*jscale*i+Math.cos(ivangle*Math.PI)*iscale*diagonal/2, CH/2-Math.sin(jvangle*Math.PI)*jscale*scale*i-Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
             //끝점
-            ctx.lineTo((canvas.width)/2+Math.cos(jvangle*Math.PI)*scale*jscale*i-Math.cos(ivangle*Math.PI)*iscale*diagonal/2, canvas.height/2-Math.sin(jvangle*Math.PI)*jscale*scale*i+Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+            ctx.lineTo((CW)/2+Math.cos(jvangle*Math.PI)*scale*jscale*i-Math.cos(ivangle*Math.PI)*iscale*diagonal/2, CH/2-Math.sin(jvangle*Math.PI)*jscale*scale*i+Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
             //선 색
             ctx.strokeStyle = "#4868ff";////////////////////////////////////////////////////////////////////////////////////color
             //선 두께
@@ -392,20 +400,20 @@ function drawIvectorPoint(){
     //새로 시작
     ctx.beginPath();
     //점 위치
-    ctx.arc((canvas.width)/2+absscale*ivector[0], (canvas.height)/2-absscale*ivector[1], 2.25, 0, Math.PI * 2);
+    ctx.arc((CW)/2+absscale*ivector[0], (CH)/2-absscale*ivector[1], 2.25, 0, Math.PI * 2);
     //점 색
     ctx.fillStyle = "#ff6868";////////////////////////////////////////////////////////////////////////////////////color
     //점 그리기
     ctx.fill(); 
 }
 
-function drawIvecor(){
+function drawIVector(){
     //새로 시작
     ctx.beginPath();
     //시작점
-    ctx.moveTo((canvas.width)/2, (canvas.height)/2);
+    ctx.moveTo((CW)/2, (CH)/2);
     //끝점
-    ctx.lineTo((canvas.width)/2+absscale*ivector[0], (canvas.height)/2-absscale*ivector[1]);
+    ctx.lineTo((CW)/2+absscale*ivector[0], (CH)/2-absscale*ivector[1]);
     //선 색
     ctx.strokeStyle = "#ff6868";////////////////////////////////////////////////////////////////////////////////////color
     //선 두께
@@ -418,20 +426,20 @@ function drawJvectorPoint(){
     //새로 시작
     ctx.beginPath();
     //점 위치
-    ctx.arc((canvas.width)/2+absscale*jvector[0], (canvas.height)/2-absscale*jvector[1], 2.25, 0, Math.PI * 2);
+    ctx.arc((CW)/2+absscale*jvector[0], (CH)/2-absscale*jvector[1], 2.25, 0, Math.PI * 2);
     //점 색
     ctx.fillStyle = "#68ff68";////////////////////////////////////////////////////////////////////////////////////color
     //점 그리기
     ctx.fill(); 
 }
 
-function drawJvecor(){
+function drawJVector(){
     //새로 시작
     ctx.beginPath();
     //시작점
-    ctx.moveTo((canvas.width)/2, (canvas.height)/2);
+    ctx.moveTo((CW)/2, (CH)/2);
     //끝점
-    ctx.lineTo((canvas.width)/2+absscale*jvector[0], (canvas.height)/2-absscale*jvector[1]);
+    ctx.lineTo((CW)/2+absscale*jvector[0], (CH)/2-absscale*jvector[1]);
     //선 색
     ctx.strokeStyle = "#68ff68";////////////////////////////////////////////////////////////////////////////////////color
     //선 두께
@@ -510,10 +518,10 @@ function animateVector(){
 
         animatetimes-=1;
         handleResize();
-        drawIvecor();
+        drawIVector();
         drawIvectorPoint();
 
-        drawJvecor();
+        drawJVector();
         drawJvectorPoint();
 
         requestAnimationFrame(animateVector);
@@ -522,15 +530,19 @@ function animateVector(){
         jvector=jgole;
         animatetimes=500;
         handleResize();
-        drawIvecor();
+        drawIVector();
         drawIvectorPoint();
-        drawJvecor();
+        drawJVector();
         drawJvectorPoint();
 
         console.log("done");
 
     }
 }
+
+const drawVecor = drawVector; // backward compatibility
+const drawIvecor = drawIVector; // backward compatibility
+const drawJvecor = drawJVector; // backward compatibility
 
 /////////////////
 
@@ -547,3 +559,144 @@ canvas.addEventListener("wheel", (event) => {
     scalingPlane();
     handleResize();
 });
+
+// ===== controls & helpers =====
+const q = s => document.querySelector(s);
+const $ = id => document.getElementById(id);
+
+function fmt(n){ return Math.round(n*1000)/1000; }
+
+function updateLabels(){
+  const vBox = document.querySelector('.vector');
+  const iBox = document.querySelector('.unitvectori');
+  const jBox = document.querySelector('.unitvectorj');
+  vBox.innerHTML = `\\(\\vec{v}=${fmt(vi)}\\hat{i}+${fmt(vj)}\\hat{j}\\)`;
+  iBox.innerHTML = `\\(\\hat{i}=(${fmt(ivector[0])},\\,${fmt(ivector[1])})\\)`;
+  jBox.innerHTML = `\\(\\hat{j}=(${fmt(jvector[0])},\\,${fmt(jvector[1])})\\)`;
+  if (window.MathJax && MathJax.typeset) MathJax.typeset();
+}
+
+function readMatrix(){
+  const a11 = parseFloat($('a11').value) || 0;
+  const a12 = parseFloat($('a12').value) || 0;
+  const a21 = parseFloat($('a21').value) || 0;
+  const a22 = parseFloat($('a22').value) || 0;
+  return [[a11,a12],[a21,a22]];
+}
+
+function setVectorFromInputs(){
+  vi = parseFloat($('vi_in').value) || 0;
+  vj = parseFloat($('vj_in').value) || 0;
+  handleResize();
+  updateLabels();
+}
+
+function setInputsFromVector(){
+  $('vi_in').value = vi;
+  $('vj_in').value = vj;
+  updateLabels();
+}
+
+function mulMatVec(A, v){
+  return [
+    A[0][0]*v[0] + A[0][1]*v[1],
+    A[1][0]*v[0] + A[1][1]*v[1]
+  ];
+}
+
+function invert2x2(M){
+  const [a,b] = M[0], [c,d] = M[1];
+  const det = a*d - b*c;
+  if (Math.abs(det) < 1e-12) return null;
+  const inv = [[ d/det, -b/det],[-c/det,  a/det]];
+  return inv;
+}
+
+function basisMatrix(){
+  return [[ivector[0], jvector[0]],[ivector[1], jvector[1]]];
+}
+
+function fitToView(){
+  const w = CW, h = CH;
+  const center = 0.45 * Math.min(w, h);
+  const vAbs = [
+    vi*ivector[0] + vj*jvector[0],
+    vi*ivector[1] + vj*jvector[1]
+  ];
+  const maxR = Math.max(
+    Math.hypot(ivector[0], ivector[1]),
+    Math.hypot(jvector[0], jvector[1]),
+    Math.hypot(vAbs[0],   vAbs[1]),
+    1
+  );
+  absscale = center / maxR;
+  scale = absscale * scaleunit;
+  handleResize();
+}
+
+$('vi_in').addEventListener('change', setVectorFromInputs);
+$('vj_in').addEventListener('change', setVectorFromInputs);
+
+$('applyA').addEventListener('click', () => {
+  const A = readMatrix();
+  igole = [A[0][0], A[1][0]];
+  jgole = [A[0][1], A[1][1]];
+  animateVector();
+  updateLabels();
+});
+
+$('composeA').addEventListener('click', () => {
+  const A = readMatrix();
+  igole = mulMatVec(A, ivector);
+  jgole = mulMatVec(A, jvector);
+  animateVector();
+  updateLabels();
+});
+
+$('fitView').addEventListener('click', fitToView);
+
+$('resetAll').addEventListener('click', () => {
+  resetCanvas();
+  ivector = [1,0];
+  jvector = [0,1];
+  vi = 1; vj = 2;
+  $('a11').value = 1; $('a12').value = 0;
+  $('a21').value = 0; $('a22').value = 1;
+  setInputsFromVector();
+  handleResize();
+});
+
+canvas.addEventListener('click', (e) => {
+  if (!$('clickSet').checked) return;
+  const rect = canvas.getBoundingClientRect();
+  const xpx = e.clientX - rect.left - CW/2;
+  const ypx = CH/2 - (e.clientY - rect.top);
+  const X = xpx / absscale;
+  const Y = ypx / absscale;
+  const B = basisMatrix();
+  const Binv = invert2x2(B);
+  if (!Binv){
+    console.warn('기저가 퇴화(Det=0)되어 v를 계산할 수 없음');
+    alert('기저가 퇴화하여 v를 계산할 수 없습니다.');
+    return;
+  }
+  vi = Binv[0][0]*X + Binv[0][1]*Y;
+  vj = Binv[1][0]*X + Binv[1][1]*Y;
+  setInputsFromVector();
+  handleResize();
+});
+
+window.addEventListener('keydown', (e) => {
+  const step = (e.shiftKey ? 1 : 0.25);
+  if (e.key === 'ArrowLeft') vi -= step;
+  if (e.key === 'ArrowRight') vi += step;
+  if (e.key === 'ArrowDown') vj -= step;
+  if (e.key === 'ArrowUp') vj += step;
+  if (['ArrowLeft','ArrowRight','ArrowDown','ArrowUp'].includes(e.key)){
+    setInputsFromVector();
+    handleResize();
+    e.preventDefault();
+  }
+});
+
+updateLabels();
