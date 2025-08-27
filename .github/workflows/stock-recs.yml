@@ -248,16 +248,22 @@ jobs:
           echo "Mode:"
           node -e "console.log(require('./recommendations.json').mode || 'unknown')"
 
+      - name: Build news summary
+        run: node summarize-news.js
+
+      - name: Build article cache
+        run: node build-articles.js
+
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market_news.json data/fx_rates.json || true
+          git add data/market_news.json data/fx_rates.json summary.json summary.md data/articles || true
           echo "Files staged for commit"
 
       - name: "Commit & push changes"
         uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0  # v5
         with:
-          commit_message: "chore: data update (news/fx) [skip ci]"
+          commit_message: "chore: data update (news/fx/summary) [skip ci]"
           file_pattern: .
           branch: ${{ github.ref_name }}
 
