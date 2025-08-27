@@ -125,7 +125,10 @@ function hasKey(provider){
 
 export async function getCandles(symbol, opts={}){
   const isKR = /\.K[QS]$/.test(symbol);
-  const order = isKR ? ['twelvedata','fmp'] : ['finnhub','twelvedata','fmp'];
+  let order = isKR ? ['twelvedata','fmp'] : ['finnhub','twelvedata','fmp'];
+  if (!isKR && opts.preferNonNasdaq) {
+    order = order.filter(p => p !== 'nasdaq').concat(order.filter(p => p === 'nasdaq'));
+  }
   const attempts = [];
   const ttl = Number(opts.cacheTtlMs || CACHE_TTL_MS);
   const maxPer = Number.isFinite(opts.maxPerProvider) ? opts.maxPerProvider : Infinity;

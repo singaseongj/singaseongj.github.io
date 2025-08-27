@@ -97,6 +97,7 @@ function normalizeKey(s) {
   let t = String(s).normalize('NFKC');
   // Remove all format controls (Cf) if supported
   try { t = t.replace(/\p{Cf}/gu, ''); } catch {}
+  t = t.replace(/\uFEFF/g, ''); // BOM
   // Remove common invisibles (soft hyphen, word joiner, bidi, etc.)
   t = t.replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '');
   // Remove ASCII/Latin control chars (Cc)
@@ -175,6 +176,7 @@ function mapOne(rawKey) {
 
 function fallbackSymbolFromRaw(raw) {
   const s = normalizeKey(raw);
+  if (/^[A-Z]{1,5}$/.test(s)) return s;            // US tickers
   if (/^\d{6}\.K[QS]$/.test(s)) return s;
   if (ALLOWLIST.has(s)) return s;
   if (/^[A-Z]{1,5}\.[A-Z]{1,3}$/.test(s)) return s;
@@ -324,6 +326,7 @@ const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
 const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
 const MIN_PRICE_USD = Number(process.env.MIN_PRICE_USD || 2);
 const MIN_PRICE_KRW = Number(process.env.MIN_PRICE_KRW || 1000);
+const FINAL_FRAC = Number(process.env.FINAL_STAGE_BUDGET_FRAC || 0.02);
 const ALLOWLIST = new Set(Object.values(TICKER_MAP));
 
 // ---- time budget
@@ -465,7 +468,7 @@ async function getCandlesWithVariants(sym, opts) {
     if (tried.has(c)) continue;
     tried.add(c);
     try {
-      const res = await getCandles(c, opts);
+      const res = await getCandles(c, { preferNonNasdaq: true, ...opts });
       if (res && Array.isArray(res.c) && res.c.length >= 21) return res;
     } catch (_) {}
   }
@@ -765,9 +768,15 @@ async function main(){
   }
 
   if (!OFFLINE) {
-    NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.35
-      ? await enrichWithNewsFeatures(symbols, { symbolToName: SYMBOL_TO_NAME })
-      : {};
+    const NEWS_MAX = Number(process.env.NEWS_MAX_SYMBOLS || 80); // ~80 by default
+    const kr = symbols.filter(isKR);
+    const us = symbols.filter(s => !isKR(s));
+    const newsSymbols = kr.concat(us).slice(0, NEWS_MAX);
+    if (timeLeft() > GLOBAL_BUDGET_MS * 0.6) {
+      NEWS_FEATURES = await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME });
+    } else {
+      NEWS_FEATURES = {};
+    }
   }
 
   // now build keywords using up-to-date features
@@ -813,7 +822,7 @@ async function main(){
     const byName = {};
     const processed = new Set();
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
-      if (timeLeft() < GLOBAL_BUDGET_MS * 0.1) return; // 90% budget used
+      if (timeLeft() < GLOBAL_BUDGET_MS * FINAL_FRAC) return;
       if (!budgetOk(800)) return; // skip if no time left
       const mappedOne = OFFLINE ? null : mapOne(name);
       if (!mappedOne || !mappedOne.sym) {
@@ -886,6 +895,16 @@ async function main(){
           newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
           sym:null, source:null, attempts:[], fetchMs:0
         };
+      }
+      const sym = byName[n].sym || nameToSymbol(n) || n;
+      const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[n];
+      if (nf) {
+        byName[n].newsCount = nf.count ?? byName[n].newsCount;
+        byName[n].sentiment = (typeof nf.sentiment === 'number' ? nf.sentiment : byName[n].sentiment);
+        byName[n].naverPopularity = nf.naverPopularity ?? byName[n].naverPopularity;
+        byName[n].blogMentions = nf.blogMentions ?? byName[n].blogMentions;
+        byName[n].polygonTrend = nf.polygonTrend ?? byName[n].polygonTrend;
+        byName[n].nasdaqClose = nf.nasdaqClose ?? byName[n].nasdaqClose;
       }
     }
 
@@ -1067,7 +1086,6 @@ async function main(){
     }, {});
 
     const subset = filteredNames
-      .filter(n => processed.has(n))
       .reduce((acc,n)=>{ acc[n] = byName[n]; return acc; }, {});
     marketCoverage[market] = coverageRatio(subset);
   }

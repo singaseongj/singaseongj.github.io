@@ -364,6 +364,8 @@ export async function buildNewsFeatures(symbols, opts={}){
   const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
   const GNEWS = process.env.GNEWS_API || '';
+  const HARD = Number(process.env.HARD_DEADLINE_MS || 0);
+  const DEADLINE = HARD ? Date.now() + HARD : 0;
 
   const nameFile = 'symbolNames.json';
   const cachedNames = (()=>{ try{return JSON.parse(fs.readFileSync(nameFile,'utf8'));}catch{return{}} })();
@@ -390,6 +392,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const baseOut = {};
 
   await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
+    if (DEADLINE && Date.now() > DEADLINE) return;
     const q = queries[sym];
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
