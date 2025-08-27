@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { restClient } from '@polygon.io/client-js';
 import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
@@ -18,6 +19,8 @@ const defaultHeaders = {
 };
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
 const SKIP_NAVER = process.env.SKIP_NAVER === '1';
+const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
+const NASDAQ_API_KEY = process.env.NASDAQ_API_KEY || '';
 
 const buckets = {
   newsapi: tokenBucket({capacity:3, refillPerSec:2}),
@@ -91,6 +94,51 @@ async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
 function isKR(sym){ return /\.K[QS]$/.test(sym); }
 
 function baseSymbol(sym){ return String(sym||'').replace(/[\.\-]/g,'').toUpperCase(); }
+
+async function fetchPolygonTrend(ticker) {
+  if (!POLYGON_API_KEY) return null;
+  try {
+    const rest = restClient(POLYGON_API_KEY);
+    const end = new Date();
+    const start = new Date(end.getTime() - 2 * 24 * 60 * 60 * 1000);
+    const res = await rest.stocks.aggregates(
+      ticker,
+      1,
+      'day',
+      start.toISOString().slice(0, 10),
+      end.toISOString().slice(0, 10)
+    );
+    const arr = Array.isArray(res?.results) ? res.results : [];
+    if (arr.length >= 2) {
+      const prev = arr[arr.length - 2];
+      const last = arr[arr.length - 1];
+      const pc = prev?.c;
+      const lc = last?.c;
+      if (typeof pc === 'number' && typeof lc === 'number' && pc !== 0) {
+        return (lc - pc) / pc;
+      }
+    }
+  } catch (e) {
+    console.warn(`polygon trend failed for ${ticker}:`, e.message);
+  }
+  return null;
+}
+
+async function fetchNasdaqMetric(ticker) {
+  if (!NASDAQ_API_KEY) return null;
+  const base = baseSymbol(ticker);
+  const url = `https://data.nasdaq.com/api/v3/datasets/WIKI/${base}.json?rows=1&api_key=${NASDAQ_API_KEY}`;
+  try {
+    const res = await fetch(url, { headers: defaultUA });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const j = await res.json();
+    const close = j?.dataset?.data?.[0]?.[4];
+    return typeof close === 'number' ? close : null;
+  } catch (e) {
+    console.warn(`nasdaq data failed for ${ticker}:`, e.message);
+    return null;
+  }
+}
 
 /**
  * Build a compact symbol→query dictionary.
@@ -301,7 +349,7 @@ async function newsFromGdelt(sym, q){
 
 /**
  * Main: buildNewsFeatures(symbols, { symbolToName })
- * Returns shape: { [symbol]: { count, sentiment, blogMentions } }
+ * Returns shape: { [symbol]: { count, sentiment, blogMentions, polygonTrend, nasdaqClose } }
  */
 export async function buildNewsFeatures(symbols, opts={}){
   const FINNHUB = process.env.FINNHUB_API_KEY || '';
@@ -364,6 +412,10 @@ export async function buildNewsFeatures(symbols, opts={}){
               v.blogMentions = Math.max(v.blogMentions || 0, blogs || 0);
             } catch {}
           }
+          const trend = await fetchPolygonTrend(sym);
+          if (trend != null) v.polygonTrend = trend;
+          const close = await fetchNasdaqMetric(sym);
+          if (close != null) v.nasdaqClose = close;
           baseOut[baseSymbol(sym)] = v;
           return;
         }
@@ -373,12 +425,16 @@ export async function buildNewsFeatures(symbols, opts={}){
       }
     }
     if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
+    const trend = await fetchPolygonTrend(sym);
+    if (trend != null) feat.polygonTrend = trend;
+    const close = await fetchNasdaqMetric(sym);
+    if (close != null) feat.nasdaqClose = close;
     baseOut[baseSymbol(sym)] = feat;
   });
 
   const out = {};
   for (const s of symbols){
-    out[s] = baseOut[baseSymbol(s)] || { count:0, sentiment:0, blogMentions:0 };
+    out[s] = baseOut[baseSymbol(s)] || { count:0, sentiment:0, blogMentions:0, polygonTrend:0, nasdaqClose:null };
   }
   return out;
 }

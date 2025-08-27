@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 export const TICKER_MAP = {
   '삼성전자': '005930.KS', 'SK하이닉스': '000660.KS', '삼성바이오로직스': '207940.KS',
   '현대차': '005380.KS', 'LG에너지솔루션': '373220.KS', '한화에어로스페이스': '012450.KS',
@@ -45,3 +47,29 @@ export const STATIC_SECTORS = {
 
 export const looksKorean = s => /[가-힣]/.test(s);
 export const looksSymbol = s => /^[A-Z.\-]+$/.test(s) || /^\d{6}\.K[QS]$/.test(s);
+
+const DYNAMIC_FILE = './dynamicTickerMap.json';
+let dynamicMap = {};
+try { dynamicMap = JSON.parse(fs.readFileSync(DYNAMIC_FILE, 'utf8')); } catch {}
+
+export async function resolveTicker(name) {
+  if (TICKER_MAP[name]) return TICKER_MAP[name];
+  if (dynamicMap[name]) return dynamicMap[name];
+  const key = process.env.POLYGON_API_KEY;
+  if (!key) return null;
+  try {
+    const url = `https://api.polygon.io/v3/reference/tickers?search=${encodeURIComponent(name)}&active=true&limit=1&apiKey=${key}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const j = await res.json();
+    const t = j?.results?.[0]?.ticker;
+    if (t) {
+      dynamicMap[name] = t;
+      try { fs.writeFileSync(DYNAMIC_FILE, JSON.stringify(dynamicMap, null, 2)); } catch {}
+      return t;
+    }
+  } catch (e) {
+    console.warn('resolveTicker failed', e.message);
+  }
+  return null;
+}
