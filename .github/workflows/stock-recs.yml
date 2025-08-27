@@ -191,7 +191,7 @@ jobs:
           fi
 
       # ⬇️ Added from daily-build.yml
-      - name: Preflight: outbound connectivity (SerpApi/GDELT)
+      - name: "Preflight: outbound connectivity (SerpApi/GDELT)"
         shell: bash
         run: |
           set -Eeuo pipefail
