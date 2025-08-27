@@ -33,7 +33,8 @@ jobs:
       USE_EXIM_FX_BACKUP: "1"
       EXIM_AUTH_KEY: ${{ secrets.EXIM_AUTH_KEY }}   # Exim
       # Use the portal key for KOTRA + (optionally KRX if you share it)
-      DATA_API_KEY: ${{ secrets.DATA_API_KEY }}     # data.go.kr (KRX & KOTRA)
+      DATA_API_KEY: ${{ secrets.DATA_API_KEY }}             # plain (decoded) KOTRA key (…==)
+      DATA_ENCODE_KEY: ${{ secrets.DATA_ENCODE_KEY }}
       USE_KOTRA_BACKUP: "1"
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 

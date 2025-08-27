@@ -294,7 +294,21 @@ function chooseApiKey(name){
   if (dec) return dec;
   try { return decodeURIComponent(enc); } catch { return enc; }
 }
-function chooseServiceKeyForDataGoKr(){ return chooseApiKey('DATA_API_KEY'); }
+function chooseServiceKeyForDataGoKr(){
+  // Precedence: plain first, then encoded
+  const candidates = [
+    (process.env.DATA_API_KEY || '').trim(),        // preferred (decoded)
+    (process.env.DATA_API_KEY_DECODED || '').trim(),// legacy plain
+    (process.env.DATA_API_KEY_ENCODED || '').trim(),// legacy encoded
+    (process.env.DATA_ENCODE_KEY || '').trim(),     // your encoded key
+  ].filter(Boolean);
+  if (!candidates.length) return '';
+  const first = candidates[0];
+  if (/%[0-9A-Fa-f]{2}/.test(first)) { // looks encoded
+    try { return decodeURIComponent(first); } catch { /* fallthrough */ }
+  }
+  return first;
+}
 export function chooseKrxApiKey(){ return chooseApiKey('KRX_API_KEY'); }
 
 function normalizeNewsApiArticle(it) {
