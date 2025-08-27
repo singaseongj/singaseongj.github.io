@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stock News Summary </title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .spinner { border: 3px solid #eee; border-top: 3px solid #888; border-radius: 50%; width: 16px; height: 16px; animation: spin 0.9s linear infinite }
+    @keyframes spin { 0% { transform: rotate(0) } 100% { transform: rotate(360deg) } }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div class="max-w-7xl mx-auto p-4 md:p-6">
+    <header class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Stock News Summary</h1>
+      <p class="text-sm text-slate-500 mt-1">Reads <code>summary.json</code> generated from pipeline, and shows compact, filterable summaries. Click a row to see headlines (loaded on demand from <code>data/articles/&lt;TICKER&gt;.json</code> if present).</p>
+    </header>
+
+    <!-- Controls -->
+    <section class="grid gap-3 md:grid-cols-3 mb-4 md:mb-6">
+      <label class="flex items-center gap-2 bg-white shadow-sm rounded-xl px-3 py-2 border border-slate-200">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="q" type="search" placeholder="Search company / ticker…" class="w-full bg-transparent outline-none placeholder:text-slate-400" />
+      </label>
+
+      <div class="flex gap-2 bg-white shadow-sm rounded-xl px-3 py-2 border border-slate-200 items-center">
+        <span class="text-sm text-slate-500">Bucket</span>
+        <label class="flex items-center gap-1"><input type="checkbox" id="chkSafe" class="accent-slate-700" checked><span class="text-sm">SAFE</span></label>
+        <label class="flex items-center gap-1"><input type="checkbox" id="chkAgg" class="accent-slate-700" checked><span class="text-sm">AGGR</span></label>
+        <div class="flex-1"></div>
+        <select id="sortBy" class="text-sm bg-slate-100 rounded-md px-2 py-1">
+          <option value="-news">Top news</option>
+          <option value="-ret5">5d return</option>
+          <option value="-ret20">20d return</option>
+          <option value="-sent">Sentiment</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
+
+      <div class="flex gap-2 bg-white shadow-sm rounded-xl px-3 py-2 border border-slate-200 items-center">
+        <span class="text-sm text-slate-500">Market</span>
+        <select id="market" class="text-sm bg-slate-100 rounded-md px-2 py-1 min-w-[10rem]"></select>
+        <div class="flex-1"></div>
+        <button id="viewCompact" class="text-sm px-2 py-1 rounded-md bg-slate-800 text-white">Compact</button>
+        <button id="viewDetailed" class="text-sm px-2 py-1 rounded-md bg-slate-200">Detailed</button>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights" class="mb-4 hidden">
+      <h2 class="text-lg font-semibold mb-2">Highlights</h2>
+      <div id="highlightGrid" class="grid md:grid-cols-3 gap-3"></div>
+    </section>
+
+    <!-- Table -->
+    <section class="bg-white shadow-sm rounded-2xl border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-100 text-slate-600">
+            <tr>
+              <th class="text-left px-4 py-2">Company</th>
+              <th class="text-left px-4 py-2">Ticker</th>
+              <th class="text-left px-4 py-2">Bucket</th>
+              <th class="text-left px-4 py-2">News (7d)</th>
+              <th class="text-left px-4 py-2">Sentiment</th>
+              <th class="text-left px-4 py-2">5d</th>
+              <th class="text-left px-4 py-2">20d</th>
+              <th class="text-left px-4 py-2">Vol</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="text-xs text-slate-500 mt-6">Generated from pipeline’s <code>summary.json</code>. Click a row to expand. Put per‑ticker cached headlines in <code>data/articles/TICKER.json</code> to see titles.</footer>
+  </div>
+
+  <template id="rowTmpl">
+    <tr class="border-t border-slate-100 hover:bg-slate-50 cursor-pointer align-top">
+      <td class="px-4 py-2 font-medium text-slate-800 name"></td>
+      <td class="px-4 py-2 ticker"></td>
+      <td class="px-4 py-2"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bucketChip"></span></td>
+      <td class="px-4 py-2 news"></td>
+      <td class="px-4 py-2 sent"></td>
+      <td class="px-4 py-2 ret5"></td>
+      <td class="px-4 py-2 ret20"></td>
+      <td class="px-4 py-2 vol"></td>
+    </tr>
+    <tr class="detail hidden">
+      <td colspan="8" class="px-6 pb-4 bg-slate-50">
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="md:col-span-2">
+            <div class="text-sm font-semibold mb-1">Summary</div>
+            <ul class="list-disc list-inside text-sm text-slate-700 bullets"></ul>
+          </div>
+          <div>
+            <div class="text-sm font-semibold mb-1">Latest headlines</div>
+            <div class="text-xs text-slate-500 mb-1">(from cached <code>data/articles/&lt;TICKER&gt;.json</code>)</div>
+            <div class="headlines text-sm space-y-1">
+              <div class="text-slate-400 flex items-center gap-2"><span class="spinner"></span> <span>Loading…</span></div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </template>
+
+  <script>
+    const $ = (s, el=document) => el.querySelector(s);
+    const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+
+    /** Utils **/
+    function fmtPct(n){ return (n==null||!isFinite(n)) ? 'n/a' : (n>=0?'+':'') + n.toFixed(1) + '%'; }
+    function labelVol(v){ if(v==null||!isFinite(v)) return 'unknown'; if(v>=0.66) return 'high'; if(v>=0.33) return 'medium'; return 'low'; }
+    function labelSent(s){ if(s==null||!isFinite(s)) return 'unknown'; if(s>=0.25) return `positive (+${s.toFixed(2)})`; if(s<=-0.25) return `negative (${s.toFixed(2)})`; return `slightly ${s>=0?'positive':'negative'} (${s.toFixed(2)})`; }
+    function bucketBadge(bucket){ const c = bucket==='safe' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'; return `<span class="${c} px-2 py-0.5 rounded-full text-xs font-semibold">${bucket.toUpperCase()}</span>`; }
+
+    /** State **/
+    let data = null; // summary.json
+    let view = 'compact'; // or 'detailed'
+
+    async function loadSummary(){
+      const res = await fetch('../summary.json');
+      if(!res.ok) throw new Error('summary.json not found');
+      const j = await res.json();
+      return j;
+    }
+
+    function marketsFrom(j){
+      const set = new Set(j.companies.map(c=>c.market));
+      return ['ALL', ...Array.from(set).sort()];
+    }
+
+    function applyFilters(){
+      const q = $('#q').value.trim().toLowerCase();
+      const wantSafe = $('#chkSafe').checked;
+      const wantAgg = $('#chkAgg').checked;
+      const mkt = $('#market').value;
+
+      const filtered = data.companies.filter(c => {
+        if (mkt !== 'ALL' && c.market !== mkt) return false;
+        if (!wantSafe && c.bucket === 'safe') return false;
+        if (!wantAgg && c.bucket === 'aggressive') return false;
+        if (q) {
+          const hay = `${c.name} ${c.ticker||''} ${c.sector||''}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      // sort
+      const s = $('#sortBy').value;
+      const key = s.replace(/^[+-]/,'');
+      const desc = s.startsWith('-');
+      const scoreOf = (c) => {
+        if(key==='news') return c.news?.count ?? -1;
+        if(key==='ret5') return c.metrics?.ret5 ?? -9999;
+        if(key==='ret20') return c.metrics?.ret20 ?? -9999;
+        if(key==='sent') return c.news?.sentiment ?? -99;
+        if(key==='name') return c.name;
+        return 0;
+      };
+      filtered.sort((a,b)=>{
+        const av = scoreOf(a), bv = scoreOf(b);
+        if(typeof av === 'string' || typeof bv === 'string') return String(av).localeCompare(String(bv)) * (desc?-1:1);
+        return (desc ? (bv - av) : (av - bv));
+      });
+
+      renderTable(filtered);
+      renderHighlights(filtered);
+    }
+
+    function renderHighlights(list){
+      const el = $('#highlights');
+      const grid = $('#highlightGrid');
+      if(!list.length){ el.classList.add('hidden'); grid.innerHTML=''; return; }
+      // top by news, by ret5, by ret20
+      const byNews = [...list].sort((a,b)=> (b.news?.count||0) - (a.news?.count||0)).slice(0,3);
+      const byR5 = [...list].sort((a,b)=> (b.metrics?.ret5||-9999) - (a.metrics?.ret5||-9999)).slice(0,3);
+      const byR20 = [...list].sort((a,b)=> (b.metrics?.ret20||-9999) - (a.metrics?.ret20||-9999)).slice(0,3);
+      const cards = [
+        { title: 'Most news (7d)', rows: byNews, stat: (c)=>`${c.news?.count||0}` },
+        { title: 'Top 5d return', rows: byR5, stat: (c)=>fmtPct(c.metrics?.ret5) },
+        { title: 'Top 20d return', rows: byR20, stat: (c)=>fmtPct(c.metrics?.ret20) },
+      ];
+      grid.innerHTML = cards.map(card => `
+        <div class="border border-slate-200 rounded-xl p-3 bg-white shadow-sm">
+          <div class="text-sm font-semibold mb-2">${card.title}</div>
+          <ul class="text-sm space-y-1">
+            ${card.rows.map(c=>`<li class="flex justify-between"><span class="truncate pr-2">${c.name} ${c.ticker?`<span class='text-slate-400'>(${c.ticker})</span>`:''}</span><span class="tabular-nums">${card.stat(c)}</span></li>`).join('')}
+          </ul>
+        </div>`).join('');
+      el.classList.remove('hidden');
+    }
+
+    function renderTable(list){
+      const body = $('#rows');
+      body.innerHTML = '';
+      const tmpl = $('#rowTmpl');
+      for(const c of list){
+        const frag = tmpl.content.cloneNode(true);
+        const tr = $('.border-t', frag);
+        const det = $('.detail', frag);
+        $('.name', frag).textContent = c.name;
+        $('.ticker', frag).textContent = c.ticker || '';
+        $('.bucketChip', frag).outerHTML = bucketBadge(c.bucket);
+        $('.news', frag).textContent = `${c.news?.count ?? 0}${c.news?.blogs?` (blog ${c.news.blogs})`:''}`;
+        $('.sent', frag).textContent = labelSent(c.news?.sentiment);
+        $('.ret5', frag).textContent = fmtPct(c.metrics?.ret5);
+        $('.ret20', frag).textContent = fmtPct(c.metrics?.ret20);
+        $('.vol', frag).textContent = labelVol(c.metrics?.volBand === 'unknown' ? null : (c.metrics?.volBand === 'high' ? 0.9 : c.metrics?.volBand === 'medium' ? 0.5 : 0.1));
+
+        // details
+        const bullets = $('.bullets', det);
+        (c.bullets||[]).forEach(b=>{
+          const li = document.createElement('li'); li.textContent = b.replace(/\s+/g,' ').trim(); bullets.appendChild(li);
+        });
+
+        // expand/collapse
+        tr.addEventListener('click', async ()=>{
+          const isHidden = det.classList.contains('hidden');
+          $$('#rows .detail').forEach(x=>x.classList.add('hidden'));
+          if (isHidden) {
+            det.classList.remove('hidden');
+            // lazy-load headlines
+            if (c.ticker) await loadHeadlines(det, c.ticker);
+          }
+        });
+
+        body.appendChild(frag);
+      }
+    }
+
+    function safeFile(ticker){ return String(ticker).replace(/[^A-Za-z0-9_.-]/g,'_'); }
+
+    async function loadHeadlines(detailRow, ticker){
+      const box = $('.headlines', detailRow);
+      try {
+        const res = await fetch(`../data/articles/${safeFile(ticker)}.json`);
+        if(!res.ok) throw new Error('no cached headlines');
+        const arr = await res.json();
+        if (!Array.isArray(arr) || arr.length === 0) throw new Error('empty');
+        box.innerHTML = arr.slice(0,5).map(a=>{
+          const t = a.title || a.headline || '(untitled)';
+          const u = a.url || a.link || '#';
+          const src = a.source || '';
+          return `<div>• <a class="text-sky-700 hover:underline" href="${u}" target="_blank" rel="noopener">${t}</a> <span class="text-xs text-slate-400">${src}</span></div>`;
+        }).join('');
+      } catch(e){
+        box.innerHTML = `<div class="text-slate-400">No cached headlines. Generate with build‑articles.js.</div>`;
+      }
+    }
+
+    function initSelectors(j){
+      // markets
+      const m = $('#market');
+      m.innerHTML = marketsFrom(j).map(x=>`<option value="${x}">${x}</option>`).join('');
+      m.value = 'ALL';
+
+      // events
+      ['q','chkSafe','chkAgg','market','sortBy'].forEach(id=>{
+        $('#'+id).addEventListener('input', applyFilters);
+        $('#'+id).addEventListener('change', applyFilters);
+      });
+
+      $('#viewCompact').addEventListener('click', ()=>{
+        view='compact';
+        $('#viewCompact').className='text-sm px-2 py-1 rounded-md bg-slate-800 text-white';
+        $('#viewDetailed').className='text-sm px-2 py-1 rounded-md bg-slate-200';
+        document.body.classList.remove('detailed');
+      });
+      $('#viewDetailed').addEventListener('click', ()=>{
+        view='detailed';
+        $('#viewDetailed').className='text-sm px-2 py-1 rounded-md bg-slate-800 text-white';
+        $('#viewCompact').className='text-sm px-2 py-1 rounded-md bg-slate-200';
+        document.body.classList.add('detailed');
+      });
+    }
+
+    (async function main(){
+      try {
+        data = await loadSummary();
+        initSelectors(data);
+        applyFilters();
+      } catch(e){
+        $('#rows').innerHTML = `<tr><td colspan="8" class="px-4 py-6 text-center text-slate-500">${e.message}</td></tr>`;
+      }
+    })();
+  </script>
+</body>
+</html>

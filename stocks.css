@@ -16,6 +16,21 @@ h1 {
   margin-bottom: 20px;
 }
 
+.dashboard-link {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.dashboard-link a {
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dashboard-link a:hover {
+  text-decoration: underline;
+}
+
 h2 {
   color: #34495e;
   border-left: 4px solid #3498db;
@@ -141,6 +156,17 @@ tr:hover {
 
 .portfolio-group .sector {
   margin-left: 4px;
+  color: #6b7280;
+  font-size: 0.85em;
+}
+
+.portfolio-group .score {
+  margin-left: 4px;
+  color: #2563eb;
+  font-size: 0.85em;
+}
+
+.portfolio-group .score-suffix {
   color: #6b7280;
   font-size: 0.85em;
 }

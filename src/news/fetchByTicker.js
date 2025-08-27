@@ -1,15 +1,47 @@
 import fs from 'fs';
 import path from 'path';
+import { restClient } from '@polygon.io/client-js';
 import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
+import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
 
 const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
 const NEWS_CONCURRENCY = Number(process.env.NEWS_CONCURRENCY || 2);
 const ALLOW_STALE_NEWS = process.env.ALLOW_STALE_NEWS !== '0';
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || 8000);
+const CONNECT_TIMEOUT_MS = Number(process.env.CONNECT_TIMEOUT_MS || 3000);
+const defaultHeaders = {
+  'User-Agent': 'stock-recs/1.1 (+ci)',
+  'Accept': 'application/json,text/*;q=0.9,*/*;q=0.8',
+  'Accept-Encoding': 'gzip,deflate',
+  'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
+};
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
 const SKIP_NAVER = process.env.SKIP_NAVER === '1';
+const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
+const NASDAQ_API_KEY = process.env.NASDAQ_API_KEY || '';
+
+const buckets = {
+  newsapi: tokenBucket({capacity:3, refillPerSec:2}),
+  serpapi: tokenBucket({capacity:2, refillPerSec:1.5}),
+  finnhub: tokenBucket({capacity:2, refillPerSec:1}),
+  gdelt: tokenBucket({capacity:2, refillPerSec:1}),
+  naver: tokenBucket({capacity:3, refillPerSec:2}),
+};
+const cb = circuitBreaker({cooldownMs:20*60_000});
+
+async function guardedCall(name, fn){
+  if (cb.isOpen(name)) return null;
+  await buckets[name]?.();
+  try {
+    return await fn();
+  } catch (e){
+    const msg = String(e?.message||e);
+    if (/HTTP 403/.test(msg)) cb.open(name);
+    throw e;
+  }
+}
 
 function looksLikeXmlOrHtml(s){ const t=String(s||'').trim(); return !!t && t.startsWith('<'); }
 function cacheKey(url){ return path.join(CACHE_DIR, `news-${Buffer.from(url).toString('base64url')}.json`); }
@@ -25,28 +57,88 @@ async function cachedJson(url, fetcher, ttlMs=NEWS_TTL_MS, allowStale=ALLOW_STAL
   try{ fs.mkdirSync(CACHE_DIR,{recursive:true}); fs.writeFileSync(key, JSON.stringify(data)); }catch{}
   return data;
 }
-async function safeGetJson(url, headers={}){
-  const ac = new AbortController();
-  const to = setTimeout(() => ac.abort(new Error('timeout')), REQ_TIMEOUT_MS);
+async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
+  const ctrl = new AbortController();
+  const connectTimer = setTimeout(()=>ctrl.abort(new Error('timeout')), CONNECT_TIMEOUT_MS);
   let res;
   try {
-    res = await fetch(url, { headers, signal: ac.signal });
-  } catch (e) {
+    res = await fetch(url, { headers: { ...defaultHeaders, ...headers }, redirect: 'follow', signal: ctrl.signal });
+    clearTimeout(connectTimer);
+  } catch (e){
     const host = (()=>{ try { return new URL(url).host; } catch { return 'unknown-host'; }})();
     const code = e?.cause?.code || e.name || 'ERR_FETCH';
     throw new Error(`fetch failed (${host}): ${e.message} [${code}]`);
-  } finally {
-    clearTimeout(to);
   }
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const ct = res.headers?.get?.('content-type') || '';
-  if (/json/i.test(ct)) return await res.json();
-  const txt = await res.text();
-  if (looksLikeXmlOrHtml(txt)) throw new Error(`non-JSON payload (${ct||'unknown'})`);
-  try{ return JSON.parse(txt); } catch(e){ throw new Error(`JSON parse failed (${ct||'unknown'}): ${e.message}`); }
+  const readTimer = setTimeout(()=>ctrl.abort(new Error('timeout')), timeoutMs);
+  try {
+    if (!res.ok) {
+      const hdrs = {};
+      res.headers?.forEach((v,k)=>hdrs[k]=v);
+      const err = new Error(`HTTP ${res.status}`);
+      err.responseHeaders = hdrs;
+      throw err;
+    }
+    const ct = res.headers?.get?.('content-type') || '';
+    if (/json/i.test(ct)) return await res.json();
+    const txt = await res.text();
+    if (looksLikeXmlOrHtml(txt)) throw new Error(`non-JSON payload (${ct||'unknown'})`);
+    return JSON.parse(txt);
+  } catch(e){
+    if (e instanceof SyntaxError) throw new Error(`JSON parse failed (${e.message})`);
+    throw e;
+  } finally {
+    clearTimeout(readTimer);
+  }
 }
 
 function isKR(sym){ return /\.K[QS]$/.test(sym); }
+
+function baseSymbol(sym){ return String(sym||'').replace(/[\.\-]/g,'').toUpperCase(); }
+
+async function fetchPolygonTrend(ticker) {
+  if (!POLYGON_API_KEY) return null;
+  try {
+    const rest = restClient(POLYGON_API_KEY);
+    const end = new Date();
+    const start = new Date(end.getTime() - 2 * 24 * 60 * 60 * 1000);
+    const res = await rest.stocks.aggregates(
+      ticker,
+      1,
+      'day',
+      start.toISOString().slice(0, 10),
+      end.toISOString().slice(0, 10)
+    );
+    const arr = Array.isArray(res?.results) ? res.results : [];
+    if (arr.length >= 2) {
+      const prev = arr[arr.length - 2];
+      const last = arr[arr.length - 1];
+      const pc = prev?.c;
+      const lc = last?.c;
+      if (typeof pc === 'number' && typeof lc === 'number' && pc !== 0) {
+        return (lc - pc) / pc;
+      }
+    }
+  } catch (e) {
+    console.warn(`polygon trend failed for ${ticker}:`, e.message);
+  }
+  return null;
+}
+
+async function fetchNasdaqMetric(ticker) {
+  if (!NASDAQ_API_KEY) return null;
+  const base = baseSymbol(ticker);
+  const url = `https://data.nasdaq.com/api/v3/datasets/WIKI/${base}.json?rows=1&api_key=${NASDAQ_API_KEY}`;
+  try {
+    const res = await fetch(url, { headers: defaultUA });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const j = await res.json();
+    const close = j?.dataset?.data?.[0]?.[4];
+    return typeof close === 'number' ? close : null;
+  } catch (e) {
+    console.warn(`nasdaq data failed for ${ticker}:`, e.message);
+    return null;
+  }
+}
 
 /**
  * Build a compact symbol→query dictionary.
@@ -81,14 +173,26 @@ async function mapLimit(items, limit, worker){
   return out;
 }
 
-async function with429Retry(fn, max=1, baseMs=400){
-  let last; for (let i=0;i<=max;i++){
-    try { return await fn(); } catch(e){
-      last = e;
-      if (!/HTTP 429/.test(String(e))) break;
-      if (i<max) await new Promise(r=>setTimeout(r, Math.floor(baseMs*Math.pow(2,i)*(0.6+Math.random()*0.6))));
+async function withRetry(fn,{max=2,baseMs=600,onError}={}){
+  let last;
+  for(let i=0;i<=max;i++){
+    try { return await fn(); }
+    catch(e){
+      last=e;
+      const msg=String(e);
+      const ra=Number((e?.responseHeaders?.['retry-after'])||0);
+      const is429=/HTTP 429/.test(msg);
+      const wait=typeof onError==='function' ? (onError(e)||0) : 0;
+      const backoff=Math.floor((is429 ? (ra*1000||baseMs*Math.pow(2,i)) : baseMs*Math.pow(2,i))*(0.6+Math.random()*0.6));
+      if(i<max) await new Promise(r=>setTimeout(r, Math.max(wait, backoff)));
+      else break;
     }
-  } throw last;
+  }
+  throw last;
+}
+
+async function with429Retry(fn, max=2, baseMs=600){
+  return withRetry(fn,{max, baseMs});
 }
 
 /**
@@ -99,9 +203,9 @@ async function newsFromFinnhub(sym, FINNHUB){
   const to = new Date().toISOString().slice(0,10);
   const from = new Date(Date.now()-7*864e5).toISOString().slice(0,10);
   const url = `https://finnhub.io/api/v1/company-news?symbol=${encodeURIComponent(sym)}&from=${from}&to=${to}&token=${FINNHUB}`;
-  const j = await with429Retry(
+  const j = await withRetry(
     () => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true),
-    2, /*base backoff*/ 600
+    {max:2, baseMs:600}
   );
   const arr = Array.isArray(j) ? j : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
@@ -109,8 +213,8 @@ async function newsFromFinnhub(sym, FINNHUB){
 
 async function newsFromNewsAPI(sym, q, NEWSAPI){
   if (!NEWSAPI) return null;
-  const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(q)}&language=en&pageSize=10&sortBy=publishedAt&apiKey=${NEWSAPI}`;
-  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
+  const url = `https://newsapi.org/v2/everything?qInTitle=${encodeURIComponent(sym)}&language=en&pageSize=10&sortBy=publishedAt&apiKey=${NEWSAPI}`;
+  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true), {max:1, baseMs:600});
   const arr = Array.isArray(j?.articles) ? j.articles : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
@@ -120,35 +224,55 @@ async function newsFromNewsAPI(sym, q, NEWSAPI){
  * Docs: https://serpapi.com/google-news-api
  * We localize KR vs US via gl/hl and add a recency hint (when:7d).
  */
-async function newsFromSerpApi(sym, q, SERPAPI){
+async function newsFromSerpApi(sym, name, SERPAPI){
   if (!SERPAPI) return null;
   const isKr = isKR(sym);
   const gl = isKr ? 'kr' : 'us';
   const hl = isKr ? 'ko' : 'en';
-  const finalQ = /\bwhen:\d+[hdwmy]?\b/i.test(q) ? q : `${q} when:7d`;
+  const baseQ = `"${name}" OR ${sym} site:news.google.com`;
+  const finalQ = /\bwhen:\d+[hdwmy]?\b/i.test(baseQ) ? baseQ : `${baseQ} when:7d`;
   const url = `https://serpapi.com/search.json?engine=google_news&q=${encodeURIComponent(finalQ)}&gl=${gl}&hl=${hl}&no_cache=false&api_key=${SERPAPI}`;
-  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
+  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true), {max:1, baseMs:600});
   const arr = Array.isArray(j?.news_results) ? j.news_results : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
-async function newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET){
+async function newsFromGNews(sym, q, GNEWS_API){
+  if (!GNEWS_API) return null;
+
+  // Choose language by market (you can tweak country= as well if you like):
+  const isKr = isKR(sym);
+  const lang = isKr ? 'ko' : 'en';
+
+  // Keep it simple and quota-friendly. You can add date filters later if needed.
+  // Docs pattern: https://gnews.io/api/v4/search?q=...&lang=...&max=...&apikey=KEY
+  const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=10&apikey=${GNEWS_API}`;
+
+  // Cache ~20 min; allow stale like others
+  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
+
+  const arr = Array.isArray(j?.articles) ? j.articles : [];
+  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
+async function newsFromNaver(name, NAVER_ID, NAVER_SECRET){
   if (SKIP_NAVER) return null;
   if (!NAVER_ID || !NAVER_SECRET) return null;
-  // news search (date-sorted); we only need a small page to decide "non-zero"
+  const q = `${name} + 증권 OR 투자`;
   const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
-  const headers = { ...defaultUA, 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
-  const j = await cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true);
+  const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true), {max:1, baseMs:600});
   const arr = Array.isArray(j?.items) ? j.items : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
-async function blogFromNaver(q, NAVER_ID, NAVER_SECRET){
+async function blogFromNaver(name, NAVER_ID, NAVER_SECRET){
   if (SKIP_NAVER) return 0;
   if (!NAVER_ID || !NAVER_SECRET) return 0;
+  const q = `${name} + 증권 OR 투자`;
   const url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
-  const headers = { ...defaultUA, 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
-  const j = await cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true);
+  const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true), {max:1, baseMs:600});
   const arr = Array.isArray(j?.items) ? j.items : [];
   return Math.min(arr.length, 30);
 }
@@ -190,7 +314,7 @@ async function newsFromKotra(sym, rawQuery) {
 
   const headers = { Accept: 'application/json' };
   // KOTRA will often return XML on auth/param error; soft-fail to keep other providers running.
-  const j = await cachedJson(url, async (u) => {
+  const j = await withRetry(() => cachedJson(url, async (u) => {
     try { return await safeGetJson(u, headers); }
     catch (e) {
       if (String(e.message).includes('non-JSON payload')) {
@@ -198,7 +322,7 @@ async function newsFromKotra(sym, rawQuery) {
       }
       throw e;
     }
-  }, 20 * 60 * 1000, true);
+  }, 20 * 60 * 1000, true), {max:1, baseMs:600});
 
   const header = j?.response?.header;
   if (!header || header.resultCode !== '00') return { count: 0, sentiment: 0, blogMentions: 0 };
@@ -211,21 +335,21 @@ async function newsFromKotra(sym, rawQuery) {
 }
 
 async function newsFromGdelt(sym, q){
-  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(q)}&mode=artlist&format=jsonfeed&maxrecords=10&sort=DateDesc`;
-  const j = await cachedJson(url, async (u)=>{
-    try { return await safeGetJson(u, defaultUA); }
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(q)}&mode=artlist&format=json&maxrecords=5&timespan=7d&sort=DateDesc`;
+  const j = await withRetry(() => cachedJson(url, async (u)=>{
+    try { return await safeGetJson(u, defaultUA, 4000); }
     catch(e){
-      if (String(e.message).includes('non-JSON payload')) return { items: [] }; // soft-fail
+      if (String(e.message).includes('non-JSON payload')) return { items: [] };
       throw e;
     }
-  }, 15*60*1000, true);
-  const arr = Array.isArray(j?.items) ? j.items : [];
+  }, 10*60*1000, true), {max:1, baseMs:800});
+  const arr = Array.isArray(j?.articles) ? j.articles : (Array.isArray(j?.items) ? j.items : []);
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
 /**
  * Main: buildNewsFeatures(symbols, { symbolToName })
- * Returns shape: { [symbol]: { count, sentiment, blogMentions } }
+ * Returns shape: { [symbol]: { count, sentiment, blogMentions, polygonTrend, nasdaqClose } }
  */
 export async function buildNewsFeatures(symbols, opts={}){
   const FINNHUB = process.env.FINNHUB_API_KEY || '';
@@ -233,46 +357,66 @@ export async function buildNewsFeatures(symbols, opts={}){
   const SERPAPI = process.env.SERP_API_KEY || '';
   const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
+  const GNEWS = process.env.GNEWS_API || '';
 
-  const symbolToName = { ...(opts.symbolToName || {}) };
-  // Try to fill in KR company names when missing
-  await Promise.all(symbols.map(async (s)=>{
+  const nameFile = 'symbolNames.json';
+  const cachedNames = (()=>{ try{return JSON.parse(fs.readFileSync(nameFile,'utf8'));}catch{return{}} })();
+  const symbolToName = { ...(cachedNames), ...(opts.symbolToName||{}) };
+
+  const baseMap = {};
+  const uniq = [];
+  for (const s of symbols){
+    const b = baseSymbol(s);
+    if (!baseMap[b]){ baseMap[b]=s; uniq.push(s); }
+  }
+
+  await Promise.all(uniq.map(async (s)=>{
     if (isKR(s) && !symbolToName[s]) {
-      try { symbolToName[s] = await getCompanyNameByYahooSymbol(s); } catch {}
+      try {
+        const nm = await getCompanyNameByYahooSymbol(s);
+        if (nm){ symbolToName[s]=nm; cachedNames[s]=nm; }
+      } catch {}
     }
   }));
-  const queries = buildQueries(symbols, { symbolToName });
-  const out = {};
+  try { fs.writeFileSync(nameFile, JSON.stringify(cachedNames)); } catch {}
 
-  await mapLimit(symbols, NEWS_CONCURRENCY, async (sym)=>{
+  const queries = buildQueries(uniq, { symbolToName });
+  const baseOut = {};
+
+  await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
     const q = queries[sym];
+    const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
-    // Prefer SerpApi early; keep NewsAPI as a late fallback. GDELT is a last-resort fallback.
     const preferKotra = process.env.USE_KOTRA_BACKUP === '1' || process.env.PREFER_KOTRA === '1';
     const providers = isKR(sym)
       ? (preferKotra
-          ? ['kotra', 'naver', 'serpapi', 'finnhub', 'newsapi', 'gdelt']
-          : ['naver', 'serpapi', 'finnhub', 'kotra', 'newsapi', 'gdelt'])
-      : ['serpapi', 'newsapi', 'finnhub', 'kotra', 'naver', 'gdelt'];
+          ? ['gnews','kotra','naver','serpapi','finnhub','newsapi','gdelt']
+          : ['gnews','naver','serpapi','kotra','finnhub','newsapi','gdelt'])
+      : ['gnews','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
 
     let lastErr = null;
     for (const p of providers) {
       try {
         let v = null;
-        if (p === 'finnhub') v = await newsFromFinnhub(sym, FINNHUB);
-        else if (p === 'serpapi') v = await with429Retry(() => newsFromSerpApi(sym, q, SERPAPI), 2, 600);
-        else if (p === 'newsapi') v = await with429Retry(() => newsFromNewsAPI(sym, q, NEWSAPI), 1, 600);
-        else if (p === 'kotra') v = await newsFromKotra(sym, q);
-        else if (p === 'gdelt') v = await newsFromGdelt(sym, q);
-        else v = await newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET);
+        if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
+        else if (p === 'finnhub') v = await guardedCall('finnhub', () => newsFromFinnhub(sym, FINNHUB));
+        else if (p === 'serpapi') v = await guardedCall('serpapi', () => newsFromSerpApi(sym, name, SERPAPI));
+        else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
+        else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
+        else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
+        else v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET));
         if (v && v.count > 0) {
           if (!SKIP_NAVER) {
             try {
-              const blogs = await blogFromNaver(q, NAVER_ID, NAVER_SECRET);
-              v.blogMentions = Math.max(v.blogMentions || 0, blogs);
+              const blogs = await guardedCall('naver', () => blogFromNaver(name, NAVER_ID, NAVER_SECRET));
+              v.blogMentions = Math.max(v.blogMentions || 0, blogs || 0);
             } catch {}
           }
-          out[sym] = v;
+          const trend = await fetchPolygonTrend(sym);
+          if (trend != null) v.polygonTrend = trend;
+          const close = await fetchNasdaqMetric(sym);
+          if (close != null) v.nasdaqClose = close;
+          baseOut[baseSymbol(sym)] = v;
           return;
         }
       } catch (e) {
@@ -281,9 +425,17 @@ export async function buildNewsFeatures(symbols, opts={}){
       }
     }
     if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
-    out[sym] = feat;
+    const trend = await fetchPolygonTrend(sym);
+    if (trend != null) feat.polygonTrend = trend;
+    const close = await fetchNasdaqMetric(sym);
+    if (close != null) feat.nasdaqClose = close;
+    baseOut[baseSymbol(sym)] = feat;
   });
 
+  const out = {};
+  for (const s of symbols){
+    out[s] = baseOut[baseSymbol(s)] || { count:0, sentiment:0, blogMentions:0, polygonTrend:0, nasdaqClose:null };
+  }
   return out;
 }
 
@@ -328,6 +480,15 @@ function normalizeNaverArticle(it) {
   return { title, url, source: "Naver", publishedAt: date };
 }
 
+function normalizeGNewsArticle(it) {
+  const title = it?.title || "";
+  const url = it?.url || "";
+  if (!title || !url) return null;
+  const date = it?.publishedAt ? new Date(it.publishedAt).toISOString() : new Date().toISOString();
+  const source = it?.source?.name || "GNews";
+  return { title, url, source, publishedAt: date };
+}
+
 function dedupeArticles(items) {
   const seen = new Set();
   return items.filter(it => {
@@ -360,6 +521,18 @@ async function getTickerArticlesPrimary(ticker) {
       const j = await res.json();
       const arr = Array.isArray(j?.items) ? j.items : [];
       out.push(...arr.map(normalizeNaverArticle).filter(Boolean));
+    } catch {}
+  }
+  const GNEWS = process.env.GNEWS_API || "";
+  if (GNEWS) {
+    try {
+      const lang = /\.K[QS]$/.test(ticker) ? 'ko' : 'en';
+      const q = ticker.replace(/\.[A-Z]+$/,'');
+      const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=20&apikey=${GNEWS}`;
+      const res = await fetch(url, { headers: { 'User-Agent': 'stock-recs/1.0 (+github-actions)' } });
+      const j = await res.json();
+      const arr = Array.isArray(j?.articles) ? j.articles : [];
+      out.push(...arr.map(normalizeGNewsArticle).filter(Boolean));
     } catch {}
   }
   return dedupeArticles(out);

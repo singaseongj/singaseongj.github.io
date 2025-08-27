@@ -550,7 +550,9 @@ function namesOnlyRank(universe, features) {
       const count = Math.min(nf.count || 0, 30) / 30;
       const sentiment = ((nf.sentiment ?? 0) + 1) / 2;
       const pop = nf.naverPopularity ?? 0;
-      const score = count * 0.12 + (sentiment - 0.5) * 0.08 + (/\.K[QS]$/.test(sym) ? pop * 0.20 : 0);
+      const trendBoost = (typeof nf.polygonTrend === 'number' ? clamp01(nf.polygonTrend) * 0.05 : 0);
+      const nasdaqBoost = nf.nasdaqClose != null ? 0.02 : 0;
+      const score = count * 0.12 + (sentiment - 0.5) * 0.08 + (/\.K[QS]$/.test(sym) ? pop * 0.20 : 0) + trendBoost + nasdaqBoost;
       return { name: n, score };
     }).sort((a,b)=>b.score-a.score).map(s=>s.name);
     out[m] = { safe: scored.slice(0, kSafe), aggressive: scored.slice(kSafe, kSafe + kAggr) };
@@ -840,7 +842,7 @@ async function main(){
       }
       log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
-      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let earn=false; let candles=null;
+      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let polygonTrend=null; let nasdaqClose=null; let earn=false; let candles=null;
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
@@ -867,19 +869,21 @@ async function main(){
           sentiment = typeof nf.sentiment === 'number' ? nf.sentiment : null;
           naverPopularity = typeof nf.naverPopularity === 'number' ? nf.naverPopularity : 0;
           blogMentions = typeof nf.blogMentions === 'number' ? nf.blogMentions : 0;
+          if (typeof nf.polygonTrend === 'number') polygonTrend = nf.polygonTrend;
+          if (typeof nf.nasdaqClose === 'number') nasdaqClose = nf.nasdaqClose;
         }
         earn = !!(EARNINGS_SET && sym && isUS(sym) && EARNINGS_SET.has(sym));
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, polygonTrend, nasdaqClose, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
       processed.add(name);
     });
     for (const n of names) {
       if (!byName[n]) {
         byName[n] = {
           ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
-          newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false,
+          newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
           sym:null, source:null, attempts:[], fetchMs:0
         };
       }
@@ -920,7 +924,22 @@ async function main(){
       const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
       const pop = byName[n].naverPopularity ?? 0;
       const blogNorm = nBlog[i];
-      const newsBoost = newsCountNorm * 0.12 + (sentimentNorm - 0.5) * 0.08 + (isKRName ? pop * 0.20 : 0) + blogNorm * 0.05;
+
+      const weights = {
+        count: 0.12,
+        sentiment: 0.08,
+        naver: isKRName ? 0.30 : 0,
+        blog: 0.15,
+      };
+      const totalOrig = weights.count + weights.sentiment + weights.naver + weights.blog;
+      let totalAvail = 0;
+      let newsBoost = 0;
+      if (byName[n].newsCount != null) { newsBoost += newsCountNorm * weights.count; totalAvail += weights.count; }
+      if (byName[n].sentiment != null) { newsBoost += (sentimentNorm - 0.5) * weights.sentiment; totalAvail += weights.sentiment; }
+      if (isKRName && byName[n].naverPopularity != null) { newsBoost += pop * weights.naver; totalAvail += weights.naver; }
+      if (byName[n].blogMentions != null) { newsBoost += blogNorm * weights.blog; totalAvail += weights.blog; }
+      const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
+      newsBoost *= scale;
 
       const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsBoost + 0.10*earnBonus);
       const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsBoost + earnBonus);
@@ -1039,7 +1058,7 @@ async function main(){
       const blogNorm = nBlog[i];
       acc[n] = {
         ret5: byName[n].ret5, ret20: byName[n].ret20, vol20: byName[n].vol20, turnover: byName[n].turnover,
-        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, blogMentions: byName[n].blogMentions, recentEarnings: byName[n].earn,
+        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, blogMentions: byName[n].blogMentions, polygonTrend: byName[n].polygonTrend, nasdaqClose: byName[n].nasdaqClose, recentEarnings: byName[n].earn,
         source: byName[n].source, attempts: byName[n].attempts, fetchMs: byName[n].fetchMs,
         norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], newsCount: newsCountNorm, sentiment: sentimentNorm, popularity: pop, blogMentions: blogNorm },
         score: { safe: scoreSafe[n], aggressive: scoreAggr[n] }

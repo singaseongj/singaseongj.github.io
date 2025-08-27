@@ -61,6 +61,7 @@
 <body>
   <a href="index.html" class="home-button" aria-label="Home">&#x21A9;</a>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
+  <p class="dashboard-link"><a data-i18n="dashboardLink" href="stocks/index.html">Stock News Summary Dashboard</a></p>
   <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> {{CURRENT_DATE}}</p>
   
   <div id="debugInfo" class="debug" style="display: none;">
@@ -119,6 +120,7 @@
         disclaimer: '본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.',
         marketNews: '최신 마켓 뉴스',
         portfolioRecs: '포트폴리오 추천',
+        dashboardLink: '주식 시장 요약 대시보드',
         marketDataError: '마켓 데이터를 불러오지 못했습니다.',
         newsError: '뉴스를 불러오지 못했습니다.',
         recsError: '추천 데이터를 불러오지 못했습니다.',
@@ -127,7 +129,8 @@
         pickNote: '안전주는 변동성이 낮고 최근 수익률이 안정적인 종목, 공격주는 모멘텀과 거래대금이 높은 종목입니다.',
         updated: '업데이트: ',
         visitsToday: '오늘 방문: {daily} | 총 방문: {total}',
-        noPicks: 'No picks available'
+        noPicks: 'No picks available',
+        scoreSuffix: '매력점수'
       },
       en: {
         title: 'Daily Stock Report Automation',
@@ -144,6 +147,7 @@
         disclaimer: 'Information on this page is for reference only and accuracy is not guaranteed. Investment decisions are your responsibility.',
         marketNews: 'Latest Market News',
         portfolioRecs: 'Portfolio Recommendations',
+        dashboardLink: 'Stock News Summary Dashboard',
         marketDataError: 'Failed to load market data.',
         newsError: 'Failed to load news.',
         recsError: 'Failed to load recommendations.',
@@ -152,7 +156,8 @@
         pickNote: 'Safe Picks emphasise consistent performance and lower volatility; Aggressive Picks highlight higher momentum and volume.',
         updated: 'Updated: ',
         visitsToday: 'Visits today: {daily} | Total: {total}',
-        noPicks: 'No picks available'
+        noPicks: 'No picks available',
+        scoreSuffix: 'Attractiveness'
       }
     };
 
@@ -425,11 +430,12 @@
             const name = FULL_NAME_MAP[item.name] || item.name;
             const link = item.searchUrl ? `<a href="${item.searchUrl}" target="_blank" rel="noopener">${name}</a>` : name;
             const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
-            return `<li>${link}${sector}</li>`;
+            const score = item.score != null ? `<span class="score">${item.score}</span>` : '';
+            return `<li>${link}${sector}${score}</li>`;
           });
           const list = itemsArr.length ? itemsArr.join('') : `<li class="empty">${translations[currentLang].noPicks}</li>`;
           const label = bucket === 'safe' ? translations[currentLang].safe : translations[currentLang].aggressive;
-          html.push(`<div class="portfolio-group"><h3>${m} ${label}</h3><ul>${list}</ul></div>`);
+          html.push(`<div class="portfolio-group"><h3>${m} ${label} / <span class="score-suffix">${translations[currentLang].scoreSuffix}</span></h3><ul>${list}</ul></div>`);
         }
         html.push(`<small class="tooltip">${translations[currentLang].pickNote}</small>`);
       }
