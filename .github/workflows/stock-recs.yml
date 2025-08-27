@@ -51,7 +51,7 @@ jobs:
       NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
       NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
       SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
-      GNEWS_API_KEY: ${{ secrets.GNEWS_API }}
+      GNEWS_API: ${{ secrets.GNEWS_API }}
       # Optional tuning for this module
       NEWS_CONCURRENCY: 2        # your code already defaults to 2; keep it small for SerpApi quotas
       NEWS_TTL_MS: 1800000       # 30m cache TTL (aligns with your comment)
@@ -168,7 +168,7 @@ jobs:
       - name: Build recommendations (no pool refresh here)
         shell: bash
         env:
-          GNEWS_API_KEY: ${{ secrets.GNEWS_API }}
+          GNEWS_API: ${{ secrets.GNEWS_API }}
         run: |
           set -euo pipefail
           if [ -f fetchStockInfo.js ]; then

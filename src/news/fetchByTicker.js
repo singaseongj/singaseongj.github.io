@@ -189,8 +189,8 @@ async function newsFromSerpApi(sym, name, SERPAPI){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
-async function newsFromGNews(sym, q, GNEWS_API_KEY){
-  if (!GNEWS_API_KEY) return null;
+async function newsFromGNews(sym, q, GNEWS_API){
+  if (!GNEWS_API) return null;
 
   // Choose language by market (you can tweak country= as well if you like):
   const isKr = isKR(sym);
@@ -198,7 +198,7 @@ async function newsFromGNews(sym, q, GNEWS_API_KEY){
 
   // Keep it simple and quota-friendly. You can add date filters later if needed.
   // Docs pattern: https://gnews.io/api/v4/search?q=...&lang=...&max=...&apikey=KEY
-  const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=10&apikey=${GNEWS_API_KEY}`;
+  const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=10&apikey=${GNEWS_API}`;
 
   // Cache ~20 min; allow stale like others
   const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
@@ -309,7 +309,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const SERPAPI = process.env.SERP_API_KEY || '';
   const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
-  const GNEWS_KEY = process.env.GNEWS_API_KEY || '';
+  const GNEWS = process.env.GNEWS_API || '';
 
   const nameFile = 'symbolNames.json';
   const cachedNames = (()=>{ try{return JSON.parse(fs.readFileSync(nameFile,'utf8'));}catch{return{}} })();
@@ -350,7 +350,7 @@ export async function buildNewsFeatures(symbols, opts={}){
     for (const p of providers) {
       try {
         let v = null;
-        if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS_KEY), 2, 600));
+        if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
         else if (p === 'finnhub') v = await guardedCall('finnhub', () => newsFromFinnhub(sym, FINNHUB));
         else if (p === 'serpapi') v = await guardedCall('serpapi', () => newsFromSerpApi(sym, name, SERPAPI));
         else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
@@ -467,12 +467,12 @@ async function getTickerArticlesPrimary(ticker) {
       out.push(...arr.map(normalizeNaverArticle).filter(Boolean));
     } catch {}
   }
-  const GNEWS_KEY = process.env.GNEWS_API_KEY || "";
-  if (GNEWS_KEY) {
+  const GNEWS = process.env.GNEWS_API || "";
+  if (GNEWS) {
     try {
       const lang = /\.K[QS]$/.test(ticker) ? 'ko' : 'en';
       const q = ticker.replace(/\.[A-Z]+$/,'');
-      const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=20&apikey=${GNEWS_KEY}`;
+      const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=20&apikey=${GNEWS}`;
       const res = await fetch(url, { headers: { 'User-Agent': 'stock-recs/1.0 (+github-actions)' } });
       const j = await res.json();
       const arr = Array.isArray(j?.articles) ? j.articles : [];
