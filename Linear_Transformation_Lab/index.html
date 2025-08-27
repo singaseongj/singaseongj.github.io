@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ <!--한국어-->
+<html lang="ko">
+    <head>
+        <!--글자 안깨지게-->
+        <meta charset="UTF-8">
+        <meta name="keywords" content="선형변환, linear transformation, 수학 시각화, 2D 선형대수, 벡터 변환, 행렬 곱, 고등수학, 선형대수학, JavaScript 수학 시각화, 벡터 시각화">
+        <!--탭 제목-->
+        <title>선형변환</title>
+        <!--수학용 글꼴 사용-->
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--헤더-->
+        <header>2D 선형변환</header>
+
+        <!--헤더 뺀 부분-->
+        <main>
+            <!--좌측 박스-->
+            <div id="leftbox">
+                <!--벡터 표시용-->
+                <div class="vector">\(\vec{v}=00000\hat{i} + 00000\hat{j}\)</div>
+                <!--단위벡터 표시용 상자-->
+                <div class="unitvectorborder">
+                    <!--단위벡터 표시-->
+                    <div class="unitvectori">\(\hat{i}=(00000,00000)\)</div>
+                    <div class="unitvectorj">\(\hat{j}=(00000,00000)\)</div>
+                </div>
+                <!--행렬 순서 표시-->
+                <div class="matrixlog"></div>
+                <!--행렬 입력창-->
+                <div class="matrixinput">
+                    <form id="controls" style="font-size:12px; line-height:1.4">
+                      <div style="margin-bottom:6px">
+                        <strong>행렬 A</strong><br>
+                        <input id="a11" type="number" step="any" value="1" style="width:44px"> 
+                        <input id="a12" type="number" step="any" value="0" style="width:44px"><br>
+                        <input id="a21" type="number" step="any" value="0" style="width:44px"> 
+                        <input id="a22" type="number" step="any" value="1" style="width:44px">
+                      </div>
+                      <div style="margin-bottom:6px">
+                        <strong>벡터 v</strong><br>
+                        v<sub>i</sub>= <input id="vi_in" type="number" step="any" value="1" style="width:60px">
+        v<sub>j</sub>= <input id="vj_in" type="number" step="any" value="2" style="width:60px">
+                      </div>
+                      <div>
+                        <button type="button" id="applyA">적용</button>
+                        <button type="button" id="composeA" title="현재 변환 뒤에 곱합니다">누적</button>
+                        <button type="button" id="fitView">맞추기</button>
+                        <button type="button" id="resetAll">리셋</button>
+                      </div>
+                      <label style="display:block; margin-top:6px">
+                        <input type="checkbox" id="clickSet" checked> 평면 클릭으로 v 설정
+                      </label>
+                    </form>
+                </div>
+            </div>
+            <!--실제 좌표 평면-->
+            <div id="plane">
+                <!--canvas 로 좌표평면 만들기-->
+                <canvas id="graph"> <!--여기에 좌표평면 넣기--> </canvas>
+            </div>
+        </main>
+
+<!--해야할 일: 1. js 부분 가독성 높게 갈아엎기, 2. 점 찍는 기능 추가, 3. 자동으로 스케일링 해주는 기능 추가, 4. 벡터를 추가하는 기능 추가, 5. 나머지 모든 기능 구현, 6. 코드에 주석 달고 가독성 높게 갈아엎기, 7. 완성!!!-->
+
+        <script src="script.js"></script>
+    </body>
+</html>

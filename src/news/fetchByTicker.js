@@ -9,6 +9,7 @@ const NEWS_CONCURRENCY = Number(process.env.NEWS_CONCURRENCY || 2);
 const ALLOW_STALE_NEWS = process.env.ALLOW_STALE_NEWS !== '0';
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || 8000);
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
+const SKIP_NAVER = process.env.SKIP_NAVER === '1';
 
 function looksLikeXmlOrHtml(s){ const t=String(s||'').trim(); return !!t && t.startsWith('<'); }
 function cacheKey(url){ return path.join(CACHE_DIR, `news-${Buffer.from(url).toString('base64url')}.json`); }
@@ -52,7 +53,7 @@ function isKR(sym){ return /\.K[QS]$/.test(sym); }
  * - For KR symbols: prefer Korean display name if provided (opts.symbolToName), else the numeric code.
  * - For US: use ticker + display name to help NewsAPI.
  */
-function buildQueries(symbols, { symbolToName={} }={}){
+function buildQueries(symbols, { symbolToName={} }={}) {
   const q = {};
   for (const s of symbols){
     const name = symbolToName[s] || s;
@@ -98,7 +99,10 @@ async function newsFromFinnhub(sym, FINNHUB){
   const to = new Date().toISOString().slice(0,10);
   const from = new Date(Date.now()-7*864e5).toISOString().slice(0,10);
   const url = `https://finnhub.io/api/v1/company-news?symbol=${encodeURIComponent(sym)}&from=${from}&to=${to}&token=${FINNHUB}`;
-  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
+  const j = await with429Retry(
+    () => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true),
+    2, /*base backoff*/ 600
+  );
   const arr = Array.isArray(j) ? j : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
@@ -129,6 +133,7 @@ async function newsFromSerpApi(sym, q, SERPAPI){
 }
 
 async function newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET){
+  if (SKIP_NAVER) return null;
   if (!NAVER_ID || !NAVER_SECRET) return null;
   // news search (date-sorted); we only need a small page to decide "non-zero"
   const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
@@ -139,6 +144,7 @@ async function newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET){
 }
 
 async function blogFromNaver(q, NAVER_ID, NAVER_SECRET){
+  if (SKIP_NAVER) return 0;
   if (!NAVER_ID || !NAVER_SECRET) return 0;
   const url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
   const headers = { ...defaultUA, 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
@@ -206,7 +212,13 @@ async function newsFromKotra(sym, rawQuery) {
 
 async function newsFromGdelt(sym, q){
   const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(q)}&mode=artlist&format=jsonfeed&maxrecords=10&sort=DateDesc`;
-  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 15*60*1000, true);
+  const j = await cachedJson(url, async (u)=>{
+    try { return await safeGetJson(u, defaultUA); }
+    catch(e){
+      if (String(e.message).includes('non-JSON payload')) return { items: [] }; // soft-fail
+      throw e;
+    }
+  }, 15*60*1000, true);
   const arr = Array.isArray(j?.items) ? j.items : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
@@ -222,16 +234,26 @@ export async function buildNewsFeatures(symbols, opts={}){
   const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
 
-  const queries = buildQueries(symbols, opts);
+  const symbolToName = { ...(opts.symbolToName || {}) };
+  // Try to fill in KR company names when missing
+  await Promise.all(symbols.map(async (s)=>{
+    if (isKR(s) && !symbolToName[s]) {
+      try { symbolToName[s] = await getCompanyNameByYahooSymbol(s); } catch {}
+    }
+  }));
+  const queries = buildQueries(symbols, { symbolToName });
   const out = {};
 
   await mapLimit(symbols, NEWS_CONCURRENCY, async (sym)=>{
     const q = queries[sym];
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
     // Prefer SerpApi early; keep NewsAPI as a late fallback. GDELT is a last-resort fallback.
+    const preferKotra = process.env.USE_KOTRA_BACKUP === '1' || process.env.PREFER_KOTRA === '1';
     const providers = isKR(sym)
-      ? ['naver', 'serpapi', 'finnhub', 'kotra', 'newsapi', 'gdelt']
-      : ['finnhub', 'serpapi', 'newsapi', 'kotra', 'naver', 'gdelt'];
+      ? (preferKotra
+          ? ['kotra', 'naver', 'serpapi', 'finnhub', 'newsapi', 'gdelt']
+          : ['naver', 'serpapi', 'finnhub', 'kotra', 'newsapi', 'gdelt'])
+      : ['serpapi', 'newsapi', 'finnhub', 'kotra', 'naver', 'gdelt'];
 
     let lastErr = null;
     for (const p of providers) {
@@ -244,10 +266,12 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'gdelt') v = await newsFromGdelt(sym, q);
         else v = await newsFromNaver(sym, q, NAVER_ID, NAVER_SECRET);
         if (v && v.count > 0) {
-          try {
-            const blogs = await blogFromNaver(q, NAVER_ID, NAVER_SECRET);
-            v.blogMentions = Math.max(v.blogMentions || 0, blogs);
-          } catch {}
+          if (!SKIP_NAVER) {
+            try {
+              const blogs = await blogFromNaver(q, NAVER_ID, NAVER_SECRET);
+              v.blogMentions = Math.max(v.blogMentions || 0, blogs);
+            } catch {}
+          }
           out[sym] = v;
           return;
         }
@@ -264,12 +288,28 @@ export async function buildNewsFeatures(symbols, opts={}){
 }
 
 // --- helpers for KOTRA key handling (replace old chooseEncodedServiceKey) ---
-function chooseServiceKeyForDataGoKr() {
-  const dec = (process.env.DATA_API_KEY_DECODED || '').trim();
-  const enc = (process.env.DATA_API_KEY || '').trim();
+function chooseApiKey(name){
+  const dec = (process.env[`${name}_DECODED`] || '').trim();
+  const enc = (process.env[name] || '').trim();
   if (dec) return dec;
   try { return decodeURIComponent(enc); } catch { return enc; }
 }
+function chooseServiceKeyForDataGoKr(){
+  // Precedence: plain first, then encoded
+  const candidates = [
+    (process.env.DATA_API_KEY || '').trim(),        // preferred (decoded)
+    (process.env.DATA_API_KEY_DECODED || '').trim(),// legacy plain
+    (process.env.DATA_API_KEY_ENCODED || '').trim(),// legacy encoded
+    (process.env.DATA_ENCODE_KEY || '').trim(),     // your encoded key
+  ].filter(Boolean);
+  if (!candidates.length) return '';
+  const first = candidates[0];
+  if (/%[0-9A-Fa-f]{2}/.test(first)) { // looks encoded
+    try { return decodeURIComponent(first); } catch { /* fallthrough */ }
+  }
+  return first;
+}
+export function chooseKrxApiKey(){ return chooseApiKey('KRX_API_KEY'); }
 
 function normalizeNewsApiArticle(it) {
   const title = it?.title || "";
@@ -312,7 +352,7 @@ async function getTickerArticlesPrimary(ticker) {
   }
   const NAVER_ID = process.env.NAVER_CLIENT_ID || "";
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
-  if (NAVER_ID && NAVER_SECRET) {
+  if (!SKIP_NAVER && NAVER_ID && NAVER_SECRET) {
     try {
       const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(ticker)}&display=20&sort=date`;
       const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
