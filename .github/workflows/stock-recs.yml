@@ -25,9 +25,8 @@ jobs:
       TZ: Asia/Seoul
       NODE_OPTIONS: --dns-result-order=ipv4first
       # Keep the run under typical 60s shells; script respects this.
-      HARD_DEADLINE_MS: "55000"
-      # GitHub often has flaky access to Naver; feel free to unset.
-      SKIP_NAVER: "1"          # optional: avoid flaky Naver on GH runners
+      HARD_DEADLINE_MS: "55000"           # news deadline (now enforced)
+      SKIP_NAVER: "0"
       IS_CRON: ${{ github.event_name == 'schedule' }}
       # FX backup via Korea Eximbank (oapi.koreaexim.go.kr)
       USE_EXIM_FX_BACKUP: "1"
@@ -58,14 +57,16 @@ jobs:
       NEWS_CONCURRENCY: 2        # your code already defaults to 2; keep it small for SerpApi quotas
       NEWS_TTL_MS: 1800000       # 30m cache TTL (aligns with your comment)
       NAVER_TRENDS_CACHE_TTL_MS: 21600000   # 6h (matches the code)
-      GLOBAL_BUDGET_MS: 90000
+      GLOBAL_BUDGET_MS: "90000"
+      FINAL_STAGE_BUDGET_FRAC: "0.02"
+      COVERAGE_MIN: "0.10"
+      NEWS_MAX_SYMBOLS: "80"
       MAX_CONCURRENCY: 2
-      REQ_TIMEOUT_MS: 8000       # helps fail fast instead of hanging
-      RETRIES: 2
-      BACKOFF_BASE_MS: 600
+      REQ_TIMEOUT_MS: "8000"       # helps fail fast instead of hanging
+      RETRIES: "2"
+      BACKOFF_BASE_MS: "600"
       CIRCUIT_MAX_ERRORS: 6
       CIRCUIT_COOLDOWN_MS: 45000
-      COVERAGE_MIN: 0.3
 
     steps:
       - name: Checkout
@@ -107,6 +108,14 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
+
+      - name: Cache pools data
+        uses: actions/cache@v4
+        with:
+          path: |
+            cache
+            data/cache
+          key: pools-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       - name: Tune npm for CI
         run: |
