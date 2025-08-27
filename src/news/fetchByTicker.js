@@ -1,5 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+import { fetchKotraRecent } from "./kotraOverseas.js";
+import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 
 const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
@@ -218,3 +220,84 @@ export async function buildNewsFeatures(symbols, opts={}){
 
   return out;
 }
+
+function normalizeNewsApiArticle(it) {
+  const title = it?.title || "";
+  const url = it?.url || "";
+  if (!title || !url) return null;
+  const date = it?.publishedAt ? new Date(it.publishedAt).toISOString() : new Date().toISOString();
+  const source = it?.source?.name || "NewsAPI";
+  return { title, url, source, publishedAt: date };
+}
+
+function normalizeNaverArticle(it) {
+  const title = (it?.title || "").replace(/<[^>]*>/g, "").trim();
+  const url = (it?.originallink || it?.link || "").trim();
+  if (!title || !url) return null;
+  const date = it?.pubDate ? new Date(it.pubDate).toISOString() : new Date().toISOString();
+  return { title, url, source: "Naver", publishedAt: date };
+}
+
+function dedupeArticles(items) {
+  const seen = new Set();
+  return items.filter(it => {
+    const u = (it?.url || "").trim();
+    if (!u || seen.has(u)) return false;
+    seen.add(u);
+    return true;
+  });
+}
+
+async function getTickerArticlesPrimary(ticker) {
+  const out = [];
+  const NEWSAPI = process.env.NEWSAPI_KEY || "";
+  if (NEWSAPI) {
+    try {
+      const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(ticker)}&language=en&pageSize=20&sortBy=publishedAt&apiKey=${NEWSAPI}`;
+      const res = await fetch(url, { headers: { 'User-Agent': 'stock-recs/1.0 (+github-actions)' } });
+      const j = await res.json();
+      const arr = Array.isArray(j?.articles) ? j.articles : [];
+      out.push(...arr.map(normalizeNewsApiArticle).filter(Boolean));
+    } catch {}
+  }
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || "";
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
+  if (NAVER_ID && NAVER_SECRET) {
+    try {
+      const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(ticker)}&display=20&sort=date`;
+      const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+      const res = await fetch(url, { headers });
+      const j = await res.json();
+      const arr = Array.isArray(j?.items) ? j.items : [];
+      out.push(...arr.map(normalizeNaverArticle).filter(Boolean));
+    } catch {}
+  }
+  return dedupeArticles(out);
+}
+
+export async function getTickerArticles(ticker) {
+  const primary = await getTickerArticlesPrimary(ticker).catch(e => {
+    console.error(`[news] primary failed for ${ticker}:`, e.message);
+    return [];
+  });
+  if (primary?.length) return primary;
+
+  if (process.env.USE_KOTRA_BACKUP === "1") {
+    try {
+      const name = await getCompanyNameByYahooSymbol(ticker);
+      if (name) {
+        // Pull ~100–150 recent items then keyword-match by company name
+        const kotra = await fetchKotraRecent({ pages: 3, pageSize: 50, keyword: name });
+        if (kotra.length) {
+          console.log(`[kotra-backup] ${ticker}: ${kotra.length} items`);
+          return kotra.slice(0, 20);
+        }
+      }
+    } catch (e) {
+      console.error(`[kotra-backup] ${ticker} backup failed:`, e.message);
+    }
+  }
+
+  return primary ?? [];
+}
+
