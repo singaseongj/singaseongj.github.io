@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-08-28T00:33:24+09:00 (KST)**
+- Generated: **2025-08-28T05:26:16+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -178,7 +178,7 @@
 
 **ADBE** (ADBE)
 
-- News (7d): **6**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=ADBE%20ADBE
@@ -199,7 +199,7 @@
 
 **AMD** (AMD)
 
-- News (7d): **10**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -216,14 +216,14 @@
 
 **ABNB** (ABNB)
 
-- News (7d): **9**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=ABNB%20ABNB
 
 **CrowdStrike** (CRWD)
 
-- News (7d): **10**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -242,7 +242,7 @@
 
 **Amazon** (AMZN)
 
-- News (7d): **10**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
@@ -250,14 +250,14 @@
 
 **AVGO** (AVGO)
 
-- News (7d): **10**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=AVGO%20AVGO
 
 **Microsoft** (MSFT)
 
-- News (7d): **10**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -274,14 +274,14 @@
 
 **A** (A)
 
-- News (7d): **10**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **6** (blogs: 6) — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?tbm=nws&q=A%20A
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=A%20A
 
 **ADSK** (ADSK)
 
-- News (7d): **2**  — momentum: **low**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=ADSK%20ADSK
@@ -303,7 +303,7 @@
 
 **CPB** (CPB)
 
-- News (7d): **10**  — momentum: **high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5**  — momentum: **medium**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **low**
 - Earnings window (±10d): **No**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=CPB%20CPB
