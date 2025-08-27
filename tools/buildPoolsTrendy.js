@@ -920,7 +920,22 @@ async function main(){
       const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
       const pop = byName[n].naverPopularity ?? 0;
       const blogNorm = nBlog[i];
-      const newsBoost = newsCountNorm * 0.12 + (sentimentNorm - 0.5) * 0.08 + (isKRName ? pop * 0.20 : 0) + blogNorm * 0.05;
+
+      const weights = {
+        count: 0.12,
+        sentiment: 0.08,
+        naver: isKRName ? 0.30 : 0,
+        blog: 0.15,
+      };
+      const totalOrig = weights.count + weights.sentiment + weights.naver + weights.blog;
+      let totalAvail = 0;
+      let newsBoost = 0;
+      if (byName[n].newsCount != null) { newsBoost += newsCountNorm * weights.count; totalAvail += weights.count; }
+      if (byName[n].sentiment != null) { newsBoost += (sentimentNorm - 0.5) * weights.sentiment; totalAvail += weights.sentiment; }
+      if (isKRName && byName[n].naverPopularity != null) { newsBoost += pop * weights.naver; totalAvail += weights.naver; }
+      if (byName[n].blogMentions != null) { newsBoost += blogNorm * weights.blog; totalAvail += weights.blog; }
+      const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
+      newsBoost *= scale;
 
       const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsBoost + 0.10*earnBonus);
       const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsBoost + earnBonus);

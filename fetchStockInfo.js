@@ -4,6 +4,16 @@ import { existsSync } from 'fs';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
 
+const poolsMetricsRaw = JSON.parse(
+  await readFile(new URL('./pools-metrics.json', import.meta.url), 'utf8')
+);
+const newsFeatures = JSON.parse(
+  await readFile(new URL('./data/news-features.json', import.meta.url), 'utf8')
+);
+const naverTrends = JSON.parse(
+  await readFile(new URL('./data/naver-trends.json', import.meta.url), 'utf8')
+);
+
 const OUT_FILE = path.resolve(process.cwd(), 'recommendations.json');
 const MAX_AGE_MS = 6 * 60 * 60 * 1000;
 const ARGS = new Set(process.argv.slice(2));
@@ -192,6 +202,43 @@ function totalCount(out) {
     n += (out[m]?.safe?.length || 0) + (out[m]?.aggressive?.length || 0);
   }
   return n;
+}
+
+function calcRawScore(market, tier, name, ticker) {
+  const marketData = poolsMetricsRaw.markets?.[market] || poolsMetricsRaw[market];
+  const metrics = marketData?.[name];
+  const base = typeof metrics?.score?.[tier] === 'number' ? metrics.score[tier] : 0;
+  const news = ticker ? (newsFeatures[ticker] || {}) : {};
+  const trend = ticker ? (naverTrends[ticker] || {}) : {};
+  const rnd = seededRandom(ticker || name);
+  const jitter = rnd() * 0.01;
+
+  const signals = [];
+  const baseWeights = { sentiment: 0.1, count: 0.01, blog: 0.15, naver: 0.3 };
+  if (typeof news.sentiment === 'number') signals.push({ v: news.sentiment, w: baseWeights.sentiment });
+  if (typeof news.count === 'number') signals.push({ v: news.count, w: baseWeights.count });
+  if (typeof news.blogMentions === 'number') signals.push({ v: news.blogMentions, w: baseWeights.blog });
+  if (typeof trend.naverPopularity === 'number') signals.push({ v: trend.naverPopularity, w: baseWeights.naver });
+
+  const totalOrig = baseWeights.sentiment + baseWeights.count + baseWeights.blog + baseWeights.naver;
+  const totalAvail = signals.reduce((s, x) => s + x.w, 0);
+  const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
+  const extra = signals.reduce((s, x) => s + x.v * x.w * scale, 0);
+
+  return base + extra + jitter;
+}
+
+function scaleScores(entries, tier) {
+  const raws = entries.map(e => e.rawScore);
+  const min = Math.min(...raws);
+  const max = Math.max(...raws);
+  for (const e of entries) {
+    const norm = (e.rawScore - min) / (max - min || 1);
+    let score = Math.round(50 + norm * 50);
+    if (tier === 'safe') score = Math.min(100, score + 5);
+    e.score = score;
+    delete e.rawScore;
+  }
 }
 
 // More stable headers
@@ -636,13 +683,14 @@ async function tryFetchAndEnrich() {
             name,
             sector: sector || prevSector || null,
             ticker: ticker || null,
-            searchUrl: searchUrl || null
+            searchUrl: searchUrl || null,
+            rawScore: calcRawScore(market, group, name, ticker)
           });
 
           if (sector) successCount++;
         } catch (err) {
           console.error(`[ERROR] ${name}: ${err.message}`);
-          updated.push({ name, sector: prevSector || null, ticker: null, searchUrl: null });
+          updated.push({ name, sector: prevSector || null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, name, null) });
           noteStatus(err);
 
           if (consecutive429 >= 5) {
@@ -655,6 +703,7 @@ async function tryFetchAndEnrich() {
         await sleep(delay);
       }
 
+      scaleScores(updated, group);
       data[market][group] = updated;
     }
   }
@@ -702,6 +751,15 @@ async function main() {
 
     const pools = await loadPools();
     const rotated = sortData(rotateFromPools(pools, prev));
+    for (const [market, bucket] of Object.entries(rotated)) {
+      for (const tier of ['safe', 'aggressive']) {
+        const arr = bucket[tier] || [];
+        for (const entry of arr) {
+          entry.rawScore = calcRawScore(market, tier, entry.name, null);
+        }
+        scaleScores(arr, tier);
+      }
+    }
     let out = { ...rotated, lastUpdated: nowKSTISO() };
     pruneEmptyMarkets(out);
     ensureNonEmpty(out);
