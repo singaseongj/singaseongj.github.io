@@ -27,7 +27,7 @@ jobs:
       # Keep the run under typical 60s shells; script respects this.
       HARD_DEADLINE_MS: "55000"
       # GitHub often has flaky access to Naver; feel free to unset.
-      SKIP_NAVER: "0"
+      SKIP_NAVER: "1"          # optional: avoid flaky Naver on GH runners
       IS_CRON: ${{ github.event_name == 'schedule' }}
       # FX backup via Korea Eximbank (oapi.koreaexim.go.kr)
       USE_EXIM_FX_BACKUP: "1"
@@ -49,10 +49,14 @@ jobs:
       NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
       NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
       NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+      SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
+      # Optional tuning for this module
+      NEWS_CONCURRENCY: 2        # your code already defaults to 2; keep it small for SerpApi quotas
+      NEWS_TTL_MS: 1800000       # 30m cache TTL (aligns with your comment)
       NAVER_TRENDS_CACHE_TTL_MS: 21600000   # 6h (matches the code)
       GLOBAL_BUDGET_MS: 90000
       MAX_CONCURRENCY: 2
-      REQ_TIMEOUT_MS: 5000
+      REQ_TIMEOUT_MS: 8000       # helps fail fast instead of hanging
       RETRIES: 2
       BACKOFF_BASE_MS: 600
       CIRCUIT_MAX_ERRORS: 6
@@ -79,7 +83,7 @@ jobs:
             echo "❌ Possible hardcoded secret detected"; exit 1
           fi
           # Fail if someone echoes secret env vars
-          if git grep -nI -E 'echo\s+(\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY)\}?|%(\1)%)' -- \
+          if git grep -nI -E 'echo\s+(\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY|SERP_API_KEY)\}?|%(\1)%)' -- \
               ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
             echo "❌ Attempt to echo a secret environment variable"; exit 1
           fi
@@ -187,6 +191,27 @@ jobs:
           fi
 
       # ⬇️ Added from daily-build.yml
+      - name: Preflight: outbound connectivity (SerpApi/GDELT)
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          echo "DNS:"
+          getent hosts serpapi.com || true
+          getent hosts api.gdeltproject.org || true
+
+          echo "HTTP head checks:"
+          curl -4sS -I https://serpapi.com | head -n 1
+          curl -4sS -I https://api.gdeltproject.org | head -n 1
+
+          echo "SerpApi auth check (status only; key masked by Actions):"
+          curl -4sS --get 'https://serpapi.com/search.json' \
+            --data-urlencode 'engine=google_news' \
+            --data-urlencode 'q=TSLA' \
+            --data-urlencode 'gl=us' \
+            --data-urlencode 'hl=en' \
+            --data-urlencode "api_key=${SERP_API_KEY}" \
+            -o /dev/null -w 'HTTP %{http_code}\n'
+
       - name: Update market news
         shell: bash
         run: |
