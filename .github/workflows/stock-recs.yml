@@ -196,6 +196,9 @@ jobs:
             validate_json
           fi
 
+      - name: Fetch price returns
+        run: node fetchReturns.js
+
       # ⬇️ Added from daily-build.yml
       - name: "Preflight: outbound connectivity (SerpApi/GDELT)"
         shell: bash
@@ -259,7 +262,7 @@ jobs:
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market_news.json data/fx_rates.json summary.json summary.md data/articles || true
+          git add data/market_news.json data/fx_rates.json summary.json summary.md data/articles pools-metrics.json || true
           echo "Files staged for commit"
 
       - name: "Commit & push changes"
