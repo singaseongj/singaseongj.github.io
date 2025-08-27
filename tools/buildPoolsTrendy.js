@@ -101,6 +101,7 @@ function normalizeKey(s) {
   t = t.replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '');
   // Remove ASCII/Latin control chars (Cc)
   t = t.replace(/[\u0000-\u001F\u007F-\u009F]/g, '');
+  t = t.replace(/\uFEFF/g, ''); // strip BOM
   // Unify Unicode minus to hyphen
   t = t.replace(/\u2212/g, '-');
   // Remove all space separators (Zs) and then any remaining whitespace
@@ -175,6 +176,7 @@ function mapOne(rawKey) {
 
 function fallbackSymbolFromRaw(raw) {
   const s = normalizeKey(raw);
+  if (/^[A-Z]{1,5}$/.test(s)) return s;            // accept plain US tickers
   if (/^\d{6}\.K[QS]$/.test(s)) return s;
   if (ALLOWLIST.has(s)) return s;
   if (/^[A-Z]{1,5}\.[A-Z]{1,3}$/.test(s)) return s;
@@ -316,7 +318,8 @@ for (const a of process.argv.slice(2)) {
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
   if (a.startsWith('--cooloff-ms=')) COOLOFF_MS = Number(a.split('=')[1]);
 }
-const COVERAGE_MIN = +process.env.COVERAGE_MIN || 0.3; // need ≥30% metrics to replace pools
+const COVERAGE_MIN = +process.env.COVERAGE_MIN || 0.15;  // loosen gate
+const FINAL_FRAC   = Number(process.env.FINAL_STAGE_BUDGET_FRAC || 0.02);
 const GLOBAL_BUDGET_MS = +process.env.GLOBAL_BUDGET_MS || 90000; // 90s soft budget
 const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
 const DEMO_MODE = !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
@@ -765,8 +768,12 @@ async function main(){
   }
 
   if (!OFFLINE) {
-    NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.35
-      ? await enrichWithNewsFeatures(symbols, { symbolToName: SYMBOL_TO_NAME })
+    const NEWS_MAX = Number(process.env.NEWS_MAX_SYMBOLS || 80);
+    const kr = symbols.filter(isKR);
+    const us = symbols.filter(s => !isKR(s));
+    const newsSymbols = kr.concat(us).slice(0, NEWS_MAX);
+    NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.6
+      ? await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME })
       : {};
   }
 
@@ -813,7 +820,7 @@ async function main(){
     const byName = {};
     const processed = new Set();
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
-      if (timeLeft() < GLOBAL_BUDGET_MS * 0.1) return; // 90% budget used
+      if (timeLeft() < GLOBAL_BUDGET_MS * FINAL_FRAC) return; // leave final budget
       if (!budgetOk(800)) return; // skip if no time left
       const mappedOne = OFFLINE ? null : mapOne(name);
       if (!mappedOne || !mappedOne.sym) {
@@ -886,6 +893,16 @@ async function main(){
           newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
           sym:null, source:null, attempts:[], fetchMs:0
         };
+      }
+      const sym = byName[n].sym || nameToSymbol(n) || n;
+      const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[n];
+      if (nf) {
+        byName[n].newsCount       = nf.count ?? byName[n].newsCount;
+        byName[n].sentiment       = (typeof nf.sentiment === 'number' ? nf.sentiment : byName[n].sentiment);
+        byName[n].naverPopularity = nf.naverPopularity ?? byName[n].naverPopularity;
+        byName[n].blogMentions    = nf.blogMentions ?? byName[n].blogMentions;
+        byName[n].polygonTrend    = nf.polygonTrend ?? byName[n].polygonTrend;
+        byName[n].nasdaqClose     = nf.nasdaqClose ?? byName[n].nasdaqClose;
       }
     }
 
@@ -1066,9 +1083,10 @@ async function main(){
       return acc;
     }, {});
 
-    const subset = filteredNames
-      .filter(n => processed.has(n))
-      .reduce((acc,n)=>{ acc[n] = byName[n]; return acc; }, {});
+    const subset = filteredNames.reduce((acc, n) => {
+      acc[n] = byName[n];
+      return acc;
+    }, {});
     marketCoverage[market] = coverageRatio(subset);
   }
 
@@ -1103,7 +1121,8 @@ async function main(){
     console.log('[buildPools] wrote pools-metrics.json (dry-run)');
     return;
   }
-  if (avgCoverage < COVERAGE_MIN) {
+  const hardFail = avgCoverage === 0 || covs.every(c => c < 0.01);
+  if (avgCoverage < COVERAGE_MIN && hardFail) {
     console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using fallback`);
     const last = loadLastGoodPools() || pools; // prefer last good; else keep current pools as-is
     const outPools = last || namesOnlyRank(universe, NEWS_FEATURES);

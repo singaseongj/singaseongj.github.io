@@ -358,6 +358,8 @@ async function newsFromPolygon(sym){
  * `nasdaqClose` now reflects Polygon's previous close price when available.
  */
 export async function buildNewsFeatures(symbols, opts={}){
+  const HARD = Number(process.env.HARD_DEADLINE_MS || 0);
+  const DEADLINE = HARD ? Date.now() + HARD : 0;
   const FINNHUB = process.env.FINNHUB_API_KEY || '';
   const NEWSAPI = process.env.NEWSAPI_KEY || '';
   const SERPAPI = process.env.SERP_API_KEY || '';
@@ -390,6 +392,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const baseOut = {};
 
   await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
+    if (DEADLINE && Date.now() > DEADLINE) return; // stop cleanly
     const q = queries[sym];
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
@@ -402,6 +405,7 @@ export async function buildNewsFeatures(symbols, opts={}){
 
     let lastErr = null;
     for (const p of providers) {
+      if (DEADLINE && Date.now() > DEADLINE) break;
       try {
         let v = null;
         if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));

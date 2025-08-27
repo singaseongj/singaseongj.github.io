@@ -107,15 +107,13 @@ async function twelveCandles(symbol){
 }
 
 async function fmpCandles(symbol){
-  const priceUrl = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?serietype=line&timeseries=40&apikey=${FMP}`;
-  const price = await fetchJSON(priceUrl);
-  const hist = price?.historical;
+  const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?timeseries=40&apikey=${FMP}`;
+  const j = await fetchJSON(url);
+  const hist = j?.historical;
   if (!Array.isArray(hist) || hist.length===0) throw new Error('bad fmp');
-  const close = hist.slice(0,40).map(d=>Number(d.close)).reverse();
-  const volUrl = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?timeseries=40&apikey=${FMP}`;
-  const vol = await fetchJSON(volUrl);
-  const volHist = vol?.historical || [];
-  const volumes = volHist.slice(0,40).map(d=>Number(d.volume||0)).reverse();
+  const slice = hist.slice(0,40);
+  const close = slice.map(d=>Number(d.close)).reverse();
+  const volumes = slice.map(d=>Number(d.volume||0)).reverse();
   return { c: close, v: volumes };
 }
 
@@ -193,8 +191,11 @@ function hasKey(provider){
 
 export async function getCandles(symbol, opts={}){
   const isKR = /\.K[QS]$/.test(symbol);
-  const order = isKR ? ['naver','yahoo','polygon','twelvedata','fmp','google','finnhub']
-                      : ['finnhub','yahoo','polygon','twelvedata','fmp','google','naver'];
+  const ORDER_US = (process.env.CANDLES_PROVIDER_ORDER_US || 'finnhub,yahoo,polygon,twelvedata,fmp,google,naver')
+    .split(',').map(s=>s.trim()).filter(Boolean);
+  const ORDER_KR = (process.env.CANDLES_PROVIDER_ORDER_KR || 'naver,yahoo,polygon,twelvedata,fmp,google,finnhub')
+    .split(',').map(s=>s.trim()).filter(Boolean);
+  const order = isKR ? ORDER_KR : ORDER_US;
   const attempts = [];
   const ttl = Number(opts.cacheTtlMs || CACHE_TTL_MS);
   const maxPer = Number.isFinite(opts.maxPerProvider) ? opts.maxPerProvider : Infinity;
