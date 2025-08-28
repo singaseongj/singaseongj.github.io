@@ -1,21 +1,17 @@
 // tools/updateIndexMaps.mjs
 import fs from "fs/promises";
-import dns from "node:dns";
-import { Agent, setGlobalDispatcher } from "undici";
+import { execFileSync } from "node:child_process";
 
-dns.setDefaultResultOrder?.("ipv4first");
-setGlobalDispatcher(new Agent({ connect: { family: 4 } }));
-
-const UA = {
-  "User-Agent":
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36",
-  Accept: "text/html,application/xhtml+xml",
-};
+const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36";
 
 async function text(url) {
-  const r = await fetch(url, { headers: UA });
-  if (!r.ok) throw new Error(`HTTP ${r.status} for ${url}`);
-  return r.text();
+  try {
+    return execFileSync("curl", ["-L", "-s", "-f", "-A", UA, url], {
+      encoding: "utf8",
+    });
+  } catch {
+    throw new Error(`HTTP fetch failed for ${url}`);
+  }
 }
 
 // --- small helpers
@@ -66,15 +62,25 @@ async function fetchKOSPI200() {
 
 // --- KOSDAQ 100 (코스닥100) => append .KQ
 async function fetchKOSDAQ100() {
-  const html = await text("https://ko.wikipedia.org/wiki/KOSDAQ_100");
-  const rows = [...html.matchAll(
-    /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
-  )];
-  return rows.map((m) => ({
-    symbol: `${six(m[2])}.KQ`,
-    name: m[1].trim(),
-    sector: null,
-  }));
+  try {
+    const html = await text("https://ko.wikipedia.org/wiki/KOSDAQ_100");
+    const rows = [...html.matchAll(
+      /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
+    )];
+    return rows.map((m) => ({
+      symbol: `${six(m[2])}.KQ`,
+      name: m[1].trim(),
+      sector: null,
+    }));
+  } catch (e) {
+    console.warn("KOSDAQ 100 fetch failed:", e.message);
+    try {
+      const cached = JSON.parse(await fs.readFile("src/maps.indexes.json", "utf8"));
+      return cached.kosdaq100 || [];
+    } catch {
+      return [];
+    }
+  }
 }
 
 async function main() {
