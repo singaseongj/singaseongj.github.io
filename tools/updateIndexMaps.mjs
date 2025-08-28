@@ -68,18 +68,17 @@ function parseSp500(html) {
   if (!html) return [];
   let rows = [
     ...html.matchAll(
-      /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>/gi
+      /<tr>\s*<td[^>]*>\s*(?:<a[^>]*>)?([A-Z.\-]+)<\/(?:a|td)>\s*<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)>\s*<td[^>]*>[\s\S]*?<\/td>\s*<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)>/gi
     ),
   ];
   if (rows.length < 300) {
     rows = [
       ...html.matchAll(
-        /<tr>\s*<td[^>]*>\s*(?:<a [^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>/gi
+        /<tr>\s*<td[^>]*>\s*(?:<a[^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)>/gi
       ),
     ];
-    return rows.map(m => ({ symbol: canonUS(m[1]), name: clean(m[2]), sector: clean(m[3]) }));
   }
-  return rows.map(m => ({ symbol: canonUS(m[2]), name: clean(m[1]), sector: clean(m[3]) }));
+  return rows.map(m => ({ symbol: canonUS(m[1]), name: clean(m[2]), sector: clean(m[3]) }));
 }
 
 // Nasdaq-100: limit to constituents section to avoid extra tables
