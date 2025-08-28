@@ -41,6 +41,26 @@ async function netText(url) {
 const canonUS = s => s.toUpperCase().replace('/', '.').replace('-', '.');
 const six = s => (s || '').replace(/\D/g, '').padStart(6, '0');
 
+const decode = s => s
+  .replace(/&amp;/g, '&')
+  .replace(/&nbsp;/g, ' ')
+  .replace(/&#(\d+);/g, (_,n)=>String.fromCharCode(+n))
+  .replace(/&#x([0-9a-f]+);/gi, (_,h)=>String.fromCharCode(parseInt(h,16)));
+
+const clean = s => decode((s || '').trim());
+
+function uniqBySymbol(arr){
+  const seen = new Set();
+  const out = [];
+  for (const r of arr) {
+    const k = (r.symbol || '').toUpperCase();
+    if (!k || seen.has(k)) continue;
+    seen.add(k);
+    out.push(r);
+  }
+  return out.sort((a,b)=>a.symbol.localeCompare(b.symbol));
+}
+
 // ---- Parsers (with fallbacks)
 
 // S&P 500: prefer Name,Symbol,Sector order; fallback to Symbol,Name,Sector
@@ -48,37 +68,38 @@ function parseSp500(html) {
   if (!html) return [];
   let rows = [
     ...html.matchAll(
-      /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>[\s\S]*?<td>([^<]+)<\/td>/gi
+      /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>/gi
     ),
   ];
   if (rows.length < 300) {
     rows = [
       ...html.matchAll(
-        /<tr>\s*<td[^>]*>\s*(?:<a [^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*([^<]+)<\/td>/gi
+        /<tr>\s*<td[^>]*>\s*(?:<a [^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>/gi
       ),
     ];
-    return rows.map(m => ({ symbol: canonUS(m[1]), name: m[2].trim(), sector: m[3].trim() }));
+    return rows.map(m => ({ symbol: canonUS(m[1]), name: clean(m[2]), sector: clean(m[3]) }));
   }
-  return rows.map(m => ({ symbol: canonUS(m[2]), name: m[1].trim(), sector: m[3].trim() }));
+  return rows.map(m => ({ symbol: canonUS(m[2]), name: clean(m[1]), sector: clean(m[3]) }));
 }
 
 // Nasdaq-100: limit to constituents section to avoid extra tables
 function parseNasdaq100(html) {
   if (!html) return [];
-  const part = html.split('id="constituents"')[1] || html;
+  const parts = html.split(/id="constituents"/i);
+  const part = parts[1] || html;
   const rows = [
     ...part.matchAll(
       /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>/gi
     ),
   ];
   if (rows.length > 0) {
-    return rows.map(m => ({ symbol: canonUS(m[2]), name: m[1].trim(), sector: null }));
+    return rows.map(m => ({ symbol: canonUS(m[2]), name: clean(m[1]), sector: null }));
   }
   // fallback pattern
   const rows2 = [
     ...part.matchAll(/<tr>\s*<td>([A-Z.\-]+)<\/td>\s*<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>/gi),
   ];
-  return rows2.map(m => ({ symbol: canonUS(m[1]), name: m[2].trim(), sector: null }));
+  return rows2.map(m => ({ symbol: canonUS(m[1]), name: clean(m[2]), sector: null }));
 }
 
 function parseKospi200(html) {
@@ -88,7 +109,7 @@ function parseKospi200(html) {
       /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
     ),
   ];
-  return rows.map(m => ({ symbol: `${six(m[2])}.KS`, name: m[1].trim(), sector: null }));
+  return rows.map(m => ({ symbol: `${six(m[2])}.KS`, name: clean(m[1]), sector: null }));
 }
 
 function parseKosdaq100(html) {
@@ -98,7 +119,7 @@ function parseKosdaq100(html) {
       /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
     ),
   ];
-  return rows.map(m => ({ symbol: `${six(m[2])}.KQ`, name: m[1].trim(), sector: null }));
+  return rows.map(m => ({ symbol: `${six(m[2])}.KQ`, name: clean(m[1]), sector: null }));
 }
 
 async function main() {
@@ -119,10 +140,15 @@ async function main() {
   let kosdaq100 = parseKosdaq100(kq100Txt);
 
   // Sanity thresholds; fallback to current if parse looks wrong/too small
-  if (sp500.length < 350) sp500 = current.sp500;
-  if (nasdaq100.length < 70) nasdaq100 = current.nasdaq100;
-  if (kospi200.length < 150) kospi200 = current.kospi200;
-  if (kosdaq100.length < 80) kosdaq100 = current.kosdaq100;
+  if (sp500.length < 350) { console.log('[indexes] keep current S&P500 (parsed=', sp500.length, ')'); sp500 = current.sp500; }
+  if (nasdaq100.length < 70) { console.log('[indexes] keep current Nasdaq100 (parsed=', nasdaq100.length, ')'); nasdaq100 = current.nasdaq100; }
+  if (kospi200.length < 150) { console.log('[indexes] keep current KOSPI200 (parsed=', kospi200.length, ')'); kospi200 = current.kospi200; }
+  if (kosdaq100.length < 80) { console.log('[indexes] keep current KOSDAQ100 (parsed=', kosdaq100.length, ')'); kosdaq100 = current.kosdaq100; }
+
+  sp500     = uniqBySymbol(sp500);
+  nasdaq100 = uniqBySymbol(nasdaq100);
+  kospi200  = uniqBySymbol(kospi200);
+  kosdaq100 = uniqBySymbol(kosdaq100);
 
   const next = {
     sp500,
