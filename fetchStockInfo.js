@@ -208,43 +208,6 @@ function totalCount(out) {
   return n;
 }
 
-function calcRawScore(market, tier, name, ticker) {
-  const marketData = poolsMetricsRaw.markets?.[market] || poolsMetricsRaw[market];
-  const metrics = marketData?.[name];
-  const base = typeof metrics?.score?.[tier] === 'number' ? metrics.score[tier] : 0;
-  const news = ticker ? (newsFeatures[ticker] || {}) : {};
-  const trend = ticker ? (naverTrends[ticker] || {}) : {};
-  const rnd = seededRandom(ticker || name);
-  const jitter = rnd() * 0.01;
-
-  const signals = [];
-  const baseWeights = { sentiment: 0.10, count: 0.01, blog: 0.15, naver: 0.30, reputation: 0.25 };
-  if (typeof news.sentiment === 'number') signals.push({ v: news.sentiment, w: baseWeights.sentiment });
-  if (typeof news.count === 'number') signals.push({ v: news.count, w: baseWeights.count });
-  if (typeof news.blogMentions === 'number') signals.push({ v: news.blogMentions, w: baseWeights.blog });
-  if (typeof trend.naverPopularity === 'number') signals.push({ v: trend.naverPopularity, w: baseWeights.naver });
-  if (typeof news.reputationScore === 'number') signals.push({ v: news.reputationScore, w: baseWeights.reputation });
-
-  const totalOrig = baseWeights.sentiment + baseWeights.count + baseWeights.blog + baseWeights.naver + baseWeights.reputation;
-  const totalAvail = signals.reduce((s, x) => s + x.w, 0);
-  const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
-  const extra = signals.reduce((s, x) => s + x.v * x.w * scale, 0);
-
-  return base + extra + jitter;
-}
-
-function scaleScores(entries, tier) {
-  const raws = entries.map(e => e.rawScore);
-  const min = Math.min(...raws);
-  const max = Math.max(...raws);
-  for (const e of entries) {
-    const norm = (e.rawScore - min) / (max - min || 1);
-    let score = Math.round(50 + norm * 50);
-    if (tier === 'safe') score = Math.min(100, score + 5);
-    e.score = score;
-    delete e.rawScore;
-  }
-}
 
 // More stable headers
 const HEADERS_HTML = {
@@ -766,7 +729,6 @@ function validateRecommendations(out) {
 // Main data fetching function
 async function tryFetchAndEnrich() {
   const POOLS = await loadPools();
-  const seed = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
   const data = {};
   const log = {};
 
@@ -775,15 +737,11 @@ async function tryFetchAndEnrich() {
     if (!hasAnyCandidates(buckets)) continue;
     data[market] = {};
     const safeSource = buckets.safe || [];
-    const safeKey = `${seed}:${market}:safe`;
-    const chosenSafe = process.env.FIXED_RECS === '1' ? safeSource.slice(0, 5) : pickDeterministic(safeSource, 5, safeKey);
+    const chosenSafe = safeSource.slice(0, 5);
     data[market].safe = chosenSafe.map(n => (typeof n === 'string' ? { name: n } : n));
-    const safeSet = new Set(chosenSafe.map(n => (typeof n === 'string' ? n : n.name)));
 
     let aggrSource = buckets.aggressive || [];
-    aggrSource = aggrSource.filter(n => !safeSet.has(typeof n === 'string' ? n : n.name));
-    const aggrKey = `${seed}:${market}:aggressive`;
-    const chosenAggr = process.env.FIXED_RECS === '1' ? aggrSource.slice(0, 5) : pickDeterministic(aggrSource, 5, aggrKey);
+    const chosenAggr = aggrSource.slice(0, 5);
     data[market].aggressive = chosenAggr.map(n => (typeof n === 'string' ? { name: n } : n));
 
     log[market] = {
@@ -840,12 +798,18 @@ async function tryFetchAndEnrich() {
 
           const news = ticker ? (newsFeatures[ticker] || {}) : {};
           const trend = ticker ? (naverTrends[ticker] || {}) : {};
+          const metrics = poolsMetricsRaw.markets?.[market]?.[rawName] || poolsMetricsRaw[market]?.[rawName];
+          let baseScore = null;
+          if (typeof metrics?.score === 'number') baseScore = Math.round(metrics.score);
+          else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
+          else if (typeof metrics?.score?.safe === 'number') baseScore = Math.round(metrics.score.safe * 100);
+          if (baseScore == null) baseScore = 50;
           updated.push({
             name: displayName,
             sector,
             ticker,
             searchUrl,
-            rawScore: calcRawScore(market, group, displayName, ticker),
+            score: baseScore,
             reasons: {
               reputationScore: news.reputationScore ?? null,
               topKeywords: news.topKeywords || [],
@@ -860,7 +824,13 @@ async function tryFetchAndEnrich() {
           if (sector) successCount++;
         } catch (err) {
           console.error(`[ERROR] ${rawName}: ${err.message}`);
-          updated.push({ name: rawName, sector: null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, rawName, null), reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: null, blog: null, naver: null } } });
+          const metrics = poolsMetricsRaw.markets?.[market]?.[rawName] || poolsMetricsRaw[market]?.[rawName];
+          let baseScore = null;
+          if (typeof metrics?.score === 'number') baseScore = Math.round(metrics.score);
+          else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
+          else if (typeof metrics?.score?.safe === 'number') baseScore = Math.round(metrics.score.safe * 100);
+          if (baseScore == null) baseScore = 50;
+          updated.push({ name: rawName, sector: null, ticker: null, searchUrl: null, score: baseScore, reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: null, blog: null, naver: null } } });
           noteStatus(err);
         }
 
@@ -873,7 +843,6 @@ async function tryFetchAndEnrich() {
       const delay = consecutive429 >= 3 ? nextDelay() * 2 : nextDelay();
       await sleep(delay);
 
-      scaleScores(updated, group);
       data[market][group] = updated;
     }
   }
@@ -925,9 +894,14 @@ async function main() {
       for (const tier of ['safe', 'aggressive']) {
         const arr = bucket[tier] || [];
         for (const entry of arr) {
-          entry.rawScore = calcRawScore(market, tier, entry.name, null);
+          const metrics = poolsMetricsRaw.markets?.[market]?.[entry.name] || poolsMetricsRaw[market]?.[entry.name];
+          if (metrics) {
+            if (typeof metrics.score === 'number') entry.score = Math.round(metrics.score);
+            else if (typeof metrics.score?.total === 'number') entry.score = Math.round(metrics.score.total);
+            else if (typeof metrics.score?.safe === 'number') entry.score = Math.round(metrics.score.safe * 100);
+          }
+          if (entry.score == null) entry.score = 50;
         }
-        scaleScores(arr, tier);
       }
     }
     let out = { ...rotated, lastUpdated: nowKSTISO() };

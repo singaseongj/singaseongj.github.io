@@ -280,6 +280,11 @@ try {
   NEWS_FEATURES = JSON.parse(await fsp.readFile(NEWS_FEATURES_FILE, 'utf8'));
 } catch {}
 
+let PREV_METRICS = {};
+try {
+  PREV_METRICS = JSON.parse(await fsp.readFile(METRICS_FILE, 'utf8'));
+} catch {}
+
 async function enrichWithNewsFeatures(symbols, opts = {}) {
   const feats = await buildNewsFeatures(symbols, opts);
   try {
@@ -571,6 +576,89 @@ function rank01(values) {
 }
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+
+function scoreSentiment(s){
+  if (s == null) return null;
+  if (s >= 0.5) return 5;
+  if (s >= 0.2) return 4;
+  if (s > -0.2) return 3;
+  if (s > -0.5) return 2;
+  return 1;
+}
+
+function scoreNewsMomentum(cur, prev){
+  if (cur === 0 && prev === 0) return 3;
+  if (prev === 0) return cur > 0 ? 5 : 3;
+  const g = (cur - prev) / Math.max(prev, 1);
+  if (g >= 1) return 5;
+  if (g >= 0.5) return 4;
+  if (g >= 0.1) return 3;
+  if (g > -0.5) return 2;
+  return 1;
+}
+
+function scoreTrend(g){
+  if (g == null) return null;
+  if (g >= 0.6) return 5;
+  if (g >= 0.25) return 4;
+  if (g >= 0.05) return 3;
+  if (g > -0.25) return 2;
+  return 1;
+}
+
+function scoreCredibility(r){
+  if (r == null) return null;
+  if (r >= 0.70) return 5;
+  if (r >= 0.55) return 4;
+  if (r >= 0.40) return 3;
+  if (r >= 0.25) return 2;
+  return 1;
+}
+
+const CATALYST_DICT = [
+  ['earnings', /earnings beat|eps beat|guidance raise|upgraded|target hike/i],
+  ['contract', /contract win|joint venture|JV|partnership|MOU/i],
+  ['approval', /fda approval|approval|license/i],
+  ['product', /product launch|feature launch|pilot|expansion/i],
+  ['capital', /hiring plan|buyback|dividend increase/i]
+];
+
+function scoreCatalysts(keywords){
+  const kw = (keywords || []).map(k => k.toLowerCase());
+  const found = new Set();
+  for (const [cat, re] of CATALYST_DICT){
+    if (kw.some(k => re.test(k))) found.add(cat);
+  }
+  const cnt = found.size;
+  if (cnt >= 4) return 5;
+  if (cnt === 3) return 4;
+  if (cnt === 2) return 3;
+  if (cnt === 1) return 2;
+  return 1;
+}
+
+const RISK_SEVERE = [/investigation/i, /regulator probe/i, /sec/i, /공정위/, /금감원/, /data breach/i, /해킹/, /accounting/i, /restatement/i, /recall/i, /delisting/i];
+const RISK_MODERATE = [/lawsuit/i, /소송/, /downgrade/i, /strike/i, /파업/, /short[- ]seller/i, /guidance cut/i, /layoff/i, /공매도/, /벌금/, /fine/i];
+
+function scoreRisk(keywords){
+  const kw = (keywords || []).map(k => k.toLowerCase());
+  let pts = 0;
+  for (const re of RISK_SEVERE){ if (kw.some(k => re.test(k))) pts += 2; }
+  for (const re of RISK_MODERATE){ if (kw.some(k => re.test(k))) pts += 1; }
+  if (pts === 0) return 5;
+  if (pts === 1) return 4;
+  if (pts === 2) return 3;
+  if (pts <= 4) return 2;
+  return 1;
+}
+
+function combineScore(components){
+  const avail = components.filter(c => c.score != null);
+  const weightSum = avail.reduce((s,c)=>s+c.weight,0);
+  if (weightSum === 0) return 0;
+  const subtotal = avail.reduce((s,c)=>s+(c.score/5)*c.weight,0);
+  return subtotal * (100/weightSum);
+}
 
 function namesOnlyRank(universe, features) {
   const out = {};
@@ -962,49 +1050,32 @@ async function main(){
       return advOk && priceOk;
     });
 
-    // Normalize within market
-    const nRet5   = rank01(filteredNames.map(n => byName[n].ret5));
-    const nRet20  = rank01(filteredNames.map(n => byName[n].ret20));
-    const nTurn   = rank01(filteredNames.map(n => byName[n].turnover));
-    const nVol    = rank01(filteredNames.map(n => byName[n].vol20));   // higher vol = riskier
-    const nBlog   = rank01(filteredNames.map(n => byName[n].blogMentions));
-
     // Scores
     const scoreSafeRaw = {};
     const scoreAggrRaw = {};
-    filteredNames.forEach((n, i) => {
-      const earnBonus = byName[n].earn ? 0.10 : 0;
-      const sym = byName[n].sym;
-      const isKRName = sym ? isKR(sym) : false;
-      const baseKR = isKRName ? 0.05 : 0;
-
-      const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
-      const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
-      const pop = byName[n].naverPopularity ?? 0;
-      const blogNorm = nBlog[i];
-
-      const weights = {
-        count: 0.12,
-        sentiment: 0.08,
-        naver: isKRName ? 0.30 : 0,
-        blog: 0.15,
-        reputation: 0.25,
-      };
-      const totalOrig = weights.count + weights.sentiment + weights.naver + weights.blog + weights.reputation;
-      let totalAvail = 0;
-      let newsBoost = 0;
-      if (byName[n].newsCount != null) { newsBoost += newsCountNorm * weights.count; totalAvail += weights.count; }
-      if (byName[n].sentiment != null) { newsBoost += (sentimentNorm - 0.5) * weights.sentiment; totalAvail += weights.sentiment; }
-      if (isKRName && byName[n].naverPopularity != null) { newsBoost += pop * weights.naver; totalAvail += weights.naver; }
-      if (byName[n].blogMentions != null) { newsBoost += blogNorm * weights.blog; totalAvail += weights.blog; }
-      if (byName[n].reputationScore != null) { newsBoost += byName[n].reputationScore * weights.reputation; totalAvail += weights.reputation; }
-      const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
-      newsBoost *= scale;
-
-      const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsBoost + 0.10*earnBonus);
-      const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsBoost + earnBonus);
-      scoreSafeRaw[n] = safe;
-      scoreAggrRaw[n] = aggr;
+    filteredNames.forEach((n) => {
+      const prev = PREV_METRICS?.[market]?.[n]?.newsCount || 0;
+      const sentScore = scoreSentiment(byName[n].sentiment);
+      const momScore = scoreNewsMomentum(byName[n].newsCount || 0, prev);
+      const trendScore = scoreTrend(byName[n].naverPopularity);
+      const credScore = scoreCredibility(byName[n].reputationScore);
+      const catScore = scoreCatalysts(byName[n].topKeywords);
+      const riskScore = scoreRisk(byName[n].topKeywords);
+      const total = combineScore([
+        { score: sentScore, weight: 30 },
+        { score: momScore, weight: 15 },
+        { score: trendScore, weight: 20 },
+        { score: credScore, weight: 10 },
+        { score: catScore, weight: 15 },
+        { score: riskScore, weight: 10 }
+      ]);
+      const totalRounded = Math.round(total);
+      byName[n].prevNewsCount = prev;
+      byName[n].componentScores = { sentiment: sentScore, momentum: momScore, trends: trendScore, credibility: credScore, catalysts: catScore, risk: riskScore };
+      byName[n].totalScore = totalRounded;
+      const norm = totalRounded / 100;
+      scoreSafeRaw[n] = norm;
+      scoreAggrRaw[n] = norm;
     });
 
     // Apply feedback nudges
@@ -1111,18 +1182,30 @@ async function main(){
     // Record for later markets (used by penalty & de-dup)
     USED[market] = { safe: chosenSafe.slice(), aggressive: chosenAggr.slice() };
 
-    metricsOut[market] = filteredNames.reduce((acc, n, i) => {
-      const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
-      const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
-      const pop = byName[n].naverPopularity ?? 0;
-      const blogNorm = nBlog[i];
+    metricsOut[market] = filteredNames.reduce((acc, n) => {
       acc[n] = {
-        ret5: byName[n].ret5, ret20: byName[n].ret20, vol20: byName[n].vol20, turnover: byName[n].turnover,
-        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, blogMentions: byName[n].blogMentions, polygonTrend: byName[n].polygonTrend, nasdaqClose: byName[n].nasdaqClose, recentEarnings: byName[n].earn,
-        reputationScore: byName[n].reputationScore, topKeywords: (byName[n].topKeywords || []).slice(0,3), reputationHitIds: byName[n].reputationHitIds || [],
-        source: byName[n].source, attempts: byName[n].attempts, fetchMs: byName[n].fetchMs,
-        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], newsCount: newsCountNorm, sentiment: sentimentNorm, popularity: pop, blogMentions: blogNorm },
-        score: { safe: scoreSafe[n], aggressive: scoreAggr[n] }
+        ret5: byName[n].ret5,
+        ret20: byName[n].ret20,
+        vol20: byName[n].vol20,
+        turnover: byName[n].turnover,
+        adv20: byName[n].adv20,
+        close: byName[n].close,
+        newsCount: byName[n].newsCount,
+        prevNewsCount: byName[n].prevNewsCount,
+        sentiment: byName[n].sentiment,
+        naverPopularity: byName[n].naverPopularity,
+        blogMentions: byName[n].blogMentions,
+        polygonTrend: byName[n].polygonTrend,
+        nasdaqClose: byName[n].nasdaqClose,
+        recentEarnings: byName[n].earn,
+        reputationScore: byName[n].reputationScore,
+        topKeywords: (byName[n].topKeywords || []).slice(0,3),
+        reputationHitIds: byName[n].reputationHitIds || [],
+        source: byName[n].source,
+        attempts: byName[n].attempts,
+        fetchMs: byName[n].fetchMs,
+        components: byName[n].componentScores,
+        score: byName[n].totalScore
       };
       return acc;
     }, {});
