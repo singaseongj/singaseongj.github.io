@@ -214,13 +214,14 @@ function calcRawScore(market, tier, name, ticker) {
   const jitter = rnd() * 0.01;
 
   const signals = [];
-  const baseWeights = { sentiment: 0.1, count: 0.01, blog: 0.15, naver: 0.3 };
+  const baseWeights = { sentiment: 0.10, count: 0.01, blog: 0.15, naver: 0.30, reputation: 0.25 };
   if (typeof news.sentiment === 'number') signals.push({ v: news.sentiment, w: baseWeights.sentiment });
   if (typeof news.count === 'number') signals.push({ v: news.count, w: baseWeights.count });
   if (typeof news.blogMentions === 'number') signals.push({ v: news.blogMentions, w: baseWeights.blog });
   if (typeof trend.naverPopularity === 'number') signals.push({ v: trend.naverPopularity, w: baseWeights.naver });
+  if (typeof news.reputationScore === 'number') signals.push({ v: news.reputationScore, w: baseWeights.reputation });
 
-  const totalOrig = baseWeights.sentiment + baseWeights.count + baseWeights.blog + baseWeights.naver;
+  const totalOrig = baseWeights.sentiment + baseWeights.count + baseWeights.blog + baseWeights.naver + baseWeights.reputation;
   const totalAvail = signals.reduce((s, x) => s + x.w, 0);
   const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
   const extra = signals.reduce((s, x) => s + x.v * x.w * scale, 0);
@@ -817,18 +818,29 @@ async function tryFetchAndEnrich() {
               console.warn(`[SEARCH_URL_FAIL] ${name}: ${e.message}`);
             }
 
+            const news = ticker ? (newsFeatures[ticker] || {}) : {};
+            const trend = ticker ? (naverTrends[ticker] || {}) : {};
             updated.push({
               name: displayName,
               sector: INDEX_SECTOR[ticker] || sector,
               ticker,
               searchUrl,
-              rawScore: calcRawScore(market, group, displayName, ticker)
+              rawScore: calcRawScore(market, group, displayName, ticker),
+              reasons: {
+                reputationScore: news.reputationScore ?? null,
+                topKeywords: news.topKeywords || [],
+                signals: {
+                  sentiment: typeof news.sentiment === 'number' ? news.sentiment : null,
+                  blog: typeof news.blogMentions === 'number' ? news.blogMentions : null,
+                  naver: typeof trend.naverPopularity === 'number' ? trend.naverPopularity : null
+                }
+              }
             });
 
             if (sector) successCount++;
           } catch (err) {
             console.error(`[ERROR] ${name}: ${err.message}`);
-            updated.push({ name, sector: null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, name, null) });
+            updated.push({ name, sector: null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, name, null), reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: null, blog: null, naver: null } } });
             noteStatus(err);
 
           if (consecutive429 >= 5) {
