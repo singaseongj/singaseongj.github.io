@@ -157,6 +157,11 @@ jobs:
           echo "npm ci failed after retries."
           exit 1
 
+      - name: Build index ticker maps
+        run: node tools/updateIndexMaps.mjs
+        env:
+          FMP_KEY: ${{ secrets.FMP_KEY }}
+
       - name: Build trend-aware pools
         env:
           FMP_KEY: ${{ secrets.FMP_KEY }}
