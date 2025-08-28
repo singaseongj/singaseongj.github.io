@@ -16,7 +16,8 @@ async function text(url) {
 }
 
 function decodeEntities(s) {
-  return load(s || "").text();
+  // Only parse with Cheerio when the string contains HTML entities
+  return s && s.includes("&") ? load(s).text() : s || "";
 }
 
 function normName(s) {
