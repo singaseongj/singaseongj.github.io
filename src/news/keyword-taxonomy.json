@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "halfLifeDays": 14,
+  "alpha": 1.1,
+  "defaultBias": 0.0,
+  "sourceWeights": {
+    "major": 1.2,
+    "wire": 1.1,
+    "default": 1.0,
+    "blog": 0.75,
+    "forum": 0.6,
+    "unknown": 0.6
+  },
+  "intensity": {
+    "strong": 1.5,
+    "normal": 1.0,
+    "weak": 0.75
+  },
+  "classes": [
+    {
+      "id": "contract_win",
+      "polarity": "positive",
+      "weight": 1.0,
+      "terms_kr": ["수주", "대형 수주", "계약 체결", "장기 공급계약"],
+      "terms_en": ["contract win", "wins contract", "award(ed) contract", "long-term supply"],
+      "sectors": ["industrial", "defense", "semiconductor", "energy"]
+    },
+    {
+      "id": "guidance_up",
+      "polarity": "positive",
+      "weight": 1.0,
+      "terms_kr": ["가이던스 상향", "실적 전망 상향"],
+      "terms_en": ["guidance raise", "raises guidance", "outlook raised", "upgrades outlook"]
+    },
+    {
+      "id": "buyback_dividend",
+      "polarity": "positive",
+      "weight": 0.9,
+      "terms_kr": ["자사주 매입", "배당 증액"],
+      "terms_en": ["share buyback", "repurchase", "dividend hike", "special dividend"]
+    },
+    {
+      "id": "regulatory_approval",
+      "polarity": "positive",
+      "weight": 1.1,
+      "terms_kr": ["허가 승인", "식약처 승인", "인허가 승인"],
+      "terms_en": ["approval granted", "FDA approval", "regulatory approval"]
+    },
+    {
+      "id": "recall_investigation",
+      "polarity": "negative",
+      "weight": 1.1,
+      "terms_kr": ["리콜", "조사 착수", "조사 대상"],
+      "terms_en": ["recall", "under investigation", "probe launched"]
+    },
+    {
+      "id": "guidance_down",
+      "polarity": "negative",
+      "weight": 1.0,
+      "terms_kr": ["가이던스 하향", "실적 전망 하향"],
+      "terms_en": ["cuts guidance", "guidance cut", "lowers outlook"]
+    },
+    {
+      "id": "fraud_accounting",
+      "polarity": "negative",
+      "weight": 1.3,
+      "terms_kr": ["회계 부정", "분식회계", "사기 의혹"],
+      "terms_en": ["accounting fraud", "fraud probe", "improper accounting"]
+    },
+    {
+      "id": "security_breach",
+      "polarity": "negative",
+      "weight": 1.0,
+      "terms_kr": ["보안 침해", "해킹", "개인정보 유출"],
+      "terms_en": ["security breach", "hacked", "data leak", "data breach"]
+    }
+  ]
+}

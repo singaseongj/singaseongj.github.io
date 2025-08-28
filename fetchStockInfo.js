@@ -214,13 +214,14 @@ function calcRawScore(market, tier, name, ticker) {
   const jitter = rnd() * 0.01;
 
   const signals = [];
-  const baseWeights = { sentiment: 0.1, count: 0.01, blog: 0.15, naver: 0.3 };
+  const baseWeights = { sentiment: 0.10, count: 0.01, blog: 0.15, naver: 0.30, reputation: 0.25 };
   if (typeof news.sentiment === 'number') signals.push({ v: news.sentiment, w: baseWeights.sentiment });
   if (typeof news.count === 'number') signals.push({ v: news.count, w: baseWeights.count });
   if (typeof news.blogMentions === 'number') signals.push({ v: news.blogMentions, w: baseWeights.blog });
   if (typeof trend.naverPopularity === 'number') signals.push({ v: trend.naverPopularity, w: baseWeights.naver });
+  if (typeof news.reputationScore === 'number') signals.push({ v: news.reputationScore, w: baseWeights.reputation });
 
-  const totalOrig = baseWeights.sentiment + baseWeights.count + baseWeights.blog + baseWeights.naver;
+  const totalOrig = baseWeights.sentiment + baseWeights.count + baseWeights.blog + baseWeights.naver + baseWeights.reputation;
   const totalAvail = signals.reduce((s, x) => s + x.w, 0);
   const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
   const extra = signals.reduce((s, x) => s + x.v * x.w * scale, 0);
@@ -306,59 +307,6 @@ function normalizeKey(s) {
   return t.toUpperCase();
 }
 
-// ---------- Index lookups ----------
-let indexes = {};
-try {
-  indexes = JSON.parse(await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8'));
-} catch {}
-
-const rows = [
-  ...(indexes.sp500 || []),
-  ...(indexes.nasdaq100 || []),
-  ...(indexes.kospi200 || []),
-  ...(indexes.kosdaq100 || []),
-];
-
-const SYMBOL_TO_NAME = Object.fromEntries(rows.filter(r => r.symbol && r.name).map(r => [r.symbol, r.name]));
-
-const SECTOR_NORMALIZE = {
-  'Information Technology': 'Technology',
-  'Health Care': 'Healthcare',
-  'Communication Services': 'Communication Services',
-  'Consumer Discretionary': 'Consumer Discretionary',
-  'Consumer Staples': 'Consumer Staples',
-  'Financials': 'Financial Services',
-  'Industrials': 'Industrials',
-  'Materials': 'Materials',
-  'Utilities': 'Utilities',
-  'Real Estate': 'Real Estate',
-  'Energy': 'Energy',
-};
-const INDEX_SECTOR = Object.fromEntries(
-  rows
-    .filter(r => r.symbol && r.sector)
-    .map(r => [r.symbol, SECTOR_NORMALIZE[r.sector] || r.sector])
-);
-
-const INDEX_SYMBOL_SET = new Set(Object.keys(SYMBOL_TO_NAME));
-
-// Helpful canonicalizer for tickers with class separators
-function canonSymbol(s) {
-  if (!s) return s;
-  return String(s).toUpperCase().replace('/', '.').replace('-', '.');
-}
-
-// Merge your hard-coded TICKER_MAP with index map names so both directions exist.
-const STATIC_MAP = (() => {
-  const merged = { ...TICKER_MAP };
-  for (const [sym, nm] of Object.entries(SYMBOL_TO_NAME)) {
-    if (nm) merged[nm] = sym;
-  }
-  const out = {};
-  for (const [k, v] of Object.entries(merged)) out[normalizeKey(k)] = v;
-  return out;
-})();
-
 // Extended static sector mapping (consistent naming)
 const STATIC_SECTORS = {
   // KOSPI
@@ -379,13 +327,120 @@ const STATIC_SECTORS = {
   // US
   'MSFT': 'Technology', 'AAPL': 'Technology', 'NVDA': 'Technology', 'AMZN': 'Consumer Discretionary',
   'META': 'Communication Services', 'GOOGL': 'Communication Services', 'TSLA': 'Consumer Discretionary',
-  'NFLX': 'Communication Services', 'SMCI': 'Technology', 'AMD': 'Technology', 'PEP': 'Consumer Staples', 'PLTR': 'Technology', 'ARM': 'Technology',
+  'NFLX': 'Communication Services', 'SMCI': 'Technology', 'AMD': 'Technology', 'PEP': 'Consumer Staples', 'PLTR': 'Technology',
+  'ARM': 'Technology',
   'MU': 'Technology', 'PATH': 'Technology', 'CRWD': 'Technology', 'BRK-B': 'Financial Services',
   'JNJ': 'Healthcare', 'PG': 'Consumer Staples', 'V': 'Financial Services', 'KO': 'Consumer Staples',
   'NOW': 'Technology', 'LLY': 'Healthcare', 'UBER': 'Technology', 'NRG': 'Utilities',
   'JPM': 'Financial Services', 'UNH': 'Healthcare', 'MRNA': 'Healthcare', 'ZM': 'Technology',
   'MDB': 'Technology', 'SNOW': 'Technology'
 };
+
+// ---------- Index lookups (robust) ----------
+let indexes = {};
+try {
+  indexes = JSON.parse(await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8'));
+} catch {}
+
+const GICS_SECTORS = new Set([
+  'Communication Services','Consumer Discretionary','Consumer Staples','Energy',
+  'Financials','Health Care','Healthcare','Industrials','Information Technology','Technology',
+  'Materials','Real Estate','Utilities'
+].map(s => s.toUpperCase()));
+
+const SECTOR_NORMALIZE = {
+  'Information Technology': 'Technology',
+  'Health Care': 'Healthcare',
+  'Healthcare': 'Healthcare',
+  'Communication Services': 'Communication Services',
+  'Consumer Discretionary': 'Consumer Discretionary',
+  'Consumer Staples': 'Consumer Staples',
+  'Financials': 'Financial Services',
+  'Industrials': 'Industrials',
+  'Materials': 'Materials',
+  'Utilities': 'Utilities',
+  'Real Estate': 'Real Estate',
+  'Energy': 'Energy',
+};
+
+// Treat both slash and dash variants as the same symbol
+function canonSymbol(s) {
+  if (!s) return s;
+  return String(s).toUpperCase().replace('/', '.').replace('-', '.');
+}
+function looksLikeTickerShape(x) {
+  return /^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(x || '') || /^\d{6}\.K[QS]$/.test(x || '');
+}
+const looksLikeTicker = s => looksLikeTickerShape(canonSymbol(s || ''));
+
+// Gather candidate rows from all supported lists if present
+const rawRows = [
+  ...(indexes.sp500 || []),
+  ...(indexes.nasdaq100 || []),
+  ...(indexes.kospi200 || []),
+  ...(indexes.kosdaq100 || []),
+];
+
+// Build robust maps from index data that may have swapped fields
+const INDEX_NAME = {};   // ticker -> company name
+const INDEX_SECTOR = {}; // ticker -> normalized sector
+
+for (const r of rawRows) {
+  // Pull and canonicalize
+  const s1 = canonSymbol(r.symbol);
+  const s2 = canonSymbol(r.name);
+
+  const s1IsTicker = looksLikeTicker(s1);
+  const s2IsTicker = looksLikeTicker(s2);
+
+  // Determine ticker
+  let ticker = null;
+  if (s1IsTicker && !s2IsTicker) ticker = s1;
+  else if (!s1IsTicker && s2IsTicker) ticker = s2;
+  else if (s1IsTicker && s2IsTicker) {
+    // Both look like tickers: pick s1 by default; if static sector knows s2 but not s1, prefer s2
+    ticker = s1;
+    if (STATIC_SECTORS?.[s2] && !STATIC_SECTORS?.[s1]) ticker = s2;
+  } else {
+    // Neither clearly ticker → skip; we can’t trust this row
+    continue;
+  }
+
+  // Determine company name: pick the non-ticker field; if both tickers, try r.sector if it looks like a name
+  let company = null;
+  if (s1IsTicker && !s2IsTicker) company = r.name?.toString().trim();
+  else if (!s1IsTicker && s2IsTicker) company = r.symbol?.toString().trim();
+  else if (s1IsTicker && s2IsTicker) {
+    const maybeName = (r.sector || '').toString().trim();
+    if (maybeName && !GICS_SECTORS.has(maybeName.toUpperCase())) company = maybeName;
+  }
+
+  // Determine sector (only accept if it looks like a real sector)
+  let sector = r.sector;
+  if (sector && typeof sector === 'string') {
+    sector = sector.trim();
+    if (!GICS_SECTORS.has(sector.toUpperCase())) sector = null;
+  } else {
+    sector = null;
+  }
+
+  if (company && !looksLikeTicker(company) && !GICS_SECTORS.has(company.toUpperCase())) INDEX_NAME[ticker] = company;
+  if (sector) INDEX_SECTOR[ticker] = SECTOR_NORMALIZE[sector] || sector;
+}
+
+const INDEX_SYMBOL_SET = new Set(Object.keys(INDEX_NAME));
+
+// Merge your hard-coded TICKER_MAP with index map names so both directions exist.
+const STATIC_MAP = (() => {
+  const merged = { ...TICKER_MAP };
+  for (const [sym, nm] of Object.entries(INDEX_NAME)) {
+    if (nm) merged[nm] = sym;
+  }
+  const out = {};
+  for (const [k, v] of Object.entries(merged)) out[normalizeKey(k)] = v;
+  return out;
+})();
+
 
 // Cache related functions
 async function loadCache() {
@@ -566,10 +621,6 @@ function pickSymbol(name, searchJson) {
   return quotes[0]?.symbol || null;
 }
 
-function looksLikeTickerShape(x) {
-  return /^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(x) || /^\d{6}\.K[QS]$/.test(x);
-}
-
 async function resolveTicker(name, cache) {
   const raw = String(name);
   const nk = normalizeKey(raw);
@@ -651,11 +702,6 @@ async function fetchSector(name, cache) {
     console.warn(`[FETCH_SECTOR] ${name}: ${e.message}`);
     return { sector: null, ticker: null };
   }
-}
-
-// Utility functions
-function looksLikeTicker(s) {
-  return looksLikeTickerShape(canonSymbol(s || ''));
 }
 
 function inStatic(name) {
@@ -756,35 +802,46 @@ async function tryFetchAndEnrich() {
 
       const updated = [];
       for (const entry of entries) {
-        const name = typeof entry === 'string' ? entry : entry.name;
-        const prevSector = typeof entry === 'object' ? (entry.sector ?? null) : null;
+          const name = typeof entry === 'string' ? entry : entry.name;
 
-        try {
-          const { sector, ticker } = await fetchSector(name, cache);
-
-          // Build a SERP URL with fallback: Naver → Google → Yahoo
-          let searchUrl = null;
           try {
-            searchUrl = await fetchSearchUrl(name, ticker, cache);
-          } catch (e) {
-            console.warn(`[SEARCH_URL_FAIL] ${name}: ${e.message}`);
-          }
+            const { sector, ticker } = await fetchSector(name, cache);
+            const displayName =
+              INDEX_NAME[ticker] ||
+              (!looksLikeTicker(name) ? name : undefined) ||
+              name;
 
-          const displayName = (ticker && SYMBOL_TO_NAME[ticker]) || name;
+            let searchUrl = null;
+            try {
+              searchUrl = await fetchSearchUrl(displayName, ticker, cache);
+            } catch (e) {
+              console.warn(`[SEARCH_URL_FAIL] ${name}: ${e.message}`);
+            }
 
-          updated.push({
-            name: displayName,
-            sector: sector || prevSector || null,
-            ticker: ticker || null,
-            searchUrl: searchUrl || null,
-            rawScore: calcRawScore(market, group, displayName, ticker)
-          });
+            const news = ticker ? (newsFeatures[ticker] || {}) : {};
+            const trend = ticker ? (naverTrends[ticker] || {}) : {};
+            updated.push({
+              name: displayName,
+              sector: INDEX_SECTOR[ticker] || sector,
+              ticker,
+              searchUrl,
+              rawScore: calcRawScore(market, group, displayName, ticker),
+              reasons: {
+                reputationScore: news.reputationScore ?? null,
+                topKeywords: news.topKeywords || [],
+                signals: {
+                  sentiment: typeof news.sentiment === 'number' ? news.sentiment : null,
+                  blog: typeof news.blogMentions === 'number' ? news.blogMentions : null,
+                  naver: typeof trend.naverPopularity === 'number' ? trend.naverPopularity : null
+                }
+              }
+            });
 
-          if (sector) successCount++;
-        } catch (err) {
-          console.error(`[ERROR] ${name}: ${err.message}`);
-          updated.push({ name, sector: prevSector || null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, name, null) });
-          noteStatus(err);
+            if (sector) successCount++;
+          } catch (err) {
+            console.error(`[ERROR] ${name}: ${err.message}`);
+            updated.push({ name, sector: null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, name, null), reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: null, blog: null, naver: null } } });
+            noteStatus(err);
 
           if (consecutive429 >= 5) {
             throw new Error('Too many consecutive 429s, aborting');
