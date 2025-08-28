@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-08-29T00:22:48+09:00 (KST)**
+- Generated: **2025-08-29T05:23:32+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,6 +93,14 @@
 
 ### SAFE (5)
 
+**HD한국조선해양** (009540.KS)
+
+- News (7d): **3** (blogs: 10) — momentum: **low**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **14.9%**, 20d **15.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=HD%ED%95%9C%EA%B5%AD%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91%20009540.KS
+
 **금양** (001570.KS)
 
 - News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
@@ -108,14 +116,6 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%8C%80%ED%95%9C%EC%9C%A0%ED%99%94%20006650.KS
-
-**삼성전자** (005930.KS)
-
-- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.4%**, 20d **-4.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20005930.KS
 
 **현대차우** (005385.KS)
 
