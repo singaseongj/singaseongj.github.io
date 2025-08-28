@@ -173,7 +173,11 @@ function rotateFromPools(pools, prevData) {
         candidates = candidates.filter(n => !safeNames.has(n));
       }
       const picked = pickDeterministic(candidates, 5, `${seed}:${market}:${bucket}`);
-      out[market][bucket] = picked.map(n => ({ name: n }));
+      out[market][bucket] = picked.map(n => {
+        const sym = canonSymbol(n);
+        const displayName = INDEX_NAME[sym] || n;
+        return { name: displayName };
+      });
     }
   }
   return out;
@@ -415,20 +419,26 @@ for (const r of rawRows) {
     if (maybeName && !GICS_SECTORS.has(maybeName.toUpperCase())) company = maybeName;
   }
 
-  // Determine sector (only accept if it looks like a real sector)
+  // Determine sector – accept known English sectors or any Korean text
   let sector = r.sector;
   if (sector && typeof sector === 'string') {
     sector = sector.trim();
-    if (!GICS_SECTORS.has(sector.toUpperCase())) sector = null;
+    const upper = sector.toUpperCase();
+    const isKorean = /[\u3131-\uD79D]/.test(sector);
+    if (GICS_SECTORS.has(upper)) {
+      sector = SECTOR_NORMALIZE[sector] || sector;
+    } else if (!isKorean) {
+      sector = null;
+    }
   } else {
     sector = null;
   }
 
   if (company && !looksLikeTicker(company) && !GICS_SECTORS.has(company.toUpperCase())) INDEX_NAME[ticker] = company;
-  if (sector) INDEX_SECTOR[ticker] = SECTOR_NORMALIZE[sector] || sector;
+  if (sector) INDEX_SECTOR[ticker] = sector;
 }
 
-const INDEX_SYMBOL_SET = new Set(Object.keys(INDEX_NAME));
+const INDEX_SYMBOL_SET = new Set([...new Set([...Object.keys(INDEX_NAME), ...Object.keys(INDEX_SECTOR)])]);
 
 // Merge your hard-coded TICKER_MAP with index map names so both directions exist.
 const STATIC_MAP = (() => {
@@ -802,56 +812,66 @@ async function tryFetchAndEnrich() {
 
       const updated = [];
       for (const entry of entries) {
-          const name = typeof entry === 'string' ? entry : entry.name;
+        const rawName = typeof entry === 'string' ? entry : entry.name;
 
-          try {
-            const { sector, ticker } = await fetchSector(name, cache);
-            const displayName =
-              INDEX_NAME[ticker] ||
-              (!looksLikeTicker(name) ? name : undefined) ||
-              name;
+        try {
+          const sym = canonSymbol(rawName);
+          let ticker = null;
+          let sector = null;
+          let displayName = rawName;
 
-            let searchUrl = null;
-            try {
-              searchUrl = await fetchSearchUrl(displayName, ticker, cache);
-            } catch (e) {
-              console.warn(`[SEARCH_URL_FAIL] ${name}: ${e.message}`);
-            }
-
-            const news = ticker ? (newsFeatures[ticker] || {}) : {};
-            const trend = ticker ? (naverTrends[ticker] || {}) : {};
-            updated.push({
-              name: displayName,
-              sector: INDEX_SECTOR[ticker] || sector,
-              ticker,
-              searchUrl,
-              rawScore: calcRawScore(market, group, displayName, ticker),
-              reasons: {
-                reputationScore: news.reputationScore ?? null,
-                topKeywords: news.topKeywords || [],
-                signals: {
-                  sentiment: typeof news.sentiment === 'number' ? news.sentiment : null,
-                  blog: typeof news.blogMentions === 'number' ? news.blogMentions : null,
-                  naver: typeof trend.naverPopularity === 'number' ? trend.naverPopularity : null
-                }
-              }
-            });
-
-            if (sector) successCount++;
-          } catch (err) {
-            console.error(`[ERROR] ${name}: ${err.message}`);
-            updated.push({ name, sector: null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, name, null), reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: null, blog: null, naver: null } } });
-            noteStatus(err);
-
-          if (consecutive429 >= 5) {
-            throw new Error('Too many consecutive 429s, aborting');
+          if (INDEX_NAME[sym] || INDEX_SECTOR[sym]) {
+            ticker = sym;
+            displayName = INDEX_NAME[sym] || rawName;
+            sector = INDEX_SECTOR[sym] || null;
+          } else {
+            const res = await fetchSector(rawName, cache);
+            ticker = res.ticker;
+            sector = INDEX_SECTOR[ticker] || res.sector;
+            displayName = INDEX_NAME[ticker] || (!looksLikeTicker(rawName) ? rawName : undefined) || rawName;
           }
+
+          let searchUrl = null;
+          try {
+            searchUrl = await fetchSearchUrl(displayName, ticker, cache);
+          } catch (e) {
+            console.warn(`[SEARCH_URL_FAIL] ${rawName}: ${e.message}`);
+          }
+
+          const news = ticker ? (newsFeatures[ticker] || {}) : {};
+          const trend = ticker ? (naverTrends[ticker] || {}) : {};
+          updated.push({
+            name: displayName,
+            sector,
+            ticker,
+            searchUrl,
+            rawScore: calcRawScore(market, group, displayName, ticker),
+            reasons: {
+              reputationScore: news.reputationScore ?? null,
+              topKeywords: news.topKeywords || [],
+              signals: {
+                sentiment: typeof news.sentiment === 'number' ? news.sentiment : null,
+                blog: typeof news.blogMentions === 'number' ? news.blogMentions : null,
+                naver: typeof trend.naverPopularity === 'number' ? trend.naverPopularity : null
+              }
+            }
+          });
+
+          if (sector) successCount++;
+        } catch (err) {
+          console.error(`[ERROR] ${rawName}: ${err.message}`);
+          updated.push({ name: rawName, sector: null, ticker: null, searchUrl: null, rawScore: calcRawScore(market, group, rawName, null), reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: null, blog: null, naver: null } } });
+          noteStatus(err);
         }
 
-        // Adaptive delay based on consecutive 429s
-        const delay = consecutive429 >= 3 ? nextDelay() * 2 : nextDelay();
-        await sleep(delay);
+        if (consecutive429 >= 5) {
+          throw new Error('Too many consecutive 429s, aborting');
+        }
       }
+
+      // Adaptive delay based on consecutive 429s
+      const delay = consecutive429 >= 3 ? nextDelay() * 2 : nextDelay();
+      await sleep(delay);
 
       scaleScores(updated, group);
       data[market][group] = updated;
