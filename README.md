@@ -8,7 +8,7 @@ parses the previous closing value for KOSPI and KOSDAQ so the generated
 `stocks.html` page can display those figures alongside the current index value.
 The page also shows a "latest market news" section. A helper script pulls
 headlines from Yahoo Finance and several Korean sources every six hours and
-writes them to `data/market_news.json`. When the page loads it reads this file,
+writes them to `data/market-news.json`. When the page loads it reads this file,
 falling back to `data/sample_market_news.json` if needed.
 
 The S&P 500 tracks 500 large companies listed on U.S. exchanges, while the
@@ -118,7 +118,7 @@ node fetchStockInfo.js --refresh-pools --force
 
 `fetchNews.js` gathers the latest headlines from several RSS feeds. It collects
 five US market items from Yahoo Finance and one headline from each of three
-Korean Google News queries, then writes them to `data/market_news.json`. The
+Korean Google News queries, then writes them to `data/market-news.json`. The
 file is only refreshed when the previous update is older than six hours.
 
 Run it manually whenever you want to refresh the news:

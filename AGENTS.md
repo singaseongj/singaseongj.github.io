@@ -25,8 +25,9 @@ This project hosts the Singaseong website files.
   OFFLINE=1 node src/build.js
   ```
 
-The page also loads recent market headlines from Yahoo Finance.
-When offline, it falls back to `data/sample_market_news.json`.
+The page also loads recent market headlines from Yahoo Finance stored in
+`data/market-news.json`. When offline, it falls back to
+`data/sample_market_news.json`.
 ### Stock page template
 The structure of `stocks.html` is defined in `src/template.html`. We like the current layout and keep it as the reference for future builds. Modify this template and rebuild with `node src/build.js` if you change the design.
 

@@ -85,7 +85,7 @@ async function readJsonOrNull(p) {
  *  - seeds: {[symbol]: string[]} small seed terms (your current map)
  *  - symbolToName: {[symbol]: displayName} (optional, to seed company names)
  *  - newsFeatures: object (optional) to mine extra words
- *  - newsFilePath: string (optional) fallback: data/market_news.json
+ *  - newsFilePath: string (optional) fallback: data/market-news.json
  *  - overridesPath: string (optional) data/keyword-overrides.json
  *  - aliasesPath: string (optional) data/aliases.json
  *  - brandsPath: string (optional) data/brands.json
@@ -95,7 +95,7 @@ export async function buildKeywordDict({
   seeds = {},
   symbolToName = {},
   newsFeatures = null,
-  newsFilePath = 'data/market_news.json',
+  newsFilePath = 'data/market-news.json',
   overridesPath = 'data/keyword-overrides.json',
   aliasesPath = 'data/aliases.json',
   brandsPath = 'data/brands.json',
@@ -119,7 +119,7 @@ export async function buildKeywordDict({
       display
     ];
 
-    // 2) mined tokens from news (either from NEWS_FEATURES-like or market_news.json)
+    // 2) mined tokens from news (either from NEWS_FEATURES-like or market-news.json)
     const mined = newsFeatures
       ? mineFromNews(sym, newsFeatures, 5)
       : mineFromNews(sym, { [sym]: marketNews }, 5);
