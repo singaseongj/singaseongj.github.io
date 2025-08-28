@@ -124,6 +124,9 @@ const INDEX_ROWS = (() => {
   return rows;
 })();
 
+const K200 = new Map((INDEX_RAW.kospi200 || []).map(r => [r.symbol, r.name]));
+const KQ100 = new Map((INDEX_RAW.kosdaq100 || []).map(r => [r.symbol, r.name]));
+
 const INDEX_SYMBOL_TO_NAME = {};
 for (const r of INDEX_ROWS) {
   const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
@@ -211,6 +214,12 @@ function fallbackSymbolFromRaw(raw) {
     return `${a}.${b}`;
   }
   return null;
+}
+
+function mergeIndexNames(base, idxMap) {
+  const out = new Set(base || []);
+  for (const [sym, nm] of idxMap) out.add(nm || sym);
+  return Array.from(out);
 }
 
 const PROVIDER_SCORE_FILE = path.join(CACHE_DIR, 'provider-score.json');
@@ -751,6 +760,9 @@ async function main(){
   const universe = OFFLINE
     ? Object.fromEntries(MARKETS.map(m => [m, Array.from(new Set([...(pools[m]?.safe || []), ...(pools[m]?.aggressive || [])]))]))
     : await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
+
+  universe.KOSPI = mergeIndexNames(universe.KOSPI, K200);
+  universe.KOSDAQ = mergeIndexNames(universe.KOSDAQ, KQ100);
 
   const symbolSet = new Set();
   for (const [market, names] of Object.entries(universe)) {
