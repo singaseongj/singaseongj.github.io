@@ -1,6 +1,19 @@
 {
-  "Berkshire Hathaway (B)": "BRK-B",
-  "Berkshire Hathaway (A)": "BRK-A",
-  "Brown-Forman (B)": "BF-B",
-  "Brown-Forman (A)": "BF-A"
+  "sp500": [
+    { "symbol": "AAPL", "name": "Apple", "sector": "Information Technology" },
+    { "symbol": "MSFT", "name": "Microsoft", "sector": "Information Technology" }
+  ],
+  "nasdaq100": [
+    { "symbol": "NVDA", "name": "NVIDIA", "sector": null },
+    { "symbol": "AMZN", "name": "Amazon", "sector": null }
+  ],
+  "kospi200": [
+    { "symbol": "005930.KS", "name": "삼성전자", "sector": null },
+    { "symbol": "000660.KS", "name": "SK하이닉스", "sector": null }
+  ],
+  "kosdaq100": [
+    { "symbol": "091990.KQ", "name": "셀트리온헬스케어", "sector": null },
+    { "symbol": "247540.KQ", "name": "에코프로비엠", "sector": null }
+  ],
+  "generatedAt": "2025-08-28T00:00:00.000Z"
 }

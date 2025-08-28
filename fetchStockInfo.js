@@ -264,7 +264,7 @@ const HEADERS_JSON = {
 const normalizeForYahoo = s => s.replace(/\./g, '-'); // if you decide to use it later
 
 // Extended static ticker mapping including KOSDAQ
-const TICKER_BASE = {
+const TICKER_MAP = {
   // KOSPI
   '삼성전자': '005930.KS', 'SK하이닉스': '000660.KS', '삼성바이오로직스': '207940.KS',
   '현대차': '005380.KS', 'LG에너지솔루션': '373220.KS', '한화에어로스페이스': '012450.KS',
@@ -293,30 +293,77 @@ const TICKER_BASE = {
   'Moderna': 'MRNA', 'Zoom': 'ZM', 'MongoDB': 'MDB', 'Snowflake': 'SNOW'
 };
 
-// Load generated index map (if the updater ran)
-let INDEX_MAP = {};
+// Normalizer to match buildPoolsTrendy
+function normalizeKey(s) {
+  if (s == null) return '';
+  let t = String(s).normalize('NFKC');
+  try { t = t.replace(/\p{Cf}/gu, ''); } catch {}
+  t = t.replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '');
+  t = t.replace(/[\u0000-\u001F\u007F-\u009F]/g, '').replace(/\uFEFF/g,'');
+  t = t.replace(/\u2212/g, '-');
+  t = t.replace(/\u00A0|\u1680|[\u2000-\u200A]|\u202F|\u205F|\u3000/g, '');
+  t = t.replace(/\s+/g, '').trim();
+  return t.toUpperCase();
+}
+
+// ---------- Index maps (S&P 500 + Nasdaq 100) ----------
+let INDEX_RAW = {};
 try {
-  INDEX_MAP = JSON.parse(
-    await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8')
-  );
-} catch { /* first run or offline: fine */ }
+  // adjust the path if your file lives elsewhere
+  INDEX_RAW = JSON.parse(await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8'));
+} catch {}
 
-// Optional: normalize lookup (so keys with extra spaces still hit)
-const normalizeKey = s =>
-  String(s || '')
-    .normalize('NFKC')
-    .replace(/\s+/g, ' ')
-    .trim();
+// Normalize various possible shapes into rows with {symbol, name, sector}
+function rowsFromIndex(raw) {
+  if (Array.isArray(raw)) return raw;
 
-// Final map the rest of the file will use:
-const TICKER_MAP = new Proxy({ ...INDEX_MAP, ...TICKER_BASE }, {
-  get(target, prop) {
-    if (typeof prop !== 'string') return target[prop];
-    const direct = target[prop]; if (direct) return direct;
-    const n = normalizeKey(prop);
-    return target[n] || undefined;
+  const keys = ["sp500", "nasdaq100", "kospi200", "kosdaq100"];
+  let all = [];
+  for (const k of keys) if (Array.isArray(raw?.[k])) all = all.concat(raw[k]);
+
+  if (all.length) return all;
+
+  // object map: { "AAPL": {name, sector} } or { "AAPL": "Apple" }
+  return Object.entries(raw || {}).map(([symbol, v]) => ({
+    symbol,
+    name: (v && (v.name || v.company || v.companyName || v.Name)) || (typeof v === 'string' ? v : null),
+    sector: (v && (v.sector || v.Sector)) || null
+  }));
+}
+
+const INDEX_ROWS = rowsFromIndex(INDEX_RAW);
+
+// Build reverse lookups
+const SYMBOL_TO_NAME = {};
+const SYMBOL_TO_SECTOR = {};
+for (const r of INDEX_ROWS) {
+  const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
+  if (!sym) continue;
+  if (r.name)   SYMBOL_TO_NAME[sym]   = r.name;
+  if (r.sector) SYMBOL_TO_SECTOR[sym] = r.sector;
+}
+
+// A fast “known tickers” set for pass-through decisions
+const INDEX_SYMBOL_SET = new Set(Object.keys(SYMBOL_TO_NAME));
+
+// Helpful canonicalizer for tickers with class separators
+function canonSymbol(s) {
+  if (!s) return s;
+  return String(s).toUpperCase().replace('/', '.').replace('-', '.');
+}
+
+// Merge your hard-coded TICKER_MAP with index map names so both directions exist.
+const STATIC_MAP = (() => {
+  const merged = { ...TICKER_MAP };
+  // also allow reverse mapping when INDEX has full names
+  for (const [sym, nm] of Object.entries(SYMBOL_TO_NAME)) {
+    if (nm) merged[nm] = sym;
   }
-});
+  // normalize keys
+  const out = {};
+  for (const [k, v] of Object.entries(merged)) out[normalizeKey(k)] = v;
+  return out;
+})();
 
 // Extended static sector mapping (consistent naming)
 const STATIC_SECTORS = {
@@ -376,15 +423,17 @@ function cachePutSector(cache, symbol, sector) {
 }
 
 function cacheGetSearchUrl(cache, name) {
-  const e = cache._searchUrls?.[name];
+  const nk = normalizeKey(name);
+  const e = cache._searchUrls?.[nk];
   if (!e) return undefined;
   if (Date.now() - e.ts > NEWS_TTL_MS) return undefined;
   return e.value; // string URL
 }
 
 function cachePutSearchUrl(cache, name, url) {
+  const nk = normalizeKey(name);
   cache._searchUrls = cache._searchUrls || {};
-  cache._searchUrls[name] = { value: url, ts: Date.now() };
+  cache._searchUrls[nk] = { value: url, ts: Date.now() };
 }
 
 const looksKorean = s => /[가-힣]/.test(s);
@@ -523,65 +572,83 @@ function pickSymbol(name, searchJson) {
   return quotes[0]?.symbol || null;
 }
 
+function looksLikeTickerShape(x) {
+  return /^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(x) || /^\d{6}\.K[QS]$/.test(x);
+}
+
 async function resolveTicker(name, cache) {
-  // Direct ticker pass-through
-  if (/^[A-Z.\-]+$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
+  const raw = String(name);
+  const nk = normalizeKey(raw);
 
-  // Check static mapping first
-  if (TICKER_MAP[name]) return TICKER_MAP[name];
+  // 1) If it's literally a KR/US ticker we already know from index or static, pass through (canon form).
+  const maybeTicker = canonSymbol(raw);
+  const isTickerShape = looksLikeTickerShape(maybeTicker);
+  if (isTickerShape && (INDEX_SYMBOL_SET.has(maybeTicker) || STATIC_SECTORS[maybeTicker] || TICKER_MAP[raw] || TICKER_MAP[nk])) {
+    return maybeTicker;
+  }
 
-  // Check cache
-  if (cache[name]) return cache[name];
+  // 2) Static name->ticker first (your static + index map merged)
+  if (STATIC_MAP[nk]) return canonSymbol(STATIC_MAP[nk]);
 
+  // 3) Cache by normalized key
+  if (cache[nk]) return canonSymbol(cache[nk]);
+
+  // 4) Yahoo fallback (name -> best ticker)
   try {
-    const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
-    const region = looksKorean(name) ? 'KR' : 'US';
-    const data = await yahooSearchSymbol(name, lang, region);
-
-    const symbol = pickSymbol(name, data);
-    if (!symbol) throw new Error(`Could not resolve ticker for "${name}"`);
-
-    cache[name] = symbol;
+    const lang = looksKorean(raw) ? 'ko-KR' : 'en-US';
+    const region = looksKorean(raw) ? 'KR' : 'US';
+    const data = await yahooSearchSymbol(raw, lang, region);
+    const symbol = canonSymbol(pickSymbol(raw, data));
+    if (!symbol) throw new Error(`Could not resolve ticker for "${raw}"`);
+    cache[nk] = symbol;
     await saveCache(cache);
-    console.log(`[RESOLVE] ${name} -> ${symbol}`);
+    console.log(`[RESOLVE] ${raw} -> ${symbol}`);
     return symbol;
   } catch (e) {
-    console.warn(`[RESOLVE] ${name}: ${e.message}`);
+    console.warn(`[RESOLVE] ${raw}: ${e.message}`);
     throw e;
   }
 }
 
-// Sector fetching with static mapping priority
+// Sector fetching with index and static mapping priority
 async function fetchSectorByTicker(ticker, cache) {
+  const sym = canonSymbol(ticker);
+
   // Check cache first
-  const cached = cacheGetSector(cache, ticker);
+  const cached = cacheGetSector(cache, sym);
   if (cached !== undefined) return cached;
 
-  // Check static sector mapping first
-  if (STATIC_SECTORS[ticker]) {
-    const sector = STATIC_SECTORS[ticker];
-    cachePutSector(cache, ticker, sector);
+  // 0) Index sector first
+  if (SYMBOL_TO_SECTOR[sym]) {
+    cachePutSector(cache, sym, SYMBOL_TO_SECTOR[sym]);
     await saveCache(cache);
-    console.log(`[STATIC] ${ticker}: ${sector}`);
+    return SYMBOL_TO_SECTOR[sym];
+  }
+
+  // 1) Static fallback
+  if (STATIC_SECTORS[sym]) {
+    const sector = STATIC_SECTORS[sym];
+    cachePutSector(cache, sym, sector);
+    await saveCache(cache);
     return sector;
   }
 
-  // For Korean stocks, try Naver
-  if (/.K[QS]$/.test(ticker)) {
+  // 2) KR: NAVER scrape
+  if (/.K[QS]$/.test(sym)) {
     try {
-      const sector = await naverSectorKR(ticker);
+      const sector = await naverSectorKR(sym);
       if (sector) {
-        cachePutSector(cache, ticker, sector);
+        cachePutSector(cache, sym, sector);
         await saveCache(cache);
         return sector;
       }
     } catch (e) {
-      console.warn(`[NAVER_FAIL] ${ticker}: ${e.message}`);
+      console.warn(`[NAVER_FAIL] ${sym}: ${e.message}`);
     }
   }
 
-  // Cache null on failure
-  cachePutSector(cache, ticker, null);
+  // 3) Cache null on failure
+  cachePutSector(cache, sym, null);
   await saveCache(cache);
   return null;
 }
@@ -598,6 +665,14 @@ async function fetchSector(name, cache) {
 }
 
 // Utility functions
+function looksLikeTicker(s) {
+  return looksLikeTickerShape(canonSymbol(s || ''));
+}
+
+function inStatic(name) {
+  return !!STATIC_MAP[normalizeKey(name)];
+}
+
 function findMissingStaticMappings(recos) {
   const missing = new Set();
   for (const mkt of Object.keys(recos)) {
@@ -606,7 +681,9 @@ function findMissingStaticMappings(recos) {
     for (const bucket of ['safe', 'aggressive']) {
       for (const entry of grp[bucket]) {
         const name = typeof entry === 'string' ? entry : entry.name;
-        if (name && !TICKER_MAP[name]) missing.add(name);
+        if (!name) continue;
+        // Don’t flag plain tickers; check merged static map
+        if (!looksLikeTicker(name) && !inStatic(name)) missing.add(name);
       }
     }
   }
@@ -704,12 +781,18 @@ async function tryFetchAndEnrich() {
             console.warn(`[SEARCH_URL_FAIL] ${name}: ${e.message}`);
           }
 
+          const sym = ticker ? canonSymbol(ticker) : null;
+          const displayName =
+            (sym && SYMBOL_TO_NAME[sym]) ||
+            (sym && sym.includes('.') ? sym.replace('.', '-') : null) ||
+            name;
+
           updated.push({
-            name,
-            sector: sector || prevSector || null,
-            ticker: ticker || null,
+            name: displayName,
+            sector: sector || prevSector || (sym ? SYMBOL_TO_SECTOR[sym] || null : null),
+            ticker: sym || null,
             searchUrl: searchUrl || null,
-            rawScore: calcRawScore(market, group, name, ticker)
+            rawScore: calcRawScore(market, group, displayName, sym)
           });
 
           if (sector) successCount++;
