@@ -335,11 +335,11 @@
   async function loadMarketNews() {
       let data = null;
       try {
-        const res = await fetch('data/market_news.json');
+        const res = await fetch('data/market-news.json');
         if (!res.ok) throw new Error('HTTP ' + res.status);
         data = await res.json();
       } catch (e) {
-        console.warn('market_news.json load failed', e);
+        console.warn('market-news.json load failed', e);
         try {
           const res = await fetch('data/sample_market_news.json');
           data = await res.json();

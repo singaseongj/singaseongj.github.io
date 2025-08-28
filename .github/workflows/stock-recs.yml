@@ -240,12 +240,12 @@ jobs:
         run: |
           set -Eeuo pipefail
           node fetchNews.js
-          test -s data/market_news.json
+          test -s data/market-news.json
           echo "market_news lastUpdated:"
-          node -e "console.log(require('./data/market_news.json').lastUpdated || 'missing')"
+          node -e "console.log(require('./data/market-news.json').lastUpdated || 'missing')"
           echo "--- git status/diff (market_news) ---"
-          git status --porcelain -- data/market_news.json || true
-          git --no-pager diff -- data/market_news.json | sed -n '1,80p' || true
+          git status --porcelain -- data/market-news.json || true
+          git --no-pager diff -- data/market-news.json | sed -n '1,80p' || true
 
       - name: Update FX rates
         shell: bash
@@ -276,7 +276,7 @@ jobs:
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market_news.json data/fx_rates.json summary.json summary.md data/articles pools-metrics.json || true
+          git add data/market-news.json data/fx_rates.json summary.json summary.md data/articles pools-metrics.json || true
           echo "Files staged for commit"
 
       - name: "Commit & push changes"
@@ -290,7 +290,7 @@ jobs:
         if: always()
         run: |
           echo "market_news HEAD lastUpdated:"
-          git show HEAD:data/market_news.json | jq -r .lastUpdated
+          git show HEAD:data/market-news.json | jq -r .lastUpdated
           echo "fx_rates HEAD lastUpdated:"
           git show HEAD:data/fx_rates.json | jq -r .lastUpdated
 

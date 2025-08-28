@@ -10,7 +10,7 @@ import { fetchKotraRecent } from './src/news/kotraOverseas.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const OUT_FILE = path.join(__dirname, 'data', 'market_news.json');
+const OUT_FILE = path.join(__dirname, 'data', 'market-news.json');
 const HANGUL = /[\u3131-\u318E\uAC00-\uD7A3]/;
 const KR_DOMAIN = /(yonhap|yna|hankyung|mk\.co\.kr|chosun|joongang|edaily|sedaily|newsis|hankyoreh|donga|fnnews|biz\.chosun|etnews|kmib|koreatimes|joongangdaily|koreaherald)\./i;
 const isKR = it => HANGUL.test(it.title) || KR_DOMAIN.test(it.link);
