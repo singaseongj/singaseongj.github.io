@@ -316,11 +316,15 @@ try {
 // Normalize various possible shapes into rows with {symbol, name, sector}
 function rowsFromIndex(raw) {
   if (Array.isArray(raw)) return raw;
-  if (Array.isArray(raw.sp500) || Array.isArray(raw.nasdaq100)) {
-    return (raw.sp500 || []).concat(raw.nasdaq100 || []);
-  }
+
+  const keys = ["sp500", "nasdaq100", "kospi200", "kosdaq100"];
+  let all = [];
+  for (const k of keys) if (Array.isArray(raw?.[k])) all = all.concat(raw[k]);
+
+  if (all.length) return all;
+
   // object map: { "AAPL": {name, sector} } or { "AAPL": "Apple" }
-  return Object.entries(raw).map(([symbol, v]) => ({
+  return Object.entries(raw || {}).map(([symbol, v]) => ({
     symbol,
     name: (v && (v.name || v.company || v.companyName || v.Name)) || (typeof v === 'string' ? v : null),
     sector: (v && (v.sector || v.Sector)) || null
