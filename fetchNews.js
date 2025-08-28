@@ -35,6 +35,7 @@ const KR_FEEDS = [
 ];
 
 const parser = new XMLParser({ ignoreAttributes: false });
+const MIN_NEWS = Number(process.env.MIN_NEWS || 8);
 const execFileP = promisify(execFile);
 
 function extract(item) {
@@ -87,6 +88,14 @@ function dedupe(items) {
   return out;
 }
 
+// Prefer a 6/6 split, but backfill from whichever side has extra.
+function pickMixed(us, kr, total = 12, capPerSide = 6) {
+  const first = [...us.slice(0, capPerSide), ...kr.slice(0, capPerSide)];
+  if (first.length >= total) return first.slice(0, total);
+  const rest = [...us.slice(capPerSide), ...kr.slice(capPerSide)];
+  return [...first, ...rest.slice(0, total - first.length)];
+}
+
 async function naverSearch(query, headers, display = 20) {
   const url = `${NAVER_ENDPOINT}?query=${encodeURIComponent(query)}&display=${display}&sort=date`;
   const res = await fetch(url, { headers });
@@ -134,7 +143,7 @@ async function gatherFeeds() {
     (isKR(it) ? kr : us).push(it);
   }
 
-  return [...us.slice(0, 6), ...kr.slice(0, 6)].slice(0, 12);
+  return pickMixed(us, kr, 12, 6);
 }
 
 async function gather() {
@@ -170,8 +179,16 @@ async function main() {
   for (const it of items) {
     (isKR(it) ? kr : us).push(it);
   }
-  items = [...us.slice(0, 6), ...kr.slice(0, 6)].slice(0, 12);
-  if (items.length < 8) throw new Error('No news items after filtering');
+  items = pickMixed(us, kr, 12, 6);
+  if (items.length < MIN_NEWS) {
+    if (process.env.ALLOW_EMPTY_NEWS === '1') {
+      const out = { lastUpdated: nowKSTISO(), items };
+      await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
+      console.warn(`Only ${items.length} items; ALLOW_EMPTY_NEWS=1 so not failing.`);
+      return;
+    }
+    throw new Error(`No news items after filtering (got ${items.length}, need >= ${MIN_NEWS})`);
+  }
   const out = { lastUpdated: nowKSTISO(), items };
   await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
   console.log(`Wrote ${items.length} items to ${OUT_FILE}`);
