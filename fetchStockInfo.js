@@ -264,7 +264,7 @@ const HEADERS_JSON = {
 const normalizeForYahoo = s => s.replace(/\./g, '-'); // if you decide to use it later
 
 // Extended static ticker mapping including KOSDAQ
-const TICKER_BASE = {
+const TICKER_MAP = {
   // KOSPI
   '삼성전자': '005930.KS', 'SK하이닉스': '000660.KS', '삼성바이오로직스': '207940.KS',
   '현대차': '005380.KS', 'LG에너지솔루션': '373220.KS', '한화에어로스페이스': '012450.KS',
@@ -293,30 +293,30 @@ const TICKER_BASE = {
   'Moderna': 'MRNA', 'Zoom': 'ZM', 'MongoDB': 'MDB', 'Snowflake': 'SNOW'
 };
 
-// Load generated index map (if the updater ran)
+// Normalizer to match buildPoolsTrendy
+function normalizeKey(s) {
+  if (s == null) return '';
+  let t = String(s).normalize('NFKC');
+  try { t = t.replace(/\p{Cf}/gu, ''); } catch {}
+  t = t.replace(/[\u00AD\u034F\u061C\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069]/g, '');
+  t = t.replace(/[\u0000-\u001F\u007F-\u009F]/g, '').replace(/\uFEFF/g,'');
+  t = t.replace(/\u2212/g, '-');
+  t = t.replace(/\u00A0|\u1680|[\u2000-\u200A]|\u202F|\u205F|\u3000/g, '');
+  t = t.replace(/\s+/g, '').trim();
+  return t.toUpperCase();
+}
+
+// Load generated S&P500/Nasdaq100 map and merge into a single static map
 let INDEX_MAP = {};
 try {
-  INDEX_MAP = JSON.parse(
-    await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8')
-  );
-} catch { /* first run or offline: fine */ }
-
-// Optional: normalize lookup (so keys with extra spaces still hit)
-const normalizeKey = s =>
-  String(s || '')
-    .normalize('NFKC')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-// Final map the rest of the file will use:
-const TICKER_MAP = new Proxy({ ...INDEX_MAP, ...TICKER_BASE }, {
-  get(target, prop) {
-    if (typeof prop !== 'string') return target[prop];
-    const direct = target[prop]; if (direct) return direct;
-    const n = normalizeKey(prop);
-    return target[n] || undefined;
-  }
-});
+  INDEX_MAP = JSON.parse(await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8'));
+} catch {}
+const STATIC_MAP = (() => {
+  const merged = { ...TICKER_MAP, ...INDEX_MAP };
+  const out = {};
+  for (const [k, v] of Object.entries(merged)) out[normalizeKey(k)] = v;
+  return out;
+})();
 
 // Extended static sector mapping (consistent naming)
 const STATIC_SECTORS = {
@@ -376,15 +376,17 @@ function cachePutSector(cache, symbol, sector) {
 }
 
 function cacheGetSearchUrl(cache, name) {
-  const e = cache._searchUrls?.[name];
+  const nk = normalizeKey(name);
+  const e = cache._searchUrls?.[nk];
   if (!e) return undefined;
   if (Date.now() - e.ts > NEWS_TTL_MS) return undefined;
   return e.value; // string URL
 }
 
 function cachePutSearchUrl(cache, name, url) {
+  const nk = normalizeKey(name);
   cache._searchUrls = cache._searchUrls || {};
-  cache._searchUrls[name] = { value: url, ts: Date.now() };
+  cache._searchUrls[nk] = { value: url, ts: Date.now() };
 }
 
 const looksKorean = s => /[가-힣]/.test(s);
@@ -524,24 +526,24 @@ function pickSymbol(name, searchJson) {
 }
 
 async function resolveTicker(name, cache) {
-  // Direct ticker pass-through
-  if (/^[A-Z.\-]+$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
+  // direct ticker pass-through
+  if (/^[A-Z][A-Z.\-]{0,6}(\.[A-Z]{1,3})?$/.test(name) || /^\d{6}\.K[QS]$/.test(name)) return name;
 
-  // Check static mapping first
-  if (TICKER_MAP[name]) return TICKER_MAP[name];
+  const nk = normalizeKey(name);
 
-  // Check cache
-  if (cache[name]) return cache[name];
+  // static maps
+  if (STATIC_MAP[nk]) return STATIC_MAP[nk];
+
+  // cache (store by normalized key)
+  if (cache[nk]) return cache[nk];
 
   try {
     const lang = looksKorean(name) ? 'ko-KR' : 'en-US';
     const region = looksKorean(name) ? 'KR' : 'US';
     const data = await yahooSearchSymbol(name, lang, region);
-
     const symbol = pickSymbol(name, data);
     if (!symbol) throw new Error(`Could not resolve ticker for "${name}"`);
-
-    cache[name] = symbol;
+    cache[nk] = symbol;
     await saveCache(cache);
     console.log(`[RESOLVE] ${name} -> ${symbol}`);
     return symbol;
@@ -598,6 +600,14 @@ async function fetchSector(name, cache) {
 }
 
 // Utility functions
+function looksLikeTicker(s) {
+  return /^[A-Z]{1,5}([.\-][A-Z]{1,3})?$/.test(s) || /^\d{6}\.K[QS]$/.test(s);
+}
+
+function inStatic(name) {
+  return !!STATIC_MAP[normalizeKey(name)];
+}
+
 function findMissingStaticMappings(recos) {
   const missing = new Set();
   for (const mkt of Object.keys(recos)) {
@@ -606,7 +616,9 @@ function findMissingStaticMappings(recos) {
     for (const bucket of ['safe', 'aggressive']) {
       for (const entry of grp[bucket]) {
         const name = typeof entry === 'string' ? entry : entry.name;
-        if (name && !TICKER_MAP[name]) missing.add(name);
+        if (!name) continue;
+        // Don’t flag plain tickers; check merged static map
+        if (!looksLikeTicker(name) && !inStatic(name)) missing.add(name);
       }
     }
   }
