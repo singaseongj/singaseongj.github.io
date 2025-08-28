@@ -264,7 +264,7 @@ const HEADERS_JSON = {
 const normalizeForYahoo = s => s.replace(/\./g, '-'); // if you decide to use it later
 
 // Extended static ticker mapping including KOSDAQ
-const TICKER_MAP = {
+const TICKER_BASE = {
   // KOSPI
   '삼성전자': '005930.KS', 'SK하이닉스': '000660.KS', '삼성바이오로직스': '207940.KS',
   '현대차': '005380.KS', 'LG에너지솔루션': '373220.KS', '한화에어로스페이스': '012450.KS',
@@ -292,6 +292,31 @@ const TICKER_MAP = {
   'NRG Energy': 'NRG', 'JPMorgan Chase': 'JPM', 'UnitedHealth': 'UNH',
   'Moderna': 'MRNA', 'Zoom': 'ZM', 'MongoDB': 'MDB', 'Snowflake': 'SNOW'
 };
+
+// Load generated index map (if the updater ran)
+let INDEX_MAP = {};
+try {
+  INDEX_MAP = JSON.parse(
+    await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8')
+  );
+} catch { /* first run or offline: fine */ }
+
+// Optional: normalize lookup (so keys with extra spaces still hit)
+const normalizeKey = s =>
+  String(s || '')
+    .normalize('NFKC')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+// Final map the rest of the file will use:
+const TICKER_MAP = new Proxy({ ...INDEX_MAP, ...TICKER_BASE }, {
+  get(target, prop) {
+    if (typeof prop !== 'string') return target[prop];
+    const direct = target[prop]; if (direct) return direct;
+    const n = normalizeKey(prop);
+    return target[n] || undefined;
+  }
+});
 
 // Extended static sector mapping (consistent naming)
 const STATIC_SECTORS = {
