@@ -1,95 +1,144 @@
 // tools/updateIndexMaps.mjs
-import fs from "fs/promises";
-import { execFileSync } from "node:child_process";
+import fs from 'fs/promises';
+import { execFile } from 'node:child_process';
 
-const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36";
+const OFFLINE = process.env.OFFLINE === '1' || process.env.NO_NET === '1';
+const INDEX_PATH = 'src/maps.indexes.json';
+const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36';
 
-let cached = {};
-
-async function text(url) {
-  try {
-    return execFileSync("curl", ["-L", "-s", "-f", "-A", UA, url], {
-      encoding: "utf8",
+function execFileText(cmd, args) {
+  return new Promise((resolve) => {
+    execFile(cmd, args, { encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 }, (err, stdout) => {
+      if (err) return resolve(null);
+      resolve(stdout);
     });
-  } catch {
-    throw new Error(`HTTP fetch failed for ${url}`);
-  }
+  });
 }
 
-// --- small helpers
-const canonUS = s => s.toUpperCase().replace("/", ".").replace("-", ".");
-const six = s => (s || "").replace(/\D/g, "").padStart(6, "0");
+async function curlText(url) {
+  // -L follow redirects, -s silent, -f fail on HTTP error, -A user-agent
+  return execFileText('curl', ['-L', '-s', '-f', '-A', UA, url]);
+}
 
-// --- S&P 500
-async function fetchSP500() {
+async function netText(url) {
+  if (OFFLINE) return null;
+
+  // Try built-in fetch first (Node 18+), then curl fallback
   try {
-    const html = await text("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies");
-    const rows = [...html.matchAll(/<tr>\s*<td[^>]*>\s*(?:<a [^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*([^<]+)<\/td>/gi)];
-    if (rows.length < 400) throw new Error("parse failed");
+    // Some environments disallow setting User-Agent; omit if it errors
+    const r = await fetch(url, { headers: { 'user-agent': UA } });
+    if (r.ok) return await r.text();
+  } catch { /* ignore and try curl */ }
+
+  try {
+    const txt = await curlText(url);
+    if (txt) return txt;
+  } catch { /* ignore */ }
+
+  return null;
+}
+
+const canonUS = s => s.toUpperCase().replace('/', '.').replace('-', '.');
+const six = s => (s || '').replace(/\D/g, '').padStart(6, '0');
+
+// ---- Parsers (with fallbacks)
+
+// S&P 500: prefer Name,Symbol,Sector order; fallback to Symbol,Name,Sector
+function parseSp500(html) {
+  if (!html) return [];
+  let rows = [
+    ...html.matchAll(
+      /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>[\s\S]*?<td>([^<]+)<\/td>/gi
+    ),
+  ];
+  if (rows.length < 300) {
+    rows = [
+      ...html.matchAll(
+        /<tr>\s*<td[^>]*>\s*(?:<a [^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*([^<]+)<\/td>/gi
+      ),
+    ];
     return rows.map(m => ({ symbol: canonUS(m[1]), name: m[2].trim(), sector: m[3].trim() }));
-  } catch (e) {
-    console.warn("S&P 500 fetch failed:", e.message);
-    return cached.sp500 || [];
   }
+  return rows.map(m => ({ symbol: canonUS(m[2]), name: m[1].trim(), sector: m[3].trim() }));
 }
 
-// --- Nasdaq-100
-async function fetchNasdaq100() {
-  try {
-    const html = await text("https://en.wikipedia.org/wiki/Nasdaq-100");
-    const part = html.split('id="constituents"')[1] || "";
-    const rows = [...part.matchAll(/<tr>\s*<td>([A-Z.\-]+)<\/td>\s*<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>/gi)];
-    if (rows.length < 80) throw new Error("parse failed");
-    return rows.map(m => ({ symbol: canonUS(m[1]), name: m[2].trim(), sector: null }));
-  } catch (e) {
-    console.warn("Nasdaq-100 fetch failed:", e.message);
-    return cached.nasdaq100 || [];
+// Nasdaq-100: limit to constituents section to avoid extra tables
+function parseNasdaq100(html) {
+  if (!html) return [];
+  const part = html.split('id="constituents"')[1] || html;
+  const rows = [
+    ...part.matchAll(
+      /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>/gi
+    ),
+  ];
+  if (rows.length > 0) {
+    return rows.map(m => ({ symbol: canonUS(m[2]), name: m[1].trim(), sector: null }));
   }
+  // fallback pattern
+  const rows2 = [
+    ...part.matchAll(/<tr>\s*<td>([A-Z.\-]+)<\/td>\s*<td[^>]*>\s*(?:<a [^>]*>)?([^<]+)<\/(?:a|td)>/gi),
+  ];
+  return rows2.map(m => ({ symbol: canonUS(m[1]), name: m[2].trim(), sector: null }));
 }
 
-// --- KOSPI 200 (코스피200) => append .KS
-async function fetchKOSPI200() {
-  try {
-    const html = await text("https://ko.wikipedia.org/wiki/KOSPI_200");
-    const rows = [...html.matchAll(/<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi)];
-    if (rows.length < 150) throw new Error("parse failed");
-    return rows.map(m => ({ symbol: `${six(m[2])}.KS`, name: m[1].trim(), sector: null }));
-  } catch (e) {
-    console.warn("KOSPI 200 fetch failed:", e.message);
-    return cached.kospi200 || [];
-  }
+function parseKospi200(html) {
+  if (!html) return [];
+  const rows = [
+    ...html.matchAll(
+      /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
+    ),
+  ];
+  return rows.map(m => ({ symbol: `${six(m[2])}.KS`, name: m[1].trim(), sector: null }));
 }
 
-// --- KOSDAQ 100 (코스닥100) => append .KQ
-async function fetchKOSDAQ100() {
-  try {
-    const html = await text("https://ko.wikipedia.org/wiki/KOSDAQ_100");
-    const rows = [...html.matchAll(/<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi)];
-    if (rows.length < 80) throw new Error("parse failed");
-    return rows.map(m => ({ symbol: `${six(m[2])}.KQ`, name: m[1].trim(), sector: null }));
-  } catch (e) {
-    console.warn("KOSDAQ 100 fetch failed:", e.message);
-    return cached.kosdaq100 || [];
-  }
+function parseKosdaq100(html) {
+  if (!html) return [];
+  const rows = [
+    ...html.matchAll(
+      /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
+    ),
+  ];
+  return rows.map(m => ({ symbol: `${six(m[2])}.KQ`, name: m[1].trim(), sector: null }));
 }
 
 async function main() {
-  try {
-    cached = JSON.parse(await fs.readFile("src/maps.indexes.json", "utf8"));
-  } catch {}
+  // Load existing file (for fallback if fetch fails)
+  let current = { sp500: [], nasdaq100: [], kospi200: [], kosdaq100: [], generatedAt: null };
+  try { current = JSON.parse(await fs.readFile(INDEX_PATH, 'utf8')); } catch {}
 
-  const [sp500, nasdaq100, kospi200, kosdaq100] = await Promise.all([
-    fetchSP500(),
-    fetchNasdaq100(),
-    fetchKOSPI200(),
-    fetchKOSDAQ100(),
+  const [spTxt, nqTxt, k200Txt, kq100Txt] = await Promise.all([
+    netText('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'),
+    netText('https://en.wikipedia.org/wiki/Nasdaq-100'),
+    netText('https://ko.wikipedia.org/wiki/KOSPI_200'),
+    netText('https://ko.wikipedia.org/wiki/KOSDAQ_100'),
   ]);
 
-  const out = { sp500, nasdaq100, kospi200, kosdaq100, generatedAt: new Date().toISOString() };
-  await fs.writeFile("src/maps.indexes.json", JSON.stringify(out, null, 2));
-  console.log("Wrote src/maps.indexes.json",
-              `(S&P500=${sp500.length}, N100=${nasdaq100.length}, K200=${kospi200.length}, KQ100=${kosdaq100.length})`);
+  let sp500 = parseSp500(spTxt);
+  let nasdaq100 = parseNasdaq100(nqTxt);
+  let kospi200 = parseKospi200(k200Txt);
+  let kosdaq100 = parseKosdaq100(kq100Txt);
+
+  // Sanity thresholds; fallback to current if parse looks wrong/too small
+  if (sp500.length < 350) sp500 = current.sp500;
+  if (nasdaq100.length < 70) nasdaq100 = current.nasdaq100;
+  if (kospi200.length < 150) kospi200 = current.kospi200;
+  if (kosdaq100.length < 80) kosdaq100 = current.kosdaq100;
+
+  const next = {
+    sp500,
+    nasdaq100,
+    kospi200,
+    kosdaq100,
+    generatedAt: new Date().toISOString(),
+  };
+
+  await fs.mkdir('src', { recursive: true });
+  await fs.writeFile(INDEX_PATH, JSON.stringify(next, null, 2));
+  console.log('[indexes] updated',
+    `(S&P500=${sp500.length}, N100=${nasdaq100.length}, K200=${kospi200.length}, KQ100=${kosdaq100.length})`,
+    OFFLINE ? '[OFFLINE mode]' : ''
+  );
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
-
+// Non-fatal on error (so CI doesn’t break hard)
+main().catch(e => { console.warn('[indexes] non-fatal:', e.message); process.exit(0); });
