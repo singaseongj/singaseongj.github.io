@@ -4,6 +4,7 @@ import { restClient } from '@polygon.io/client-js';
 import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
+import { computeReputation } from './reputation.js';
 
 const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
@@ -30,6 +31,8 @@ const buckets = {
   polygon: tokenBucket({capacity:2, refillPerSec:1}),
 };
 const cb = circuitBreaker({cooldownMs:20*60_000});
+const ALIAS_PATH = path.join(process.cwd(), 'src/news/symbol-aliases.json');
+const SYMBOL_ALIASES = (()=>{ try { return JSON.parse(fs.readFileSync(ALIAS_PATH, 'utf8')); } catch { return {}; }})();
 
 async function guardedCall(name, fn){
   if (cb.isOpen(name)) return null;
@@ -429,8 +432,8 @@ export async function buildNewsFeatures(symbols, opts={}){
           if (close != null) v.nasdaqClose = close;
           if (v.count === 0 && (v.polygonTrend != null || v.nasdaqClose != null)) v.count = 1;
           if (v.count > 0) {
-            baseOut[baseSymbol(sym)] = v;
-            return;
+            feat = v;
+            break;
           }
         }
       } catch (e) {
@@ -438,18 +441,33 @@ export async function buildNewsFeatures(symbols, opts={}){
         console.warn(`[news] ${sym} provider ${p} failed: ${e.message}`);
       }
     }
-    if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
-    const trend = await fetchPolygonTrend(sym);
-    if (trend != null) feat.polygonTrend = trend;
-    const close = await fetchPrevClose(sym);
-    if (close != null) feat.nasdaqClose = close;
-    if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
+    if (feat.count === 0) {
+      if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
+      const trend = await fetchPolygonTrend(sym);
+      if (trend != null) feat.polygonTrend = trend;
+      const close = await fetchPrevClose(sym);
+      if (close != null) feat.nasdaqClose = close;
+      if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
+    }
+
+    let items = [];
+    try {
+      items = await getTickerArticles(sym);
+    } catch {}
+    try {
+      const aliases = SYMBOL_ALIASES[sym] || [];
+      const rep = computeReputation({ items, company: { ticker: sym, names: [symbolToName[sym], ...aliases].filter(Boolean) } });
+      feat.reputationScore = rep.reputationScore;
+      feat.topKeywords = rep.topKeywords;
+      feat.reputationHitIds = rep.hitIds;
+    } catch {}
+
     baseOut[baseSymbol(sym)] = feat;
   });
 
   const out = {};
   for (const s of symbols){
-    out[s] = baseOut[baseSymbol(s)] || { count:0, sentiment:0, blogMentions:0, polygonTrend:0, nasdaqClose:null };
+    out[s] = baseOut[baseSymbol(s)] || { count:0, sentiment:0, blogMentions:0, polygonTrend:0, nasdaqClose:null, reputationScore:null, topKeywords:[], reputationHitIds:[] };
   }
   return out;
 }

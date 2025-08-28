@@ -920,7 +920,7 @@ async function main(){
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, polygonTrend, nasdaqClose, earn, sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, polygonTrend, nasdaqClose, earn, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
       processed.add(name);
     });
     for (const n of names) {
@@ -928,6 +928,7 @@ async function main(){
         byName[n] = {
           ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
           newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
+          reputationScore:null, topKeywords:[], reputationHitIds:[],
           sym:null, source:null, attempts:[], fetchMs:0
         };
       }
@@ -940,6 +941,9 @@ async function main(){
         byName[n].blogMentions    = nf.blogMentions ?? byName[n].blogMentions;
         byName[n].polygonTrend    = nf.polygonTrend ?? byName[n].polygonTrend;
         byName[n].nasdaqClose     = nf.nasdaqClose ?? byName[n].nasdaqClose;
+        byName[n].reputationScore = nf.reputationScore ?? byName[n].reputationScore;
+        byName[n].topKeywords     = nf.topKeywords ?? byName[n].topKeywords;
+        byName[n].reputationHitIds = nf.reputationHitIds ?? byName[n].reputationHitIds;
       }
     }
 
@@ -984,14 +988,16 @@ async function main(){
         sentiment: 0.08,
         naver: isKRName ? 0.30 : 0,
         blog: 0.15,
+        reputation: 0.25,
       };
-      const totalOrig = weights.count + weights.sentiment + weights.naver + weights.blog;
+      const totalOrig = weights.count + weights.sentiment + weights.naver + weights.blog + weights.reputation;
       let totalAvail = 0;
       let newsBoost = 0;
       if (byName[n].newsCount != null) { newsBoost += newsCountNorm * weights.count; totalAvail += weights.count; }
       if (byName[n].sentiment != null) { newsBoost += (sentimentNorm - 0.5) * weights.sentiment; totalAvail += weights.sentiment; }
       if (isKRName && byName[n].naverPopularity != null) { newsBoost += pop * weights.naver; totalAvail += weights.naver; }
       if (byName[n].blogMentions != null) { newsBoost += blogNorm * weights.blog; totalAvail += weights.blog; }
+      if (byName[n].reputationScore != null) { newsBoost += byName[n].reputationScore * weights.reputation; totalAvail += weights.reputation; }
       const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
       newsBoost *= scale;
 
@@ -1113,6 +1119,7 @@ async function main(){
       acc[n] = {
         ret5: byName[n].ret5, ret20: byName[n].ret20, vol20: byName[n].vol20, turnover: byName[n].turnover,
         adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, blogMentions: byName[n].blogMentions, polygonTrend: byName[n].polygonTrend, nasdaqClose: byName[n].nasdaqClose, recentEarnings: byName[n].earn,
+        reputationScore: byName[n].reputationScore, topKeywords: (byName[n].topKeywords || []).slice(0,3), reputationHitIds: byName[n].reputationHitIds || [],
         source: byName[n].source, attempts: byName[n].attempts, fetchMs: byName[n].fetchMs,
         norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], newsCount: newsCountNorm, sentiment: sentimentNorm, popularity: pop, blogMentions: blogNorm },
         score: { safe: scoreSafe[n], aggressive: scoreAggr[n] }
