@@ -1,0 +1,54 @@
+{
+  "$id": "https://ddsciencehs.local/schemas/maps.indexes.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "sp500": { "$ref": "#/$defs/listUS" },
+    "nasdaq100": { "$ref": "#/$defs/listUS" },
+    "kospi200": { "$ref": "#/$defs/listKR" },
+    "kosdaq100": { "$ref": "#/$defs/listKR" },
+    "generatedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": ["sp500", "nasdaq100", "kospi200", "kosdaq100"],
+  "$defs": {
+    "gics": {
+      "enum": [
+        "Communication Services",
+        "Consumer Discretionary",
+        "Consumer Staples",
+        "Energy",
+        "Financials",
+        "Health Care",
+        "Industrials",
+        "Information Technology",
+        "Materials",
+        "Real Estate",
+        "Utilities",
+        null
+      ]
+    },
+    "rowUS": {
+      "type": "object",
+      "required": ["symbol", "name", "sector"],
+      "properties": {
+        "symbol": { "type": "string", "pattern": "^[A-Z]{1,5}(\\.[A-Z]{1,2})?$" },
+        "name":   { "type": "string", "minLength": 1 },
+        "sector": { "$ref": "#/$defs/gics" }
+      },
+      "additionalProperties": false
+    },
+    "rowKR": {
+      "type": "object",
+      "required": ["symbol", "name", "sector"],
+      "properties": {
+        "symbol": { "type": "string", "pattern": "^\\d{6}\\.(KS|KQ)$" },
+        "name":   { "type": "string", "minLength": 1 },
+        "sector": { "$ref": "#/$defs/gics" }
+      },
+      "additionalProperties": false
+    },
+    "listUS": { "type": "array", "items": { "$ref": "#/$defs/rowUS" } },
+    "listKR": { "type": "array", "items": { "$ref": "#/$defs/rowKR" } }
+  },
+  "additionalProperties": false
+}
