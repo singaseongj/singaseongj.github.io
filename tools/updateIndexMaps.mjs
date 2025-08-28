@@ -1,5 +1,6 @@
 // Build a name -> ticker dictionary for S&P 500 + Nasdaq 100
 import { writeFile, mkdir } from "fs/promises";
+import { load } from "cheerio";
 
 const FMP = process.env.FMP_KEY || ""; // optional; falls back to Wikipedia if empty
 
@@ -12,6 +13,10 @@ async function text(url) {
   const r = await fetch(url, { headers: { "User-Agent": "stock-recs/ci" } });
   if (!r.ok) throw new Error(`HTTP ${r.status} @ ${url}`);
   return r.text();
+}
+
+function decodeEntities(s) {
+  return load(s || "").text();
 }
 
 function normName(s) {
@@ -50,13 +55,13 @@ async function fetchSP500() {
     try {
       // FMP endpoint commonly used in examples
       const arr = await json(`https://financialmodelingprep.com/api/v3/sp500_constituent?apikey=${FMP}`);
-      return arr.map(x => ({ symbol: x.symbol, name: x.name }));
+      return arr.map(x => ({ symbol: x.symbol, name: decodeEntities(x.name) }));
     } catch {}
   }
   // 2) Wikipedia fallback (robust enough for CI)
   const html = await text("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies");
   const rows = [...html.matchAll(/<tr>\s*<td><a[^>]+>([A-Z\.\-]+)<\/a><\/td>\s*<td><a[^>]*>([^<]+)<\/a>/g)];
-  return rows.map(([, symbol, name]) => ({ symbol, name }));
+  return rows.map(([, symbol, name]) => ({ symbol, name: decodeEntities(name) }));
 }
 
 async function fetchNasdaq100() {
@@ -65,21 +70,21 @@ async function fetchNasdaq100() {
       // Many users mirror NASDAQ-100 here; keep the fallback just in case endpoint differs
       const arr = await json(`https://financialmodelingprep.com/api/v3/nasdaq_constituent?apikey=${FMP}`);
       if (Array.isArray(arr) && arr[0]?.symbol && arr[0]?.name) {
-        return arr.map(x => ({ symbol: x.symbol, name: x.name }));
+        return arr.map(x => ({ symbol: x.symbol, name: decodeEntities(x.name) }));
       }
     } catch {}
   }
   const html = await text("https://en.wikipedia.org/wiki/Nasdaq-100");
   // First wikitable with “Ticker” + “Company”
   const rows = [...html.matchAll(/<tr>\s*<td><a[^>]*>([A-Z\.\-]+)<\/a><\/td>\s*<td>(?:<a[^>]*>)?([^<]+)</g)];
-  return rows.map(([, symbol, name]) => ({ symbol, name }));
+  return rows.map(([, symbol, name]) => ({ symbol, name: decodeEntities(name) }));
 }
 
 function buildMap(pairs) {
   const map = {};
   for (const { symbol, name } of pairs) {
     if (!symbol || !name) continue;
-    for (const v of expandVariants(name)) {
+    for (const v of expandVariants(decodeEntities(name))) {
       map[v] = symbol;
     }
   }
