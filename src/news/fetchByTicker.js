@@ -20,7 +20,6 @@ const defaultHeaders = {
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
 const SKIP_NAVER = process.env.SKIP_NAVER === '1';
 const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
-const NASDAQ_API_KEY = process.env.NASDAQ_API_KEY || '';
 
 const buckets = {
   newsapi: tokenBucket({capacity:3, refillPerSec:2}),
@@ -28,6 +27,7 @@ const buckets = {
   finnhub: tokenBucket({capacity:2, refillPerSec:1}),
   gdelt: tokenBucket({capacity:2, refillPerSec:1}),
   naver: tokenBucket({capacity:3, refillPerSec:2}),
+  polygon: tokenBucket({capacity:2, refillPerSec:1}),
 };
 const cb = circuitBreaker({cooldownMs:20*60_000});
 
@@ -119,23 +119,20 @@ async function fetchPolygonTrend(ticker) {
       }
     }
   } catch (e) {
-    console.warn(`polygon trend failed for ${ticker}:`, e.message);
+    console.warn(`polygon trend failed for ${ticker}:`, e.message || e);
   }
   return null;
 }
 
-async function fetchNasdaqMetric(ticker) {
-  if (!NASDAQ_API_KEY) return null;
-  const base = baseSymbol(ticker);
-  const url = `https://data.nasdaq.com/api/v3/datasets/WIKI/${base}.json?rows=1&api_key=${NASDAQ_API_KEY}`;
+async function fetchPrevClose(ticker) {
+  if (!POLYGON_API_KEY) return null;
   try {
-    const res = await fetch(url, { headers: defaultUA });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const j = await res.json();
-    const close = j?.dataset?.data?.[0]?.[4];
+    const rest = restClient(POLYGON_API_KEY);
+    const res = await rest.stocks.previousClose(ticker, { adjusted: true });
+    const close = res?.results?.[0]?.c;
     return typeof close === 'number' ? close : null;
   } catch (e) {
-    console.warn(`nasdaq data failed for ${ticker}:`, e.message);
+    console.warn(`polygon close failed for ${ticker}:`, e.message || e);
     return null;
   }
 }
@@ -347,11 +344,22 @@ async function newsFromGdelt(sym, q){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
+async function newsFromPolygon(sym){
+  if (!POLYGON_API_KEY) return null;
+  const url = `https://api.polygon.io/v2/reference/news?ticker=${encodeURIComponent(sym)}&limit=50&apiKey=${POLYGON_API_KEY}`;
+  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 15*60*1000, true), {max:1, baseMs:600});
+  const arr = Array.isArray(j?.results) ? j.results : [];
+  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
 /**
  * Main: buildNewsFeatures(symbols, { symbolToName })
  * Returns shape: { [symbol]: { count, sentiment, blogMentions, polygonTrend, nasdaqClose } }
+ * `nasdaqClose` now reflects Polygon's previous close price when available.
  */
 export async function buildNewsFeatures(symbols, opts={}){
+  const HARD = Number(process.env.HARD_DEADLINE_MS || 0);
+  const DEADLINE = HARD ? Date.now() + HARD : 0;
   const FINNHUB = process.env.FINNHUB_API_KEY || '';
   const NEWSAPI = process.env.NEWSAPI_KEY || '';
   const SERPAPI = process.env.SERP_API_KEY || '';
@@ -384,6 +392,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const baseOut = {};
 
   await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
+    if (DEADLINE && Date.now() > DEADLINE) return; // stop cleanly
     const q = queries[sym];
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
@@ -392,21 +401,23 @@ export async function buildNewsFeatures(symbols, opts={}){
       ? (preferKotra
           ? ['gnews','kotra','naver','serpapi','finnhub','newsapi','gdelt']
           : ['gnews','naver','serpapi','kotra','finnhub','newsapi','gdelt'])
-      : ['gnews','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
+      : ['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
 
     let lastErr = null;
     for (const p of providers) {
+      if (DEADLINE && Date.now() > DEADLINE) break;
       try {
         let v = null;
         if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
+        else if (p === 'polygon') v = await guardedCall('polygon', () => with429Retry(() => newsFromPolygon(sym), 2, 600));
         else if (p === 'finnhub') v = await guardedCall('finnhub', () => newsFromFinnhub(sym, FINNHUB));
         else if (p === 'serpapi') v = await guardedCall('serpapi', () => newsFromSerpApi(sym, name, SERPAPI));
         else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
         else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
         else v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET));
-        if (v && v.count > 0) {
-          if (!SKIP_NAVER) {
+        if (v) {
+          if (!SKIP_NAVER && v.count > 0) {
             try {
               const blogs = await guardedCall('naver', () => blogFromNaver(name, NAVER_ID, NAVER_SECRET));
               v.blogMentions = Math.max(v.blogMentions || 0, blogs || 0);
@@ -414,10 +425,13 @@ export async function buildNewsFeatures(symbols, opts={}){
           }
           const trend = await fetchPolygonTrend(sym);
           if (trend != null) v.polygonTrend = trend;
-          const close = await fetchNasdaqMetric(sym);
+          const close = await fetchPrevClose(sym);
           if (close != null) v.nasdaqClose = close;
-          baseOut[baseSymbol(sym)] = v;
-          return;
+          if (v.count === 0 && (v.polygonTrend != null || v.nasdaqClose != null)) v.count = 1;
+          if (v.count > 0) {
+            baseOut[baseSymbol(sym)] = v;
+            return;
+          }
         }
       } catch (e) {
         lastErr = e;
@@ -427,8 +441,9 @@ export async function buildNewsFeatures(symbols, opts={}){
     if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
     const trend = await fetchPolygonTrend(sym);
     if (trend != null) feat.polygonTrend = trend;
-    const close = await fetchNasdaqMetric(sym);
+    const close = await fetchPrevClose(sym);
     if (close != null) feat.nasdaqClose = close;
+    if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
     baseOut[baseSymbol(sym)] = feat;
   });
 

@@ -4,6 +4,7 @@ import path from 'path';
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
 const FMP = process.env.FMP_KEY || '';
+const POLYGON = process.env.POLYGON_API_KEY || '';
 
 const REQ_TIMEOUT_MS = Number(process.env.REQ_TIMEOUT_MS || 8000);
 const CIRCUIT_MAX_ERRORS = Number(process.env.CIRCUIT_MAX_ERRORS || 8);
@@ -16,6 +17,10 @@ const state = {
   finnhub:    { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
   twelvedata: { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
   fmp:        { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
+  yahoo:      { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
+  polygon:    { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
+  naver:      { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
+  google:     { errors: 0, coolUntil: 0, count: 0, ok: 0, err: 0, '429': 0 },
 };
 
 function toTwelveSymbol(sym){
@@ -102,30 +107,95 @@ async function twelveCandles(symbol){
 }
 
 async function fmpCandles(symbol){
-  const priceUrl = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?serietype=line&timeseries=40&apikey=${FMP}`;
-  const price = await fetchJSON(priceUrl);
-  const hist = price?.historical;
+  const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?timeseries=40&apikey=${FMP}`;
+  const j = await fetchJSON(url);
+  const hist = j?.historical;
   if (!Array.isArray(hist) || hist.length===0) throw new Error('bad fmp');
-  const close = hist.slice(0,40).map(d=>Number(d.close)).reverse();
-  const volUrl = `https://financialmodelingprep.com/api/v3/historical-price-full/${encodeURIComponent(symbol)}?timeseries=40&apikey=${FMP}`;
-  const vol = await fetchJSON(volUrl);
-  const volHist = vol?.historical || [];
-  const volumes = volHist.slice(0,40).map(d=>Number(d.volume||0)).reverse();
+  const slice = hist.slice(0,40);
+  const close = slice.map(d=>Number(d.close)).reverse();
+  const volumes = slice.map(d=>Number(d.volume||0)).reverse();
   return { c: close, v: volumes };
 }
 
-const adapters = { finnhub: finnhubCandles, twelvedata: twelveCandles, fmp: fmpCandles };
+async function yahooCandles(symbol){
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1mo&interval=1d`;
+  const j = await fetchJSON(url);
+  const res = j?.chart?.result?.[0];
+  if (!res) throw new Error('bad yahoo');
+  const close = res.indicators?.quote?.[0]?.close || [];
+  const vol = res.indicators?.quote?.[0]?.volume || [];
+  return { c: close, v: vol };
+}
+
+async function polygonCandles(symbol){
+  const to = new Date();
+  const from = new Date(Date.now() - 40*24*60*60*1000);
+  const fmt = d => d.toISOString().slice(0,10);
+  const url = `https://api.polygon.io/v2/aggs/ticker/${encodeURIComponent(symbol)}/range/1/day/${fmt(from)}/${fmt(to)}?adjusted=true&apiKey=${POLYGON}`;
+  const j = await fetchJSON(url);
+  if (!Array.isArray(j?.results)) throw new Error('bad polygon');
+  const close = j.results.map(r=>Number(r.c));
+  const vol = j.results.map(r=>Number(r.v||0));
+  return { c: close, v: vol };
+}
+
+async function naverCandles(symbol){
+  const m = String(symbol).match(/^(\d{6})\.(K[QS])$/);
+  if (!m) throw new Error('naver supports only KR');
+  const sym = m[1];
+  const url = `https://api.stock.naver.com/chart/domestic/item/${sym}?timeframe=day&count=40`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0', 'Referer': 'https://stock.naver.com' }});
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const j = await res.json();
+  const data = j?.data;
+  if (!Array.isArray(data)) throw new Error('bad naver');
+  const close = data.map(d=>Number(d.closePrice));
+  const vol = data.map(d=>Number(d.tradeVolume||0));
+  return { c: close, v: vol };
+}
+
+async function googleCandles(symbol){
+  const url = `https://www.google.com/finance/quote/${encodeURIComponent(symbol)}?window=1M`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }});
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const text = await res.text();
+  const m = text.match(/"prices":(\[[^\]]+\])/);
+  if (!m) throw new Error('bad google');
+  const arr = JSON.parse(m[1]);
+  const close = arr.map(p=>Number(p[1]));
+  const vol = arr.map(p=>Number(p[2]||0));
+  return { c: close, v: vol };
+}
+
+const adapters = {
+  finnhub: finnhubCandles,
+  twelvedata: twelveCandles,
+  fmp: fmpCandles,
+  yahoo: yahooCandles,
+  polygon: polygonCandles,
+  naver: naverCandles,
+  google: googleCandles,
+};
 
 function hasKey(provider){
   if (provider === 'finnhub') return !!FINNHUB;
   if (provider === 'twelvedata') return !!TWELVE;
   if (provider === 'fmp') return !!FMP;
+  if (provider === 'polygon') return !!POLYGON;
+  // yahoo, naver and google do not require keys
+  if (provider === 'yahoo') return true;
+  if (provider === 'naver') return true;
+  if (provider === 'google') return true;
   return false;
 }
 
 export async function getCandles(symbol, opts={}){
   const isKR = /\.K[QS]$/.test(symbol);
-  const order = isKR ? ['twelvedata','fmp'] : ['finnhub','twelvedata','fmp'];
+  const ORDER_US = (process.env.CANDLES_PROVIDER_ORDER_US || 'finnhub,yahoo,polygon,twelvedata,fmp,google,naver')
+    .split(',').map(s=>s.trim()).filter(Boolean);
+  const ORDER_KR = (process.env.CANDLES_PROVIDER_ORDER_KR || 'naver,yahoo,polygon,twelvedata,fmp,google,finnhub')
+    .split(',').map(s=>s.trim()).filter(Boolean);
+  const order = isKR ? ORDER_KR : ORDER_US;
   const attempts = [];
   const ttl = Number(opts.cacheTtlMs || CACHE_TTL_MS);
   const maxPer = Number.isFinite(opts.maxPerProvider) ? opts.maxPerProvider : Infinity;
