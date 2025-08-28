@@ -1,21 +1,19 @@
-[
-  {"symbol":"BRK.B","name":"Berkshire Hathaway (B)","sector":"Financial Services"},
-  {"symbol":"BRK.A","name":"Berkshire Hathaway (A)","sector":"Financial Services"},
-  {"symbol":"BF.B","name":"Brown-Forman (B)","sector":"Consumer Staples"},
-  {"symbol":"BF.A","name":"Brown-Forman (A)","sector":"Consumer Staples"},
-  {"symbol":"ABBV","name":"AbbVie","sector":"Healthcare"},
-  {"symbol":"ALB","name":"Albemarle","sector":"Materials"},
-  {"symbol":"AXP","name":"American Express","sector":"Financial Services"},
-  {"symbol":"BBY","name":"Best Buy","sector":"Consumer Discretionary"},
-  {"symbol":"A","name":"Agilent Technologies","sector":"Healthcare"},
-  {"symbol":"ADI","name":"Analog Devices","sector":"Technology"},
-  {"symbol":"APA","name":"APA Corporation","sector":"Energy"},
-  {"symbol":"CPB","name":"Campbell Soup","sector":"Consumer Staples"},
-  {"symbol":"GOOG","name":"Alphabet (Class C)","sector":"Communication Services"},
-  {"symbol":"ADP","name":"Automatic Data Processing","sector":"Technology"},
-  {"symbol":"AMAT","name":"Applied Materials","sector":"Technology"},
-  {"symbol":"ABNB","name":"Airbnb","sector":"Consumer Discretionary"},
-  {"symbol":"ADSK","name":"Autodesk","sector":"Technology"},
-  {"symbol":"APP","name":"Applovin","sector":"Technology"},
-  {"symbol":"PDD","name":"PDD Holdings","sector":"Consumer Discretionary"}
-]
+{
+  "sp500": [
+    { "symbol": "AAPL", "name": "Apple", "sector": "Information Technology" },
+    { "symbol": "MSFT", "name": "Microsoft", "sector": "Information Technology" }
+  ],
+  "nasdaq100": [
+    { "symbol": "NVDA", "name": "NVIDIA", "sector": null },
+    { "symbol": "AMZN", "name": "Amazon", "sector": null }
+  ],
+  "kospi200": [
+    { "symbol": "005930.KS", "name": "삼성전자", "sector": null },
+    { "symbol": "000660.KS", "name": "SK하이닉스", "sector": null }
+  ],
+  "kosdaq100": [
+    { "symbol": "091990.KQ", "name": "셀트리온헬스케어", "sector": null },
+    { "symbol": "247540.KQ", "name": "에코프로비엠", "sector": null }
+  ],
+  "generatedAt": "2025-08-28T00:00:00.000Z"
+}

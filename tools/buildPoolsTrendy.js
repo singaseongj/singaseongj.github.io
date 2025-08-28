@@ -90,6 +90,7 @@ function saveNameToSymbol(map) {
   try { fs.writeFileSync(SYMBOL_MAP_FILE, JSON.stringify(map, null, 2)); } catch {}
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
+const SYMBOL_TO_NAME = {};
 
 // Canonicalize keys and strip invisible characters
 function normalizeKey(s) {
@@ -109,6 +110,31 @@ function normalizeKey(s) {
   t = t.replace(/\s+/g, '').trim();
   // Uppercase for stable ticker comparisons (safe for KR codes)
   return t.toUpperCase();
+}
+
+// Import index maps (S&P 500, Nasdaq-100, KOSPI 200, KOSDAQ 100)
+let INDEX_RAW = {};
+try {
+  INDEX_RAW = JSON.parse(await fsp.readFile('src/maps.indexes.json', 'utf8'));
+} catch {}
+const INDEX_ROWS = (() => {
+  const keys = ["sp500", "nasdaq100", "kospi200", "kosdaq100"];
+  let rows = [];
+  for (const k of keys) if (Array.isArray(INDEX_RAW?.[k])) rows = rows.concat(INDEX_RAW[k]);
+  return rows;
+})();
+
+const INDEX_SYMBOL_TO_NAME = {};
+for (const r of INDEX_ROWS) {
+  const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
+  if (!sym) continue;
+  if (r.name) INDEX_SYMBOL_TO_NAME[sym] = r.name;
+}
+
+for (const [sym, nm] of Object.entries(INDEX_SYMBOL_TO_NAME)) {
+  SYMBOL_TO_NAME[sym] = SYMBOL_TO_NAME[sym] || nm;
+  const nk = normalizeKey(nm);
+  if (!NAME_TO_SYMBOL[nk]) NAME_TO_SYMBOL[nk] = sym;
 }
 
 function keyVariants(k) {
@@ -365,15 +391,6 @@ try {
   Object.assign(NAME_TO_SYMBOL, (await import('../data/tickerMap.js')).NAME_TO_SYMBOL || {});
 } catch {}
 
-// Merge the auto-built index maps (S&P 500 + Nasdaq 100) if present
-try {
-  const idxJson = JSON.parse(await fsp.readFile(path.join('src', 'maps.indexes.json'), 'utf8'));
-  for (const [k, v] of Object.entries(idxJson || {})) {
-    const nk = normalizeKey(k);
-    if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
-  }
-} catch {}
-
 Object.assign(NAME_TO_SYMBOL, {
   '삼성전자':'005930.KS','SK하이닉스':'000660.KS','현대차':'005380.KS','POSCO홀딩스':'005490.KS','LG화학':'051910.KS',
   'NAVER':'035420.KS','네이버':'035420.KS','카카오':'035720.KS','기아':'000270.KS','LG전자':'066570.KS','삼성SDI':'006400.KS',
@@ -411,9 +428,8 @@ Object.assign(NAME_TO_SYMBOL, {
 })();
 
 // Build reverse lookup to convert tickers back to display names
-const SYMBOL_TO_NAME = {};
 for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP })) {
-  SYMBOL_TO_NAME[symbol] = name;
+  SYMBOL_TO_NAME[symbol] = SYMBOL_TO_NAME[symbol] || name;
 }
 
 function nameToSymbol(name){
