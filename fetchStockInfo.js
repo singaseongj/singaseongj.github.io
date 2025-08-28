@@ -306,44 +306,40 @@ function normalizeKey(s) {
   return t.toUpperCase();
 }
 
-// ---------- Index maps (S&P 500 + Nasdaq 100) ----------
-let INDEX_RAW = {};
+// ---------- Index lookups ----------
+let indexes = {};
 try {
-  // adjust the path if your file lives elsewhere
-  INDEX_RAW = JSON.parse(await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8'));
+  indexes = JSON.parse(await readFile(new URL('./src/maps.indexes.json', import.meta.url), 'utf8'));
 } catch {}
 
-// Normalize various possible shapes into rows with {symbol, name, sector}
-function rowsFromIndex(raw) {
-  if (Array.isArray(raw)) return raw;
+const rows = [
+  ...(indexes.sp500 || []),
+  ...(indexes.nasdaq100 || []),
+  ...(indexes.kospi200 || []),
+  ...(indexes.kosdaq100 || []),
+];
 
-  const keys = ["sp500", "nasdaq100", "kospi200", "kosdaq100"];
-  let all = [];
-  for (const k of keys) if (Array.isArray(raw?.[k])) all = all.concat(raw[k]);
+const SYMBOL_TO_NAME = Object.fromEntries(rows.filter(r => r.symbol && r.name).map(r => [r.symbol, r.name]));
 
-  if (all.length) return all;
+const SECTOR_NORMALIZE = {
+  'Information Technology': 'Technology',
+  'Health Care': 'Healthcare',
+  'Communication Services': 'Communication Services',
+  'Consumer Discretionary': 'Consumer Discretionary',
+  'Consumer Staples': 'Consumer Staples',
+  'Financials': 'Financial Services',
+  'Industrials': 'Industrials',
+  'Materials': 'Materials',
+  'Utilities': 'Utilities',
+  'Real Estate': 'Real Estate',
+  'Energy': 'Energy',
+};
+const INDEX_SECTOR = Object.fromEntries(
+  rows
+    .filter(r => r.symbol && r.sector)
+    .map(r => [r.symbol, SECTOR_NORMALIZE[r.sector] || r.sector])
+);
 
-  // object map: { "AAPL": {name, sector} } or { "AAPL": "Apple" }
-  return Object.entries(raw || {}).map(([symbol, v]) => ({
-    symbol,
-    name: (v && (v.name || v.company || v.companyName || v.Name)) || (typeof v === 'string' ? v : null),
-    sector: (v && (v.sector || v.Sector)) || null
-  }));
-}
-
-const INDEX_ROWS = rowsFromIndex(INDEX_RAW);
-
-// Build reverse lookups
-const SYMBOL_TO_NAME = {};
-const SYMBOL_TO_SECTOR = {};
-for (const r of INDEX_ROWS) {
-  const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
-  if (!sym) continue;
-  if (r.name)   SYMBOL_TO_NAME[sym]   = r.name;
-  if (r.sector) SYMBOL_TO_SECTOR[sym] = r.sector;
-}
-
-// A fast “known tickers” set for pass-through decisions
 const INDEX_SYMBOL_SET = new Set(Object.keys(SYMBOL_TO_NAME));
 
 // Helpful canonicalizer for tickers with class separators
@@ -355,11 +351,9 @@ function canonSymbol(s) {
 // Merge your hard-coded TICKER_MAP with index map names so both directions exist.
 const STATIC_MAP = (() => {
   const merged = { ...TICKER_MAP };
-  // also allow reverse mapping when INDEX has full names
   for (const [sym, nm] of Object.entries(SYMBOL_TO_NAME)) {
     if (nm) merged[nm] = sym;
   }
-  // normalize keys
   const out = {};
   for (const [k, v] of Object.entries(merged)) out[normalizeKey(k)] = v;
   return out;
@@ -618,14 +612,14 @@ async function fetchSectorByTicker(ticker, cache) {
   const cached = cacheGetSector(cache, sym);
   if (cached !== undefined) return cached;
 
-  // 0) Index sector first
-  if (SYMBOL_TO_SECTOR[sym]) {
-    cachePutSector(cache, sym, SYMBOL_TO_SECTOR[sym]);
+  // 0) index sector first
+  if (INDEX_SECTOR[sym]) {
+    cachePutSector(cache, sym, INDEX_SECTOR[sym]);
     await saveCache(cache);
-    return SYMBOL_TO_SECTOR[sym];
+    return INDEX_SECTOR[sym];
   }
 
-  // 1) Static fallback
+  // 1) static mapping
   if (STATIC_SECTORS[sym]) {
     const sector = STATIC_SECTORS[sym];
     cachePutSector(cache, sym, sector);
@@ -633,21 +627,16 @@ async function fetchSectorByTicker(ticker, cache) {
     return sector;
   }
 
-  // 2) KR: NAVER scrape
+  // 2) NAVER for KR
   if (/.K[QS]$/.test(sym)) {
-    try {
-      const sector = await naverSectorKR(sym);
-      if (sector) {
-        cachePutSector(cache, sym, sector);
-        await saveCache(cache);
-        return sector;
-      }
-    } catch (e) {
-      console.warn(`[NAVER_FAIL] ${sym}: ${e.message}`);
+    const sector = await naverSectorKR(sym).catch(() => null);
+    if (sector) {
+      cachePutSector(cache, sym, sector);
+      await saveCache(cache);
+      return sector;
     }
   }
 
-  // 3) Cache null on failure
   cachePutSector(cache, sym, null);
   await saveCache(cache);
   return null;
@@ -781,18 +770,14 @@ async function tryFetchAndEnrich() {
             console.warn(`[SEARCH_URL_FAIL] ${name}: ${e.message}`);
           }
 
-          const sym = ticker ? canonSymbol(ticker) : null;
-          const displayName =
-            (sym && SYMBOL_TO_NAME[sym]) ||
-            (sym && sym.includes('.') ? sym.replace('.', '-') : null) ||
-            name;
+          const displayName = (ticker && SYMBOL_TO_NAME[ticker]) || name;
 
           updated.push({
             name: displayName,
-            sector: sector || prevSector || (sym ? SYMBOL_TO_SECTOR[sym] || null : null),
-            ticker: sym || null,
+            sector: sector || prevSector || null,
+            ticker: ticker || null,
             searchUrl: searchUrl || null,
-            rawScore: calcRawScore(market, group, displayName, sym)
+            rawScore: calcRawScore(market, group, displayName, ticker)
           });
 
           if (sector) successCount++;

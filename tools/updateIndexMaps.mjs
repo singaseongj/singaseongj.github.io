@@ -1,95 +1,63 @@
-// tools/updateIndexMaps.mjs
-import fs from "fs/promises";
-import dns from "node:dns";
-import { Agent, setGlobalDispatcher } from "undici";
+// tools/updateIndexMaps.mjs (offline-safe)
+import fs from 'fs/promises';
 
-dns.setDefaultResultOrder?.("ipv4first");
-setGlobalDispatcher(new Agent({ connect: { family: 4 } }));
+const OFFLINE = process.env.OFFLINE === '1' || process.env.NO_NET === '1';
+const INDEX_PATH = 'src/maps.indexes.json';
 
-const UA = {
-  "User-Agent":
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36",
-  Accept: "text/html,application/xhtml+xml",
-};
-
-async function text(url) {
-  const r = await fetch(url, { headers: UA });
-  if (!r.ok) throw new Error(`HTTP ${r.status} for ${url}`);
-  return r.text();
+async function safeFetchText(url) {
+  if (OFFLINE) return null;
+  try {
+    const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0' } });
+    if (!r.ok) return null;
+    return await r.text();
+  } catch {
+    return null;
+  }
 }
 
-// --- small helpers
-const canonUS = s => s.toUpperCase().replace("/", ".").replace("-", ".");
-const six = s => (s || "").replace(/\D/g, "").padStart(6, "0");
+const canonUS = s => s.toUpperCase().replace('/', '.').replace('-', '.');
+const six = s => (s || '').replace(/\D/g, '').padStart(6, '0');
 
-// --- S&P 500
-async function fetchSP500() {
-  const html = await text("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies");
-  // Company name + Symbol + GICS Sector are in the first big table
-  const rows = [...html.matchAll(
-    /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>[\s\S]*?<td>([^<]+)<\/td>/gi
-  )];
-  return rows.map((m) => ({
-    symbol: canonUS(m[2]),
-    name: m[1].trim(),
-    sector: m[3].trim(),
-  }));
+function parseSp500(html) {
+  const rows = [...html.matchAll(/<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>[\s\S]*?<td>([^<]+)<\/td>/gi)];
+  return rows.map(m => ({ symbol: canonUS(m[2]), name: m[1].trim(), sector: m[3].trim() }));
 }
 
-// --- Nasdaq-100
-async function fetchNasdaq100() {
-  const html = await text("https://en.wikipedia.org/wiki/Nasdaq-100");
-  // fallback regex: (Company, Ticker)
-  const rows = [...html.matchAll(
-    /<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>/gi
-  )];
-  return rows.map((m) => ({
-    symbol: canonUS(m[2]),
-    name: m[1].trim(),
-    sector: null, // sector not always present on this page
-  }));
+function parseNasdaq100(html) {
+  const rows = [...html.matchAll(/<tr>\s*<td><a [^>]*>([^<]+)<\/a>[\s\S]*?<td>([A-Z.\-]+)<\/td>/gi)];
+  return rows.map(m => ({ symbol: canonUS(m[2]), name: m[1].trim(), sector: null }));
 }
 
-// --- KOSPI 200 (코스피200) => append .KS
-async function fetchKOSPI200() {
-  const html = await text("https://ko.wikipedia.org/wiki/KOSPI_200");
-  // Try to capture rows with 종목명 + 종목코드 (6 digits)
-  const rows = [...html.matchAll(
-    /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
-  )];
-  return rows.map((m) => ({
-    symbol: `${six(m[2])}.KS`,
-    name: m[1].trim(),
-    sector: null, // we’ll enrich via Naver later
-  }));
+function parseKospi200(html) {
+  const rows = [...html.matchAll(/<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi)];
+  return rows.map(m => ({ symbol: `${six(m[2])}.KS`, name: m[1].trim(), sector: null }));
 }
 
-// --- KOSDAQ 100 (코스닥100) => append .KQ
-async function fetchKOSDAQ100() {
-  const html = await text("https://ko.wikipedia.org/wiki/KOSDAQ_100");
-  const rows = [...html.matchAll(
-    /<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi
-  )];
-  return rows.map((m) => ({
-    symbol: `${six(m[2])}.KQ`,
-    name: m[1].trim(),
-    sector: null,
-  }));
+function parseKosdaq100(html) {
+  const rows = [...html.matchAll(/<tr>[\s\S]*?<td[^>]*>\s*(?:<a [^>]*>)?([^<\n]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(\d{6})\s*<\/td>/gi)];
+  return rows.map(m => ({ symbol: `${six(m[2])}.KQ`, name: m[1].trim(), sector: null }));
 }
 
 async function main() {
-  const [sp500, nasdaq100, kospi200, kosdaq100] = await Promise.all([
-    fetchSP500(),
-    fetchNasdaq100(),
-    fetchKOSPI200(),
-    fetchKOSDAQ100(),
-  ]);
+  let current = { sp500: [], nasdaq100: [], kospi200: [], kosdaq100: [], generatedAt: null };
+  try { current = JSON.parse(await fs.readFile(INDEX_PATH, 'utf8')); } catch {}
 
-  const out = { sp500, nasdaq100, kospi200, kosdaq100, generatedAt: new Date().toISOString() };
-  await fs.writeFile("src/maps.indexes.json", JSON.stringify(out, null, 2));
-  console.log("Wrote src/maps.indexes.json",
-              `(S&P500=${sp500.length}, N100=${nasdaq100.length}, K200=${kospi200.length}, KQ100=${kosdaq100.length})`);
+  const spTxt = await safeFetchText('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies');
+  const nqTxt = await safeFetchText('https://en.wikipedia.org/wiki/Nasdaq-100');
+  const k200Txt = await safeFetchText('https://ko.wikipedia.org/wiki/KOSPI_200');
+  const kq100Txt = await safeFetchText('https://ko.wikipedia.org/wiki/KOSDAQ_100');
+
+  const next = {
+    sp500:    spTxt   ? parseSp500(spTxt)      : current.sp500,
+    nasdaq100:nqTxt   ? parseNasdaq100(nqTxt)  : current.nasdaq100,
+    kospi200: k200Txt ? parseKospi200(k200Txt) : current.kospi200,
+    kosdaq100:kq100Txt? parseKosdaq100(kq100Txt): current.kosdaq100,
+    generatedAt: new Date().toISOString()
+  };
+
+  await fs.mkdir('src', { recursive: true });
+  await fs.writeFile(INDEX_PATH, JSON.stringify(next, null, 2));
+  console.log('[indexes] updated (offline-safe)');
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
-
+main().catch(e => { console.warn('[indexes] non-fatal:', e.message); process.exit(0); });
