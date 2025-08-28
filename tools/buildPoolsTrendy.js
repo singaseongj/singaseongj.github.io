@@ -365,6 +365,15 @@ try {
   Object.assign(NAME_TO_SYMBOL, (await import('../data/tickerMap.js')).NAME_TO_SYMBOL || {});
 } catch {}
 
+// Merge the auto-built index maps (S&P 500 + Nasdaq 100) if present
+try {
+  const idxJson = JSON.parse(await fsp.readFile(path.join('src', 'maps.indexes.json'), 'utf8'));
+  for (const [k, v] of Object.entries(idxJson || {})) {
+    const nk = normalizeKey(k);
+    if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
+  }
+} catch {}
+
 Object.assign(NAME_TO_SYMBOL, {
   '삼성전자':'005930.KS','SK하이닉스':'000660.KS','현대차':'005380.KS','POSCO홀딩스':'005490.KS','LG화학':'051910.KS',
   'NAVER':'035420.KS','네이버':'035420.KS','카카오':'035720.KS','기아':'000270.KS','LG전자':'066570.KS','삼성SDI':'006400.KS',
