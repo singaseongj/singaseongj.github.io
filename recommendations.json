@@ -367,7 +367,7 @@
       },
       {
         "name": "Intuitive Surgical",
-        "sector": null,
+        "sector": "Healthcare",
         "ticker": "ISRG",
         "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Intuitive%20Surgical%20ISRG",
         "reasons": {
@@ -383,7 +383,7 @@
       },
       {
         "name": "Keurig Dr Pepper",
-        "sector": null,
+        "sector": "Consumer Staples",
         "ticker": "KDP",
         "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Keurig%20Dr%20Pepper%20KDP",
         "reasons": {
@@ -399,7 +399,7 @@
       },
       {
         "name": "Old Dominion Freight Line",
-        "sector": null,
+        "sector": "Industrials",
         "ticker": "ODFL",
         "searchUrl": "https://www.google.com/search?tbm=nws&q=Old%20Dominion%20Freight%20Line%20ODFL",
         "reasons": {
@@ -449,7 +449,7 @@
       },
       {
         "name": "Constellation Energy",
-        "sector": null,
+        "sector": "Utilities",
         "ticker": "CEG",
         "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Constellation%20Energy%20CEG",
         "reasons": {
@@ -465,7 +465,7 @@
       },
       {
         "name": "CoStar Group",
-        "sector": null,
+        "sector": "Real Estate",
         "ticker": "CSGP",
         "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=CoStar%20Group%20CSGP",
         "reasons": {
@@ -484,10 +484,10 @@
   "S&P 500": {
     "safe": [
       {
-        "name": "ACGL",
-        "sector": null,
-        "ticker": "ACGL",
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=ACGL%20ACGL",
+        "name": "3M",
+        "sector": "Industrials",
+        "ticker": "MMM",
+        "searchUrl": "https://www.google.com/search?tbm=nws&q=3M%20MMM",
         "reasons": {
           "reputationScore": null,
           "topKeywords": [],
@@ -497,10 +497,10 @@
             "naver": null
           }
         },
-        "score": 100
+        "score": 88
       },
       {
-        "name": "AMETEK",
+        "name": "Ametek",
         "sector": "Industrials",
         "ticker": "AME",
         "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=AMETEK%20AME",
@@ -516,10 +516,26 @@
         "score": 63
       },
       {
-        "name": "BK",
-        "sector": null,
+        "name": "Arch Capital Group",
+        "sector": "Financial Services",
+        "ticker": "ACGL",
+        "searchUrl": "https://www.google.com/search?tbm=nws&q=Arch%20Capital%20Group%20ACGL",
+        "reasons": {
+          "reputationScore": null,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": null,
+            "blog": null,
+            "naver": null
+          }
+        },
+        "score": 100
+      },
+      {
+        "name": "BNY Mellon",
+        "sector": "Financial Services",
         "ticker": "BK",
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=BK%20BK",
+        "searchUrl": "https://www.google.com/search?tbm=nws&q=BNY%20Mellon%20BK",
         "reasons": {
           "reputationScore": null,
           "topKeywords": [],
@@ -532,10 +548,10 @@
         "score": 55
       },
       {
-        "name": "CINF",
-        "sector": null,
+        "name": "Cincinnati Financial",
+        "sector": "Financial Services",
         "ticker": "CINF",
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=CINF%20CINF",
+        "searchUrl": "https://www.google.com/search?tbm=nws&q=Cincinnati%20Financial%20CINF",
         "reasons": {
           "reputationScore": null,
           "topKeywords": [],
@@ -546,22 +562,6 @@
           }
         },
         "score": 95
-      },
-      {
-        "name": "MMM",
-        "sector": null,
-        "ticker": "MMM",
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=MMM%20MMM",
-        "reasons": {
-          "reputationScore": null,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": null,
-            "blog": null,
-            "naver": null
-          }
-        },
-        "score": 88
       }
     ],
     "aggressive": [
@@ -582,6 +582,22 @@
         "score": 50
       },
       {
+        "name": "Constellation Brands",
+        "sector": "Consumer Staples",
+        "ticker": "STZ",
+        "searchUrl": "https://www.google.com/search?tbm=nws&q=Constellation%20Brands%20STZ",
+        "reasons": {
+          "reputationScore": null,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": null,
+            "blog": null,
+            "naver": null
+          }
+        },
+        "score": 73
+      },
+      {
         "name": "CrowdStrike",
         "sector": "Technology",
         "ticker": "CRWD",
@@ -598,7 +614,7 @@
         "score": 62
       },
       {
-        "name": "DAYFORCE",
+        "name": "Dayforce",
         "sector": "Industrials",
         "ticker": "DAY",
         "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=DAYFORCE%20DAY",
@@ -615,7 +631,7 @@
       },
       {
         "name": "Dominion Energy",
-        "sector": null,
+        "sector": "Utilities",
         "ticker": "D",
         "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Dominion%20Energy%20D",
         "reasons": {
@@ -628,24 +644,8 @@
           }
         },
         "score": 100
-      },
-      {
-        "name": "STZ",
-        "sector": null,
-        "ticker": "STZ",
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=STZ%20STZ",
-        "reasons": {
-          "reputationScore": null,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": null,
-            "blog": null,
-            "naver": null
-          }
-        },
-        "score": 73
       }
     ]
   },
-  "lastUpdated": "2025-08-28T20:27:44+09:00"
+  "lastUpdated": "2025-08-28T20:45:25+09:00"
 }
