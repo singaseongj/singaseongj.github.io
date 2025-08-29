@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-08-29T05:23:32+09:00 (KST)**
+- Generated: **2025-08-29T10:40:02+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -31,13 +31,13 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?tbm=nws&q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%20086520.KQ
 
-**카카오** (035720.KQ)
+**케어젠** (214370.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **10.4%**, 20d **6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **커뮤니케이션서비스**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%B9%B4%EC%B9%B4%EC%98%A4%20035720.KQ
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?tbm=nws&q=%EC%BC%80%EC%96%B4%EC%A0%A0%20214370.KQ
 
 **코미코** (183300.KQ)
 
@@ -47,131 +47,49 @@
 - Sector: **정보기술**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%BD%94%EB%AF%B8%EC%BD%94%20183300.KQ
 
-### AGGRESSIVE (5)
-
-**덕산네오룩스** (213420.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **24.4%**, 20d **18.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?tbm=nws&q=%EB%8D%95%EC%82%B0%EB%84%A4%EC%98%A4%EB%A3%A9%EC%8A%A4%20213420.KQ
-
-**상아프론테크** (089980.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **6.2%**, 20d **3.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%83%81%EC%95%84%ED%94%84%EB%A1%A0%ED%85%8C%ED%81%AC%20089980.KQ
-
-**크리스탈지노믹스** (083790.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-1.1%**, 20d **-1.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?tbm=nws&q=%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%83%88%EC%A7%80%EB%85%B8%EB%AF%B9%EC%8A%A4%20083790.KQ
-
-**피에스케이** (319660.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%20319660.KQ
-
-**현대바이오** (048410.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **40.8%**, 20d **11.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?tbm=nws&q=%ED%98%84%EB%8C%80%EB%B0%94%EC%9D%B4%EC%98%A4%20048410.KQ
-
 ## KOSPI
 
 ### SAFE (5)
 
-**HD한국조선해양** (009540.KS)
+**LG화학** (051910.KS)
 
-- News (7d): **3** (blogs: 10) — momentum: **low**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **14.9%**, 20d **15.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=HD%ED%95%9C%EA%B5%AD%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91%20009540.KS
-
-**금양** (001570.KS)
-
-- News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.0%**, 20d **0.0%**; volatility (20d): **unknown**
+- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.6%**, 20d **-7.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EA%B8%88%EC%96%91%20001570.KS
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=LG%ED%99%94%ED%95%99%20051910.KS
 
-**대한유화** (006650.KS)
-
-- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **18.8%**, 20d **22.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%8C%80%ED%95%9C%EC%9C%A0%ED%99%94%20006650.KS
-
-**현대차우** (005385.KS)
+**삼성전자** (005930.KS)
 
 - News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.8%**, 20d **-0.8%**; volatility (20d): **unknown**
+- Returns: 5d **-0.6%**, 20d **-3.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?tbm=nws&q=%ED%98%84%EB%8C%80%EC%B0%A8%EC%9A%B0%20005385.KS
+- Sector: **정보기술**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20005930.KS
 
-**현대해상** (001450.KS)
-
-- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.6%**, 20d **6.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81%20001450.KS
-
-### AGGRESSIVE (5)
-
-**CJ** (CJ.TO)
+**삼성중공업** (010140.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **2.4%**, 20d **-0.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=CJ%20CJ.TO
-
-**LS** (LSLUSD=X)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.1%**, 20d **1.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?tbm=nws&q=LS%20LSLUSD%3DX
-
-**대웅** (003090.KS)
-
-- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **11.9%**, 20d **0.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?tbm=nws&q=%EB%8C%80%EC%9B%85%20003090.KS
-
-**두산** (000150.KS)
-
-- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.4%**, 20d **0.2%**; volatility (20d): **unknown**
+- Returns: 5d **7.3%**, 20d **11.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%91%90%EC%82%B0%20000150.KS
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85%20010140.KS
 
-**미래에셋증권** (006800.KS)
+**아이에스동서** (010780.KS)
 
-- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.7%**, 20d **-0.1%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **3.1%**, 20d **-3.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%A6%9D%EA%B6%8C%20006800.KS
+- Sector: **소재**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4%EB%8F%99%EC%84%9C%20010780.KS
+
+**현대미포조선** (010620.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **6.5%**, 20d **-3.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EB%AF%B8%ED%8F%AC%EC%A1%B0%EC%84%A0%20010620.KS
 
 ## NASDAQ 100
 
@@ -193,6 +111,14 @@
 - Sector: **Healthcare**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Intuitive%20Surgical%20ISRG
 
+**Keurig Dr Pepper** (KDP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **-15.5%**, 20d **-12.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Staples**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Keurig%20Dr%20Pepper%20KDP
+
 **Linde plc** (LIN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
@@ -200,13 +126,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Linde%20plc%20LIN
-
-**Marvell Technology** (MRVL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **5.0%**, 20d **-8.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Marvell%20Technology%20MRVL
 
 **Old Dominion Freight Line** (ODFL)
 
@@ -216,43 +135,17 @@
 - Sector: **Industrials**
 - News search: https://www.google.com/search?tbm=nws&q=Old%20Dominion%20Freight%20Line%20ODFL
 
-### AGGRESSIVE (4)
-
-**Copart** (CPRT)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **2.1%**, 20d **5.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Copart%20CPRT
-
-**Nvidia** (NVDA)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.5%**, 20d **1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Nvidia%20NVDA
-
-**Palo Alto Networks** (PANW)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **1.7%**, 20d **2.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Palo%20Alto%20Networks%20PANW
-
-**Workday, Inc.** (WDAY)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **1.0%**, 20d **-3.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Workday%2C%20Inc.%20WDAY
-
 ## S&P 500
 
 ### SAFE (5)
+
+**Agilent Technologies** (A)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **-0.4%**, 20d **0.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Healthcare**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Agilent%20Technologies%20A
 
 **BNY Mellon** (BK)
 
@@ -270,14 +163,6 @@
 - Sector: **Financial Services**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Cincinnati%20Financial%20CINF
 
-**Comcast** (CMCSA)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **1.6%**, 20d **4.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Comcast%20CMCSA
-
 **CrowdStrike** (CRWD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
@@ -293,46 +178,4 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=CSCO%20CSCO
-
-### AGGRESSIVE (5)
-
-**Autodesk** (ADSK)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.9%**, 20d **-7.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Autodesk%20ADSK
-
-**Best Buy** (BBY)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **4.4%**, 20d **14.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Best%20Buy%20BBY
-
-**Broadcom** (AVGO)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.1%**, 20d **-0.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Broadcom%20AVGO
-
-**Campbell's Company (The)** (CPB)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.9%**, 20d **0.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://www.google.com/search?tbm=nws&q=Campbell's%20Company%20(The)%20CPB
-
-**Dollar Tree** (DLTR)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.4%**, 20d **-1.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Dollar%20Tree%20DLTR
 

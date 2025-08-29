@@ -280,6 +280,11 @@ try {
   NEWS_FEATURES = JSON.parse(await fsp.readFile(NEWS_FEATURES_FILE, 'utf8'));
 } catch {}
 
+let PREV_METRICS = {};
+try {
+  PREV_METRICS = JSON.parse(await fsp.readFile(METRICS_FILE, 'utf8'));
+} catch {}
+
 async function enrichWithNewsFeatures(symbols, opts = {}) {
   const feats = await buildNewsFeatures(symbols, opts);
   try {
@@ -571,6 +576,99 @@ function rank01(values) {
 }
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+
+function scoreSentiment(s){
+  if (s == null) return null;
+  if (s >= 0.5) return 5;
+  if (s >= 0.2) return 4;
+  if (s > -0.2) return 3;
+  if (s > -0.5) return 2;
+  return 1;
+}
+
+function scoreNewsMomentum(cur, prev){
+  if (cur === 0 && prev === 0) return 3;
+  if (prev === 0) return cur > 0 ? 5 : 3;
+  const g = (cur - prev) / Math.max(prev, 1);
+  if (g >= 1) return 5;
+  if (g >= 0.5) return 4;
+  if (g >= 0.1) return 3;
+  if (g > -0.5) return 2;
+  return 1;
+}
+
+function computeTrendMomentum(nf, prev) {
+  if (typeof nf?.naverSpike === 'number') return nf.naverSpike;
+  if (typeof nf?.naverAsvi === 'number' && typeof prev?.naverAsvi === 'number') {
+    const base = Math.max(prev.naverAsvi, 1e-6);
+    return (nf.naverAsvi - prev.naverAsvi) / base;
+  }
+  return null;
+}
+
+function scoreTrend(g){
+  if (g == null) return null;
+  if (g >= 0.6) return 5;
+  if (g >= 0.25) return 4;
+  if (g >= 0.05) return 3;
+  if (g > -0.25) return 2;
+  return 1;
+}
+
+function scoreCredibility(r){
+  if (r == null) return null;
+  const x = r > 1 ? r / 100 : r;
+  if (x >= 0.70) return 5;
+  if (x >= 0.55) return 4;
+  if (x >= 0.40) return 3;
+  if (x >= 0.25) return 2;
+  return 1;
+}
+
+const CATALYST_DICT = [
+  ['earnings', /earnings beat|eps beat|guidance raise|upgraded|target hike|실적(?: 호조| 개선| 서프라이즈)|가이던스(?: 상향| 상향조정)/i],
+  ['contract', /contract win|joint venture|JV|partnership|MOU|제휴|협력|계약|수주|공급|납품/i],
+  ['approval', /fda approval|approval|license|승인|허가|인가|인증/i],
+  ['product', /product launch|feature launch|pilot|expansion|출시|런칭|신제품|파일럿|확장/i],
+  ['capital', /hiring plan|buyback|dividend increase|자사주 매입|배당(?: 증액)?|채용 계획|고용 계획/i]
+];
+
+function scoreCatalysts(keywords){
+  const kw = (keywords || []).map(k => k.toLowerCase());
+  const found = new Set();
+  for (const [cat, re] of CATALYST_DICT){
+    if (kw.some(k => re.test(k))) found.add(cat);
+  }
+  const cnt = found.size;
+  if (cnt >= 4) return 5;
+  if (cnt === 3) return 4;
+  if (cnt === 2) return 3;
+  if (cnt === 1) return 2;
+  return 1;
+}
+
+const RISK_SEVERE = [/investigation|regulator probe|sec\b|공정위|금감원|검찰|수사|data breach|해킹|accounting|회계부정|restatement|리콜|상장폐지|delisting/i];
+const RISK_MODERATE = [/lawsuit|소송|downgrade|하향|strike|파업|short[- ]seller|공매도|guidance cut|감익|layoff|구조조정|벌금|과징금|fine|영업정지/i];
+
+function scoreRisk(keywords){
+  const kw = (keywords || []).map(k => k.toLowerCase());
+  let pts = 0;
+  for (const re of RISK_SEVERE){ if (kw.some(k => re.test(k))) pts += 2; }
+  for (const re of RISK_MODERATE){ if (kw.some(k => re.test(k))) pts += 1; }
+  if (pts === 0) return 5;
+  if (pts === 1) return 4;
+  if (pts === 2) return 3;
+  if (pts <= 4) return 2;
+  return 1;
+}
+
+function combineScore(components){
+  const avail = components.filter(c => c.score != null);
+  const weightSum = avail.reduce((s,c)=>s+c.weight,0);
+  if (weightSum === 0) return 0;
+  const subtotal = avail.reduce((s,c)=>s+(c.score/5)*c.weight,0);
+  return subtotal * (100/weightSum);
+}
 
 function namesOnlyRank(universe, features) {
   const out = {};
@@ -886,7 +984,7 @@ async function main(){
       }
       log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
-      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let blogMentions=0; let polygonTrend=null; let nasdaqClose=null; let earn=false; let candles=null;
+      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let naverAsvi=null; let naverSpike=null; let blogMentions=0; let polygonTrend=null; let nasdaqClose=null; let earn=false; let candles=null;
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
@@ -915,19 +1013,21 @@ async function main(){
           blogMentions = typeof nf.blogMentions === 'number' ? nf.blogMentions : 0;
           if (typeof nf.polygonTrend === 'number') polygonTrend = nf.polygonTrend;
           if (typeof nf.nasdaqClose === 'number') nasdaqClose = nf.nasdaqClose;
+          if (typeof nf.naverAsvi === 'number') naverAsvi = nf.naverAsvi;
+          if (typeof nf.naverSpike === 'number') naverSpike = nf.naverSpike;
         }
         earn = !!(EARNINGS_SET && sym && isUS(sym) && EARNINGS_SET.has(sym));
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, blogMentions, polygonTrend, nasdaqClose, earn, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, naverAsvi, naverSpike, blogMentions, polygonTrend, nasdaqClose, earn, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
       processed.add(name);
     });
     for (const n of names) {
       if (!byName[n]) {
         byName[n] = {
           ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
-          newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
+          newsCount:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
           reputationScore:null, topKeywords:[], reputationHitIds:[],
           sym:null, source:null, attempts:[], fetchMs:0
         };
@@ -938,6 +1038,8 @@ async function main(){
         byName[n].newsCount       = nf.count ?? byName[n].newsCount;
         byName[n].sentiment       = (typeof nf.sentiment === 'number' ? nf.sentiment : byName[n].sentiment);
         byName[n].naverPopularity = nf.naverPopularity ?? byName[n].naverPopularity;
+        byName[n].naverAsvi       = nf.naverAsvi ?? byName[n].naverAsvi;
+        byName[n].naverSpike      = nf.naverSpike ?? byName[n].naverSpike;
         byName[n].blogMentions    = nf.blogMentions ?? byName[n].blogMentions;
         byName[n].polygonTrend    = nf.polygonTrend ?? byName[n].polygonTrend;
         byName[n].nasdaqClose     = nf.nasdaqClose ?? byName[n].nasdaqClose;
@@ -953,58 +1055,56 @@ async function main(){
     }).length;
     console.log(`[metrics] ${market} processed=${processed.size}/${names.length} withSignals=${withSignals}`);
 
-    const filteredNames = names.filter(n => {
+    // Eligibility flags (for *ranking*, not for whether we score)
+    const eligibility = {};
+    names.forEach(n => {
       const m = byName[n] || {};
       const sym = m.sym;
       const isKRName = sym ? isKR(sym) : false;
       const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym));
       const priceOk = m.close == null || m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD);
-      return advOk && priceOk;
+      eligibility[n] = { advOk, priceOk, eligible: !!(advOk && priceOk) };
     });
 
-    // Normalize within market
-    const nRet5   = rank01(filteredNames.map(n => byName[n].ret5));
-    const nRet20  = rank01(filteredNames.map(n => byName[n].ret20));
-    const nTurn   = rank01(filteredNames.map(n => byName[n].turnover));
-    const nVol    = rank01(filteredNames.map(n => byName[n].vol20));   // higher vol = riskier
-    const nBlog   = rank01(filteredNames.map(n => byName[n].blogMentions));
-
-    // Scores
+    // Scores for *all* names
     const scoreSafeRaw = {};
     const scoreAggrRaw = {};
-    filteredNames.forEach((n, i) => {
-      const earnBonus = byName[n].earn ? 0.10 : 0;
-      const sym = byName[n].sym;
-      const isKRName = sym ? isKR(sym) : false;
-      const baseKR = isKRName ? 0.05 : 0;
+    names.forEach((n) => {
+      const prev = PREV_METRICS?.[market]?.[n]?.newsCount || 0;
 
-      const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
-      const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
-      const pop = byName[n].naverPopularity ?? 0;
-      const blogNorm = nBlog[i];
+      // trend momentum: prefer growth metric if available
+      const prevTrendRow = PREV_METRICS?.[market]?.[n];
+      const trendMomentum = computeTrendMomentum(byName[n], prevTrendRow);
 
-      const weights = {
-        count: 0.12,
-        sentiment: 0.08,
-        naver: isKRName ? 0.30 : 0,
-        blog: 0.15,
-        reputation: 0.25,
-      };
-      const totalOrig = weights.count + weights.sentiment + weights.naver + weights.blog + weights.reputation;
-      let totalAvail = 0;
-      let newsBoost = 0;
-      if (byName[n].newsCount != null) { newsBoost += newsCountNorm * weights.count; totalAvail += weights.count; }
-      if (byName[n].sentiment != null) { newsBoost += (sentimentNorm - 0.5) * weights.sentiment; totalAvail += weights.sentiment; }
-      if (isKRName && byName[n].naverPopularity != null) { newsBoost += pop * weights.naver; totalAvail += weights.naver; }
-      if (byName[n].blogMentions != null) { newsBoost += blogNorm * weights.blog; totalAvail += weights.blog; }
-      if (byName[n].reputationScore != null) { newsBoost += byName[n].reputationScore * weights.reputation; totalAvail += weights.reputation; }
-      const scale = totalAvail > 0 ? totalOrig / totalAvail : 0;
-      newsBoost *= scale;
+      const sentScore  = scoreSentiment(byName[n].sentiment);
+      const momScore   = scoreNewsMomentum(byName[n].newsCount || 0, prev);
+      const trendScore = scoreTrend(trendMomentum);
+      const credScore  = scoreCredibility(byName[n].reputationScore); // normalized inside
+      const catScore   = scoreCatalysts(byName[n].topKeywords);
+      const riskScore  = scoreRisk(byName[n].topKeywords);
 
-      const safe = clamp01(baseKR + 0.40*nRet20[i] + 0.30*(1 - nVol[i]) + newsBoost + 0.10*earnBonus);
-      const aggr = clamp01(baseKR + 0.40*nRet5[i]  + 0.30*nTurn[i]     + 0.20*nVol[i] + newsBoost + earnBonus);
-      scoreSafeRaw[n] = safe;
-      scoreAggrRaw[n] = aggr;
+      const total = combineScore([
+        { score: sentScore,  weight: 30 },
+        { score: momScore,   weight: 15 },
+        { score: trendScore, weight: 20 },
+        { score: credScore,  weight: 10 },
+        { score: catScore,   weight: 15 },
+        { score: riskScore,  weight: 10 }
+      ]);
+
+      const totalRounded = Math.round(total);
+      byName[n].prevNewsCount   = prev;
+      byName[n].componentScores = { sentiment: sentScore, momentum: momScore, trends: trendScore, credibility: credScore, catalysts: catScore, risk: riskScore };
+      byName[n].totalScore      = totalRounded;
+
+      // Base normalized score 0..1 for ranking
+      let norm = totalRounded / 100;
+
+      // Down-rank ineligible names (still keep their score & metrics)
+      if (!eligibility[n].eligible) norm = Math.max(0, norm - 0.5);
+
+      scoreSafeRaw[n] = norm;
+      scoreAggrRaw[n] = norm;
     });
 
     // Apply feedback nudges
@@ -1028,115 +1128,75 @@ async function main(){
       }
     }
 
-    // Pick top K distinct names for each bucket
-    const total = filteredNames.filter(n => processed.has(n)).length || filteredNames.length;
-    let kSafe = Math.min(6, Math.ceil(total * 0.5));
-    let kAggr = Math.min(6, total - kSafe);
-    if (kSafe + kAggr > total) {
-      kAggr = Math.max(0, total - kSafe);
-    }
-    if (total >= 2 && kAggr === 0) {
-      kAggr = 1;
-      if (kSafe > 0) kSafe = Math.min(kSafe, total - kAggr);
-    }
+    // Build full ranked orders
+    const safeOrder = Object.keys(scoreSafe).sort((a,b)=>scoreSafe[b]-scoreSafe[a]);
 
-    function topK(scores, k){
-      return Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,k).map(([n])=>n);
-    }
+    // Keep aggressive as a distinct list (no overlap with SAFE)
+    const aggrOrderRaw = Object.keys(scoreAggr).sort((a,b)=>scoreAggr[b]-scoreAggr[a]);
+    const safeSet = new Set(safeOrder);
+    const aggrOrder = aggrOrderRaw.filter(n => !safeSet.has(n));
 
-    let chosenSafe = topK(scoreSafe, kSafe);
-    const aggrCandidates = topK(scoreAggr, Math.min(kSafe + kAggr * 2, total));
-    let chosenAggr = aggrCandidates.filter(n => !chosenSafe.includes(n)).slice(0, kAggr);
-
-    if (chosenAggr.length < kAggr) {
-      const need = kAggr - chosenAggr.length;
-      const backfill = aggrCandidates.filter(n => !chosenSafe.includes(n) && !chosenAggr.includes(n)).slice(0, need);
-      chosenAggr = chosenAggr.concat(backfill);
-    }
-    if (chosenAggr.length < kAggr) {
-      const everything = Object.keys(scoreAggr);
-      const need = kAggr - chosenAggr.length;
-      const tail = everything.filter(n => !chosenAggr.includes(n)).slice(-need);
-      chosenAggr = chosenAggr.concat(tail);
-    }
-    
-    // -------- Cross-market de-duplication guard ----------
+    // Optional cross-market de-dup (keep as-is if you like that behavior)
     const earlierAll = Object.values(USED).flatMap(u => [...(u.safe||[]), ...(u.aggressive||[])]);
     const earlierSet = new Set(earlierAll.map(n => { const s = nameToSymbol(n) || n; rememberMapping(n, s); return s; }));
 
-    function dedupAndBackfill(list, scoreMap, k, candidateOrder) {
+    function filterOutEarlier(list) {
       const out = [];
       const seen = new Set();
       for (const n of list) {
         const sym = nameToSymbol(n) || n; rememberMapping(n, sym);
-        if (!earlierSet.has(sym) && !seen.has(sym)) {
-          out.push(n); seen.add(sym);
-        }
-        if (out.length >= k) break;
-      }
-      if (out.length < k) {
-        for (const cand of candidateOrder) {
-          const sym = nameToSymbol(cand) || cand; rememberMapping(cand, sym);
-          if (!earlierSet.has(sym) && !seen.has(sym)) {
-            out.push(cand); seen.add(sym);
-          }
-          if (out.length >= k) break;
-        }
+        if (!earlierSet.has(sym) && !seen.has(sym)) { out.push(n); seen.add(sym); }
       }
       return out;
     }
 
-    // Build a global descending order for backfill
-    const safeOrder = Object.keys(scoreSafe).sort((a,b)=>scoreSafe[b]-scoreSafe[a]);
-    const aggrOrder = Object.keys(scoreAggr).sort((a,b)=>scoreAggr[b]-scoreAggr[a]);
+    const rankedSafe = filterOutEarlier(safeOrder);
+    const rankedAggr = filterOutEarlier(aggrOrder);
 
-    chosenSafe = dedupAndBackfill(chosenSafe, scoreSafe, kSafe, safeOrder);
-    chosenAggr = dedupAndBackfill(chosenAggr, scoreAggr, kAggr, aggrCandidates.concat(aggrOrder));
+    pools[market] = { safe: rankedSafe, aggressive: rankedAggr };
 
-    if (prevPools) {
-      const prevSet = new Set([...(prevPools[market]?.safe || []), ...(prevPools[market]?.aggressive || [])]);
-      const enforced = enforceRotationForMarket({ market, chosenSafe, chosenAggr, scoreSafe, scoreAggr, prevSet });
-      chosenSafe = enforced.chosenSafe;
-      chosenAggr = enforced.chosenAggr;
-    }
+    // Record for later markets
+    USED[market] = { safe: rankedSafe.slice(), aggressive: rankedAggr.slice() };
 
-    console.log(`[buildPools] ${market} total=${names.length} filtered=${filteredNames.length} kSafe=${kSafe} kAggr=${kAggr}`);
-    console.log(`[buildPools] chosenSafe=${chosenSafe.length} chosenAggr=${chosenAggr.length}`);
-
-    pools[market] = {
-      safe: chosenSafe,
-      aggressive: chosenAggr
-    };
-
-    // Record for later markets (used by penalty & de-dup)
-    USED[market] = { safe: chosenSafe.slice(), aggressive: chosenAggr.slice() };
-
-    metricsOut[market] = filteredNames.reduce((acc, n, i) => {
-      const newsCountNorm = Math.min(byName[n].newsCount || 0, 30) / 30;
-      const sentimentNorm = ((byName[n].sentiment ?? 0) + 1) / 2;
-      const pop = byName[n].naverPopularity ?? 0;
-      const blogNorm = nBlog[i];
+    metricsOut[market] = names.reduce((acc, n) => {
       acc[n] = {
-        ret5: byName[n].ret5, ret20: byName[n].ret20, vol20: byName[n].vol20, turnover: byName[n].turnover,
-        adv20: byName[n].adv20, close: byName[n].close, newsCount: byName[n].newsCount, sentiment: byName[n].sentiment, naverPopularity: byName[n].naverPopularity, blogMentions: byName[n].blogMentions, polygonTrend: byName[n].polygonTrend, nasdaqClose: byName[n].nasdaqClose, recentEarnings: byName[n].earn,
-        reputationScore: byName[n].reputationScore, topKeywords: (byName[n].topKeywords || []).slice(0,3), reputationHitIds: byName[n].reputationHitIds || [],
-        source: byName[n].source, attempts: byName[n].attempts, fetchMs: byName[n].fetchMs,
-        norm: { ret5: nRet5[i], ret20: nRet20[i], vol20: nVol[i], turnover: nTurn[i], newsCount: newsCountNorm, sentiment: sentimentNorm, popularity: pop, blogMentions: blogNorm },
-        score: { safe: scoreSafe[n], aggressive: scoreAggr[n] }
+        ret5: byName[n].ret5,
+        ret20: byName[n].ret20,
+        vol20: byName[n].vol20,
+        turnover: byName[n].turnover,
+        adv20: byName[n].adv20,
+        close: byName[n].close,
+        newsCount: byName[n].newsCount,
+        prevNewsCount: byName[n].prevNewsCount,
+        sentiment: byName[n].sentiment,
+        naverPopularity: byName[n].naverPopularity,
+        naverAsvi: byName[n].naverAsvi,
+        naverSpike: byName[n].naverSpike,
+        blogMentions: byName[n].blogMentions,
+        polygonTrend: byName[n].polygonTrend,
+        nasdaqClose: byName[n].nasdaqClose,
+        recentEarnings: byName[n].earn,
+        reputationScore: byName[n].reputationScore,
+        topKeywords: (byName[n].topKeywords || []).slice(0,3),
+        reputationHitIds: byName[n].reputationHitIds || [],
+        source: byName[n].source,
+        attempts: byName[n].attempts,
+        fetchMs: byName[n].fetchMs,
+        components: byName[n].componentScores,
+        score: byName[n].totalScore,
+        eligible: eligibility[n]
       };
       return acc;
     }, {});
 
-    const subset = filteredNames.reduce((acc, n) => {
-      acc[n] = byName[n];
-      return acc;
-    }, {});
+    const subset = names.reduce((acc, n) => { acc[n] = byName[n]; return acc; }, {});
     marketCoverage[market] = coverageRatio(subset);
   }
 
   const covs = Object.values(marketCoverage);
   const avgCoverage = covs.length ? covs.reduce((a,b)=>a+b,0)/covs.length : 0;
-  console.log(`[buildPools] avg coverage=${(avgCoverage*100).toFixed(1)}% (min=${(Math.min(...covs)*100||0).toFixed(1)}%)`);
+  const minCov = covs.length ? Math.min(...covs) : 0;
+  console.log(`[buildPools] avg coverage=${(avgCoverage*100).toFixed(1)}% (min=${(minCov*100).toFixed(1)}%)`);
 
   const providerSummary = {};
   for (const [p, s] of Object.entries(providerState)) {
@@ -1166,7 +1226,7 @@ async function main(){
     return;
   }
   const hardFail = avgCoverage === 0 || covs.every(c => c < 0.01);
-  if (avgCoverage < COVERAGE_MIN && hardFail) {
+  if (avgCoverage < COVERAGE_MIN || hardFail) {
     console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using fallback`);
     const last = loadLastGoodPools() || pools; // prefer last good; else keep current pools as-is
     const outPools = last || namesOnlyRank(universe, NEWS_FEATURES);
