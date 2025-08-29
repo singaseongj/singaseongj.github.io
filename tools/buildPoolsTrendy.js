@@ -339,15 +339,6 @@ async function enrichWithNaverTrends(universe, keywordDict){
   }
 }
 
-async function readPrevPools() {
-  try {
-    const txt = execSync('git show HEAD~1:pools.json', { stdio: ['ignore', 'pipe', 'ignore'] }).toString('utf8');
-    return JSON.parse(txt);
-  } catch {
-    return null;
-  }
-}
-
 // ---- flags
 const ARGS = new Set(process.argv.slice(2));
 const OFFLINE = ARGS.has('--offline');                // skip all network
@@ -576,7 +567,7 @@ function rank01(values) {
   const nums = arr.filter(v => v !== null);
   if (nums.length === 0) return values.map(_ => 0);
   const min = Math.min(...nums), max = Math.max(...nums);
-  if (min === max) return values.map(v => (v === null ? 0 : 0.5));
+  if (min === max) return values.map(() => 0);
   return arr.map(v => (v === null ? 0 : (v - min) / (max - min)));
 }
 
@@ -817,41 +808,6 @@ async function mapLimit(items, limit, worker) {
   });
 }
 
-function enforceRotationForMarket({ market, chosenSafe, chosenAggr, scoreSafe, scoreAggr, prevSet, minSwaps = Number(process.env.ROTATE_MIN_SWAPS || 1) }) {
-  const safeRanked = Object.entries(scoreSafe).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
-  const aggrRanked = Object.entries(scoreAggr).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
-
-  let swaps = 0;
-
-  function swapIn(arr, ranked) {
-    // find first candidate not already present that’s in the ranked list
-    const curSet = new Set(arr);
-    for (const cand of ranked) {
-      if (!curSet.has(cand)) {
-        // replace the last element (lowest score) to minimize disruption
-        arr[arr.length - 1] = cand;
-        swaps++;
-        return true;
-      }
-    }
-    return false;
-  }
-
-  const combined = new Set([...chosenSafe, ...chosenAggr]);
-  let identical = true;
-  for (const n of combined) if (!prevSet.has(n)) { identical = false; break; }
-
-  if (!identical) return { chosenSafe, chosenAggr, swaps };
-
-  // try to introduce at least one outsider
-  swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked);
-
-  // If more swaps requested, keep swapping aggr first, then safe
-  while (swaps < minSwaps && (swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked))) {}
-
-  return { chosenSafe, chosenAggr, swaps };
-}
-
 // ---------- Main ----------
 async function main(){
   const pools = await loadJson(POOLS_FILE);
@@ -956,8 +912,6 @@ async function main(){
       }
     }
   }
-  const prevPools = await readPrevPools();
-
   for (const market of MARKETS){
     if (Number.isFinite(MAX_PER_PROVIDER)) {
       for (const s of Object.values(providerState)) s.count = 0;
@@ -1119,13 +1073,6 @@ async function main(){
       // Base normalized score 0..1 for ranking
       let norm = totalRounded / 100;
 
-      // Down-rank ineligible or unknown names (still keep their score & metrics)
-      if (!eligibility[n].eligible) {
-        norm = Math.max(0, norm - INELIGIBLE_PENALTY);
-      } else if (!eligibility[n].advKnown || !eligibility[n].priceKnown) {
-        norm = Math.max(0, norm - UNKNOWN_PENALTY);
-      }
-
       scoreSafeRaw[n] = norm;
       scoreAggrRaw[n] = norm;
     });
@@ -1172,19 +1119,9 @@ async function main(){
     const HOT = Number(process.env.HOTNESS_WEIGHT || 12); // as % of scale
     if (HOT > 0) {
       const asArr = (fn) => names.map(fn);
-      const r01 = (arr) => {
-        const vals = arr.slice();
-        const nums = vals.map(v => (Number.isFinite(v) ? v : 0));
-        // rank 0..1 (use your rank01 if you prefer)
-        const pairs = nums.map((v,i)=>[i,v]).sort((a,b)=>a[1]-b[1]);
-        const n = Math.max(1, pairs.length-1);
-        const out = new Array(nums.length).fill(0);
-        pairs.forEach(([i],k)=>{ out[i] = k/n; });
-        return out;
-      };
-      const newsP = r01(asArr(n => (byName[n].newsCount ?? 0)));
-      const trendP= r01(asArr(n => (computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
-      const turnP = r01(asArr(n => (byName[n].turnover ?? 0)));
+      const newsP = rank01(asArr(n => (byName[n].newsCount ?? 0)));
+      const trendP= rank01(asArr(n => (computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
+      const turnP = rank01(asArr(n => (byName[n].turnover ?? 0)));
 
       names.forEach((n, i) => {
         const hot = 0.5*newsP[i] + 0.3*trendP[i] + 0.2*turnP[i];
@@ -1194,6 +1131,18 @@ async function main(){
         scoreAggr[n] = Math.min(1, scoreAggr[n] + bump * 0.8);
         byName[n].totalScore = Math.min(100, Math.round(byName[n].totalScore + (CEIL - FLOOR) * (HOT/100) * hot));
       });
+    }
+
+    // Re-apply eligibility gating after curve/hotness so it survives percentiling
+    for (const n of names) {
+      const pen = !eligibility[n].eligible
+        ? INELIGIBLE_PENALTY
+        : ((!eligibility[n].advKnown || !eligibility[n].priceKnown) ? UNKNOWN_PENALTY : 0);
+      if (pen > 0) {
+        scoreSafe[n] = clamp01(scoreSafe[n] - pen);
+        scoreAggr[n] = clamp01(scoreAggr[n] - pen * 0.8);
+        byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
+      }
     }
 
     // Build full ranked orders
