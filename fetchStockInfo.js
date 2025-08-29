@@ -740,7 +740,8 @@ async function tryFetchAndEnrich() {
     const chosenSafe = safeSource.slice(0, 5);
     data[market].safe = chosenSafe.map(n => (typeof n === 'string' ? { name: n } : n));
 
-    let aggrSource = buckets.aggressive || [];
+    const safeNames = new Set(chosenSafe.map(n => (typeof n === 'string' ? n : n.name)));
+    let aggrSource = (buckets.aggressive || []).filter(n => !safeNames.has(typeof n === 'string' ? n : n.name));
     const chosenAggr = aggrSource.slice(0, 5);
     data[market].aggressive = chosenAggr.map(n => (typeof n === 'string' ? { name: n } : n));
 
