@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2025-08-29T19:22:35+09:00",
+  "generatedAtKST": "2025-08-29T22:24:09+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -439,12 +439,69 @@
     {
       "market": "KOSPI",
       "bucket": "aggressive",
-      "name": "LG생활건강",
-      "ticker": "051900.KS",
-      "sector": "필수소비재",
+      "name": "Goldman Sachs",
+      "ticker": "GS",
+      "sector": "Financial Services",
       "metrics": {
-        "ret5": -1.5,
-        "ret20": -6.487341772151899,
+        "ret5": 4.926315789473684,
+        "ret20": 3.8184528285621475,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": null,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Goldman%20Sachs%20GS"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **unknown**",
+        "Returns: 5d **4.9%**, 20d **3.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Financial Services**",
+        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Goldman%20Sachs%20GS"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "aggressive",
+      "name": "S-Oil",
+      "ticker": "SOTL.NS",
+      "sector": null,
+      "metrics": {
+        "ret5": 0.4051550390385206,
+        "ret20": 1.9573635064085775,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": null,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?tbm=nws&q=S-Oil%20SOTL.NS"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **unknown**",
+        "Returns: 5d **0.4%**, 20d **2.0%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?tbm=nws&q=S-Oil%20SOTL.NS"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "aggressive",
+      "name": "아이에스동서",
+      "ticker": "010780.KS",
+      "sector": "소재",
+      "metrics": {
+        "ret5": 3.1413612565445024,
+        "ret20": -3.194103194103194,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -455,54 +512,25 @@
         "momentum": "high"
       },
       "links": {
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=LG%EC%83%9D%ED%99%9C%EA%B1%B4%EA%B0%95%20051900.KS"
+        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4%EB%8F%99%EC%84%9C%20010780.KS"
       },
       "bullets": [
         "News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-1.5%**, 20d **-6.5%**; volatility (20d): **unknown**",
+        "Returns: 5d **3.1%**, 20d **-3.2%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **필수소비재**",
-        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=LG%EC%83%9D%ED%99%9C%EA%B1%B4%EA%B0%95%20051900.KS"
+        "Sector: **소재**",
+        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4%EB%8F%99%EC%84%9C%20010780.KS"
       ]
     },
     {
       "market": "KOSPI",
       "bucket": "aggressive",
-      "name": "TKG휴켐스",
-      "ticker": "069260.KS",
-      "sector": "헬스케어",
+      "name": "한국금융지주",
+      "ticker": "071050.KS",
+      "sector": "금융",
       "metrics": {
-        "ret5": 1.7341040462427744,
-        "ret20": -0.28328611898017,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 2,
-        "blogs": 10,
-        "sentiment": 0,
-        "momentum": "low"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?tbm=nws&q=TKG%ED%9C%B4%EC%BC%90%EC%8A%A4%20069260.KS"
-      },
-      "bullets": [
-        "News (7d): **2** (blogs: 10) — momentum: **low**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.7%**, 20d **-0.3%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **헬스케어**",
-        "News search: https://www.google.com/search?tbm=nws&q=TKG%ED%9C%B4%EC%BC%90%EC%8A%A4%20069260.KS"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "aggressive",
-      "name": "대웅제약",
-      "ticker": "069620.KS",
-      "sector": "헬스케어",
-      "metrics": {
-        "ret5": 1.4925373134328357,
-        "ret20": -7.608695652173914,
+        "ret5": 5.660377358490567,
+        "ret20": -6.013986013986014,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -513,14 +541,14 @@
         "momentum": "high"
       },
       "links": {
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD%20069620.KS"
+        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC%20071050.KS"
       },
       "bullets": [
         "News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.5%**, 20d **-7.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **5.7%**, 20d **-6.0%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **헬스케어**",
-        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD%20069620.KS"
+        "Sector: **금융**",
+        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC%20071050.KS"
       ]
     },
     {
@@ -536,49 +564,20 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EA%B8%80%EB%A1%9C%EB%B9%84%EC%8A%A4%20086280.KS"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **9.0%**, 20d **25.0%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **산업재**",
-        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EA%B8%80%EB%A1%9C%EB%B9%84%EC%8A%A4%20086280.KS"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "aggressive",
-      "name": "현대백화점",
-      "ticker": "069960.KS",
-      "sector": "경기소비재",
-      "metrics": {
-        "ret5": 1.7808219178082192,
-        "ret20": 5.091937765205092,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
         "count": 10,
         "blogs": 10,
         "sentiment": 0,
         "momentum": "high"
       },
       "links": {
-        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20069960.KS"
+        "searchUrl": "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EA%B8%80%EB%A1%9C%EB%B9%84%EC%8A%A4%20086280.KS"
       },
       "bullets": [
         "News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.8%**, 20d **5.1%**; volatility (20d): **unknown**",
+        "Returns: 5d **9.0%**, 20d **25.0%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **경기소비재**",
-        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20069960.KS"
+        "Sector: **산업재**",
+        "News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EA%B8%80%EB%A1%9C%EB%B9%84%EC%8A%A4%20086280.KS"
       ]
     },
     {

@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-08-29T19:22:35+09:00 (KST)**
+- Generated: **2025-08-29T22:24:09+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -135,45 +135,44 @@
 
 ### AGGRESSIVE (5)
 
-**LG생활건강** (051900.KS)
+**Goldman Sachs** (GS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **4.9%**, 20d **3.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Financial Services**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Goldman%20Sachs%20GS
+
+**S-Oil** (SOTL.NS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **0.4%**, 20d **2.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?tbm=nws&q=S-Oil%20SOTL.NS
+
+**아이에스동서** (010780.KS)
 
 - News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.5%**, 20d **-6.5%**; volatility (20d): **unknown**
+- Returns: 5d **3.1%**, 20d **-3.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **필수소비재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=LG%EC%83%9D%ED%99%9C%EA%B1%B4%EA%B0%95%20051900.KS
+- Sector: **소재**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4%EB%8F%99%EC%84%9C%20010780.KS
 
-**TKG휴켐스** (069260.KS)
-
-- News (7d): **2** (blogs: 10) — momentum: **low**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.7%**, 20d **-0.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?tbm=nws&q=TKG%ED%9C%B4%EC%BC%90%EC%8A%A4%20069260.KS
-
-**대웅제약** (069620.KS)
+**한국금융지주** (071050.KS)
 
 - News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.5%**, 20d **-7.6%**; volatility (20d): **unknown**
+- Returns: 5d **5.7%**, 20d **-6.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD%20069620.KS
+- Sector: **금융**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC%20071050.KS
 
 **현대글로비스** (086280.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **9.0%**, 20d **25.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EA%B8%80%EB%A1%9C%EB%B9%84%EC%8A%A4%20086280.KS
-
-**현대백화점** (069960.KS)
-
-- News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.8%**, 20d **5.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90%20069960.KS
 
 ## NASDAQ 100
 
