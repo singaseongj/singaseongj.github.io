@@ -248,7 +248,7 @@ jobs:
             --data-urlencode "api_key=${SERP_API_KEY}" \
             -o /dev/null -w 'HTTP %{http_code}\n'
 
-      - name: Preflight: NewsData.io
+      - name: "Preflight: NewsData.io"
         shell: bash
         env:
           NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
