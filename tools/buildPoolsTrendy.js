@@ -580,6 +580,16 @@ function rank01(values) {
   return arr.map(v => (v === null ? 0 : (v - min) / (max - min)));
 }
 
+// helper: percentiles from a name->value map (values in 0..1)
+function percentileMap(obj){
+  const entries = Object.entries(obj);
+  entries.sort((a,b)=>a[1]-b[1]);
+  const n = Math.max(1, entries.length-1);
+  const out = {};
+  entries.forEach(([k],i)=>{ out[k] = i / n; });
+  return out;
+}
+
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
 
 function scoreSentiment(s){
@@ -1139,6 +1149,51 @@ async function main(){
           scoreAggr[n] = clamp01(scoreAggr[n] - 0.10);
         }
       }
+    }
+
+    // ---- Per-market calibration: curve & widen spread ----
+    const GAMMA = Number(process.env.SCORE_CURVE || 0.65); // <1 boosts the head
+    const FLOOR = Number(process.env.SCORE_FLOOR || 45);
+    const CEIL  = Number(process.env.SCORE_CEIL  || 100);
+
+    const pSafe = percentileMap(scoreSafe);   // 0..1 by rank within market
+    const pAggr = percentileMap(scoreAggr);
+
+    for (const n of names) {
+      // same curve for both buckets; ordering preserved
+      const curved = Math.pow(pSafe[n], GAMMA);
+      scoreSafe[n] = curved;
+      scoreAggr[n] = Math.pow(pAggr[n], GAMMA);
+      // store human-facing 0..100 with floor/ceiling
+      byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * curved);
+    }
+
+    // Optional: small popularity boost (bounded) — disabled with HOTNESS_WEIGHT=0
+    const HOT = Number(process.env.HOTNESS_WEIGHT || 12); // as % of scale
+    if (HOT > 0) {
+      const asArr = (fn) => names.map(fn);
+      const r01 = (arr) => {
+        const vals = arr.slice();
+        const nums = vals.map(v => (Number.isFinite(v) ? v : 0));
+        // rank 0..1 (use your rank01 if you prefer)
+        const pairs = nums.map((v,i)=>[i,v]).sort((a,b)=>a[1]-b[1]);
+        const n = Math.max(1, pairs.length-1);
+        const out = new Array(nums.length).fill(0);
+        pairs.forEach(([i],k)=>{ out[i] = k/n; });
+        return out;
+      };
+      const newsP = r01(asArr(n => (byName[n].newsCount ?? 0)));
+      const trendP= r01(asArr(n => (computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
+      const turnP = r01(asArr(n => (byName[n].turnover ?? 0)));
+
+      names.forEach((n, i) => {
+        const hot = 0.5*newsP[i] + 0.3*trendP[i] + 0.2*turnP[i];
+        const bump = (HOT/100) * hot;                 // <= HOT/100
+        const curved = Math.min(1, scoreSafe[n] + bump);
+        scoreSafe[n] = curved;
+        scoreAggr[n] = Math.min(1, scoreAggr[n] + bump * 0.8);
+        byName[n].totalScore = Math.min(100, Math.round(byName[n].totalScore + (CEIL - FLOOR) * (HOT/100) * hot));
+      });
     }
 
     // Build full ranked orders
