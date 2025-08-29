@@ -163,12 +163,23 @@ jobs:
         env:
           FMP_KEY: ${{ secrets.FMP_KEY }}
 
+      - name: Preflight: DeepSearch
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          curl -4sS -I https://api-v2.deepsearch.com | head -n 1
+          curl -4sS --get 'https://api-v2.deepsearch.com/v1/global-articles' \
+            -H "Authorization: Bearer ${DEEPS_API_KEY}" \
+            --data-urlencode 'page_size=1' \
+            -o /dev/null -w 'HTTP %{http_code}\n'
+
       - name: Build trend-aware pools
         env:
           FMP_KEY: ${{ secrets.FMP_KEY }}
           ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
           GLOBAL_BUDGET_MS: ${{ env.GLOBAL_BUDGET_MS }}
           MAX_CONCURRENCY: ${{ env.MAX_CONCURRENCY }}
           REQ_TIMEOUT_MS: ${{ env.REQ_TIMEOUT_MS }}
