@@ -129,6 +129,28 @@ const N100  = new Map((INDEX_RAW.nasdaq100 || []).map(r => [r.symbol || r.ticker
 const K200  = new Map((INDEX_RAW.kospi200 || []).map(r => [r.symbol, r.name]));
 const KQ100 = new Map((INDEX_RAW.kosdaq100 || []).map(r => [r.symbol, r.name]));
 
+function normIndexKey(sym){
+  return String(sym || '').toUpperCase().replace('/', '.').replace('-', '.');
+}
+function inIdx(sym, m){ return m.has(normIndexKey(sym)); }
+
+const PRIOR_W_SP500 = +process.env.PRIOR_W_SP500 || 0.50;
+const PRIOR_W_N100  = +process.env.PRIOR_W_N100  || 0.25;
+const PRIOR_W_K200  = +process.env.PRIOR_W_K200  || 0.35;
+const PRIOR_W_KQ100 = +process.env.PRIOR_W_KQ100 || 0.20;
+const PRIOR_FLOOR   = +process.env.PRIOR_FLOOR   || 0.10; // base for names in no index
+const STRUCT_FLOOR_W = +process.env.STRUCT_FLOOR_W || 0.40; // portion of scale reserved for prior
+const PREV_CARRY = +process.env.PREV_CARRY || 0.6;  // 0..1 how much of last run to keep
+
+function structuralPrior(sym){
+  let p = PRIOR_FLOOR;
+  if (inIdx(sym, SP500)) p += PRIOR_W_SP500;
+  if (inIdx(sym, N100))  p += PRIOR_W_N100;
+  if (inIdx(sym, K200))  p += PRIOR_W_K200;
+  if (inIdx(sym, KQ100)) p += PRIOR_W_KQ100;
+  return clamp01(p);
+}
+
 const INDEX_SYMBOL_TO_NAME = {};
 for (const r of INDEX_ROWS) {
   const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
@@ -936,6 +958,18 @@ async function main(){
     // Fetch signals per name best-effort
     const byName = {};
     const processed = new Set();
+    function backfillFromPrev(n, market){
+      const prev = PREV_METRICS?.[market]?.[n];
+      if (!prev) return;
+      const keys = ['ret5','ret20','turnover','adv20','close','newsCount','sentiment','naverPopularity','naverAsvi','naverSpike'];
+      for (const k of keys){
+        const cur = byName[n][k];
+        if (cur == null || (typeof cur === 'number' && cur === 0)) {
+          const pv = prev[k];
+          if (pv != null) byName[n][k] = (typeof pv === 'number') ? pv * PREV_CARRY : pv;
+        }
+      }
+    }
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
       if (timeLeft() < GLOBAL_BUDGET_MS * FINAL_FRAC) return; // leave final budget
       if (!budgetOk(800)) return; // skip if no time left
@@ -1029,6 +1063,7 @@ async function main(){
         byName[n].topKeywords     = nf.topKeywords ?? byName[n].topKeywords;
         byName[n].reputationHitIds = nf.reputationHitIds ?? byName[n].reputationHitIds;
       }
+      backfillFromPrev(n, market);
     }
 
     const withSignals = [...processed].filter(n => {
@@ -1159,6 +1194,27 @@ async function main(){
         scoreAggr[n] = Math.min(1, scoreAggr[n] + bump*0.8 + (byName[n].earn ? EARN_BOOST*0.8 : 0));
         byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
       });
+
+      const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.10; // 10% of scale max
+      const sectorHot = {};
+      const sectorCnt = {};
+      names.forEach((n,i)=>{
+        const s = pools[market]?.sectorMap?.[n] || byName[n].sector || null;
+        const composite = 0.5*newsP[i] + 0.3*trendP[i] + 0.2*Math.max(0, (byName[n].ret5 ?? 0));
+        if (!s) return;
+        if (!sectorHot[s]) { sectorHot[s] = 0; sectorCnt[s] = 0; }
+        sectorHot[s] += composite; sectorCnt[s] += 1;
+      });
+      Object.keys(sectorHot).forEach(s => { sectorHot[s] = sectorCnt[s] ? sectorHot[s]/sectorCnt[s] : 0; });
+
+      names.forEach((n)=>{
+        const s = pools[market]?.sectorMap?.[n] || byName[n].sector || null;
+        if (!s) return;
+        const lift = (sectorHot[s] || 0) * SECTOR_LIFT;  // 0..SECTOR_LIFT
+        scoreSafe[n] = Math.min(1, scoreSafe[n] + lift);
+        scoreAggr[n] = Math.min(1, scoreAggr[n] + lift);
+        byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
+      });
     }
 
     // Re-apply eligibility gating after curve/hotness so it survives percentiling
@@ -1172,6 +1228,17 @@ async function main(){
         byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
       }
     }
+
+    names.forEach(n=>{
+      const sym = byName[n].sym || nameToSymbol(n) || n;
+      const prior = structuralPrior(sym); // 0..1
+      const indivFloor01 = STRUCT_FLOOR_W * prior; // 0..STRUCT_FLOOR_W
+      const indivFloor100 = FLOOR + (CEIL - FLOOR) * indivFloor01;
+
+      byName[n].totalScore = Math.max(indivFloor100, byName[n].totalScore);
+      scoreSafe[n] = Math.max(scoreSafe[n], indivFloor01);
+      scoreAggr[n] = Math.max(scoreAggr[n], indivFloor01 * 0.95);
+    });
 
     // ---- Split into safe/aggressive buckets based on volatility ----
     const total = names.length;
