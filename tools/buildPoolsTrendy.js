@@ -124,7 +124,9 @@ const INDEX_ROWS = (() => {
   return rows;
 })();
 
-const K200 = new Map((INDEX_RAW.kospi200 || []).map(r => [r.symbol, r.name]));
+const SP500 = new Map((INDEX_RAW.sp500 || []).map(r => [r.symbol || r.ticker, r.name]));
+const N100  = new Map((INDEX_RAW.nasdaq100 || []).map(r => [r.symbol || r.ticker, r.name]));
+const K200  = new Map((INDEX_RAW.kospi200 || []).map(r => [r.symbol, r.name]));
 const KQ100 = new Map((INDEX_RAW.kosdaq100 || []).map(r => [r.symbol, r.name]));
 
 const INDEX_SYMBOL_TO_NAME = {};
@@ -337,15 +339,6 @@ async function enrichWithNaverTrends(universe, keywordDict){
   }
 }
 
-async function readPrevPools() {
-  try {
-    const txt = execSync('git show HEAD~1:pools.json', { stdio: ['ignore', 'pipe', 'ignore'] }).toString('utf8');
-    return JSON.parse(txt);
-  } catch {
-    return null;
-  }
-}
-
 // ---- flags
 const ARGS = new Set(process.argv.slice(2));
 const OFFLINE = ARGS.has('--offline');                // skip all network
@@ -367,6 +360,9 @@ const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
 const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
 const MIN_PRICE_USD = Number(process.env.MIN_PRICE_USD || 2);
 const MIN_PRICE_KRW = Number(process.env.MIN_PRICE_KRW || 1000);
+const INELIGIBLE_PENALTY = Number(process.env.INELIGIBLE_PENALTY || 0.5);
+const UNKNOWN_PENALTY    = Number(process.env.UNKNOWN_PENALTY || 0.2);
+const CROSS_MARKET_DEDUP = process.env.CROSS_MARKET_DEDUP !== '0';
 const ALLOWLIST = new Set(Object.values(TICKER_MAP));
 
 // ---- time budget
@@ -571,8 +567,18 @@ function rank01(values) {
   const nums = arr.filter(v => v !== null);
   if (nums.length === 0) return values.map(_ => 0);
   const min = Math.min(...nums), max = Math.max(...nums);
-  if (min === max) return values.map(v => (v === null ? 0 : 0.5));
+  if (min === max) return values.map(() => 0);
   return arr.map(v => (v === null ? 0 : (v - min) / (max - min)));
+}
+
+// helper: percentiles from a name->value map (values in 0..1)
+function percentileMap(obj){
+  const entries = Object.entries(obj);
+  entries.sort((a,b)=>a[1]-b[1]);
+  const n = Math.max(1, entries.length-1);
+  const out = {};
+  entries.forEach(([k],i)=>{ out[k] = i / n; });
+  return out;
 }
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
@@ -802,41 +808,6 @@ async function mapLimit(items, limit, worker) {
   });
 }
 
-function enforceRotationForMarket({ market, chosenSafe, chosenAggr, scoreSafe, scoreAggr, prevSet, minSwaps = Number(process.env.ROTATE_MIN_SWAPS || 1) }) {
-  const safeRanked = Object.entries(scoreSafe).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
-  const aggrRanked = Object.entries(scoreAggr).sort((a,b)=>b[1]-a[1]).map(([n])=>n);
-
-  let swaps = 0;
-
-  function swapIn(arr, ranked) {
-    // find first candidate not already present that’s in the ranked list
-    const curSet = new Set(arr);
-    for (const cand of ranked) {
-      if (!curSet.has(cand)) {
-        // replace the last element (lowest score) to minimize disruption
-        arr[arr.length - 1] = cand;
-        swaps++;
-        return true;
-      }
-    }
-    return false;
-  }
-
-  const combined = new Set([...chosenSafe, ...chosenAggr]);
-  let identical = true;
-  for (const n of combined) if (!prevSet.has(n)) { identical = false; break; }
-
-  if (!identical) return { chosenSafe, chosenAggr, swaps };
-
-  // try to introduce at least one outsider
-  swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked);
-
-  // If more swaps requested, keep swapping aggr first, then safe
-  while (swaps < minSwaps && (swapIn(chosenAggr, aggrRanked) || swapIn(chosenSafe, safeRanked))) {}
-
-  return { chosenSafe, chosenAggr, swaps };
-}
-
 // ---------- Main ----------
 async function main(){
   const pools = await loadJson(POOLS_FILE);
@@ -857,9 +828,11 @@ async function main(){
 
   const universe = OFFLINE
     ? Object.fromEntries(MARKETS.map(m => [m, Array.from(new Set([...(pools[m]?.safe || []), ...(pools[m]?.aggressive || [])]))]))
-    : await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
+    : await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 9999) });
 
-  universe.KOSPI = mergeIndexNames(universe.KOSPI, K200);
+  universe['S&P 500']    = mergeIndexNames(universe['S&P 500'], SP500);
+  universe['NASDAQ 100'] = mergeIndexNames(universe['NASDAQ 100'], N100);
+  universe.KOSPI  = mergeIndexNames(universe.KOSPI, K200);
   universe.KOSDAQ = mergeIndexNames(universe.KOSDAQ, KQ100);
 
   const symbolSet = new Set();
@@ -939,8 +912,6 @@ async function main(){
       }
     }
   }
-  const prevPools = await readPrevPools();
-
   for (const market of MARKETS){
     if (Number.isFinite(MAX_PER_PROVIDER)) {
       for (const s of Object.values(providerState)) s.count = 0;
@@ -1061,9 +1032,11 @@ async function main(){
       const m = byName[n] || {};
       const sym = m.sym;
       const isKRName = sym ? isKR(sym) : false;
-      const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym));
-      const priceOk = m.close == null || m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD);
-      eligibility[n] = { advOk, priceOk, eligible: !!(advOk && priceOk) };
+      const advKnown   = Number.isFinite(m.adv20);
+      const priceKnown = Number.isFinite(m.close);
+      const advOk   = advKnown   && (m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym)));
+      const priceOk = priceKnown && (m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD));
+      eligibility[n] = { advOk, priceOk, advKnown, priceKnown, eligible: (advOk && priceOk) };
     });
 
     // Scores for *all* names
@@ -1100,9 +1073,6 @@ async function main(){
       // Base normalized score 0..1 for ranking
       let norm = totalRounded / 100;
 
-      // Down-rank ineligible names (still keep their score & metrics)
-      if (!eligibility[n].eligible) norm = Math.max(0, norm - 0.5);
-
       scoreSafeRaw[n] = norm;
       scoreAggrRaw[n] = norm;
     });
@@ -1128,6 +1098,53 @@ async function main(){
       }
     }
 
+    // ---- Per-market calibration: curve & widen spread ----
+    const GAMMA = Number(process.env.SCORE_CURVE || 0.65); // <1 boosts the head
+    const FLOOR = Number(process.env.SCORE_FLOOR || 45);
+    const CEIL  = Number(process.env.SCORE_CEIL  || 100);
+
+    const pSafe = percentileMap(scoreSafe);   // 0..1 by rank within market
+    const pAggr = percentileMap(scoreAggr);
+
+    for (const n of names) {
+      // same curve for both buckets; ordering preserved
+      const curved = Math.pow(pSafe[n], GAMMA);
+      scoreSafe[n] = curved;
+      scoreAggr[n] = Math.pow(pAggr[n], GAMMA);
+      // store human-facing 0..100 with floor/ceiling
+      byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * curved);
+    }
+
+    // Optional: small popularity boost (bounded) — disabled with HOTNESS_WEIGHT=0
+    const HOT = Number(process.env.HOTNESS_WEIGHT || 12); // as % of scale
+    if (HOT > 0) {
+      const asArr = (fn) => names.map(fn);
+      const newsP = rank01(asArr(n => (byName[n].newsCount ?? 0)));
+      const trendP= rank01(asArr(n => (computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
+      const turnP = rank01(asArr(n => (byName[n].turnover ?? 0)));
+
+      names.forEach((n, i) => {
+        const hot = 0.5*newsP[i] + 0.3*trendP[i] + 0.2*turnP[i];
+        const bump = (HOT/100) * hot;                 // <= HOT/100
+        const curved = Math.min(1, scoreSafe[n] + bump);
+        scoreSafe[n] = curved;
+        scoreAggr[n] = Math.min(1, scoreAggr[n] + bump * 0.8);
+        byName[n].totalScore = Math.min(100, Math.round(byName[n].totalScore + (CEIL - FLOOR) * (HOT/100) * hot));
+      });
+    }
+
+    // Re-apply eligibility gating after curve/hotness so it survives percentiling
+    for (const n of names) {
+      const pen = !eligibility[n].eligible
+        ? INELIGIBLE_PENALTY
+        : ((!eligibility[n].advKnown || !eligibility[n].priceKnown) ? UNKNOWN_PENALTY : 0);
+      if (pen > 0) {
+        scoreSafe[n] = clamp01(scoreSafe[n] - pen);
+        scoreAggr[n] = clamp01(scoreAggr[n] - pen * 0.8);
+        byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
+      }
+    }
+
     // Build full ranked orders
     const safeOrder = Object.keys(scoreSafe).sort((a,b)=>scoreSafe[b]-scoreSafe[a]);
 
@@ -1137,7 +1154,9 @@ async function main(){
     const aggrOrder = aggrOrderRaw.filter(n => !safeSet.has(n));
 
     // Optional cross-market de-dup (keep as-is if you like that behavior)
-    const earlierAll = Object.values(USED).flatMap(u => [...(u.safe||[]), ...(u.aggressive||[])]);
+    const earlierAll = CROSS_MARKET_DEDUP
+      ? Object.values(USED).flatMap(u => [...(u.safe||[]), ...(u.aggressive||[])])
+      : [];
     const earlierSet = new Set(earlierAll.map(n => { const s = nameToSymbol(n) || n; rememberMapping(n, s); return s; }));
 
     function filterOutEarlier(list) {
@@ -1228,12 +1247,12 @@ async function main(){
   const hardFail = avgCoverage === 0 || covs.every(c => c < 0.01);
   if (avgCoverage < COVERAGE_MIN || hardFail) {
     console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using fallback`);
-    const last = loadLastGoodPools() || pools; // prefer last good; else keep current pools as-is
-    const outPools = last || namesOnlyRank(universe, NEWS_FEATURES);
+    const lastGood = loadLastGoodPools();
+    const outPools = lastGood ?? namesOnlyRank(universe, NEWS_FEATURES) ?? pools;
     await writeAtomic(POOLS_FILE, JSON.stringify(outPools, null, 2));
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
-    if (last) console.log('[buildPools] wrote pools.json from last good snapshot');
-    else console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
+    if (lastGood) console.log('[buildPools] wrote pools.json from last good snapshot');
+    else if (outPools !== pools) console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
     return;
   }
 
