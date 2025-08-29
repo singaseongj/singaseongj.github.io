@@ -143,6 +143,13 @@ const PRIOR_FLOOR   = +process.env.PRIOR_FLOOR   || 0.10; // base for names in n
 const STRUCT_FLOOR_W = +process.env.STRUCT_FLOOR_W || 0.40; // portion of scale reserved for prior
 const PREV_CARRY = +process.env.PREV_CARRY || 0.6;  // 0..1 how much of last run to keep
 
+const HOT_W_NEWS       = +process.env.HOT_W_NEWS       || 0.45;
+const HOT_W_TREND      = +process.env.HOT_W_TREND      || 0.35;
+const HOT_W_TURN       = +process.env.HOT_W_TURN       || 0.20;
+const TREND_EXP        = +process.env.TREND_EXP        || 1.2;  // >1 makes trend more sensitive
+const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.05; // * ds_burst
+const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.08; // cap (0..1 scale)
+
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
   if (inIdx(sym, SP500)) p += PRIOR_W_SP500;
@@ -594,6 +601,15 @@ function rank01(values) {
   return arr.map(v => (v === null ? 0 : (v - min) / (max - min)));
 }
 
+function safeRank01(arr){
+  const r = rank01(arr);
+  if (r.every(x => x === 0)) {
+    const min = Math.min(...arr), max = Math.max(...arr);
+    return (min === max) ? r : arr.map(v => (v - min) / (max - min));
+  }
+  return r;
+}
+
 // helper: percentiles from a name->value map (values in 0..1)
 function percentileMap(obj){
   const entries = Object.entries(obj);
@@ -605,6 +621,13 @@ function percentileMap(obj){
 }
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+
+function djitter(key, mag=0.002){
+  let h=0; for (let i=0;i<key.length;i++) h=(h*131+key.charCodeAt(i))|0;
+  return ((h % 2001) - 1000) / 1000 * mag;
+}
+
+function stripNulls(o){ return JSON.parse(JSON.stringify(o, (_,v)=>v===null?undefined:v)); }
 
 function scoreSentiment(s){
   if (s == null) return null;
@@ -1254,22 +1277,35 @@ async function main(){
     const LIQ_W = +process.env.LIQ_WEIGHT || 4;
     const EARN_BOOST = +process.env.EARNINGS_BOOST || 0.04; // +4% of 0..1 scale
     if (HOT > 0 || LIQ_W > 0) {
-      const newsP  = rank01(names.map(n => (byName[n].ds_news7 ?? byName[n].newsCount ?? 0)));
-      const trendP = rank01(names.map(n => (byName[n].ds_trend ?? computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
-      const turnP  = rank01(names.map(n => byName[n].turnover));
-      const offLP  = rank01(names.map(n => byName[n].offLo ?? 0));
-      const offHP  = rank01(names.map(n => byName[n].offHi ?? 0));
+      const asArr = fn => names.map(fn);
+      const newsRaw  = asArr(n => (byName[n].ds_news7 ?? byName[n].newsCount ?? 0));
+      const trendRaw = asArr(n => (byName[n].ds_trend  ?? computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0));
+
+      const newsP  = safeRank01(newsRaw);
+      const trendP = safeRank01(trendRaw.map(v => Math.max(0, v)));
+      const turnP  = safeRank01(asArr(n => (byName[n].turnover ?? 0)));
       const liqP   = names.map(n => structuralPrior(byName[n].sym || nameToSymbol(n) || n));
 
-      names.forEach((n, i) => {
-        let hot01 = 0.45*newsP[i] + 0.35*trendP[i] + 0.20*turnP[i];
-        hot01 += 0.1*offLP[i] - 0.05*offHP[i];
-        const burstKick = Math.min(0.05, 0.05 * (byName[n].ds_burst ?? 0));
-        const bump = (HOT/100) * Math.min(1, hot01 + burstKick) + (LIQ_W/100) * liqP[i];
-        scoreSafe[n] = Math.min(1, scoreSafe[n] + bump + (byName[n].earn ? EARN_BOOST : 0));
-        scoreAggr[n] = Math.min(1, scoreAggr[n] + bump*0.8 + (byName[n].earn ? EARN_BOOST*0.8 : 0));
+      const hot01 = names.map((n,i) => (
+        HOT_W_NEWS*newsP[i] +
+        HOT_W_TREND*Math.pow(trendP[i], TREND_EXP) +
+        HOT_W_TURN*turnP[i]
+      ));
+
+      const burstKick = names.map(n =>
+        Math.min(BURST_KICK_MAX, BURST_KICK_SCALE * (byName[n].ds_burst || 0))
+      );
+
+      for (let i=0; i<names.length; i++) {
+        const n = names[i];
+        const bumpHot = (HOT/100) * hot01[i] + burstKick[i];
+        const bumpLiq = (LIQ_W/100) * liqP[i];
+        const earnSafe = byName[n].earn ? EARN_BOOST : 0;
+        const earnAggr = byName[n].earn ? EARN_BOOST*0.8 : 0;
+        scoreSafe[n] = clamp01(scoreSafe[n] + bumpHot + bumpLiq + earnSafe);
+        scoreAggr[n] = clamp01(scoreAggr[n] + bumpHot*1.15 + bumpLiq + earnAggr);
         byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
-      });
+      }
 
       const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.10; // 10% of scale max
       const sectorHot = {};
@@ -1287,8 +1323,8 @@ async function main(){
         const s = pools[market]?.sectorMap?.[n] || byName[n].sector || null;
         if (!s) return;
         const lift = (sectorHot[s] || 0) * SECTOR_LIFT;  // 0..SECTOR_LIFT
-        scoreSafe[n] = Math.min(1, scoreSafe[n] + lift);
-        scoreAggr[n] = Math.min(1, scoreAggr[n] + lift);
+        scoreSafe[n] = clamp01(scoreSafe[n] + lift);
+        scoreAggr[n] = clamp01(scoreAggr[n] + lift);
         byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
       });
     }
@@ -1315,6 +1351,28 @@ async function main(){
       scoreSafe[n] = Math.max(scoreSafe[n], indivFloor01);
       scoreAggr[n] = Math.max(scoreAggr[n], indivFloor01 * 0.95);
     });
+
+    for (const n of names) {
+      const j = djitter(n);
+      scoreSafe[n] = clamp01(scoreSafe[n] + j);
+      scoreAggr[n] = clamp01(scoreAggr[n] + j);
+      byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
+
+      byName[n].reasons = byName[n].reasons || {};
+      byName[n].reasons.topKeywords = byName[n].reasons.topKeywords || [];
+      const sig = (byName[n].reasons.signals = {
+        ...(byName[n].reasons.signals || {}),
+        news7d:  byName[n].ds_news7  ?? 0,
+        burst:   byName[n].ds_burst  ?? 0,
+        slope7d: byName[n].ds_slope7 ?? 0,
+        topic:   byName[n].ds_topic  ?? 0,
+        trend:   byName[n].ds_trend  ?? 0,
+      });
+      sig.sentiment = sig.sentiment ?? 0;
+      sig.blog      = sig.blog      ?? 0;
+      sig.naver     = sig.naver     ?? 0;
+      byName[n].reasons = stripNulls(byName[n].reasons);
+    }
 
     // ---- Split into safe/aggressive buckets based on volatility ----
     const total = names.length;
