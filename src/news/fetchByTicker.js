@@ -505,6 +505,8 @@ export async function buildNewsFeatures(symbols, opts={}){
   const queries = buildQueries(uniq, { symbolToName });
   const baseOut = {};
 
+  if (DEEPS_API_KEY) console.log('[deepsearch] enabled (7d window)');
+
   await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
     if (DEADLINE && Date.now() > DEADLINE) return; // stop cleanly
     const q = queries[sym];
