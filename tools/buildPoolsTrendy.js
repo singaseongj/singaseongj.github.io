@@ -592,14 +592,25 @@ function scoreSentiment(s){
   return 1;
 }
 
+// === Sensitivity knobs (env) ===
+const TREND_T5 = +process.env.TREND_T5 || 0.30;
+const TREND_T4 = +process.env.TREND_T4 || 0.12;
+const TREND_T3 = +process.env.TREND_T3 || 0.03;
+const TREND_T2 = +process.env.TREND_T2 || -0.12;
+
+const NEWS_T5  = +process.env.NEWS_T5  || 1.00;  // growth >= 100%
+const NEWS_T4  = +process.env.NEWS_T4  || 0.50;  // >= 50%
+const NEWS_T3  = +process.env.NEWS_T3  || 0.10;  // >= 10%
+const NEWS_T2  = +process.env.NEWS_T2  || -0.30; // > -30%
+
 function scoreNewsMomentum(cur, prev){
   if (cur === 0 && prev === 0) return 3;
   if (prev === 0) return cur > 0 ? 5 : 3;
   const g = (cur - prev) / Math.max(prev, 1);
-  if (g >= 1) return 5;
-  if (g >= 0.5) return 4;
-  if (g >= 0.1) return 3;
-  if (g > -0.5) return 2;
+  if (g >= NEWS_T5) return 5;
+  if (g >= NEWS_T4) return 4;
+  if (g >= NEWS_T3) return 3;
+  if (g >  NEWS_T2) return 2;
   return 1;
 }
 
@@ -614,10 +625,10 @@ function computeTrendMomentum(nf, prev) {
 
 function scoreTrend(g){
   if (g == null) return null;
-  if (g >= 0.6) return 5;
-  if (g >= 0.25) return 4;
-  if (g >= 0.05) return 3;
-  if (g > -0.25) return 2;
+  if (g >= TREND_T5) return 5;
+  if (g >= TREND_T4) return 4;
+  if (g >= TREND_T3) return 3;
+  if (g >  TREND_T2) return 2;
   return 1;
 }
 
@@ -1099,9 +1110,16 @@ async function main(){
     }
 
     // ---- Per-market calibration: curve & widen spread ----
-    const GAMMA = Number(process.env.SCORE_CURVE || 0.65); // <1 boosts the head
-    const FLOOR = Number(process.env.SCORE_FLOOR || 45);
+    const AUTO_CURVE = process.env.AUTO_CURVE !== '0';
+    let GAMMA = Number(process.env.SCORE_CURVE || 0.62); // <1 boosts the head
+    const FLOOR = Number(process.env.SCORE_FLOOR || 35); // ↓ was 45
     const CEIL  = Number(process.env.SCORE_CEIL  || 100);
+
+    if (AUTO_CURVE) {
+      const vals = Object.values(scoreSafeRaw);
+      const spread = Math.max(...vals) - Math.min(...vals);
+      if (spread < 0.15) GAMMA = Math.max(0.55, GAMMA - 0.05);
+    }
 
     const pSafe = percentileMap(scoreSafe);   // 0..1 by rank within market
     const pAggr = percentileMap(scoreAggr);
@@ -1115,21 +1133,31 @@ async function main(){
       byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * curved);
     }
 
-    // Optional: small popularity boost (bounded) — disabled with HOTNESS_WEIGHT=0
-    const HOT = Number(process.env.HOTNESS_WEIGHT || 12); // as % of scale
-    if (HOT > 0) {
-      const asArr = (fn) => names.map(fn);
-      const newsP = rank01(asArr(n => (byName[n].newsCount ?? 0)));
-      const trendP= rank01(asArr(n => (computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
-      const turnP = rank01(asArr(n => (byName[n].turnover ?? 0)));
+    // Optional: hotness boost — disabled with HOTNESS_WEIGHT=0
+    const HOTness    = +process.env.HOTNESS_WEIGHT || 18;     // overall cap (% of scale)
+    const HOT_W_NEWS = +process.env.HOT_W_NEWS || 0.50;
+    const HOT_W_TREND= +process.env.HOT_W_TREND|| 0.25;
+    const HOT_W_TURN = +process.env.HOT_W_TURN || 0.15;
+    const HOT_W_RET  = +process.env.HOT_W_RET  || 0.10;    // price momentum
+    const EARN_BOOST = +process.env.EARNINGS_BOOST || 0.04; // +4% of 0..1 scale
+    if (HOTness > 0) {
+      const asArr  = (fn) => names.map(fn);
+      const newsP  = rank01(asArr(n => byName[n].newsCount ?? 0));
+      const trendP = rank01(asArr(n => Math.max(0, computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
+      const turnP  = rank01(asArr(n => byName[n].turnover ?? 0));
+      const retP   = rank01(asArr(n => Math.max(0, byName[n].ret5 ?? 0))); // 5-day up moves only
 
       names.forEach((n, i) => {
-        const hot = 0.5*newsP[i] + 0.3*trendP[i] + 0.2*turnP[i];
-        const bump = (HOT/100) * hot;                 // <= HOT/100
-        const curved = Math.min(1, scoreSafe[n] + bump);
-        scoreSafe[n] = curved;
-        scoreAggr[n] = Math.min(1, scoreAggr[n] + bump * 0.8);
-        byName[n].totalScore = Math.min(100, Math.round(byName[n].totalScore + (CEIL - FLOOR) * (HOT/100) * hot));
+        const hot = (
+          HOT_W_NEWS*newsP[i] +
+          HOT_W_TREND*trendP[i] +
+          HOT_W_TURN*turnP[i] +
+          HOT_W_RET*retP[i]
+        );
+        const bump = (HOTness/100) * hot; // cap
+        scoreSafe[n] = Math.min(1, scoreSafe[n] + bump + (byName[n].earn ? EARN_BOOST : 0));
+        scoreAggr[n] = Math.min(1, scoreAggr[n] + bump*0.8 + (byName[n].earn ? EARN_BOOST*0.8 : 0));
+        byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
       });
     }
 
@@ -1145,13 +1173,17 @@ async function main(){
       }
     }
 
-    // Build full ranked orders
-    const safeOrder = Object.keys(scoreSafe).sort((a,b)=>scoreSafe[b]-scoreSafe[a]);
+    // ---- Split into safe/aggressive buckets based on volatility ----
+    const total = names.length;
+    const aggrCount = Math.min(total, Math.max(5, Math.ceil(total * 0.3)));
+    const volSorted = names
+      .slice()
+      .sort((a, b) => (byName[b].vol20 ?? -Infinity) - (byName[a].vol20 ?? -Infinity));
+    const aggrSet = new Set(volSorted.slice(0, aggrCount));
+    const safeCandidates = names.filter(n => !aggrSet.has(n));
 
-    // Keep aggressive as a distinct list (no overlap with SAFE)
-    const aggrOrderRaw = Object.keys(scoreAggr).sort((a,b)=>scoreAggr[b]-scoreAggr[a]);
-    const safeSet = new Set(safeOrder);
-    const aggrOrder = aggrOrderRaw.filter(n => !safeSet.has(n));
+    const safeSorted = safeCandidates.sort((a,b)=>scoreSafe[b]-scoreSafe[a]);
+    const aggrSorted = Array.from(aggrSet).sort((a,b)=>scoreAggr[b]-scoreAggr[a]);
 
     // Optional cross-market de-dup (keep as-is if you like that behavior)
     const earlierAll = CROSS_MARKET_DEDUP
@@ -1169,8 +1201,8 @@ async function main(){
       return out;
     }
 
-    const rankedSafe = filterOutEarlier(safeOrder);
-    const rankedAggr = filterOutEarlier(aggrOrder);
+    const rankedSafe = filterOutEarlier(safeSorted);
+    const rankedAggr = filterOutEarlier(aggrSorted);
 
     pools[market] = { safe: rankedSafe, aggressive: rankedAggr };
 
