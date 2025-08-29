@@ -932,7 +932,12 @@ async function main(){
     console.log('[buildPools] No pools.json; nothing to do.');
     process.exit(0);
   }
-  console.log(`[buildPools] start :: FINNHUB=${!!process.env.FINNHUB_API_KEY} TWELVE=${!!process.env.TWELVEDATA_API_KEY} FMP=${!!process.env.FMP_KEY} OFFLINE=${OFFLINE} DEMO=${DEMO_MODE} budget=${GLOBAL_BUDGET_MS}ms`);
+  const hasFinnhub = !!process.env.FINNHUB_API_KEY;
+  const hasTwelve  = !!process.env.TWELVEDATA_API_KEY;
+  const hasFmp     = !!process.env.FMP_KEY;
+  const hasNewsData = !!process.env.NEWSDATA_API_KEY;
+
+  console.log(`[buildPools] start :: FINNHUB=${hasFinnhub} TWELVE=${hasTwelve} FMP=${hasFmp} NEWSDATA=${hasNewsData} OFFLINE=${!!process.env.OFFLINE} DEMO=${!!process.env.DEMO} budget=${process.env.GLOBAL_BUDGET_MS||'n/a'}ms`);
 
   // Ensure pools object has entries for all markets
   for (const m of MARKETS) {
