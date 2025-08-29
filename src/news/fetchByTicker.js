@@ -21,9 +21,14 @@ const defaultHeaders = {
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
 const SKIP_NAVER = process.env.SKIP_NAVER === '1';
 const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
+const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
+const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
+const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
 
 const buckets = {
+  deepsearch: tokenBucket({capacity:3, refillPerSec:2}),
   newsapi: tokenBucket({capacity:3, refillPerSec:2}),
+  newsdata: tokenBucket({capacity:3, refillPerSec:2}),
   serpapi: tokenBucket({capacity:2, refillPerSec:1.5}),
   finnhub: tokenBucket({capacity:2, refillPerSec:1}),
   gdelt: tokenBucket({capacity:2, refillPerSec:1}),
@@ -41,7 +46,7 @@ async function guardedCall(name, fn){
     return await fn();
   } catch (e){
     const msg = String(e?.message||e);
-    if (/HTTP 403/.test(msg)) cb.open(name);
+    if (/HTTP (401|403)/.test(msg)) cb.open(name);
     throw e;
   }
 }
@@ -51,14 +56,20 @@ function cacheKey(url){ return path.join(CACHE_DIR, `news-${Buffer.from(url).toS
 
 async function cachedJson(url, fetcher, ttlMs=NEWS_TTL_MS, allowStale=ALLOW_STALE_NEWS){
   const key = cacheKey(url);
-  try{
-    const st=fs.statSync(key); const age=Date.now()-st.mtimeMs;
-    if (age < ttlMs) return JSON.parse(fs.readFileSync(key,'utf8'));
-    if (allowStale) return JSON.parse(fs.readFileSync(key,'utf8'));
-  }catch{}
-  const data = await fetcher(url);
-  try{ fs.mkdirSync(CACHE_DIR,{recursive:true}); fs.writeFileSync(key, JSON.stringify(data)); }catch{}
-  return data;
+  let cached; let age=Infinity;
+  try {
+    const st=fs.statSync(key); age=Date.now()-st.mtimeMs;
+    cached = JSON.parse(fs.readFileSync(key,'utf8'));
+    if (age < ttlMs) return cached;
+  } catch {}
+  try {
+    const data = await fetcher(url);
+    try { fs.mkdirSync(CACHE_DIR,{recursive:true}); fs.writeFileSync(key, JSON.stringify(data)); } catch {}
+    return data;
+  } catch (e){
+    if (allowStale && cached) return cached;
+    throw e;
+  }
 }
 async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
   const ctrl = new AbortController();
@@ -95,11 +106,39 @@ async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
 }
 
 function isKR(sym){ return /\.K[QS]$/.test(sym); }
+function isUS(sym){ return /^[A-Z]+$/.test(sym) && !/\.K[QS]$/i.test(sym); }
 
 function baseSymbol(sym){ return String(sym||'').replace(/[\.\-]/g,'').toUpperCase(); }
 
+function dsSymbolFor(yahooSym){
+  // 005930.KS -> KRX:005930, 123456.KQ -> KRX:123456
+  if (/\.K[QS]$/i.test(yahooSym)) {
+    const m = yahooSym.match(/^(\d{5,6})\.K[QS]$/i);
+    return m ? `KRX:${m[1]}` : null;
+  }
+  // Pure alpha like NVDA, MSFT… assume NASDAQ unless overridden
+  if (/^[A-Z]+$/.test(yahooSym)) return `${DEEPS_US_EXCHANGE}:${yahooSym}`;
+  return null;
+}
+
+function iso(d){ return d.toISOString().slice(0,10); }
+function daysAgo(n){ const t=new Date(); t.setDate(t.getDate()-n); return iso(t); }
+
+// Small linear regression slope on equally spaced points
+function slope01(arr){ // returns slope normalized-ish (−1..+1)
+  if (!arr.length) return 0;
+  const n = arr.length, xs = [...Array(n)].map((_,i)=>i);
+  const mx = (n-1)/2, my = arr.reduce((a,b)=>a+b,0)/n;
+  let num=0, den=0;
+  for (let i=0;i<n;i++){ num += (xs[i]-mx)*(arr[i]-my); den += (xs[i]-mx)*(xs[i]-mx); }
+  if (den === 0) return 0;
+  // scale by average to keep comparable across tickers
+  const s = num/den;
+  return my > 0 ? Math.max(-1, Math.min(1, s / Math.max(1,my))) : 0;
+}
+
 async function fetchPolygonTrend(ticker) {
-  if (!POLYGON_API_KEY) return null;
+  if (!POLYGON_API_KEY || !isUS(ticker)) return null;
   try {
     const rest = restClient(POLYGON_API_KEY);
     const end = new Date();
@@ -128,7 +167,7 @@ async function fetchPolygonTrend(ticker) {
 }
 
 async function fetchPrevClose(ticker) {
-  if (!POLYGON_API_KEY) return null;
+  if (!POLYGON_API_KEY || !isUS(ticker)) return null;
   try {
     const rest = restClient(POLYGON_API_KEY);
     const res = await rest.stocks.previousClose(ticker, { adjusted: true });
@@ -198,6 +237,80 @@ async function with429Retry(fn, max=2, baseMs=600){
 /**
  * Provider calls (each returns a {count, sentiment?, blogMentions?} shape or null)
  */
+async function newsFromDeepSearch(sym, name){
+  if (!DEEPS_API_KEY) return null;
+
+  const dsSym = dsSymbolFor(sym);
+  // Pick endpoint by market
+  const isKr = /\.K[QS]$/i.test(sym);
+  const base = isKr ? 'https://api-v2.deepsearch.com/v1/articles'
+                    : 'https://api-v2.deepsearch.com/v1/global-articles';
+
+  // 7d window for counts; also pull daily aggregation for slope/burst
+  const date_to   = daysAgo(0);
+  const date_from = daysAgo(7);
+
+  const params = new URLSearchParams();
+  params.set('page_size','1'); // we just need counts
+  params.set('date_from', date_from);
+  params.set('date_to', date_to);
+  if (dsSym) params.set('symbols', dsSym);
+  else params.set('company_name', name); // fallback
+
+  const headers = { ...defaultUA, Authorization: `Bearer ${DEEPS_API_KEY}` };
+
+  // total count in window
+  const j = await withRetry(
+    () => cachedJson(`${base}?${params.toString()}`, (u)=>safeGetJson(u, headers), 10*60*1000, true),
+    {max:2, baseMs:700}
+  );
+  const total = Number(j?.total_items || 0);
+
+  // daily aggregation
+  const aggParams = new URLSearchParams();
+  aggParams.set('date_from', date_from);
+  aggParams.set('date_to', date_to);
+  aggParams.set('groupby', 'published_at');
+  aggParams.set('size', '1000');
+  if (dsSym) aggParams.set('symbols', dsSym);
+  else aggParams.set('company_name', name);
+
+  const aggBase = isKr ? 'https://api-v2.deepsearch.com/v1/articles/aggregation'
+                       : 'https://api-v2.deepsearch.com/v1/global-articles/aggregation';
+
+  const a = await withRetry(
+    () => cachedJson(`${aggBase}?${aggParams.toString()}`, (u)=>safeGetJson(u, headers), 10*60*1000, true),
+    {max:2, baseMs:700}
+  );
+
+  // Build 8-day histogram (pad zeros)
+  const byDay = Object.fromEntries(
+    (Array.isArray(a?.data) ? a.data : []).map(it => {
+      const k = (it?.key || it?.published_at || '').slice(0,10);
+      const c = Number(it?.doc_count ?? it?.count ?? it?.value ?? 0);
+      return [k, isFinite(c) ? c : 0];
+    })
+  );
+  const days = [...Array(8)].map((_,i)=>daysAgo(7-i));
+  const daily = days.map(d => byDay[d] || 0);
+
+  // Trend & burst
+  const slope = slope01(daily);                          // −1..+1
+  const recent = daily.slice(-2).reduce((a,b)=>a+b,0);
+  const prev   = daily.slice(-4,-2).reduce((a,b)=>a+b,0);
+  const burst  = prev > 0 ? Math.min(3, (recent - prev) / prev) : (recent>0 ? 1 : 0); // cap +300%
+
+  return {
+    count: Math.min(total, 10000),
+    sentiment: 0,
+    blogMentions: 0,
+    ds_news7: total,              // total hits (7d)
+    ds_slope7: slope,             // normalized trend slope
+    ds_burst: burst,              // 2d vs prior 2d
+    ds_trend: Math.max(0, slope), // for your hotness (non-negative)
+  };
+}
+
 async function newsFromFinnhub(sym, FINNHUB){
   if (!FINNHUB) return null;
   const to = new Date().toISOString().slice(0,10);
@@ -252,6 +365,32 @@ async function newsFromGNews(sym, q, GNEWS_API){
   const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
 
   const arr = Array.isArray(j?.articles) ? j.articles : [];
+  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
+async function newsFromNewsData(sym, q) {
+  if (!NEWSDATA_API_KEY) return null;
+
+  const lang = isKR(sym) ? 'ko' : 'en';
+
+  const params = new URLSearchParams({
+    apikey: NEWSDATA_API_KEY,
+    language: lang,
+    timeframe: '24',
+    removeduplicate: '1',
+    size: '25',
+  });
+
+  params.set('qInTitle', q.slice(0, 500));
+
+  const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
+
+  const j = await withRetry(
+    () => cachedJson(url, (u) => safeGetJson(u, defaultUA), 20 * 60 * 1000, true),
+    { max: 1, baseMs: 600 }
+  );
+
+  const arr = Array.isArray(j?.results) ? j.results : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
@@ -394,33 +533,34 @@ export async function buildNewsFeatures(symbols, opts={}){
   const queries = buildQueries(uniq, { symbolToName });
   const baseOut = {};
 
+  if (DEEPS_API_KEY) console.log('[deepsearch] enabled (7d window)');
+
   await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
     if (DEADLINE && Date.now() > DEADLINE) return; // stop cleanly
     const q = queries[sym];
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
-    const preferKotra = process.env.USE_KOTRA_BACKUP === '1' || process.env.PREFER_KOTRA === '1';
     const providers = isKR(sym)
-      ? (preferKotra
-          ? ['gnews','kotra','naver','serpapi','finnhub','newsapi','gdelt']
-          : ['gnews','naver','serpapi','kotra','finnhub','newsapi','gdelt'])
-      : ['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
+      ? ['deepsearch','gnews','newsdata','naver','serpapi','kotra','finnhub','newsapi','gdelt']
+      : ['deepsearch','polygon','gnews','newsdata','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
 
     let lastErr = null;
     for (const p of providers) {
       if (DEADLINE && Date.now() > DEADLINE) break;
       try {
         let v = null;
-        if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
+        if (p === 'deepsearch') v = await guardedCall('deepsearch', () => newsFromDeepSearch(sym, name));
+        else if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
         else if (p === 'polygon') v = await guardedCall('polygon', () => with429Retry(() => newsFromPolygon(sym), 2, 600));
         else if (p === 'finnhub') v = await guardedCall('finnhub', () => newsFromFinnhub(sym, FINNHUB));
+        else if (p === 'newsdata') v = await guardedCall('newsdata', () => newsFromNewsData(sym, q));
         else if (p === 'serpapi') v = await guardedCall('serpapi', () => newsFromSerpApi(sym, name, SERPAPI));
         else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
         else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
         else v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET));
         if (v) {
-          if (!SKIP_NAVER && v.count > 0) {
+          if (!SKIP_NAVER && v.count > 0 && (v.blogMentions||0) === 0) {
             try {
               const blogs = await guardedCall('naver', () => blogFromNaver(name, NAVER_ID, NAVER_SECRET));
               v.blogMentions = Math.max(v.blogMentions || 0, blogs || 0);
@@ -430,11 +570,10 @@ export async function buildNewsFeatures(symbols, opts={}){
           if (trend != null) v.polygonTrend = trend;
           const close = await fetchPrevClose(sym);
           if (close != null) v.nasdaqClose = close;
-          if (v.count === 0 && (v.polygonTrend != null || v.nasdaqClose != null)) v.count = 1;
-          if (v.count > 0) {
-            feat = v;
-            break;
-          }
+
+          // If we got any useful DS metrics, keep them even when count==0
+          const useful = (v.count > 0) || (v.ds_news7>0) || (v.ds_burst>0) || (v.ds_slope7 && v.ds_slope7 !== 0);
+          if (useful) { feat = v; break; }
         }
       } catch (e) {
         lastErr = e;
@@ -443,10 +582,13 @@ export async function buildNewsFeatures(symbols, opts={}){
     }
     if (feat.count === 0) {
       if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
-      const trend = await fetchPolygonTrend(sym);
-      if (trend != null) feat.polygonTrend = trend;
-      const close = await fetchPrevClose(sym);
-      if (close != null) feat.nasdaqClose = close;
+      const trend = await fetchPolygonTrend(sym); if (trend != null) feat.polygonTrend = trend;
+      const close = await fetchPrevClose(sym);    if (close != null) feat.nasdaqClose = close;
+      // keep DS fields non-null
+      feat.ds_news7 = feat.ds_news7 ?? 0;
+      feat.ds_slope7 = feat.ds_slope7 ?? 0;
+      feat.ds_burst = feat.ds_burst ?? 0;
+      feat.ds_trend = feat.ds_trend ?? 0;
       if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
     }
 
@@ -467,7 +609,22 @@ export async function buildNewsFeatures(symbols, opts={}){
 
   const out = {};
   for (const s of symbols){
-    out[s] = baseOut[baseSymbol(s)] || { count:0, sentiment:0, blogMentions:0, polygonTrend:0, nasdaqClose:null, reputationScore:null, topKeywords:[], reputationHitIds:[] };
+    const f = baseOut[baseSymbol(s)] || {};
+    out[s] = {
+      count:             Number(f.count || 0),
+      sentiment:         Number(f.sentiment || 0),
+      blogMentions:      Number(f.blogMentions || 0),
+      polygonTrend:      Number.isFinite(f.polygonTrend) ? f.polygonTrend : 0,
+      nasdaqClose:       Number.isFinite(f.nasdaqClose) ? f.nasdaqClose : 0,
+      reputationScore:   Number.isFinite(f.reputationScore) ? f.reputationScore : 0,
+      topKeywords:       Array.isArray(f.topKeywords) ? f.topKeywords : [],
+      reputationHitIds:  Array.isArray(f.reputationHitIds) ? f.reputationHitIds : [],
+      // NEW DS fields, always numeric
+      ds_news7:          Number(f.ds_news7 || 0),
+      ds_slope7:         Number(f.ds_slope7 || 0),
+      ds_burst:         Number(f.ds_burst || 0),
+      ds_trend:         Number(f.ds_trend || 0),
+    };
   }
   return out;
 }
@@ -522,6 +679,47 @@ function normalizeGNewsArticle(it) {
   return { title, url, source, publishedAt: date };
 }
 
+function normalizeDeepSearchArticle(it){
+  const title = (it?.title_ko || it?.title || '').trim();
+  const url = (it?.url || it?.link || '').trim();
+  if (!title || !url) return null;
+  const date = it?.published_at ? new Date(it.published_at).toISOString() : new Date().toISOString();
+  const source = it?.publisher || it?.source || 'DeepSearch';
+  return { title, url, source, publishedAt: date };
+}
+
+function normalizeNewsDataArticle(it) {
+  const title = it?.title || "";
+  const url = it?.link || "";
+  if (!title || !url) return null;
+
+  const tz = (it?.pubDateTZ || '').toUpperCase();
+  const iso = it?.pubDate
+    ? (tz === 'UTC' ? it.pubDate.replace(' ', 'T') + 'Z' : new Date(it.pubDate).toISOString())
+    : new Date().toISOString();
+
+  const source = it?.source_name || it?.source_id || "NewsData";
+  return { title, url, source, publishedAt: iso };
+}
+
+async function getTickerArticlesFromDS(sym, name){
+  if (!DEEPS_API_KEY) return [];
+  const dsSym = dsSymbolFor(sym);
+  const isKr = /\.K[QS]$/i.test(sym);
+  const base = isKr ? 'https://api-v2.deepsearch.com/v1/articles'
+                    : 'https://api-v2.deepsearch.com/v1/global-articles';
+  const qp = new URLSearchParams();
+  qp.set('page_size','20'); qp.set('order','published_at');
+  qp.set('date_from', daysAgo(7)); qp.set('date_to', daysAgo(0));
+  if (dsSym) qp.set('symbols', dsSym); else qp.set('company_name', name);
+  const headers = { ...defaultUA, Authorization: `Bearer ${DEEPS_API_KEY}` };
+  try {
+    const j = await safeGetJson(`${base}?${qp.toString()}`, headers);
+    const arr = Array.isArray(j?.data) ? j.data : [];
+    return dedupeArticles(arr.map(normalizeDeepSearchArticle).filter(Boolean));
+  } catch { return []; }
+}
+
 function dedupeArticles(items) {
   const seen = new Set();
   return items.filter(it => {
@@ -534,6 +732,8 @@ function dedupeArticles(items) {
 
 async function getTickerArticlesPrimary(ticker) {
   const out = [];
+  const dsItems = await getTickerArticlesFromDS(ticker, ticker.replace(/\.[A-Z]+$/,''));
+  out.push(...dsItems);
   const NEWSAPI = process.env.NEWSAPI_KEY || "";
   if (NEWSAPI) {
     try {
@@ -566,6 +766,28 @@ async function getTickerArticlesPrimary(ticker) {
       const j = await res.json();
       const arr = Array.isArray(j?.articles) ? j.articles : [];
       out.push(...arr.map(normalizeGNewsArticle).filter(Boolean));
+    } catch {}
+  }
+  const NEWSDATA = process.env.NEWSDATA_API_KEY || "";
+  if (NEWSDATA) {
+    try {
+      const lang = /\.K[QS]$/.test(ticker) ? 'ko' : 'en';
+      const qTitle = ticker.replace(/\.[A-Z]+$/, '');
+
+      const params = new URLSearchParams({
+        apikey: NEWSDATA,
+        language: lang,
+        timeframe: '24',
+        removeduplicate: '1',
+        size: '25',
+        qInTitle: qTitle,
+      });
+
+      const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
+      const res = await fetch(url, { headers: defaultUA });
+      const j = await res.json();
+      const arr = Array.isArray(j?.results) ? j.results : [];
+      out.push(...arr.map(normalizeNewsDataArticle).filter(Boolean));
     } catch {}
   }
   return dedupeArticles(out);

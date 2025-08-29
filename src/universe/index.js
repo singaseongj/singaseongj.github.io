@@ -17,7 +17,11 @@ const UNMAPPED = new Set();
 function tickerToName(t){
   const n = SYMBOL_TO_NAME[t];
   if (n) return n;
-  if (!UNMAPPED.has(t)) { console.warn(`[universe] unmapped: ${t}`); UNMAPPED.add(t); }
+  // Only warn for unrecognized KR tickers; US symbols are fine as-is
+  if (/\.K[QS]$/i.test(t) && !UNMAPPED.has(t)) {
+    console.warn(`[universe] unmapped: ${t}`);
+    UNMAPPED.add(t);
+  }
   return t;
 }
 
