@@ -124,7 +124,9 @@ const INDEX_ROWS = (() => {
   return rows;
 })();
 
-const K200 = new Map((INDEX_RAW.kospi200 || []).map(r => [r.symbol, r.name]));
+const SP500 = new Map((INDEX_RAW.sp500 || []).map(r => [r.symbol || r.ticker, r.name]));
+const N100  = new Map((INDEX_RAW.nasdaq100 || []).map(r => [r.symbol || r.ticker, r.name]));
+const K200  = new Map((INDEX_RAW.kospi200 || []).map(r => [r.symbol, r.name]));
 const KQ100 = new Map((INDEX_RAW.kosdaq100 || []).map(r => [r.symbol, r.name]));
 
 const INDEX_SYMBOL_TO_NAME = {};
@@ -367,6 +369,9 @@ const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
 const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
 const MIN_PRICE_USD = Number(process.env.MIN_PRICE_USD || 2);
 const MIN_PRICE_KRW = Number(process.env.MIN_PRICE_KRW || 1000);
+const INELIGIBLE_PENALTY = Number(process.env.INELIGIBLE_PENALTY || 0.5);
+const UNKNOWN_PENALTY    = Number(process.env.UNKNOWN_PENALTY || 0.2);
+const CROSS_MARKET_DEDUP = process.env.CROSS_MARKET_DEDUP !== '0';
 const ALLOWLIST = new Set(Object.values(TICKER_MAP));
 
 // ---- time budget
@@ -857,9 +862,11 @@ async function main(){
 
   const universe = OFFLINE
     ? Object.fromEntries(MARKETS.map(m => [m, Array.from(new Set([...(pools[m]?.safe || []), ...(pools[m]?.aggressive || [])]))]))
-    : await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 100) });
+    : await buildUniverse(pools, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 9999) });
 
-  universe.KOSPI = mergeIndexNames(universe.KOSPI, K200);
+  universe['S&P 500']    = mergeIndexNames(universe['S&P 500'], SP500);
+  universe['NASDAQ 100'] = mergeIndexNames(universe['NASDAQ 100'], N100);
+  universe.KOSPI  = mergeIndexNames(universe.KOSPI, K200);
   universe.KOSDAQ = mergeIndexNames(universe.KOSDAQ, KQ100);
 
   const symbolSet = new Set();
@@ -1061,9 +1068,11 @@ async function main(){
       const m = byName[n] || {};
       const sym = m.sym;
       const isKRName = sym ? isKR(sym) : false;
-      const advOk = m.adv20 == null || m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym));
-      const priceOk = m.close == null || m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD);
-      eligibility[n] = { advOk, priceOk, eligible: !!(advOk && priceOk) };
+      const advKnown   = Number.isFinite(m.adv20);
+      const priceKnown = Number.isFinite(m.close);
+      const advOk   = advKnown   && (m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym)));
+      const priceOk = priceKnown && (m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD));
+      eligibility[n] = { advOk, priceOk, advKnown, priceKnown, eligible: (advOk && priceOk) };
     });
 
     // Scores for *all* names
@@ -1100,8 +1109,12 @@ async function main(){
       // Base normalized score 0..1 for ranking
       let norm = totalRounded / 100;
 
-      // Down-rank ineligible names (still keep their score & metrics)
-      if (!eligibility[n].eligible) norm = Math.max(0, norm - 0.5);
+      // Down-rank ineligible or unknown names (still keep their score & metrics)
+      if (!eligibility[n].eligible) {
+        norm = Math.max(0, norm - INELIGIBLE_PENALTY);
+      } else if (!eligibility[n].advKnown || !eligibility[n].priceKnown) {
+        norm = Math.max(0, norm - UNKNOWN_PENALTY);
+      }
 
       scoreSafeRaw[n] = norm;
       scoreAggrRaw[n] = norm;
@@ -1137,7 +1150,9 @@ async function main(){
     const aggrOrder = aggrOrderRaw.filter(n => !safeSet.has(n));
 
     // Optional cross-market de-dup (keep as-is if you like that behavior)
-    const earlierAll = Object.values(USED).flatMap(u => [...(u.safe||[]), ...(u.aggressive||[])]);
+    const earlierAll = CROSS_MARKET_DEDUP
+      ? Object.values(USED).flatMap(u => [...(u.safe||[]), ...(u.aggressive||[])])
+      : [];
     const earlierSet = new Set(earlierAll.map(n => { const s = nameToSymbol(n) || n; rememberMapping(n, s); return s; }));
 
     function filterOutEarlier(list) {
@@ -1228,12 +1243,12 @@ async function main(){
   const hardFail = avgCoverage === 0 || covs.every(c => c < 0.01);
   if (avgCoverage < COVERAGE_MIN || hardFail) {
     console.warn(`[buildPools] low metric coverage (avg=${(avgCoverage*100).toFixed(1)}%), using fallback`);
-    const last = loadLastGoodPools() || pools; // prefer last good; else keep current pools as-is
-    const outPools = last || namesOnlyRank(universe, NEWS_FEATURES);
+    const lastGood = loadLastGoodPools();
+    const outPools = lastGood ?? namesOnlyRank(universe, NEWS_FEATURES) ?? pools;
     await writeAtomic(POOLS_FILE, JSON.stringify(outPools, null, 2));
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
-    if (last) console.log('[buildPools] wrote pools.json from last good snapshot');
-    else console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
+    if (lastGood) console.log('[buildPools] wrote pools.json from last good snapshot');
+    else if (outPools !== pools) console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
     return;
   }
 
