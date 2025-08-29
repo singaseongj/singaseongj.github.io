@@ -642,11 +642,11 @@ function computeTrendMomentum(nf, prev) {
     const base = Math.max(prev.naverAsvi, 1e-6);
     return (nf.naverAsvi - prev.naverAsvi) / base;
   }
-  return null;
+  return 0;
 }
 
 function scoreTrend(g){
-  if (g == null) return null;
+  if (!Number.isFinite(g)) return null;
   if (g >= TREND_T5) return 5;
   if (g >= TREND_T4) return 4;
   if (g >= TREND_T3) return 3;
@@ -784,6 +784,66 @@ function coverageRatio(metrics) {
     return [m.ret5, m.ret20, m.vol20, m.turnover].some(x => Number.isFinite(x)) || m.newsCount > 0 || m.earn === true;
   }).length;
   return ok / vals.length;
+}
+
+// ------- Simple helpers -------
+function nz(x, def = 0) { return Number.isFinite(x) ? x : def; }
+
+function sanitizeSignals(row) {
+  row.newsCount       = nz(row.newsCount, 0);
+  row.sentiment       = Number.isFinite(row.sentiment) ? row.sentiment : 0;
+  row.blogMentions    = nz(row.blogMentions, 0);
+  row.naverPopularity = nz(row.naverPopularity, 0);
+  row.naverAsvi       = nz(row.naverAsvi, 0);
+  row.naverSpike      = nz(row.naverSpike, 0);
+  row.reputationScore = Number.isFinite(row.reputationScore) ? row.reputationScore : 0.5;
+  row.ret5            = Number.isFinite(row.ret5) ? row.ret5 : 0;
+  row.ret20           = Number.isFinite(row.ret20) ? row.ret20 : 0;
+  row.turnover        = Number.isFinite(row.turnover) ? row.turnover : 0;
+  return row;
+}
+
+function carryForwardIfEmpty(byName, n, market){
+  const prev = PREV_METRICS?.[market]?.[n];
+  if (!prev) return;
+  const fields = ['ret5','ret20','turnover','newsCount','sentiment','naverPopularity','naverAsvi','naverSpike'];
+  for (const f of fields){
+    const cur = byName[n][f];
+    if (!Number.isFinite(cur) || cur === 0){
+      const pv = prev[f];
+      if (Number.isFinite(pv)) byName[n][f] = pv * PREV_CARRY;
+    }
+  }
+}
+
+function sectorMedians(names, byName){
+  const fields = ['sentiment','newsCount','naverPopularity','ret5','ret20','turnover'];
+  const buckets = new Map();
+  for (const n of names){
+    const s = byName[n].sector || 'UNKNOWN';
+    if (!buckets.has(s)) buckets.set(s, {});
+    const b = buckets.get(s);
+    for (const f of fields){
+      const v = byName[n][f];
+      if (Number.isFinite(v)) (b[f] ||= []).push(v);
+    }
+  }
+  const med = {};
+  for (const [s,b] of buckets){
+    med[s] = {};
+    for (const [f, arr] of Object.entries(b)){
+      arr.sort((a,b)=>a-b);
+      med[s][f] = arr.length ? arr[Math.floor(arr.length/2)] : 0;
+    }
+  }
+  return med;
+}
+
+// % off 52w high / low
+function pctOffHiLo(c){
+  if (!Array.isArray(c) || c.length < 20) return { offHi:0, offLo:0 };
+  const lo = Math.min(...c), hi = Math.max(...c), last = c[c.length-1];
+  return { offHi: (hi-last)/Math.max(1e-6, hi), offLo: (last-lo)/Math.max(1e-6, hi) };
 }
 
 // ---------- Universe & name→symbol mapping ----------
@@ -926,6 +986,13 @@ async function main(){
     newsFeatures: NEWS_FEATURES,
   });
 
+  for (const sym of symbols){
+    if (!KEYWORDS[sym] || KEYWORDS[sym].length === 0){
+      const nm = SYMBOL_TO_NAME[sym] || sym;
+      KEYWORDS[sym] = [nm, sym, `${nm} 주가`].filter(Boolean);
+    }
+  }
+
   try {
     await fsp.mkdir('data', { recursive: true });
     await fsp.writeFile('data/naver-keywords.json', JSON.stringify(KEYWORDS, null, 2));
@@ -958,18 +1025,6 @@ async function main(){
     // Fetch signals per name best-effort
     const byName = {};
     const processed = new Set();
-    function backfillFromPrev(n, market){
-      const prev = PREV_METRICS?.[market]?.[n];
-      if (!prev) return;
-      const keys = ['ret5','ret20','turnover','adv20','close','newsCount','sentiment','naverPopularity','naverAsvi','naverSpike'];
-      for (const k of keys){
-        const cur = byName[n][k];
-        if (cur == null || (typeof cur === 'number' && cur === 0)) {
-          const pv = prev[k];
-          if (pv != null) byName[n][k] = (typeof pv === 'number') ? pv * PREV_CARRY : pv;
-        }
-      }
-    }
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
       if (timeLeft() < GLOBAL_BUDGET_MS * FINAL_FRAC) return; // leave final budget
       if (!budgetOk(800)) return; // skip if no time left
@@ -977,7 +1032,8 @@ async function main(){
       if (!mappedOne || !mappedOne.sym) {
         console.warn('[map] skip (no symbol):', name);
         rememberMapping(name, null);
-        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, sym:null, source:null, attempts:[], fetchMs:0 };
+        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, offHi:0, offLo:0, sym:null, source:null, attempts:[], fetchMs:0 };
+        sanitizeSignals(byName[name]);
         return;
       }
       const sym = mappedOne.sym;
@@ -1000,7 +1056,7 @@ async function main(){
       }
       log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
-      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let naverAsvi=null; let naverSpike=null; let blogMentions=0; let polygonTrend=null; let nasdaqClose=null; let earn=false; let candles=null;
+      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let sentiment=null; let naverPopularity=0; let naverAsvi=null; let naverSpike=null; let blogMentions=0; let polygonTrend=null; let nasdaqClose=null; let earn=false; let candles=null; let offHi=0; let offLo=0;
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
@@ -1020,6 +1076,8 @@ async function main(){
         if (candles && Array.isArray(candles.c) && Array.isArray(candles.v)) {
           const m = computeMetrics(candles.c, candles.v);
           ret5 = m.ret5; ret20 = m.ret20; vol20 = m.vol20; turnover = m.turnover; adv20 = m.adv20; close = m.close;
+          const shp = pctOffHiLo(candles.c);
+          offHi = shp.offHi; offLo = shp.offLo;
         }
         const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name];
         if (nf) {
@@ -1036,14 +1094,15 @@ async function main(){
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, naverAsvi, naverSpike, blogMentions, polygonTrend, nasdaqClose, earn, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, naverAsvi, naverSpike, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      sanitizeSignals(byName[name]);
       processed.add(name);
     });
     for (const n of names) {
       if (!byName[n]) {
         byName[n] = {
           ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
-          newsCount:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
+          newsCount:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false, offHi:0, offLo:0,
           reputationScore:null, topKeywords:[], reputationHitIds:[],
           sym:null, source:null, attempts:[], fetchMs:0
         };
@@ -1063,7 +1122,21 @@ async function main(){
         byName[n].topKeywords     = nf.topKeywords ?? byName[n].topKeywords;
         byName[n].reputationHitIds = nf.reputationHitIds ?? byName[n].reputationHitIds;
       }
-      backfillFromPrev(n, market);
+    }
+
+    const med = sectorMedians(names, byName);
+    const IMPUTE = +process.env.SECTOR_IMPUTE || 0.6;
+    for (const n of names){
+      carryForwardIfEmpty(byName, n, market);
+      const s = byName[n].sector || 'UNKNOWN';
+      const m = med[s] || {};
+      if (!Number.isFinite(byName[n].sentiment))       byName[n].sentiment       = (m.sentiment ?? 0) * IMPUTE;
+      if (!Number.isFinite(byName[n].newsCount))       byName[n].newsCount       = (m.newsCount ?? 0) * IMPUTE;
+      if (!Number.isFinite(byName[n].naverPopularity)) byName[n].naverPopularity = (m.naverPopularity ?? 0) * (IMPUTE*0.7);
+      if (!Number.isFinite(byName[n].ret5))            byName[n].ret5            = (m.ret5 ?? 0) * (IMPUTE*0.8);
+      if (!Number.isFinite(byName[n].ret20))           byName[n].ret20           = (m.ret20 ?? 0) * (IMPUTE*0.8);
+      if (!Number.isFinite(byName[n].turnover))        byName[n].turnover        = (m.turnover ?? 0) * (IMPUTE*0.7);
+      sanitizeSignals(byName[n]);
     }
 
     const withSignals = [...processed].filter(n => {
@@ -1169,27 +1242,21 @@ async function main(){
     }
 
     // Optional: hotness boost — disabled with HOTNESS_WEIGHT=0
-    const HOTness    = +process.env.HOTNESS_WEIGHT || 18;     // overall cap (% of scale)
-    const HOT_W_NEWS = +process.env.HOT_W_NEWS || 0.50;
-    const HOT_W_TREND= +process.env.HOT_W_TREND|| 0.25;
-    const HOT_W_TURN = +process.env.HOT_W_TURN || 0.15;
-    const HOT_W_RET  = +process.env.HOT_W_RET  || 0.10;    // price momentum
+    const HOT   = +process.env.HOTNESS_WEIGHT || 18;
+    const LIQ_W = +process.env.LIQ_WEIGHT || 4;
     const EARN_BOOST = +process.env.EARNINGS_BOOST || 0.04; // +4% of 0..1 scale
-    if (HOTness > 0) {
-      const asArr  = (fn) => names.map(fn);
-      const newsP  = rank01(asArr(n => byName[n].newsCount ?? 0));
-      const trendP = rank01(asArr(n => Math.max(0, computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
-      const turnP  = rank01(asArr(n => byName[n].turnover ?? 0));
-      const retP   = rank01(asArr(n => Math.max(0, byName[n].ret5 ?? 0))); // 5-day up moves only
+    if (HOT > 0 || LIQ_W > 0) {
+      const newsP  = rank01(names.map(n => byName[n].newsCount));
+      const trendP = rank01(names.map(n => computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n])));
+      const turnP  = rank01(names.map(n => byName[n].turnover));
+      const offLP  = rank01(names.map(n => byName[n].offLo ?? 0));
+      const offHP  = rank01(names.map(n => byName[n].offHi ?? 0));
+      const liqP   = names.map(n => structuralPrior(byName[n].sym || nameToSymbol(n) || n));
 
       names.forEach((n, i) => {
-        const hot = (
-          HOT_W_NEWS*newsP[i] +
-          HOT_W_TREND*trendP[i] +
-          HOT_W_TURN*turnP[i] +
-          HOT_W_RET*retP[i]
-        );
-        const bump = (HOTness/100) * hot; // cap
+        let hot01 = 0.5*newsP[i] + 0.3*trendP[i] + 0.2*turnP[i];
+        hot01 += 0.1*offLP[i] - 0.05*offHP[i];
+        const bump = (HOT/100) * hot01 + (LIQ_W/100) * liqP[i];
         scoreSafe[n] = Math.min(1, scoreSafe[n] + bump + (byName[n].earn ? EARN_BOOST : 0));
         scoreAggr[n] = Math.min(1, scoreAggr[n] + bump*0.8 + (byName[n].earn ? EARN_BOOST*0.8 : 0));
         byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
@@ -1291,6 +1358,8 @@ async function main(){
         naverAsvi: byName[n].naverAsvi,
         naverSpike: byName[n].naverSpike,
         blogMentions: byName[n].blogMentions,
+        offHi: byName[n].offHi,
+        offLo: byName[n].offLo,
         polygonTrend: byName[n].polygonTrend,
         nasdaqClose: byName[n].nasdaqClose,
         recentEarnings: byName[n].earn,
