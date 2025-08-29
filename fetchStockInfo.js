@@ -815,9 +815,9 @@ async function tryFetchAndEnrich() {
               reputationScore: news.reputationScore ?? null,
               topKeywords: news.topKeywords || [],
               signals: {
-                sentiment: typeof news.sentiment === 'number' ? news.sentiment : null,
-                blog: typeof news.blogMentions === 'number' ? news.blogMentions : null,
-                naver: typeof trend.naverPopularity === 'number' ? trend.naverPopularity : null
+                sentiment: Number.isFinite(news.sentiment) ? +news.sentiment.toFixed(2) : 0,
+                blog: Number.isFinite(news.blogMentions) ? news.blogMentions|0 : 0,
+                naver: Number.isFinite(trend.naverPopularity) ? +trend.naverPopularity.toFixed(2) : 0
               }
             }
           });
@@ -831,7 +831,7 @@ async function tryFetchAndEnrich() {
           else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
           else if (typeof metrics?.score?.safe === 'number') baseScore = Math.round(metrics.score.safe * 100);
           if (baseScore == null) baseScore = 50;
-          updated.push({ name: rawName, sector: null, ticker: null, searchUrl: null, score: baseScore, reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: null, blog: null, naver: null } } });
+          updated.push({ name: rawName, sector: null, ticker: null, searchUrl: null, score: baseScore, reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: 0, blog: 0, naver: 0 } } });
           noteStatus(err);
         }
 
