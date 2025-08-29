@@ -23,10 +23,12 @@ const SKIP_NAVER = process.env.SKIP_NAVER === '1';
 const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
 const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
+const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
 
 const buckets = {
   deepsearch: tokenBucket({capacity:3, refillPerSec:2}),
   newsapi: tokenBucket({capacity:3, refillPerSec:2}),
+  newsdata: tokenBucket({capacity:3, refillPerSec:2}),
   serpapi: tokenBucket({capacity:2, refillPerSec:1.5}),
   finnhub: tokenBucket({capacity:2, refillPerSec:1}),
   gdelt: tokenBucket({capacity:2, refillPerSec:1}),
@@ -366,6 +368,32 @@ async function newsFromGNews(sym, q, GNEWS_API){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
+async function newsFromNewsData(sym, q) {
+  if (!NEWSDATA_API_KEY) return null;
+
+  const lang = isKR(sym) ? 'ko' : 'en';
+
+  const params = new URLSearchParams({
+    apikey: NEWSDATA_API_KEY,
+    language: lang,
+    timeframe: '24',
+    removeduplicate: '1',
+    size: '25',
+  });
+
+  params.set('qInTitle', q.slice(0, 500));
+
+  const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
+
+  const j = await withRetry(
+    () => cachedJson(url, (u) => safeGetJson(u, defaultUA), 20 * 60 * 1000, true),
+    { max: 1, baseMs: 600 }
+  );
+
+  const arr = Array.isArray(j?.results) ? j.results : [];
+  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
 async function newsFromNaver(name, NAVER_ID, NAVER_SECRET){
   if (SKIP_NAVER) return null;
   if (!NAVER_ID || !NAVER_SECRET) return null;
@@ -513,8 +541,8 @@ export async function buildNewsFeatures(symbols, opts={}){
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
     const providers = isKR(sym)
-      ? ['deepsearch','gnews','naver','serpapi','kotra','finnhub','newsapi','gdelt']
-      : ['deepsearch','polygon','gnews','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
+      ? ['deepsearch','gnews','newsdata','naver','serpapi','kotra','finnhub','newsapi','gdelt']
+      : ['deepsearch','polygon','gnews','newsdata','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
 
     let lastErr = null;
     for (const p of providers) {
@@ -525,6 +553,7 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
         else if (p === 'polygon') v = await guardedCall('polygon', () => with429Retry(() => newsFromPolygon(sym), 2, 600));
         else if (p === 'finnhub') v = await guardedCall('finnhub', () => newsFromFinnhub(sym, FINNHUB));
+        else if (p === 'newsdata') v = await guardedCall('newsdata', () => newsFromNewsData(sym, q));
         else if (p === 'serpapi') v = await guardedCall('serpapi', () => newsFromSerpApi(sym, name, SERPAPI));
         else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
@@ -659,6 +688,20 @@ function normalizeDeepSearchArticle(it){
   return { title, url, source, publishedAt: date };
 }
 
+function normalizeNewsDataArticle(it) {
+  const title = it?.title || "";
+  const url = it?.link || "";
+  if (!title || !url) return null;
+
+  const tz = (it?.pubDateTZ || '').toUpperCase();
+  const iso = it?.pubDate
+    ? (tz === 'UTC' ? it.pubDate.replace(' ', 'T') + 'Z' : new Date(it.pubDate).toISOString())
+    : new Date().toISOString();
+
+  const source = it?.source_name || it?.source_id || "NewsData";
+  return { title, url, source, publishedAt: iso };
+}
+
 async function getTickerArticlesFromDS(sym, name){
   if (!DEEPS_API_KEY) return [];
   const dsSym = dsSymbolFor(sym);
@@ -723,6 +766,28 @@ async function getTickerArticlesPrimary(ticker) {
       const j = await res.json();
       const arr = Array.isArray(j?.articles) ? j.articles : [];
       out.push(...arr.map(normalizeGNewsArticle).filter(Boolean));
+    } catch {}
+  }
+  const NEWSDATA = process.env.NEWSDATA_API_KEY || "";
+  if (NEWSDATA) {
+    try {
+      const lang = /\.K[QS]$/.test(ticker) ? 'ko' : 'en';
+      const qTitle = ticker.replace(/\.[A-Z]+$/, '');
+
+      const params = new URLSearchParams({
+        apikey: NEWSDATA,
+        language: lang,
+        timeframe: '24',
+        removeduplicate: '1',
+        size: '25',
+        qInTitle: qTitle,
+      });
+
+      const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
+      const res = await fetch(url, { headers: defaultUA });
+      const j = await res.json();
+      const arr = Array.isArray(j?.results) ? j.results : [];
+      out.push(...arr.map(normalizeNewsDataArticle).filter(Boolean));
     } catch {}
   }
   return dedupeArticles(out);

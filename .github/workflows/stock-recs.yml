@@ -46,6 +46,7 @@ jobs:
       ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
       FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
       TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
       NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
       NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
       NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
@@ -245,6 +246,20 @@ jobs:
             --data-urlencode 'gl=us' \
             --data-urlencode 'hl=en' \
             --data-urlencode "api_key=${SERP_API_KEY}" \
+            -o /dev/null -w 'HTTP %{http_code}\n'
+
+      - name: Preflight: NewsData.io
+        shell: bash
+        env:
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+        run: |
+          set -Eeuo pipefail
+          curl -4sS -I https://newsdata.io | head -n 1
+          curl -4sS --get 'https://newsdata.io/api/1/latest' \
+            --data-urlencode "apikey=${NEWSDATA_API_KEY}" \
+            --data-urlencode "q=tesla" \
+            --data-urlencode "language=en" \
+            --data-urlencode "timeframe=6" \
             -o /dev/null -w 'HTTP %{http_code}\n'
 
       - name: Update market news
