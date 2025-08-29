@@ -163,7 +163,7 @@ jobs:
         env:
           FMP_KEY: ${{ secrets.FMP_KEY }}
 
-      - name: Preflight: DeepSearch
+      - name: "Preflight: DeepSearch"
         shell: bash
         run: |
           set -Eeuo pipefail
