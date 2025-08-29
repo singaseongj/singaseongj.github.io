@@ -104,6 +104,7 @@ async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
 }
 
 function isKR(sym){ return /\.K[QS]$/.test(sym); }
+function isUS(sym){ return /^[A-Z]+$/.test(sym) && !/\.K[QS]$/i.test(sym); }
 
 function baseSymbol(sym){ return String(sym||'').replace(/[\.\-]/g,'').toUpperCase(); }
 
@@ -135,7 +136,7 @@ function slope01(arr){ // returns slope normalized-ish (−1..+1)
 }
 
 async function fetchPolygonTrend(ticker) {
-  if (!POLYGON_API_KEY) return null;
+  if (!POLYGON_API_KEY || !isUS(ticker)) return null;
   try {
     const rest = restClient(POLYGON_API_KEY);
     const end = new Date();
@@ -164,7 +165,7 @@ async function fetchPolygonTrend(ticker) {
 }
 
 async function fetchPrevClose(ticker) {
-  if (!POLYGON_API_KEY) return null;
+  if (!POLYGON_API_KEY || !isUS(ticker)) return null;
   try {
     const rest = restClient(POLYGON_API_KEY);
     const res = await rest.stocks.previousClose(ticker, { adjusted: true });
