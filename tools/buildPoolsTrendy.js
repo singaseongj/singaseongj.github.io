@@ -14,6 +14,7 @@ import { buildUniverse } from '../src/universe/index.js';
 import { buildNewsFeatures } from '../src/news/fetchByTicker.js';
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverDatalab.js';
 import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
+import { fetchDeepsearchFeatures } from '../src/news/deepsearch.js';
 
 fs.mkdirSync('cache', { recursive: true });
 
@@ -1032,7 +1033,7 @@ async function main(){
       if (!mappedOne || !mappedOne.sym) {
         console.warn('[map] skip (no symbol):', name);
         rememberMapping(name, null);
-        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, offHi:0, offLo:0, sym:null, source:null, attempts:[], fetchMs:0 };
+        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, offHi:0, offLo:0, sym:null, source:null, attempts:[], fetchMs:0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0 };
         sanitizeSignals(byName[name]);
         return;
       }
@@ -1094,7 +1095,13 @@ async function main(){
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, naverAsvi, naverSpike, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, sentiment, naverPopularity, naverAsvi, naverSpike, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0 };
+      try {
+        const ds = await fetchDeepsearchFeatures({ name, ticker: sym, market });
+        Object.assign(byName[name], ds);
+      } catch (e) {
+        Object.assign(byName[name], { ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0 });
+      }
       sanitizeSignals(byName[name]);
       processed.add(name);
     });
@@ -1104,7 +1111,8 @@ async function main(){
           ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
           newsCount:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false, offHi:0, offLo:0,
           reputationScore:null, topKeywords:[], reputationHitIds:[],
-          sym:null, source:null, attempts:[], fetchMs:0
+          sym:null, source:null, attempts:[], fetchMs:0,
+          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0
         };
       }
       const sym = byName[n].sym || nameToSymbol(n) || n;
@@ -1246,17 +1254,18 @@ async function main(){
     const LIQ_W = +process.env.LIQ_WEIGHT || 4;
     const EARN_BOOST = +process.env.EARNINGS_BOOST || 0.04; // +4% of 0..1 scale
     if (HOT > 0 || LIQ_W > 0) {
-      const newsP  = rank01(names.map(n => byName[n].newsCount));
-      const trendP = rank01(names.map(n => computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n])));
+      const newsP  = rank01(names.map(n => (byName[n].ds_news7 ?? byName[n].newsCount ?? 0)));
+      const trendP = rank01(names.map(n => (byName[n].ds_trend ?? computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0)));
       const turnP  = rank01(names.map(n => byName[n].turnover));
       const offLP  = rank01(names.map(n => byName[n].offLo ?? 0));
       const offHP  = rank01(names.map(n => byName[n].offHi ?? 0));
       const liqP   = names.map(n => structuralPrior(byName[n].sym || nameToSymbol(n) || n));
 
       names.forEach((n, i) => {
-        let hot01 = 0.5*newsP[i] + 0.3*trendP[i] + 0.2*turnP[i];
+        let hot01 = 0.45*newsP[i] + 0.35*trendP[i] + 0.20*turnP[i];
         hot01 += 0.1*offLP[i] - 0.05*offHP[i];
-        const bump = (HOT/100) * hot01 + (LIQ_W/100) * liqP[i];
+        const burstKick = Math.min(0.05, 0.05 * (byName[n].ds_burst ?? 0));
+        const bump = (HOT/100) * Math.min(1, hot01 + burstKick) + (LIQ_W/100) * liqP[i];
         scoreSafe[n] = Math.min(1, scoreSafe[n] + bump + (byName[n].earn ? EARN_BOOST : 0));
         scoreAggr[n] = Math.min(1, scoreAggr[n] + bump*0.8 + (byName[n].earn ? EARN_BOOST*0.8 : 0));
         byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
@@ -1371,6 +1380,11 @@ async function main(){
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
         score: byName[n].totalScore,
+        ds_news7: byName[n].ds_news7,
+        ds_burst: byName[n].ds_burst,
+        ds_slope7: byName[n].ds_slope7,
+        ds_topic: byName[n].ds_topic,
+        ds_trend: byName[n].ds_trend,
         eligible: eligibility[n]
       };
       return acc;
