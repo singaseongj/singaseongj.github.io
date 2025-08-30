@@ -28,6 +28,10 @@ jobs:
       HARD_DEADLINE_MS: "55000"           # news deadline (now enforced)
       SKIP_NAVER: "0"
       PREFER_NAVER: "1"
+      NAVER_WEIGHT: "1.6"
+      OTHER_NEWS_WEIGHT: "1.0"
+      NAVER_BLOG_WEIGHT: "0.5"
+      NAVER_REP_BONUS: "1.1"
       IS_CRON: ${{ github.event_name == 'schedule' }}
       # FX backup via Korea Eximbank (oapi.koreaexim.go.kr)
       USE_EXIM_FX_BACKUP: "1"

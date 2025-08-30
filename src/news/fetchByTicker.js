@@ -25,6 +25,22 @@ const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
 const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
 
+const NAVER_WEIGHT = Number(process.env.NAVER_WEIGHT || 1.6);
+const OTHER_NEWS_WEIGHT = Number(process.env.OTHER_NEWS_WEIGHT || 1.0);
+const NAVER_BLOG_WEIGHT = Number(process.env.NAVER_BLOG_WEIGHT || 0.5);
+const NAVER_REP_BONUS = Number(process.env.NAVER_REP_BONUS || 1.1);
+
+function to01(x){ return Math.max(0, Math.min(1, x)); }
+
+export function newsScoreFromFeatures(f) {
+  if (typeof f?.newsScore === 'number') return f.newsScore;
+  const naver = Number(f?.naverCount || 0);
+  const other = Number(f?.otherCount || ((f?._source === 'naver') ? 0 : (f?.count || 0)));
+  const blogs = Number(f?.blogMentions || 0);
+  const weighted = NAVER_WEIGHT*naver + OTHER_NEWS_WEIGHT*other + NAVER_BLOG_WEIGHT*blogs;
+  return to01(Math.tanh(weighted / 10));
+}
+
 const buckets = {
   deepsearch: tokenBucket({capacity:3, refillPerSec:2}),
   newsapi: tokenBucket({capacity:3, refillPerSec:2}),
@@ -580,6 +596,7 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
         else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
         else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym }));
+        if (v) v._source = p;
         if (v) {
           if (!SKIP_NAVER && v.count > 0 && (v.blogMentions||0) === 0) {
             try {
@@ -613,6 +630,23 @@ export async function buildNewsFeatures(symbols, opts={}){
       if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
     }
 
+    feat.naverCount = (feat._source === 'naver') ? feat.count : 0;
+    feat.otherCount = (feat._source && feat._source !== 'naver') ? feat.count : 0;
+
+    if (preferNaver && (!feat.naverCount || feat.naverCount === 0)) {
+      try {
+        const nv = await newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym });
+        if (nv) feat.naverCount = nv.count;
+      } catch {}
+    }
+
+    const blogs = Number(feat.blogMentions || 0);
+    const weightedCount =
+      NAVER_WEIGHT * feat.naverCount +
+      OTHER_NEWS_WEIGHT * feat.otherCount +
+      NAVER_BLOG_WEIGHT * blogs;
+    feat.newsScore = to01(Math.tanh(weightedCount / 10));
+
     let items = [];
     try {
       items = await getTickerArticles(sym);
@@ -620,7 +654,12 @@ export async function buildNewsFeatures(symbols, opts={}){
     try {
       const aliases = SYMBOL_ALIASES[sym] || [];
       const rep = computeReputation({ items, company: { ticker: sym, names: [symbolToName[sym], ...aliases].filter(Boolean) } });
-      feat.reputationScore = rep.reputationScore;
+      let repScore = rep.reputationScore;
+      const nTotal = items.length || 1;
+      const nNaver = items.reduce((n, it) => n + (it?.source === 'Naver' ? 1 : 0), 0);
+      const naverShare = nNaver / nTotal;
+      repScore = repScore * (1 + (NAVER_REP_BONUS - 1) * naverShare);
+      feat.reputationScore = repScore;
       feat.topKeywords = rep.topKeywords;
       feat.reputationHitIds = rep.hitIds;
     } catch {}
@@ -635,6 +674,9 @@ export async function buildNewsFeatures(symbols, opts={}){
       count:             Number(f.count || 0),
       sentiment:         Number(f.sentiment || 0),
       blogMentions:      Number(f.blogMentions || 0),
+      naverCount:        Number(f.naverCount || 0),
+      otherCount:        Number(f.otherCount || 0),
+      newsScore:         Number(f.newsScore || 0),
       polygonTrend:      Number.isFinite(f.polygonTrend) ? f.polygonTrend : 0,
       nasdaqClose:       Number.isFinite(f.nasdaqClose) ? f.nasdaqClose : 0,
       reputationScore:   Number.isFinite(f.reputationScore) ? f.reputationScore : 0,
@@ -753,13 +795,10 @@ function dedupeArticles(items) {
 
 async function getTickerArticlesPrimary(ticker) {
   const out = [];
-  const dsItems = await getTickerArticlesFromDS(ticker, ticker.replace(/\.[A-Z]+$/,''));
-  out.push(...dsItems);
   const NAVER_ID = process.env.NAVER_CLIENT_ID || "";
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
   if (!SKIP_NAVER && NAVER_ID && NAVER_SECRET) {
     try {
-      // Try to enrich query with company name if we have it cached
       let display = ticker;
       try {
         const nm = (require('./symbolNames.json') || {})[ticker];
@@ -767,14 +806,23 @@ async function getTickerArticlesPrimary(ticker) {
       } catch {}
       const q = /\.K[QS]$/.test(ticker) ? `${display} 증권 OR 투자` : display;
 
-      const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=20&sort=date`;
       const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
-      const res = await fetch(url, { headers });
-      const j = await res.json();
-      const arr = Array.isArray(j?.items) ? j.items : [];
+      const page1 = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=20&start=1&sort=date`;
+      const page2 = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=20&start=21&sort=date`;
+
+      const [r1, r2] = await Promise.all([
+        fetch(page1, { headers }).then(r=>r.json()).catch(()=>({items:[]})),
+        fetch(page2, { headers }).then(r=>r.json()).catch(()=>({items:[]})),
+      ]);
+
+      const arr = []
+        .concat(Array.isArray(r1?.items) ? r1.items : [])
+        .concat(Array.isArray(r2?.items) ? r2.items : []);
       out.push(...arr.map(normalizeNaverArticle).filter(Boolean));
     } catch {}
   }
+  const dsItems = await getTickerArticlesFromDS(ticker, ticker.replace(/\.[A-Z]+$/,''));
+  out.push(...dsItems);
   const NEWSAPI = process.env.NEWSAPI_KEY || "";
   if (NEWSAPI) {
     try {
