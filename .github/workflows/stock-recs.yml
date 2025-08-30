@@ -27,6 +27,7 @@ jobs:
       # Keep the run under typical 60s shells; script respects this.
       HARD_DEADLINE_MS: "55000"           # news deadline (now enforced)
       SKIP_NAVER: "0"
+      PREFER_NAVER: "1"
       IS_CRON: ${{ github.event_name == 'schedule' }}
       # FX backup via Korea Eximbank (oapi.koreaexim.go.kr)
       USE_EXIM_FX_BACKUP: "1"

@@ -32,7 +32,7 @@ const buckets = {
   serpapi: tokenBucket({capacity:2, refillPerSec:1.5}),
   finnhub: tokenBucket({capacity:2, refillPerSec:1}),
   gdelt: tokenBucket({capacity:2, refillPerSec:1}),
-  naver: tokenBucket({capacity:3, refillPerSec:2}),
+  naver: tokenBucket({capacity:5, refillPerSec:3}),
   polygon: tokenBucket({capacity:2, refillPerSec:1}),
 };
 const cb = circuitBreaker({cooldownMs:20*60_000});
@@ -394,13 +394,29 @@ async function newsFromNewsData(sym, q) {
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
-async function newsFromNaver(name, NAVER_ID, NAVER_SECRET){
+async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
   if (SKIP_NAVER) return null;
   if (!NAVER_ID || !NAVER_SECRET) return null;
-  const q = `${name} + 증권 OR 투자`;
+
+  const sym = String(opts.sym || '').trim();
+  const name = String(symOrName || '').trim();
+  const isKr = isKR(sym) || /[가-힣]/.test(name);
+
+  // Build a compact query: prefer quoted name + raw ticker.
+  // For KR names, lightly boost finance context; for US keep neutral to avoid over-filtering.
+  const terms = [];
+  if (name) terms.push(`"${name}"`);
+  if (sym)  terms.push(sym.replace(/\.[A-Z]+$/, '')); // base ticker
+  const q = isKr ? `${terms.join(' OR ')} 증권 OR 투자` : terms.join(' OR ');
+
   const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
   const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
-  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true), {max:1, baseMs:600});
+
+  const j = await withRetry(
+    () => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true),
+    { max: 1, baseMs: 600 }
+  );
+
   const arr = Array.isArray(j?.items) ? j.items : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
@@ -508,6 +524,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
   const GNEWS = process.env.GNEWS_API || '';
+  const preferNaver = process.env.PREFER_NAVER === '1' || (!!NAVER_ID && !!NAVER_SECRET);
 
   const nameFile = 'symbolNames.json';
   const cachedNames = (()=>{ try{return JSON.parse(fs.readFileSync(nameFile,'utf8'));}catch{return{}} })();
@@ -540,9 +557,13 @@ export async function buildNewsFeatures(symbols, opts={}){
     const q = queries[sym];
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
-    const providers = isKR(sym)
-      ? ['deepsearch','gnews','newsdata','naver','serpapi','kotra','finnhub','newsapi','gdelt']
-      : ['deepsearch','polygon','gnews','newsdata','serpapi','newsapi','gdelt','finnhub','kotra','naver'];
+    const providers = preferNaver
+      ? (isKR(sym)
+          ? ['naver','gnews','serpapi','kotra','newsapi','gdelt','finnhub','polygon']
+          : ['naver','gnews','serpapi','newsapi','gdelt','finnhub','kotra','polygon'])
+      : (isKR(sym)
+          ? ['gnews','naver','serpapi','kotra','finnhub','newsapi','gdelt']
+          : ['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver']);
 
     let lastErr = null;
     for (const p of providers) {
@@ -558,7 +579,7 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
         else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
-        else v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET));
+        else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym }));
         if (v) {
           if (!SKIP_NAVER && v.count > 0 && (v.blogMentions||0) === 0) {
             try {
@@ -734,6 +755,26 @@ async function getTickerArticlesPrimary(ticker) {
   const out = [];
   const dsItems = await getTickerArticlesFromDS(ticker, ticker.replace(/\.[A-Z]+$/,''));
   out.push(...dsItems);
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || "";
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
+  if (!SKIP_NAVER && NAVER_ID && NAVER_SECRET) {
+    try {
+      // Try to enrich query with company name if we have it cached
+      let display = ticker;
+      try {
+        const nm = (require('./symbolNames.json') || {})[ticker];
+        if (nm) display = `"${nm}" OR ${ticker.replace(/\.[A-Z]+$/,'')}`;
+      } catch {}
+      const q = /\.K[QS]$/.test(ticker) ? `${display} 증권 OR 투자` : display;
+
+      const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=20&sort=date`;
+      const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+      const res = await fetch(url, { headers });
+      const j = await res.json();
+      const arr = Array.isArray(j?.items) ? j.items : [];
+      out.push(...arr.map(normalizeNaverArticle).filter(Boolean));
+    } catch {}
+  }
   const NEWSAPI = process.env.NEWSAPI_KEY || "";
   if (NEWSAPI) {
     try {
@@ -742,18 +783,6 @@ async function getTickerArticlesPrimary(ticker) {
       const j = await res.json();
       const arr = Array.isArray(j?.articles) ? j.articles : [];
       out.push(...arr.map(normalizeNewsApiArticle).filter(Boolean));
-    } catch {}
-  }
-  const NAVER_ID = process.env.NAVER_CLIENT_ID || "";
-  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
-  if (!SKIP_NAVER && NAVER_ID && NAVER_SECRET) {
-    try {
-      const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(ticker)}&display=20&sort=date`;
-      const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
-      const res = await fetch(url, { headers });
-      const j = await res.json();
-      const arr = Array.isArray(j?.items) ? j.items : [];
-      out.push(...arr.map(normalizeNaverArticle).filter(Boolean));
     } catch {}
   }
   const GNEWS = process.env.GNEWS_API || "";
