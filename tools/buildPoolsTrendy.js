@@ -1013,6 +1013,7 @@ async function main(){
     }
   }
 
+  let KEYWORDS = { ...NAVER_SEED_KEYWORDS };
   if (!OFFLINE) {
     const NEWS_MAX = Number(process.env.NEWS_MAX_SYMBOLS || 80);
     const kr = symbols.filter(isKR);
@@ -1024,7 +1025,7 @@ async function main(){
   }
 
   // now build keywords using up-to-date features
-  const KEYWORDS = await buildKeywordDict({
+  KEYWORDS = await buildKeywordDict({
     symbols,
     seeds: NAVER_SEED_KEYWORDS,
     symbolToName: SYMBOL_TO_NAME,
