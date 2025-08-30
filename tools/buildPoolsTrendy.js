@@ -150,6 +150,11 @@ const TREND_EXP        = +process.env.TREND_EXP        || 1.2;  // >1 makes tren
 const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.05; // * ds_burst
 const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.08; // cap (0..1 scale)
 
+// --- Popularity (bounded) ---
+const POP_W       = +process.env.POP_W       || 6;    // % of 0..1 scale added to score
+const POP_FLOOR_W = +process.env.POP_FLOOR_W || 0.10; // portion of scale reserved for popularity floor
+const POP_CAP     = +process.env.POP_CAP     || 0.05; // hard cap of popularity bump (0..1 scale)
+
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
   if (inIdx(sym, SP500)) p += PRIOR_W_SP500;
@@ -1364,6 +1369,22 @@ async function main(){
       });
     }
 
+    // ---- Popularity premium (bounded) ----
+    // Use last run's weightedCount (proxy for persistent coverage) + Naver long-run popularity
+    const popRawA = names.map(n => (PREV_METRICS?.[market]?.[n]?.weightedCount ?? byName[n].newsCount ?? 0));
+    const popRawB = names.map(n => (byName[n].naverPopularity ?? 0));
+    const popA = safeRank01(popRawA);  // normalize within market
+    const popB = safeRank01(popRawB);
+    const popularity01Arr = names.map((_, i) => 0.6 * popA[i] + 0.4 * popB[i]);
+    const popularity01 = Object.fromEntries(names.map((n, i) => [n, popularity01Arr[i]]));
+
+    for (const n of names) {
+      const bump = Math.min(POP_CAP, (POP_W / 100) * (popularity01[n] ?? 0));
+      scoreSafe[n] = clamp01(scoreSafe[n] + bump);
+      scoreAggr[n] = clamp01(scoreAggr[n] + bump);
+      byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
+    }
+
     // Re-apply eligibility gating after curve/hotness so it survives percentiling
     for (const n of names) {
       const pen = !eligibility[n].eligible
@@ -1379,16 +1400,17 @@ async function main(){
     names.forEach(n=>{
       const sym = byName[n].sym || nameToSymbol(n) || n;
       const prior = structuralPrior(sym); // 0..1
-      const indivFloor01 = STRUCT_FLOOR_W * prior; // 0..STRUCT_FLOOR_W
-      const indivFloor100 = FLOOR + (CEIL - FLOOR) * indivFloor01;
+      const indivFloor01 = STRUCT_FLOOR_W * prior; // index/size based
+      const popFloor01   = (POP_FLOOR_W) * (typeof popularity01?.[n] === 'number' ? popularity01[n] : 0);
+      const floor01      = Math.min(1, indivFloor01 + popFloor01);
+      const floor100     = FLOOR + (CEIL - FLOOR) * floor01;
 
-      byName[n].totalScore = Math.max(indivFloor100, byName[n].totalScore);
-      scoreSafe[n] = Math.max(scoreSafe[n], indivFloor01);
-      scoreAggr[n] = Math.max(scoreAggr[n], indivFloor01 * 0.95);
+      byName[n].totalScore = Math.max(floor100, byName[n].totalScore);
+      scoreSafe[n]         = Math.max(scoreSafe[n], floor01);
+      scoreAggr[n]         = Math.max(scoreAggr[n], floor01 * 0.95);
     });
 
     // Popularity cap: if baseline >> today (always-talked-about), shave 2–5%
-    const POP_CAP = Number(process.env.POP_CAP || 0.04); // 4% of 0..1 scale
     names.forEach(n => {
       const baseBig = (PREV_METRICS?.[market]?.[n]?.weightedCount ?? 0) > 30;
       if (baseBig && (byName[n].naverAsvi ?? 0) <= 0.05) {
@@ -1484,6 +1506,7 @@ async function main(){
         reputationScore: byName[n].reputationScore,
         topKeywords: (byName[n].topKeywords || []).slice(0,3),
         reputationHitIds: byName[n].reputationHitIds || [],
+        popularity01: popularity01?.[n] ?? 0,
         source: byName[n].source,
         attempts: byName[n].attempts,
         fetchMs: byName[n].fetchMs,
