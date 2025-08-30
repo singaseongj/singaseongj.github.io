@@ -29,15 +29,19 @@ const NAVER_WEIGHT = Number(process.env.NAVER_WEIGHT || 1.6);
 const OTHER_NEWS_WEIGHT = Number(process.env.OTHER_NEWS_WEIGHT || 1.0);
 const NAVER_BLOG_WEIGHT = Number(process.env.NAVER_BLOG_WEIGHT || 0.5);
 const NAVER_REP_BONUS = Number(process.env.NAVER_REP_BONUS || 1.1);
+const NAVER_KO_WEIGHT = Number(process.env.NAVER_KO_WEIGHT || 1.3);
+const NAVER_EN_WEIGHT = Number(process.env.NAVER_EN_WEIGHT || 1.0);
 
 function to01(x){ return Math.max(0, Math.min(1, x)); }
 
 export function newsScoreFromFeatures(f) {
   if (typeof f?.newsScore === 'number') return f.newsScore;
-  const naver = Number(f?.naverCount || 0);
+  const naverKO = Number(f?.naverCountKO || 0);
+  const naverEN = Number(f?.naverCountEN || 0);
   const other = Number(f?.otherCount || ((f?._source === 'naver') ? 0 : (f?.count || 0)));
   const blogs = Number(f?.blogMentions || 0);
-  const weighted = NAVER_WEIGHT*naver + OTHER_NEWS_WEIGHT*other + NAVER_BLOG_WEIGHT*blogs;
+  const weightedNaver = NAVER_KO_WEIGHT * naverKO + NAVER_EN_WEIGHT * naverEN;
+  const weighted = weightedNaver + OTHER_NEWS_WEIGHT * other + NAVER_BLOG_WEIGHT * blogs;
   return to01(Math.tanh(weighted / 10));
 }
 
@@ -250,6 +254,19 @@ async function with429Retry(fn, max=2, baseMs=600){
   return withRetry(fn,{max, baseMs});
 }
 
+async function naverSearchCount({ query, NAVER_ID, NAVER_SECRET }) {
+  if (SKIP_NAVER) return 0;
+  if (!NAVER_ID || !NAVER_SECRET) return 0;
+  const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(query)}&display=10&sort=date`;
+  const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+  const j = await withRetry(
+    () => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true),
+    { max: 1, baseMs: 600 }
+  );
+  const arr = Array.isArray(j?.items) ? j.items : [];
+  return Math.min(arr.length, 30);
+}
+
 /**
  * Provider calls (each returns a {count, sentiment?, blogMentions?} shape or null)
  */
@@ -416,15 +433,32 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
 
   const sym = String(opts.sym || '').trim();
   const name = String(symOrName || '').trim();
+  const keywords = Array.isArray(opts.keywords) ? opts.keywords : [];
   const isKr = isKR(sym) || /[가-힣]/.test(name);
+  const hasHangul = s => /[가-힣]/.test(String(s));
 
-  // Build a compact query: prefer quoted name + raw ticker.
-  // For KR names, lightly boost finance context; for US keep neutral to avoid over-filtering.
+  if (keywords.length > 0) {
+    const koKws = keywords.filter(hasHangul).slice(0, 4);
+    const enKws = keywords.filter(k => !hasHangul(k)).slice(0, 4);
+    let koHits = 0, enHits = 0;
+    for (const q of koKws) koHits += await naverSearchCount({ query: q, NAVER_ID, NAVER_SECRET });
+    for (const q of enKws) enHits += await naverSearchCount({ query: q, NAVER_ID, NAVER_SECRET });
+    const total = koHits + enHits;
+    return {
+      count: total,
+      naverCount: total,
+      naverCountKO: koHits,
+      naverCountEN: enHits,
+      sentiment: 0,
+      blogMentions: 0,
+    };
+  }
+
+  // Fallback: simple query using name/ticker
   const terms = [];
   if (name) terms.push(`"${name}"`);
-  if (sym)  terms.push(sym.replace(/\.[A-Z]+$/, '')); // base ticker
+  if (sym)  terms.push(sym.replace(/\.[A-Z]+$/, ''));
   const q = isKr ? `${terms.join(' OR ')} 증권 OR 투자` : terms.join(' OR ');
-
   const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
   const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
 
@@ -434,7 +468,15 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
   );
 
   const arr = Array.isArray(j?.items) ? j.items : [];
-  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+  const cnt = Math.min(arr.length, 30);
+  return {
+    count: cnt,
+    naverCount: cnt,
+    naverCountKO: isKr ? cnt : 0,
+    naverCountEN: isKr ? 0 : cnt,
+    sentiment: 0,
+    blogMentions: 0,
+  };
 }
 
 async function blogFromNaver(name, NAVER_ID, NAVER_SECRET){
@@ -545,6 +587,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const nameFile = 'symbolNames.json';
   const cachedNames = (()=>{ try{return JSON.parse(fs.readFileSync(nameFile,'utf8'));}catch{return{}} })();
   const symbolToName = { ...(cachedNames), ...(opts.symbolToName||{}) };
+  const keywordsMap = opts.keywords || {};
 
   const baseMap = {};
   const uniq = [];
@@ -595,7 +638,7 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
         else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
-        else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym }));
+        else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym, keywords: keywordsMap[sym] }));
         if (v) v._source = p;
         if (v) {
           if (!SKIP_NAVER && v.count > 0 && (v.blogMentions||0) === 0) {
@@ -630,19 +673,26 @@ export async function buildNewsFeatures(symbols, opts={}){
       if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
     }
 
-    feat.naverCount = (feat._source === 'naver') ? feat.count : 0;
-    feat.otherCount = (feat._source && feat._source !== 'naver') ? feat.count : 0;
+    feat.naverCount = Number(feat.naverCount || ((feat._source === 'naver') ? feat.count : 0));
+    feat.naverCountKO = Number(feat.naverCountKO || 0);
+    feat.naverCountEN = Number(feat.naverCountEN || 0);
+    feat.otherCount = Number(feat.otherCount || ((feat._source && feat._source !== 'naver') ? feat.count : 0));
 
     if (preferNaver && (!feat.naverCount || feat.naverCount === 0)) {
       try {
-        const nv = await newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym });
-        if (nv) feat.naverCount = nv.count;
+        const nv = await newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym, keywords: keywordsMap[sym] });
+        if (nv) {
+          feat.naverCount = nv.naverCount;
+          feat.naverCountKO = nv.naverCountKO;
+          feat.naverCountEN = nv.naverCountEN;
+        }
       } catch {}
     }
 
     const blogs = Number(feat.blogMentions || 0);
+    const weightedNaver = NAVER_KO_WEIGHT * feat.naverCountKO + NAVER_EN_WEIGHT * feat.naverCountEN;
     const weightedCount =
-      NAVER_WEIGHT * feat.naverCount +
+      weightedNaver +
       OTHER_NEWS_WEIGHT * feat.otherCount +
       NAVER_BLOG_WEIGHT * blogs;
     feat.newsScore = to01(Math.tanh(weightedCount / 10));
@@ -675,6 +725,8 @@ export async function buildNewsFeatures(symbols, opts={}){
       sentiment:         Number(f.sentiment || 0),
       blogMentions:      Number(f.blogMentions || 0),
       naverCount:        Number(f.naverCount || 0),
+      naverCountKO:      Number(f.naverCountKO || 0),
+      naverCountEN:      Number(f.naverCountEN || 0),
       otherCount:        Number(f.otherCount || 0),
       newsScore:         Number(f.newsScore || 0),
       polygonTrend:      Number.isFinite(f.polygonTrend) ? f.polygonTrend : 0,
