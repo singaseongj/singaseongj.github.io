@@ -105,6 +105,45 @@ async function fetchGoogleNewsCount(sym){
   } catch { return 0; }
 }
 
+async function fetchYahooNewsCount(sym){
+  if (!sym || OFFLINE) return 0;
+  const url = `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${encodeURIComponent(sym)}&region=US&lang=en-US`;
+  try {
+    const data = await cachedJsonFetch(url, async u => {
+      const txt = await fetch(u).then(r=>r.text());
+      const count = (txt.match(/<item>/g) || []).length;
+      return { count };
+    });
+    return data.count || 0;
+  } catch { return 0; }
+}
+
+async function fetchInvestingNewsCount(sym){
+  if (!sym || OFFLINE) return 0;
+  const url = `https://www.investing.com/search/?q=${encodeURIComponent(sym)}`;
+  try {
+    const data = await cachedJsonFetch(url, async u => {
+      const txt = await fetch(u).then(r=>r.text());
+      const count = (txt.match(new RegExp(sym, 'gi')) || []).length;
+      return { count };
+    });
+    return data.count || 0;
+  } catch { return 0; }
+}
+
+async function fetchHanwhaNewsCount(sym){
+  if (!sym || OFFLINE) return 0;
+  const url = `https://m.hanwhawm.com:9090/M/main/research/main/list.cmd?depth3_id=overseaEtf&search=${encodeURIComponent(sym)}`;
+  try {
+    const data = await cachedJsonFetch(url, async u => {
+      const txt = await fetch(u).then(r=>r.text());
+      const count = (txt.match(new RegExp(sym, 'gi')) || []).length;
+      return { count };
+    }, TTL_MS, true);
+    return data.count || 0;
+  } catch { return 0; }
+}
+
 const SYMBOL_MAP_FILE = path.join(CACHE_DIR, 'name-to-symbol.json');
 function loadNameToSymbol() {
   const txt = tryRead(SYMBOL_MAP_FILE);
@@ -1110,7 +1149,7 @@ async function main(){
       if (!mappedOne || !mappedOne.sym) {
         console.warn('[map] skip (no symbol):', name);
         rememberMapping(name, null);
-        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, weightedCount:0, newsScore:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, offHi:0, offLo:0, sym:null, source:null, attempts:[], fetchMs:0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0 };
+        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, weightedCount:0, newsScore:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, offHi:0, offLo:0, sym:null, source:null, attempts:[], fetchMs:0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0 };
         sanitizeSignals(byName[name]);
         return;
       }
@@ -1140,7 +1179,7 @@ async function main(){
       let naverCount=0, naverCountKO=0, naverCountEN=0;
       let blogMentions=0, polygonTrend=null, nasdaqClose=null, earn=false;
       let candles=null, offHi=0, offLo=0, posHits=0, negHits=0;
-      let fmpNewsCount=0, googleNewsCount=0;
+      let fmpNewsCount=0, googleNewsCount=0, yahooNewsCount=0, investingNewsCount=0, hanwhaNewsCount=0;
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
@@ -1183,11 +1222,14 @@ async function main(){
         }
         fmpNewsCount = await fetchFmpNewsCount(sym);
         googleNewsCount = await fetchGoogleNewsCount(sym);
+        yahooNewsCount = await fetchYahooNewsCount(sym);
+        investingNewsCount = await fetchInvestingNewsCount(sym);
+        hanwhaNewsCount = await fetchHanwhaNewsCount(sym);
         earn = !!(EARNINGS_SET && sym && isUS(sym) && EARNINGS_SET.has(sym));
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount };
       try {
         const ds = await fetchDeepsearchFeatures({ name, ticker: sym, market });
         Object.assign(byName[name], ds);
@@ -1204,7 +1246,7 @@ async function main(){
           newsCount:0, weightedCount:0, newsScore:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, naverCount:0, naverCountKO:0, naverCountEN:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false, offHi:0, offLo:0,
           reputationScore:null, topKeywords:[], reputationHitIds:[],
           sym:null, source:null, attempts:[], fetchMs:0,
-          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0
+          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0
         };
       }
       const sym = byName[n].sym || nameToSymbol(n) || n;
@@ -1228,6 +1270,9 @@ async function main(){
         byName[n].reputationHitIds = nf.reputationHitIds ?? byName[n].reputationHitIds;
         byName[n].posHits         = nf.posHits ?? byName[n].posHits;
         byName[n].negHits         = nf.negHits ?? byName[n].negHits;
+        byName[n].yahooNewsCount  = nf.yahooNewsCount ?? byName[n].yahooNewsCount;
+        byName[n].investingNewsCount = nf.investingNewsCount ?? byName[n].investingNewsCount;
+        byName[n].hanwhaNewsCount = nf.hanwhaNewsCount ?? byName[n].hanwhaNewsCount;
       }
     }
 
@@ -1275,17 +1320,20 @@ async function main(){
       const news   = nf.newsCount      || 0;
       const fmp    = nf.fmpNewsCount   || 0;
       const goog   = nf.googleNewsCount|| 0;
+      const yahoo  = nf.yahooNewsCount || 0;
+      const invest = nf.investingNewsCount || 0;
+      const hanwha = nf.hanwhaNewsCount || 0;
       const pop    = nf.naverPopularity|| 0;
       const posK   = nf.posHits        || 0;
       const negK   = nf.negHits        || 0;
       nf.componentScores = {
         blogs: blog,
-        news: news + fmp + goog,
+        news: news + fmp + goog + yahoo + invest + hanwha,
         popularity: pop,
         posKeywords: posK,
         negKeywords: negK
       };
-      return NEWS_WEIGHT*(news + fmp + goog) +
+      return NEWS_WEIGHT*(news + fmp + goog + yahoo + invest + hanwha) +
              BLOG_WEIGHT*blog +
              POPULARITY_WEIGHT*pop +
              POS_KW_WEIGHT*posK +
@@ -1500,6 +1548,14 @@ async function main(){
     const rankedSafe = filterOutEarlier(safeSorted);
     const rankedAggr = filterOutEarlier(aggrSorted);
 
+    const assignRankScore = list =>
+      list.forEach((n, i) => {
+        const r = Math.max(1, 100 - i);
+        byName[n].rankScore = r;
+      });
+    assignRankScore(rankedSafe);
+    assignRankScore(rankedAggr);
+
     pools[market] = { safe: rankedSafe, aggressive: rankedAggr };
 
     // Record for later markets
@@ -1528,6 +1584,9 @@ async function main(){
         blogMentions: byName[n].blogMentions,
         fmpNewsCount: byName[n].fmpNewsCount,
         googleNewsCount: byName[n].googleNewsCount,
+        yahooNewsCount: byName[n].yahooNewsCount,
+        investingNewsCount: byName[n].investingNewsCount,
+        hanwhaNewsCount: byName[n].hanwhaNewsCount,
         offHi: byName[n].offHi,
         offLo: byName[n].offLo,
         polygonTrend: byName[n].polygonTrend,
@@ -1541,7 +1600,9 @@ async function main(){
         attempts: byName[n].attempts,
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
-        score: byName[n].totalScore,
+        rankScore: byName[n].rankScore ?? null,
+        score: byName[n].rankScore ?? byName[n].totalScore,
+        rawScore: byName[n].totalScore,
         ds_news7: byName[n].ds_news7,
         ds_burst: byName[n].ds_burst,
         ds_slope7: byName[n].ds_slope7,
