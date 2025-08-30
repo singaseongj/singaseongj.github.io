@@ -73,10 +73,11 @@ TTL is not met it falls back to `pools-cache.json`, then the versioned
 `tools/buildPoolsTrendy.js` can refresh pools daily using lightweight signals.
 It writes diagnostics to `pools-metrics.json` and updates `feedback.json` which
 stores user feedback with gradual decay. Missing APIs are tolerated—the script
-logs a warning and leaves existing pools untouched. The builder now tallies
+logs a warning and leaves existing pools untouched. The builder tallies
 headlines from Google News, Yahoo Finance, Investing.com, and Hanwha to give
-popular large‑cap names higher scores. Each category’s top candidate is ranked
-at 100 with subsequent entries descending 99, 98, and so on.
+popular large‑cap names higher scores. Each candidate receives an integer score
+from 0 to 100 (capped), with a tiny deterministic jitter to tease apart close
+matches. Pools are then sorted by this score so top companies surface first.
 
 Key files:
 
