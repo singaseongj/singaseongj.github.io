@@ -32,6 +32,61 @@ const NAVER_REP_BONUS = Number(process.env.NAVER_REP_BONUS || 1.1);
 const NAVER_KO_WEIGHT = Number(process.env.NAVER_KO_WEIGHT || 1.3);
 const NAVER_EN_WEIGHT = Number(process.env.NAVER_EN_WEIGHT || 1.0);
 
+const POS_KR = /(호조|개선|확대|수주|계약|제휴|승인|허가|인증|증설|증대|흑자전환|사상 최대|서프라이즈|상향)/i;
+const NEG_KR = /(부진|감소|하락|급락|적자|적자전환|소송|제재|벌금|과징금|리콜|해킹|유출|파업|중단|연기|취소|하향|정지)/i;
+
+const SOURCE_WEIGHT = {
+  'www.hankyung.com': 1.0, 'www.edaily.co.kr': 1.0, 'biz.chosun.com': 1.0,
+  'www.mk.co.kr': 1.0, 'www.sedaily.com': 1.0, 'www.fnnews.com': 1.0,
+  // fallbacks default to 0.6; PR/blogs → 0.4
+};
+
+function hostWeight(u){
+  try {
+    const h = new URL(u).host;
+    if (/press|prnews|newswire|bo.do|공지|보도자료/i.test(u)) return 0.4;
+    return SOURCE_WEIGHT[h] ?? 0.6;
+  } catch { return 0.6; }
+}
+function normalizeTitle(t){
+  return String(t||'')
+    .replace(/[\[\(【〔].*?[\]\)】〕]/g,'')   // drop [단독][속보]… 괄호 태그
+    .replace(/[\s\u00A0]+/g,' ')
+    .trim()
+    .toLowerCase();
+}
+
+function classifyPolarity(str){
+  const s = String(str||'');
+  const pos = POS_KR.test(s), neg = NEG_KR.test(s);
+  if (pos && !neg) return +1;
+  if (neg && !pos) return -1;
+  return 0;
+}
+
+function ema(prev, cur, alpha = 0.2){
+  return (1 - alpha) * prev + alpha * cur;
+}
+
+const NAVER_BASELINE_FILE = path.join(CACHE_DIR, 'naver-baseline.json');
+let NAVER_BASELINES = null;
+async function loadBaseline(sym){
+  if (!NAVER_BASELINES){
+    try { NAVER_BASELINES = JSON.parse(fs.readFileSync(NAVER_BASELINE_FILE,'utf8')); }
+    catch { NAVER_BASELINES = {}; }
+  }
+  return Number(NAVER_BASELINES[sym] || 0);
+}
+async function saveBaseline(sym, val){
+  if (!NAVER_BASELINES){
+    try { NAVER_BASELINES = JSON.parse(fs.readFileSync(NAVER_BASELINE_FILE,'utf8')); }
+    catch { NAVER_BASELINES = {}; }
+  }
+  NAVER_BASELINES[sym] = val;
+  try { fs.mkdirSync(path.dirname(NAVER_BASELINE_FILE), { recursive: true });
+        fs.writeFileSync(NAVER_BASELINE_FILE, JSON.stringify(NAVER_BASELINES)); } catch {}
+}
+
 function to01(x){ return Math.max(0, Math.min(1, x)); }
 
 export function newsScoreFromFeatures(f) {
@@ -254,17 +309,15 @@ async function with429Retry(fn, max=2, baseMs=600){
   return withRetry(fn,{max, baseMs});
 }
 
-async function naverSearchCount({ query, NAVER_ID, NAVER_SECRET }) {
-  if (SKIP_NAVER) return 0;
-  if (!NAVER_ID || !NAVER_SECRET) return 0;
-  const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(query)}&display=10&sort=date`;
+async function naverSearch({ query, NAVER_ID, NAVER_SECRET }) {
+  if (SKIP_NAVER) return { items: [] };
+  if (!NAVER_ID || !NAVER_SECRET) return { items: [] };
+  const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(query)}&display=20&sort=date`;
   const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
-  const j = await withRetry(
+  return await withRetry(
     () => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true),
     { max: 1, baseMs: 600 }
   );
-  const arr = Array.isArray(j?.items) ? j.items : [];
-  return Math.min(arr.length, 30);
 }
 
 /**
@@ -435,46 +488,57 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
   const name = String(symOrName || '').trim();
   const keywords = Array.isArray(opts.keywords) ? opts.keywords : [];
   const isKr = isKR(sym) || /[가-힣]/.test(name);
-  const hasHangul = s => /[가-힣]/.test(String(s));
 
-  if (keywords.length > 0) {
-    const koKws = keywords.filter(hasHangul).slice(0, 4);
-    const enKws = keywords.filter(k => !hasHangul(k)).slice(0, 4);
-    let koHits = 0, enHits = 0;
-    for (const q of koKws) koHits += await naverSearchCount({ query: q, NAVER_ID, NAVER_SECRET });
-    for (const q of enKws) enHits += await naverSearchCount({ query: q, NAVER_ID, NAVER_SECRET });
-    const total = koHits + enHits;
-    return {
-      count: total,
-      naverCount: total,
-      naverCountKO: koHits,
-      naverCountEN: enHits,
-      sentiment: 0,
-      blogMentions: 0,
-    };
+  const queries = keywords.length
+    ? keywords.slice(0, 8)
+    : (() => {
+        const terms = [];
+        if (name) terms.push(`"${name}"`);
+        if (sym) terms.push(sym.replace(/\.[A-Z]+$/, ''));
+        const q = isKr ? `${terms.join(' OR ')} 증권 OR 투자` : terms.join(' OR ');
+        return [q];
+      })();
+
+  const seen = new Set();
+  let posHits = 0, negHits = 0, totalW = 0, rawCount = 0;
+  for (const q of queries) {
+    const res = await naverSearch({ query: q, NAVER_ID, NAVER_SECRET });
+    for (const it of res?.items || []) {
+      const key = normalizeTitle(it.title);
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      const w = hostWeight(it.link);
+      const pol = classifyPolarity(it.title + ' ' + (it.description || ''));
+      if (pol > 0) posHits += w;
+      else if (pol < 0) negHits += w;
+      totalW += w;
+      rawCount++;
+    }
   }
 
-  // Fallback: simple query using name/ticker
-  const terms = [];
-  if (name) terms.push(`"${name}"`);
-  if (sym)  terms.push(sym.replace(/\.[A-Z]+$/, ''));
-  const q = isKr ? `${terms.join(' OR ')} 증권 OR 투자` : terms.join(' OR ');
-  const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
-  const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
+  const sentiment = totalW > 0 ? (posHits - negHits) / totalW : 0;
 
-  const j = await withRetry(
-    () => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true),
-    { max: 1, baseMs: 600 }
-  );
+  const today = totalW;
+  const key = sym || name;
+  const baseline = await loadBaseline(key);
+  const alpha = Number(process.env.NAVER_ASVI_ALPHA || 0.2);
+  const asvi = baseline > 0 ? (today / baseline) - 1 : (today > 0 ? 1 : 0);
+  await saveBaseline(key, ema(baseline, today, alpha));
 
-  const arr = Array.isArray(j?.items) ? j.items : [];
-  const cnt = Math.min(arr.length, 30);
+  const newsScore = Math.max(0, Math.tanh(today / 8));
+
   return {
-    count: cnt,
-    naverCount: cnt,
-    naverCountKO: isKr ? cnt : 0,
-    naverCountEN: isKr ? 0 : cnt,
-    sentiment: 0,
+    count: rawCount,
+    weightedCount: totalW,
+    posHits: +posHits.toFixed(2),
+    negHits: +negHits.toFixed(2),
+    sentiment,
+    naverAsvi: asvi,
+    naverSpike: Math.max(0, asvi),
+    newsScore,
+    naverCount: rawCount,
+    naverCountKO: 0,
+    naverCountEN: 0,
     blogMentions: 0,
   };
 }
@@ -677,6 +741,9 @@ export async function buildNewsFeatures(symbols, opts={}){
     feat.naverCountKO = Number(feat.naverCountKO || 0);
     feat.naverCountEN = Number(feat.naverCountEN || 0);
     feat.otherCount = Number(feat.otherCount || ((feat._source && feat._source !== 'naver') ? feat.count : 0));
+    feat.weightedCount = Number(feat.weightedCount || 0);
+    feat.posHits = Number(feat.posHits || 0);
+    feat.negHits = Number(feat.negHits || 0);
 
     if (preferNaver && (!feat.naverCount || feat.naverCount === 0)) {
       try {
@@ -685,17 +752,27 @@ export async function buildNewsFeatures(symbols, opts={}){
           feat.naverCount = nv.naverCount;
           feat.naverCountKO = nv.naverCountKO;
           feat.naverCountEN = nv.naverCountEN;
+          feat.weightedCount = nv.weightedCount ?? feat.weightedCount;
+          feat.posHits = nv.posHits ?? feat.posHits;
+          feat.negHits = nv.negHits ?? feat.negHits;
+          feat.sentiment = nv.sentiment ?? feat.sentiment;
+          feat.newsScore = nv.newsScore ?? feat.newsScore;
+          feat.naverAsvi = nv.naverAsvi;
+          feat.naverSpike = nv.naverSpike;
         }
       } catch {}
     }
 
-    const blogs = Number(feat.blogMentions || 0);
-    const weightedNaver = NAVER_KO_WEIGHT * feat.naverCountKO + NAVER_EN_WEIGHT * feat.naverCountEN;
-    const weightedCount =
-      weightedNaver +
-      OTHER_NEWS_WEIGHT * feat.otherCount +
-      NAVER_BLOG_WEIGHT * blogs;
-    feat.newsScore = to01(Math.tanh(weightedCount / 10));
+    if (typeof feat.newsScore !== 'number') {
+      const blogs = Number(feat.blogMentions || 0);
+      const weightedNaver = NAVER_KO_WEIGHT * feat.naverCountKO + NAVER_EN_WEIGHT * feat.naverCountEN;
+      const weightedCount =
+        weightedNaver +
+        OTHER_NEWS_WEIGHT * feat.otherCount +
+        NAVER_BLOG_WEIGHT * blogs;
+      feat.weightedCount = weightedCount;
+      feat.newsScore = to01(Math.tanh(weightedCount / 10));
+    }
 
     let items = [];
     try {
@@ -722,6 +799,9 @@ export async function buildNewsFeatures(symbols, opts={}){
     const f = baseOut[baseSymbol(s)] || {};
     out[s] = {
       count:             Number(f.count || 0),
+      weightedCount:     Number(f.weightedCount || 0),
+      posHits:           Number(f.posHits || 0),
+      negHits:           Number(f.negHits || 0),
       sentiment:         Number(f.sentiment || 0),
       blogMentions:      Number(f.blogMentions || 0),
       naverCount:        Number(f.naverCount || 0),
@@ -729,6 +809,8 @@ export async function buildNewsFeatures(symbols, opts={}){
       naverCountEN:      Number(f.naverCountEN || 0),
       otherCount:        Number(f.otherCount || 0),
       newsScore:         Number(f.newsScore || 0),
+      naverAsvi:         Number(f.naverAsvi || 0),
+      naverSpike:        Number(f.naverSpike || 0),
       polygonTrend:      Number.isFinite(f.polygonTrend) ? f.polygonTrend : 0,
       nasdaqClose:       Number.isFinite(f.nasdaqClose) ? f.nasdaqClose : 0,
       reputationScore:   Number.isFinite(f.reputationScore) ? f.reputationScore : 0,
