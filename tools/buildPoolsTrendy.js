@@ -1226,45 +1226,23 @@ async function main(){
       eligibility[n] = { advOk, priceOk, advKnown, priceKnown, eligible: (advOk && priceOk) };
     });
 
-    // Scores for *all* names
+    // Scores for *all* names based on news and blog popularity
     const scoreSafeRaw = {};
     const scoreAggrRaw = {};
-    names.forEach((n) => {
-      const nf = byName[n]; // already merged
+    const popRaw = names.map(n => {
+      const nf = byName[n];
+      return (nf.naverCount ?? nf.newsCount ?? 0) + (nf.blogMentions ?? 0);
+    });
+    const popArr = safeRank01(popRaw);
+    const popularity01 = Object.fromEntries(names.map((n, i) => [n, popArr[i]]));
 
-      // trend momentum: prefer growth metric if available
-      const prevTrendRow = PREV_METRICS?.[market]?.[n];
-      const trendMomentum = computeTrendMomentum(nf, prevTrendRow);
-
-      const momBase = (typeof nf.naverAsvi === 'number')
-        ? nf.naverAsvi
-        : ((nf.newsScore ?? 0) - (PREV_METRICS?.[market]?.[n]?.newsScore ?? 0));
-      const momScore   = scoreTrend(momBase); // reuse 5-tier trend buckets
-      const sentScore  = scoreSentiment(nf.sentiment);
-      const trendScore = scoreTrend(trendMomentum);
-      const credScore  = scoreCredibility(nf.reputationScore); // normalized inside
-      const catScore   = scoreCatalysts(nf.topKeywords);
-      const riskScore  = scoreRisk(nf.topKeywords);
-
-      const total = combineScore([
-        { score: sentScore,  weight: 30 },
-        { score: momScore,   weight: 15 },
-        { score: trendScore, weight: 20 },
-        { score: credScore,  weight: 10 },
-        { score: catScore,   weight: 15 },
-        { score: riskScore,  weight: 10 }
-      ]);
-
-      const totalRounded = Math.round(total);
+    names.forEach((n, i) => {
+      const p01 = popArr[i];
       byName[n].prevNewsScore   = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
-      byName[n].componentScores = { sentiment: sentScore, momentum: momScore, trends: trendScore, credibility: credScore, catalysts: catScore, risk: riskScore };
-      byName[n].totalScore      = totalRounded;
-
-      // Base normalized score 0..1 for ranking
-      let norm = totalRounded / 100;
-
-      scoreSafeRaw[n] = norm;
-      scoreAggrRaw[n] = norm;
+      byName[n].componentScores = { popularity: Math.round(p01 * 100) };
+      byName[n].totalScore      = Math.round(p01 * 100);
+      scoreSafeRaw[n] = p01;
+      scoreAggrRaw[n] = p01;
     });
 
     // Apply feedback nudges
@@ -1369,21 +1347,7 @@ async function main(){
       });
     }
 
-    // ---- Popularity premium (bounded) ----
-    // Use last run's weightedCount (proxy for persistent coverage) + Naver long-run popularity
-    const popRawA = names.map(n => (PREV_METRICS?.[market]?.[n]?.weightedCount ?? byName[n].newsCount ?? 0));
-    const popRawB = names.map(n => (byName[n].naverPopularity ?? 0));
-    const popA = safeRank01(popRawA);  // normalize within market
-    const popB = safeRank01(popRawB);
-    const popularity01Arr = names.map((_, i) => 0.6 * popA[i] + 0.4 * popB[i]);
-    const popularity01 = Object.fromEntries(names.map((n, i) => [n, popularity01Arr[i]]));
-
-    for (const n of names) {
-      const bump = Math.min(POP_CAP, (POP_W / 100) * (popularity01[n] ?? 0));
-      scoreSafe[n] = clamp01(scoreSafe[n] + bump);
-      scoreAggr[n] = clamp01(scoreAggr[n] + bump);
-      byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
-    }
+    // popularity01 already computed above; no additional popularity premium
 
     // Re-apply eligibility gating after curve/hotness so it survives percentiling
     for (const n of names) {
