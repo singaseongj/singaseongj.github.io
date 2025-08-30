@@ -704,7 +704,7 @@ function percentileMap(obj){
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
 
-function djitter(key, mag=0.002){
+function djitter(key, mag=0.01){
   let h=0; for (let i=0;i<key.length;i++) h=(h*131+key.charCodeAt(i))|0;
   return ((h % 2001) - 1000) / 1000 * mag;
 }
@@ -1374,7 +1374,7 @@ async function main(){
     // ---- Per-market calibration: curve & widen spread ----
     const AUTO_CURVE = process.env.AUTO_CURVE !== '0';
     let GAMMA = Number(process.env.SCORE_CURVE || 0.62); // <1 boosts the head
-    const FLOOR = Number(process.env.SCORE_FLOOR || 35); // ↓ was 45
+    const FLOOR = Number(process.env.SCORE_FLOOR || 0); // allow full 0-100 range
     const CEIL  = Number(process.env.SCORE_CEIL  || 100);
 
     if (AUTO_CURVE) {
@@ -1548,14 +1548,6 @@ async function main(){
     const rankedSafe = filterOutEarlier(safeSorted);
     const rankedAggr = filterOutEarlier(aggrSorted);
 
-    const assignRankScore = list =>
-      list.forEach((n, i) => {
-        const r = Math.max(1, 100 - i);
-        byName[n].rankScore = r;
-      });
-    assignRankScore(rankedSafe);
-    assignRankScore(rankedAggr);
-
     pools[market] = { safe: rankedSafe, aggressive: rankedAggr };
 
     // Record for later markets
@@ -1600,8 +1592,7 @@ async function main(){
         attempts: byName[n].attempts,
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
-        rankScore: byName[n].rankScore ?? null,
-        score: byName[n].rankScore ?? byName[n].totalScore,
+        score: byName[n].totalScore,
         rawScore: byName[n].totalScore,
         ds_news7: byName[n].ds_news7,
         ds_burst: byName[n].ds_burst,
