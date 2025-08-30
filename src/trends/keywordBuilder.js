@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
+import { KO_ALIASES } from './koAliases.js';
 
-const MAX_PER_SYMBOL = Number(process.env.NAVER_MAX_KEYWORDS || 8);
+const MAX_PER_SYMBOL = Number(process.env.NAVER_MAX_KEYWORDS || 12);
 
 // generic suffix/prefix templates that tend to help with intent
 const TEMPLATES_KR = ['주가', '실적', '리콜', '파업', '규제', '적자', '흑자'];
@@ -95,6 +96,7 @@ export async function buildKeywordDict({
   seeds = {},
   symbolToName = {},
   newsFeatures = null,
+  addKoreanForUSTickers = true,
   newsFilePath = 'data/market-news.json',
   overridesPath = 'data/keyword-overrides.json',
   aliasesPath = 'data/aliases.json',
@@ -106,6 +108,9 @@ export async function buildKeywordDict({
   const marketNews = newsFeatures ? null : (await readJsonOrNull(newsFilePath));
 
   const out = {};
+  const isUS = s => /^[A-Z][A-Z.\-]{0,6}$/.test(String(s)) && !/\.K[QS]$/.test(String(s));
+  const hasHangul = s => /[가-힣]/.test(String(s));
+
   for (const sym of symbols) {
     const display = symbolToName[sym] || sym;
     const isKR = /\.K[QS]$/.test(sym);
@@ -128,6 +133,21 @@ export async function buildKeywordDict({
     // 3) prepend ticker where helpful (US tickers often searched as-is)
     if (!isKR) candidates.push(sym);
 
+    // NEW: add Korean aliases for U.S. tickers
+    if (addKoreanForUSTickers && isUS(sym)) {
+      const variants = KO_ALIASES[sym]
+        || KO_ALIASES[sym.replace('.', '-')]
+        || KO_ALIASES[sym.replace('-', '.')];
+      if (variants) {
+        candidates.push(...variants);
+        candidates.push(...variants.map(v => `${v} 주가`));
+        variants.forEach(v => {
+          candidates.push(`${v} 실적`);
+          candidates.push(`${v} 리콜`);
+        });
+      }
+    }
+
     // 4) apply templates (KR/EN)
     candidates = applyTemplates(uniq(candidates), isKR);
 
@@ -149,7 +169,11 @@ export async function buildKeywordDict({
       return s;
     };
 
-    clean.sort((a,b)=>score(b)-score(a));
+    clean.sort((a,b)=>{
+      const krDiff = Number(hasHangul(b)) - Number(hasHangul(a));
+      if (krDiff !== 0) return krDiff;
+      return score(b) - score(a);
+    });
 
     // 6) apply overrides
     const add = overrides.add?.[sym] || [];

@@ -502,6 +502,13 @@ const NAVER_SEED_KEYWORDS = {
   'TSLA': ['테슬라','Tesla','테슬라 주가','사이버트럭'],
 };
 
+Object.assign(NAVER_SEED_KEYWORDS, {
+  NVDA: ['엔비디아', 'HBM', '지포스', '엔비디아 주가'],
+  AMZN: ['아마존', '프라임', '아마존 주가'],
+  GOOGL: ['구글', '알파벳', '구글 주가'],
+  META: ['메타', '페이스북', '메타 주가'],
+});
+
 function isKR(symbolOrName) {
   // KR symbols end with .KS (KOSPI) or .KQ (KOSDAQ)
   return /\.K[QS]$/.test(String(symbolOrName));
@@ -821,6 +828,9 @@ function sanitizeSignals(row) {
   row.naverPopularity = nz(row.naverPopularity, 0);
   row.naverAsvi       = nz(row.naverAsvi, 0);
   row.naverSpike      = nz(row.naverSpike, 0);
+  row.naverCount      = nz(row.naverCount, 0);
+  row.naverCountKO    = nz(row.naverCountKO, 0);
+  row.naverCountEN    = nz(row.naverCountEN, 0);
   row.reputationScore = Number.isFinite(row.reputationScore) ? row.reputationScore : 0.5;
   row.ret5            = Number.isFinite(row.ret5) ? row.ret5 : 0;
   row.ret20           = Number.isFinite(row.ret20) ? row.ret20 : 0;
@@ -1004,7 +1014,7 @@ async function main(){
     const us = symbols.filter(s => !isKR(s));
     const newsSymbols = kr.concat(us).slice(0, NEWS_MAX);
     NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.6
-      ? await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME })
+      ? await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME, keywords: KEYWORDS })
       : {};
   }
 
@@ -1014,6 +1024,7 @@ async function main(){
     seeds: NAVER_SEED_KEYWORDS,
     symbolToName: SYMBOL_TO_NAME,
     newsFeatures: NEWS_FEATURES,
+    addKoreanForUSTickers: process.env.ADD_KO_FOR_US !== '0',
   });
 
   for (const sym of symbols){
@@ -1086,7 +1097,7 @@ async function main(){
       }
       log(`[buildPools] ${market} :: ${name} ${route}${routeDetail}`);
 
-      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let newsScore=0; let sentiment=null; let naverPopularity=0; let naverAsvi=null; let naverSpike=null; let blogMentions=0; let polygonTrend=null; let nasdaqClose=null; let earn=false; let candles=null; let offHi=0; let offLo=0;
+      let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null; let newsCount=0; let newsScore=0; let sentiment=null; let naverPopularity=0; let naverAsvi=null; let naverSpike=null; let naverCount=0; let naverCountKO=0; let naverCountEN=0; let blogMentions=0; let polygonTrend=null; let nasdaqClose=null; let earn=false; let candles=null; let offHi=0; let offLo=0;
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
         candles = (sym && budgetOk(REQ_TIMEOUT_MS) && !circuitOpen())
@@ -1112,6 +1123,9 @@ async function main(){
         const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name];
         if (nf) {
           newsCount = nf.count || 0;
+          naverCount = typeof nf.naverCount === 'number' ? nf.naverCount : 0;
+          naverCountKO = typeof nf.naverCountKO === 'number' ? nf.naverCountKO : 0;
+          naverCountEN = typeof nf.naverCountEN === 'number' ? nf.naverCountEN : 0;
           newsScore = newsScoreFromFeatures(nf);
           sentiment = typeof nf.sentiment === 'number' ? nf.sentiment : null;
           naverPopularity = typeof nf.naverPopularity === 'number' ? nf.naverPopularity : 0;
@@ -1125,7 +1139,7 @@ async function main(){
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0 };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0 };
       try {
         const ds = await fetchDeepsearchFeatures({ name, ticker: sym, market });
         Object.assign(byName[name], ds);
@@ -1139,7 +1153,7 @@ async function main(){
       if (!byName[n]) {
         byName[n] = {
           ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
-          newsCount:0, newsScore:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false, offHi:0, offLo:0,
+          newsCount:0, newsScore:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, naverCount:0, naverCountKO:0, naverCountEN:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false, offHi:0, offLo:0,
           reputationScore:null, topKeywords:[], reputationHitIds:[],
           sym:null, source:null, attempts:[], fetchMs:0,
           ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0
@@ -1154,6 +1168,9 @@ async function main(){
         byName[n].naverPopularity = nf.naverPopularity ?? byName[n].naverPopularity;
         byName[n].naverAsvi       = nf.naverAsvi ?? byName[n].naverAsvi;
         byName[n].naverSpike      = nf.naverSpike ?? byName[n].naverSpike;
+        byName[n].naverCount      = nf.naverCount ?? byName[n].naverCount;
+        byName[n].naverCountKO    = nf.naverCountKO ?? byName[n].naverCountKO;
+        byName[n].naverCountEN    = nf.naverCountEN ?? byName[n].naverCountEN;
         byName[n].blogMentions    = nf.blogMentions ?? byName[n].blogMentions;
         byName[n].polygonTrend    = nf.polygonTrend ?? byName[n].polygonTrend;
         byName[n].nasdaqClose     = nf.nasdaqClose ?? byName[n].nasdaqClose;
@@ -1434,6 +1451,9 @@ async function main(){
         naverPopularity: byName[n].naverPopularity,
         naverAsvi: byName[n].naverAsvi,
         naverSpike: byName[n].naverSpike,
+        naverCount: byName[n].naverCount,
+        naverCountKO: byName[n].naverCountKO,
+        naverCountEN: byName[n].naverCountEN,
         blogMentions: byName[n].blogMentions,
         offHi: byName[n].offHi,
         offLo: byName[n].offLo,
