@@ -778,6 +778,21 @@ export async function buildNewsFeatures(symbols, opts={}){
     try {
       items = await getTickerArticles(sym);
     } catch {}
+    if (items.length) {
+      const now = Date.now();
+      const decayed = items.reduce((sum,it)=>{
+        const ts = new Date(it.publishedAt || it.pubDate || it.date || 0).getTime();
+        if (!ts) return sum;
+        const ageH = (now - ts) / 3600000;
+        const decay = Math.pow(0.5, ageH / 24);
+        return sum + decay * hostWeight(it.url || '');
+      },0);
+      feat.weightedCount = Math.max(decayed, feat.weightedCount || 0);
+    }
+    if (Number.isFinite(feat.marketCap) && feat.weightedCount) {
+      const scale = Math.sqrt(1e11 / Math.max(feat.marketCap, 1e6));
+      feat.weightedCount *= scale;
+    }
     try {
       const aliases = SYMBOL_ALIASES[sym] || [];
       const rep = computeReputation({ items, company: { ticker: sym, names: [symbolToName[sym], ...aliases].filter(Boolean) } });
@@ -918,11 +933,14 @@ async function getTickerArticlesFromDS(sym, name){
 }
 
 function dedupeArticles(items) {
-  const seen = new Set();
+  const seenUrl = new Set();
+  const seenTitle = new Set();
   return items.filter(it => {
     const u = (it?.url || "").trim();
-    if (!u || seen.has(u)) return false;
-    seen.add(u);
+    const t = normalizeTitle(it?.title || "");
+    if ((!u && !t) || seenUrl.has(u) || (t && seenTitle.has(t))) return false;
+    if (u) seenUrl.add(u);
+    if (t) seenTitle.add(t);
     return true;
   });
 }
