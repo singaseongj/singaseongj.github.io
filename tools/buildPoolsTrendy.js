@@ -224,6 +224,7 @@ const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 2;
 const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 50; // naver popularity is 0..1
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.15; // scale & stability weight (0..1)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
@@ -703,6 +704,10 @@ function percentileMap(obj){
 }
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+
+function scaleAdjust(x){
+  return Number.isFinite(x) && x > 0 ? x * Math.log10(1 + x) : 0;
+}
 
 function djitter(key, mag=0.01){
   let h=0; for (let i=0;i<key.length;i++) h=(h*131+key.charCodeAt(i))|0;
@@ -1326,28 +1331,39 @@ async function main(){
       const pop    = nf.naverPopularity|| 0;
       const posK   = nf.posHits        || 0;
       const negK   = nf.negHits        || 0;
+      const newsSum = news + fmp + goog + yahoo + invest + hanwha;
+      const materiality = (nf.contractValue && nf.marketCap)
+        ? nf.contractValue / nf.marketCap
+        : 0;
       nf.componentScores = {
         blogs: blog,
-        news: news + fmp + goog + yahoo + invest + hanwha,
+        news: newsSum,
         popularity: pop,
         posKeywords: posK,
-        negKeywords: negK
+        negKeywords: negK,
+        materiality,
+        scale: nf.marketCap || 0,
       };
-      return NEWS_WEIGHT*(news + fmp + goog + yahoo + invest + hanwha) +
-             BLOG_WEIGHT*blog +
-             POPULARITY_WEIGHT*pop +
+      return NEWS_WEIGHT*scaleAdjust(newsSum) +
+             BLOG_WEIGHT*scaleAdjust(blog) +
+             POPULARITY_WEIGHT*scaleAdjust(pop) +
              POS_KW_WEIGHT*posK +
-             NEG_KW_WEIGHT*negK;
+             NEG_KW_WEIGHT*negK +
+             materiality;
     });
+    const scaleRaw = names.map(n => scaleAdjust(byName[n].marketCap || 0));
     const popArr = safeRank01(popRaw);
+    const scaleArr = safeRank01(scaleRaw);
     const popularity01 = Object.fromEntries(names.map((n, i) => [n, popArr[i]]));
 
     names.forEach((n, i) => {
       const p01 = popArr[i];
+      const s01 = scaleArr[i];
+      const total01 = (1 - SCALE_WEIGHT) * p01 + SCALE_WEIGHT * s01;
       byName[n].prevNewsScore = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
-      byName[n].totalScore    = Math.round(p01 * 100);
-      scoreSafeRaw[n] = p01;
-      scoreAggrRaw[n] = p01;
+      byName[n].totalScore    = Math.round(total01 * 100);
+      scoreSafeRaw[n] = total01;
+      scoreAggrRaw[n] = total01;
     });
 
     // Apply feedback nudges
