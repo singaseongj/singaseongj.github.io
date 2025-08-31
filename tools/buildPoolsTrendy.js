@@ -154,6 +154,7 @@ function saveNameToSymbol(map) {
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
 const SYMBOL_TO_NAME = {};
+const CONFIRMED_KEYS = new Set();
 
 // Canonicalize keys and strip invisible characters
 function normalizeKey(s) {
@@ -270,7 +271,23 @@ function rememberMapping(humanNameOrTicker, providerSymbol) {
       NAME_TO_SYMBOL[k] = providerSymbol;
     }
   }
-  saveNameToSymbol(NAME_TO_SYMBOL);
+}
+
+function confirmMapping(humanNameOrTicker, providerSymbol) {
+  if (!humanNameOrTicker || !providerSymbol) return;
+  rememberMapping(humanNameOrTicker, providerSymbol);
+  for (const k of keyVariants(humanNameOrTicker)) {
+    CONFIRMED_KEYS.add(k);
+  }
+}
+
+function persistConfirmedMappings() {
+  if (CONFIRMED_KEYS.size === 0) return;
+  const existing = loadNameToSymbol();
+  for (const k of CONFIRMED_KEYS) {
+    existing[k] = NAME_TO_SYMBOL[k];
+  }
+  saveNameToSymbol(existing);
 }
 
 function lookupLearnedMapping(key) {
@@ -675,31 +692,52 @@ async function loadJson(p, fallback=null) {
 }
 
 function rank01(values) {
-  // values: array of numbers (may include null). Return normalized map of idx -> 0..1 with null -> 0.
+  // values: array of numbers (may include null). Nulls -> 0.5, all equal -> 0.5
   const arr = values.map(v => (Number.isFinite(v) ? v : null));
   const nums = arr.filter(v => v !== null);
-  if (nums.length === 0) return values.map(_ => 0);
+  if (nums.length === 0) return values.map(_ => 0.5);
   const min = Math.min(...nums), max = Math.max(...nums);
-  if (min === max) return values.map(() => 0);
-  return arr.map(v => (v === null ? 0 : (v - min) / (max - min)));
+  if (min === max) return values.map(() => 0.5);
+  return arr.map(v => (v === null ? 0.5 : (v - min) / (max - min)));
 }
 
 function safeRank01(arr){
-  const r = rank01(arr);
-  if (r.every(x => x === 0)) {
-    const min = Math.min(...arr), max = Math.max(...arr);
-    return (min === max) ? r : arr.map(v => (v - min) / (max - min));
-  }
-  return r;
+  return rank01(arr);
 }
 
 // helper: percentiles from a name->value map (values in 0..1)
 function percentileMap(obj){
-  const entries = Object.entries(obj);
+  const entries = Object.entries(obj).filter(([_,v])=>Number.isFinite(v));
   entries.sort((a,b)=>a[1]-b[1]);
   const n = Math.max(1, entries.length-1);
   const out = {};
-  entries.forEach(([k],i)=>{ out[k] = i / n; });
+  entries.forEach(([k],i)=>{ out[k] = n>0 ? i / n : 0.5; });
+  for (const k of Object.keys(obj)) {
+    if (!Number.isFinite(obj[k])) out[k] = 0.5;
+  }
+  return out;
+}
+
+function bucketRelative(names, byName, getter){
+  const buckets = {};
+  for (const n of names){
+    const sector = byName[n].sector || 'UNKNOWN';
+    const size = byName[n].marketCap ?? byName[n].adv20;
+    let bucketSize = 'U';
+    if (Number.isFinite(size)) {
+      if (size < 2e9) bucketSize = 'S';
+      else if (size < 1e11) bucketSize = 'M';
+      else bucketSize = 'L';
+    }
+    const key = `${sector}|${bucketSize}`;
+    (buckets[key] ||= []).push({ n, v: getter(n) });
+  }
+  const out = {};
+  for (const arr of Object.values(buckets)){
+    const vals = arr.map(o=>Number.isFinite(o.v)?o.v:null);
+    const ranks = safeRank01(vals);
+    arr.forEach((o,i)=>{ out[o.n] = ranks[i]; });
+  }
   return out;
 }
 
@@ -1183,7 +1221,7 @@ async function main(){
       let naverPopularity=0, naverAsvi=null, naverSpike=null;
       let naverCount=0, naverCountKO=0, naverCountEN=0;
       let blogMentions=0, polygonTrend=null, nasdaqClose=null, earn=false;
-      let candles=null, offHi=0, offLo=0, posHits=0, negHits=0;
+      let candles=null, offHi=0, offLo=0, posHits=0, negHits=0, marketCap=null;
       let fmpNewsCount=0, googleNewsCount=0, yahooNewsCount=0, investingNewsCount=0, hanwhaNewsCount=0;
       try {
         const countsBefore = Object.fromEntries(Object.entries(providerState).map(([p,s])=>[p, s.count||0]));
@@ -1224,6 +1262,7 @@ async function main(){
           if (typeof nf.naverSpike === 'number') naverSpike = nf.naverSpike;
           if (typeof nf.posHits === 'number') posHits = nf.posHits;
           if (typeof nf.negHits === 'number') negHits = nf.negHits;
+          if (typeof nf.marketCap === 'number') marketCap = nf.marketCap;
         }
         fmpNewsCount = await fetchFmpNewsCount(sym);
         googleNewsCount = await fetchGoogleNewsCount(sym);
@@ -1234,7 +1273,7 @@ async function main(){
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, marketCap, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount };
       try {
         const ds = await fetchDeepsearchFeatures({ name, ticker: sym, market });
         Object.assign(byName[name], ds);
@@ -1242,6 +1281,9 @@ async function main(){
         Object.assign(byName[name], { ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0 });
       }
       sanitizeSignals(byName[name]);
+      if (sym && (Number.isFinite(close) || Number.isFinite(adv20) || newsCount > 0)) {
+        confirmMapping(name, sym);
+      }
       processed.add(name);
     });
     for (const n of names) {
@@ -1278,6 +1320,7 @@ async function main(){
         byName[n].yahooNewsCount  = nf.yahooNewsCount ?? byName[n].yahooNewsCount;
         byName[n].investingNewsCount = nf.investingNewsCount ?? byName[n].investingNewsCount;
         byName[n].hanwhaNewsCount = nf.hanwhaNewsCount ?? byName[n].hanwhaNewsCount;
+        if (typeof nf.marketCap === 'number') byName[n].marketCap = nf.marketCap;
       }
     }
 
@@ -1416,9 +1459,11 @@ async function main(){
     const LIQ_W = +process.env.LIQ_WEIGHT || 4;
     const EARN_BOOST = +process.env.EARNINGS_BOOST || 0.04; // +4% of 0..1 scale
     if (HOT > 0 || LIQ_W > 0) {
+      const newsRel  = bucketRelative(names, byName, n => (byName[n].ds_news7 ?? byName[n].newsScore ?? 0));
+      const trendRel = bucketRelative(names, byName, n => (byName[n].ds_trend  ?? computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0));
       const asArr = fn => names.map(fn);
-      const newsRaw  = asArr(n => (byName[n].ds_news7 ?? byName[n].newsScore ?? 0));
-      const trendRaw = asArr(n => (byName[n].ds_trend  ?? computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0));
+      const newsRaw  = names.map(n => newsRel[n]);
+      const trendRaw = names.map(n => trendRel[n]);
 
       const newsP  = safeRank01(newsRaw);
       const trendP = safeRank01(trendRaw.map(v => Math.max(0, v)));
@@ -1470,7 +1515,21 @@ async function main(){
 
     // popularity01 already computed above; no additional popularity premium
 
-    // Re-apply eligibility gating after curve/hotness so it survives percentiling
+    names.forEach(n=>{
+      const sym = byName[n].sym || nameToSymbol(n) || n;
+      const prior = structuralPrior(sym); // 0..1
+      const indivFloor01 = STRUCT_FLOOR_W * prior; // index/size based
+      const popFloor01   = (POP_FLOOR_W) * (typeof popularity01?.[n] === 'number' ? popularity01[n] : 0);
+      const baseFloor    = Math.min(1, indivFloor01 + popFloor01);
+      const floor01      = eligibility[n].eligible ? baseFloor : Math.min(baseFloor, 0.1);
+      const floor100     = FLOOR + (CEIL - FLOOR) * floor01;
+
+      byName[n].totalScore = Math.max(floor100, byName[n].totalScore);
+      scoreSafe[n]         = Math.max(scoreSafe[n], floor01);
+      scoreAggr[n]         = Math.max(scoreAggr[n], floor01 * 0.95);
+    });
+
+    // Re-apply eligibility penalties after floors so floors can't mask them
     for (const n of names) {
       const pen = !eligibility[n].eligible
         ? INELIGIBLE_PENALTY
@@ -1481,19 +1540,6 @@ async function main(){
         byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
       }
     }
-
-    names.forEach(n=>{
-      const sym = byName[n].sym || nameToSymbol(n) || n;
-      const prior = structuralPrior(sym); // 0..1
-      const indivFloor01 = STRUCT_FLOOR_W * prior; // index/size based
-      const popFloor01   = (POP_FLOOR_W) * (typeof popularity01?.[n] === 'number' ? popularity01[n] : 0);
-      const floor01      = Math.min(1, indivFloor01 + popFloor01);
-      const floor100     = FLOOR + (CEIL - FLOOR) * floor01;
-
-      byName[n].totalScore = Math.max(floor100, byName[n].totalScore);
-      scoreSafe[n]         = Math.max(scoreSafe[n], floor01);
-      scoreAggr[n]         = Math.max(scoreAggr[n], floor01 * 0.95);
-    });
 
     // Popularity cap: if baseline >> today (always-talked-about), shave 2–5%
     names.forEach(n => {
@@ -1682,4 +1728,12 @@ async function main(){
   console.log('[buildPools] wrote pools.json and pools-metrics.json :: done');
 }
 
-main().catch(e => { console.error('[buildPools] failed:', e.message); process.exit(0); });
+main()
+  .then(() => {
+    persistConfirmedMappings();
+  })
+  .catch(e => {
+    console.error('[buildPools] failed:', e.message);
+    persistConfirmedMappings();
+    process.exit(0);
+  });
