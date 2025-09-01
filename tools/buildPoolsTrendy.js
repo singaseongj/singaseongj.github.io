@@ -229,21 +229,21 @@ const PRIOR_W_N100  = +process.env.PRIOR_W_N100  || 0.25;
 const PRIOR_W_K200  = +process.env.PRIOR_W_K200  || 0.35;
 const PRIOR_W_KQ100 = +process.env.PRIOR_W_KQ100 || 0.20;
 const PRIOR_FLOOR   = +process.env.PRIOR_FLOOR   || 0.10; // base for names in no index
-const STRUCT_FLOOR_W = +process.env.STRUCT_FLOOR_W || 0.40; // portion of scale reserved for prior
-const PREV_CARRY = +process.env.PREV_CARRY || 0.6;  // 0..1 how much of last run to keep
+const STRUCT_FLOOR_W = +process.env.STRUCT_FLOOR_W || 0.12; // portion of scale reserved for prior
+const PREV_CARRY = +process.env.PREV_CARRY || 0.3;  // 0..1 how much of last run to keep
 
 const HOT_W_NEWS       = +process.env.HOT_W_NEWS       || 0.40;
 const HOT_W_TREND      = +process.env.HOT_W_TREND      || 0.30;
 const HOT_W_TURN       = +process.env.HOT_W_TURN       || 0.20;
 const HOT_W_WIKI       = +process.env.HOT_W_WIKI       || 0.10;
 const TREND_EXP        = +process.env.TREND_EXP        || 1.5;  // >1 makes trend more sensitive
-const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.05; // * ds_burst
-const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.08; // cap (0..1 scale)
+const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.02; // * ds_burst
+const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.04; // cap (0..1 scale)
 
 // --- Popularity (bounded) ---
 const POP_W       = +process.env.POP_W       || 6;    // % of 0..1 scale added to score
-const POP_FLOOR_W = +process.env.POP_FLOOR_W || 0.10; // portion of scale reserved for popularity floor
-const POP_CAP     = +process.env.POP_CAP     || 0.05; // hard cap of popularity bump (0..1 scale)
+const POP_FLOOR_W = +process.env.POP_FLOOR_W || 0.01; // portion of scale reserved for popularity floor
+const POP_CAP     = +process.env.POP_CAP     || 0.10; // hard cap of popularity bump (0..1 scale)
 
 // External news/popularity weights
 const FMP_API_KEY        = process.env.FMP_API_KEY || 'demo';
@@ -253,7 +253,7 @@ const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 60; // naver popul
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
 const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.10; // scale & stability weight (0..1)
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.05; // scale & stability weight (0..1)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
@@ -513,8 +513,8 @@ const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
 const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
 const MIN_PRICE_USD = Number(process.env.MIN_PRICE_USD || 2);
 const MIN_PRICE_KRW = Number(process.env.MIN_PRICE_KRW || 1000);
-const INELIGIBLE_PENALTY = Number(process.env.INELIGIBLE_PENALTY || 0.5);
-const UNKNOWN_PENALTY    = Number(process.env.UNKNOWN_PENALTY || 0.2);
+const INELIGIBLE_PENALTY = Number(process.env.INELIGIBLE_PENALTY || 0.8);
+const UNKNOWN_PENALTY    = Number(process.env.UNKNOWN_PENALTY || 0.3);
 const CROSS_MARKET_DEDUP = process.env.CROSS_MARKET_DEDUP !== '0';
 const ALLOWLIST = new Set(Object.values(TICKER_MAP));
 
@@ -1500,9 +1500,9 @@ async function main(){
     }
 
     // Optional: hotness boost — disabled with HOTNESS_WEIGHT=0
-    const HOT   = +process.env.HOTNESS_WEIGHT || 18;
-    const LIQ_W = +process.env.LIQ_WEIGHT || 4;
-    const EARN_BOOST = +process.env.EARNINGS_BOOST || 0.04; // +4% of 0..1 scale
+    const HOT   = +process.env.HOTNESS_WEIGHT || 8;
+    const LIQ_W = +process.env.LIQ_WEIGHT || 1;
+    const EARN_BOOST = +process.env.EARNINGS_BOOST || 0.02; // +4% of 0..1 scale
     if (HOT > 0 || LIQ_W > 0) {
       const newsRel  = bucketRelative(names, byName, n => (byName[n].ds_news7 ?? byName[n].newsScore ?? 0));
       const trendRel = bucketRelative(names, byName, n => (byName[n].ds_trend  ?? computeTrendMomentum(byName[n], PREV_METRICS?.[market]?.[n]) ?? 0));
@@ -1542,7 +1542,7 @@ async function main(){
         byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
       }
 
-      const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.10; // 10% of scale max
+      const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.02; // 10% of scale max
       const sectorHot = {};
       const sectorCnt = {};
       names.forEach((n,i)=>{
