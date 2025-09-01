@@ -680,13 +680,16 @@ export async function buildNewsFeatures(symbols, opts={}){
     const q = queries[sym];
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
-    const providers = preferNaver
+    const baseProviders = preferNaver
       ? (isKR(sym)
           ? ['naver','gnews','serpapi','kotra','newsapi','gdelt','finnhub','polygon']
           : ['naver','gnews','serpapi','newsapi','gdelt','finnhub','kotra','polygon'])
       : (isKR(sym)
           ? ['gnews','naver','serpapi','kotra','finnhub','newsapi','gdelt']
           : ['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver']);
+    const providers = process.env.SKIP_GDELT === '1'
+      ? baseProviders.filter(p => p !== 'gdelt')
+      : baseProviders;
 
     let lastErr = null;
     for (const p of providers) {
