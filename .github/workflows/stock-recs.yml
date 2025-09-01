@@ -309,10 +309,17 @@ jobs:
       - name: Build article cache
         run: node build-articles.js
 
+      - name: Prune cache directory
+        env:
+          CACHE_LIMIT: 1000
+        run: node tools/prune-cache.js
+
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market-news.json data/fx_rates.json summary.json summary.md data/articles pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json || true
+          git add data/market-news.json data/fx_rates.json summary.json summary.md data/articles \
+                  pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json \
+                  cache || true
           echo "Files staged for commit"
 
       - name: Commit & push changes
