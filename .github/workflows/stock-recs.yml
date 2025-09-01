@@ -312,7 +312,7 @@ jobs:
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market-news.json data/fx_rates.json summary.json summary.md data/articles pools-metrics.json || true
+          git add data/market-news.json data/fx_rates.json summary.json summary.md data/articles pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json || true
           echo "Files staged for commit"
 
       - name: Commit & push changes
