@@ -326,7 +326,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore: data update (news/fx/summary) [skip ci]"
-          git pull --rebase origin "${{ github.ref_name }}"
+          git pull --rebase --autostash origin "${{ github.ref_name }}"
           git push origin HEAD:"${{ github.ref_name }}"
 
       - name: Verify HEAD has fresh data
