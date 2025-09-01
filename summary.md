@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-01T16:31:04+09:00 (KST)**
+- Generated: **2025-09-01T16:56:51+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -22,14 +22,6 @@
 - Sector: **헬스케어**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4%20141080.KQ
 
-**리노공업** (058470.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85%20058470.KQ
-
 **에코프로비엠** (247540.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
@@ -38,23 +30,23 @@
 - Sector: **소재**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0%20247540.KQ
 
-**휴젤** (145020.KQ)
+**케어젠** (214370.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **5.9%**, 20d **3.0%**; volatility (20d): **unknown**
+- Returns: 5d **10.4%**, 20d **6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%9C%B4%EC%A0%A4%20145020.KQ
+- News search: https://www.google.com/search?tbm=nws&q=%EC%BC%80%EC%96%B4%EC%A0%A0%20214370.KQ
+
+**클래시스** (214150.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **-3.0%**, 20d **-9.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?tbm=nws&q=%ED%81%B4%EB%9E%98%EC%8B%9C%EC%8A%A4%20214150.KQ
 
 ### AGGRESSIVE (5)
-
-**메지온** (140410.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **7.6%**, 20d **5.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?tbm=nws&q=%EB%A9%94%EC%A7%80%EC%98%A8%20140410.KQ
 
 **에스엠** (041510.KQ)
 
@@ -72,21 +64,29 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?tbm=nws&q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%20086520.KQ
 
-**엑세스바이오** (950130.KQ)
+**이오테크닉스** (039030.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?tbm=nws&q=%EC%97%91%EC%84%B8%EC%8A%A4%EB%B0%94%EC%9D%B4%EC%98%A4%20950130.KQ
-
-**테크윙** (089030.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **13.3%**, 20d **16.8%**; volatility (20d): **unknown**
+- Returns: 5d **-1.2%**, 20d **-5.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%85%8C%ED%81%AC%EC%9C%99%20089030.KQ
+- News search: https://www.google.com/search?tbm=nws&q=%EC%9D%B4%EC%98%A4%ED%85%8C%ED%81%AC%EB%8B%89%EC%8A%A4%20039030.KQ
+
+**정보기술** (403870.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **6.8%**, 20d **-0.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?tbm=nws&q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0%20403870.KQ
+
+**펄어비스** (263750.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **6.3%**, 20d **-13.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **커뮤니케이션서비스**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%8E%84%EC%96%B4%EB%B9%84%EC%8A%A4%20263750.KQ
 
 ## KOSPI
 
@@ -115,6 +115,14 @@
 - Sector: **정보기술**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4%20000660.KS
 
+**삼성물산** (028260.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **-0.1%**, 20d **2.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0%20028260.KS
+
 **신한지주** (055550.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
@@ -122,14 +130,6 @@
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC%20055550.KS
-
-**이마트** (139480.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.5%**, 20d **-19.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **필수소비재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%9D%B4%EB%A7%88%ED%8A%B8%20139480.KS
 
 ### AGGRESSIVE (5)
 
@@ -177,21 +177,6 @@
 
 ### SAFE (5)
 
-**Lululemon** (LULU)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.8%**, 20d **-0.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Lululemon%20LULU
-
-**Marvell Technology** (MRVL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **5.0%**, 20d **-8.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Marvell%20Technology%20MRVL
-
 **Mercado Libre** (MELI)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
@@ -199,131 +184,141 @@
 - Earnings window (±10d): **No**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Mercado%20Libre%20MELI
 
-**Old Dominion Freight Line** (ODFL)
+**MicroStrategy** (MSTR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **2.4%**, 20d **5.0%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?tbm=nws&q=Old%20Dominion%20Freight%20Line%20ODFL
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=MicroStrategy%20MSTR
 
-**Onsemi** (ON)
+**O'Reilly Automotive** (ORLY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.6%**, 20d **-11.7%**; volatility (20d): **unknown**
+- Returns: 5d **0.0%**, 20d **4.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Onsemi%20ON
+- Sector: **Consumer Discretionary**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=O'Reilly%20Automotive%20ORLY
+
+**PDD Holdings** (PDD)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **3.6%**, 20d **8.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=PDD%20Holdings%20PDD
+
+**Shopify** (SHOP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Shopify%20SHOP
 
 ### AGGRESSIVE (5)
 
-**Coca-Cola Europacific Partners** (CCEP)
+**AppLovin** (APP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
+- Returns: 5d **12.3%**, 20d **27.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Coca-Cola%20Europacific%20Partners%20CCEP
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=AppLovin%20APP
 
-**Lululemon** (LULU)
+**ASML Holding** (ASML)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.8%**, 20d **-0.4%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **6.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Lululemon%20LULU
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=ASML%20Holding%20ASML
 
-**Mercado Libre** (MELI)
+**AstraZeneca** (AZN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **4.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Mercado%20Libre%20MELI
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=AstraZeneca%20AZN
 
-**Old Dominion Freight Line** (ODFL)
+**PDD Holdings** (PDD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **2.4%**, 20d **5.0%**; volatility (20d): **unknown**
+- Returns: 5d **3.6%**, 20d **8.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?tbm=nws&q=Old%20Dominion%20Freight%20Line%20ODFL
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=PDD%20Holdings%20PDD
 
-**Onsemi** (ON)
+**Shopify** (SHOP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.6%**, 20d **-11.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Onsemi%20ON
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Shopify%20SHOP
 
 ## S&P 500
 
 ### SAFE (5)
 
-**Agilent Technologies** (A)
+**Abbott Laboratories** (ABT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.4%**, 20d **0.5%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **2.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Agilent%20Technologies%20A
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Abbott%20Laboratories%20ABT
 
-**American Express** (AXP)
+**Accenture** (ACN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **4.6%**, 20d **6.3%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **-6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=American%20Express%20AXP
+- Sector: **Technology**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Accenture%20ACN
 
-**Domino's** (DPZ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **2.2%**, 20d **-4.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Domino's%20DPZ
-
-**Emerson Electric** (EMR)
+**Amazon** (AMZN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **2.0%**, 20d **-8.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Emerson%20Electric%20EMR
-
-**Expedia Group** (EXPE)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **3.2%**, 20d **18.0%**; volatility (20d): **unknown**
+- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Expedia%20Group%20EXPE
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Amazon%20AMZN
+
+**Amphenol** (APH)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **1.4%**, 20d **4.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Amphenol%20APH
+
+**Broadcom** (AVGO)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **3.1%**, 20d **-0.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Broadcom%20AVGO
 
 ### AGGRESSIVE (5)
 
-**Paychex** (PAYX)
+**Qualcomm** (QCOM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.2%**, 20d **-5.0%**; volatility (20d): **unknown**
+- Returns: 5d **2.8%**, 20d **0.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Qualcomm%20QCOM
+
+**RTX Corporation** (RTX)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **1.5%**, 20d **1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Paychex%20PAYX
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=RTX%20Corporation%20RTX
 
-**Paycom** (PAYC)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-2.9%**, 20d **0.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Paycom%20PAYC
-
-**Synchrony Financial** (SYF)
+**Starbucks** (SBUX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **4.3%**, 20d **13.0%**; volatility (20d): **unknown**
+- Returns: 5d **-2.1%**, 20d **-5.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Synchrony%20Financial%20SYF
+- Sector: **Consumer Discretionary**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Starbucks%20SBUX
 
 **T-Mobile US** (TMUS)
 
@@ -333,11 +328,11 @@
 - Sector: **Communication Services**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=T-Mobile%20US%20TMUS
 
-**Workday, Inc.** (WDAY)
+**Vertex Pharmaceuticals** (VRTX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **1.0%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **-1.3%**, 20d **-17.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Workday%2C%20Inc.%20WDAY
+- Sector: **Healthcare**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=Vertex%20Pharmaceuticals%20VRTX
 
