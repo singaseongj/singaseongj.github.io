@@ -247,13 +247,13 @@ const POP_CAP     = +process.env.POP_CAP     || 0.05; // hard cap of popularity 
 
 // External news/popularity weights
 const FMP_API_KEY        = process.env.FMP_API_KEY || 'demo';
-const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 2;
-const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 2;
-const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 5; // naver popularity is 0..1
+const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 1.5;
+const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 2.5;
+const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 60; // naver popularity is 0..1
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
-const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 3;
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 3; // scale & stability weight (0..1)
+const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.10; // scale & stability weight (0..1)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
