@@ -1681,6 +1681,11 @@ async function main(){
     USED[market] = { safe: rankedSafe.slice(), aggressive: rankedAggr.slice() };
 
     metricsOut[market] = names.reduce((acc, n) => {
+      // Ensure a score exists even if some upstream step failed to set totalScore
+      const safeScore01 = clamp01(scoreSafe?.[n] ?? 0);
+      const fallbackScore = Math.round((FLOOR + (CEIL - FLOOR) * safeScore01));
+      const finalScore = Number.isFinite(byName[n].totalScore) ? byName[n].totalScore : fallbackScore;
+
       acc[n] = {
         ret5: byName[n].ret5,
         ret20: byName[n].ret20,
@@ -1721,8 +1726,9 @@ async function main(){
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
         wikiScore: byName[n].wikiScore,
-        score: byName[n].totalScore,
-        rawScore: byName[n].totalScore,
+        // <<< persisted scoring fields >>> //
+        score: finalScore,          // human-facing 0..100 (rounded per market curve)
+        rawScore: finalScore,       // keep a copy for downstream tools
         ds_news7: byName[n].ds_news7,
         ds_burst: byName[n].ds_burst,
         ds_slope7: byName[n].ds_slope7,
@@ -1766,6 +1772,11 @@ async function main(){
   if (DRY_RUN) {
     console.warn(`[buildPools] dry-run, no writes`);
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
+    // Small sanity log so it's obvious scores are present
+    try {
+      console.log('[buildPools] score check (S&P 500/Microsoft):',
+        metricsOut['S&P 500']?.['Microsoft']?.score ?? '(missing)');
+    } catch {}
     console.log('[buildPools] wrote pools-metrics.json (dry-run)');
     return;
   }
@@ -1791,6 +1802,11 @@ async function main(){
   // Write outputs
   await writeAtomic(POOLS_FILE, JSON.stringify(pools, null, 2));
   await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
+  // Small sanity log so it's obvious scores are present
+  try {
+    console.log('[buildPools] score check (S&P 500/Microsoft):',
+      metricsOut['S&P 500']?.['Microsoft']?.score ?? '(missing)');
+  } catch {}
   snapshotPools(pools);
   console.log('[buildPools] wrote pools.json and pools-metrics.json :: done');
 }
