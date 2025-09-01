@@ -237,10 +237,12 @@ function structuralPrior(sym){
 }
 
 const INDEX_SYMBOL_TO_NAME = {};
+const INDEX_MARKETCAP = {};
 for (const r of INDEX_ROWS) {
   const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
   if (!sym) continue;
   if (r.name) INDEX_SYMBOL_TO_NAME[sym] = r.name;
+  if (r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
 }
 
 for (const [sym, nm] of Object.entries(INDEX_SYMBOL_TO_NAME)) {
@@ -1364,6 +1366,9 @@ async function main(){
     const scoreAggrRaw = {};
     const popRaw = names.map(n => {
       const nf = byName[n];
+      const sym = nf.sym || nameToSymbol(n) || n;
+      const mcap = nf.marketCap ?? INDEX_MARKETCAP[normIndexKey(sym)] ?? 0;
+      nf.marketCap = mcap;
       const blog   = nf.blogMentions   || 0;
       const news   = nf.newsCount      || 0;
       const fmp    = nf.fmpNewsCount   || 0;
@@ -1375,8 +1380,8 @@ async function main(){
       const posK   = nf.posHits        || 0;
       const negK   = nf.negHits        || 0;
       const newsSum = news + fmp + goog + yahoo + invest + hanwha;
-      const materiality = (nf.contractValue && nf.marketCap)
-        ? nf.contractValue / nf.marketCap
+      const materiality = (nf.contractValue && mcap)
+        ? nf.contractValue / mcap
         : 0;
       nf.componentScores = {
         blogs: blog,
@@ -1385,7 +1390,7 @@ async function main(){
         posKeywords: posK,
         negKeywords: negK,
         materiality,
-        scale: nf.marketCap || 0,
+        scale: mcap || 0,
       };
       return NEWS_WEIGHT*scaleAdjust(newsSum) +
              BLOG_WEIGHT*scaleAdjust(blog) +
@@ -1394,7 +1399,11 @@ async function main(){
              NEG_KW_WEIGHT*negK +
              materiality;
     });
-    const scaleRaw = names.map(n => scaleAdjust(byName[n].marketCap || 0));
+    const scaleRaw = names.map(n => {
+      const sym = byName[n].sym || nameToSymbol(n) || n;
+      const mcap = byName[n].marketCap ?? INDEX_MARKETCAP[normIndexKey(sym)] ?? 0;
+      return scaleAdjust(mcap);
+    });
     const popArr = safeRank01(popRaw);
     const scaleArr = safeRank01(scaleRaw);
     const popularity01 = Object.fromEntries(names.map((n, i) => [n, popArr[i]]));
@@ -1549,6 +1558,19 @@ async function main(){
         scoreAggr[n] = clamp01(scoreAggr[n] - POP_CAP);
       }
     });
+
+    // Rescale scores to widen spread (0..1)
+    const rescale = (map) => {
+      const vals = Object.values(map);
+      const min = Math.min(...vals);
+      const max = Math.max(...vals);
+      const span = max - min;
+      if (span > 0) {
+        names.forEach(n => { map[n] = (map[n] - min) / span; });
+      }
+    };
+    rescale(scoreSafe);
+    rescale(scoreAggr);
 
     for (const n of names) {
       const j = djitter(n);
