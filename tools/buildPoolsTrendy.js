@@ -7,7 +7,6 @@ import fs from 'fs';
 import path from 'path';
 import fsp from 'fs/promises';
 import crypto from 'crypto';
-import { execSync } from 'node:child_process';
 import { TICKER_MAP } from '../src/maps.js';
 import { getCandles, providerState } from '../src/data/candles.js';
 import { buildUniverse } from '../src/universe/index.js';
@@ -16,6 +15,10 @@ import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverD
 import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 import { fetchDeepsearchFeatures } from '../src/news/deepsearch.js';
 
+if (typeof fetch === 'undefined') {
+  globalThis.fetch = (await import('node-fetch')).default;
+}
+
 fs.mkdirSync('cache', { recursive: true });
 
 const CACHE_DIR = 'cache';
@@ -23,6 +26,10 @@ const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
 
 const VERBOSE = process.env.VERBOSE === '1';
 const log = (...a) => VERBOSE && console.log(...a);
+
+const UA = 'Mozilla/5.0 (compatible; TrendPools/1.0; +https://example.com)';
+const fetchText = u => fetch(u, { headers: { 'User-Agent': UA } }).then(r => r.text());
+const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 let CIRCUIT_OPEN = false;
 let CIRCUIT_OPENED_AT = 0;
@@ -83,7 +90,7 @@ async function safeParseBody(res) {
 }
 
 async function fetchFmpNewsCount(sym){
-  if (!sym || OFFLINE) return 0;
+  if (!sym || OFFLINE || !FMP_API_KEY) return 0;
   const from = new Date(Date.now() - 7*86400000).toISOString().slice(0,10);
   const url = `https://financialmodelingprep.com/api/v3/stock_news?tickers=${encodeURIComponent(sym)}&from=${from}&limit=50&apikey=${FMP_API_KEY}`;
   try {
@@ -97,7 +104,7 @@ async function fetchGoogleNewsCount(sym){
   const url = `https://news.google.com/rss/search?q=${encodeURIComponent(sym)}&hl=en-US&gl=US&ceid=US:en`;
   try {
     const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetch(u).then(r=>r.text());
+      const txt = await fetchText(u);
       const count = (txt.match(/<item>/g) || []).length;
       return { count };
     });
@@ -110,7 +117,7 @@ async function fetchYahooNewsCount(sym){
   const url = `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${encodeURIComponent(sym)}&region=US&lang=en-US`;
   try {
     const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetch(u).then(r=>r.text());
+      const txt = await fetchText(u);
       const count = (txt.match(/<item>/g) || []).length;
       return { count };
     });
@@ -123,8 +130,8 @@ async function fetchInvestingNewsCount(sym){
   const url = `https://www.investing.com/search/?q=${encodeURIComponent(sym)}`;
   try {
     const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetch(u).then(r=>r.text());
-      const count = (txt.match(new RegExp(sym, 'gi')) || []).length;
+      const txt = await fetchText(u);
+      const count = (txt.match(new RegExp(esc(sym), 'gi')) || []).length;
       return { count };
     });
     return data.count || 0;
@@ -136,8 +143,8 @@ async function fetchHanwhaNewsCount(sym){
   const url = `https://m.hanwhawm.com:9090/M/main/research/main/list.cmd?depth3_id=overseaEtf&search=${encodeURIComponent(sym)}`;
   try {
     const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetch(u).then(r=>r.text());
-      const count = (txt.match(new RegExp(sym, 'gi')) || []).length;
+      const txt = await fetchText(u);
+      const count = (txt.match(new RegExp(esc(sym), 'gi')) || []).length;
       return { count };
     }, TTL_MS, true);
     return data.count || 0;
@@ -241,12 +248,11 @@ const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.02; // * ds_burst
 const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.04; // cap (0..1 scale)
 
 // --- Popularity (bounded) ---
-const POP_W       = +process.env.POP_W       || 6;    // % of 0..1 scale added to score
 const POP_FLOOR_W = +process.env.POP_FLOOR_W || 0.01; // portion of scale reserved for popularity floor
 const POP_CAP     = +process.env.POP_CAP     || 0.10; // hard cap of popularity bump (0..1 scale)
 
 // External news/popularity weights
-const FMP_API_KEY        = process.env.FMP_API_KEY || 'demo';
+const FMP_API_KEY        = process.env.FMP_API_KEY || process.env.FMP_KEY || '';
 const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 1.5;
 const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 2.5;
 const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 60; // naver popularity is 0..1
@@ -327,34 +333,9 @@ function lookupLearnedMapping(key) {
   return null;
 }
 
-function tryProviders(sym) {
-  const providers = ['finnhub', 'twelvedata', 'fmp'];
-  providers.sort((a, b) => providerPenalty(a) - providerPenalty(b));
-  for (const p of providers) {
-    if (!sym) continue;
-    // For now, assume candidate symbol is valid when provider key exists
-    // Real-time validation happens later when fetching candles.
-    if (p === 'finnhub' && FINNHUB) return sym;
-    if (p === 'twelvedata' && TWELVE) return sym;
-    if (p === 'fmp' && FMP) return sym;
-  }
-  return null;
-}
-
 function mapOne(rawKey) {
   const direct = nameToSymbol(normalizeKey(rawKey));
   if (direct) return { sym: direct, raw: rawKey, source: (direct === rawKey ? 'ticker' : 'dict') };
-
-  const t = normalizeKey(rawKey);
-  const variants = [t, t.replace('.', '-'), t.replace('.', '/'), t.replace('.', '')];
-
-  for (const v of variants) {
-    const sym = tryProviders(v);
-    if (sym) {
-      rememberMapping(rawKey, sym);
-      return { sym, raw: rawKey, source: 'provider' };
-    }
-  }
   return null;
 }
 
@@ -394,14 +375,6 @@ function bump(provider, ok) {
   saveProviderScore(providerScore);
 }
 
-function providerPenalty(provider) {
-  const p = providerScore[provider];
-  if (!p) return 0;
-  const ageH = (Date.now() - (p.lastFail || 0)) / 36e5;
-  const recency = Math.max(0, 6 - ageH) / 6;
-  return p.fail * (1 + recency);
-}
-
 const LAST_GOOD = path.join(CACHE_DIR, 'last-good-pools.json');
 function snapshotPools(pools) {
   try { fs.writeFileSync(LAST_GOOD, JSON.stringify(pools, null, 2)); } catch {}
@@ -418,7 +391,7 @@ function tryRead(file) {
 
 const FINNHUB = process.env.FINNHUB_API_KEY || '';
 const TWELVE = process.env.TWELVEDATA_API_KEY || '';
-const FMP = process.env.FMP_KEY || '';
+const FMP = !!FMP_API_KEY;
 
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
@@ -494,7 +467,7 @@ async function enrichWithNaverTrends(universe, keywordDict){
 
 // ---- flags
 const ARGS = new Set(process.argv.slice(2));
-const OFFLINE = ARGS.has('--offline');                // skip all network
+const OFFLINE = ARGS.has('--offline') || process.env.OFFLINE === '1';                // skip all network
 const DRY_RUN = ARGS.has('--dry-run');
 let MAX_PER_PROVIDER = Infinity;
 let CACHE_TTL_MS = Number(process.env.CACHE_TTL_MS || 3600000);
@@ -508,7 +481,7 @@ const COVERAGE_MIN = +process.env.COVERAGE_MIN || 0.15;  // loosen gate
 const FINAL_FRAC   = Number(process.env.FINAL_STAGE_BUDGET_FRAC || 0.02);
 const GLOBAL_BUDGET_MS = +process.env.GLOBAL_BUDGET_MS || 90000; // 90s soft budget
 const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
-const DEMO_MODE = !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
+const DEMO_MODE = ARGS.has('--demo') || process.env.DEMO === '1' || !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
 const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
 const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
 const MIN_PRICE_USD = Number(process.env.MIN_PRICE_USD || 2);
@@ -1093,12 +1066,10 @@ async function main(){
     console.log('[buildPools] No pools.json; nothing to do.');
     process.exit(0);
   }
-  const hasFinnhub = !!process.env.FINNHUB_API_KEY;
-  const hasTwelve  = !!process.env.TWELVEDATA_API_KEY;
-  const hasFmp     = !!process.env.FMP_KEY;
-  const hasNewsData = !!process.env.NEWSDATA_API_KEY;
+  const hasFinnhub = !!FINNHUB;
+  const hasTwelve  = !!TWELVE;
 
-  console.log(`[buildPools] start :: FINNHUB=${hasFinnhub} TWELVE=${hasTwelve} FMP=${hasFmp} NEWSDATA=${hasNewsData} OFFLINE=${!!process.env.OFFLINE} DEMO=${!!process.env.DEMO} budget=${process.env.GLOBAL_BUDGET_MS||'n/a'}ms`);
+  console.log(`[buildPools] start :: FINNHUB=${hasFinnhub} TWELVE=${hasTwelve} FMP=${FMP} OFFLINE=${OFFLINE} DEMO=${DEMO_MODE} budget=${process.env.GLOBAL_BUDGET_MS||'n/a'}ms`);
 
   // Ensure pools object has entries for all markets
   for (const m of MARKETS) {
@@ -1297,12 +1268,15 @@ async function main(){
           if (typeof nf.negHits === 'number') negHits = nf.negHits;
           if (typeof nf.marketCap === 'number') marketCap = nf.marketCap;
         }
-        fmpNewsCount = await fetchFmpNewsCount(sym);
-        googleNewsCount = await fetchGoogleNewsCount(sym);
-        yahooNewsCount = await fetchYahooNewsCount(sym);
-        investingNewsCount = await fetchInvestingNewsCount(sym);
-        hanwhaNewsCount = await fetchHanwhaNewsCount(sym);
-        wikiViews = await fetchWikiPageviews(name);
+        [fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount, wikiViews] =
+          await Promise.allSettled([
+            fetchFmpNewsCount(sym),
+            fetchGoogleNewsCount(sym),
+            fetchYahooNewsCount(sym),
+            fetchInvestingNewsCount(sym),
+            fetchHanwhaNewsCount(sym),
+            fetchWikiPageviews(name),
+          ]).then(rs => rs.map(r => (r.status === 'fulfilled' ? r.value : 0)));
         earn = !!(EARNINGS_SET && sym && isUS(sym) && EARNINGS_SET.has(sym));
       } catch (e) {
         tripOnError(e);
@@ -1730,7 +1704,7 @@ async function main(){
         reputationHitIds: byName[n].reputationHitIds || [],
         popularity01: popularity01?.[n] ?? 0,
         source: byName[n].source,
-        attempts: byName[n].attempts,
+        attempts: (byName[n].attempts || []).slice(-10),
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
         wikiScore: byName[n].wikiScore,
