@@ -777,7 +777,7 @@ function scaleAdjust(x){
   return Number.isFinite(x) && x > 0 ? x * Math.log10(1 + x) : 0;
 }
 
-function djitter(key, mag=0.01){
+function djitter(key, mag=Number(process.env.JITTER_MAG || 0.003)){
   let h=0; for (let i=0;i<key.length;i++) h=(h*131+key.charCodeAt(i))|0;
   return ((h % 2001) - 1000) / 1000 * mag;
 }
@@ -1480,6 +1480,10 @@ async function main(){
     let GAMMA = Number(process.env.SCORE_CURVE || 0.62); // <1 boosts the head
     const FLOOR = Number(process.env.SCORE_FLOOR || 0); // allow full 0-100 range
     const CEIL  = Number(process.env.SCORE_CEIL  || 100);
+    const SCORE_ROUND = (process.env.SCORE_ROUND || 'round').toLowerCase();
+    const roundScore = (x) => SCORE_ROUND === 'floor' ? Math.floor(x)
+                            : SCORE_ROUND === 'ceil'  ? Math.ceil(x)
+                            : Math.round(x);
 
     if (AUTO_CURVE) {
       const vals = Object.values(scoreSafeRaw);
@@ -1496,7 +1500,7 @@ async function main(){
       scoreSafe[n] = curved;
       scoreAggr[n] = Math.pow(pAggr[n], GAMMA);
       // store human-facing 0..100 with floor/ceiling
-      byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * curved);
+      byName[n].totalScore = roundScore(FLOOR + (CEIL - FLOOR) * curved);
     }
 
     // Optional: hotness boost — disabled with HOTNESS_WEIGHT=0
@@ -1537,9 +1541,9 @@ async function main(){
         const bumpLiq = (LIQ_W/100) * liqP[i];
         const earnSafe = byName[n].earn ? EARN_BOOST : 0;
         const earnAggr = byName[n].earn ? EARN_BOOST*0.8 : 0;
-        scoreSafe[n] = clamp01(scoreSafe[n] + bumpHot + bumpLiq + earnSafe);
-        scoreAggr[n] = clamp01(scoreAggr[n] + bumpHot*1.15 + bumpLiq + earnAggr);
-        byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
+        scoreSafe[n] += (bumpHot + bumpLiq + earnSafe);
+        scoreAggr[n] += (bumpHot*1.15 + bumpLiq + earnAggr);
+        byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
       }
 
       const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.02; // 10% of scale max
@@ -1558,9 +1562,9 @@ async function main(){
         const s = pools[market]?.sectorMap?.[n] || byName[n].sector || null;
         if (!s) return;
         const lift = (sectorHot[s] || 0) * SECTOR_LIFT;  // 0..SECTOR_LIFT
-        scoreSafe[n] = clamp01(scoreSafe[n] + lift);
-        scoreAggr[n] = clamp01(scoreAggr[n] + lift);
-        byName[n].totalScore = Math.min(100, Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
+        scoreSafe[n] += lift;
+        scoreAggr[n] += lift;
+        byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
       });
     }
 
@@ -1586,9 +1590,9 @@ async function main(){
         ? INELIGIBLE_PENALTY
         : ((!eligibility[n].advKnown || !eligibility[n].priceKnown) ? UNKNOWN_PENALTY : 0);
       if (pen > 0) {
-        scoreSafe[n] = clamp01(scoreSafe[n] - pen);
-        scoreAggr[n] = clamp01(scoreAggr[n] - pen * 0.8);
-        byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
+        scoreSafe[n] -= pen;
+        scoreAggr[n] -= pen * 0.8;
+        byName[n].totalScore = roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
       }
     }
 
@@ -1601,15 +1605,25 @@ async function main(){
       }
     });
 
+    function quantile(arr, q){
+      const a = arr.slice().sort((x,y)=>x-y);
+      if (!a.length) return 0;
+      const pos = (a.length - 1) * q;
+      const lo = Math.floor(pos), hi = Math.ceil(pos);
+      if (lo === hi) return a[lo];
+      const f = pos - lo; return a[lo]*(1-f) + a[hi]*f;
+    }
+    const QLO = +process.env.RESCALE_Q_LO || 0.02;  // 2nd percentile
+    const QHI = +process.env.RESCALE_Q_HI || 0.99;  // 99th percentile
+
     // Rescale scores to widen spread (0..1)
     const rescale = (map) => {
       const vals = Object.values(map);
-      const min = Math.min(...vals);
-      const max = Math.max(...vals);
-      const span = max - min;
-      if (span > 0) {
-        names.forEach(n => { map[n] = (map[n] - min) / span; });
-      }
+      let lo = quantile(vals, QLO);
+      let hi = quantile(vals, QHI);
+      if (!(hi > lo)) { lo = Math.min(...vals); hi = Math.max(...vals); }
+      const span = Math.max(1e-9, hi - lo);
+      names.forEach(n => { map[n] = clamp01((map[n] - lo) / span); });
     };
     rescale(scoreSafe);
     rescale(scoreAggr);
@@ -1618,7 +1632,7 @@ async function main(){
       const j = djitter(n);
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
       scoreAggr[n] = clamp01(scoreAggr[n] + j);
-      byName[n].totalScore = Math.round(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
+      byName[n].totalScore = roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
 
       byName[n].reasons = byName[n].reasons || {};
       byName[n].reasons.topKeywords = byName[n].reasons.topKeywords || [];
