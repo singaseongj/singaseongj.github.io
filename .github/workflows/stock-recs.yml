@@ -315,12 +315,19 @@ jobs:
           git add data/market-news.json data/fx_rates.json summary.json summary.md data/articles pools-metrics.json || true
           echo "Files staged for commit"
 
-      - name: "Commit & push changes"
-        uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0  # v5
-        with:
-          commit_message: "chore: data update (news/fx/summary) [skip ci]"
-          file_pattern: .
-          branch: ${{ github.ref_name }}
+      - name: Commit & push changes
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: data update (news/fx/summary) [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin HEAD:"${{ github.ref_name }}"
 
       - name: Verify HEAD has fresh data
         if: always()
