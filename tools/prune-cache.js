@@ -3,7 +3,7 @@ import path from 'path';
 
 const ROOT = process.cwd();
 const CACHE_DIR = path.join(ROOT, 'cache');
-const LIMIT = Number(process.env.CACHE_LIMIT || 1000);
+const LIMIT = Number(process.env.CACHE_LIMIT || 990);
 const DRY_RUN = process.env.DRY_RUN === '1';
 
 async function *walk(dir) {
