@@ -1001,7 +1001,7 @@ function sectorMedians(names, byName){
 function pctOffHiLo(c){
   if (!Array.isArray(c) || c.length < 20) return { offHi:0, offLo:0 };
   const lo = Math.min(...c), hi = Math.max(...c), last = c[c.length-1];
-  return { offHi: (hi-last)/Math.max(1e-6, hi), offLo: (last-lo)/Math.max(1e-6, hi) };
+  return { offHi: (hi-last)/Math.max(1e-6, hi), offLo: (last-lo)/Math.max(1e-6, lo) };
 }
 
 // ---------- Universe & name→symbol mapping ----------
@@ -1423,7 +1423,9 @@ async function main(){
       const total01 = (1 - SCALE_WEIGHT) * p01 + SCALE_WEIGHT * s01;
       byName[n].prevNewsScore = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
       byName[n].totalScore    = Math.round(total01 * 100);
-      byName[n].componentScores = (NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {}).componentScores;
+      byName[n].componentScores = byName[n].componentScores
+        || (NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {}).componentScores
+        || {};
       scoreSafeRaw[n] = total01;
       scoreAggrRaw[n] = total01;
     });
