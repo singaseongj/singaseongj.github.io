@@ -236,7 +236,7 @@ const HOT_W_NEWS       = +process.env.HOT_W_NEWS       || 0.40;
 const HOT_W_TREND      = +process.env.HOT_W_TREND      || 0.30;
 const HOT_W_TURN       = +process.env.HOT_W_TURN       || 0.20;
 const HOT_W_WIKI       = +process.env.HOT_W_WIKI       || 0.10;
-const TREND_EXP        = +process.env.TREND_EXP        || 1.2;  // >1 makes trend more sensitive
+const TREND_EXP        = +process.env.TREND_EXP        || 1.5;  // >1 makes trend more sensitive
 const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.05; // * ds_burst
 const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.08; // cap (0..1 scale)
 
@@ -247,13 +247,13 @@ const POP_CAP     = +process.env.POP_CAP     || 0.05; // hard cap of popularity 
 
 // External news/popularity weights
 const FMP_API_KEY        = process.env.FMP_API_KEY || 'demo';
-const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 1;
+const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 2;
 const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 2;
-const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 50; // naver popularity is 0..1
+const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 5; // naver popularity is 0..1
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
-const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 1;
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.15; // scale & stability weight (0..1)
+const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 3;
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 3; // scale & stability weight (0..1)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
