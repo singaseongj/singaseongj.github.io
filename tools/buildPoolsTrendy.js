@@ -1456,6 +1456,10 @@ async function main(){
     let GAMMA = Number(process.env.SCORE_CURVE || 0.62); // <1 boosts the head
     const FLOOR = Number(process.env.SCORE_FLOOR || 0); // allow full 0-100 range
     const CEIL  = Number(process.env.SCORE_CEIL  || 100);
+    // Optional per-market ceiling (e.g., only cap S&P 500 at 99)
+    const CEIL_LOCAL = (market === 'S&P 500')
+      ? (Number(process.env.SCORE_CEIL_SP500) || CEIL)
+      : CEIL;
     const SCORE_ROUND = (process.env.SCORE_ROUND || 'round').toLowerCase();
     const roundScore = (x) => SCORE_ROUND === 'floor' ? Math.floor(x)
                             : SCORE_ROUND === 'ceil'  ? Math.ceil(x)
@@ -1476,7 +1480,7 @@ async function main(){
       scoreSafe[n] = curved;
       scoreAggr[n] = Math.pow(pAggr[n], GAMMA);
       // store human-facing 0..100 with floor/ceiling
-      byName[n].totalScore = roundScore(FLOOR + (CEIL - FLOOR) * curved);
+      byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * curved);
     }
 
     // Optional: hotness boost — disabled with HOTNESS_WEIGHT=0
@@ -1519,7 +1523,7 @@ async function main(){
         const earnAggr = byName[n].earn ? EARN_BOOST*0.8 : 0;
         scoreSafe[n] += (bumpHot + bumpLiq + earnSafe);
         scoreAggr[n] += (bumpHot*1.15 + bumpLiq + earnAggr);
-        byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
+        byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]));
       }
 
       const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.02; // 10% of scale max
@@ -1540,7 +1544,7 @@ async function main(){
         const lift = (sectorHot[s] || 0) * SECTOR_LIFT;  // 0..SECTOR_LIFT
         scoreSafe[n] += lift;
         scoreAggr[n] += lift;
-        byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]));
+        byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]));
       });
     }
 
@@ -1553,7 +1557,7 @@ async function main(){
       const popFloor01   = (POP_FLOOR_W) * (typeof popularity01?.[n] === 'number' ? popularity01[n] : 0);
       const baseFloor    = Math.min(1, indivFloor01 + popFloor01);
       const floor01      = eligibility[n].eligible ? baseFloor : Math.min(baseFloor, 0.1);
-      const floor100     = FLOOR + (CEIL - FLOOR) * floor01;
+      const floor100     = FLOOR + (CEIL_LOCAL - FLOOR) * floor01;
 
       byName[n].totalScore = Math.max(floor100, byName[n].totalScore);
       scoreSafe[n]         = Math.max(scoreSafe[n], floor01);
@@ -1568,7 +1572,7 @@ async function main(){
       if (pen > 0) {
         scoreSafe[n] -= pen;
         scoreAggr[n] -= pen * 0.8;
-        byName[n].totalScore = roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
+        byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
       }
     }
 
@@ -1589,26 +1593,33 @@ async function main(){
       if (lo === hi) return a[lo];
       const f = pos - lo; return a[lo]*(1-f) + a[hi]*f;
     }
-    const QLO = +process.env.RESCALE_Q_LO || 0.02;  // 2nd percentile
-    const QHI = +process.env.RESCALE_Q_HI || 0.99;  // 99th percentile
+    const QLO_BASE = +process.env.RESCALE_Q_LO || 0.02;   // defaults
+    const QHI_BASE = +process.env.RESCALE_Q_HI || 0.99;
+    // Optional per-market quantile overrides (e.g., RESCALE_Q_HI_SP500=1)
+    const QLO_LOCAL = (market === 'S&P 500')
+      ? (Number(process.env.RESCALE_Q_LO_SP500) || QLO_BASE)
+      : QLO_BASE;
+    const QHI_LOCAL = (market === 'S&P 500')
+      ? (Number(process.env.RESCALE_Q_HI_SP500) || QHI_BASE)
+      : QHI_BASE;
 
     // Rescale scores to widen spread (0..1)
-    const rescale = (map) => {
+    const rescale = (map, qlo, qhi) => {
       const vals = Object.values(map);
-      let lo = quantile(vals, QLO);
-      let hi = quantile(vals, QHI);
+      let lo = quantile(vals, qlo);
+      let hi = quantile(vals, qhi);
       if (!(hi > lo)) { lo = Math.min(...vals); hi = Math.max(...vals); }
       const span = Math.max(1e-9, hi - lo);
       names.forEach(n => { map[n] = clamp01((map[n] - lo) / span); });
     };
-    rescale(scoreSafe);
-    rescale(scoreAggr);
+    rescale(scoreSafe, QLO_LOCAL, QHI_LOCAL);
+    rescale(scoreAggr, QLO_LOCAL, QHI_LOCAL);
 
     for (const n of names) {
       const j = djitter(n);
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
       scoreAggr[n] = clamp01(scoreAggr[n] + j);
-      byName[n].totalScore = roundScore(FLOOR + (CEIL - FLOOR) * scoreSafe[n]);
+      byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
 
       byName[n].reasons = byName[n].reasons || {};
       byName[n].reasons.topKeywords = byName[n].reasons.topKeywords || [];
