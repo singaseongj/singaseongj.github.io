@@ -61,6 +61,45 @@ function uniqBySymbol(arr){
   return out.sort((a,b)=>a.symbol.localeCompare(b.symbol));
 }
 
+function parseCap(str){
+  if (!str) return null;
+  const m = str.replace(/,/g,'').match(/([\d.]+)\s*([TBMK])\s+[A-Z]{3}/i);
+  if (!m) return null;
+  const mult = { K:1e3, M:1e6, B:1e9, T:1e12 }[m[2].toUpperCase()] || 1;
+  return Math.round(parseFloat(m[1]) * mult);
+}
+
+function exchangesFor(sym){
+  if (sym.endsWith('.KS')) return ['KRX'];
+  if (sym.endsWith('.KQ')) return ['KOSDAQ'];
+  return ['NASDAQ','NYSE','NYSEARCA','NYSEAMERICAN'];
+}
+
+async function fetchCap(sym){
+  const exs = exchangesFor(sym);
+  const base = sym.replace(/\.KS$|\.KQ$/,'');
+  for (const ex of exs){
+    const html = await netText(`https://www.google.com/finance/quote/${base}:${ex}`);
+    if (!html) continue;
+    const m = html.match(/Market cap<\/div><div[^>]*>.*?<\/div><\/span><div[^>]*>([^<]+)/);
+    if (m) return parseCap(m[1]);
+  }
+  return null;
+}
+
+async function fetchMarketCaps(symbols, limit=5){
+  const caps = {};
+  const queue = symbols.slice();
+  const workers = Array(limit).fill(0).map(async () => {
+    while(queue.length){
+      const sym = queue.shift();
+      caps[sym] = await fetchCap(sym);
+    }
+  });
+  await Promise.all(workers);
+  return caps;
+}
+
 // ---- Parsers (with fallbacks)
 
 // S&P 500: prefer Name,Symbol,Sector order; fallback to Symbol,Name,Sector
@@ -148,6 +187,37 @@ async function main() {
   nasdaq100 = uniqBySymbol(nasdaq100);
   kospi200  = uniqBySymbol(kospi200);
   kosdaq100 = uniqBySymbol(kosdaq100);
+
+  const allSymbols = Array.from(new Set([
+    ...sp500,
+    ...nasdaq100,
+    ...kospi200,
+    ...kosdaq100,
+  ].map(r => r.symbol)));
+
+  const caps = OFFLINE ? {} : await fetchMarketCaps(allSymbols);
+  const oldCaps = new Map();
+  for (const key of ['sp500','nasdaq100','kospi200','kosdaq100']) {
+    for (const r of current[key] || []) {
+      if (typeof r.marketCap === 'number') oldCaps.set(r.symbol, r.marketCap);
+    }
+  }
+
+  function attachCaps(list){
+    for (const r of list) {
+      const mc = caps[r.symbol] ?? null;
+      const prev = oldCaps.get(r.symbol);
+      if (prev != null && mc != null && prev !== mc) {
+        console.log(`[cap] ${r.symbol}: ${prev} -> ${mc}`);
+      }
+      r.marketCap = mc;
+    }
+  }
+
+  attachCaps(sp500);
+  attachCaps(nasdaq100);
+  attachCaps(kospi200);
+  attachCaps(kosdaq100);
 
   const next = {
     sp500,
