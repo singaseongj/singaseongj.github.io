@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-01T16:56:51+09:00 (KST)**
+- Generated: **2025-09-01T17:09:01+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -100,12 +100,13 @@
 - Sector: **금융**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=KB%EA%B8%88%EC%9C%B5%20105560.KS
 
-**NAVER** (NAVER)
+**LG에너지솔루션** (373220.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.1%**, 20d **-6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=NAVER%20NAVER
+- Sector: **산업재**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98%20373220.KS
 
 **SK하이닉스** (000660.KS)
 
@@ -115,21 +116,21 @@
 - Sector: **정보기술**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4%20000660.KS
 
-**삼성물산** (028260.KS)
+**삼성전자우** (005935.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.1%**, 20d **2.9%**; volatility (20d): **unknown**
+- Returns: 5d **-2.4%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%EC%9A%B0%20005935.KS
+
+**한화에어로스페이스** (012450.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.4%**, 20d **-2.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0%20028260.KS
-
-**신한지주** (055550.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-2.1%**, 20d **-4.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC%20055550.KS
+- News search: https://www.google.com/search?tbm=nws&q=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20012450.KS
 
 ### AGGRESSIVE (5)
 
@@ -141,21 +142,29 @@
 - Sector: **산업재**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=HD%ED%95%9C%EA%B5%AD%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91%20009540.KS
 
-**기아** (000270.KS)
+**강원랜드** (035250.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **-3.6%**; volatility (20d): **unknown**
+- News (7d): **3** (blogs: 10) — momentum: **low**, sentiment: **positive (+0.33)**
+- Returns: 5d **-0.9%**, 20d **-2.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EA%B8%B0%EC%95%84%20000270.KS
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EA%B0%95%EC%9B%90%EB%9E%9C%EB%93%9C%20035250.KS
 
-**메리츠금융지주** (138040.KS)
+**두산에너빌리티** (034020.KS)
 
-- News (7d): **3** (blogs: 10) — momentum: **low**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.2%**, 20d **12.8%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **-1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://www.google.com/search?tbm=nws&q=%EB%A9%94%EB%A6%AC%EC%B8%A0%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC%20138040.KS
+- Sector: **산업재**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0%20034020.KS
+
+**삼성SDI** (006400.KS)
+
+- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.11)**
+- Returns: 5d **0.2%**, 20d **4.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1SDI%20006400.KS
 
 **삼성전자** (005930.KS)
 
@@ -164,14 +173,6 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20005930.KS
-
-**한솔케미칼** (014680.KS)
-
-- News (7d): **1** (blogs: 10) — momentum: **low**, sentiment: **negative (-1.00)**
-- Returns: 5d **-7.0%**, 20d **-6.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%ED%95%9C%EC%86%94%EC%BC%80%EB%AF%B8%EC%B9%BC%20014680.KS
 
 ## NASDAQ 100
 
