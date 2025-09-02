@@ -259,7 +259,7 @@ const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 60; // naver popul
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
 const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.05; // scale & stability weight (0..1)
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.25; // size (market cap from indexes) weight (0..1)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
@@ -1373,7 +1373,8 @@ async function main(){
     const popRaw = names.map(n => {
       const nf = byName[n];
       const sym = nf.sym || nameToSymbol(n) || n;
-      const mcap = nf.marketCap ?? INDEX_MARKETCAP[normIndexKey(sym)] ?? 0;
+      // Prefer stable market cap from src/maps.indexes.json; fall back to runtime caps.
+      const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? nf.marketCap ?? 0;
       nf.marketCap = mcap;
       const blog   = nf.blogMentions   || 0;
       const news   = nf.newsCount      || 0;
@@ -1410,7 +1411,8 @@ async function main(){
     });
     const scaleRaw = names.map(n => {
       const sym = byName[n].sym || nameToSymbol(n) || n;
-      const mcap = byName[n].marketCap ?? INDEX_MARKETCAP[normIndexKey(sym)] ?? 0;
+      // Rank by index-based market cap first to keep size signal consistent across runs.
+      const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? byName[n].marketCap ?? 0;
       return scaleAdjust(mcap);
     });
     const popArr = safeRank01(popRaw);
@@ -1420,7 +1422,7 @@ async function main(){
     names.forEach((n, i) => {
       const p01 = popArr[i];
       const s01 = scaleArr[i];
-      const total01 = (1 - SCALE_WEIGHT) * p01 + SCALE_WEIGHT * s01;
+      const total01 = (1 - SCALE_WEIGHT) * p01 + SCALE_WEIGHT * s01; // now with higher size influence
       byName[n].prevNewsScore = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
       byName[n].totalScore    = Math.round(total01 * 100);
       byName[n].componentScores = byName[n].componentScores
