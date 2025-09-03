@@ -1707,7 +1707,17 @@ async function main(){
       byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
 
       byName[n].reasons = byName[n].reasons || {};
-      byName[n].reasons.topKeywords = byName[n].reasons.topKeywords || [];
+      const nf = NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {};
+      // Fill reputation & keywords (computed in fetchByTicker via computeReputation)
+      if (Number.isFinite(nf.reputationScore)) {
+        byName[n].reasons.reputationScore = nf.reputationScore;
+      }
+      if (Array.isArray(nf.topKeywords) && nf.topKeywords.length) {
+        byName[n].reasons.topKeywords = nf.topKeywords.slice(0, 5);
+      } else {
+        byName[n].reasons.topKeywords = byName[n].reasons.topKeywords || [];
+      }
+
       const sig = (byName[n].reasons.signals = {
         ...(byName[n].reasons.signals || {}),
         news7d:  byName[n].ds_news7  ?? 0,
@@ -1716,9 +1726,22 @@ async function main(){
         topic:   byName[n].ds_topic  ?? 0,
         trend:   byName[n].ds_trend  ?? 0,
       });
-      sig.sentiment = sig.sentiment ?? 0;
-      sig.blog      = sig.blog      ?? 0;
-      sig.naver     = sig.naver     ?? 0;
+      // Populate human-facing signals
+      // sentiment: map −1..+1 to 1..5 (or leave as 0..1 if you prefer)
+      if (!Number.isFinite(sig.sentiment)) {
+        const s = byName[n].sentiment;
+        sig.sentiment = Number.isFinite(s) ? scoreSentiment(s) : 0; // 1..5
+      }
+      // blog: normalize Naver blog mentions to 0..1
+      if (!Number.isFinite(sig.blog)) {
+        sig.blog = clamp01((byName[n].blogMentions || 0) / 10);
+      }
+      // naver: use popularity (fallback to spike/asvi)
+      if (!Number.isFinite(sig.naver)) {
+        const navp = nf.naverPopularity ?? byName[n].naverPopularity ?? 0;
+        const asvi = nf.naverSpike ?? byName[n].naverSpike ?? byName[n].naverAsvi ?? 0;
+        sig.naver = clamp01(navp || asvi || 0);
+      }
       byName[n].reasons = stripNulls(byName[n].reasons);
     }
     const scores = names.map(n => byName[n].totalScore);
