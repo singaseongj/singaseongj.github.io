@@ -584,7 +584,6 @@ function natnForSym(sym) {
   return '미국';
 }
 
-function ymd(d){ return d.toISOString().slice(0,10).replace(/-/g,''); }
 function buildKotraUrl({
   serviceKey,
   natn,
@@ -592,10 +591,8 @@ function buildKotraUrl({
   rows = 10,
   page = 1,
   includeText = true,
-  dateFrom,       // YYYYMMDD
-  dateTo,         // YYYYMMDD
-  industryCode,   // search5 (optional)
-  hotclip,        // search6 (optional)
+  fromYmd,
+  toYmd,
 }) {
   const params = new URLSearchParams();
   params.set('serviceKey', serviceKey);
@@ -605,11 +602,9 @@ function buildKotraUrl({
   if (includeText) params.set('search8', 'Y');
   if (natn) params.set('search1', natn);
   if (title) params.set('search2', title);
-  if (dateFrom) params.set('search4', dateFrom);
-  if (dateTo) params.set('search7', dateTo);
-  if (industryCode) params.set('search5', industryCode);
-  if (hotclip) params.set('search6', hotclip);
-  return `${KOTRA_BASE}/ovseaMrktNews?${params.toString()}`;
+  if (fromYmd) params.set('search4', fromYmd); // 시작일자 YYYYMMDD
+  if (toYmd)   params.set('search7', toYmd);   // 종료일자 YYYYMMDD
+  return `${KOTRA_BASE}?${params.toString()}`;
 }
 
 async function newsFromKotra(sym, rawQuery) {
@@ -618,21 +613,17 @@ async function newsFromKotra(sym, rawQuery) {
   if (!serviceKey) return null;
 
   const natn = natnForSym(sym);
-  // 7-day window (inclusive)
-  const to = new Date();
-  const from = new Date(Date.now() - 7*24*3600*1000);
+  const d = (n)=>{ const t=new Date(); t.setDate(t.getDate()+n); return t.toISOString().slice(0,10).replace(/-/g,''); };
+  const from = d(-7), to = d(0);
   const url = buildKotraUrl({
     serviceKey,
     natn,
-    title: String(rawQuery || '').replace(/^"+|"+$/g,'').slice(0,200),
-    rows: 20,
+    title: rawQuery,
+    rows: 10,
     page: 1,
     includeText: true,
-    dateFrom: ymd(from),
-    dateTo: ymd(to),
-    // Optionally pass search5/search6 if you decide to map industry/hotclip
-    // industryCode: 'I001195',
-    // hotclip: 'ANA',
+    fromYmd: from,
+    toYmd: to
   });
 
   const headers = { Accept: 'application/json' };
@@ -797,13 +788,14 @@ export async function buildNewsFeatures(symbols, opts={}){
     const q = queries[sym];
     const name = symbolToName[sym] || sym;
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
+    const addDS = (arr) => (DEEPS_API_KEY ? ['deepsearch', ...arr] : arr);
     const baseProviders = preferNaver
       ? (isKR(sym)
-          ? ['naver','gnews','serpapi','kotra','newsapi','gdelt','polygon']      // no finnhub for KR
-          : ['naver','gnews','serpapi','newsapi','gdelt','finnhub','polygon'])
+          ? addDS(['naver','gnews','serpapi','kotra','newsapi','gdelt','polygon'])      // no finnhub for KR
+          : addDS(['naver','gnews','serpapi','newsapi','gdelt','finnhub','polygon']))
       : (isKR(sym)
-          ? ['gnews','naver','serpapi','kotra','newsapi','gdelt','polygon']      // no finnhub for KR
-          : ['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver']);
+          ? addDS(['gnews','naver','serpapi','kotra','newsapi','gdelt','polygon'])      // no finnhub for KR
+          : addDS(['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver']));
     const providers = process.env.SKIP_GDELT === '1'
       ? baseProviders.filter(p => p !== 'gdelt')
       : baseProviders;
