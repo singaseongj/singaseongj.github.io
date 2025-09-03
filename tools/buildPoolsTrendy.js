@@ -500,10 +500,12 @@ const TTL = {
   wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
   earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
 };
-// Blend weights (0..1); sum should be <= ~0.4 so we don't drown out core score
-const W_NEWS = Number(process.env.W_NEWS || 0.18);
-const W_REPUTATION = Number(process.env.W_REPUTATION || 0.14);
-const W_NAVER_POP = Number(process.env.W_NAVER_POP || 0.10);
+// Blend weights (0..1); keep total <= ~0.4 so we don't drown out core score
+const W_NEWS        = Number(process.env.W_NEWS        || 0.18); // newsScore (intensity)
+const W_REPUTATION  = Number(process.env.W_REPUTATION  || 0.14); // reputationScore (quality)
+const W_NAVER_POP   = Number(process.env.W_NAVER_POP   || 0.10); // naverPopularity (interest)
+const W_SENTIMENT   = Number(process.env.W_SENTIMENT   || 0.10); // sentiment (-1..1 mapped to 0..1)
+const W_DS_TREND    = Number(process.env.W_DS_TREND    || 0.10); // ds_trend (0..1), complements HOT_W_TREND
 for (const a of process.argv.slice(2)) {
   if (a.startsWith('--max-per-provider=')) MAX_PER_PROVIDER = Number(a.split('=')[1]);
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
@@ -1662,7 +1664,13 @@ async function main(){
 
     // --- Blend external news/trend signals (from data/*.json) -----------------
     // Note: these are already in 0..1-ish ranges; clamp & mix conservatively.
-    const EXT_SUM = Math.max(0, Math.min(0.95, W_NEWS + W_REPUTATION + W_NAVER_POP));
+    const EXT_SUM = Math.max(
+      0,
+      Math.min(
+        0.95,
+        W_NEWS + W_REPUTATION + W_NAVER_POP + W_SENTIMENT + W_DS_TREND
+      )
+    );
     for (const n of names) {
       const nk = normalizeKey(n);
       const sym = NAME_TO_SYMBOL[nk] || NAME_TO_SYMBOL[n] || byName[n]?.symbol;
@@ -1671,7 +1679,14 @@ async function main(){
       const news = clamp01(Number(nf?.newsScore ?? 0));
       const rep  = clamp01(Number(nf?.reputationScore ?? 0));
       const navp = clamp01(Number(nt?.naverPopularity ?? 0));
-      const ext  = (W_NEWS * news) + (W_REPUTATION * rep) + (W_NAVER_POP * navp);
+      const sent = clamp01(0.5 * (Number(nf?.sentiment ?? 0) + 1)); // -1..1 -> 0..1
+      const dstr = clamp01(Math.max(0, Number(nf?.ds_trend ?? 0))); // keep non-negative
+      const ext  =
+        (W_NEWS       * news) +
+        (W_REPUTATION * rep)  +
+        (W_NAVER_POP  * navp) +
+        (W_SENTIMENT  * sent) +
+        (W_DS_TREND   * dstr);
       if (ext > 0) {
         scoreSafe[n] = clamp01((1 - EXT_SUM) * scoreSafe[n] + ext);
         // slightly more weight for aggressive on news/trend
@@ -1684,7 +1699,9 @@ async function main(){
         metricsOut[market][n].extSignals = {
           newsScore: news || 0,
           reputationScore: rep || 0,
-          naverPopularity: navp || 0
+          naverPopularity: navp || 0,
+          sentiment01: sent || 0,
+          dsTrend: dstr || 0
         };
       } catch {}
     }
@@ -1872,7 +1889,12 @@ async function main(){
       HOT_W_TURN,
       HOT_W_WIKI,
       SECTOR_LIFT: +process.env.SECTOR_LIFT || 0.02,
-      EARNINGS_BOOST: +process.env.EARNINGS_BOOST || 0.02
+      EARNINGS_BOOST: +process.env.EARNINGS_BOOST || 0.02,
+      W_NEWS,
+      W_REPUTATION,
+      W_NAVER_POP,
+      W_SENTIMENT,
+      W_DS_TREND
     },
     env: {
       PREV_CARRY,
