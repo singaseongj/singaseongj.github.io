@@ -1,7 +1,8 @@
 # yamllint disable rule:line-length
+---
 name: Build & Publish Stock Recommendations
 
-on:
+'on':
   workflow_dispatch:
   schedule:
     # Every 5 hours (cron is UTC; cadence doesn't depend on timezone)
@@ -170,6 +171,28 @@ jobs:
         env:
           FMP_KEY: ${{ secrets.FMP_KEY }}
 
+      # 🔹 NEW: Build news & trend caches first (writes data/news-features.json, data/naver-trends.json)
+      - name: Build news/trend caches (features first)
+        env:
+          NEWS_FEATURES_FILE: data/news-features.json
+          NAVER_TRENDS_FILE: data/naver-trends.json
+          GLOBAL_BUDGET_MS: ${{ env.GLOBAL_BUDGET_MS }}
+          NAVER_TRENDS_CACHE_TTL_MS: ${{ env.NAVER_TRENDS_CACHE_TTL_MS }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          GNEWS_API: ${{ secrets.GNEWS_API }}
+          SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
+          DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
+        run: |
+          set -euo pipefail
+          node -e "import('./src/news/fetchByTicker.js').then(m=>m.buildNewsCachesCli && m.buildNewsCachesCli())"
+          test -s data/news-features.json
+          test -s data/naver-trends.json
+
       - name: "Preflight: DeepSearch"
         shell: bash
         run: |
@@ -182,6 +205,9 @@ jobs:
 
       - name: Build trend-aware pools
         env:
+          USE_PREBUILT_FEATURES: "1"              # ← read-only: reuse the files we just built
+          NEWS_FEATURES_FILE: data/news-features.json
+          NAVER_TRENDS_FILE: data/naver-trends.json
           FMP_KEY: ${{ secrets.FMP_KEY }}
           ALPHA_VANTAGE_KEY: ${{ secrets.ALPHA_VANTAGE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
