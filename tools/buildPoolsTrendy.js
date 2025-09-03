@@ -407,8 +407,9 @@ const FMP = !!FMP_API_KEY;
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
-const NEWS_FEATURES_FILE = 'data/news-features.json';
-const NAVER_TRENDS_FILE = 'data/naver-trends.json';
+const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
+const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
+const USE_PREBUILT_FEATURES = process.env.USE_PREBUILT_FEATURES !== '0';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 // Track picks from earlier markets in this run
@@ -431,18 +432,39 @@ try {
 } catch {}
 
 async function enrichWithNewsFeatures(symbols, opts = {}) {
+  // If prebuilt exists and requested, just use it.
+  if (USE_PREBUILT_FEATURES && Object.keys(NEWS_FEATURES || {}).length) {
+    return NEWS_FEATURES;
+  }
   const feats = await buildNewsFeatures(symbols, opts);
-  try {
-    await fsp.mkdir('data', { recursive: true });
-    await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
-  } catch (e) {
-    console.warn('Failed to persist news-features.json:', e.message);
+  // Only write when we actually built them here.
+  if (!USE_PREBUILT_FEATURES) {
+    try {
+      await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
+      await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
+    } catch (e) {
+      console.warn('Failed to persist news-features.json:', e.message);
+    }
   }
   return feats;
 }
 
 async function enrichWithNaverTrends(universe, keywordDict){
   try{
+    // If prebuilt exists and requested, convert it into the compact shape and return.
+    if (USE_PREBUILT_FEATURES && Object.keys(NAVER_TRENDS || {}).length) {
+      const out = {};
+      for (const [sym, t] of Object.entries(NAVER_TRENDS)){
+        const v = t?.naverPopularity != null ? t : { naverPopularity: t?.pop || 0, naverSpike: t?.spike || 0, naverPersist: t?.persist || 0, naverAsvi: t?.lastAsvi || 0 };
+        out[sym] = {
+          naverPopularity: Number(v.naverPopularity || 0),
+          naverSpike: Number(v.naverSpike || v.spike || 0),
+          naverPersist: Number(v.naverPersist || v.persist || 0),
+          naverAsvi: Number(v.naverAsvi || v.lastAsvi || 0)
+        };
+      }
+      return out;
+    }
     const baskets = buildBasketsFromUniverse({
       universe,
       nameToSymbol,
@@ -461,10 +483,12 @@ async function enrichWithNaverTrends(universe, keywordDict){
       cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
       budgetLeftMs: timeLeft()
     }).then(r => { bump('naver', true); return r; });
-    try {
-      await fsp.mkdir('data', { recursive: true });
-      await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
-    } catch {}
+    if (!USE_PREBUILT_FEATURES) {
+      try {
+        await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
+        await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+      } catch {}
+    }
     const out = {};
     for (const [sym, t] of Object.entries(perSymbol)){
       out[sym] = {
@@ -1683,7 +1707,17 @@ async function main(){
       byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
 
       byName[n].reasons = byName[n].reasons || {};
-      byName[n].reasons.topKeywords = byName[n].reasons.topKeywords || [];
+      const nf = NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {};
+      // Fill reputation & keywords (computed in fetchByTicker via computeReputation)
+      if (Number.isFinite(nf.reputationScore)) {
+        byName[n].reasons.reputationScore = nf.reputationScore;
+      }
+      if (Array.isArray(nf.topKeywords) && nf.topKeywords.length) {
+        byName[n].reasons.topKeywords = nf.topKeywords.slice(0, 5);
+      } else {
+        byName[n].reasons.topKeywords = byName[n].reasons.topKeywords || [];
+      }
+
       const sig = (byName[n].reasons.signals = {
         ...(byName[n].reasons.signals || {}),
         news7d:  byName[n].ds_news7  ?? 0,
@@ -1692,9 +1726,22 @@ async function main(){
         topic:   byName[n].ds_topic  ?? 0,
         trend:   byName[n].ds_trend  ?? 0,
       });
-      sig.sentiment = sig.sentiment ?? 0;
-      sig.blog      = sig.blog      ?? 0;
-      sig.naver     = sig.naver     ?? 0;
+      // Populate human-facing signals
+      // sentiment: map −1..+1 to 1..5 (or leave as 0..1 if you prefer)
+      if (!Number.isFinite(sig.sentiment)) {
+        const s = byName[n].sentiment;
+        sig.sentiment = Number.isFinite(s) ? scoreSentiment(s) : 0; // 1..5
+      }
+      // blog: normalize Naver blog mentions to 0..1
+      if (!Number.isFinite(sig.blog)) {
+        sig.blog = clamp01((byName[n].blogMentions || 0) / 10);
+      }
+      // naver: use popularity (fallback to spike/asvi)
+      if (!Number.isFinite(sig.naver)) {
+        const navp = nf.naverPopularity ?? byName[n].naverPopularity ?? 0;
+        const asvi = nf.naverSpike ?? byName[n].naverSpike ?? byName[n].naverAsvi ?? 0;
+        sig.naver = clamp01(navp || asvi || 0);
+      }
       byName[n].reasons = stripNulls(byName[n].reasons);
     }
     const scores = names.map(n => byName[n].totalScore);
