@@ -407,8 +407,9 @@ const FMP = !!FMP_API_KEY;
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
-const NEWS_FEATURES_FILE = 'data/news-features.json';
-const NAVER_TRENDS_FILE = 'data/naver-trends.json';
+const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
+const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
+const USE_PREBUILT_FEATURES = process.env.USE_PREBUILT_FEATURES !== '0';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 // Track picks from earlier markets in this run
@@ -431,18 +432,39 @@ try {
 } catch {}
 
 async function enrichWithNewsFeatures(symbols, opts = {}) {
+  // If prebuilt exists and requested, just use it.
+  if (USE_PREBUILT_FEATURES && Object.keys(NEWS_FEATURES || {}).length) {
+    return NEWS_FEATURES;
+  }
   const feats = await buildNewsFeatures(symbols, opts);
-  try {
-    await fsp.mkdir('data', { recursive: true });
-    await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
-  } catch (e) {
-    console.warn('Failed to persist news-features.json:', e.message);
+  // Only write when we actually built them here.
+  if (!USE_PREBUILT_FEATURES) {
+    try {
+      await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
+      await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
+    } catch (e) {
+      console.warn('Failed to persist news-features.json:', e.message);
+    }
   }
   return feats;
 }
 
 async function enrichWithNaverTrends(universe, keywordDict){
   try{
+    // If prebuilt exists and requested, convert it into the compact shape and return.
+    if (USE_PREBUILT_FEATURES && Object.keys(NAVER_TRENDS || {}).length) {
+      const out = {};
+      for (const [sym, t] of Object.entries(NAVER_TRENDS)){
+        const v = t?.naverPopularity != null ? t : { naverPopularity: t?.pop || 0, naverSpike: t?.spike || 0, naverPersist: t?.persist || 0, naverAsvi: t?.lastAsvi || 0 };
+        out[sym] = {
+          naverPopularity: Number(v.naverPopularity || 0),
+          naverSpike: Number(v.naverSpike || v.spike || 0),
+          naverPersist: Number(v.naverPersist || v.persist || 0),
+          naverAsvi: Number(v.naverAsvi || v.lastAsvi || 0)
+        };
+      }
+      return out;
+    }
     const baskets = buildBasketsFromUniverse({
       universe,
       nameToSymbol,
@@ -461,10 +483,12 @@ async function enrichWithNaverTrends(universe, keywordDict){
       cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
       budgetLeftMs: timeLeft()
     }).then(r => { bump('naver', true); return r; });
-    try {
-      await fsp.mkdir('data', { recursive: true });
-      await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
-    } catch {}
+    if (!USE_PREBUILT_FEATURES) {
+      try {
+        await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
+        await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+      } catch {}
+    }
     const out = {};
     for (const [sym, t] of Object.entries(perSymbol)){
       out[sym] = {
