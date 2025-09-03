@@ -572,15 +572,31 @@ async function blogFromNaver(name, NAVER_ID, NAVER_SECRET){
   return Math.min(arr.length, 30);
 }
 
+// Official KOTRA endpoint (Data.go.kr)
+// Docs params: serviceKey, type=json, numOfRows, pageNo,
+//   search1=국가명, search2=뉴스제목, search4=시작(YYYYMMDD), search7=종료(YYYYMMDD),
+//   search5=산업분류, search6=핫클립, search8=본문포함 여부(Y/N)
 const KOTRA_BASE =
-  'https://apis.data.go.kr/B410001/kotra_overseasMarketNews/ovseaMrktNews/ovseaMrktNews';
+  'https://apis.data.go.kr/B410001/kotra_overseasMarketNews/ovseaMrktNews';
 
 function natnForSym(sym) {
   if (/\.K[QS]$/.test(sym)) return '대한민국';
   return '미국';
 }
 
-function buildKotraUrl({ serviceKey, natn, title, rows = 10, page = 1, includeText = true }) {
+function ymd(d){ return d.toISOString().slice(0,10).replace(/-/g,''); }
+function buildKotraUrl({
+  serviceKey,
+  natn,
+  title,
+  rows = 10,
+  page = 1,
+  includeText = true,
+  dateFrom,       // YYYYMMDD
+  dateTo,         // YYYYMMDD
+  industryCode,   // search5 (optional)
+  hotclip,        // search6 (optional)
+}) {
   const params = new URLSearchParams();
   params.set('serviceKey', serviceKey);
   params.set('type', 'json');
@@ -589,7 +605,11 @@ function buildKotraUrl({ serviceKey, natn, title, rows = 10, page = 1, includeTe
   if (includeText) params.set('search8', 'Y');
   if (natn) params.set('search1', natn);
   if (title) params.set('search2', title);
-  return `${KOTRA_BASE}?${params.toString()}`;
+  if (dateFrom) params.set('search4', dateFrom);
+  if (dateTo) params.set('search7', dateTo);
+  if (industryCode) params.set('search5', industryCode);
+  if (hotclip) params.set('search6', hotclip);
+  return `${KOTRA_BASE}/ovseaMrktNews?${params.toString()}`;
 }
 
 async function newsFromKotra(sym, rawQuery) {
@@ -598,13 +618,21 @@ async function newsFromKotra(sym, rawQuery) {
   if (!serviceKey) return null;
 
   const natn = natnForSym(sym);
+  // 7-day window (inclusive)
+  const to = new Date();
+  const from = new Date(Date.now() - 7*24*3600*1000);
   const url = buildKotraUrl({
     serviceKey,
     natn,
-    title: rawQuery,
-    rows: 10,
+    title: String(rawQuery || '').replace(/^"+|"+$/g,'').slice(0,200),
+    rows: 20,
     page: 1,
-    includeText: true
+    includeText: true,
+    dateFrom: ymd(from),
+    dateTo: ymd(to),
+    // Optionally pass search5/search6 if you decide to map industry/hotclip
+    // industryCode: 'I001195',
+    // hotclip: 'ANA',
   });
 
   const headers = { Accept: 'application/json' };
@@ -622,11 +650,20 @@ async function newsFromKotra(sym, rawQuery) {
   const header = j?.response?.header;
   if (!header || header.resultCode !== '00') return { count: 0, sentiment: 0, blogMentions: 0 };
 
+  // item can be an object or array; dedupe by title to be safe
   const itemsNode = j?.response?.body?.itemList?.item;
   const items = Array.isArray(itemsNode) ? itemsNode : (itemsNode ? [itemsNode] : []);
-  const count = Math.min(items.length, 30);
-  const hasKw = items.some(it => typeof it?.kwrd === 'string' && it.kwrd.trim());
-  return { count, sentiment: 0, blogMentions: hasKw ? Math.min(count, 10) : 0 };
+  const seen = new Set();
+  let unique = 0, kwHits = 0;
+  for (const it of items) {
+    const title = String(it?.title || it?.newsSj || '').trim();
+    if (!title || seen.has(title)) continue;
+    seen.add(title);
+    unique++;
+    if (typeof it?.kwrd === 'string' && it.kwrd.trim()) kwHits++;
+  }
+  const count = Math.min(unique, 30);
+  return { count, sentiment: 0, blogMentions: Math.min(kwHits, 10) };
 }
 
 async function newsFromGdelt(sym, q){
