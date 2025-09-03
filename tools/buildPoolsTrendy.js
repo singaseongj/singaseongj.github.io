@@ -419,6 +419,12 @@ try {
   NEWS_FEATURES = JSON.parse(await fsp.readFile(NEWS_FEATURES_FILE, 'utf8'));
 } catch {}
 
+let NAVER_TRENDS = {};
+try {
+  const t = JSON.parse(await fsp.readFile(NAVER_TRENDS_FILE, 'utf8'));
+  NAVER_TRENDS = (t && t.perSymbol) ? t.perSymbol : (t || {});
+} catch {}
+
 let PREV_METRICS = {};
 try {
   PREV_METRICS = JSON.parse(await fsp.readFile(METRICS_FILE, 'utf8'));
@@ -489,16 +495,6 @@ const TTL = {
   wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
   earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
 };
-// External signals persisted by fetchByTicker
-const NEWS_FEATURES_FILE = 'data/news-features.json';
-const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
-let NEWS_FEATURES = {};
-let NAVER_TRENDS  = {};
-try { NEWS_FEATURES = JSON.parse(fs.readFileSync(NEWS_FEATURES_FILE,'utf8')); } catch {}
-try {
-  const t = JSON.parse(fs.readFileSync(NAVER_TRENDS_FILE,'utf8'));
-  NAVER_TRENDS = (t && t.perSymbol) ? t.perSymbol : (t || {});
-} catch {}
 // Blend weights (0..1); sum should be <= ~0.4 so we don't drown out core score
 const W_NEWS = Number(process.env.W_NEWS || 0.18);
 const W_REPUTATION = Number(process.env.W_REPUTATION || 0.14);
@@ -1194,8 +1190,9 @@ async function main(){
   } catch {}
 
   if (!OFFLINE) {
-    const NAVER_TRENDS = await enrichWithNaverTrends(universe, KEYWORDS);
-    for (const [k, v] of Object.entries(NAVER_TRENDS)) {
+    const fetchedTrends = await enrichWithNaverTrends(universe, KEYWORDS);
+    for (const [k, v] of Object.entries(fetchedTrends)) {
+      NAVER_TRENDS[k] = v;
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
       // If news providers were throttled (count = 0) but NAVER shows interest,
       // synthesize a minimal newsCount so coverage can count this symbol.
