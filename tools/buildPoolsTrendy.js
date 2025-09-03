@@ -232,6 +232,12 @@ const INDEX_ROWS = (() => {
   return rows;
 })();
 
+const INDEX_SECTOR = {};
+for (const r of INDEX_ROWS) {
+  const sym = normIndexKey(r.symbol || r.ticker || '');
+  if (sym) INDEX_SECTOR[sym] = r.sector || r.gicsSector || r.industry || null;
+}
+
 const SP500 = new Map((INDEX_RAW.sp500 || []).map(r => [r.symbol || r.ticker, r.name]));
 const N100  = new Map((INDEX_RAW.nasdaq100 || []).map(r => [r.symbol || r.ticker, r.name]));
 const K200  = new Map((INDEX_RAW.kospi200 || []).map(r => [r.symbol, r.name]));
@@ -1240,7 +1246,10 @@ async function main(){
       if (!mappedOne || !mappedOne.sym) {
         console.warn('[map] skip (no symbol):', name);
         rememberMapping(name, null);
-        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, weightedCount:0, newsScore:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, offHi:0, offLo:0, sym:null, source:null, attempts:[], fetchMs:0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0, wikiViews:0, wikiScore:0 };
+        const sym = mappedOne?.sym;
+        const normSym = normIndexKey(sym || '');
+        const sectorGuess = INDEX_SECTOR[normSym] || byName[name]?.sector || null;
+        byName[name] = { ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null, newsCount:0, weightedCount:0, newsScore:0, sentiment:null, naverPopularity:0, blogMentions:0, earn:false, offHi:0, offLo:0, sym:null, source:null, attempts:[], fetchMs:0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0, wikiViews:0, wikiScore:0, sector: sectorGuess };
         sanitizeSignals(byName[name]);
         return;
       }
@@ -1326,7 +1335,9 @@ async function main(){
       } catch (e) {
         tripOnError(e);
       }
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, marketCap, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount, wikiViews, wikiScore:0 };
+      const normSym = normIndexKey(sym || '');
+      const sectorGuess = INDEX_SECTOR[normSym] || byName[name]?.sector || null;
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, marketCap, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount, wikiViews, wikiScore:0, sector: sectorGuess };
       try {
         const ds = await fetchDeepsearchFeatures({ name, ticker: sym, market });
         Object.assign(byName[name], ds);
@@ -1346,10 +1357,13 @@ async function main(){
           newsCount:0, weightedCount:0, newsScore:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, naverCount:0, naverCountKO:0, naverCountEN:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false, offHi:0, offLo:0,
           reputationScore:null, topKeywords:[], reputationHitIds:[],
           sym:null, source:null, attempts:[], fetchMs:0,
-          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0, wikiViews:0, wikiScore:0
+          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0, wikiViews:0, wikiScore:0, sector: null
         };
       }
       const sym = byName[n].sym || nameToSymbol(n) || n;
+      const normSym = normIndexKey(sym || '');
+      const sectorGuess = INDEX_SECTOR[normSym] || byName[n]?.sector || null;
+      byName[n].sector = sectorGuess;
       const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[n];
       if (nf) {
         byName[n].newsCount       = nf.count ?? byName[n].newsCount;
@@ -1736,7 +1750,13 @@ async function main(){
       // Populate human-facing signals
       // sentiment: map −1..+1 to 1..5 (or leave as 0..1 if you prefer)
       if (!Number.isFinite(sig.sentiment)) {
-        const s = byName[n].sentiment;
+        let s = byName[n].sentiment;
+        if (!Number.isFinite(s)) {
+          const pos = Number(byName[n].posHits || 0);
+          const neg = Number(byName[n].negHits || 0);
+          const tot = pos + neg;
+          if (tot > 0) s = (pos - neg) / tot; // -1..1
+        }
         sig.sentiment = Number.isFinite(s) ? scoreSentiment(s) : 0; // 1..5
       }
       // blog: normalize Naver blog mentions to 0..1
@@ -1820,7 +1840,7 @@ async function main(){
         naverCount: byName[n].naverCount,
         naverCountKO: byName[n].naverCountKO,
         naverCountEN: byName[n].naverCountEN,
-        blogMentions: byName[n].blogMentions,
+        blogMentions: clamp01((byName[n].blogMentions || 0) / 10),
         wikiViews: byName[n].wikiViews,
         fmpNewsCount: byName[n].fmpNewsCount,
         googleNewsCount: byName[n].googleNewsCount,
