@@ -270,7 +270,7 @@ const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 60; // naver popul
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
 const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.25; // size (market cap from indexes) weight (0..1)
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.7; // size (market cap from indexes) weight (0..1)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
