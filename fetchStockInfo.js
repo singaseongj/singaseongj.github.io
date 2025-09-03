@@ -525,38 +525,23 @@ async function naverNewsSearchPresence(query) {
 const buildNaverNewsSERP = q =>
   `https://search.naver.com/search.naver?where=news&sm=tab_jum&query=${encodeURIComponent(q)}`;
 
-const buildGoogleNewsSERP = q =>
-  `https://www.google.com/search?tbm=nws&q=${encodeURIComponent(q)}`;
+const buildGoogleSERP = q =>
+  `https://www.google.com/search?q=${encodeURIComponent(q)}`;
 
-const buildYahooNewsSERP = q =>
-  `https://news.search.yahoo.com/search?p=${encodeURIComponent(q)}`;
 
-function makeSearchQuery(name, ticker) {
-  // Include ticker if resolved; simple and language-agnostic
-  return ticker ? `${name} ${ticker}` : name;
+function makeSearchQuery(name) {
+  // Company name only (no ticker / sector)
+  return String(name || '').trim();
 }
 
-async function fetchSearchUrl(name, ticker, cache) {
+async function fetchSearchUrl(name, cache) {
   // 1) cache
   const cached = cacheGetSearchUrl(cache, name);
   if (cached !== undefined) return cached;
 
-  const query = makeSearchQuery(name, ticker);
-
-  // 2) prefer Naver if API confirms presence
-  let url = null;
-  try {
-    const ok = await naverNewsSearchPresence(query);
-    if (ok) {
-      url = buildNaverNewsSERP(query);
-    }
-  } catch (e) {
-    // already logged in presence checker
-  }
-
-  // 3) fallbacks
-  if (!url) url = buildGoogleNewsSERP(query);
-  if (!url) url = buildYahooNewsSERP(query); // practically never hit, but keeps the intent clear
+  const query = makeSearchQuery(name);
+  // Always use plain Google web search with just the company name
+  const url = buildGoogleSERP(query);
 
   cachePutSearchUrl(cache, name, url);
   await saveCache(cache);
@@ -792,7 +777,7 @@ async function tryFetchAndEnrich() {
 
           let searchUrl = null;
           try {
-            searchUrl = await fetchSearchUrl(displayName, ticker, cache);
+            searchUrl = await fetchSearchUrl(displayName, cache);
           } catch (e) {
             console.warn(`[SEARCH_URL_FAIL] ${rawName}: ${e.message}`);
           }
