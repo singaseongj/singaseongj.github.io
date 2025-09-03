@@ -407,9 +407,9 @@ const FMP = !!FMP_API_KEY;
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
-const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
-const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
-const USE_PREBUILT_FEATURES = process.env.USE_PREBUILT_FEATURES !== '0';
+const NEWS_FEATURES_FILE = 'data/news-features.json';
+const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
+const USE_PREBUILT = process.env.USE_PREBUILT_FEATURES === '1';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 // Track picks from earlier markets in this run
@@ -432,39 +432,22 @@ try {
 } catch {}
 
 async function enrichWithNewsFeatures(symbols, opts = {}) {
-  // If prebuilt exists and requested, just use it.
-  if (USE_PREBUILT_FEATURES && Object.keys(NEWS_FEATURES || {}).length) {
+  if (USE_PREBUILT && Object.keys(NEWS_FEATURES || {}).length) {
+    console.log('[prebuilt] using', NEWS_FEATURES_FILE);
     return NEWS_FEATURES;
   }
   const feats = await buildNewsFeatures(symbols, opts);
-  // Only write when we actually built them here.
-  if (!USE_PREBUILT_FEATURES) {
-    try {
-      await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
-      await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
-    } catch (e) {
-      console.warn('Failed to persist news-features.json:', e.message);
-    }
+  try {
+    await fsp.mkdir('data', { recursive: true });
+    await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
+  } catch (e) {
+    console.warn('Failed to persist news-features.json:', e.message);
   }
   return feats;
 }
 
 async function enrichWithNaverTrends(universe, keywordDict){
   try{
-    // If prebuilt exists and requested, convert it into the compact shape and return.
-    if (USE_PREBUILT_FEATURES && Object.keys(NAVER_TRENDS || {}).length) {
-      const out = {};
-      for (const [sym, t] of Object.entries(NAVER_TRENDS)){
-        const v = t?.naverPopularity != null ? t : { naverPopularity: t?.pop || 0, naverSpike: t?.spike || 0, naverPersist: t?.persist || 0, naverAsvi: t?.lastAsvi || 0 };
-        out[sym] = {
-          naverPopularity: Number(v.naverPopularity || 0),
-          naverSpike: Number(v.naverSpike || v.spike || 0),
-          naverPersist: Number(v.naverPersist || v.persist || 0),
-          naverAsvi: Number(v.naverAsvi || v.lastAsvi || 0)
-        };
-      }
-      return out;
-    }
     const baskets = buildBasketsFromUniverse({
       universe,
       nameToSymbol,
@@ -483,12 +466,10 @@ async function enrichWithNaverTrends(universe, keywordDict){
       cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
       budgetLeftMs: timeLeft()
     }).then(r => { bump('naver', true); return r; });
-    if (!USE_PREBUILT_FEATURES) {
-      try {
-        await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
-        await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
-      } catch {}
-    }
+    try {
+      await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
+      await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+    } catch {}
     const out = {};
     for (const [sym, t] of Object.entries(perSymbol)){
       out[sym] = {
@@ -519,10 +500,12 @@ const TTL = {
   wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
   earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
 };
-// Blend weights (0..1); sum should be <= ~0.4 so we don't drown out core score
-const W_NEWS = Number(process.env.W_NEWS || 0.18);
-const W_REPUTATION = Number(process.env.W_REPUTATION || 0.14);
-const W_NAVER_POP = Number(process.env.W_NAVER_POP || 0.10);
+// Blend weights (0..1); keep total <= ~0.4 so we don't drown out core score
+const W_NEWS        = Number(process.env.W_NEWS        || 0.18); // newsScore (intensity)
+const W_REPUTATION  = Number(process.env.W_REPUTATION  || 0.14); // reputationScore (quality)
+const W_NAVER_POP   = Number(process.env.W_NAVER_POP   || 0.10); // naverPopularity (interest)
+const W_SENTIMENT   = Number(process.env.W_SENTIMENT   || 0.10); // sentiment (-1..1 mapped to 0..1)
+const W_DS_TREND    = Number(process.env.W_DS_TREND    || 0.10); // ds_trend (0..1), complements HOT_W_TREND
 for (const a of process.argv.slice(2)) {
   if (a.startsWith('--max-per-provider=')) MAX_PER_PROVIDER = Number(a.split('=')[1]);
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
@@ -1187,9 +1170,13 @@ async function main(){
     const kr = symbols.filter(isKR);
     const us = symbols.filter(s => !isKR(s));
     const newsSymbols = kr.concat(us).slice(0, NEWS_MAX);
-    NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.6
-      ? await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME, keywords: KEYWORDS })
-      : {};
+    if (USE_PREBUILT && Object.keys(NEWS_FEATURES||{}).length) {
+      console.log('[prebuilt] NEWS_FEATURES loaded, skipping rebuild');
+    } else {
+      NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.6
+        ? await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME, keywords: KEYWORDS })
+        : {};
+    }
   }
 
   // now build keywords using up-to-date features
@@ -1214,7 +1201,12 @@ async function main(){
   } catch {}
 
   if (!OFFLINE) {
-    const fetchedTrends = await enrichWithNaverTrends(universe, KEYWORDS);
+    let fetchedTrends = {};
+    if (USE_PREBUILT && Object.keys(NAVER_TRENDS||{}).length) {
+      console.log('[prebuilt] using', NAVER_TRENDS_FILE);
+    } else {
+      fetchedTrends = await enrichWithNaverTrends(universe, KEYWORDS);
+    }
     for (const [k, v] of Object.entries(fetchedTrends)) {
       NAVER_TRENDS[k] = v;
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };
@@ -1672,7 +1664,13 @@ async function main(){
 
     // --- Blend external news/trend signals (from data/*.json) -----------------
     // Note: these are already in 0..1-ish ranges; clamp & mix conservatively.
-    const EXT_SUM = Math.max(0, Math.min(0.95, W_NEWS + W_REPUTATION + W_NAVER_POP));
+    const EXT_SUM = Math.max(
+      0,
+      Math.min(
+        0.95,
+        W_NEWS + W_REPUTATION + W_NAVER_POP + W_SENTIMENT + W_DS_TREND
+      )
+    );
     for (const n of names) {
       const nk = normalizeKey(n);
       const sym = NAME_TO_SYMBOL[nk] || NAME_TO_SYMBOL[n] || byName[n]?.symbol;
@@ -1681,7 +1679,14 @@ async function main(){
       const news = clamp01(Number(nf?.newsScore ?? 0));
       const rep  = clamp01(Number(nf?.reputationScore ?? 0));
       const navp = clamp01(Number(nt?.naverPopularity ?? 0));
-      const ext  = (W_NEWS * news) + (W_REPUTATION * rep) + (W_NAVER_POP * navp);
+      const sent = clamp01(0.5 * (Number(nf?.sentiment ?? 0) + 1)); // -1..1 -> 0..1
+      const dstr = clamp01(Math.max(0, Number(nf?.ds_trend ?? 0))); // keep non-negative
+      const ext  =
+        (W_NEWS       * news) +
+        (W_REPUTATION * rep)  +
+        (W_NAVER_POP  * navp) +
+        (W_SENTIMENT  * sent) +
+        (W_DS_TREND   * dstr);
       if (ext > 0) {
         scoreSafe[n] = clamp01((1 - EXT_SUM) * scoreSafe[n] + ext);
         // slightly more weight for aggressive on news/trend
@@ -1694,7 +1699,9 @@ async function main(){
         metricsOut[market][n].extSignals = {
           newsScore: news || 0,
           reputationScore: rep || 0,
-          naverPopularity: navp || 0
+          naverPopularity: navp || 0,
+          sentiment01: sent || 0,
+          dsTrend: dstr || 0
         };
       } catch {}
     }
@@ -1882,7 +1889,12 @@ async function main(){
       HOT_W_TURN,
       HOT_W_WIKI,
       SECTOR_LIFT: +process.env.SECTOR_LIFT || 0.02,
-      EARNINGS_BOOST: +process.env.EARNINGS_BOOST || 0.02
+      EARNINGS_BOOST: +process.env.EARNINGS_BOOST || 0.02,
+      W_NEWS,
+      W_REPUTATION,
+      W_NAVER_POP,
+      W_SENTIMENT,
+      W_DS_TREND
     },
     env: {
       PREV_CARRY,
