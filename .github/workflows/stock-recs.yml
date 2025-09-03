@@ -1,8 +1,8 @@
-# yamllint disable rule:line-length
+# yamllint disable rule:line-length rule:truthy
 ---
 name: Build & Publish Stock Recommendations
 
-'on':
+on:
   workflow_dispatch:
   schedule:
     # Every 5 hours (cron is UTC; cadence doesn't depend on timezone)
@@ -171,7 +171,7 @@ jobs:
         env:
           FMP_KEY: ${{ secrets.FMP_KEY }}
 
-      # 🔹 NEW: Build news & trend caches first (writes data/news-features.json, data/naver-trends.json)
+      # 🔹 Build news & trend caches first (writes data/news-features.json, data/naver-trends.json)
       - name: Build news/trend caches (features first)
         env:
           NEWS_FEATURES_FILE: data/news-features.json
@@ -189,7 +189,7 @@ jobs:
           DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
         run: |
           set -euo pipefail
-          node -e "import('./src/news/fetchByTicker.js').then(m=>m.buildNewsCachesCli && m.buildNewsCachesCli())"
+          node src/news/fetchByTicker.js --build-caches
           test -s data/news-features.json
           test -s data/naver-trends.json
 
@@ -343,7 +343,8 @@ jobs:
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market-news.json data/fx_rates.json summary.json summary.md data/articles \
+          git add data/market-news.json data/fx_rates.json data/news-features.json data/naver-trends.json \
+                  summary.json summary.md data/articles \
                   pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json \
                   cache || true
           echo "Files staged for commit"
