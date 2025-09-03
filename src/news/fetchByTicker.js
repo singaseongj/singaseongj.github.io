@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { restClient } from '@polygon.io/client-js';
+import { fileURLToPath } from 'url';
 import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
@@ -20,6 +21,9 @@ const defaultHeaders = {
 };
 const defaultUA = { 'User-Agent': 'stock-recs/1.0 (+github-actions)' };
 const SKIP_NAVER = process.env.SKIP_NAVER === '1';
+// Persist targets
+const NEWS_FEATURES_FILE = path.join('data', 'news-features.json');
+const NAVER_TRENDS_FILE  = path.join('data', 'naver-trends.json');
 const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
 const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
@@ -88,6 +92,9 @@ async function saveBaseline(sym, val){
 }
 
 function to01(x){ return Math.max(0, Math.min(1, x)); }
+
+function ensureDirFor(file){ try { fs.mkdirSync(path.dirname(file), { recursive:true }); } catch {} }
+function readJsonSafe(p){ try { return JSON.parse(fs.readFileSync(p,'utf8')); } catch { return null; } }
 
 export function newsScoreFromFeatures(f) {
   if (typeof f?.newsScore === 'number') return f.newsScore;
@@ -264,16 +271,14 @@ async function fetchPrevClose(ticker) {
 }
 
 /**
- * Build a compact symbol→query dictionary.
- * - For KR symbols: prefer Korean display name if provided (opts.symbolToName), else the numeric code.
- * - For US: use ticker + display name to help NewsAPI.
+ * Build a compact symbol→query dictionary (COMPANY NAME ONLY).
+ * We deliberately do NOT include the ticker to keep Naver/GNews/NewsData queries name-centric.
  */
 function buildQueries(symbols, { symbolToName={} }={}) {
   const q = {};
   for (const s of symbols){
     const name = symbolToName[s] || s;
-    if (isKR(s)) q[s] = `${name} ${s}`;
-    else q[s] = `${s} ${name}`;
+    q[s] = String(name).trim();
   }
   return q;
 }
@@ -422,7 +427,8 @@ async function newsFromFinnhub(sym, FINNHUB){
 
 async function newsFromNewsAPI(sym, q, NEWSAPI){
   if (!NEWSAPI) return null;
-  const url = `https://newsapi.org/v2/everything?qInTitle=${encodeURIComponent(sym)}&language=en&pageSize=10&sortBy=publishedAt&apiKey=${NEWSAPI}`;
+  // Use company name (q) in the title filter.
+  const url = `https://newsapi.org/v2/everything?qInTitle=${encodeURIComponent(q)}&language=en&pageSize=10&sortBy=publishedAt&apiKey=${NEWSAPI}`;
   const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true), {max:1, baseMs:600});
   const arr = Array.isArray(j?.articles) ? j.articles : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
@@ -454,7 +460,7 @@ async function newsFromGNews(sym, q, GNEWS_API){
   const lang = isKr ? 'ko' : 'en';
 
   // Keep it simple and quota-friendly. You can add date filters later if needed.
-  // Docs pattern: https://gnews.io/api/v4/search?q=...&lang=...&max=...&apikey=KEY
+  // Docs: https://gnews.io/api/v4/search?q=...&lang=...&max=...&apikey=KEY
   const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=10&apikey=${GNEWS_API}`;
 
   // Cache ~20 min; allow stale like others
@@ -477,7 +483,7 @@ async function newsFromNewsData(sym, q) {
     size: '25',
   });
 
-  params.set('qInTitle', q.slice(0, 500));
+  params.set('qInTitle', q.slice(0, 500)); // company name only
 
   const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
 
@@ -640,6 +646,56 @@ async function newsFromPolygon(sym){
   const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 15*60*1000, true), {max:1, baseMs:600});
   const arr = Array.isArray(j?.results) ? j.results : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+}
+
+/**
+ * Build Naver "trends" style popularity from Naver Search API results.
+ * - Strictly uses COMPANY NAME for the query (no ticker).
+ * - Output shape mirrors your existing example: { perSymbol: { [sym]: { naverPopularity, spike, persist, lastAsvi, debug: [...] } } }
+ */
+export async function buildNaverTrends(symbols, opts = {}) {
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || "";
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
+  if (SKIP_NAVER || !NAVER_ID || !NAVER_SECRET) {
+    return { perSymbol: {} };
+  }
+  // Load best-guess names (filled earlier by buildNewsFeatures)
+  const knownNames = readJsonSafe(path.join(process.cwd(), 'src/news/symbolNames.json')) || {};
+  const symbolToName = { ...(opts.symbolToName || {}), ...knownNames };
+
+  // Collect raw weighted counts via name-only queries
+  const rows = [];
+  for (const sym of symbols) {
+    const nm = symbolToName[sym] || sym;
+    // newsFromNaver(name-only)
+    const nv = await newsFromNaver(nm, NAVER_ID, NAVER_SECRET, { sym });
+    rows.push({ sym, name: nm, nv: nv || {} });
+  }
+  const sumW = rows.reduce((s, r) => s + Number(r.nv?.weightedCount || 0), 0) || 1;
+
+  const perSymbol = {};
+  for (const { sym, name, nv } of rows) {
+    const w = Number(nv?.weightedCount || 0);
+    const pop = w / sumW; // fraction-style popularity (matches tiny decimals in your sample)
+    const spikeVal = Number(nv?.naverSpike || 0);
+    const asvi = Number(nv?.naverAsvi || 0);
+    const spikeBool = spikeVal > Number(process.env.NAVER_SPIKE_BOOL_THRESH || 0.25);
+    const persistBool = (asvi > 0) && spikeBool;
+    perSymbol[sym] = {
+      naverPopularity: +pop.toFixed(8),
+      spike: spikeBool,
+      persist: persistBool,
+      lastAsvi: asvi,
+      debug: [{
+        groupName: name,
+        pop,
+        spike: spikeVal,
+        persist: persistBool ? 1 : 0,
+        lastAsvi: asvi
+      }]
+    };
+  }
+  return { perSymbol };
 }
 
 /**
@@ -873,6 +929,34 @@ export async function buildNewsFeatures(symbols, opts={}){
   return out;
 }
 
+/**
+ * Convenience: build & persist both files expected by downstream steps.
+ * - data/news-features.json
+ * - data/naver-trends.json
+ */
+export async function buildAndPersistNewsArtifacts(symbols, opts = {}) {
+  // 1) Features
+  const features = await buildNewsFeatures(symbols, opts);
+  ensureDirFor(NEWS_FEATURES_FILE);
+  try {
+    fs.writeFileSync(NEWS_FEATURES_FILE, JSON.stringify(features, null, 2));
+    console.log(`[persist] wrote ${NEWS_FEATURES_FILE}`);
+  } catch (e) {
+    console.warn(`[persist] failed writing news-features: ${e.message}`);
+  }
+  // 2) Naver trends (company-name queries)
+  let trends = { perSymbol: {} };
+  try {
+    trends = await buildNaverTrends(symbols, opts);
+    ensureDirFor(NAVER_TRENDS_FILE);
+    fs.writeFileSync(NAVER_TRENDS_FILE, JSON.stringify(trends, null, 2));
+    console.log(`[persist] wrote ${NAVER_TRENDS_FILE}`);
+  } catch (e) {
+    console.warn(`[persist] failed writing naver-trends: ${e.message}`);
+  }
+  return { features, trends };
+}
+
 // --- helpers for KOTRA key handling (replace old chooseEncodedServiceKey) ---
 function chooseApiKey(name){
   const dec = (process.env[`${name}_DECODED`] || '').trim();
@@ -983,11 +1067,16 @@ async function getTickerArticlesPrimary(ticker) {
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || "";
   if (!SKIP_NAVER && NAVER_ID && NAVER_SECRET) {
     try {
-      let display = ticker;
+      // Prefer COMPANY NAME for all search requests
+      let display = '';
       try {
         const nm = (require('./symbolNames.json') || {})[ticker];
-        if (nm) display = `"${nm}" OR ${ticker.replace(/\.[A-Z]+$/,'')}`;
+        if (nm) display = `"${nm}"`;
       } catch {}
+      if (!display) {
+        const nm = await getCompanyNameByYahooSymbol(ticker).catch(()=>null);
+        display = nm ? `"${nm}"` : `"${ticker.replace(/\.[A-Z]+$/,'')}"`;
+      }
       const q = /\.K[QS]$/.test(ticker) ? `${display} 증권 OR 투자` : display;
 
       const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
@@ -1010,7 +1099,9 @@ async function getTickerArticlesPrimary(ticker) {
   const NEWSAPI = process.env.NEWSAPI_KEY || "";
   if (NEWSAPI) {
     try {
-      const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(ticker)}&language=en&pageSize=20&sortBy=publishedAt&apiKey=${NEWSAPI}`;
+      const nm = (readJsonSafe(path.join(process.cwd(),'src/news/symbolNames.json'))||{})[ticker];
+      const q = nm || ticker.replace(/\.[A-Z]+$/,'');
+      const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(q)}&language=en&pageSize=20&sortBy=publishedAt&apiKey=${NEWSAPI}`;
       const res = await fetch(url, { headers: { 'User-Agent': 'stock-recs/1.0 (+github-actions)' } });
       const j = await res.json();
       const arr = Array.isArray(j?.articles) ? j.articles : [];
@@ -1021,7 +1112,8 @@ async function getTickerArticlesPrimary(ticker) {
   if (GNEWS) {
     try {
       const lang = /\.K[QS]$/.test(ticker) ? 'ko' : 'en';
-      const q = ticker.replace(/\.[A-Z]+$/,'');
+      const nm = (readJsonSafe(path.join(process.cwd(),'src/news/symbolNames.json'))||{})[ticker];
+      const q = nm || ticker.replace(/\.[A-Z]+$/,'');
       const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=20&apikey=${GNEWS}`;
       const res = await fetch(url, { headers: { 'User-Agent': 'stock-recs/1.0 (+github-actions)' } });
       const j = await res.json();
@@ -1033,7 +1125,8 @@ async function getTickerArticlesPrimary(ticker) {
   if (NEWSDATA) {
     try {
       const lang = /\.K[QS]$/.test(ticker) ? 'ko' : 'en';
-      const qTitle = ticker.replace(/\.[A-Z]+$/, '');
+      const nm = (readJsonSafe(path.join(process.cwd(),'src/news/symbolNames.json'))||{})[ticker];
+      const qTitle = nm || ticker.replace(/\.[A-Z]+$/, '');
 
       const params = new URLSearchParams({
         apikey: NEWSDATA,
