@@ -28,7 +28,12 @@ const VERBOSE = process.env.VERBOSE === '1';
 const log = (...a) => VERBOSE && console.log(...a);
 
 const UA = 'Mozilla/5.0 (compatible; TrendPools/1.0; +https://example.com)';
-const fetchText = u => fetch(u, { headers: { 'User-Agent': UA } }).then(r => r.text());
+const fetchText = u => fetch(u, {
+  headers: {
+    'User-Agent': UA,
+    'Accept': 'text/xml,application/rss+xml,application/xml,text/html;q=0.9,*/*;q=0.8'
+  }
+}).then(r => r.text());
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 let CIRCUIT_OPEN = false;
@@ -76,6 +81,30 @@ function looksLikeXmlOrHtml(s) {
   return false;
 }
 
+// ---- Generic helpers for "count from text" and "count from json" ----
+async function fetchCountTextGeneric(url, extractor, ttl = TTL.newsRss, allowStale = false) {
+  try {
+    const data = await cachedJsonFetch(
+      url,
+      async u => {
+        const txt = await fetchText(u);
+        const count = Number(extractor(txt)) || 0;
+        return { count };
+      },
+      ttl,
+      allowStale
+    );
+    return data.count || 0;
+  } catch { return 0; }
+}
+
+async function fetchCountJsonGeneric(url, extractor, ttl = TTL.newsRss, allowStale = false) {
+  try {
+    const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody), ttl, allowStale);
+    return Number(extractor(data)) || 0;
+  } catch { return 0; }
+}
+
 async function safeParseBody(res) {
   const ct = (res.headers && res.headers.get && res.headers.get('content-type')) || '';
   if (/json/i.test(ct)) {
@@ -93,62 +122,44 @@ async function fetchFmpNewsCount(sym){
   if (!sym || OFFLINE || !FMP_API_KEY) return 0;
   const from = new Date(Date.now() - 7*86400000).toISOString().slice(0,10);
   const url = `https://financialmodelingprep.com/api/v3/stock_news?tickers=${encodeURIComponent(sym)}&from=${from}&limit=50&apikey=${FMP_API_KEY}`;
-  try {
-    const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody));
-    return Array.isArray(data) ? data.length : 0;
-  } catch { return 0; }
+  return fetchCountJsonGeneric(
+    url,
+    data => (Array.isArray(data) ? data.length : 0),
+    TTL.newsRss
+  );
 }
 
 async function fetchGoogleNewsCount(sym){
   if (!sym || OFFLINE) return 0;
   const url = `https://news.google.com/rss/search?q=${encodeURIComponent(sym)}&hl=en-US&gl=US&ceid=US:en`;
-  try {
-    const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetchText(u);
-      const count = (txt.match(/<item>/g) || []).length;
-      return { count };
-    });
-    return data.count || 0;
-  } catch { return 0; }
+  return fetchCountTextGeneric(url, txt => (txt.match(/<item>/g) || []).length, TTL.newsRss);
 }
 
 async function fetchYahooNewsCount(sym){
   if (!sym || OFFLINE) return 0;
   const url = `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${encodeURIComponent(sym)}&region=US&lang=en-US`;
-  try {
-    const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetchText(u);
-      const count = (txt.match(/<item>/g) || []).length;
-      return { count };
-    });
-    return data.count || 0;
-  } catch { return 0; }
+  return fetchCountTextGeneric(url, txt => (txt.match(/<item>/g) || []).length, TTL.newsRss);
 }
 
 async function fetchInvestingNewsCount(sym){
   if (!sym || OFFLINE) return 0;
   const url = `https://www.investing.com/search/?q=${encodeURIComponent(sym)}`;
-  try {
-    const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetchText(u);
-      const count = (txt.match(new RegExp(esc(sym), 'gi')) || []).length;
-      return { count };
-    });
-    return data.count || 0;
-  } catch { return 0; }
+  return fetchCountTextGeneric(
+    url,
+    txt => (txt.match(new RegExp(esc(sym), 'gi')) || []).length,
+    TTL.newsRss
+  );
 }
 
 async function fetchHanwhaNewsCount(sym){
   if (!sym || OFFLINE) return 0;
   const url = `https://m.hanwhawm.com:9090/M/main/research/main/list.cmd?depth3_id=overseaEtf&search=${encodeURIComponent(sym)}`;
-  try {
-    const data = await cachedJsonFetch(url, async u => {
-      const txt = await fetchText(u);
-      const count = (txt.match(new RegExp(esc(sym), 'gi')) || []).length;
-      return { count };
-    }, TTL_MS, true);
-    return data.count || 0;
-  } catch { return 0; }
+  return fetchCountTextGeneric(
+    url,
+    txt => (txt.match(new RegExp(esc(sym), 'gi')) || []).length,
+    TTL.newsRss,
+    /*allowStale*/ true
+  );
 }
 
 async function fetchWikiPageviews(title){
@@ -163,7 +174,7 @@ async function fetchWikiPageviews(title){
   for (const lang of langs) {
     const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/${lang}.wikipedia/all-access/all-agents/${enc}/daily/${start}/${end}`;
     try {
-      const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody), TTL_MS, true);
+      const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody), TTL.wiki, true);
       if (data && Array.isArray(data.items)) {
         return data.items.reduce((sum, it) => sum + (it.views || 0), 0);
       }
@@ -171,7 +182,7 @@ async function fetchWikiPageviews(title){
   }
   try {
     const url = `https://namu.wiki/api/pageview?title=${enc}`;
-    const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody), TTL_MS, true);
+    const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody), TTL.wiki, true);
     if (data && typeof data.total === 'number') return data.total;
   } catch {}
   return 0;
@@ -259,7 +270,7 @@ const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 60; // naver popul
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
 const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.05; // scale & stability weight (0..1)
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.25; // size (market cap from indexes) weight (0..1)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
@@ -472,6 +483,12 @@ const DRY_RUN = ARGS.has('--dry-run');
 let MAX_PER_PROVIDER = Infinity;
 let CACHE_TTL_MS = Number(process.env.CACHE_TTL_MS || 3600000);
 let COOLOFF_MS = Number(process.env.COOLOFF_MS || 60000);
+// Fine-grained TTLs for freshness control
+const TTL = {
+  newsRss: Number(process.env.TTL_NEWS_RSS_MS || 2*60*60*1000),   // 2h for news/RSS/HTML counts
+  wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
+  earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
+};
 for (const a of process.argv.slice(2)) {
   if (a.startsWith('--max-per-provider=')) MAX_PER_PROVIDER = Number(a.split('=')[1]);
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
@@ -754,6 +771,7 @@ function djitter(key, mag=Number(process.env.JITTER_MAG || 0.003)){
   let h=0; for (let i=0;i<key.length;i++) h=(h*131+key.charCodeAt(i))|0;
   return ((h % 2001) - 1000) / 1000 * mag;
 }
+const DISABLE_JITTER = process.env.DISABLE_JITTER === '1';
 
 function stripNulls(o){ return JSON.parse(JSON.stringify(o, (_,v)=>v===null?undefined:v)); }
 
@@ -894,7 +912,7 @@ function todayYMD(offsetDays=0){
 async function finnhubEarningsWindowSet() {
   const from = todayYMD(-10), to = todayYMD(+10);
   const url = `https://finnhub.io/api/v1/calendar/earnings?from=${from}&to=${to}&token=${FINNHUB}`;
-  const j = await getJSON(url, {}, RETRIES, BACKOFF_BASE_MS, 1000*60*60*4)
+  const j = await getJSON(url, {}, RETRIES, BACKOFF_BASE_MS, TTL.earnings)
     .then(d => { bump('finnhub', true); return d; })
     .catch(() => { bump('finnhub', false); return null; });
   const rows = j?.earningsCalendar || [];
@@ -1373,7 +1391,8 @@ async function main(){
     const popRaw = names.map(n => {
       const nf = byName[n];
       const sym = nf.sym || nameToSymbol(n) || n;
-      const mcap = nf.marketCap ?? INDEX_MARKETCAP[normIndexKey(sym)] ?? 0;
+      // Prefer stable market cap from src/maps.indexes.json; fall back to runtime caps.
+      const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? nf.marketCap ?? 0;
       nf.marketCap = mcap;
       const blog   = nf.blogMentions   || 0;
       const news   = nf.newsCount      || 0;
@@ -1410,7 +1429,8 @@ async function main(){
     });
     const scaleRaw = names.map(n => {
       const sym = byName[n].sym || nameToSymbol(n) || n;
-      const mcap = byName[n].marketCap ?? INDEX_MARKETCAP[normIndexKey(sym)] ?? 0;
+      // Rank by index-based market cap first to keep size signal consistent across runs.
+      const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? byName[n].marketCap ?? 0;
       return scaleAdjust(mcap);
     });
     const popArr = safeRank01(popRaw);
@@ -1420,7 +1440,7 @@ async function main(){
     names.forEach((n, i) => {
       const p01 = popArr[i];
       const s01 = scaleArr[i];
-      const total01 = (1 - SCALE_WEIGHT) * p01 + SCALE_WEIGHT * s01;
+      const total01 = (1 - SCALE_WEIGHT) * p01 + SCALE_WEIGHT * s01; // now with higher size influence
       byName[n].prevNewsScore = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
       byName[n].totalScore    = Math.round(total01 * 100);
       byName[n].componentScores = byName[n].componentScores
@@ -1616,7 +1636,7 @@ async function main(){
     rescale(scoreAggr, QLO_LOCAL, QHI_LOCAL);
 
     for (const n of names) {
-      const j = djitter(n);
+      const j = DISABLE_JITTER ? 0 : djitter(n);
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
       scoreAggr[n] = clamp01(scoreAggr[n] + j);
       byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
@@ -1760,7 +1780,31 @@ async function main(){
     markets: marketSizes,
     providers: providerSummary,
     coverage: { ...marketCoverage, avg: avgCoverage },
-    timingMs: { total: Date.now() - START_TS }
+    timingMs: { total: Date.now() - START_TS },
+    weights: {
+      SCALE_WEIGHT,
+      NEWS_WEIGHT,
+      BLOG_WEIGHT,
+      POPULARITY_WEIGHT,
+      WIKI_WEIGHT,
+      POS_KW_WEIGHT,
+      NEG_KW_WEIGHT,
+      HOT_W_NEWS,
+      HOT_W_TREND,
+      HOT_W_TURN,
+      HOT_W_WIKI,
+      SECTOR_LIFT: +process.env.SECTOR_LIFT || 0.02,
+      EARNINGS_BOOST: +process.env.EARNINGS_BOOST || 0.02
+    },
+    env: {
+      PREV_CARRY,
+      GLOBAL_BUDGET_MS,
+      MAX_CONCURRENCY,
+      DEMO_MODE,
+      OFFLINE,
+      DISABLE_JITTER: process.env.DISABLE_JITTER === '1'
+    },
+    runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
 
   if (OFFLINE) {
