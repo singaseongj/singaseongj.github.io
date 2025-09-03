@@ -110,6 +110,15 @@ const buckets = {
   naver: tokenBucket({capacity:5, refillPerSec:3}),
   polygon: tokenBucket({capacity:2, refillPerSec:1}),
 };
+
+// Persist tiny provider health to prefer healthy ones next run
+const PROV_SCORE_FILE = path.join(CACHE_DIR,'news-provider-score.json');
+function loadProvScore(){ try { return JSON.parse(fs.readFileSync(PROV_SCORE_FILE,'utf8')); } catch { return {}; } }
+function saveProvScore(s){ try { fs.writeFileSync(PROV_SCORE_FILE, JSON.stringify(s)); } catch {} }
+const provScore = loadProvScore();
+function markProvider(p, ok){ const s = (provScore[p] ||= {ok:0,fail:0,lastFail:0}); ok ? s.ok++ : (s.fail++, s.lastFail=Date.now()); saveProvScore(provScore); }
+
+let FINNHUB_OK;
 const cb = circuitBreaker({cooldownMs:20*60_000});
 const ALIAS_PATH = path.join(process.cwd(), 'src/news/symbol-aliases.json');
 const SYMBOL_ALIASES = (()=>{ try { return JSON.parse(fs.readFileSync(ALIAS_PATH, 'utf8')); } catch { return {}; }})();
@@ -398,7 +407,8 @@ async function newsFromDeepSearch(sym, name){
 }
 
 async function newsFromFinnhub(sym, FINNHUB){
-  if (!FINNHUB) return null;
+  if (!FINNHUB || !isUS(sym)) return null; // avoid KR .KS/.KQ => HTTP 403
+  if (typeof FINNHUB_OK !== 'undefined' && !FINNHUB_OK) return null;
   const to = new Date().toISOString().slice(0,10);
   const from = new Date(Date.now()-7*864e5).toISOString().slice(0,10);
   const url = `https://finnhub.io/api/v1/company-news?symbol=${encodeURIComponent(sym)}&from=${from}&to=${to}&token=${FINNHUB}`;
@@ -648,6 +658,18 @@ export async function buildNewsFeatures(symbols, opts={}){
   const GNEWS = process.env.GNEWS_API || '';
   const preferNaver = process.env.PREFER_NAVER === '1' || (!!NAVER_ID && !!NAVER_SECRET);
 
+  // Optional: one-time light probe to decide whether to try Finnhub at all
+  async function softProbeFinnhub(key){
+    if (!key) return false;
+    try {
+      // very small response; confirms token works
+      const url = `https://finnhub.io/api/v1/stock/symbol?exchange=US&token=${key}`;
+      const j = await safeGetJson(url, defaultUA);
+      return Array.isArray(j);
+    } catch { return false; }
+  }
+  FINNHUB_OK = await softProbeFinnhub(FINNHUB);
+
   const nameFile = 'symbolNames.json';
   const cachedNames = (()=>{ try{return JSON.parse(fs.readFileSync(nameFile,'utf8'));}catch{return{}} })();
   const symbolToName = { ...(cachedNames), ...(opts.symbolToName||{}) };
@@ -682,17 +704,22 @@ export async function buildNewsFeatures(symbols, opts={}){
     let feat = { count: 0, sentiment: 0, blogMentions: 0 };
     const baseProviders = preferNaver
       ? (isKR(sym)
-          ? ['naver','gnews','serpapi','kotra','newsapi','gdelt','finnhub','polygon']
-          : ['naver','gnews','serpapi','newsapi','gdelt','finnhub','kotra','polygon'])
+          ? ['naver','gnews','serpapi','kotra','newsapi','gdelt','polygon']      // no finnhub for KR
+          : ['naver','gnews','serpapi','newsapi','gdelt','finnhub','polygon'])
       : (isKR(sym)
-          ? ['gnews','naver','serpapi','kotra','finnhub','newsapi','gdelt']
+          ? ['gnews','naver','serpapi','kotra','newsapi','gdelt','polygon']      // no finnhub for KR
           : ['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver']);
     const providers = process.env.SKIP_GDELT === '1'
       ? baseProviders.filter(p => p !== 'gdelt')
       : baseProviders;
 
     let lastErr = null;
-    for (const p of providers) {
+    const ordered = providers.slice().sort((a,b)=>{
+      const sa=provScore[a]||{}, sb=provScore[b]||{};
+      const ra=(sa.ok||0)-(sa.fail||0), rb=(sb.ok||0)-(sb.fail||0);
+      return rb - ra;
+    });
+    for (const p of ordered) {
       if (DEADLINE && Date.now() > DEADLINE) break;
       try {
         let v = null;
@@ -708,6 +735,7 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym, keywords: keywordsMap[sym] }));
         if (v) v._source = p;
         if (v) {
+          markProvider(p, true);
           if (!SKIP_NAVER && v.count > 0 && (v.blogMentions||0) === 0) {
             try {
               const blogs = await guardedCall('naver', () => blogFromNaver(name, NAVER_ID, NAVER_SECRET));
@@ -726,6 +754,7 @@ export async function buildNewsFeatures(symbols, opts={}){
       } catch (e) {
         lastErr = e;
         console.warn(`[news] ${sym} provider ${p} failed: ${e.message}`);
+        markProvider(p, false);
       }
     }
     if (feat.count === 0) {
