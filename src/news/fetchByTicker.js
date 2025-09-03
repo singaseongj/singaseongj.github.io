@@ -1,4 +1,5 @@
 import fs from 'fs';
+import fsp from 'fs/promises';
 import path from 'path';
 import { restClient } from '@polygon.io/client-js';
 import { fileURLToPath } from 'url';
@@ -6,6 +7,10 @@ import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
 import { computeReputation } from './reputation.js';
+import { TICKER_MAP } from '../maps.js';
+import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
+import { buildKeywordDict } from '../trends/keywordBuilder.js';
+import { buildUniverse } from '../universe/index.js';
 
 const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
@@ -270,15 +275,12 @@ async function fetchPrevClose(ticker) {
   }
 }
 
-/**
- * Build a compact symbol→query dictionary (COMPANY NAME ONLY).
- * We deliberately do NOT include the ticker to keep Naver/GNews/NewsData queries name-centric.
- */
+// Prefer the human/company name everywhere (ticker only as a fallback).
 function buildQueries(symbols, { symbolToName={} }={}) {
   const q = {};
   for (const s of symbols){
-    const name = symbolToName[s] || s;
-    q[s] = String(name).trim();
+    const name = String(symbolToName[s] || '').trim();
+    q[s] = name || s;
   }
   return q;
 }
@@ -425,9 +427,9 @@ async function newsFromFinnhub(sym, FINNHUB){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
-async function newsFromNewsAPI(sym, q, NEWSAPI){
+async function newsFromNewsAPI(sym, companyName, NEWSAPI){
   if (!NEWSAPI) return null;
-  // Use company name (q) in the title filter.
+  const q = companyName || sym;
   const url = `https://newsapi.org/v2/everything?qInTitle=${encodeURIComponent(q)}&language=en&pageSize=10&sortBy=publishedAt&apiKey=${NEWSAPI}`;
   const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true), {max:1, baseMs:600});
   const arr = Array.isArray(j?.articles) ? j.articles : [];
@@ -470,7 +472,7 @@ async function newsFromGNews(sym, q, GNEWS_API){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
-async function newsFromNewsData(sym, q) {
+async function newsFromNewsData(sym, companyName) {
   if (!NEWSDATA_API_KEY) return null;
 
   const lang = isKR(sym) ? 'ko' : 'en';
@@ -483,7 +485,8 @@ async function newsFromNewsData(sym, q) {
     size: '25',
   });
 
-  params.set('qInTitle', q.slice(0, 500)); // company name only
+  const q = (companyName || sym || '').slice(0, 500);
+  params.set('qInTitle', q);
 
   const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
 
@@ -783,9 +786,9 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
         else if (p === 'polygon') v = await guardedCall('polygon', () => with429Retry(() => newsFromPolygon(sym), 2, 600));
         else if (p === 'finnhub') v = await guardedCall('finnhub', () => newsFromFinnhub(sym, FINNHUB));
-        else if (p === 'newsdata') v = await guardedCall('newsdata', () => newsFromNewsData(sym, q));
+        else if (p === 'newsdata') v = await guardedCall('newsdata', () => newsFromNewsData(sym, name));
         else if (p === 'serpapi') v = await guardedCall('serpapi', () => newsFromSerpApi(sym, name, SERPAPI));
-        else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, q, NEWSAPI));
+        else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, name, NEWSAPI));
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
         else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
         else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym, keywords: keywordsMap[sym] }));
@@ -1171,5 +1174,84 @@ export async function getTickerArticles(ticker) {
   }
 
   return primary ?? [];
+}
+
+// ---------- CLI helper: build & persist features + naver trends ----------
+export async function buildNewsCachesCli(){
+  const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
+  const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
+  const GLOBAL_BUDGET_MS   = Number(process.env.GLOBAL_BUDGET_MS || 90000);
+
+  // Universe: current pools.json (checked-in) or a lightweight build
+  let pools = {};
+  try { pools = JSON.parse(fs.readFileSync('pools.json','utf8')); } catch {}
+  if (!pools || !Object.keys(pools).length) {
+    pools = await buildUniverse({}, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 200) });
+  }
+  const MARKETS = Object.keys(pools);
+  const universe = {};
+  const symbolSet = new Set();
+  for (const m of MARKETS){
+    const names = Array.from(new Set([...(pools[m]?.safe||[]), ...(pools[m]?.aggressive||[])]));
+    universe[m] = names;
+    for (const n of names){
+      // best-effort map via TICKER_MAP; if absent, let name act as symbol
+      const sym = TICKER_MAP[n] || TICKER_MAP[n.toUpperCase?.()] || n;
+      symbolSet.add(sym);
+    }
+  }
+  const symbols = Array.from(symbolSet);
+
+  // Build symbol->name map (prefer friendly name)
+  const symbolToName = {};
+  for (const [name, sym] of Object.entries(TICKER_MAP)) {
+    if (sym) symbolToName[sym] = symbolToName[sym] || name;
+  }
+
+  // Seed + expand keywords (ensure company names are included first)
+  let KEYWORDS = await buildKeywordDict({
+    symbols,
+    seeds: {},
+    symbolToName,
+    newsFeatures: {},
+    addKoreanForUSTickers: process.env.ADD_KO_FOR_US !== '0',
+  });
+  for (const s of symbols){
+    const nm = symbolToName[s] || s;
+    KEYWORDS[s] = Array.from(new Set([nm, s, `${nm} 주가`, ...(KEYWORDS[s]||[])]));
+  }
+
+  // 1) NEWS FEATURES
+  const feats = await buildNewsFeatures(symbols, { symbolToName, keywords: KEYWORDS });
+  await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
+  await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
+  console.log(`[features] wrote ${NEWS_FEATURES_FILE} (${Object.keys(feats).length} symbols)`);
+
+  // 2) NAVER TRENDS (company-name keywords only)
+  const baskets = buildBasketsFromUniverse({
+    universe,
+    nameToSymbol: (name) => TICKER_MAP[name] || TICKER_MAP[name?.toUpperCase?.()] || null,
+    keywordDict: KEYWORDS
+  });
+  if (baskets.length) {
+    const today = new Date();
+    const end = today.toISOString().slice(0,10);
+    const start = new Date(today.getTime()-365*24*3600*1000).toISOString().slice(0,10);
+    const { perSymbol, raw } = await fetchNaverTrends({
+      baskets, startDate:start, endDate:end, timeUnit:'date',
+      cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
+      budgetLeftMs: GLOBAL_BUDGET_MS
+    });
+    await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
+    await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+    console.log(`[trends] wrote ${NAVER_TRENDS_FILE} (${Object.keys(perSymbol).length} symbols)`);
+  } else {
+    console.log('[trends] no baskets built; skipped');
+  }
+}
+
+// Allow running directly: node src/news/fetchByTicker.js --write-news-caches
+if (process.argv.includes('--write-news-caches')) {
+  buildNewsCachesCli().catch(e => { console.error(e); process.exit(1); });
 }
 
