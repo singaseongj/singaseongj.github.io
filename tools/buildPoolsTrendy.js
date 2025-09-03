@@ -407,9 +407,9 @@ const FMP = !!FMP_API_KEY;
 const POOLS_FILE = 'pools.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
-const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
-const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
-const USE_PREBUILT_FEATURES = process.env.USE_PREBUILT_FEATURES !== '0';
+const NEWS_FEATURES_FILE = 'data/news-features.json';
+const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
+const USE_PREBUILT = process.env.USE_PREBUILT_FEATURES === '1';
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 // Track picks from earlier markets in this run
@@ -432,39 +432,22 @@ try {
 } catch {}
 
 async function enrichWithNewsFeatures(symbols, opts = {}) {
-  // If prebuilt exists and requested, just use it.
-  if (USE_PREBUILT_FEATURES && Object.keys(NEWS_FEATURES || {}).length) {
+  if (USE_PREBUILT && Object.keys(NEWS_FEATURES || {}).length) {
+    console.log('[prebuilt] using', NEWS_FEATURES_FILE);
     return NEWS_FEATURES;
   }
   const feats = await buildNewsFeatures(symbols, opts);
-  // Only write when we actually built them here.
-  if (!USE_PREBUILT_FEATURES) {
-    try {
-      await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
-      await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
-    } catch (e) {
-      console.warn('Failed to persist news-features.json:', e.message);
-    }
+  try {
+    await fsp.mkdir('data', { recursive: true });
+    await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
+  } catch (e) {
+    console.warn('Failed to persist news-features.json:', e.message);
   }
   return feats;
 }
 
 async function enrichWithNaverTrends(universe, keywordDict){
   try{
-    // If prebuilt exists and requested, convert it into the compact shape and return.
-    if (USE_PREBUILT_FEATURES && Object.keys(NAVER_TRENDS || {}).length) {
-      const out = {};
-      for (const [sym, t] of Object.entries(NAVER_TRENDS)){
-        const v = t?.naverPopularity != null ? t : { naverPopularity: t?.pop || 0, naverSpike: t?.spike || 0, naverPersist: t?.persist || 0, naverAsvi: t?.lastAsvi || 0 };
-        out[sym] = {
-          naverPopularity: Number(v.naverPopularity || 0),
-          naverSpike: Number(v.naverSpike || v.spike || 0),
-          naverPersist: Number(v.naverPersist || v.persist || 0),
-          naverAsvi: Number(v.naverAsvi || v.lastAsvi || 0)
-        };
-      }
-      return out;
-    }
     const baskets = buildBasketsFromUniverse({
       universe,
       nameToSymbol,
@@ -483,12 +466,10 @@ async function enrichWithNaverTrends(universe, keywordDict){
       cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
       budgetLeftMs: timeLeft()
     }).then(r => { bump('naver', true); return r; });
-    if (!USE_PREBUILT_FEATURES) {
-      try {
-        await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
-        await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
-      } catch {}
-    }
+    try {
+      await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
+      await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+    } catch {}
     const out = {};
     for (const [sym, t] of Object.entries(perSymbol)){
       out[sym] = {
@@ -1187,9 +1168,13 @@ async function main(){
     const kr = symbols.filter(isKR);
     const us = symbols.filter(s => !isKR(s));
     const newsSymbols = kr.concat(us).slice(0, NEWS_MAX);
-    NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.6
-      ? await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME, keywords: KEYWORDS })
-      : {};
+    if (USE_PREBUILT && Object.keys(NEWS_FEATURES||{}).length) {
+      console.log('[prebuilt] NEWS_FEATURES loaded, skipping rebuild');
+    } else {
+      NEWS_FEATURES = timeLeft() > GLOBAL_BUDGET_MS * 0.6
+        ? await enrichWithNewsFeatures(newsSymbols, { symbolToName: SYMBOL_TO_NAME, keywords: KEYWORDS })
+        : {};
+    }
   }
 
   // now build keywords using up-to-date features
@@ -1214,7 +1199,12 @@ async function main(){
   } catch {}
 
   if (!OFFLINE) {
-    const fetchedTrends = await enrichWithNaverTrends(universe, KEYWORDS);
+    let fetchedTrends = {};
+    if (USE_PREBUILT && Object.keys(NAVER_TRENDS||{}).length) {
+      console.log('[prebuilt] using', NAVER_TRENDS_FILE);
+    } else {
+      fetchedTrends = await enrichWithNaverTrends(universe, KEYWORDS);
+    }
     for (const [k, v] of Object.entries(fetchedTrends)) {
       NAVER_TRENDS[k] = v;
       NEWS_FEATURES[k] = { ...(NEWS_FEATURES[k] || {}), ...v };

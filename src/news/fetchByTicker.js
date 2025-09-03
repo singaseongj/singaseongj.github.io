@@ -7,10 +7,9 @@ import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
 import { computeReputation } from './reputation.js';
-import { TICKER_MAP } from '../maps.js';
+// for CLI-only cache builders
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
 import { buildKeywordDict } from '../trends/keywordBuilder.js';
-import { buildUniverse } from '../universe/index.js';
 
 const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
@@ -1276,82 +1275,80 @@ export async function getTickerArticles(ticker) {
   return primary ?? [];
 }
 
-// ---------- CLI helper: build & persist features + naver trends ----------
-export async function buildNewsCachesCli(){
-  const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
-  const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
-  const GLOBAL_BUDGET_MS   = Number(process.env.GLOBAL_BUDGET_MS || 90000);
-
-  // Universe: current pools.json (checked-in) or a lightweight build
-  let pools = {};
-  try { pools = JSON.parse(fs.readFileSync('pools.json','utf8')); } catch {}
-  if (!pools || !Object.keys(pools).length) {
-    pools = await buildUniverse({}, { limitPerMarket: Number(process.env.UNIVERSE_LIMIT || 200) });
+// ---------- CLI helper: build a broad symbol set & name maps from index files / pools ----------
+async function _cliCollectUniverse() {
+  // Prefer index constituents (stable) and enrich with pools.json names if present.
+  let idx = {};
+  try { idx = JSON.parse(await fsp.readFile('src/maps.indexes.json', 'utf8')); } catch {}
+  const rows = ['sp500','nasdaq100','kospi200','kosdaq100']
+    .flatMap(k => Array.isArray(idx?.[k]) ? idx[k] : []);
+  const SYM_TO_NAME = {};
+  const NAME_TO_SYM = {};
+  for (const r of rows) {
+    const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
+    const nm  = String(r.name || '').trim() || sym;
+    if (sym) { SYM_TO_NAME[sym] = nm; NAME_TO_SYM[nm.toUpperCase()] = sym; }
   }
-  const MARKETS = Object.keys(pools);
-  const universe = {};
-  const symbolSet = new Set();
-  for (const m of MARKETS){
-    const names = Array.from(new Set([...(pools[m]?.safe||[]), ...(pools[m]?.aggressive||[])]));
-    universe[m] = names;
-    for (const n of names){
-      // best-effort map via TICKER_MAP; if absent, let name act as symbol
-      const sym = TICKER_MAP[n] || TICKER_MAP[n.toUpperCase?.()] || n;
-      symbolSet.add(sym);
-    }
-  }
-  const symbols = Array.from(symbolSet);
-
-  // Build symbol->name map (prefer friendly name)
-  const symbolToName = {};
-  for (const [name, sym] of Object.entries(TICKER_MAP)) {
-    if (sym) symbolToName[sym] = symbolToName[sym] || name;
-  }
-
-  // Seed + expand keywords (ensure company names are included first)
-  let KEYWORDS = await buildKeywordDict({
-    symbols,
-    seeds: {},
-    symbolToName,
-    newsFeatures: {},
-    addKoreanForUSTickers: process.env.ADD_KO_FOR_US !== '0',
-  });
-  for (const s of symbols){
-    const nm = symbolToName[s] || s;
-    KEYWORDS[s] = Array.from(new Set([nm, s, `${nm} 주가`, ...(KEYWORDS[s]||[])]));
-  }
-
-  // 1) NEWS FEATURES
-  const feats = await buildNewsFeatures(symbols, { symbolToName, keywords: KEYWORDS });
-  await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
-  await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(feats, null, 2));
-  console.log(`[features] wrote ${NEWS_FEATURES_FILE} (${Object.keys(feats).length} symbols)`);
-
-  // 2) NAVER TRENDS (company-name keywords only)
-  const baskets = buildBasketsFromUniverse({
-    universe,
-    nameToSymbol: (name) => TICKER_MAP[name] || TICKER_MAP[name?.toUpperCase?.()] || null,
-    keywordDict: KEYWORDS
-  });
-  if (baskets.length) {
-    const today = new Date();
-    const end = today.toISOString().slice(0,10);
-    const start = new Date(today.getTime()-365*24*3600*1000).toISOString().slice(0,10);
-    const { perSymbol, raw } = await fetchNaverTrends({
-      baskets, startDate:start, endDate:end, timeUnit:'date',
-      cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
-      budgetLeftMs: GLOBAL_BUDGET_MS
-    });
-    await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE), { recursive: true });
-    await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
-    console.log(`[trends] wrote ${NAVER_TRENDS_FILE} (${Object.keys(perSymbol).length} symbols)`);
-  } else {
-    console.log('[trends] no baskets built; skipped');
-  }
+  // Try to map pools.json names back to symbols using index names (best-effort).
+  let pools = null;
+  try { pools = JSON.parse(await fsp.readFile('pools.json','utf8')); } catch {}
+  const poolNames = pools
+    ? Object.values(pools).flatMap(b => [...(b.safe||[]), ...(b.aggressive||[])])
+    : [];
+  const poolSyms = poolNames
+    .map(n => NAME_TO_SYM[String(n).toUpperCase()])
+    .filter(Boolean);
+  const indexSyms = Object.keys(SYM_TO_NAME);
+  const symbols = Array.from(new Set([...poolSyms, ...indexSyms]));
+  // Build a light "universe" of names by market for Naver baskets (index-based)
+  const uni = {
+    'S&P 500':     (idx?.sp500||[]).map(r => r.name || r.symbol),
+    'NASDAQ 100':  (idx?.nasdaq100||[]).map(r => r.name || r.symbol),
+    KOSPI:         (idx?.kospi200||[]).map(r => r.name || r.symbol),
+    KOSDAQ:        (idx?.kosdaq100||[]).map(r => r.name || r.symbol),
+  };
+  // Reverse mapper for baskets
+  const nameToSymbol = (name) => NAME_TO_SYM[String(name||'').toUpperCase()] || null;
+  return { symbols, symbolToName: SYM_TO_NAME, universe: uni, nameToSymbol };
 }
 
-// Allow running directly: node src/news/fetchByTicker.js --write-news-caches
-if (process.argv.includes('--write-news-caches')) {
-  buildNewsCachesCli().catch(e => { console.error(e); process.exit(1); });
+// ---------- CLI: build & write news-features.json + naver-trends.json ----------
+export async function buildNewsCachesCli() {
+  const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
+  const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
+  await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
+  await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE),  { recursive: true });
+
+  const { symbols, symbolToName, universe, nameToSymbol } = await _cliCollectUniverse();
+
+  // 1) News features (counts/sentiment/reputation etc.)
+  const features = await buildNewsFeatures(symbols, { symbolToName });
+  await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(features, null, 2));
+
+  // 2) Naver trends (use company names in keyword builder & baskets)
+  const KEYWORDS = await buildKeywordDict({
+    symbols,
+    seeds: {}, // your builder adds good defaults
+    symbolToName,
+    newsFeatures: features,
+    addKoreanForUSTickers: process.env.ADD_KO_FOR_US !== '0',
+  });
+  const baskets = buildBasketsFromUniverse({ universe, nameToSymbol, keywordDict: KEYWORDS });
+  const now = new Date(), end = now.toISOString().slice(0,10);
+  const start = new Date(now.getTime() - 365*24*3600*1000).toISOString().slice(0,10);
+  const { perSymbol, raw } = await fetchNaverTrends({
+    baskets, startDate: start, endDate: end, timeUnit: 'date',
+    cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
+    budgetLeftMs: Number(process.env.GLOBAL_BUDGET_MS || 90000)
+  });
+  await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+  console.log(`[news-caches] wrote ${NEWS_FEATURES_FILE} and ${NAVER_TRENDS_FILE}`);
+}
+
+// Node entrypoint: `node src/news/fetchByTicker.js --build-caches`
+if (import.meta.url === `file://${process.argv[1]}`) {
+  if (process.argv.includes('--build-caches')) {
+    buildNewsCachesCli().catch(e => { console.error(e); process.exit(1); });
+  }
 }
 
