@@ -489,6 +489,20 @@ const TTL = {
   wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
   earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
 };
+// External signals persisted by fetchByTicker
+const NEWS_FEATURES_FILE = 'data/news-features.json';
+const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
+let NEWS_FEATURES = {};
+let NAVER_TRENDS  = {};
+try { NEWS_FEATURES = JSON.parse(fs.readFileSync(NEWS_FEATURES_FILE,'utf8')); } catch {}
+try {
+  const t = JSON.parse(fs.readFileSync(NAVER_TRENDS_FILE,'utf8'));
+  NAVER_TRENDS = (t && t.perSymbol) ? t.perSymbol : (t || {});
+} catch {}
+// Blend weights (0..1); sum should be <= ~0.4 so we don't drown out core score
+const W_NEWS = Number(process.env.W_NEWS || 0.18);
+const W_REPUTATION = Number(process.env.W_REPUTATION || 0.14);
+const W_NAVER_POP = Number(process.env.W_NAVER_POP || 0.10);
 for (const a of process.argv.slice(2)) {
   if (a.startsWith('--max-per-provider=')) MAX_PER_PROVIDER = Number(a.split('=')[1]);
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
@@ -1634,6 +1648,36 @@ async function main(){
     };
     rescale(scoreSafe, QLO_LOCAL, QHI_LOCAL);
     rescale(scoreAggr, QLO_LOCAL, QHI_LOCAL);
+
+    // --- Blend external news/trend signals (from data/*.json) -----------------
+    // Note: these are already in 0..1-ish ranges; clamp & mix conservatively.
+    const EXT_SUM = Math.max(0, Math.min(0.95, W_NEWS + W_REPUTATION + W_NAVER_POP));
+    for (const n of names) {
+      const nk = normalizeKey(n);
+      const sym = NAME_TO_SYMBOL[nk] || NAME_TO_SYMBOL[n] || byName[n]?.symbol;
+      const nf  = sym ? NEWS_FEATURES[sym] : null;
+      const nt  = sym ? NAVER_TRENDS[sym]  : null;
+      const news = clamp01(Number(nf?.newsScore ?? 0));
+      const rep  = clamp01(Number(nf?.reputationScore ?? 0));
+      const navp = clamp01(Number(nt?.naverPopularity ?? 0));
+      const ext  = (W_NEWS * news) + (W_REPUTATION * rep) + (W_NAVER_POP * navp);
+      if (ext > 0) {
+        scoreSafe[n] = clamp01((1 - EXT_SUM) * scoreSafe[n] + ext);
+        // slightly more weight for aggressive on news/trend
+        scoreAggr[n] = clamp01((1 - EXT_SUM) * scoreAggr[n] + ext * 1.05);
+      }
+      // capture for metrics output
+      try {
+        (metricsOut[market] ||= {});
+        (metricsOut[market][n] ||= {});
+        metricsOut[market][n].extSignals = {
+          newsScore: news || 0,
+          reputationScore: rep || 0,
+          naverPopularity: navp || 0
+        };
+      } catch {}
+    }
+    // --------------------------------------------------------------------------
 
     for (const n of names) {
       const j = DISABLE_JITTER ? 0 : djitter(n);
