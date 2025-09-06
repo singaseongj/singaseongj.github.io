@@ -271,22 +271,24 @@ const POP_CAP     = +process.env.POP_CAP     || 0.10; // hard cap of popularity 
 // =========================
 // Absolute-scoring controls
 // =========================
-const ABSOLUTE_SCORING = process.env.ABSOLUTE_SCORING !== '0'; // default: ON
-// Stronger size bias (absolute path)
-const SIZE_ABS_WEIGHT = +process.env.SIZE_ABS_WEIGHT || 0.78;  // 0..1, higher = more size bias
-// Market cap range for log scaling (absolute)
-const MCAP_MIN = +process.env.MCAP_MIN || 1e9;        // ~small cap
-const MCAP_MAX = +process.env.MCAP_MAX || 3e13;       // ~AAPL/NVDA range
-// Normalizers for blog/wiki (turn counts into 0..1)
-const BLOG_NORM = +process.env.BLOG_NORM || 30;
-const WIKI_NORM = +process.env.WIKI_NORM || 60000;
-// Absolute popularity mixer (0..1 after normalization)
-const ABS_W_NEWS   = +process.env.ABS_W_NEWS   || 0.55;
-const ABS_W_NAVPOP = +process.env.ABS_W_NAVPOP || 0.35;
-const ABS_W_BLOGS  = +process.env.ABS_W_BLOGS  || 0.06;
-const ABS_W_WIKI   = +process.env.ABS_W_WIKI   || 0.04;
-const ABS_W_KEYPOS = +process.env.ABS_W_KEYPOS || 0.05;
-const ABS_W_KEYNEG = +process.env.ABS_W_KEYNEG || 0.03;
+const ABSOLUTE_SCORING = process.env.ABSOLUTE_SCORING !== '0'; // default ON
+// Stronger size bias (absolute)
+const SIZE_ABS_WEIGHT = +process.env.SIZE_ABS_WEIGHT || 0.82;  // higher => more size
+// Market-cap range for log scaling
+const MCAP_MIN = +process.env.MCAP_MIN || 2e9;
+const MCAP_MAX = +process.env.MCAP_MAX || 6e12;       // ~5–6T puts AAPL/NVDA near the top of range
+// Normalizers for blog/wiki (count -> 0..1)
+const BLOG_NORM = +process.env.BLOG_NORM || 20;
+const WIKI_NORM = +process.env.WIKI_NORM || 80000;
+// Absolute popularity mixer (normalized internally)
+const ABS_W_NEWS   = +process.env.ABS_W_NEWS   || 0.65;
+const ABS_W_NAVPOP = +process.env.ABS_W_NAVPOP || 0.50;
+const ABS_W_BLOGS  = +process.env.ABS_W_BLOGS  || 0.05;
+const ABS_W_WIKI   = +process.env.ABS_W_WIKI   || 0.02;
+const ABS_W_KEYPOS = +process.env.ABS_W_KEYPOS || 0.04;
+const ABS_W_KEYNEG = +process.env.ABS_W_KEYNEG || 0.02;
+// Additive external boost (0..1 contribution added onto base)
+const EXT_MIX = +process.env.EXT_MIX || 0.35;
 
 function sizeScoreFromMcap(mcap){
   if (!Number.isFinite(mcap) || mcap <= 0) return 0;
@@ -301,14 +303,14 @@ function sizeScoreFromMcap(mcap){
 // relies on ABS_* weights instead.
 const FMP_API_KEY        = process.env.FMP_API_KEY || process.env.FMP_KEY || '';
 const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 1.5;
-const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 5.0; // heavier news pulse
-const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 90;  // heavier Naver pop pulse
+// Early composition (“popularity pulse”) — heavier by default
+const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 6.0;
+const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 110; // Naver popularity is 0..1
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
 const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
-// NOTE: kept for backward compatibility in some derived fields, but the
-// absolute path below uses SIZE_ABS_WEIGHT instead of this relative mixer.
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.7; // (legacy)
+// kept for legacy diagnostics; the absolute path below uses SIZE_ABS_WEIGHT instead
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.7;
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
@@ -447,7 +449,7 @@ const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
 const NEWS_FEATURES_FILE = 'data/news-features.json';
 const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
-// Prefer prebuilt features if the files exist, unless explicitly disabled.
+// Prefer prebuilt features if files exist (unless explicitly disabled)
 const USE_PREBUILT = process.env.USE_PREBUILT_FEATURES === '1'
   || (fs.existsSync('data/news-features.json') || fs.existsSync('data/naver-trends.json'));
 
@@ -540,10 +542,10 @@ const TTL = {
   wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
   earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
 };
-// Later-stage blend weights (0..1-ish) — make news & Naver POP matter more.
-const W_NEWS        = Number(process.env.W_NEWS        || 0.45);
+// Later-stage blend weights (used inside an additive boost — not a convex override)
+const W_NEWS        = Number(process.env.W_NEWS        || 0.55);
 const W_REPUTATION  = Number(process.env.W_REPUTATION  || 0.14);
-const W_NAVER_POP   = Number(process.env.W_NAVER_POP   || 0.35);
+const W_NAVER_POP   = Number(process.env.W_NAVER_POP   || 0.45);
 const W_SENTIMENT   = Number(process.env.W_SENTIMENT   || 0.08);
 const W_DS_TREND    = Number(process.env.W_DS_TREND    || 0.14);
 for (const a of process.argv.slice(2)) {
@@ -561,7 +563,7 @@ const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
 const MIN_PRICE_USD = Number(process.env.MIN_PRICE_USD || 2);
 const MIN_PRICE_KRW = Number(process.env.MIN_PRICE_KRW || 1000);
 const INELIGIBLE_PENALTY = Number(process.env.INELIGIBLE_PENALTY || 0.8);
-const UNKNOWN_PENALTY    = Number(process.env.UNKNOWN_PENALTY || 0.3);
+const UNKNOWN_PENALTY    = Number(process.env.UNKNOWN_PENALTY || 0.12); // much lighter in absolute mode
 const CROSS_MARKET_DEDUP = process.env.CROSS_MARKET_DEDUP !== '0';
 const ALLOWLIST = new Set(Object.values(TICKER_MAP));
 
@@ -1614,7 +1616,7 @@ async function main(){
         byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]));
       }
 
-      const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.02; // 10% of scale max
+    const SECTOR_LIFT = +process.env.SECTOR_LIFT || 0.02; // keep modest
       const sectorHot = {};
       const sectorCnt = {};
       names.forEach((n,i)=>{
@@ -1652,11 +1654,17 @@ async function main(){
       scoreAggr[n]         = Math.max(scoreAggr[n], floor01 * 0.95);
     });
 
-    // Re-apply eligibility penalties after floors so floors can't mask them (absolute)
+    // Re-apply eligibility penalties (absolute-safe):
+    // - If ADV/price are UNKNOWN, apply small UNKNOWN_PENALTY only.
+    // - If both known and below thresholds, apply INELIGIBLE_PENALTY.
     for (const n of names) {
-      const pen = !eligibility[n].eligible
-        ? INELIGIBLE_PENALTY
-        : ((!eligibility[n].advKnown || !eligibility[n].priceKnown) ? UNKNOWN_PENALTY : 0);
+      const e = eligibility[n];
+      let pen = 0;
+      if (!e.advKnown || !e.priceKnown) {
+        pen = UNKNOWN_PENALTY;
+      } else if (!e.eligible) {
+        pen = INELIGIBLE_PENALTY;
+      }
       if (pen > 0) {
         scoreSafe[n] -= pen;
         scoreAggr[n] -= pen * 0.8;
@@ -1673,15 +1681,7 @@ async function main(){
       }
     });
 
-    // --- Blend external news/trend signals (from data/*.json) -----------------
-    // Note: these are already in 0..1-ish ranges; clamp & mix conservatively.
-    const EXT_SUM = Math.max(
-      0,
-      Math.min(
-        0.95,
-        W_NEWS + W_REPUTATION + W_NAVER_POP + W_SENTIMENT + W_DS_TREND
-      )
-    );
+    // --- Additive external boost (from data/*.json) -----------------
     for (const n of names) {
       const nk = normalizeKey(n);
       const sym = NAME_TO_SYMBOL[nk] || NAME_TO_SYMBOL[n] || byName[n]?.symbol;
@@ -1689,7 +1689,7 @@ async function main(){
       const nt  = sym ? NAVER_TRENDS[sym]  : null;
       const news = clamp01(Number(nf?.newsScore ?? 0));
       const rep  = clamp01(Number(nf?.reputationScore ?? 0));
-      const navp = clamp01(Number(nt?.naverPopularity ?? 0));
+      const navp = clamp01(Number((nt?.naverPopularity ?? nf?.naverPopularity) ?? 0));
       const sent = clamp01(0.5 * (Number(nf?.sentiment ?? 0) + 1)); // -1..1 -> 0..1
       const dstr = clamp01(Math.max(0, Number(nf?.ds_trend ?? 0))); // keep non-negative
       const ext  =
@@ -1699,9 +1699,8 @@ async function main(){
         (W_SENTIMENT  * sent) +
         (W_DS_TREND   * dstr);
       if (ext > 0) {
-        scoreSafe[n] = clamp01((1 - EXT_SUM) * scoreSafe[n] + ext);
-        // slightly more weight for aggressive on news/trend
-        scoreAggr[n] = clamp01((1 - EXT_SUM) * scoreAggr[n] + ext * 1.05);
+        scoreSafe[n] = clamp01(scoreSafe[n] + EXT_MIX * clamp01(ext));
+        scoreAggr[n] = clamp01(scoreAggr[n] + EXT_MIX * clamp01(ext) * 1.05);
       }
       // capture for metrics output
       try {
@@ -1894,8 +1893,17 @@ async function main(){
     coverage: { ...marketCoverage, avg: avgCoverage },
     timingMs: { total: Date.now() - START_TS },
     weights: {
-      SCALE_WEIGHT,
+      SCALE_WEIGHT, // legacy
       SIZE_ABS_WEIGHT,
+      MCAP_MIN,
+      MCAP_MAX,
+      ABS_W_NEWS,
+      ABS_W_NAVPOP,
+      ABS_W_BLOGS,
+      ABS_W_WIKI,
+      ABS_W_KEYPOS,
+      ABS_W_KEYNEG,
+      EXT_MIX,
       NEWS_WEIGHT,
       BLOG_WEIGHT,
       POPULARITY_WEIGHT,
@@ -1920,8 +1928,8 @@ async function main(){
       MAX_CONCURRENCY,
       DEMO_MODE,
       OFFLINE,
-      DISABLE_JITTER: process.env.DISABLE_JITTER === '1',
-      ABSOLUTE_SCORING
+      ABSOLUTE_SCORING: ABSOLUTE_SCORING,
+      DISABLE_JITTER: process.env.DISABLE_JITTER === '1'
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
