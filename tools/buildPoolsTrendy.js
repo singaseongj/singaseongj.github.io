@@ -848,6 +848,7 @@ const TREND_T5 = +process.env.TREND_T5 || 0.30;
 const TREND_T4 = +process.env.TREND_T4 || 0.12;
 const TREND_T3 = +process.env.TREND_T3 || 0.03;
 const TREND_T2 = +process.env.TREND_T2 || -0.12;
+const KR_MARKET_DEDUCT_POINTS = +process.env.KR_MARKET_DEDUCT_POINTS || 20;
 
 const NEWS_T5  = +process.env.NEWS_T5  || 1.00;  // growth >= 100%
 const NEWS_T4  = +process.env.NEWS_T4  || 0.50;  // >= 50%
@@ -1717,12 +1718,15 @@ async function main(){
     }
     // --------------------------------------------------------------------------
 
-    // ---- Final KR markets deduction (-20 pts applied before capping) ----
+    // ---- Final KR markets offset-and-rescale (start -20 but still allow 100) ----
+    // We shift by an offset (e.g., 20pts) and then rescale by 1/(1 - offset)
+    // so the upper end can still reach 100 instead of being capped at 80.
     if (ABSOLUTE_SCORING && (market === 'KOSPI' || market === 'KOSDAQ')) {
-      const off01 = 0.20; // 20 points on 0..100 scale
+      const off01 = KR_MARKET_DEDUCT_POINTS / 100; // e.g., 0.20
+      const denom = Math.max(1e-9, 1 - off01);
       for (const n of names) {
-        scoreSafe[n] -= off01;
-        scoreAggr[n] -= off01;
+        scoreSafe[n] = clamp01((scoreSafe[n] - off01) / denom);
+        scoreAggr[n] = clamp01((scoreAggr[n] - off01) / denom);
       }
     }
 
@@ -1939,7 +1943,8 @@ async function main(){
       OFFLINE,
       ABSOLUTE_SCORING: ABSOLUTE_SCORING,
       DISABLE_JITTER: process.env.DISABLE_JITTER === '1',
-      KR_MARKET_DEDUCT_POINTS: 20
+      KR_MARKET_DEDUCT_POINTS: KR_MARKET_DEDUCT_POINTS,
+      KR_OFFSET_AND_RESCALE: true
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
