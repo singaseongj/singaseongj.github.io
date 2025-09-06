@@ -268,15 +268,47 @@ const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.04; // cap (0..1 sca
 const POP_FLOOR_W = +process.env.POP_FLOOR_W || 0.01; // portion of scale reserved for popularity floor
 const POP_CAP     = +process.env.POP_CAP     || 0.10; // hard cap of popularity bump (0..1 scale)
 
-// External news/popularity weights
+// =========================
+// Absolute-scoring controls
+// =========================
+const ABSOLUTE_SCORING = process.env.ABSOLUTE_SCORING !== '0'; // default: ON
+// Stronger size bias (absolute path)
+const SIZE_ABS_WEIGHT = +process.env.SIZE_ABS_WEIGHT || 0.78;  // 0..1, higher = more size bias
+// Market cap range for log scaling (absolute)
+const MCAP_MIN = +process.env.MCAP_MIN || 1e9;        // ~small cap
+const MCAP_MAX = +process.env.MCAP_MAX || 3e13;       // ~AAPL/NVDA range
+// Normalizers for blog/wiki (turn counts into 0..1)
+const BLOG_NORM = +process.env.BLOG_NORM || 30;
+const WIKI_NORM = +process.env.WIKI_NORM || 60000;
+// Absolute popularity mixer (0..1 after normalization)
+const ABS_W_NEWS   = +process.env.ABS_W_NEWS   || 0.55;
+const ABS_W_NAVPOP = +process.env.ABS_W_NAVPOP || 0.35;
+const ABS_W_BLOGS  = +process.env.ABS_W_BLOGS  || 0.06;
+const ABS_W_WIKI   = +process.env.ABS_W_WIKI   || 0.04;
+const ABS_W_KEYPOS = +process.env.ABS_W_KEYPOS || 0.05;
+const ABS_W_KEYNEG = +process.env.ABS_W_KEYNEG || 0.03;
+
+function sizeScoreFromMcap(mcap){
+  if (!Number.isFinite(mcap) || mcap <= 0) return 0;
+  const lo = Math.log10(Math.max(MCAP_MIN, 1));
+  const hi = Math.log10(Math.max(MCAP_MAX, MCAP_MIN + 1));
+  const x  = Math.log10(mcap);
+  return clamp01((x - lo) / Math.max(1e-9, (hi - lo)));
+}
+
+// Early composition (pre-ext blend) for "popularity" components.
+// We'll still compute legacy fields for metrics, but the absolute path below
+// relies on ABS_* weights instead.
 const FMP_API_KEY        = process.env.FMP_API_KEY || process.env.FMP_KEY || '';
 const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 1.5;
-const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 2.5;
-const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 60; // naver popularity is 0..1
+const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 5.0; // heavier news pulse
+const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 90;  // heavier Naver pop pulse
 const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
 const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
 const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
-const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.7; // size (market cap from indexes) weight (0..1)
+// NOTE: kept for backward compatibility in some derived fields, but the
+// absolute path below uses SIZE_ABS_WEIGHT instead of this relative mixer.
+const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.7; // (legacy)
 
 function structuralPrior(sym){
   let p = PRIOR_FLOOR;
@@ -415,7 +447,9 @@ const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
 const NEWS_FEATURES_FILE = 'data/news-features.json';
 const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
-const USE_PREBUILT = process.env.USE_PREBUILT_FEATURES === '1';
+// Prefer prebuilt features if the files exist, unless explicitly disabled.
+const USE_PREBUILT = process.env.USE_PREBUILT_FEATURES === '1'
+  || (fs.existsSync('data/news-features.json') || fs.existsSync('data/naver-trends.json'));
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
 // Track picks from earlier markets in this run
@@ -506,12 +540,12 @@ const TTL = {
   wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
   earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
 };
-// Blend weights (0..1); keep total <= ~0.4 so we don't drown out core score
-const W_NEWS        = Number(process.env.W_NEWS        || 0.18); // newsScore (intensity)
-const W_REPUTATION  = Number(process.env.W_REPUTATION  || 0.14); // reputationScore (quality)
-const W_NAVER_POP   = Number(process.env.W_NAVER_POP   || 0.10); // naverPopularity (interest)
-const W_SENTIMENT   = Number(process.env.W_SENTIMENT   || 0.10); // sentiment (-1..1 mapped to 0..1)
-const W_DS_TREND    = Number(process.env.W_DS_TREND    || 0.10); // ds_trend (0..1), complements HOT_W_TREND
+// Later-stage blend weights (0..1-ish) — make news & Naver POP matter more.
+const W_NEWS        = Number(process.env.W_NEWS        || 0.45);
+const W_REPUTATION  = Number(process.env.W_REPUTATION  || 0.14);
+const W_NAVER_POP   = Number(process.env.W_NAVER_POP   || 0.35);
+const W_SENTIMENT   = Number(process.env.W_SENTIMENT   || 0.08);
+const W_DS_TREND    = Number(process.env.W_DS_TREND    || 0.14);
 for (const a of process.argv.slice(2)) {
   if (a.startsWith('--max-per-provider=')) MAX_PER_PROVIDER = Number(a.split('=')[1]);
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
@@ -917,9 +951,14 @@ function namesOnlyRank(universe, features) {
       const newsScore = newsScoreFromFeatures(nf);
       const sentiment = ((nf.sentiment ?? 0) + 1) / 2;
       const pop = nf.naverPopularity ?? 0;
-      const trendBoost = (typeof nf.polygonTrend === 'number' ? clamp01(nf.polygonTrend) * 0.05 : 0);
+      // Fallback scorer (no candles/providers) — bias to content & size.
+      const trendBoost = (typeof nf.polygonTrend === 'number' ? clamp01(nf.polygonTrend) * 0.08 : 0);
       const nasdaqBoost = nf.nasdaqClose != null ? 0.02 : 0;
-      const score = newsScore * 0.12 + (sentiment - 0.5) * 0.08 + (/\.K[QS]$/.test(sym) ? pop * 0.20 : 0) + trendBoost + nasdaqBoost;
+      // Heavier news + popularity by default here
+      const score = newsScore * 0.35
+                  + (sentiment - 0.5) * 0.06
+                  + ( /\.K[QS]$/.test(sym) ? pop * 0.35 : pop * 0.12 )
+                  + trendBoost + nasdaqBoost;
       return { name: n, score };
     }).sort((a,b)=>b.score-a.score).map(s=>s.name);
     out[m] = { safe: scored.slice(0, kSafe), aggressive: scored.slice(kSafe, kSafe + kAggr) };
@@ -1426,69 +1465,59 @@ async function main(){
       eligibility[n] = { advOk, priceOk, advKnown, priceKnown, eligible: (advOk && priceOk) };
     });
 
-    // Scores for *all* names based on blogs, news articles, popularity and keywords
+    // ===== Absolute composition (no percentile ranking) =====
+    // Build absolute popularity (content) & size scores, both 0..1
     const scoreSafeRaw = {};
     const scoreAggrRaw = {};
-    const popRaw = names.map(n => {
+    const popularity01 = {};
+
+    names.forEach((n) => {
       const nf = byName[n];
       const sym = nf.sym || nameToSymbol(n) || n;
-      // Prefer stable market cap from src/maps.indexes.json; fall back to runtime caps.
       const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? nf.marketCap ?? 0;
       nf.marketCap = mcap;
-      const blog   = nf.blogMentions   || 0;
-      const news   = nf.newsCount      || 0;
-      const fmp    = nf.fmpNewsCount   || 0;
-      const goog   = nf.googleNewsCount|| 0;
-      const yahoo  = nf.yahooNewsCount || 0;
-      const invest = nf.investingNewsCount || 0;
-      const hanwha = nf.hanwhaNewsCount || 0;
-      const pop    = nf.naverPopularity|| 0;
-      const posK   = nf.posHits        || 0;
-      const negK   = nf.negHits        || 0;
-      const wiki   = byName[n].wikiViews || 0;
-      const newsSum = news + fmp + goog + yahoo + invest + hanwha;
-      const materiality = (nf.contractValue && mcap)
-        ? nf.contractValue / mcap
-        : 0;
-      nf.componentScores = {
-        blogs: blog,
-        news: newsSum,
-        popularity: pop,
-        wikiViews: wiki,
-        posKeywords: posK,
-        negKeywords: negK,
-        materiality,
-        scale: mcap || 0,
-      };
-      return NEWS_WEIGHT*scaleAdjust(newsSum) +
-             BLOG_WEIGHT*scaleAdjust(blog) +
-             POPULARITY_WEIGHT*scaleAdjust(pop) +
-             WIKI_WEIGHT*scaleAdjust(wiki) +
-             POS_KW_WEIGHT*posK +
-             NEG_KW_WEIGHT*negK +
-             materiality;
-    });
-    const scaleRaw = names.map(n => {
-      const sym = byName[n].sym || nameToSymbol(n) || n;
-      // Rank by index-based market cap first to keep size signal consistent across runs.
-      const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? byName[n].marketCap ?? 0;
-      return scaleAdjust(mcap);
-    });
-    const popArr = safeRank01(popRaw);
-    const scaleArr = safeRank01(scaleRaw);
-    const popularity01 = Object.fromEntries(names.map((n, i) => [n, popArr[i]]));
 
-    names.forEach((n, i) => {
-      const p01 = popArr[i];
-      const s01 = scaleArr[i];
-      const total01 = (1 - SCALE_WEIGHT) * p01 + SCALE_WEIGHT * s01; // now with higher size influence
+      // Pull core content signals
+      const news  = clamp01(nf.newsScore ?? 0);
+      // Prefer NAVER_TRENDS per-symbol pop; fall back to features-derived
+      const navp  = clamp01(NAVER_TRENDS[nf.sym || sym]?.naverPopularity ?? nf.naverPopularity ?? 0);
+      const blog01 = clamp01((nf.blogMentions || 0) / Math.max(1, BLOG_NORM));
+      const wiki01 = clamp01((nf.wikiViews || 0)      / Math.max(1, WIKI_NORM));
+      const pos01  = clamp01((nf.posHits || 0) / 10);
+      const neg01  = clamp01((nf.negHits || 0) / 10);
+
+      // Compose an absolute popularity/content score
+      const denom = Math.max(1e-9, ABS_W_NEWS + ABS_W_NAVPOP + ABS_W_BLOGS + ABS_W_WIKI + ABS_W_KEYPOS + ABS_W_KEYNEG);
+      const popAbs = (ABS_W_NEWS   * news
+                    + ABS_W_NAVPOP * navp
+                    + ABS_W_BLOGS  * blog01
+                    + ABS_W_WIKI   * wiki01
+                    + ABS_W_KEYPOS * pos01
+                    - ABS_W_KEYNEG * neg01) / denom;
+      const pop01 = clamp01(popAbs);
+      popularity01[n] = pop01; // used in floors
+
+      // Absolute size score via log-scaled market cap
+      const size01 = sizeScoreFromMcap(mcap);
+
+      // Absolute base score — stronger size bias as requested
+      const base01 = clamp01(SIZE_ABS_WEIGHT * size01 + (1 - SIZE_ABS_WEIGHT) * pop01);
+
       byName[n].prevNewsScore = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
-      byName[n].totalScore    = Math.round(total01 * 100);
-      byName[n].componentScores = byName[n].componentScores
-        || (NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {}).componentScores
-        || {};
-      scoreSafeRaw[n] = total01;
-      scoreAggrRaw[n] = total01;
+      byName[n].totalScore    = Math.round(base01 * 100);
+      scoreSafeRaw[n] = base01;
+      scoreAggrRaw[n] = base01;
+
+      // Keep components for diagnostics
+      nf.componentScores = nf.componentScores || {};
+      Object.assign(nf.componentScores, {
+        newsScore: news,
+        naverPopularity: navp,
+        blogs01: blog01,
+        wiki01: wiki01,
+        pos01, neg01,
+        size01
+      });
     });
 
     // Apply feedback nudges
@@ -1512,12 +1541,9 @@ async function main(){
       }
     }
 
-    // ---- Per-market calibration: curve & widen spread ----
-    const AUTO_CURVE = process.env.AUTO_CURVE !== '0';
-    let GAMMA = Number(process.env.SCORE_CURVE || 0.62); // <1 boosts the head
-    const FLOOR = Number(process.env.SCORE_FLOOR || 0); // allow full 0-100 range
+    // ---- Absolute mapping to 0..100 (no percentile curve) ----
+    const FLOOR = Number(process.env.SCORE_FLOOR || 0);
     const CEIL  = Number(process.env.SCORE_CEIL  || 100);
-    // Optional per-market ceiling (e.g., only cap S&P 500 at 99)
     const CEIL_LOCAL = (market === 'S&P 500')
       ? (Number(process.env.SCORE_CEIL_SP500) || CEIL)
       : CEIL;
@@ -1526,22 +1552,23 @@ async function main(){
                             : SCORE_ROUND === 'ceil'  ? Math.ceil(x)
                             : Math.round(x);
 
-    if (AUTO_CURVE) {
-      const vals = Object.values(scoreSafeRaw);
-      const spread = Math.max(...vals) - Math.min(...vals);
-      if (spread < 0.15) GAMMA = Math.max(0.55, GAMMA - 0.05);
-    }
-
-    const pSafe = percentileMap(scoreSafe);   // 0..1 by rank within market
-    const pAggr = percentileMap(scoreAggr);
-
-    for (const n of names) {
-      // same curve for both buckets; ordering preserved
-      const curved = Math.pow(pSafe[n], GAMMA);
-      scoreSafe[n] = curved;
-      scoreAggr[n] = Math.pow(pAggr[n], GAMMA);
-      // store human-facing 0..100 with floor/ceiling
-      byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * curved);
+    if (ABSOLUTE_SCORING) {
+      for (const n of names) {
+        scoreSafe[n] = clamp01(scoreSafe[n]);
+        scoreAggr[n] = clamp01(scoreAggr[n]);
+        byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
+      }
+    } else {
+      // (legacy relative curve path is disabled by default)
+      const pSafe = percentileMap(scoreSafe);
+      const pAggr = percentileMap(scoreAggr);
+      let GAMMA = Number(process.env.SCORE_CURVE || 0.62);
+      for (const n of names) {
+        const curved = Math.pow(pSafe[n], GAMMA);
+        scoreSafe[n] = curved;
+        scoreAggr[n] = Math.pow(pAggr[n], GAMMA);
+        byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * curved);
+      }
     }
 
     // Optional: hotness boost — disabled with HOTNESS_WEIGHT=0
@@ -1625,7 +1652,7 @@ async function main(){
       scoreAggr[n]         = Math.max(scoreAggr[n], floor01 * 0.95);
     });
 
-    // Re-apply eligibility penalties after floors so floors can't mask them
+    // Re-apply eligibility penalties after floors so floors can't mask them (absolute)
     for (const n of names) {
       const pen = !eligibility[n].eligible
         ? INELIGIBLE_PENALTY
@@ -1645,36 +1672,6 @@ async function main(){
         scoreAggr[n] = clamp01(scoreAggr[n] - POP_CAP);
       }
     });
-
-    function quantile(arr, q){
-      const a = arr.slice().sort((x,y)=>x-y);
-      if (!a.length) return 0;
-      const pos = (a.length - 1) * q;
-      const lo = Math.floor(pos), hi = Math.ceil(pos);
-      if (lo === hi) return a[lo];
-      const f = pos - lo; return a[lo]*(1-f) + a[hi]*f;
-    }
-    const QLO_BASE = +process.env.RESCALE_Q_LO || 0.02;   // defaults
-    const QHI_BASE = +process.env.RESCALE_Q_HI || 0.99;
-    // Optional per-market quantile overrides (e.g., RESCALE_Q_HI_SP500=1)
-    const QLO_LOCAL = (market === 'S&P 500')
-      ? (Number(process.env.RESCALE_Q_LO_SP500) || QLO_BASE)
-      : QLO_BASE;
-    const QHI_LOCAL = (market === 'S&P 500')
-      ? (Number(process.env.RESCALE_Q_HI_SP500) || QHI_BASE)
-      : QHI_BASE;
-
-    // Rescale scores to widen spread (0..1)
-    const rescale = (map, qlo, qhi) => {
-      const vals = Object.values(map);
-      let lo = quantile(vals, qlo);
-      let hi = quantile(vals, qhi);
-      if (!(hi > lo)) { lo = Math.min(...vals); hi = Math.max(...vals); }
-      const span = Math.max(1e-9, hi - lo);
-      names.forEach(n => { map[n] = clamp01((map[n] - lo) / span); });
-    };
-    rescale(scoreSafe, QLO_LOCAL, QHI_LOCAL);
-    rescale(scoreAggr, QLO_LOCAL, QHI_LOCAL);
 
     // --- Blend external news/trend signals (from data/*.json) -----------------
     // Note: these are already in 0..1-ish ranges; clamp & mix conservatively.
@@ -1898,6 +1895,7 @@ async function main(){
     timingMs: { total: Date.now() - START_TS },
     weights: {
       SCALE_WEIGHT,
+      SIZE_ABS_WEIGHT,
       NEWS_WEIGHT,
       BLOG_WEIGHT,
       POPULARITY_WEIGHT,
@@ -1922,7 +1920,8 @@ async function main(){
       MAX_CONCURRENCY,
       DEMO_MODE,
       OFFLINE,
-      DISABLE_JITTER: process.env.DISABLE_JITTER === '1'
+      DISABLE_JITTER: process.env.DISABLE_JITTER === '1',
+      ABSOLUTE_SCORING
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
