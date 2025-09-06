@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-06T22:39:38+09:00 (KST)**
+- Generated: **2025-09-07T00:23:10+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -92,21 +92,27 @@
 
 ### SAFE (5)
 
-**SK케미칼** (285130.KS)
+**HMM** (HMMR)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **0.0%**, 20d **-12.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HMM
+
+**KT** (KT)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **-2.1%**, 20d **-0.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=KT
+
+**SK바이오팜** (326030.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.7%**, 20d **-10.1%**; volatility (20d): **unknown**
+- Returns: 5d **10.8%**, 20d **9.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=SK%EC%BC%80%EB%AF%B8%EC%B9%BC
-
-**넷마블** (251270.KS)
-
-- News (7d): **2** (blogs: 10) — momentum: **low**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.5%**, 20d **-1.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **커뮤니케이션서비스**
-- News search: https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=SK%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8C%9C
 
 **두산** (000150.KS)
 
@@ -116,60 +122,52 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
-**삼성증권** (016360.KS)
+**삼성전자** (005930.KS)
 
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-0.6%**, 20d **-3.1%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.3%**, 20d **-1.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C
-
-**이마트** (139480.KS)
-
-- News (7d): **264** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **9.1%**, 20d **-13.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **필수소비재**
-- News search: https://www.google.com/search?q=%EC%9D%B4%EB%A7%88%ED%8A%B8
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 ### AGGRESSIVE (5)
 
-**GS리테일** (007070.KS)
+**TKG휴켐스** (069260.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.9%**, 20d **0.8%**; volatility (20d): **unknown**
+- Returns: 5d **1.7%**, 20d **-0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **필수소비재**
-- News search: https://www.google.com/search?q=GS%EB%A6%AC%ED%85%8C%EC%9D%BC
-
-**금호타이어** (073240.KS)
-
-- News (7d): **112** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.3%**, 20d **2.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%EA%B8%88%ED%98%B8%ED%83%80%EC%9D%B4%EC%96%B4
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=TKG%ED%9C%B4%EC%BC%90%EC%8A%A4
 
 **넥센타이어** (002350.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.9%**, 20d **3.1%**; volatility (20d): **unknown**
+- Returns: 5d **-0.9%**, 20d **-4.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%EB%84%A5%EC%84%BC%ED%83%80%EC%9D%B4%EC%96%B4
 
+**녹십자** (006280.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.2%**, 20d **-9.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90
+
 **롯데정밀화학** (004000.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.1%**, 20d **8.0%**; volatility (20d): **unknown**
+- Returns: 5d **1.4%**, 20d **-0.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%A0%95%EB%B0%80%ED%99%94%ED%95%99
 
 **보령** (003850.KS)
 
-- News (7d): **221** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.9%**, 20d **2.3%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.6%**, 20d **-1.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%B3%B4%EB%A0%B9
@@ -245,12 +243,13 @@
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Lululemon
 
-**Zscaler** (ZS)
+**Old Dominion Freight Line** (ODFL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
+- Returns: 5d **2.4%**, 20d **5.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Zscaler
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Old%20Dominion%20Freight%20Line
 
 ## S&P 500
 
@@ -314,13 +313,13 @@
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Dollar%20Tree
 
-**F5, Inc.** (FFIV)
+**Leidos** (LDOS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.6%**, 20d **6.3%**; volatility (20d): **unknown**
+- Returns: 5d **-1.3%**, 20d **2.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=F5%2C%20Inc.
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Leidos
 
 **SBA Communications** (SBAC)
 
