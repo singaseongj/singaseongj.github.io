@@ -790,6 +790,25 @@ async function tryFetchAndEnrich() {
           else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
           else if (typeof metrics?.score?.safe === 'number') baseScore = Math.round(metrics.score.safe * 100);
           if (baseScore == null) baseScore = 50;
+
+          const reputationScore = metrics?.reputationScore ?? news.reputationScore ?? null;
+          const topKeywords = (metrics?.topKeywords && metrics.topKeywords.length)
+            ? metrics.topKeywords
+            : (news.topKeywords || []);
+          const sentiment = Number.isFinite(metrics?.sentiment)
+            ? +metrics.sentiment.toFixed(2)
+            : (Number.isFinite(news.sentiment) ? +news.sentiment.toFixed(2) : 0);
+          const blog = Number.isFinite(metrics?.blogScore)
+            ? +metrics.blogScore.toFixed(2)
+            : (Number.isFinite(metrics?.blogMentions)
+                ? +metrics.blogMentions.toFixed(2)
+                : (Number.isFinite(news.blogMentions) ? news.blogMentions|0 : 0));
+          const naver = Number.isFinite(metrics?.naverScore)
+            ? +metrics.naverScore.toFixed(2)
+            : (Number.isFinite(metrics?.naverPopularity)
+                ? +metrics.naverPopularity.toFixed(2)
+                : (Number.isFinite(trend.naverPopularity) ? +trend.naverPopularity.toFixed(2) : 0));
+
           updated.push({
             name: displayName,
             sector,
@@ -797,12 +816,12 @@ async function tryFetchAndEnrich() {
             searchUrl,
             score: baseScore,
             reasons: {
-              reputationScore: news.reputationScore ?? null,
-              topKeywords: news.topKeywords || [],
+              reputationScore,
+              topKeywords,
               signals: {
-                sentiment: Number.isFinite(news.sentiment) ? +news.sentiment.toFixed(2) : 0,
-                blog: Number.isFinite(news.blogMentions) ? news.blogMentions|0 : 0,
-                naver: Number.isFinite(trend.naverPopularity) ? +trend.naverPopularity.toFixed(2) : 0
+                sentiment,
+                blog,
+                naver
               }
             }
           });
@@ -816,7 +835,14 @@ async function tryFetchAndEnrich() {
           else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
           else if (typeof metrics?.score?.safe === 'number') baseScore = Math.round(metrics.score.safe * 100);
           if (baseScore == null) baseScore = 50;
-          updated.push({ name: rawName, sector: null, ticker: null, searchUrl: null, score: baseScore, reasons: { reputationScore: null, topKeywords: [], signals: { sentiment: 0, blog: 0, naver: 0 } } });
+          const sentiment = Number.isFinite(metrics?.sentiment) ? +metrics.sentiment.toFixed(2) : 0;
+          const blog = Number.isFinite(metrics?.blogScore)
+            ? +metrics.blogScore.toFixed(2)
+            : (Number.isFinite(metrics?.blogMentions) ? +metrics.blogMentions.toFixed(2) : 0);
+          const naver = Number.isFinite(metrics?.naverScore)
+            ? +metrics.naverScore.toFixed(2)
+            : (Number.isFinite(metrics?.naverPopularity) ? +metrics.naverPopularity.toFixed(2) : 0);
+          updated.push({ name: rawName, sector: null, ticker: null, searchUrl: null, score: baseScore, reasons: { reputationScore: null, topKeywords: [], signals: { sentiment, blog, naver } } });
           noteStatus(err);
         }
 
