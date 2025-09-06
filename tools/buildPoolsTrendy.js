@@ -1717,13 +1717,12 @@ async function main(){
     }
     // --------------------------------------------------------------------------
 
-    // ---- Final KR markets deduction (-20 pts) ----
+    // ---- Final KR markets deduction (-20 pts applied before capping) ----
     if (ABSOLUTE_SCORING && (market === 'KOSPI' || market === 'KOSDAQ')) {
-      const off01 = -0.20; // -20 points on 0..100 scale
+      const off01 = 0.20; // 20 points on 0..100 scale
       for (const n of names) {
-        scoreSafe[n] = clamp01(scoreSafe[n] + off01);
-        scoreAggr[n] = clamp01(scoreAggr[n] + off01);
-        byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
+        scoreSafe[n] -= off01;
+        scoreAggr[n] -= off01;
       }
     }
 
@@ -1731,7 +1730,7 @@ async function main(){
       const j = DISABLE_JITTER ? 0 : djitter(n);
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
       scoreAggr[n] = clamp01(scoreAggr[n] + j);
-      byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
+      byName[n].totalScore = Math.max(0, Math.min(100, roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n])));
 
       byName[n].reasons = byName[n].reasons || {};
       const nf = NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {};
