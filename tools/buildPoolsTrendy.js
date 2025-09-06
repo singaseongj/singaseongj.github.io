@@ -1533,6 +1533,17 @@ async function main(){
     const scoreSafe = applyFeedback(scoreSafeRaw, feedback, market);
     const scoreAggr = applyFeedback(scoreAggrRaw, feedback, market);
 
+    // KR start-at-(-20): subtract BEFORE any later boosts, no rescale.
+    // This shifts KOSPI/KOSDAQ curves down by 0.20 in 0..1 space so they
+    // literally “start at −20” and can still climb back to 100 via later adds.
+    if (ABSOLUTE_SCORING && (market === 'KOSPI' || market === 'KOSDAQ')) {
+      const off01 = KR_MARKET_DEDUCT_POINTS / 100; // e.g. 0.20 for 20 pts
+      for (const n of names) {
+        scoreSafe[n] -= off01;
+        scoreAggr[n] -= off01;
+      }
+    }
+
     // -------- Small overlap penalty for later U.S. markets ----------
     // If this is NASDAQ 100, penalize names that already appear in S&P 500 SAFE
     if (market === 'NASDAQ 100' && USED['S&P 500']?.safe?.length) {
@@ -1563,8 +1574,7 @@ async function main(){
 
     if (ABSOLUTE_SCORING) {
       for (const n of names) {
-        scoreSafe[n] = clamp01(scoreSafe[n]);
-        scoreAggr[n] = clamp01(scoreAggr[n]);
+        // Do NOT clamp yet; let later boosts push above 1.0 before the final cap.
         byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
       }
     } else {
@@ -1739,23 +1749,14 @@ async function main(){
     }
     // --------------------------------------------------------------------------
 
-    // ---- Final KR markets offset-and-rescale (start -20 but still allow 100) ----
-    // We shift by an offset (e.g., 20pts) and then rescale by 1/(1 - offset)
-    // so the upper end can still reach 100 instead of being capped at 80.
-    if (ABSOLUTE_SCORING && (market === 'KOSPI' || market === 'KOSDAQ')) {
-      const off01 = KR_MARKET_DEDUCT_POINTS / 100; // e.g., 0.20
-      const denom = Math.max(1e-9, 1 - off01);
-      for (const n of names) {
-        scoreSafe[n] = clamp01((scoreSafe[n] - off01) / denom);
-        scoreAggr[n] = clamp01((scoreAggr[n] - off01) / denom);
-      }
-    }
-
     for (const n of names) {
       const j = DISABLE_JITTER ? 0 : djitter(n);
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
       scoreAggr[n] = clamp01(scoreAggr[n] + j);
-      byName[n].totalScore = Math.max(0, Math.min(100, roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n])));
+      const mapped = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
+      byName[n].totalScore = (process.env.ALLOW_NEGATIVE_SCORES === '1')
+        ? Math.min(100, mapped)       // allow negatives down to -20 (or lower), cap only at 100
+        : Math.max(0, Math.min(100, mapped)); // default: 0..100
 
       byName[n].reasons = byName[n].reasons || {};
       const nf = NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {};
