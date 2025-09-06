@@ -1717,6 +1717,16 @@ async function main(){
     }
     // --------------------------------------------------------------------------
 
+    // ---- Final KR markets deduction (-20 pts) ----
+    if (ABSOLUTE_SCORING && (market === 'KOSPI' || market === 'KOSDAQ')) {
+      const off01 = -0.20; // -20 points on 0..100 scale
+      for (const n of names) {
+        scoreSafe[n] = clamp01(scoreSafe[n] + off01);
+        scoreAggr[n] = clamp01(scoreAggr[n] + off01);
+        byName[n].totalScore = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
+      }
+    }
+
     for (const n of names) {
       const j = DISABLE_JITTER ? 0 : djitter(n);
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
@@ -1929,7 +1939,8 @@ async function main(){
       DEMO_MODE,
       OFFLINE,
       ABSOLUTE_SCORING: ABSOLUTE_SCORING,
-      DISABLE_JITTER: process.env.DISABLE_JITTER === '1'
+      DISABLE_JITTER: process.env.DISABLE_JITTER === '1',
+      KR_MARKET_DEDUCT_POINTS: 20
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
