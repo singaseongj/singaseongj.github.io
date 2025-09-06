@@ -1785,17 +1785,17 @@ async function main(){
     const minScore = Math.min(...scores), maxScore = Math.max(...scores);
     console.log(`[score-check] ${market} score range ${minScore}-${maxScore}`);
 
-    // ---- Split into safe/aggressive buckets based on volatility ----
+    // ---- Split into safe/aggressive buckets based on market cap ----
     const total = names.length;
     const aggrCount = Math.min(total, Math.max(5, Math.ceil(total * 0.3)));
-    const volSorted = names
+    const mcapSorted = names
       .slice()
-      .sort((a, b) => (byName[b].vol20 ?? -Infinity) - (byName[a].vol20 ?? -Infinity));
-    const aggrSet = new Set(volSorted.slice(0, aggrCount));
-    const safeCandidates = names.filter(n => !aggrSet.has(n));
+      .sort((a, b) => (byName[b].marketCap ?? 0) - (byName[a].marketCap ?? 0));
+    const safeCandidates = mcapSorted.slice(0, total - aggrCount);
+    const aggrCandidates = mcapSorted.slice(total - aggrCount);
 
-    const safeSorted = safeCandidates.sort((a,b)=>scoreSafe[b]-scoreSafe[a]);
-    const aggrSorted = Array.from(aggrSet).sort((a,b)=>scoreAggr[b]-scoreAggr[a]);
+    const safeSorted = safeCandidates.sort((a, b) => scoreSafe[b] - scoreSafe[a]);
+    const aggrSorted = aggrCandidates.sort((a, b) => scoreAggr[b] - scoreAggr[a]);
 
     // Optional cross-market de-dup (keep as-is if you like that behavior)
     const earlierAll = CROSS_MARKET_DEDUP
