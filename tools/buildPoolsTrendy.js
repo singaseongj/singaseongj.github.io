@@ -1860,6 +1860,16 @@ async function main(){
     const rankedSafe = filterOutEarlier(safeSorted);
     const rankedAggr = filterOutEarlier(aggrSorted);
 
+    // --- relative normalization for blog and Naver popularity ---
+    const blogMax = Math.max(...names.map(n => byName[n].blogMentions || 0), 0);
+    const naverMax = Math.max(...names.map(n => byName[n].naverPopularity || 0), 0);
+    for (const n of names) {
+      const blogRaw = byName[n].blogMentions || 0;
+      const navRaw  = byName[n].naverPopularity || 0;
+      byName[n].blogScore  = blogMax > 0 ? clamp01(blogRaw / blogMax) : 0;
+      byName[n].naverScore = naverMax > 0 ? clamp01(navRaw / naverMax) : 0;
+    }
+
     pools[market] = { safe: rankedSafe, aggressive: rankedAggr };
 
     // Record for later markets
@@ -1893,7 +1903,9 @@ async function main(){
         naverCount: byName[n].naverCount,
         naverCountKO: byName[n].naverCountKO,
         naverCountEN: byName[n].naverCountEN,
-        blogMentions: clamp01((byName[n].blogMentions || 0) / 10),
+        blogMentions: byName[n].blogMentions || 0,
+        blogScore: byName[n].blogScore,
+        naverScore: byName[n].naverScore,
         wikiViews: byName[n].wikiViews,
         fmpNewsCount: byName[n].fmpNewsCount,
         googleNewsCount: byName[n].googleNewsCount,
