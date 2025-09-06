@@ -27,7 +27,7 @@ const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
 const VERBOSE = process.env.VERBOSE === '1';
 const log = (...a) => VERBOSE && console.log(...a);
 
-const UA = 'Mozilla/5.0 (compatible; TrendPools/1.0; +https://example.com)';
+const UA = 'Mozilla/5.0 (compatible; TrendPools/1.0; +https://singaseongj.github.io/stocks.html)';
 const fetchText = u => fetch(u, {
   headers: {
     'User-Agent': UA,
@@ -39,6 +39,8 @@ const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 let CIRCUIT_OPEN = false;
 let CIRCUIT_OPENED_AT = 0;
 const CIRCUIT_COOLDOWN_MS = Number(process.env.CIRCUIT_COOLDOWN_MS || 30000); // 30s
+// Hoist error counter next to the circuit flags for clarity
+let consecutiveErrors = 0;
 
 function circuitOpen() {
   if (!CIRCUIT_OPEN) return false;
@@ -146,7 +148,7 @@ async function fetchInvestingNewsCount(sym){
   const url = `https://www.investing.com/search/?q=${encodeURIComponent(sym)}`;
   return fetchCountTextGeneric(
     url,
-    txt => (txt.match(new RegExp(esc(sym), 'gi')) || []).length,
+    txt => Math.min(50, (txt.match(new RegExp(esc(sym), 'gi')) || []).length),
     TTL.newsRss
   );
 }
@@ -156,7 +158,8 @@ async function fetchHanwhaNewsCount(sym){
   const url = `https://m.hanwhawm.com:9090/M/main/research/main/list.cmd?depth3_id=overseaEtf&search=${encodeURIComponent(sym)}`;
   return fetchCountTextGeneric(
     url,
-    txt => (txt.match(new RegExp(esc(sym), 'gi')) || []).length,
+    // Cap matches to avoid runaway counts on keyword-heavy pages
+    txt => Math.min(50, (txt.match(new RegExp(esc(sym), 'gi')) || []).length),
     TTL.newsRss,
     /*allowStale*/ true
   );
@@ -170,16 +173,20 @@ async function fetchWikiPageviews(title){
   const startDate = new Date(endDate.getTime() - 7*86400000);
   const start = startDate.toISOString().slice(0,10).replace(/-/g, '');
   const enc = encodeURIComponent(norm);
-  const langs = ['en', 'ko'];
-  for (const lang of langs) {
+  // Sum views across languages; fall back to Namu if none were fetched
+  let totalViews = 0;
+  let seen = 0;
+  for (const lang of ['en', 'ko']) {
     const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/${lang}.wikipedia/all-access/all-agents/${enc}/daily/${start}/${end}`;
     try {
       const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody), TTL.wiki, true);
       if (data && Array.isArray(data.items)) {
-        return data.items.reduce((sum, it) => sum + (it.views || 0), 0);
+        totalViews += data.items.reduce((sum, it) => sum + (it.views || 0), 0);
+        seen++;
       }
     } catch {}
   }
+  if (seen) return totalViews;
   try {
     const url = `https://namu.wiki/api/pageview?title=${enc}`;
     const data = await cachedJsonFetch(url, u => fetch(u).then(safeParseBody), TTL.wiki, true);
@@ -573,7 +580,6 @@ function timeLeft() { return Math.max(0, GLOBAL_BUDGET_MS - (Date.now() - START_
 function budgetOk(ms=0) { return timeLeft() > ms; }
 
 // ---- circuit breaker
-let consecutiveErrors = 0;
 const CIRCUIT_MAX_ERRORS = +process.env.CIRCUIT_MAX_ERRORS || 6;
 function tripOnError(e) {
   const msg = String(e?.message || e || '');
@@ -747,9 +753,12 @@ async function getJSON(url, headers = {}, retries = RETRIES, base = BACKOFF_BASE
         if (tripOnError(e)) throw lastErr;
         if (attempt < retries && budgetOk() && !circuitOpen()) {
           const jitter = 0.2 + Math.random() * 0.6;
-          const backoff = Math.floor(base * Math.pow(2, attempt) * jitter);
+          const calc = Math.floor(base * Math.pow(2, attempt) * jitter);
+          // Clamp backoff to remaining time budget (leave a small margin)
+          const backoff = Math.max(0, Math.min(calc, Math.max(0, timeLeft() - 250)));
           const redacted = u.replace(/token=[^&]+/i, 'token=***').replace(/apikey=[^&]+/i, 'apikey=***');
           console.log(`[net] retry ${attempt + 1}/${retries} in ${backoff}ms :: ${redacted}`);
+          if (backoff <= 0) break;
           await new Promise(r => setTimeout(r, backoff));
           continue;
         }
@@ -821,10 +830,6 @@ function bucketRelative(names, byName, getter){
 }
 
 function clamp01(x){ return Math.max(0, Math.min(1, x)); }
-
-function scaleAdjust(x){
-  return Number.isFinite(x) && x > 0 ? x * Math.log10(1 + x) : 0;
-}
 
 function djitter(key, mag=Number(process.env.JITTER_MAG || 0.003)){
   let h=0; for (let i=0;i<key.length;i++) h=(h*131+key.charCodeAt(i))|0;
@@ -1519,7 +1524,8 @@ async function main(){
         blogs01: blog01,
         wiki01: wiki01,
         pos01, neg01,
-        size01
+        size01,
+        pop01
       });
     });
 
@@ -1632,7 +1638,10 @@ async function main(){
       names.forEach((n)=>{
         const s = pools[market]?.sectorMap?.[n] || byName[n].sector || null;
         if (!s) return;
-        const lift = (sectorHot[s] || 0) * SECTOR_LIFT;  // 0..SECTOR_LIFT
+        // Scale lift modestly by sector breadth to avoid diluting broad sectors
+        const breadth = sectorCnt[s] || 1;
+        const breadthScale = 1 + 0.05 * Math.log1p(breadth);
+        const lift = (sectorHot[s] || 0) * SECTOR_LIFT * breadthScale;  // 0..~1.5*SECTOR_LIFT
         scoreSafe[n] += lift;
         scoreAggr[n] += lift;
         byName[n].totalScore = Math.min(100, roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]));
@@ -1663,6 +1672,13 @@ async function main(){
       let pen = 0;
       if (!e.advKnown || !e.priceKnown) {
         pen = UNKNOWN_PENALTY;
+        // Be gentler when we have other strong confidence signals:
+        // halve the penalty if market cap is known or the structural prior is large.
+        const sym = byName[n].sym || nameToSymbol(n) || n;
+        const prior = structuralPrior(sym);
+        if (Number.isFinite(byName[n].marketCap) || prior >= 0.4) {
+          pen *= 0.5;
+        }
       } else if (!e.eligible) {
         pen = INELIGIBLE_PENALTY;
       }
@@ -1676,7 +1692,12 @@ async function main(){
     // Popularity cap: if baseline >> today (always-talked-about), shave 2–5%
     names.forEach(n => {
       const baseBig = (PREV_METRICS?.[market]?.[n]?.weightedCount ?? 0) > 30;
-      if (baseBig && (byName[n].naverAsvi ?? 0) <= 0.05) {
+      const currentNewsStrong = (byName[n].newsScore ?? 0) > 0.4;
+      // Grace: skip shave if there is meaningful current news
+      if (
+        baseBig &&
+        (byName[n].naverAsvi ?? 0) <= 0.05 && !currentNewsStrong
+      ) {
         scoreSafe[n] = clamp01(scoreSafe[n] - POP_CAP);
         scoreAggr[n] = clamp01(scoreAggr[n] - POP_CAP);
       }
@@ -1837,6 +1858,9 @@ async function main(){
         turnover: byName[n].turnover,
         adv20: byName[n].adv20,
         close: byName[n].close,
+        // Keep backward compatibility while making counts explicit
+        rawNewsCount: byName[n].newsCount,
+        weightedNewsCount: byName[n].weightedCount,
         newsCount: byName[n].weightedCount ?? byName[n].newsCount,
         newsScore: byName[n].newsScore,
         prevNewsScore: byName[n].prevNewsScore,
