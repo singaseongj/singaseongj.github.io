@@ -1280,6 +1280,12 @@ async function main(){
     const buckets = pools[market];
     if (!buckets) continue;
     const names = universe[market] || [];
+    // --- debug trackers for metrics (all in 0..1 space) ---
+    const dbgBase01 = {};            // base (size/pop) before feedback & KR
+    const dbgAfterFeedback01 = {};   // after feedback nudges, pre-KR
+    const dbgAfterKR01 = {};         // after KR −off
+    const dbgFloorBase01 = {};       // floor before KR adjustment
+    const dbgFloorAdj01 = {};        // floor after KR adjustment
     console.log(`[buildPools] market=${market} names=${names.length}`);
     if (names.length === 0) continue;
 
@@ -1515,6 +1521,8 @@ async function main(){
       byName[n].totalScore    = Math.round(base01 * 100);
       scoreSafeRaw[n] = base01;
       scoreAggrRaw[n] = base01;
+      // debug
+      dbgBase01[n] = base01;
 
       // Keep components for diagnostics
       nf.componentScores = nf.componentScores || {};
@@ -1532,17 +1540,23 @@ async function main(){
     // Apply feedback nudges
     const scoreSafe = applyFeedback(scoreSafeRaw, feedback, market);
     const scoreAggr = applyFeedback(scoreAggrRaw, feedback, market);
+    // debug
+    names.forEach(n => { dbgAfterFeedback01[n] = scoreSafe[n]; });
 
-    // KR start-at-(-20): subtract BEFORE any later boosts, no rescale.
-    // This shifts KOSPI/KOSDAQ curves down by 0.20 in 0..1 space so they
-    // literally “start at −20” and can still climb back to 100 via later adds.
-    if (ABSOLUTE_SCORING && (market === 'KOSPI' || market === 'KOSDAQ')) {
-      const off01 = KR_MARKET_DEDUCT_POINTS / 100; // e.g. 0.20 for 20 pts
+    // KR start-at-(-20): subtract BEFORE boosts AND record for metrics.
+    // We'll also propagate the penalty into the *floor* a bit later so floors
+    // don't erase it.
+    const krOff01 = (ABSOLUTE_SCORING && (market === 'KOSPI' || market === 'KOSDAQ'))
+      ? (KR_MARKET_DEDUCT_POINTS / 100)
+      : 0;
+    if (krOff01 > 0) {
       for (const n of names) {
-        scoreSafe[n] -= off01;
-        scoreAggr[n] -= off01;
+        scoreSafe[n] -= krOff01;
+        scoreAggr[n] -= krOff01;
       }
     }
+    // debug
+    names.forEach(n => { dbgAfterKR01[n] = scoreSafe[n]; });
 
     // -------- Small overlap penalty for later U.S. markets ----------
     // If this is NASDAQ 100, penalize names that already appear in S&P 500 SAFE
@@ -1666,12 +1680,17 @@ async function main(){
       const indivFloor01 = STRUCT_FLOOR_W * prior; // index/size based
       const popFloor01   = (POP_FLOOR_W) * (typeof popularity01?.[n] === 'number' ? popularity01[n] : 0);
       const baseFloor    = Math.min(1, indivFloor01 + popFloor01);
-      const floor01      = eligibility[n].eligible ? baseFloor : Math.min(baseFloor, 0.1);
-      const floor100     = FLOOR + (CEIL_LOCAL - FLOOR) * floor01;
+      let   floor01      = eligibility[n].eligible ? baseFloor : Math.min(baseFloor, 0.1);
+      // --- make floors respect KR penalty (shift down by krOff01, never <0) ---
+      const floorAdj01   = Math.max(0, floor01 - (krOff01 || 0));
+      const floor100     = FLOOR + (CEIL_LOCAL - FLOOR) * floorAdj01;
 
       byName[n].totalScore = Math.max(floor100, byName[n].totalScore);
-      scoreSafe[n]         = Math.max(scoreSafe[n], floor01);
-      scoreAggr[n]         = Math.max(scoreAggr[n], floor01 * 0.95);
+      scoreSafe[n]         = Math.max(scoreSafe[n], floorAdj01);
+      scoreAggr[n]         = Math.max(scoreAggr[n], floorAdj01 * 0.95);
+      // debug
+      dbgFloorBase01[n] = floor01;
+      dbgFloorAdj01[n]  = floorAdj01;
     });
 
     // Re-apply eligibility penalties (absolute-safe):
@@ -1895,6 +1914,14 @@ async function main(){
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
         wikiScore: byName[n].wikiScore,
+        // --- diagnostics for KR penalty & floors (0..1) ---
+        krPenalty01: krOff01,
+        base01:            Number(((dbgBase01[n] ?? 0)).toFixed(4)),
+        afterFeedback01:   Number(((dbgAfterFeedback01[n] ?? 0)).toFixed(4)),
+        afterKR01:         Number(((dbgAfterKR01[n] ?? 0)).toFixed(4)),
+        floorBase01:       Number(((dbgFloorBase01[n] ?? 0)).toFixed(4)),
+        floorApplied01:    Number(((dbgFloorAdj01[n]  ?? 0)).toFixed(4)),
+        final01:           Number(((safeScore01)       ).toFixed(4)),
         // <<< persisted scoring fields >>> //
         score: finalScore,          // human-facing 0..100 (rounded per market curve)
         rawScore: finalScore,       // keep a copy for downstream tools
@@ -1969,7 +1996,7 @@ async function main(){
       ABSOLUTE_SCORING: ABSOLUTE_SCORING,
       DISABLE_JITTER: process.env.DISABLE_JITTER === '1',
       KR_MARKET_DEDUCT_POINTS: KR_MARKET_DEDUCT_POINTS,
-      KR_OFFSET_AND_RESCALE: true
+      KR_OFFSET_AND_RESCALE: false
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
