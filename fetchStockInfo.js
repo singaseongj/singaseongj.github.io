@@ -167,7 +167,7 @@ async function writeAtomically(dest, data) {
 }
 
 async function loadJsonSafe(p) { try { return JSON.parse(await readFile(p, 'utf8')); } catch { return null; } }
-async function isFresh(p, ttlMs) { try { const s = await fs.stat(p); return (Date.now() - s.mtimeMs) < ttlMs; } catch { return false; } }
+async function isFreshPath(p, ttlMs) { try { const s = await fs.stat(p); return (Date.now() - s.mtimeMs) < ttlMs; } catch { return false; } }
 
 function validatePoolsSchema(pools) {
   if (!pools || typeof pools !== 'object') throw new Error('pools not object');
@@ -194,7 +194,7 @@ async function fetchPoolsRemote() {
 }
 
 async function loadPools() {
-  if (POOLS_URL && (REFRESH_POOLS || !(await isFresh(POOLS_CACHE, POOLS_TTL_MS)))) {
+  if (POOLS_URL && (REFRESH_POOLS || !(await isFreshPath(POOLS_CACHE, POOLS_TTL_MS)))) {
     const remote = await fetchPoolsRemote();
     if (remote) return remote;
   }
