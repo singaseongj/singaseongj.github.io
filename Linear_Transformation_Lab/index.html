@@ -799,7 +799,9 @@ $('#resetAll').addEventListener('click', () => {
 });
 
 canvas.addEventListener('click', (e) => {
-  if (!$('#clickSet').checked) return;
+  // guard: plain getElementById expects id without '#'
+  const clickSetEl = $('clickSet');
+  if (!clickSetEl || !clickSetEl.checked) return;
   if (is3D()) return; // 3D uses raycast
   const rect = canvas.getBoundingClientRect();
   const xpx = e.clientX - rect.left - CW/2;
@@ -946,7 +948,9 @@ function ensure3D(){
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
   renderer.domElement.addEventListener('click', (ev) => {
-    if (!is3D() || !$('#clickSet').checked) return;
+    // guard: plain getElementById expects id without '#'
+    const clickSetEl = $('clickSet');
+    if (!is3D() || !clickSetEl || !clickSetEl.checked) return;
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((ev.clientX - rect.left)/rect.width)*2 - 1;
     mouse.y = -((ev.clientY - rect.top)/rect.height)*2 + 1;
