@@ -166,6 +166,12 @@ jobs:
           echo "npm ci failed after retries."
           exit 1
 
+      - name: Run ESM smoke tests (non-blocking)
+        shell: bash
+        run: |
+          node --version
+          node --test tests/*.test.js || echo "No tests or tests failed — continuing"
+
       - name: Build index ticker maps
         run: node tools/updateIndexMaps.mjs
         env:
@@ -251,7 +257,8 @@ jobs:
             echo "recommendations.json valid."
           else
             echo "Rebuilding recommendations (pools already built this run)..."
-            node fetchStockInfo.js --force
+            # Prefer the enhanced path first (multi-source quotes); fall back to legacy
+            node fetchStockInfo.js --force --enhanced || node fetchStockInfo.js --force
             validate_json
           fi
 
