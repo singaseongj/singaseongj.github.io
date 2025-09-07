@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>3D 선형변환</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style3d.css">
+</head>
+<body>
+  <header>3D 선형변환</header>
+  <main>
+    <aside id="leftbox">
+      <div id="guidance">
+        <p>행렬 \(A\)와 벡터 \(\vec{v}\)를 조절해 선형변환을 실험해 보세요.</p>
+        <p>\(\vec{v}' = A\vec{v}\)</p>
+        <p id="result">\(\vec{v}' = (0,0,0)\)</p>
+      </div>
+      <form id="controls">
+        <div class="matrix">
+          <strong>행렬 A</strong>
+          <div class="row">
+            <input id="a11" type="number" value="1">
+            <input id="a12" type="number" value="0">
+            <input id="a13" type="number" value="0">
+          </div>
+          <div class="row">
+            <input id="a21" type="number" value="0">
+            <input id="a22" type="number" value="1">
+            <input id="a23" type="number" value="0">
+          </div>
+          <div class="row">
+            <input id="a31" type="number" value="0">
+            <input id="a32" type="number" value="0">
+            <input id="a33" type="number" value="1">
+          </div>
+        </div>
+        <div class="vectorInputs">
+          <strong>벡터 v</strong>
+          <div>x = <input id="vx" type="range" min="-5" max="5" step="0.1" value="1"><span id="vx_val">1</span></div>
+          <div>y = <input id="vy" type="range" min="-5" max="5" step="0.1" value="1"><span id="vy_val">1</span></div>
+          <div>z = <input id="vz" type="range" min="-5" max="5" step="0.1" value="1"><span id="vz_val">1</span></div>
+        </div>
+        <div class="buttons">
+          <button type="button" id="apply">적용</button>
+          <button type="button" id="reset">리셋</button>
+        </div>
+      </form>
+    </aside>
+    <div id="viewer"></div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="script3d.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3360521146359419" data-ad-slot="9379245032" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</body>
+</html>
