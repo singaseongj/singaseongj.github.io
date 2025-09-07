@@ -853,7 +853,7 @@ const TREND_T5 = +process.env.TREND_T5 || 0.30;
 const TREND_T4 = +process.env.TREND_T4 || 0.12;
 const TREND_T3 = +process.env.TREND_T3 || 0.03;
 const TREND_T2 = +process.env.TREND_T2 || -0.12;
-const KR_MARKET_DEDUCT_POINTS = +process.env.KR_MARKET_DEDUCT_POINTS || 20;
+const KR_MARKET_DEDUCT_POINTS = +process.env.KR_MARKET_DEDUCT_POINTS || 40;
 
 const NEWS_T5  = +process.env.NEWS_T5  || 1.00;  // growth >= 100%
 const NEWS_T4  = +process.env.NEWS_T4  || 0.50;  // >= 50%
