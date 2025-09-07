@@ -1,59 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>2D / 3D Toggle</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linear Transformation Lab</title>
   <script src="./plotly-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 10px;
+    }
+    .mode-buttons {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .mode-buttons button {
+      flex: 1;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .controls label {
+      display: flex;
+      flex-direction: column;
+      width: 80px;
+      font-size: 0.9rem;
+    }
+    #plot {
+      width: 100%;
+      height: 60vh;
+    }
+    #vectorInfo {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
-  <button onclick="draw2D()">Switch to 2D</button>
-  <button onclick="draw3D()">Switch to 3D</button>
-  <div id="plot" style="width:700px; height:600px;"></div>
+  <div class="mode-buttons">
+    <button id="btn2D">2D Mode</button>
+    <button id="btn3D">3D Mode</button>
+  </div>
+
+  <div class="controls" id="controls">
+    <label>X
+      <input type="number" id="xInput" value="2" min="-10" max="10" step="1" />
+      <input type="range" id="xSlider" value="2" min="-10" max="10" />
+    </label>
+    <label>Y
+      <input type="number" id="yInput" value="3" min="-10" max="10" step="1" />
+      <input type="range" id="ySlider" value="3" min="-10" max="10" />
+    </label>
+    <label id="zControl" style="display:none;">Z
+      <input type="number" id="zInput" value="5" min="-10" max="10" step="1" />
+      <input type="range" id="zSlider" value="5" min="-10" max="10" />
+    </label>
+  </div>
+
+  <div id="plot"></div>
+  <div id="vectorInfo"></div>
 
   <script>
-    function draw2D() {
-      let trace2D = {
-        x: [0, 2],
-        y: [0, 3],
-        mode: 'lines+markers',
-        type: 'scatter',
-        line: {width: 3, color: 'blue'},
-        marker: {size: 8, color: 'red'}
-      };
+    let is3D = false;
+    const matrix2D = [
+      [1, 1],
+      [0, 1]
+    ];
+    const matrix3D = [
+      [1, 0, 0],
+      [0, 1, 0],
+      [0, 0, 1]
+    ];
 
-      let layout2D = {
-        title: '2D Vector (2,3)',
-        xaxis: {title: 'X'},
-        yaxis: {title: 'Y'}
-      };
-
-      Plotly.newPlot('plot', [trace2D], layout2D);
-    }
-
-    function draw3D() {
-      let trace3D = {
-        x: [0, 2],
-        y: [0, 3],
-        z: [0, 5],
-        mode: 'lines+markers',
-        type: 'scatter3d',
-        line: {width: 6, color: 'green'},
-        marker: {size: 5, color: 'red'}
-      };
-
-      let layout3D = {
-        title: '3D Vector (2,3,5)',
-        scene: {
-          xaxis: {title: 'X'},
-          yaxis: {title: 'Y'},
-          zaxis: {title: 'Z'}
+    const grid2D = (() => {
+      const x = [], y = [];
+      for (let i = -10; i <= 10; i++) {
+        for (let j = -10; j <= 10; j++) {
+          x.push(i);
+          y.push(j);
         }
-      };
+      }
+      return { x, y };
+    })();
 
-      Plotly.newPlot('plot', [trace3D], layout3D);
+    const grid3D = (() => {
+      const x = [], y = [], z = [];
+      for (let xi = -10; xi <= 10; xi++) {
+        for (let yi = -10; yi <= 10; yi++) {
+          for (let zi = -10; zi <= 10; zi++) {
+            x.push(xi);
+            y.push(yi);
+            z.push(zi);
+          }
+        }
+      }
+      return { x, y, z };
+    })();
+
+    function getVector() {
+      const x = parseFloat(document.getElementById('xInput').value);
+      const y = parseFloat(document.getElementById('yInput').value);
+      const z = is3D ? parseFloat(document.getElementById('zInput').value) : 0;
+      return { x, y, z };
     }
 
-    draw2D();
+    function transform2D(v) {
+      return {
+        x: matrix2D[0][0] * v.x + matrix2D[0][1] * v.y,
+        y: matrix2D[1][0] * v.x + matrix2D[1][1] * v.y
+      };
+    }
+
+    function transform3D(v) {
+      return {
+        x: matrix3D[0][0] * v.x + matrix3D[0][1] * v.y + matrix3D[0][2] * v.z,
+        y: matrix3D[1][0] * v.x + matrix3D[1][1] * v.y + matrix3D[1][2] * v.z,
+        z: matrix3D[2][0] * v.x + matrix3D[2][1] * v.y + matrix3D[2][2] * v.z
+      };
+    }
+
+    function buildPlotData() {
+      const v = getVector();
+      if (is3D) {
+        const tv = transform3D(v);
+        const traces = [
+          {
+            x: grid3D.x,
+            y: grid3D.y,
+            z: grid3D.z,
+            mode: 'markers',
+            type: 'scatter3d',
+            marker: { size: 3, color: 'rgba(0,0,0,0)' },
+            hoverinfo: 'none',
+            showlegend: false
+          },
+          {
+            x: [0, v.x],
+            y: [0, v.y],
+            z: [0, v.z],
+            mode: 'lines+markers',
+            type: 'scatter3d',
+            line: { width: 6, color: 'blue' },
+            marker: { size: 4, color: 'blue' },
+            name: 'v'
+          },
+          {
+            x: [0, tv.x],
+            y: [0, tv.y],
+            z: [0, tv.z],
+            mode: 'lines+markers',
+            type: 'scatter3d',
+            line: { width: 4, color: 'orange' },
+            marker: { size: 3, color: 'orange' },
+            name: 'T(v)'
+          }
+        ];
+        const layout = {
+          title: '3D Linear Transformation',
+          scene: {
+            xaxis: { range: [-10, 10], dtick: 1 },
+            yaxis: { range: [-10, 10], dtick: 1 },
+            zaxis: { range: [-10, 10], dtick: 1 }
+          }
+        };
+        return { traces, layout };
+      } else {
+        const tv = transform2D(v);
+        const traces = [
+          {
+            x: grid2D.x,
+            y: grid2D.y,
+            mode: 'markers',
+            type: 'scatter',
+            marker: { size: 8, color: 'rgba(0,0,0,0)' },
+            hoverinfo: 'none',
+            showlegend: false
+          },
+          {
+            x: [0, v.x],
+            y: [0, v.y],
+            mode: 'lines+markers',
+            type: 'scatter',
+            line: { width: 3, color: 'blue' },
+            marker: { size: 8, color: 'blue' },
+            name: 'v'
+          },
+          {
+            x: [0, tv.x],
+            y: [0, tv.y],
+            mode: 'lines+markers',
+            type: 'scatter',
+            line: { width: 3, color: 'green' },
+            marker: { size: 8, color: 'green' },
+            name: 'T(v)'
+          }
+        ];
+        const layout = {
+          title: '2D Linear Transformation',
+          xaxis: { range: [-10, 10], dtick: 1, zeroline: true },
+          yaxis: { range: [-10, 10], dtick: 1, zeroline: true }
+        };
+        return { traces, layout };
+      }
+    }
+
+    function updateMath(v) {
+      let math;
+      if (is3D) {
+        const tv = transform3D(v);
+        const mag = Math.sqrt(v.x * v.x + v.y * v.y + v.z * v.z).toFixed(2);
+        math = `\\(A = \\begin{bmatrix} ${matrix3D[0][0]} & ${matrix3D[0][1]} & ${matrix3D[0][2]} \\\\ ${matrix3D[1][0]} & ${matrix3D[1][1]} & ${matrix3D[1][2]} \\\\ ${matrix3D[2][0]} & ${matrix3D[2][1]} & ${matrix3D[2][2]} \\end{bmatrix},\\quad \\vec{v} = \\begin{bmatrix} ${v.x} \\\\ ${v.y} \\\\ ${v.z} \\end{bmatrix},\\quad T(\\vec{v}) = \\begin{bmatrix} ${tv.x} \\\\ ${tv.y} \\\\ ${tv.z} \\end{bmatrix},\\quad \\|\\vec{v}\\| = ${mag}\\)`;
+      } else {
+        const tv = transform2D(v);
+        const mag = Math.sqrt(v.x * v.x + v.y * v.y).toFixed(2);
+        math = `\\(A = \\begin{bmatrix} ${matrix2D[0][0]} & ${matrix2D[0][1]} \\\\ ${matrix2D[1][0]} & ${matrix2D[1][1]} \\end{bmatrix},\\quad \\vec{v} = \\begin{bmatrix} ${v.x} \\\\ ${v.y} \\end{bmatrix},\\quad T(\\vec{v}) = \\begin{bmatrix} ${tv.x} \\\\ ${tv.y} \\end{bmatrix},\\quad \\|\\vec{v}\\| = ${mag}\\)`;
+      }
+      const info = document.getElementById('vectorInfo');
+      info.innerHTML = math;
+      MathJax.typesetPromise([info]);
+    }
+
+    function drawPlot(first = false) {
+      const { traces, layout } = buildPlotData();
+      const config = { responsive: true, displaylogo: false };
+      if (first) {
+        Plotly.newPlot('plot', traces, layout, config);
+      } else {
+        Plotly.react('plot', traces, layout, config);
+      }
+      updateMath(getVector());
+    }
+
+    function init() {
+      ['x', 'y', 'z'].forEach(axis => {
+        const input = document.getElementById(axis + 'Input');
+        const slider = document.getElementById(axis + 'Slider');
+        if (input && slider) {
+          input.addEventListener('input', () => {
+            slider.value = input.value;
+            drawPlot();
+          });
+          slider.addEventListener('input', () => {
+            input.value = slider.value;
+            drawPlot();
+          });
+        }
+      });
+
+      drawPlot(true);
+
+      const plotDiv = document.getElementById('plot');
+      plotDiv.on('plotly_click', function (data) {
+        if (!data.points || !data.points.length) return;
+        const p = data.points[0];
+        document.getElementById('xInput').value = p.x;
+        document.getElementById('xSlider').value = p.x;
+        document.getElementById('yInput').value = p.y;
+        document.getElementById('ySlider').value = p.y;
+        if (is3D) {
+          document.getElementById('zInput').value = p.z;
+          document.getElementById('zSlider').value = p.z;
+        }
+        drawPlot();
+      });
+    }
+
+    document.getElementById('btn2D').onclick = () => {
+      is3D = false;
+      document.getElementById('zControl').style.display = 'none';
+      drawPlot();
+    };
+
+    document.getElementById('btn3D').onclick = () => {
+      is3D = true;
+      document.getElementById('zControl').style.display = 'flex';
+      drawPlot();
+    };
+
+    init();
   </script>
 </body>
 </html>
+
