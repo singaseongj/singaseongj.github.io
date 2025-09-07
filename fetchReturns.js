@@ -33,3 +33,9 @@ for (const [market, buckets] of Object.entries(rec)) {
 
 await fs.writeFile('pools-metrics.json', JSON.stringify(out, null, 2));
 console.log('Wrote pools-metrics.json');
+/* === ADDITIVE EXPORT: expose fetchByTickers for other scripts === */
+let fetchByTickers;
+try {
+  ({ fetchByTickers } = await import('./src/data/quotes.js'));
+} catch {}
+export { fetchByTickers };

@@ -1,8 +1,62 @@
 // fetchStockInfo.js — improved version with fallbacks and KOSDAQ stocks
+// === ADDITIVE ENHANCEMENT (ESM) ============================================
+// Usage:
+//   node fetchStockInfo.js --enhanced [--force]
+// Behavior:
+//   - Reads symbolNames.json to get the universe
+//   - If recommendations.json is stale (> RECO_TTL_HOURS), refresh using fetchByTickers
+//   - Writes recommendations.json { lastUpdated, items:[{symbol,name,...quoteFields}] }
+// Notes:
+//   - Does NOT remove or alter your existing logic; this block runs only with --enhanced.
+// ==========================================================================
 import fs, { writeFile, rename, readFile } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
+import { fetchByTickers } from './src/data/quotes.js';
+
+async function readJSON(p, fallback=null){
+  try { return JSON.parse(await fs.readFile(p, 'utf8')); }
+  catch { return fallback; }
+}
+function isFresh(obj, ttlMs){
+  const ts = obj?.lastUpdated && Date.parse(obj.lastUpdated);
+  return !!ts && (Date.now() - ts < ttlMs);
+}
+
+export async function enhancedBuildStockInfo() {
+  const names = await readJSON('./symbolNames.json', {});
+  const tickers = Object.keys(names || {});
+  if (!tickers.length) {
+    console.warn('[enhancedStockInfo] No symbols in symbolNames.json — skipping enhanced path');
+    return;
+  }
+  const outFile = './recommendations.json';
+  const current = await readJSON(outFile, null);
+  const TTL_MS = Number(process.env.RECO_TTL_HOURS || 6) * 3600_000;
+  const force = process.argv.includes('--force');
+  if (current && isFresh(current, TTL_MS) && !force) {
+    console.log('[enhancedStockInfo] cache is fresh; skip');
+    return;
+  }
+  const quotes = await fetchByTickers(tickers);
+  const by = Object.fromEntries(quotes.map(q => [q.symbol, q]));
+  const items = tickers.map(t => ({
+    symbol: t,
+    name: names[t] || t,
+    ...(by[t] || {})
+  }));
+  const payload = { lastUpdated: new Date().toISOString(), items };
+  await fs.writeFile(outFile, JSON.stringify(payload, null, 2));
+  console.log(`[enhancedStockInfo] wrote ${items.length} items`);
+}
+
+if (process.argv.includes('--enhanced')) {
+  enhancedBuildStockInfo().catch(e => {
+    console.error('[enhancedStockInfo] failed:', e?.message || e);
+    process.exitCode = 1;
+  });
+}
 
 const poolsMetricsRaw = JSON.parse(
   await readFile(new URL('./pools-metrics.json', import.meta.url), 'utf8')
@@ -931,3 +985,34 @@ main().catch(err => {
   process.exit(1);
 });
 
+/* === ADDITIVE: enhanced multi-source update path (keeps your existing logic intact) === */
+if (import.meta.url === `file://${process.argv[1]}` && process.env.ENHANCED_STOCKINFO !== '0') {
+  (async () => {
+    try {
+      const { readJSON, writeJSONAtomic, isFresh } = await import('./utils/cache.js');
+      const { fetchByTickers } = await import('./src/data/quotes.js');
+      const symMap = await readJSON('./symbolNames.json', {});
+      const tickers = Object.keys(symMap || {});
+      if (!tickers.length) {
+        console.warn('[fetchStockInfo] No symbols found in symbolNames.json — skipping enhanced path');
+        return;
+      }
+      const outFile = './recommendations.json';
+      const current = await readJSON(outFile, null);
+      const TTL_MS = Number(process.env.RECO_TTL_HOURS || 6) * 3600_000;
+      const force = process.argv.includes('--force');
+      if (current && isFresh(current, TTL_MS) && !force) {
+        console.log('[fetchStockInfo] cache is fresh; skip (enhanced)');
+        return;
+      }
+      const quotes = await fetchByTickers(tickers);
+      const bySymbol = Object.fromEntries(quotes.map(q => [q.symbol, q]));
+      const items = tickers.map(t => ({ symbol: t, name: symMap[t], ...(bySymbol[t] || {}) }));
+      const payload = { lastUpdated: new Date().toISOString(), items };
+      await writeJSONAtomic(outFile, payload);
+      console.log(`[fetchStockInfo] wrote ${items.length} items (enhanced)`);
+    } catch (e) {
+      console.error('[fetchStockInfo] enhanced path failed:', e.message || e);
+    }
+  })();
+}

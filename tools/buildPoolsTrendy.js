@@ -134,13 +134,13 @@ async function fetchFmpNewsCount(sym){
 async function fetchGoogleNewsCount(sym){
   if (!sym || OFFLINE) return 0;
   const url = `https://news.google.com/rss/search?q=${encodeURIComponent(sym)}&hl=en-US&gl=US&ceid=US:en`;
-  return fetchCountTextGeneric(url, txt => (txt.match(/<item>/g) || []).length, TTL.newsRss);
+  return fetchCountTextGeneric(url, txt => (txt.match(/<item\b/gi) || []).length, TTL.newsRss);
 }
 
 async function fetchYahooNewsCount(sym){
   if (!sym || OFFLINE) return 0;
   const url = `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${encodeURIComponent(sym)}&region=US&lang=en-US`;
-  return fetchCountTextGeneric(url, txt => (txt.match(/<item>/g) || []).length, TTL.newsRss);
+  return fetchCountTextGeneric(url, txt => (txt.match(/<item\b/gi) || []).length, TTL.newsRss);
 }
 
 async function fetchInvestingNewsCount(sym){
