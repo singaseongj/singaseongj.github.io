@@ -200,7 +200,8 @@
    Helpers & DOM shortcuts
 ========================= */
 const q = s => document.querySelector(s);
-const $ = id => document.getElementById(id);
+// Accept ids with or without a leading '#'
+const $ = id => document.getElementById(id?.replace(/^#/, ''));
 function fmt(n){ return Math.round(n*1000)/1000; }
 function getSidebarWidth(){
   return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sidebar-w')) || 205;
