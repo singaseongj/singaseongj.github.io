@@ -329,6 +329,15 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
     if (!S.ready) return;
     // start with no k component to mimic 2D
     kvector = [0,0,0];
+
+    // default demo vector (2,3,5)
+    vi = 2; vj = 3; vk = 5;
+    $('vi_in') && ($('vi_in').value = vi);
+    $('vj_in') && ($('vj_in').value = vj);
+    $('vk_in') && ($('vk_in').value = vk);
+    $('vi_slider') && ($('vi_slider').value = vi);
+    $('vj_slider') && ($('vj_slider').value = vj);
+    $('vk_slider') && ($('vk_slider').value = vk);
     update3DObjects();
 
     fitToView3D();
@@ -356,6 +365,35 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
       cam.lookAt(0,0,0);
       step++;
       if (step <= steps) requestAnimationFrame(anim);
+    })();
+  }
+
+  function animate3Dto2D(done){
+    if (!S.ready){ done && done(); return; }
+    fitToView3D();
+    const cam = S.camera;
+    const dist = cam.position.x;
+    const startX = cam.position.x;
+    const startY = cam.position.y;
+
+    goalI = ivector;
+    goalJ = jvector;
+    goalK = [0,0,0];
+    animateBasis3D();
+
+    S.gridXZ.material.transparent = true;
+    S.gridYZ.material.transparent = true;
+
+    let step = 0, steps = 60;
+    (function anim(){
+      const t = step/steps;
+      cam.position.set(startX*(1-t), startY*(1-t), dist);
+      S.gridXZ.material.opacity = 1-t;
+      S.gridYZ.material.opacity = 1-t;
+      cam.lookAt(0,0,0);
+      step++;
+      if (step <= steps) requestAnimationFrame(anim);
+      else if (done) done();
     })();
   }
 
@@ -476,10 +514,12 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
 
   function onModeChange(){
     const to3D = is3D();
-    applyModeVisibility();
     if (to3D){
+      applyModeVisibility();
       ensure3D();
       animate2Dto3D();
+    } else {
+      animate3Dto2D(() => applyModeVisibility());
     }
   }
 
