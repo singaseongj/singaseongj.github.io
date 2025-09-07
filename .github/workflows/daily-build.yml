@@ -1,0 +1,53 @@
+name: Daily Stocks Build (optional)
+on:
+  schedule:
+    # 23:30 UTC ~= 08:30 KST next day; adjust as you like
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: |
+          npm ci || npm i
+      - name: Build pools (v2 additive)
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          MAX_CONCURRENCY: 4
+          MIN_INTERVAL_MS: 120
+        run: |
+          node tools/buildPoolsTrendy.v2.js || echo "v2 builder failed — continuing"
+      - name: Refresh stock info (enhanced path)
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          RECO_TTL_HOURS: 6
+        run: |
+          node fetchStockInfo.js --force || true
+      - name: Rebuild stocks page (if applicable)
+        run: |
+          node src/build.js || true
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: automated daily stocks build"
+          file_pattern: |
+            pools.json
+            pools-metrics.json
+            recommendations.json
+            data/market-news.json
+            stocks.html

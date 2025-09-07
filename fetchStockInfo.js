@@ -985,3 +985,34 @@ main().catch(err => {
   process.exit(1);
 });
 
+/* === ADDITIVE: enhanced multi-source update path (keeps your existing logic intact) === */
+if (import.meta.url === `file://${process.argv[1]}` && process.env.ENHANCED_STOCKINFO !== '0') {
+  (async () => {
+    try {
+      const { readJSON, writeJSONAtomic, isFresh } = await import('./utils/cache.js');
+      const { fetchByTickers } = await import('./src/data/quotes.js');
+      const symMap = await readJSON('./symbolNames.json', {});
+      const tickers = Object.keys(symMap || {});
+      if (!tickers.length) {
+        console.warn('[fetchStockInfo] No symbols found in symbolNames.json — skipping enhanced path');
+        return;
+      }
+      const outFile = './recommendations.json';
+      const current = await readJSON(outFile, null);
+      const TTL_MS = Number(process.env.RECO_TTL_HOURS || 6) * 3600_000;
+      const force = process.argv.includes('--force');
+      if (current && isFresh(current, TTL_MS) && !force) {
+        console.log('[fetchStockInfo] cache is fresh; skip (enhanced)');
+        return;
+      }
+      const quotes = await fetchByTickers(tickers);
+      const bySymbol = Object.fromEntries(quotes.map(q => [q.symbol, q]));
+      const items = tickers.map(t => ({ symbol: t, name: symMap[t], ...(bySymbol[t] || {}) }));
+      const payload = { lastUpdated: new Date().toISOString(), items };
+      await writeJSONAtomic(outFile, payload);
+      console.log(`[fetchStockInfo] wrote ${items.length} items (enhanced)`);
+    } catch (e) {
+      console.error('[fetchStockInfo] enhanced path failed:', e.message || e);
+    }
+  })();
+}
