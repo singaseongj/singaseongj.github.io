@@ -302,6 +302,40 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
     cam.updateProjectionMatrix();
   }
 
+  function animate2Dto3D(){
+    if (!S.ready) return;
+    // start with no k component to mimic 2D
+    kvector = [0,0,0];
+    update3DObjects();
+
+    fitToView3D();
+    const cam = S.camera;
+    const dist = cam.position.x; // after fitToView3D x=y=z=dist
+    cam.position.set(0,0,dist);
+    cam.lookAt(0,0,0);
+
+    S.gridXZ.material.transparent = true;
+    S.gridYZ.material.transparent = true;
+    S.gridXZ.material.opacity = 0;
+    S.gridYZ.material.opacity = 0;
+
+    goalI = ivector;
+    goalJ = jvector;
+    goalK = [0,0,1];
+    animateBasis3D();
+
+    let step = 0, steps = 60;
+    (function anim(){
+      const t = step/steps;
+      cam.position.set(dist*t, dist*t, dist);
+      S.gridXZ.material.opacity = t;
+      S.gridYZ.material.opacity = t;
+      cam.lookAt(0,0,0);
+      step++;
+      if (step <= steps) requestAnimationFrame(anim);
+    })();
+  }
+
   // ===== animations for basis under A =====
   let goalI=null, goalJ=null, goalK=null, steps=0;
   function animateBasis3D(){
@@ -409,8 +443,8 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
     const threeHost = $('scene3d');
     const canvas2d = $('graph');
     const show3D = is3D();
-    if (threeHost) threeHost.style.display = show3D ? 'block' : 'none';
-    if (canvas2d)  canvas2d.style.display  = show3D ? 'none'  : 'block';
+    if (threeHost) threeHost.classList.toggle('hidden', !show3D);
+    if (canvas2d)  canvas2d.classList.toggle('hidden', show3D);
     // toggle 3D-only rows
     document.querySelectorAll('.dim3d').forEach(el => el.style.display = show3D ? '' : 'none');
     const grid = $('matrixGrid');
@@ -418,11 +452,11 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
   }
 
   function onModeChange(){
+    const to3D = is3D();
     applyModeVisibility();
-    if (is3D()){
+    if (to3D){
       ensure3D();
-      update3DObjects();
-      fitToView3D();
+      animate2Dto3D();
     }
   }
 

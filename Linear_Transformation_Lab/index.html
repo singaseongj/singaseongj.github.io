@@ -48,9 +48,10 @@
     /* drawing areas */
     #graph, #scene3d {
       position: fixed; top: var(--topbar-h); left: var(--sidebar-w); right: 0; bottom: 0;
+      transition: opacity 0.6s ease;
     }
-    #scene3d { display:none; }
     #scene3d canvas { display:block; }
+    .hidden { opacity:0; pointer-events:none; }
 
     button { cursor: pointer; }
     select, input, button { background:#2a2a2a; color:#eee; border:1px solid #444; border-radius:4px; padding:3px 6px; }
@@ -145,7 +146,7 @@
   </div>
 
   <!-- Drawing areas -->
-  <div id="scene3d"></div>
+  <div id="scene3d" class="hidden"></div>
   <canvas id="graph"></canvas>
 
   <!-- Load scripts -->
