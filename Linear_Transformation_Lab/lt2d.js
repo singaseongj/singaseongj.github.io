@@ -456,6 +456,8 @@
   function setVectorFromInputs(){
     vi = parseFloat($('vi_in')?.value) || 0;
     vj = parseFloat($('vj_in')?.value) || 0;
+    if ($('vi_slider')) $('vi_slider').value = vi;
+    if ($('vj_slider')) $('vj_slider').value = vj;
     handleResize();
     updateLabels();
   }
@@ -463,6 +465,17 @@
   function setInputsFromVector(){
     if ($('vi_in')) $('vi_in').value = vi;
     if ($('vj_in')) $('vj_in').value = vj;
+    if ($('vi_slider')) $('vi_slider').value = vi;
+    if ($('vj_slider')) $('vj_slider').value = vj;
+    updateLabels();
+  }
+
+  function setVectorFromSliders(){
+    vi = parseFloat($('vi_slider')?.value) || 0;
+    vj = parseFloat($('vj_slider')?.value) || 0;
+    if ($('vi_in')) $('vi_in').value = vi;
+    if ($('vj_in')) $('vj_in').value = vj;
+    handleResize();
     updateLabels();
   }
 
@@ -525,8 +538,10 @@
     canvas.addEventListener('wheel', onWheel, { passive: false });
     canvas.addEventListener('click', onCanvasClick);
 
-    $('vi_in')?.addEventListener('change', setVectorFromInputs);
-    $('vj_in')?.addEventListener('change', setVectorFromInputs);
+    $('vi_in')?.addEventListener('input', setVectorFromInputs);
+    $('vj_in')?.addEventListener('input', setVectorFromInputs);
+    $('vi_slider')?.addEventListener('input', setVectorFromSliders);
+    $('vj_slider')?.addEventListener('input', setVectorFromSliders);
 
     $('applyA')?.addEventListener('click', applyAClick);
     $('composeA')?.addEventListener('click', composeAClick);

@@ -335,6 +335,20 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
     vi = parseFloat($('vi_in')?.value) || 0;
     vj = parseFloat($('vj_in')?.value) || 0;
     vk = parseFloat($('vk_in')?.value) || 0;
+    if ($('vi_slider')) $('vi_slider').value = vi;
+    if ($('vj_slider')) $('vj_slider').value = vj;
+    if ($('vk_slider')) $('vk_slider').value = vk;
+    update3DObjects();
+  }
+
+  function onVectorSliders(){
+    if (!is3D()) return;
+    vi = parseFloat($('vi_slider')?.value) || 0;
+    vj = parseFloat($('vj_slider')?.value) || 0;
+    vk = parseFloat($('vk_slider')?.value) || 0;
+    if ($('vi_in')) $('vi_in').value = vi;
+    if ($('vj_in')) $('vj_in').value = vj;
+    if ($('vk_in')) $('vk_in').value = vk;
     update3DObjects();
   }
   function onApplyA(){
@@ -367,6 +381,9 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
     if ($('vi_in')) $('vi_in').value = vi;
     if ($('vj_in')) $('vj_in').value = vj;
     if ($('vk_in')) $('vk_in').value = vk;
+    if ($('vi_slider')) $('vi_slider').value = vi;
+    if ($('vj_slider')) $('vj_slider').value = vj;
+    if ($('vk_slider')) $('vk_slider').value = vk;
     // reset A to identity
     ['a11','a22','a33'].forEach(id => { if ($(id)) $(id).value = 1; });
     ['a12','a13','a21','a23','a31','a32'].forEach(id => { if ($(id)) $(id).value = 0; });
@@ -396,6 +413,8 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
     if (canvas2d)  canvas2d.style.display  = show3D ? 'none'  : 'block';
     // toggle 3D-only rows
     document.querySelectorAll('.dim3d').forEach(el => el.style.display = show3D ? '' : 'none');
+    const grid = $('matrixGrid');
+    if (grid) grid.style.gridTemplateColumns = show3D ? 'repeat(3,64px)' : 'repeat(2,64px)';
   }
 
   function onModeChange(){
@@ -410,9 +429,12 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
   // ===== init =====
   function init(){
     // wire controls (safe even if elements are missing)
-    $('vi_in')?.addEventListener('change', onVectorInputs);
-    $('vj_in')?.addEventListener('change', onVectorInputs);
-    $('vk_in')?.addEventListener('change', onVectorInputs);
+    $('vi_in')?.addEventListener('input', onVectorInputs);
+    $('vj_in')?.addEventListener('input', onVectorInputs);
+    $('vk_in')?.addEventListener('input', onVectorInputs);
+    $('vi_slider')?.addEventListener('input', onVectorSliders);
+    $('vj_slider')?.addEventListener('input', onVectorSliders);
+    $('vk_slider')?.addEventListener('input', onVectorSliders);
 
     $('applyA')?.addEventListener('click', onApplyA);
     $('composeA')?.addEventListener('click', onComposeA);
