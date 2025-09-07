@@ -27,7 +27,7 @@
   const minaxisnum = 4;
 
   // vector & basis (2D)
-  let vi = 1, vj = 2;
+  let vi = 0, vj = 0;
   let ivector = [1, 0];
   let jvector = [0, 1];
 
@@ -349,6 +349,23 @@
     if (vBox) vBox.innerHTML = `\\(\\vec{v}=${fmt(vi)}\\hat{i}+${fmt(vj)}\\hat{j}\\)`;
     if (iBox) iBox.innerHTML = `\\(\\hat{i}=(${fmt(ivector[0])},\\,${fmt(ivector[1])})\\)`;
     if (jBox) jBox.innerHTML = `\\(\\hat{j}=(${fmt(jvector[0])},\\,${fmt(jvector[1])})\\)`;
+
+    const dirBox = q('.direction');
+    const distBox = q('.distance');
+    const moveBox = q('.movement');
+    const angleIBox = q('.anglei');
+    const angleJBox = q('.anglej');
+    const mag = Math.hypot(vi, vj);
+    const deg = mag ? fmt(Math.atan2(vj, vi) * 180 / Math.PI) : 0;
+    if (dirBox) dirBox.textContent = `방향: ${deg}°`;
+    if (distBox) distBox.textContent = `거리: ${fmt(mag)}`;
+    if (moveBox) moveBox.textContent = `이동: (${fmt(vi)}, ${fmt(vj)})`;
+    const angleI = mag ? fmt(Math.acos(vi / mag) * 180 / Math.PI) : 0;
+    const areaI = fmt(Math.abs(vj));
+    if (angleIBox) angleIBox.innerHTML = `\\(각도(\\vec v,\\hat i)=${angleI}^\\circ,\\;\\text{넓이}=${areaI}\\)`;
+    const angleJ = mag ? fmt(Math.acos(vj / mag) * 180 / Math.PI) : 0;
+    const areaJ = fmt(Math.abs(vi));
+    if (angleJBox) angleJBox.innerHTML = `\\(각도(\\vec v,\\hat j)=${angleJ}^\\circ,\\;\\text{넓이}=${areaJ}\\)`;
     if (window.MathJax && MathJax.typeset) MathJax.typeset();
   }
 
@@ -503,7 +520,7 @@
     // reset scales
     scale = 70; scaleunit = 1; absscale = 70;
     // reset basis & vector
-    ivector = [1,0]; jvector = [0,1]; vi = 1; vj = 2;
+    ivector = [1,0]; jvector = [0,1]; vi = 0; vj = 0;
     // reset A inputs
     if ($('a11')) { $('a11').value = 1; $('a12').value = 0; $('a21').value = 0; $('a22').value = 1; }
     setInputsFromVector();
