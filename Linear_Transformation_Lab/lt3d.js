@@ -12,7 +12,7 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
 
   // ===== shared inputs (read from DOM) =====
   // v components (basis coefficients) — only used when mode3d checked
-  let vi = 1, vj = 2, vk = 0;
+  let vi = 0, vj = 0, vk = 0;
 
   // basis vectors in R^3
   let ivector = [1, 0, 0];
@@ -89,6 +89,29 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
     if (kBox) kBox.innerHTML = `\\(\\hat{k}=(${fmt(kvector[0])},\\,${fmt(kvector[1])},\\,${fmt(kvector[2])})\\)`;
     if (matB3) matB3.innerHTML =
       `\\(B=\\begin{bmatrix}${fmt(ivector[0])}&${fmt(jvector[0])}&${fmt(kvector[0])}\\\\${fmt(ivector[1])}&${fmt(jvector[1])}&${fmt(kvector[1])}\\\\${fmt(ivector[2])}&${fmt(jvector[2])}&${fmt(kvector[2])}\\end{bmatrix}\\)`;
+
+    const dirBox = q('.direction');
+    const distBox = q('.distance');
+    const moveBox = q('.movement');
+    const angleIBox = q('.anglei');
+    const angleJBox = q('.anglej');
+    const angleKBox = q('.anglek');
+    const mag = Math.hypot(vi, vj, vk);
+    if (dirBox) {
+      if (mag) dirBox.textContent = `방향: (${fmt(vi/mag)}, ${fmt(vj/mag)}, ${fmt(vk/mag)})`;
+      else dirBox.textContent = '방향: (0,0,0)';
+    }
+    if (distBox) distBox.textContent = `거리: ${fmt(mag)}`;
+    if (moveBox) moveBox.textContent = `이동: (${fmt(vi)}, ${fmt(vj)}, ${fmt(vk)})`;
+    const angleI = mag ? fmt(Math.acos(vi / mag) * 180 / Math.PI) : 0;
+    const areaI = fmt(Math.hypot(vj, vk));
+    if (angleIBox) angleIBox.innerHTML = `\\(각도(\\vec v,\\hat i)=${angleI}^\\circ,\\;\\text{넓이}=${areaI}\\)`;
+    const angleJ = mag ? fmt(Math.acos(vj / mag) * 180 / Math.PI) : 0;
+    const areaJ = fmt(Math.hypot(vi, vk));
+    if (angleJBox) angleJBox.innerHTML = `\\(각도(\\vec v,\\hat j)=${angleJ}^\\circ,\\;\\text{넓이}=${areaJ}\\)`;
+    const angleK = mag ? fmt(Math.acos(vk / mag) * 180 / Math.PI) : 0;
+    const areaK = fmt(Math.hypot(vi, vj));
+    if (angleKBox) angleKBox.innerHTML = `\\(각도(\\vec v,\\hat k)=${angleK}^\\circ,\\;\\text{넓이}=${areaK}\\)`;
 
     const A = readMatrix3();
     const dA = det3(A);
@@ -411,7 +434,7 @@ import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/cont
   function onReset(){
     if (!is3D()) return;
     ivector=[1,0,0]; jvector=[0,1,0]; kvector=[0,0,1];
-    vi=1; vj=2; vk=0;
+    vi=0; vj=0; vk=0;
     if ($('vi_in')) $('vi_in').value = vi;
     if ($('vj_in')) $('vj_in').value = vj;
     if ($('vk_in')) $('vk_in').value = vk;
