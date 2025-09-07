@@ -37,7 +37,7 @@ jobs:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           RECO_TTL_HOURS: 6
         run: |
-          node fetchStockInfo.js --force || true
+          node fetchStockInfo.js --force --refresh-pools || true
       - name: Rebuild stocks page (if applicable)
         run: |
           node src/build.js || true
