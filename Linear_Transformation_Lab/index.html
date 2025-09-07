@@ -1,82 +1,1075 @@
-<!DOCTYPE html>
- <!--한국어-->
+<!doctype html>
 <html lang="ko">
-    <head>
-        <!--글자 안깨지게-->
-        <meta charset="UTF-8">
-        <meta name="keywords" content="선형변환, linear transformation, 수학 시각화, 2D 선형대수, 벡터 변환, 행렬 곱, 고등수학, 선형대수학, JavaScript 수학 시각화, 벡터 시각화">
-        <!--탭 제목-->
-        <title>선형변환</title>
-        <!--수학용 글꼴 사용-->
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--헤더-->
-        <header>2D 선형변환</header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linear Transformation Lab — 2D & 3D</title>
 
-        <!--헤더 뺀 부분-->
-        <main>
-            <!--좌측 박스-->
-            <div id="leftbox">
-                <!--벡터 표시용-->
-                <div class="vector">\(\vec{v}=00000\hat{i} + 00000\hat{j}\)</div>
-                <!--단위벡터 표시용 상자-->
-                <div class="unitvectorborder">
-                    <!--단위벡터 표시-->
-                    <div class="unitvectori">\(\hat{i}=(00000,00000)\)</div>
-                    <div class="unitvectorj">\(\hat{j}=(00000,00000)\)</div>
-                </div>
-                <!--행렬 순서 표시-->
-                <div class="matrixlog"></div>
-                <!--행렬 입력창-->
-                <div class="matrixinput">
-                    <form id="controls" style="font-size:12px; line-height:1.4">
-                      <div style="margin-bottom:6px">
-                        <strong>행렬 A</strong><br>
-                        <input id="a11" type="number" step="any" value="1" style="width:44px"> 
-                        <input id="a12" type="number" step="any" value="0" style="width:44px"><br>
-                        <input id="a21" type="number" step="any" value="0" style="width:44px"> 
-                        <input id="a22" type="number" step="any" value="1" style="width:44px">
-                      </div>
-                      <div style="margin-bottom:6px">
-                        <strong>벡터 v</strong><br>
-                        v<sub>i</sub>= <input id="vi_in" type="number" step="any" value="1" style="width:60px">
-        v<sub>j</sub>= <input id="vj_in" type="number" step="any" value="2" style="width:60px">
-                      </div>
-                      <div>
-                        <button type="button" id="applyA">적용</button>
-                        <button type="button" id="composeA" title="현재 변환 뒤에 곱합니다">누적</button>
-                        <button type="button" id="fitView">맞추기</button>
-                        <button type="button" id="resetAll">리셋</button>
-                      </div>
-                      <label style="display:block; margin-top:6px">
-                        <input type="checkbox" id="clickSet" checked> 평면 클릭으로 v 설정
-                      </label>
-                    </form>
-                </div>
-            </div>
-            <!--실제 좌표 평면-->
-            <div id="plane">
-                <!--canvas 로 좌표평면 만들기-->
-                <canvas id="graph"> <!--여기에 좌표평면 넣기--> </canvas>
-            </div>
-        </main>
+  <!-- MathJax -->
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\\(','\\)']] } };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 
-<!--해야할 일: 1. js 부분 가독성 높게 갈아엎기, 2. 점 찍는 기능 추가, 3. 자동으로 스케일링 해주는 기능 추가, 4. 벡터를 추가하는 기능 추가, 5. 나머지 모든 기능 구현, 6. 코드에 주석 달고 가독성 높게 갈아엎기, 7. 완성!!!-->
+  <!-- Three.js (ESM) preloaded; we attach to window for later use -->
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.module.js';
+    import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/controls/OrbitControls.js';
+    window.__THREE__ = THREE;
+    window.__OrbitControls__ = OrbitControls;
+  </script>
 
-        <script src="script.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
-<!-- display_ad -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3360521146359419"
-     data-ad-slot="9379245032"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+  <style>
+    :root { --sidebar-w: 205px; --topbar-h: 50px; }
 
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background: #202020;
+      color: #eee;
+    }
+
+    #topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--topbar-h);
+      background: #111;
+      color: #ddd;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      border-bottom: 1px solid #333;
+      z-index: 5;
+    }
+
+    .controls {
+      position: fixed;
+      top: var(--topbar-h);
+      bottom: 0;
+      left: 0;
+      width: var(--sidebar-w);
+      overflow: auto;
+      background: #181818;
+      border-right: 1px solid #333;
+      padding: 10px 10px 16px;
+      z-index: 4;
+    }
+    .controls fieldset { border: 1px solid #444; margin: 8px 0; padding: 6px 10px; }
+    .controls legend { font-weight: 600; }
+    .row { display:flex; gap:8px; align-items:center; margin:4px 0; flex-wrap: wrap; }
+    .grid3x3 { display:grid; grid-template-columns:repeat(3, 64px); gap:6px; }
+    .grid3x3 input[type=number]{ width:64px; }
+    .knob { display:flex; gap:6px; align-items:center; }
+    .knob label { width: 22px; opacity: 0.85; }
+    .knob input[type=number]{ width:72px; }
+    .knob input[type=range]{ width:140px; }
+    .mathbox { font-size: 0.95rem; line-height: 1.45; color:#eee; }
+    .dim3d { display:none; }    /* shown in 3D mode */
+    .dim2d { display:inline; }  /* shown in 2D mode */
+    .warn { color: #ff8a8a; margin-top: 6px; display:none; }
+
+    /* Drawing areas (same rect; we toggle which one is visible) */
+    #graph, #scene3d {
+      position: fixed;
+      top: var(--topbar-h);
+      left: var(--sidebar-w);
+      right: 0;
+      bottom: 0;
+    }
+    #scene3d { display:none; }
+    #scene3d canvas { display:block; }
+    button { cursor: pointer; }
+    select, input, button { background:#2a2a2a; color:#eee; border:1px solid #444; border-radius:4px; padding:3px 6px; }
+    input[type=checkbox], input[type=radio] { transform: translateY(1px); }
+    a { color:#8bb9ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div id="topbar">
+    <strong>Linear Transformation Lab</strong>
+    <span style="flex:1 1 auto"></span>
+    <span style="opacity:0.7; font-size: 0.9rem;">2D &middot; 3D · det / volume / orientation</span>
+  </div>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Mode</legend>
+      <label><input type="radio" name="mode" id="mode2d" checked> 2D</label>
+      <label><input type="radio" name="mode" id="mode3d"> 3D</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Vector \( \vec v \)</legend>
+      <div class="knob">
+        <label>v<sub>i</sub></label>
+        <input id="vi_in" type="number" step="0.25" value="1">
+        <input id="vi_slider" type="range" min="-10" max="10" step="0.25" value="1">
+      </div>
+      <div class="knob">
+        <label>v<sub>j</sub></label>
+        <input id="vj_in" type="number" step="0.25" value="2">
+        <input id="vj_slider" type="range" min="-10" max="10" step="0.25" value="2">
+      </div>
+      <div class="knob dim3d">
+        <label>v<sub>k</sub></label>
+        <input id="vk_in" type="number" step="0.25" value="0">
+        <input id="vk_slider" type="range" min="-10" max="10" step="0.25" value="0">
+      </div>
+      <label class="row">
+        <input type="checkbox" id="clickSet">
+        Click to set \( \vec v \)
+        <span class="dim3d" style="margin-left:6px;">(on selected plane)</span>
+      </label>
+      <div class="row dim3d">
+        <label for="planeSel">Click plane</label>
+        <select id="planeSel">
+          <option>XY</option>
+          <option>XZ</option>
+          <option>YZ</option>
+        </select>
+        <span style="opacity:0.7;">(hotkeys: 1/2/3)</span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Matrix \( A \)</legend>
+      <div class="grid3x3">
+        <input id="a11" type="number" step="0.25" value="1">
+        <input id="a12" type="number" step="0.25" value="0">
+        <input id="a13" class="dim3d" type="number" step="0.25" value="0">
+        <input id="a21" type="number" step="0.25" value="0">
+        <input id="a22" type="number" step="0.25" value="1">
+        <input id="a23" class="dim3d" type="number" step="0.25" value="0">
+        <input id="a31" class="dim3d" type="number" step="0.25" value="0">
+        <input id="a32" class="dim3d" type="number" step="0.25" value="0">
+        <input id="a33" class="dim3d" type="number" step="0.25" value="1">
+      </div>
+      <div class="row" style="gap:10px; margin-top:6px;">
+        <button id="applyA">Apply A</button>
+        <button id="composeA">Compose A</button>
+        <button id="fitView">Fit to View</button>
+        <button id="resetAll">Reset</button>
+        <label class="row dim3d" style="margin-left:8px;">
+          <input id="showPar" type="checkbox" checked> Show parallelepiped
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Math (live)</legend>
+      <div class="mathbox">
+        <div class="vector">\( \vec v = v_i\hat i + v_j\hat j \)</div>
+        <div class="vector3 dim3d">\( \vec v = v_i\hat i + v_j\hat j + v_k \hat k \)</div>
+        <div class="unitvectori">\( \hat i = (1,0) \)</div>
+        <div class="unitvectorj">\( \hat j = (0,1) \)</div>
+        <div class="unitvectork dim3d">\( \hat k = (0,0,1) \)</div>
+        <div class="matB">\( B = [\hat i\ \hat j] \)</div>
+        <div class="matB3 dim3d">\( B = [\hat i\ \hat j\ \hat k] \)</div>
+        <div class="mapX">\( X = B\,\vec v \)</div>
+        <div class="detB">\( \det(B)=1 \)</div>
+        <div class="detA">\( \det(A)=1 \)</div>
+        <div class="vol">Volume scale \(=|\det(A)|=1\), orientation: preserved</div>
+        <div class="warn"></div>
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- Drawing areas -->
+  <div id="scene3d"></div>
+  <canvas id="graph"></canvas>
+
+  <script>
+/* =========================
+   Helpers & DOM shortcuts
+========================= */
+const q = s => document.querySelector(s);
+const $ = id => document.getElementById(id);
+function fmt(n){ return Math.round(n*1000)/1000; }
+
+/* =========================
+   Canvas & 2D State
+========================= */
+// canvas
+const canvas = document.getElementById("graph");
+const ctx = canvas.getContext("2d");
+
+// device pixel ratio & CSS canvas size
+let DPR=1, CW=0, CH=0;
+
+// 2D scale state
+let scale=70;      // visible grid cell size (px per grid unit)
+let scaleunit=1;   // value per grid cell
+let absscale=70;   // pixels per "1" in world coordinates
+let scalefactor=2; // grid-step change factor
+let factor=1.10;   // zoom factor
+
+// labels & axis counts
+let labelgap=4;
+let axisnum=20;
+let maxaxisnum=16;
+let minaxisnum=4;
+
+// v components (2D/3D share vi,vj; vk for 3D)
+let vi=1;
+let vj=2;
+let vk=0;
+
+// basis unit vectors (2D uses i,j; 3D uses i,j,k)
+let ivector=[1,0];
+let jvector=[0,1];
+let kvector=[0,0,1];
+
+/* =========================
+   Sizing & Drawing (2D)
+========================= */
+function sizingCanvas(){
+  const dpr = window.devicePixelRatio || 1;
+  const cssWidth = window.innerWidth - 205;
+  const cssHeight = window.innerHeight - 50;
+  canvas.style.width = cssWidth + 'px';
+  canvas.style.height = cssHeight + 'px';
+  canvas.width = Math.floor(cssWidth * dpr);
+  canvas.height = Math.floor(cssHeight * dpr);
+  DPR = dpr; CW = cssWidth; CH = cssHeight;
+  if (ctx.resetTransform) ctx.resetTransform();
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+function drawPlane(){
+  ctx.fillStyle = "#202020";
+  ctx.fillRect(0, 0, CW, CH);
+}
+
+// axis helpers reused
+function drawMainXAxis(){
+  let diagonal=Math.hypot(CW,CH);
+  let ivangle=(Math.atan2(ivector[1], ivector[0])/Math.PI+2)%2;
+  let iscale=Math.hypot(ivector[0],ivector[1]);
+
+  ctx.beginPath();
+  ctx.moveTo(CW/2+Math.cos(ivangle*Math.PI)*iscale*diagonal/2,
+             CH/2-Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+  ctx.lineTo(CW/2-Math.cos(ivangle*Math.PI)*iscale*diagonal/2,
+             CH/2+Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+  ctx.strokeStyle = "#ffffff";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  ctx.font = "10px sans-serif";
+  ctx.fillStyle = "white";
+  for(let i=-axisnum;i<=axisnum;i++){
+    if(i){
+      ctx.fillText(scaleunit*(-i), CW/2+labelgap, CH/2+scale*i-labelgap);
+    }
+  }
+}
+function drawBoldXAxis(){
+  for(let i=-axisnum;i<=axisnum;i++){
+    if(i===0){
+      ctx.beginPath();
+      ctx.moveTo(0, CH/2+scale*i);
+      ctx.lineTo(CW, CH/2+scale*i);
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+    }
+  }
+}
+function drawLightXAxis(){
+  for(let i=-2*axisnum;i<=2*axisnum;i++){
+    ctx.beginPath();
+    ctx.moveTo(0, CH/2+scale*i*0.5);
+    ctx.lineTo(CW, CH/2+scale*i*0.5);
+    ctx.strokeStyle = "rgba(225,225,255,1)";
+    ctx.lineWidth = 0.125;
+    ctx.stroke();
+  }
+}
+function drawMainYAxis(){
+  let diagonal=Math.hypot(CW,CH);
+  let jvangle=(Math.atan2(jvector[1], jvector[0])/Math.PI+2)%2;
+  let jscale=Math.hypot(jvector[0],jvector[1]);
+
+  ctx.beginPath();
+  ctx.moveTo(CW/2+Math.cos(jvangle*Math.PI)*jscale*diagonal/2,
+             CH/2-Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+  ctx.lineTo(CW/2-Math.cos(jvangle*Math.PI)*jscale*diagonal/2,
+             CH/2+Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+  ctx.strokeStyle = "#ffffff";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  ctx.font = "10px sans-serif";
+  ctx.fillStyle = "white";
+  for(let i=-axisnum;i<=axisnum;i++){
+    if(i){
+      ctx.fillText(scaleunit*i, CW/2+scale*i+labelgap, CH/2-labelgap);
+    }
+  }
+}
+function drawBoldYAxis(){
+  for(let i=-axisnum;i<=axisnum;i++){
+    if(i===0){
+      ctx.beginPath();
+      ctx.moveTo(CW/2+scale*i, 0);
+      ctx.lineTo(CW/2+scale*i, CH);
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+    }
+  }
+}
+function drawLightYAxis(){
+  for(let i=-2*axisnum;i<=2*axisnum;i++){
+    ctx.beginPath();
+    ctx.moveTo(CW/2+scale*i*0.5, 0);
+    ctx.lineTo(CW/2+scale*i*0.5, CH);
+    ctx.strokeStyle = "rgba(225,225,255,1)";
+    ctx.lineWidth = 0.125;
+    ctx.stroke();
+  }
+}
+function drawOrigin(){
+  ctx.font = "10px sans-serif";
+  ctx.fillStyle = "white";
+  ctx.fillText(0, CW/2+labelgap, CH/2-labelgap);
+
+  ctx.beginPath();
+  ctx.arc(CW/2, CH/2, 2.25, 0, Math.PI * 2);
+  ctx.fillStyle = "#ff8000";
+  ctx.fill();
+}
+function drawPoint(){
+  ctx.beginPath();
+  ctx.arc(CW/2+absscale*(vi*ivector[0]+vj*jvector[0]),
+          CH/2-absscale*(vi*ivector[1]+vj*jvector[1]), 2.25, 0, Math.PI * 2);
+  ctx.fillStyle = "#ff8000";
+  ctx.fill();
+}
+function drawVector(){
+  ctx.beginPath();
+  ctx.moveTo(CW/2, CH/2);
+  ctx.lineTo(CW/2+absscale*(vi*ivector[0]+vj*jvector[0]),
+             CH/2-absscale*(vi*ivector[1]+vj*jvector[1]));
+  ctx.strokeStyle = "#ff8000";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+function drawIvectorPoint(){
+  ctx.beginPath();
+  ctx.arc(CW/2+absscale*ivector[0], CH/2-absscale*ivector[1], 2.25, 0, Math.PI * 2);
+  ctx.fillStyle = "#ff6868";
+  ctx.fill();
+}
+function drawIVector(){
+  ctx.beginPath();
+  ctx.moveTo(CW/2, CH/2);
+  ctx.lineTo(CW/2+absscale*ivector[0], CH/2-absscale*ivector[1]);
+  ctx.strokeStyle = "#ff6868";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+function drawJvectorPoint(){
+  ctx.beginPath();
+  ctx.arc(CW/2+absscale*jvector[0], CH/2-absscale*jvector[1], 2.25, 0, Math.PI * 2);
+  ctx.fillStyle = "#68ff68";
+  ctx.fill();
+}
+function drawJVector(){
+  ctx.beginPath();
+  ctx.moveTo(CW/2, CH/2);
+  ctx.lineTo(CW/2+absscale*jvector[0], CH/2-absscale*jvector[1]);
+  ctx.strokeStyle = "#68ff68";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+
+// moving grid (2D)
+function drawMovingYAxis(){
+  let diagonal=Math.hypot(CW,CH);
+  let ivangle=(Math.atan2(ivector[1], ivector[0])/Math.PI+2)%2;
+  let jvangle=(Math.atan2(jvector[1], jvector[0])/Math.PI+2)%2;
+  let iscale=Math.hypot(ivector[0],ivector[1]);
+  let jscale=Math.hypot(jvector[0],jvector[1]);
+
+  let movingyaxisnum=1;
+  if(jvangle%1===0.5){
+    if(ivangle%1!=0.5){
+      movingyaxisnum=Math.floor(Math.abs((CW/2)/(Math.cos(ivangle*Math.PI)*scale*iscale)));
+    }else movingyaxisnum=1;
+  }else if(jvangle%1===0){
+    if(ivangle%1!=0){
+      movingyaxisnum=Math.floor(Math.abs((CH/2)/(Math.sin(ivangle*Math.PI)*scale*iscale)));
+    }else movingyaxisnum=1;
+  }else{
+    const tanAngle = Math.tan(jvangle*Math.PI);
+    movingyaxisnum = Math.floor((Math.abs((CH/2)/tanAngle) + CW/2)/scale);
+  }
+
+  for(let i=-Math.abs(movingyaxisnum); i<=Math.abs(movingyaxisnum); i++){
+    if(i){
+      ctx.beginPath();
+      ctx.moveTo(CW/2+Math.cos(ivangle*Math.PI)*scale*iscale*i+Math.cos(jvangle*Math.PI)*jscale*diagonal/2,
+                 CH/2-Math.sin(ivangle*Math.PI)*scale*iscale*i-Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+      ctx.lineTo(CW/2+Math.cos(ivangle*Math.PI)*scale*iscale*i-Math.cos(jvangle*Math.PI)*jscale*diagonal/2,
+                 CH/2-Math.sin(ivangle*Math.PI)*scale*iscale*i+Math.sin(jvangle*Math.PI)*jscale*diagonal/2);
+      ctx.strokeStyle = "#4868ff";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+  }
+}
+function drawMovingXAxis(){
+  let diagonal=Math.hypot(CW,CH);
+  let ivangle=(Math.atan2(ivector[1], ivector[0])/Math.PI+2)%2;
+  let jvangle=(Math.atan2(jvector[1], jvector[0])/Math.PI+2)%2;
+  let iscale=Math.hypot(ivector[0],ivector[1]);
+  let jscale=Math.hypot(jvector[0],jvector[1]);
+
+  let movingxaxisnum=1;
+  if(ivangle%1===0.5){
+    if(jvangle%1!=0.5){
+      movingxaxisnum=Math.floor(Math.abs((CW/2)/(Math.cos(jvangle*Math.PI)*scale*jscale)));
+    }else movingxaxisnum=1;
+  }else if(ivangle%1===0){
+    if(jvangle%1!=0){
+      movingxaxisnum=Math.floor(Math.abs((CH/2)/(Math.sin(jvangle*Math.PI)*scale*jscale)));
+    }else movingxaxisnum=1;
+  }else{
+    const tanAngle = Math.tan(ivangle*Math.PI);
+    movingxaxisnum = Math.floor((Math.abs((CW/2)*tanAngle) + CH/2)/scale);
+  }
+
+  for(let i=-Math.abs(movingxaxisnum); i<=Math.abs(movingxaxisnum); i++){
+    if(i){
+      ctx.beginPath();
+      ctx.moveTo(CW/2+Math.cos(jvangle*Math.PI)*scale*jscale*i+Math.cos(ivangle*Math.PI)*iscale*diagonal/2,
+                 CH/2-Math.sin(jvangle*Math.PI)*jscale*scale*i-Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+      ctx.lineTo(CW/2+Math.cos(jvangle*Math.PI)*scale*jscale*i-Math.cos(ivangle*Math.PI)*iscale*diagonal/2,
+                 CH/2-Math.sin(jvangle*Math.PI)*jscale*scale*i+Math.sin(ivangle*Math.PI)*iscale*diagonal/2);
+      ctx.strokeStyle = "#4868ff";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+  }
+}
+
+// zoom & rescale
+function sizingPlane(sizing){
+  if(sizing<0){
+    if(absscale<700000){ absscale*=factor; }
+  }else if(sizing>0){
+    absscale*=1/factor;
+  }
+  scale=absscale*scaleunit;
+}
+function scalingPlane(){
+  if(scale*maxaxisnum<(CW/2)) scaleunit*=scalefactor;
+  if(scale*minaxisnum>(CW/2)) scaleunit*=1/scalefactor;
+}
+
+// full 2D redraw
+function handleResize() {
+  sizingCanvas();
+  drawPlane();
+
+  drawLightYAxis();
+  drawLightXAxis();
+
+  drawBoldYAxis();
+  drawBoldXAxis();
+
+  drawMainYAxis();
+  drawMainXAxis();
+
+  drawOrigin();
+
+  drawMovingYAxis();
+  drawMovingXAxis();
+
+  drawPoint();
+  drawVector();
+  drawIvectorPoint();
+  drawJvectorPoint();
+  drawIVector();
+  drawJVector();
+}
+
+// animate basis (2D)
+let igole=[0,-1];
+let jgole=[0,-1];
+let aigoleangle=0, ajgoleangle=0, aiangle=0, ajangle=0, aidiffangle=0, ajdiffangle=0;
+let aigolesize=0, ajgolesize=0, aisize=0, ajsize=0, aidiffsize=0, ajdiffsize=0;
+let animatetimes=500;
+
+function animateVector(){
+  aigoleangle=(Math.atan2(igole[1],igole[0])/Math.PI-2)%2;
+  aiangle=(Math.atan2(ivector[1],ivector[0])/Math.PI-2)%2;
+  aidiffangle=aigoleangle-aiangle;
+  aigolesize=Math.hypot(igole[0],igole[1]);
+  aisize=Math.hypot(ivector[0],ivector[1]);
+  aidiffsize=aigolesize-aisize;
+
+  ajgoleangle=(Math.atan2(jgole[1],jgole[0])/Math.PI-2)%2;
+  ajangle=(Math.atan2(jvector[1],jvector[0])/Math.PI-2)%2;
+  ajdiffangle=ajgoleangle-ajangle;
+  ajgolesize=Math.hypot(jgole[0],jgole[1]);
+  ajsize=Math.hypot(jvector[0],jvector[1]);
+  ajdiffsize=ajgolesize-ajsize;
+
+  if(aidiffangle>1) aidiffangle-=2;
+  else if(aidiffangle<-1) aidiffangle+=2;
+  if(ajdiffangle>1) ajdiffangle-=2;
+  else if(ajdiffangle<-1) ajdiffangle+=2;
+
+  if (animatetimes>0){
+    aiangle+=aidiffangle/64;
+    aisize+=aidiffsize/64;
+    ivector=[Math.cos(aiangle*Math.PI)*aisize,Math.sin(aiangle*Math.PI)*aisize];
+
+    ajangle+=ajdiffangle/64;
+    ajsize+=ajdiffsize/64;
+    jvector=[Math.cos(ajangle*Math.PI)*ajsize,Math.sin(ajangle*Math.PI)*ajsize];
+
+    animatetimes-=1;
+    handleResize();
+    drawIVector(); drawIvectorPoint();
+    drawJVector(); drawJvectorPoint();
+    requestAnimationFrame(animateVector);
+  }else{
+    ivector=igole;
+    jvector=jgole;
+    animatetimes=500;
+    handleResize();
+    drawIVector(); drawIvectorPoint();
+    drawJVector(); drawJvectorPoint();
+  }
+}
+
+const drawVecor = drawVector; // backward compatibility
+const drawIvecor = drawIVector; // backward compatibility
+const drawJvecor = drawJVector; // backward compatibility
+
+/* =========================
+   Matrix & Math helpers
+========================= */
+function updateLabels(){
+  const vBox = document.querySelector('.vector');
+  const vBox3 = document.querySelector('.vector3');
+  const iBox = document.querySelector('.unitvectori');
+  const jBox = document.querySelector('.unitvectorj');
+  const kBox = document.querySelector('.unitvectork');
+  const matB = document.querySelector('.matB');
+  const matB3 = document.querySelector('.matB3');
+  const detB = document.querySelector('.detB');
+  const detA = document.querySelector('.detA');
+  const vol  = document.querySelector('.vol');
+
+  // vectors text
+  vBox.innerHTML = `\\(\\vec{v}=${fmt(vi)}\\hat{i}+${fmt(vj)}\\hat{j}\\)`;
+  if (vBox3) vBox3.innerHTML = `\\(\\vec{v}=${fmt(vi)}\\hat{i}+${fmt(vj)}\\hat{j}+${fmt(vk)}\\hat{k}\\)`;
+
+  if (!is3D()){
+    iBox.innerHTML = `\\(\\hat{i}=(${fmt(ivector[0])},\\,${fmt(ivector[1])})\\)`;
+    jBox.innerHTML = `\\(\\hat{j}=(${fmt(jvector[0])},\\,${fmt(jvector[1])})\\)`;
+    if (matB) matB.innerHTML =
+      `\\(B=\\begin{bmatrix}${fmt(ivector[0])}&${fmt(jvector[0])}\\\\${fmt(ivector[1])}&${fmt(jvector[1])}\\end{bmatrix}\\)`;
+    const d2 = ivector[0]*jvector[1]-ivector[1]*jvector[0];
+    if (detB) detB.innerHTML = `\\(\\det(B)=${fmt(d2)}\\)`;
+  }else{
+    const iz = ivector[2] ?? 0, jz = jvector[2] ?? 0, kz = kvector[2] ?? 1;
+    iBox.innerHTML = `\\(\\hat{i}=(${fmt(ivector[0])},\\,${fmt(ivector[1])},\\,${fmt(iz)})\\)`;
+    jBox.innerHTML = `\\(\\hat{j}=(${fmt(jvector[0])},\\,${fmt(jvector[1])},\\,${fmt(jz)})\\)`;
+    if (kBox) kBox.innerHTML = `\\(\\hat{k}=(${fmt(kvector[0])},\\,${fmt(kvector[1])},\\,${fmt(kz)})\\)`;
+    if (matB3) matB3.innerHTML =
+      `\\(B=\\begin{bmatrix}${fmt(ivector[0])}&${fmt(jvector[0])}&${fmt(kvector[0])}\\\\${fmt(ivector[1])}&${fmt(jvector[1])}&${fmt(kvector[1])}\\\\${fmt(iz)}&${fmt(jz)}&${fmt(kz)}\\end{bmatrix}\\)`;
+    if (detB) detB.innerHTML = `\\(\\det(B)=${fmt(det3(basisMatrix3()))}\\)`;
+  }
+
+  const A = is3D()? readMatrix3() : readMatrix();
+  const dA = is3D()? det3(A) : (A[0][0]*A[1][1]-A[0][1]*A[1][0]);
+  if (detA) detA.innerHTML = `\\(\\det(A)=${fmt(dA)}\\)`;
+  if (vol) vol.innerHTML = `Volume scale \(=|\\det(A)|=${fmt(Math.abs(dA))}\\), orientation: ${dA>=0?'preserved':'reversed'}`;
+
+  if (window.MathJax && MathJax.typeset) MathJax.typeset();
+
+  // singularity warnings
+  const warn = document.querySelector('.warn');
+  if (warn){
+    const eps = 1e-6;
+    const msgs = [];
+    if (Math.abs(dA) < eps) msgs.push('Warning: A is nearly singular (|det(A)| < 1e-6).');
+    const dBv = !is3D()
+      ? (ivector[0]*jvector[1]-ivector[1]*jvector[0])
+      : det3(basisMatrix3());
+    if (Math.abs(dBv) < eps) msgs.push('Warning: Current basis B is nearly singular (|det(B)| < 1e-6).');
+    warn.style.display = msgs.length ? 'block' : 'none';
+    warn.textContent = msgs.join(' ');
+  }
+}
+
+function readMatrix(){
+  const a11 = parseFloat($('#a11').value) || 0;
+  const a12 = parseFloat($('#a12').value) || 0;
+  const a21 = parseFloat($('#a21').value) || 0;
+  const a22 = parseFloat($('#a22').value) || 0;
+  return [[a11,a12],[a21,a22]];
+}
+function readMatrix3(){
+  const a11 = parseFloat($('#a11').value) || 0;
+  const a12 = parseFloat($('#a12').value) || 0;
+  const a13 = parseFloat($('#a13').value) || 0;
+  const a21 = parseFloat($('#a21').value) || 0;
+  const a22 = parseFloat($('#a22').value) || 0;
+  const a23 = parseFloat($('#a23').value) || 0;
+  const a31 = parseFloat($('#a31').value) || 0;
+  const a32 = parseFloat($('#a32').value) || 0;
+  const a33 = parseFloat($('#a33').value) || 0;
+  return [[a11,a12,a13],[a21,a22,a23],[a31,a32,a33]];
+}
+
+function setVectorFromInputs(){
+  vi = parseFloat($('#vi_in').value) || 0;
+  vj = parseFloat($('#vj_in').value) || 0;
+  if ($('#vk_in')) vk = parseFloat($('#vk_in').value) || 0;
+  handleResize();
+  if (is3D()) update3DObjects();
+  updateLabels();
+}
+function setInputsFromVector(){
+  $('#vi_in').value = vi;
+  $('#vj_in').value = vj;
+  if ($('#vk_in')) $('#vk_in').value = vk;
+  updateLabels();
+}
+
+function mulMatVec(A, v){
+  return [ A[0][0]*v[0] + A[0][1]*v[1],
+           A[1][0]*v[0] + A[1][1]*v[1] ];
+}
+function mulMatVec3(A, v){
+  return [
+    A[0][0]*v[0] + A[0][1]*v[1] + A[0][2]*(v[2]||0),
+    A[1][0]*v[0] + A[1][1]*v[1] + A[1][2]*(v[2]||0),
+    (A[2]?.[0]||0)*v[0] + (A[2]?.[1]||0)*v[1] + (A[2]?.[2]||0)*(v[2]||0)
+  ];
+}
+function invert2x2(M){
+  const [a,b] = M[0], [c,d] = M[1];
+  const det = a*d - b*c;
+  if (Math.abs(det) < 1e-12) return null;
+  const inv = [[ d/det, -b/det],[-c/det,  a/det]];
+  return inv;
+}
+function basisMatrix(){ return [[ivector[0], jvector[0]],[ivector[1], jvector[1]]]; }
+function basisMatrix3(){
+  return [
+    [ivector[0], jvector[0], kvector[0]],
+    [ivector[1], jvector[1], kvector[1]],
+    [ivector[2]||0, jvector[2]||0, kvector[2]||0]
+  ];
+}
+function invert3x3(M){
+  const [[a,b,c],[d,e,f],[g,h,i]] = M;
+  const A =  (e*i - f*h), B = -(d*i - f*g), C =  (d*h - e*g);
+  const D = -(b*i - c*h), E =  (a*i - c*g), F = -(a*h - b*g);
+  const G =  (b*f - c*e), H = -(a*f - c*d), I =  (a*e - b*d);
+  const det = a*A + b*B + c*C;
+  if (Math.abs(det) < 1e-12) return null;
+  return [
+    [A/det, D/det, G/det],
+    [B/det, E/det, H/det],
+    [C/det, F/det, I/det]
+  ];
+}
+function det3(M){
+  const [[a,b,c],[d,e,f],[g,h,i]] = M;
+  return a*(e*i - f*h) - b*(d*i - f*g) + c*(d*h - e*g);
+}
+function fitToView(){
+  const w = CW, h = CH;
+  const center = 0.45 * Math.min(w, h);
+  const vAbs = [
+    vi*ivector[0] + vj*jvector[0],
+    vi*ivector[1] + vj*jvector[1]
+  ];
+  const maxR = Math.max(
+    Math.hypot(ivector[0], ivector[1]),
+    Math.hypot(jvector[0], jvector[1]),
+    Math.hypot(vAbs[0],   vAbs[1]),
+    1
+  );
+  absscale = center / maxR;
+  scale = absscale * scaleunit;
+  handleResize();
+}
+function fitToView3D(){
+  // include i,j,k and parallelepiped corners + v
+  const I = [ivector[0], ivector[1], ivector[2]||0];
+  const J = [jvector[0], jvector[1], jvector[2]||0];
+  const K = [kvector[0], kvector[1], kvector[2]||0];
+  const add = (a,b)=>[a[0]+b[0], a[1]+b[1], a[2]+b[2]];
+  const pts = [ I, J, K, add(I,J), add(I,K), add(J,K), add(add(I,J),K) ];
+  const vAbs = [
+    vi*I[0] + vj*J[0] + vk*K[0],
+    vi*I[1] + vj*J[1] + vk*K[1],
+    vi*I[2] + vj*J[2] + vk*K[2],
+  ];
+  pts.push(vAbs);
+  const norms = pts.map(p => Math.hypot(p[0],p[1],p[2]));
+  const maxR = Math.max(...norms, 1);
+  if (!__three.ready) return;
+  const cam = __three.camera, controls = __three.controls;
+  const fov = cam.fov * Math.PI/180;
+  const dist = maxR / Math.sin(fov/2) * 1.3;
+  cam.position.set(dist, dist, dist);
+  controls.target.set(0,0,0);
+  cam.lookAt(0,0,0);
+  cam.updateProjectionMatrix();
+}
+
+/* =========================
+   Boot 2D listeners
+========================= */
+handleResize();
+window.addEventListener("resize", handleResize);
+canvas.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  sizingPlane(event.deltaY);
+  scalingPlane();
+  handleResize();
+});
+
+/* inputs ↔ state */
+$('#vi_in').addEventListener('change', setVectorFromInputs);
+$('#vj_in').addEventListener('change', setVectorFromInputs);
+
+$('#applyA').addEventListener('click', () => {
+  if (is3D()){
+    const A = readMatrix3();
+    __goalI = [A[0][0], A[1][0], A[2][0]||0];
+    __goalJ = [A[0][1], A[1][1], A[2][1]||0];
+    __goalK = [A[0][2]||0, A[1][2]||0, A[2][2]||0];
+    animateBasis3D();
+  }else{
+    const A = readMatrix();
+    igole = [A[0][0], A[1][0]];
+    jgole = [A[0][1], A[1][1]];
+    animateVector();
+  }
+  updateLabels();
+});
+$('#composeA').addEventListener('click', () => {
+  if (is3D()){
+    const A = readMatrix3();
+    __goalI = mulMatVec3(A, [ivector[0],ivector[1],ivector[2]||0]);
+    __goalJ = mulMatVec3(A, [jvector[0],jvector[1],jvector[2]||0]);
+    __goalK = mulMatVec3(A, [kvector[0],kvector[1],kvector[2]||0]);
+    animateBasis3D();
+  }else{
+    const A = readMatrix();
+    igole = mulMatVec(A, ivector);
+    jgole = mulMatVec(A, jvector);
+    animateVector();
+  }
+  updateLabels();
+});
+$('#fitView').addEventListener('click', () => { is3D() ? fitToView3D() : fitToView(); });
+
+$('#resetAll').addEventListener('click', () => {
+  // reset view/scale
+  scale=70; scaleunit=1; absscale=70; scalefactor=2; factor=1.10;
+  scalingPlane();
+
+  // reset basis & vectors
+  ivector = [1,0]; jvector=[0,1]; kvector=[0,0,1];
+  vi=1; vj=2; vk=0;
+
+  // reset A inputs
+  $('#a11').value = 1; $('#a12').value = 0; $('#a21').value = 0; $('#a22').value = 1;
+  if ($('#a13')) { $('#a13').value=0; $('#a23').value=0; $('#a31').value=0; $('#a32').value=0; $('#a33').value=1; }
+
+  setInputsFromVector();
+  handleResize();
+  if (is3D()){ update3DObjects(); fitToView3D(); }
+});
+
+canvas.addEventListener('click', (e) => {
+  if (!$('#clickSet').checked) return;
+  if (is3D()) return; // 3D uses raycast
+  const rect = canvas.getBoundingClientRect();
+  const xpx = e.clientX - rect.left - CW/2;
+  const ypx = CH/2 - (e.clientY - rect.top);
+  const X = xpx / absscale;
+  const Y = ypx / absscale;
+  const B = basisMatrix();
+  const Binv = invert2x2(B);
+  if (!Binv){
+    console.warn('기저가 퇴화(Det=0)되어 v를 계산할 수 없음');
+    alert('기저가 퇴화하여 v를 계산할 수 없습니다.');
+    return;
+  }
+  vi = Binv[0][0]*X + Binv[0][1]*Y;
+  vj = Binv[1][0]*X + Binv[1][1]*Y;
+  setInputsFromVector();
+  handleResize();
+});
+
+window.addEventListener('keydown', (e) => {
+  const step = (e.shiftKey ? 1 : 0.25);
+  if (e.key === 'ArrowLeft') vi -= step;
+  if (e.key === 'ArrowRight') vi += step;
+  if (e.key === 'ArrowDown') vj -= step;
+  if (e.key === 'ArrowUp') vj += step;
+  // 3D: PgUp/PgDn adjust vk
+  if (e.key === 'PageUp') vk += step;
+  if (e.key === 'PageDown') vk -= step;
+  // quick plane selection in 3D
+  if (is3D()){
+    if (e.key==='1') $('#planeSel').value='XY';
+    if (e.key==='2') $('#planeSel').value='XZ';
+    if (e.key==='3') $('#planeSel').value='YZ';
+  }
+  if (['ArrowLeft','ArrowRight','ArrowDown','ArrowUp','PageUp','PageDown'].includes(e.key)){
+    setInputsFromVector();
+    handleResize();
+    e.preventDefault();
+  }
+});
+
+/* Sync sliders ↔ numbers for nicer knobs */
+function linkKnob(numId, sliderId){
+  const n = $(numId), s = $(sliderId);
+  if (!n || !s) return;
+  const sync = () => { if (document.activeElement!==n) n.value = s.value; setVectorFromInputs(); };
+  n.addEventListener('input', () => { s.value = n.value; setVectorFromInputs(); });
+  s.addEventListener('input', sync);
+}
+linkKnob('vi_in','vi_slider');
+linkKnob('vj_in','vj_slider');
+linkKnob('vk_in','vk_slider');
+
+/* =========================
+   3D: scene, objects, interactions
+========================= */
+function is3D(){ return document.getElementById('mode3d')?.checked; }
+function toggleDim(){
+  document.querySelectorAll('.dim3d').forEach(el => el.style.display = is3D() ? '' : 'none');
+  document.querySelectorAll('.dim2d').forEach(el => el.style.display = is3D() ? 'none' : '');
+  document.getElementById('scene3d').style.display = is3D() ? 'block' : 'none';
+  canvas.style.display  = is3D() ? 'none'  : 'block';
+  updateLabels();
+}
+$('#mode2d').addEventListener('change', toggleDim);
+$('#mode3d').addEventListener('change', toggleDim);
+
+const __three = { ready:false };
+let __goalI=null, __goalJ=null, __goalK=null, __steps3D=0;
+
+function ensure3D(){
+  if (__three.ready) return;
+  const THREE = window.__THREE__;
+  const OrbitControls = window.__OrbitControls__;
+  // renderer & camera
+  const w = window.innerWidth - 205;
+  const h = window.innerHeight - 50;
+  const renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer.setPixelRatio(window.devicePixelRatio||1);
+  renderer.setSize(w,h);
+  const host = document.getElementById('scene3d');
+  host.innerHTML = '';
+  host.appendChild(renderer.domElement);
+
+  const camera = new THREE.PerspectiveCamera(45, w/h, 0.01, 5000);
+  camera.position.set(3,3,3);
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x202020);
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+
+  // lights
+  scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+  const dir = new THREE.DirectionalLight(0xffffff, 0.6);
+  dir.position.set(2,3,4);
+  scene.add(dir);
+
+  // grids
+  const gridSize = 20, divs = 20;
+  const gridXY = new THREE.GridHelper(gridSize, divs, 0x808080, 0x404040);
+  gridXY.rotation.x = 0;
+  const gridXZ = new THREE.GridHelper(gridSize, divs, 0x808080, 0x404040);
+  gridXZ.rotation.x = Math.PI/2;
+  const gridYZ = new THREE.GridHelper(gridSize, divs, 0x808080, 0x404040);
+  gridYZ.rotation.z = Math.PI/2;
+  scene.add(gridXY, gridXZ, gridYZ);
+
+  // arrows: i (red-ish), j (green-ish), k (blue-ish), v (orange)
+  function makeArrow(color){ return new THREE.ArrowHelper(new THREE.Vector3(1,0,0), new THREE.Vector3(0,0,0), 1, color, 0.15, 0.07); }
+  const iArrow = makeArrow(0xff6868);
+  const jArrow = makeArrow(0x68ff68);
+  const kArrow = makeArrow(0x4868ff);
+  const vArrow = makeArrow(0xff8000);
+  scene.add(iArrow, jArrow, kArrow, vArrow);
+
+  // invisible plane for click-set
+  const plane = new THREE.Mesh(
+    new THREE.PlaneGeometry(1000,1000),
+    new THREE.MeshBasicMaterial({visible:false})
+  );
+  scene.add(plane);
+
+  // parallelepiped (wireframe)
+  const parGeom = new THREE.BufferGeometry();
+  const parMat  = new THREE.LineBasicMaterial({ color: 0x99c2ff, transparent:true, opacity:0.9 });
+  const parLine = new THREE.LineSegments(parGeom, parMat);
+  scene.add(parLine);
+
+  __three.renderer=renderer; __three.camera=camera; __three.scene=scene;
+  __three.controls=controls; __three.gridXY=gridXY; __three.gridXZ=gridXZ; __three.gridYZ=gridYZ;
+  __three.iArrow=iArrow; __three.jArrow=jArrow; __three.kArrow=kArrow; __three.vArrow=vArrow;
+  __three.plane=plane; __three.parLine=parLine; __three.parGeom=parGeom; __three.ready=true;
+
+  // render loop
+  (function loop(){
+    requestAnimationFrame(loop);
+    controls.update();
+    renderer.render(scene,camera);
+  })();
+  update3DObjects();
+  fitToView3D();
+
+  // click-to-set on selected plane
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+  renderer.domElement.addEventListener('click', (ev) => {
+    if (!is3D() || !$('#clickSet').checked) return;
+    const rect = renderer.domElement.getBoundingClientRect();
+    mouse.x = ((ev.clientX - rect.left)/rect.width)*2 - 1;
+    mouse.y = -((ev.clientY - rect.top)/rect.height)*2 + 1;
+    raycaster.setFromCamera(mouse, camera);
+    const sel = ($('#planeSel')?.value)||'XY';
+    if (sel==='XY'){ __three.plane.rotation.set(0,0,0); }
+    if (sel==='XZ'){ __three.plane.rotation.set(Math.PI/2,0,0); }
+    if (sel==='YZ'){ __three.plane.rotation.set(0,Math.PI/2,0); }
+    const hit = raycaster.intersectObject(__three.plane, false)[0];
+    if (!hit) return;
+    const p = hit.point;
+    // convert world point to basis coordinates
+    const B = basisMatrix3();
+    const Binv = invert3x3(B);
+    if (!Binv){ alert('기저가 퇴화하여 v를 계산할 수 없습니다.'); return; }
+    vi = Binv[0][0]*p.x + Binv[0][1]*p.y + Binv[0][2]*p.z;
+    vj = Binv[1][0]*p.x + Binv[1][1]*p.y + Binv[1][2]*p.z;
+    vk = Binv[2][0]*p.x + Binv[2][1]*p.y + Binv[2][2]*p.z;
+    setInputsFromVector();
+    update3DObjects();
+  });
+
+  // resize Three.js on window resize
+  window.addEventListener('resize', () => {
+    const w = window.innerWidth - 205, h = window.innerHeight - 50;
+    renderer.setPixelRatio(window.devicePixelRatio||1);
+    renderer.setSize(w,h);
+    camera.aspect = w/h;
+    camera.updateProjectionMatrix();
+  });
+}
+
+function updateParallelepiped(){
+  if (!__three.ready) return;
+  const show = $('#showPar')?.checked;
+  __three.parLine.visible = !!show;
+  if (!show) return;
+
+  const I = [ivector[0], ivector[1], ivector[2]||0];
+  const J = [jvector[0], jvector[1], jvector[2]||0];
+  const K = [kvector[0], kvector[1], kvector[2]||0];
+  const add = (a,b)=>[a[0]+b[0], a[1]+b[1], a[2]+b[2]];
+  const O = [0,0,0], IJ=add(I,J), IK=add(I,K), JK=add(J,K), IJK=add(IJ,K);
+
+  // edges as pairs
+  const edges = [
+    O,I,  O,J,  O,K,
+    I,IJ, I,IK,
+    J,IJ, J,JK,
+    K,IK, K,JK,
+    IJ,IJK, IK,IJK, JK,IJK
+  ];
+  const pos = new Float32Array(edges.length*3);
+  for (let e=0; e<edges.length; e++){
+    const p = edges[e];
+    pos[3*e+0] = p[0];
+    pos[3*e+1] = p[1];
+    pos[3*e+2] = p[2];
+  }
+  __three.parGeom.setAttribute('position', new __THREE__.BufferAttribute(pos,3));
+  __three.parGeom.computeBoundingSphere();
+}
+
+function update3DObjects(){
+  if (!__three.ready) return;
+  function setArrow(arr, vx,vy,vz){
+    const len = Math.max(1e-6, Math.hypot(vx,vy,vz));
+    const dir = new __THREE__.Vector3(vx/len, vy/len, vz/len);
+    arr.setDirection(dir);
+    arr.setLength(len, Math.min(0.2*len, 0.4), Math.min(0.12*len, 0.25));
+  }
+  setArrow(__three.iArrow, ivector[0], ivector[1], ivector[2]||0);
+  setArrow(__three.jArrow, jvector[0], jvector[1], jvector[2]||0);
+  setArrow(__three.kArrow, kvector[0], kvector[1], kvector[2]||0);
+
+  const vx = vi*ivector[0] + vj*jvector[0] + vk*(kvector[0]||0);
+  const vy = vi*ivector[1] + vj*jvector[1] + vk*(kvector[1]||0);
+  const vz = (vi*(ivector[2]||0) + vj*(jvector[2]||0) + vk*(kvector[2]||0));
+  setArrow(__three.vArrow, vx, vy, vz);
+
+  updateParallelepiped();
+  updateLabels();
+}
+
+function animateBasis3D(){
+  if (!__goalI || !__goalJ || !__goalK){ update3DObjects(); return; }
+  __steps3D = 64;
+  const startI = [ivector[0], ivector[1], ivector[2]||0];
+  const startJ = [jvector[0], jvector[1], jvector[2]||0];
+  const startK = [kvector[0], kvector[1], kvector[2]||0];
+
+  (function step(){
+    if (__steps3D<=0){
+      ivector = __goalI; jvector = __goalJ; kvector = __goalK;
+      __goalI=__goalJ=__goalK=null;
+      update3DObjects();
+      return;
+    }
+    const t = 1 - (__steps3D/64);
+    function lerp(a,b){ return a + (b-a)*t; }
+    ivector = [lerp(startI[0],__goalI[0]), lerp(startI[1],__goalI[1]), lerp(startI[2],__goalI[2])];
+    jvector = [lerp(startJ[0],__goalJ[0]), lerp(startJ[1],__goalJ[1]), lerp(startJ[2],__goalJ[2])];
+    kvector = [lerp(startK[0],__goalK[0]), lerp(startK[1],__goalK[1]), lerp(startK[2],__goalK[2])];
+    __steps3D--;
+    updateParallelepiped();
+    update3DObjects();
+    requestAnimationFrame(step);
+  })();
+}
+
+/* Mode toggle & 3D boot */
+toggleDim(); // start in 2D
+$('#mode3d').addEventListener('change', () => { ensure3D(); update3DObjects(); fitToView3D(); });
+
+// reflect toggles immediately
+if ($('#showPar')) $('#showPar').addEventListener('change', ()=>{ if(is3D()) updateParallelepiped(); });
+if ($('#planeSel')) $('#planeSel').addEventListener('change', ()=>{ /* plane applied on next click */ });
+
+// update 3D whenever vector inputs change
+['vi_in','vj_in','vk_in'].forEach(id => { if ($(id)) $(id).addEventListener('change', ()=>{ if(is3D()) update3DObjects(); }); });
+
+// initial MathJax typeset
+updateLabels();
+  </script>
 </body>
 </html>
