@@ -1,164 +1,59 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Linear Transformation Lab — 2D & 3D</title>
-
-  <!-- MathJax -->
-  <script>
-    window.MathJax = { tex: { inlineMath: [['\\(','\\)']] } };
-  </script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
-  <style>
-    :root { --sidebar-w: 205px; --topbar-h: 50px; }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-      background: #202020; color: #eee;
-    }
-    #topbar {
-      position: fixed; top: 0; left: 0; right: 0; height: var(--topbar-h);
-      background: #111; color: #ddd;
-      display: flex; align-items: center; padding: 0 12px; border-bottom: 1px solid #333; z-index: 5;
-    }
-    .controls {
-      position: fixed; top: var(--topbar-h); bottom: 0; left: 0; width: var(--sidebar-w);
-      overflow: auto; background: #181818; border-right: 1px solid #333; padding: 10px 10px 16px; z-index: 4;
-    }
-    .controls fieldset { border: 1px solid #444; margin: 8px 0; padding: 6px 10px; }
-    .controls legend { font-weight: 600; }
-    .row { display:flex; gap:8px; align-items:center; margin:4px 0; flex-wrap: wrap; }
-    .matrix-grid { display:grid; grid-template-columns:repeat(2, 64px); gap:6px; }
-    .matrix-grid input[type=number]{ width:64px; }
-    .knob { display:flex; gap:6px; align-items:center; }
-    .knob label { width: 22px; opacity: 0.85; }
-    .knob input[type=number]{ width:72px; }
-    .knob input[type=range]{ width:140px; }
-    .mathbox { font-size: 0.95rem; line-height: 1.45; color:#eee; }
-    .dim3d { display:none; } /* shown only in 3D mode */
-    .warn { color:#ff8a8a; margin-top:6px; display:none; }
-
-    /* drawing areas */
-    #graph, #scene3d {
-      position: fixed; top: var(--topbar-h); left: var(--sidebar-w); right: 0; bottom: 0;
-      transition: opacity 0.6s ease;
-    }
-    #scene3d canvas { display:block; }
-    .hidden { opacity:0; pointer-events:none; }
-
-    button { cursor: pointer; }
-    select, input, button { background:#2a2a2a; color:#eee; border:1px solid #444; border-radius:4px; padding:3px 6px; }
-    input[type=checkbox], input[type=radio] { transform: translateY(1px); }
-    a { color:#8bb9ff; text-decoration: none; }
-  </style>
+  <meta charset="UTF-8">
+  <title>2D / 3D Toggle</title>
+  <script src="./plotly-latest.min.js"></script>
 </head>
 <body>
-  <div id="topbar">
-    <strong>Linear Transformation Lab</strong>
-    <span style="flex:1 1 auto"></span>
-    <span style="opacity:0.7; font-size: 0.9rem;">2D &middot; 3D · det / volume / orientation</span>
-  </div>
+  <button onclick="draw2D()">Switch to 2D</button>
+  <button onclick="draw3D()">Switch to 3D</button>
+  <div id="plot" style="width:700px; height:600px;"></div>
 
-  <div class="controls">
-    <fieldset>
-      <legend>Mode</legend>
-      <label><input type="radio" name="mode" id="mode2d" checked> 2D</label>
-      <label><input type="radio" name="mode" id="mode3d"> 3D</label>
-    </fieldset>
+  <script>
+    function draw2D() {
+      let trace2D = {
+        x: [0, 2],
+        y: [0, 3],
+        mode: 'lines+markers',
+        type: 'scatter',
+        line: {width: 3, color: 'blue'},
+        marker: {size: 8, color: 'red'}
+      };
 
-    <fieldset>
-      <legend>Vector \( \vec v \)</legend>
-      <div class="knob">
-        <label>v<sub>i</sub></label>
-        <input id="vi_in" type="number" step="0.25" value="0">
-        <input id="vi_slider" type="range" min="-20" max="20" step="0.25" value="0">
-      </div>
-      <div class="knob">
-        <label>v<sub>j</sub></label>
-        <input id="vj_in" type="number" step="0.25" value="0">
-        <input id="vj_slider" type="range" min="-20" max="20" step="0.25" value="0">
-      </div>
-      <div class="knob dim3d">
-        <label>v<sub>k</sub></label>
-        <input id="vk_in" type="number" step="0.25" value="0">
-        <input id="vk_slider" type="range" min="-20" max="20" step="0.25" value="0">
-      </div>
-      <label class="row">
-        <input type="checkbox" id="clickSet" checked>
-        Click to set \( \vec v \)
-        <span class="dim3d" style="margin-left:6px;">(on selected plane)</span>
-      </label>
-      <div class="row dim3d">
-        <label for="planeSel">Click plane</label>
-        <select id="planeSel"><option>XY</option><option>XZ</option><option>YZ</option></select>
-        <span style="opacity:0.7;">(hotkeys: 1/2/3)</span>
-      </div>
-    </fieldset>
+      let layout2D = {
+        title: '2D Vector (2,3)',
+        xaxis: {title: 'X'},
+        yaxis: {title: 'Y'}
+      };
 
-    <fieldset>
-      <legend>Matrix \( A \)</legend>
-      <div id="matrixGrid" class="matrix-grid">
-        <input id="a11" type="number" step="0.25" value="1">
-        <input id="a12" type="number" step="0.25" value="0">
-        <input id="a13" class="dim3d" type="number" step="0.25" value="0">
-        <input id="a21" type="number" step="0.25" value="0">
-        <input id="a22" type="number" step="0.25" value="1">
-        <input id="a23" class="dim3d" type="number" step="0.25" value="0">
-        <input id="a31" class="dim3d" type="number" step="0.25" value="0">
-        <input id="a32" class="dim3d" type="number" step="0.25" value="0">
-        <input id="a33" class="dim3d" type="number" step="0.25" value="1">
-      </div>
-      <div class="row" style="gap:10px; margin-top:6px;">
-        <button id="applyA">Apply A</button>
-        <button id="composeA">Compose A</button>
-        <button id="fitView">Fit to View</button>
-        <button id="resetAll">Reset</button>
-        <label class="row dim3d" style="margin-left:8px;">
-          <input id="showPar" type="checkbox" checked> Show parallelepiped
-        </label>
-      </div>
-    </fieldset>
+      Plotly.newPlot('plot', [trace2D], layout2D);
+    }
 
-    <fieldset>
-      <legend>Math (live)</legend>
-      <div class="mathbox">
-        <div class="vector">\( \vec v = v_i\hat i + v_j\hat j \)</div>
-        <div class="vector3 dim3d">\( \vec v = v_i\hat i + v_j\hat j + v_k \hat k \)</div>
-        <div class="unitvectori">\( \hat i = (1,0) \)</div>
-        <div class="unitvectorj">\( \hat j = (0,1) \)</div>
-        <div class="unitvectork dim3d">\( \hat k = (0,0,1) \)</div>
-        <div class="matB">\( B = [\hat i\ \hat j] \)</div>
-        <div class="matB3 dim3d">\( B = [\hat i\ \hat j\ \hat k] \)</div>
-        <div class="mapX">\( X = B\,\vec v \)</div>
-        <div class="detB">\( \det(B)=1 \)</div>
-        <div class="detA">\( \det(A)=1 \)</div>
-        <div class="vol">Volume scale \(=|\det(A)|=1\), orientation: preserved</div>
-        <div class="direction">방향: 0°</div>
-        <div class="distance">거리: 0</div>
-        <div class="movement">이동: (0,0)</div>
-        <div class="anglei">\(각도(\vec v,\hat i)=0^\circ,\;\text{넓이}=0\)</div>
-        <div class="anglej">\(각도(\vec v,\hat j)=0^\circ,\;\text{넓이}=0\)</div>
-        <div class="anglek dim3d">\(각도(\vec v,\hat k)=0^\circ,\;\text{넓이}=0\)</div>
-        <div class="warn"></div>
-      </div>
-    </fieldset>
-  </div>
+    function draw3D() {
+      let trace3D = {
+        x: [0, 2],
+        y: [0, 3],
+        z: [0, 5],
+        mode: 'lines+markers',
+        type: 'scatter3d',
+        line: {width: 6, color: 'green'},
+        marker: {size: 5, color: 'red'}
+      };
 
-  <!-- Drawing areas -->
-  <div id="scene3d" class="hidden"></div>
-  <canvas id="graph"></canvas>
+      let layout3D = {
+        title: '3D Vector (2,3,5)',
+        scene: {
+          xaxis: {title: 'X'},
+          yaxis: {title: 'Y'},
+          zaxis: {title: 'Z'}
+        }
+      };
 
-  <!-- Load scripts -->
-  <!-- Your 2D logic from earlier step -->
-  <script src="./lt2d.js" defer></script>
-  <!-- 3D logic (module; handles Three.js and mode switching) -->
-  <script type="module" src="./lt3d.js"></script>
+      Plotly.newPlot('plot', [trace3D], layout3D);
+    }
+
+    draw2D();
+  </script>
 </body>
 </html>
