@@ -11,6 +11,10 @@
       font-family: sans-serif;
       margin: 10px;
     }
+    nav {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
     .mode-buttons {
       display: flex;
       gap: 0.5rem;
@@ -33,6 +37,15 @@
       width: 80px;
       font-size: 0.9rem;
     }
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(2, 80px);
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .matrix label {
+      font-size: 0.9rem;
+    }
     #plot {
       width: 100%;
       height: 60vh;
@@ -44,6 +57,7 @@
   </style>
 </head>
 <body>
+  <nav><a href="../index.html" aria-label="Home">&#x21A9; Home</a></nav>
   <div class="mode-buttons">
     <button id="btn2D">2D Mode</button>
     <button id="btn3D">3D Mode</button>
@@ -64,12 +78,19 @@
     </label>
   </div>
 
+  <div class="matrix" id="matrixControls">
+    <label>a₁₁ <input type="number" id="a11" value="1" step="0.1" /></label>
+    <label>a₁₂ <input type="number" id="a12" value="1" step="0.1" /></label>
+    <label>a₂₁ <input type="number" id="a21" value="0" step="0.1" /></label>
+    <label>a₂₂ <input type="number" id="a22" value="1" step="0.1" /></label>
+  </div>
+
   <div id="plot"></div>
   <div id="vectorInfo"></div>
 
   <script>
     let is3D = false;
-    const matrix2D = [
+    let matrix2D = [
       [1, 1],
       [0, 1]
     ];
@@ -90,11 +111,12 @@
       return { x, y };
     })();
 
-    const grid3D = (() => {
+    let grid3D = null;
+    function buildGrid3D() {
       const x = [], y = [], z = [];
-      for (let xi = -10; xi <= 10; xi++) {
-        for (let yi = -10; yi <= 10; yi++) {
-          for (let zi = -10; zi <= 10; zi++) {
+      for (let xi = -5; xi <= 5; xi++) {
+        for (let yi = -5; yi <= 5; yi++) {
+          for (let zi = -5; zi <= 5; zi++) {
             x.push(xi);
             y.push(yi);
             z.push(zi);
@@ -102,7 +124,7 @@
         }
       }
       return { x, y, z };
-    })();
+    }
 
     function getVector() {
       const x = parseFloat(document.getElementById('xInput').value);
@@ -129,6 +151,7 @@
     function buildPlotData() {
       const v = getVector();
       if (is3D) {
+        if (!grid3D) grid3D = buildGrid3D();
         const tv = transform3D(v);
         const traces = [
           {
@@ -137,7 +160,7 @@
             z: grid3D.z,
             mode: 'markers',
             type: 'scatter3d',
-            marker: { size: 3, color: 'rgba(0,0,0,0)' },
+            marker: { size: 2, color: 'rgba(0,0,0,0)' },
             hoverinfo: 'none',
             showlegend: false
           },
@@ -178,8 +201,8 @@
             x: grid2D.x,
             y: grid2D.y,
             mode: 'markers',
-            type: 'scatter',
-            marker: { size: 8, color: 'rgba(0,0,0,0)' },
+            type: 'scattergl',
+            marker: { size: 6, color: 'rgba(0,0,0,0)' },
             hoverinfo: 'none',
             showlegend: false
           },
@@ -254,12 +277,24 @@
         }
       });
 
+      ['a11','a12','a21','a22'].forEach(id => {
+        const el = document.getElementById(id);
+        el.addEventListener('input', () => {
+          matrix2D[0][0] = parseFloat(document.getElementById('a11').value);
+          matrix2D[0][1] = parseFloat(document.getElementById('a12').value);
+          matrix2D[1][0] = parseFloat(document.getElementById('a21').value);
+          matrix2D[1][1] = parseFloat(document.getElementById('a22').value);
+          drawPlot();
+        });
+      });
+
       drawPlot(true);
 
       const plotDiv = document.getElementById('plot');
       plotDiv.on('plotly_click', function (data) {
         if (!data.points || !data.points.length) return;
-        const p = data.points[0];
+        const p = data.points.find(pt => pt.curveNumber === 0);
+        if (!p) return;
         document.getElementById('xInput').value = p.x;
         document.getElementById('xSlider').value = p.x;
         document.getElementById('yInput').value = p.y;
