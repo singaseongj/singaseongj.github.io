@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-08T19:28:11+09:00 (KST)**
+- Generated: **2025-09-09T00:27:06+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -306,26 +306,26 @@
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Citizens%20Financial%20Group
 
+**Hubbell Incorporated** (HUBB)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.4%**, 20d **4.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Hubbell%20Incorporated
+
 **Leidos** (LDOS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.3%**, 20d **2.1%**; volatility (20d): **unknown**
+- Returns: 5d **-1.6%**, 20d **0.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Leidos
 
-**SBA Communications** (SBAC)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.0%**, 20d **-11.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Real Estate**
-- News search: https://www.google.com/search?q=SBA%20Communications
-
 **Southwest Airlines** (LUV)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.8%**, 20d **6.2%**; volatility (20d): **unknown**
+- Returns: 5d **-4.0%**, 20d **6.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Southwest%20Airlines
@@ -333,7 +333,7 @@
 **Weyerhaeuser** (WY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **1.7%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **0.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Weyerhaeuser
