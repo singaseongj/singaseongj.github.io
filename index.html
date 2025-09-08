@@ -463,7 +463,7 @@
         let totalBubbles = 16;
 
         // Google Apps Script URL for leaderboard
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwU8wQXs1Fs4Ywk7SyZGSbcIwoUwffpR4mDQVuVsB0k2uy5z_Zrje589YtI2BviMbo0/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxttn3wHKDmfd36T0tHyctX0jvQOMC-Nir49w_O8DPQPRiYRxAQpw4ao8_28lPbQ_Pk/exec';
 
         // Initialize game elements
         window.onload = function() {
@@ -727,7 +727,12 @@
             const name = document.getElementById('playerName').value.trim();
             if (name) {
                 const finalScore = score + Math.max(0, 1000 - Math.floor(elapsedTime * 10));
-                const newScore = { name, score: finalScore, time: parseFloat(elapsedTime) };
+                const newScore = {
+                    name,
+                    score: finalScore,
+                    time: parseFloat(elapsedTime),
+                    date: new Date().toISOString()
+                };
 
                 fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST', mode: 'no-cors',
@@ -797,11 +802,17 @@
                 else if (index === 2) trophy = '🥉 ';
                 else trophy = `${index + 1}. `;
 
+                const dateLabel = entry.date
+                    ? new Date(entry.date).toLocaleDateString(undefined, {
+                        year: 'numeric', month: 'short', day: 'numeric'
+                      })
+                    : '';
+
                 div.innerHTML = `
                     <span>${trophy}${entry.name}</span>
                     <span style="display: flex; flex-direction: column; align-items: flex-end;">
                         <span style="font-weight: bold;">${entry.score} pts</span>
-                        <span style="font-size: 0.8rem; opacity: 0.7;">${entry.time}s</span>
+                        <span style="font-size: 0.8rem; opacity: 0.7;">${dateLabel}</span>
                     </span>
                 `;
                 list.appendChild(div);
