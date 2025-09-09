@@ -296,16 +296,28 @@
 
       const plotDiv = document.getElementById('plot');
       plotDiv.on('plotly_click', function (data) {
-        if (!data.points || !data.points.length) return;
-        const p = data.points.find(pt => pt.curveNumber === 0);
-        if (!p) return;
-        document.getElementById('xInput').value = p.x;
-        document.getElementById('xSlider').value = p.x;
-        document.getElementById('yInput').value = p.y;
-        document.getElementById('ySlider').value = p.y;
         if (is3D) {
+          if (!data.points || !data.points.length) return;
+          const p = data.points.find(pt => pt.curveNumber === 0);
+          if (!p) return;
+          document.getElementById('xInput').value = p.x;
+          document.getElementById('xSlider').value = p.x;
+          document.getElementById('yInput').value = p.y;
+          document.getElementById('ySlider').value = p.y;
           document.getElementById('zInput').value = p.z;
           document.getElementById('zSlider').value = p.z;
+        } else {
+          const rect = plotDiv.getBoundingClientRect();
+          const xaxis = plotDiv._fullLayout.xaxis;
+          const yaxis = plotDiv._fullLayout.yaxis;
+          const px = data.event.clientX - rect.left;
+          const py = data.event.clientY - rect.top;
+          const xv = xaxis.l2d(xaxis.p2l(px - xaxis._offset));
+          const yv = yaxis.l2d(yaxis.p2l(py - yaxis._offset));
+          document.getElementById('xInput').value = xv.toFixed(2);
+          document.getElementById('xSlider').value = xv;
+          document.getElementById('yInput').value = yv.toFixed(2);
+          document.getElementById('ySlider').value = yv;
         }
         drawPlot();
       });
