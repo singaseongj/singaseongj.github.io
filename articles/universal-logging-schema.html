@@ -5,9 +5,14 @@
     <meta name="google-adsense-account" content="ca-pub-3360521146359419">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../src/apple-touch-icon.png">
+  <link rel="manifest" href="../src/site.webmanifest">
     <title>Designing a universal logging schema for real life workflows</title>
 </head>
 <body>
+  <nav><a href="../index.html" aria-label="Home">&#x21A9; Home</a></nav>
     <h1>Designing a universal logging schema for real life workflows</h1>
     <p>When I started building small utilities to track habits and expenses I quickly ran into a problem: every tool used a different format. My workout tracker stored records as CSV rows, my finance app wrote JSON objects, and a homemade notebook export used a custom text syntax. Analyzing data across projects meant writing conversion scripts for each source. I wanted a single schema that could describe any event in a human friendly way. This article outlines the approach I took to design a universal logging format that now powers several of my apps.</p>
     <p>The design goals were simple. The schema needed to be easy to read in plain text, flexible enough to capture most personal data, and efficient to parse. After experimenting with YAML and JSON I settled on a line oriented structure inspired by logfmt. Each record is a single line with key value pairs, separated by spaces. Timestamps appear first in ISO format, followed by a category field. Additional keys can be added as needed. The result looks like this:</p>
