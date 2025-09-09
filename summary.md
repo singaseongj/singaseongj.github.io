@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-10T00:28:55+09:00 (KST)**
+- Generated: **2025-09-10T05:27:33+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -309,7 +309,7 @@
 **Gen Digital** (GEN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.9%**, 20d **-3.2%**; volatility (20d): **unknown**
+- Returns: 5d **-0.1%**, 20d **-4.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Gen%20Digital
@@ -317,7 +317,7 @@
 **Leidos** (LDOS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.1%**, 20d **-0.0%**; volatility (20d): **unknown**
+- Returns: 5d **-1.0%**, 20d **1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Leidos
@@ -325,7 +325,7 @@
 **Snap-on** (SNA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.2%**, 20d **0.5%**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **0.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Snap-on
@@ -333,7 +333,7 @@
 **Weyerhaeuser** (WY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **0.9%**; volatility (20d): **unknown**
+- Returns: 5d **1.5%**, 20d **-0.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Weyerhaeuser
