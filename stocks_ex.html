@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+  <link rel="manifest" href="src/site.webmanifest">
   <style>
     /* 기본 스타일 */
     body {
@@ -56,20 +57,6 @@
     ul li {
       margin-bottom: 0.5rem;
     }
-    .home-button {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      text-decoration: none;
-      font-size: 24px;
-      color: #000;
-      opacity: 0.6;
-      z-index: 1000;
-    }
-    .home-button:hover {
-      opacity: 1;
-    }
-
     /* 모바일 반응형 */
     @media (max-width: 600px) {
       body {
@@ -91,7 +78,7 @@
   </style>
 </head>
 <body>
-  <a href="index.html" class="home-button" aria-label="Home">&#x21A9;</a>
+  <nav><a href="index.html" aria-label="Home">&#x21A9; Home</a></nav>
   <div class="container">
     <h1>📊 한국 시장 종목 선정 로직 상세 설명</h1>
     
