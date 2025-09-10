@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-11T00:26:48+09:00 (KST)**
+- Generated: **2025-09-11T05:28:02+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -319,7 +319,7 @@
 **Gartner** (IT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.6%**, 20d **3.0%**; volatility (20d): **unknown**
+- Returns: 5d **-6.1%**, 20d **1.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Gartner
@@ -327,7 +327,7 @@
 **Snap-on** (SNA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.4%**, 20d **-0.8%**; volatility (20d): **unknown**
+- Returns: 5d **0.7%**, 20d **-0.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Snap-on
@@ -335,7 +335,7 @@
 **Weyerhaeuser** (WY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.6%**, 20d **-1.6%**; volatility (20d): **unknown**
+- Returns: 5d **1.1%**, 20d **-2.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Weyerhaeuser
