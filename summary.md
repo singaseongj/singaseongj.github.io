@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-10T14:24:19+09:00 (KST)**
+- Generated: **2025-09-10T19:26:23+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -52,7 +52,7 @@
 **HLB생명과학** (067630.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.8%**, 20d **-14.4%**; volatility (20d): **unknown**
+- Returns: 5d **-2.7%**, 20d **-14.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
@@ -68,7 +68,7 @@
 **아이티엠반도체** (084850.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.1%**, 20d **-16.7%**; volatility (20d): **unknown**
+- Returns: 5d **-3.5%**, 20d **-17.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%95%84%EC%9D%B4%ED%8B%B0%EC%97%A0%EB%B0%98%EB%8F%84%EC%B2%B4
@@ -76,7 +76,7 @@
 **칩스앤미디어** (094360.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.9%**, 20d **-0.7%**; volatility (20d): **unknown**
+- Returns: 5d **6.2%**, 20d **-0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%B9%A9%EC%8A%A4%EC%95%A4%EB%AF%B8%EB%94%94%EC%96%B4
@@ -84,7 +84,7 @@
 **케이아이엔엑스** (093320.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.9%**, 20d **11.6%**; volatility (20d): **unknown**
+- Returns: 5d **7.7%**, 20d **12.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%95%84%EC%9D%B4%EC%97%94%EC%97%91%EC%8A%A4
@@ -103,7 +103,7 @@
 **KB금융** (105560.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **6.5%**, 20d **2.9%**; volatility (20d): **unknown**
+- Returns: 5d **6.7%**, 20d **3.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5
@@ -124,13 +124,13 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
-**신한지주** (055550.KS)
+**삼성증권** (016360.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **3.2%**, 20d **-3.3%**; volatility (20d): **unknown**
+- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **8.3%**, 20d **8.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
-- News search: https://www.google.com/search?q=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C
 
 ### AGGRESSIVE (5)
 
