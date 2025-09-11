@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-11T19:25:41+09:00 (KST)**
+- Generated: **2025-09-12T00:24:48+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -294,7 +294,7 @@
 **Oracle Corporation** (ORCL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **46.9%**, 20d **29.3%**; volatility (20d): **unknown**
+- Returns: 5d **42.7%**, 20d **30.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Oracle%20Corporation
@@ -312,7 +312,7 @@
 **Franklin Resources** (BEN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.8%**, 20d **-5.4%**; volatility (20d): **unknown**
+- Returns: 5d **-4.0%**, 20d **-5.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Franklin%20Resources
@@ -320,7 +320,7 @@
 **Gartner** (IT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.1%**, 20d **1.4%**; volatility (20d): **unknown**
+- Returns: 5d **1.3%**, 20d **-1.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Gartner
@@ -328,7 +328,7 @@
 **Snap-on** (SNA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.7%**, 20d **-0.4%**; volatility (20d): **unknown**
+- Returns: 5d **-0.2%**, 20d **-1.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Snap-on
@@ -336,7 +336,7 @@
 **Weyerhaeuser** (WY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **-2.0%**; volatility (20d): **unknown**
+- Returns: 5d **2.0%**, 20d **-1.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Weyerhaeuser
