@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-12T19:26:48+09:00 (KST)**
+- Generated: **2025-09-13T00:24:58+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -292,7 +292,7 @@
 **Oracle Corporation** (ORCL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **38.1%**, 20d **26.1%**; volatility (20d): **unknown**
+- Returns: 5d **25.8%**, 20d **19.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Oracle%20Corporation
@@ -318,7 +318,7 @@
 **Lennox International** (LII)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **-7.3%**; volatility (20d): **unknown**
+- Returns: 5d **-4.3%**, 20d **-7.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Lennox%20International
@@ -334,7 +334,7 @@
 **Southwest Airlines** (LUV)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.9%**, 20d **2.4%**; volatility (20d): **unknown**
+- Returns: 5d **1.0%**, 20d **3.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Southwest%20Airlines

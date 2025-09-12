@@ -280,7 +280,7 @@ function saveScore() {
             time: parseFloat(elapsedTime),
             date: new Date().toISOString()
         };
-
+/*
         fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST', mode: 'no-cors',
             headers: { 'Content-Type': 'application/json' },
@@ -294,7 +294,7 @@ function saveScore() {
         }).catch(error => {
             console.error('Failed to save score:', error);
         });
-
+*/
         restartGame();
     }
 }
