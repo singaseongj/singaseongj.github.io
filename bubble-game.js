@@ -10,7 +10,7 @@ let bubblesPopped = 0;
 let totalBubbles = 16;
 
 // Google Apps Script URL for leaderboard
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxttn3wHKDmfd36T0tHyctX0jvQOMC-Nir49w_O8DPQPRiYRxAQpw4ao8_28lPbQ_Pk/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwJx6EV1f8kgXKhElSJE4wMMAOq7hMDGw47H5asfSTeXIWt6jR9ETjJR5wepGZz2dqw/exec';
 
 // Initialize game elements
 window.onload = function() {
