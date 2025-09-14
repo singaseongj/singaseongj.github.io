@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-14T14:23:18+09:00 (KST)**
+- Generated: **2025-09-14T19:23:02+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -92,6 +92,14 @@
 
 ### SAFE (5)
 
+**KB금융** (105560.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **9.9%**, 20d **5.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **금융**
+- News search: https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5
+
 **LG전자** (066570.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
@@ -124,14 +132,6 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
-**현대모비스** (012330.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-2.9%**, 20d **5.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4
-
 ### AGGRESSIVE (5)
 
 **HD현대건설기계** (267270.KS)
@@ -150,13 +150,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90
 
-**대웅** (003090.KS)
+**하이트진로** (000080.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **11.9%**, 20d **0.8%**; volatility (20d): **unknown**
+- Returns: 5d **0.9%**, 20d **-5.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
 
 **한샘** (009240.KS)
 
