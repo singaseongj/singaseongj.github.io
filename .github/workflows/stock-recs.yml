@@ -296,13 +296,20 @@ jobs:
           NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
         run: |
           set -Eeuo pipefail
-          curl -4sS -I https://newsdata.io | head -n 1
-          curl -4sS --get 'https://newsdata.io/api/1/latest' \
+          if ! curl -4sS -I https://newsdata.io | head -n 1; then
+            echo "NewsData.io head check failed; skipping provider"
+            echo "SKIP_NEWSDATA=1" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          if ! curl -4sS --get 'https://newsdata.io/api/1/latest' \
             --data-urlencode "apikey=${NEWSDATA_API_KEY}" \
             --data-urlencode "q=tesla" \
             --data-urlencode "language=en" \
             --data-urlencode "timeframe=6" \
-            -o /dev/null -w 'HTTP %{http_code}\n'
+            -o /dev/null -w 'HTTP %{http_code}\n'; then
+            echo "NewsData.io API check failed; skipping provider"
+            echo "SKIP_NEWSDATA=1" >> "$GITHUB_ENV"
+          fi
 
       - name: Update market news
         shell: bash

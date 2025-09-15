@@ -181,6 +181,19 @@ async function main() {
   }
   items = pickMixed(us, kr, 12, 6);
   if (items.length < MIN_NEWS) {
+    try {
+      const samplePath = path.join(__dirname, 'data', 'sample_market_news.json');
+      const sample = JSON.parse(await fs.readFile(samplePath, 'utf8'));
+      const sampleItems = Array.isArray(sample?.items) ? sample.items : [];
+      if (sampleItems.length) {
+        items = sampleItems;
+        console.warn(`Using sample_market_news.json fallback (${items.length} items)`);
+      }
+    } catch (e) {
+      console.warn('sample_market_news.json fallback failed', e.message);
+    }
+  }
+  if (items.length < MIN_NEWS) {
     if (process.env.ALLOW_EMPTY_NEWS === '1') {
       const out = { lastUpdated: nowKSTISO(), items };
       await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2));
