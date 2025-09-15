@@ -471,31 +471,84 @@ async function newsFromGNews(sym, q, GNEWS_API){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
-// Prefer searching by company *name* in title
-async function newsFromNewsData(sym, name) {
+async function newsdataArchiveFetch({
+  q, qInTitle, languages = ['en', 'ko'],
+  fromDate, toDate,
+  size = Number(process.env.NEWSDATA_SIZE || 25),
+  pageLimit = Number(process.env.NEWSDATA_PAGE_LIMIT || 3),
+}) {
+  if (!NEWSDATA_API_KEY) return [];
+
+  // Newsdata allows multiple languages comma-separated and uses `page` token from `nextPage`
+  const base = new URL('https://newsdata.io/api/1/archive');
+  base.searchParams.set('apikey', NEWSDATA_API_KEY);
+  base.searchParams.set('size', String(size));
+  base.searchParams.set('language', languages.join(','));
+  if (fromDate) base.searchParams.set('from_date', fromDate);
+  if (toDate)   base.searchParams.set('to_date', toDate);
+  if (qInTitle) base.searchParams.set('qInTitle', qInTitle);
+  else if (q)   base.searchParams.set('q', q); // q and qInTitle are mutually exclusive
+
+  let url = base.toString();
+  const items = [];
+  let pages = 0;
+
+  while (url && pages < pageLimit) {
+    const j = await withRetry(
+      () => cachedJson(url, (u) => safeGetJson(u, defaultUA), 20 * 60 * 1000, true),
+      { max: 1, baseMs: 600 }
+    );
+    const arr = Array.isArray(j?.results) ? j.results : [];
+    items.push(...arr.map(normalizeNewsDataArticle).filter(Boolean));
+
+    const next = j?.nextPage; // use `page=<token>` to go to next page
+    pages++;
+    if (next) {
+      const nxt = new URL(base);
+      nxt.searchParams.set('page', next);
+      url = nxt.toString();
+    } else {
+      url = null;
+    }
+  }
+
+  return dedupeArticles(items);
+}
+
+// Prefer searching by company *name* in title with a 7d archive window
+async function newsFromNewsData(sym, name, opts) {
   if (!NEWSDATA_API_KEY) return null;
 
-  const lang = isKR(sym) ? 'ko' : 'en';
+  const windowDays = Number(process.env.NEWSDATA_DATE_WINDOW_DAYS || 7);
+  const from = daysAgo(windowDays);
+  const to   = daysAgo(0);
 
-  const params = new URLSearchParams({
-    apikey: NEWSDATA_API_KEY,
-    language: lang,
-    timeframe: '24',
-    removeduplicate: '1',
-    size: '25',
+  const items = await newsdataArchiveFetch({
+    qInTitle: String(name || sym).slice(0, 300),
+    languages: ['en', 'ko'],
+    fromDate: from,
+    toDate: to,
   });
 
-  params.set('qInTitle', String(name || sym).slice(0, 300));
+  const keyz = (opts?.keywords && Array.isArray(opts.keywords[sym])) ? opts.keywords[sym] : null;
+  if (keyz && keyz.length) {
+    const kwQ = keyz.map(k => `"${String(k).trim()}"`).join(' OR ');
+    const more = await newsdataArchiveFetch({
+      q: kwQ,
+      languages: ['en', 'ko'],
+      fromDate: from,
+      toDate: to,
+    }).catch(() => []);
+    items.push(...more);
+  }
 
-  const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
+  const unique = dedupeArticles(items);
 
-  const j = await withRetry(
-    () => cachedJson(url, (u) => safeGetJson(u, defaultUA), 20 * 60 * 1000, true),
-    { max: 1, baseMs: 600 }
-  );
-
-  const arr = Array.isArray(j?.results) ? j.results : [];
-  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+  return {
+    count: Math.min(unique.length, 30),
+    sentiment: 0,
+    blogMentions: 0,
+  };
 }
 
 async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
@@ -791,11 +844,11 @@ export async function buildNewsFeatures(symbols, opts={}){
     const addDS = (arr) => (DEEPS_API_KEY ? ['deepsearch', ...arr] : arr);
     const baseProviders = preferNaver
       ? (isKR(sym)
-          ? addDS(['naver','gnews','serpapi','kotra','newsapi','gdelt','polygon'])      // no finnhub for KR
-          : addDS(['naver','gnews','serpapi','newsapi','gdelt','finnhub','polygon']))
+          ? addDS(['naver','gnews','serpapi','kotra','newsapi','newsdata','gdelt','polygon'])      // no finnhub for KR
+          : addDS(['naver','gnews','serpapi','newsapi','newsdata','gdelt','finnhub','polygon']))
       : (isKR(sym)
-          ? addDS(['gnews','naver','serpapi','kotra','newsapi','gdelt','polygon'])      // no finnhub for KR
-          : addDS(['gnews','polygon','serpapi','newsapi','gdelt','finnhub','kotra','naver']));
+          ? addDS(['gnews','naver','serpapi','kotra','newsapi','newsdata','gdelt','polygon'])      // no finnhub for KR
+          : addDS(['gnews','polygon','serpapi','newsapi','newsdata','gdelt','finnhub','kotra','naver']));
     const providers = process.env.SKIP_GDELT === '1'
       ? baseProviders.filter(p => p !== 'gdelt')
       : baseProviders;
@@ -1255,24 +1308,25 @@ async function getTickerArticlesPrimary(ticker) {
   const NEWSDATA = process.env.NEWSDATA_API_KEY || "";
   if (NEWSDATA) {
     try {
-      const lang = /\.K[QS]$/.test(ticker) ? 'ko' : 'en';
-      const nm = (readJsonSafe(path.join(process.cwd(),'src/news/symbolNames.json'))||{})[ticker];
-      const qTitle = nm || ticker.replace(/\.[A-Z]+$/, '');
+      const langList = isKR(ticker) ? ['ko','en'] : ['en','ko'];
+      const from = daysAgo(Number(process.env.NEWSDATA_DATE_WINDOW_DAYS || 7));
+      const to   = daysAgo(0);
+      let qTitle = ticker.replace(/\.[A-Z]+$/,'');
+      try {
+        const nm = (require('./symbolNames.json') || {})[ticker];
+        if (nm) qTitle = nm;
+      } catch {}
 
-      const params = new URLSearchParams({
-        apikey: NEWSDATA,
-        language: lang,
-        timeframe: '24',
-        removeduplicate: '1',
-        size: '25',
+      const ndItems = await newsdataArchiveFetch({
         qInTitle: qTitle,
+        languages: langList,
+        fromDate: from,
+        toDate: to,
+        size: Number(process.env.NEWSDATA_SIZE || 25),
+        pageLimit: Number(process.env.NEWSDATA_PAGE_LIMIT || 2)
       });
 
-      const url = `https://newsdata.io/api/1/latest?${params.toString()}`;
-      const res = await fetch(url, { headers: defaultUA });
-      const j = await res.json();
-      const arr = Array.isArray(j?.results) ? j.results : [];
-      out.push(...arr.map(normalizeNewsDataArticle).filter(Boolean));
+      out.push(...ndItems);
     } catch {}
   }
   return dedupeArticles(out);
