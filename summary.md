@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-15T19:27:56+09:00 (KST)**
+- Generated: **2025-09-16T00:28:56+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -318,7 +318,7 @@
 **Gen Digital** (GEN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.2%**, 20d **-7.5%**; volatility (20d): **unknown**
+- Returns: 5d **-4.0%**, 20d **-8.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Gen%20Digital
@@ -326,7 +326,7 @@
 **Lennox International** (LII)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.8%**, 20d **-9.1%**; volatility (20d): **unknown**
+- Returns: 5d **-4.4%**, 20d **-6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Lennox%20International
@@ -334,7 +334,7 @@
 **Trimble Inc.** (TRMB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **-3.3%**; volatility (20d): **unknown**
+- Returns: 5d **0.4%**, 20d **-0.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Trimble%20Inc.
