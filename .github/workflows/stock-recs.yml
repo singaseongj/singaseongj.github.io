@@ -54,6 +54,9 @@ jobs:
       FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
       TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
       NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+      NEWSDATA_DATE_WINDOW_DAYS: 7
+      NEWSDATA_PAGE_LIMIT: 3           # follow up to 3 nextPage tokens
+      NEWSDATA_SIZE: 25                # per page; paid plans allow up to 50
       NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
       NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
       NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
@@ -190,6 +193,9 @@ jobs:
           GNEWS_API: ${{ secrets.GNEWS_API }}
           SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
           NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+          NEWSDATA_DATE_WINDOW_DAYS: ${{ env.NEWSDATA_DATE_WINDOW_DAYS }}
+          NEWSDATA_PAGE_LIMIT: ${{ env.NEWSDATA_PAGE_LIMIT }}
+          NEWSDATA_SIZE: ${{ env.NEWSDATA_SIZE }}
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
           DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
