@@ -6,7 +6,14 @@ import { nowKSTISO } from './utils/time.js';
 // Write under /stocks/fx_rates/ (dashboard + ticker will read from here)
 const OUT_DIR = path.resolve(process.cwd(), 'stocks', 'fx_rates');
 const OUT = path.join(OUT_DIR, 'fx_rates.json');
-const HISTORY = path.join(OUT_DIR, 'fx_history.json');
+const HISTORY_PREFIX = 'fx_history';
+const HISTORY_MANIFEST = path.join(OUT_DIR, `${HISTORY_PREFIX}_manifest.json`);
+const LEGACY_HISTORY = path.join(OUT_DIR, 'fx_history.json');
+
+const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD'];
+
+const blankSeries = () => Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
+const historyFileForYear = (year) => path.join(OUT_DIR, `${HISTORY_PREFIX}${year}.json`);
 
 const FR_USD = 'https://api.frankfurter.app/latest?from=USD&to=KRW,EUR,GBP,CNY,HKD';
 const FR_JPY = 'https://api.frankfurter.app/latest?from=JPY&to=KRW';
@@ -198,13 +205,110 @@ function keyFromItem(it) {
   return it.from === 'JPY' && it.amount === 100 ? 'JPY100' : it.from; // USD, EUR, CNY, GBP, HKD, JPY100
 }
 
-async function readHistory() {
+async function readManifest() {
   try {
-    const raw = await fs.readFile(HISTORY, 'utf-8');
-    return JSON.parse(raw);
+    const raw = await fs.readFile(HISTORY_MANIFEST, 'utf-8');
+    const parsed = JSON.parse(raw);
+    parsed.years = Array.isArray(parsed.years) ? parsed.years.map(Number).filter(Number.isFinite).sort((a, b) => a - b) : [];
+    return { lastUpdated: parsed.lastUpdated ?? null, years: parsed.years };
   } catch {
-    return { lastUpdated: null, series: { USD:[], JPY100:[], EUR:[], CNY:[], GBP:[], HKD:[] } };
+    if (existsSync(LEGACY_HISTORY)) {
+      const legacyRaw = await fs.readFile(LEGACY_HISTORY, 'utf-8');
+      const legacy = JSON.parse(legacyRaw);
+      return await migrateLegacyHistory(legacy);
+    }
+    return { lastUpdated: null, years: [] };
   }
+}
+
+async function writeManifest(manifest) {
+  const cleanYears = Array.from(new Set((manifest.years || []).map(Number).filter(Number.isFinite))).sort((a, b) => a - b);
+  const out = { lastUpdated: manifest.lastUpdated ?? null, years: cleanYears };
+  await fs.writeFile(HISTORY_MANIFEST, JSON.stringify(out, null, 2));
+  return out;
+}
+
+async function readYearHistory(year) {
+  try {
+    const raw = await fs.readFile(historyFileForYear(year), 'utf-8');
+    const parsed = JSON.parse(raw);
+    const series = blankSeries();
+    for (const key of SERIES_KEYS) {
+      const arr = Array.isArray(parsed.series?.[key]) ? parsed.series[key] : [];
+      series[key] = arr.filter(p => p && typeof p.t === 'string' && typeof p.v === 'number');
+    }
+    return { year, series, updatedAt: parsed.updatedAt ?? null };
+  } catch {
+    return { year, series: blankSeries(), updatedAt: null };
+  }
+}
+
+async function writeYearHistory(data) {
+  const { year } = data;
+  const payload = {
+    year,
+    updatedAt: data.updatedAt ?? null,
+    series: SERIES_KEYS.reduce((acc, key) => {
+      const arr = Array.isArray(data.series?.[key]) ? data.series[key] : [];
+      acc[key] = arr.map(p => ({ t: p.t, v: p.v }));
+      return acc;
+    }, {}),
+  };
+  await fs.writeFile(historyFileForYear(year), JSON.stringify(payload, null, 2));
+}
+
+async function migrateLegacyHistory(legacy) {
+  const manifest = { lastUpdated: legacy?.lastUpdated ?? null, years: [] };
+  const perYear = new Map();
+
+  if (legacy && typeof legacy === 'object' && legacy.series) {
+    for (const key of SERIES_KEYS) {
+      const points = Array.isArray(legacy.series[key]) ? legacy.series[key] : [];
+      for (const point of points) {
+        if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+        const d = new Date(point.t);
+        const year = Number.isFinite(d.getTime()) ? d.getFullYear() : NaN;
+        if (!Number.isFinite(year)) continue;
+        if (!perYear.has(year)) {
+          perYear.set(year, { year, updatedAt: null, series: blankSeries() });
+        }
+        const yearData = perYear.get(year);
+        yearData.series[key].push({ t: point.t, v: point.v });
+        if (!yearData.updatedAt || point.t > yearData.updatedAt) {
+          yearData.updatedAt = point.t;
+        }
+      }
+    }
+  }
+
+  const years = Array.from(perYear.keys()).sort((a, b) => a - b);
+  for (const year of years) {
+    const data = perYear.get(year);
+    for (const key of SERIES_KEYS) {
+      const sorted = data.series[key]
+        .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number')
+        .sort((a, b) => new Date(a.t) - new Date(b.t));
+      const deduped = [];
+      for (const point of sorted) {
+        const last = deduped[deduped.length - 1];
+        if (last && last.t === point.t) {
+          deduped[deduped.length - 1] = point;
+        } else {
+          deduped.push(point);
+        }
+      }
+      data.series[key] = deduped;
+    }
+    await writeYearHistory(data);
+  }
+
+  if (existsSync(LEGACY_HISTORY)) {
+    try { await fs.unlink(LEGACY_HISTORY); } catch {}
+  }
+
+  manifest.years = years;
+  await writeManifest(manifest);
+  return manifest;
 }
 
 function upsertPoint(arr, iso, val) {
@@ -218,22 +322,54 @@ function upsertPoint(arr, iso, val) {
 }
 
 async function updateHistory(snapshot) {
-  const hist = await readHistory();
+  const manifest = await readManifest();
   const { items, lastUpdated } = snapshot;
+  if (!lastUpdated) {
+    await writeManifest(manifest);
+    return manifest;
+  }
+
+  const ts = new Date(lastUpdated);
+  if (!Number.isFinite(ts.getTime())) {
+    await writeManifest(manifest);
+    return manifest;
+  }
+
+  const year = ts.getFullYear();
+  const yearHistory = await readYearHistory(year);
 
   for (const it of items) {
     if (typeof it.krw !== 'number') continue;
-    const k = keyFromItem(it);
-    hist.series[k] ??= [];
-    upsertPoint(hist.series[k], lastUpdated, it.krw);
-    // keep ~18 months
-    const cutoff = new Date(lastUpdated);
-    cutoff.setDate(cutoff.getDate() - 540);
-    hist.series[k] = hist.series[k].filter(p => new Date(p.t) >= cutoff);
+    const key = keyFromItem(it);
+    yearHistory.series[key] ??= [];
+    upsertPoint(yearHistory.series[key], lastUpdated, it.krw);
   }
-  hist.lastUpdated = lastUpdated;
-  await fs.writeFile(HISTORY, JSON.stringify(hist, null, 2));
-  return hist;
+
+  for (const key of SERIES_KEYS) {
+    const sorted = yearHistory.series[key]
+      .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number' && new Date(p.t).getFullYear() === year)
+      .sort((a, b) => new Date(a.t) - new Date(b.t));
+    const deduped = [];
+    for (const point of sorted) {
+      const last = deduped[deduped.length - 1];
+      if (last && last.t === point.t) {
+        deduped[deduped.length - 1] = point;
+      } else {
+        deduped.push(point);
+      }
+    }
+    yearHistory.series[key] = deduped;
+  }
+
+  yearHistory.updatedAt = lastUpdated;
+  await writeYearHistory(yearHistory);
+
+  if (!manifest.years.includes(year)) {
+    manifest.years.push(year);
+  }
+  manifest.lastUpdated = lastUpdated;
+  await writeManifest(manifest);
+  return manifest;
 }
 
 async function main(){
