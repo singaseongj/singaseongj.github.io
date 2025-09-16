@@ -4,65 +4,57 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>환율 대시보드</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="../../src/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../src/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../src/favicon-16x16.png">
-  <link rel="manifest" href="../../src/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 향상된 polyfill -->
   <script>
-    // Polyfill String.prototype.startsWith/endsWith for environments where Chart.js
-    // runs before these helpers are available.
+    // 더 강력한 polyfill
     (function() {
-      var proto = String.prototype;
-      var toString = Object.prototype.toString;
-
-      if (typeof proto.startsWith !== 'function') {
-        Object.defineProperty(proto, 'startsWith', {
-          value: function(searchString, position) {
-            if (toString.call(searchString) === '[object RegExp]') {
-              throw new TypeError('First argument to String.prototype.startsWith must not be a regular expression');
-            }
-            var str = String(this);
-            var search = String(searchString);
-            var pos = position != null ? Number(position) : 0;
-            if (!isFinite(pos)) pos = 0;
-            if (pos < 0) pos = 0;
-            if (pos > str.length) pos = str.length;
-            pos = Math.floor(pos);
-            return str.slice(pos, pos + search.length) === search;
-          },
-          configurable: true,
-          writable: true
-        });
+      // String prototype 보강
+      if (!String.prototype.startsWith) {
+        String.prototype.startsWith = function(searchString, position) {
+          position = position || 0;
+          return this.substr(position, searchString.length) === searchString;
+        };
       }
 
-      if (typeof proto.endsWith !== 'function') {
-        Object.defineProperty(proto, 'endsWith', {
-          value: function(searchString, length) {
-            if (toString.call(searchString) === '[object RegExp]') {
-              throw new TypeError('First argument to String.prototype.endsWith must not be a regular expression');
+      if (!String.prototype.endsWith) {
+        String.prototype.endsWith = function(searchString, length) {
+          if (length === undefined || length > this.length) {
+            length = this.length;
+          }
+          return this.substring(length - searchString.length, length) === searchString;
+        };
+      }
+
+      // Object.assign polyfill
+      if (!Object.assign) {
+        Object.assign = function(target) {
+          if (target == null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+          }
+          var to = Object(target);
+          for (var index = 1; index < arguments.length; index++) {
+            var nextSource = arguments[index];
+            if (nextSource != null) {
+              for (var nextKey in nextSource) {
+                if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                  to[nextKey] = nextSource[nextKey];
+                }
+              }
             }
-            var str = String(this);
-            var search = String(searchString);
-            var end = length != null ? Number(length) : str.length;
-            if (!isFinite(end)) end = str.length;
-            if (end < 0) end = 0;
-            if (end > str.length) end = str.length;
-            end = Math.floor(end);
-            var start = end - search.length;
-            if (start < 0) return false;
-            return str.slice(start, end) === search;
-          },
-          configurable: true,
-          writable: true
-        });
+          }
+          return to;
+        };
       }
     })();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+  
+  <!-- Chart.js 최신 버전으로 업데이트 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
+  
   <style>
     :root{ --bg:#0b1020; --card:#141a31; --ink:#dfe7ff; --muted:#9fb2ff66; --accent:#8fb4ff; }
     *{ box-sizing:border-box }
@@ -103,6 +95,7 @@
     .back-btn svg{ width:18px; height:18px }
     .back-btn:hover{ background:#1a2450; border-color:#3a4aa0; color:#fff }
     .back-btn:focus-visible{ outline:2px solid #8fb4ff; outline-offset:3px }
+    .error-card { background: #2a1a1a; border-color: #ff4444; color: #ffcccc; }
   </style>
 </head>
 <body>
@@ -163,14 +156,27 @@
   </div>
 
   <script>
+    // 전역 에러 핸들러 추가
+    window.addEventListener('error', function(e) {
+      console.error('Global error:', e.error);
+      showErrorMessage('페이지 오류: ' + e.error.message);
+    });
+
+    function showErrorMessage(message) {
+      const grid = document.getElementById('grid');
+      if (grid) {
+        grid.innerHTML = `<div class="card error-card"><h2>오류</h2><p>${message}</p><p class="muted">브라우저 콘솔을 확인해주세요.</p></div>`;
+      }
+    }
+
     const fmtKRW = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2 });
     const SERIES_META = [
-      { key: 'USD',   title: '미국 달러 (1 USD)',   unit: '₩' },
-      { key: 'JPY100',title: '일본 엔 (100 JPY)',    unit: '₩' },
-      { key: 'EUR',   title: '유로 (1 EUR)',        unit: '₩' },
-      { key: 'CNY',   title: '중국 위안 (1 CNY)',    unit: '₩' },
-      { key: 'GBP',   title: '영국 파운드 (1 GBP)',  unit: '₩' },
-      { key: 'HKD',   title: '홍콩 달러 (1 HKD)',    unit: '₩' },
+      { key: 'USD', title: '미국 달러 (1 USD)', unit: '₩' },
+      { key: 'JPY100', title: '일본 엔 (100 JPY)', unit: '₩' },
+      { key: 'EUR', title: '유로 (1 EUR)', unit: '₩' },
+      { key: 'CNY', title: '중국 위안 (1 CNY)', unit: '₩' },
+      { key: 'GBP', title: '영국 파운드 (1 GBP)', unit: '₩' },
+      { key: 'HKD', title: '홍콩 달러 (1 HKD)', unit: '₩' },
     ];
     const SERIES_KEYS = SERIES_META.map(meta => meta.key);
     const HISTORY_PREFIX = 'fx_history';
@@ -196,7 +202,19 @@
         ctx.restore();
       }
     };
-    Chart.register(crosshairPlugin);
+
+    // Chart.js 초기화를 안전하게 처리
+    let chartInitialized = false;
+    function initChart() {
+      if (chartInitialized) return;
+      try {
+        Chart.register(crosshairPlugin);
+        chartInitialized = true;
+      } catch (error) {
+        console.error('Chart.js 초기화 오류:', error);
+        showErrorMessage('Chart.js 초기화 실패: ' + error.message);
+      }
+    }
 
     const latestValues = new Map();
     const highlightPoints = new Map();
@@ -222,6 +240,12 @@
       return Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
     }
 
+    function safeString(value) {
+      if (value == null) return '';
+      if (typeof value === 'string') return value;
+      return String(value);
+    }
+
     function manifestEntryFromYear(value) {
       const num = Number(value);
       if (!Number.isFinite(num)) return null;
@@ -234,7 +258,7 @@
 
     function manifestEntryFromString(raw) {
       if (typeof raw !== 'string' && !(raw instanceof String)) return null;
-      const trimmed = String(raw).trim();
+      const trimmed = safeString(raw).trim();
       if (!trimmed) return null;
       if (/^\d{4}$/.test(trimmed)) {
         return manifestEntryFromYear(Number(trimmed));
@@ -464,7 +488,7 @@
         if (Number.isNaN(d.getTime())) return null;
         t = d.toISOString();
       } else if (typeof t !== 'string') {
-        t = String(t ?? '');
+        t = safeString(t ?? '');
       }
       const d = new Date(t);
       if (Number.isNaN(d.getTime())) return null;
@@ -496,11 +520,16 @@
     }
 
     function makeDataset(points) {
+      // 날짜를 밀리초로 변환하여 숫자형 타임스탬프 사용
+      const data = points.map(p => ({
+        x: new Date(p.t).getTime(),
+        y: p.v
+      }));
+
       return {
-        labels: points.map(p => new Date(p.t).getTime()),
         datasets: [{
           label: 'KRW',
-          data: points.map(p => p.v),
+          data: data,
           tension: 0.25,
           pointRadius: 0,
           pointHoverRadius: 4,
@@ -520,10 +549,21 @@
         interaction: { mode: 'index', intersect: false },
         scales: {
           x: {
-            type: 'time',
-            time: { unit: 'day', tooltipFormat: 'yyyy-MM-dd HH:mm' },
+            type: 'linear', // time 대신 linear 사용
             grid: { color: '#233060', lineWidth: 0.7 },
-            ticks: { color: '#cfe1ff', padding: 6, maxTicksLimit: 14 }
+            ticks: { 
+              color: '#cfe1ff', 
+              padding: 6, 
+              maxTicksLimit: 14,
+              callback: function(value) {
+                const date = new Date(value);
+                return date.toLocaleDateString('ko-KR', { 
+                  month: 'short', 
+                  day: 'numeric',
+                  timeZone: 'Asia/Seoul'
+                });
+              }
+            }
           },
           y: {
             grid: { color: '#233060', lineWidth: 0.7 },
@@ -540,13 +580,9 @@
             callbacks: {
               title(items) {
                 if (!items.length) return '';
-                const chart = items[0].chart;
-                const point = chart.fxPoints?.[items[0].dataIndex];
-                if (point?.t) return formatKST(point.t);
-                const label = items[0].label;
-                if (!label) return '';
-                const maybeDate = new Date(label);
-                return Number.isNaN(maybeDate.getTime()) ? String(label) : maybeDate.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
+                const value = items[0].parsed.x;
+                const date = new Date(value);
+                return date.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
               },
               label(ctx) {
                 return `${meta.unit}${fmtKRW.format(ctx.parsed.y)}`;
@@ -564,19 +600,6 @@
             }
           }
           clearHighlight(meta.key);
-        },
-        onClick: (event, _elements, chartInstance) => {
-          const elements = chartInstance.getElementsAtEventForMode(event, 'index', { intersect: false }, true);
-          if (elements.length) {
-            const native = event.native || {};
-            chartInstance.tooltip.setActiveElements(elements, { x: native.offsetX ?? 0, y: native.offsetY ?? 0 });
-            const point = chartInstance.fxPoints?.[elements[0].index];
-            if (point) setHighlight(meta.key, point);
-          } else {
-            chartInstance.tooltip.setActiveElements([], { x: 0, y: 0 });
-            clearHighlight(meta.key);
-          }
-          chartInstance.draw();
         }
       };
     }
@@ -772,87 +795,13 @@
 
     function applyRangeOptions(chart, points) {
       const xScale = chart.options?.scales?.x;
-      if (!xScale) return;
-      let min = undefined;
-      let max = undefined;
-      let unit = 'day';
-      let ticksLimit;
+      if (!xScale || !points.length) return;
 
-      if (activeRange === 'all') {
-        const bounds = getAllRangeBounds();
-        if (bounds) {
-          min = bounds.min;
-          max = bounds.max;
-          const diffDays = Math.max(1, Math.round((bounds.max - bounds.min) / MS_IN_DAY));
-          if (diffDays > 365 * 3) {
-            unit = 'year';
-            ticksLimit = 8;
-          } else if (diffDays > 365) {
-            unit = 'month';
-            ticksLimit = 12;
-          } else if (diffDays > 90) {
-            unit = 'week';
-            ticksLimit = 12;
-          } else {
-            unit = 'day';
-            ticksLimit = Math.min(16, diffDays + 1);
-          }
-        }
-      } else if (activeRange === 'custom') {
-        const bounds = getCustomRangeBounds();
-        if (bounds) {
-          min = bounds.min;
-          max = bounds.max;
-          const diffDays = Math.max(1, Math.round((bounds.max - bounds.min) / MS_IN_DAY));
-          if (diffDays > 365 * 2) {
-            unit = 'year';
-            ticksLimit = 8;
-          } else if (diffDays > 200) {
-            unit = 'month';
-            ticksLimit = 12;
-          } else if (diffDays > 60) {
-            unit = 'week';
-            ticksLimit = 12;
-          } else {
-            unit = 'day';
-            ticksLimit = Math.min(16, diffDays + 1);
-          }
-        }
-      } else {
-        if (points.length) {
-          const first = new Date(points[0].t);
-          const last = new Date(points[points.length - 1].t);
-          if (!Number.isNaN(first.getTime())) min = first;
-          if (!Number.isNaN(last.getTime())) max = last;
-        }
-        if (min && max) {
-          const diffDays = Math.max(1, Math.round((max - min) / MS_IN_DAY));
-          if (diffDays > 200) {
-            unit = 'month';
-            ticksLimit = 12;
-          } else if (diffDays > 60) {
-            unit = 'week';
-            ticksLimit = 12;
-          } else {
-            unit = 'day';
-            ticksLimit = Math.min(16, diffDays + 1);
-          }
-        }
-      }
-
-      if (min && max && max <= min) {
-        max = new Date(min.getTime() + MS_IN_DAY);
-      }
-
-      xScale.min = min instanceof Date ? min.getTime() : (min ?? undefined);
-      xScale.max = max instanceof Date ? max.getTime() : (max ?? undefined);
-      xScale.time = xScale.time || {};
-      xScale.time.unit = unit;
-      xScale.time.tooltipFormat = 'yyyy-MM-dd HH:mm';
-      xScale.ticks = xScale.ticks || {};
-      xScale.ticks.maxTicksLimit = ticksLimit ?? 14;
-      xScale.ticks.padding = 6;
-      xScale.ticks.source = 'auto';
+      const first = new Date(points[0].t).getTime();
+      const last = new Date(points[points.length - 1].t).getTime();
+      
+      xScale.min = first;
+      xScale.max = last;
     }
 
     function setHighlight(metaKey, point) {
@@ -935,144 +884,199 @@
     }
 
     async function loadHistory() {
-      const res = await fetch(HISTORY_MANIFEST_URL, { cache: 'no-cache' });
-      if (!res.ok) throw new Error('환율 매니페스트를 불러올 수 없습니다.');
-      const manifest = await res.json();
-      const manifestEntries = parseManifestEntries(manifest);
-      const combined = createEmptySeries();
-      const loadedEntries = [];
+      try {
+        console.log('매니페스트 로딩 시작:', HISTORY_MANIFEST_URL);
+        const res = await fetch(HISTORY_MANIFEST_URL, { cache: 'no-cache' });
+        if (!res.ok) throw new Error(`매니페스트 HTTP ${res.status}`);
+        
+        const manifest = await res.json();
+        console.log('매니페스트 로딩 완료:', manifest);
+        
+        const manifestEntries = parseManifestEntries(manifest);
+        const combined = createEmptySeries();
+        const loadedEntries = [];
 
-      for (const entry of manifestEntries) {
-        try {
-          const yearRes = await fetch(entry.url, { cache: 'no-cache' });
-          if (!yearRes.ok) throw new Error(`HTTP ${yearRes.status}`);
-          const yearData = await yearRes.json();
-          const derivedYear = Number.isFinite(entry.year) ? entry.year : Number(yearData?.year);
-          const normalizedYear = Number.isFinite(derivedYear) ? Math.trunc(derivedYear) : null;
-          loadedEntries.push({ ...entry, year: normalizedYear });
-          for (const key of SERIES_KEYS) {
-            const arr = Array.isArray(yearData.series?.[key]) ? yearData.series[key] : [];
-            for (const point of arr) {
-              const np = normalizePoint(point);
-              if (np) combined[key].push(np);
+        for (const entry of manifestEntries) {
+          try {
+            console.log('데이터 파일 로딩:', entry.url);
+            const yearRes = await fetch(entry.url, { cache: 'no-cache' });
+            if (!yearRes.ok) throw new Error(`HTTP ${yearRes.status}`);
+            const yearData = await yearRes.json();
+            const derivedYear = Number.isFinite(entry.year) ? entry.year : Number(yearData?.year);
+            const normalizedYear = Number.isFinite(derivedYear) ? Math.trunc(derivedYear) : null;
+            loadedEntries.push({ ...entry, year: normalizedYear });
+            
+            for (const key of SERIES_KEYS) {
+              const arr = Array.isArray(yearData.series?.[key]) ? yearData.series[key] : [];
+              for (const point of arr) {
+                const np = normalizePoint(point);
+                if (np) combined[key].push(np);
+              }
+            }
+            console.log('데이터 파일 로딩 완료:', entry.url);
+          } catch (err) {
+            const label = entry.label || entry.url || '연도별';
+            console.warn(`[FX] ${label} 데이터 로드 실패`, err);
+          }
+        }
+
+        // 데이터 정렬 및 중복 제거
+        for (const key of SERIES_KEYS) {
+          const sorted = combined[key]
+            .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number')
+            .sort((a, b) => new Date(a.t) - new Date(b.t));
+          const deduped = [];
+          for (const point of sorted) {
+            const last = deduped[deduped.length - 1];
+            if (last && last.t === point.t) {
+              deduped[deduped.length - 1] = point;
+            } else {
+              deduped.push(point);
             }
           }
-        } catch (err) {
-          const label = entry.label || entry.url || '연도별';
-          console.warn(`[FX] ${label} 데이터 로드 실패`, err);
+          combined[key] = deduped;
+          console.log(`${key} 데이터 포인트 수:`, deduped.length);
         }
-      }
 
-      for (const key of SERIES_KEYS) {
-        const sorted = combined[key]
-          .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number')
-          .sort((a, b) => new Date(a.t) - new Date(b.t));
-        const deduped = [];
-        for (const point of sorted) {
-          const last = deduped[deduped.length - 1];
-          if (last && last.t === point.t) {
-            deduped[deduped.length - 1] = point;
-          } else {
-            deduped.push(point);
-          }
+        const loadedYears = [];
+        const seenYears = new Set();
+        for (const entry of loadedEntries) {
+          if (!Number.isFinite(entry.year)) continue;
+          if (seenYears.has(entry.year)) continue;
+          seenYears.add(entry.year);
+          loadedYears.push(entry.year);
         }
-        combined[key] = deduped;
+        loadedYears.sort((a, b) => a - b);
+
+        const lu = manifest.lastUpdated;
+        const normLU = lu ? new Date(lu) : null;
+        historyData = {
+          lastUpdated: normLU && !Number.isNaN(normLU.getTime())
+            ? normLU.toISOString()
+            : findLatestInSeries(combined) ?? null,
+          series: combined,
+          years: loadedYears
+        };
+
+        updateHistoryBounds();
+        initializeCustomRangeDefaults();
+        updateDataFilesIndicator(manifestEntries, loadedEntries);
+        
+        console.log('히스토리 데이터 로딩 완료');
+        return true;
+      } catch (error) {
+        console.error('loadHistory 오류:', error);
+        throw error;
       }
-
-      const loadedYears = [];
-      const seenYears = new Set();
-      for (const entry of loadedEntries) {
-        if (!Number.isFinite(entry.year)) continue;
-        if (seenYears.has(entry.year)) continue;
-        seenYears.add(entry.year);
-        loadedYears.push(entry.year);
-      }
-      loadedYears.sort((a, b) => a - b);
-
-      const lu = manifest.lastUpdated;
-      const normLU = lu ? new Date(lu) : null;
-      historyData = {
-        lastUpdated: normLU && !Number.isNaN(normLU.getTime())
-          ? normLU.toISOString()
-          : findLatestInSeries(combined) ?? null,
-        series: combined,
-        years: loadedYears
-      };
-
-      updateHistoryBounds();
-      initializeCustomRangeDefaults();
-      updateDataFilesIndicator(manifestEntries, loadedEntries);
     }
 
     function renderCard(meta) {
-      const grid = document.getElementById('grid');
-      const card = document.createElement('section');
-      card.className = 'card';
-      card.innerHTML = `
-        <h2>${meta.title}</h2>
-        <div class="stat" id="stat-${meta.key}">로딩 중...</div>
-        <canvas id="chart-${meta.key}" aria-label="${meta.title} 차트" role="img"></canvas>
-        <div class="legend muted">단위: ${meta.unit} (KST)</div>`;
-      grid.appendChild(card);
-      const ctx = document.getElementById(`chart-${meta.key}`).getContext('2d');
-      const chart = new Chart(ctx, { type: 'line', data: makeDataset([]), options: makeOptions(meta) });
-      chart.fxPoints = [];
-      charts.set(meta.key, chart);
-      chart.canvas.addEventListener('mouseleave', () => {
-        chart.tooltip.setActiveElements([], { x: 0, y: 0 });
-        clearHighlight(meta.key);
-        chart.draw();
-      });
+      try {
+        const grid = document.getElementById('grid');
+        const card = document.createElement('section');
+        card.className = 'card';
+        card.innerHTML = `
+          <h2>${meta.title}</h2>
+          <div class="stat" id="stat-${meta.key}">로딩 중...</div>
+          <canvas id="chart-${meta.key}" aria-label="${meta.title} 차트" role="img"></canvas>
+          <div class="legend muted">단위: ${meta.unit} (KST)</div>`;
+        grid.appendChild(card);
+        
+        const ctx = document.getElementById(`chart-${meta.key}`).getContext('2d');
+        const chart = new Chart(ctx, { 
+          type: 'line', 
+          data: makeDataset([]), 
+          options: makeOptions(meta) 
+        });
+        chart.fxPoints = [];
+        charts.set(meta.key, chart);
+        
+        chart.canvas.addEventListener('mouseleave', () => {
+          chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+          clearHighlight(meta.key);
+          chart.draw();
+        });
+        
+        console.log('차트 렌더링 완료:', meta.key);
+      } catch (error) {
+        console.error('차트 렌더링 오류:', meta.key, error);
+        showErrorMessage(`차트 생성 오류 (${meta.key}): ${error.message}`);
+      }
     }
 
     function updateCard(meta) {
-      const chart = charts.get(meta.key);
-      if (!chart) return;
-      const points = filterByRange(historyData.series[meta.key] || [], activeRange);
-      chart.fxPoints = points;
-      chart.data.labels = points.map(p => new Date(p.t).getTime());
-      if (chart.data.datasets.length) {
-        chart.data.datasets[0].data = points.map(p => p.v);
-      }
-      applyRangeOptions(chart, points);
-      chart.tooltip.setActiveElements([], { x: 0, y: 0 });
-      chart.update();
+      try {
+        const chart = charts.get(meta.key);
+        if (!chart) return;
+        
+        const points = filterByRange(historyData.series[meta.key] || [], activeRange);
+        console.log(`${meta.key} 필터된 포인트 수:`, points.length);
+        
+        chart.fxPoints = points;
+        const dataset = makeDataset(points);
+        chart.data = dataset;
+        
+        applyRangeOptions(chart, points);
+        chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+        chart.update();
 
-      const allSeries = historyData.series[meta.key] || [];
-      const last = allSeries.at(-1);
-      const prev = allSeries.at(-2);
-      const nowVal = last ? last.v : null;
-      const diff = (last && prev) ? (last.v - prev.v) : null;
-      latestValues.set(meta.key, { unit: meta.unit, nowVal, diff });
-      highlightPoints.delete(meta.key);
-      refreshStat(meta.key);
+        const allSeries = historyData.series[meta.key] || [];
+        const last = allSeries.at(-1);
+        const prev = allSeries.at(-2);
+        const nowVal = last ? last.v : null;
+        const diff = (last && prev) ? (last.v - prev.v) : null;
+        latestValues.set(meta.key, { unit: meta.unit, nowVal, diff });
+        highlightPoints.delete(meta.key);
+        refreshStat(meta.key);
+        
+        console.log('차트 업데이트 완료:', meta.key);
+      } catch (error) {
+        console.error('차트 업데이트 오류:', meta.key, error);
+      }
     }
 
     async function load() {
       try {
+        console.log('차트 초기화 시작');
+        initChart();
+        
+        console.log('히스토리 로딩 시작');
         await loadHistory();
+        
         const lastUpdated = historyData.lastUpdated;
         const lastUpdatedEl = document.getElementById('last-updated');
-        lastUpdatedEl.textContent = lastUpdated
-          ? `마지막 갱신: ${formatKST(lastUpdated)}`
-          : '마지막 갱신 정보 없음';
+        if (lastUpdatedEl) {
+          lastUpdatedEl.textContent = lastUpdated
+            ? `마지막 갱신: ${formatKST(lastUpdated)}`
+            : '마지막 갱신 정보 없음';
+        }
 
+        console.log('카드 렌더링 시작');
         SERIES_META.forEach(renderCard);
         SERIES_META.forEach(updateCard);
         updateRangeButtonStates();
+        
+        console.log('로딩 완료');
       } catch (err) {
+        console.error('전체 로딩 오류:', err);
         updateDataFilesIndicator([], []);
         const lastUpdatedEl = document.getElementById('last-updated');
-        lastUpdatedEl.textContent = '';
-        const grid = document.getElementById('grid');
-        grid.innerHTML = `<div class="card"><h2>오류</h2><p>환율 데이터를 불러올 수 없습니다.</p><p class="muted">/stocks/fx_rates/${HISTORY_PREFIX}_manifest.json 및 연도별 파일을 확인해주세요.</p><p class="muted">${String(err)}</p></div>`;
+        if (lastUpdatedEl) lastUpdatedEl.textContent = '';
+        showErrorMessage(`환율 데이터를 불러올 수 없습니다: ${err.message}`);
       }
     }
 
+    // 초기화
     setupRangeButtonEvents();
     setupCustomRangeUI();
     updateRangeButtonStates();
-    load();
+    
+    // DOM이 준비되면 로드 시작
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', load);
+    } else {
+      load();
+    }
   </script>
 </body>
 </html>
