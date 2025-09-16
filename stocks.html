@@ -40,6 +40,9 @@
     display: inline-block;
     white-space: nowrap;
     line-height: inherit;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
   }
   .fx-item { margin: 0 .6rem; }
   .fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
@@ -535,7 +538,7 @@
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
   <div id="fx-ticker" class="fx-ticker">
-    <div id="fx-line" class="fx-track"></div>
+    <a id="fx-line" class="fx-track" href="stocks/fx_rates/index.html"></a>
   </div>
   <script>
     (async function() {
@@ -598,25 +601,33 @@
     let isPointerDown = false;
     let startX = 0;
     let startScrollLeft = 0;
+    let pointerDragged = false;
 
     function stopPointerDrag() {
+      if (!isPointerDown) return;
       isPointerDown = false;
       delete ticker.dataset.dragging;
     }
 
     ticker.addEventListener('mousedown', (event) => {
-      event.preventDefault();
+      if (event.button !== 0) return;
       isPointerDown = true;
+      pointerDragged = false;
       startX = event.pageX;
       startScrollLeft = ticker.scrollLeft;
-      ticker.dataset.dragging = 'true';
     });
 
     document.addEventListener('mousemove', (event) => {
       if (!isPointerDown) return;
-      event.preventDefault();
       const delta = event.pageX - startX;
-      ticker.scrollLeft = startScrollLeft - delta;
+      if (!pointerDragged && Math.abs(delta) > 3) {
+        pointerDragged = true;
+        ticker.dataset.dragging = 'true';
+      }
+      if (pointerDragged) {
+        event.preventDefault();
+        ticker.scrollLeft = startScrollLeft - delta;
+      }
     });
 
     document.addEventListener('mouseup', stopPointerDrag);
@@ -624,22 +635,39 @@
     ticker.addEventListener('touchstart', (event) => {
       if (event.touches.length !== 1) return;
       isPointerDown = true;
+      pointerDragged = false;
       startX = event.touches[0].pageX;
       startScrollLeft = ticker.scrollLeft;
-      ticker.dataset.dragging = 'true';
     }, { passive: true });
 
     ticker.addEventListener('touchmove', (event) => {
       if (!isPointerDown || event.touches.length !== 1) return;
       const delta = event.touches[0].pageX - startX;
-      ticker.scrollLeft = startScrollLeft - delta;
-      event.preventDefault();
+      if (!pointerDragged && Math.abs(delta) > 6) {
+        pointerDragged = true;
+        ticker.dataset.dragging = 'true';
+      }
+      if (pointerDragged) {
+        ticker.scrollLeft = startScrollLeft - delta;
+        event.preventDefault();
+      }
     }, { passive: false });
 
-    ticker.addEventListener('touchend', stopPointerDrag);
-    ticker.addEventListener('touchcancel', stopPointerDrag);
-    document.addEventListener('touchend', stopPointerDrag);
-    document.addEventListener('touchcancel', stopPointerDrag);
+    const resetTouchState = () => {
+      stopPointerDrag();
+    };
+
+    ticker.addEventListener('touchend', resetTouchState);
+    ticker.addEventListener('touchcancel', resetTouchState);
+    document.addEventListener('touchend', resetTouchState);
+    document.addEventListener('touchcancel', resetTouchState);
+
+    ticker.addEventListener('click', (event) => {
+      if (pointerDragged && event.detail !== 0) {
+        event.preventDefault();
+      }
+      pointerDragged = false;
+    });
   })();
   </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
