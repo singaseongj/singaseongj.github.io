@@ -15,6 +15,70 @@ const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD'];
 const blankSeries = () => Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
 const historyFileForYear = (year) => path.join(OUT_DIR, `${HISTORY_PREFIX}${year}.json`);
 
+function normalizeHistoryFilename(value) {
+  if (typeof value !== 'string') return null;
+  let name = value.trim();
+  if (!name) return null;
+  const queryIndex = name.search(/[?#]/);
+  if (queryIndex !== -1) {
+    name = name.slice(0, queryIndex);
+  }
+  name = name.replace(/^(\.{1,2}\/)+/, '');
+  name = name.replace(/^\/+/, '');
+  if (name.startsWith('stocks/fx_rates/')) {
+    name = name.slice('stocks/fx_rates/'.length);
+  }
+  if (name.startsWith(`${HISTORY_PREFIX}_manifest`)) return null;
+  if (!name.endsWith('.json')) {
+    name = `${name}.json`;
+  }
+  return name || null;
+}
+
+function extractYearFromFilename(name) {
+  if (typeof name !== 'string') return null;
+  const match = name.match(/(\d{4})/);
+  if (!match) return null;
+  const year = Number(match[1]);
+  return Number.isFinite(year) ? Math.trunc(year) : null;
+}
+
+function sanitizeYears(values) {
+  if (!Array.isArray(values)) return [];
+  const seen = new Set();
+  const years = [];
+  for (const value of values) {
+    const num = Number(value);
+    if (!Number.isFinite(num)) continue;
+    const year = Math.trunc(num);
+    if (year < 1900 || year > 9999) continue;
+    if (seen.has(year)) continue;
+    seen.add(year);
+    years.push(year);
+  }
+  years.sort((a, b) => a - b);
+  return years;
+}
+
+function sanitizeManifestFiles(list) {
+  if (!Array.isArray(list)) return [];
+  const seen = new Set();
+  const files = [];
+  for (const raw of list) {
+    const normalized = normalizeHistoryFilename(typeof raw === 'string' ? raw : String(raw ?? ''));
+    if (!normalized) continue;
+    const year = extractYearFromFilename(normalized);
+    if (!Number.isFinite(year)) continue;
+    const fileName = normalized.startsWith(HISTORY_PREFIX)
+      ? normalized
+      : `${HISTORY_PREFIX}${year}.json`;
+    if (seen.has(fileName)) continue;
+    seen.add(fileName);
+    files.push(fileName);
+  }
+  return files;
+}
+
 const FR_USD = 'https://api.frankfurter.app/latest?from=USD&to=KRW,EUR,GBP,CNY,HKD';
 const FR_JPY = 'https://api.frankfurter.app/latest?from=JPY&to=KRW';
 
@@ -209,22 +273,40 @@ async function readManifest() {
   try {
     const raw = await fs.readFile(HISTORY_MANIFEST, 'utf-8');
     const parsed = JSON.parse(raw);
-    parsed.years = Array.isArray(parsed.years) ? parsed.years.map(Number).filter(Number.isFinite).sort((a, b) => a - b) : [];
-    return { lastUpdated: parsed.lastUpdated ?? null, years: parsed.years };
+    const files = sanitizeManifestFiles(parsed.files);
+    const yearsFromFiles = sanitizeYears(files.map(extractYearFromFilename).filter(Number.isFinite));
+    let years = sanitizeYears(parsed.years);
+    if (!years.length && yearsFromFiles.length) {
+      years = yearsFromFiles;
+    }
+    if (!files.length && years.length) {
+      for (const year of years) {
+        files.push(`${HISTORY_PREFIX}${year}.json`);
+      }
+    }
+    return {
+      lastUpdated: parsed.lastUpdated ?? null,
+      years,
+      files,
+    };
   } catch {
     if (existsSync(LEGACY_HISTORY)) {
       const legacyRaw = await fs.readFile(LEGACY_HISTORY, 'utf-8');
       const legacy = JSON.parse(legacyRaw);
       return await migrateLegacyHistory(legacy);
     }
-    return { lastUpdated: null, years: [] };
+    return { lastUpdated: null, years: [], files: [] };
   }
 }
 
 async function writeManifest(manifest) {
-  const cleanYears = Array.from(new Set((manifest.years || []).map(Number).filter(Number.isFinite))).sort((a, b) => a - b);
-  const out = { lastUpdated: manifest.lastUpdated ?? null, years: cleanYears };
+  const cleanYears = sanitizeYears(manifest.years);
+  const files = cleanYears.map(year => `${HISTORY_PREFIX}${year}.json`);
+  const out = { lastUpdated: manifest.lastUpdated ?? null, years: cleanYears, files };
   await fs.writeFile(HISTORY_MANIFEST, JSON.stringify(out, null, 2));
+  manifest.years = cleanYears;
+  manifest.files = files;
+  manifest.lastUpdated = out.lastUpdated;
   return out;
 }
 
