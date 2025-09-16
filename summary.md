@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-16T20:38:29+09:00 (KST)**
+- Generated: **2025-09-17T00:28:08+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -310,7 +310,7 @@
 **GoDaddy** (GDDY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-2.6%**, 20d **0.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=GoDaddy
@@ -318,7 +318,7 @@
 **J.M. Smucker Company (The)** (SJM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.4%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-6.1%**, 20d **-6.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=J.M.%20Smucker%20Company%20(The)
@@ -326,7 +326,7 @@
 **Kimco Realty** (KIM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.8%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-0.9%**, 20d **5.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Kimco%20Realty
