@@ -310,6 +310,64 @@ async function writeManifest(manifest) {
   return out;
 }
 
+async function writeLegacyHistoryFromManifest(manifest) {
+  const years = sanitizeYears(manifest?.years);
+  const combined = blankSeries();
+  let latest = typeof manifest?.lastUpdated === 'string' ? manifest.lastUpdated : null;
+
+  for (const year of years) {
+    const data = await readYearHistory(year);
+    for (const key of SERIES_KEYS) {
+      const arr = Array.isArray(data.series?.[key]) ? data.series[key] : [];
+      for (const point of arr) {
+        if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+        combined[key].push({ t: point.t, v: point.v });
+        if (!latest || point.t > latest) {
+          latest = point.t;
+        }
+      }
+    }
+  }
+
+  for (const key of SERIES_KEYS) {
+    const cleaned = combined[key]
+      .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number')
+      .map(p => ({ t: p.t, v: p.v }));
+    cleaned.sort((a, b) => {
+      const ta = Date.parse(a.t);
+      const tb = Date.parse(b.t);
+      if (Number.isFinite(ta) && Number.isFinite(tb)) return ta - tb;
+      if (Number.isFinite(ta)) return -1;
+      if (Number.isFinite(tb)) return 1;
+      return a.t.localeCompare(b.t);
+    });
+    const deduped = [];
+    for (const point of cleaned) {
+      const last = deduped[deduped.length - 1];
+      if (last && last.t === point.t) {
+        deduped[deduped.length - 1] = point;
+      } else {
+        deduped.push(point);
+      }
+    }
+    combined[key] = deduped;
+  }
+
+  const payload = {
+    lastUpdated: typeof latest === 'string' ? latest : null,
+    series: combined,
+  };
+
+  await fs.writeFile(LEGACY_HISTORY, JSON.stringify(payload, null, 2));
+  return payload;
+}
+
+async function saveManifest(manifest) {
+  const saved = await writeManifest(manifest);
+  await writeLegacyHistoryFromManifest(saved);
+  return saved;
+}
+
 async function readYearHistory(year) {
   try {
     const raw = await fs.readFile(historyFileForYear(year), 'utf-8');
@@ -389,8 +447,7 @@ async function migrateLegacyHistory(legacy) {
   }
 
   manifest.years = years;
-  await writeManifest(manifest);
-  return manifest;
+  return await saveManifest(manifest);
 }
 
 function upsertPoint(arr, iso, val) {
@@ -407,14 +464,12 @@ async function updateHistory(snapshot) {
   const manifest = await readManifest();
   const { items, lastUpdated } = snapshot;
   if (!lastUpdated) {
-    await writeManifest(manifest);
-    return manifest;
+    return await saveManifest(manifest);
   }
 
   const ts = new Date(lastUpdated);
   if (!Number.isFinite(ts.getTime())) {
-    await writeManifest(manifest);
-    return manifest;
+    return await saveManifest(manifest);
   }
 
   const year = ts.getFullYear();
@@ -450,8 +505,7 @@ async function updateHistory(snapshot) {
     manifest.years.push(year);
   }
   manifest.lastUpdated = lastUpdated;
-  await writeManifest(manifest);
-  return manifest;
+  return await saveManifest(manifest);
 }
 
 async function main(){
