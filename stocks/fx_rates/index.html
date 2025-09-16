@@ -119,8 +119,8 @@
       <span id="last-updated" style="margin-left:10px" class="muted"></span>
     </div>
     <div class="controls" role="toolbar" aria-label="기간 선택">
-      <button class="btn" data-range="7">7일</button>
-      <button class="btn" data-range="30" aria-pressed="true">30일</button>
+      <button class="btn" data-range="7" aria-pressed="true">7일</button>
+      <button class="btn" data-range="30">30일</button>
       <button class="btn" data-range="90">90일</button>
       <button class="btn" data-range="365">1년</button>
       <button class="btn" data-range="all">전체</button>
@@ -201,7 +201,7 @@
     const latestValues = new Map();
     const highlightPoints = new Map();
     let historyData = { lastUpdated: null, series: createEmptySeries(), years: [] };
-    let activeRange = '30';
+    let activeRange = '7';
     const charts = new Map();
     const MS_IN_DAY = 24 * 60 * 60 * 1000;
     const inputDateFormatter = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
@@ -233,8 +233,8 @@
     }
 
     function manifestEntryFromString(raw) {
-      if (typeof raw !== 'string') return null;
-      const trimmed = raw.trim();
+      if (typeof raw !== 'string' && !(raw instanceof String)) return null;
+      const trimmed = String(raw).trim();
       if (!trimmed) return null;
       if (/^\d{4}$/.test(trimmed)) {
         return manifestEntryFromYear(Number(trimmed));
@@ -255,14 +255,17 @@
       }
       path = path.replace(/^(\.{1,2}\/)+/, '');
       path = path.replace(/^\/+/, '');
-      if (path.startsWith('stocks/fx_rates/')) {
-        path = path.slice('stocks/fx_rates/'.length);
+      if (!path) return null;
+      const fxDirPrefix = 'stocks/fx_rates/';
+      if (path.slice(0, fxDirPrefix.length) === fxDirPrefix) {
+        path = path.slice(fxDirPrefix.length);
       }
-      if (path.startsWith(`${HISTORY_PREFIX}_manifest`)) return null;
-      if (!path.endsWith('.json')) {
+      const manifestPrefix = `${HISTORY_PREFIX}_manifest`;
+      if (path.slice(0, manifestPrefix.length) === manifestPrefix) return null;
+      if (path.slice(-5) !== '.json') {
         path = `${path}.json`;
       }
-      if (!path.startsWith(HISTORY_PREFIX)) {
+      if (path.slice(0, HISTORY_PREFIX.length) !== HISTORY_PREFIX) {
         const yearMatch = path.match(/(\d{4})/);
         if (yearMatch) {
           path = `${HISTORY_PREFIX}${yearMatch[1]}.json`;
@@ -388,6 +391,20 @@
       const toDate = parseDateInput(customRange.to, true);
       if (!fromDate || !toDate) return null;
       return { min: fromDate, max: toDate };
+    }
+
+    function calculateRecentRange(days) {
+      const dayCount = Number(days);
+      if (!Number.isFinite(dayCount) || dayCount <= 0) return null;
+      if (!historyBounds.max) return null;
+      const end = new Date(historyBounds.max);
+      if (Number.isNaN(end.getTime())) return null;
+      const start = new Date(end);
+      start.setDate(start.getDate() - (Math.trunc(dayCount) - 1));
+      if (historyBounds.min && start < historyBounds.min) {
+        start.setTime(historyBounds.min.getTime());
+      }
+      return { from: start, to: end };
     }
 
     function getSixMonthBucket(date) {
@@ -718,13 +735,22 @@
 
     function initializeCustomRangeDefaults() {
       updateCustomRangeInputBounds();
-      const bounds = getAllRangeBounds();
-      const minSource = bounds?.min ?? historyBounds.min;
-      const maxSource = bounds?.max ?? historyBounds.max;
-      const minValue = dateToInputValue(minSource);
-      const maxValue = dateToInputValue(maxSource);
-      if (minValue && !customRange.from) customRange.from = minValue;
-      if (maxValue && !customRange.to) customRange.to = maxValue;
+      let recentFrom = '';
+      let recentTo = '';
+      const recentRange = calculateRecentRange(7);
+      if (recentRange) {
+        recentFrom = dateToInputValue(recentRange.from);
+        recentTo = dateToInputValue(recentRange.to);
+      }
+      if (!recentFrom || !recentTo) {
+        const bounds = getAllRangeBounds();
+        const minSource = bounds?.min ?? historyBounds.min;
+        const maxSource = bounds?.max ?? historyBounds.max;
+        if (!recentFrom) recentFrom = dateToInputValue(minSource);
+        if (!recentTo) recentTo = dateToInputValue(maxSource);
+      }
+      if (recentFrom) customRange.from = recentFrom;
+      if (recentTo) customRange.to = recentTo;
       updateCustomRangeLabel();
     }
 
