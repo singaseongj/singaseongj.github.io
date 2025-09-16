@@ -129,9 +129,49 @@
       return historyData.lastUpdated ?? findLatestInSeries(historyData.series);
     }
 
+    function getSixMonthBucket(date) {
+      if (!(date instanceof Date)) return null;
+      const year = date.getUTCFullYear();
+      const month = date.getUTCMonth();
+      if (!Number.isFinite(year) || !Number.isFinite(month)) return null;
+      const half = month < 6 ? 0 : 1;
+      return { year, half };
+    }
+
+    function downsampleToSixMonths(points) {
+      if (!Array.isArray(points) || points.length === 0) return [];
+      const latestByBucket = new Map();
+      for (const point of points) {
+        if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+        const dt = new Date(point.t);
+        if (Number.isNaN(dt.getTime())) continue;
+        const bucket = getSixMonthBucket(dt);
+        if (!bucket) continue;
+        const key = `${bucket.year}-${bucket.half}`;
+        const existing = latestByBucket.get(key);
+        if (!existing || dt > existing.date) {
+          latestByBucket.set(key, {
+            date: dt,
+            year: bucket.year,
+            half: bucket.half,
+            point: { t: point.t, v: point.v }
+          });
+        }
+      }
+
+      const aggregated = Array.from(latestByBucket.values())
+        .sort((a, b) => {
+          if (a.year === b.year) return a.half - b.half;
+          return a.year - b.year;
+        })
+        .map(entry => entry.point);
+
+      return aggregated.length ? aggregated : points;
+    }
+
     function filterByRange(points, range) {
       if (!Array.isArray(points) || points.length === 0) return [];
-      if (range === 'all') return points;
+      if (range === 'all') return downsampleToSixMonths(points);
       const days = Number(range);
       if (!Number.isFinite(days)) return points;
       const refIso = getLatestTimestamp();
