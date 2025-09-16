@@ -222,6 +222,95 @@
       return Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
     }
 
+    function manifestEntryFromYear(value) {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return null;
+      const year = Math.trunc(num);
+      if (year < 1900 || year > 9999) return null;
+      const fileName = `${HISTORY_PREFIX}${year}.json`;
+      const path = `/stocks/fx_rates/${fileName}`;
+      return { url: path, label: path, year };
+    }
+
+    function manifestEntryFromString(raw) {
+      if (typeof raw !== 'string') return null;
+      const trimmed = raw.trim();
+      if (!trimmed) return null;
+      if (/^\d{4}$/.test(trimmed)) {
+        return manifestEntryFromYear(Number(trimmed));
+      }
+      const hasProtocol = /^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed);
+      if (hasProtocol) {
+        const base = trimmed.split(/[?#]/)[0];
+        const match = base.match(/(\d{4})/);
+        const year = match ? Number(match[1]) : null;
+        return { url: trimmed, label: trimmed, year: Number.isFinite(year) ? Math.trunc(year) : null };
+      }
+      let path = trimmed;
+      let suffix = '';
+      const suffixIndex = path.search(/[?#]/);
+      if (suffixIndex !== -1) {
+        suffix = path.slice(suffixIndex);
+        path = path.slice(0, suffixIndex);
+      }
+      path = path.replace(/^(\.{1,2}\/)+/, '');
+      path = path.replace(/^\/+/, '');
+      if (path.startsWith('stocks/fx_rates/')) {
+        path = path.slice('stocks/fx_rates/'.length);
+      }
+      if (path.startsWith(`${HISTORY_PREFIX}_manifest`)) return null;
+      if (!path.endsWith('.json')) {
+        path = `${path}.json`;
+      }
+      if (!path.startsWith(HISTORY_PREFIX)) {
+        const yearMatch = path.match(/(\d{4})/);
+        if (yearMatch) {
+          path = `${HISTORY_PREFIX}${yearMatch[1]}.json`;
+        }
+      }
+      const basePath = `/stocks/fx_rates/${path}`;
+      const fetchPath = suffix ? `${basePath}${suffix}` : basePath;
+      const match = path.match(/(\d{4})/);
+      const year = match ? Number(match[1]) : null;
+      return { url: fetchPath, label: basePath, year: Number.isFinite(year) ? Math.trunc(year) : null };
+    }
+
+    function manifestEntryFromDescriptor(value) {
+      if (typeof value === 'number') return manifestEntryFromYear(value);
+      if (typeof value === 'string') return manifestEntryFromString(value);
+      if (value && typeof value === 'object') {
+        if (typeof value.year === 'number' || (typeof value.year === 'string' && /^\d{4}$/.test(value.year))) {
+          const entry = manifestEntryFromYear(Number(value.year));
+          if (entry) return entry;
+        }
+        const keys = ['file', 'path', 'url', 'name', 'href'];
+        for (const key of keys) {
+          if (typeof value[key] === 'string') {
+            const entry = manifestEntryFromString(value[key]);
+            if (entry) return entry;
+          }
+        }
+      }
+      return null;
+    }
+
+    function parseManifestEntries(manifest) {
+      const entries = [];
+      const seen = new Set();
+      const add = descriptor => {
+        const entry = manifestEntryFromDescriptor(descriptor);
+        if (!entry || !entry.url) return;
+        if (seen.has(entry.url)) return;
+        seen.add(entry.url);
+        entries.push(entry);
+      };
+      if (manifest && typeof manifest === 'object') {
+        if (Array.isArray(manifest.files)) manifest.files.forEach(add);
+        if (Array.isArray(manifest.years)) manifest.years.forEach(add);
+      }
+      return entries;
+    }
+
     function dateToInputValue(date) {
       if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
       return inputDateFormatter.format(date);
@@ -760,7 +849,7 @@
       }
     }
 
-    function updateDataFilesIndicator(manifestYears, loadedYears) {
+    function updateDataFilesIndicator(manifestEntries, loadedEntries) {
       const el = document.getElementById('data-files');
       if (!el) return;
       el.innerHTML = '';
@@ -769,26 +858,33 @@
       manifestCode.textContent = HISTORY_MANIFEST_URL;
       el.append(manifestCode);
 
-      if (!manifestYears.length) {
+      const entries = Array.isArray(manifestEntries) ? manifestEntries : [];
+      if (!entries.length) {
         el.append(document.createTextNode(' · 연도별 데이터 없음'));
         return;
       }
 
       el.append(document.createTextNode(' · 연도별: '));
-      manifestYears.forEach((year, idx) => {
+      const loadedSet = new Set((loadedEntries || []).map(entry => entry.url));
+      let missing = false;
+      entries.forEach((entry, idx) => {
         const code = document.createElement('code');
-        code.textContent = `/stocks/fx_rates/${HISTORY_PREFIX}${year}.json`;
-        if (!loadedYears.includes(year)) {
+        const label = entry?.label || entry?.url || '';
+        code.textContent = label;
+        if (!loadedSet.has(entry.url)) {
           code.classList.add('muted');
           code.title = '로드 실패';
+          missing = true;
+        } else if (entry.url && entry.url !== label) {
+          code.title = entry.url;
         }
         el.append(code);
-        if (idx < manifestYears.length - 1) {
+        if (idx < entries.length - 1) {
           el.append(document.createTextNode(', '));
         }
       });
 
-      if (loadedYears.length !== manifestYears.length) {
+      if (missing) {
         const warn = document.createElement('span');
         warn.className = 'muted';
         warn.textContent = ' (일부 로드 실패)';
@@ -800,18 +896,18 @@
       const res = await fetch(HISTORY_MANIFEST_URL, { cache: 'no-cache' });
       if (!res.ok) throw new Error('환율 매니페스트를 불러올 수 없습니다.');
       const manifest = await res.json();
-      const manifestYears = Array.isArray(manifest.years)
-        ? manifest.years.map(Number).filter(Number.isFinite).sort((a, b) => a - b)
-        : [];
+      const manifestEntries = parseManifestEntries(manifest);
       const combined = createEmptySeries();
-      const loadedYears = [];
+      const loadedEntries = [];
 
-      for (const year of manifestYears) {
+      for (const entry of manifestEntries) {
         try {
-          const yearRes = await fetch(`/stocks/fx_rates/${HISTORY_PREFIX}${year}.json`, { cache: 'no-cache' });
+          const yearRes = await fetch(entry.url, { cache: 'no-cache' });
           if (!yearRes.ok) throw new Error(`HTTP ${yearRes.status}`);
           const yearData = await yearRes.json();
-          loadedYears.push(year);
+          const derivedYear = Number.isFinite(entry.year) ? entry.year : Number(yearData?.year);
+          const normalizedYear = Number.isFinite(derivedYear) ? Math.trunc(derivedYear) : null;
+          loadedEntries.push({ ...entry, year: normalizedYear });
           for (const key of SERIES_KEYS) {
             const arr = Array.isArray(yearData.series?.[key]) ? yearData.series[key] : [];
             for (const point of arr) {
@@ -820,7 +916,8 @@
             }
           }
         } catch (err) {
-          console.warn(`[FX] ${year}년 데이터 로드 실패`, err);
+          const label = entry.label || entry.url || '연도별';
+          console.warn(`[FX] ${label} 데이터 로드 실패`, err);
         }
       }
 
@@ -840,6 +937,16 @@
         combined[key] = deduped;
       }
 
+      const loadedYears = [];
+      const seenYears = new Set();
+      for (const entry of loadedEntries) {
+        if (!Number.isFinite(entry.year)) continue;
+        if (seenYears.has(entry.year)) continue;
+        seenYears.add(entry.year);
+        loadedYears.push(entry.year);
+      }
+      loadedYears.sort((a, b) => a - b);
+
       historyData = {
         lastUpdated: manifest.lastUpdated ?? findLatestInSeries(combined) ?? null,
         series: combined,
@@ -848,7 +955,7 @@
 
       updateHistoryBounds();
       initializeCustomRangeDefaults();
-      updateDataFilesIndicator(manifestYears, loadedYears);
+      updateDataFilesIndicator(manifestEntries, loadedEntries);
     }
 
     function renderCard(meta) {
