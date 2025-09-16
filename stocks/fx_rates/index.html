@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>환율 대시보드</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+  <style>
+    :root{ --bg:#0b1020; --card:#141a31; --ink:#dfe7ff; --muted:#9fb2ff66; --accent:#8fb4ff; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--ink); }
+    header{ padding:24px 16px 8px; max-width:1100px; margin:0 auto; }
+    h1{ margin:0 0 4px; font-size:28px; letter-spacing:0.2px }
+    .meta{ color:#b9c4ff; font-size:13px }
+    .controls{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px }
+    .btn{ border:1px solid #2a3560; background:#0f1530; color:#cfe1ff; padding:8px 10px; border-radius:10px; font-size:13px; cursor:pointer }
+    .btn[aria-pressed="true"]{ background:#1a2450; border-color:#3a4aa0; color:#fff }
+    main{ max-width:1100px; margin:16px auto 40px; padding:0 16px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px }
+    .card{ background:var(--card); border:1px solid #233060; border-radius:16px; padding:14px 14px 8px; box-shadow:0 0 0 1px #0003 inset }
+    .card h2{ margin:0 0 8px; font-size:16px }
+    .stat{ font-size:12px; color:#c8d3ff; margin-bottom:6px }
+    canvas{ width:100% !important; height:220px !important }
+    .legend{ font-size:12px; color:#c8d3ff; margin-top:6px }
+    .footer{ max-width:1100px; margin:0 auto 40px; padding:0 16px; color:#a9b6ff; font-size:12px }
+    .muted{ color:var(--muted) }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>환율 대시보드</h1>
+    <div class="meta">
+      <span>데이터 경로: <code>/stocks/fx_rates/fx_history.json</code></span>
+      <span id="last-updated" style="margin-left:10px" class="muted"></span>
+    </div>
+    <div class="controls" role="toolbar" aria-label="기간 선택">
+      <button class="btn" data-range="7">7일</button>
+      <button class="btn" data-range="30" aria-pressed="true">30일</button>
+      <button class="btn" data-range="90">90일</button>
+      <button class="btn" data-range="365">1년</button>
+      <button class="btn" data-range="all">전체</button>
+    </div>
+  </header>
+
+  <main id="grid"></main>
+
+  <div class="footer">
+    <p>설명: 각 카드에는 해당 통화의 KRW 선형 차트가 표시됩니다. 일본 JPY는 <strong>100엔</strong> 기준입니다.</p>
+  </div>
+
+  <script>
+    const fmtKRW = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2 });
+    const SERIES_META = [
+      { key: 'USD',   title: '미국 달러 (1 USD)',   unit: '₩' },
+      { key: 'JPY100',title: '일본 엔 (100 JPY)',    unit: '₩' },
+      { key: 'EUR',   title: '유로 (1 EUR)',        unit: '₩' },
+      { key: 'CNY',   title: '중국 위안 (1 CNY)',    unit: '₩' },
+      { key: 'GBP',   title: '영국 파운드 (1 GBP)',  unit: '₩' },
+      { key: 'HKD',   title: '홍콩 달러 (1 HKD)',    unit: '₩' },
+    ];
+
+    let historyData = null;
+    let activeRange = '30';
+    const charts = new Map();
+
+    function filterByRange(points, range){
+      if(!points || !points.length) return [];
+      if(range === 'all') return points;
+      const days = Number(range);
+      const cutoff = new Date(historyData.lastUpdated || Date.now());
+      cutoff.setDate(cutoff.getDate() - days);
+      return points.filter(p => new Date(p.t) >= cutoff);
+    }
+    function makeDataset(points){
+      return {
+        labels: points.map(p => new Date(p.t)),
+        datasets: [{ label:'KRW', data: points.map(p => p.v), tension:0.25, pointRadius:0, borderWidth:2, fill:false }]
+      };
+    }
+    function makeOptions(unit){
+      return {
+        responsive:true,
+        maintainAspectRatio:false,
+        scales:{
+          x:{ type:'time', time:{ unit:'day', tooltipFormat:'yyyy-MM-dd HH:mm' }, grid:{ color:'#233060' }, ticks:{ color:'#cfe1ff' } },
+          y:{ grid:{ color:'#233060' }, ticks:{ color:'#cfe1ff', callback:v => unit + fmtKRW.format(v) } }
+        },
+        plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:ctx => `${unit}${fmtKRW.format(ctx.parsed.y)}` } } },
+        animation:{ duration:300 }
+      };
+    }
+    function renderCard(meta){
+      const grid = document.getElementById('grid');
+      const card = document.createElement('section');
+      card.className = 'card';
+      card.innerHTML = `
+        <h2>${meta.title}</h2>
+        <div class="stat" id="stat-${meta.key}"></div>
+        <canvas id="chart-${meta.key}" aria-label="${meta.title} 차트" role="img"></canvas>
+        <div class="legend muted">단위: ${meta.unit} (KST)</div>`;
+      grid.appendChild(card);
+      const ctx = document.getElementById(`chart-${meta.key}`).getContext('2d');
+      const chart = new Chart(ctx, { type:'line', data: makeDataset([]), options: makeOptions(meta.unit) });
+      charts.set(meta.key, chart);
+    }
+    function updateCard(meta){
+      const points = filterByRange(historyData.series[meta.key] || [], activeRange);
+      const chart = charts.get(meta.key);
+      chart.data = makeDataset(points);
+      chart.update();
+      const stat = document.getElementById(`stat-${meta.key}`);
+      const last = (historyData.series[meta.key]||[]).at(-1);
+      const prev = (historyData.series[meta.key]||[]).at(-2);
+      const nowVal = last ? last.v : null;
+      const diff = (last && prev) ? (last.v - prev.v) : null;
+      stat.textContent = nowVal == null ? '데이터 없음' : `${meta.unit}${fmtKRW.format(nowVal)}${diff==null?'':` (${diff>=0?'+':''}${fmtKRW.format(diff)})`}`;
+    }
+    async function load(){
+      try{
+        const res = await fetch('/stocks/fx_rates/fx_history.json', { cache:'no-cache' });
+        if(!res.ok) throw new Error('데이터 로드 실패');
+        historyData = await res.json();
+        document.getElementById('last-updated').textContent =
+          `마지막 갱신: ${new Date(historyData.lastUpdated).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}`;
+        SERIES_META.forEach(renderCard);
+        SERIES_META.forEach(updateCard);
+        document.querySelectorAll('.btn[data-range]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.btn[data-range]').forEach(b => b.setAttribute('aria-pressed','false'));
+            btn.setAttribute('aria-pressed','true');
+            activeRange = btn.dataset.range;
+            SERIES_META.forEach(updateCard);
+          });
+        });
+      }catch(err){
+        const grid = document.getElementById('grid');
+        grid.innerHTML = `<div class="card"><h2>오류</h2><p>/stocks/fx_rates/fx_history.json 을 불러올 수 없습니다.</p><p class="muted">${String(err)}</p></div>`;
+      }
+    }
+    load();
+  </script>
+</body>
+</html>

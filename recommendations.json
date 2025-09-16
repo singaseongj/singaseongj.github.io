@@ -88,7 +88,7 @@
         "sector": "헬스케어",
         "ticker": "067630.KQ",
         "searchUrl": "https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99",
-        "score": 22,
+        "score": 21,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -168,6 +168,22 @@
   "KOSPI": {
     "safe": [
       {
+        "name": "CJ",
+        "sector": null,
+        "ticker": "CJ.TO",
+        "searchUrl": "https://www.google.com/search?q=CJ",
+        "score": 93,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": -0.05,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
         "name": "LG디스플레이",
         "sector": "정보기술",
         "ticker": "034220.KS",
@@ -188,7 +204,7 @@
         "sector": "정보기술",
         "ticker": "000660.KS",
         "searchUrl": "https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
-        "score": 95,
+        "score": 96,
         "reasons": {
           "reputationScore": 0.55,
           "topKeywords": [],
@@ -204,9 +220,9 @@
         "sector": "경기소비재",
         "ticker": "000270.KS",
         "searchUrl": "https://www.google.com/search?q=%EA%B8%B0%EC%95%84",
-        "score": 95,
+        "score": 96,
         "reasons": {
-          "reputationScore": 0.5442307692307693,
+          "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.05,
@@ -222,26 +238,10 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
         "score": 100,
         "reasons": {
-          "reputationScore": 0.5463414634146342,
+          "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.1,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "현대차",
-        "sector": "경기소비재",
-        "ticker": "005380.KS",
-        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%B0%A8",
-        "score": 93,
-        "reasons": {
-          "reputationScore": 0.5424242424242425,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": -0.06,
             "blog": 1,
             "naver": 0
           }
@@ -250,11 +250,11 @@
     ],
     "aggressive": [
       {
-        "name": "HL만도",
-        "sector": "경기소비재",
-        "ticker": "204320.KS",
-        "searchUrl": "https://www.google.com/search?q=HL%EB%A7%8C%EB%8F%84",
-        "score": 35,
+        "name": "LX인터내셔널",
+        "sector": "산업재",
+        "ticker": "001120.KS",
+        "searchUrl": "https://www.google.com/search?q=LX%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90",
+        "score": 34,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -286,7 +286,7 @@
         "sector": "산업재",
         "ticker": "001800.KS",
         "searchUrl": "https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8%ED%99%80%EB%94%A9%EC%8A%A4",
-        "score": 38,
+        "score": 39,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-09-16T10:47:02+09:00"
+  "lastUpdated": "2025-09-16T12:39:43+09:00"
 }
