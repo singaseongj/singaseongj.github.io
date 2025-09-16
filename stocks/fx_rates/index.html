@@ -4,9 +4,63 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>환율 대시보드</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../../src/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../src/favicon-16x16.png">
+  <link rel="manifest" href="../../src/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Polyfill String.prototype.startsWith/endsWith for environments where Chart.js
+    // runs before these helpers are available.
+    (function() {
+      var proto = String.prototype;
+      var toString = Object.prototype.toString;
+
+      if (typeof proto.startsWith !== 'function') {
+        Object.defineProperty(proto, 'startsWith', {
+          value: function(searchString, position) {
+            if (toString.call(searchString) === '[object RegExp]') {
+              throw new TypeError('First argument to String.prototype.startsWith must not be a regular expression');
+            }
+            var str = String(this);
+            var search = String(searchString);
+            var pos = position != null ? Number(position) : 0;
+            if (!isFinite(pos)) pos = 0;
+            if (pos < 0) pos = 0;
+            if (pos > str.length) pos = str.length;
+            pos = Math.floor(pos);
+            return str.slice(pos, pos + search.length) === search;
+          },
+          configurable: true,
+          writable: true
+        });
+      }
+
+      if (typeof proto.endsWith !== 'function') {
+        Object.defineProperty(proto, 'endsWith', {
+          value: function(searchString, length) {
+            if (toString.call(searchString) === '[object RegExp]') {
+              throw new TypeError('First argument to String.prototype.endsWith must not be a regular expression');
+            }
+            var str = String(this);
+            var search = String(searchString);
+            var end = length != null ? Number(length) : str.length;
+            if (!isFinite(end)) end = str.length;
+            if (end < 0) end = 0;
+            if (end > str.length) end = str.length;
+            end = Math.floor(end);
+            var start = end - search.length;
+            if (start < 0) return false;
+            return str.slice(start, end) === search;
+          },
+          configurable: true,
+          writable: true
+        });
+      }
+    })();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
   <style>
@@ -16,13 +70,31 @@
     header{ padding:24px 16px 8px; max-width:1100px; margin:0 auto; }
     h1{ margin:0 0 4px; font-size:28px; letter-spacing:0.2px }
     .meta{ color:#b9c4ff; font-size:13px }
-    .controls{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px }
-    .btn{ border:1px solid #2a3560; background:#0f1530; color:#cfe1ff; padding:8px 10px; border-radius:10px; font-size:13px; cursor:pointer }
+    .controls{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; position:relative }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:6px; border:1px solid #2a3560; background:#0f1530; color:#cfe1ff; padding:8px 10px; border-radius:10px; font-size:13px; cursor:pointer; text-decoration:none }
     .btn[aria-pressed="true"]{ background:#1a2450; border-color:#3a4aa0; color:#fff }
+    .icon-btn svg{ width:16px; height:16px; flex-shrink:0 }
+    .custom-range-text{ font-size:12px; white-space:nowrap; max-width:140px; overflow:hidden; text-overflow:ellipsis }
+    .range-picker{ position:relative }
+    .range-panel{ position:absolute; top:calc(100% + 8px); right:0; min-width:240px; background:#0f1530; border:1px solid #2a3560; border-radius:14px; padding:14px; display:flex; flex-direction:column; gap:12px; box-shadow:0 16px 36px rgba(0,0,0,0.45); z-index:50; color:#dfe7ff }
+    .range-panel[hidden]{ display:none }
+    .range-panel h3{ margin:0; font-size:13px }
+    .range-fields{ display:flex; flex-direction:column; gap:10px }
+    .range-panel label{ display:flex; flex-direction:column; gap:6px; font-size:12px; color:#b9c4ff }
+    .range-panel input{ font:inherit; font-size:13px; padding:8px 10px; border-radius:10px; border:1px solid #2a3560; background:#141a31; color:#fff; outline:none; transition:border-color .2s ease, box-shadow .2s ease }
+    .range-panel input:focus-visible{ border-color:#3a4aa0; box-shadow:0 0 0 2px #3a4aa044 }
+    .range-panel input::-webkit-calendar-picker-indicator{ filter:invert(0.8) }
+    .range-actions{ display:flex; gap:8px; justify-content:flex-end }
+    .panel-btn{ font:inherit; font-size:12px; padding:7px 10px; border-radius:9px; border:1px solid #2a3560; background:#111735; color:#cfe1ff; cursor:pointer; transition:background .2s ease,border-color .2s ease,color .2s ease }
+    .panel-btn:hover{ background:#1a2450 }
+    .panel-btn.primary{ background:#1a2450; border-color:#3a4aa0; color:#fff }
+    .panel-btn:focus-visible{ outline:2px solid #8fb4ff; outline-offset:2px }
+    .range-error{ min-height:16px; font-size:11px; color:#ff9da4 }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0 }
     main{ max-width:1100px; margin:16px auto 40px; padding:0 16px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px }
     .card{ background:var(--card); border:1px solid #233060; border-radius:16px; padding:14px 14px 8px; box-shadow:0 0 0 1px #0003 inset }
     .card h2{ margin:0 0 8px; font-size:16px }
-    .stat{ font-size:12px; color:#c8d3ff; margin-bottom:6px }
+    .stat{ font-size:12px; color:#c8d3ff; margin-bottom:6px; display:flex; flex-direction:column; gap:2px }
     canvas{ width:100% !important; height:220px !important }
     .legend{ font-size:12px; color:#c8d3ff; margin-top:6px }
     .footer{ max-width:1100px; margin:0 auto 40px; padding:0 16px; color:#a9b6ff; font-size:12px }
@@ -43,15 +115,44 @@
     </a>
     <h1>환율 대시보드</h1>
     <div class="meta">
-      <span>데이터 경로: <code>/stocks/fx_rates/fx_history.json</code></span>
+      <span>데이터 파일: <span id="data-files"></span></span>
       <span id="last-updated" style="margin-left:10px" class="muted"></span>
     </div>
     <div class="controls" role="toolbar" aria-label="기간 선택">
-      <button class="btn" data-range="7">7일</button>
-      <button class="btn" data-range="30" aria-pressed="true">30일</button>
+      <button class="btn" data-range="7" aria-pressed="true">7일</button>
+      <button class="btn" data-range="30">30일</button>
       <button class="btn" data-range="90">90일</button>
       <button class="btn" data-range="365">1년</button>
       <button class="btn" data-range="all">전체</button>
+      <div class="range-picker" id="custom-range">
+        <button type="button" class="btn icon-btn" data-range="custom" id="custom-range-btn" aria-haspopup="dialog" aria-controls="custom-range-form" aria-expanded="false" aria-pressed="false" title="기간 직접 선택">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4.5" width="18" height="16" rx="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="8" y1="2.5" x2="8" y2="6.5"></line>
+            <line x1="16" y1="2.5" x2="16" y2="6.5"></line>
+          </svg>
+          <span class="custom-range-text" id="custom-range-label">직접 선택</span>
+        </button>
+        <form id="custom-range-form" class="range-panel" aria-label="사용자 지정 기간 선택" hidden>
+          <h3>사용자 지정 기간</h3>
+          <div class="range-fields">
+            <label for="custom-range-from">
+              <span>시작일</span>
+              <input type="date" id="custom-range-from" required>
+            </label>
+            <label for="custom-range-to">
+              <span>종료일</span>
+              <input type="date" id="custom-range-to" required>
+            </label>
+          </div>
+          <div class="range-error" id="custom-range-error" role="alert" aria-live="assertive"></div>
+          <div class="range-actions">
+            <button type="button" class="panel-btn" id="custom-range-cancel">취소</button>
+            <button type="submit" class="panel-btn primary">적용</button>
+          </div>
+        </form>
+      </div>
     </div>
   </header>
 
@@ -71,85 +172,886 @@
       { key: 'GBP',   title: '영국 파운드 (1 GBP)',  unit: '₩' },
       { key: 'HKD',   title: '홍콩 달러 (1 HKD)',    unit: '₩' },
     ];
+    const SERIES_KEYS = SERIES_META.map(meta => meta.key);
+    const HISTORY_PREFIX = 'fx_history';
+    const HISTORY_MANIFEST_URL = `/stocks/fx_rates/${HISTORY_PREFIX}_manifest.json`;
 
-    let historyData = null;
-    let activeRange = '30';
+    const crosshairPlugin = {
+      id: 'fxCrosshair',
+      afterDatasetsDraw(chart) {
+        const tooltip = chart.tooltip;
+        if (!tooltip?.getActiveElements?.().length) return;
+        const { ctx, chartArea } = chart;
+        if (!chartArea) return;
+        const active = tooltip.getActiveElements()[0];
+        const x = active?.element?.x;
+        if (typeof x !== 'number') return;
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(x, chartArea.top);
+        ctx.lineTo(x, chartArea.bottom);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = '#8fb4ff66';
+        ctx.stroke();
+        ctx.restore();
+      }
+    };
+    Chart.register(crosshairPlugin);
+
+    const latestValues = new Map();
+    const highlightPoints = new Map();
+    let historyData = { lastUpdated: null, series: createEmptySeries(), years: [] };
+    let activeRange = '7';
     const charts = new Map();
+    const MS_IN_DAY = 24 * 60 * 60 * 1000;
+    const inputDateFormatter = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
+    const rangeButtons = Array.from(document.querySelectorAll('.btn[data-range]'));
+    const presetRangeButtons = rangeButtons.filter(btn => btn.dataset.range !== 'custom');
+    const customRangeContainer = document.getElementById('custom-range');
+    const customRangeBtn = document.getElementById('custom-range-btn');
+    const customRangeForm = document.getElementById('custom-range-form');
+    const customRangeFromInput = document.getElementById('custom-range-from');
+    const customRangeToInput = document.getElementById('custom-range-to');
+    const customRangeError = document.getElementById('custom-range-error');
+    const customRangeLabel = document.getElementById('custom-range-label');
+    const customRangeCancelBtn = document.getElementById('custom-range-cancel');
+    let historyBounds = { min: null, max: null };
+    let customRange = { from: '', to: '' };
 
-    function filterByRange(points, range){
-      if(!points || !points.length) return [];
-      if(range === 'all') return points;
-      const days = Number(range);
-      const cutoff = new Date(historyData.lastUpdated || Date.now());
-      cutoff.setDate(cutoff.getDate() - days);
-      return points.filter(p => new Date(p.t) >= cutoff);
+    function createEmptySeries() {
+      return Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
     }
-    function makeDataset(points){
+
+    function manifestEntryFromYear(value) {
+      const num = Number(value);
+      if (!Number.isFinite(num)) return null;
+      const year = Math.trunc(num);
+      if (year < 1900 || year > 9999) return null;
+      const fileName = `${HISTORY_PREFIX}${year}.json`;
+      const path = `/stocks/fx_rates/${fileName}`;
+      return { url: path, label: path, year };
+    }
+
+    function manifestEntryFromString(raw) {
+      if (typeof raw !== 'string' && !(raw instanceof String)) return null;
+      const trimmed = String(raw).trim();
+      if (!trimmed) return null;
+      if (/^\d{4}$/.test(trimmed)) {
+        return manifestEntryFromYear(Number(trimmed));
+      }
+      const hasProtocol = /^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed);
+      if (hasProtocol) {
+        const base = trimmed.split(/[?#]/)[0];
+        const match = base.match(/(\d{4})/);
+        const year = match ? Number(match[1]) : null;
+        return { url: trimmed, label: trimmed, year: Number.isFinite(year) ? Math.trunc(year) : null };
+      }
+      let path = trimmed;
+      let suffix = '';
+      const suffixIndex = path.search(/[?#]/);
+      if (suffixIndex !== -1) {
+        suffix = path.slice(suffixIndex);
+        path = path.slice(0, suffixIndex);
+      }
+      path = path.replace(/^(\.{1,2}\/)+/, '');
+      path = path.replace(/^\/+/, '');
+      if (!path) return null;
+      const fxDirPrefix = 'stocks/fx_rates/';
+      if (path.slice(0, fxDirPrefix.length) === fxDirPrefix) {
+        path = path.slice(fxDirPrefix.length);
+      }
+      const manifestPrefix = `${HISTORY_PREFIX}_manifest`;
+      if (path.slice(0, manifestPrefix.length) === manifestPrefix) return null;
+      if (path.slice(-5) !== '.json') {
+        path = `${path}.json`;
+      }
+      if (path.slice(0, HISTORY_PREFIX.length) !== HISTORY_PREFIX) {
+        const yearMatch = path.match(/(\d{4})/);
+        if (yearMatch) {
+          path = `${HISTORY_PREFIX}${yearMatch[1]}.json`;
+        }
+      }
+      const basePath = `/stocks/fx_rates/${path}`;
+      const fetchPath = suffix ? `${basePath}${suffix}` : basePath;
+      const match = path.match(/(\d{4})/);
+      const year = match ? Number(match[1]) : null;
+      return { url: fetchPath, label: basePath, year: Number.isFinite(year) ? Math.trunc(year) : null };
+    }
+
+    function manifestEntryFromDescriptor(value) {
+      if (typeof value === 'number') return manifestEntryFromYear(value);
+      if (typeof value === 'string') return manifestEntryFromString(value);
+      if (value && typeof value === 'object') {
+        if (typeof value.year === 'number' || (typeof value.year === 'string' && /^\d{4}$/.test(value.year))) {
+          const entry = manifestEntryFromYear(Number(value.year));
+          if (entry) return entry;
+        }
+        const keys = ['file', 'path', 'url', 'name', 'href'];
+        for (const key of keys) {
+          if (typeof value[key] === 'string') {
+            const entry = manifestEntryFromString(value[key]);
+            if (entry) return entry;
+          }
+        }
+      }
+      return null;
+    }
+
+    function parseManifestEntries(manifest) {
+      const entries = [];
+      const seen = new Set();
+      const add = descriptor => {
+        const entry = manifestEntryFromDescriptor(descriptor);
+        if (!entry || !entry.url) return;
+        if (seen.has(entry.url)) return;
+        seen.add(entry.url);
+        entries.push(entry);
+      };
+      if (manifest && typeof manifest === 'object') {
+        if (Array.isArray(manifest.files)) manifest.files.forEach(add);
+        if (Array.isArray(manifest.years)) manifest.years.forEach(add);
+      }
+      return entries;
+    }
+
+    function dateToInputValue(date) {
+      if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
+      return inputDateFormatter.format(date);
+    }
+
+    function formatInputDisplay(value) {
+      if (typeof value !== 'string' || !value) return '';
+      return value.replace(/-/g, '.');
+    }
+
+    function parseDateInput(value, endOfDay = false) {
+      if (typeof value !== 'string' || !value) return null;
+      const time = endOfDay ? '23:59:59' : '00:00:00';
+      const iso = `${value}T${time}+09:00`;
+      const parsed = new Date(iso);
+      return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    function formatKST(iso) {
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return '';
+      return d.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
+    }
+
+    function findLatestInSeries(series) {
+      let latest = null;
+      for (const key of SERIES_KEYS) {
+        const arr = series[key] || [];
+        const last = arr[arr.length - 1];
+        if (last && (!latest || last.t > latest)) {
+          latest = last.t;
+        }
+      }
+      return latest;
+    }
+
+    function findEarliestInSeries(series) {
+      let earliest = null;
+      for (const key of SERIES_KEYS) {
+        const arr = series[key] || [];
+        const first = arr[0];
+        if (first && typeof first.t === 'string') {
+          if (!earliest || new Date(first.t) < new Date(earliest)) {
+            earliest = first.t;
+          }
+        }
+      }
+      return earliest;
+    }
+
+    function getLatestTimestamp() {
+      return historyData.lastUpdated ?? findLatestInSeries(historyData.series);
+    }
+
+    function updateHistoryBounds() {
+      const earliestIso = findEarliestInSeries(historyData.series);
+      const latestIso = findLatestInSeries(historyData.series);
+      historyBounds = {
+        min: earliestIso ? new Date(earliestIso) : null,
+        max: latestIso ? new Date(latestIso) : null
+      };
+    }
+
+    function getAllRangeBounds() {
+      if (!historyBounds.min || !historyBounds.max) return null;
+      const start = new Date(Date.UTC(historyBounds.min.getUTCFullYear(), 0, 1));
+      const end = new Date(historyBounds.max);
+      end.setUTCHours(23, 59, 59, 999);
+      return { min: start, max: end };
+    }
+
+    function getCustomRangeBounds() {
+      if (!customRange.from || !customRange.to) return null;
+      const fromDate = parseDateInput(customRange.from);
+      const toDate = parseDateInput(customRange.to, true);
+      if (!fromDate || !toDate) return null;
+      return { min: fromDate, max: toDate };
+    }
+
+    function calculateRecentRange(days) {
+      const dayCount = Number(days);
+      if (!Number.isFinite(dayCount) || dayCount <= 0) return null;
+      if (!historyBounds.max) return null;
+      const end = new Date(historyBounds.max);
+      if (Number.isNaN(end.getTime())) return null;
+      const start = new Date(end);
+      start.setDate(start.getDate() - (Math.trunc(dayCount) - 1));
+      if (historyBounds.min && start < historyBounds.min) {
+        start.setTime(historyBounds.min.getTime());
+      }
+      return { from: start, to: end };
+    }
+
+    function getSixMonthBucket(date) {
+      if (!(date instanceof Date)) return null;
+      const year = date.getUTCFullYear();
+      const month = date.getUTCMonth();
+      if (!Number.isFinite(year) || !Number.isFinite(month)) return null;
+      const half = month < 6 ? 0 : 1;
+      return { year, half };
+    }
+
+    function downsampleToSixMonths(points) {
+      if (!Array.isArray(points) || points.length === 0) return [];
+      const bucketMap = new Map();
+      for (const point of points) {
+        if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+        const dt = new Date(point.t);
+        if (Number.isNaN(dt.getTime())) continue;
+        const bucket = getSixMonthBucket(dt);
+        if (!bucket) continue;
+        const key = `${bucket.year}-${bucket.half}`;
+        let entry = bucketMap.get(key);
+        if (!entry) {
+          entry = { year: bucket.year, half: bucket.half, earliest: null, latest: null };
+          bucketMap.set(key, entry);
+        }
+        const safePoint = { t: point.t, v: point.v };
+        if (!entry.earliest || dt < entry.earliest.date) {
+          entry.earliest = { date: dt, point: safePoint };
+        }
+        if (!entry.latest || dt > entry.latest.date) {
+          entry.latest = { date: dt, point: safePoint };
+        }
+      }
+
+      const aggregated = Array.from(bucketMap.values())
+        .sort((a, b) => (a.year === b.year ? a.half - b.half : a.year - b.year))
+        .flatMap(entry => {
+          const arr = [];
+          if (entry.earliest) arr.push(entry.earliest.point);
+          if (entry.latest && entry.latest.point.t !== entry.earliest?.point.t) {
+            arr.push(entry.latest.point);
+          }
+          return arr;
+        })
+        .sort((a, b) => new Date(a.t) - new Date(b.t));
+
+      return aggregated.length ? aggregated : points;
+    }
+
+    function filterByRange(points, range) {
+      if (!Array.isArray(points) || points.length === 0) return [];
+      if (range === 'all') return downsampleToSixMonths(points);
+      if (range === 'custom') {
+        const bounds = getCustomRangeBounds();
+        if (!bounds) return [];
+        return points.filter(p => {
+          const dt = new Date(p.t);
+          if (Number.isNaN(dt.getTime())) return false;
+          return dt >= bounds.min && dt <= bounds.max;
+        });
+      }
+      const days = Number(range);
+      if (!Number.isFinite(days)) return points;
+      const refIso = getLatestTimestamp();
+      if (!refIso) return points;
+      const cutoff = new Date(refIso);
+      cutoff.setDate(cutoff.getDate() - days);
+      return points.filter(p => {
+        const dt = new Date(p.t);
+        return Number.isNaN(dt.getTime()) ? false : dt >= cutoff;
+      });
+    }
+
+    function makeDataset(points) {
       return {
         labels: points.map(p => new Date(p.t)),
-        datasets: [{ label:'KRW', data: points.map(p => p.v), tension:0.25, pointRadius:0, borderWidth:2, fill:false }]
+        datasets: [{
+          label: 'KRW',
+          data: points.map(p => p.v),
+          tension: 0.25,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          borderWidth: 2,
+          fill: false,
+          borderColor: '#8fb4ff',
+          spanGaps: true
+        }]
       };
     }
-    function makeOptions(unit){
+
+    function makeOptions(meta) {
       return {
-        responsive:true,
-        maintainAspectRatio:false,
-        scales:{
-          x:{ type:'time', time:{ unit:'day', tooltipFormat:'yyyy-MM-dd HH:mm' }, grid:{ color:'#233060' }, ticks:{ color:'#cfe1ff' } },
-          y:{ grid:{ color:'#233060' }, ticks:{ color:'#cfe1ff', callback:v => unit + fmtKRW.format(v) } }
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { top: 8, right: 14, bottom: 8, left: 8 } },
+        interaction: { mode: 'index', intersect: false },
+        scales: {
+          x: {
+            type: 'time',
+            time: { unit: 'day', tooltipFormat: 'yyyy-MM-dd HH:mm' },
+            grid: { color: '#233060', lineWidth: 0.7 },
+            ticks: { color: '#cfe1ff', padding: 6, maxTicksLimit: 14 }
+          },
+          y: {
+            grid: { color: '#233060', lineWidth: 0.7 },
+            ticks: { color: '#cfe1ff', padding: 6, callback: v => `${meta.unit}${fmtKRW.format(v)}` },
+            grace: '5%'
+          }
         },
-        plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:ctx => `${unit}${fmtKRW.format(ctx.parsed.y)}` } } },
-        animation:{ duration:300 }
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+            displayColors: false,
+            callbacks: {
+              title(items) {
+                if (!items.length) return '';
+                const chart = items[0].chart;
+                const point = chart.fxPoints?.[items[0].dataIndex];
+                if (point?.t) return formatKST(point.t);
+                const label = items[0].label;
+                if (!label) return '';
+                const maybeDate = new Date(label);
+                return Number.isNaN(maybeDate.getTime()) ? String(label) : maybeDate.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
+              },
+              label(ctx) {
+                return `${meta.unit}${fmtKRW.format(ctx.parsed.y)}`;
+              }
+            }
+          }
+        },
+        animation: { duration: 300 },
+        onHover: (_event, activeElements, chartInstance) => {
+          if (activeElements?.length) {
+            const point = chartInstance.fxPoints?.[activeElements[0].index];
+            if (point) {
+              setHighlight(meta.key, point);
+              return;
+            }
+          }
+          clearHighlight(meta.key);
+        },
+        onClick: (event, _elements, chartInstance) => {
+          const elements = chartInstance.getElementsAtEventForMode(event, 'index', { intersect: false }, true);
+          if (elements.length) {
+            const native = event.native || {};
+            chartInstance.tooltip.setActiveElements(elements, { x: native.offsetX ?? 0, y: native.offsetY ?? 0 });
+            const point = chartInstance.fxPoints?.[elements[0].index];
+            if (point) setHighlight(meta.key, point);
+          } else {
+            chartInstance.tooltip.setActiveElements([], { x: 0, y: 0 });
+            clearHighlight(meta.key);
+          }
+          chartInstance.draw();
+        }
       };
     }
-    function renderCard(meta){
+
+    function setCustomRangeError(message) {
+      if (!customRangeError) return;
+      customRangeError.textContent = message ?? '';
+    }
+
+    function updateCustomRangeInputBounds() {
+      if (!customRangeFromInput || !customRangeToInput) return;
+      const bounds = getAllRangeBounds();
+      const minSource = bounds?.min ?? historyBounds.min;
+      const maxSource = bounds?.max ?? historyBounds.max;
+      const minValue = dateToInputValue(minSource);
+      const maxValue = dateToInputValue(maxSource);
+      if (minValue) {
+        customRangeFromInput.min = minValue;
+        customRangeToInput.min = minValue;
+      } else {
+        customRangeFromInput.removeAttribute('min');
+        customRangeToInput.removeAttribute('min');
+      }
+      if (maxValue) {
+        customRangeFromInput.max = maxValue;
+        customRangeToInput.max = maxValue;
+      } else {
+        customRangeFromInput.removeAttribute('max');
+        customRangeToInput.removeAttribute('max');
+      }
+      if (customRange.from && minValue && customRange.from < minValue) {
+        customRange.from = minValue;
+      }
+      if (customRange.to && maxValue && customRange.to > maxValue) {
+        customRange.to = maxValue;
+      }
+    }
+
+    function populateCustomRangeInputs() {
+      if (!customRangeFromInput || !customRangeToInput) return;
+      updateCustomRangeInputBounds();
+      const bounds = getAllRangeBounds();
+      const minSource = bounds?.min ?? historyBounds.min;
+      const maxSource = bounds?.max ?? historyBounds.max;
+      const minValue = dateToInputValue(minSource);
+      const maxValue = dateToInputValue(maxSource);
+      customRangeFromInput.value = customRange.from || minValue || '';
+      customRangeToInput.value = customRange.to || maxValue || '';
+    }
+
+    function openCustomRangePanel() {
+      if (!customRangeForm || !customRangeBtn) return;
+      populateCustomRangeInputs();
+      customRangeForm.removeAttribute('hidden');
+      customRangeBtn.setAttribute('aria-expanded', 'true');
+      setCustomRangeError('');
+      const focusTarget = customRangeFromInput || customRangeToInput;
+      focusTarget?.focus();
+    }
+
+    function closeCustomRangePanel() {
+      if (!customRangeForm || !customRangeBtn) return;
+      if (customRangeForm.hasAttribute('hidden')) return;
+      customRangeForm.setAttribute('hidden', '');
+      customRangeBtn.setAttribute('aria-expanded', 'false');
+      setCustomRangeError('');
+    }
+
+    function toggleCustomRangePanel() {
+      if (!customRangeForm) return;
+      if (customRangeForm.hasAttribute('hidden')) {
+        openCustomRangePanel();
+      } else {
+        closeCustomRangePanel();
+      }
+    }
+
+    function updateCustomRangeLabel() {
+      if (!customRangeLabel) return;
+      if (activeRange === 'custom' && customRange.from && customRange.to) {
+        const label = `${formatInputDisplay(customRange.from)} ~ ${formatInputDisplay(customRange.to)}`;
+        customRangeLabel.textContent = label;
+        if (customRangeBtn) {
+          customRangeBtn.setAttribute('aria-label', `사용자 지정 기간 ${label}`);
+          customRangeBtn.title = `사용자 지정 기간 ${label}`;
+        }
+      } else {
+        customRangeLabel.textContent = '직접 선택';
+        if (customRangeBtn) {
+          customRangeBtn.setAttribute('aria-label', '기간 직접 선택 (달력)');
+          customRangeBtn.title = '기간 직접 선택';
+        }
+      }
+    }
+
+    function updateRangeButtonStates() {
+      rangeButtons.forEach(btn => {
+        const isActive = btn.dataset.range === activeRange;
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+      updateCustomRangeLabel();
+    }
+
+    function setActiveRange(range) {
+      activeRange = range;
+      updateRangeButtonStates();
+      SERIES_META.forEach(updateCard);
+    }
+
+    function handleCustomRangeSubmit(event) {
+      event.preventDefault();
+      if (!customRangeFromInput || !customRangeToInput) return;
+      const fromVal = customRangeFromInput.value;
+      const toVal = customRangeToInput.value;
+      if (!fromVal || !toVal) {
+        setCustomRangeError('기간을 모두 선택해주세요.');
+        return;
+      }
+      const fromDate = parseDateInput(fromVal);
+      const toDate = parseDateInput(toVal, true);
+      if (!fromDate || !toDate) {
+        setCustomRangeError('유효한 날짜를 입력해주세요.');
+        return;
+      }
+      if (fromDate > toDate) {
+        setCustomRangeError('시작일이 종료일보다 늦습니다.');
+        return;
+      }
+      customRange = { from: fromVal, to: toVal };
+      setCustomRangeError('');
+      closeCustomRangePanel();
+      setActiveRange('custom');
+      if (customRangeBtn) customRangeBtn.focus();
+    }
+
+    function setupCustomRangeUI() {
+      if (!customRangeBtn || !customRangeForm) return;
+      customRangeBtn.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleCustomRangePanel();
+      });
+      customRangeCancelBtn?.addEventListener('click', () => {
+        closeCustomRangePanel();
+        customRangeBtn?.focus();
+      });
+      customRangeForm.addEventListener('submit', handleCustomRangeSubmit);
+      document.addEventListener('click', event => {
+        if (!customRangeForm || customRangeForm.hasAttribute('hidden')) return;
+        if (!customRangeContainer) return;
+        if (!customRangeContainer.contains(event.target)) {
+          closeCustomRangePanel();
+        }
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && customRangeForm && !customRangeForm.hasAttribute('hidden')) {
+          event.preventDefault();
+          closeCustomRangePanel();
+          customRangeBtn?.focus();
+        }
+      });
+    }
+
+    function setupRangeButtonEvents() {
+      presetRangeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          setActiveRange(btn.dataset.range);
+          closeCustomRangePanel();
+        });
+      });
+    }
+
+    function initializeCustomRangeDefaults() {
+      updateCustomRangeInputBounds();
+      let recentFrom = '';
+      let recentTo = '';
+      const recentRange = calculateRecentRange(7);
+      if (recentRange) {
+        recentFrom = dateToInputValue(recentRange.from);
+        recentTo = dateToInputValue(recentRange.to);
+      }
+      if (!recentFrom || !recentTo) {
+        const bounds = getAllRangeBounds();
+        const minSource = bounds?.min ?? historyBounds.min;
+        const maxSource = bounds?.max ?? historyBounds.max;
+        if (!recentFrom) recentFrom = dateToInputValue(minSource);
+        if (!recentTo) recentTo = dateToInputValue(maxSource);
+      }
+      if (recentFrom) customRange.from = recentFrom;
+      if (recentTo) customRange.to = recentTo;
+      updateCustomRangeLabel();
+    }
+
+    function applyRangeOptions(chart, points) {
+      const xScale = chart.options?.scales?.x;
+      if (!xScale) return;
+      let min = undefined;
+      let max = undefined;
+      let unit = 'day';
+      let ticksLimit;
+
+      if (activeRange === 'all') {
+        const bounds = getAllRangeBounds();
+        if (bounds) {
+          min = bounds.min;
+          max = bounds.max;
+          const diffDays = Math.max(1, Math.round((bounds.max - bounds.min) / MS_IN_DAY));
+          if (diffDays > 365 * 3) {
+            unit = 'year';
+            ticksLimit = 8;
+          } else if (diffDays > 365) {
+            unit = 'month';
+            ticksLimit = 12;
+          } else if (diffDays > 90) {
+            unit = 'week';
+            ticksLimit = 12;
+          } else {
+            unit = 'day';
+            ticksLimit = Math.min(16, diffDays + 1);
+          }
+        }
+      } else if (activeRange === 'custom') {
+        const bounds = getCustomRangeBounds();
+        if (bounds) {
+          min = bounds.min;
+          max = bounds.max;
+          const diffDays = Math.max(1, Math.round((bounds.max - bounds.min) / MS_IN_DAY));
+          if (diffDays > 365 * 2) {
+            unit = 'year';
+            ticksLimit = 8;
+          } else if (diffDays > 200) {
+            unit = 'month';
+            ticksLimit = 12;
+          } else if (diffDays > 60) {
+            unit = 'week';
+            ticksLimit = 12;
+          } else {
+            unit = 'day';
+            ticksLimit = Math.min(16, diffDays + 1);
+          }
+        }
+      } else {
+        if (points.length) {
+          const first = new Date(points[0].t);
+          const last = new Date(points[points.length - 1].t);
+          if (!Number.isNaN(first.getTime())) min = first;
+          if (!Number.isNaN(last.getTime())) max = last;
+        }
+        if (min && max) {
+          const diffDays = Math.max(1, Math.round((max - min) / MS_IN_DAY));
+          if (diffDays > 200) {
+            unit = 'month';
+            ticksLimit = 12;
+          } else if (diffDays > 60) {
+            unit = 'week';
+            ticksLimit = 12;
+          } else {
+            unit = 'day';
+            ticksLimit = Math.min(16, diffDays + 1);
+          }
+        }
+      }
+
+      if (min && max && max <= min) {
+        max = new Date(min.getTime() + MS_IN_DAY);
+      }
+
+      xScale.min = min ?? undefined;
+      xScale.max = max ?? undefined;
+      xScale.time = xScale.time || {};
+      xScale.time.unit = unit;
+      xScale.time.tooltipFormat = 'yyyy-MM-dd HH:mm';
+      xScale.ticks = xScale.ticks || {};
+      xScale.ticks.maxTicksLimit = ticksLimit ?? 14;
+      xScale.ticks.padding = 6;
+      xScale.ticks.source = 'auto';
+    }
+
+    function setHighlight(metaKey, point) {
+      if (point) {
+        highlightPoints.set(metaKey, point);
+      } else {
+        highlightPoints.delete(metaKey);
+      }
+      refreshStat(metaKey);
+    }
+
+    function clearHighlight(metaKey) {
+      setHighlight(metaKey, null);
+    }
+
+    function refreshStat(metaKey) {
+      const statEl = document.getElementById(`stat-${metaKey}`);
+      if (!statEl) return;
+      const latest = latestValues.get(metaKey);
+      if (!latest || latest.nowVal == null) {
+        statEl.textContent = '데이터 없음';
+        return;
+      }
+      statEl.textContent = '';
+      const currentLine = document.createElement('div');
+      const diffText = latest.diff == null ? '' : ` (${latest.diff >= 0 ? '+' : ''}${fmtKRW.format(latest.diff)})`;
+      currentLine.textContent = `현재: ${latest.unit}${fmtKRW.format(latest.nowVal)}${diffText}`;
+      statEl.appendChild(currentLine);
+
+      const highlight = highlightPoints.get(metaKey);
+      if (highlight) {
+        const highlightLine = document.createElement('div');
+        highlightLine.className = 'muted';
+        highlightLine.textContent = `선택: ${formatKST(highlight.t)} · ${latest.unit}${fmtKRW.format(highlight.v)}`;
+        statEl.appendChild(highlightLine);
+      }
+    }
+
+    function updateDataFilesIndicator(manifestEntries, loadedEntries) {
+      const el = document.getElementById('data-files');
+      if (!el) return;
+      el.innerHTML = '';
+      el.append(document.createTextNode('매니페스트: '));
+      const manifestCode = document.createElement('code');
+      manifestCode.textContent = HISTORY_MANIFEST_URL;
+      el.append(manifestCode);
+
+      const entries = Array.isArray(manifestEntries) ? manifestEntries : [];
+      if (!entries.length) {
+        el.append(document.createTextNode(' · 연도별 데이터 없음'));
+        return;
+      }
+
+      el.append(document.createTextNode(' · 연도별: '));
+      const loadedSet = new Set((loadedEntries || []).map(entry => entry.url));
+      let missing = false;
+      entries.forEach((entry, idx) => {
+        const code = document.createElement('code');
+        const label = entry?.label || entry?.url || '';
+        code.textContent = label;
+        if (!loadedSet.has(entry.url)) {
+          code.classList.add('muted');
+          code.title = '로드 실패';
+          missing = true;
+        } else if (entry.url && entry.url !== label) {
+          code.title = entry.url;
+        }
+        el.append(code);
+        if (idx < entries.length - 1) {
+          el.append(document.createTextNode(', '));
+        }
+      });
+
+      if (missing) {
+        const warn = document.createElement('span');
+        warn.className = 'muted';
+        warn.textContent = ' (일부 로드 실패)';
+        el.append(warn);
+      }
+    }
+
+    async function loadHistory() {
+      const res = await fetch(HISTORY_MANIFEST_URL, { cache: 'no-cache' });
+      if (!res.ok) throw new Error('환율 매니페스트를 불러올 수 없습니다.');
+      const manifest = await res.json();
+      const manifestEntries = parseManifestEntries(manifest);
+      const combined = createEmptySeries();
+      const loadedEntries = [];
+
+      for (const entry of manifestEntries) {
+        try {
+          const yearRes = await fetch(entry.url, { cache: 'no-cache' });
+          if (!yearRes.ok) throw new Error(`HTTP ${yearRes.status}`);
+          const yearData = await yearRes.json();
+          const derivedYear = Number.isFinite(entry.year) ? entry.year : Number(yearData?.year);
+          const normalizedYear = Number.isFinite(derivedYear) ? Math.trunc(derivedYear) : null;
+          loadedEntries.push({ ...entry, year: normalizedYear });
+          for (const key of SERIES_KEYS) {
+            const arr = Array.isArray(yearData.series?.[key]) ? yearData.series[key] : [];
+            for (const point of arr) {
+              if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+              combined[key].push({ t: point.t, v: point.v });
+            }
+          }
+        } catch (err) {
+          const label = entry.label || entry.url || '연도별';
+          console.warn(`[FX] ${label} 데이터 로드 실패`, err);
+        }
+      }
+
+      for (const key of SERIES_KEYS) {
+        const sorted = combined[key]
+          .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number')
+          .sort((a, b) => new Date(a.t) - new Date(b.t));
+        const deduped = [];
+        for (const point of sorted) {
+          const last = deduped[deduped.length - 1];
+          if (last && last.t === point.t) {
+            deduped[deduped.length - 1] = point;
+          } else {
+            deduped.push(point);
+          }
+        }
+        combined[key] = deduped;
+      }
+
+      const loadedYears = [];
+      const seenYears = new Set();
+      for (const entry of loadedEntries) {
+        if (!Number.isFinite(entry.year)) continue;
+        if (seenYears.has(entry.year)) continue;
+        seenYears.add(entry.year);
+        loadedYears.push(entry.year);
+      }
+      loadedYears.sort((a, b) => a - b);
+
+      historyData = {
+        lastUpdated: manifest.lastUpdated ?? findLatestInSeries(combined) ?? null,
+        series: combined,
+        years: loadedYears
+      };
+
+      updateHistoryBounds();
+      initializeCustomRangeDefaults();
+      updateDataFilesIndicator(manifestEntries, loadedEntries);
+    }
+
+    function renderCard(meta) {
       const grid = document.getElementById('grid');
       const card = document.createElement('section');
       card.className = 'card';
       card.innerHTML = `
         <h2>${meta.title}</h2>
-        <div class="stat" id="stat-${meta.key}"></div>
+        <div class="stat" id="stat-${meta.key}">로딩 중...</div>
         <canvas id="chart-${meta.key}" aria-label="${meta.title} 차트" role="img"></canvas>
         <div class="legend muted">단위: ${meta.unit} (KST)</div>`;
       grid.appendChild(card);
       const ctx = document.getElementById(`chart-${meta.key}`).getContext('2d');
-      const chart = new Chart(ctx, { type:'line', data: makeDataset([]), options: makeOptions(meta.unit) });
+      const chart = new Chart(ctx, { type: 'line', data: makeDataset([]), options: makeOptions(meta) });
+      chart.fxPoints = [];
       charts.set(meta.key, chart);
+      chart.canvas.addEventListener('mouseleave', () => {
+        chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+        clearHighlight(meta.key);
+        chart.draw();
+      });
     }
-    function updateCard(meta){
-      const points = filterByRange(historyData.series[meta.key] || [], activeRange);
+
+    function updateCard(meta) {
       const chart = charts.get(meta.key);
-      chart.data = makeDataset(points);
+      if (!chart) return;
+      const points = filterByRange(historyData.series[meta.key] || [], activeRange);
+      chart.fxPoints = points;
+      chart.data.labels = points.map(p => new Date(p.t));
+      if (chart.data.datasets.length) {
+        chart.data.datasets[0].data = points.map(p => p.v);
+      }
+      applyRangeOptions(chart, points);
+      chart.tooltip.setActiveElements([], { x: 0, y: 0 });
       chart.update();
-      const stat = document.getElementById(`stat-${meta.key}`);
-      const last = (historyData.series[meta.key]||[]).at(-1);
-      const prev = (historyData.series[meta.key]||[]).at(-2);
+
+      const allSeries = historyData.series[meta.key] || [];
+      const last = allSeries.at(-1);
+      const prev = allSeries.at(-2);
       const nowVal = last ? last.v : null;
       const diff = (last && prev) ? (last.v - prev.v) : null;
-      stat.textContent = nowVal == null ? '데이터 없음' : `${meta.unit}${fmtKRW.format(nowVal)}${diff==null?'':` (${diff>=0?'+':''}${fmtKRW.format(diff)})`}`;
+      latestValues.set(meta.key, { unit: meta.unit, nowVal, diff });
+      highlightPoints.delete(meta.key);
+      refreshStat(meta.key);
     }
-    async function load(){
-      try{
-        const res = await fetch('/stocks/fx_rates/fx_history.json', { cache:'no-cache' });
-        if(!res.ok) throw new Error('데이터 로드 실패');
-        historyData = await res.json();
-        document.getElementById('last-updated').textContent =
-          `마지막 갱신: ${new Date(historyData.lastUpdated).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}`;
+
+    async function load() {
+      try {
+        await loadHistory();
+        const lastUpdated = historyData.lastUpdated;
+        const lastUpdatedEl = document.getElementById('last-updated');
+        lastUpdatedEl.textContent = lastUpdated
+          ? `마지막 갱신: ${formatKST(lastUpdated)}`
+          : '마지막 갱신 정보 없음';
+
         SERIES_META.forEach(renderCard);
         SERIES_META.forEach(updateCard);
-        document.querySelectorAll('.btn[data-range]').forEach(btn => {
-          btn.addEventListener('click', () => {
-            document.querySelectorAll('.btn[data-range]').forEach(b => b.setAttribute('aria-pressed','false'));
-            btn.setAttribute('aria-pressed','true');
-            activeRange = btn.dataset.range;
-            SERIES_META.forEach(updateCard);
-          });
-        });
-      }catch(err){
+        updateRangeButtonStates();
+      } catch (err) {
+        updateDataFilesIndicator([], []);
+        const lastUpdatedEl = document.getElementById('last-updated');
+        lastUpdatedEl.textContent = '';
         const grid = document.getElementById('grid');
-        grid.innerHTML = `<div class="card"><h2>오류</h2><p>/stocks/fx_rates/fx_history.json 을 불러올 수 없습니다.</p><p class="muted">${String(err)}</p></div>`;
+        grid.innerHTML = `<div class="card"><h2>오류</h2><p>환율 데이터를 불러올 수 없습니다.</p><p class="muted">/stocks/fx_rates/${HISTORY_PREFIX}_manifest.json 및 연도별 파일을 확인해주세요.</p><p class="muted">${String(err)}</p></div>`;
       }
     }
+
+    setupRangeButtonEvents();
+    setupCustomRangeUI();
+    updateRangeButtonStates();
     load();
   </script>
 </body>
