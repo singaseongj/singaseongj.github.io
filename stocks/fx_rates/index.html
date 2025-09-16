@@ -7,6 +7,56 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Polyfill String.prototype.startsWith/endsWith for environments where Chart.js
+    // runs before these helpers are available.
+    (function() {
+      var proto = String.prototype;
+      var toString = Object.prototype.toString;
+
+      if (typeof proto.startsWith !== 'function') {
+        Object.defineProperty(proto, 'startsWith', {
+          value: function(searchString, position) {
+            if (toString.call(searchString) === '[object RegExp]') {
+              throw new TypeError('First argument to String.prototype.startsWith must not be a regular expression');
+            }
+            var str = String(this);
+            var search = String(searchString);
+            var pos = position != null ? Number(position) : 0;
+            if (!isFinite(pos)) pos = 0;
+            if (pos < 0) pos = 0;
+            if (pos > str.length) pos = str.length;
+            pos = Math.floor(pos);
+            return str.slice(pos, pos + search.length) === search;
+          },
+          configurable: true,
+          writable: true
+        });
+      }
+
+      if (typeof proto.endsWith !== 'function') {
+        Object.defineProperty(proto, 'endsWith', {
+          value: function(searchString, length) {
+            if (toString.call(searchString) === '[object RegExp]') {
+              throw new TypeError('First argument to String.prototype.endsWith must not be a regular expression');
+            }
+            var str = String(this);
+            var search = String(searchString);
+            var end = length != null ? Number(length) : str.length;
+            if (!isFinite(end)) end = str.length;
+            if (end < 0) end = 0;
+            if (end > str.length) end = str.length;
+            end = Math.floor(end);
+            var start = end - search.length;
+            if (start < 0) return false;
+            return str.slice(start, end) === search;
+          },
+          configurable: true,
+          writable: true
+        });
+      }
+    })();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
   <style>
