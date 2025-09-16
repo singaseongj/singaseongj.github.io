@@ -27,10 +27,20 @@
     .legend{ font-size:12px; color:#c8d3ff; margin-top:6px }
     .footer{ max-width:1100px; margin:0 auto 40px; padding:0 16px; color:#a9b6ff; font-size:12px }
     .muted{ color:var(--muted) }
+    .back-btn{ display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:999px; border:1px solid #233060; background:#0f1530; color:#cfe1ff; text-decoration:none; transition:background .2s ease,border-color .2s ease,color .2s ease; margin-bottom:12px }
+    .back-btn svg{ width:18px; height:18px }
+    .back-btn:hover{ background:#1a2450; border-color:#3a4aa0; color:#fff }
+    .back-btn:focus-visible{ outline:2px solid #8fb4ff; outline-offset:3px }
   </style>
 </head>
 <body>
   <header>
+    <a href="../../stocks.html" class="back-btn" aria-label="주식 페이지로 돌아가기">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6"></path>
+        <path d="M9 12h12"></path>
+      </svg>
+    </a>
     <h1>환율 대시보드</h1>
     <div class="meta">
       <span>데이터 경로: <code>/stocks/fx_rates/fx_history.json</code></span>
