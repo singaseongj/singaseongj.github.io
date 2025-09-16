@@ -27,23 +27,22 @@
     font-size: 1.0em;
     height: 1.5em;
     line-height: 1.1em;
-    overflow: hidden;
-    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
     box-sizing: border-box;
     margin: 0.5rem 0;
   }
-  .fx-ticker .fx-track {
+  .fx-ticker::-webkit-scrollbar {
+    display: none;
+  }
+  .fx-track {
     display: inline-block;
     white-space: nowrap;
     line-height: inherit;
-    animation: ticker-loop 30s linear infinite;
   }
   .fx-item { margin: 0 .6rem; }
   .fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
-  @keyframes ticker-loop {
-    0%   { transform: translateX(50%); }
-    100% { transform: translateX(-100%); }
-  }
   </style>
 </head>
 <body>
@@ -567,12 +566,7 @@
         });
         const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
         line.innerHTML = parts.join(' • ') + ' • ' + stamp;
-        const afterFonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-        line.style.animation = 'none';
-        afterFonts.then(() => {
-          void line.offsetWidth;
-          line.style.animation = 'ticker-loop 30s linear infinite';
-        });
+        wrap.scrollLeft = 0;
       });
   }
   if (document.readyState === 'loading') {
@@ -585,57 +579,69 @@
 })();
   </script>
   <script>
-  const track = document.querySelector('.fx-track');
-  let isDragging = false;
-  let startX = 0;
-  let currentX = 0;
-  let offsetX = 0;
+  (function enableFxTickerAutoScroll() {
+    const ticker = document.querySelector('.fx-ticker');
+    if (!ticker) return;
 
-  function setTransform(x) {
-    track.style.transform = `translateX(${x}px)`;
-  }
+    function autoScroll() {
+      if (ticker.scrollWidth <= ticker.clientWidth) return;
+      if (!ticker.matches(':hover') && !ticker.dataset.dragging) {
+        ticker.scrollLeft += 1;
+        if (ticker.scrollLeft >= ticker.scrollWidth - ticker.clientWidth) {
+          ticker.scrollLeft = 0;
+        }
+      }
+    }
 
-  // Mouse events
-  track.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX - offsetX;
-    track.classList.add('grabbing');
-  });
+    setInterval(autoScroll, 30);
 
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    currentX = e.clientX - startX;
-    offsetX = currentX;
-    setTransform(currentX);
-  });
+    let isPointerDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
 
-  window.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    track.classList.remove('grabbing');
-    track.style.transform = ""; // Reset to animation
-  });
+    function stopPointerDrag() {
+      isPointerDown = false;
+      delete ticker.dataset.dragging;
+    }
 
-  // Touch events
-  track.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX - offsetX;
-    track.classList.add('grabbing');
-  });
+    ticker.addEventListener('mousedown', (event) => {
+      event.preventDefault();
+      isPointerDown = true;
+      startX = event.pageX;
+      startScrollLeft = ticker.scrollLeft;
+      ticker.dataset.dragging = 'true';
+    });
 
-  track.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    currentX = e.touches[0].clientX - startX;
-    offsetX = currentX;
-    setTransform(currentX);
-  });
+    document.addEventListener('mousemove', (event) => {
+      if (!isPointerDown) return;
+      event.preventDefault();
+      const delta = event.pageX - startX;
+      ticker.scrollLeft = startScrollLeft - delta;
+    });
 
-  track.addEventListener('touchend', () => {
-    isDragging = false;
-    track.classList.remove('grabbing');
-    track.style.transform = ""; // Resume animation
-  });
-</script>
+    document.addEventListener('mouseup', stopPointerDrag);
+
+    ticker.addEventListener('touchstart', (event) => {
+      if (event.touches.length !== 1) return;
+      isPointerDown = true;
+      startX = event.touches[0].pageX;
+      startScrollLeft = ticker.scrollLeft;
+      ticker.dataset.dragging = 'true';
+    }, { passive: true });
+
+    ticker.addEventListener('touchmove', (event) => {
+      if (!isPointerDown || event.touches.length !== 1) return;
+      const delta = event.touches[0].pageX - startX;
+      ticker.scrollLeft = startScrollLeft - delta;
+      event.preventDefault();
+    }, { passive: false });
+
+    ticker.addEventListener('touchend', stopPointerDrag);
+    ticker.addEventListener('touchcancel', stopPointerDrag);
+    document.addEventListener('touchend', stopPointerDrag);
+    document.addEventListener('touchcancel', stopPointerDrag);
+  })();
+  </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
 <!-- display_ad -->
 <ins class="adsbygoogle"
