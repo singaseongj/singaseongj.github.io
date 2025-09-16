@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-17T00:28:08+09:00 (KST)**
+- Generated: **2025-09-17T05:27:58+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -150,13 +150,13 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8%ED%99%80%EB%94%A9%EC%8A%A4
 
-**쿠쿠홈시스** (192400.KS)
+**하이트진로** (000080.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **17.1%**; volatility (20d): **unknown**
+- Returns: 5d **0.9%**, 20d **-5.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%EC%BF%A0%EC%BF%A0%ED%99%88%EC%8B%9C%EC%8A%A4
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
 
 **한샘** (009240.KS)
 
@@ -310,7 +310,7 @@
 **GoDaddy** (GDDY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **0.6%**; volatility (20d): **unknown**
+- Returns: 5d **-3.2%**, 20d **0.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=GoDaddy
@@ -318,7 +318,7 @@
 **J.M. Smucker Company (The)** (SJM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.1%**, 20d **-6.6%**; volatility (20d): **unknown**
+- Returns: 5d **-5.7%**, 20d **-6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=J.M.%20Smucker%20Company%20(The)
@@ -326,7 +326,7 @@
 **Kimco Realty** (KIM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.9%**, 20d **5.0%**; volatility (20d): **unknown**
+- Returns: 5d **-1.1%**, 20d **4.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Kimco%20Realty
