@@ -455,6 +455,22 @@
       return aggregated.length ? aggregated : points;
     }
 
+    function normalizePoint(p) {
+      if (!p || p.v == null) return null;
+      let t = p.t;
+      if (t instanceof Date) t = t.toISOString();
+      else if (typeof t === 'number') {
+        const d = new Date(t);
+        if (Number.isNaN(d.getTime())) return null;
+        t = d.toISOString();
+      } else if (typeof t !== 'string') {
+        t = String(t ?? '');
+      }
+      const d = new Date(t);
+      if (Number.isNaN(d.getTime())) return null;
+      return { t: d.toISOString(), v: Number(p.v) };
+    }
+
     function filterByRange(points, range) {
       if (!Array.isArray(points) || points.length === 0) return [];
       if (range === 'all') return downsampleToSixMonths(points);
@@ -481,7 +497,7 @@
 
     function makeDataset(points) {
       return {
-        labels: points.map(p => new Date(p.t)),
+        labels: points.map(p => new Date(p.t).getTime()),
         datasets: [{
           label: 'KRW',
           data: points.map(p => p.v),
@@ -828,8 +844,8 @@
         max = new Date(min.getTime() + MS_IN_DAY);
       }
 
-      xScale.min = min ?? undefined;
-      xScale.max = max ?? undefined;
+      xScale.min = min instanceof Date ? min.getTime() : (min ?? undefined);
+      xScale.max = max instanceof Date ? max.getTime() : (max ?? undefined);
       xScale.time = xScale.time || {};
       xScale.time.unit = unit;
       xScale.time.tooltipFormat = 'yyyy-MM-dd HH:mm';
@@ -937,8 +953,8 @@
           for (const key of SERIES_KEYS) {
             const arr = Array.isArray(yearData.series?.[key]) ? yearData.series[key] : [];
             for (const point of arr) {
-              if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
-              combined[key].push({ t: point.t, v: point.v });
+              const np = normalizePoint(point);
+              if (np) combined[key].push(np);
             }
           }
         } catch (err) {
@@ -973,8 +989,12 @@
       }
       loadedYears.sort((a, b) => a - b);
 
+      const lu = manifest.lastUpdated;
+      const normLU = lu ? new Date(lu) : null;
       historyData = {
-        lastUpdated: manifest.lastUpdated ?? findLatestInSeries(combined) ?? null,
+        lastUpdated: normLU && !Number.isNaN(normLU.getTime())
+          ? normLU.toISOString()
+          : findLatestInSeries(combined) ?? null,
         series: combined,
         years: loadedYears
       };
@@ -1010,7 +1030,7 @@
       if (!chart) return;
       const points = filterByRange(historyData.series[meta.key] || [], activeRange);
       chart.fxPoints = points;
-      chart.data.labels = points.map(p => new Date(p.t));
+      chart.data.labels = points.map(p => new Date(p.t).getTime());
       if (chart.data.datasets.length) {
         chart.data.datasets[0].data = points.map(p => p.v);
       }
