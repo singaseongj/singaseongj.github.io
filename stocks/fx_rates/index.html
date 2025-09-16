@@ -52,8 +52,8 @@
     })();
   </script>
   
-  <!-- Chart.js 최신 버전으로 업데이트 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
+  <!-- Chart.js 안정적인 버전 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
   
   <style>
     :root{ --bg:#0b1020; --card:#141a31; --ink:#dfe7ff; --muted:#9fb2ff66; --accent:#8fb4ff; }
@@ -203,16 +203,36 @@
       }
     };
 
-    // Chart.js 초기화를 안전하게 처리
+    // Chart.js 로딩 확인 및 초기화를 안전하게 처리
     let chartInitialized = false;
+    function checkChartJS() {
+      if (typeof Chart === 'undefined') {
+        console.error('Chart.js가 로드되지 않았습니다');
+        showErrorMessage('Chart.js 라이브러리를 불러올 수 없습니다. 네트워크 연결을 확인해주세요.');
+        return false;
+      }
+      return true;
+    }
+
     function initChart() {
-      if (chartInitialized) return;
+      if (chartInitialized) return true;
+      if (!checkChartJS()) return false;
+      
       try {
-        Chart.register(crosshairPlugin);
+        // Chart.js v3에서는 plugin 등록 방식이 다름
+        if (Chart.register) {
+          Chart.register(crosshairPlugin);
+        } else {
+          // 구버전 대응
+          Chart.pluginService?.register?.(crosshairPlugin);
+        }
         chartInitialized = true;
+        console.log('Chart.js 초기화 완료');
+        return true;
       } catch (error) {
         console.error('Chart.js 초기화 오류:', error);
         showErrorMessage('Chart.js 초기화 실패: ' + error.message);
+        return false;
       }
     }
 
@@ -549,7 +569,7 @@
         interaction: { mode: 'index', intersect: false },
         scales: {
           x: {
-            type: 'linear', // time 대신 linear 사용
+            type: 'linear',
             grid: { color: '#233060', lineWidth: 0.7 },
             ticks: { 
               color: '#cfe1ff', 
@@ -567,7 +587,13 @@
           },
           y: {
             grid: { color: '#233060', lineWidth: 0.7 },
-            ticks: { color: '#cfe1ff', padding: 6, callback: v => `${meta.unit}${fmtKRW.format(v)}` },
+            ticks: { 
+              color: '#cfe1ff', 
+              padding: 6, 
+              callback: function(value) {
+                return `${meta.unit}${fmtKRW.format(value)}`;
+              }
+            },
             grace: '5%'
           }
         },
@@ -578,20 +604,20 @@
             intersect: false,
             displayColors: false,
             callbacks: {
-              title(items) {
+              title: function(items) {
                 if (!items.length) return '';
                 const value = items[0].parsed.x;
                 const date = new Date(value);
                 return date.toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
               },
-              label(ctx) {
+              label: function(ctx) {
                 return `${meta.unit}${fmtKRW.format(ctx.parsed.y)}`;
               }
             }
           }
         },
         animation: { duration: 300 },
-        onHover: (_event, activeElements, chartInstance) => {
+        onHover: function(_event, activeElements, chartInstance) {
           if (activeElements?.length) {
             const point = chartInstance.fxPoints?.[activeElements[0].index];
             if (point) {
@@ -972,6 +998,10 @@
 
     function renderCard(meta) {
       try {
+        if (!checkChartJS()) {
+          return;
+        }
+        
         const grid = document.getElementById('grid');
         const card = document.createElement('section');
         card.className = 'card';
@@ -992,9 +1022,11 @@
         charts.set(meta.key, chart);
         
         chart.canvas.addEventListener('mouseleave', () => {
-          chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+          if (chart.tooltip && chart.tooltip.setActiveElements) {
+            chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+          }
           clearHighlight(meta.key);
-          chart.draw();
+          chart.update();
         });
         
         console.log('차트 렌더링 완료:', meta.key);
@@ -1037,8 +1069,22 @@
 
     async function load() {
       try {
+        // Chart.js 로딩 대기
+        let chartLoadAttempts = 0;
+        const maxAttempts = 20; // 2초 대기
+        while (typeof Chart === 'undefined' && chartLoadAttempts < maxAttempts) {
+          await new Promise(resolve => setTimeout(resolve, 100));
+          chartLoadAttempts++;
+        }
+
+        if (!checkChartJS()) {
+          return; // 에러 메시지는 checkChartJS에서 이미 표시됨
+        }
+
         console.log('차트 초기화 시작');
-        initChart();
+        if (!initChart()) {
+          return; // 에러 메시지는 initChart에서 이미 표시됨
+        }
         
         console.log('히스토리 로딩 시작');
         await loadHistory();
