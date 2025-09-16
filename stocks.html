@@ -584,6 +584,58 @@
   }
 })();
   </script>
+  <script>
+  const track = document.querySelector('.fx-track');
+  let isDragging = false;
+  let startX = 0;
+  let currentX = 0;
+  let offsetX = 0;
+
+  function setTransform(x) {
+    track.style.transform = `translateX(${x}px)`;
+  }
+
+  // Mouse events
+  track.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX - offsetX;
+    track.classList.add('grabbing');
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    currentX = e.clientX - startX;
+    offsetX = currentX;
+    setTransform(currentX);
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    track.classList.remove('grabbing');
+    track.style.transform = ""; // Reset to animation
+  });
+
+  // Touch events
+  track.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX - offsetX;
+    track.classList.add('grabbing');
+  });
+
+  track.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX - startX;
+    offsetX = currentX;
+    setTransform(currentX);
+  });
+
+  track.addEventListener('touchend', () => {
+    isDragging = false;
+    track.classList.remove('grabbing');
+    track.style.transform = ""; // Resume animation
+  });
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360521146359419" crossorigin="anonymous"></script>
 <!-- display_ad -->
 <ins class="adsbygoogle"
