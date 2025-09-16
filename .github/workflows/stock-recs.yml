@@ -326,13 +326,15 @@ jobs:
         shell: bash
         run: |
           set -Eeuo pipefail
+          mkdir -p stocks/fx_rates
           node fetchFxRates.js
-          test -s data/fx_rates.json
+          test -s stocks/fx_rates/fx_rates.json
+          test -s stocks/fx_rates/fx_history.json
           echo "fx_rates lastUpdated:"
-          node -e "console.log(require('./data/fx_rates.json').lastUpdated || 'missing')"
+          node -e "console.log(require('./stocks/fx_rates/fx_rates.json').lastUpdated || 'missing')"
           echo "--- git status/diff (fx_rates) ---"
-          git status --porcelain -- data/fx_rates.json || true
-          git --no-pager diff -- data/fx_rates.json | sed -n '1,80p' || true
+          git status --porcelain -- stocks/fx_rates || true
+          git --no-pager diff -- stocks/fx_rates | sed -n '1,80p' || true
 
       - name: "Verify generated files (brief)"
         run: |
@@ -356,10 +358,12 @@ jobs:
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market-news.json data/fx_rates.json data/news-features.json data/naver-trends.json \
+          git add data/market-news.json data/news-features.json data/naver-trends.json \
                   summary.json summary.md data/articles \
                   pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json \
-                  cache || true
+                  cache \
+                  stocks/fx_rates/fx_rates.json stocks/fx_rates/fx_history.json \
+                  stocks/fx_rates/index.html || true
           echo "Files staged for commit"
 
       - name: Commit & push changes
@@ -381,8 +385,10 @@ jobs:
         run: |
           echo "market_news HEAD lastUpdated:"
           git show HEAD:data/market-news.json | jq -r .lastUpdated
-          echo "fx_rates HEAD lastUpdated:"
-          git show HEAD:data/fx_rates.json | jq -r .lastUpdated
+          echo "fx_rates HEAD lastUpdated (stocks/fx_rates):"
+          git show HEAD:stocks/fx_rates/fx_rates.json | jq -r .lastUpdated
+          echo "history HEAD lastUpdated:"
+          git show HEAD:stocks/fx_rates/fx_history.json | jq -r .lastUpdated
 
       - name: "Show last commit (debug)"
         if: always()
