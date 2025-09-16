@@ -556,7 +556,7 @@
     const line = document.getElementById('fx-line');
     const wrap = document.getElementById('fx-ticker');
     if (!line || !wrap) return;
-    fetch('./data/fx_rates.json', { cache: 'no-store' })
+    fetch('/stocks/fx_rates/fx_rates.json', { cache: 'no-store' })
       .then(res => res.json())
       .then(data => {
         const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });

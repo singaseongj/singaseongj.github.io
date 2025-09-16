@@ -3,7 +3,10 @@ import { existsSync } from 'fs';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
 
-const OUT = path.resolve(process.cwd(), 'data', 'fx_rates.json');
+// Write under /stocks/fx_rates/ (dashboard + ticker will read from here)
+const OUT_DIR = path.resolve(process.cwd(), 'stocks', 'fx_rates');
+const OUT = path.join(OUT_DIR, 'fx_rates.json');
+const HISTORY = path.join(OUT_DIR, 'fx_history.json');
 
 const FR_USD = 'https://api.frankfurter.app/latest?from=USD&to=KRW,EUR,GBP,CNY,HKD';
 const FR_JPY = 'https://api.frankfurter.app/latest?from=JPY&to=KRW';
@@ -190,8 +193,51 @@ async function exchangerateHostProvider() {
   return itemsFromRates(map);
 }
 
+// --- History helpers (append one point per day, in KST) ---
+function keyFromItem(it) {
+  return it.from === 'JPY' && it.amount === 100 ? 'JPY100' : it.from; // USD, EUR, CNY, GBP, HKD, JPY100
+}
+
+async function readHistory() {
+  try {
+    const raw = await fs.readFile(HISTORY, 'utf-8');
+    return JSON.parse(raw);
+  } catch {
+    return { lastUpdated: null, series: { USD:[], JPY100:[], EUR:[], CNY:[], GBP:[], HKD:[] } };
+  }
+}
+
+function upsertPoint(arr, iso, val) {
+  const day = iso.slice(0,10);             // YYYY-MM-DD
+  const last = arr[arr.length - 1];
+  if (last && last.t.slice(0,10) === day) {
+    last.v = val;                          // overwrite same-day point
+  } else {
+    arr.push({ t: iso, v: val });
+  }
+}
+
+async function updateHistory(snapshot) {
+  const hist = await readHistory();
+  const { items, lastUpdated } = snapshot;
+
+  for (const it of items) {
+    if (typeof it.krw !== 'number') continue;
+    const k = keyFromItem(it);
+    hist.series[k] ??= [];
+    upsertPoint(hist.series[k], lastUpdated, it.krw);
+    // keep ~18 months
+    const cutoff = new Date(lastUpdated);
+    cutoff.setDate(cutoff.getDate() - 540);
+    hist.series[k] = hist.series[k].filter(p => new Date(p.t) >= cutoff);
+  }
+  hist.lastUpdated = lastUpdated;
+  await fs.writeFile(HISTORY, JSON.stringify(hist, null, 2));
+  return hist;
+}
+
 async function main(){
-  await fs.mkdir(path.dirname(OUT), { recursive:true });
+  await fs.mkdir(OUT_DIR, { recursive:true });
 
   let items = null;
   const providers = [naverProvider];
@@ -223,6 +269,9 @@ async function main(){
   const out = { lastUpdated: nowKSTISO(), items };
   await fs.writeFile(OUT, JSON.stringify(out, null, 2));
   console.log(`FX: wrote ${OUT} at ${out.lastUpdated}`);
+
+  // append/update rolling history
+  await updateHistory(out);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
