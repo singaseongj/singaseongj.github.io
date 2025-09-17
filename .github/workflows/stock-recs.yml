@@ -362,7 +362,7 @@ jobs:
                   summary.json summary.md data/articles \
                   pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json \
                   cache \
-                  stocks/fx_rates/fx_rates.json stocks/fx_rates/fx_history.json \
+                  stocks/fx_rates/fx_rates.json stocks/fx_rates/fx_history*.json \
                   stocks/fx_rates/index.html || true
           echo "Files staged for commit"
 
@@ -389,6 +389,17 @@ jobs:
           git show HEAD:stocks/fx_rates/fx_rates.json | jq -r .lastUpdated
           echo "history HEAD lastUpdated:"
           git show HEAD:stocks/fx_rates/fx_history.json | jq -r .lastUpdated
+          manifest_tmp="$(mktemp)"
+          git show HEAD:stocks/fx_rates/fx_history_manifest.json > "$manifest_tmp"
+          echo "fx_history manifest HEAD files:"
+          jq -r '.files[]?' "$manifest_tmp"
+          echo "fx_history HEAD per-file updatedAt values:"
+          jq -r '.files[]?' "$manifest_tmp" | while read -r file; do
+            [ -n "$file" ] || continue
+            echo "$file updatedAt:"
+            git show HEAD:stocks/fx_rates/"$file" | jq -r '.updatedAt // .lastUpdated // "missing"'
+          done
+          rm -f "$manifest_tmp"
 
       - name: "Show last commit (debug)"
         if: always()
