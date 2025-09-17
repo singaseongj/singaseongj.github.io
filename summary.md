@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-17T19:26:23+09:00 (KST)**
+- Generated: **2025-09-18T00:27:49+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -143,6 +143,14 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=KG%EC%8A%A4%ED%8B%B8
 
+**SK케미칼** (285130.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **6.1%**, 20d **5.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=SK%EC%BC%80%EB%AF%B8%EC%B9%BC
+
 **TKG휴켐스** (069260.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -166,14 +174,6 @@
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD
-
-**효성** (004800.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.0%**, 20d **-2.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%ED%9A%A8%EC%84%B1
 
 ## NASDAQ 100
 
@@ -327,16 +327,16 @@
 **GoDaddy** (GDDY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.2%**, 20d **0.0%**; volatility (20d): **unknown**
+- Returns: 5d **0.0%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=GoDaddy
 
-**Trade Desk (The)** (TTD)
+**Insulet Corporation** (PODD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **-39.1%**; volatility (20d): **unknown**
+- Returns: 5d **-5.1%**, 20d **-2.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Trade%20Desk%20(The)
+- Sector: **Healthcare**
+- News search: https://www.google.com/search?q=Insulet%20Corporation
 
