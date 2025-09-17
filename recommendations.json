@@ -2,6 +2,22 @@
   "KOSDAQ": {
     "safe": [
       {
+        "name": "리노공업",
+        "sector": "정보기술",
+        "ticker": "058470.KQ",
+        "searchUrl": "https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85",
+        "score": 48,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0
+          }
+        }
+      },
+      {
         "name": "알테오젠",
         "sector": "헬스케어",
         "ticker": "196170.KQ",
@@ -39,22 +55,6 @@
         "ticker": "247540.KQ",
         "searchUrl": "https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
         "score": 53,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "케어젠",
-        "sector": "헬스케어",
-        "ticker": "214370.KQ",
-        "searchUrl": "https://www.google.com/search?q=%EC%BC%80%EC%96%B4%EC%A0%A0",
-        "score": 48,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -188,7 +188,7 @@
         "sector": "경기소비재",
         "ticker": "066570.KS",
         "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90",
-        "score": 94,
+        "score": 97,
         "reasons": {
           "reputationScore": 0.55,
           "topKeywords": [],
@@ -204,12 +204,28 @@
         "sector": "정보기술",
         "ticker": "000660.KS",
         "searchUrl": "https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
-        "score": 97,
+        "score": 99,
         "reasons": {
           "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.06,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "대한항공",
+        "sector": "산업재",
+        "ticker": "003490.KS",
+        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5",
+        "score": 93,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": -0.05,
             "blog": 1,
             "naver": 0
           }
@@ -226,22 +242,6 @@
           "topKeywords": [],
           "signals": {
             "sentiment": -0.1,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "현대차",
-        "sector": "경기소비재",
-        "ticker": "005380.KS",
-        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%B0%A8",
-        "score": 92,
-        "reasons": {
-          "reputationScore": 0.55,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": -0.06,
             "blog": 1,
             "naver": 0
           }
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-09-17T14:25:09+09:00"
+  "lastUpdated": "2025-09-17T19:26:23+09:00"
 }
