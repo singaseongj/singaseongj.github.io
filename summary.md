@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-18T19:26:37+09:00 (KST)**
+- Generated: **2025-09-19T00:27:39+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -318,7 +318,7 @@
 **Insulet Corporation** (PODD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.6%**, 20d **-1.6%**; volatility (20d): **unknown**
+- Returns: 5d **-3.2%**, 20d **-1.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Insulet%20Corporation
@@ -326,7 +326,7 @@
 **Packaging Corporation of America** (PKG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.5%**, 20d **7.0%**; volatility (20d): **unknown**
+- Returns: 5d **-2.2%**, 20d **7.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Packaging%20Corporation%20of%20America
