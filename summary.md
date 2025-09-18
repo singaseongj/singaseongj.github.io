@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-19T00:27:39+09:00 (KST)**
+- Generated: **2025-09-19T05:28:06+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -96,7 +96,7 @@
 **LG디스플레이** (034220.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **11.4%**, 20d **14.5%**; volatility (20d): **unknown**
+- Returns: 5d **11.7%**, 20d **14.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=LG%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4
@@ -104,7 +104,7 @@
 **LG전자** (066570.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **8.3%**, 20d **8.4%**; volatility (20d): **unknown**
+- Returns: 5d **8.2%**, 20d **8.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
@@ -112,7 +112,7 @@
 **SK하이닉스** (000660.KS)
 
 - News (7d): **18** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
-- Returns: 5d **15.0%**, 20d **44.1%**; volatility (20d): **unknown**
+- Returns: 5d **15.8%**, 20d **45.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
@@ -128,7 +128,7 @@
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **9.7%**, 20d **14.0%**; volatility (20d): **unknown**
+- Returns: 5d **9.4%**, 20d **13.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
@@ -161,7 +161,7 @@
 **종근당** (185750.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **4.0%**; volatility (20d): **unknown**
+- Returns: 5d **9.1%**, 20d **10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
@@ -315,18 +315,10 @@
 - Sector: **Energy**
 - News search: https://www.google.com/search?q=Devon%20Energy
 
-**Insulet Corporation** (PODD)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.2%**, 20d **-1.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Insulet%20Corporation
-
 **Packaging Corporation of America** (PKG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.2%**, 20d **7.1%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **8.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Packaging%20Corporation%20of%20America
@@ -338,4 +330,12 @@
 - Earnings window (±10d): **No**
 - Sector: **Energy**
 - News search: https://www.google.com/search?q=Texas%20Pacific%20Land%20Corporation
+
+**Tyler Technologies** (TYL)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-4.3%**, 20d **-6.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Tyler%20Technologies
 
