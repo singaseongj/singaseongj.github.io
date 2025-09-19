@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-19T19:27:16+09:00 (KST)**
+- Generated: **2025-09-20T00:26:26+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -65,13 +65,13 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%8F%99%EC%9A%B4%EC%95%84%EB%82%98%ED%85%8D
 
-**성일하이텍** (365340.KQ)
+**상아프론테크** (089980.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.4%**, 20d **-4.5%**; volatility (20d): **unknown**
+- Returns: 5d **6.2%**, 20d **3.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%84%B1%EC%9D%BC%ED%95%98%EC%9D%B4%ED%85%8D
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%83%81%EC%95%84%ED%94%84%EB%A1%A0%ED%85%8C%ED%81%AC
 
 **칩스앤미디어** (094360.KQ)
 
@@ -141,14 +141,6 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=GKL
 
-**대웅** (003090.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **11.9%**, 20d **0.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85
-
 **롯데정밀화학** (004000.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -172,6 +164,14 @@
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
+
+**코스모신소재** (005070.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-7.4%**, 20d **12.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8B%A0%EC%86%8C%EC%9E%AC
 
 ## NASDAQ 100
 
@@ -300,6 +300,14 @@
 
 ### AGGRESSIVE (5)
 
+**Amcor** (AMCR)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.7%**, 20d **-10.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Materials**
+- News search: https://www.google.com/search?q=Amcor
+
 **Devon Energy** (DVN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -319,7 +327,7 @@
 **Hologic** (HOLX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.8%**, 20d **-0.7%**; volatility (20d): **unknown**
+- Returns: 5d **6.1%**, 20d **1.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Hologic
@@ -331,12 +339,4 @@
 - Earnings window (±10d): **No**
 - Sector: **Energy**
 - News search: https://www.google.com/search?q=Texas%20Pacific%20Land%20Corporation
-
-**Tyler Technologies** (TYL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.3%**, 20d **-6.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Tyler%20Technologies
 
