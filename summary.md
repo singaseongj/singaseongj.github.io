@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-19T14:24:13+09:00 (KST)**
+- Generated: **2025-09-19T19:27:16+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -60,7 +60,7 @@
 **동운아나텍** (094170.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.2%**, 20d **3.3%**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **3.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%8F%99%EC%9A%B4%EC%95%84%EB%82%98%ED%85%8D
@@ -76,7 +76,7 @@
 **칩스앤미디어** (094360.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.1%**, 20d **11.5%**; volatility (20d): **unknown**
+- Returns: 5d **2.6%**, 20d **10.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%B9%A9%EC%8A%A4%EC%95%A4%EB%AF%B8%EB%94%94%EC%96%B4
@@ -93,10 +93,17 @@
 
 ### SAFE (5)
 
+**CJ** (CJ.TO)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **2.4%**, 20d **-0.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=CJ
+
 **LG전자** (066570.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **3.4%**, 20d **5.7%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **5.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
@@ -104,7 +111,7 @@
 **LG화학** (051910.KS)
 
 - News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **0.5%**, 20d **1.4%**; volatility (20d): **unknown**
+- Returns: 5d **0.3%**, 20d **1.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
@@ -112,7 +119,7 @@
 **SK하이닉스** (000660.KS)
 
 - News (7d): **18** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
-- Returns: 5d **6.6%**, 20d **39.5%**; volatility (20d): **unknown**
+- Returns: 5d **7.5%**, 20d **40.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
@@ -120,18 +127,10 @@
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **6.1%**, 20d **12.0%**; volatility (20d): **unknown**
+- Returns: 5d **5.7%**, 20d **11.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
-
-**셀트리온** (068270.KS)
-
-- News (7d): **15** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.07)**
-- Returns: 5d **-1.2%**, 20d **-2.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
 ### AGGRESSIVE (5)
 
@@ -161,7 +160,7 @@
 **신풍제약** (019170.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **9.3%**, 20d **11.1%**; volatility (20d): **unknown**
+- Returns: 5d **10.0%**, 20d **11.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%8B%A0%ED%92%8D%EC%A0%9C%EC%95%BD
@@ -169,7 +168,7 @@
 **종근당** (185750.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.0%**, 20d **0.9%**; volatility (20d): **unknown**
+- Returns: 5d **1.3%**, 20d **2.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
