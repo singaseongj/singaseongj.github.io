@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-20T14:24:02+09:00 (KST)**
+- Generated: **2025-09-20T19:24:33+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -101,14 +101,6 @@
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
 
-**LG화학** (051910.KS)
-
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **0.3%**, 20d **1.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
-
 **SK하이닉스** (000660.KS)
 
 - News (7d): **18** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
@@ -124,6 +116,14 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
+
+**현대모비스** (012330.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **-1.8%**, 20d **2.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4
 
 **현대차** (005380.KS)
 
