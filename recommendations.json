@@ -168,6 +168,22 @@
   "KOSPI": {
     "safe": [
       {
+        "name": "KB금융",
+        "sector": "금융",
+        "ticker": "105560.KS",
+        "searchUrl": "https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5",
+        "score": 82,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": -0.05,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
         "name": "LG전자",
         "sector": "경기소비재",
         "ticker": "066570.KS",
@@ -226,22 +242,6 @@
           "topKeywords": [],
           "signals": {
             "sentiment": -0.1,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "셀트리온",
-        "sector": "헬스케어",
-        "ticker": "068270.KS",
-        "searchUrl": "https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
-        "score": 80,
-        "reasons": {
-          "reputationScore": 0.55,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": -0.07,
             "blog": 1,
             "naver": 0
           }
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-09-21T10:56:22+09:00"
+  "lastUpdated": "2025-09-21T14:24:32+09:00"
 }
