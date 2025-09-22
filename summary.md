@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-22T19:28:59+09:00 (KST)**
+- Generated: **2025-09-23T00:28:08+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -318,7 +318,7 @@
 **Hologic** (HOLX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.9%**, 20d **-1.3%**; volatility (20d): **unknown**
+- Returns: 5d **4.7%**, 20d **-2.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Hologic
@@ -326,7 +326,7 @@
 **LyondellBasell** (LYB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.8%**, 20d **-6.2%**; volatility (20d): **unknown**
+- Returns: 5d **-2.6%**, 20d **-12.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=LyondellBasell
@@ -334,7 +334,7 @@
 **Trimble Inc.** (TRMB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.3%**, 20d **3.1%**; volatility (20d): **unknown**
+- Returns: 5d **0.5%**, 20d **-1.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Trimble%20Inc.
