@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-23T19:27:15+09:00 (KST)**
+- Generated: **2025-09-24T00:27:14+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,6 +93,14 @@
 
 ### SAFE (5)
 
+**LG화학** (051910.KS)
+
+- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **3.6%**, 20d **3.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
+
 **대한항공** (003490.KS)
 
 - News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
@@ -116,14 +124,6 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
-
-**삼성증권** (016360.KS)
-
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-1.6%**, 20d **9.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C
 
 **현대모비스** (012330.KS)
 
@@ -310,7 +310,7 @@
 **GoDaddy** (GDDY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.6%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **-1.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=GoDaddy
@@ -318,7 +318,7 @@
 **Hologic** (HOLX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.5%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **7.5%**, 20d **1.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Hologic
@@ -326,16 +326,16 @@
 **LyondellBasell** (LYB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.8%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-2.2%**, 20d **-9.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=LyondellBasell
 
-**Weyerhaeuser** (WY)
+**Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.0%**, 20d **-4.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Real Estate**
-- News search: https://www.google.com/search?q=Weyerhaeuser
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Tyler%20Technologies
 
