@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-23T14:25:35+09:00 (KST)**
+- Generated: **2025-09-23T19:27:15+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -52,7 +52,7 @@
 **HLB생명과학** (067630.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **-7.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.5%**, 20d **-6.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
@@ -60,7 +60,7 @@
 **동운아나텍** (094170.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.1%**, 20d **-0.1%**; volatility (20d): **unknown**
+- Returns: 5d **-0.1%**, 20d **-0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%8F%99%EC%9A%B4%EC%95%84%EB%82%98%ED%85%8D
@@ -84,7 +84,7 @@
 **칩스앤미디어** (094360.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **8.8%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **8.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%B9%A9%EC%8A%A4%EC%95%A4%EB%AF%B8%EB%94%94%EC%96%B4
@@ -93,18 +93,10 @@
 
 ### SAFE (5)
 
-**LG화학** (051910.KS)
-
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **4.3%**, 20d **3.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
-
 **대한항공** (003490.KS)
 
 - News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-0.9%**, 20d **-5.7%**; volatility (20d): **unknown**
+- Returns: 5d **-1.1%**, 20d **-5.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
@@ -112,7 +104,7 @@
 **삼성전기** (009150.KS)
 
 - News (7d): **18** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
-- Returns: 5d **5.5%**, 20d **27.6%**; volatility (20d): **unknown**
+- Returns: 5d **5.8%**, 20d **27.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0
@@ -120,15 +112,23 @@
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **7.2%**, 20d **21.1%**; volatility (20d): **unknown**
+- Returns: 5d **6.7%**, 20d **20.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
+**삼성증권** (016360.KS)
+
+- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-1.6%**, 20d **9.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **금융**
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C
+
 **현대모비스** (012330.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **0.6%**, 20d **3.8%**; volatility (20d): **unknown**
+- Returns: 5d **1.0%**, 20d **4.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4
@@ -159,13 +159,13 @@
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%9B%B0%ED%91%B8%EB%93%9C
 
-**쿠쿠홈시스** (192400.KS)
+**에스디바이오센서** (137310.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.0%**, 20d **6.7%**; volatility (20d): **unknown**
+- Returns: 5d **6.0%**, 20d **6.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%EC%BF%A0%EC%BF%A0%ED%99%88%EC%8B%9C%EC%8A%A4
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EB%94%94%EB%B0%94%EC%9D%B4%EC%98%A4%EC%84%BC%EC%84%9C
 
 **한샘** (009240.KS)
 
