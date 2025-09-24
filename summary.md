@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-25T00:27:15+09:00 (KST)**
+- Generated: **2025-09-25T05:28:51+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -298,18 +298,10 @@
 
 ### AGGRESSIVE (5)
 
-**CDW Corporation** (CDW)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.0%**, 20d **-8.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=CDW%20Corporation
-
 **GoDaddy** (GDDY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.8%**, 20d **-2.2%**; volatility (20d): **unknown**
+- Returns: 5d **-0.6%**, 20d **-2.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=GoDaddy
@@ -317,7 +309,7 @@
 **KeyCorp** (KEY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.5%**, 20d **-2.5%**; volatility (20d): **unknown**
+- Returns: 5d **0.3%**, 20d **-2.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=KeyCorp
@@ -325,15 +317,23 @@
 **LyondellBasell** (LYB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.9%**, 20d **-9.1%**; volatility (20d): **unknown**
+- Returns: 5d **-4.0%**, 20d **-9.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=LyondellBasell
 
+**Teradyne** (TER)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **16.5%**, 20d **12.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Teradyne
+
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.5%**, 20d **-3.5%**; volatility (20d): **unknown**
+- Returns: 5d **-2.5%**, 20d **-4.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
