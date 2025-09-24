@@ -1,7 +1,14 @@
 import fs from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'node:path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { setDefaultResultOrder } from 'node:dns';
 import { nowKSTISO } from './utils/time.js';
+
+try { setDefaultResultOrder('ipv4first'); } catch {}
+
+const execFileAsync = promisify(execFile);
 
 // Write under /stocks/fx_rates/ (dashboard + ticker will read from here)
 const OUT_DIR = path.resolve(process.cwd(), 'stocks', 'fx_rates');
@@ -10,7 +17,7 @@ const HISTORY_PREFIX = 'fx_history';
 const HISTORY_MANIFEST = path.join(OUT_DIR, `${HISTORY_PREFIX}_manifest.json`);
 const LEGACY_HISTORY = path.join(OUT_DIR, 'fx_history.json');
 
-const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD'];
+const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD', 'GOLD', 'BTC'];
 
 const blankSeries = () => Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
 const historyFileForYear = (year) => path.join(OUT_DIR, `${HISTORY_PREFIX}${year}.json`);
@@ -89,6 +96,103 @@ const NAVER_LIST = 'https://finance.naver.com/marketindex/exchangeList.naver';
 
 const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
 
+function shouldUseFallback(err) {
+  if (!err) return false;
+  const codes = new Set(['ENETUNREACH', 'EHOSTUNREACH', 'ECONNRESET', 'ECONNREFUSED', 'EAI_AGAIN']);
+  const cause = err.cause;
+  if (cause && typeof cause === 'object') {
+    if (typeof cause.code === 'string' && codes.has(cause.code)) return true;
+    if (Array.isArray(cause.errors) && cause.errors.some(e => typeof e?.code === 'string' && codes.has(e.code))) {
+      return true;
+    }
+  }
+  return false;
+}
+
+async function requestWithCurl(urlStr, { headers = {}, timeoutMs = 10000 } = {}) {
+  const maxTime = Math.max(1, Math.ceil(timeoutMs / 1000));
+  const args = ['-sS', '--fail', '-4', '--max-time', String(maxTime), '--retry', '3', '--retry-delay', '2', '--retry-all-errors', '--retry-max-time', String(Math.max(3, maxTime * 2))];
+  for (const [key, value] of Object.entries(headers)) {
+    if (typeof value === 'undefined') continue;
+    args.push('-H', `${key}: ${String(value)}`);
+  }
+  args.push(urlStr);
+  try {
+    const { stdout } = await execFileAsync('curl', args);
+    return stdout;
+  } catch (err) {
+    const stderr = err?.stderr ? String(err.stderr).trim() : '';
+    const message = stderr ? `${err.message}: ${stderr}` : err.message;
+    throw new Error(message);
+  }
+}
+
+async function fetchJsonNative(url, headers) {
+  const res = await fetch(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0',
+      ...(headers || {}),
+    },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return await res.json();
+}
+
+async function fetchTextNative(url, headers) {
+  const res = await fetch(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0',
+      ...(headers || {}),
+    },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return await res.text();
+}
+
+async function fetchJsonEither(url, headers = {}, timeoutMs = 10000) {
+  const baseHeaders = { 'Accept': 'application/json', ...(headers || {}) };
+  try {
+    return await fetchJsonNative(url, baseHeaders);
+  } catch (err) {
+    if (shouldUseFallback(err)) {
+      const text = await requestWithCurl(url, { headers: baseHeaders, timeoutMs });
+      return JSON.parse(text);
+    }
+    throw err;
+  }
+}
+
+async function fetchTextEither(url, headers = {}, timeoutMs = 10000) {
+  const baseHeaders = { ...(headers || {}) };
+  try {
+    return await fetchTextNative(url, baseHeaders);
+  } catch (err) {
+    if (shouldUseFallback(err)) {
+      return await requestWithCurl(url, { headers: baseHeaders, timeoutMs });
+    }
+    throw err;
+  }
+}
+
+function parseProxyJson(text) {
+  if (typeof text !== 'string') throw new Error('Proxy response not string');
+  const trimmed = text.trim();
+  if (!trimmed) throw new Error('Proxy response empty');
+  if (trimmed.startsWith('{')) {
+    const parsed = JSON.parse(trimmed);
+    if (parsed && parsed.data && typeof parsed.data.content === 'string') {
+      return parseProxyJson(parsed.data.content);
+    }
+    return parsed;
+  }
+  const start = trimmed.indexOf('{');
+  if (start === -1) throw new Error('Proxy JSON missing');
+  const end = trimmed.lastIndexOf('}');
+  if (end === -1 || end < start) throw new Error('Proxy JSON incomplete');
+  const jsonStr = trimmed.slice(start, end + 1).trim();
+  return JSON.parse(jsonStr);
+}
+
 function nowKST() {
   const t = Date.now() + (new Date().getTimezoneOffset() * 60000) + 9 * 3600 * 1000;
   return new Date(t);
@@ -100,38 +204,26 @@ function yyyymmddKST(d = nowKST()) {
   return `${y}${m}${dd}`;
 }
 
-async function getJson(url,{retries=3,base=400,headers}={}) {
+async function getJson(url,{retries=3,base=400,headers,timeoutMs=10000}={}) {
   let err;
   for (let i=0;i<=retries;i++){
     try{
-      const res = await fetch(url,{
-        headers: {
-          'User-Agent':'Mozilla/5.0',
-          'Accept':'application/json',
-          ...(headers||{})
-        }
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
+      return await fetchJsonEither(url, headers, timeoutMs);
     }catch(e){ err=e; if(i<retries) await sleep(base*2**i); }
   }
   throw err;
 }
 
-async function getText(url,{retries=3,base=400,headers}={}) {
+async function getText(url,{retries=3,base=400,headers,timeoutMs=10000}={}) {
   let err;
+  const mergedHeaders = {
+    'Accept':'text/html, */*;q=0.1',
+    'Referer': 'https://finance.naver.com/',
+    ...(headers||{}),
+  };
   for (let i=0;i<=retries;i++){
     try{
-      const res = await fetch(url,{
-        headers: {
-          'User-Agent':'Mozilla/5.0',
-          'Accept':'text/html, */*;q=0.1',
-          'Referer': 'https://finance.naver.com/',
-          ...(headers||{})
-        }
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.text();
+      return await fetchTextEither(url, mergedHeaders, timeoutMs);
     }catch(e){ err=e; if(i<retries) await sleep(base*2**i); }
   }
   throw err;
@@ -145,7 +237,202 @@ function itemsFromRates(map) {
     { label:'1 CNY',   amount:1,   from:'CNY', to:'KRW', krw: map.CNY_KRW ?? null },
     { label:'1 GBP',   amount:1,   from:'GBP', to:'KRW', krw: map.GBP_KRW ?? null },
     { label:'1 HKD',   amount:1,   from:'HKD', to:'KRW', krw: map.HKD_KRW ?? null },
+    { label:'Gold (1 oz)', amount:1, from:'GOLD', to:'KRW', krw: map.GOLD_KRW ?? null },
+    { label:'Bitcoin (1 BTC)', amount:1, from:'BTC', to:'KRW', krw: map.BTC_KRW ?? null },
   ];
+}
+
+const YAHOO_CHART_BASE = 'https://query1.finance.yahoo.com/v8/finance/chart/';
+const MS_PER_DAY = 24 * 3600 * 1000;
+
+function toKSTDayFromUnix(seconds) {
+  const ts = Number(seconds);
+  if (!Number.isFinite(ts)) return null;
+  const kstMs = ts * 1000 + 9 * 3600 * 1000;
+  const d = new Date(kstMs);
+  if (!Number.isFinite(d.getTime())) return null;
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  const dayStr = `${year}-${month}-${day}`;
+  return { day: dayStr, iso: `${dayStr}T00:00:00+09:00`, year };
+}
+
+function dedupeAndSortDaily(points) {
+  const map = new Map();
+  for (const point of points ?? []) {
+    if (!point || typeof point.day !== 'string') continue;
+    map.set(point.day, point);
+  }
+  return Array.from(map.values()).sort((a, b) => a.day.localeCompare(b.day));
+}
+
+function convertUsdSeriesToKrw(points, usdKrwMap, year) {
+  const arr = [];
+  let lastRate = null;
+  for (const point of dedupeAndSortDaily(points)) {
+    if (!point || typeof point.value !== 'number') continue;
+    if (Number.isFinite(year) && Number(point.day?.slice(0, 4)) !== year) continue;
+    let rate = usdKrwMap.get(point.day);
+    if (!Number.isFinite(rate)) rate = lastRate;
+    if (!Number.isFinite(rate)) continue;
+    lastRate = rate;
+    const val = Number((point.value * rate).toFixed(2));
+    if (!Number.isFinite(val)) continue;
+    arr.push({ t: point.iso, v: val });
+  }
+  return arr;
+}
+
+function formatDateYYYYMMDD(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+async function fetchUsdKrwSeries(year) {
+  const now = nowKST();
+  const startDateStr = `${year}-01-01`;
+  const endDateStr = now.getFullYear() === year ? formatDateYYYYMMDD(now) : `${year}-12-31`;
+  const url = `https://api.frankfurter.app/${startDateStr}..${endDateStr}?from=USD&to=KRW`;
+  const data = await getJson(url, { retries: 2, base: 600 });
+  const map = new Map();
+  for (const [date, value] of Object.entries(data?.rates ?? {})) {
+    if (typeof date !== 'string') continue;
+    if (Number(date.slice(0, 4)) !== year) continue;
+    const rate = Number(value?.KRW);
+    if (!Number.isFinite(rate)) continue;
+    map.set(date, rate);
+  }
+  return map;
+}
+
+async function fetchYahooDailySeries(symbol, startMs, endMs) {
+  const url = new URL(`${YAHOO_CHART_BASE}${encodeURIComponent(symbol)}`);
+  url.searchParams.set('period1', Math.floor(startMs / 1000));
+  url.searchParams.set('period2', Math.floor(endMs / 1000));
+  url.searchParams.set('interval', '1d');
+  url.searchParams.set('includePrePost', 'false');
+  url.searchParams.set('events', 'history');
+
+  let json = null;
+  try {
+    json = await getJson(url.toString(), {
+      headers: { 'Accept-Language': 'en-US,en;q=0.9', 'Referer': 'https://finance.yahoo.com/' },
+      retries: 2,
+      base: 600,
+      timeoutMs: 12000,
+    });
+  } catch {}
+
+  if (!json?.chart?.result?.[0]) {
+    const proxyUrl = `https://r.jina.ai/${url.toString()}`;
+    const proxyText = await getText(proxyUrl, {
+      headers: { 'Accept': 'application/json', 'Referer': 'https://finance.yahoo.com/' },
+      timeoutMs: 15000,
+    });
+    json = parseProxyJson(proxyText);
+  }
+
+  const result = json?.chart?.result?.[0];
+  if (!result) throw new Error(`Yahoo data missing for ${symbol}`);
+  const timestamps = Array.isArray(result.timestamp) ? result.timestamp : [];
+  const closes = result?.indicators?.quote?.[0]?.close ?? [];
+  const points = [];
+  for (let i = 0; i < timestamps.length; i++) {
+    const ts = Number(timestamps[i]);
+    const close = Number(closes[i]);
+    if (!Number.isFinite(ts) || !Number.isFinite(close)) continue;
+    const kst = toKSTDayFromUnix(ts);
+    if (!kst) continue;
+    points.push({ day: kst.day, iso: kst.iso, value: close });
+  }
+  return { points, meta: result.meta ?? {} };
+}
+
+function sanitizeSeriesPoints(points, year) {
+  if (!Array.isArray(points)) return [];
+  const byDay = new Map();
+  for (const point of points) {
+    if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+    const d = new Date(point.t);
+    if (!Number.isFinite(d.getTime())) continue;
+    if (Number.isFinite(year) && d.getFullYear() !== year) continue;
+    const dayKey = point.t.slice(0, 10);
+    byDay.set(dayKey, { t: point.t, v: point.v });
+  }
+  const arr = Array.from(byDay.values());
+  arr.sort((a, b) => new Date(a.t) - new Date(b.t));
+  return arr;
+}
+
+function maxIso(...values) {
+  let max = null;
+  for (const value of values) {
+    if (typeof value !== 'string' || !value) continue;
+    if (!max || value > max) {
+      max = value;
+    }
+  }
+  return max;
+}
+
+async function fetchGoldBitcoinKRW() {
+  const now = nowKST();
+  const year = now.getFullYear();
+  const start = Date.UTC(year, 0, 1);
+  const end = now.getTime() + MS_PER_DAY;
+
+  let usdMap;
+  try {
+    usdMap = await fetchUsdKrwSeries(year);
+  } catch (err) {
+    throw new Error(`USD/KRW reference failed: ${err.message}`);
+  }
+  if (!usdMap.size) {
+    throw new Error('USD/KRW reference empty');
+  }
+
+  await sleep(400);
+
+  let goldData = null;
+  try {
+    goldData = await fetchYahooDailySeries('GC=F', start, end);
+  } catch (err) {
+    console.warn(`[FX] Gold history fetch failed: ${err.message}`);
+  }
+
+  await sleep(400);
+
+  let btcData = null;
+  try {
+    btcData = await fetchYahooDailySeries('BTC-USD', start, end);
+  } catch (err) {
+    console.warn(`[FX] Bitcoin history fetch failed: ${err.message}`);
+  }
+
+  const goldSeries = goldData
+    ? convertUsdSeriesToKrw(goldData.points, usdMap, year)
+    : [];
+  const bitcoinSeries = btcData
+    ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
+    : [];
+
+  const latestGold = goldSeries.length ? goldSeries[goldSeries.length - 1] : null;
+  const latestBitcoin = bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null;
+  const extraLastUpdateds = [];
+  if (latestGold?.t) extraLastUpdateds.push(latestGold.t);
+  if (latestBitcoin?.t) extraLastUpdateds.push(latestBitcoin.t);
+
+  return {
+    year,
+    goldSeries,
+    bitcoinSeries,
+    latestGold,
+    latestBitcoin,
+    extraLastUpdateds,
+  };
 }
 
 // -------- Exim helpers --------
@@ -460,30 +747,60 @@ function upsertPoint(arr, iso, val) {
   }
 }
 
-async function updateHistory(snapshot) {
+async function updateHistory(snapshot, options = {}) {
   const manifest = await readManifest();
-  const { items, lastUpdated } = snapshot;
-  if (!lastUpdated) {
+  const items = Array.isArray(snapshot?.items) ? snapshot.items : [];
+  const lastUpdated = typeof snapshot?.lastUpdated === 'string' ? snapshot.lastUpdated : null;
+  const extraSeries = options && typeof options.extraSeries === 'object' && options.extraSeries
+    ? options.extraSeries
+    : {};
+  const extraYear = Number.isFinite(options?.extraYear) ? Math.trunc(options.extraYear) : null;
+  const extraLastUpdateds = Array.isArray(options?.extraLastUpdateds)
+    ? options.extraLastUpdateds.filter(v => typeof v === 'string')
+    : [];
+
+  let year = null;
+  if (lastUpdated) {
+    const ts = new Date(lastUpdated);
+    if (Number.isFinite(ts.getTime())) {
+      year = ts.getFullYear();
+    }
+  }
+  if (!Number.isFinite(year) && Number.isFinite(extraYear)) {
+    year = extraYear;
+  }
+
+  if (!Number.isFinite(year)) {
+    if (Number.isFinite(extraYear) && !manifest.years.includes(extraYear)) {
+      manifest.years.push(extraYear);
+    }
+    manifest.lastUpdated = maxIso(manifest.lastUpdated, lastUpdated, ...extraLastUpdateds);
     return await saveManifest(manifest);
   }
 
-  const ts = new Date(lastUpdated);
-  if (!Number.isFinite(ts.getTime())) {
-    return await saveManifest(manifest);
-  }
-
-  const year = ts.getFullYear();
   const yearHistory = await readYearHistory(year);
+  const extraSeriesLatest = [];
 
-  for (const it of items) {
-    if (typeof it.krw !== 'number') continue;
-    const key = keyFromItem(it);
-    yearHistory.series[key] ??= [];
-    upsertPoint(yearHistory.series[key], lastUpdated, it.krw);
+  for (const [key, series] of Object.entries(extraSeries)) {
+    if (!SERIES_KEYS.includes(key)) continue;
+    const sanitized = sanitizeSeriesPoints(series, year);
+    if (sanitized.length) {
+      yearHistory.series[key] = sanitized;
+      extraSeriesLatest.push(sanitized[sanitized.length - 1].t);
+    }
+  }
+
+  if (lastUpdated) {
+    for (const it of items) {
+      if (!it || typeof it.krw !== 'number') continue;
+      const key = keyFromItem(it);
+      yearHistory.series[key] ??= [];
+      upsertPoint(yearHistory.series[key], lastUpdated, it.krw);
+    }
   }
 
   for (const key of SERIES_KEYS) {
-    const sorted = yearHistory.series[key]
+    const sorted = (yearHistory.series[key] ?? [])
       .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number' && new Date(p.t).getFullYear() === year)
       .sort((a, b) => new Date(a.t) - new Date(b.t));
     const deduped = [];
@@ -498,13 +815,14 @@ async function updateHistory(snapshot) {
     yearHistory.series[key] = deduped;
   }
 
-  yearHistory.updatedAt = lastUpdated;
+  const updateCandidates = [yearHistory.updatedAt, lastUpdated, ...extraSeriesLatest, ...extraLastUpdateds];
+  yearHistory.updatedAt = maxIso(...updateCandidates);
   await writeYearHistory(yearHistory);
 
   if (!manifest.years.includes(year)) {
     manifest.years.push(year);
   }
-  manifest.lastUpdated = lastUpdated;
+  manifest.lastUpdated = maxIso(manifest.lastUpdated, yearHistory.updatedAt, lastUpdated, ...extraLastUpdateds, ...extraSeriesLatest);
   return await saveManifest(manifest);
 }
 
@@ -532,10 +850,50 @@ async function main(){
 
   if (!items) {
     if (existsSync(OUT)) {
-      console.warn('FX: all providers failed; keeping previous file');
-      return;
+      console.warn('FX: all providers failed; falling back to previous snapshot');
+      try {
+        const prevRaw = await fs.readFile(OUT, 'utf-8');
+        const prev = JSON.parse(prevRaw);
+        if (Array.isArray(prev?.items)) {
+          items = prev.items.map(it => ({ ...it }));
+        }
+      } catch (err) {
+        console.warn(`[FX] Failed to read fallback FX file: ${err.message}`);
+      }
     }
-    items = itemsFromRates({}); // all nulls
+    if (!items) {
+      items = itemsFromRates({}); // all nulls
+    }
+  }
+
+  items = Array.isArray(items) ? items : [];
+
+  let commodityData = null;
+  try {
+    commodityData = await fetchGoldBitcoinKRW();
+  } catch (err) {
+    console.warn(`[FX] Commodity fetch failed: ${err.message}`);
+  }
+
+  const ensureItem = (code, fallbackLabel) => {
+    let found = items.find(it => keyFromItem(it) === code || it.from === code);
+    if (!found) {
+      found = { label: fallbackLabel, amount: 1, from: code, to: 'KRW', krw: null };
+      items.push(found);
+    }
+    return found;
+  };
+
+  if (commodityData?.latestGold) {
+    ensureItem('GOLD', 'Gold (1 oz)').krw = commodityData.latestGold.v;
+  } else {
+    ensureItem('GOLD', 'Gold (1 oz)');
+  }
+
+  if (commodityData?.latestBitcoin) {
+    ensureItem('BTC', 'Bitcoin (1 BTC)').krw = commodityData.latestBitcoin.v;
+  } else {
+    ensureItem('BTC', 'Bitcoin (1 BTC)');
   }
 
   const out = { lastUpdated: nowKSTISO(), items };
@@ -543,7 +901,18 @@ async function main(){
   console.log(`FX: wrote ${OUT} at ${out.lastUpdated}`);
 
   // append/update rolling history
-  await updateHistory(out);
+  const extraSeries = {};
+  if (commodityData?.goldSeries?.length) {
+    extraSeries.GOLD = commodityData.goldSeries;
+  }
+  if (commodityData?.bitcoinSeries?.length) {
+    extraSeries.BTC = commodityData.bitcoinSeries;
+  }
+  await updateHistory(out, {
+    extraSeries,
+    extraYear: commodityData?.year ?? null,
+    extraLastUpdateds: commodityData?.extraLastUpdateds ?? [],
+  });
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
