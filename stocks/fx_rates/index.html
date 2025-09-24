@@ -152,7 +152,7 @@
   <main id="grid"></main>
 
   <div class="footer">
-    <p>설명: 각 카드에는 해당 통화의 KRW 선형 차트가 표시됩니다. 일본 JPY는 <strong>100엔</strong> 기준입니다.</p>
+    <p>설명: 각 카드에는 해당 자산의 KRW 선형 차트가 표시됩니다. 일본 JPY는 <strong>100엔</strong>, 금은 <strong>1그램</strong>, 비트코인은 <strong>1 BTC</strong> 기준입니다.</p>
   </div>
 
   <script>
@@ -177,6 +177,8 @@
       { key: 'CNY', title: '중국 위안 (1 CNY)', unit: '₩' },
       { key: 'GBP', title: '영국 파운드 (1 GBP)', unit: '₩' },
       { key: 'HKD', title: '홍콩 달러 (1 HKD)', unit: '₩' },
+      { key: 'GOLD', title: '금 (1그램)', unit: '₩' },
+      { key: 'BTC', title: '비트코인 (1 BTC)', unit: '₩' },
     ];
     const SERIES_KEYS = SERIES_META.map(meta => meta.key);
     const HISTORY_PREFIX = 'fx_history';
