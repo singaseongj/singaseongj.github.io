@@ -18,6 +18,7 @@ const HISTORY_MANIFEST = path.join(OUT_DIR, `${HISTORY_PREFIX}_manifest.json`);
 const LEGACY_HISTORY = path.join(OUT_DIR, 'fx_history.json');
 
 const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD', 'GOLD', 'BTC'];
+const TROY_OUNCE_TO_GRAM = 31.1034768;
 
 const blankSeries = () => Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
 const historyFileForYear = (year) => path.join(OUT_DIR, `${HISTORY_PREFIX}${year}.json`);
@@ -237,7 +238,7 @@ function itemsFromRates(map) {
     { label:'1 CNY',   amount:1,   from:'CNY', to:'KRW', krw: map.CNY_KRW ?? null },
     { label:'1 GBP',   amount:1,   from:'GBP', to:'KRW', krw: map.GBP_KRW ?? null },
     { label:'1 HKD',   amount:1,   from:'HKD', to:'KRW', krw: map.HKD_KRW ?? null },
-    { label:'Gold (1 oz)', amount:1, from:'GOLD', to:'KRW', krw: map.GOLD_KRW ?? null },
+    { label:'Gold (1 g)', amount:1, from:'GOLD', to:'KRW', krw: map.GOLD_KRW ?? null },
     { label:'Bitcoin (1 BTC)', amount:1, from:'BTC', to:'KRW', krw: map.BTC_KRW ?? null },
   ];
 }
@@ -414,6 +415,14 @@ async function fetchGoldBitcoinKRW() {
 
   const goldSeries = goldData
     ? convertUsdSeriesToKrw(goldData.points, usdMap, year)
+        .map(point => {
+          const value = Number(point?.v);
+          if (!Number.isFinite(value)) return null;
+          const perGram = Number((value / TROY_OUNCE_TO_GRAM).toFixed(2));
+          if (!Number.isFinite(perGram)) return null;
+          return { t: point.t, v: perGram };
+        })
+        .filter(Boolean)
     : [];
   const bitcoinSeries = btcData
     ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
@@ -885,9 +894,9 @@ async function main(){
   };
 
   if (commodityData?.latestGold) {
-    ensureItem('GOLD', 'Gold (1 oz)').krw = commodityData.latestGold.v;
+    ensureItem('GOLD', 'Gold (1 g)').krw = commodityData.latestGold.v;
   } else {
-    ensureItem('GOLD', 'Gold (1 oz)');
+    ensureItem('GOLD', 'Gold (1 g)');
   }
 
   if (commodityData?.latestBitcoin) {
