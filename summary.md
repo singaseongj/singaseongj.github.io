@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-26T00:27:56+09:00 (KST)**
+- Generated: **2025-09-26T05:28:53+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -157,13 +157,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85
 
-**롯데웰푸드** (280360.KS)
+**대웅제약** (069620.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **-2.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.5%**, 20d **-7.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **필수소비재**
-- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%9B%B0%ED%91%B8%EB%93%9C
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD
 
 **쿠쿠홈시스** (192400.KS)
 
@@ -301,7 +301,7 @@
 **Franklin Resources** (BEN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.9%**, 20d **-8.5%**; volatility (20d): **unknown**
+- Returns: 5d **-4.1%**, 20d **-8.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Franklin%20Resources
@@ -309,7 +309,7 @@
 **Hubbell Incorporated** (HUBB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.7%**, 20d **-6.0%**; volatility (20d): **unknown**
+- Returns: 5d **-4.5%**, 20d **-5.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Hubbell%20Incorporated
@@ -317,7 +317,7 @@
 **KeyCorp** (KEY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.0%**, 20d **-3.3%**; volatility (20d): **unknown**
+- Returns: 5d **-1.7%**, 20d **-3.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=KeyCorp
@@ -325,7 +325,7 @@
 **Quest Diagnostics** (DGX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **2.8%**; volatility (20d): **unknown**
+- Returns: 5d **1.1%**, 20d **3.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Quest%20Diagnostics
@@ -333,7 +333,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.5%**, 20d **-7.9%**; volatility (20d): **unknown**
+- Returns: 5d **-1.5%**, 20d **-6.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
