@@ -292,6 +292,59 @@ function formatDateYYYYMMDD(date) {
   return `${y}-${m}-${d}`;
 }
 
+function getUsdKrwRateForDay(usdMap, day) {
+  if (!(usdMap instanceof Map) || usdMap.size === 0) return null;
+  if (typeof day === 'string' && usdMap.has(day)) {
+    const direct = Number(usdMap.get(day));
+    if (Number.isFinite(direct)) return direct;
+  }
+  const entries = Array.from(usdMap.entries())
+    .map(([date, rate]) => [date, Number(rate)])
+    .filter(([, rate]) => Number.isFinite(rate))
+    .sort((a, b) => a[0].localeCompare(b[0]));
+  if (!entries.length) return null;
+  if (typeof day === 'string') {
+    for (let i = entries.length - 1; i >= 0; i--) {
+      if (entries[i][0] <= day) {
+        return entries[i][1];
+      }
+    }
+  }
+  return entries[entries.length - 1][1];
+}
+
+async function fetchCoindeskBitcoinPoint(usdMap) {
+  const apiKey = process.env.COINDESK_API || process.env.COINDESK_API_KEY || process.env.COINDESK_TOKEN || '';
+  const url = new URL('https://data-api.coindesk.com/index/cc/v1/latest/tick');
+  url.searchParams.set('market', 'ccix');
+  url.searchParams.set('instruments', 'BTC-USD');
+  if (apiKey) {
+    url.searchParams.set('api_key', apiKey);
+  }
+  const json = await getJson(url.toString(), {
+    headers: { Accept: 'application/json' },
+    retries: 1,
+    base: 600,
+    timeoutMs: 10000,
+  });
+  const payload = json?.Data?.['BTC-USD'] ?? json?.Data?.BTCUSD ?? null;
+  if (!payload) throw new Error('Coindesk BTC payload missing');
+  const usdValue = Number(payload.VALUE ?? payload.value);
+  if (!Number.isFinite(usdValue)) throw new Error('Coindesk BTC value missing');
+  let tsSeconds = Number(payload.VALUE_LAST_UPDATE_TS ?? payload.last_update_ts);
+  if (!Number.isFinite(tsSeconds) && Number.isFinite(payload.VALUE_LAST_UPDATE_TS_NS)) {
+    tsSeconds = Number(payload.VALUE_LAST_UPDATE_TS_NS) / 1e9;
+  }
+  if (!Number.isFinite(tsSeconds)) throw new Error('Coindesk BTC timestamp missing');
+  const kst = toKSTDayFromUnix(tsSeconds);
+  if (!kst?.day || !kst?.iso) throw new Error('Coindesk BTC timestamp invalid');
+  const rate = getUsdKrwRateForDay(usdMap, kst.day);
+  if (!Number.isFinite(rate)) throw new Error('USD/KRW rate unavailable for BTC');
+  const krwValue = Number((usdValue * rate).toFixed(2));
+  if (!Number.isFinite(krwValue)) throw new Error('Coindesk BTC conversion failed');
+  return { t: kst.iso, v: krwValue };
+}
+
 async function fetchUsdKrwSeries(year) {
   const now = nowKST();
   const startDateStr = `${year}-01-01`;
@@ -424,15 +477,53 @@ async function fetchGoldBitcoinKRW() {
         })
         .filter(Boolean)
     : [];
-  const bitcoinSeries = btcData
+  let bitcoinSeries = btcData
     ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
     : [];
+
+  const btcPointIsStale = (point) => {
+    if (!point || typeof point.t !== 'string') return true;
+    const d = new Date(point.t);
+    if (!Number.isFinite(d.getTime())) return true;
+    return now.getTime() - d.getTime() > 2 * MS_PER_DAY;
+  };
+
+  let coindeskPoint = null;
+  const latestFromSeries = bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null;
+  if (!bitcoinSeries.length || btcPointIsStale(latestFromSeries)) {
+    try {
+      coindeskPoint = await fetchCoindeskBitcoinPoint(usdMap);
+      if (coindeskPoint) {
+        const dayKey = coindeskPoint.t.slice(0, 10);
+        bitcoinSeries = bitcoinSeries
+          .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number');
+        let replaced = false;
+        for (let i = 0; i < bitcoinSeries.length; i++) {
+          const existing = bitcoinSeries[i];
+          if (existing.t.slice(0, 10) === dayKey) {
+            bitcoinSeries[i] = coindeskPoint;
+            replaced = true;
+            break;
+          }
+        }
+        if (!replaced) {
+          bitcoinSeries.push(coindeskPoint);
+        }
+        bitcoinSeries.sort((a, b) => new Date(a.t) - new Date(b.t));
+      }
+    } catch (err) {
+      console.warn(`[FX] Coindesk BTC fallback failed: ${err.message}`);
+    }
+  }
 
   const latestGold = goldSeries.length ? goldSeries[goldSeries.length - 1] : null;
   const latestBitcoin = bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null;
   const extraLastUpdateds = [];
   if (latestGold?.t) extraLastUpdateds.push(latestGold.t);
   if (latestBitcoin?.t) extraLastUpdateds.push(latestBitcoin.t);
+  if (coindeskPoint?.t && !extraLastUpdateds.includes(coindeskPoint.t)) {
+    extraLastUpdateds.push(coindeskPoint.t);
+  }
 
   return {
     year,
