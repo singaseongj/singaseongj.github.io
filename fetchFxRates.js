@@ -292,6 +292,251 @@ function formatDateYYYYMMDD(date) {
   return `${y}-${m}-${d}`;
 }
 
+function getUsdKrwRateForDay(usdMap, day) {
+  if (!(usdMap instanceof Map) || usdMap.size === 0) return null;
+  if (typeof day === 'string' && usdMap.has(day)) {
+    const direct = Number(usdMap.get(day));
+    if (Number.isFinite(direct)) return direct;
+  }
+  const entries = Array.from(usdMap.entries())
+    .map(([date, rate]) => [date, Number(rate)])
+    .filter(([, rate]) => Number.isFinite(rate))
+    .sort((a, b) => a[0].localeCompare(b[0]));
+  if (!entries.length) return null;
+  if (typeof day === 'string') {
+    for (let i = entries.length - 1; i >= 0; i--) {
+      if (entries[i][0] <= day) {
+        return entries[i][1];
+      }
+    }
+  }
+  return entries[entries.length - 1][1];
+}
+
+async function fetchCoindeskBitcoinPoint(usdMap) {
+  const apiKey = process.env.COINDESK_API || process.env.COINDESK_API_KEY || process.env.COINDESK_TOKEN || '';
+  const url = new URL('https://data-api.coindesk.com/index/cc/v1/latest/tick');
+  url.searchParams.set('market', 'ccix');
+  url.searchParams.set('instruments', 'BTC-USD');
+  if (apiKey) {
+    url.searchParams.set('api_key', apiKey);
+  }
+  const json = await getJson(url.toString(), {
+    headers: { Accept: 'application/json' },
+    retries: 1,
+    base: 600,
+    timeoutMs: 10000,
+  });
+  const payload = json?.Data?.['BTC-USD'] ?? json?.Data?.BTCUSD ?? null;
+  if (!payload) throw new Error('Coindesk BTC payload missing');
+  const usdValue = Number(payload.VALUE ?? payload.value);
+  if (!Number.isFinite(usdValue)) throw new Error('Coindesk BTC value missing');
+  let tsSeconds = Number(payload.VALUE_LAST_UPDATE_TS ?? payload.last_update_ts);
+  if (!Number.isFinite(tsSeconds) && Number.isFinite(payload.VALUE_LAST_UPDATE_TS_NS)) {
+    tsSeconds = Number(payload.VALUE_LAST_UPDATE_TS_NS) / 1e9;
+  }
+  if (!Number.isFinite(tsSeconds)) throw new Error('Coindesk BTC timestamp missing');
+  const kst = toKSTDayFromUnix(tsSeconds);
+  if (!kst?.day || !kst?.iso) throw new Error('Coindesk BTC timestamp invalid');
+  const rate = getUsdKrwRateForDay(usdMap, kst.day);
+  if (!Number.isFinite(rate)) throw new Error('USD/KRW rate unavailable for BTC');
+  const krwValue = Number((usdValue * rate).toFixed(2));
+  if (!Number.isFinite(krwValue)) throw new Error('Coindesk BTC conversion failed');
+  return { t: kst.iso, v: krwValue };
+}
+
+function parseGoldBasDt(value) {
+  if (typeof value !== 'string') return null;
+  const trimmed = value.trim();
+  const match = trimmed.match(/^(\d{4})(\d{2})(\d{2})$/);
+  if (!match) return null;
+  const day = `${match[1]}-${match[2]}-${match[3]}`;
+  return { day, iso: `${day}T00:00:00+09:00` };
+}
+
+function parseGoldNumeric(value) {
+  if (typeof value === 'number') {
+    return Number.isFinite(value) ? value : NaN;
+  }
+  if (typeof value === 'string') {
+    const cleaned = value.replace(/,/g, '').trim();
+    if (!cleaned) return NaN;
+    const num = Number(cleaned);
+    return Number.isFinite(num) ? num : NaN;
+  }
+  return NaN;
+}
+
+function getGoldField(obj, keys) {
+  if (!obj || typeof obj !== 'object') return null;
+  for (const key of keys) {
+    if (typeof key !== 'string' || !key) continue;
+    const candidate = obj[key];
+    if (typeof candidate === 'string') {
+      const trimmed = candidate.trim();
+      if (trimmed) return trimmed;
+    } else if (typeof candidate === 'number') {
+      if (Number.isFinite(candidate)) return candidate;
+    }
+  }
+  return null;
+}
+
+function parseGoldItemsFromXml(text) {
+  if (typeof text !== 'string') return [];
+  const trimmed = text.trim();
+  if (!trimmed) return [];
+  if (trimmed.startsWith('<OpenAPI_ServiceResponse')) {
+    const reason = trimmed.match(/<returnReasonCode>([^<]*)<\/returnReasonCode>/)?.[1]?.trim();
+    const authMsg = trimmed.match(/<returnAuthMsg>([^<]*)<\/returnAuthMsg>/)?.[1]?.trim();
+    const errMsg = trimmed.match(/<errMsg>([^<]*)<\/errMsg>/)?.[1]?.trim();
+    const parts = [reason, authMsg, errMsg].filter(Boolean);
+    const detail = parts.length ? parts.join(' / ') : 'Service error';
+    throw new Error(detail);
+  }
+  const codeMatch = trimmed.match(/<resultCode>([^<]*)<\/resultCode>/);
+  if (codeMatch) {
+    const code = codeMatch[1]?.trim();
+    if (code && code !== '00') {
+      const message = trimmed.match(/<resultMsg>([^<]*)<\/resultMsg>/)?.[1]?.trim() ?? 'Unknown error';
+      throw new Error(`${code} ${message}`.trim());
+    }
+  }
+  const items = [];
+  const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+  let match;
+  while ((match = itemRegex.exec(trimmed))) {
+    const block = match[1];
+    const entry = {};
+    const fieldRegex = /<([^\s<>\/]+)>([\s\S]*?)<\/\1>/g;
+    let fieldMatch;
+    while ((fieldMatch = fieldRegex.exec(block))) {
+      const key = fieldMatch[1]?.trim();
+      if (!key) continue;
+      const rawVal = fieldMatch[2] ?? '';
+      const value = String(rawVal)
+        .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+        .trim();
+      entry[key] = value;
+    }
+    if (Object.keys(entry).length) {
+      items.push(entry);
+    }
+  }
+  return items;
+}
+
+function normalizeGoldApiEntries(rawItems) {
+  const entries = [];
+  for (const raw of rawItems ?? []) {
+    const basDt = getGoldField(raw, ['basDt', 'basdt']);
+    const parsedDate = parseGoldBasDt(typeof basDt === 'number' ? String(basDt) : basDt);
+    if (!parsedDate) continue;
+    const priceRaw = getGoldField(raw, ['clpr', 'close', 'closingPrice']);
+    const price = parseGoldNumeric(priceRaw);
+    if (!Number.isFinite(price)) continue;
+    const code = getGoldField(raw, ['srtnCd', 'srtncd']);
+    const name = getGoldField(raw, ['itmsNm', 'itmsnm']);
+    const perGram = Number(Number(price).toFixed(2));
+    if (!Number.isFinite(perGram)) continue;
+    entries.push({
+      code: typeof code === 'string' ? code.trim() : null,
+      name: typeof name === 'string' ? name.trim() : null,
+      iso: parsedDate.iso,
+      day: parsedDate.day,
+      value: perGram,
+    });
+  }
+  return entries;
+}
+
+function buildGoldSeries(entries) {
+  if (!Array.isArray(entries) || !entries.length) {
+    return { series: [], latest: null };
+  }
+  const byId = new Map();
+  for (const entry of entries) {
+    const key = entry.code || entry.name || 'default';
+    if (!byId.has(key)) byId.set(key, []);
+    byId.get(key).push(entry);
+  }
+  const preferOrder = ['04020000', '04020100'];
+  const order = [...preferOrder, ...Array.from(byId.keys()).filter(key => !preferOrder.includes(key))];
+  for (const id of order) {
+    const arr = byId.get(id);
+    if (!arr || !arr.length) continue;
+    const perDay = new Map();
+    for (const it of arr) {
+      if (!it?.day) continue;
+      perDay.set(it.day, it);
+    }
+    if (!perDay.size) continue;
+    const sorted = Array.from(perDay.values()).sort((a, b) => a.day.localeCompare(b.day));
+    const series = sorted.map(it => ({ t: it.iso, v: Number(it.value.toFixed(2)) }));
+    if (series.length) {
+      return { series, latest: series[series.length - 1] };
+    }
+  }
+  return { series: [], latest: null };
+}
+
+async function fetchGoldPriceFromDataApi(year) {
+  const serviceKey = (process.env.DATA_API_KEY || '').trim();
+  if (!serviceKey) throw new Error('DATA_API_KEY missing');
+  const url = new URL('https://apis.data.go.kr/1160100/service/GetGeneralProductInfoService/getGoldPriceInfo');
+  url.searchParams.set('serviceKey', serviceKey);
+  url.searchParams.set('numOfRows', '30');
+  url.searchParams.set('pageNo', '1');
+  url.searchParams.set('resultType', 'json');
+
+  let text;
+  try {
+    text = await getText(url.toString(), {
+      headers: { 'Accept': 'application/json, text/xml;q=0.9, */*;q=0.1' },
+      timeoutMs: 12000,
+      retries: 1,
+    });
+  } catch (err) {
+    throw new Error(`data.go.kr request failed: ${err.message}`);
+  }
+
+  let items = [];
+  let parsedJson = null;
+  try {
+    parsedJson = JSON.parse(text);
+  } catch {}
+
+  if (parsedJson) {
+    const resultCode = String(parsedJson?.response?.header?.resultCode ?? parsedJson?.header?.resultCode ?? '').trim();
+    if (resultCode && resultCode !== '00') {
+      const msg = parsedJson?.response?.header?.resultMsg ?? parsedJson?.header?.resultMsg ?? 'Unknown error';
+      throw new Error(`${resultCode} ${msg}`.trim());
+    }
+    const jsonItems = parsedJson?.response?.body?.items?.item ?? parsedJson?.body?.items?.item ?? parsedJson?.items?.item ?? parsedJson?.items;
+    if (Array.isArray(jsonItems)) {
+      items = jsonItems;
+    } else if (jsonItems) {
+      items = [jsonItems];
+    }
+  }
+
+  if (!items.length) {
+    items = parseGoldItemsFromXml(text);
+  }
+
+  if (!items.length) {
+    throw new Error('data.go.kr gold payload empty');
+  }
+
+  const entries = normalizeGoldApiEntries(items)
+    .filter(entry => !Number.isFinite(year) || Number(entry.day?.slice(0, 4)) >= year - 1);
+  const { series, latest } = buildGoldSeries(entries);
+  if (!series.length && !latest) {
+    throw new Error('data.go.kr gold price unavailable');
+  }
+  return { series, latest };
+}
+
 async function fetchUsdKrwSeries(year) {
   const now = nowKST();
   const startDateStr = `${year}-01-01`;
@@ -413,7 +658,7 @@ async function fetchGoldBitcoinKRW() {
     console.warn(`[FX] Bitcoin history fetch failed: ${err.message}`);
   }
 
-  const goldSeries = goldData
+  let goldSeries = goldData
     ? convertUsdSeriesToKrw(goldData.points, usdMap, year)
         .map(point => {
           const value = Number(point?.v);
@@ -424,15 +669,74 @@ async function fetchGoldBitcoinKRW() {
         })
         .filter(Boolean)
     : [];
-  const bitcoinSeries = btcData
+  let bitcoinSeries = btcData
     ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
     : [];
 
-  const latestGold = goldSeries.length ? goldSeries[goldSeries.length - 1] : null;
+  const btcPointIsStale = (point) => {
+    if (!point || typeof point.t !== 'string') return true;
+    const d = new Date(point.t);
+    if (!Number.isFinite(d.getTime())) return true;
+    return now.getTime() - d.getTime() > 2 * MS_PER_DAY;
+  };
+
+  let coindeskPoint = null;
+  const latestFromSeries = bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null;
+  if (!bitcoinSeries.length || btcPointIsStale(latestFromSeries)) {
+    try {
+      coindeskPoint = await fetchCoindeskBitcoinPoint(usdMap);
+      if (coindeskPoint) {
+        const dayKey = coindeskPoint.t.slice(0, 10);
+        bitcoinSeries = bitcoinSeries
+          .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number');
+        let replaced = false;
+        for (let i = 0; i < bitcoinSeries.length; i++) {
+          const existing = bitcoinSeries[i];
+          if (existing.t.slice(0, 10) === dayKey) {
+            bitcoinSeries[i] = coindeskPoint;
+            replaced = true;
+            break;
+          }
+        }
+        if (!replaced) {
+          bitcoinSeries.push(coindeskPoint);
+        }
+        bitcoinSeries.sort((a, b) => new Date(a.t) - new Date(b.t));
+      }
+    } catch (err) {
+      console.warn(`[FX] Coindesk BTC fallback failed: ${err.message}`);
+    }
+  }
+
+  let latestGold = goldSeries.length ? goldSeries[goldSeries.length - 1] : null;
+
+  if ((!goldSeries.length || !latestGold) && process.env.DATA_API_KEY) {
+    try {
+      const fallback = await fetchGoldPriceFromDataApi(year);
+      if (fallback?.series?.length) {
+        goldSeries = sanitizeSeriesPoints([...goldSeries, ...fallback.series], year);
+      }
+      if (!latestGold && fallback?.latest) {
+        latestGold = fallback.latest;
+      }
+      if (!latestGold && goldSeries.length) {
+        latestGold = goldSeries[goldSeries.length - 1];
+      }
+    } catch (err) {
+      console.warn(`[FX] Gold fallback (data.go.kr) failed: ${err.message}`);
+    }
+  }
+
+  if (!latestGold && goldSeries.length) {
+    latestGold = goldSeries[goldSeries.length - 1];
+  }
   const latestBitcoin = bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null;
   const extraLastUpdateds = [];
   if (latestGold?.t) extraLastUpdateds.push(latestGold.t);
   if (latestBitcoin?.t) extraLastUpdateds.push(latestBitcoin.t);
+  if (coindeskPoint?.t && !extraLastUpdateds.includes(coindeskPoint.t)) {
+    extraLastUpdateds.push(coindeskPoint.t);
+  }
 
   return {
     year,
