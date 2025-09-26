@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-27T00:33:09+09:00 (KST)**
+- Generated: **2025-09-27T05:33:38+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -309,7 +309,7 @@
 **Hubbell Incorporated** (HUBB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.9%**, 20d **-4.9%**; volatility (20d): **unknown**
+- Returns: 5d **-3.7%**, 20d **-4.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Hubbell%20Incorporated
@@ -317,7 +317,7 @@
 **Quest Diagnostics** (DGX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.2%**, 20d **4.7%**; volatility (20d): **unknown**
+- Returns: 5d **2.9%**, 20d **5.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Quest%20Diagnostics
@@ -325,16 +325,16 @@
 **Snap-on** (SNA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **3.9%**; volatility (20d): **unknown**
+- Returns: 5d **1.4%**, 20d **4.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Snap-on
 
-**Trimble Inc.** (TRMB)
+**Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.8%**, 20d **-2.1%**; volatility (20d): **unknown**
+- Returns: 5d **-0.9%**, 20d **-4.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Trimble%20Inc.
+- News search: https://www.google.com/search?q=Tyler%20Technologies
 
