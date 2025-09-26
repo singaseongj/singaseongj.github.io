@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-26T19:27:35+09:00 (KST)**
+- Generated: **2025-09-27T00:33:09+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -100,13 +100,13 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=CJ
 
-**LG화학** (051910.KS)
+**KT&G** (033780.KS)
 
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **n/a**, 20d **1.8%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **2.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=KT%26G
 
 **NAVER** (NAVER)
 
@@ -115,6 +115,14 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=NAVER
 
+**기업은행** (024110.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **1.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **금융**
+- News search: https://www.google.com/search?q=%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89
+
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
@@ -122,14 +130,6 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
-
-**포스코인터내셔널** (047050.KS)
-
-- News (7d): **16** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.13)**
-- Returns: 5d **n/a**, 20d **1.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90
 
 ### AGGRESSIVE (5)
 
@@ -309,7 +309,7 @@
 **Hubbell Incorporated** (HUBB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.5%**, 20d **-5.7%**; volatility (20d): **unknown**
+- Returns: 5d **-3.9%**, 20d **-4.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Hubbell%20Incorporated
@@ -317,7 +317,7 @@
 **Quest Diagnostics** (DGX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **3.1%**; volatility (20d): **unknown**
+- Returns: 5d **2.2%**, 20d **4.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Quest%20Diagnostics
@@ -325,16 +325,16 @@
 **Snap-on** (SNA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **2.1%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **3.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Snap-on
 
-**Tyler Technologies** (TYL)
+**Trimble Inc.** (TRMB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.5%**, 20d **-6.9%**; volatility (20d): **unknown**
+- Returns: 5d **-2.8%**, 20d **-2.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Tyler%20Technologies
+- News search: https://www.google.com/search?q=Trimble%20Inc.
 
