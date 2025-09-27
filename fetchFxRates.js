@@ -94,6 +94,7 @@ const EH_USD = 'https://api.exchangerate.host/latest?base=USD&symbols=KRW,EUR,GB
 const EH_JPY = 'https://api.exchangerate.host/latest?base=JPY&symbols=KRW';
 
 const NAVER_LIST = 'https://finance.naver.com/marketindex/exchangeList.naver';
+const NAVER_UPBIT_BTC = 'https://m.stock.naver.com/crypto/UPBIT/BTC';
 
 const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
 
@@ -268,6 +269,28 @@ function dedupeAndSortDaily(points) {
   return Array.from(map.values()).sort((a, b) => a.day.localeCompare(b.day));
 }
 
+function upsertDailySeriesPoint(series, point) {
+  if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') return Array.isArray(series) ? series : [];
+  const dayKey = point.t.slice(0, 10);
+  const filtered = Array.isArray(series)
+    ? series.filter(p => p && typeof p.t === 'string' && typeof p.v === 'number')
+    : [];
+  let replaced = false;
+  for (let i = 0; i < filtered.length; i++) {
+    const existing = filtered[i];
+    if (existing.t.slice(0, 10) === dayKey) {
+      filtered[i] = point;
+      replaced = true;
+      break;
+    }
+  }
+  if (!replaced) {
+    filtered.push(point);
+  }
+  filtered.sort((a, b) => new Date(a.t) - new Date(b.t));
+  return filtered;
+}
+
 function convertUsdSeriesToKrw(points, usdKrwMap, year) {
   const arr = [];
   let lastRate = null;
@@ -343,6 +366,61 @@ async function fetchCoindeskBitcoinPoint(usdMap) {
   const krwValue = Number((usdValue * rate).toFixed(2));
   if (!Number.isFinite(krwValue)) throw new Error('Coindesk BTC conversion failed');
   return { t: kst.iso, v: krwValue };
+}
+
+function extractNextDataFromHtml(html) {
+  if (typeof html !== 'string' || !html) throw new Error('Naver HTML missing');
+  const marker = 'id="__NEXT_DATA__"';
+  const markerIndex = html.indexOf(marker);
+  if (markerIndex === -1) throw new Error('Naver NEXT_DATA marker missing');
+  const start = html.indexOf('>', markerIndex);
+  const end = html.indexOf('</script>', start);
+  if (start === -1 || end === -1) throw new Error('Naver NEXT_DATA bounds missing');
+  const jsonStr = html.slice(start + 1, end).trim();
+  if (!jsonStr) throw new Error('Naver NEXT_DATA empty');
+  try {
+    return JSON.parse(jsonStr);
+  } catch (err) {
+    throw new Error(`Naver NEXT_DATA parse failed: ${err.message}`);
+  }
+}
+
+function extractNaverCryptoDetail(parsed) {
+  const queries = parsed?.props?.pageProps?.dehydratedState?.queries;
+  if (!Array.isArray(queries)) throw new Error('Naver dehydrated state missing');
+  for (const entry of queries) {
+    const key = Array.isArray(entry?.queryKey) ? entry.queryKey[0] : null;
+    if (!key || typeof key !== 'object') continue;
+    if (key.url === '/crypto/cryptoDetail') {
+      const result = entry?.state?.data?.result;
+      if (result && typeof result === 'object') {
+        return result;
+      }
+    }
+  }
+  throw new Error('Naver crypto detail missing');
+}
+
+async function fetchNaverBitcoinPoint(now = nowKST()) {
+  const html = await getText(NAVER_UPBIT_BTC, {
+    headers: {
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    },
+    timeoutMs: 12000,
+    retries: 2,
+  });
+  const parsed = extractNextDataFromHtml(html);
+  const detail = extractNaverCryptoDetail(parsed);
+  const priceRaw = detail?.tradePrice ?? detail?.formatted?.tradePrice ?? null;
+  const price = parseGoldNumeric(priceRaw);
+  if (!Number.isFinite(price)) throw new Error('Naver BTC price missing');
+  let tradedAt = typeof detail?.koreaTradedAt === 'string' ? detail.koreaTradedAt.trim() : '';
+  if (!tradedAt) {
+    tradedAt = formatDateYYYYMMDD(now);
+  }
+  const day = tradedAt.length >= 10 ? tradedAt.slice(0, 10) : formatDateYYYYMMDD(now);
+  const iso = `${day}T00:00:00+09:00`;
+  return { t: iso, v: Number(price.toFixed(2)) };
 }
 
 function parseGoldBasDt(value) {
@@ -681,30 +759,42 @@ async function fetchGoldBitcoinKRW() {
   };
 
   let coindeskPoint = null;
-  const latestFromSeries = bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null;
+  let naverPoint = null;
+  let interpolatedPoint = null;
+  const latestSeriesPoint = () => (bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null);
+  let latestFromSeries = latestSeriesPoint();
   if (!bitcoinSeries.length || btcPointIsStale(latestFromSeries)) {
     try {
       coindeskPoint = await fetchCoindeskBitcoinPoint(usdMap);
       if (coindeskPoint) {
-        const dayKey = coindeskPoint.t.slice(0, 10);
-        bitcoinSeries = bitcoinSeries
-          .filter(p => p && typeof p.t === 'string' && typeof p.v === 'number');
-        let replaced = false;
-        for (let i = 0; i < bitcoinSeries.length; i++) {
-          const existing = bitcoinSeries[i];
-          if (existing.t.slice(0, 10) === dayKey) {
-            bitcoinSeries[i] = coindeskPoint;
-            replaced = true;
-            break;
-          }
-        }
-        if (!replaced) {
-          bitcoinSeries.push(coindeskPoint);
-        }
-        bitcoinSeries.sort((a, b) => new Date(a.t) - new Date(b.t));
+        bitcoinSeries = upsertDailySeriesPoint(bitcoinSeries, coindeskPoint);
       }
     } catch (err) {
       console.warn(`[FX] Coindesk BTC fallback failed: ${err.message}`);
+    }
+  }
+
+  latestFromSeries = latestSeriesPoint();
+  if (!bitcoinSeries.length || btcPointIsStale(latestFromSeries)) {
+    try {
+      naverPoint = await fetchNaverBitcoinPoint(now);
+      if (naverPoint) {
+        bitcoinSeries = upsertDailySeriesPoint(bitcoinSeries, naverPoint);
+      }
+    } catch (err) {
+      console.warn(`[FX] Naver BTC fallback failed: ${err.message}`);
+    }
+  }
+
+  latestFromSeries = latestSeriesPoint();
+  if (!bitcoinSeries.length || btcPointIsStale(latestFromSeries)) {
+    try {
+      interpolatedPoint = await interpolateBitcoinFallback(now, year, bitcoinSeries);
+      if (interpolatedPoint) {
+        bitcoinSeries = upsertDailySeriesPoint(bitcoinSeries, interpolatedPoint);
+      }
+    } catch (err) {
+      console.warn(`[FX] Bitcoin interpolation fallback failed: ${err.message}`);
     }
   }
 
@@ -737,6 +827,12 @@ async function fetchGoldBitcoinKRW() {
   if (coindeskPoint?.t && !extraLastUpdateds.includes(coindeskPoint.t)) {
     extraLastUpdateds.push(coindeskPoint.t);
   }
+  if (naverPoint?.t && !extraLastUpdateds.includes(naverPoint.t)) {
+    extraLastUpdateds.push(naverPoint.t);
+  }
+  if (interpolatedPoint?.t && !extraLastUpdateds.includes(interpolatedPoint.t)) {
+    extraLastUpdateds.push(interpolatedPoint.t);
+  }
 
   return {
     year,
@@ -746,6 +842,78 @@ async function fetchGoldBitcoinKRW() {
     latestBitcoin,
     extraLastUpdateds,
   };
+}
+
+async function interpolateBitcoinFallback(now, year, currentSeries) {
+  const combined = Array.isArray(currentSeries)
+    ? currentSeries.filter(p => p && typeof p.t === 'string' && typeof p.v === 'number')
+    : [];
+  if (Number.isFinite(year)) {
+    try {
+      const history = await readYearHistory(year);
+      const historySeries = Array.isArray(history?.series?.BTC) ? history.series.BTC : [];
+      for (const point of historySeries) {
+        if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+        combined.push({ t: point.t, v: point.v });
+      }
+    } catch {}
+    if (combined.length < 3) {
+      try {
+        const prevHistory = await readYearHistory(year - 1);
+        const prevSeries = Array.isArray(prevHistory?.series?.BTC) ? prevHistory.series.BTC : [];
+        for (const point of prevSeries) {
+          if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+          combined.push({ t: point.t, v: point.v });
+        }
+      } catch {}
+    }
+  }
+
+  let sanitized = [];
+  for (const point of combined) {
+    sanitized = upsertDailySeriesPoint(sanitized, point);
+  }
+
+  if (!sanitized.length) return null;
+
+  const targetDay = formatDateYYYYMMDD(now);
+  const targetIso = `${targetDay}T00:00:00+09:00`;
+  const targetTime = new Date(targetIso).getTime();
+  if (!Number.isFinite(targetTime)) return null;
+
+  sanitized = sanitized.filter(point => typeof point?.t === 'string' && new Date(point.t).getTime() <= targetTime);
+  if (sanitized.length < 3) return null;
+
+  const lastThree = sanitized.slice(-3);
+  const times = lastThree.map(p => new Date(p.t).getTime());
+  if (times.some(t => !Number.isFinite(t))) return null;
+  const values = lastThree.map(p => p.v);
+  if (values.some(v => !Number.isFinite(v))) return null;
+
+  const base = times[0];
+  const normalizedTimes = times.map(t => (t - base) / MS_PER_DAY);
+  const targetX = (targetTime - base) / MS_PER_DAY;
+
+  const n = normalizedTimes.length;
+  const sumX = normalizedTimes.reduce((acc, x) => acc + x, 0);
+  const sumY = values.reduce((acc, y) => acc + y, 0);
+  const sumXX = normalizedTimes.reduce((acc, x) => acc + x * x, 0);
+  const sumXY = normalizedTimes.reduce((acc, x, idx) => acc + x * values[idx], 0);
+  const denom = n * sumXX - sumX * sumX;
+
+  let slope = 0;
+  let intercept = sumY / n;
+  if (Math.abs(denom) > 1e-9) {
+    slope = (n * sumXY - sumX * sumY) / denom;
+    intercept = (sumY - slope * sumX) / n;
+  }
+
+  const predicted = intercept + slope * targetX;
+  if (!Number.isFinite(predicted)) return null;
+  const rounded = Number(predicted.toFixed(2));
+  if (!Number.isFinite(rounded)) return null;
+
+  return { t: targetIso, v: rounded };
 }
 
 // -------- Exim helpers --------
