@@ -168,11 +168,11 @@
   "KOSPI": {
     "safe": [
       {
-        "name": "CJ",
-        "sector": null,
-        "ticker": "CJ.TO",
-        "searchUrl": "https://www.google.com/search?q=CJ",
-        "score": 79,
+        "name": "KB금융",
+        "sector": "금융",
+        "ticker": "105560.KS",
+        "searchUrl": "https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5",
+        "score": 82,
         "reasons": {
           "reputationScore": 0.55,
           "topKeywords": [],
@@ -188,23 +188,7 @@
         "sector": "경기소비재",
         "ticker": "066570.KS",
         "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90",
-        "score": 83,
-        "reasons": {
-          "reputationScore": 0.55,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": -0.05,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "LG화학",
-        "sector": "소재",
-        "ticker": "051910.KS",
-        "searchUrl": "https://www.google.com/search?q=LG%ED%99%94%ED%95%99",
-        "score": 81,
+        "score": 84,
         "reasons": {
           "reputationScore": 0.55,
           "topKeywords": [],
@@ -242,6 +226,22 @@
           "topKeywords": [],
           "signals": {
             "sentiment": 0,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "현대모비스",
+        "sector": "경기소비재",
+        "ticker": "012330.KS",
+        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4",
+        "score": 83,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": -0.05,
             "blog": 1,
             "naver": 0
           }
@@ -302,7 +302,7 @@
         "sector": "경기소비재",
         "ticker": "009240.KS",
         "searchUrl": "https://www.google.com/search?q=%ED%95%9C%EC%83%98",
-        "score": 24,
+        "score": 25,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-09-28T14:24:10+09:00"
+  "lastUpdated": "2025-09-28T19:25:04+09:00"
 }
