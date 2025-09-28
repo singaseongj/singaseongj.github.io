@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-09-28T14:24:10+09:00 (KST)**
+- Generated: **2025-09-28T19:25:04+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -92,12 +92,13 @@
 
 ### SAFE (5)
 
-**CJ** (CJ.TO)
+**KB금융** (105560.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **2.4%**, 20d **-0.8%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **n/a**, 20d **4.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=CJ
+- Sector: **금융**
+- News search: https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5
 
 **LG전자** (066570.KS)
 
@@ -106,14 +107,6 @@
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
-
-**LG화학** (051910.KS)
-
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **n/a**, 20d **1.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
 **삼성전자** (005930.KS)
 
@@ -130,6 +123,14 @@
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94
+
+**현대모비스** (012330.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **n/a**, 20d **-7.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4
 
 ### AGGRESSIVE (5)
 
