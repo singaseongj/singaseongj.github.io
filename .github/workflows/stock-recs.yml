@@ -351,6 +351,9 @@ jobs:
       - name: Build article cache
         run: node build-articles.js
 
+      - name: Clear prior market keyword snapshot
+        run: rm -f newsKeywords.json
+
       - name: Build market keyword snapshot
         run: node src/news/fetchByTicker.js --build-keywords
 
