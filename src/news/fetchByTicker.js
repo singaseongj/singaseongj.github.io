@@ -440,13 +440,7 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
     articles.push(...collected);
   }
 
-  let keywords = buildKeywordSummary(articles);
-  if (!keywords.length) {
-    if (Array.isArray(existingSnapshot?.keywords) && existingSnapshot.keywords.length) {
-      console.warn('[keywords] no fresh keywords found; reusing existing snapshot');
-      keywords = existingSnapshot.keywords;
-    }
-  }
+  const keywords = buildKeywordSummary(articles);
 
   const now = new Date();
   const tz = process.env.KEYWORD_TIMEZONE || 'Asia/Seoul';
@@ -506,6 +500,40 @@ const CANONICAL_MAP = new Map([
 
 const STOP_KO = new Set(['은','는','이','가','을','를','에','에서','으로','와','과','및','또한','등','대한','관련','부분','대해','통한','지난','올해','이번','최근']);
 const STOP_EN = new Set(['the','a','an','and','or','for','to','of','in','on','with','by','as','from','at','this','that','these','those','is','are','was','were']);
+const BLACKLIST_KO = new Set([
+  '최소','최대','전문','속보','종합','단독','사진','영상','라디오','프로그램',
+  '오늘','어제','내일','현재','최근','지난','이번','올해','관련','대해','부분','경우',
+  '발언','인터뷰','코멘트','분석','전망','영향','상승','하락','변동','폭','수준',
+  '연합뉴스','YTN','KBS','SBS','MBN','JTBC','머니투데이','한국경제','매일경제','서울경제'
+]);
+
+const ECON_SUFFIXES = [
+  '산업','업','업체','기업','시장','수요','공급','가격','지수','수출','수입','무역수지',
+  '금리','환율','물가','채권','유가','원자재','설비','수주','발주','실적','가이던스',
+  '배터리','전지','조선','해양','반도체','자동차','전장','디스플레이','철강','정유','석유화학',
+  '방산','바이오','제약','로봇','원자력','SMR','LNG','데이터센터'
+];
+
+const MACRO_WHITELIST = new Set([
+  'CPI','PPI','PCE','FOMC','GDP','NFP','PMI','ISM','QT','QE',
+  '연준','기준금리','인플레이션','디플레이션','연착륙','경기침체','고용','임금','소비',
+  '2차전지','조선해양','반도체','HBM','AI','LNG'
+]);
+
+function looksEconomic(term) {
+  if (DOMAIN_LEXICON.has(term) || MACRO_WHITELIST.has(term)) return true;
+
+  for (const suf of ECON_SUFFIXES) {
+    if (term.endsWith(suf)) return true;
+  }
+
+  if (/^[A-Z]{3,6}$/.test(term)) return true;
+
+  if (/^\d+([.,]\d+)?%?$/.test(term)) return false;
+  if (/^\d+(분기|월|일|년)$/.test(term)) return false;
+
+  return false;
+}
 
 const isHangul = (s) => /^[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]+$/.test(s);
 const isAlphaNum = (s) => /^[a-z0-9\-]+$/.test(s);
@@ -521,8 +549,11 @@ function tokenizeKR(text) {
   const toks = normalizeTokenText(text).split(' ');
   return toks.filter(t => {
     if (!t) return false;
-    if (isHangul(t) && t.length > 1 && !STOP_KO.has(t)) return true;
-    if (DOMAIN_LEXICON.has(t)) return true;
+    if (STOP_KO.has(t)) return false;
+    if (t.length <= 2 && !DOMAIN_LEXICON.has(t) && !MACRO_WHITELIST.has(t)) return false;
+    if (/[한]$/.test(t) || /(적|적인)$/.test(t)) return false;
+    if (isHangul(t)) return true;
+    if (DOMAIN_LEXICON.has(t) || MACRO_WHITELIST.has(t)) return true;
     return false;
   });
 }
@@ -620,16 +651,24 @@ export function buildKeywordScores(articles) {
 
 export function filterAndRank(scores) {
   const MIN_LEN = 2;
-  const MIN_SCORE = 1.2;
+  const MIN_SCORE = 1.6;
+  const MIN_SOURCES = 2;
   const out = [];
+
   for (const [term, { score, sources }] of scores.entries()) {
-    if (term.length < MIN_LEN) continue;
+    const srcCount = sources.size || sources.length || 0;
+
+    if (!term || term.length < MIN_LEN) continue;
+    if (BLACKLIST_KO.has(term)) continue;
+    if (/^\d+$/.test(term)) continue;
     if (STOP_KO.has(term) || STOP_EN.has(term)) continue;
 
-    const keep = DOMAIN_LEXICON.has(term) || score >= MIN_SCORE;
-    if (!keep) continue;
+    if (!looksEconomic(term)) continue;
 
-    if (/^\d+$/.test(term)) continue;
+    if (srcCount < MIN_SOURCES && !DOMAIN_LEXICON.has(term)) continue;
+
+    const keep = score >= MIN_SCORE || DOMAIN_LEXICON.has(term);
+    if (!keep) continue;
 
     out.push({ term, score: Number(score.toFixed(3)), sources: [...sources].slice(0, 5) });
   }
@@ -641,8 +680,7 @@ export function filterAndRank(scores) {
     if (!prev || k.score > prev.score) seen.set(t, { ...k, term: t });
   }
 
-  const ranked = [...seen.values()].sort((a, b) => b.score - a.score);
-  return ranked.filter((k, idx) => idx < 20 || k.score > 2.0).slice(0, 25);
+  return [...seen.values()].sort((a, b) => b.score - a.score).slice(0, 10);
 }
 
 export function buildNewsKeywords(articlesByTicker) {
@@ -655,7 +693,7 @@ export function buildNewsKeywords(articlesByTicker) {
   for (const [ticker, articles] of Object.entries(articlesByTicker || {})) {
     if (!Array.isArray(articles) || !articles.length) continue;
     const scores = buildKeywordScores(articles);
-    const keywords = filterAndRank(scores);
+    const keywords = filterAndRank(scores).slice(0, 10);
     if (keywords.length) {
       output.tickers[ticker] = { keywords };
     }
