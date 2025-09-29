@@ -187,6 +187,53 @@ function extractKoreanKeywords(text){
   return tokens;
 }
 
+function splitMeaningfulWords(text){
+  if (!text) return [];
+  const cleaned = stripHtml(text)
+    .replace(/[\u201c\u201d\u2018\u2019]/g, '')
+    .replace(/[^0-9A-Za-z가-힣·\s]/g, ' ');
+  const parts = cleaned.split(/\s+/).map(normalizeWord).filter(Boolean);
+  const result = [];
+  for (const part of parts){
+    if (!part || part.length < 2) continue;
+    const hasHangul = containsHangul(part);
+    const lower = part.toLowerCase();
+    if (hasHangul && STOPWORDS_KO.has(part)) continue;
+    if (!hasHangul && STOPWORDS_EN.has(lower)) continue;
+    result.push({ token: part, locale: hasHangul ? 'ko' : 'en' });
+  }
+  return result;
+}
+
+function extractKeywordPhrases(text){
+  if (!text) return [];
+  const words = splitMeaningfulWords(text);
+  const phrases = [];
+  const seen = new Set();
+  for (let i = 0; i < words.length; i++){
+    const slice = [];
+    for (let len = 1; len <= 3 && i + len <= words.length; len++){
+      slice.push(words[i + len - 1]);
+      if (!slice.length) continue;
+      const phrase = slice.map(it => it.token).join(' ');
+      if (!phrase || phrase.length < 3) continue;
+      if (phrase.split(' ').length === 1) continue;
+      const locales = new Set(slice.map(it => it.locale));
+      const locale = locales.has('ko') ? 'ko' : 'en';
+      const hasMeaningful = slice.some(it => {
+        if (containsHangul(it.token)) return !STOPWORDS_KO.has(it.token);
+        return !STOPWORDS_EN.has(it.token.toLowerCase());
+      });
+      if (!hasMeaningful) continue;
+      const key = `${locale}:${phrase.toLowerCase()}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      phrases.push({ token: phrase, locale });
+    }
+  }
+  return phrases;
+}
+
 function addKeywordCandidate(map, key, info){
   if (!key) return;
   const norm = key.toLowerCase();
@@ -377,7 +424,8 @@ function buildKeywordSummary(articles){
     const text = `${article.title || ''} ${article.description || ''}`;
     const english = extractEnglishKeywords(text);
     const korean  = extractKoreanKeywords(text);
-    const tokens = [...english, ...korean];
+    const phrases = extractKeywordPhrases(text);
+    const tokens = [...phrases, ...english, ...korean];
     for (const { token, locale } of tokens) {
       if (!token) continue;
       addKeywordCandidate(map, token, {
