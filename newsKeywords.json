@@ -1,218 +1,391 @@
 {
-  "generatedAt": "2025-09-29T14:27:17.672Z",
+  "generatedAt": "2025-09-29T15:28:52.715Z",
   "timezone": "Asia/Seoul",
   "updatedAt": {
-    "ko": "2025. 9. 29. 23시 27분 17초",
-    "en": "9/29/2025, 11:27:17 PM"
+    "ko": "2025. 9. 30. 24시 28분 52초",
+    "en": "9/30/2025, 12:28:52 AM"
   },
   "keywords": [
     {
       "text": {
-        "ko": "AI 반도체 투자",
-        "en": "AI semiconductor investment"
+        "ko": "Nasdaq",
+        "en": "Nasdaq"
       },
       "markets": [
         "KOSPI",
-        "NASDAQ 100"
+        "NASDAQ 100",
+        "S&P 500"
       ],
       "sources": [
         "naver",
-        "newsapi"
+        "serpapi"
       ],
-      "mentions": 12,
+      "mentions": 427,
       "score": 1,
       "sampleHeadlines": [
         {
-          "title": "AI 반도체 수요 확대에 삼성전자 투자 확대",
-          "url": "https://example.com/samsung-ai",
+          "title": "Seoul shares down over 2 pct late Fri. morning on reduced hopes for Fed r...",
+          "url": "https://en.yna.co.kr/view/AEN20250926005700320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "Seoul shares down over 2 pct late Fri. morning on reduced hopes for Fed r...",
+          "url": "https://en.yna.co.kr/view/AEN20250926005700320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "Overseas Stock Holdings Surpass 200 Trillion Won for the First Time",
+          "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=251253",
           "source": "naver"
         }
       ],
       "searchUrl": {
-        "ko": "https://www.google.com/search?q=AI+%EB%B0%98%EB%8F%84%EC%B2%B4+%ED%88%AC%EC%9E%90&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=AI+semiconductor+investment&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=Nasdaq&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Nasdaq&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
       "text": {
-        "ko": "친환경 에너지",
-        "en": "Green energy"
-      },
-      "markets": [
-        "KOSDAQ",
-        "S&P 500"
-      ],
-      "sources": [
-        "gnews",
-        "serpapi"
-      ],
-      "mentions": 9,
-      "score": 0.75,
-      "sampleHeadlines": [
-        {
-          "title": "미국 신재생 에너지 세액공제 확대",
-          "url": "https://example.com/ira",
-          "source": "newsapi"
-        }
-      ],
-      "searchUrl": {
-        "ko": "https://www.google.com/search?q=%EC%B9%9C%ED%99%98%EA%B2%BD+%EC%97%90%EB%84%88%EC%A7%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Green+energy&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "text": {
-        "ko": "원/달러 환율 안정",
-        "en": "KRW/USD stability"
-      },
-      "markets": [
-        "KOSPI"
-      ],
-      "sources": [
-        "naver"
-      ],
-      "mentions": 7,
-      "score": 0.58,
-      "sampleHeadlines": [],
-      "searchUrl": {
-        "ko": "https://www.google.com/search?q=%EC%9B%90%2F%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EC%95%88%EC%A0%95&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=KRW%2FUSD+stability&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "text": {
-        "ko": "바이오 헬스케어",
-        "en": "Bio healthcare"
-      },
-      "markets": [
-        "KOSDAQ",
-        "NASDAQ 100"
-      ],
-      "sources": [
-        "newsdata"
-      ],
-      "mentions": 6,
-      "score": 0.5,
-      "sampleHeadlines": [],
-      "searchUrl": {
-        "ko": "https://www.google.com/search?q=%EB%B0%94%EC%9D%B4%EC%98%A4+%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Bio+healthcare&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "text": {
-        "ko": "IT 서비스 업황",
-        "en": "IT services outlook"
-      },
-      "markets": [
-        "KOSPI",
-        "S&P 500"
-      ],
-      "sources": [
-        "serpapi"
-      ],
-      "mentions": 5,
-      "score": 0.42,
-      "sampleHeadlines": [],
-      "searchUrl": {
-        "ko": "https://www.google.com/search?q=IT+%EC%84%9C%EB%B9%84%EC%8A%A4+%EC%97%85%ED%99%A9&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=IT+services+outlook&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "text": {
-        "ko": "반도체 공급망",
-        "en": "Semiconductor supply chain"
+        "ko": "100",
+        "en": "100"
       },
       "markets": [
         "NASDAQ 100",
         "S&P 500"
       ],
       "sources": [
-        "newsapi"
+        "naver",
+        "serpapi"
       ],
-      "mentions": 5,
-      "score": 0.42,
-      "sampleHeadlines": [],
+      "mentions": 195,
+      "score": 0.457,
+      "sampleHeadlines": [
+        {
+          "title": "미국 뉴욕증시 장초반, 빅테크 강세·잭스 'Jobs Week' 경계",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=15823983",
+          "source": "naver"
+        },
+        {
+          "title": "U.S. Stock Futures Edge Higher as Government Shutdown Talks Intensify",
+          "url": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Government-Shutdown-Talks-Intensify-1721799",
+          "source": "naver"
+        },
+        {
+          "title": "[미국주식] 구조조정 착수한 스타벅스, 단기 악재?",
+          "url": "https://www.itooza.com/common/iview.php?no=2025092909151141886",
+          "source": "naver"
+        }
+      ],
       "searchUrl": {
-        "ko": "https://www.google.com/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%EA%B3%B5%EA%B8%89%EB%A7%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Semiconductor+supply+chain&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=100&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=100&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
       "text": {
-        "ko": "2차전지 소재",
-        "en": "Battery materials"
+        "ko": "KOSPI",
+        "en": "KOSPI"
       },
       "markets": [
+        "KOSPI",
+        "KOSDAQ",
+        "NASDAQ 100"
+      ],
+      "sources": [
+        "naver",
+        "serpapi"
+      ],
+      "mentions": 178,
+      "score": 0.417,
+      "sampleHeadlines": [
+        {
+          "title": "(LEAD) Seoul shares sharply rebound on reviving rate cut hope; won sharpl...",
+          "url": "https://en.yna.co.kr/view/AEN20250929007851320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "(LEAD) Seoul shares sharply rebound on reviving rate cut hope; won sharpl...",
+          "url": "https://en.yna.co.kr/view/AEN20250929007851320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "Seoul shares sharply rebound on reviving rate cut hope; won sharply up",
+          "url": "https://en.yna.co.kr/view/AEN20250929007800320?input=2106m",
+          "source": "naver"
+        }
+      ],
+      "searchUrl": {
+        "ko": "https://www.google.com/search?q=KOSPI&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=KOSPI&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "text": {
+        "ko": "to",
+        "en": "to"
+      },
+      "markets": [
+        "KOSPI",
+        "KOSDAQ",
+        "NASDAQ 100",
+        "S&P 500"
+      ],
+      "sources": [
+        "naver",
+        "serpapi"
+      ],
+      "mentions": 136,
+      "score": 0.319,
+      "sampleHeadlines": [
+        {
+          "title": "(LEAD) Seoul shares sharply rebound on reviving rate cut hope; won sharpl...",
+          "url": "https://en.yna.co.kr/view/AEN20250929007851320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "Seoul shares sharply rebound on reviving rate cut hope; won sharply up",
+          "url": "https://en.yna.co.kr/view/AEN20250929007800320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "Samsung Electronics set to wrap up W10tr share buyback this week",
+          "url": "https://www.koreaherald.com/article/10585902?ref=naver",
+          "source": "naver"
+        }
+      ],
+      "searchUrl": {
+        "ko": "https://www.google.com/search?q=to&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=to&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "text": {
+        "ko": "500",
+        "en": "500"
+      },
+      "markets": [
+        "KOSPI",
+        "KOSDAQ",
+        "NASDAQ 100",
+        "S&P 500"
+      ],
+      "sources": [
+        "serpapi",
+        "naver"
+      ],
+      "mentions": 131,
+      "score": 0.307,
+      "sampleHeadlines": [
+        {
+          "title": "한투증권, 10월 코스피 등락 범위 3,200∼3,500 제시",
+          "url": "https://www.yna.co.kr/view/AKR20250929016900008",
+          "source": "serpapi"
+        },
+        {
+          "title": "Samsung Electronics set to wrap up W10tr share buyback this week",
+          "url": "https://www.koreaherald.com/article/10585902?ref=naver",
+          "source": "naver"
+        },
+        {
+          "title": "KOSPI at Record High, but Cosmetics industry APR Plunges ₩11,500",
+          "url": "https://www.thebk.co.kr/news/articleView.html?idxno=302350",
+          "source": "serpapi"
+        }
+      ],
+      "searchUrl": {
+        "ko": "https://www.google.com/search?q=500&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=500&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "text": {
+        "ko": "KOSDAQ",
+        "en": "KOSDAQ"
+      },
+      "markets": [
+        "KOSPI",
         "KOSDAQ"
       ],
       "sources": [
+        "naver",
+        "serpapi"
+      ],
+      "mentions": 119,
+      "score": 0.279,
+      "sampleHeadlines": [
+        {
+          "title": "Foreign investors push Korean stock ownership above 30% of market cap",
+          "url": "https://en.asiatoday.co.kr/view.php?key=20250925000946562",
+          "source": "naver"
+        },
+        {
+          "title": "Foreign investors push Korean stock ownership above 30% of market cap",
+          "url": "https://en.asiatoday.co.kr/view.php?key=20250925000946562",
+          "source": "naver"
+        },
+        {
+          "title": "Korea bio Companies Dreaming of Leaving KOSDAQ for KOSPI",
+          "url": "https://it.chosun.com/news/articleView.html?idxno=2023092147117",
+          "source": "serpapi"
+        }
+      ],
+      "searchUrl": {
+        "ko": "https://www.google.com/search?q=KOSDAQ&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=KOSDAQ&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "text": {
+        "ko": "in",
+        "en": "in"
+      },
+      "markets": [
+        "KOSPI",
+        "KOSDAQ",
+        "NASDAQ 100",
+        "S&P 500"
+      ],
+      "sources": [
+        "naver",
+        "serpapi"
+      ],
+      "mentions": 114,
+      "score": 0.267,
+      "sampleHeadlines": [
+        {
+          "title": "Asian Stocks Rise as Tech Shares Rebound; RBA and RBI Meetings in Focus",
+          "url": "https://www.econotimes.com/Asian-Stocks-Rise-as-Tech-Shares-Rebound-RBA-and-RBI-Meetings-in-Focus-1721817",
+          "source": "naver"
+        },
+        {
+          "title": "Seoul shares open higher after sharp drop",
+          "url": "https://en.yna.co.kr/view/AEN20250929002500320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "President Lee Announces 3rd Commercial Law Amendment in New York",
+          "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=253157",
+          "source": "naver"
+        }
+      ],
+      "searchUrl": {
+        "ko": "https://www.google.com/search?q=in&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=in&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "text": {
+        "ko": "P500",
+        "en": "P500"
+      },
+      "markets": [
+        "NASDAQ 100",
+        "S&P 500"
+      ],
+      "sources": [
+        "naver",
+        "serpapi"
+      ],
+      "mentions": 111,
+      "score": 0.26,
+      "sampleHeadlines": [
+        {
+          "title": "메리츠증권, '해외주식 모으기' 한 달 만에 5400명 돌파…ETF·빅테크에 ...",
+          "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=340970",
+          "source": "naver"
+        },
+        {
+          "title": "메리츠증권, '해외주식 모으기' 한 달 만에 5400명 돌파…ETF·빅테크에 ...",
+          "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=340970",
+          "source": "naver"
+        },
+        {
+          "title": "메리츠증권, 해외주식 모으기 서비스 출시 한달 만에 이용자 수 5000명 돌...",
+          "url": "https://www.thepublic.kr/news/articleView.html?idxno=278186",
+          "source": "naver"
+        }
+      ],
+      "searchUrl": {
+        "ko": "https://www.google.com/search?q=P500&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=P500&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "text": {
+        "ko": "ETF",
+        "en": "ETF"
+      },
+      "markets": [
+        "KOSPI",
+        "KOSDAQ",
+        "NASDAQ 100",
+        "S&P 500"
+      ],
+      "sources": [
+        "serpapi",
         "naver"
       ],
-      "mentions": 4,
-      "score": 0.33,
-      "sampleHeadlines": [],
+      "mentions": 104,
+      "score": 0.244,
+      "sampleHeadlines": [
+        {
+          "title": "코스피서 짐 싸는 개미들…\"국장서 미국 ETF만 사요\"",
+          "url": "https://www.hankyung.com/article/202406044829i",
+          "source": "serpapi"
+        },
+        {
+          "title": "李 대통령, 코스닥 ETF에 2000만 원 투자… 수익률 20%",
+          "url": "https://www.donga.com/news/Economy/article/all/20250926/132475420/2",
+          "source": "serpapi"
+        },
+        {
+          "title": "미국 뉴욕증시 장초반, 빅테크 강세·잭스 'Jobs Week' 경계",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=15823983",
+          "source": "naver"
+        }
+      ],
       "searchUrl": {
-        "ko": "https://www.google.com/search?q=2%EC%B0%A8%EC%A0%84%EC%A7%80+%EC%86%8C%EC%9E%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Battery+materials&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=ETF&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=ETF&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
       "text": {
-        "ko": "미국 CPI",
-        "en": "US CPI"
+        "ko": "on",
+        "en": "on"
       },
       "markets": [
+        "KOSPI",
+        "KOSDAQ",
+        "NASDAQ 100",
         "S&P 500"
       ],
       "sources": [
-        "gnews"
+        "naver",
+        "serpapi"
       ],
-      "mentions": 4,
-      "score": 0.33,
-      "sampleHeadlines": [],
+      "mentions": 98,
+      "score": 0.23,
+      "sampleHeadlines": [
+        {
+          "title": "(LEAD) Seoul shares sharply rebound on reviving rate cut hope; won sharpl...",
+          "url": "https://en.yna.co.kr/view/AEN20250929007851320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "Seoul shares sharply rebound on reviving rate cut hope; won sharply up",
+          "url": "https://en.yna.co.kr/view/AEN20250929007800320?input=2106m",
+          "source": "naver"
+        },
+        {
+          "title": "Seoul shares up over 1 pct late Mon. morning on revived rate-cut hope",
+          "url": "https://en.yna.co.kr/view/AEN20250929005000320?input=2106m",
+          "source": "naver"
+        }
+      ],
       "searchUrl": {
-        "ko": "https://www.google.com/search?q=%EB%AF%B8%EA%B5%AD+CPI&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=US+CPI&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "text": {
-        "ko": "환율 변동성",
-        "en": "FX volatility"
-      },
-      "markets": [
-        "KOSPI"
-      ],
-      "sources": [
-        "newsdata"
-      ],
-      "mentions": 3,
-      "score": 0.25,
-      "sampleHeadlines": [],
-      "searchUrl": {
-        "ko": "https://www.google.com/search?q=%ED%99%98%EC%9C%A8+%EB%B3%80%EB%8F%99%EC%84%B1&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=FX+volatility&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "text": {
-        "ko": "미 연준 금리",
-        "en": "US Fed rate"
-      },
-      "markets": [
-        "S&P 500"
-      ],
-      "sources": [
-        "newsapi"
-      ],
-      "mentions": 3,
-      "score": 0.25,
-      "sampleHeadlines": [],
-      "searchUrl": {
-        "ko": "https://www.google.com/search?q=%EB%AF%B8+%EC%97%B0%EC%A4%80+%EA%B8%88%EB%A6%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=US+Fed+rate&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=on&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=on&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     }
   ],
