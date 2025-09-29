@@ -432,6 +432,8 @@ function buildKeywordSummary(articles){
 }
 
 export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
+  const existingSnapshot = readJsonSafe(outputPath) || {};
+
   const articles = [];
   for (const marketConfig of KEYWORD_MARKET_QUERIES) {
     const collected = await collectMarketArticles(marketConfig);
@@ -440,10 +442,9 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
 
   let keywords = buildKeywordSummary(articles);
   if (!keywords.length) {
-    const existing = readJsonSafe(outputPath);
-    if (Array.isArray(existing?.keywords) && existing.keywords.length) {
+    if (Array.isArray(existingSnapshot?.keywords) && existingSnapshot.keywords.length) {
       console.warn('[keywords] no fresh keywords found; reusing existing snapshot');
-      keywords = existing.keywords;
+      keywords = existingSnapshot.keywords;
     }
   }
 
@@ -463,10 +464,203 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
     markets: KEYWORD_MARKET_QUERIES.map(m => m.market)
   };
 
+  if (existingSnapshot?.tickerKeywords) {
+    payload.tickerKeywords = existingSnapshot.tickerKeywords;
+  }
+  if (existingSnapshot?.tickerKeywordsMeta) {
+    payload.tickerKeywordsMeta = existingSnapshot.tickerKeywordsMeta;
+  }
+
   ensureDirFor(outputPath);
   await fsp.writeFile(outputPath, JSON.stringify(payload, null, 2));
   console.log(`[keywords] wrote ${outputPath} with ${payload.keywords.length} entries`);
   return payload;
+}
+
+// --- Ticker-level keyword builder (domain-aware tokenizer) ---
+const DOMAIN_LEXICON = new Set([
+  '2차전지','전고체 배터리','배터리','조선해양','조선','해운','반도체','HBM','AI','클라우드','로봇',
+  '방산','원자력','SMR','바이오','제약','철강','자동차','전장','디스플레이','석유화학','정유',
+  '부동산','리츠','건설','물류','원자재','구리','금','환율','달러','유가','수출','수입','무역수지',
+  '금리','기준금리','연준','연방준비제도','소비','고용','실업','임금','경기','경기침체','연착륙',
+  '소프트랜딩','테슬라','엔비디아','삼성전자','하이닉스','현대차','LG에너지솔루션'
+]);
+
+const CANONICAL_MAP = new Map([
+  ['이차전지','2차전지'],
+  ['2차 전지','2차전지'],
+  ['전지','2차전지'],
+  ['전고체배터리','전고체 배터리'],
+  ['배터리','2차전지'],
+  ['조선','조선해양'],
+  ['해양','조선해양'],
+  ['조선업','조선해양'],
+  ['해운','조선해양'],
+  ['HBM3','HBM'], ['HBM3e','HBM'], ['HBM2e','HBM'],
+  ['메모리','반도체'], ['파운드리','반도체'], ['칩','반도체'],
+  ['연방준비제도','연준'],
+  ['soft landing','연착륙'], ['소프트랜딩','연착륙'],
+  ['전기차','자동차'],
+  ['전장화','전장'],
+]);
+
+const STOP_KO = new Set(['은','는','이','가','을','를','에','에서','으로','와','과','및','또한','등','대한','관련','부분','대해','통한','지난','올해','이번','최근']);
+const STOP_EN = new Set(['the','a','an','and','or','for','to','of','in','on','with','by','as','from','at','this','that','these','those','is','are','was','were']);
+
+const isHangul = (s) => /^[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]+$/.test(s);
+const isAlphaNum = (s) => /^[a-z0-9\-]+$/.test(s);
+const normalizeTokenText = (text = '') =>
+  text
+    .replace(/[\u200B-\u200D\uFEFF]/g, '')
+    .replace(/[“”‘’"”“]/g, ' ')
+    .replace(/[(){}\[\],.:;!?/\\]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+function tokenizeKR(text) {
+  const toks = normalizeTokenText(text).split(' ');
+  return toks.filter(t => {
+    if (!t) return false;
+    if (isHangul(t) && t.length > 1 && !STOP_KO.has(t)) return true;
+    if (DOMAIN_LEXICON.has(t)) return true;
+    return false;
+  });
+}
+
+function tokenizeEN(text) {
+  const toks = normalizeTokenText(text.toLowerCase()).split(' ');
+  return toks.filter(t => {
+    if (!t) return false;
+    if (STOP_EN.has(t)) return false;
+    if (isAlphaNum(t)) return t.length > 2;
+    return false;
+  });
+}
+
+function ngrams(tokens, n) {
+  const out = [];
+  for (let i = 0; i <= tokens.length - n; i++) {
+    out.push(tokens.slice(i, i + n).join(' '));
+  }
+  return out;
+}
+
+function candidatePhrases({ title, summary, body }) {
+  const textKR = [title, summary, body].filter(Boolean).join(' ');
+  const textEN = textKR;
+
+  const ko = tokenizeKR(textKR);
+  const en = tokenizeEN(textEN);
+
+  const singles = [...ko, ...en];
+  const bigrams = [...ngrams(ko, 2), ...ngrams(en, 2)];
+  const trigrams = [...ngrams(ko, 3), ...ngrams(en, 3)];
+
+  const all = [...singles, ...bigrams, ...trigrams]
+    .map(s => s.trim())
+    .filter(s => s && s.length >= 2);
+
+  return all;
+}
+
+export function canonicalize(term) {
+  const t = term.trim();
+  if (CANONICAL_MAP.has(t)) return CANONICAL_MAP.get(t);
+  if (t === '조선 해양') return '조선해양';
+  return t;
+}
+
+export function buildKeywordScores(articles) {
+  const docs = articles.map(a => ({
+    text: candidatePhrases(a),
+    titleText: new Set(candidatePhrases({ title: a.title || '', summary: '', body: '' })),
+    url: a.url
+  }));
+
+  const df = new Map();
+  const tf = [];
+  for (const d of docs) {
+    const tfMap = new Map();
+    for (const raw of d.text) {
+      const term = canonicalize(raw);
+      tfMap.set(term, (tfMap.get(term) || 0) + 1);
+    }
+    tf.push(tfMap);
+    const uniqueTerms = new Set([...tfMap.keys()]);
+    for (const term of uniqueTerms) {
+      df.set(term, (df.get(term) || 0) + 1);
+    }
+  }
+
+  const N = docs.length || 1;
+  const scores = new Map();
+  tf.forEach((tfMap, i) => {
+    const d = docs[i];
+    for (const [term, freq] of tfMap.entries()) {
+      const idf = Math.log((N + 1) / ((df.get(term) || 0) + 1)) + 1;
+      let s = freq * idf;
+
+      if (DOMAIN_LEXICON.has(term)) s *= 1.6;
+      if (d.titleText.has(term)) s *= 1.4;
+
+      const cur = scores.get(term) || { score: 0, sources: new Set() };
+      cur.score += s;
+      cur.sources.add(docs[i].url || `doc_${i}`);
+      scores.set(term, cur);
+    }
+  });
+
+  for (const [term, obj] of scores.entries()) {
+    const multi = Math.min(obj.sources.size, 5);
+    obj.score *= (1 + (multi - 1) * 0.2);
+  }
+
+  return scores;
+}
+
+export function filterAndRank(scores) {
+  const MIN_LEN = 2;
+  const MIN_SCORE = 1.2;
+  const out = [];
+  for (const [term, { score, sources }] of scores.entries()) {
+    if (term.length < MIN_LEN) continue;
+    if (STOP_KO.has(term) || STOP_EN.has(term)) continue;
+
+    const keep = DOMAIN_LEXICON.has(term) || score >= MIN_SCORE;
+    if (!keep) continue;
+
+    if (/^\d+$/.test(term)) continue;
+
+    out.push({ term, score: Number(score.toFixed(3)), sources: [...sources].slice(0, 5) });
+  }
+
+  const seen = new Map();
+  for (const k of out) {
+    const t = canonicalize(k.term);
+    const prev = seen.get(t);
+    if (!prev || k.score > prev.score) seen.set(t, { ...k, term: t });
+  }
+
+  const ranked = [...seen.values()].sort((a, b) => b.score - a.score);
+  return ranked.filter((k, idx) => idx < 20 || k.score > 2.0).slice(0, 25);
+}
+
+export function buildNewsKeywords(articlesByTicker) {
+  const output = {
+    generated_at: new Date().toISOString(),
+    version: '1.0',
+    tickers: {}
+  };
+
+  for (const [ticker, articles] of Object.entries(articlesByTicker || {})) {
+    if (!Array.isArray(articles) || !articles.length) continue;
+    const scores = buildKeywordScores(articles);
+    const keywords = filterAndRank(scores);
+    if (keywords.length) {
+      output.tickers[ticker] = { keywords };
+    }
+  }
+  return output;
 }
 
 export function newsScoreFromFeatures(f) {
@@ -1182,6 +1376,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const cachedNames = (()=>{ try{return JSON.parse(fs.readFileSync(nameFile,'utf8'));}catch{return{}} })();
   const symbolToName = { ...(cachedNames), ...(opts.symbolToName||{}) };
   const keywordsMap = opts.keywords || {};
+  const articleCollector = (opts.collectArticles && typeof opts.collectArticles === 'object') ? opts.collectArticles : null;
 
   const baseMap = {};
   const uniq = [];
@@ -1320,6 +1515,17 @@ export async function buildNewsFeatures(symbols, opts={}){
       items = await getTickerArticles(sym);
     } catch {}
     if (items.length) {
+      if (articleCollector) {
+        const mapped = items.map(it => ({
+          title: it?.title || '',
+          summary: it?.summary || it?.description || '',
+          body: it?.body || it?.summary || it?.description || '',
+          url: it?.url || it?.link || ''
+        })).filter(entry => entry.title || entry.summary || entry.body);
+        if (mapped.length) {
+          articleCollector[sym] = mapped;
+        }
+      }
       const now = Date.now();
       const decayed = items.reduce((sum,it)=>{
         const ts = new Date(it.publishedAt || it.pubDate || it.date || 0).getTime();
@@ -1531,7 +1737,8 @@ function normalizeNewsApiArticle(it) {
   if (!title || !url) return null;
   const date = it?.publishedAt ? new Date(it.publishedAt).toISOString() : new Date().toISOString();
   const source = it?.source?.name || "NewsAPI";
-  return { title, url, source, publishedAt: date };
+  const summary = stripHtml(it?.description || it?.content || "");
+  return { title, url, source, publishedAt: date, summary, body: summary };
 }
 
 function normalizeNaverArticle(it) {
@@ -1539,7 +1746,8 @@ function normalizeNaverArticle(it) {
   const url = (it?.originallink || it?.link || "").trim();
   if (!title || !url) return null;
   const date = it?.pubDate ? new Date(it.pubDate).toISOString() : new Date().toISOString();
-  return { title, url, source: "Naver", publishedAt: date };
+  const summary = stripHtml(it?.description || "");
+  return { title, url, source: "Naver", publishedAt: date, summary, body: summary };
 }
 
 function normalizeGNewsArticle(it) {
@@ -1548,7 +1756,8 @@ function normalizeGNewsArticle(it) {
   if (!title || !url) return null;
   const date = it?.publishedAt ? new Date(it.publishedAt).toISOString() : new Date().toISOString();
   const source = it?.source?.name || "GNews";
-  return { title, url, source, publishedAt: date };
+  const summary = stripHtml(it?.description || it?.content || "");
+  return { title, url, source, publishedAt: date, summary, body: summary };
 }
 
 function normalizeDeepSearchArticle(it){
@@ -1557,7 +1766,9 @@ function normalizeDeepSearchArticle(it){
   if (!title || !url) return null;
   const date = it?.published_at ? new Date(it.published_at).toISOString() : new Date().toISOString();
   const source = it?.publisher || it?.source || 'DeepSearch';
-  return { title, url, source, publishedAt: date };
+  const summary = stripHtml(it?.summary || it?.description || it?.body || "");
+  const body = stripHtml(it?.body || it?.summary || "");
+  return { title, url, source, publishedAt: date, summary, body };
 }
 
 function normalizeNewsDataArticle(it) {
@@ -1571,7 +1782,9 @@ function normalizeNewsDataArticle(it) {
     : new Date().toISOString();
 
   const source = it?.source_name || it?.source_id || "NewsData";
-  return { title, url, source, publishedAt: iso };
+  const summary = stripHtml(it?.description || it?.content || it?.full_description || "");
+  const body = stripHtml(it?.content || it?.full_content || it?.full_description || "");
+  return { title, url, source, publishedAt: iso, summary, body };
 }
 
 async function getTickerArticlesFromDS(sym, name){
@@ -1768,13 +1981,15 @@ async function _cliCollectUniverse() {
 export async function buildNewsCachesCli() {
   const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
   const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
+  const NEWS_KEYWORDS_FILE = process.env.NEWS_KEYWORDS_FILE || 'newsKeywords.json';
   await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
   await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE),  { recursive: true });
 
   const { symbols, symbolToName, universe, nameToSymbol } = await _cliCollectUniverse();
 
   // 1) News features (counts/sentiment/reputation etc.)
-  const features = await buildNewsFeatures(symbols, { symbolToName });
+  const collectedArticles = {};
+  const features = await buildNewsFeatures(symbols, { symbolToName, collectArticles: collectedArticles });
   await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(features, null, 2));
 
   // 2) Naver trends (use company names in keyword builder & baskets)
@@ -1795,6 +2010,29 @@ export async function buildNewsCachesCli() {
   });
   await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
   console.log(`[news-caches] wrote ${NEWS_FEATURES_FILE} and ${NAVER_TRENDS_FILE}`);
+
+  // 3) Ticker keyword snapshot merged into newsKeywords.json
+  const keywordPayload = buildNewsKeywords(collectedArticles);
+  const tickerCount = Object.keys(keywordPayload.tickers).length;
+  if (tickerCount) {
+    await fsp.mkdir(path.dirname(NEWS_KEYWORDS_FILE), { recursive: true }).catch(()=>{});
+    const existing = readJsonSafe(NEWS_KEYWORDS_FILE) || {};
+    const merged = { ...existing };
+    if (!Array.isArray(merged.keywords)) merged.keywords = Array.isArray(existing?.keywords) ? existing.keywords : [];
+    if (merged.updatedAt == null && existing?.updatedAt == null) merged.updatedAt = existing?.updatedAt || {};
+    if (!Array.isArray(merged.markets) && Array.isArray(existing?.markets)) {
+      merged.markets = existing.markets;
+    }
+    merged.tickerKeywords = keywordPayload.tickers;
+    merged.tickerKeywordsMeta = {
+      generatedAt: keywordPayload.generated_at,
+      version: keywordPayload.version,
+    };
+    await fsp.writeFile(NEWS_KEYWORDS_FILE, JSON.stringify(merged, null, 2));
+    console.log(`[news-caches] updated ${NEWS_KEYWORDS_FILE} with ${tickerCount} ticker keyword sets`);
+  } else {
+    console.log('[news-caches] no ticker keywords derived from collected articles');
+  }
 }
 
 // Node entrypoint: `node src/news/fetchByTicker.js --build-caches`
