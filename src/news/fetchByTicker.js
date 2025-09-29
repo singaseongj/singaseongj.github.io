@@ -139,6 +139,25 @@ function normalizeWord(word){
   return String(word || '').replace(/["'`’”\(\)\[\]\{\}:;!?]/g, '').trim();
 }
 
+function buildGoogleSearchUrl(query, locale = 'en'){
+  const q = String(query || '').trim();
+  if (!q) return '';
+  const params = new URLSearchParams();
+  params.set('q', q);
+  params.set('tbm', 'nws');
+  const lang = locale === 'ko' ? 'ko' : 'en';
+  if (lang === 'ko') {
+    params.set('hl', 'ko');
+    params.set('gl', 'KR');
+    params.set('ceid', 'KR:ko');
+  } else {
+    params.set('hl', 'en');
+    params.set('gl', 'US');
+    params.set('ceid', 'US:en');
+  }
+  return `https://www.google.com/search?${params.toString()}`;
+}
+
 function extractEnglishKeywords(text){
   if (!text) return [];
   const tokens = [];
@@ -397,7 +416,18 @@ function buildKeywordSummary(articles){
   const maxScore = Math.max(...top.map(it => it.score), 1);
   return top.map(item => ({
     ...item,
-    score: Number((item.score / maxScore).toFixed(3))
+    score: Number((item.score / maxScore).toFixed(3)),
+    searchUrl: (() => {
+      const koQuery = item.text.ko || item.text.en || '';
+      const enQuery = item.text.en || item.text.ko || '';
+      const localized = {
+        ko: buildGoogleSearchUrl(koQuery, 'ko'),
+        en: buildGoogleSearchUrl(enQuery, 'en')
+      };
+      if (!localized.ko) delete localized.ko;
+      if (!localized.en) delete localized.en;
+      return localized;
+    })()
   }));
 }
 

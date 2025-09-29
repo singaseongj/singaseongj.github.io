@@ -74,10 +74,50 @@
     flex-direction: column;
     gap: 0.35rem;
   }
+  .keyword-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
   .keyword-text {
     font-weight: 600;
     font-size: 1rem;
     color: #2c3e50;
+  }
+  .keyword-actions {
+    display: inline-flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .keyword-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: #2563eb;
+    border: 1px solid #1d4ed8;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .keyword-btn:hover,
+  .keyword-btn:focus-visible {
+    background: #1e40af;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+  }
+  .keyword-btn[data-lang="ko"] {
+    background: #0f766e;
+    border-color: #0f5e55;
+  }
+  .keyword-btn[data-lang="ko"]:hover,
+  .keyword-btn[data-lang="ko"]:focus-visible {
+    background: #0d5f59;
+    box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.25);
   }
   .keyword-markets {
     font-size: 0.85rem;
@@ -413,7 +453,31 @@
           const marketsHtml = markets
             ? `<span class="keyword-markets">${escapeHtml(translations[currentLang].keywordMarkets)}: ${markets}</span>`
             : '';
-          return `<li><span class="keyword-text">${label}</span>${marketsHtml}</li>`;
+          const urls = (() => {
+            const urlField = entry?.searchUrl;
+            if (typeof urlField === 'string') {
+              return { en: urlField };
+            }
+            if (urlField && typeof urlField === 'object') {
+              const result = {};
+              if (typeof urlField.ko === 'string' && urlField.ko) result.ko = urlField.ko;
+              if (typeof urlField.en === 'string' && urlField.en) result.en = urlField.en;
+              return result;
+            }
+            return {};
+          })();
+          if (!urls.ko && urls.en) urls.ko = urls.en;
+          if (!urls.en && urls.ko) urls.en = urls.ko;
+          const buttons = [];
+          if (urls.ko) {
+            buttons.push(`<a class="keyword-btn" data-lang="ko" href="${escapeHtml(urls.ko)}" target="_blank" rel="noopener noreferrer">한국어</a>`);
+          }
+          if (urls.en) {
+            buttons.push(`<a class="keyword-btn" data-lang="en" href="${escapeHtml(urls.en)}" target="_blank" rel="noopener noreferrer">English</a>`);
+          }
+          const actionsHtml = buttons.length ? `<div class="keyword-actions">${buttons.join('')}</div>` : '';
+          const header = `<div class="keyword-header"><span class="keyword-text">${label}</span>${actionsHtml}</div>`;
+          return `<li>${header}${marketsHtml}</li>`;
         }).join('');
         listEl.innerHTML = items || `<li class="empty">${translations[currentLang].keywordError}</li>`;
         errorEl.style.display = 'none';
