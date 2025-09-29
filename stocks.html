@@ -46,6 +46,88 @@
   }
   .fx-item { margin: 0 .6rem; }
   .fx-time { opacity: .75; margin-left: .85rem; font-size: .9em; }
+  .keyword-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #fafafa;
+  }
+  .keyword-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+  }
+  .keyword-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .keyword-list li {
+    padding: 0.65rem 0.75rem;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .keyword-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .keyword-text {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #2c3e50;
+  }
+  .keyword-actions {
+    display: inline-flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .keyword-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: #2563eb;
+    border: 1px solid #1d4ed8;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .keyword-btn:hover,
+  .keyword-btn:focus-visible {
+    background: #1e40af;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+  }
+  .keyword-btn[data-lang="ko"] {
+    background: #0f766e;
+    border-color: #0f5e55;
+  }
+  .keyword-btn[data-lang="ko"]:hover,
+  .keyword-btn[data-lang="ko"]:focus-visible {
+    background: #0d5f59;
+    box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.25);
+  }
+  .keyword-markets {
+    font-size: 0.85rem;
+    color: #576574;
+  }
+  @media (min-width: 768px) {
+    .keyword-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   </style>
 </head>
 <body>
@@ -81,6 +163,13 @@
       <div id="newsUpdated" class="last-updated"></div>
     </section>
 
+    <section id="keywordHighlights" class="keyword-box" aria-labelledby="keywordTitle">
+      <h3 id="keywordTitle" data-i18n="keywordTitle">오늘의 키워드</h3>
+      <div id="keywordUpdated" class="last-updated"></div>
+      <ul id="keywordList" class="keyword-list"></ul>
+      <div id="keywordError" class="error" role="alert" style="display:none;"></div>
+    </section>
+
   <section id="portfolioRecommendations">
     <h2 data-i18n="portfolioRecs">포트폴리오 추천</h2>
     <div id="loading" class="loading" style="display:none">
@@ -104,6 +193,9 @@
         nasdaqDesc: '나스닥 상장 비금융 대형주 100종목으로 기술주 비중 높음',
         disclaimer: '본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.',
         marketNews: '최신 마켓 뉴스',
+        keywordTitle: '오늘의 키워드',
+        keywordError: '키워드를 불러오지 못했습니다.',
+        keywordMarkets: '적용 시장',
         portfolioRecs: '포트폴리오 추천',
         dashboardLink: '👉 주식 시장 요약 대시보드',
         marketDataError: '마켓 데이터를 불러오지 못했습니다.',
@@ -128,6 +220,9 @@
         nasdaqDesc: 'Tech-heavy index of 100 non-financial NASDAQ stocks',
         disclaimer: 'Information on this page is for reference only and accuracy is not guaranteed. Investment decisions are your responsibility.',
         marketNews: 'Latest Market News',
+        keywordTitle: "Today's Keyword",
+        keywordError: 'Failed to load keywords.',
+        keywordMarkets: 'Markets',
         portfolioRecs: 'Portfolio Recommendations',
         dashboardLink: '👉 Stock News Summary Dashboard',
         marketDataError: 'Failed to load market data.',
@@ -145,6 +240,17 @@
 
     let currentLang = (navigator.language || 'en').startsWith('ko') ? 'ko' : 'en';
     let visitData = null;
+    let keywordSnapshot = null;
+    let keywordLoadFailed = false;
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
 
     function applyTranslations() {
       const t = translations[currentLang];
@@ -158,6 +264,7 @@
           el.textContent = t[key];
         }
       });
+      renderKeywordBox();
     }
 
     function toggleDebug() {
@@ -312,7 +419,79 @@
         const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
         upd.textContent = translations[currentLang].updated + newsTimestamp.toLocaleString(locale);
       }
-  }
+    }
+
+    function renderKeywordBox() {
+      const listEl = document.getElementById('keywordList');
+      const errorEl = document.getElementById('keywordError');
+      const updatedEl = document.getElementById('keywordUpdated');
+      if (!listEl || !errorEl) return;
+
+      if (!keywordSnapshot) {
+        listEl.innerHTML = '';
+        if (keywordLoadFailed) {
+          errorEl.textContent = translations[currentLang].keywordError;
+          errorEl.style.display = 'block';
+        } else {
+          errorEl.style.display = 'none';
+        }
+        if (updatedEl) updatedEl.textContent = '';
+        return;
+      }
+
+      const keywords = Array.isArray(keywordSnapshot.keywords) ? keywordSnapshot.keywords : [];
+      if (!keywords.length) {
+        listEl.innerHTML = `<li class="empty">${translations[currentLang].keywordError}</li>`;
+        errorEl.style.display = 'none';
+      } else {
+        const items = keywords.map(entry => {
+          const labelRaw = currentLang === 'ko'
+            ? (entry?.text?.ko || entry?.text?.en || '')
+            : (entry?.text?.en || entry?.text?.ko || '');
+          const label = escapeHtml(labelRaw);
+          const markets = Array.isArray(entry?.markets) ? escapeHtml(entry.markets.join(', ')) : '';
+          const marketsHtml = markets
+            ? `<span class="keyword-markets">${escapeHtml(translations[currentLang].keywordMarkets)}: ${markets}</span>`
+            : '';
+          const urls = (() => {
+            const urlField = entry?.searchUrl;
+            if (typeof urlField === 'string') {
+              return { en: urlField };
+            }
+            if (urlField && typeof urlField === 'object') {
+              const result = {};
+              if (typeof urlField.ko === 'string' && urlField.ko) result.ko = urlField.ko;
+              if (typeof urlField.en === 'string' && urlField.en) result.en = urlField.en;
+              return result;
+            }
+            return {};
+          })();
+          if (!urls.ko && urls.en) urls.ko = urls.en;
+          if (!urls.en && urls.ko) urls.en = urls.ko;
+          const buttons = [];
+          if (urls.ko) {
+            buttons.push(`<a class="keyword-btn" data-lang="ko" href="${escapeHtml(urls.ko)}" target="_blank" rel="noopener noreferrer">한국어</a>`);
+          }
+          if (urls.en) {
+            buttons.push(`<a class="keyword-btn" data-lang="en" href="${escapeHtml(urls.en)}" target="_blank" rel="noopener noreferrer">English</a>`);
+          }
+          const actionsHtml = buttons.length ? `<div class="keyword-actions">${buttons.join('')}</div>` : '';
+          const header = `<div class="keyword-header"><span class="keyword-text">${label}</span>${actionsHtml}</div>`;
+          return `<li>${header}${marketsHtml}</li>`;
+        }).join('');
+        listEl.innerHTML = items || `<li class="empty">${translations[currentLang].keywordError}</li>`;
+        errorEl.style.display = 'none';
+      }
+
+      if (updatedEl) {
+        const localized = currentLang === 'ko'
+          ? (keywordSnapshot.updatedAt?.ko || keywordSnapshot.updatedAt?.en || '')
+          : (keywordSnapshot.updatedAt?.en || keywordSnapshot.updatedAt?.ko || '');
+        updatedEl.textContent = localized
+          ? translations[currentLang].updated + localized
+          : '';
+      }
+    }
 
   async function loadMarketNews() {
       let data = null;
@@ -347,7 +526,22 @@
         document.getElementById('newsError').style.display = 'block';
       }
       renderNewsUpdated();
-  }
+    }
+
+    async function loadKeywordHighlights() {
+      keywordLoadFailed = false;
+      try {
+        const res = await fetch('newsKeywords.json?_=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        keywordSnapshot = await res.json();
+        keywordLoadFailed = false;
+      } catch (err) {
+        console.warn('newsKeywords.json load failed', err);
+        keywordSnapshot = null;
+        keywordLoadFailed = true;
+      }
+      renderKeywordBox();
+    }
 
     // 추천 종목 로드
     const FULL_NAME_MAP = {
@@ -471,7 +665,7 @@
         button.disabled = true;
         button.textContent = translations[currentLang].refreshing;
       }
-      Promise.all([loadMarketData(), fetchRecs(), loadMarketNews()]).finally(() => {
+      Promise.all([loadMarketData(), fetchRecs(), loadMarketNews(), loadKeywordHighlights()]).finally(() => {
         if (button) {
           button.disabled = false;
           button.textContent = translations[currentLang].refreshData;
@@ -480,7 +674,7 @@
     }
     
     // 페이지 로드 시 실행
-    document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function() {
       applyTranslations();
       updateCurrentDate();
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
@@ -492,6 +686,7 @@
         applyTranslations();
         updateCurrentDate();
         renderNewsUpdated();
+        renderKeywordBox();
         if (lastRecommendations) render(lastRecommendations);
         updateVisitCounts();
       });
@@ -500,6 +695,7 @@
         applyTranslations();
         updateCurrentDate();
         renderNewsUpdated();
+        renderKeywordBox();
         if (lastRecommendations) render(lastRecommendations);
         updateVisitCounts();
       });

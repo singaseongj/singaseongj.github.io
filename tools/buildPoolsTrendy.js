@@ -205,6 +205,13 @@ function saveNameToSymbol(map) {
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
 const SYMBOL_TO_NAME = {};
+const KEYWORD_SNAPSHOT_PATH = path.join(process.cwd(), 'newsKeywords.json');
+const KEYWORD_SCORE_WEIGHT = (() => {
+  const raw = Number(process.env.KEYWORD_SCORE_WEIGHT ?? 0.1);
+  if (!Number.isFinite(raw)) return 0.1;
+  return Math.max(0, Math.min(0.5, raw));
+})();
+let NEWS_KEYWORD_SNAPSHOT = null;
 const CONFIRMED_KEYS = new Set();
 
 // Canonicalize keys and strip invisible characters
@@ -365,6 +372,63 @@ function rememberMapping(humanNameOrTicker, providerSymbol) {
       NAME_TO_SYMBOL[k] = providerSymbol;
     }
   }
+}
+
+function loadNewsKeywordSnapshot() {
+  if (NEWS_KEYWORD_SNAPSHOT !== null) return NEWS_KEYWORD_SNAPSHOT;
+  try {
+    const raw = fs.readFileSync(KEYWORD_SNAPSHOT_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed?.keywords)) {
+      parsed._matchers = parsed.keywords.map(entry => {
+        const ko = String(entry?.text?.ko || '').trim();
+        const en = String(entry?.text?.en || '').trim();
+        const texts = [ko, en].filter(Boolean);
+        const lowered = texts.map(t => t.toLowerCase());
+        const regexes = texts
+          .filter(t => t && t.length >= 2)
+          .map(t => {
+            try { return new RegExp(esc(t), 'i'); }
+            catch { return null; }
+          })
+          .filter(Boolean);
+        return { entry, lowered, regexes };
+      });
+    } else {
+      parsed._matchers = [];
+    }
+    NEWS_KEYWORD_SNAPSHOT = parsed;
+  } catch {
+    NEWS_KEYWORD_SNAPSHOT = { keywords: [], _matchers: [] };
+  }
+  return NEWS_KEYWORD_SNAPSHOT;
+}
+
+function keywordMatchesForName(name, sym) {
+  const snapshot = loadNewsKeywordSnapshot();
+  if (!snapshot?._matchers?.length) return [];
+  const hay = [];
+  if (name) hay.push(String(name));
+  if (sym) hay.push(String(sym));
+  const known = SYMBOL_TO_NAME[sym];
+  if (known && known !== name) hay.push(String(known));
+  const normalized = hay.map(h => h.toLowerCase());
+  const matches = [];
+  for (const matcher of snapshot._matchers) {
+    let matched = false;
+    for (const token of matcher.lowered) {
+      if (!token) continue;
+      if (normalized.some(h => h.includes(token) || token.includes(h))) {
+        matched = true;
+        break;
+      }
+    }
+    if (!matched && matcher.regexes?.length) {
+      matched = matcher.regexes.some(re => hay.some(h => re.test(h)));
+    }
+    if (matched) matches.push(matcher.entry);
+  }
+  return matches;
 }
 
 function confirmMapping(humanNameOrTicker, providerSymbol) {
@@ -1767,6 +1831,41 @@ async function main(){
       } catch {}
     }
     // --------------------------------------------------------------------------
+
+    const keywordSnapshot = loadNewsKeywordSnapshot();
+    if (keywordSnapshot?.keywords?.length) {
+      for (const n of names) {
+        const sym = nameToSymbol(n) || n;
+        rememberMapping(n, sym);
+        const hits = keywordMatchesForName(n, sym);
+        if (!hits.length) continue;
+        const limited = hits.slice(0, 3);
+        const keywordScore = limited.reduce((max, entry) => {
+          const val = Number(entry?.score ?? 0);
+          return Math.max(max, clamp01(val));
+        }, 0);
+        byName[n].reasons = byName[n].reasons || {};
+        if (keywordScore > 0 && KEYWORD_SCORE_WEIGHT > 0) {
+          const baseSafe = clamp01(scoreSafe[n]);
+          const baseAggr = clamp01(scoreAggr[n]);
+          const blendedSafe = clamp01((1 - KEYWORD_SCORE_WEIGHT) * baseSafe + KEYWORD_SCORE_WEIGHT * keywordScore);
+          const blendedAggr = clamp01((1 - KEYWORD_SCORE_WEIGHT) * baseAggr + KEYWORD_SCORE_WEIGHT * keywordScore);
+          scoreSafe[n] = clamp01(Math.max(scoreSafe[n], blendedSafe));
+          scoreAggr[n] = clamp01(Math.max(scoreAggr[n], blendedAggr));
+          byName[n].reasons.keywordScore = keywordScore;
+        }
+        const texts = limited.map(entry => entry?.text?.ko && entry?.text?.en
+          ? `${entry.text.ko} / ${entry.text.en}`
+          : (entry?.text?.ko || entry?.text?.en || ''));
+        byName[n].reasons.keywordMatches = Array.from(new Set([...(byName[n].reasons.keywordMatches || []), ...texts].filter(Boolean)));
+        try {
+          (metricsOut[market] ||= {});
+          (metricsOut[market][n] ||= {});
+          metricsOut[market][n].keywordMatches = limited.map(entry => entry.text);
+          metricsOut[market][n].keywordScore = keywordScore;
+        } catch {}
+      }
+    }
 
     for (const n of names) {
       const j = DISABLE_JITTER ? 0 : djitter(n);
