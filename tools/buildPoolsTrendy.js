@@ -206,8 +206,11 @@ function saveNameToSymbol(map) {
 const NAME_TO_SYMBOL = loadNameToSymbol();
 const SYMBOL_TO_NAME = {};
 const KEYWORD_SNAPSHOT_PATH = path.join(process.cwd(), 'newsKeywords.json');
-const KEYWORD_BONUS_SAFE = Number(process.env.KEYWORD_BONUS_SAFE || 0.05);
-const KEYWORD_BONUS_AGGR = Number(process.env.KEYWORD_BONUS_AGGR || 0.07);
+const KEYWORD_SCORE_WEIGHT = (() => {
+  const raw = Number(process.env.KEYWORD_SCORE_WEIGHT ?? 0.1);
+  if (!Number.isFinite(raw)) return 0.1;
+  return Math.max(0, Math.min(0.5, raw));
+})();
 let NEWS_KEYWORD_SNAPSHOT = null;
 const CONFIRMED_KEYS = new Set();
 
@@ -1837,15 +1840,20 @@ async function main(){
         const hits = keywordMatchesForName(n, sym);
         if (!hits.length) continue;
         const limited = hits.slice(0, 3);
-        const liftSafe = KEYWORD_BONUS_SAFE * limited.length;
-        const liftAggr = KEYWORD_BONUS_AGGR * limited.length;
-        if (liftSafe > 0) {
-          scoreSafe[n] = clamp01(scoreSafe[n] + liftSafe);
-        }
-        if (liftAggr > 0) {
-          scoreAggr[n] = clamp01(scoreAggr[n] + liftAggr);
-        }
+        const keywordScore = limited.reduce((max, entry) => {
+          const val = Number(entry?.score ?? 0);
+          return Math.max(max, clamp01(val));
+        }, 0);
         byName[n].reasons = byName[n].reasons || {};
+        if (keywordScore > 0 && KEYWORD_SCORE_WEIGHT > 0) {
+          const baseSafe = clamp01(scoreSafe[n]);
+          const baseAggr = clamp01(scoreAggr[n]);
+          const blendedSafe = clamp01((1 - KEYWORD_SCORE_WEIGHT) * baseSafe + KEYWORD_SCORE_WEIGHT * keywordScore);
+          const blendedAggr = clamp01((1 - KEYWORD_SCORE_WEIGHT) * baseAggr + KEYWORD_SCORE_WEIGHT * keywordScore);
+          scoreSafe[n] = clamp01(Math.max(scoreSafe[n], blendedSafe));
+          scoreAggr[n] = clamp01(Math.max(scoreAggr[n], blendedAggr));
+          byName[n].reasons.keywordScore = keywordScore;
+        }
         const texts = limited.map(entry => entry?.text?.ko && entry?.text?.en
           ? `${entry.text.ko} / ${entry.text.en}`
           : (entry?.text?.ko || entry?.text?.en || ''));
@@ -1854,6 +1862,7 @@ async function main(){
           (metricsOut[market] ||= {});
           (metricsOut[market][n] ||= {});
           metricsOut[market][n].keywordMatches = limited.map(entry => entry.text);
+          metricsOut[market][n].keywordScore = keywordScore;
         } catch {}
       }
     }
