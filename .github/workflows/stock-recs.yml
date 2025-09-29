@@ -351,6 +351,9 @@ jobs:
       - name: Build article cache
         run: node build-articles.js
 
+      - name: Build market keyword snapshot
+        run: node src/news/fetchByTicker.js --build-keywords
+
       - name: Prune cache directory
         env:
           CACHE_LIMIT: 1000
@@ -364,7 +367,8 @@ jobs:
                   pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json \
                   cache \
                   stocks/fx_rates/fx_rates.json stocks/fx_rates/fx_history*.json \
-                  stocks/fx_rates/index.html || true
+                  stocks/fx_rates/index.html \
+                  newsKeywords.json || true
           echo "Files staged for commit"
 
       - name: Commit & push changes
