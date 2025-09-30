@@ -109,6 +109,99 @@ const KEYWORD_MARKET_QUERIES = [
   { market: 'S&P 500', queries: ['S&P 500', 'S&P500 economy', '미국 증시 S&P500'], locales: ['en', 'ko'] }
 ];
 
+const DATALAB_TREND_KEYWORDS = [
+  {
+    text: { ko: 'AI 반도체 투자', en: 'AI semiconductor investment' },
+    datalabKeyword: 'AI 반도체 투자',
+    markets: ['KOSPI', 'NASDAQ 100'],
+    articleQueries: [
+      { query: 'AI 반도체 투자', locales: ['ko'] },
+      { query: 'AI semiconductor investment', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '친환경 에너지 전환', en: 'Green energy transition' },
+    datalabKeyword: '친환경 에너지',
+    markets: ['KOSDAQ', 'S&P 500'],
+    articleQueries: [
+      { query: '친환경 에너지', locales: ['ko'] },
+      { query: 'Green energy transition', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '원달러 환율 안정', en: 'KRW USD stability' },
+    datalabKeyword: '원달러 환율',
+    markets: ['KOSPI'],
+    articleQueries: [
+      { query: '원달러 환율', locales: ['ko'] },
+      { query: 'KRW USD stability', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '바이오 헬스케어 혁신', en: 'Bio healthcare innovation' },
+    datalabKeyword: '바이오 헬스케어',
+    markets: ['KOSDAQ', 'NASDAQ 100'],
+    articleQueries: [
+      { query: '바이오 헬스케어', locales: ['ko'] },
+      { query: 'Bio healthcare innovation', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: 'IT 서비스 업황', en: 'IT services outlook' },
+    datalabKeyword: 'IT 서비스 업황',
+    markets: ['KOSPI', 'S&P 500'],
+    articleQueries: [
+      { query: 'IT 서비스 업황', locales: ['ko'] },
+      { query: 'IT services outlook', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '반도체 공급망', en: 'Semiconductor supply chain' },
+    datalabKeyword: '반도체 공급망',
+    markets: ['NASDAQ 100', 'S&P 500'],
+    articleQueries: [
+      { query: '반도체 공급망', locales: ['ko'] },
+      { query: 'Semiconductor supply chain', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '2차전지 소재 수요', en: 'Battery materials demand' },
+    datalabKeyword: '2차전지 소재',
+    markets: ['KOSDAQ'],
+    articleQueries: [
+      { query: '2차전지 소재', locales: ['ko'] },
+      { query: 'Battery materials demand', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '미국 CPI 전망', en: 'US CPI outlook' },
+    datalabKeyword: '미국 CPI',
+    markets: ['S&P 500'],
+    articleQueries: [
+      { query: '미국 CPI', locales: ['ko'] },
+      { query: 'US CPI outlook', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '환율 변동성', en: 'FX volatility' },
+    datalabKeyword: '환율 변동성',
+    markets: ['KOSPI'],
+    articleQueries: [
+      { query: '환율 변동성', locales: ['ko'] },
+      { query: 'FX volatility', locales: ['en'] }
+    ]
+  },
+  {
+    text: { ko: '미 연준 금리', en: 'US Fed rate' },
+    datalabKeyword: '미 연준 금리',
+    markets: ['S&P 500'],
+    articleQueries: [
+      { query: '미 연준 금리', locales: ['ko'] },
+      { query: 'US Fed rate', locales: ['en'] }
+    ]
+  }
+];
+
 const STOPWORDS_EN = new Set([
   'the','and','for','with','from','that','this','have','has','into','over','under','after','before','will','would','could','should',
   'market','markets','stock','stocks','index','indices','latest','today','news','report','reports','analysis','update','updates',
@@ -419,6 +512,146 @@ async function collectMarketArticles({ market, queries, locales }){
   return results;
 }
 
+async function fetchDatalabKeywordMetrics(configs){
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || process.env.NAVER_ID || '';
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || process.env.NAVER_SECRET || '';
+  if (!NAVER_ID || !NAVER_SECRET || SKIP_NAVER || !configs.length) return new Map();
+
+  const today = new Date();
+  const end = today.toISOString().slice(0, 10);
+  const lookbackDays = Number(process.env.DATALAB_KEYWORD_LOOKBACK_DAYS || 120);
+  const start = new Date(today.getTime() - lookbackDays * 24 * 3600 * 1000).toISOString().slice(0, 10);
+
+  const metrics = new Map();
+  const groups = configs.map(cfg => {
+    const keyword = cfg.datalabKeyword || cfg.text?.ko || cfg.text?.en;
+    return { config: cfg, groupName: keyword, keyword };
+  }).filter(g => g.keyword);
+
+  for (const batch of chunk(groups, 5)) {
+    const res = await fetchNaverDataLabBatch(batch, {
+      startDate: start,
+      endDate: end,
+      timeUnit: 'date',
+      NAVER_ID,
+      NAVER_SECRET
+    }).catch(() => ({}));
+    const resEntries = Object.entries(res || {});
+    const usedKeys = new Set();
+    for (const item of batch) {
+      const key = item.groupName;
+      let data = res?.[key] || res?.[item.keyword];
+      if (!data) {
+        const fallback = resEntries.find(([k]) => !usedKeys.has(k));
+        if (fallback) {
+          usedKeys.add(fallback[0]);
+          data = fallback[1];
+        }
+      } else {
+        usedKeys.add(key);
+      }
+      if (data) {
+        metrics.set(item.config, data);
+      }
+    }
+  }
+
+  return metrics;
+}
+
+function dedupeArticlesByUrl(articles){
+  const seen = new Set();
+  const out = [];
+  for (const article of articles) {
+    const url = article?.url || '';
+    const key = url || `${article?.title || ''}__${article?.source || ''}`;
+    if (!key) continue;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(article);
+  }
+  return out;
+}
+
+async function gatherArticlesForDatalabKeyword(config){
+  const articles = [];
+  const market = config.markets?.[0] || 'GLOBAL';
+  for (const queryInfo of config.articleQueries || []) {
+    if (!queryInfo?.query) continue;
+    const locales = Array.isArray(queryInfo.locales) && queryInfo.locales.length ? queryInfo.locales : ['en'];
+    const collected = await collectMarketArticles({ market, queries: [queryInfo.query], locales });
+    articles.push(...collected);
+  }
+  return dedupeArticlesByUrl(articles);
+}
+
+function computeDatalabRawScore(metrics, mentions){
+  if (!metrics) return 0;
+  const asviScore = Math.max(0, Number(metrics.lastAsvi || 0)) / 100;
+  const popularity = Math.max(0, Math.min(1, Number(metrics.popularity01 || 0)));
+  const mentionScore = mentions > 0 ? Math.min(1, Math.log10(mentions + 1) / Math.log10(11)) : 0;
+  const spikeBonus = metrics.spike ? 0.15 : 0;
+  const persistBonus = metrics.persist ? 0.1 : 0;
+  return asviScore * 0.5 + popularity * 0.3 + mentionScore * 0.2 + spikeBonus + persistBonus;
+}
+
+async function buildDatalabKeywordEntries(){
+  const metricsMap = await fetchDatalabKeywordMetrics(DATALAB_TREND_KEYWORDS);
+  if (!metricsMap.size) return [];
+
+  const rawEntries = [];
+  for (const config of DATALAB_TREND_KEYWORDS) {
+    const metrics = metricsMap.get(config);
+    if (!metrics) continue;
+    const articles = await gatherArticlesForDatalabKeyword(config);
+    const mentions = articles.length;
+    const sources = new Set(articles.map(a => a.source).filter(Boolean));
+    sources.add('naver-datalab');
+    const sourcesList = Array.from(sources).sort();
+    const sampleHeadlines = articles
+      .filter(a => a?.title && a?.url)
+      .slice(0, 3)
+      .map(a => ({ title: a.title, url: a.url, source: a.source }));
+
+    const searchUrl = {};
+    if (config.text?.ko) searchUrl.ko = buildGoogleSearchUrl(config.text.ko, 'ko');
+    if (config.text?.en) searchUrl.en = buildGoogleSearchUrl(config.text.en, 'en');
+
+    const rawScore = computeDatalabRawScore(metrics, mentions);
+
+    rawEntries.push({
+      rawScore,
+      entry: {
+        text: {
+          ko: config.text?.ko || config.text?.en || '',
+          en: config.text?.en || config.text?.ko || ''
+        },
+        markets: Array.from(new Set(config.markets || [])),
+        sources: sourcesList,
+        mentions,
+        score: rawScore,
+        sampleHeadlines,
+        searchUrl
+      }
+    });
+  }
+
+  if (!rawEntries.length) return [];
+
+  const maxScore = rawEntries.reduce((m, r) => Math.max(m, r.rawScore), 0) || 1;
+  return rawEntries
+    .sort((a, b) => {
+      if (b.rawScore !== a.rawScore) return b.rawScore - a.rawScore;
+      if (b.entry.mentions !== a.entry.mentions) return b.entry.mentions - a.entry.mentions;
+      return (b.entry.text.en || '').localeCompare(a.entry.text.en || '');
+    })
+    .slice(0, 10)
+    .map(({ entry, rawScore }) => ({
+      ...entry,
+      score: Number((rawScore / maxScore).toFixed(3))
+    }));
+}
+
 function buildKeywordSummary(articles){
   const map = new Map();
   for (const article of articles) {
@@ -483,18 +716,38 @@ function buildKeywordSummary(articles){
 export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
 
-  const articles = [];
-  for (const marketConfig of KEYWORD_MARKET_QUERIES) {
-    const collected = await collectMarketArticles(marketConfig);
-    articles.push(...collected);
-  }
+  let keywords = await buildDatalabKeywordEntries();
 
-  const keywords = buildKeywordSummary(articles);
+  if (keywords.length < 10) {
+    const articles = [];
+    for (const marketConfig of KEYWORD_MARKET_QUERIES) {
+      const collected = await collectMarketArticles(marketConfig);
+      articles.push(...collected);
+    }
+    const fallback = buildKeywordSummary(articles);
+    if (!keywords.length) {
+      keywords = fallback;
+    } else if (fallback.length) {
+      const existingKeys = new Set(keywords.map(k => (k?.text?.en || k?.text?.ko || '').toLowerCase()));
+      for (const item of fallback) {
+        const key = (item?.text?.en || item?.text?.ko || '').toLowerCase();
+        if (!key || existingKeys.has(key)) continue;
+        keywords.push(item);
+        existingKeys.add(key);
+        if (keywords.length >= 10) break;
+      }
+    }
+  }
 
   const now = new Date();
   const tz = process.env.KEYWORD_TIMEZONE || 'Asia/Seoul';
   const updatedKo = now.toLocaleString('ko-KR', { timeZone: tz, hour12: false });
   const updatedEn = now.toLocaleString('en-US', { timeZone: tz });
+
+  const markets = Array.from(new Set([
+    ...KEYWORD_MARKET_QUERIES.map(m => m.market),
+    ...DATALAB_TREND_KEYWORDS.flatMap(cfg => cfg.markets || [])
+  ])).sort();
 
   const payload = {
     generatedAt: now.toISOString(),
@@ -504,7 +757,7 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
       en: updatedEn
     },
     keywords,
-    markets: KEYWORD_MARKET_QUERIES.map(m => m.market)
+    markets
   };
 
   if (existingSnapshot?.tickerKeywords) {
