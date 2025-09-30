@@ -110,6 +110,63 @@ const KEYWORD_MARKET_QUERIES = [
   { market: 'S&P 500', queries: ['S&P 500', 'S&P500 economy', '미국 증시 S&P500'], locales: ['en', 'ko'] }
 ];
 
+const TAG_OUTPUT_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
+const TAG_TARGET_COUNT = Number(process.env.MARKET_TAG_TARGET || 10_000);
+const TAG_COLLECTION_WINDOW_DAYS = Number(process.env.TAG_COLLECTION_LOOKBACK_DAYS || 14);
+const TAG_COLLECTION_PAGE_LIMIT = Number(process.env.TAG_COLLECTION_PAGE_LIMIT || 5);
+const TAG_COLLECTION_PAGE_SIZE = Number(process.env.TAG_COLLECTION_PAGE_SIZE || 40);
+const ENGLISH_TAG_REGEX = /^[A-Za-z0-9][A-Za-z0-9\-\s&()/.,']{1,60}$/;
+
+const TAG_KO_DICTIONARY = new Map(Object.entries({
+  'ai': '인공지능',
+  'artificial intelligence': '인공지능',
+  'battery': '배터리',
+  'batteries': '배터리',
+  'battery materials': '배터리 소재',
+  'blockchain': '블록체인',
+  'cloud computing': '클라우드 컴퓨팅',
+  'consumer spending': '소비 지출',
+  'cryptocurrency': '암호화폐',
+  'currency': '통화',
+  'digital transformation': '디지털 전환',
+  'electric vehicle': '전기차',
+  'electric vehicles': '전기차',
+  'energy transition': '에너지 전환',
+  'energy': '에너지',
+  'exports': '수출',
+  'federal reserve': '미 연준',
+  'financial markets': '금융 시장',
+  'finance': '금융',
+  'foreign exchange': '외환',
+  'gdp': '국내총생산',
+  'green energy': '친환경 에너지',
+  'healthcare': '헬스케어',
+  'inflation': '인플레이션',
+  'interest rate': '금리',
+  'interest rates': '금리',
+  'ipo': '기업공개',
+  'logistics': '물류',
+  'machine learning': '머신러닝',
+  'manufacturing': '제조업',
+  'mergers and acquisitions': '인수합병',
+  'monetary policy': '통화 정책',
+  'nasdaq': '나스닥',
+  'oil prices': '유가',
+  'private equity': '사모펀드',
+  'renewable energy': '재생 에너지',
+  'recession': '경기침체',
+  'semiconductor': '반도체',
+  'semiconductors': '반도체',
+  'shipping': '해운',
+  'supply chain': '공급망',
+  'supply chains': '공급망',
+  'supply shortage': '공급 부족',
+  'stock market': '증시',
+  'tech stocks': '기술주',
+  'trade balance': '무역수지',
+  'venture capital': '벤처 투자'
+}));
+
 const DATALAB_TREND_KEYWORDS = [
   {
     text: { ko: 'AI 반도체 투자', en: 'AI semiconductor investment' },
@@ -735,10 +792,277 @@ function buildKeywordSummary(articles){
   }));
 }
 
+function normalizeTagCandidate(raw) {
+  if (!raw) return null;
+  const cleaned = String(raw)
+    .replace(/[“”‘’]/g, "'")
+    .replace(/[·•]/g, ' ')
+    .replace(/[^A-Za-z0-9&()/.,'\-\s]/g, ' ')
+    .trim();
+  if (!cleaned) return null;
+  const collapsed = cleaned.replace(/\s+/g, ' ').trim();
+  if (!collapsed || !/[A-Za-z]/.test(collapsed)) return null;
+  if (!ENGLISH_TAG_REGEX.test(collapsed)) return null;
+  return collapsed;
+}
+
+function formatTagDisplay(str) {
+  const text = String(str || '').trim();
+  if (!text) return '';
+  const lower = text.toLowerCase();
+  if (text.length <= 3 && /[a-z]/i.test(text)) return text.toUpperCase();
+  if (text === lower) {
+    return lower
+      .split(' ')
+      .map(part => part ? part[0].toUpperCase() + part.slice(1) : '')
+      .join(' ');
+  }
+  return text;
+}
+
+function translateTagToKo(tag) {
+  const text = String(tag || '').trim();
+  if (!text) return '';
+  const lower = text.toLowerCase();
+  if (TAG_KO_DICTIONARY.has(lower)) return TAG_KO_DICTIONARY.get(lower);
+  if (lower.endsWith('es') && TAG_KO_DICTIONARY.has(lower.slice(0, -2))) return TAG_KO_DICTIONARY.get(lower.slice(0, -2));
+  if (lower.endsWith('s') && TAG_KO_DICTIONARY.has(lower.slice(0, -1))) return TAG_KO_DICTIONARY.get(lower.slice(0, -1));
+  if (lower.includes('&')) {
+    const parts = lower.split('&').map(p => p.trim());
+    const translated = parts.map(p => TAG_KO_DICTIONARY.get(p) || '').filter(Boolean);
+    if (translated.length) return translated.join(' & ');
+  }
+  return text;
+}
+
+function chooseTagDisplay(entry) {
+  if (!entry) return '';
+  const forms = Array.from(entry.forms || []);
+  if (!forms.length) return formatTagDisplay(entry.display || '');
+  forms.sort((a, b) => b.length - a.length);
+  const proper = forms.find(f => /[A-Z]/.test(f.slice(1)));
+  return formatTagDisplay(proper || forms[0]);
+}
+
+function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', collected, targetCount }) {
+  const normalized = normalizeTagCandidate(tag);
+  if (!normalized) return;
+  const key = normalized.toLowerCase();
+  let entry = stats.get(key);
+  if (!entry) {
+    entry = {
+      key,
+      forms: new Set(),
+      display: normalized,
+      count: 0,
+      markets: new Set(),
+      sources: new Set(),
+      headlines: [],
+      headlineKeys: new Set()
+    };
+    stats.set(key, entry);
+  }
+
+  entry.count += 1;
+  entry.forms.add(normalized);
+  if (!entry.display || normalized.length > entry.display.length) {
+    entry.display = normalized;
+  }
+
+  for (const market of markets || []) {
+    const val = String(market || '').trim();
+    if (val) entry.markets.add(val);
+  }
+  if (article?.market) entry.markets.add(article.market);
+
+  const source = String(article?.source || sourceLabel || '').trim();
+  if (source) entry.sources.add(source);
+
+  if (article?.title && article?.url) {
+    const keyStr = `${article.url}__${article.title}`;
+    if (!entry.headlineKeys.has(keyStr) && entry.headlines.length < 3) {
+      entry.headlineKeys.add(keyStr);
+      entry.headlines.push({ title: article.title, url: article.url, source: article.source || sourceLabel || 'news' });
+    }
+  }
+
+  if (collected && collected.length < targetCount) {
+    collected.push(normalized);
+  }
+}
+
+function buildTagQueryConfigs() {
+  const configs = [];
+  const seen = new Set();
+  const pushConfig = (query, markets, sourceLabel) => {
+    const cleaned = normalizeTagCandidate(query);
+    if (!cleaned) return;
+    const key = cleaned.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    configs.push({ query: cleaned, markets: Array.isArray(markets) ? markets : [], source: sourceLabel });
+  };
+
+  for (const cfg of DATALAB_TREND_KEYWORDS) {
+    if (cfg?.text?.en) {
+      pushConfig(cfg.text.en, cfg.markets || [], 'naver-datalab');
+    }
+    for (const aq of cfg.articleQueries || []) {
+      if (!aq?.query) continue;
+      const locales = Array.isArray(aq.locales) ? aq.locales : [];
+      if (locales.length && !locales.includes('en')) continue;
+      pushConfig(aq.query, cfg.markets || [], 'naver-datalab');
+    }
+  }
+
+  for (const mk of KEYWORD_MARKET_QUERIES) {
+    for (const query of mk.queries || []) {
+      if (!/[A-Za-z]/.test(query)) continue;
+      pushConfig(query, [mk.market], 'market-query');
+    }
+  }
+
+  return configs;
+}
+
+async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
+  const stats = new Map();
+  const collected = [];
+  if (!NEWSDATA_API_KEY) {
+    console.warn('[keywords] NEWSDATA_API_KEY missing; skipping tag collection');
+    return { tags: collected, stats };
+  }
+
+  const queries = buildTagQueryConfigs();
+  if (!queries.length) return { tags: collected, stats };
+
+  const fromDate = daysAgo(TAG_COLLECTION_WINDOW_DAYS);
+  const toDate = daysAgo(0);
+
+  for (const cfg of queries) {
+    try {
+      const articles = await newsdataArchiveFetch({
+        q: cfg.query,
+        languages: ['en'],
+        fromDate,
+        toDate,
+        size: TAG_COLLECTION_PAGE_SIZE,
+        pageLimit: TAG_COLLECTION_PAGE_LIMIT
+      });
+      for (const article of articles) {
+        const tags = Array.isArray(article?.tags) ? article.tags : [];
+        if (!tags.length) continue;
+        for (const rawTag of tags) {
+          recordTagStat({
+            stats,
+            tag: rawTag,
+            article,
+            markets: cfg.markets,
+            sourceLabel: cfg.source,
+            collected,
+            targetCount
+          });
+        }
+      }
+    } catch (err) {
+      console.warn(`[keywords] failed to collect tags for "${cfg.query}":`, err?.message || err);
+    }
+    if (collected.length >= targetCount && stats.size >= 10) break;
+  }
+
+  if (stats.size && collected.length < targetCount) {
+    const entries = [...stats.values()]
+      .sort((a, b) => (b.count - a.count) || chooseTagDisplay(a).localeCompare(chooseTagDisplay(b)));
+    let idx = 0;
+    while (collected.length < targetCount && entries.length) {
+      const entry = entries[idx % entries.length];
+      collected.push(chooseTagDisplay(entry));
+      idx += 1;
+    }
+  }
+
+  return { tags: collected.slice(0, targetCount), stats };
+}
+
+async function writeTagsJsonFile(tags) {
+  const normalized = Array.isArray(tags) ? tags.map(formatTagDisplay) : [];
+  ensureDirFor(TAG_OUTPUT_FILE);
+  const payload = {
+    generatedAt: new Date().toISOString(),
+    total: normalized.length,
+    tags: normalized
+  };
+  await fsp.writeFile(TAG_OUTPUT_FILE, JSON.stringify(payload, null, 2));
+  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${normalized.length} tags`);
+}
+
+function buildSearchUrlPair(enText, koText) {
+  const urls = {};
+  const koUrl = buildGoogleSearchUrl(koText, 'ko');
+  const enUrl = buildGoogleSearchUrl(enText, 'en');
+  if (koUrl) urls.ko = koUrl;
+  if (enUrl) urls.en = enUrl;
+  return urls;
+}
+
+function buildKeywordsFromTagStats(tagStats, { limit = 10 } = {}) {
+  if (!tagStats || !tagStats.size) return [];
+  const entries = [];
+  for (const entry of tagStats.values()) {
+    entries.push({
+      display: chooseTagDisplay(entry),
+      count: entry.count || 0,
+      markets: Array.from(entry.markets || []).filter(Boolean).sort(),
+      sources: Array.from(entry.sources || []).filter(Boolean).sort(),
+      headlines: Array.isArray(entry.headlines) ? entry.headlines.slice(0, 3) : []
+    });
+  }
+  entries.sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return a.display.localeCompare(b.display);
+  });
+
+  const maxCount = entries[0]?.count || 1;
+
+  return entries.slice(0, limit).map(item => {
+    const enText = formatTagDisplay(item.display);
+    const koText = translateTagToKo(enText) || enText;
+    return {
+      text: { ko: koText, en: enText },
+      markets: item.markets,
+      sources: item.sources,
+      mentions: item.count,
+      score: Number((item.count / maxCount).toFixed(3)),
+      sampleHeadlines: item.headlines,
+      searchUrl: buildSearchUrlPair(enText, koText)
+    };
+  }).filter(entry => entry.text.en);
+}
+
+function mergeKeywordLists(primary = [], secondary = [], limit = 10) {
+  const out = [];
+  const seen = new Set();
+  const add = (item) => {
+    if (!item || typeof item !== 'object') return;
+    const key = String(item?.text?.en || item?.text?.ko || '').trim().toLowerCase();
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    out.push(item);
+  };
+  primary.forEach(add);
+  secondary.forEach(add);
+  return out.slice(0, limit);
+}
+
 export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
 
-  let keywords = await buildDatalabKeywordEntries();
+  const { tags: tagCorpus, stats: tagStats } = await collectTagCorpus({ targetCount: TAG_TARGET_COUNT });
+  await writeTagsJsonFile(tagCorpus);
+
+  const tagKeywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
+  const datalabKeywords = await buildDatalabKeywordEntries();
+  let keywords = mergeKeywordLists(tagKeywords, datalabKeywords, 10);
 
   if (keywords.length < 10) {
     const articles = [];
@@ -747,18 +1071,7 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
       articles.push(...collected);
     }
     const fallback = buildKeywordSummary(articles);
-    if (!keywords.length) {
-      keywords = fallback;
-    } else if (fallback.length) {
-      const existingKeys = new Set(keywords.map(k => (k?.text?.en || k?.text?.ko || '').toLowerCase()));
-      for (const item of fallback) {
-        const key = (item?.text?.en || item?.text?.ko || '').toLowerCase();
-        if (!key || existingKeys.has(key)) continue;
-        keywords.push(item);
-        existingKeys.add(key);
-        if (keywords.length >= 10) break;
-      }
-    }
+    keywords = mergeKeywordLists(keywords, fallback, 10);
   }
 
   const now = new Date();
