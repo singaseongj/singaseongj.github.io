@@ -383,6 +383,16 @@ jobs:
       - name: Build market keyword snapshot
         run: node src/news/fetchByTicker.js --build-keywords
 
+      - name: Verify market tag snapshot
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          test -s tags.json
+          echo "tags.json generatedAt:"
+          jq -r '.generatedAt // "missing"' tags.json
+          echo "tags.json total tags:"
+          jq -r '.total // "missing"' tags.json
+
       - name: Prune cache directory
         env:
           CACHE_LIMIT: 1000
@@ -397,7 +407,7 @@ jobs:
                   cache \
                   stocks/fx_rates/fx_rates.json stocks/fx_rates/fx_history*.json \
                   stocks/fx_rates/index.html \
-                  newsKeywords.json || true
+                  newsKeywords.json tags.json || true
           echo "Files staged for commit"
 
       - name: Commit & push changes
