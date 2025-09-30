@@ -2,10 +2,10 @@
   "KOSDAQ": {
     "safe": [
       {
-        "name": "HLB",
-        "sector": null,
-        "ticker": "HLB",
-        "searchUrl": "https://www.google.com/search?q=HLB",
+        "name": "레고켐바이오",
+        "sector": "헬스케어",
+        "ticker": "141080.KQ",
+        "searchUrl": "https://www.google.com/search?q=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4",
         "score": 46,
         "reasons": {
           "reputationScore": 0,
@@ -120,7 +120,7 @@
         "sector": "헬스케어",
         "ticker": "100790.KQ",
         "searchUrl": "https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%83%9D%EB%AA%85%EC%9E%90%EC%9B%90",
-        "score": 23,
+        "score": 24,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -168,22 +168,6 @@
   "KOSPI": {
     "safe": [
       {
-        "name": "CJ",
-        "sector": null,
-        "ticker": "CJ.TO",
-        "searchUrl": "https://www.google.com/search?q=CJ",
-        "score": 89,
-        "reasons": {
-          "reputationScore": 0.55,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": -0.05,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
         "name": "LG전자",
         "sector": "경기소비재",
         "ticker": "066570.KS",
@@ -220,12 +204,28 @@
         "sector": null,
         "ticker": "NAVER",
         "searchUrl": "https://www.google.com/search?q=NAVER",
-        "score": 92,
+        "score": 91,
         "reasons": {
           "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.2,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "대한항공",
+        "sector": "산업재",
+        "ticker": "003490.KS",
+        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5",
+        "score": 92,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": -0.05,
             "blog": 1,
             "naver": 0
           }
@@ -238,7 +238,7 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
         "score": 99,
         "reasons": {
-          "reputationScore": 0.5387755102040817,
+          "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.1,
@@ -254,22 +254,6 @@
         "sector": "산업재",
         "ticker": "001120.KS",
         "searchUrl": "https://www.google.com/search?q=LX%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90",
-        "score": 32,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "대웅제약",
-        "sector": "헬스케어",
-        "ticker": "069620.KS",
-        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD",
         "score": 32,
         "reasons": {
           "reputationScore": 0,
@@ -303,6 +287,22 @@
         "ticker": "192400.KS",
         "searchUrl": "https://www.google.com/search?q=%EC%BF%A0%EC%BF%A0%ED%99%88%EC%8B%9C%EC%8A%A4",
         "score": 32,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "하이트진로",
+        "sector": "필수소비재",
+        "ticker": "000080.KS",
+        "searchUrl": "https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C",
+        "score": 31,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -354,7 +354,7 @@
         "sector": null,
         "ticker": "ASML",
         "searchUrl": "https://www.google.com/search?q=ASML%20Holding",
-        "score": 57,
+        "score": 55,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -370,7 +370,7 @@
         "sector": null,
         "ticker": "PDD",
         "searchUrl": "https://www.google.com/search?q=PDD%20Holdings",
-        "score": 52,
+        "score": 50,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -468,7 +468,7 @@
         "sector": "Industrials",
         "ticker": "ODFL",
         "searchUrl": "https://www.google.com/search?q=Old%20Dominion%20Freight%20Line",
-        "score": 46,
+        "score": 43,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -614,11 +614,11 @@
         }
       },
       {
-        "name": "Hubbell Incorporated",
+        "name": "Dover Corporation",
         "sector": "Industrials",
-        "ticker": "HUBB",
-        "searchUrl": "https://www.google.com/search?q=Hubbell%20Incorporated",
-        "score": 43,
+        "ticker": "DOV",
+        "searchUrl": "https://www.google.com/search?q=Dover%20Corporation",
+        "score": 40,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-09-30T11:58:26+09:00"
+  "lastUpdated": "2025-09-30T14:25:41+09:00"
 }
