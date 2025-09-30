@@ -116,6 +116,15 @@ const TAG_COLLECTION_WINDOW_DAYS = Number(process.env.TAG_COLLECTION_LOOKBACK_DA
 const TAG_COLLECTION_PAGE_LIMIT = Number(process.env.TAG_COLLECTION_PAGE_LIMIT || 5);
 const TAG_COLLECTION_PAGE_SIZE = Number(process.env.TAG_COLLECTION_PAGE_SIZE || 40);
 const ENGLISH_TAG_REGEX = /^[A-Za-z0-9][A-Za-z0-9\-\s&()/.,']{1,60}$/;
+const TAG_STOPWORD_PHRASES = new Set([
+  'nasdaq', 'nasdaq 100', '100', '200', '300', '400', '500', 'to'
+]);
+const TAG_STOPWORD_TOKENS = new Set([
+  'nasdaq', 'dow', 'jones', 'sp', 's', 'p', 'index', 'indices', 'market', 'markets',
+  '100', '200', '300', '400', '500', '600', '700', '800', '900', '1000',
+  'the', 'and', 'or', 'for', 'of', 'in', 'on', 'at', 'by', 'from', 'with', 'without',
+  'to', 'vs', 'vs.', 'a', 'an', 'per', 'amid'
+]);
 
 const TAG_KO_DICTIONARY = new Map(Object.entries({
   'ai': '인공지능',
@@ -792,6 +801,23 @@ function buildKeywordSummary(articles){
   }));
 }
 
+function isMeaningfulTagCandidate(str) {
+  if (!str) return false;
+  const lower = String(str).toLowerCase().trim();
+  if (!lower) return false;
+  if (TAG_STOPWORD_PHRASES.has(lower)) return false;
+  const normalizedPhrase = lower.replace(/-/g, ' ');
+  if (TAG_STOPWORD_PHRASES.has(normalizedPhrase)) return false;
+  if (/^\d+$/.test(lower)) return false;
+  const tokens = normalizedPhrase.split(/[^a-z0-9]+/).filter(Boolean);
+  if (!tokens.length) return false;
+  return tokens.some(token => {
+    if (!token) return false;
+    if (/^\d+$/.test(token)) return false;
+    return !TAG_STOPWORD_TOKENS.has(token);
+  });
+}
+
 function normalizeTagCandidate(raw) {
   if (!raw) return null;
   const cleaned = String(raw)
@@ -803,6 +829,7 @@ function normalizeTagCandidate(raw) {
   const collapsed = cleaned.replace(/\s+/g, ' ').trim();
   if (!collapsed || !/[A-Za-z]/.test(collapsed)) return null;
   if (!ENGLISH_TAG_REGEX.test(collapsed)) return null;
+  if (!isMeaningfulTagCandidate(collapsed)) return null;
   return collapsed;
 }
 
@@ -1064,18 +1091,15 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   const { tags: tagCorpus, stats: tagStats } = await collectTagCorpus({ targetCount: TAG_TARGET_COUNT });
   await writeTagsJsonFile(tagCorpus, tagStats);
 
-  const tagKeywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
-  const datalabKeywords = await buildDatalabKeywordEntries();
-  let keywords = mergeKeywordLists(tagKeywords, datalabKeywords, 10);
+  const keywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
 
-  if (keywords.length < 10) {
-    const articles = [];
-    for (const marketConfig of KEYWORD_MARKET_QUERIES) {
-      const collected = await collectMarketArticles(marketConfig);
-      articles.push(...collected);
+  const marketSet = new Set();
+  if (tagStats && typeof tagStats.values === 'function') {
+    for (const entry of tagStats.values()) {
+      for (const market of entry.markets || []) {
+        if (market) marketSet.add(market);
+      }
     }
-    const fallback = buildKeywordSummary(articles);
-    keywords = mergeKeywordLists(keywords, fallback, 10);
   }
 
   const now = new Date();
@@ -1083,10 +1107,10 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   const updatedKo = now.toLocaleString('ko-KR', { timeZone: tz, hour12: false });
   const updatedEn = now.toLocaleString('en-US', { timeZone: tz });
 
-  const markets = Array.from(new Set([
-    ...KEYWORD_MARKET_QUERIES.map(m => m.market),
-    ...DATALAB_TREND_KEYWORDS.flatMap(cfg => cfg.markets || [])
-  ])).sort();
+  const derivedMarkets = Array.from(marketSet).sort();
+  const markets = derivedMarkets.length
+    ? derivedMarkets
+    : (Array.isArray(existingSnapshot?.markets) ? existingSnapshot.markets : []);
 
   const payload = {
     generatedAt: now.toISOString(),
