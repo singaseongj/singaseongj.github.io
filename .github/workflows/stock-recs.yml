@@ -206,6 +206,32 @@ jobs:
           test -s data/news-features.json
           test -s data/naver-trends.json
 
+      - name: Commit updated tag corpus
+        if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f tags.json ]; then
+            echo "tags.json not found; skipping commit"
+            exit 0
+          fi
+
+          if ! git status --short -- tags.json | grep -q 'tags.json'; then
+            echo "No tag updates detected"
+            exit 0
+          fi
+
+          branch="${GITHUB_REF#refs/heads/}"
+          branch=${branch:-main}
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$branch"
+          git pull --rebase origin "$branch"
+          git add tags.json
+          git commit -m "chore: update market tags"
+          git push origin "HEAD:$branch"
+
       - name: "Preflight: DeepSearch"
         shell: bash
         run: |

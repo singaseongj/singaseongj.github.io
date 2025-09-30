@@ -984,13 +984,17 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
   return { tags: collected.slice(0, targetCount), stats };
 }
 
-async function writeTagsJsonFile(tags) {
+async function writeTagsJsonFile(tags, stats = new Map()) {
   const normalized = Array.isArray(tags) ? tags.map(formatTagDisplay) : [];
+  const ranked = (stats && typeof stats.size === 'number' && stats.size > 0)
+    ? buildKeywordsFromTagStats(stats, { limit: Math.max(normalized.length, 50) })
+    : [];
   ensureDirFor(TAG_OUTPUT_FILE);
   const payload = {
     generatedAt: new Date().toISOString(),
     total: normalized.length,
-    tags: normalized
+    tags: normalized,
+    ranked
   };
   await fsp.writeFile(TAG_OUTPUT_FILE, JSON.stringify(payload, null, 2));
   console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${normalized.length} tags`);
@@ -1058,7 +1062,7 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   const existingSnapshot = readJsonSafe(outputPath) || {};
 
   const { tags: tagCorpus, stats: tagStats } = await collectTagCorpus({ targetCount: TAG_TARGET_COUNT });
-  await writeTagsJsonFile(tagCorpus);
+  await writeTagsJsonFile(tagCorpus, tagStats);
 
   const tagKeywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
   const datalabKeywords = await buildDatalabKeywordEntries();
