@@ -873,7 +873,7 @@ function chooseTagDisplay(entry) {
 
 function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', collected, targetCount }) {
   const normalized = normalizeTagCandidate(tag);
-  if (!normalized) return;
+  if (!normalized) return false;
   const key = normalized.toLowerCase();
   let entry = stats.get(key);
   if (!entry) {
@@ -916,6 +916,8 @@ function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', co
   if (collected && collected.length < targetCount) {
     collected.push(normalized);
   }
+
+  return true;
 }
 
 function buildTagQueryConfigs() {
@@ -952,19 +954,65 @@ function buildTagQueryConfigs() {
   return configs;
 }
 
-async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
+function isRateLimitError(err) {
+  const msg = String(err?.message || err || '').toLowerCase();
+  return msg.includes('http 429') || msg.includes('status 429') || msg.includes('too many requests');
+}
+
+function retryAfterMsFromError(err, fallback = 5000) {
+  const headers = err?.responseHeaders || err?.headers || {};
+  const retryAfter = headers['retry-after'] || headers['Retry-After'];
+  const parsed = retryAfter ? Number(retryAfter) : NaN;
+  if (!Number.isNaN(parsed) && parsed > 0) {
+    return parsed * 1000;
+  }
+  return fallback;
+}
+
+function sleep(ms) {
+  if (!ms || ms <= 0) return Promise.resolve();
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function rebuildTagStatsFromSnapshot(snapshot) {
+  const stats = new Map();
+  if (!snapshot) return stats;
+  const ranked = Array.isArray(snapshot?.ranked) ? snapshot.ranked : [];
+  for (const item of ranked) {
+    const sourceText = item?.text?.en || item?.text?.ko || item?.display || item?.text || '';
+    const normalized = normalizeTagCandidate(sourceText);
+    if (!normalized) continue;
+    const key = normalized.toLowerCase();
+    const entry = {
+      key,
+      forms: new Set([normalized]),
+      display: normalized,
+      count: Number(item?.mentions || item?.count || 1) || 1,
+      markets: new Set(Array.isArray(item?.markets) ? item.markets.filter(Boolean) : []),
+      sources: new Set(Array.isArray(item?.sources) ? item.sources.filter(Boolean) : []),
+      headlines: Array.isArray(item?.sampleHeadlines) ? item.sampleHeadlines.slice(0, 3) : [],
+      headlineKeys: new Set()
+    };
+    stats.set(key, entry);
+  }
+  return stats;
+}
+
+async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapshot = null } = {}) {
   const stats = new Map();
   const collected = [];
   if (!NEWSDATA_API_KEY) {
     console.warn('[keywords] NEWSDATA_API_KEY missing; skipping tag collection');
-    return { tags: collected, stats };
+    return { tags: collected, stats, fallbackUsed: false };
   }
 
   const queries = buildTagQueryConfigs();
-  if (!queries.length) return { tags: collected, stats };
+  if (!queries.length) return { tags: collected, stats, fallbackUsed: false };
 
   const fromDate = daysAgo(TAG_COLLECTION_WINDOW_DAYS);
   const toDate = daysAgo(0);
+  let recordedCount = 0;
+  let consecutive429 = 0;
 
   for (const cfg of queries) {
     try {
@@ -976,11 +1024,12 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
         size: TAG_COLLECTION_PAGE_SIZE,
         pageLimit: TAG_COLLECTION_PAGE_LIMIT
       });
+      let queryRecorded = false;
       for (const article of articles) {
         const tags = Array.isArray(article?.tags) ? article.tags : [];
         if (!tags.length) continue;
         for (const rawTag of tags) {
-          recordTagStat({
+          const recorded = recordTagStat({
             stats,
             tag: rawTag,
             article,
@@ -989,10 +1038,25 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
             collected,
             targetCount
           });
+          if (recorded) {
+            queryRecorded = true;
+            recordedCount += 1;
+          }
         }
+      }
+      if (queryRecorded) {
+        consecutive429 = 0;
       }
     } catch (err) {
       console.warn(`[keywords] failed to collect tags for "${cfg.query}":`, err?.message || err);
+      if (isRateLimitError(err)) {
+        consecutive429 += 1;
+        const waitMs = retryAfterMsFromError(err, Math.min(5000 * consecutive429, 30000));
+        if (waitMs > 0) {
+          console.warn(`[keywords] rate limited while collecting tags; waiting ${waitMs}ms before continuing`);
+          await sleep(waitMs);
+        }
+      }
     }
     if (collected.length >= targetCount && stats.size >= 10) break;
   }
@@ -1008,23 +1072,50 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
     }
   }
 
-  return { tags: collected.slice(0, targetCount), stats };
+  if (!recordedCount && fallbackSnapshot) {
+    const fallbackTags = Array.isArray(fallbackSnapshot?.tags)
+      ? Array.from(new Set(fallbackSnapshot.tags.map(formatTagDisplay))).filter(Boolean)
+      : [];
+    if (fallbackTags.length) {
+      console.warn(`[keywords] using fallback tags snapshot with ${fallbackTags.length} tags`);
+      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
+      return { tags: fallbackTags.slice(0, targetCount), stats: fallbackStats, fallbackUsed: true };
+    }
+  }
+
+  return { tags: collected.slice(0, targetCount), stats, fallbackUsed: false };
 }
 
-async function writeTagsJsonFile(tags, stats = new Map()) {
+async function writeTagsJsonFile(tags, stats = new Map(), { fallbackSnapshot = null, fallbackUsed = false } = {}) {
   const normalized = Array.isArray(tags) ? tags.map(formatTagDisplay) : [];
   const ranked = (stats && typeof stats.size === 'number' && stats.size > 0)
     ? buildKeywordsFromTagStats(stats, { limit: Math.max(normalized.length, 50) })
     : [];
+  let finalTags = normalized.filter(Boolean);
+  let finalRanked = ranked;
+
+  if (!finalTags.length && Array.isArray(fallbackSnapshot?.tags)) {
+    finalTags = fallbackSnapshot.tags.map(formatTagDisplay).filter(Boolean);
+  }
+  if (!finalRanked.length && Array.isArray(fallbackSnapshot?.ranked)) {
+    finalRanked = fallbackSnapshot.ranked;
+  }
+
+  if (!finalTags.length) {
+    console.warn('[keywords] skipping tags.json update because no tags are available');
+    return;
+  }
+
   ensureDirFor(TAG_OUTPUT_FILE);
   const payload = {
     generatedAt: new Date().toISOString(),
-    total: normalized.length,
-    tags: normalized,
-    ranked
+    total: finalTags.length,
+    tags: finalTags,
+    ranked: finalRanked
   };
   await fsp.writeFile(TAG_OUTPUT_FILE, JSON.stringify(payload, null, 2));
-  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${normalized.length} tags`);
+  const suffix = fallbackUsed ? ' (fallback)' : '';
+  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${finalTags.length} tags${suffix}`);
 }
 
 function buildSearchUrlPair(enText, koText) {
@@ -1087,11 +1178,19 @@ function mergeKeywordLists(primary = [], secondary = [], limit = 10) {
 
 export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
+  const existingTagSnapshot = readJsonSafe(TAG_OUTPUT_FILE) || null;
 
-  const { tags: tagCorpus, stats: tagStats } = await collectTagCorpus({ targetCount: TAG_TARGET_COUNT });
-  await writeTagsJsonFile(tagCorpus, tagStats);
+  const { tags: tagCorpus, stats: tagStats, fallbackUsed } = await collectTagCorpus({
+    targetCount: TAG_TARGET_COUNT,
+    fallbackSnapshot: existingTagSnapshot
+  });
+  await writeTagsJsonFile(tagCorpus, tagStats, { fallbackSnapshot: existingTagSnapshot, fallbackUsed });
 
-  const keywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
+  let keywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
+  if (!keywords.length && Array.isArray(existingSnapshot?.keywords) && existingSnapshot.keywords.length) {
+    console.warn('[keywords] falling back to previous keyword snapshot');
+    keywords = existingSnapshot.keywords;
+  }
 
   const marketSet = new Set();
   if (tagStats && typeof tagStats.values === 'function') {
