@@ -30,6 +30,7 @@ const SKIP_NAVER = process.env.SKIP_NAVER === '1';
 const NEWS_FEATURES_FILE = path.join('data', 'news-features.json');
 const NAVER_TRENDS_FILE  = path.join('data', 'naver-trends.json');
 const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
+const polygonRest = POLYGON_API_KEY ? restClient(POLYGON_API_KEY) : null;
 const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
 const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
@@ -231,6 +232,27 @@ function containsHangul(str){
 
 function normalizeWord(word){
   return String(word || '').replace(/["'`’”\(\)\[\]\{\}:;!?]/g, '').trim();
+}
+
+function toUniqueStrings(value) {
+  if (!value) return [];
+  const arr = Array.isArray(value) ? value : [value];
+  const out = [];
+  for (const entry of arr) {
+    let str = '';
+    if (typeof entry === 'string') {
+      str = entry;
+    } else if (entry && typeof entry === 'object') {
+      if (typeof entry.name === 'string') str = entry.name;
+      else if (typeof entry.label === 'string') str = entry.label;
+      else if (typeof entry.value === 'string') str = entry.value;
+    }
+    const cleaned = normalizeWord(str);
+    if (cleaned && cleaned.length > 1) {
+      out.push(cleaned);
+    }
+  }
+  return Array.from(new Set(out));
 }
 
 function buildGoogleSearchUrl(query, locale = 'en'){
@@ -1064,6 +1086,51 @@ function extractKeywords(articles, domainLexicon) {
   return pickKeywords(scores, domainLexicon);
 }
 
+function normalizeMetadataToken(token) {
+  return String(token || '').replace(/\s+/g, ' ').trim();
+}
+
+function shouldIncludeMetadataToken(token) {
+  if (!token) return false;
+  const hasHangul = containsHangul(token);
+  if (hasHangul && STOPWORDS_KO.has(token)) return false;
+  const lower = token.toLowerCase();
+  if (!hasHangul && STOPWORDS_EN.has(lower)) return false;
+  const collapsed = token.replace(/\s+/g, '');
+  if (collapsed.length < 2) return false;
+  if (looksContenty(token) || isWhitelisted(token)) return true;
+  const parts = token.split(/\s+/).filter(Boolean);
+  return parts.some(part => looksContenty(part) || isWhitelisted(part));
+}
+
+function collectMetadataKeywords(articles) {
+  const meta = new Map();
+  const push = (raw, weight, sourceLabel) => {
+    const normalized = normalizeMetadataToken(raw);
+    if (!normalized || !shouldIncludeMetadataToken(normalized)) return;
+    const key = canon(normalized);
+    const entry = meta.get(key) || { term: key, score: 0, sources: new Set() };
+    entry.score += weight;
+    entry.sources.add(sourceLabel);
+    meta.set(key, entry);
+  };
+
+  for (const article of articles) {
+    if (!article || typeof article !== 'object') continue;
+    if (Array.isArray(article.tags)) {
+      for (const tag of article.tags) push(tag, 2.5, 'tag');
+    }
+    if (Array.isArray(article.keywords)) {
+      for (const kw of article.keywords) push(kw, 2.0, 'keyword');
+    }
+    if (Array.isArray(article.tickers)) {
+      for (const ticker of article.tickers) push(ticker, 1.5, 'ticker');
+    }
+  }
+
+  return meta;
+}
+
 export function buildNewsKeywords(articlesByTicker) {
   const output = {
     generated_at: new Date().toISOString(),
@@ -1073,9 +1140,33 @@ export function buildNewsKeywords(articlesByTicker) {
 
   for (const [ticker, articles] of Object.entries(articlesByTicker || {})) {
     if (!Array.isArray(articles) || !articles.length) continue;
-    const keywords = extractKeywords(articles, KEYWORD_WHITELIST).slice(0, 10);
-    if (keywords.length) {
-      output.tickers[ticker] = { keywords };
+    const metaMap = collectMetadataKeywords(articles);
+    const metaKeywords = [...metaMap.values()]
+      .map(entry => ({
+        term: entry.term,
+        score: Number(entry.score.toFixed(3)),
+        sources: Array.from(entry.sources)
+      }))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 10);
+
+    const textKeywords = extractKeywords(articles, KEYWORD_WHITELIST).slice(0, 10);
+
+    const combined = [];
+    const seen = new Set();
+    const pushUnique = (item) => {
+      if (!item || !item.term) return;
+      const key = item.term;
+      if (seen.has(key)) return;
+      seen.add(key);
+      combined.push(item);
+    };
+
+    metaKeywords.forEach(pushUnique);
+    textKeywords.forEach(pushUnique);
+
+    if (combined.length) {
+      output.tickers[ticker] = { keywords: combined.slice(0, 12) };
     }
   }
   return output;
@@ -1214,12 +1305,11 @@ function slope01(arr){ // returns slope normalized-ish (−1..+1)
 }
 
 async function fetchPolygonTrend(ticker) {
-  if (!POLYGON_API_KEY || !isUS(ticker)) return null;
+  if (!polygonRest || !isUS(ticker)) return null;
   try {
-    const rest = restClient(POLYGON_API_KEY);
     const end = new Date();
     const start = new Date(end.getTime() - 2 * 24 * 60 * 60 * 1000);
-    const res = await rest.stocks.aggregates(
+    const res = await polygonRest.stocks.aggregates(
       ticker,
       1,
       'day',
@@ -1243,10 +1333,9 @@ async function fetchPolygonTrend(ticker) {
 }
 
 async function fetchPrevClose(ticker) {
-  if (!POLYGON_API_KEY || !isUS(ticker)) return null;
+  if (!polygonRest || !isUS(ticker)) return null;
   try {
-    const rest = restClient(POLYGON_API_KEY);
-    const res = await rest.stocks.previousClose(ticker, { adjusted: true });
+    const res = await polygonRest.stocks.previousClose(ticker, { adjusted: true });
     const close = res?.results?.[0]?.c;
     return typeof close === 'number' ? close : null;
   } catch (e) {
@@ -1705,11 +1794,19 @@ async function newsFromGdelt(sym, q){
 }
 
 async function newsFromPolygon(sym){
-  if (!POLYGON_API_KEY) return null;
-  const url = `https://api.polygon.io/v2/reference/news?ticker=${encodeURIComponent(sym)}&limit=50&apiKey=${POLYGON_API_KEY}`;
-  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 15*60*1000, true), {max:1, baseMs:600});
-  const arr = Array.isArray(j?.results) ? j.results : [];
-  return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+  if (!polygonRest) return null;
+  try {
+    const res = await withRetry(() => polygonRest.reference.tickerNews({
+      ticker: sym,
+      limit: Number(process.env.POLYGON_NEWS_LIMIT || 50),
+      order: 'desc'
+    }), { max: 1, baseMs: 600 });
+    const arr = Array.isArray(res?.results) ? res.results : [];
+    return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
+  } catch (err) {
+    console.warn(`polygon news failed for ${sym}:`, err?.message || err);
+    return null;
+  }
 }
 
 /**
@@ -1938,7 +2035,10 @@ export async function buildNewsFeatures(symbols, opts={}){
           title: it?.title || '',
           summary: it?.summary || it?.description || '',
           body: it?.body || it?.summary || it?.description || '',
-          url: it?.url || it?.link || ''
+          url: it?.url || it?.link || '',
+          tickers: Array.isArray(it?.tickers) ? it.tickers : [],
+          keywords: Array.isArray(it?.keywords) ? it.keywords : [],
+          tags: Array.isArray(it?.tags) ? it.tags : []
         })).filter(entry => entry.title || entry.summary || entry.body);
         if (mapped.length) {
           articleCollector[sym] = mapped;
@@ -2156,7 +2256,17 @@ function normalizeNewsApiArticle(it) {
   const date = it?.publishedAt ? new Date(it.publishedAt).toISOString() : new Date().toISOString();
   const source = it?.source?.name || "NewsAPI";
   const summary = stripHtml(it?.description || it?.content || "");
-  return { title, url, source, publishedAt: date, summary, body: summary };
+  return {
+    title,
+    url,
+    source,
+    publishedAt: date,
+    summary,
+    body: summary,
+    tickers: toUniqueStrings(it?.tickers || it?.symbols),
+    keywords: toUniqueStrings(it?.keywords),
+    tags: toUniqueStrings(it?.tags)
+  };
 }
 
 function normalizeNaverArticle(it) {
@@ -2165,7 +2275,17 @@ function normalizeNaverArticle(it) {
   if (!title || !url) return null;
   const date = it?.pubDate ? new Date(it.pubDate).toISOString() : new Date().toISOString();
   const summary = stripHtml(it?.description || "");
-  return { title, url, source: "Naver", publishedAt: date, summary, body: summary };
+  return {
+    title,
+    url,
+    source: "Naver",
+    publishedAt: date,
+    summary,
+    body: summary,
+    tickers: toUniqueStrings(it?.tickers),
+    keywords: toUniqueStrings(it?.keywords),
+    tags: toUniqueStrings(it?.tags)
+  };
 }
 
 function normalizeGNewsArticle(it) {
@@ -2175,7 +2295,17 @@ function normalizeGNewsArticle(it) {
   const date = it?.publishedAt ? new Date(it.publishedAt).toISOString() : new Date().toISOString();
   const source = it?.source?.name || "GNews";
   const summary = stripHtml(it?.description || it?.content || "");
-  return { title, url, source, publishedAt: date, summary, body: summary };
+  return {
+    title,
+    url,
+    source,
+    publishedAt: date,
+    summary,
+    body: summary,
+    tickers: toUniqueStrings(it?.tickers || it?.symbols),
+    keywords: toUniqueStrings(it?.keywords),
+    tags: toUniqueStrings(it?.tags)
+  };
 }
 
 function normalizeDeepSearchArticle(it){
@@ -2186,7 +2316,17 @@ function normalizeDeepSearchArticle(it){
   const source = it?.publisher || it?.source || 'DeepSearch';
   const summary = stripHtml(it?.summary || it?.description || it?.body || "");
   const body = stripHtml(it?.body || it?.summary || "");
-  return { title, url, source, publishedAt: date, summary, body };
+  return {
+    title,
+    url,
+    source,
+    publishedAt: date,
+    summary,
+    body,
+    tickers: toUniqueStrings(it?.tickers || it?.symbols),
+    keywords: toUniqueStrings(it?.keywords),
+    tags: toUniqueStrings(it?.tags)
+  };
 }
 
 function normalizeNewsDataArticle(it) {
@@ -2202,7 +2342,42 @@ function normalizeNewsDataArticle(it) {
   const source = it?.source_name || it?.source_id || "NewsData";
   const summary = stripHtml(it?.description || it?.content || it?.full_description || "");
   const body = stripHtml(it?.content || it?.full_content || it?.full_description || "");
-  return { title, url, source, publishedAt: iso, summary, body };
+  return {
+    title,
+    url,
+    source,
+    publishedAt: iso,
+    summary,
+    body,
+    tickers: toUniqueStrings(it?.tickers || it?.symbols),
+    keywords: toUniqueStrings(it?.keywords),
+    tags: toUniqueStrings(it?.categories || it?.tags)
+  };
+}
+
+function normalizePolygonArticle(it) {
+  const title = it?.title || '';
+  const url = it?.article_url || it?.url || '';
+  if (!title || !url) return null;
+
+  const publishedAt = it?.published_utc
+    ? new Date(it.published_utc).toISOString()
+    : new Date().toISOString();
+  const source = it?.publisher?.name || it?.publisher || 'Polygon';
+  const summary = stripHtml(it?.description || it?.excerpt || '');
+  const body = stripHtml(it?.article || it?.description || '');
+
+  return {
+    title,
+    url,
+    source,
+    publishedAt,
+    summary,
+    body,
+    tickers: toUniqueStrings(it?.tickers),
+    keywords: toUniqueStrings(it?.keywords),
+    tags: toUniqueStrings(it?.tags)
+  };
 }
 
 async function getTickerArticlesFromDS(sym, name){
@@ -2328,6 +2503,19 @@ async function getTickerArticlesPrimary(ticker) {
 
       out.push(...ndItems);
     } catch {}
+  }
+  if (polygonRest && isUS(ticker)) {
+    try {
+      const res = await polygonRest.reference.tickerNews({
+        ticker,
+        order: 'desc',
+        limit: Number(process.env.POLYGON_NEWS_LIMIT || 20)
+      });
+      const arr = Array.isArray(res?.results) ? res.results : [];
+      out.push(...arr.map(normalizePolygonArticle).filter(Boolean));
+    } catch (err) {
+      console.warn(`[polygon-news] ${ticker} fetch failed:`, err?.message || err);
+    }
   }
   return dedupeArticles(out);
 }
