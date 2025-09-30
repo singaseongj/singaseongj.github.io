@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-01T00:25:54+09:00 (KST)**
+- Generated: **2025-10-01T05:29:18+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -101,14 +101,6 @@
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
 
-**LG화학** (051910.KS)
-
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-6.9%**, 20d **3.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
-
 **NAVER** (NAVER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
@@ -123,6 +115,14 @@
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
+
+**두산** (000150.KS)
+
+- News (7d): **12** (blogs: 10) — momentum: **high**, sentiment: **slightly negative (-0.17)**
+- Returns: 5d **-8.3%**, 20d **1.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼성전자** (005930.KS)
 
