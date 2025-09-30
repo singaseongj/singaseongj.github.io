@@ -3,6 +3,7 @@ import fsp from 'fs/promises';
 import path from 'path';
 import { restClient } from '@polygon.io/client-js';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
@@ -520,12 +521,34 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
 }
 
 // --- Ticker-level keyword builder (domain-aware tokenizer) ---
+const require = createRequire(import.meta.url);
+
+let okt = null;
+try {
+  const mod = require('open-korean-text-node');
+  okt = (mod && mod.default) ? mod.default : mod;
+} catch (e) {
+  okt = null;
+}
+
+let nlp = null;
+try {
+  const mod = require('compromise');
+  nlp = (mod && mod.default) ? mod.default : mod;
+} catch (e) {
+  nlp = null;
+}
+
 const DOMAIN_LEXICON = new Set([
   '2차전지','전고체 배터리','배터리','조선해양','조선','해운','반도체','HBM','AI','클라우드','로봇',
   '방산','원자력','SMR','바이오','제약','철강','자동차','전장','디스플레이','석유화학','정유',
   '부동산','리츠','건설','물류','원자재','구리','금','환율','달러','유가','수출','수입','무역수지',
   '금리','기준금리','연준','연방준비제도','소비','고용','실업','임금','경기','경기침체','연착륙',
-  '소프트랜딩','테슬라','엔비디아','삼성전자','하이닉스','현대차','LG에너지솔루션'
+  '소프트랜딩','테슬라','엔비디아','삼성전자','하이닉스','현대차','LG에너지솔루션','LNG',
+  'semiconductor','semiconductors','battery','batteries','chip','chips','ai','cloud','robotics','defense',
+  'nuclear','smr','lng','biotech','pharma','pharmaceuticals','steel','automotive','mobility','display','petrochemical',
+  'oil','energy','gas','refining','logistics','export','exports','import','imports','currency','forex','fx',
+  'inflation','recession','growth','earnings','guidance','orders','backlog','naver','kakao'
 ]);
 
 const CANONICAL_MAP = new Map([
@@ -535,32 +558,31 @@ const CANONICAL_MAP = new Map([
   ['전고체배터리','전고체 배터리'],
   ['배터리','2차전지'],
   ['조선','조선해양'],
+  ['조선 해양','조선해양'],
   ['해양','조선해양'],
   ['조선업','조선해양'],
   ['해운','조선해양'],
-  ['HBM3','HBM'], ['HBM3e','HBM'], ['HBM2e','HBM'],
+  ['HBM3','HBM'], ['HBM3e','HBM'], ['HBM3E','HBM'], ['HBM2e','HBM'],
   ['메모리','반도체'], ['파운드리','반도체'], ['칩','반도체'],
   ['연방준비제도','연준'],
   ['soft landing','연착륙'], ['소프트랜딩','연착륙'],
   ['전기차','자동차'],
   ['전장화','전장'],
+  ['semiconductors','semiconductor'],
+  ['batteries','battery'],
+  ['chips','chip'],
+  ['markets','market'],
+  ['exports','export'],
+  ['imports','import'],
+  ['interest rates','rates'],
+  ['electric vehicles','electric vehicle'],
+  ['electric vehicle','자동차'],
 ]);
 
-const STOP_KO = new Set(['은','는','이','가','을','를','에','에서','으로','와','과','및','또한','등','대한','관련','부분','대해','통한','지난','올해','이번','최근']);
-const STOP_EN = new Set(['the','a','an','and','or','for','to','of','in','on','with','by','as','from','at','this','that','these','those','is','are','was','were']);
-const BLACKLIST_KO = new Set([
-  '최소','최대','전문','속보','종합','단독','사진','영상','라디오','프로그램',
-  '오늘','어제','내일','현재','최근','지난','이번','올해','관련','대해','부분','경우',
-  '발언','인터뷰','코멘트','분석','전망','영향','상승','하락','변동','폭','수준',
-  '연합뉴스','YTN','KBS','SBS','MBN','JTBC','머니투데이','한국경제','매일경제','서울경제'
-]);
-
-const ECON_SUFFIXES = [
-  '산업','업','업체','기업','시장','수요','공급','가격','지수','수출','수입','무역수지',
-  '금리','환율','물가','채권','유가','원자재','설비','수주','발주','실적','가이던스',
-  '배터리','전지','조선','해양','반도체','자동차','전장','디스플레이','철강','정유','석유화학',
-  '방산','바이오','제약','로봇','원자력','SMR','LNG','데이터센터'
-];
+const BLACKLIST = new Set(['최소','최대','속보','종합','오늘','어제','내일','최근','전문','사진','영상']);
+const ECON_SUFFIXES = ['산업','업','시장','수출','수입','무역수지','금리','환율','물가','지수','채권','유가','원자재',
+  '실적','가이던스','수주','발주','배터리','전지','조선','해양','반도체','자동차','전장','디스플레이','철강','정유','석유화학','방산','바이오','제약','로봇','원자력','SMR','LNG',
+  'market','markets','exports','imports','earnings','revenue','revenues','guidance','sales','demand','supply','inflation','rates','rate','yields','yield','forex','currency','currencies','sector','sectors','industry','industries','index','indices','production','manufacturing','chip','chips','battery','batteries','semiconductor','semiconductors','automotive'];
 
 const MACRO_WHITELIST = new Set([
   'CPI','PPI','PCE','FOMC','GDP','NFP','PMI','ISM','QT','QE',
@@ -568,55 +590,99 @@ const MACRO_WHITELIST = new Set([
   '2차전지','조선해양','반도체','HBM','AI','LNG'
 ]);
 
-function looksEconomic(term) {
-  if (DOMAIN_LEXICON.has(term) || MACRO_WHITELIST.has(term)) return true;
+const KEYWORD_WHITELIST = new Set([...DOMAIN_LEXICON, ...MACRO_WHITELIST]);
 
-  for (const suf of ECON_SUFFIXES) {
-    if (term.endsWith(suf)) return true;
+const isHangulTerm = (str) => /[\u3131-\u318E\uAC00-\uD7A3]/.test(str || '');
+
+function isWhitelisted(term, lexicon = KEYWORD_WHITELIST) {
+  const t = String(term || '').trim();
+  if (!t) return false;
+  const collapsed = t.replace(/\s+/g, '');
+  const lower = t.toLowerCase();
+  const lowerCollapsed = collapsed.toLowerCase();
+  return (
+    lexicon.has(t) ||
+    lexicon.has(collapsed) ||
+    lexicon.has(lower) ||
+    lexicon.has(lowerCollapsed)
+  );
+}
+
+function canon(term) {
+  const t = term.trim();
+  if (CANONICAL_MAP.has(t)) return CANONICAL_MAP.get(t);
+  const collapsed = t.replace(/\s+/g, '');
+  if (CANONICAL_MAP.has(collapsed)) return CANONICAL_MAP.get(collapsed);
+  return t;
+}
+
+function looksContenty(token) {
+  const raw = String(token || '').trim();
+  if (!raw) return false;
+  if (BLACKLIST.has(raw)) return false;
+  const collapsed = raw.replace(/\s+/g, '');
+  if (!/^[\u3131-\u318E\uAC00-\uD7A3A-Za-z0-9-]+$/.test(collapsed)) return false;
+  if (/^\d+([.,]\d+)?%?$/.test(collapsed)) return false;
+  if (/^\d+(분기|월|일|년)$/.test(collapsed)) return false;
+  if (/^\d+$/.test(collapsed)) return false;
+
+  if (isWhitelisted(raw)) {
+    return true;
   }
 
-  if (/^[A-Z]{3,6}$/.test(term)) return true;
+  if (/^[A-Z]{3,6}$/.test(collapsed)) return true;
 
-  if (/^\d+([.,]\d+)?%?$/.test(term)) return false;
-  if (/^\d+(분기|월|일|년)$/.test(term)) return false;
+  if (isHangulTerm(raw)) {
+    if (collapsed.length < 2) return false;
+    return ECON_SUFFIXES.some(suf => raw.endsWith(suf));
+  }
+
+  if (collapsed.length < 3) return false;
+
+  const lower = collapsed.toLowerCase();
+  if (ECON_SUFFIXES.some(suf => lower.endsWith(suf.toLowerCase()))) return true;
 
   return false;
 }
 
-const isHangul = (s) => /^[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]+$/.test(s);
-const isAlphaNum = (s) => /^[a-z0-9\-]+$/.test(s);
-const normalizeTokenText = (text = '') =>
-  text
-    .replace(/[\u200B-\u200D\uFEFF]/g, '')
-    .replace(/[“”‘’"”“]/g, ' ')
-    .replace(/[(){}\[\],.:;!?/\\]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-function tokenizeKR(text) {
-  const toks = normalizeTokenText(text).split(' ');
-  return toks.filter(t => {
-    if (!t) return false;
-    if (STOP_KO.has(t)) return false;
-    if (t.length <= 2 && !DOMAIN_LEXICON.has(t) && !MACRO_WHITELIST.has(t)) return false;
-    if (/[한]$/.test(t) || /(적|적인)$/.test(t)) return false;
-    if (isHangul(t)) return true;
-    if (DOMAIN_LEXICON.has(t) || MACRO_WHITELIST.has(t)) return true;
-    return false;
-  });
+function koNouns(text) {
+  if (!text) return [];
+  const str = String(text);
+  if (okt && typeof okt.normalizeSync === 'function' && typeof okt.posSync === 'function') {
+    try {
+      const norm = okt.normalizeSync(str);
+      const pos = okt.posSync(norm);
+      return pos
+        .filter(([w, tag]) => tag === 'Noun')
+        .map(([w]) => w.trim())
+        .filter(w => looksContenty(w) || isWhitelisted(w));
+    } catch {}
+  }
+  return (str.match(/[\uAC00-\uD7A3]{2,}/g) || [])
+    .map(w => w.trim())
+    .filter(w => looksContenty(w) || isWhitelisted(w));
 }
 
-function tokenizeEN(text) {
-  const toks = normalizeTokenText(text.toLowerCase()).split(' ');
-  return toks.filter(t => {
-    if (!t) return false;
-    if (STOP_EN.has(t)) return false;
-    if (isAlphaNum(t)) return t.length > 2;
-    return false;
-  });
+function enNouns(text) {
+  if (!text) return [];
+  const str = String(text);
+  if (nlp) {
+    try {
+      const doc = nlp(str);
+      return [
+        ...doc.nouns().out('array'),
+        ...doc.match('#Acronym').out('array'),
+      ]
+        .map(t => t.trim())
+        .filter(t => looksContenty(t) || isWhitelisted(t));
+    } catch {}
+  }
+  return (str.match(/[A-Za-z][A-Za-z0-9\-]{2,}/g) || [])
+    .map(t => t.trim())
+    .filter(t => looksContenty(t) || isWhitelisted(t));
 }
 
-function ngrams(tokens, n) {
+function ngrams(tokens, n = 2) {
   const out = [];
   for (let i = 0; i <= tokens.length - n; i++) {
     out.push(tokens.slice(i, i + n).join(' '));
@@ -624,111 +690,125 @@ function ngrams(tokens, n) {
   return out;
 }
 
-function candidatePhrases({ title, summary, body }) {
-  const textKR = [title, summary, body].filter(Boolean).join(' ');
-  const textEN = textKR;
-
-  const ko = tokenizeKR(textKR);
-  const en = tokenizeEN(textEN);
-
-  const singles = [...ko, ...en];
-  const bigrams = [...ngrams(ko, 2), ...ngrams(en, 2)];
-  const trigrams = [...ngrams(ko, 3), ...ngrams(en, 3)];
-
-  const all = [...singles, ...bigrams, ...trigrams]
-    .map(s => s.trim())
-    .filter(s => s && s.length >= 2);
-
-  return all;
+function addCollocations(docs, addTerm) {
+  docs.forEach(({ text, url }) => {
+    const ko = koNouns(text);
+    const en = enNouns(text);
+    const grams = [...ngrams(ko, 2), ...ngrams(en, 2)];
+    grams.forEach(g => {
+      const collapsed = g.replace(/\s+/g, '');
+      if (looksContenty(collapsed) || isWhitelisted(g) || isWhitelisted(collapsed)) {
+        addTerm(g, url);
+      }
+    });
+  });
 }
 
-export function canonicalize(term) {
-  const t = term.trim();
-  if (CANONICAL_MAP.has(t)) return CANONICAL_MAP.get(t);
-  if (t === '조선 해양') return '조선해양';
-  return t;
-}
-
-export function buildKeywordScores(articles) {
-  const docs = articles.map(a => ({
-    text: candidatePhrases(a),
-    titleText: new Set(candidatePhrases({ title: a.title || '', summary: '', body: '' })),
-    url: a.url
-  }));
-
-  const df = new Map();
+function scoreTerms(docs, domainLexicon = new Set()) {
   const tf = [];
-  for (const d of docs) {
+  const df = new Map();
+
+  docs.forEach((doc, idx) => {
+    const tokens = [...koNouns(doc.text), ...enNouns(doc.text)];
+    const titleTokens = new Set([...koNouns(doc.title || ''), ...enNouns(doc.title || '')]);
     const tfMap = new Map();
-    for (const raw of d.text) {
-      const term = canonicalize(raw);
-      tfMap.set(term, (tfMap.get(term) || 0) + 1);
-    }
-    tf.push(tfMap);
-    const uniqueTerms = new Set([...tfMap.keys()]);
-    for (const term of uniqueTerms) {
-      df.set(term, (df.get(term) || 0) + 1);
-    }
-  }
+
+    tokens.forEach(t => {
+      const key = t.trim();
+      if (!key) return;
+      tfMap.set(key, (tfMap.get(key) || 0) + 1);
+    });
+
+    tf.push({ tfMap, titleTokens, url: doc.url || `doc_${idx}`, text: doc.text });
+    const unique = new Set(tfMap.keys());
+    unique.forEach(term => df.set(term, (df.get(term) || 0) + 1));
+  });
 
   const N = docs.length || 1;
   const scores = new Map();
-  tf.forEach((tfMap, i) => {
-    const d = docs[i];
+
+  tf.forEach(({ tfMap, titleTokens, url }) => {
     for (const [term, freq] of tfMap.entries()) {
       const idf = Math.log((N + 1) / ((df.get(term) || 0) + 1)) + 1;
       let s = freq * idf;
-
-      if (DOMAIN_LEXICON.has(term)) s *= 1.6;
-      if (d.titleText.has(term)) s *= 1.4;
+      if (titleTokens.has(term)) s *= 1.4;
+      if (isWhitelisted(term, domainLexicon)) s *= 1.6;
 
       const cur = scores.get(term) || { score: 0, sources: new Set() };
       cur.score += s;
-      cur.sources.add(docs[i].url || `doc_${i}`);
+      cur.sources.add(url);
       scores.set(term, cur);
     }
   });
 
-  for (const [term, obj] of scores.entries()) {
-    const multi = Math.min(obj.sources.size, 5);
-    obj.score *= (1 + (multi - 1) * 0.2);
+  addCollocations(tf.map(({ text, url }, i) => ({ text, url: url || `doc_${i}` })), (term, url) => {
+    const clean = term.trim();
+    if (!clean) return;
+    const cur = scores.get(clean) || { score: 0, sources: new Set() };
+    cur.score += 0.5;
+    if (url) cur.sources.add(url);
+    scores.set(clean, cur);
+  });
+
+  for (const [, info] of scores.entries()) {
+    const src = Math.min(info.sources.size, 5);
+    info.score *= 1 + (src - 1) * 0.2;
   }
 
   return scores;
 }
 
-export function filterAndRank(scores) {
-  const MIN_LEN = 2;
+function pickKeywords(scores, domainLexicon) {
   const MIN_SCORE = 1.6;
   const MIN_SOURCES = 2;
-  const out = [];
+  const arr = [];
 
   for (const [term, { score, sources }] of scores.entries()) {
-    const srcCount = sources.size || sources.length || 0;
+    const canonicalTerm = canon(term);
+    const collapsed = canonicalTerm.replace(/\s+/g, '');
+    if (!looksContenty(collapsed) && !domainLexicon.has(canonicalTerm) && !domainLexicon.has(collapsed)) continue;
 
-    if (!term || term.length < MIN_LEN) continue;
-    if (BLACKLIST_KO.has(term)) continue;
-    if (/^\d+$/.test(term)) continue;
-    if (STOP_KO.has(term) || STOP_EN.has(term)) continue;
+    const srcCount = sources.size;
+    const whitelisted = isWhitelisted(canonicalTerm, domainLexicon) || isWhitelisted(collapsed, domainLexicon);
 
-    if (!looksEconomic(term)) continue;
-
-    if (srcCount < MIN_SOURCES && !DOMAIN_LEXICON.has(term)) continue;
-
-    const keep = score >= MIN_SCORE || DOMAIN_LEXICON.has(term);
-    if (!keep) continue;
-
-    out.push({ term, score: Number(score.toFixed(3)), sources: [...sources].slice(0, 5) });
+    if ((srcCount >= MIN_SOURCES && score >= MIN_SCORE) || whitelisted) {
+      arr.push({ term: canonicalTerm, score: Number(score.toFixed(3)), sources: [...sources].slice(0, 5) });
+    }
   }
 
-  const seen = new Map();
-  for (const k of out) {
-    const t = canonicalize(k.term);
-    const prev = seen.get(t);
-    if (!prev || k.score > prev.score) seen.set(t, { ...k, term: t });
+  const deduped = new Map();
+  for (const item of arr) {
+    const key = item.term;
+    const prev = deduped.get(key);
+    if (!prev || item.score > prev.score) {
+      deduped.set(key, item);
+    }
   }
 
-  return [...seen.values()].sort((a, b) => b.score - a.score).slice(0, 10);
+  return [...deduped.values()].sort((a, b) => b.score - a.score).slice(0, 20);
+}
+
+function extractKeywords(articles, domainLexicon) {
+  const docs = articles.map(a => ({
+    title: a.title || '',
+    url: a.url || '',
+    text: [a.title, a.summary, a.body].filter(Boolean).join(' ')
+  }));
+
+  const scores = scoreTerms(docs, domainLexicon);
+
+  for (const [term, value] of [...scores.entries()]) {
+    const c = canon(term);
+    if (c !== term) {
+      const cur = scores.get(c) || { score: 0, sources: new Set() };
+      cur.score += value.score;
+      value.sources.forEach(src => cur.sources.add(src));
+      scores.set(c, cur);
+      scores.delete(term);
+    }
+  }
+
+  return pickKeywords(scores, domainLexicon);
 }
 
 export function buildNewsKeywords(articlesByTicker) {
@@ -740,8 +820,7 @@ export function buildNewsKeywords(articlesByTicker) {
 
   for (const [ticker, articles] of Object.entries(articlesByTicker || {})) {
     if (!Array.isArray(articles) || !articles.length) continue;
-    const scores = buildKeywordScores(articles);
-    const keywords = filterAndRank(scores).slice(0, 10);
+    const keywords = extractKeywords(articles, KEYWORD_WHITELIST).slice(0, 10);
     if (keywords.length) {
       output.tickers[ticker] = { keywords };
     }
@@ -2103,18 +2182,19 @@ export async function buildNewsCachesCli() {
   if (tickerCount) {
     await fsp.mkdir(path.dirname(NEWS_KEYWORDS_FILE), { recursive: true }).catch(()=>{});
     const existing = readJsonSafe(NEWS_KEYWORDS_FILE) || {};
-    const merged = { ...existing };
-    if (!Array.isArray(merged.keywords)) merged.keywords = Array.isArray(existing?.keywords) ? existing.keywords : [];
-    if (merged.updatedAt == null && existing?.updatedAt == null) merged.updatedAt = existing?.updatedAt || {};
-    if (!Array.isArray(merged.markets) && Array.isArray(existing?.markets)) {
-      merged.markets = existing.markets;
-    }
-    merged.tickerKeywords = keywordPayload.tickers;
-    merged.tickerKeywordsMeta = {
-      generatedAt: keywordPayload.generated_at,
-      version: keywordPayload.version,
+    const fresh = {
+      generatedAt: existing?.generatedAt || keywordPayload.generated_at,
+      timezone: existing?.timezone || 'Asia/Seoul',
+      updatedAt: existing?.updatedAt || {},
+      keywords: Array.isArray(existing?.keywords) ? existing.keywords : [],
+      markets: Array.isArray(existing?.markets) ? existing.markets : KEYWORD_MARKET_QUERIES.map(m => m.market),
+      tickerKeywords: keywordPayload.tickers,
+      tickerKeywordsMeta: {
+        generatedAt: keywordPayload.generated_at,
+        version: keywordPayload.version,
+      }
     };
-    await fsp.writeFile(NEWS_KEYWORDS_FILE, JSON.stringify(merged, null, 2));
+    await fsp.writeFile(NEWS_KEYWORDS_FILE, JSON.stringify(fresh, null, 2));
     console.log(`[news-caches] updated ${NEWS_KEYWORDS_FILE} with ${tickerCount} ticker keyword sets`);
   } else {
     console.log('[news-caches] no ticker keywords derived from collected articles');
