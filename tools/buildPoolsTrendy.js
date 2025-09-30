@@ -23,6 +23,9 @@ fs.mkdirSync('cache', { recursive: true });
 
 const CACHE_DIR = 'cache';
 const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
+const TAG_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
+const TAG_WEIGHT_INPUT = Number(process.env.TAG_EVAL_WEIGHT);
+const TAG_FREQ_WEIGHT_INPUT = Number(process.env.TAG_FREQ_WEIGHT);
 
 const VERBOSE = process.env.VERBOSE === '1';
 const log = (...a) => VERBOSE && console.log(...a);
@@ -901,6 +904,115 @@ function djitter(key, mag=Number(process.env.JITTER_MAG || 0.003)){
 }
 const DISABLE_JITTER = process.env.DISABLE_JITTER === '1';
 
+const TAG_EVAL_WEIGHT = clamp01(Number.isFinite(TAG_WEIGHT_INPUT) ? TAG_WEIGHT_INPUT : 0.2);
+const TAG_FREQ_WEIGHT = clamp01(Number.isFinite(TAG_FREQ_WEIGHT_INPUT) ? TAG_FREQ_WEIGHT_INPUT : 0.4);
+const TAG_STRENGTH_WEIGHT = 1 - TAG_FREQ_WEIGHT;
+
+function normalizeTagKey(text) {
+  return String(text || '')
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/["'`]/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function expandTagKeys(text) {
+  const out = new Set();
+  const push = (val) => {
+    const norm = normalizeTagKey(val);
+    if (!norm) return;
+    out.add(norm);
+    norm.split(/[\/,&]/).forEach(part => {
+      const trimmed = part.trim();
+      if (trimmed.length >= 3) out.add(trimmed);
+    });
+  };
+  if (typeof text === 'string') push(text);
+  return [...out];
+}
+
+let TAG_ENTRY_LIST = [];
+const TAG_SCORE_MAP = new Map();
+let TAG_NEUTRAL_SCORE = 0.5;
+
+try {
+  const rawTagData = await loadJson(TAG_FILE, null);
+  if (rawTagData) {
+    const ranked = Array.isArray(rawTagData?.ranked) ? rawTagData.ranked : [];
+    const fallback = Array.isArray(rawTagData?.tags) ? rawTagData.tags : [];
+    const entries = ranked.length ? ranked : fallback.map(text => ({ text: { en: text, ko: text }, mentions: 0, score: 0 }));
+    let maxMentions = 0;
+    entries.forEach(entry => {
+      const mentions = Number(entry?.mentions) || 0;
+      if (mentions > maxMentions) maxMentions = mentions;
+    });
+    TAG_ENTRY_LIST = entries.map(entry => {
+      const en = entry?.text?.en ?? entry?.text ?? entry?.term ?? '';
+      const ko = entry?.text?.ko ?? '';
+      const keys = [...expandTagKeys(en), ...expandTagKeys(ko)];
+      if (!keys.length) return null;
+      const mentions = Math.max(0, Number(entry?.mentions) || 0);
+      const strength = clamp01(Number(entry?.score ?? 0));
+      const freqNorm = maxMentions > 0 ? clamp01(mentions / maxMentions) : strength;
+      const combined = clamp01((TAG_STRENGTH_WEIGHT * strength) + (TAG_FREQ_WEIGHT * freqNorm));
+      const tokens = [...new Set(keys.flatMap(k => k.split(' ').filter(part => part.length >= 4)))];
+      return { keys, mentions, strength, freqNorm, combined, norm: keys[0], tokens };
+    }).filter(Boolean);
+    TAG_ENTRY_LIST.forEach(item => {
+      for (const key of item.keys) {
+        if (!TAG_SCORE_MAP.has(key)) TAG_SCORE_MAP.set(key, item);
+      }
+    });
+    if (TAG_ENTRY_LIST.length) {
+      TAG_NEUTRAL_SCORE = TAG_ENTRY_LIST.reduce((sum, item) => sum + item.combined, 0) / TAG_ENTRY_LIST.length;
+    }
+  }
+} catch (err) {
+  console.warn(`[tags] failed to load ${TAG_FILE}:`, err?.message || err);
+}
+
+function findTagMatch(normTerm) {
+  if (!normTerm || !TAG_ENTRY_LIST.length) return null;
+  if (TAG_SCORE_MAP.has(normTerm)) return TAG_SCORE_MAP.get(normTerm);
+  if (normTerm.length < 4) return null;
+  for (const item of TAG_ENTRY_LIST) {
+    if (item.norm === normTerm) return item;
+    if (item.norm.includes(normTerm) || normTerm.includes(item.norm)) return item;
+    if (item.tokens.some(token => normTerm.includes(token) || token.includes(normTerm))) {
+      return item;
+    }
+  }
+  return null;
+}
+
+function computeTagAffinity(keywords, fallback = TAG_NEUTRAL_SCORE) {
+  if (!TAG_ENTRY_LIST.length) return fallback;
+  const arr = Array.isArray(keywords) ? keywords : [];
+  if (!arr.length) return fallback;
+  let total = 0;
+  let matched = 0;
+  for (const kw of arr) {
+    const term = typeof kw === 'string' ? kw : (kw?.term ?? kw?.text ?? kw?.keyword ?? '');
+    if (!term) continue;
+    const norm = normalizeTagKey(term);
+    if (!norm) continue;
+    const baseWeight = Math.max(
+      0.5,
+      Math.abs(Number(kw?.weight ?? kw?.score ?? 0)) || (kw?.count ? Math.log1p(Math.abs(kw?.count)) : 1)
+    );
+    total += baseWeight;
+    const match = findTagMatch(norm);
+    if (match) {
+      matched += baseWeight * match.combined;
+    }
+  }
+  if (!total) return fallback;
+  const score = matched / total;
+  return Number.isFinite(score) ? clamp01(score) : fallback;
+}
+
 function stripNulls(o){ return JSON.parse(JSON.stringify(o, (_,v)=>v===null?undefined:v)); }
 
 function scoreSentiment(s){
@@ -1579,10 +1691,15 @@ async function main(){
       const size01 = sizeScoreFromMcap(mcap);
 
       // Absolute base score — stronger size bias as requested
-      const base01 = clamp01(SIZE_ABS_WEIGHT * size01 + (1 - SIZE_ABS_WEIGHT) * pop01);
+      const baseNoTags = clamp01(SIZE_ABS_WEIGHT * size01 + (1 - SIZE_ABS_WEIGHT) * pop01);
+      const tagAffinity = computeTagAffinity(nf.topKeywords, baseNoTags);
+      const base01 = TAG_EVAL_WEIGHT > 0
+        ? clamp01((1 - TAG_EVAL_WEIGHT) * baseNoTags + TAG_EVAL_WEIGHT * tagAffinity)
+        : baseNoTags;
 
       byName[n].prevNewsScore = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
       byName[n].totalScore    = Math.round(base01 * 100);
+      byName[n].tagAffinity   = tagAffinity;
       scoreSafeRaw[n] = base01;
       scoreAggrRaw[n] = base01;
       // debug
@@ -1597,7 +1714,8 @@ async function main(){
         wiki01: wiki01,
         pos01, neg01,
         size01,
-        pop01
+        pop01,
+        tagAffinity
       });
     });
 
@@ -2020,6 +2138,7 @@ async function main(){
         topKeywords: (byName[n].topKeywords || []).slice(0,3),
         reputationHitIds: byName[n].reputationHitIds || [],
         popularity01: popularity01?.[n] ?? 0,
+        tagAffinity: byName[n].tagAffinity,
         source: byName[n].source,
         attempts: (byName[n].attempts || []).slice(-10),
         fetchMs: byName[n].fetchMs,
