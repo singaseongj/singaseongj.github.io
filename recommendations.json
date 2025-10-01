@@ -2,22 +2,6 @@
   "KOSDAQ": {
     "safe": [
       {
-        "name": "레고켐바이오",
-        "sector": "헬스케어",
-        "ticker": "141080.KQ",
-        "searchUrl": "https://www.google.com/search?q=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4",
-        "score": 46,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0
-          }
-        }
-      },
-      {
         "name": "리노공업",
         "sector": "정보기술",
         "ticker": "058470.KQ",
@@ -38,7 +22,7 @@
         "sector": "헬스케어",
         "ticker": "196170.KQ",
         "searchUrl": "https://www.google.com/search?q=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0",
-        "score": 48,
+        "score": 46,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -54,7 +38,7 @@
         "sector": "산업재",
         "ticker": "086520.KQ",
         "searchUrl": "https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C",
-        "score": 50,
+        "score": 45,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -70,7 +54,23 @@
         "sector": "소재",
         "ticker": "247540.KQ",
         "searchUrl": "https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0",
-        "score": 49,
+        "score": 44,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "티씨케이",
+        "sector": "정보기술",
+        "ticker": "064760.KQ",
+        "searchUrl": "https://www.google.com/search?q=%ED%8B%B0%EC%94%A8%EC%BC%80%EC%9D%B4",
+        "score": 45,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -88,7 +88,7 @@
         "sector": "헬스케어",
         "ticker": "067630.KQ",
         "searchUrl": "https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99",
-        "score": 21,
+        "score": 17,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -120,7 +120,7 @@
         "sector": "헬스케어",
         "ticker": "100790.KQ",
         "searchUrl": "https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%83%9D%EB%AA%85%EC%9E%90%EC%9B%90",
-        "score": 24,
+        "score": 19,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -136,7 +136,7 @@
         "sector": "소재",
         "ticker": "365340.KQ",
         "searchUrl": "https://www.google.com/search?q=%EC%84%B1%EC%9D%BC%ED%95%98%EC%9D%B4%ED%85%8D",
-        "score": 27,
+        "score": 21,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -152,7 +152,7 @@
         "sector": "정보기술",
         "ticker": "094360.KQ",
         "searchUrl": "https://www.google.com/search?q=%EC%B9%A9%EC%8A%A4%EC%95%A4%EB%AF%B8%EB%94%94%EC%96%B4",
-        "score": 18,
+        "score": 16,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -168,42 +168,26 @@
   "KOSPI": {
     "safe": [
       {
+        "name": "LG",
+        "sector": null,
+        "ticker": "LGND",
+        "searchUrl": "https://www.google.com/search?q=LG",
+        "score": 89,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
         "name": "LG전자",
         "sector": "경기소비재",
         "ticker": "066570.KS",
         "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90",
-        "score": 97,
-        "reasons": {
-          "reputationScore": 0.55,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": -0.05,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "NAVER",
-        "sector": null,
-        "ticker": "NAVER",
-        "searchUrl": "https://www.google.com/search?q=NAVER",
-        "score": 92,
-        "reasons": {
-          "reputationScore": 0.55,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": -0.2,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "대한항공",
-        "sector": "산업재",
-        "ticker": "003490.KS",
-        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5",
         "score": 93,
         "reasons": {
           "reputationScore": 0.55,
@@ -216,16 +200,16 @@
         }
       },
       {
-        "name": "두산",
+        "name": "대한항공",
         "sector": "산업재",
-        "ticker": "000150.KS",
-        "searchUrl": "https://www.google.com/search?q=%EB%91%90%EC%82%B0",
-        "score": 92,
+        "ticker": "003490.KS",
+        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5",
+        "score": 89,
         "reasons": {
           "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
-            "sentiment": -0.17,
+            "sentiment": -0.05,
             "blog": 1,
             "naver": 0
           }
@@ -246,15 +230,31 @@
             "naver": 0
           }
         }
+      },
+      {
+        "name": "한화",
+        "sector": "산업재",
+        "ticker": "000880.KS",
+        "searchUrl": "https://www.google.com/search?q=%ED%95%9C%ED%99%94",
+        "score": 89,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 1,
+            "naver": 0
+          }
+        }
       }
     ],
     "aggressive": [
       {
-        "name": "LX인터내셔널",
-        "sector": "산업재",
-        "ticker": "001120.KS",
-        "searchUrl": "https://www.google.com/search?q=LX%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90",
-        "score": 31,
+        "name": "녹십자",
+        "sector": "헬스케어",
+        "ticker": "006280.KS",
+        "searchUrl": "https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90",
+        "score": 30,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -270,7 +270,7 @@
         "sector": "헬스케어",
         "ticker": "069620.KS",
         "searchUrl": "https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD",
-        "score": 31,
+        "score": 33,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -282,10 +282,26 @@
         }
       },
       {
-        "name": "롯데에너지머티리얼즈",
+        "name": "보령",
+        "sector": "헬스케어",
+        "ticker": "003850.KS",
+        "searchUrl": "https://www.google.com/search?q=%EB%B3%B4%EB%A0%B9",
+        "score": 37,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "세아베스틸지주",
         "sector": "소재",
-        "ticker": "020150.KS",
-        "searchUrl": "https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%97%90%EB%84%88%EC%A7%80%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88",
+        "ticker": "001430.KS",
+        "searchUrl": "https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC",
         "score": 31,
         "reasons": {
           "reputationScore": 0,
@@ -298,27 +314,11 @@
         }
       },
       {
-        "name": "쿠쿠홈시스",
-        "sector": "경기소비재",
-        "ticker": "192400.KS",
-        "searchUrl": "https://www.google.com/search?q=%EC%BF%A0%EC%BF%A0%ED%99%88%EC%8B%9C%EC%8A%A4",
+        "name": "코스모신소재",
+        "sector": "소재",
+        "ticker": "005070.KS",
+        "searchUrl": "https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8B%A0%EC%86%8C%EC%9E%AC",
         "score": 32,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "한샘",
-        "sector": "경기소비재",
-        "ticker": "009240.KS",
-        "searchUrl": "https://www.google.com/search?q=%ED%95%9C%EC%83%98",
-        "score": 36,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -338,7 +338,7 @@
         "sector": "Communication Services",
         "ticker": "GOOGL",
         "searchUrl": "https://www.google.com/search?q=Alphabet%20Inc.",
-        "score": 76,
+        "score": 84,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -354,7 +354,23 @@
         "sector": null,
         "ticker": "ASML",
         "searchUrl": "https://www.google.com/search?q=ASML%20Holding",
-        "score": 55,
+        "score": 57,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "AstraZeneca",
+        "sector": null,
+        "ticker": "AZN",
+        "searchUrl": "https://www.google.com/search?q=AstraZeneca",
+        "score": 52,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -386,23 +402,7 @@
         "sector": null,
         "ticker": "SHOP",
         "searchUrl": "https://www.google.com/search?q=Shopify",
-        "score": 58,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "Thomson Reuters",
-        "sector": null,
-        "ticker": "TRI",
-        "searchUrl": "https://www.google.com/search?q=Thomson%20Reuters",
-        "score": 51,
+        "score": 57,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -420,7 +420,7 @@
         "sector": null,
         "ticker": "TEAM",
         "searchUrl": "https://www.google.com/search?q=Atlassian",
-        "score": 38,
+        "score": 37,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -452,7 +452,7 @@
         "sector": null,
         "ticker": "GFS",
         "searchUrl": "https://www.google.com/search?q=GlobalFoundries",
-        "score": 36,
+        "score": 34,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -484,7 +484,7 @@
         "sector": null,
         "ticker": "ZS",
         "searchUrl": "https://www.google.com/search?q=Zscaler",
-        "score": 39,
+        "score": 40,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -504,7 +504,7 @@
         "sector": "Consumer Discretionary",
         "ticker": "AMZN",
         "searchUrl": "https://www.google.com/search?q=Amazon",
-        "score": 78,
+        "score": 81,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -520,7 +520,7 @@
         "sector": "Technology",
         "ticker": "AAPL",
         "searchUrl": "https://www.google.com/search?q=Apple%20Inc.",
-        "score": 78,
+        "score": 79,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -536,7 +536,7 @@
         "sector": "Technology",
         "ticker": "AVGO",
         "searchUrl": "https://www.google.com/search?q=Broadcom",
-        "score": 76,
+        "score": 77,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -552,7 +552,7 @@
         "sector": "Technology",
         "ticker": "MSFT",
         "searchUrl": "https://www.google.com/search?q=Microsoft",
-        "score": 81,
+        "score": 87,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -568,7 +568,7 @@
         "sector": "Technology",
         "ticker": "NVDA",
         "searchUrl": "https://www.google.com/search?q=Nvidia",
-        "score": 83,
+        "score": 88,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -582,11 +582,11 @@
     ],
     "aggressive": [
       {
-        "name": "Centene Corporation",
-        "sector": "Healthcare",
-        "ticker": "CNC",
-        "searchUrl": "https://www.google.com/search?q=Centene%20Corporation",
-        "score": 43,
+        "name": "GoDaddy",
+        "sector": "Technology",
+        "ticker": "GDDY",
+        "searchUrl": "https://www.google.com/search?q=GoDaddy",
+        "score": 41,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -598,11 +598,11 @@
         }
       },
       {
-        "name": "Citizens Financial Group",
-        "sector": "Financial Services",
-        "ticker": "CFG",
-        "searchUrl": "https://www.google.com/search?q=Citizens%20Financial%20Group",
-        "score": 48,
+        "name": "Ralph Lauren Corporation",
+        "sector": "Consumer Discretionary",
+        "ticker": "RL",
+        "searchUrl": "https://www.google.com/search?q=Ralph%20Lauren%20Corporation",
+        "score": 42,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -614,11 +614,11 @@
         }
       },
       {
-        "name": "Devon Energy",
-        "sector": "Energy",
-        "ticker": "DVN",
-        "searchUrl": "https://www.google.com/search?q=Devon%20Energy",
-        "score": 46,
+        "name": "Stanley Black & Decker",
+        "sector": "Industrials",
+        "ticker": "SWK",
+        "searchUrl": "https://www.google.com/search?q=Stanley%20Black%20%26%20Decker",
+        "score": 42,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -634,7 +634,7 @@
         "sector": "Energy",
         "ticker": "TPL",
         "searchUrl": "https://www.google.com/search?q=Texas%20Pacific%20Land%20Corporation",
-        "score": 46,
+        "score": 48,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-10-01T05:29:18+09:00"
+  "lastUpdated": "2025-10-01T10:59:26+09:00"
 }

@@ -116,6 +116,15 @@ const TAG_COLLECTION_WINDOW_DAYS = Number(process.env.TAG_COLLECTION_LOOKBACK_DA
 const TAG_COLLECTION_PAGE_LIMIT = Number(process.env.TAG_COLLECTION_PAGE_LIMIT || 5);
 const TAG_COLLECTION_PAGE_SIZE = Number(process.env.TAG_COLLECTION_PAGE_SIZE || 40);
 const ENGLISH_TAG_REGEX = /^[A-Za-z0-9][A-Za-z0-9\-\s&()/.,']{1,60}$/;
+const TAG_STOPWORD_PHRASES = new Set([
+  'nasdaq', 'nasdaq 100', '100', '200', '300', '400', '500', 'to'
+]);
+const TAG_STOPWORD_TOKENS = new Set([
+  'nasdaq', 'dow', 'jones', 'sp', 's', 'p', 'index', 'indices', 'market', 'markets',
+  '100', '200', '300', '400', '500', '600', '700', '800', '900', '1000',
+  'the', 'and', 'or', 'for', 'of', 'in', 'on', 'at', 'by', 'from', 'with', 'without',
+  'to', 'vs', 'vs.', 'a', 'an', 'per', 'amid'
+]);
 
 const TAG_KO_DICTIONARY = new Map(Object.entries({
   'ai': '인공지능',
@@ -792,6 +801,23 @@ function buildKeywordSummary(articles){
   }));
 }
 
+function isMeaningfulTagCandidate(str) {
+  if (!str) return false;
+  const lower = String(str).toLowerCase().trim();
+  if (!lower) return false;
+  if (TAG_STOPWORD_PHRASES.has(lower)) return false;
+  const normalizedPhrase = lower.replace(/-/g, ' ');
+  if (TAG_STOPWORD_PHRASES.has(normalizedPhrase)) return false;
+  if (/^\d+$/.test(lower)) return false;
+  const tokens = normalizedPhrase.split(/[^a-z0-9]+/).filter(Boolean);
+  if (!tokens.length) return false;
+  return tokens.some(token => {
+    if (!token) return false;
+    if (/^\d+$/.test(token)) return false;
+    return !TAG_STOPWORD_TOKENS.has(token);
+  });
+}
+
 function normalizeTagCandidate(raw) {
   if (!raw) return null;
   const cleaned = String(raw)
@@ -803,6 +829,7 @@ function normalizeTagCandidate(raw) {
   const collapsed = cleaned.replace(/\s+/g, ' ').trim();
   if (!collapsed || !/[A-Za-z]/.test(collapsed)) return null;
   if (!ENGLISH_TAG_REGEX.test(collapsed)) return null;
+  if (!isMeaningfulTagCandidate(collapsed)) return null;
   return collapsed;
 }
 
@@ -846,7 +873,7 @@ function chooseTagDisplay(entry) {
 
 function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', collected, targetCount }) {
   const normalized = normalizeTagCandidate(tag);
-  if (!normalized) return;
+  if (!normalized) return false;
   const key = normalized.toLowerCase();
   let entry = stats.get(key);
   if (!entry) {
@@ -889,6 +916,8 @@ function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', co
   if (collected && collected.length < targetCount) {
     collected.push(normalized);
   }
+
+  return true;
 }
 
 function buildTagQueryConfigs() {
@@ -925,19 +954,84 @@ function buildTagQueryConfigs() {
   return configs;
 }
 
-async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
+function isRateLimitError(err) {
+  const msg = String(err?.message || err || '').toLowerCase();
+  return msg.includes('http 429') || msg.includes('status 429') || msg.includes('too many requests');
+}
+
+function retryAfterMsFromError(err, fallback = 5000) {
+  const headers = err?.responseHeaders || err?.headers || {};
+  const retryAfter = headers['retry-after'] || headers['Retry-After'];
+  const parsed = retryAfter ? Number(retryAfter) : NaN;
+  if (!Number.isNaN(parsed) && parsed > 0) {
+    return parsed * 1000;
+  }
+  return fallback;
+}
+
+function sleep(ms) {
+  if (!ms || ms <= 0) return Promise.resolve();
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function rebuildTagStatsFromSnapshot(snapshot) {
+  const stats = new Map();
+  if (!snapshot) return stats;
+  const pushEntry = (sourceText, meta = {}) => {
+    const normalized = normalizeTagCandidate(sourceText);
+    if (!normalized) return;
+    const key = normalized.toLowerCase();
+    const entry = {
+      key,
+      forms: new Set([normalized]),
+      display: normalized,
+      count: Number(meta?.mentions || meta?.count || 1) || 1,
+      markets: new Set(Array.isArray(meta?.markets) ? meta.markets.filter(Boolean) : []),
+      sources: new Set(Array.isArray(meta?.sources) ? meta.sources.filter(Boolean) : []),
+      headlines: Array.isArray(meta?.sampleHeadlines) ? meta.sampleHeadlines.slice(0, 3) : [],
+      headlineKeys: new Set()
+    };
+    stats.set(key, entry);
+  };
+
+  if (Array.isArray(snapshot?.discovered_keywords)) {
+    for (const item of snapshot.discovered_keywords) {
+      const sourceText = item?.term || item?.text?.en || item?.text || '';
+      pushEntry(sourceText, { count: item?.count });
+    }
+  }
+
+  if (!stats.size && Array.isArray(snapshot?.ranked)) {
+    for (const item of snapshot.ranked) {
+      const sourceText = item?.text?.en || item?.text?.ko || item?.display || item?.text || '';
+      pushEntry(sourceText, {
+        count: item?.mentions || item?.count,
+        markets: item?.markets,
+        sources: item?.sources,
+        sampleHeadlines: item?.sampleHeadlines
+      });
+    }
+  }
+  return stats;
+}
+
+async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapshot = null } = {}) {
   const stats = new Map();
   const collected = [];
+  const articleTextMap = new Map();
+  const articleKeySet = new Set();
   if (!NEWSDATA_API_KEY) {
     console.warn('[keywords] NEWSDATA_API_KEY missing; skipping tag collection');
-    return { tags: collected, stats };
+    return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
   }
 
   const queries = buildTagQueryConfigs();
-  if (!queries.length) return { tags: collected, stats };
+  if (!queries.length) return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
 
   const fromDate = daysAgo(TAG_COLLECTION_WINDOW_DAYS);
   const toDate = daysAgo(0);
+  let recordedCount = 0;
+  let consecutive429 = 0;
 
   for (const cfg of queries) {
     try {
@@ -949,11 +1043,28 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
         size: TAG_COLLECTION_PAGE_SIZE,
         pageLimit: TAG_COLLECTION_PAGE_LIMIT
       });
+      let queryRecorded = false;
       for (const article of articles) {
+        const textParts = [];
+        if (article?.title) textParts.push(String(article.title));
+        if (article?.summary) textParts.push(String(article.summary));
+        if (article?.body && article.body !== article.summary) textParts.push(String(article.body));
+        const combined = textParts.join(' ').replace(/\s+/g, ' ').trim();
+        const baseKey = article?.url || `${article?.title || ''}__${article?.publishedAt || ''}`;
+        const articleKey = baseKey || (combined ? combined.slice(0, 120) : '');
+        if (articleKey) {
+          articleKeySet.add(articleKey);
+        }
+        if (combined) {
+          const textKey = articleKey || combined.slice(0, 120);
+          if (textKey && !articleTextMap.has(textKey)) {
+            articleTextMap.set(textKey, combined.slice(0, 5000));
+          }
+        }
         const tags = Array.isArray(article?.tags) ? article.tags : [];
         if (!tags.length) continue;
         for (const rawTag of tags) {
-          recordTagStat({
+          const recorded = recordTagStat({
             stats,
             tag: rawTag,
             article,
@@ -962,10 +1073,25 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
             collected,
             targetCount
           });
+          if (recorded) {
+            queryRecorded = true;
+            recordedCount += 1;
+          }
         }
+      }
+      if (queryRecorded) {
+        consecutive429 = 0;
       }
     } catch (err) {
       console.warn(`[keywords] failed to collect tags for "${cfg.query}":`, err?.message || err);
+      if (isRateLimitError(err)) {
+        consecutive429 += 1;
+        const waitMs = retryAfterMsFromError(err, Math.min(5000 * consecutive429, 30000));
+        if (waitMs > 0) {
+          console.warn(`[keywords] rate limited while collecting tags; waiting ${waitMs}ms before continuing`);
+          await sleep(waitMs);
+        }
+      }
     }
     if (collected.length >= targetCount && stats.size >= 10) break;
   }
@@ -981,23 +1107,138 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT } = {}) {
     }
   }
 
-  return { tags: collected.slice(0, targetCount), stats };
+  if (!recordedCount && fallbackSnapshot) {
+    const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
+    if (fallbackTags.length) {
+      console.warn(`[keywords] using fallback tags snapshot with ${fallbackTags.length} tags`);
+      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
+      return {
+        tags: fallbackTags.slice(0, targetCount),
+        stats: fallbackStats,
+        fallbackUsed: true,
+        articleTexts: Array.from(articleTextMap.values()),
+        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
+        asOfDate: fallbackSnapshot?.date || toDate
+      };
+    }
+  }
+
+  return {
+    tags: collected.slice(0, targetCount),
+    stats,
+    fallbackUsed: false,
+    articleTexts: Array.from(articleTextMap.values()),
+    articleCount: articleKeySet.size,
+    asOfDate: toDate
+  };
 }
 
-async function writeTagsJsonFile(tags, stats = new Map()) {
-  const normalized = Array.isArray(tags) ? tags.map(formatTagDisplay) : [];
-  const ranked = (stats && typeof stats.size === 'number' && stats.size > 0)
-    ? buildKeywordsFromTagStats(stats, { limit: Math.max(normalized.length, 50) })
-    : [];
-  ensureDirFor(TAG_OUTPUT_FILE);
+function buildDiscoveredKeywordsFromStats(tagStats, { limit = 50 } = {}) {
+  if (!tagStats || typeof tagStats.size !== 'number' || tagStats.size === 0) return [];
+  const entries = [];
+  for (const entry of tagStats.values()) {
+    const term = chooseTagDisplay(entry);
+    if (!term) continue;
+    const count = Number(entry?.count || 0);
+    entries.push({ term, count });
+  }
+  entries.sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return a.term.localeCompare(b.term);
+  });
+  const top = entries.slice(0, limit);
+  const maxCount = top.length ? Math.max(...top.map(item => item.count || 0)) : 0;
+  return top.map(item => ({
+    term: formatTagDisplay(item.term),
+    count: item.count,
+    score: maxCount > 0 ? Number((item.count / maxCount).toFixed(2)) : 0
+  })).filter(entry => entry.term);
+}
+
+function normalizeDiscoveredKeywordList(entries = []) {
+  const sanitized = [];
+  const seen = new Set();
+  for (const entry of entries) {
+    const rawTerm = entry?.term || entry?.text?.en || entry?.text || '';
+    const term = formatTagDisplay(rawTerm);
+    if (!term) continue;
+    const key = term.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const count = Number(entry?.count || 0);
+    const rawScore = Number.isFinite(entry?.score) ? Number(entry.score) : null;
+    sanitized.push({ term, count, rawScore });
+  }
+  if (!sanitized.length) return [];
+  let maxCount = 0;
+  for (const item of sanitized) {
+    if (item.count > maxCount) maxCount = item.count;
+  }
+  return sanitized.map(item => {
+    const baseScore = item.rawScore != null ? to01(item.rawScore) : (maxCount > 0 ? to01(item.count / maxCount) : 0);
+    return {
+      term: item.term,
+      count: item.count,
+      score: Number(baseScore.toFixed(2))
+    };
+  });
+}
+
+function extractTagTermsFromSnapshot(snapshot) {
+  if (!snapshot) return [];
+  if (Array.isArray(snapshot?.tags)) {
+    return snapshot.tags.map(formatTagDisplay).filter(Boolean);
+  }
+  if (Array.isArray(snapshot?.discovered_keywords)) {
+    return snapshot.discovered_keywords
+      .map(item => formatTagDisplay(item?.term || item?.text?.en || item?.text || ''))
+      .filter(Boolean);
+  }
+  return [];
+}
+
+async function writeTagsJsonFile(tags, stats = new Map(), {
+  fallbackSnapshot = null,
+  fallbackUsed = false,
+  articleTexts = [],
+  articleCount = 0,
+  asOfDate = daysAgo(0)
+} = {}) {
+  const normalizedTags = Array.isArray(tags) ? tags.map(formatTagDisplay).filter(Boolean) : [];
+  let discovered = buildDiscoveredKeywordsFromStats(stats, { limit: Math.max(normalizedTags.length, 50) });
+  let derivedArticleCount = Number(articleCount) || 0;
+
+  if (!derivedArticleCount && Array.isArray(articleTexts)) {
+    derivedArticleCount = articleTexts.length;
+  }
+
+  if (!discovered.length && Array.isArray(fallbackSnapshot?.discovered_keywords)) {
+    discovered = normalizeDiscoveredKeywordList(fallbackSnapshot.discovered_keywords);
+  }
+
+  if (!discovered.length && Array.isArray(fallbackSnapshot?.ranked)) {
+    const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
+    discovered = buildDiscoveredKeywordsFromStats(fallbackStats, { limit: Math.max(normalizedTags.length, 50) });
+  }
+
+  if (!discovered.length) {
+    console.warn('[keywords] skipping tags.json update because no keywords are available');
+    return null;
+  }
+
   const payload = {
-    generatedAt: new Date().toISOString(),
-    total: normalized.length,
-    tags: normalized,
-    ranked
+    date: asOfDate,
+    window: `${TAG_COLLECTION_WINDOW_DAYS}_days`,
+    total_articles: derivedArticleCount,
+    discovered_keywords: discovered
   };
+
+  ensureDirFor(TAG_OUTPUT_FILE);
   await fsp.writeFile(TAG_OUTPUT_FILE, JSON.stringify(payload, null, 2));
-  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${normalized.length} tags`);
+
+  const suffix = fallbackUsed ? ' (fallback)' : '';
+  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${discovered.length} keywords${suffix}`);
+  return payload;
 }
 
 function buildSearchUrlPair(enText, koText) {
@@ -1058,24 +1299,89 @@ function mergeKeywordLists(primary = [], secondary = [], limit = 10) {
   return out.slice(0, limit);
 }
 
+function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10 } = {}) {
+  if (!snapshot) return [];
+  const discovered = Array.isArray(snapshot?.discovered_keywords) ? snapshot.discovered_keywords : [];
+  if (!discovered.length) return [];
+
+  const fallbackStats = rebuildTagStatsFromSnapshot(snapshot);
+  const statsMap = (tagStats && typeof tagStats.size === 'number' && tagStats.size > 0)
+    ? tagStats
+    : fallbackStats;
+
+  const maxCount = discovered.reduce((max, item) => {
+    const count = Number(item?.count || 0);
+    return count > max ? count : max;
+  }, 0);
+
+  const out = [];
+  const seen = new Set();
+  for (const item of discovered) {
+    if (out.length >= limit) break;
+    const rawTerm = item?.term || item?.text?.en || item?.text || '';
+    const enText = formatTagDisplay(rawTerm);
+    if (!enText) continue;
+    const norm = normalizeTagCandidate(enText);
+    const key = (norm || enText).toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    const statEntry = norm && statsMap ? statsMap.get(norm.toLowerCase()) : null;
+    const mentionsFromSnapshot = Number(item?.count || 0);
+    const mentions = mentionsFromSnapshot || Number(statEntry?.count || 0);
+    const scoreBase = item?.score != null ? Number(item.score) : (maxCount > 0 ? mentions / maxCount : 0);
+    const normalizedScore = Number(to01(scoreBase).toFixed(3));
+    const koText = translateTagToKo(enText) || enText;
+    const markets = statEntry ? Array.from(statEntry.markets || []) : [];
+    const sources = statEntry ? Array.from(statEntry.sources || []) : [];
+    const sampleHeadlines = statEntry ? statEntry.headlines.slice(0, 3) : [];
+    const searchUrl = buildSearchUrlPair(enText, koText);
+    out.push({
+      text: { ko: koText, en: enText },
+      markets,
+      sources,
+      mentions,
+      score: normalizedScore,
+      sampleHeadlines,
+      searchUrl
+    });
+  }
+
+  return out.slice(0, limit);
+}
+
 export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
+  const existingTagSnapshot = readJsonSafe(TAG_OUTPUT_FILE) || null;
 
-  const { tags: tagCorpus, stats: tagStats } = await collectTagCorpus({ targetCount: TAG_TARGET_COUNT });
-  await writeTagsJsonFile(tagCorpus, tagStats);
+  const { tags: tagCorpus, stats: tagStats, fallbackUsed, articleTexts, articleCount, asOfDate } = await collectTagCorpus({
+    targetCount: TAG_TARGET_COUNT,
+    fallbackSnapshot: existingTagSnapshot
+  });
+  const tagSnapshot = await writeTagsJsonFile(tagCorpus, tagStats, {
+    fallbackSnapshot: existingTagSnapshot,
+    fallbackUsed,
+    articleTexts,
+    articleCount,
+    asOfDate
+  });
 
-  const tagKeywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
-  const datalabKeywords = await buildDatalabKeywordEntries();
-  let keywords = mergeKeywordLists(tagKeywords, datalabKeywords, 10);
+  let keywords = buildNewsKeywordsFromTagSnapshot(tagSnapshot, tagStats, { limit: 10 });
+  if (!keywords.length) {
+    keywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
+  }
+  if (!keywords.length && Array.isArray(existingSnapshot?.keywords) && existingSnapshot.keywords.length) {
+    console.warn('[keywords] falling back to previous keyword snapshot');
+    keywords = existingSnapshot.keywords;
+  }
 
-  if (keywords.length < 10) {
-    const articles = [];
-    for (const marketConfig of KEYWORD_MARKET_QUERIES) {
-      const collected = await collectMarketArticles(marketConfig);
-      articles.push(...collected);
+  const marketSet = new Set();
+  if (tagStats && typeof tagStats.values === 'function') {
+    for (const entry of tagStats.values()) {
+      for (const market of entry.markets || []) {
+        if (market) marketSet.add(market);
+      }
     }
-    const fallback = buildKeywordSummary(articles);
-    keywords = mergeKeywordLists(keywords, fallback, 10);
   }
 
   const now = new Date();
@@ -1083,10 +1389,10 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   const updatedKo = now.toLocaleString('ko-KR', { timeZone: tz, hour12: false });
   const updatedEn = now.toLocaleString('en-US', { timeZone: tz });
 
-  const markets = Array.from(new Set([
-    ...KEYWORD_MARKET_QUERIES.map(m => m.market),
-    ...DATALAB_TREND_KEYWORDS.flatMap(cfg => cfg.markets || [])
-  ])).sort();
+  const derivedMarkets = Array.from(marketSet).sort();
+  const markets = derivedMarkets.length
+    ? derivedMarkets
+    : (Array.isArray(existingSnapshot?.markets) ? existingSnapshot.markets : []);
 
   const payload = {
     generatedAt: now.toISOString(),

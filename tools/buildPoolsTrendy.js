@@ -940,17 +940,32 @@ let TAG_NEUTRAL_SCORE = 0.5;
 try {
   const rawTagData = await loadJson(TAG_FILE, null);
   if (rawTagData) {
-    const ranked = Array.isArray(rawTagData?.ranked) ? rawTagData.ranked : [];
-    const fallback = Array.isArray(rawTagData?.tags) ? rawTagData.tags : [];
-    const entries = ranked.length ? ranked : fallback.map(text => ({ text: { en: text, ko: text }, mentions: 0, score: 0 }));
+    let entries = [];
+    if (Array.isArray(rawTagData?.discovered_keywords) && rawTagData.discovered_keywords.length) {
+      entries = rawTagData.discovered_keywords.map(item => ({
+        en: item?.term || item?.text?.en || item?.text || '',
+        ko: item?.text?.ko || '',
+        mentions: item?.count || 0,
+        score: item?.score || 0
+      }));
+    } else if (Array.isArray(rawTagData?.ranked) && rawTagData.ranked.length) {
+      entries = rawTagData.ranked.map(item => ({
+        en: item?.text?.en || item?.text || item?.term || '',
+        ko: item?.text?.ko || '',
+        mentions: item?.mentions || item?.count || 0,
+        score: item?.score || 0
+      }));
+    } else if (Array.isArray(rawTagData?.tags)) {
+      entries = rawTagData.tags.map(text => ({ en: text, ko: text, mentions: 0, score: 0 }));
+    }
     let maxMentions = 0;
     entries.forEach(entry => {
       const mentions = Number(entry?.mentions) || 0;
       if (mentions > maxMentions) maxMentions = mentions;
     });
     TAG_ENTRY_LIST = entries.map(entry => {
-      const en = entry?.text?.en ?? entry?.text ?? entry?.term ?? '';
-      const ko = entry?.text?.ko ?? '';
+      const en = entry?.en ?? entry?.text?.en ?? entry?.text ?? entry?.term ?? '';
+      const ko = entry?.ko ?? entry?.text?.ko ?? '';
       const keys = [...expandTagKeys(en), ...expandTagKeys(ko)];
       if (!keys.length) return null;
       const mentions = Math.max(0, Number(entry?.mentions) || 0);
