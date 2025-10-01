@@ -211,12 +211,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -f tags.json ]; then
+          if [ ! -f stocks/data/tags.json ]; then
             echo "tags.json not found; skipping commit"
             exit 0
           fi
 
-          if ! git status --short -- tags.json | grep -q 'tags.json'; then
+          if ! git status --short -- stocks/data/tags.json | grep -q 'stocks/data/tags.json'; then
             echo "No tag updates detected"
             exit 0
           fi
@@ -228,7 +228,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin "$branch"
           git pull --rebase origin "$branch"
-          git add tags.json
+          git add stocks/data/tags.json
           git commit -m "chore: update market tags"
           git push origin "HEAD:$branch"
 
@@ -381,17 +381,19 @@ jobs:
         run: rm -f newsKeywords.json
 
       - name: Build market keyword snapshot
+        env:
+          MARKET_TAG_FILE: stocks/data/tags.json
         run: node src/news/fetchByTicker.js --build-keywords
 
       - name: Verify market tag snapshot
         shell: bash
         run: |
           set -Eeuo pipefail
-          test -s tags.json
+          test -s stocks/data/tags.json
           echo "tags.json generatedAt:"
-          jq -r '.generatedAt // "missing"' tags.json
+          jq -r '.generatedAt // "missing"' stocks/data/tags.json
           echo "tags.json total tags:"
-          jq -r '.total // "missing"' tags.json
+          jq -r '.total // "missing"' stocks/data/tags.json
 
       - name: Prune cache directory
         env:
@@ -407,7 +409,7 @@ jobs:
                   cache \
                   stocks/fx_rates/fx_rates.json stocks/fx_rates/fx_history*.json \
                   stocks/fx_rates/index.html \
-                  newsKeywords.json tags.json || true
+                  newsKeywords.json stocks/data/tags.json || true
           echo "Files staged for commit"
 
       - name: Commit & push changes
