@@ -65,7 +65,7 @@ jobs:
       POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
       NASDAQ_API_KEY: ${{ secrets.NASDAQ_API_KEY }}
       DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
-      DEEP_API_KEY: ${{ secrets.DEEP_API_KEY }}
+      DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       COINDESK_API: ${{ secrets.COINDESK_API }}
       # Optional tuning for this module
       NEWS_CONCURRENCY: 2        # your code already defaults to 2; keep it small for SerpApi quotas
