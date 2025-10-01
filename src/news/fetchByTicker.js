@@ -42,6 +42,8 @@ const NAVER_REP_BONUS = Number(process.env.NAVER_REP_BONUS || 1.1);
 const NAVER_KO_WEIGHT = Number(process.env.NAVER_KO_WEIGHT || 1.3);
 const NAVER_EN_WEIGHT = Number(process.env.NAVER_EN_WEIGHT || 1.0);
 
+const HANGUL_REGEX = /[\u3131-\u318E\uAC00-\uD7A3]/;
+
 const POS_KR = /(호조|개선|확대|수주|계약|제휴|승인|허가|인증|증설|증대|흑자전환|사상 최대|서프라이즈|상향)/i;
 const NEG_KR = /(부진|감소|하락|급락|적자|적자전환|소송|제재|벌금|과징금|리콜|해킹|유출|파업|중단|연기|취소|하향|정지)/i;
 
@@ -862,6 +864,63 @@ function translateTagToKo(tag) {
   return text;
 }
 
+const TRANSLATION_CACHE = new Map();
+let translationModulePromise = null;
+
+function hasHangulText(value) {
+  return HANGUL_REGEX.test(String(value || ''));
+}
+
+async function ensureTranslationModule() {
+  if (!translationModulePromise) {
+    translationModulePromise = import('@vitalets/google-translate-api')
+      .then(mod => mod?.default ?? mod)
+      .catch(err => {
+        console.warn('[keywords] failed to load translation module:', err?.message || err);
+        return null;
+      });
+  }
+  return translationModulePromise;
+}
+
+async function getLocalizedKeywordTexts(enText) {
+  const en = String(enText || '').trim();
+  if (!en) return { en: '', ko: '' };
+
+  const dictionaryKo = translateTagToKo(en);
+  if (dictionaryKo && hasHangulText(dictionaryKo)) {
+    const finalKo = dictionaryKo.trim();
+    TRANSLATION_CACHE.set(en.toLowerCase(), finalKo);
+    return { en, ko: finalKo };
+  }
+
+  const cacheKey = en.toLowerCase();
+  if (TRANSLATION_CACHE.has(cacheKey)) {
+    return { en, ko: TRANSLATION_CACHE.get(cacheKey) };
+  }
+
+  let ko = dictionaryKo && dictionaryKo.trim() ? dictionaryKo.trim() : '';
+  const translator = await ensureTranslationModule();
+  if (translator) {
+    try {
+      const result = await translator(en, { from: 'en', to: 'ko' });
+      const translated = String(result?.text || '').trim();
+      if (translated) {
+        ko = translated;
+      }
+    } catch (err) {
+      console.warn(`[keywords] failed to translate "${en}":`, err?.message || err);
+    }
+  }
+
+  if (!ko) {
+    ko = en;
+  }
+
+  TRANSLATION_CACHE.set(cacheKey, ko);
+  return { en, ko };
+}
+
 function chooseTagDisplay(entry) {
   if (!entry) return '';
   const forms = Array.from(entry.forms || []);
@@ -1250,7 +1309,7 @@ function buildSearchUrlPair(enText, koText) {
   return urls;
 }
 
-function buildKeywordsFromTagStats(tagStats, { limit = 10 } = {}) {
+async function buildKeywordsFromTagStats(tagStats, { limit = 10 } = {}) {
   if (!tagStats || !tagStats.size) return [];
   const entries = [];
   for (const entry of tagStats.values()) {
@@ -1269,19 +1328,24 @@ function buildKeywordsFromTagStats(tagStats, { limit = 10 } = {}) {
 
   const maxCount = entries[0]?.count || 1;
 
-  return entries.slice(0, limit).map(item => {
+  const results = [];
+  for (const item of entries.slice(0, limit)) {
     const enText = formatTagDisplay(item.display);
-    const koText = translateTagToKo(enText) || enText;
-    return {
-      text: { ko: koText, en: enText },
+    if (!enText) continue;
+    const localized = await getLocalizedKeywordTexts(enText);
+    const koText = localized.ko || enText;
+    results.push({
+      text: { ko: koText, en: localized.en || enText },
       markets: item.markets,
       sources: item.sources,
       mentions: item.count,
       score: Number((item.count / maxCount).toFixed(3)),
       sampleHeadlines: item.headlines,
-      searchUrl: buildSearchUrlPair(enText, koText)
-    };
-  }).filter(entry => entry.text.en);
+      searchUrl: buildSearchUrlPair(localized.en || enText, koText)
+    });
+  }
+
+  return results.filter(entry => entry.text.en);
 }
 
 function mergeKeywordLists(primary = [], secondary = [], limit = 10) {
@@ -1299,7 +1363,7 @@ function mergeKeywordLists(primary = [], secondary = [], limit = 10) {
   return out.slice(0, limit);
 }
 
-function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10 } = {}) {
+async function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10 } = {}) {
   if (!snapshot) return [];
   const discovered = Array.isArray(snapshot?.discovered_keywords) ? snapshot.discovered_keywords : [];
   if (!discovered.length) return [];
@@ -1331,13 +1395,14 @@ function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10 } = {
     const mentions = mentionsFromSnapshot || Number(statEntry?.count || 0);
     const scoreBase = item?.score != null ? Number(item.score) : (maxCount > 0 ? mentions / maxCount : 0);
     const normalizedScore = Number(to01(scoreBase).toFixed(3));
-    const koText = translateTagToKo(enText) || enText;
+    const localized = await getLocalizedKeywordTexts(enText);
+    const koText = localized.ko || enText;
     const markets = statEntry ? Array.from(statEntry.markets || []) : [];
     const sources = statEntry ? Array.from(statEntry.sources || []) : [];
     const sampleHeadlines = statEntry ? statEntry.headlines.slice(0, 3) : [];
-    const searchUrl = buildSearchUrlPair(enText, koText);
+    const searchUrl = buildSearchUrlPair(localized.en || enText, koText);
     out.push({
-      text: { ko: koText, en: enText },
+      text: { ko: koText, en: localized.en || enText },
       markets,
       sources,
       mentions,
@@ -1366,13 +1431,27 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
     asOfDate
   });
 
-  let keywords = buildNewsKeywordsFromTagSnapshot(tagSnapshot, tagStats, { limit: 10 });
+  let keywords = await buildNewsKeywordsFromTagSnapshot(tagSnapshot, tagStats, { limit: 10 });
   if (!keywords.length) {
-    keywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
+    keywords = await buildKeywordsFromTagStats(tagStats, { limit: 10 });
   }
   if (!keywords.length && Array.isArray(existingSnapshot?.keywords) && existingSnapshot.keywords.length) {
     console.warn('[keywords] falling back to previous keyword snapshot');
-    keywords = existingSnapshot.keywords;
+    const localizedFallback = [];
+    for (const entry of existingSnapshot.keywords) {
+      if (!entry || typeof entry !== 'object') continue;
+      const enSource = entry?.text?.en || entry?.text?.ko || entry?.text || '';
+      const enText = formatTagDisplay(enSource);
+      if (!enText) continue;
+      const localized = await getLocalizedKeywordTexts(enText);
+      const koText = localized.ko || enText;
+      localizedFallback.push({
+        ...entry,
+        text: { ko: koText, en: localized.en || enText },
+        searchUrl: buildSearchUrlPair(localized.en || enText, koText)
+      });
+    }
+    keywords = localizedFallback;
   }
 
   const marketSet = new Set();
