@@ -944,7 +944,7 @@ try {
     if (Array.isArray(rawTagData?.discovered_keywords) && rawTagData.discovered_keywords.length) {
       entries = rawTagData.discovered_keywords.map(item => ({
         en: item?.term || item?.text?.en || item?.text || '',
-        ko: item?.text?.ko || '',
+        ko: item?.term_ko || item?.text?.ko || '',
         mentions: item?.count || 0,
         score: item?.score || 0
       }));

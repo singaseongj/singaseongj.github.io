@@ -1299,7 +1299,8 @@ function normalizeDiscoveredKeywordList(entries = []) {
     seen.add(key);
     const count = Number(entry?.count || 0);
     const rawScore = Number.isFinite(entry?.score) ? Number(entry.score) : null;
-    sanitized.push({ term, count, rawScore });
+    const termKo = String(entry?.term_ko || entry?.text?.ko || '').trim();
+    sanitized.push({ term, termKo, count, rawScore });
   }
   if (!sanitized.length) return [];
   let maxCount = 0;
@@ -1308,11 +1309,15 @@ function normalizeDiscoveredKeywordList(entries = []) {
   }
   return sanitized.map(item => {
     const baseScore = item.rawScore != null ? to01(item.rawScore) : (maxCount > 0 ? to01(item.count / maxCount) : 0);
-    return {
+    const normalized = {
       term: item.term,
       count: item.count,
       score: Number(baseScore.toFixed(2))
     };
+    if (item.termKo) {
+      normalized.term_ko = item.termKo;
+    }
+    return normalized;
   });
 }
 
@@ -1331,7 +1336,7 @@ function primeTranslationCacheFromSnapshot(snapshot) {
   if (Array.isArray(snapshot?.discovered_keywords)) {
     for (const item of snapshot.discovered_keywords) {
       const enText = String(item?.text?.en || item?.term || item?.text || '').trim();
-      const koText = String(item?.text?.ko || '').trim();
+      const koText = String(item?.term_ko || item?.text?.ko || '').trim();
       if (enText && koText) {
         setTranslationCache(enText, koText);
       }
@@ -1386,13 +1391,23 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   const translations = {};
   const localizedDiscovered = [];
   for (const item of discovered) {
-    const localized = await getLocalizedKeywordTexts(item.term);
-    const enText = localized.en || item.term;
-    const koText = localized.ko || enText;
+    const baseTerm = formatTagDisplay(item?.term || '');
+    if (!baseTerm) continue;
+    const storedKo = String(item?.term_ko || item?.text?.ko || '').trim();
+    if (storedKo) {
+      setTranslationCache(baseTerm, storedKo);
+    }
+    const localized = await getLocalizedKeywordTexts(baseTerm);
+    const enText = localized.en || baseTerm;
+    const koText = storedKo || localized.ko || enText;
+    const count = Number(item?.count ?? 0);
+    const score = Number(item?.score ?? 0);
     translations[enText] = { en: enText, ko: koText };
     localizedDiscovered.push({
-      ...item,
       term: enText,
+      term_ko: koText,
+      count: Number.isFinite(count) ? count : 0,
+      score: Number.isFinite(score) ? score : 0,
       text: { en: enText, ko: koText }
     });
   }
@@ -1508,12 +1523,16 @@ async function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10
     const mentions = mentionsFromSnapshot || Number(statEntry?.count || 0);
     const scoreBase = item?.score != null ? Number(item.score) : (maxCount > 0 ? mentions / maxCount : 0);
     const normalizedScore = Number(to01(scoreBase).toFixed(3));
+    const storedKo = String(item?.term_ko || item?.text?.ko || '').trim();
+    if (storedKo) {
+      setTranslationCache(enText, storedKo);
+    }
     const localized = await getLocalizedKeywordTexts(enText);
-    const koText = localized.ko || enText;
+    const koText = storedKo || localized.ko || enText;
     const markets = statEntry ? Array.from(statEntry.markets || []) : [];
     const sources = statEntry ? Array.from(statEntry.sources || []) : [];
     const sampleHeadlines = statEntry ? statEntry.headlines.slice(0, 3) : [];
-    const searchUrl = buildSearchUrlPair(localized.en || enText, koText);
+    const searchUrl = buildSearchUrlPair(localized.en || enText, storedKo || koText);
     out.push({
       text: { ko: koText, en: localized.en || enText },
       markets,
@@ -1556,12 +1575,16 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
       const enSource = entry?.text?.en || entry?.text?.ko || entry?.text || '';
       const enText = formatTagDisplay(enSource);
       if (!enText) continue;
+      const storedKo = String(entry?.term_ko || entry?.text?.ko || '').trim();
+      if (storedKo) {
+        setTranslationCache(enText, storedKo);
+      }
       const localized = await getLocalizedKeywordTexts(enText);
-      const koText = localized.ko || enText;
+      const koText = storedKo || localized.ko || enText;
       localizedFallback.push({
         ...entry,
         text: { ko: koText, en: localized.en || enText },
-        searchUrl: buildSearchUrlPair(localized.en || enText, koText)
+        searchUrl: buildSearchUrlPair(localized.en || enText, storedKo || koText)
       });
     }
     keywords = localizedFallback;
