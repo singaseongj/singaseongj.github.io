@@ -34,6 +34,7 @@ const polygonRest = POLYGON_API_KEY ? restClient(POLYGON_API_KEY) : null;
 const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
 const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
+const DEEP_API_KEY = (process.env.DEEP_API_KEY || '').trim();
 
 const NAVER_WEIGHT = Number(process.env.NAVER_WEIGHT || 1.6);
 const OTHER_NEWS_WEIGHT = Number(process.env.OTHER_NEWS_WEIGHT || 1.0);
@@ -867,8 +868,49 @@ function translateTagToKo(tag) {
 const TRANSLATION_CACHE = new Map();
 let translationModulePromise = null;
 
+function setTranslationCache(en, ko) {
+  const enText = String(en || '').trim();
+  const koText = String(ko || '').trim();
+  if (!enText || !koText) return;
+  TRANSLATION_CACHE.set(enText.toLowerCase(), koText);
+}
+
 function hasHangulText(value) {
   return HANGUL_REGEX.test(String(value || ''));
+}
+
+async function translateWithDeepL(text, { targetLang = 'KO', sourceLang = 'EN' } = {}) {
+  if (!DEEP_API_KEY) return null;
+  const raw = String(text || '').trim();
+  if (!raw) return null;
+  try {
+    const res = await fetch('https://api.deepl.com/v2/translate', {
+      method: 'POST',
+      headers: {
+        'Authorization': `DeepL-Auth-Key ${DEEP_API_KEY}`,
+        'Content-Type': 'application/json',
+        'User-Agent': 'stock-recs/1.2 (+github-actions)'
+      },
+      body: JSON.stringify({
+        text: [raw],
+        target_lang: String(targetLang || 'KO').toUpperCase(),
+        source_lang: String(sourceLang || 'EN').toUpperCase()
+      })
+    });
+    if (!res.ok) {
+      const errText = await res.text().catch(() => res.statusText);
+      console.warn(`[keywords] DeepL translation failed (${res.status}):`, errText);
+      return null;
+    }
+    const data = await res.json().catch(() => null);
+    const translated = data?.translations?.[0]?.text;
+    if (translated) {
+      return String(translated).trim();
+    }
+  } catch (err) {
+    console.warn(`[keywords] DeepL request failed for "${raw}":`, err?.message || err);
+  }
+  return null;
 }
 
 async function ensureTranslationModule() {
@@ -890,7 +932,7 @@ async function getLocalizedKeywordTexts(enText) {
   const dictionaryKo = translateTagToKo(en);
   if (dictionaryKo && hasHangulText(dictionaryKo)) {
     const finalKo = dictionaryKo.trim();
-    TRANSLATION_CACHE.set(en.toLowerCase(), finalKo);
+    setTranslationCache(en, finalKo);
     return { en, ko: finalKo };
   }
 
@@ -900,16 +942,26 @@ async function getLocalizedKeywordTexts(enText) {
   }
 
   let ko = dictionaryKo && dictionaryKo.trim() ? dictionaryKo.trim() : '';
-  const translator = await ensureTranslationModule();
-  if (translator) {
-    try {
-      const result = await translator(en, { from: 'en', to: 'ko' });
-      const translated = String(result?.text || '').trim();
-      if (translated) {
-        ko = translated;
+
+  if (!ko) {
+    const deeplResult = await translateWithDeepL(en, { sourceLang: 'EN', targetLang: 'KO' });
+    if (deeplResult) {
+      ko = deeplResult;
+    }
+  }
+
+  if (!ko) {
+    const translator = await ensureTranslationModule();
+    if (translator) {
+      try {
+        const result = await translator(en, { from: 'en', to: 'ko' });
+        const translated = String(result?.text || '').trim();
+        if (translated) {
+          ko = translated;
+        }
+      } catch (err) {
+        console.warn(`[keywords] failed to translate "${en}":`, err?.message || err);
       }
-    } catch (err) {
-      console.warn(`[keywords] failed to translate "${en}":`, err?.message || err);
     }
   }
 
@@ -917,7 +969,7 @@ async function getLocalizedKeywordTexts(enText) {
     ko = en;
   }
 
-  TRANSLATION_CACHE.set(cacheKey, ko);
+  setTranslationCache(en, ko);
   return { en, ko };
 }
 
@@ -1092,6 +1144,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   let recordedCount = 0;
   let consecutive429 = 0;
 
+  let abortedByRateLimit = false;
   for (const cfg of queries) {
     try {
       const articles = await newsdataArchiveFetch({
@@ -1138,9 +1191,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
           }
         }
       }
-      if (queryRecorded) {
-        consecutive429 = 0;
-      }
+      consecutive429 = 0;
     } catch (err) {
       console.warn(`[keywords] failed to collect tags for "${cfg.query}":`, err?.message || err);
       if (isRateLimitError(err)) {
@@ -1150,9 +1201,31 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
           console.warn(`[keywords] rate limited while collecting tags; waiting ${waitMs}ms before continuing`);
           await sleep(waitMs);
         }
+        const MAX_CONSECUTIVE_429 = 6;
+        if (consecutive429 >= MAX_CONSECUTIVE_429) {
+          console.warn(`[keywords] aborting tag collection after ${consecutive429} consecutive rate limits`);
+          abortedByRateLimit = true;
+          break;
+        }
       }
     }
     if (collected.length >= targetCount && stats.size >= 10) break;
+  }
+
+  if (abortedByRateLimit && fallbackSnapshot) {
+    const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
+    if (fallbackTags.length) {
+      console.warn(`[keywords] falling back to snapshot after repeated rate limits (${consecutive429})`);
+      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
+      return {
+        tags: fallbackTags.slice(0, targetCount),
+        stats: fallbackStats,
+        fallbackUsed: true,
+        articleTexts: Array.from(articleTextMap.values()),
+        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
+        asOfDate: fallbackSnapshot?.date || toDate
+      };
+    }
   }
 
   if (stats.size && collected.length < targetCount) {
@@ -1226,7 +1299,8 @@ function normalizeDiscoveredKeywordList(entries = []) {
     seen.add(key);
     const count = Number(entry?.count || 0);
     const rawScore = Number.isFinite(entry?.score) ? Number(entry.score) : null;
-    sanitized.push({ term, count, rawScore });
+    const termKo = String(entry?.term_ko || entry?.text?.ko || '').trim();
+    sanitized.push({ term, termKo, count, rawScore });
   }
   if (!sanitized.length) return [];
   let maxCount = 0;
@@ -1235,12 +1309,39 @@ function normalizeDiscoveredKeywordList(entries = []) {
   }
   return sanitized.map(item => {
     const baseScore = item.rawScore != null ? to01(item.rawScore) : (maxCount > 0 ? to01(item.count / maxCount) : 0);
-    return {
+    const normalized = {
       term: item.term,
       count: item.count,
       score: Number(baseScore.toFixed(2))
     };
+    if (item.termKo) {
+      normalized.term_ko = item.termKo;
+    }
+    return normalized;
   });
+}
+
+function primeTranslationCacheFromSnapshot(snapshot) {
+  if (!snapshot || typeof snapshot !== 'object') return;
+  if (snapshot?.translations && typeof snapshot.translations === 'object') {
+    for (const [key, value] of Object.entries(snapshot.translations)) {
+      if (!value) continue;
+      const enText = String(value?.en || key || '').trim();
+      const koText = String(value?.ko || value || '').trim();
+      if (enText && koText) {
+        setTranslationCache(enText, koText);
+      }
+    }
+  }
+  if (Array.isArray(snapshot?.discovered_keywords)) {
+    for (const item of snapshot.discovered_keywords) {
+      const enText = String(item?.text?.en || item?.term || item?.text || '').trim();
+      const koText = String(item?.term_ko || item?.text?.ko || '').trim();
+      if (enText && koText) {
+        setTranslationCache(enText, koText);
+      }
+    }
+  }
 }
 
 function extractTagTermsFromSnapshot(snapshot) {
@@ -1263,6 +1364,8 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   articleCount = 0,
   asOfDate = daysAgo(0)
 } = {}) {
+  primeTranslationCacheFromSnapshot(fallbackSnapshot);
+
   const normalizedTags = Array.isArray(tags) ? tags.map(formatTagDisplay).filter(Boolean) : [];
   let discovered = buildDiscoveredKeywordsFromStats(stats, { limit: Math.max(normalizedTags.length, 50) });
   let derivedArticleCount = Number(articleCount) || 0;
@@ -1285,11 +1388,36 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     return null;
   }
 
+  const translations = {};
+  const localizedDiscovered = [];
+  for (const item of discovered) {
+    const baseTerm = formatTagDisplay(item?.term || '');
+    if (!baseTerm) continue;
+    const storedKo = String(item?.term_ko || item?.text?.ko || '').trim();
+    if (storedKo) {
+      setTranslationCache(baseTerm, storedKo);
+    }
+    const localized = await getLocalizedKeywordTexts(baseTerm);
+    const enText = localized.en || baseTerm;
+    const koText = storedKo || localized.ko || enText;
+    const count = Number(item?.count ?? 0);
+    const score = Number(item?.score ?? 0);
+    translations[enText] = { en: enText, ko: koText };
+    localizedDiscovered.push({
+      term: enText,
+      term_ko: koText,
+      count: Number.isFinite(count) ? count : 0,
+      score: Number.isFinite(score) ? score : 0,
+      text: { en: enText, ko: koText }
+    });
+  }
+
   const payload = {
     date: asOfDate,
     window: `${TAG_COLLECTION_WINDOW_DAYS}_days`,
     total_articles: derivedArticleCount,
-    discovered_keywords: discovered
+    discovered_keywords: localizedDiscovered,
+    translations
   };
 
   ensureDirFor(TAG_OUTPUT_FILE);
@@ -1395,12 +1523,16 @@ async function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10
     const mentions = mentionsFromSnapshot || Number(statEntry?.count || 0);
     const scoreBase = item?.score != null ? Number(item.score) : (maxCount > 0 ? mentions / maxCount : 0);
     const normalizedScore = Number(to01(scoreBase).toFixed(3));
+    const storedKo = String(item?.term_ko || item?.text?.ko || '').trim();
+    if (storedKo) {
+      setTranslationCache(enText, storedKo);
+    }
     const localized = await getLocalizedKeywordTexts(enText);
-    const koText = localized.ko || enText;
+    const koText = storedKo || localized.ko || enText;
     const markets = statEntry ? Array.from(statEntry.markets || []) : [];
     const sources = statEntry ? Array.from(statEntry.sources || []) : [];
     const sampleHeadlines = statEntry ? statEntry.headlines.slice(0, 3) : [];
-    const searchUrl = buildSearchUrlPair(localized.en || enText, koText);
+    const searchUrl = buildSearchUrlPair(localized.en || enText, storedKo || koText);
     out.push({
       text: { ko: koText, en: localized.en || enText },
       markets,
@@ -1443,12 +1575,16 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
       const enSource = entry?.text?.en || entry?.text?.ko || entry?.text || '';
       const enText = formatTagDisplay(enSource);
       if (!enText) continue;
+      const storedKo = String(entry?.term_ko || entry?.text?.ko || '').trim();
+      if (storedKo) {
+        setTranslationCache(enText, storedKo);
+      }
       const localized = await getLocalizedKeywordTexts(enText);
-      const koText = localized.ko || enText;
+      const koText = storedKo || localized.ko || enText;
       localizedFallback.push({
         ...entry,
         text: { ko: koText, en: localized.en || enText },
-        searchUrl: buildSearchUrlPair(localized.en || enText, koText)
+        searchUrl: buildSearchUrlPair(localized.en || enText, storedKo || koText)
       });
     }
     keywords = localizedFallback;
@@ -2266,9 +2402,14 @@ async function newsdataArchiveFetch({
   let pages = 0;
 
   while (url && pages < pageLimit) {
+    await buckets.newsdata?.();
     const j = await withRetry(
       () => cachedJson(url, (u) => safeGetJson(u, defaultUA), 20 * 60 * 1000, true),
-      { max: 1, baseMs: 600 }
+      {
+        max: 2,
+        baseMs: 1000,
+        onError: (err) => isRateLimitError(err) ? retryAfterMsFromError(err, 5000) : 0
+      }
     );
     const arr = Array.isArray(j?.results) ? j.results : [];
     items.push(...arr.map(normalizeNewsDataArticle).filter(Boolean));
