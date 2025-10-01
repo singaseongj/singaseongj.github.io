@@ -977,23 +977,40 @@ function sleep(ms) {
 function rebuildTagStatsFromSnapshot(snapshot) {
   const stats = new Map();
   if (!snapshot) return stats;
-  const ranked = Array.isArray(snapshot?.ranked) ? snapshot.ranked : [];
-  for (const item of ranked) {
-    const sourceText = item?.text?.en || item?.text?.ko || item?.display || item?.text || '';
+  const pushEntry = (sourceText, meta = {}) => {
     const normalized = normalizeTagCandidate(sourceText);
-    if (!normalized) continue;
+    if (!normalized) return;
     const key = normalized.toLowerCase();
     const entry = {
       key,
       forms: new Set([normalized]),
       display: normalized,
-      count: Number(item?.mentions || item?.count || 1) || 1,
-      markets: new Set(Array.isArray(item?.markets) ? item.markets.filter(Boolean) : []),
-      sources: new Set(Array.isArray(item?.sources) ? item.sources.filter(Boolean) : []),
-      headlines: Array.isArray(item?.sampleHeadlines) ? item.sampleHeadlines.slice(0, 3) : [],
+      count: Number(meta?.mentions || meta?.count || 1) || 1,
+      markets: new Set(Array.isArray(meta?.markets) ? meta.markets.filter(Boolean) : []),
+      sources: new Set(Array.isArray(meta?.sources) ? meta.sources.filter(Boolean) : []),
+      headlines: Array.isArray(meta?.sampleHeadlines) ? meta.sampleHeadlines.slice(0, 3) : [],
       headlineKeys: new Set()
     };
     stats.set(key, entry);
+  };
+
+  if (Array.isArray(snapshot?.discovered_keywords)) {
+    for (const item of snapshot.discovered_keywords) {
+      const sourceText = item?.term || item?.text?.en || item?.text || '';
+      pushEntry(sourceText, { count: item?.count });
+    }
+  }
+
+  if (!stats.size && Array.isArray(snapshot?.ranked)) {
+    for (const item of snapshot.ranked) {
+      const sourceText = item?.text?.en || item?.text?.ko || item?.display || item?.text || '';
+      pushEntry(sourceText, {
+        count: item?.mentions || item?.count,
+        markets: item?.markets,
+        sources: item?.sources,
+        sampleHeadlines: item?.sampleHeadlines
+      });
+    }
   }
   return stats;
 }
@@ -1002,6 +1019,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   const stats = new Map();
   const collected = [];
   const articleTextMap = new Map();
+  const articleKeySet = new Set();
   if (!NEWSDATA_API_KEY) {
     console.warn('[keywords] NEWSDATA_API_KEY missing; skipping tag collection');
     return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
@@ -1032,10 +1050,15 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
         if (article?.summary) textParts.push(String(article.summary));
         if (article?.body && article.body !== article.summary) textParts.push(String(article.body));
         const combined = textParts.join(' ').replace(/\s+/g, ' ').trim();
+        const baseKey = article?.url || `${article?.title || ''}__${article?.publishedAt || ''}`;
+        const articleKey = baseKey || (combined ? combined.slice(0, 120) : '');
+        if (articleKey) {
+          articleKeySet.add(articleKey);
+        }
         if (combined) {
-          const articleKey = article?.url || `${article?.title || ''}__${article?.publishedAt || ''}` || combined.slice(0, 120);
-          if (!articleTextMap.has(articleKey)) {
-            articleTextMap.set(articleKey, combined.slice(0, 5000));
+          const textKey = articleKey || combined.slice(0, 120);
+          if (textKey && !articleTextMap.has(textKey)) {
+            articleTextMap.set(textKey, combined.slice(0, 5000));
           }
         }
         const tags = Array.isArray(article?.tags) ? article.tags : [];
@@ -1085,9 +1108,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   }
 
   if (!recordedCount && fallbackSnapshot) {
-    const fallbackTags = Array.isArray(fallbackSnapshot?.tags)
-      ? Array.from(new Set(fallbackSnapshot.tags.map(formatTagDisplay))).filter(Boolean)
-      : [];
+    const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
     if (fallbackTags.length) {
       console.warn(`[keywords] using fallback tags snapshot with ${fallbackTags.length} tags`);
       const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
@@ -1095,7 +1116,9 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
         tags: fallbackTags.slice(0, targetCount),
         stats: fallbackStats,
         fallbackUsed: true,
-        articleTexts: Array.from(articleTextMap.values())
+        articleTexts: Array.from(articleTextMap.values()),
+        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
+        asOfDate: fallbackSnapshot?.date || toDate
       };
     }
   }
@@ -1104,110 +1127,118 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
     tags: collected.slice(0, targetCount),
     stats,
     fallbackUsed: false,
-    articleTexts: Array.from(articleTextMap.values())
+    articleTexts: Array.from(articleTextMap.values()),
+    articleCount: articleKeySet.size,
+    asOfDate: toDate
   };
 }
 
-function extractNewsKeywordsFromArticles(articleTexts = [], limit = 50) {
-  if (!Array.isArray(articleTexts) || !articleTexts.length) return [];
-  if (!keywordExtractor) {
-    console.warn('[keywords] keyword-extractor unavailable; skipping news keyword extraction');
-    return [];
+function buildDiscoveredKeywordsFromStats(tagStats, { limit = 50 } = {}) {
+  if (!tagStats || typeof tagStats.size !== 'number' || tagStats.size === 0) return [];
+  const entries = [];
+  for (const entry of tagStats.values()) {
+    const term = chooseTagDisplay(entry);
+    if (!term) continue;
+    const count = Number(entry?.count || 0);
+    entries.push({ term, count });
   }
-
-  const counts = new Map();
-  const hasNlp = typeof nlp === 'function';
-  let candidateErrorLogged = false;
-  let nerErrorLogged = false;
-
-  for (const rawText of articleTexts) {
-    const text = stripHtml(rawText).trim();
-    if (!text) continue;
-
-    let words = [];
-    try {
-      words = keywordExtractor.extract(text, {
-        language: 'english',
-        remove_digits: true,
-        return_changed_case: true,
-        remove_duplicates: false
-      });
-    } catch (err) {
-      if (!candidateErrorLogged) {
-        console.warn('[keywords] failed to extract keyword candidates:', err?.message || err);
-        candidateErrorLogged = true;
-      }
-      continue;
-    }
-
-    for (const w of words) {
-      const term = String(w || '').trim().toLowerCase();
-      if (!term) continue;
-      counts.set(term, (counts.get(term) || 0) + 1);
-    }
-
-    if (hasNlp) {
-      try {
-        const doc = nlp(text);
-        const topicDoc = doc && typeof doc.topics === 'function' ? doc.topics() : null;
-        const topics = topicDoc && typeof topicDoc.out === 'function' ? topicDoc.out('array') : [];
-        for (const topic of topics) {
-          const norm = String(topic || '').trim().toLowerCase();
-          if (!norm) continue;
-          counts.set(norm, (counts.get(norm) || 0) + 2);
-        }
-      } catch (err) {
-        if (!nerErrorLogged) {
-          console.warn('[keywords] failed to run NER topic extraction:', err?.message || err);
-          nerErrorLogged = true;
-        }
-      }
-    }
-  }
-
-  const ranked = Array.from(counts.entries())
-    .filter(([term, score]) => score > 2 && term.length > 2)
-    .sort((a, b) => b[1] - a[1]);
-
-  return ranked.slice(0, limit).map(([term]) => term);
+  entries.sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return a.term.localeCompare(b.term);
+  });
+  const top = entries.slice(0, limit);
+  const maxCount = top.length ? Math.max(...top.map(item => item.count || 0)) : 0;
+  return top.map(item => ({
+    term: formatTagDisplay(item.term),
+    count: item.count,
+    score: maxCount > 0 ? Number((item.count / maxCount).toFixed(2)) : 0
+  })).filter(entry => entry.term);
 }
 
-async function writeTagsJsonFile(tags, stats = new Map(), { fallbackSnapshot = null, fallbackUsed = false, articleTexts = [] } = {}) {
-  const normalized = Array.isArray(tags) ? tags.map(formatTagDisplay) : [];
-  const ranked = (stats && typeof stats.size === 'number' && stats.size > 0)
-    ? buildKeywordsFromTagStats(stats, { limit: Math.max(normalized.length, 50) })
-    : [];
-  let finalTags = normalized.filter(Boolean);
-  let finalRanked = ranked;
-  let finalKeywords = extractNewsKeywordsFromArticles(articleTexts, 50);
+function normalizeDiscoveredKeywordList(entries = []) {
+  const sanitized = [];
+  const seen = new Set();
+  for (const entry of entries) {
+    const rawTerm = entry?.term || entry?.text?.en || entry?.text || '';
+    const term = formatTagDisplay(rawTerm);
+    if (!term) continue;
+    const key = term.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const count = Number(entry?.count || 0);
+    const rawScore = Number.isFinite(entry?.score) ? Number(entry.score) : null;
+    sanitized.push({ term, count, rawScore });
+  }
+  if (!sanitized.length) return [];
+  let maxCount = 0;
+  for (const item of sanitized) {
+    if (item.count > maxCount) maxCount = item.count;
+  }
+  return sanitized.map(item => {
+    const baseScore = item.rawScore != null ? to01(item.rawScore) : (maxCount > 0 ? to01(item.count / maxCount) : 0);
+    return {
+      term: item.term,
+      count: item.count,
+      score: Number(baseScore.toFixed(2))
+    };
+  });
+}
 
-  if (!finalTags.length && Array.isArray(fallbackSnapshot?.tags)) {
-    finalTags = fallbackSnapshot.tags.map(formatTagDisplay).filter(Boolean);
+function extractTagTermsFromSnapshot(snapshot) {
+  if (!snapshot) return [];
+  if (Array.isArray(snapshot?.tags)) {
+    return snapshot.tags.map(formatTagDisplay).filter(Boolean);
   }
-  if (!finalRanked.length && Array.isArray(fallbackSnapshot?.ranked)) {
-    finalRanked = fallbackSnapshot.ranked;
+  if (Array.isArray(snapshot?.discovered_keywords)) {
+    return snapshot.discovered_keywords
+      .map(item => formatTagDisplay(item?.term || item?.text?.en || item?.text || ''))
+      .filter(Boolean);
   }
-  if (!finalKeywords.length && Array.isArray(fallbackSnapshot?.keywords)) {
-    finalKeywords = fallbackSnapshot.keywords;
+  return [];
+}
+
+async function writeTagsJsonFile(tags, stats = new Map(), {
+  fallbackSnapshot = null,
+  fallbackUsed = false,
+  articleTexts = [],
+  articleCount = 0,
+  asOfDate = daysAgo(0)
+} = {}) {
+  const normalizedTags = Array.isArray(tags) ? tags.map(formatTagDisplay).filter(Boolean) : [];
+  let discovered = buildDiscoveredKeywordsFromStats(stats, { limit: Math.max(normalizedTags.length, 50) });
+  let derivedArticleCount = Number(articleCount) || 0;
+
+  if (!derivedArticleCount && Array.isArray(articleTexts)) {
+    derivedArticleCount = articleTexts.length;
   }
 
-  if (!finalTags.length) {
-    console.warn('[keywords] skipping tags.json update because no tags are available');
-    return;
+  if (!discovered.length && Array.isArray(fallbackSnapshot?.discovered_keywords)) {
+    discovered = normalizeDiscoveredKeywordList(fallbackSnapshot.discovered_keywords);
   }
+
+  if (!discovered.length && Array.isArray(fallbackSnapshot?.ranked)) {
+    const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
+    discovered = buildDiscoveredKeywordsFromStats(fallbackStats, { limit: Math.max(normalizedTags.length, 50) });
+  }
+
+  if (!discovered.length) {
+    console.warn('[keywords] skipping tags.json update because no keywords are available');
+    return null;
+  }
+
+  const payload = {
+    date: asOfDate,
+    window: `${TAG_COLLECTION_WINDOW_DAYS}_days`,
+    total_articles: derivedArticleCount,
+    discovered_keywords: discovered
+  };
 
   ensureDirFor(TAG_OUTPUT_FILE);
-  const payload = {
-    generatedAt: new Date().toISOString(),
-    total: finalTags.length,
-    tags: finalTags,
-    ranked: finalRanked,
-    keywords: finalKeywords
-  };
   await fsp.writeFile(TAG_OUTPUT_FILE, JSON.stringify(payload, null, 2));
+
   const suffix = fallbackUsed ? ' (fallback)' : '';
-  const keywordSuffix = finalKeywords.length ? ` and ${finalKeywords.length} keywords` : '';
-  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${finalTags.length} tags${keywordSuffix}${suffix}`);
+  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${discovered.length} keywords${suffix}`);
+  return payload;
 }
 
 function buildSearchUrlPair(enText, koText) {
@@ -1268,21 +1299,77 @@ function mergeKeywordLists(primary = [], secondary = [], limit = 10) {
   return out.slice(0, limit);
 }
 
+function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10 } = {}) {
+  if (!snapshot) return [];
+  const discovered = Array.isArray(snapshot?.discovered_keywords) ? snapshot.discovered_keywords : [];
+  if (!discovered.length) return [];
+
+  const fallbackStats = rebuildTagStatsFromSnapshot(snapshot);
+  const statsMap = (tagStats && typeof tagStats.size === 'number' && tagStats.size > 0)
+    ? tagStats
+    : fallbackStats;
+
+  const maxCount = discovered.reduce((max, item) => {
+    const count = Number(item?.count || 0);
+    return count > max ? count : max;
+  }, 0);
+
+  const out = [];
+  const seen = new Set();
+  for (const item of discovered) {
+    if (out.length >= limit) break;
+    const rawTerm = item?.term || item?.text?.en || item?.text || '';
+    const enText = formatTagDisplay(rawTerm);
+    if (!enText) continue;
+    const norm = normalizeTagCandidate(enText);
+    const key = (norm || enText).toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    const statEntry = norm && statsMap ? statsMap.get(norm.toLowerCase()) : null;
+    const mentionsFromSnapshot = Number(item?.count || 0);
+    const mentions = mentionsFromSnapshot || Number(statEntry?.count || 0);
+    const scoreBase = item?.score != null ? Number(item.score) : (maxCount > 0 ? mentions / maxCount : 0);
+    const normalizedScore = Number(to01(scoreBase).toFixed(3));
+    const koText = translateTagToKo(enText) || enText;
+    const markets = statEntry ? Array.from(statEntry.markets || []) : [];
+    const sources = statEntry ? Array.from(statEntry.sources || []) : [];
+    const sampleHeadlines = statEntry ? statEntry.headlines.slice(0, 3) : [];
+    const searchUrl = buildSearchUrlPair(enText, koText);
+    out.push({
+      text: { ko: koText, en: enText },
+      markets,
+      sources,
+      mentions,
+      score: normalizedScore,
+      sampleHeadlines,
+      searchUrl
+    });
+  }
+
+  return out.slice(0, limit);
+}
+
 export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
   const existingTagSnapshot = readJsonSafe(TAG_OUTPUT_FILE) || null;
 
-  const { tags: tagCorpus, stats: tagStats, fallbackUsed, articleTexts } = await collectTagCorpus({
+  const { tags: tagCorpus, stats: tagStats, fallbackUsed, articleTexts, articleCount, asOfDate } = await collectTagCorpus({
     targetCount: TAG_TARGET_COUNT,
     fallbackSnapshot: existingTagSnapshot
   });
-  await writeTagsJsonFile(tagCorpus, tagStats, {
+  const tagSnapshot = await writeTagsJsonFile(tagCorpus, tagStats, {
     fallbackSnapshot: existingTagSnapshot,
     fallbackUsed,
-    articleTexts
+    articleTexts,
+    articleCount,
+    asOfDate
   });
 
-  let keywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
+  let keywords = buildNewsKeywordsFromTagSnapshot(tagSnapshot, tagStats, { limit: 10 });
+  if (!keywords.length) {
+    keywords = buildKeywordsFromTagStats(tagStats, { limit: 10 });
+  }
   if (!keywords.length && Array.isArray(existingSnapshot?.keywords) && existingSnapshot.keywords.length) {
     console.warn('[keywords] falling back to previous keyword snapshot');
     keywords = existingSnapshot.keywords;
@@ -1348,14 +1435,6 @@ try {
   nlp = (mod && mod.default) ? mod.default : mod;
 } catch (e) {
   nlp = null;
-}
-
-let keywordExtractor = null;
-try {
-  const mod = require('keyword-extractor');
-  keywordExtractor = (mod && mod.default) ? mod.default : mod;
-} catch (e) {
-  keywordExtractor = null;
 }
 
 const DOMAIN_LEXICON = new Set([
