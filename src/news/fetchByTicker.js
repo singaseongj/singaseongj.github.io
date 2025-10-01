@@ -1144,6 +1144,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   let recordedCount = 0;
   let consecutive429 = 0;
 
+  let abortedByRateLimit = false;
   for (const cfg of queries) {
     try {
       const articles = await newsdataArchiveFetch({
@@ -1190,9 +1191,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
           }
         }
       }
-      if (queryRecorded) {
-        consecutive429 = 0;
-      }
+      consecutive429 = 0;
     } catch (err) {
       console.warn(`[keywords] failed to collect tags for "${cfg.query}":`, err?.message || err);
       if (isRateLimitError(err)) {
@@ -1202,9 +1201,31 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
           console.warn(`[keywords] rate limited while collecting tags; waiting ${waitMs}ms before continuing`);
           await sleep(waitMs);
         }
+        const MAX_CONSECUTIVE_429 = 6;
+        if (consecutive429 >= MAX_CONSECUTIVE_429) {
+          console.warn(`[keywords] aborting tag collection after ${consecutive429} consecutive rate limits`);
+          abortedByRateLimit = true;
+          break;
+        }
       }
     }
     if (collected.length >= targetCount && stats.size >= 10) break;
+  }
+
+  if (abortedByRateLimit && fallbackSnapshot) {
+    const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
+    if (fallbackTags.length) {
+      console.warn(`[keywords] falling back to snapshot after repeated rate limits (${consecutive429})`);
+      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
+      return {
+        tags: fallbackTags.slice(0, targetCount),
+        stats: fallbackStats,
+        fallbackUsed: true,
+        articleTexts: Array.from(articleTextMap.values()),
+        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
+        asOfDate: fallbackSnapshot?.date || toDate
+      };
+    }
   }
 
   if (stats.size && collected.length < targetCount) {
@@ -2358,9 +2379,14 @@ async function newsdataArchiveFetch({
   let pages = 0;
 
   while (url && pages < pageLimit) {
+    await buckets.newsdata?.();
     const j = await withRetry(
       () => cachedJson(url, (u) => safeGetJson(u, defaultUA), 20 * 60 * 1000, true),
-      { max: 1, baseMs: 600 }
+      {
+        max: 2,
+        baseMs: 1000,
+        onError: (err) => isRateLimitError(err) ? retryAfterMsFromError(err, 5000) : 0
+      }
     );
     const arr = Array.isArray(j?.results) ? j.results : [];
     items.push(...arr.map(normalizeNewsDataArticle).filter(Boolean));
