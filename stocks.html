@@ -156,26 +156,6 @@
     본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.
   </div>
 
-  <section id="marketOverview" aria-labelledby="marketOverviewTitle">
-    <div class="section-header" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
-      <h2 id="marketOverviewTitle" data-i18n="marketOverview">주요 지수 현황</h2>
-      <div id="marketLastUpdated" class="last-updated" aria-live="polite"></div>
-    </div>
-    <div id="marketError" class="error" role="alert" style="display:none;"></div>
-    <div class="table-wrapper" style="overflow-x:auto;">
-      <table class="market-table" style="width:100%;border-collapse:collapse;min-width:280px;">
-        <thead>
-          <tr>
-            <th scope="col" data-i18n="marketColumnIndex" style="text-align:left;padding:0.5rem;border-bottom:1px solid #e2e8f0;">지수</th>
-            <th scope="col" data-i18n="marketColumnPrice" style="text-align:right;padding:0.5rem;border-bottom:1px solid #e2e8f0;">현재가</th>
-            <th scope="col" data-i18n="marketColumnChange" style="text-align:right;padding:0.5rem;border-bottom:1px solid #e2e8f0;">등락률</th>
-          </tr>
-        </thead>
-        <tbody id="marketBody"></tbody>
-      </table>
-    </div>
-  </section>
-
     <section id="marketNews">
       <h2 data-i18n="marketNews">최신 마켓 뉴스</h2>
       <ul id="newsList" class="news-list"></ul>
@@ -212,18 +192,14 @@
         spDesc: '미국 대표 대형주 지수',
         nasdaqDesc: '나스닥 상장 비금융 대형주 100종목으로 기술주 비중 높음',
         disclaimer: '본 페이지의 정보는 투자 참고용이며, 제공된 데이터의 정확성을 보장하지 않습니다. 투자 판단의 책임은 이용자에게 있습니다.',
-        marketOverview: '주요 지수 현황',
-        marketColumnIndex: '지수',
-        marketColumnPrice: '현재가',
-        marketColumnChange: '등락률',
-        marketPrevClose: '전일 종가: ',
         marketNews: '최신 마켓 뉴스',
         keywordTitle: '오늘의 키워드',
         keywordError: '키워드를 불러오지 못했습니다.',
         keywordMarkets: '적용 시장',
         portfolioRecs: '포트폴리오 추천',
         dashboardLink: '👉 주식 시장 요약 대시보드',
-        marketDataError: '마켓 데이터를 불러오지 못했습니다.',
+        refreshing: '새로고침 중...',
+        refreshData: '데이터 새로고침',
         newsError: '뉴스를 불러오지 못했습니다.',
         recsError: '추천 데이터를 불러오지 못했습니다.',
         safe: '안전주',
@@ -244,18 +220,14 @@
         spDesc: 'Major U.S. large-cap index',
         nasdaqDesc: 'Tech-heavy index of 100 non-financial NASDAQ stocks',
         disclaimer: 'Information on this page is for reference only and accuracy is not guaranteed. Investment decisions are your responsibility.',
-        marketOverview: 'Major Index Overview',
-        marketColumnIndex: 'Index',
-        marketColumnPrice: 'Last Price',
-        marketColumnChange: 'Change',
-        marketPrevClose: 'Prev close: ',
         marketNews: 'Latest Market News',
         keywordTitle: "Today's Keyword",
         keywordError: 'Failed to load keywords.',
         keywordMarkets: 'Markets',
         portfolioRecs: 'Portfolio Recommendations',
         dashboardLink: '👉 Stock News Summary Dashboard',
-        marketDataError: 'Failed to load market data.',
+        refreshing: 'Refreshing...',
+        refreshData: 'Refresh Data',
         newsError: 'Failed to load news.',
         recsError: 'Failed to load recommendations.',
         safe: 'Safe Picks',
@@ -272,9 +244,6 @@
     let visitData = null;
     let keywordSnapshot = null;
     let keywordLoadFailed = false;
-    let marketTimestamp = null;
-    let lastMarketSnapshot = [];
-    let marketHadError = false;
 
     function escapeHtml(str) {
       return String(str || '')
@@ -333,165 +302,6 @@
       }
     }
    
-
-    function renderMarketTable(data = lastMarketSnapshot) {
-      const tbody = document.getElementById('marketBody');
-      if (!tbody) return;
-      const rows = [];
-      const dataset = Array.isArray(data) ? data : [];
-      if (!dataset.length) {
-        tbody.innerHTML = '';
-        return;
-      } else {
-        for (const entry of dataset) {
-          const nameCell = escapeHtml(entry.label);
-          const priceCell = escapeHtml(String(entry.price ?? 'N/A'));
-          const changeCell = escapeHtml(String(entry.changePct ?? 'N/A'));
-          const prevCell = escapeHtml(String(entry.prevClose ?? 'N/A'));
-          const prevLabel = escapeHtml(translations[currentLang].marketPrevClose + String(entry.prevClose ?? 'N/A'));
-          const trendClass = entry.trendClass || 'neutral';
-          rows.push(`<tr><td style="padding:0.5rem;border-bottom:1px solid #f1f5f9;">${nameCell}</td><td style="padding:0.5rem;text-align:right;border-bottom:1px solid #f1f5f9;" title="${prevLabel}" data-prev-close="${prevCell}">${priceCell}</td><td style="padding:0.5rem;text-align:right;border-bottom:1px solid #f1f5f9;" class="${trendClass}">${changeCell}</td></tr>`);
-        }
-      }
-      tbody.innerHTML = rows.join('');
-    }
-
-    // 실시간 지수 데이터 로드
-    async function loadMarketData() {
-      marketHadError = false;
-      updateMarketErrorMessage();
-      let sample = {};
-      try {
-        const res = await fetch('data/sample_market_data.json', { cache: 'no-store' });
-        if (res.ok) {
-          sample = await res.json();
-        }
-      } catch (e) {
-        console.warn('sample market data load failed', e);
-      }
-
-      const indices = [
-        { key: 'KOSPI', label: 'KOSPI', symbol: '^KS11' },
-        { key: 'KOSDAQ', label: 'KOSDAQ', symbol: '^KQ11' },
-        { key: 'S&P500', label: 'S&P 500', symbol: '^GSPC' },
-        { key: 'NASDAQ100', label: 'NASDAQ 100', symbol: '^NDX' },
-      ];
-
-      let hadError = false;
-      const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
-
-      async function fetchQuote(symbol) {
-        const baseUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbol)}`;
-        const endpoints = [
-          { url: baseUrl, parse: res => res.json() },
-          { url: `https://api.allorigins.win/raw?url=${encodeURIComponent(baseUrl)}`, parse: res => res.text().then(JSON.parse) },
-        ];
-
-        let lastError;
-        for (const endpoint of endpoints) {
-          try {
-            const response = await fetch(endpoint.url, { cache: 'no-store' });
-            if (!response.ok) {
-              throw new Error(`HTTP ${response.status}`);
-            }
-            const data = await endpoint.parse(response);
-            const info = data?.quoteResponse?.result?.[0];
-            if (info) {
-              return info;
-            }
-            throw new Error('Empty quote response');
-          } catch (err) {
-            lastError = err;
-          }
-        }
-        throw lastError || new Error('Quote fetch failed');
-      }
-
-      const formatNumber = value => {
-        const num = Number(value);
-        if (!Number.isFinite(num)) return null;
-        return num.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      };
-
-      const results = [];
-      for (const idx of indices) {
-        const fallback = sample[idx.key] || {};
-        const fallbackPrice = formatNumber(fallback.price) || (typeof fallback.price === 'string' ? fallback.price : null);
-        const fallbackPrev = formatNumber(fallback.prevClose) || (typeof fallback.prevClose === 'string' ? fallback.prevClose : null);
-        let changePct = 'N/A';
-        if (typeof fallback.changePct === 'string' && fallback.changePct.trim()) {
-          changePct = fallback.changePct;
-        } else {
-          const val = Number(fallback.changePct);
-          if (Number.isFinite(val)) {
-            changePct = `${val >= 0 ? '+' : ''}${val.toFixed(2)}%`;
-          }
-        }
-
-        let price = fallbackPrice || 'N/A';
-        let prevClose = fallbackPrev || 'N/A';
-
-        try {
-          const quote = await fetchQuote(idx.symbol);
-          const current = formatNumber(quote?.regularMarketPrice);
-          const prev = formatNumber(quote?.regularMarketPreviousClose);
-          const changeVal = Number(quote?.regularMarketChangePercent);
-          if (current && prev && Number.isFinite(changeVal)) {
-            price = current;
-            prevClose = prev;
-            changePct = `${changeVal >= 0 ? '+' : ''}${changeVal.toFixed(2)}%`;
-          } else {
-            throw new Error('Incomplete quote data');
-          }
-        } catch (err) {
-          hadError = true;
-          console.error('지수 로드 실패', idx.label, err);
-        }
-
-        const numericChange = Number.parseFloat(changePct);
-        const cls = Number.isFinite(numericChange)
-          ? (numericChange > 0 ? 'positive' : numericChange < 0 ? 'negative' : 'neutral')
-          : 'neutral';
-        results.push({
-          label: idx.label,
-          price,
-          prevClose,
-          changePct,
-          trendClass: cls,
-        });
-      }
-
-      lastMarketSnapshot = results;
-      renderMarketTable(results);
-
-      marketHadError = hadError;
-      updateMarketErrorMessage();
-
-      marketTimestamp = new Date();
-      renderMarketLastUpdated();
-    }
-
-    function renderMarketLastUpdated() {
-      const el = document.getElementById('marketLastUpdated');
-      if (!el) return;
-      if (!marketTimestamp) {
-        el.textContent = '';
-        return;
-      }
-      const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
-      el.textContent = translations[currentLang].updated + marketTimestamp.toLocaleString(locale);
-    }
-
-    function updateMarketErrorMessage() {
-      const errorDiv = document.getElementById('marketError');
-      if (!errorDiv) return;
-      if (marketHadError) {
-        errorDiv.textContent = translations[currentLang].marketDataError;
-        errorDiv.style.display = 'block';
-      } else {
-        errorDiv.style.display = 'none';
-      }
-    }
 
   // 최신 마켓 뉴스 로드
   let newsTimestamp = null;
@@ -748,7 +558,7 @@
         button.disabled = true;
         button.textContent = translations[currentLang].refreshing;
       }
-      Promise.all([loadMarketData(), fetchRecs(), loadMarketNews(), loadKeywordHighlights()]).finally(() => {
+      Promise.all([fetchRecs(), loadMarketNews(), loadKeywordHighlights()]).finally(() => {
         if (button) {
           button.disabled = false;
           button.textContent = translations[currentLang].refreshData;
@@ -769,9 +579,6 @@
         applyTranslations();
         updateCurrentDate();
         renderNewsUpdated();
-        renderMarketLastUpdated();
-        renderMarketTable();
-        updateMarketErrorMessage();
         renderKeywordBox();
         if (lastRecommendations) render(lastRecommendations);
         updateVisitCounts();
@@ -781,9 +588,6 @@
         applyTranslations();
         updateCurrentDate();
         renderNewsUpdated();
-        renderMarketLastUpdated();
-        renderMarketTable();
-        updateMarketErrorMessage();
         renderKeywordBox();
         if (lastRecommendations) render(lastRecommendations);
         updateVisitCounts();
