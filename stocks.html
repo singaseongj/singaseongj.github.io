@@ -198,7 +198,8 @@
         keywordMarkets: '적용 시장',
         portfolioRecs: '포트폴리오 추천',
         dashboardLink: '👉 주식 시장 요약 대시보드',
-        marketDataError: '마켓 데이터를 불러오지 못했습니다.',
+        refreshing: '새로고침 중...',
+        refreshData: '데이터 새로고침',
         newsError: '뉴스를 불러오지 못했습니다.',
         recsError: '추천 데이터를 불러오지 못했습니다.',
         safe: '안전주',
@@ -225,7 +226,8 @@
         keywordMarkets: 'Markets',
         portfolioRecs: 'Portfolio Recommendations',
         dashboardLink: '👉 Stock News Summary Dashboard',
-        marketDataError: 'Failed to load market data.',
+        refreshing: 'Refreshing...',
+        refreshData: 'Refresh Data',
         newsError: 'Failed to load news.',
         recsError: 'Failed to load recommendations.',
         safe: 'Safe Picks',
@@ -300,115 +302,6 @@
       }
     }
    
-
-    // 실시간 지수 데이터 로드
-  async function loadMarketData() {
-      // Load fallback data in case external requests fail
-      let sample = {};
-      try {
-        const res = await fetch('data/sample_market_data.json');
-        sample = await res.json();
-      } catch (e) {
-        console.warn('sample market data load failed', e);
-      }
-
-      const FMP_KEY = 'demo';
-      const indices = [
-        { name: 'KOSPI', code: 'KOSPI', type: 'naver' },
-        { name: 'KOSDAQ', code: 'KOSDAQ', type: 'naver' },
-        { name: 'S&P500', symbol: '^GSPC', type: 'fmp' },
-        { name: 'NASDAQ100', symbol: '^NDX', type: 'fmp' },
-      ];
-
-      const rows = [];
-      let hadError = false;
-      for (const idx of indices) {
-        let price = 'N/A';
-        let prevClose = 'N/A';
-        let changePct = 'N/A';
-
-        try {
-          if (idx.type === 'naver') {
-            const api = `https://polling.finance.naver.com/api/realtime?query=SERVICE_INDEX:${idx.code}`;
-            const data = await (await fetch(api)).json();
-            const info = data?.result?.areas?.[0]?.datas?.[0];
-            if (info) {
-              price = (info.nv / 100).toFixed(2);
-              prevClose = ((info.nv - info.cv) / 100).toFixed(2);
-              changePct = (info.cr >= 0 ? '+' : '') + info.cr.toFixed(2) + '%';
-            }
-          } else if (idx.type === 'fmp') {
-            const api = `https://financialmodelingprep.com/api/v3/quote/${encodeURIComponent(idx.symbol)}?apikey=${FMP_KEY}`;
-            const data = await (await fetch(api)).json();
-            const info = data && data[0];
-            if (info) {
-              price = String(info.price);
-              prevClose = String(info.previousClose);
-              const change = info.changesPercentage;
-              if (Number.isFinite(change)) {
-                changePct = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
-              }
-            }
-          } else if (idx.type === 'yahoo') {
-            // Yahoo Finance blocks CORS, so fetch through a proxy
-            const yahooUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(idx.symbol)}`;
-            const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(yahooUrl)}`;
-
-            const res = await fetch(proxy);
-            const data = await res.json();
-            if (data.quoteResponse && data.quoteResponse.result && data.quoteResponse.result[0]) {
-              const info = data.quoteResponse.result[0];
-              const current = info.regularMarketPrice;
-              const changeVal = info.regularMarketChangePercent;
-              const prev = info.regularMarketPreviousClose;
-              if (current != null && changeVal != null && prev != null) {
-                price = current.toFixed(2);
-                prevClose = prev.toFixed(2);
-                changePct = (changeVal > 0 ? '+' : '') + changeVal.toFixed(2) + '%';
-              }
-            }
-          }
-        } catch (err) {
-          console.error('지수 로드 실패', idx.name, err);
-          hadError = true;
-          // fallback to sample data when available
-          if (sample[idx.name]) {
-            const info = sample[idx.name];
-            price = info.price;
-            prevClose = info.prevClose;
-            changePct = info.changePct;
-          }
-        }
-
-        if ((price === 'N/A' || changePct === 'N/A') && sample[idx.name]) {
-          const info = sample[idx.name];
-          price = price === 'N/A' ? info.price : price;
-          prevClose = prevClose === 'N/A' ? info.prevClose : prevClose;
-          changePct = changePct === 'N/A' ? info.changePct : changePct;
-        }
-
-        const chg = parseFloat(changePct);
-        const cls = chg > 0 ? 'positive' : chg < 0 ? 'negative' : 'neutral';
-        rows.push(`<tr><td>${idx.name}</td><td>${price}</td><td class="${cls}">${changePct}</td></tr>`);
-      }
-
-      const tbody = document.getElementById('marketBody');
-      if (tbody) {
-        tbody.innerHTML = rows.join('');
-      }
-      const errorDiv = document.getElementById('marketError');
-      if (errorDiv) {
-        if (hadError) {
-          errorDiv.textContent = translations[currentLang].marketDataError;
-          errorDiv.style.display = 'block';
-        } else {
-          errorDiv.style.display = 'none';
-        }
-      }
-
-      const ts = new Date().toLocaleString('ko-KR');
-      document.getElementById('lastUpdated').textContent = ts;
-    }
 
   // 최신 마켓 뉴스 로드
   let newsTimestamp = null;
@@ -665,7 +558,7 @@
         button.disabled = true;
         button.textContent = translations[currentLang].refreshing;
       }
-      Promise.all([loadMarketData(), fetchRecs(), loadMarketNews(), loadKeywordHighlights()]).finally(() => {
+      Promise.all([fetchRecs(), loadMarketNews(), loadKeywordHighlights()]).finally(() => {
         if (button) {
           button.disabled = false;
           button.textContent = translations[currentLang].refreshData;
@@ -702,7 +595,12 @@
 
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
-        console.error('페이지 에러:', e.error);
+        const message = (e && (e.message || (e.error && e.error.message))) || '';
+        if (typeof message === 'string' && message.includes('conflux')) {
+          e.preventDefault();
+          return;
+        }
+        console.error('페이지 에러:', e.error || message || e);
       });
 
       // 데이터 로딩 상태 확인
