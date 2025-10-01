@@ -34,7 +34,7 @@ const polygonRest = POLYGON_API_KEY ? restClient(POLYGON_API_KEY) : null;
 const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
 const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
-const DEEP_API_KEY = (process.env.DEEP_API_KEY || '').trim();
+const DEEPL_API_KEY = (process.env.DEEPL_API_KEY || '').trim();
 
 const NAVER_WEIGHT = Number(process.env.NAVER_WEIGHT || 1.6);
 const OTHER_NEWS_WEIGHT = Number(process.env.OTHER_NEWS_WEIGHT || 1.0);
@@ -880,14 +880,14 @@ function hasHangulText(value) {
 }
 
 async function translateWithDeepL(text, { targetLang = 'KO', sourceLang = 'EN' } = {}) {
-  if (!DEEP_API_KEY) return null;
+  if (!DEEPL_API_KEY) return null;
   const raw = String(text || '').trim();
   if (!raw) return null;
   try {
     const res = await fetch('https://api.deepl.com/v2/translate', {
       method: 'POST',
       headers: {
-        'Authorization': `DeepL-Auth-Key ${DEEP_API_KEY}`,
+        'Authorization': `DeepL-Auth-Key ${DEEPL_API_KEY}`,
         'Content-Type': 'application/json',
         'User-Agent': 'stock-recs/1.2 (+github-actions)'
       },
@@ -925,39 +925,80 @@ async function ensureTranslationModule() {
   return translationModulePromise;
 }
 
+function isCompleteKoTranslation(en, candidate) {
+  const enText = String(en || '').trim().toLowerCase();
+  const koText = String(candidate || '').trim();
+  if (!koText) return false;
+  if (hasHangulText(koText)) return true;
+  if (!enText) return false;
+  return koText.toLowerCase() !== enText;
+}
+
 async function getLocalizedKeywordTexts(enText) {
   const en = String(enText || '').trim();
   if (!en) return { en: '', ko: '' };
 
-  const dictionaryKo = translateTagToKo(en);
-  if (dictionaryKo && hasHangulText(dictionaryKo)) {
-    const finalKo = dictionaryKo.trim();
+  const dictionaryKoRaw = translateTagToKo(en);
+  const dictionaryKoHasHangul = dictionaryKoRaw && hasHangulText(dictionaryKoRaw);
+  if (dictionaryKoHasHangul) {
+    const finalKo = String(dictionaryKoRaw || '').trim();
     setTranslationCache(en, finalKo);
-    return { en, ko: finalKo };
+    return { en, ko: finalKo, meta: { translator: 'dictionary', attemptedDeepL: false, usedDeepL: false, complete: true } };
   }
 
   const cacheKey = en.toLowerCase();
   if (TRANSLATION_CACHE.has(cacheKey)) {
-    return { en, ko: TRANSLATION_CACHE.get(cacheKey) };
+    const cachedKo = TRANSLATION_CACHE.get(cacheKey);
+    return {
+      en,
+      ko: cachedKo,
+      meta: {
+        translator: 'cache',
+        attemptedDeepL: false,
+        usedDeepL: false,
+        complete: isCompleteKoTranslation(en, cachedKo)
+      }
+    };
   }
 
-  let ko = dictionaryKo && dictionaryKo.trim() ? dictionaryKo.trim() : '';
+  let ko = '';
+  let translator = 'none';
+  let attemptedDeepL = false;
+  let usedDeepL = false;
+  let complete = false;
+  const fallbackDictionary = String(dictionaryKoRaw || '').trim();
 
-  if (!ko) {
+  if (DEEPL_API_KEY) {
+    attemptedDeepL = true;
     const deeplResult = await translateWithDeepL(en, { sourceLang: 'EN', targetLang: 'KO' });
-    if (deeplResult) {
-      ko = deeplResult;
+    const deeplText = String(deeplResult || '').trim();
+    if (deeplText) {
+      if (isCompleteKoTranslation(en, deeplText)) {
+        ko = deeplText;
+        translator = 'deepl';
+        usedDeepL = true;
+        complete = true;
+      } else {
+        translator = 'deepl-incomplete';
+        console.warn(`[keywords] DeepL returned incomplete translation for "${en}":`, deeplText);
+      }
     }
   }
 
   if (!ko) {
-    const translator = await ensureTranslationModule();
-    if (translator) {
+    const translatorModule = await ensureTranslationModule();
+    if (translatorModule) {
       try {
-        const result = await translator(en, { from: 'en', to: 'ko' });
+        const result = await translatorModule(en, { from: 'en', to: 'ko' });
         const translated = String(result?.text || '').trim();
         if (translated) {
-          ko = translated;
+          if (isCompleteKoTranslation(en, translated)) {
+            ko = translated;
+            translator = usedDeepL ? 'deepl+google' : 'google';
+            complete = true;
+          } else {
+            console.warn(`[keywords] Google translation incomplete for "${en}":`, translated);
+          }
         }
       } catch (err) {
         console.warn(`[keywords] failed to translate "${en}":`, err?.message || err);
@@ -965,12 +1006,20 @@ async function getLocalizedKeywordTexts(enText) {
     }
   }
 
+  if (!ko && fallbackDictionary && fallbackDictionary.toLowerCase() !== en.toLowerCase()) {
+    ko = fallbackDictionary;
+    translator = translator === 'none' ? 'dictionary-fallback' : `${translator}+dictionary`;
+    complete = isCompleteKoTranslation(en, ko);
+  }
+
   if (!ko) {
     ko = en;
+    translator = translator === 'none' ? 'identity' : `${translator}+identity`;
+    complete = false;
   }
 
   setTranslationCache(en, ko);
-  return { en, ko };
+  return { en, ko, meta: { translator, attemptedDeepL, usedDeepL, complete } };
 }
 
 function chooseTagDisplay(entry) {
@@ -1399,10 +1448,25 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     }
     const localized = await getLocalizedKeywordTexts(baseTerm);
     const enText = localized.en || baseTerm;
-    const koText = storedKo || localized.ko || enText;
+    const meta = localized.meta || {};
+    if (DEEPL_API_KEY && !storedKo) {
+      if (!meta.attemptedDeepL) {
+        console.warn(`[keywords] DeepL translation not attempted for "${baseTerm}" while writing tags.json`);
+      } else if (!meta.usedDeepL) {
+        console.warn(`[keywords] DeepL translation unused for "${baseTerm}" (translator: ${meta.translator || 'unknown'})`);
+      }
+    }
+    const koCandidate = storedKo || localized.ko || '';
+    const koText = koCandidate || enText;
+    if (!storedKo && !hasHangulText(koText)) {
+      console.warn(`[keywords] missing Korean translation for "${baseTerm}"; using fallback text`);
+    }
     const count = Number(item?.count ?? 0);
     const score = Number(item?.score ?? 0);
     translations[enText] = { en: enText, ko: koText };
+    if (meta.translator) {
+      translations[enText].translator = meta.translator;
+    }
     localizedDiscovered.push({
       term: enText,
       term_ko: koText,
