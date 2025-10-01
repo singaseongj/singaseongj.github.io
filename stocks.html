@@ -244,6 +244,8 @@
     let visitData = null;
     let keywordSnapshot = null;
     let keywordLoadFailed = false;
+    let tagKoLookup = null;
+    let tagKoLookupPromise = null;
 
     function escapeHtml(str) {
       return String(str || '')
@@ -252,6 +254,103 @@
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
+    }
+
+    function normalizeTermKey(term) {
+      return String(term || '').trim().toLowerCase();
+    }
+
+    function buildTagKoLookup(snapshot) {
+      const map = new Map();
+      if (!snapshot || typeof snapshot !== 'object') {
+        return map;
+      }
+      const add = (en, ko) => {
+        const key = normalizeTermKey(en);
+        const value = String(ko || '').trim();
+        if (!key || !value) return;
+        map.set(key, value);
+      };
+      if (Array.isArray(snapshot.discovered_keywords)) {
+        snapshot.discovered_keywords.forEach(item => {
+          const en = item?.term || item?.text?.en || '';
+          const ko = item?.term_ko || item?.text?.ko || '';
+          add(en, ko);
+        });
+      }
+      if (Array.isArray(snapshot.keywords)) {
+        snapshot.keywords.forEach(item => {
+          const en = item?.term || item?.text?.en || '';
+          const ko = item?.term_ko || item?.text?.ko || '';
+          add(en, ko);
+        });
+      }
+      if (snapshot.translations && typeof snapshot.translations === 'object') {
+        for (const [en, value] of Object.entries(snapshot.translations)) {
+          if (!value) continue;
+          if (typeof value === 'string') {
+            add(en, value);
+          } else {
+            add(en, value.ko || value.en || '');
+          }
+        }
+      }
+      return map;
+    }
+
+    async function loadTagKoLookup() {
+      if (tagKoLookup) return tagKoLookup;
+      if (tagKoLookupPromise) return tagKoLookupPromise;
+      const url = 'stocks/data/tags.json?_=' + Date.now();
+      tagKoLookupPromise = fetch(url, { cache: 'no-store' })
+        .then(res => {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then(data => {
+          tagKoLookup = buildTagKoLookup(data);
+          return tagKoLookup;
+        })
+        .catch(err => {
+          console.warn('tags.json load failed', err);
+          tagKoLookup = new Map();
+          return tagKoLookup;
+        })
+        .finally(() => {
+          tagKoLookupPromise = null;
+          renderKeywordBox();
+        });
+      return tagKoLookupPromise;
+    }
+
+    function lookupKoTerm(term) {
+      const key = normalizeTermKey(term);
+      if (!key) return '';
+      if (tagKoLookup && tagKoLookup.has(key)) {
+        return tagKoLookup.get(key);
+      }
+      return '';
+    }
+
+    function getKoTermForEntry(entry) {
+      if (!entry) return '';
+      const direct = typeof entry.term_ko === 'string' ? entry.term_ko.trim() : '';
+      const enSource = typeof entry.term === 'string' ? entry.term : entry?.text?.en;
+      const textKo = typeof entry?.text?.ko === 'string' ? entry.text.ko.trim() : '';
+      const lookup = lookupKoTerm(enSource || direct || textKo);
+      if (lookup) return lookup;
+      if (direct) return direct;
+      if (textKo) return textKo;
+      return '';
+    }
+
+    function buildNewsSearchUrl(term, lang = 'en') {
+      const query = String(term || '').trim();
+      if (!query) return '';
+      const hl = lang === 'ko' ? 'ko' : 'en';
+      const gl = lang === 'ko' ? 'KR' : 'US';
+      const ceid = `${gl}:${hl}`;
+      return `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=nws&hl=${hl}&gl=${gl}&ceid=${encodeURIComponent(ceid)}`;
     }
 
     function applyTranslations() {
@@ -338,9 +437,11 @@
         errorEl.style.display = 'none';
       } else {
         const items = keywords.map(entry => {
+          const enTerm = String(entry?.term || entry?.text?.en || '').trim();
+          const koTerm = String(getKoTermForEntry(entry) || '').trim();
           const labelRaw = currentLang === 'ko'
-            ? (entry?.text?.ko || entry?.text?.en || '')
-            : (entry?.text?.en || entry?.text?.ko || '');
+            ? (koTerm || enTerm)
+            : (enTerm || koTerm);
           const label = escapeHtml(labelRaw);
           const markets = Array.isArray(entry?.markets) ? escapeHtml(entry.markets.join(', ')) : '';
           const marketsHtml = markets
@@ -351,14 +452,18 @@
             if (typeof urlField === 'string') {
               return { en: urlField };
             }
-            if (urlField && typeof urlField === 'object') {
-              const result = {};
-              if (typeof urlField.ko === 'string' && urlField.ko) result.ko = urlField.ko;
-              if (typeof urlField.en === 'string' && urlField.en) result.en = urlField.en;
-              return result;
-            }
-            return {};
-          })();
+          if (urlField && typeof urlField === 'object') {
+            const result = {};
+            if (typeof urlField.ko === 'string' && urlField.ko) result.ko = urlField.ko;
+            if (typeof urlField.en === 'string' && urlField.en) result.en = urlField.en;
+            return result;
+          }
+          return {};
+        })();
+          const koQuery = koTerm || enTerm;
+          const enQuery = enTerm || koTerm;
+          if (!urls.ko && koQuery) urls.ko = buildNewsSearchUrl(koQuery, 'ko');
+          if (!urls.en && enQuery) urls.en = buildNewsSearchUrl(enQuery, 'en');
           if (!urls.ko && urls.en) urls.ko = urls.en;
           if (!urls.en && urls.ko) urls.en = urls.ko;
           const buttons = [];
@@ -427,11 +532,16 @@
         const res = await fetch('newsKeywords.json?_=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         keywordSnapshot = await res.json();
-        keywordLoadFailed = false;
-      } catch (err) {
-        console.warn('newsKeywords.json load failed', err);
-        keywordSnapshot = null;
-        keywordLoadFailed = true;
+      keywordLoadFailed = false;
+    } catch (err) {
+      console.warn('newsKeywords.json load failed', err);
+      keywordSnapshot = null;
+      keywordLoadFailed = true;
+    }
+      try {
+        await loadTagKoLookup();
+      } catch (e) {
+        console.warn('Unable to load tag translations', e);
       }
       renderKeywordBox();
     }
@@ -572,6 +682,7 @@
       updateCurrentDate();
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
       // 페이지가 초기화되면 자동으로 데이터를 새로 불러옵니다.
+      loadTagKoLookup().catch(() => {});
       refreshAllData();
 
       document.getElementById('btnKo').addEventListener('click', function() {
