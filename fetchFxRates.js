@@ -423,6 +423,37 @@ async function fetchNaverBitcoinPoint(now = nowKST()) {
   return { t: iso, v: Number(price.toFixed(2)) };
 }
 
+function parseDayString(dayStr) {
+  if (typeof dayStr !== 'string') return null;
+  const match = dayStr.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return null;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) return null;
+  return { year, month, day };
+}
+
+function addDaysToDayString(dayStr, offset) {
+  const parsed = parseDayString(dayStr);
+  if (!parsed || !Number.isFinite(offset)) return null;
+  const utc = Date.UTC(parsed.year, parsed.month - 1, parsed.day) + Math.trunc(offset) * MS_PER_DAY;
+  const d = new Date(utc);
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function diffDaysBetween(dayA, dayB) {
+  const a = parseDayString(dayA);
+  const b = parseDayString(dayB);
+  if (!a || !b) return NaN;
+  const utcA = Date.UTC(a.year, a.month - 1, a.day);
+  const utcB = Date.UTC(b.year, b.month - 1, b.day);
+  return Math.round((utcB - utcA) / MS_PER_DAY);
+}
+
 function parseGoldBasDt(value) {
   if (typeof value !== 'string') return null;
   const trimmed = value.trim();
@@ -761,6 +792,7 @@ async function fetchGoldBitcoinKRW() {
   let coindeskPoint = null;
   let naverPoint = null;
   let interpolatedPoint = null;
+  const interpolatedGapPoints = [];
   const latestSeriesPoint = () => (bitcoinSeries.length ? bitcoinSeries[bitcoinSeries.length - 1] : null);
   let latestFromSeries = latestSeriesPoint();
   if (!bitcoinSeries.length || btcPointIsStale(latestFromSeries)) {
@@ -798,6 +830,10 @@ async function fetchGoldBitcoinKRW() {
     }
   }
 
+  const gapResult = fillRecentBitcoinGaps(bitcoinSeries);
+  bitcoinSeries = gapResult.series;
+  interpolatedGapPoints.push(...gapResult.interpolated);
+
   let latestGold = goldSeries.length ? goldSeries[goldSeries.length - 1] : null;
 
   if ((!goldSeries.length || !latestGold) && process.env.DATA_API_KEY) {
@@ -833,6 +869,11 @@ async function fetchGoldBitcoinKRW() {
   if (interpolatedPoint?.t && !extraLastUpdateds.includes(interpolatedPoint.t)) {
     extraLastUpdateds.push(interpolatedPoint.t);
   }
+  for (const point of interpolatedGapPoints) {
+    if (point?.t && !extraLastUpdateds.includes(point.t)) {
+      extraLastUpdateds.push(point.t);
+    }
+  }
 
   return {
     year,
@@ -842,6 +883,48 @@ async function fetchGoldBitcoinKRW() {
     latestBitcoin,
     extraLastUpdateds,
   };
+}
+
+function fillRecentBitcoinGaps(series) {
+  const sanitized = Array.isArray(series)
+    ? series
+        .filter(point => point && typeof point.t === 'string' && typeof point.v === 'number')
+        .slice()
+        .sort((a, b) => new Date(a.t) - new Date(b.t))
+    : [];
+  if (sanitized.length < 2) {
+    return { series: Array.isArray(series) ? series : [], interpolated: [] };
+  }
+
+  const added = [];
+  let updatedSeries = Array.isArray(series) ? series : [];
+
+  for (let i = 1; i < sanitized.length; i++) {
+    const prev = sanitized[i - 1];
+    const curr = sanitized[i];
+    const prevDay = prev.t.slice(0, 10);
+    const currDay = curr.t.slice(0, 10);
+    const diff = diffDaysBetween(prevDay, currDay);
+    if (!Number.isFinite(diff) || diff <= 1) continue;
+
+    for (let offset = 1; offset < diff; offset++) {
+      const targetDay = addDaysToDayString(prevDay, offset);
+      if (!targetDay) continue;
+      const targetIso = `${targetDay}T00:00:00+09:00`;
+      const already = updatedSeries.some(point => point?.t?.slice(0, 10) === targetDay);
+      if (already) continue;
+      const ratio = offset / diff;
+      const value = prev.v + (curr.v - prev.v) * ratio;
+      if (!Number.isFinite(value)) continue;
+      const rounded = Number(value.toFixed(2));
+      if (!Number.isFinite(rounded)) continue;
+      const point = { t: targetIso, v: rounded };
+      updatedSeries = upsertDailySeriesPoint(updatedSeries, point);
+      added.push(point);
+    }
+  }
+
+  return { series: updatedSeries, interpolated: added };
 }
 
 async function interpolateBitcoinFallback(now, year, currentSeries) {
