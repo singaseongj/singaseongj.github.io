@@ -71,6 +71,8 @@ jobs:
       NEWS_CONCURRENCY: 2        # your code already defaults to 2; keep it small for SerpApi quotas
       NEWS_TTL_MS: 1800000       # 30m cache TTL (aligns with your comment)
       NAVER_TRENDS_CACHE_TTL_MS: 21600000   # 6h (matches the code)
+      TAG_TARGET_COUNT: "50"
+      TAG_MAX_CONSECUTIVE_429: "12"
       GLOBAL_BUDGET_MS: "90000"
       FINAL_STAGE_BUDGET_FRAC: "0.02"
       COVERAGE_MIN: "0.10"
