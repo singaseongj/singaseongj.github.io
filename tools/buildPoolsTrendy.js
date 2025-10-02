@@ -384,8 +384,8 @@ function loadNewsKeywordSnapshot() {
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed?.keywords)) {
       parsed._matchers = parsed.keywords.map(entry => {
-        const ko = String(entry?.text?.ko || '').trim();
-        const en = String(entry?.text?.en || '').trim();
+        const ko = String(entry?.term_ko || '').trim();
+        const en = String(entry?.term || '').trim();
         const texts = [ko, en].filter(Boolean);
         const lowered = texts.map(t => t.toLowerCase());
         const regexes = texts
@@ -943,8 +943,8 @@ try {
     let entries = [];
     if (Array.isArray(rawTagData?.discovered_keywords) && rawTagData.discovered_keywords.length) {
       entries = rawTagData.discovered_keywords.map(item => ({
-        en: item?.term || item?.text?.en || item?.text || '',
-        ko: item?.term_ko || item?.text?.ko || '',
+        en: item?.term || '',
+        ko: item?.term_ko || '',
         mentions: item?.count || 0,
         score: item?.score || 0
       }));
@@ -964,8 +964,8 @@ try {
       if (mentions > maxMentions) maxMentions = mentions;
     });
     TAG_ENTRY_LIST = entries.map(entry => {
-      const en = entry?.en ?? entry?.text?.en ?? entry?.text ?? entry?.term ?? '';
-      const ko = entry?.ko ?? entry?.text?.ko ?? '';
+      const en = String(entry?.en ?? entry?.term ?? '').trim();
+      const ko = String(entry?.ko ?? '').trim();
       const keys = [...expandTagKeys(en), ...expandTagKeys(ko)];
       if (!keys.length) return null;
       const mentions = Math.max(0, Number(entry?.mentions) || 0);
@@ -1987,14 +1987,20 @@ async function main(){
           scoreAggr[n] = clamp01(Math.max(scoreAggr[n], blendedAggr));
           byName[n].reasons.keywordScore = keywordScore;
         }
-        const texts = limited.map(entry => entry?.text?.ko && entry?.text?.en
-          ? `${entry.text.ko} / ${entry.text.en}`
-          : (entry?.text?.ko || entry?.text?.en || ''));
+        const texts = limited.map(entry => {
+          const ko = String(entry?.term_ko || '').trim();
+          const en = String(entry?.term || '').trim();
+          if (ko && en) return `${ko} / ${en}`;
+          return ko || en || '';
+        });
         byName[n].reasons.keywordMatches = Array.from(new Set([...(byName[n].reasons.keywordMatches || []), ...texts].filter(Boolean)));
         try {
           (metricsOut[market] ||= {});
           (metricsOut[market][n] ||= {});
-          metricsOut[market][n].keywordMatches = limited.map(entry => entry.text);
+          metricsOut[market][n].keywordMatches = limited.map(entry => ({
+            term: String(entry?.term || '').trim(),
+            term_ko: String(entry?.term_ko || '').trim()
+          }));
           metricsOut[market][n].keywordScore = keywordScore;
         } catch {}
       }
