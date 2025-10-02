@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-02T19:45:35+09:00 (KST)**
+- Generated: **2025-10-03T00:27:08+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -100,26 +100,26 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=LG
 
-**LG전자** (066570.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-1.9%**, 20d **-4.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
-
 **LG화학** (051910.KS)
 
 - News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-6.7%**, 20d **-5.9%**; volatility (20d): **unknown**
+- Returns: 5d **-5.1%**, 20d **-0.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
+**SK하이닉스** (000660.KS)
+
+- News (7d): **18** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- Returns: 5d **10.9%**, 20d **49.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
+
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **-4.1%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Returns: 5d **3.4%**, 20d **27.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
@@ -127,7 +127,7 @@
 **한화** (000880.KS)
 
 - News (7d): **8** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.9%**, 20d **-12.0%**; volatility (20d): **unknown**
+- Returns: 5d **0.1%**, 20d **1.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94
