@@ -2038,6 +2038,318 @@ export async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, p
 
   return payload;
 }
+
+// REDESIGNED: Extract significant 2-3 word phrases that signal newsworthy events
+// Focus: "조선업체 호황" not "환율"
+
+// Signal words that indicate something SIGNIFICANT is happening
+const SIGNAL_WORDS = {
+  positive: new Set([
+    '호황', '급등', '사상최대', '최고치', '수주', '흑자전환', '확대', '성장',
+    '돌파', '신기록', '증가', '상승', '수출증가', '개선', '회복', '반등'
+  ]),
+  negative: new Set([
+    '위기', '급락', '적자', '파산', '중단', '폐쇄', '감소', '하락',
+    '붕괴', '최악', '침체', '부진', '타격', '손실', '위축'
+  ]),
+  change: new Set([
+    '전환', '변화', '전환점', '시작', '종료', '중단', '재개', '조정',
+    '개편', '개혁', '혁신', '전환기'
+  ]),
+  policy: new Set([
+    '규제', '완화', '강화', '발표', '계획', '정책', '승인', '허가',
+    '금지', '제재', '개정', '시행'
+  ])
+};
+
+// Domain-specific contexts that matter
+const SIGNIFICANT_CONTEXTS = new Set([
+  // Industries
+  '반도체', '2차전지', '조선', '해운', '자동차', '바이오', '방산',
+  '디스플레이', '철강', '항공', '건설', '부동산', '금융',
+
+  // Economic indicators
+  '수출', '수입', '무역수지', '환율', '금리', '물가', 'GDP', 'CPI',
+
+  // Market movers
+  'AI', 'HBM', '전기차', '원자력', '수소', '태양광', 'LNG'
+]);
+
+// Extract 2-3 word meaningful phrases from text
+function extractSignificantPhrases(text) {
+  const cleaned = text
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/[^가-힣A-Za-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const words = cleaned.split(/\s+/);
+  const phrases = [];
+
+  // Extract 2-word and 3-word combinations
+  for (let i = 0; i < words.length - 1; i++) {
+    // 2-word phrases
+    const phrase2 = `${words[i]} ${words[i + 1]}`;
+    if (isPhraseSignificant(phrase2)) {
+      phrases.push({ text: phrase2, length: 2 });
+    }
+
+    // 3-word phrases
+    if (i < words.length - 2) {
+      const phrase3 = `${words[i]} ${words[i + 1]} ${words[i + 2]}`;
+      if (isPhraseSignificant(phrase3)) {
+        phrases.push({ text: phrase3, length: 3 });
+      }
+    }
+  }
+
+  return phrases;
+}
+
+// Check if phrase is significant (contains signal + context)
+function isPhraseSignificant(phrase) {
+  const words = phrase.split(/\s+/);
+
+  // Must be 2-3 words
+  if (words.length < 2 || words.length > 3) return false;
+
+  // Must contain at least one Hangul word
+  if (!words.some(w => /[가-힣]/.test(w))) return false;
+
+  // Check for signal words (something is HAPPENING)
+  const hasSignal = words.some(w =>
+    [...SIGNAL_WORDS.positive, ...SIGNAL_WORDS.negative,
+     ...SIGNAL_WORDS.change, ...SIGNAL_WORDS.policy].some(sig => w.includes(sig))
+  );
+
+  // Check for significant context (industry/indicator)
+  const hasContext = words.some(w =>
+    Array.from(SIGNIFICANT_CONTEXTS).some(ctx => w.includes(ctx))
+  );
+
+  // Must have BOTH signal AND context
+  // Example: "조선업체 호황" = context(조선) + signal(호황) ✓
+  // Example: "환율" = context(환율) only ✗
+  return hasSignal && hasContext;
+}
+
+// Score phrases by significance (not frequency)
+function scorePhrasesbySignificance(phrases) {
+  const scored = new Map();
+
+  for (const { text, length } of phrases) {
+    const existing = scored.get(text);
+
+    if (existing) {
+      existing.count += 1;
+    } else {
+      // Calculate significance score
+      let score = 0;
+
+      // Length bonus (3-word phrases are more specific)
+      score += length * 10;
+
+      // Signal strength
+      const words = text.split(/\s+/);
+      for (const w of words) {
+        if ([...SIGNAL_WORDS.positive].some(s => w.includes(s))) score += 30;
+        if ([...SIGNAL_WORDS.negative].some(s => w.includes(s))) score += 30;
+        if ([...SIGNAL_WORDS.change].some(s => w.includes(s))) score += 25;
+        if ([...SIGNAL_WORDS.policy].some(s => w.includes(s))) score += 20;
+      }
+
+      // Context relevance
+      for (const w of words) {
+        if (Array.from(SIGNIFICANT_CONTEXTS).some(c => w.includes(c))) score += 15;
+      }
+
+      scored.set(text, {
+        text,
+        count: 1,
+        score,
+        length
+      });
+    }
+  }
+
+  // Sort by significance score, NOT frequency
+  // This ensures "조선업체 호황" (high significance, low freq)
+  // ranks above "환율 변동" (low significance, high freq)
+  return Array.from(scored.values())
+    .sort((a, b) => {
+      // Primary: significance score
+      if (b.score !== a.score) return b.score - a.score;
+
+      // Secondary: count (tie-breaker)
+      if (b.count !== a.count) return b.count - a.count;
+
+      // Tertiary: prefer longer phrases
+      return b.length - a.length;
+    });
+}
+
+// Extract from Naver News with phrase focus
+async function extractNaverNewsSignificantPhrases() {
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
+
+  if (!NAVER_ID || !NAVER_SECRET || SKIP_NAVER) return [];
+
+  // Query for newsworthy events
+  const queries = [
+    '반도체 수주', '조선 호황', '2차전지 급등',
+    '금리 인하', '수출 증가', '실적 개선',
+    '공급망 위기', '규제 완화', '정책 발표'
+  ];
+
+  const allPhrases = [];
+
+  for (const query of queries) {
+    try {
+      const res = await naverSearch({ query, NAVER_ID, NAVER_SECRET });
+
+      for (const item of res?.items || []) {
+        const title = stripHtml(item.title);
+        const desc = stripHtml(item.description);
+        const text = `${title} ${desc}`;
+
+        const phrases = extractSignificantPhrases(text);
+        allPhrases.push(...phrases);
+      }
+
+      await new Promise(r => setTimeout(r, 300));
+    } catch (err) {
+      console.warn(`[Naver] query "${query}" failed:`, err.message);
+    }
+  }
+
+  console.log(`[Naver] extracted ${allPhrases.length} candidate phrases`);
+  return allPhrases;
+}
+
+// Extract from KDI with phrase focus
+async function extractKDISignificantPhrases() {
+  try {
+    const keywords = await fetchEIECEconomyKeywords({ maxEntries: 100 });
+    const allPhrases = [];
+
+    // KDI keywords are already meaningful, but let's validate them
+    for (const kw of keywords) {
+      const text = kw.term_ko || kw.term || '';
+      const words = text.split(/\s+/).filter(Boolean);
+
+      if (words.length >= 2 && words.length <= 3) {
+        if (isPhraseSignificant(text)) {
+          allPhrases.push({ text, length: words.length });
+        }
+      }
+    }
+
+    console.log(`[KDI] extracted ${allPhrases.length} significant phrases`);
+    return allPhrases;
+  } catch (err) {
+    console.warn('[KDI] extraction failed:', err.message);
+    return [];
+  }
+}
+
+// Extract from ZUM with phrase focus
+async function extractZumSignificantPhrases() {
+  try {
+    const keywords = await fetchInvestZumIssueKeywords({ maxEntries: 50 });
+    const allPhrases = [];
+
+    // ZUM gives us company names - enhance with context from page
+    const response = await fetchTextWithFallback([
+      { url: 'https://invest.zum.com/', headers: { Accept: 'text/html' } }
+    ], { timeoutMs: 8000, label: 'ZUM phrases' });
+
+    if (response) {
+      const phrases = extractSignificantPhrases(response);
+      allPhrases.push(...phrases);
+    }
+
+    console.log(`[ZUM] extracted ${allPhrases.length} significant phrases`);
+    return allPhrases;
+  } catch (err) {
+    console.warn('[ZUM] extraction failed:', err.message);
+    return [];
+  }
+}
+
+// Main collection function
+export async function collectSignificantPhrases({ targetCount = 30 } = {}) {
+  console.log('[Significance] Collecting newsworthy 2-3 word phrases...');
+
+  const collectors = [
+    extractNaverNewsSignificantPhrases(),
+    extractKDISignificantPhrases(),
+    extractZumSignificantPhrases()
+  ];
+
+  const results = await Promise.allSettled(collectors);
+  const allPhrases = [];
+
+  for (const result of results) {
+    if (result.status === 'fulfilled' && Array.isArray(result.value)) {
+      allPhrases.push(...result.value);
+    }
+  }
+
+  console.log(`[Significance] collected ${allPhrases.length} total phrases`);
+
+  // Score by significance
+  const scored = scorePhrasesbySignificance(allPhrases);
+
+  console.log('[Significance] Top 20 by significance score:');
+  scored.slice(0, 20).forEach((p, i) => {
+    console.log(`  ${i + 1}. "${p.text}" - score: ${p.score}, count: ${p.count}`);
+  });
+
+  // Return top N
+  return scored.slice(0, targetCount).map(p => ({
+    term_ko: p.text,
+    score: p.score,
+    count: p.count,
+    length: p.length,
+    source: 'significance_analysis'
+  }));
+}
+
+// Write output
+export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE } = {}) {
+  const phrases = await collectSignificantPhrases({ targetCount: 30 });
+
+  if (!phrases.length) {
+    console.error('[Significance] No significant phrases found');
+    return null;
+  }
+
+  // For now, keep Korean only (you'll fix translation later)
+  const payload = {
+    date: new Date().toISOString().slice(0, 10),
+    window: '5_hours',
+    total_phrases: phrases.length,
+    discovered_keywords: phrases.map(p => ({
+      term: p.term_ko, // Keep Korean for now
+      term_ko: p.term_ko,
+      significance_score: p.score,
+      mentions: p.count
+    })),
+    metadata: {
+      collection_method: 'significance_over_frequency',
+      phrase_length: '2-3 words',
+      scoring: 'signal_words + context_relevance',
+      generated_at: new Date().toISOString()
+    }
+  };
+
+  ensureDirFor(outputPath);
+  await fsp.writeFile(outputPath, JSON.stringify(payload, null, 2));
+
+  console.log(`[Significance] wrote ${phrases.length} significant phrases`);
+  return payload;
+}
 function buildDiscoveredKeywordsFromStats(tagStats, { limit = 50 } = {}) {
   if (!tagStats || typeof tagStats.size !== 'number' || tagStats.size === 0) return [];
   const entries = [];
@@ -4426,6 +4738,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     writeKoreanFirstTagsJson().catch(e => { console.error(e); process.exit(1); });
   } else if (process.argv.includes('--build-keywords')) {
     buildMarketKeywordSnapshot().catch(e => { console.error(e); process.exit(1); });
+  } else if (process.argv.includes('--significant-phrases')) {
+    writeSignificantPhrasesJson().catch(e => { console.error(e); process.exit(1); });
   }
 }
 
