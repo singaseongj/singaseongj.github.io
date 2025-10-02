@@ -191,50 +191,16 @@ const TAG_KO_DICTIONARY = new Map(Object.entries({
 const EIEC_TREND_URL = 'https://eiec.kdi.re.kr/bigdata/issueTrend.do?cat=%EC%A0%84%EC%B2%B4';
 const INVEST_ZUM_URL = 'https://invest.zum.com/';
 
+const DATALAB_KEYWORD_COUNT = Number(process.env.DATALAB_KEYWORD_COUNT || 10);
+
 const DATALAB_TREND_KEYWORDS = [
   {
     text: { ko: 'AI 반도체 투자', en: 'AI semiconductor investment' },
     datalabKeyword: 'AI 반도체 투자',
     markets: ['KOSPI', 'NASDAQ 100'],
     articleQueries: [
-      { query: 'AI 반도체 투자', locales: ['ko'] },
-      { query: 'AI semiconductor investment', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '친환경 에너지 전환', en: 'Green energy transition' },
-    datalabKeyword: '친환경 에너지',
-    markets: ['KOSDAQ', 'S&P 500'],
-    articleQueries: [
-      { query: '친환경 에너지', locales: ['ko'] },
-      { query: 'Green energy transition', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '원달러 환율 안정', en: 'KRW USD stability' },
-    datalabKeyword: '원달러 환율',
-    markets: ['KOSPI'],
-    articleQueries: [
-      { query: '원달러 환율', locales: ['ko'] },
-      { query: 'KRW USD stability', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '바이오 헬스케어 혁신', en: 'Bio healthcare innovation' },
-    datalabKeyword: '바이오 헬스케어',
-    markets: ['KOSDAQ', 'NASDAQ 100'],
-    articleQueries: [
-      { query: '바이오 헬스케어', locales: ['ko'] },
-      { query: 'Bio healthcare innovation', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: 'IT 서비스 업황', en: 'IT services outlook' },
-    datalabKeyword: 'IT 서비스 업황',
-    markets: ['KOSPI', 'S&P 500'],
-    articleQueries: [
-      { query: 'IT 서비스 업황', locales: ['ko'] },
-      { query: 'IT services outlook', locales: ['en'] }
+      { query: 'AI 반도체 투자', locales: ['ko'] }
+      // EN 쿼리 제거하여 API 호출 절반으로
     ]
   },
   {
@@ -242,35 +208,31 @@ const DATALAB_TREND_KEYWORDS = [
     datalabKeyword: '반도체 공급망',
     markets: ['NASDAQ 100', 'S&P 500'],
     articleQueries: [
-      { query: '반도체 공급망', locales: ['ko'] },
-      { query: 'Semiconductor supply chain', locales: ['en'] }
+      { query: '반도체 공급망', locales: ['ko'] }
     ]
   },
   {
-    text: { ko: '2차전지 소재 수요', en: 'Battery materials demand' },
+    text: { ko: '원달러 환율', en: 'KRW USD stability' },
+    datalabKeyword: '원달러 환율',
+    markets: ['KOSPI'],
+    articleQueries: [
+      { query: '원달러 환율', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: '2차전지 소재', en: 'Battery materials demand' },
     datalabKeyword: '2차전지 소재',
     markets: ['KOSDAQ'],
     articleQueries: [
-      { query: '2차전지 소재', locales: ['ko'] },
-      { query: 'Battery materials demand', locales: ['en'] }
+      { query: '2차전지 소재', locales: ['ko'] }
     ]
   },
   {
-    text: { ko: '미국 CPI 전망', en: 'US CPI outlook' },
-    datalabKeyword: '미국 CPI',
-    markets: ['S&P 500'],
+    text: { ko: '바이오 헬스케어', en: 'Bio healthcare innovation' },
+    datalabKeyword: '바이오 헬스케어',
+    markets: ['KOSDAQ', 'NASDAQ 100'],
     articleQueries: [
-      { query: '미국 CPI', locales: ['ko'] },
-      { query: 'US CPI outlook', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '환율 변동성', en: 'FX volatility' },
-    datalabKeyword: '환율 변동성',
-    markets: ['KOSPI'],
-    articleQueries: [
-      { query: '환율 변동성', locales: ['ko'] },
-      { query: 'FX volatility', locales: ['en'] }
+      { query: '바이오 헬스케어', locales: ['ko'] }
     ]
   },
   {
@@ -278,11 +240,43 @@ const DATALAB_TREND_KEYWORDS = [
     datalabKeyword: '미 연준 금리',
     markets: ['S&P 500'],
     articleQueries: [
-      { query: '미 연준 금리', locales: ['ko'] },
-      { query: 'US Fed rate', locales: ['en'] }
+      { query: '미 연준 금리', locales: ['ko'] }
+    ]
+  },
+  // 나머지 4개는 조건부로만 사용
+  {
+    text: { ko: '친환경 에너지', en: 'Green energy transition' },
+    datalabKeyword: '친환경 에너지',
+    markets: ['KOSDAQ', 'S&P 500'],
+    articleQueries: [
+      { query: '친환경 에너지', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: 'IT 서비스 업황', en: 'IT services outlook' },
+    datalabKeyword: 'IT 서비스 업황',
+    markets: ['KOSPI', 'S&P 500'],
+    articleQueries: [
+      { query: 'IT 서비스 업황', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: '미국 CPI', en: 'US CPI outlook' },
+    datalabKeyword: '미국 CPI',
+    markets: ['S&P 500'],
+    articleQueries: [
+      { query: '미국 CPI', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: '환율 변동성', en: 'FX volatility' },
+    datalabKeyword: '환율 변동성',
+    markets: ['KOSPI'],
+    articleQueries: [
+      { query: '환율 변동성', locales: ['ko'] }
     ]
   }
-];
+].slice(0, DATALAB_KEYWORD_COUNT);
 
 const STOPWORDS_EN = new Set([
   'the','and','for','with','from','that','this','have','has','into','over','under','after','before','will','would','could','should',
@@ -1593,6 +1587,9 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   const collected = [];
   const articleTextMap = new Map();
   const articleKeySet = new Set();
+
+  // Limit heavy collection runs; cap actual target at 50
+  const actualTarget = Math.min(targetCount, 50);
   if (!NEWSDATA_API_KEY) {
     console.warn('[keywords] NEWSDATA_API_KEY missing; skipping tag collection');
     return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
@@ -1607,7 +1604,13 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   let consecutive429 = 0;
 
   let abortedByRateLimit = false;
+
   for (const cfg of queries) {
+    // Early exit once enough variety is collected
+    if (collected.length >= actualTarget && stats.size >= 10) {
+      console.log(`[keywords] early exit: collected ${collected.length}/${actualTarget} tags with ${stats.size} unique terms`);
+      break;
+    }
     try {
       const articles = await newsdataArchiveFetch({
         q: cfg.query,
@@ -1645,7 +1648,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
             markets: cfg.markets,
             sourceLabel: cfg.source,
             collected,
-            targetCount
+            targetCount: actualTarget
           });
           if (recorded) {
             queryRecorded = true;
@@ -1663,7 +1666,8 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
           console.warn(`[keywords] rate limited while collecting tags; waiting ${waitMs}ms before continuing`);
           await sleep(waitMs);
         }
-        const MAX_CONSECUTIVE_429 = 6;
+        // Reduce the maximum consecutive rate-limit retries to react faster
+        const MAX_CONSECUTIVE_429 = 3;
         if (consecutive429 >= MAX_CONSECUTIVE_429) {
           console.warn(`[keywords] aborting tag collection after ${consecutive429} consecutive rate limits`);
           abortedByRateLimit = true;
@@ -1671,7 +1675,8 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
         }
       }
     }
-    if (collected.length >= targetCount && stats.size >= 10) break;
+    // Check for early exit again after processing the query batch
+    if (collected.length >= actualTarget && stats.size >= 10) break;
   }
 
   if (abortedByRateLimit && fallbackSnapshot) {
@@ -1680,7 +1685,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
       console.warn(`[keywords] falling back to snapshot after repeated rate limits (${consecutive429})`);
       const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
       return {
-        tags: fallbackTags.slice(0, targetCount),
+        tags: fallbackTags.slice(0, actualTarget),
         stats: fallbackStats,
         fallbackUsed: true,
         articleTexts: Array.from(articleTextMap.values()),
@@ -1690,11 +1695,11 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
     }
   }
 
-  if (stats.size && collected.length < targetCount) {
+  if (stats.size && collected.length < actualTarget) {
     const entries = [...stats.values()]
       .sort((a, b) => (b.count - a.count) || chooseTagDisplay(a).localeCompare(chooseTagDisplay(b)));
     let idx = 0;
-    while (collected.length < targetCount && entries.length) {
+    while (collected.length < actualTarget && entries.length) {
       const entry = entries[idx % entries.length];
       collected.push(chooseTagDisplay(entry));
       idx += 1;
@@ -1707,7 +1712,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
       console.warn(`[keywords] using fallback tags snapshot with ${fallbackTags.length} tags`);
       const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
       return {
-        tags: fallbackTags.slice(0, targetCount),
+        tags: fallbackTags.slice(0, actualTarget),
         stats: fallbackStats,
         fallbackUsed: true,
         articleTexts: Array.from(articleTextMap.values()),
@@ -1718,7 +1723,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   }
 
   return {
-    tags: collected.slice(0, targetCount),
+    tags: collected.slice(0, actualTarget),
     stats,
     fallbackUsed: false,
     articleTexts: Array.from(articleTextMap.values()),
