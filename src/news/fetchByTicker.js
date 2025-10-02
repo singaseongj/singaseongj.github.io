@@ -188,6 +188,9 @@ const TAG_KO_DICTIONARY = new Map(Object.entries({
   'venture capital': '벤처 투자'
 }));
 
+const EIEC_TREND_URL = 'https://eiec.kdi.re.kr/bigdata/issueTrend.do?cat=%EC%A0%84%EC%B2%B4';
+const INVEST_ZUM_URL = 'https://invest.zum.com/';
+
 const DATALAB_TREND_KEYWORDS = [
   {
     text: { ko: 'AI 반도체 투자', en: 'AI semiconductor investment' },
@@ -1179,23 +1182,257 @@ async function runKrWordRankCollector({ limit = 30, queries = [] } = {}) {
   });
 }
 
+async function fetchTextWithFallback(attempts = [], { timeoutMs = 8000, label = 'source' } = {}) {
+  for (const attempt of attempts) {
+    if (!attempt || !attempt.url) continue;
+    const headers = { ...defaultHeaders, ...(attempt.headers || {}) };
+    const attemptTimeout = Number.isFinite(attempt.timeoutMs)
+      ? Math.max(0, Number(attempt.timeoutMs))
+      : timeoutMs;
+    const controller = attemptTimeout > 0 ? new AbortController() : null;
+    let timer = null;
+    if (controller && attemptTimeout > 0) {
+      timer = setTimeout(() => controller.abort(), attemptTimeout);
+    }
+    try {
+      const res = await fetch(attempt.url, {
+        headers,
+        signal: controller ? controller.signal : undefined,
+        redirect: attempt.redirect || 'follow'
+      });
+      if (timer) clearTimeout(timer);
+      if (!res.ok) {
+        console.warn(`[keywords] ${label} request to ${attempt.url} returned status ${res.status}`);
+        continue;
+      }
+      const text = await res.text();
+      if (text && text.trim()) {
+        return text;
+      }
+    } catch (err) {
+      if (timer) clearTimeout(timer);
+      if (err?.name === 'AbortError') {
+        console.warn(`[keywords] ${label} request to ${attempt.url} timed out after ${attemptTimeout || timeoutMs}ms`);
+      } else {
+        console.warn(`[keywords] failed to fetch ${label} from ${attempt.url}:`, err?.message || err);
+      }
+    }
+  }
+  return '';
+}
+
+function normalizeKoKeywordTerm(value) {
+  return String(value || '')
+    .replace(/\u00A0/g, ' ')
+    .replace(/\r/g, ' ')
+    .replace(/[\[\]{}]/g, ' ')
+    .replace(/[<>]/g, ' ')
+    .replace(/[`*_]/g, ' ')
+    .replace(/[()]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function parseEIECKeywordText(text, { maxEntries = 60 } = {}) {
+  if (!text) return [];
+  const plain = String(text)
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\*\*/g, ' ')
+    .replace(/__+/g, ' ')
+    .replace(/\u00A0/g, ' ');
+  const lines = plain
+    .split(/\n|\r/)
+    .map(line => line.trim())
+    .filter(Boolean);
+  const keywords = [];
+  let currentPeriod = '';
+  for (const rawLine of lines) {
+    const line = rawLine.replace(/\s+/g, ' ').trim();
+    if (!line) continue;
+    const periodMatch = line.match(/^(\d{4}\.\d{1,2})$/);
+    if (periodMatch) {
+      currentPeriod = periodMatch[1];
+      continue;
+    }
+    const entryMatch = line.match(/^(\d+)\.\s+(\d+)\s+(.+)$/);
+    if (!entryMatch) continue;
+    let termPart = entryMatch[3].trim();
+    let count = 0;
+    const countMatch = termPart.match(/(\d{1,3}(?:,\d{3})*)\s*$/);
+    if (countMatch) {
+      count = Number(countMatch[1].replace(/,/g, ''));
+      termPart = termPart.slice(0, countMatch.index).trim();
+    }
+    termPart = termPart
+      .replace(/\bNEW\b/gi, ' ')
+      .replace(/\bpick\b/gi, ' ')
+      .replace(/\bpick_\b/gi, ' ')
+      .replace(/\s+-\s*$/, ' ')
+      .replace(/[_*]/g, ' ')
+      .replace(/[()]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const normalized = normalizeKoKeywordTerm(termPart);
+    if (!normalized || !hasHangulText(normalized)) continue;
+    const weight = Number.isFinite(count) && count > 0 ? count : 1;
+    keywords.push({
+      term: '',
+      term_ko: normalized,
+      score: weight,
+      count: weight,
+      period: currentPeriod,
+      source: 'eiec'
+    });
+    if (maxEntries > 0 && keywords.length >= maxEntries) break;
+  }
+  return keywords;
+}
+
+async function fetchEIECEconomyKeywords({ maxEntries = 60 } = {}) {
+  const text = await fetchTextWithFallback([
+    { url: EIEC_TREND_URL, headers: { Accept: 'text/html,application/xhtml+xml;q=0.9' } },
+    { url: `https://r.jina.ai/${EIEC_TREND_URL}`, headers: { Accept: 'text/markdown,text/plain;q=0.9' } }
+  ], { timeoutMs: 9000, label: 'EIEC keyword trend' });
+  if (!text) return [];
+  return parseEIECKeywordText(text, { maxEntries });
+}
+
+function parseInvestZumKeywordText(text, { maxEntries = 40 } = {}) {
+  if (!text) return [];
+  const plain = String(text)
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\u00A0/g, ' ')
+    .replace(/\*\*/g, ' ')
+    .replace(/__+/g, ' ');
+  const anchor = plain.includes('오늘의 이슈 종목')
+    ? plain.slice(plain.indexOf('오늘의 이슈 종목'))
+    : plain;
+  const tailIndex = anchor.indexOf('ZUM에서 제공');
+  const segment = tailIndex > 0 ? anchor.slice(0, tailIndex) : anchor;
+  const regex = /\]\s*([^\]\$\n]+?)\s*\$[\d,.]+/g;
+  const map = new Map();
+  let match;
+  while ((match = regex.exec(segment)) !== null) {
+    let name = match[1] || '';
+    name = name.replace(/[!()[\]]/g, ' ').replace(/\s+/g, ' ').trim();
+    const normalized = normalizeKoKeywordTerm(name);
+    if (!normalized || !hasHangulText(normalized)) continue;
+    const key = normalized.toLowerCase();
+    const existing = map.get(key);
+    if (existing) {
+      existing.count += 1;
+      existing.score = Math.max(existing.score, existing.count);
+    } else {
+      map.set(key, { term: '', term_ko: normalized, score: 1, count: 1, source: 'invest-zum' });
+      if (maxEntries > 0 && map.size >= maxEntries) break;
+    }
+  }
+  return Array.from(map.values());
+}
+
+async function fetchInvestZumIssueKeywords({ maxEntries = 40 } = {}) {
+  const text = await fetchTextWithFallback([
+    { url: INVEST_ZUM_URL, headers: { Accept: 'text/html,application/xhtml+xml;q=0.9' } },
+    { url: `https://r.jina.ai/${INVEST_ZUM_URL}`, headers: { Accept: 'text/markdown,text/plain;q=0.9' } }
+  ], { timeoutMs: 9000, label: 'Invest ZUM issues' });
+  if (!text) return [];
+  return parseInvestZumKeywordText(text, { maxEntries });
+}
+
 async function collectEconomyKoKeywords({ limit = 30 } = {}) {
-  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) return [];
-  const queries = [
-    '경제',
-    '증시',
-    '산업 동향',
-    '비즈니스 뉴스',
-    '금융 시장'
-  ];
-  const result = await runKrWordRankCollector({ limit, queries });
-  if (!result || !Array.isArray(result?.keywords)) return [];
-  return result.keywords.map(entry => ({
-    term: entry?.term || entry?.term_en || '',
-    term_ko: entry?.term_ko || entry?.term || '',
-    score: Number(entry?.score ?? entry?.weight ?? 0),
-    count: Number(entry?.count ?? 0)
+  const aggregated = new Map();
+  const pushKeyword = (entry = {}) => {
+    const rawKo = entry.term_ko || entry.term || '';
+    const normalizedKo = normalizeKoKeywordTerm(rawKo);
+    if (!normalizedKo || !hasHangulText(normalizedKo)) return;
+    const key = normalizedKo.toLowerCase();
+    const rawScore = Number(entry.score);
+    const rawCount = Number(entry.count);
+    const weight = (Number.isFinite(rawScore) && rawScore > 0)
+      ? rawScore
+      : (Number.isFinite(rawCount) && rawCount > 0 ? rawCount : 1);
+    const source = entry.source ? String(entry.source) : '';
+    const enTerm = entry.term && entry.term !== normalizedKo ? entry.term : '';
+    if (aggregated.has(key)) {
+      const existing = aggregated.get(key);
+      if (enTerm && (!existing.term || existing.term === existing.term_ko)) {
+        existing.term = enTerm;
+      }
+      existing.count += weight;
+      if (weight > existing.score) {
+        existing.score = weight;
+      }
+      if (source) existing.sources.add(source);
+    } else {
+      aggregated.set(key, {
+        term: enTerm,
+        term_ko: normalizedKo,
+        score: weight,
+        count: weight,
+        sources: new Set(source ? [source] : [])
+      });
+    }
+  };
+
+  const supplementalLimit = limit && Number.isFinite(limit) ? limit : 30;
+  const eiecKeywords = await fetchEIECEconomyKeywords({ maxEntries: supplementalLimit * 3 });
+  for (const item of eiecKeywords) {
+    pushKeyword(item);
+  }
+
+  const zumKeywords = await fetchInvestZumIssueKeywords({ maxEntries: supplementalLimit * 2 });
+  for (const item of zumKeywords) {
+    pushKeyword(item);
+  }
+
+  if (NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
+    const queries = [
+      '경제',
+      '증시',
+      '산업 동향',
+      '비즈니스 뉴스',
+      '금융 시장'
+    ];
+    const result = await runKrWordRankCollector({ limit: supplementalLimit, queries });
+    if (result && Array.isArray(result?.keywords)) {
+      for (const entry of result.keywords) {
+        pushKeyword({
+          term: entry?.term || entry?.term_en || '',
+          term_ko: entry?.term_ko || entry?.term || '',
+          score: Number(entry?.score ?? entry?.weight ?? 0),
+          count: Number(entry?.count ?? 0),
+          source: 'krwordrank'
+        });
+      }
+    }
+  } else {
+    console.warn('[keywords] NAVER credentials missing; skipping KR-WordRank collector');
+  }
+
+  let results = Array.from(aggregated.values()).map(entry => ({
+    term: entry.term,
+    term_ko: entry.term_ko,
+    score: Number(entry.score) || Number(entry.count) || 1,
+    count: Number(entry.count) || Number(entry.score) || 1,
+    source: entry.sources.size ? Array.from(entry.sources).join('+') : undefined
   }));
+
+  results = results.filter(entry => entry.term_ko);
+  results.sort((a, b) => {
+    if ((b.count || 0) !== (a.count || 0)) return (b.count || 0) - (a.count || 0);
+    if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
+    return a.term_ko.localeCompare(b.term_ko, 'ko');
+  });
+
+  if (limit && Number.isFinite(limit) && results.length > limit) {
+    results = results.slice(0, limit);
+  }
+
+  return results;
 }
 
 function chooseTagDisplay(entry) {
@@ -1745,7 +1982,8 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   for (const entry of koKeywordBoost) {
     const koTerm = entry?.term_ko || entry?.term || '';
     const enTerm = entry?.term && entry.term !== koTerm ? entry.term : '';
-    await addKoreanCandidate(koTerm, enTerm, { translator: 'krwordrank' });
+    const translatorLabel = String(entry?.source || '').trim() || 'krwordrank';
+    await addKoreanCandidate(koTerm, enTerm, { translator: translatorLabel });
   }
 
   for (const item of discovered) {
