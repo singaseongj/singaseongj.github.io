@@ -711,6 +711,7 @@ function sanitizeSeriesPoints(points, year) {
   const byDay = new Map();
   for (const point of points) {
     if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
+    if (point.v <= 0) continue;
     const d = new Date(point.t);
     if (!Number.isFinite(d.getTime())) continue;
     if (Number.isFinite(year) && d.getFullYear() !== year) continue;
@@ -1348,9 +1349,36 @@ async function updateHistory(snapshot, options = {}) {
   for (const [key, series] of Object.entries(extraSeries)) {
     if (!SERIES_KEYS.includes(key)) continue;
     const sanitized = sanitizeSeriesPoints(series, year);
+    
     if (sanitized.length) {
-      yearHistory.series[key] = sanitized;
-      extraSeriesLatest.push(sanitized[sanitized.length - 1].t);
+      // 기존 데이터를 완전히 교체하는 대신 병합
+      const existing = yearHistory.series[key] ?? [];
+      const merged = [...existing];
+
+      for (const newPoint of sanitized) {
+        const dayKey = newPoint.t.slice(0, 10);
+        const existingIdx = merged.findIndex(p => p.t.slice(0, 10) === dayKey);
+
+        if (existingIdx >= 0) {
+          // 같은 날짜가 있으면 새 값으로 업데이트 (값이 유효한 경우만)
+          if (newPoint.v > 0) {  // ✓ 0 값 체크 추가
+            merged[existingIdx] = newPoint;
+          }
+        } else {
+          // 새로운 날짜면 추가 (값이 유효한 경우만)
+          if (newPoint.v > 0) {  // ✓ 0 값 체크 추가
+            merged.push(newPoint);
+          }
+        }
+      }
+
+      merged.sort((a, b) => new Date(a.t) - new Date(b.t));
+      yearHistory.series[key] = merged;
+
+      const validLatest = merged.filter(p => p.v > 0);
+      if (validLatest.length) {
+        extraSeriesLatest.push(validLatest[validLatest.length - 1].t);
+      }
     }
   }
 

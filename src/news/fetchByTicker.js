@@ -5,6 +5,7 @@ import { spawn } from 'child_process';
 import { restClient } from '@polygon.io/client-js';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
+import { parse } from 'node-html-parser';
 import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
@@ -123,7 +124,6 @@ const KEYWORD_MARKET_QUERIES = [
 ];
 
 const TAG_OUTPUT_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
-const TAG_TARGET_COUNT = Number(process.env.MARKET_TAG_TARGET || 10_000);
 const TAG_COLLECTION_WINDOW_DAYS = Number(process.env.TAG_COLLECTION_LOOKBACK_DAYS || 14);
 const TAG_COLLECTION_PAGE_LIMIT = Number(process.env.TAG_COLLECTION_PAGE_LIMIT || 5);
 const TAG_COLLECTION_PAGE_SIZE = Number(process.env.TAG_COLLECTION_PAGE_SIZE || 40);
@@ -191,50 +191,16 @@ const TAG_KO_DICTIONARY = new Map(Object.entries({
 const EIEC_TREND_URL = 'https://eiec.kdi.re.kr/bigdata/issueTrend.do?cat=%EC%A0%84%EC%B2%B4';
 const INVEST_ZUM_URL = 'https://invest.zum.com/';
 
+const DATALAB_KEYWORD_COUNT = Number(process.env.DATALAB_KEYWORD_COUNT || 10);
+
 const DATALAB_TREND_KEYWORDS = [
   {
     text: { ko: 'AI 반도체 투자', en: 'AI semiconductor investment' },
     datalabKeyword: 'AI 반도체 투자',
     markets: ['KOSPI', 'NASDAQ 100'],
     articleQueries: [
-      { query: 'AI 반도체 투자', locales: ['ko'] },
-      { query: 'AI semiconductor investment', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '친환경 에너지 전환', en: 'Green energy transition' },
-    datalabKeyword: '친환경 에너지',
-    markets: ['KOSDAQ', 'S&P 500'],
-    articleQueries: [
-      { query: '친환경 에너지', locales: ['ko'] },
-      { query: 'Green energy transition', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '원달러 환율 안정', en: 'KRW USD stability' },
-    datalabKeyword: '원달러 환율',
-    markets: ['KOSPI'],
-    articleQueries: [
-      { query: '원달러 환율', locales: ['ko'] },
-      { query: 'KRW USD stability', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '바이오 헬스케어 혁신', en: 'Bio healthcare innovation' },
-    datalabKeyword: '바이오 헬스케어',
-    markets: ['KOSDAQ', 'NASDAQ 100'],
-    articleQueries: [
-      { query: '바이오 헬스케어', locales: ['ko'] },
-      { query: 'Bio healthcare innovation', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: 'IT 서비스 업황', en: 'IT services outlook' },
-    datalabKeyword: 'IT 서비스 업황',
-    markets: ['KOSPI', 'S&P 500'],
-    articleQueries: [
-      { query: 'IT 서비스 업황', locales: ['ko'] },
-      { query: 'IT services outlook', locales: ['en'] }
+      { query: 'AI 반도체 투자', locales: ['ko'] }
+      // EN 쿼리 제거하여 API 호출 절반으로
     ]
   },
   {
@@ -242,35 +208,31 @@ const DATALAB_TREND_KEYWORDS = [
     datalabKeyword: '반도체 공급망',
     markets: ['NASDAQ 100', 'S&P 500'],
     articleQueries: [
-      { query: '반도체 공급망', locales: ['ko'] },
-      { query: 'Semiconductor supply chain', locales: ['en'] }
+      { query: '반도체 공급망', locales: ['ko'] }
     ]
   },
   {
-    text: { ko: '2차전지 소재 수요', en: 'Battery materials demand' },
+    text: { ko: '원달러 환율', en: 'KRW USD stability' },
+    datalabKeyword: '원달러 환율',
+    markets: ['KOSPI'],
+    articleQueries: [
+      { query: '원달러 환율', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: '2차전지 소재', en: 'Battery materials demand' },
     datalabKeyword: '2차전지 소재',
     markets: ['KOSDAQ'],
     articleQueries: [
-      { query: '2차전지 소재', locales: ['ko'] },
-      { query: 'Battery materials demand', locales: ['en'] }
+      { query: '2차전지 소재', locales: ['ko'] }
     ]
   },
   {
-    text: { ko: '미국 CPI 전망', en: 'US CPI outlook' },
-    datalabKeyword: '미국 CPI',
-    markets: ['S&P 500'],
+    text: { ko: '바이오 헬스케어', en: 'Bio healthcare innovation' },
+    datalabKeyword: '바이오 헬스케어',
+    markets: ['KOSDAQ', 'NASDAQ 100'],
     articleQueries: [
-      { query: '미국 CPI', locales: ['ko'] },
-      { query: 'US CPI outlook', locales: ['en'] }
-    ]
-  },
-  {
-    text: { ko: '환율 변동성', en: 'FX volatility' },
-    datalabKeyword: '환율 변동성',
-    markets: ['KOSPI'],
-    articleQueries: [
-      { query: '환율 변동성', locales: ['ko'] },
-      { query: 'FX volatility', locales: ['en'] }
+      { query: '바이오 헬스케어', locales: ['ko'] }
     ]
   },
   {
@@ -278,11 +240,43 @@ const DATALAB_TREND_KEYWORDS = [
     datalabKeyword: '미 연준 금리',
     markets: ['S&P 500'],
     articleQueries: [
-      { query: '미 연준 금리', locales: ['ko'] },
-      { query: 'US Fed rate', locales: ['en'] }
+      { query: '미 연준 금리', locales: ['ko'] }
+    ]
+  },
+  // 나머지 4개는 조건부로만 사용
+  {
+    text: { ko: '친환경 에너지', en: 'Green energy transition' },
+    datalabKeyword: '친환경 에너지',
+    markets: ['KOSDAQ', 'S&P 500'],
+    articleQueries: [
+      { query: '친환경 에너지', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: 'IT 서비스 업황', en: 'IT services outlook' },
+    datalabKeyword: 'IT 서비스 업황',
+    markets: ['KOSPI', 'S&P 500'],
+    articleQueries: [
+      { query: 'IT 서비스 업황', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: '미국 CPI', en: 'US CPI outlook' },
+    datalabKeyword: '미국 CPI',
+    markets: ['S&P 500'],
+    articleQueries: [
+      { query: '미국 CPI', locales: ['ko'] }
+    ]
+  },
+  {
+    text: { ko: '환율 변동성', en: 'FX volatility' },
+    datalabKeyword: '환율 변동성',
+    markets: ['KOSPI'],
+    articleQueries: [
+      { query: '환율 변동성', locales: ['ko'] }
     ]
   }
-];
+].slice(0, DATALAB_KEYWORD_COUNT);
 
 const STOPWORDS_EN = new Set([
   'the','and','for','with','from','that','this','have','has','into','over','under','after','before','will','would','could','should',
@@ -1588,145 +1582,462 @@ function rebuildTagStatsFromSnapshot(snapshot) {
   return stats;
 }
 
-async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapshot = null } = {}) {
-  const stats = new Map();
-  const collected = [];
-  const articleTextMap = new Map();
-  const articleKeySet = new Set();
-  if (!NEWSDATA_API_KEY) {
-    console.warn('[keywords] NEWSDATA_API_KEY missing; skipping tag collection');
-    return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
+// ============= Yahoo Finance News scraper =============
+async function fetchYahooFinanceTopics() {
+  const topics = new Set();
+
+  try {
+    const rssUrl = 'https://finance.yahoo.com/news/rssindex';
+    const xml = await fetchTextWithFallback([
+      { url: rssUrl, headers: { Accept: 'application/rss+xml' } }
+    ], { timeoutMs: 8000, label: 'Yahoo Finance RSS' });
+
+    if (!xml) return [];
+
+    const titleMatches = xml.match(/<title>(?:<!\[CDATA\[)?([^<]+)(?:\]\]>)?<\/title>/gi) || [];
+    for (const match of titleMatches.slice(2)) {
+      const text = match
+        .replace(/<!\[CDATA\[|\]\]>/g, '')
+        .replace(/<[^>]*>/g, '')
+        .trim();
+
+      if (text.length > 10 && text.length < 150) {
+        const keywords = extractEnglishKeywords(text);
+        keywords.forEach(k => {
+          if (k.token.length >= 3) topics.add(k.token);
+        });
+      }
+    }
+  } catch (err) {
+    console.warn('[keywords] Yahoo Finance RSS failed:', err.message);
   }
 
-  const queries = buildTagQueryConfigs();
-  if (!queries.length) return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
+  return Array.from(topics).slice(0, 30);
+}
 
-  const fromDate = daysAgo(TAG_COLLECTION_WINDOW_DAYS);
-  const toDate = daysAgo(0);
-  let recordedCount = 0;
-  let consecutive429 = 0;
+// ============= Google News RSS scraper =============
+async function fetchGoogleNewsTopics() {
+  const topics = new Set();
+  const rssUrls = [
+    'https://news.google.com/rss/search?q=stock+market&hl=en-US&gl=US&ceid=US:en',
+    'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB?hl=en-US&gl=US&ceid=US:en', // Business
+    'https://news.google.com/rss/search?q=KOSPI+OR+KOSDAQ&hl=ko&gl=KR&ceid=KR:ko',
+  ];
 
-  let abortedByRateLimit = false;
-  for (const cfg of queries) {
+  for (const url of rssUrls) {
     try {
-      const articles = await newsdataArchiveFetch({
-        q: cfg.query,
-        languages: ['en'],
-        fromDate,
-        toDate,
-        size: TAG_COLLECTION_PAGE_SIZE,
-        pageLimit: TAG_COLLECTION_PAGE_LIMIT
-      });
-      let queryRecorded = false;
-      for (const article of articles) {
-        const textParts = [];
-        if (article?.title) textParts.push(String(article.title));
-        if (article?.summary) textParts.push(String(article.summary));
-        if (article?.body && article.body !== article.summary) textParts.push(String(article.body));
-        const combined = textParts.join(' ').replace(/\s+/g, ' ').trim();
-        const baseKey = article?.url || `${article?.title || ''}__${article?.publishedAt || ''}`;
-        const articleKey = baseKey || (combined ? combined.slice(0, 120) : '');
-        if (articleKey) {
-          articleKeySet.add(articleKey);
-        }
-        if (combined) {
-          const textKey = articleKey || combined.slice(0, 120);
-          if (textKey && !articleTextMap.has(textKey)) {
-            articleTextMap.set(textKey, combined.slice(0, 5000));
-          }
-        }
-        const tags = Array.isArray(article?.tags) ? article.tags : [];
-        if (!tags.length) continue;
-        for (const rawTag of tags) {
-          const recorded = recordTagStat({
-            stats,
-            tag: rawTag,
-            article,
-            markets: cfg.markets,
-            sourceLabel: cfg.source,
-            collected,
-            targetCount
-          });
-          if (recorded) {
-            queryRecorded = true;
-            recordedCount += 1;
-          }
+      const xml = await fetchTextWithFallback([
+        { url, headers: { Accept: 'application/rss+xml,application/xml,text/xml' } }
+      ], { timeoutMs: 8000, label: 'Google News RSS' });
+
+      if (!xml) continue;
+
+      // Extract titles from RSS
+      const titleMatches = xml.match(/<title>(?:<!\[CDATA\[)?([^<]+)(?:\]\]>)?<\/title>/gi) || [];
+      for (const match of titleMatches) {
+        const text = match
+          .replace(/<!\[CDATA\[|\]\]>/g, '')
+          .replace(/<[^>]*>/g, '')
+          .trim();
+
+        if (text.length > 10 && text.length < 150) {
+          const enKeywords = extractEnglishKeywords(text);
+          enKeywords.forEach(k => topics.add(k.token));
+
+          const koKeywords = extractKoreanKeywords(text);
+          koKeywords.forEach(k => topics.add(k.token));
         }
       }
-      consecutive429 = 0;
+
     } catch (err) {
-      console.warn(`[keywords] failed to collect tags for "${cfg.query}":`, err?.message || err);
-      if (isRateLimitError(err)) {
-        consecutive429 += 1;
-        const waitMs = retryAfterMsFromError(err, Math.min(5000 * consecutive429, 30000));
-        if (waitMs > 0) {
-          console.warn(`[keywords] rate limited while collecting tags; waiting ${waitMs}ms before continuing`);
-          await sleep(waitMs);
+      console.warn('[keywords] Google News RSS fetch failed:', err.message);
+    }
+  }
+
+  return Array.from(topics).slice(0, 30);
+}
+
+// ============= Enhanced Naver DataLab keyword collector =============
+async function fetchNaverDatalabTrendingKeywords({ limit = 20 } = {}) {
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
+
+  if (!NAVER_ID || !NAVER_SECRET) return [];
+
+  // Use shopping/trend keywords as seeds
+  const seedGroups = [
+    { keyword: '반도체', category: 'tech' },
+    { keyword: 'AI', category: 'tech' },
+    { keyword: '2차전지', category: 'tech' },
+    { keyword: '바이오', category: 'health' },
+    { keyword: '금리', category: 'finance' },
+    { keyword: '환율', category: 'finance' },
+    { keyword: '증시', category: 'market' },
+    { keyword: 'IT', category: 'tech' },
+  ];
+
+  const today = new Date();
+  const end = today.toISOString().slice(0, 10);
+  const start = new Date(today.getTime() - 90 * 24 * 3600 * 1000).toISOString().slice(0, 10);
+
+  const results = [];
+
+  for (const batch of chunk(seedGroups, 5)) {
+    try {
+      const res = await fetchNaverDataLabBatch(batch.map(g => ({
+        groupName: g.keyword,
+        keyword: g.keyword
+      })), {
+        startDate: start,
+        endDate: end,
+        timeUnit: 'date',
+        NAVER_ID,
+        NAVER_SECRET
+      });
+
+      for (const group of batch) {
+        const data = res[group.keyword];
+        if (!data) continue;
+
+        const popularity = Number(data.popularity01 || 0);
+        const spike = data.spike ? 1 : 0;
+        const asvi = Number(data.lastAsvi || 0);
+
+        // Weight by popularity + spike
+        const score = popularity * 100 + spike * 20 + Math.max(0, asvi);
+
+        results.push({
+          term_ko: group.keyword,
+          score,
+          source: 'naver-datalab',
+          category: group.category
+        });
+      }
+
+    } catch (err) {
+      console.warn('[keywords] Naver DataLab batch failed:', err.message);
+    }
+  }
+
+  return results
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit);
+}
+
+// ============= KOREAN-FIRST COLLECTION FUNCTIONS =============
+
+const KO_DOMAIN_BOOST = new Set([
+  '반도체', 'AI', '인공지능', '2차전지', '배터리', '전기차', '조선', '해운',
+  '바이오', '제약', '방산', '원자력', 'SMR', '수소', '클라우드', '로봇',
+  '디스플레이', '철강', '자동차', '금리', '환율', '원달러', '연준', 'CPI',
+  '인플레이션', '경기침체', '수출', '무역', 'LNG', '에너지', '친환경',
+  '헬스케어', '메타버스', '블록체인', 'HBM', '파운드리', '메모리'
+]);
+
+async function scrapeDaumRealtimeTrends() {
+  try {
+    const text = await fetchTextWithFallback([
+      { url: 'https://www.daum.net/', headers: { Accept: 'text/html' } }
+    ], { timeoutMs: 8000, label: 'Daum trends' });
+
+    if (!text) return [];
+
+    const root = parse(text);
+    const keywords = [];
+    const selectors = ['.link_favorsch', '.link_txt', '.tit_g'];
+
+    for (const selector of selectors) {
+      const links = root.querySelectorAll(selector);
+      for (const link of links) {
+        const txt = link.text.trim().replace(/^\d+\.?\s*/, '');
+        if (txt && txt.length > 1 && containsHangul(txt) && !STOPWORDS_KO.has(txt)) {
+          keywords.push({
+            term_ko: txt,
+            source: 'daum',
+            score: 20 - keywords.length
+          });
         }
-        const MAX_CONSECUTIVE_429 = 6;
-        if (consecutive429 >= MAX_CONSECUTIVE_429) {
-          console.warn(`[keywords] aborting tag collection after ${consecutive429} consecutive rate limits`);
-          abortedByRateLimit = true;
-          break;
+        if (keywords.length >= 20) break;
+      }
+      if (keywords.length >= 20) break;
+    }
+
+    console.log(`[Daum] collected ${keywords.length} keywords`);
+    return keywords;
+  } catch (err) {
+    console.warn('[Daum] scrape failed:', err.message);
+    return [];
+  }
+}
+
+async function scrapeNateIssueTrends() {
+  try {
+    const text = await fetchTextWithFallback([
+      { url: 'https://news.nate.com/', headers: { Accept: 'text/html' } }
+    ], { timeoutMs: 8000, label: 'Nate trends' });
+
+    if (!text) return [];
+
+    const root = parse(text);
+    const keywords = [];
+    const selectors = ['.mlt01 a', '.ranking a', '.issue a'];
+
+    for (const selector of selectors) {
+      const items = root.querySelectorAll(selector);
+      for (const item of items) {
+        const txt = item.text.trim().replace(/^\d+\.?\s*/, '');
+        if (txt && txt.length > 1 && containsHangul(txt) && !STOPWORDS_KO.has(txt)) {
+          keywords.push({
+            term_ko: txt,
+            source: 'nate',
+            score: 15 - keywords.length
+          });
+        }
+        if (keywords.length >= 15) break;
+      }
+      if (keywords.length >= 15) break;
+    }
+
+    console.log(`[Nate] collected ${keywords.length} keywords`);
+    return keywords;
+  } catch (err) {
+    console.warn('[Nate] scrape failed:', err.message);
+    return [];
+  }
+}
+
+async function extractNaverNewsKeywords() {
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET || SKIP_NAVER) return [];
+
+  const queries = ['증시 동향', '경제 뉴스', '반도체 산업', '2차전지', '금리 전망'];
+  const keywordMap = new Map();
+
+  for (const query of queries) {
+    try {
+      const res = await naverSearch({ query, NAVER_ID: NAVER_CLIENT_ID, NAVER_SECRET: NAVER_CLIENT_SECRET });
+
+      for (const item of res?.items || []) {
+        const title = stripHtml(item.title);
+        const desc = stripHtml(item.description);
+        const text = `${title} ${desc}`;
+
+        const matches = text.match(/[가-힣]{2,4}/g) || [];
+
+        for (const match of matches) {
+          if (STOPWORDS_KO.has(match) || match.length < 2) continue;
+
+          const key = match.toLowerCase();
+          const existing = keywordMap.get(key);
+          if (existing) {
+            existing.score += 1;
+          } else {
+            keywordMap.set(key, {
+              term_ko: match,
+              source: 'naver-news',
+              score: 1
+            });
+          }
         }
       }
-    }
-    if (collected.length >= targetCount && stats.size >= 10) break;
-  }
-
-  if (abortedByRateLimit && fallbackSnapshot) {
-    const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
-    if (fallbackTags.length) {
-      console.warn(`[keywords] falling back to snapshot after repeated rate limits (${consecutive429})`);
-      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
-      return {
-        tags: fallbackTags.slice(0, targetCount),
-        stats: fallbackStats,
-        fallbackUsed: true,
-        articleTexts: Array.from(articleTextMap.values()),
-        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
-        asOfDate: fallbackSnapshot?.date || toDate
-      };
+    } catch (err) {
+      console.warn(`[Naver News] query "${query}" failed:`, err.message);
     }
   }
 
-  if (stats.size && collected.length < targetCount) {
-    const entries = [...stats.values()]
-      .sort((a, b) => (b.count - a.count) || chooseTagDisplay(a).localeCompare(chooseTagDisplay(b)));
-    let idx = 0;
-    while (collected.length < targetCount && entries.length) {
-      const entry = entries[idx % entries.length];
-      collected.push(chooseTagDisplay(entry));
-      idx += 1;
+  const results = Array.from(keywordMap.values())
+    .filter(k => k.score >= 3)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 30);
+
+  console.log(`[Naver News] extracted ${results.length} keywords from ${keywordMap.size} unique terms`);
+  return results;
+}
+
+async function aggregateKoreanKeywords(allKeywords) {
+  const aggregated = new Map();
+
+  for (const kw of allKeywords) {
+    const koTerm = String(kw.term_ko || kw.term || '').trim();
+    if (!koTerm || !containsHangul(koTerm)) continue;
+
+    const key = koTerm.toLowerCase();
+    const existing = aggregated.get(key);
+
+    if (existing) {
+      existing.count += 1;
+      existing.score += Number(kw.score || 1);
+      existing.sources.add(kw.source || 'unknown');
+    } else {
+      aggregated.set(key, {
+        term_ko: koTerm,
+        count: 1,
+        score: Number(kw.score || 1),
+        sources: new Set([kw.source || 'unknown'])
+      });
     }
   }
 
-  if (!recordedCount && fallbackSnapshot) {
-    const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
-    if (fallbackTags.length) {
-      console.warn(`[keywords] using fallback tags snapshot with ${fallbackTags.length} tags`);
-      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
-      return {
-        tags: fallbackTags.slice(0, targetCount),
-        stats: fallbackStats,
-        fallbackUsed: true,
-        articleTexts: Array.from(articleTextMap.values()),
-        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
-        asOfDate: fallbackSnapshot?.date || toDate
-      };
+  let results = Array.from(aggregated.values()).map(item => {
+    const domainBoost = KO_DOMAIN_BOOST.has(item.term_ko) ? 1.5 : 1.0;
+    const diversityBonus = Math.min(item.sources.size, 3) * 0.2;
+
+    return {
+      ...item,
+      sources: Array.from(item.sources),
+      originalScore: item.score,
+      score: item.score * domainBoost * (1 + diversityBonus)
+    };
+  });
+
+  results.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    if (b.count !== a.count) return b.count - a.count;
+    return a.term_ko.localeCompare(b.term_ko, 'ko');
+  });
+
+  return results.slice(0, 50);
+}
+
+async function translateKoreanKeywordToEnglish(koTerm) {
+  const dictResult = translateTagToKo(koTerm);
+  if (dictResult && dictResult !== koTerm) return dictResult;
+
+  const cached = TRANSLATION_CACHE.get(koTerm.toLowerCase());
+  if (cached && cached !== koTerm) return cached;
+
+  if (DEEPL_API_KEY) {
+    try {
+      const deepl = await translateWithDeepL(koTerm, { sourceLang: 'KO', targetLang: 'EN' });
+      if (deepl && deepl !== koTerm) {
+        setTranslationCache(deepl, koTerm);
+        return deepl;
+      }
+    } catch (err) {
+      console.warn(`[DeepL] translation failed for "${koTerm}":`, err.message);
     }
   }
+
+  if (NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
+    try {
+      const papago = await translateWithNaverPapago(koTerm, { sourceLang: 'ko', targetLang: 'en' });
+      if (papago && papago !== koTerm) {
+        setTranslationCache(papago, koTerm);
+        return papago;
+      }
+    } catch (err) {
+      console.warn(`[Papago] translation failed for "${koTerm}":`, err.message);
+    }
+  }
+
+  return koTerm;
+}
+
+export async function collectKoreanFirstKeywords({ targetCount = 30 } = {}) {
+  console.log('[Korean-First] Starting keyword collection...');
+
+  const allKeywords = [];
+
+  const collectors = [
+    scrapeDaumRealtimeTrends(),
+    scrapeNateIssueTrends(),
+    extractNaverNewsKeywords(),
+    fetchInvestZumIssueKeywords({ maxEntries: 40 }),
+    fetchEIECEconomyKeywords({ maxEntries: 60 }),
+  ];
+
+  const results = await Promise.allSettled(collectors);
+
+  for (const result of results) {
+    if (result.status === 'fulfilled' && Array.isArray(result.value)) {
+      allKeywords.push(...result.value);
+    } else if (result.status === 'rejected') {
+      console.warn('[Korean-First] collector failed:', result.reason?.message);
+    }
+  }
+
+  console.log(`[Korean-First] collected ${allKeywords.length} raw keywords`);
+
+  const aggregated = await aggregateKoreanKeywords(allKeywords);
+  console.log(`[Korean-First] aggregated to ${aggregated.length} unique keywords`);
+
+  const topKeywords = aggregated.slice(0, targetCount);
+
+  console.log('[Korean-First] translating to English...');
+  const translatedKeywords = [];
+
+  for (const kw of topKeywords) {
+    const enTerm = await translateKoreanKeywordToEnglish(kw.term_ko);
+    translatedKeywords.push({
+      term: enTerm,
+      term_ko: kw.term_ko,
+      score: kw.score,
+      count: kw.count,
+      sources: kw.sources
+    });
+
+    await new Promise(r => setTimeout(r, 50));
+  }
+
+  console.log(`[Korean-First] completed with ${translatedKeywords.length} keywords`);
 
   return {
-    tags: collected.slice(0, targetCount),
-    stats,
-    fallbackUsed: false,
-    articleTexts: Array.from(articleTextMap.values()),
-    articleCount: articleKeySet.size,
-    asOfDate: toDate
+    keywords: translatedKeywords,
+    totalRaw: allKeywords.length,
+    uniqueTerms: aggregated.length
   };
 }
 
+export async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, preCollected = null } = {}) {
+  const existingSnapshot = readJsonSafe(outputPath) || null;
+
+  primeTranslationCacheFromSnapshot(existingSnapshot);
+
+  const { keywords, totalRaw, uniqueTerms } = preCollected || await collectKoreanFirstKeywords({ targetCount: 30 });
+
+  if (!keywords.length) {
+    console.warn('[Korean-First] no keywords collected, using fallback');
+    if (existingSnapshot) return existingSnapshot;
+    return null;
+  }
+
+  const translations = {};
+  for (const kw of keywords) {
+    if (kw.term && kw.term_ko) {
+      translations[kw.term] = {
+        en: kw.term,
+        ko: kw.term_ko,
+        translator: DEEPL_API_KEY ? 'deepl' : (NAVER_CLIENT_ID ? 'papago' : 'dictionary')
+      };
+    }
+  }
+
+  const now = new Date();
+  const payload = {
+    date: now.toISOString().slice(0, 10),
+    window: '5_hours',
+    total_articles: totalRaw,
+    discovered_keywords: keywords.map(kw => ({
+      term: kw.term,
+      term_ko: kw.term_ko
+    })),
+    translations,
+    metadata: {
+      collection_method: 'korean_first',
+      unique_terms: uniqueTerms,
+      sources_used: Array.from(new Set(keywords.flatMap(k => k.sources))),
+      domain_keywords: keywords.filter(k => KO_DOMAIN_BOOST.has(k.term_ko)).length,
+      generated_at: now.toISOString()
+    }
+  };
+
+  ensureDirFor(outputPath);
+  await fsp.writeFile(outputPath, JSON.stringify(payload, null, 2));
+
+  console.log(`[Korean-First] wrote ${outputPath} with ${keywords.length} keywords`);
+  console.log(`[Korean-First] sources: ${payload.metadata.sources_used.join(', ')}`);
+
+  return payload;
+}
 function buildDiscoveredKeywordsFromStats(tagStats, { limit = 50 } = {}) {
   if (!tagStats || typeof tagStats.size !== 'number' || tagStats.size === 0) return [];
   const entries = [];
@@ -2152,62 +2463,53 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   const existingSnapshot = readJsonSafe(outputPath) || {};
   const existingTagSnapshot = readJsonSafe(TAG_OUTPUT_FILE) || null;
 
-  const { tags: tagCorpus, stats: tagStats, fallbackUsed, articleTexts, articleCount, asOfDate } = await collectTagCorpus({
-    targetCount: TAG_TARGET_COUNT,
-    fallbackSnapshot: existingTagSnapshot
-  });
-  const tagSnapshot = await writeTagsJsonFile(tagCorpus, tagStats, {
-    fallbackSnapshot: existingTagSnapshot,
-    fallbackUsed,
-    articleTexts,
-    articleCount,
-    asOfDate
-  });
-
-  const termKoLookup = buildTermKoLookup(tagSnapshot);
-
-  let keywords = await buildNewsKeywordsFromTagSnapshot(tagSnapshot, tagStats, { limit: 10, koLookup: termKoLookup });
-  if (!keywords.length) {
-    keywords = await buildKeywordsFromTagStats(tagStats, { limit: 10, koLookup: termKoLookup });
+  let collectionResult = { keywords: [], totalRaw: 0, uniqueTerms: 0 };
+  try {
+    collectionResult = await collectKoreanFirstKeywords({ targetCount: 30 });
+  } catch (err) {
+    console.warn('[Korean-First] collection failed:', err.message);
   }
-  if (!keywords.length && Array.isArray(existingSnapshot?.keywords) && existingSnapshot.keywords.length) {
-    console.warn('[keywords] falling back to previous keyword snapshot');
-    const localizedFallback = [];
-    for (const entry of existingSnapshot.keywords) {
-      if (!entry || typeof entry !== 'object') continue;
-      const koTerm = String(entry?.term_ko || '').trim();
-      if (!koTerm || !hasHangulText(koTerm)) continue;
-      const enTerm = formatTagDisplay(entry?.term || '');
-      if (enTerm) {
-        setTranslationCache(enTerm, koTerm);
-      }
-      localizedFallback.push({ term: enTerm || '', term_ko: koTerm });
-      if (localizedFallback.length >= 10) break;
+
+  let tagSnapshot = existingTagSnapshot;
+  try {
+    const snapshot = await writeKoreanFirstTagsJson({ outputPath: TAG_OUTPUT_FILE, preCollected: collectionResult });
+    if (snapshot) {
+      tagSnapshot = snapshot;
     }
-    keywords = localizedFallback;
+  } catch (err) {
+    console.warn('[Korean-First] failed to write tags snapshot:', err.message);
   }
 
-  if (Array.isArray(keywords)) {
-    const deduped = [];
+  const dedupeKeywords = (list = []) => {
+    const out = [];
     const seen = new Set();
-    for (const entry of keywords) {
+    for (const entry of list) {
       if (!entry || typeof entry !== 'object') continue;
-      const koTerm = String(entry.term_ko || '').trim();
-      const key = (koTerm || String(entry.term || '').trim()).toLowerCase();
+      const term = formatTagDisplay(entry.term || '');
+      const termKo = String(entry.term_ko || '').trim();
+      const key = (termKo || term).toLowerCase();
       if (!key || seen.has(key)) continue;
       seen.add(key);
-      deduped.push({ term: String(entry.term || '').trim(), term_ko: koTerm });
-      if (deduped.length >= 10) break;
+      out.push({ term, term_ko: termKo });
+      if (out.length >= 10) break;
     }
-    keywords = deduped;
+    return out;
+  };
+
+  let keywords = dedupeKeywords(collectionResult.keywords);
+
+  if (!keywords.length && Array.isArray(tagSnapshot?.discovered_keywords)) {
+    keywords = dedupeKeywords(tagSnapshot.discovered_keywords);
   }
 
-  const marketSet = new Set();
-  if (tagStats && typeof tagStats.values === 'function') {
-    for (const entry of tagStats.values()) {
-      for (const market of entry.markets || []) {
-        if (market) marketSet.add(market);
-      }
+  if (!keywords.length && Array.isArray(existingSnapshot?.keywords)) {
+    console.warn('[keywords] falling back to previous keyword snapshot');
+    keywords = dedupeKeywords(existingSnapshot.keywords);
+  }
+
+  for (const entry of keywords) {
+    if (entry.term && entry.term_ko) {
+      setTranslationCache(entry.term, entry.term_ko);
     }
   }
 
@@ -2216,10 +2518,7 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   const updatedKo = now.toLocaleString('ko-KR', { timeZone: tz, hour12: false });
   const updatedEn = now.toLocaleString('en-US', { timeZone: tz });
 
-  const derivedMarkets = Array.from(marketSet).sort();
-  const markets = derivedMarkets.length
-    ? derivedMarkets
-    : (Array.isArray(existingSnapshot?.markets) ? existingSnapshot.markets : []);
+  const markets = Array.isArray(existingSnapshot?.markets) ? existingSnapshot.markets : [];
 
   const payload = {
     generatedAt: now.toISOString(),
@@ -4123,6 +4422,8 @@ export async function buildNewsCachesCli() {
 if (import.meta.url === `file://${process.argv[1]}`) {
   if (process.argv.includes('--build-caches')) {
     buildNewsCachesCli().catch(e => { console.error(e); process.exit(1); });
+  } else if (process.argv.includes('--korean-first-keywords')) {
+    writeKoreanFirstTagsJson().catch(e => { console.error(e); process.exit(1); });
   } else if (process.argv.includes('--build-keywords')) {
     buildMarketKeywordSnapshot().catch(e => { console.error(e); process.exit(1); });
   }
