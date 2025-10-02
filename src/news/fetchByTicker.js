@@ -1,6 +1,7 @@
 import fs from 'fs';
 import fsp from 'fs/promises';
 import path from 'path';
+import { spawn } from 'child_process';
 import { restClient } from '@polygon.io/client-js';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
@@ -11,6 +12,9 @@ import { computeReputation } from './reputation.js';
 // for CLI-only cache builders
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
 import { buildKeywordDict } from '../trends/keywordBuilder.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const CACHE_DIR = 'cache';
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 30 * 60 * 1000); // 30m
@@ -35,6 +39,11 @@ const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
 const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
 const DEEPL_API_KEY = (process.env.DEEPL_API_KEY || '').trim();
+const NAVER_CLIENT_ID = (process.env.NAVER_CLIENT_ID || '').trim();
+const NAVER_CLIENT_SECRET = (process.env.NAVER_CLIENT_SECRET || '').trim();
+const PYTHON_BIN = (process.env.PYTHON_BIN || process.env.PYTHON || 'python3').trim();
+const KRWORDRANK_TIMEOUT_MS = Number(process.env.KRWORDRANK_TIMEOUT_MS || 20000);
+const KRWORDRANK_SCRIPT = path.join(__dirname, '..', '..', 'tools', 'krwordrank_fetcher.py');
 
 const NAVER_WEIGHT = Number(process.env.NAVER_WEIGHT || 1.6);
 const OTHER_NEWS_WEIGHT = Number(process.env.OTHER_NEWS_WEIGHT || 1.0);
@@ -913,6 +922,42 @@ async function translateWithDeepL(text, { targetLang = 'KO', sourceLang = 'EN' }
   return null;
 }
 
+async function translateWithNaverPapago(text, { targetLang = 'ko', sourceLang = 'en' } = {}) {
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) return null;
+  const raw = String(text || '').trim();
+  if (!raw) return null;
+  try {
+    const params = new URLSearchParams({
+      source: String(sourceLang || 'en').toLowerCase(),
+      target: String(targetLang || 'ko').toLowerCase(),
+      text: raw
+    });
+    const res = await fetch('https://openapi.naver.com/v1/papago/n2mt', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'X-Naver-Client-Id': NAVER_CLIENT_ID,
+        'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+        'User-Agent': 'stock-recs/1.2 (+github-actions)'
+      },
+      body: params
+    });
+    if (!res.ok) {
+      const errText = await res.text().catch(() => res.statusText);
+      console.warn(`[keywords] Naver Papago translation failed (${res.status}):`, errText);
+      return null;
+    }
+    const data = await res.json().catch(() => null);
+    const translated = data?.message?.result?.translatedText;
+    if (translated) {
+      return String(translated).trim();
+    }
+  } catch (err) {
+    console.warn(`[keywords] Papago request failed for "${raw}":`, err?.message || err);
+  }
+  return null;
+}
+
 async function ensureTranslationModule() {
   if (!translationModulePromise) {
     translationModulePromise = import('@vitalets/google-translate-api')
@@ -932,6 +977,41 @@ function isCompleteKoTranslation(en, candidate) {
   if (hasHangulText(koText)) return true;
   if (!enText) return false;
   return koText.toLowerCase() !== enText;
+}
+
+async function translateKoTermToEn(koText) {
+  const raw = String(koText || '').trim();
+  if (!raw) return '';
+  if (DEEPL_API_KEY) {
+    const deepl = await translateWithDeepL(raw, { sourceLang: 'KO', targetLang: 'EN' });
+    const deeplText = String(deepl || '').trim();
+    if (deeplText) {
+      return deeplText;
+    }
+  }
+
+  const translatorModule = await ensureTranslationModule();
+  if (translatorModule) {
+    try {
+      const result = await translatorModule(raw, { from: 'ko', to: 'en' });
+      const translated = String(result?.text || '').trim();
+      if (translated) {
+        return translated;
+      }
+    } catch (err) {
+      console.warn(`[keywords] failed to translate Korean term "${raw}" with Google:`, err?.message || err);
+    }
+  }
+
+  if (NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
+    const papago = await translateWithNaverPapago(raw, { sourceLang: 'ko', targetLang: 'en' });
+    const papagoText = String(papago || '').trim();
+    if (papagoText) {
+      return papagoText;
+    }
+  }
+
+  return '';
 }
 
 async function getLocalizedKeywordTexts(enText) {
@@ -965,6 +1045,8 @@ async function getLocalizedKeywordTexts(enText) {
   let translator = 'none';
   let attemptedDeepL = false;
   let usedDeepL = false;
+  let attemptedNaver = false;
+  let usedNaver = false;
   let complete = false;
   const fallbackDictionary = String(dictionaryKoRaw || '').trim();
 
@@ -1006,6 +1088,22 @@ async function getLocalizedKeywordTexts(enText) {
     }
   }
 
+  if (!ko && NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
+    attemptedNaver = true;
+    const papago = await translateWithNaverPapago(en, { sourceLang: 'en', targetLang: 'ko' });
+    const papagoText = String(papago || '').trim();
+    if (papagoText) {
+      if (isCompleteKoTranslation(en, papagoText)) {
+        ko = papagoText;
+        translator = translator === 'none' ? 'papago' : `${translator}+papago`;
+        usedNaver = true;
+        complete = true;
+      } else {
+        console.warn(`[keywords] Papago translation incomplete for "${en}":`, papagoText);
+      }
+    }
+  }
+
   if (!ko && fallbackDictionary && fallbackDictionary.toLowerCase() !== en.toLowerCase()) {
     ko = fallbackDictionary;
     translator = translator === 'none' ? 'dictionary-fallback' : `${translator}+dictionary`;
@@ -1019,7 +1117,85 @@ async function getLocalizedKeywordTexts(enText) {
   }
 
   setTranslationCache(en, ko);
-  return { en, ko, meta: { translator, attemptedDeepL, usedDeepL, complete } };
+  return { en, ko, meta: { translator, attemptedDeepL, usedDeepL, attemptedNaver, usedNaver, complete } };
+}
+
+async function runKrWordRankCollector({ limit = 30, queries = [] } = {}) {
+  try {
+    await fsp.access(KRWORDRANK_SCRIPT);
+  } catch {
+    return null;
+  }
+
+  const args = [KRWORDRANK_SCRIPT, '--limit', String(limit)];
+  for (const q of queries) {
+    const cleaned = String(q || '').trim();
+    if (cleaned) {
+      args.push('--query', cleaned);
+    }
+  }
+
+  return await new Promise((resolve) => {
+    const proc = spawn(PYTHON_BIN || 'python3', args, {
+      env: { ...process.env },
+      stdio: ['ignore', 'pipe', 'pipe']
+    });
+    let stdout = '';
+    let stderr = '';
+    const timer = setTimeout(() => {
+      console.warn('[keywords] KR-WordRank collector timed out; terminating process');
+      proc.kill('SIGTERM');
+    }, Math.max(5000, KRWORDRANK_TIMEOUT_MS));
+
+    proc.stdout.on('data', chunk => { stdout += chunk; });
+    proc.stderr.on('data', chunk => { stderr += chunk; });
+
+    proc.on('error', err => {
+      clearTimeout(timer);
+      console.warn('[keywords] failed to run KR-WordRank collector:', err?.message || err);
+      resolve(null);
+    });
+
+    proc.on('close', code => {
+      clearTimeout(timer);
+      if (stderr.trim()) {
+        console.warn('[keywords] KR-WordRank stderr:', stderr.trim());
+      }
+      if (code !== 0) {
+        console.warn(`[keywords] KR-WordRank collector exited with code ${code}`);
+        return resolve(null);
+      }
+      if (!stdout.trim()) {
+        return resolve(null);
+      }
+      try {
+        const parsed = JSON.parse(stdout.trim());
+        resolve(parsed);
+      } catch (err) {
+        console.warn('[keywords] failed to parse KR-WordRank output:', err?.message || err);
+        resolve(null);
+      }
+    });
+  });
+}
+
+async function collectEconomyKoKeywords({ limit = 30 } = {}) {
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) return [];
+  const queries = [
+    '경제',
+    '증시',
+    '산업 동향',
+    '비즈니스 뉴스',
+    '금융 시장'
+  ];
+  const result = await runKrWordRankCollector({ limit, queries });
+  if (!result || !Array.isArray(result?.keywords)) return [];
+  return result.keywords.map(entry => ({
+    term: entry?.term || entry?.term_en || '',
+    term_ko: entry?.term_ko || entry?.term || '',
+    score: Number(entry?.score ?? entry?.weight ?? 0),
+    count: Number(entry?.count ?? 0)
+  }));
 }
 
 function chooseTagDisplay(entry) {
@@ -1526,6 +1702,68 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
       score: Number.isFinite(score) ? score : 0,
       text: { en: enText, ko: koText }
     });
+  }
+
+  const seenEn = new Map();
+  for (const entry of localizedDiscovered) {
+    const key = String(entry?.term || '').trim().toLowerCase();
+    if (key) {
+      seenEn.set(key, entry);
+    }
+  }
+
+  const koKeywordBoost = await collectEconomyKoKeywords({ limit: Math.max(30, normalizedTags.length) });
+  for (const entry of koKeywordBoost) {
+    const koTermRaw = String(entry?.term_ko || entry?.term || '').trim();
+    if (!koTermRaw) continue;
+    const koTerm = koTermRaw;
+    let enTerm = formatTagDisplay(entry?.term || '');
+    if (!enTerm || enTerm.toLowerCase() === koTerm.toLowerCase()) {
+      const translated = await translateKoTermToEn(koTerm);
+      if (translated) {
+        enTerm = formatTagDisplay(translated);
+      }
+    }
+    if (!enTerm) {
+      enTerm = formatTagDisplay(koTerm);
+    }
+    if (!enTerm) continue;
+    const enKey = enTerm.toLowerCase();
+    const existing = seenEn.get(enKey);
+    const score = Number(entry?.score || 0);
+    const count = Number(entry?.count || 0);
+    if (existing) {
+      if (!hasHangulText(existing.term_ko || '')) {
+        existing.term_ko = koTerm;
+        existing.text.ko = koTerm;
+      }
+      existing.score = Number.isFinite(existing.score) ? Math.max(existing.score, score) : score;
+      existing.count = Number.isFinite(existing.count) ? Math.max(existing.count, count) : count;
+      const prevMeta = translations[existing.term] || {};
+      const mergedTranslator = prevMeta.translator ? `${prevMeta.translator}+krwordrank` : 'krwordrank';
+      translations[existing.term] = {
+        ...prevMeta,
+        en: existing.term,
+        ko: existing.term_ko,
+        translator: mergedTranslator
+      };
+      setTranslationCache(existing.term, existing.term_ko);
+      continue;
+    }
+
+    translations[enTerm] = { en: enTerm, ko: koTerm, translator: 'krwordrank' };
+    const normalizedScore = Number.isFinite(score) ? score : 0;
+    const normalizedCount = Number.isFinite(count) ? count : 0;
+    const addition = {
+      term: enTerm,
+      term_ko: koTerm,
+      count: normalizedCount,
+      score: normalizedScore,
+      text: { en: enTerm, ko: koTerm }
+    };
+    localizedDiscovered.push(addition);
+    seenEn.set(enKey, addition);
+    setTranslationCache(enTerm, koTerm);
   }
 
   const payload = {
