@@ -383,10 +383,10 @@ jobs:
       - name: Clear prior market keyword snapshot
         run: rm -f newsKeywords.json
 
-      - name: Build market keyword snapshot
+      - name: Build significance-based keyword snapshot
         env:
           MARKET_TAG_FILE: stocks/data/tags.json
-        run: node src/news/fetchByTicker.js --build-keywords
+        run: node src/news/fetchByTicker.js --significant-phrases
 
       - name: Verify market tag snapshot
         shell: bash

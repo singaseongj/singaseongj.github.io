@@ -2306,14 +2306,17 @@ export async function collectSignificantPhrases({ targetCount = 30 } = {}) {
     console.log(`  ${i + 1}. "${p.text}" - score: ${p.score}, count: ${p.count}`);
   });
 
-  // Return top N
-  return scored.slice(0, targetCount).map(p => ({
-    term_ko: p.text,
-    score: p.score,
-    count: p.count,
-    length: p.length,
-    source: 'significance_analysis'
-  }));
+  // Return top N (filtering to phrases of reasonable length)
+  return scored
+    .filter(p => p.length >= 2 && p.length <= 3)
+    .slice(0, targetCount)
+    .map(p => ({
+      term_ko: p.text,
+      score: p.score,
+      count: p.count,
+      length: p.length,
+      source: 'significance_analysis'
+    }));
 }
 
 // Write output
@@ -4734,10 +4737,8 @@ export async function buildNewsCachesCli() {
 if (import.meta.url === `file://${process.argv[1]}`) {
   if (process.argv.includes('--build-caches')) {
     buildNewsCachesCli().catch(e => { console.error(e); process.exit(1); });
-  } else if (process.argv.includes('--korean-first-keywords')) {
-    writeKoreanFirstTagsJson().catch(e => { console.error(e); process.exit(1); });
   } else if (process.argv.includes('--build-keywords')) {
-    buildMarketKeywordSnapshot().catch(e => { console.error(e); process.exit(1); });
+    writeSignificantPhrasesJson().catch(e => { console.error(e); process.exit(1); });
   } else if (process.argv.includes('--significant-phrases')) {
     writeSignificantPhrasesJson().catch(e => { console.error(e); process.exit(1); });
   }
