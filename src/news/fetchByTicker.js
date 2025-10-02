@@ -1582,142 +1582,314 @@ function rebuildTagStatsFromSnapshot(snapshot) {
   return stats;
 }
 
+// ============= Yahoo Finance News scraper =============
+async function fetchYahooFinanceTopics() {
+  const topics = new Set();
+  const urls = [
+    'https://finance.yahoo.com/',
+    'https://finance.yahoo.com/topic/stock-market-news/',
+  ];
+
+  for (const url of urls) {
+    try {
+      const html = await fetchTextWithFallback([
+        { url, headers: { Accept: 'text/html' } }
+      ], { timeoutMs: 8000, label: 'Yahoo Finance' });
+
+      if (!html) continue;
+
+      // Extract article headlines
+      const headlines = html.match(/<h3[^>]*>([^<]+)<\/h3>/gi) || [];
+      for (const h of headlines) {
+        const text = h.replace(/<[^>]*>/g, '').trim();
+        if (text.length > 10 && text.length < 100) {
+          const keywords = extractEnglishKeywords(text);
+          keywords.forEach(k => topics.add(k.token));
+        }
+      }
+
+      // Extract meta keywords if present
+      const metaMatch = html.match(/<meta\s+name=["']keywords["']\s+content=["']([^"']+)["']/i);
+      if (metaMatch) {
+        metaMatch[1].split(',').forEach(kw => {
+          const clean = kw.trim();
+          if (clean.length > 2 && clean.length < 60) topics.add(clean);
+        });
+      }
+
+    } catch (err) {
+      console.warn('[keywords] Yahoo Finance fetch failed:', err.message);
+    }
+  }
+
+  return Array.from(topics).slice(0, 30);
+}
+
+// ============= Google News RSS scraper =============
+async function fetchGoogleNewsTopics() {
+  const topics = new Set();
+  const rssUrls = [
+    'https://news.google.com/rss/search?q=stock+market&hl=en-US&gl=US&ceid=US:en',
+    'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB?hl=en-US&gl=US&ceid=US:en', // Business
+    'https://news.google.com/rss/search?q=KOSPI+OR+KOSDAQ&hl=ko&gl=KR&ceid=KR:ko',
+  ];
+
+  for (const url of rssUrls) {
+    try {
+      const xml = await fetchTextWithFallback([
+        { url, headers: { Accept: 'application/rss+xml,application/xml,text/xml' } }
+      ], { timeoutMs: 8000, label: 'Google News RSS' });
+
+      if (!xml) continue;
+
+      // Extract titles from RSS
+      const titleMatches = xml.match(/<title>(?:<!\[CDATA\[)?([^<]+)(?:\]\]>)?<\/title>/gi) || [];
+      for (const match of titleMatches) {
+        const text = match
+          .replace(/<!\[CDATA\[|\]\]>/g, '')
+          .replace(/<[^>]*>/g, '')
+          .trim();
+
+        if (text.length > 10 && text.length < 150) {
+          const enKeywords = extractEnglishKeywords(text);
+          enKeywords.forEach(k => topics.add(k.token));
+
+          const koKeywords = extractKoreanKeywords(text);
+          koKeywords.forEach(k => topics.add(k.token));
+        }
+      }
+
+    } catch (err) {
+      console.warn('[keywords] Google News RSS fetch failed:', err.message);
+    }
+  }
+
+  return Array.from(topics).slice(0, 30);
+}
+
+// ============= Enhanced Naver DataLab keyword collector =============
+async function fetchNaverDatalabTrendingKeywords({ limit = 20 } = {}) {
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
+
+  if (!NAVER_ID || !NAVER_SECRET) return [];
+
+  // Use shopping/trend keywords as seeds
+  const seedGroups = [
+    { keyword: '반도체', category: 'tech' },
+    { keyword: 'AI', category: 'tech' },
+    { keyword: '2차전지', category: 'tech' },
+    { keyword: '바이오', category: 'health' },
+    { keyword: '금리', category: 'finance' },
+    { keyword: '환율', category: 'finance' },
+    { keyword: '증시', category: 'market' },
+    { keyword: 'IT', category: 'tech' },
+  ];
+
+  const today = new Date();
+  const end = today.toISOString().slice(0, 10);
+  const start = new Date(today.getTime() - 90 * 24 * 3600 * 1000).toISOString().slice(0, 10);
+
+  const results = [];
+
+  for (const batch of chunk(seedGroups, 5)) {
+    try {
+      const res = await fetchNaverDataLabBatch(batch.map(g => ({
+        groupName: g.keyword,
+        keyword: g.keyword
+      })), {
+        startDate: start,
+        endDate: end,
+        timeUnit: 'date',
+        NAVER_ID,
+        NAVER_SECRET
+      });
+
+      for (const group of batch) {
+        const data = res[group.keyword];
+        if (!data) continue;
+
+        const popularity = Number(data.popularity01 || 0);
+        const spike = data.spike ? 1 : 0;
+        const asvi = Number(data.lastAsvi || 0);
+
+        // Weight by popularity + spike
+        const score = popularity * 100 + spike * 20 + Math.max(0, asvi);
+
+        results.push({
+          term_ko: group.keyword,
+          score,
+          source: 'naver-datalab',
+          category: group.category
+        });
+      }
+
+    } catch (err) {
+      console.warn('[keywords] Naver DataLab batch failed:', err.message);
+    }
+  }
+
+  return results
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit);
+}
+
 async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapshot = null } = {}) {
   const stats = new Map();
   const collected = [];
-  const articleTextMap = new Map();
-  const articleKeySet = new Set();
+  const actualTarget = Math.min(targetCount, 100); // Cap at 100
 
-  // Limit heavy collection runs; cap actual target at 50
-  const actualTarget = Math.min(targetCount, 50);
-  if (!NEWSDATA_API_KEY) {
-    console.warn('[keywords] NEWSDATA_API_KEY missing; skipping tag collection');
-    return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
-  }
+  console.log(`[keywords] collecting up to ${actualTarget} keywords from multiple sources`);
 
-  const queries = buildTagQueryConfigs();
-  if (!queries.length) return { tags: collected, stats, fallbackUsed: false, articleTexts: [] };
-
-  const fromDate = daysAgo(TAG_COLLECTION_WINDOW_DAYS);
-  const toDate = daysAgo(0);
-  let recordedCount = 0;
-  let consecutive429 = 0;
-
-  let abortedByRateLimit = false;
-
-  for (const cfg of queries) {
-    // Early exit once enough variety is collected
-    if (collected.length >= actualTarget && stats.size >= 10) {
-      console.log(`[keywords] early exit: collected ${collected.length}/${actualTarget} tags with ${stats.size} unique terms`);
-      break;
+  // ===== 1. Naver DataLab (primary, unlimited) =====
+  console.log('[keywords] fetching Naver DataLab trends...');
+  const naverTrends = await fetchNaverDatalabTrendingKeywords({ limit: 30 });
+  for (const item of naverTrends) {
+    const key = item.term_ko.toLowerCase();
+    const entry = stats.get(key) || {
+      key,
+      forms: new Set([item.term_ko]),
+      display: item.term_ko,
+      count: 0,
+      markets: new Set(['KOSPI', 'KOSDAQ']),
+      sources: new Set(['naver-datalab']),
+      headlines: [],
+      headlineKeys: new Set()
+    };
+    entry.count += item.score;
+    entry.forms.add(item.term_ko);
+    entry.sources.add('naver-datalab');
+    entry.markets.add('KOSPI');
+    entry.markets.add('KOSDAQ');
+    if (!entry.display || item.term_ko.length > entry.display.length) {
+      entry.display = item.term_ko;
     }
-    try {
-      const articles = await newsdataArchiveFetch({
-        q: cfg.query,
-        languages: ['en'],
-        fromDate,
-        toDate,
-        size: TAG_COLLECTION_PAGE_SIZE,
-        pageLimit: TAG_COLLECTION_PAGE_LIMIT
-      });
-      let queryRecorded = false;
-      for (const article of articles) {
-        const textParts = [];
-        if (article?.title) textParts.push(String(article.title));
-        if (article?.summary) textParts.push(String(article.summary));
-        if (article?.body && article.body !== article.summary) textParts.push(String(article.body));
-        const combined = textParts.join(' ').replace(/\s+/g, ' ').trim();
-        const baseKey = article?.url || `${article?.title || ''}__${article?.publishedAt || ''}`;
-        const articleKey = baseKey || (combined ? combined.slice(0, 120) : '');
-        if (articleKey) {
-          articleKeySet.add(articleKey);
-        }
-        if (combined) {
-          const textKey = articleKey || combined.slice(0, 120);
-          if (textKey && !articleTextMap.has(textKey)) {
-            articleTextMap.set(textKey, combined.slice(0, 5000));
+    stats.set(key, entry);
+  }
+  console.log(`[keywords] collected ${naverTrends.length} from Naver DataLab`);
+
+  // ===== 2. Yahoo Finance (free, no API key) =====
+  console.log('[keywords] fetching Yahoo Finance topics...');
+  const yahooTopics = await fetchYahooFinanceTopics();
+  for (const topic of yahooTopics) {
+    const normalized = normalizeTagCandidate(topic);
+    if (!normalized) continue;
+
+    const key = normalized.toLowerCase();
+    const entry = stats.get(key) || {
+      key,
+      forms: new Set([normalized]),
+      display: normalized,
+      count: 0,
+      markets: new Set(['NASDAQ 100', 'S&P 500']),
+      sources: new Set(['yahoo-finance']),
+      headlines: [],
+      headlineKeys: new Set()
+    };
+    entry.count += 5; // Fixed weight
+    entry.forms.add(normalized);
+    entry.sources.add('yahoo-finance');
+    entry.markets.add('NASDAQ 100');
+    entry.markets.add('S&P 500');
+    if (!entry.display || normalized.length > entry.display.length) {
+      entry.display = normalized;
+    }
+    stats.set(key, entry);
+  }
+  console.log(`[keywords] collected ${yahooTopics.length} from Yahoo Finance`);
+
+  // ===== 3. Google News RSS (free, no API key) =====
+  console.log('[keywords] fetching Google News topics...');
+  const googleTopics = await fetchGoogleNewsTopics();
+  for (const topic of googleTopics) {
+    const normalized = normalizeTagCandidate(topic);
+    if (!normalized) continue;
+
+    const key = normalized.toLowerCase();
+    const entry = stats.get(key) || {
+      key,
+      forms: new Set([normalized]),
+      display: normalized,
+      count: 0,
+      markets: new Set(['GLOBAL']),
+      sources: new Set(['google-news']),
+      headlines: [],
+      headlineKeys: new Set()
+    };
+    entry.count += 3; // Lower weight than Yahoo
+    entry.forms.add(normalized);
+    entry.sources.add('google-news');
+    entry.markets.add('GLOBAL');
+    if (!entry.display || normalized.length > entry.display.length) {
+      entry.display = normalized;
+    }
+    stats.set(key, entry);
+  }
+  console.log(`[keywords] collected ${googleTopics.length} from Google News RSS`);
+
+  // ===== 4. Optional: NewsData supplement (only if under quota) =====
+  if (NEWSDATA_API_KEY && stats.size < actualTarget) {
+    console.log('[keywords] supplementing with NewsData (limited queries)...');
+    const topQueries = ['AI', 'semiconductor', 'stock market']
+      .slice(0, 3); // Only 3 queries to stay under quota
+
+    for (const query of topQueries) {
+      if (stats.size >= actualTarget) break;
+
+      try {
+        const articles = await newsdataArchiveFetch({
+          q: query,
+          languages: ['en'],
+          fromDate: daysAgo(7),
+          toDate: daysAgo(0),
+          size: 10,
+          pageLimit: 1
+        });
+
+        for (const article of articles) {
+          const tags = Array.isArray(article?.tags) ? article.tags : [];
+          for (const rawTag of tags) {
+            recordTagStat({
+              stats,
+              tag: rawTag,
+              article,
+              markets: ['GLOBAL'],
+              sourceLabel: 'newsdata',
+              collected: [],
+              targetCount: actualTarget
+            });
           }
         }
-        const tags = Array.isArray(article?.tags) ? article.tags : [];
-        if (!tags.length) continue;
-        for (const rawTag of tags) {
-          const recorded = recordTagStat({
-            stats,
-            tag: rawTag,
-            article,
-            markets: cfg.markets,
-            sourceLabel: cfg.source,
-            collected,
-            targetCount: actualTarget
-          });
-          if (recorded) {
-            queryRecorded = true;
-            recordedCount += 1;
-          }
-        }
-      }
-      consecutive429 = 0;
-    } catch (err) {
-      console.warn(`[keywords] failed to collect tags for "${cfg.query}":`, err?.message || err);
-      if (isRateLimitError(err)) {
-        consecutive429 += 1;
-        const waitMs = retryAfterMsFromError(err, Math.min(5000 * consecutive429, 30000));
-        if (waitMs > 0) {
-          console.warn(`[keywords] rate limited while collecting tags; waiting ${waitMs}ms before continuing`);
-          await sleep(waitMs);
-        }
-        // Reduce the maximum consecutive rate-limit retries to react faster
-        const MAX_CONSECUTIVE_429 = 3;
-        if (consecutive429 >= MAX_CONSECUTIVE_429) {
-          console.warn(`[keywords] aborting tag collection after ${consecutive429} consecutive rate limits`);
-          abortedByRateLimit = true;
-          break;
-        }
+      } catch (err) {
+        console.warn(`[keywords] NewsData query "${query}" failed:`, err.message);
+        break; // Stop on first failure to avoid rate limits
       }
     }
-    // Check for early exit again after processing the query batch
-    if (collected.length >= actualTarget && stats.size >= 10) break;
   }
 
-  if (abortedByRateLimit && fallbackSnapshot) {
+  // ===== 5. Build final list =====
+  const entries = [...stats.values()]
+    .sort((a, b) => (b.count - a.count) || chooseTagDisplay(a).localeCompare(chooseTagDisplay(b)));
+
+  for (const entry of entries) {
+    if (collected.length >= actualTarget) break;
+    collected.push(chooseTagDisplay(entry));
+  }
+
+  console.log(`[keywords] final collection: ${collected.length} tags from ${stats.size} unique terms`);
+
+  // Fallback if still empty
+  if (!collected.length && fallbackSnapshot) {
     const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
     if (fallbackTags.length) {
-      console.warn(`[keywords] falling back to snapshot after repeated rate limits (${consecutive429})`);
-      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
+      console.warn('[keywords] using fallback snapshot');
       return {
         tags: fallbackTags.slice(0, actualTarget),
-        stats: fallbackStats,
+        stats: rebuildTagStatsFromSnapshot(fallbackSnapshot),
         fallbackUsed: true,
-        articleTexts: Array.from(articleTextMap.values()),
-        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
-        asOfDate: fallbackSnapshot?.date || toDate
-      };
-    }
-  }
-
-  if (stats.size && collected.length < actualTarget) {
-    const entries = [...stats.values()]
-      .sort((a, b) => (b.count - a.count) || chooseTagDisplay(a).localeCompare(chooseTagDisplay(b)));
-    let idx = 0;
-    while (collected.length < actualTarget && entries.length) {
-      const entry = entries[idx % entries.length];
-      collected.push(chooseTagDisplay(entry));
-      idx += 1;
-    }
-  }
-
-  if (!recordedCount && fallbackSnapshot) {
-    const fallbackTags = extractTagTermsFromSnapshot(fallbackSnapshot);
-    if (fallbackTags.length) {
-      console.warn(`[keywords] using fallback tags snapshot with ${fallbackTags.length} tags`);
-      const fallbackStats = rebuildTagStatsFromSnapshot(fallbackSnapshot);
-      return {
-        tags: fallbackTags.slice(0, actualTarget),
-        stats: fallbackStats,
-        fallbackUsed: true,
-        articleTexts: Array.from(articleTextMap.values()),
-        articleCount: Number(fallbackSnapshot?.total_articles || articleKeySet.size) || 0,
-        asOfDate: fallbackSnapshot?.date || toDate
+        articleTexts: [],
+        articleCount: 0,
+        asOfDate: daysAgo(0)
       };
     }
   }
@@ -1726,9 +1898,9 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
     tags: collected.slice(0, actualTarget),
     stats,
     fallbackUsed: false,
-    articleTexts: Array.from(articleTextMap.values()),
-    articleCount: articleKeySet.size,
-    asOfDate: toDate
+    articleTexts: [],
+    articleCount: stats.size,
+    asOfDate: daysAgo(0)
   };
 }
 
