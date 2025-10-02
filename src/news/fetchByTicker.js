@@ -1585,41 +1585,31 @@ function rebuildTagStatsFromSnapshot(snapshot) {
 // ============= Yahoo Finance News scraper =============
 async function fetchYahooFinanceTopics() {
   const topics = new Set();
-  const urls = [
-    'https://finance.yahoo.com/',
-    'https://finance.yahoo.com/topic/stock-market-news/',
-  ];
 
-  for (const url of urls) {
-    try {
-      const html = await fetchTextWithFallback([
-        { url, headers: { Accept: 'text/html' } }
-      ], { timeoutMs: 8000, label: 'Yahoo Finance' });
+  try {
+    const rssUrl = 'https://finance.yahoo.com/news/rssindex';
+    const xml = await fetchTextWithFallback([
+      { url: rssUrl, headers: { Accept: 'application/rss+xml' } }
+    ], { timeoutMs: 8000, label: 'Yahoo Finance RSS' });
 
-      if (!html) continue;
+    if (!xml) return [];
 
-      // Extract article headlines
-      const headlines = html.match(/<h3[^>]*>([^<]+)<\/h3>/gi) || [];
-      for (const h of headlines) {
-        const text = h.replace(/<[^>]*>/g, '').trim();
-        if (text.length > 10 && text.length < 100) {
-          const keywords = extractEnglishKeywords(text);
-          keywords.forEach(k => topics.add(k.token));
-        }
-      }
+    const titleMatches = xml.match(/<title>(?:<!\[CDATA\[)?([^<]+)(?:\]\]>)?<\/title>/gi) || [];
+    for (const match of titleMatches.slice(2)) {
+      const text = match
+        .replace(/<!\[CDATA\[|\]\]>/g, '')
+        .replace(/<[^>]*>/g, '')
+        .trim();
 
-      // Extract meta keywords if present
-      const metaMatch = html.match(/<meta\s+name=["']keywords["']\s+content=["']([^"']+)["']/i);
-      if (metaMatch) {
-        metaMatch[1].split(',').forEach(kw => {
-          const clean = kw.trim();
-          if (clean.length > 2 && clean.length < 60) topics.add(clean);
+      if (text.length > 10 && text.length < 150) {
+        const keywords = extractEnglishKeywords(text);
+        keywords.forEach(k => {
+          if (k.token.length >= 3) topics.add(k.token);
         });
       }
-
-    } catch (err) {
-      console.warn('[keywords] Yahoo Finance fetch failed:', err.message);
     }
+  } catch (err) {
+    console.warn('[keywords] Yahoo Finance RSS failed:', err.message);
   }
 
   return Array.from(topics).slice(0, 30);
@@ -1741,8 +1731,59 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
 
   console.log(`[keywords] collecting up to ${actualTarget} keywords from multiple sources`);
 
-  // ===== 1. Naver DataLab (primary, unlimited) =====
-  console.log('[keywords] fetching Naver DataLab trends...');
+  // ===== 1. Naver DataLab existing keywords (most reliable) =====
+  console.log('[keywords] fetching Naver DataLab for predefined keywords...');
+  const datalabEntries = await buildDatalabKeywordEntries();
+  for (const entry of datalabEntries) {
+    const koTerm = entry?.text?.ko || '';
+    const enTerm = entry?.text?.en || '';
+    if (!koTerm) continue;
+
+    const key = koTerm.toLowerCase();
+    const statEntry = stats.get(key) || {
+      key,
+      forms: new Set([koTerm]),
+      display: koTerm,
+      count: 0,
+      markets: new Set(entry.markets || []),
+      sources: new Set(['naver-datalab']),
+      headlines: [],
+      headlineKeys: new Set()
+    };
+
+    const scoreBoost = Number(entry?.score || 0);
+    statEntry.count += scoreBoost * 100;
+    statEntry.forms.add(koTerm);
+    if (enTerm) statEntry.forms.add(enTerm);
+    if (Array.isArray(entry.markets)) {
+      for (const market of entry.markets) statEntry.markets.add(market);
+    }
+    if (Array.isArray(entry.sources)) {
+      for (const source of entry.sources) statEntry.sources.add(source);
+    }
+    statEntry.sources.add('naver-datalab');
+    if (!statEntry.display || koTerm.length > statEntry.display.length) {
+      statEntry.display = koTerm;
+    }
+    if (Array.isArray(entry.sampleHeadlines)) {
+      for (const headline of entry.sampleHeadlines) {
+        const title = headline?.title || '';
+        const url = headline?.url || '';
+        if (!title && !url) continue;
+        const keyStr = `${title}__${url}`;
+        if (!statEntry.headlineKeys.has(keyStr)) {
+          statEntry.headlineKeys.add(keyStr);
+          statEntry.headlines.push(headline);
+        }
+      }
+    }
+
+    stats.set(key, statEntry);
+  }
+  console.log(`[keywords] collected ${datalabEntries.length} from Naver DataLab (predefined)`);
+
+  // ===== 2. Naver DataLab trending seeds =====
+  console.log('[keywords] fetching Naver DataLab trending seeds...');
   const naverTrends = await fetchNaverDatalabTrendingKeywords({ limit: 30 });
   for (const item of naverTrends) {
     const key = item.term_ko.toLowerCase();
@@ -1766,9 +1807,9 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
     }
     stats.set(key, entry);
   }
-  console.log(`[keywords] collected ${naverTrends.length} from Naver DataLab`);
+  console.log(`[keywords] collected ${naverTrends.length} from Naver DataLab (trending)`);
 
-  // ===== 2. Yahoo Finance (free, no API key) =====
+  // ===== 3. Yahoo Finance (free, no API key) =====
   console.log('[keywords] fetching Yahoo Finance topics...');
   const yahooTopics = await fetchYahooFinanceTopics();
   for (const topic of yahooTopics) {
@@ -1798,7 +1839,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   }
   console.log(`[keywords] collected ${yahooTopics.length} from Yahoo Finance`);
 
-  // ===== 3. Google News RSS (free, no API key) =====
+  // ===== 4. Google News RSS (free, no API key) =====
   console.log('[keywords] fetching Google News topics...');
   const googleTopics = await fetchGoogleNewsTopics();
   for (const topic of googleTopics) {
@@ -1827,7 +1868,7 @@ async function collectTagCorpus({ targetCount = TAG_TARGET_COUNT, fallbackSnapsh
   }
   console.log(`[keywords] collected ${googleTopics.length} from Google News RSS`);
 
-  // ===== 4. Optional: NewsData supplement (only if under quota) =====
+  // ===== 5. Optional: NewsData supplement (only if under quota) =====
   if (NEWSDATA_API_KEY && stats.size < actualTarget) {
     console.log('[keywords] supplementing with NewsData (limited queries)...');
     const topQueries = ['AI', 'semiconductor', 'stock market']
