@@ -9,6 +9,7 @@
   <title data-i18n="title">데일리 주식 리포트 자동화</title>
   <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="src/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
   <link rel="manifest" href="src/site.webmanifest">
   <link rel="stylesheet" href="stocks.css">
@@ -813,16 +814,6 @@
         updateVisitCounts();
       });
 
-      // 에러 발생 시 표시할 수 있는 기능
-      window.addEventListener('error', function(e) {
-        const message = (e && (e.message || (e.error && e.error.message))) || '';
-        if (typeof message === 'string' && message.includes('conflux')) {
-          e.preventDefault();
-          return;
-        }
-        console.error('페이지 에러:', e.error || message || e);
-      });
-
       // 데이터 로딩 상태 확인
       const loadingElements = document.querySelectorAll('.loading');
       if (loadingElements.length > 0) {
@@ -837,13 +828,25 @@
         e.preventDefault();
         toggleDebug();
       }
-      
+
       // Ctrl + R: 데이터 새로고침 (기본 새로고침 대신)
       if (e.ctrlKey && e.key === 'r') {
         e.preventDefault();
         refreshAllData();
       }
     });
+  </script>
+  <script>
+    function handleWindowError(e) {
+      const message = (e && (e.message || (e.error && e.error.message))) || '';
+      if (typeof message === 'string' && message.includes('conflux')) {
+        e.preventDefault();
+        return;
+      }
+      console.error('페이지 에러:', e.error || message || e);
+    }
+
+    window.addEventListener('error', handleWindowError, true);
   </script>
   <div id="languageToggle" style="text-align:center;margin-top:20px;">
     <button id="btnKo">한국어</button> |
