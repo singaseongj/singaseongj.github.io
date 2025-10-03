@@ -198,6 +198,7 @@
         keywordMarkets: '적용 시장',
         portfolioRecs: '포트폴리오 추천',
         dashboardLink: '👉 주식 시장 요약 대시보드',
+        marketDataError: '마켓 데이터를 불러오지 못했습니다.',
         refreshing: '새로고침 중...',
         refreshData: '데이터 새로고침',
         newsError: '뉴스를 불러오지 못했습니다.',
@@ -226,6 +227,7 @@
         keywordMarkets: 'Markets',
         portfolioRecs: 'Portfolio Recommendations',
         dashboardLink: '👉 Stock News Summary Dashboard',
+        marketDataError: 'Failed to load market data.',
         refreshing: 'Refreshing...',
         refreshData: 'Refresh Data',
         newsError: 'Failed to load news.',
@@ -429,7 +431,9 @@
         return;
       }
 
-      const keywords = Array.isArray(keywordSnapshot.keywords) ? keywordSnapshot.keywords : [];
+      const keywords = Array.isArray(keywordSnapshot.keywords)
+        ? keywordSnapshot.keywords.slice(0, 10)
+        : [];
       if (!keywords.length) {
         listEl.innerHTML = `<li class="empty">${translations[currentLang].keywordError}</li>`;
         errorEl.style.display = 'none';
@@ -443,12 +447,14 @@
           const label = escapeHtml(display || '');
           const koQuery = koTerm || enTerm;
           const enQuery = enTerm || koTerm;
+          const koUrl = entry?.search?.ko || (koQuery ? buildNewsSearchUrl(koQuery, 'ko') : '');
+          const enUrl = entry?.search?.en || (enQuery ? buildNewsSearchUrl(enQuery, 'en') : '');
           const buttons = [];
-          if (koQuery) {
-            buttons.push(`<a class="keyword-btn" data-lang="ko" href="${escapeHtml(buildNewsSearchUrl(koQuery, 'ko'))}" target="_blank" rel="noopener noreferrer">한국어</a>`);
+          if (koUrl) {
+            buttons.push(`<a class="keyword-btn" data-lang="ko" href="${escapeHtml(koUrl)}" target="_blank" rel="noopener noreferrer">한국어</a>`);
           }
-          if (enQuery) {
-            buttons.push(`<a class="keyword-btn" data-lang="en" href="${escapeHtml(buildNewsSearchUrl(enQuery, 'en'))}" target="_blank" rel="noopener noreferrer">English</a>`);
+          if (enUrl) {
+            buttons.push(`<a class="keyword-btn" data-lang="en" href="${escapeHtml(enUrl)}" target="_blank" rel="noopener noreferrer">English</a>`);
           }
           const actionsHtml = buttons.length ? `<div class="keyword-actions">${buttons.join('')}</div>` : '';
           return `<li><div class="keyword-header"><span class="keyword-text">${label}</span>${actionsHtml}</div></li>`;

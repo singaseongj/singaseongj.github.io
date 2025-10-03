@@ -23,7 +23,7 @@ fs.mkdirSync('cache', { recursive: true });
 
 const CACHE_DIR = 'cache';
 const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
-const TAG_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
+let TAG_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
 const TAG_WEIGHT_INPUT = Number(process.env.TAG_EVAL_WEIGHT);
 const TAG_FREQ_WEIGHT_INPUT = Number(process.env.TAG_FREQ_WEIGHT);
 
@@ -237,6 +237,187 @@ function normalizeKey(s) {
   return t.toUpperCase();
 }
 
+const TAG_FILE_CANDIDATES = Array.from(new Set([
+  TAG_FILE,
+  'tags.json',
+  'stocks/data/tags.json'
+].filter(Boolean)));
+const NEWS_KEYWORD_LIMIT = Math.max(1, Number(process.env.NEWS_KEYWORD_LIMIT || 10));
+let TAG_SOURCE_META = { date: '', window: '', generatedAt: '' };
+let TAG_SOURCE_PATH = null;
+
+function formatEnglishKeyword(str) {
+  const text = String(str || '').trim();
+  if (!text) return '';
+  const lower = text.toLowerCase();
+  if (text.length <= 3 && /[a-z]/i.test(text)) return text.toUpperCase();
+  if (text === lower) {
+    return lower
+      .split(' ')
+      .map(part => (part ? part[0].toUpperCase() + part.slice(1) : ''))
+      .join(' ');
+  }
+  return text;
+}
+
+function buildNewsSearchUrl(term, lang = 'en') {
+  const query = String(term || '').trim();
+  if (!query) return '';
+  const hl = lang === 'ko' ? 'ko' : 'en';
+  const gl = lang === 'ko' ? 'KR' : 'US';
+  const ceid = `${gl}:${hl}`;
+  return `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=nws&hl=${hl}&gl=${gl}&ceid=${encodeURIComponent(ceid)}`;
+}
+
+function enrichKeywordSnapshot(raw) {
+  if (!raw || typeof raw !== 'object') {
+    return { keywords: [], _matchers: [] };
+  }
+  const snapshot = { ...raw };
+  const list = Array.isArray(snapshot.keywords) ? snapshot.keywords : [];
+  snapshot.keywords = list;
+  snapshot._matchers = list.map(entry => {
+    const ko = String(entry?.term_ko || '').trim();
+    const en = String(entry?.term || '').trim();
+    const texts = [ko, en].filter(Boolean);
+    const lowered = texts.map(t => t.toLowerCase());
+    const regexes = texts
+      .filter(t => t && t.length >= 2)
+      .map(t => {
+        try { return new RegExp(esc(t), 'i'); }
+        catch { return null; }
+      })
+      .filter(Boolean);
+    return { entry, lowered, regexes };
+  });
+  return snapshot;
+}
+
+function formatTagUpdatedStrings(meta = {}) {
+  const iso = meta.generatedAt || meta.generated_at || (meta.metadata && meta.metadata.generated_at) || '';
+  const date = meta.date || '';
+  const window = meta.window || (meta.metadata && meta.metadata.window) || '';
+  const formatWindow = window ? window.replace(/_/g, ' ') : '';
+  const result = { en: '', ko: '' };
+  if (iso) {
+    const ts = new Date(iso);
+    if (!Number.isNaN(ts.valueOf())) {
+      try {
+        const fmtEn = new Intl.DateTimeFormat('en-US', {
+          dateStyle: 'medium',
+          timeStyle: 'short',
+          timeZone: 'Asia/Seoul'
+        }).format(ts);
+        result.en = `Updated ${fmtEn} KST`;
+      } catch {
+        result.en = `Updated ${iso}`;
+      }
+      try {
+        const fmtKo = new Intl.DateTimeFormat('ko-KR', {
+          dateStyle: 'medium',
+          timeStyle: 'short',
+          timeZone: 'Asia/Seoul'
+        }).format(ts);
+        result.ko = `${fmtKo} 기준 업데이트`;
+      } catch {
+        result.ko = `${iso} 기준 업데이트`;
+      }
+    }
+  }
+  if (!result.en && date) {
+    result.en = `As of ${date}`;
+  }
+  if (!result.ko && date) {
+    result.ko = `${date} 기준`;
+  }
+  if (formatWindow) {
+    result.en = result.en ? `${result.en} (${formatWindow})` : formatWindow;
+    result.ko = result.ko ? `${result.ko} (${formatWindow})` : formatWindow;
+  }
+  return result;
+}
+
+function sanitizeSearchMap(search) {
+  if (!search || typeof search !== 'object') return undefined;
+  const entries = Object.entries(search)
+    .filter(([_, url]) => typeof url === 'string' && url.trim());
+  if (!entries.length) return undefined;
+  return entries.reduce((acc, [lang, url]) => {
+    acc[lang] = url.trim();
+    return acc;
+  }, {});
+}
+
+function buildKeywordSnapshotFromTags({ limit = NEWS_KEYWORD_LIMIT } = {}) {
+  if (!Array.isArray(TAG_ENTRY_LIST) || !TAG_ENTRY_LIST.length) return null;
+  const sorted = [...TAG_ENTRY_LIST]
+    .sort((a, b) => {
+      if (b.combined !== a.combined) return b.combined - a.combined;
+      if (b.score !== a.score) return b.score - a.score;
+      return b.mentions - a.mentions;
+    });
+  const seen = new Set();
+  const keywords = [];
+  for (const entry of sorted) {
+    if (keywords.length >= limit) break;
+    const en = String(entry.termEn || entry.en || '').trim();
+    const ko = String(entry.termKo || entry.ko || '').trim();
+    const key = (ko || en).toLowerCase();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    const primaryEn = formatEnglishKeyword(en || ko);
+    const primaryKo = ko || en;
+    const search = sanitizeSearchMap({
+      ko: primaryKo ? buildNewsSearchUrl(primaryKo, 'ko') : '',
+      en: primaryEn ? buildNewsSearchUrl(primaryEn, 'en') : ''
+    });
+    const record = {
+      term: primaryEn,
+      term_ko: primaryKo,
+      score: Number(entry.combined.toFixed(3)),
+      mentions: entry.mentions
+    };
+    if (search) record.search = search;
+    keywords.push(record);
+  }
+  if (!keywords.length) return null;
+  const updatedAt = formatTagUpdatedStrings(TAG_SOURCE_META);
+  return {
+    generatedAt: new Date().toISOString(),
+    updatedAt,
+    tagMeta: {
+      source: TAG_SOURCE_PATH || TAG_FILE,
+      date: TAG_SOURCE_META.date || '',
+      window: TAG_SOURCE_META.window || '',
+      generatedAt: TAG_SOURCE_META.generatedAt || ''
+    },
+    keywords
+  };
+}
+
+async function refreshKeywordSnapshotFromTags({ limit = NEWS_KEYWORD_LIMIT } = {}) {
+  const built = buildKeywordSnapshotFromTags({ limit });
+  if (!built) return null;
+  let existing = {};
+  try { existing = JSON.parse(fs.readFileSync(KEYWORD_SNAPSHOT_PATH, 'utf8')); }
+  catch {}
+  const merged = {
+    ...existing,
+    keywords: built.keywords,
+    updatedAt: { ...(existing?.updatedAt || {}), ...built.updatedAt },
+    generatedAt: built.generatedAt,
+    timezone: existing?.timezone || 'Asia/Seoul',
+    tagMeta: built.tagMeta
+  };
+  if (existing?.tickerKeywords) merged.tickerKeywords = existing.tickerKeywords;
+  if (existing?.tickerKeywordsMeta) merged.tickerKeywordsMeta = existing.tickerKeywordsMeta;
+  if (existing?.markets) merged.markets = existing.markets;
+  await fsp.mkdir(path.dirname(KEYWORD_SNAPSHOT_PATH), { recursive: true }).catch(() => {});
+  await writeAtomic(KEYWORD_SNAPSHOT_PATH, JSON.stringify(merged, null, 2));
+  NEWS_KEYWORD_SNAPSHOT = enrichKeywordSnapshot(merged);
+  return NEWS_KEYWORD_SNAPSHOT;
+}
+
 // Import index maps (S&P 500, Nasdaq-100, KOSPI 200, KOSDAQ 100)
 let INDEX_RAW = {};
 try {
@@ -382,25 +563,7 @@ function loadNewsKeywordSnapshot() {
   try {
     const raw = fs.readFileSync(KEYWORD_SNAPSHOT_PATH, 'utf8');
     const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed?.keywords)) {
-      parsed._matchers = parsed.keywords.map(entry => {
-        const ko = String(entry?.term_ko || '').trim();
-        const en = String(entry?.term || '').trim();
-        const texts = [ko, en].filter(Boolean);
-        const lowered = texts.map(t => t.toLowerCase());
-        const regexes = texts
-          .filter(t => t && t.length >= 2)
-          .map(t => {
-            try { return new RegExp(esc(t), 'i'); }
-            catch { return null; }
-          })
-          .filter(Boolean);
-        return { entry, lowered, regexes };
-      });
-    } else {
-      parsed._matchers = [];
-    }
-    NEWS_KEYWORD_SNAPSHOT = parsed;
+    NEWS_KEYWORD_SNAPSHOT = enrichKeywordSnapshot(parsed);
   } catch {
     NEWS_KEYWORD_SNAPSHOT = { keywords: [], _matchers: [] };
   }
@@ -937,55 +1100,114 @@ let TAG_ENTRY_LIST = [];
 const TAG_SCORE_MAP = new Map();
 let TAG_NEUTRAL_SCORE = 0.5;
 
-try {
-  const rawTagData = await loadJson(TAG_FILE, null);
-  if (rawTagData) {
-    let entries = [];
-    if (Array.isArray(rawTagData?.discovered_keywords) && rawTagData.discovered_keywords.length) {
-      entries = rawTagData.discovered_keywords.map(item => ({
-        en: item?.term || '',
-        ko: item?.term_ko || '',
-        mentions: item?.count || 0,
-        score: item?.score || 0
-      }));
-    } else if (Array.isArray(rawTagData?.ranked) && rawTagData.ranked.length) {
-      entries = rawTagData.ranked.map(item => ({
-        en: item?.text?.en || item?.text || item?.term || '',
-        ko: item?.text?.ko || '',
-        mentions: item?.mentions || item?.count || 0,
-        score: item?.score || 0
-      }));
-    } else if (Array.isArray(rawTagData?.tags)) {
-      entries = rawTagData.tags.map(text => ({ en: text, ko: text, mentions: 0, score: 0 }));
+let rawTagData = null;
+let lastTagError = null;
+for (const candidate of TAG_FILE_CANDIDATES) {
+  try {
+    const txt = await fsp.readFile(candidate, 'utf8');
+    rawTagData = JSON.parse(txt);
+    TAG_FILE = candidate;
+    TAG_SOURCE_PATH = candidate;
+    break;
+  } catch (err) {
+    lastTagError = err;
+  }
+}
+
+if (!rawTagData) {
+  if (lastTagError) {
+    const joined = TAG_FILE_CANDIDATES.join(', ');
+    console.warn(`[tags] failed to load ${joined}:`, lastTagError?.message || lastTagError);
+  }
+} else {
+  TAG_SOURCE_META = {
+    date: rawTagData?.date || '',
+    window: rawTagData?.window || (rawTagData?.metadata?.window || ''),
+    generatedAt: rawTagData?.metadata?.generated_at
+      || rawTagData?.metadata?.generatedAt
+      || rawTagData?.generated_at
+      || rawTagData?.generatedAt
+      || '',
+    metadata: rawTagData?.metadata || {}
+  };
+
+  let entries = [];
+  if (Array.isArray(rawTagData?.discovered_keywords) && rawTagData.discovered_keywords.length) {
+    entries = rawTagData.discovered_keywords.map(item => ({
+      en: item?.term || '',
+      ko: item?.term_ko || '',
+      mentions: item?.mentions || item?.count || 0,
+      score: item?.score ?? item?.significance_score ?? item?.significance ?? 0
+    }));
+  } else if (Array.isArray(rawTagData?.ranked) && rawTagData.ranked.length) {
+    entries = rawTagData.ranked.map(item => ({
+      en: item?.text?.en || item?.text || item?.term || '',
+      ko: item?.text?.ko || '',
+      mentions: item?.mentions || item?.count || 0,
+      score: item?.score ?? item?.significance_score ?? item?.significance ?? 0
+    }));
+  } else if (Array.isArray(rawTagData?.tags)) {
+    entries = rawTagData.tags.map(text => ({ en: text, ko: text, mentions: 0, score: 0 }));
+  }
+
+  let maxMentions = 0;
+  entries.forEach(entry => {
+    const mentions = Number(entry?.mentions) || 0;
+    if (mentions > maxMentions) maxMentions = mentions;
+  });
+
+  TAG_ENTRY_LIST = entries.map(entry => {
+    const enRaw = String(entry?.en ?? entry?.term ?? '').trim();
+    const koRaw = String(entry?.ko ?? '').trim();
+    const en = formatEnglishKeyword(enRaw);
+    const ko = koRaw;
+    const keys = [...expandTagKeys(en || enRaw), ...expandTagKeys(ko)];
+    if (!keys.length) return null;
+    const mentions = Math.max(0, Number(entry?.mentions) || 0);
+    const rawScore = Number(entry?.score ?? 0);
+    let strength = Number.isFinite(rawScore) ? rawScore : 0;
+    if (strength > 1) strength = clamp01(strength / 100);
+    else strength = clamp01(strength);
+    const freqNorm = maxMentions > 0 ? clamp01(mentions / maxMentions) : strength;
+    const combined = clamp01((TAG_STRENGTH_WEIGHT * strength) + (TAG_FREQ_WEIGHT * freqNorm));
+    const tokens = [...new Set(keys.flatMap(k => k.split(' ').filter(part => part.length >= 4)))];
+    return {
+      keys,
+      mentions,
+      strength,
+      freqNorm,
+      combined,
+      norm: keys[0],
+      tokens,
+      termEn: en,
+      termKo: ko,
+      en,
+      ko,
+      score: strength,
+      rawScore
+    };
+  }).filter(Boolean);
+
+  TAG_ENTRY_LIST.forEach(item => {
+    for (const key of item.keys) {
+      if (!TAG_SCORE_MAP.has(key)) TAG_SCORE_MAP.set(key, item);
     }
-    let maxMentions = 0;
-    entries.forEach(entry => {
-      const mentions = Number(entry?.mentions) || 0;
-      if (mentions > maxMentions) maxMentions = mentions;
-    });
-    TAG_ENTRY_LIST = entries.map(entry => {
-      const en = String(entry?.en ?? entry?.term ?? '').trim();
-      const ko = String(entry?.ko ?? '').trim();
-      const keys = [...expandTagKeys(en), ...expandTagKeys(ko)];
-      if (!keys.length) return null;
-      const mentions = Math.max(0, Number(entry?.mentions) || 0);
-      const strength = clamp01(Number(entry?.score ?? 0));
-      const freqNorm = maxMentions > 0 ? clamp01(mentions / maxMentions) : strength;
-      const combined = clamp01((TAG_STRENGTH_WEIGHT * strength) + (TAG_FREQ_WEIGHT * freqNorm));
-      const tokens = [...new Set(keys.flatMap(k => k.split(' ').filter(part => part.length >= 4)))];
-      return { keys, mentions, strength, freqNorm, combined, norm: keys[0], tokens };
-    }).filter(Boolean);
-    TAG_ENTRY_LIST.forEach(item => {
-      for (const key of item.keys) {
-        if (!TAG_SCORE_MAP.has(key)) TAG_SCORE_MAP.set(key, item);
+  });
+  if (TAG_ENTRY_LIST.length) {
+    TAG_NEUTRAL_SCORE = TAG_ENTRY_LIST.reduce((sum, item) => sum + item.combined, 0) / TAG_ENTRY_LIST.length;
+  }
+
+  if (!DRY_RUN) {
+    try {
+      const snapshot = await refreshKeywordSnapshotFromTags({ limit: NEWS_KEYWORD_LIMIT });
+      if (snapshot?.keywords?.length) {
+        const rel = path.relative(process.cwd(), KEYWORD_SNAPSHOT_PATH) || KEYWORD_SNAPSHOT_PATH;
+        console.log(`[tags] wrote ${rel} (${snapshot.keywords.length} keywords)`);
       }
-    });
-    if (TAG_ENTRY_LIST.length) {
-      TAG_NEUTRAL_SCORE = TAG_ENTRY_LIST.reduce((sum, item) => sum + item.combined, 0) / TAG_ENTRY_LIST.length;
+    } catch (err) {
+      console.warn('[tags] failed to refresh newsKeywords.json:', err?.message || err);
     }
   }
-} catch (err) {
-  console.warn(`[tags] failed to load ${TAG_FILE}:`, err?.message || err);
 }
 
 function findTagMatch(normTerm) {
