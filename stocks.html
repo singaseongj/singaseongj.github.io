@@ -359,30 +359,59 @@
       if (!data || typeof data !== 'object') {
         return { ko: '', en: '' };
       }
-      const iso = data?.metadata?.generated_at || data?.generatedAt || data?.generated_at;
-      let stamp = null;
-      if (iso) {
-        const parsed = new Date(iso);
-        if (!Number.isNaN(parsed.getTime())) {
-          stamp = parsed;
+
+      const meta = {
+        generatedAt: data?.metadata?.generated_at
+          || data?.metadata?.generatedAt
+          || data?.generated_at
+          || data?.generatedAt
+          || '',
+        date: data?.date || data?.metadata?.date || '',
+        window: data?.window || data?.metadata?.window || ''
+      };
+
+      const windowLabel = typeof meta.window === 'string' ? meta.window.replace(/_/g, ' ').trim() : '';
+      const result = { ko: '', en: '' };
+
+      if (meta.generatedAt) {
+        const stamp = new Date(meta.generatedAt);
+        if (!Number.isNaN(stamp.getTime())) {
+          try {
+            const fmtEn = new Intl.DateTimeFormat('en-US', {
+              dateStyle: 'medium',
+              timeStyle: 'short',
+              timeZone: 'Asia/Seoul'
+            }).format(stamp);
+            result.en = `Updated ${fmtEn} KST`;
+          } catch {
+            result.en = `Updated ${meta.generatedAt}`;
+          }
+          try {
+            const fmtKo = new Intl.DateTimeFormat('ko-KR', {
+              dateStyle: 'medium',
+              timeStyle: 'short',
+              timeZone: 'Asia/Seoul'
+            }).format(stamp);
+            result.ko = `${fmtKo} 기준 업데이트`;
+          } catch {
+            result.ko = `${meta.generatedAt} 기준 업데이트`;
+          }
         }
       }
-      if (!stamp && typeof data?.date === 'string') {
-        const parsed = new Date(data.date);
-        if (!Number.isNaN(parsed.getTime())) {
-          stamp = parsed;
-        }
+
+      if (!result.en && meta.date) {
+        result.en = `As of ${meta.date}`;
       }
-      if (stamp) {
-        return {
-          ko: stamp.toLocaleString('ko-KR'),
-          en: stamp.toLocaleString('en-US')
-        };
+      if (!result.ko && meta.date) {
+        result.ko = `${meta.date} 기준`;
       }
-      if (typeof data?.date === 'string') {
-        return { ko: data.date, en: data.date };
+
+      if (windowLabel) {
+        result.en = result.en ? `${result.en} (${windowLabel})` : windowLabel;
+        result.ko = result.ko ? `${result.ko} (${windowLabel})` : windowLabel;
       }
-      return { ko: '', en: '' };
+
+      return result;
     }
 
     async function loadTagKoLookup() {
@@ -540,7 +569,10 @@
         } else {
           errorEl.style.display = 'none';
         }
-        if (updatedEl) updatedEl.textContent = '';
+        if (updatedEl) {
+          updatedEl.textContent = '';
+          updatedEl.style.display = 'none';
+        }
         return;
       }
 
@@ -560,9 +592,8 @@
         const localized = currentLang === 'ko'
           ? (keywordSnapshot.updatedAt?.ko || keywordSnapshot.updatedAt?.en || '')
           : (keywordSnapshot.updatedAt?.en || keywordSnapshot.updatedAt?.ko || '');
-        updatedEl.textContent = localized
-          ? translations[currentLang].updated + localized
-          : '';
+        updatedEl.textContent = localized || '';
+        updatedEl.style.display = localized ? 'block' : 'none';
       }
     }
 
