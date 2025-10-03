@@ -976,14 +976,19 @@ function isCompleteKoTranslation(en, candidate) {
   return koText.toLowerCase() !== enText;
 }
 
-async function translateKoTermToEn(koText) {
+async function translateKoTermToEn(koText, { includeMeta = false } = {}) {
   const raw = String(koText || '').trim();
-  if (!raw) return '';
+  if (!raw) return includeMeta ? { text: '', translator: '' } : '';
+
+  const buildResult = (text, translator) => includeMeta
+    ? { text: String(text || '').trim(), translator: String(translator || '').trim() }
+    : String(text || '').trim();
+
   if (DEEPL_API_KEY) {
     const deepl = await translateWithDeepL(raw, { sourceLang: 'KO', targetLang: 'EN' });
     const deeplText = String(deepl || '').trim();
     if (deeplText) {
-      return deeplText;
+      return buildResult(deeplText, 'deepl');
     }
   }
 
@@ -993,7 +998,7 @@ async function translateKoTermToEn(koText) {
       const result = await translatorModule(raw, { from: 'ko', to: 'en' });
       const translated = String(result?.text || '').trim();
       if (translated) {
-        return translated;
+        return buildResult(translated, 'google');
       }
     } catch (err) {
       console.warn(`[keywords] failed to translate Korean term "${raw}" with Google:`, err?.message || err);
@@ -1004,11 +1009,11 @@ async function translateKoTermToEn(koText) {
     const papago = await translateWithNaverPapago(raw, { sourceLang: 'ko', targetLang: 'en' });
     const papagoText = String(papago || '').trim();
     if (papagoText) {
-      return papagoText;
+      return buildResult(papagoText, 'papago');
     }
   }
 
-  return '';
+  return buildResult('', '');
 }
 
 async function getLocalizedKeywordTexts(enText) {
@@ -2553,21 +2558,28 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     const enText = formatTagDisplay(enRaw || '');
     const key = toKeywordKey(enText, koText);
     if (!key) return;
+    const translatorLabel = String(translator || '').trim();
     if (aggregated.has(key)) {
       const existing = aggregated.get(key);
       if (!existing.term && enText) existing.term = enText;
+      if (!existing.term_en && enText) existing.term_en = enText;
       if (!existing.term_ko && koText) existing.term_ko = koText;
+      if (translatorLabel) existing.translators.add(translatorLabel);
     } else {
+      const translators = new Set();
+      if (translatorLabel) translators.add(translatorLabel);
       aggregated.set(key, {
         term: enText || '',
-        term_ko: koText
+        term_en: enText || '',
+        term_ko: koText,
+        translators
       });
     }
 
     if (enText && koText) {
       translations[enText] = { en: enText, ko: koText };
-      if (translator) {
-        translations[enText].translator = translator;
+      if (translatorLabel) {
+        translations[enText].translator = translatorLabel;
       }
       setTranslationCache(enText, koText);
     }
@@ -2577,13 +2589,17 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     const koTerm = normalizeKoKeywordTerm(koSource);
     if (!koTerm) return;
     let enTerm = formatTagDisplay(enHint || '');
+    let translatorLabel = String(translator || '').trim();
     if (!enTerm || enTerm.toLowerCase() === koTerm.toLowerCase()) {
-      const translated = await translateKoTermToEn(koTerm);
-      if (translated) {
-        enTerm = formatTagDisplay(translated);
+      const translation = await translateKoTermToEn(koTerm, { includeMeta: true });
+      if (translation.text) {
+        enTerm = formatTagDisplay(translation.text);
+        if (translation.translator) {
+          translatorLabel = translation.translator;
+        }
       }
     }
-    addAggregatedKeyword(enTerm, koTerm, { translator });
+    addAggregatedKeyword(enTerm, koTerm, { translator: translatorLabel });
   };
 
   const addEnglishCandidate = async (enSource, koHint) => {
@@ -2592,7 +2608,7 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     const storedKo = normalizeKoKeywordTerm(koHint);
     if (storedKo) {
       setTranslationCache(baseTerm, storedKo);
-      addAggregatedKeyword(baseTerm, storedKo);
+      addAggregatedKeyword(baseTerm, storedKo, { translator: 'cache' });
       return;
     }
 
@@ -2638,7 +2654,47 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     return null;
   }
 
-  const localizedDiscovered = Array.from(aggregated.values());
+  const localizedDiscovered = [];
+  for (const entry of aggregated.values()) {
+    const koTerm = entry.term_ko || '';
+    let english = formatTagDisplay(entry.term_en || entry.term || '');
+    let translatorLabel = '';
+    if (entry.translators && entry.translators.size) {
+      const translatorCandidates = [...entry.translators];
+      if (translatorCandidates.length) {
+        translatorLabel = String(translatorCandidates[0] || '').trim();
+      }
+    }
+
+    if ((!english || english.toLowerCase() === koTerm.toLowerCase()) && koTerm) {
+      const translation = await translateKoTermToEn(koTerm, { includeMeta: true });
+      if (translation.text) {
+        english = formatTagDisplay(translation.text);
+        if (translation.translator) {
+          translatorLabel = translation.translator;
+        }
+      }
+    }
+
+    const finalEn = english || formatTagDisplay(entry.term || '');
+    const keywordRecord = {
+      term: finalEn || '',
+      term_ko: koTerm,
+      term_en: finalEn || ''
+    };
+
+    localizedDiscovered.push(keywordRecord);
+
+    if (finalEn && koTerm) {
+      const translatorValue = translatorLabel || (DEEPL_API_KEY ? 'deepl' : '');
+      const translationEntry = { en: finalEn, ko: koTerm };
+      if (translatorValue) {
+        translationEntry.translator = translatorValue;
+      }
+      translations[finalEn] = translationEntry;
+      setTranslationCache(finalEn, koTerm);
+    }
+  }
 
   const payload = {
     date: asOfDate,
@@ -2784,15 +2840,47 @@ async function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10
   return out;
 }
 
-export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
+export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, preCollected = null } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
   const existingTagSnapshot = readJsonSafe(TAG_OUTPUT_FILE) || null;
 
-  let collectionResult = { keywords: [], totalRaw: 0, uniqueTerms: 0 };
-  try {
-    collectionResult = await collectKoreanFirstKeywords({ targetCount: 30 });
-  } catch (err) {
-    console.warn('[Korean-First] collection failed:', err.message);
+  const normalizeCollection = (input) => {
+    if (!input || typeof input !== 'object') {
+      return { keywords: [], totalRaw: 0, uniqueTerms: 0 };
+    }
+
+    const keywords = Array.isArray(input.keywords)
+      ? input.keywords.map((kw) => {
+          if (!kw || typeof kw !== 'object') return {};
+          const sources = Array.isArray(kw.sources)
+            ? kw.sources.filter(Boolean)
+            : (kw.sources ? [kw.sources].filter(Boolean) : []);
+          return { ...kw, sources };
+        })
+      : [];
+
+    const totalRawValue = Number(input.totalRaw);
+    const uniqueTermsValue = Number(input.uniqueTerms);
+
+    return {
+      keywords,
+      totalRaw: Number.isFinite(totalRawValue) ? totalRawValue : keywords.length,
+      uniqueTerms: Number.isFinite(uniqueTermsValue) ? uniqueTermsValue : keywords.length
+    };
+  };
+
+  const providedCollection = preCollected && typeof preCollected === 'object'
+    ? normalizeCollection(preCollected)
+    : null;
+
+  let collectionResult = providedCollection || { keywords: [], totalRaw: 0, uniqueTerms: 0 };
+
+  if (!providedCollection) {
+    try {
+      collectionResult = normalizeCollection(await collectKoreanFirstKeywords({ targetCount: 30 }));
+    } catch (err) {
+      console.warn('[Korean-First] collection failed:', err.message);
+    }
   }
 
   let tagSnapshot = existingTagSnapshot;
@@ -3135,7 +3223,68 @@ function pickKeywords(scores, domainLexicon) {
     }
   }
 
-  return [...deduped.values()].sort((a, b) => b.score - a.score).slice(0, 20);
+  const ranked = [...deduped.values()].sort((a, b) => b.score - a.score);
+  if (ranked.length) {
+    return ranked.slice(0, 20);
+  }
+
+  return pickRandomImportantTerms(scores, domainLexicon, 10);
+}
+
+function shuffleArrayInPlace(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function pickRandomImportantTerms(scores, domainLexicon, count = 10) {
+  const important = [];
+  const fallback = [];
+
+  for (const [term, value] of scores.entries()) {
+    const canonicalTerm = canon(term);
+    const collapsed = canonicalTerm.replace(/\s+/g, '');
+    const info = {
+      term: formatTagDisplay(canonicalTerm),
+      score: Number((value?.score || 0).toFixed(3)),
+      sources: Array.from(value?.sources || []).slice(0, 5)
+    };
+
+    const isImportant = isWhitelisted(canonicalTerm, domainLexicon) || isWhitelisted(collapsed, domainLexicon);
+    if (isImportant) {
+      important.push(info);
+    } else if (looksContenty(collapsed)) {
+      fallback.push(info);
+    }
+  }
+
+  const dedupe = (list) => {
+    const seen = new Set();
+    const out = [];
+    for (const item of list) {
+      const key = String(item.term || '').toLowerCase();
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      out.push(item);
+    }
+    return out;
+  };
+
+  const chosen = [];
+  const importantPool = dedupe(important);
+  shuffleArrayInPlace(importantPool);
+  chosen.push(...importantPool.slice(0, count));
+
+  if (chosen.length < count) {
+    const remaining = count - chosen.length;
+    const fallbackPool = dedupe(fallback).filter(item => item.term);
+    shuffleArrayInPlace(fallbackPool);
+    chosen.push(...fallbackPool.slice(0, remaining));
+  }
+
+  return chosen.slice(0, count);
 }
 
 function extractKeywords(articles, domainLexicon) {
