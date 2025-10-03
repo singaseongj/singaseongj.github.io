@@ -140,6 +140,16 @@
     "LG에너지솔루션 적자",
     "LG에너지솔루션 흑자"
   ],
+  "097950.KS": [
+    "CJ제일제당 주가",
+    "CJ제일제당 실적",
+    "CJ제일제당",
+    "CJ제일제당 리콜",
+    "CJ제일제당 파업",
+    "CJ제일제당 규제",
+    "CJ제일제당 적자",
+    "CJ제일제당 흑자"
+  ],
   "018260.KS": [
     "삼성에스디에스 주가",
     "삼성에스디에스 실적",
@@ -362,16 +372,6 @@
     "포스코퓨처엠 규제",
     "포스코퓨처엠 적자",
     "포스코퓨처엠 흑자"
-  ],
-  "097950.KS": [
-    "CJ제일제당 주가",
-    "CJ제일제당 실적",
-    "CJ제일제당",
-    "CJ제일제당 리콜",
-    "CJ제일제당 파업",
-    "CJ제일제당 규제",
-    "CJ제일제당 적자",
-    "CJ제일제당 흑자"
   ],
   "034020.KS": [
     "두산에너빌리티 주가",
@@ -722,16 +722,6 @@
     "우리금융지주 적자",
     "우리금융지주 흑자"
   ],
-  "064350.KS": [
-    "현대로템 주가",
-    "현대로템 실적",
-    "현대로템",
-    "현대로템 리콜",
-    "현대로템 파업",
-    "현대로템 규제",
-    "현대로템 적자",
-    "현대로템 흑자"
-  ],
   "175330.KS": [
     "JB금융지주 주가",
     "JB금융지주 실적",
@@ -741,6 +731,16 @@
     "JB금융지주 규제",
     "JB금융지주 적자",
     "JB금융지주 흑자"
+  ],
+  "064350.KS": [
+    "현대로템 주가",
+    "현대로템 실적",
+    "현대로템",
+    "현대로템 리콜",
+    "현대로템 파업",
+    "현대로템 규제",
+    "현대로템 적자",
+    "현대로템 흑자"
   ],
   "271560.KS": [
     "오리온 주가",
@@ -3094,15 +3094,6 @@
     "Philip Morris International strike",
     "Philip Morris International regulation"
   ],
-  "BX": [
-    "BX",
-    "Blackstone Inc. stock",
-    "Blackstone Inc. earnings",
-    "Blackstone Inc.",
-    "Blackstone Inc. recall",
-    "Blackstone Inc. strike",
-    "Blackstone Inc. regulation"
-  ],
   "MS": [
     "MS",
     "Morgan Stanley stock",
@@ -3112,6 +3103,15 @@
     "Morgan Stanley strike",
     "Morgan Stanley regulation"
   ],
+  "BX": [
+    "BX",
+    "Blackstone Inc. stock",
+    "Blackstone Inc. earnings",
+    "Blackstone Inc.",
+    "Blackstone Inc. recall",
+    "Blackstone Inc. strike",
+    "Blackstone Inc. regulation"
+  ],
   "HD": [
     "HD",
     "Home Depot (The) stock",
@@ -3120,15 +3120,6 @@
     "Home Depot (The) recall",
     "Home Depot (The) strike",
     "Home Depot (The) regulation"
-  ],
-  "NKE": [
-    "NKE",
-    "Nike, Inc. stock",
-    "Nike, Inc. earnings",
-    "Nike, Inc.",
-    "Nike, Inc. recall",
-    "Nike, Inc. strike",
-    "Nike, Inc. regulation"
   ],
   "LRCX": [
     "LRCX",
@@ -3147,6 +3138,15 @@
     "Arista Networks recall",
     "Arista Networks strike",
     "Arista Networks regulation"
+  ],
+  "NKE": [
+    "NKE",
+    "Nike, Inc. stock",
+    "Nike, Inc. earnings",
+    "Nike, Inc.",
+    "Nike, Inc. recall",
+    "Nike, Inc. strike",
+    "Nike, Inc. regulation"
   ],
   "CRM": [
     "Salesforce stock",
@@ -3180,15 +3180,6 @@
     "Thermo Fisher Scientific strike",
     "Thermo Fisher Scientific regulation"
   ],
-  "DHR": [
-    "DHR",
-    "Danaher Corporation stock",
-    "Danaher Corporation earnings",
-    "Danaher Corporation",
-    "Danaher Corporation recall",
-    "Danaher Corporation strike",
-    "Danaher Corporation regulation"
-  ],
   "RTX": [
     "RTX",
     "RTX Corporation stock",
@@ -3197,6 +3188,15 @@
     "RTX Corporation recall",
     "RTX Corporation strike",
     "RTX Corporation regulation"
+  ],
+  "DHR": [
+    "DHR",
+    "Danaher Corporation stock",
+    "Danaher Corporation earnings",
+    "Danaher Corporation",
+    "Danaher Corporation recall",
+    "Danaher Corporation strike",
+    "Danaher Corporation regulation"
   ],
   "AMGN": [
     "Amgen stock",
@@ -3250,15 +3250,6 @@
     "AT&T strike",
     "AT&T regulation"
   ],
-  "BMY": [
-    "BMY",
-    "Bristol Myers Squibb stock",
-    "Bristol Myers Squibb earnings",
-    "Bristol Myers Squibb",
-    "Bristol Myers Squibb recall",
-    "Bristol Myers Squibb strike",
-    "Bristol Myers Squibb regulation"
-  ],
   "KO": [
     "코카콜라 주가",
     "코카콜라 실적",
@@ -3273,15 +3264,6 @@
     "코카콜라 주가 recall",
     "코카콜라 주가 strike"
   ],
-  "XOM": [
-    "ExxonMobil stock",
-    "ExxonMobil earnings",
-    "ExxonMobil",
-    "ExxonMobil recall",
-    "ExxonMobil strike",
-    "ExxonMobil regulation",
-    "XOM"
-  ],
   "COST": [
     "Costco stock",
     "Costco earnings",
@@ -3291,14 +3273,23 @@
     "Costco regulation",
     "COST"
   ],
-  "CVX": [
-    "CVX",
-    "Chevron Corporation stock",
-    "Chevron Corporation earnings",
-    "Chevron Corporation",
-    "Chevron Corporation recall",
-    "Chevron Corporation strike",
-    "Chevron Corporation regulation"
+  "XOM": [
+    "ExxonMobil stock",
+    "ExxonMobil earnings",
+    "ExxonMobil",
+    "ExxonMobil recall",
+    "ExxonMobil strike",
+    "ExxonMobil regulation",
+    "XOM"
+  ],
+  "BMY": [
+    "BMY",
+    "Bristol Myers Squibb stock",
+    "Bristol Myers Squibb earnings",
+    "Bristol Myers Squibb",
+    "Bristol Myers Squibb recall",
+    "Bristol Myers Squibb strike",
+    "Bristol Myers Squibb regulation"
   ],
   "UNH": [
     "유나이티드헬스 주가",
@@ -3313,6 +3304,15 @@
     "유나이티드헬스 리콜 stock",
     "유나이티드헬스 주가 recall",
     "유나이티드헬스 주가 strike"
+  ],
+  "CVX": [
+    "CVX",
+    "Chevron Corporation stock",
+    "Chevron Corporation earnings",
+    "Chevron Corporation",
+    "Chevron Corporation recall",
+    "Chevron Corporation strike",
+    "Chevron Corporation regulation"
   ],
   "HOOD": [
     "HOOD",
@@ -3341,15 +3341,6 @@
     "Linde plc strike",
     "Linde plc regulation"
   ],
-  "UPS": [
-    "UPS",
-    "United Parcel Service stock",
-    "United Parcel Service earnings",
-    "United Parcel Service",
-    "United Parcel Service recall",
-    "United Parcel Service strike",
-    "United Parcel Service regulation"
-  ],
   "GE": [
     "GE",
     "GE Aerospace stock",
@@ -3377,6 +3368,15 @@
     "Caterpillar Inc. strike",
     "Caterpillar Inc. regulation"
   ],
+  "UPS": [
+    "UPS",
+    "United Parcel Service stock",
+    "United Parcel Service earnings",
+    "United Parcel Service",
+    "United Parcel Service recall",
+    "United Parcel Service strike",
+    "United Parcel Service regulation"
+  ],
   "VZ": [
     "Verizon stock",
     "Verizon earnings",
@@ -3386,15 +3386,6 @@
     "Verizon regulation",
     "VZ"
   ],
-  "APP": [
-    "AppLovin stock",
-    "AppLovin earnings",
-    "AppLovin",
-    "AppLovin recall",
-    "AppLovin strike",
-    "AppLovin regulation",
-    "APP"
-  ],
   "HLT": [
     "HLT",
     "Hilton Worldwide stock",
@@ -3403,6 +3394,15 @@
     "Hilton Worldwide recall",
     "Hilton Worldwide strike",
     "Hilton Worldwide regulation"
+  ],
+  "APP": [
+    "AppLovin stock",
+    "AppLovin earnings",
+    "AppLovin",
+    "AppLovin recall",
+    "AppLovin strike",
+    "AppLovin regulation",
+    "APP"
   ],
   "DIS": [
     "DIS",
@@ -3422,15 +3422,6 @@
     "T-Mobile US strike",
     "T-Mobile US regulation"
   ],
-  "CB": [
-    "CB",
-    "Chubb Limited stock",
-    "Chubb Limited earnings",
-    "Chubb Limited",
-    "Chubb Limited recall",
-    "Chubb Limited strike",
-    "Chubb Limited regulation"
-  ],
   "GS": [
     "GS",
     "Goldman Sachs stock",
@@ -3439,6 +3430,15 @@
     "Goldman Sachs recall",
     "Goldman Sachs strike",
     "Goldman Sachs regulation"
+  ],
+  "CB": [
+    "CB",
+    "Chubb Limited stock",
+    "Chubb Limited earnings",
+    "Chubb Limited",
+    "Chubb Limited recall",
+    "Chubb Limited strike",
+    "Chubb Limited regulation"
   ],
   "ADP": [
     "ADP",
@@ -3476,15 +3476,6 @@
     "Intuitive Surgical strike",
     "Intuitive Surgical regulation"
   ],
-  "ADI": [
-    "ADI",
-    "Analog Devices stock",
-    "Analog Devices earnings",
-    "Analog Devices",
-    "Analog Devices recall",
-    "Analog Devices strike",
-    "Analog Devices regulation"
-  ],
   "ADBE": [
     "ADBE",
     "Adobe Inc. stock",
@@ -3493,15 +3484,6 @@
     "Adobe Inc. recall",
     "Adobe Inc. strike",
     "Adobe Inc. regulation"
-  ],
-  "AMD": [
-    "AMD",
-    "Advanced Micro Devices stock",
-    "Advanced Micro Devices earnings",
-    "Advanced Micro Devices",
-    "Advanced Micro Devices recall",
-    "Advanced Micro Devices strike",
-    "Advanced Micro Devices regulation"
   ],
   "AMAT": [
     "AMAT",
@@ -3512,6 +3494,27 @@
     "Applied Materials strike",
     "Applied Materials regulation"
   ],
+  "ADI": [
+    "ADI",
+    "Analog Devices stock",
+    "Analog Devices earnings",
+    "Analog Devices",
+    "Analog Devices recall",
+    "Analog Devices strike",
+    "Analog Devices regulation"
+  ],
+  "AMD": [
+    "AMD",
+    "Advanced Micro Devices stock",
+    "Advanced Micro Devices earnings",
+    "Advanced Micro Devices",
+    "Advanced Micro Devices recall",
+    "Advanced Micro Devices strike",
+    "Advanced Micro Devices regulation"
+  ],
+  "IBM": [
+    "IBM"
+  ],
   "MMC": [
     "MMC",
     "Marsh McLennan stock",
@@ -3521,8 +3524,14 @@
     "Marsh McLennan strike",
     "Marsh McLennan regulation"
   ],
-  "IBM": [
-    "IBM"
+  "BLK": [
+    "BlackRock stock",
+    "BlackRock earnings",
+    "BlackRock",
+    "BlackRock recall",
+    "BlackRock strike",
+    "BlackRock regulation",
+    "BLK"
   ],
   "ACN": [
     "Accenture stock",
@@ -3541,15 +3550,6 @@
     "Cisco strike",
     "Cisco regulation",
     "CSCO"
-  ],
-  "BLK": [
-    "BlackRock stock",
-    "BlackRock earnings",
-    "BlackRock",
-    "BlackRock recall",
-    "BlackRock strike",
-    "BlackRock regulation",
-    "BLK"
   ],
   "NEE": [
     "NEE",
@@ -3592,6 +3592,15 @@
     "Amphenol regulation",
     "APH"
   ],
+  "MNST": [
+    "MNST",
+    "Monster Beverage stock",
+    "Monster Beverage earnings",
+    "Monster Beverage",
+    "Monster Beverage recall",
+    "Monster Beverage strike",
+    "Monster Beverage regulation"
+  ],
   "LOW": [
     "Lowe's stock",
     "Lowe's earnings",
@@ -3610,14 +3619,23 @@
     "L3Harris regulation",
     "LHX"
   ],
-  "MNST": [
-    "MNST",
-    "Monster Beverage stock",
-    "Monster Beverage earnings",
-    "Monster Beverage",
-    "Monster Beverage recall",
-    "Monster Beverage strike",
-    "Monster Beverage regulation"
+  "GILD": [
+    "GILD",
+    "Gilead Sciences stock",
+    "Gilead Sciences earnings",
+    "Gilead Sciences",
+    "Gilead Sciences recall",
+    "Gilead Sciences strike",
+    "Gilead Sciences regulation"
+  ],
+  "ABT": [
+    "ABT",
+    "Abbott Laboratories stock",
+    "Abbott Laboratories earnings",
+    "Abbott Laboratories",
+    "Abbott Laboratories recall",
+    "Abbott Laboratories strike",
+    "Abbott Laboratories regulation"
   ],
   "GEV": [
     "GEV",
@@ -3636,24 +3654,6 @@
     "Altria strike",
     "Altria regulation",
     "MO"
-  ],
-  "GILD": [
-    "GILD",
-    "Gilead Sciences stock",
-    "Gilead Sciences earnings",
-    "Gilead Sciences",
-    "Gilead Sciences recall",
-    "Gilead Sciences strike",
-    "Gilead Sciences regulation"
-  ],
-  "ABT": [
-    "ABT",
-    "Abbott Laboratories stock",
-    "Abbott Laboratories earnings",
-    "Abbott Laboratories",
-    "Abbott Laboratories recall",
-    "Abbott Laboratories strike",
-    "Abbott Laboratories regulation"
   ],
   "GLW": [
     "GLW",
@@ -3732,14 +3732,14 @@
     "McDonald's regulation",
     "MCD"
   ],
-  "CARR": [
-    "CARR",
-    "Carrier Global stock",
-    "Carrier Global earnings",
-    "Carrier Global",
-    "Carrier Global recall",
-    "Carrier Global strike",
-    "Carrier Global regulation"
+  "PANW": [
+    "PANW",
+    "Palo Alto Networks stock",
+    "Palo Alto Networks earnings",
+    "Palo Alto Networks",
+    "Palo Alto Networks recall",
+    "Palo Alto Networks strike",
+    "Palo Alto Networks regulation"
   ],
   "AEP": [
     "AEP",
@@ -3750,14 +3750,14 @@
     "American Electric Power strike",
     "American Electric Power regulation"
   ],
-  "PANW": [
-    "PANW",
-    "Palo Alto Networks stock",
-    "Palo Alto Networks earnings",
-    "Palo Alto Networks",
-    "Palo Alto Networks recall",
-    "Palo Alto Networks strike",
-    "Palo Alto Networks regulation"
+  "CARR": [
+    "CARR",
+    "Carrier Global stock",
+    "Carrier Global earnings",
+    "Carrier Global",
+    "Carrier Global recall",
+    "Carrier Global strike",
+    "Carrier Global regulation"
   ],
   "INTU": [
     "Intuit stock",
@@ -3767,15 +3767,6 @@
     "Intuit strike",
     "Intuit regulation",
     "INTU"
-  ],
-  "OXY": [
-    "OXY",
-    "Occidental Petroleum stock",
-    "Occidental Petroleum earnings",
-    "Occidental Petroleum",
-    "Occidental Petroleum recall",
-    "Occidental Petroleum strike",
-    "Occidental Petroleum regulation"
   ],
   "PGR": [
     "PGR",
@@ -3795,6 +3786,15 @@
     "BNY Mellon strike",
     "BNY Mellon regulation"
   ],
+  "OXY": [
+    "OXY",
+    "Occidental Petroleum stock",
+    "Occidental Petroleum earnings",
+    "Occidental Petroleum",
+    "Occidental Petroleum recall",
+    "Occidental Petroleum strike",
+    "Occidental Petroleum regulation"
+  ],
   "LMT": [
     "LMT",
     "Lockheed Martin stock",
@@ -3804,15 +3804,6 @@
     "Lockheed Martin strike",
     "Lockheed Martin regulation"
   ],
-  "TXN": [
-    "TXN",
-    "Texas Instruments stock",
-    "Texas Instruments earnings",
-    "Texas Instruments",
-    "Texas Instruments recall",
-    "Texas Instruments strike",
-    "Texas Instruments regulation"
-  ],
   "ELV": [
     "ELV",
     "Elevance Health stock",
@@ -3821,6 +3812,15 @@
     "Elevance Health recall",
     "Elevance Health strike",
     "Elevance Health regulation"
+  ],
+  "TXN": [
+    "TXN",
+    "Texas Instruments stock",
+    "Texas Instruments earnings",
+    "Texas Instruments",
+    "Texas Instruments recall",
+    "Texas Instruments strike",
+    "Texas Instruments regulation"
   ],
   "TTWO": [
     "TTWO",
@@ -3867,24 +3867,6 @@
     "Northrop Grumman strike",
     "Northrop Grumman regulation"
   ],
-  "KKR": [
-    "KKR",
-    "KKR & Co. stock",
-    "KKR & Co. earnings",
-    "KKR & Co.",
-    "KKR & Co. recall",
-    "KKR & Co. strike",
-    "KKR & Co. regulation"
-  ],
-  "MDLZ": [
-    "MDLZ",
-    "Mondelez International stock",
-    "Mondelez International earnings",
-    "Mondelez International",
-    "Mondelez International recall",
-    "Mondelez International strike",
-    "Mondelez International regulation"
-  ],
   "MDT": [
     "Medtronic stock",
     "Medtronic earnings",
@@ -3903,6 +3885,15 @@
     "Capital One strike",
     "Capital One regulation"
   ],
+  "KKR": [
+    "KKR",
+    "KKR & Co. stock",
+    "KKR & Co. earnings",
+    "KKR & Co.",
+    "KKR & Co. recall",
+    "KKR & Co. strike",
+    "KKR & Co. regulation"
+  ],
   "INTC": [
     "Intel stock",
     "Intel earnings",
@@ -3911,6 +3902,15 @@
     "Intel strike",
     "Intel regulation",
     "INTC"
+  ],
+  "MDLZ": [
+    "MDLZ",
+    "Mondelez International stock",
+    "Mondelez International earnings",
+    "Mondelez International",
+    "Mondelez International recall",
+    "Mondelez International strike",
+    "Mondelez International regulation"
   ],
   "SYK": [
     "SYK",
@@ -3930,15 +3930,6 @@
     "Fifth Third Bancorp strike",
     "Fifth Third Bancorp regulation"
   ],
-  "WM": [
-    "WM",
-    "Waste Management stock",
-    "Waste Management earnings",
-    "Waste Management",
-    "Waste Management recall",
-    "Waste Management strike",
-    "Waste Management regulation"
-  ],
   "ABNB": [
     "Airbnb stock",
     "Airbnb earnings",
@@ -3947,6 +3938,15 @@
     "Airbnb strike",
     "Airbnb regulation",
     "ABNB"
+  ],
+  "WM": [
+    "WM",
+    "Waste Management stock",
+    "Waste Management earnings",
+    "Waste Management",
+    "Waste Management recall",
+    "Waste Management strike",
+    "Waste Management regulation"
   ],
   "IBKR": [
     "IBKR",
@@ -3966,6 +3966,15 @@
     "Quanta Services strike",
     "Quanta Services regulation"
   ],
+  "PCAR": [
+    "Paccar stock",
+    "Paccar earnings",
+    "Paccar",
+    "Paccar recall",
+    "Paccar strike",
+    "Paccar regulation",
+    "PCAR"
+  ],
   "TEL": [
     "TEL",
     "TE Connectivity stock",
@@ -3975,14 +3984,14 @@
     "TE Connectivity strike",
     "TE Connectivity regulation"
   ],
-  "PCAR": [
-    "Paccar stock",
-    "Paccar earnings",
-    "Paccar",
-    "Paccar recall",
-    "Paccar strike",
-    "Paccar regulation",
-    "PCAR"
+  "CEG": [
+    "CEG",
+    "Constellation Energy stock",
+    "Constellation Energy earnings",
+    "Constellation Energy",
+    "Constellation Energy recall",
+    "Constellation Energy strike",
+    "Constellation Energy regulation"
   ],
   "UNP": [
     "UNP",
@@ -4011,14 +4020,23 @@
     "TransDigm Group strike",
     "TransDigm Group regulation"
   ],
-  "CEG": [
-    "CEG",
-    "Constellation Energy stock",
-    "Constellation Energy earnings",
-    "Constellation Energy",
-    "Constellation Energy recall",
-    "Constellation Energy strike",
-    "Constellation Energy regulation"
+  "PYPL": [
+    "PayPal stock",
+    "PayPal earnings",
+    "PayPal",
+    "PayPal recall",
+    "PayPal strike",
+    "PayPal regulation",
+    "PYPL"
+  ],
+  "USB": [
+    "USB",
+    "U.S. Bancorp stock",
+    "U.S. Bancorp earnings",
+    "U.S. Bancorp",
+    "U.S. Bancorp recall",
+    "U.S. Bancorp strike",
+    "U.S. Bancorp regulation"
   ],
   "CRWD": [
     "사이버 보안 주가",
@@ -4043,15 +4061,6 @@
     "Otis Worldwide strike",
     "Otis Worldwide regulation"
   ],
-  "USB": [
-    "USB",
-    "U.S. Bancorp stock",
-    "U.S. Bancorp earnings",
-    "U.S. Bancorp",
-    "U.S. Bancorp recall",
-    "U.S. Bancorp strike",
-    "U.S. Bancorp regulation"
-  ],
   "BSX": [
     "BSX",
     "Boston Scientific stock",
@@ -4061,23 +4070,14 @@
     "Boston Scientific strike",
     "Boston Scientific regulation"
   ],
-  "PYPL": [
-    "PayPal stock",
-    "PayPal earnings",
-    "PayPal",
-    "PayPal recall",
-    "PayPal strike",
-    "PayPal regulation",
-    "PYPL"
-  ],
-  "WELL": [
-    "Welltower stock",
-    "Welltower earnings",
-    "Welltower",
-    "Welltower recall",
-    "Welltower strike",
-    "Welltower regulation",
-    "WELL"
+  "COIN": [
+    "Coinbase stock",
+    "Coinbase earnings",
+    "Coinbase",
+    "Coinbase recall",
+    "Coinbase strike",
+    "Coinbase regulation",
+    "COIN"
   ],
   "DE": [
     "DE",
@@ -4088,14 +4088,14 @@
     "Deere & Company strike",
     "Deere & Company regulation"
   ],
-  "COIN": [
-    "Coinbase stock",
-    "Coinbase earnings",
-    "Coinbase",
-    "Coinbase recall",
-    "Coinbase strike",
-    "Coinbase regulation",
-    "COIN"
+  "WELL": [
+    "Welltower stock",
+    "Welltower earnings",
+    "Welltower",
+    "Welltower recall",
+    "Welltower strike",
+    "Welltower regulation",
+    "WELL"
   ],
   "FCX": [
     "Freeport-McMoRan stock",
@@ -4114,15 +4114,6 @@
     "Emerson Electric recall",
     "Emerson Electric strike",
     "Emerson Electric regulation"
-  ],
-  "TT": [
-    "TT",
-    "Trane Technologies stock",
-    "Trane Technologies earnings",
-    "Trane Technologies",
-    "Trane Technologies recall",
-    "Trane Technologies strike",
-    "Trane Technologies regulation"
   ],
   "STT": [
     "STT",
@@ -4150,6 +4141,15 @@
     "Honeywell strike",
     "Honeywell regulation",
     "HON"
+  ],
+  "TT": [
+    "TT",
+    "Trane Technologies stock",
+    "Trane Technologies earnings",
+    "Trane Technologies",
+    "Trane Technologies recall",
+    "Trane Technologies strike",
+    "Trane Technologies regulation"
   ],
   "ECL": [
     "Ecolab stock",
@@ -4196,15 +4196,6 @@
     "Ametek regulation",
     "AME"
   ],
-  "VRSK": [
-    "VRSK",
-    "Verisk Analytics stock",
-    "Verisk Analytics earnings",
-    "Verisk Analytics",
-    "Verisk Analytics recall",
-    "Verisk Analytics strike",
-    "Verisk Analytics regulation"
-  ],
   "PH": [
     "PH",
     "Parker Hannifin stock",
@@ -4214,6 +4205,15 @@
     "Parker Hannifin strike",
     "Parker Hannifin regulation"
   ],
+  "VRSK": [
+    "VRSK",
+    "Verisk Analytics stock",
+    "Verisk Analytics earnings",
+    "Verisk Analytics",
+    "Verisk Analytics recall",
+    "Verisk Analytics strike",
+    "Verisk Analytics regulation"
+  ],
   "NUE": [
     "Nucor stock",
     "Nucor earnings",
@@ -4222,6 +4222,15 @@
     "Nucor strike",
     "Nucor regulation",
     "NUE"
+  ],
+  "WDC": [
+    "WDC",
+    "Western Digital stock",
+    "Western Digital earnings",
+    "Western Digital",
+    "Western Digital recall",
+    "Western Digital strike",
+    "Western Digital regulation"
   ],
   "GM": [
     "GM",
@@ -4240,15 +4249,6 @@
     "McKesson Corporation recall",
     "McKesson Corporation strike",
     "McKesson Corporation regulation"
-  ],
-  "WDC": [
-    "WDC",
-    "Western Digital stock",
-    "Western Digital earnings",
-    "Western Digital",
-    "Western Digital recall",
-    "Western Digital strike",
-    "Western Digital regulation"
   ],
   "XYL": [
     "XYL",
@@ -4286,15 +4286,6 @@
     "Fiserv regulation",
     "FI"
   ],
-  "LVS": [
-    "LVS",
-    "Las Vegas Sands stock",
-    "Las Vegas Sands earnings",
-    "Las Vegas Sands",
-    "Las Vegas Sands recall",
-    "Las Vegas Sands strike",
-    "Las Vegas Sands regulation"
-  ],
   "GWW": [
     "GWW",
     "W. W. Grainger stock",
@@ -4304,32 +4295,14 @@
     "W. W. Grainger strike",
     "W. W. Grainger regulation"
   ],
-  "TRGP": [
-    "TRGP",
-    "Targa Resources stock",
-    "Targa Resources earnings",
-    "Targa Resources",
-    "Targa Resources recall",
-    "Targa Resources strike",
-    "Targa Resources regulation"
-  ],
-  "NSC": [
-    "NSC",
-    "Norfolk Southern stock",
-    "Norfolk Southern earnings",
-    "Norfolk Southern",
-    "Norfolk Southern recall",
-    "Norfolk Southern strike",
-    "Norfolk Southern regulation"
-  ],
-  "XEL": [
-    "XEL",
-    "Xcel Energy stock",
-    "Xcel Energy earnings",
-    "Xcel Energy",
-    "Xcel Energy recall",
-    "Xcel Energy strike",
-    "Xcel Energy regulation"
+  "LVS": [
+    "LVS",
+    "Las Vegas Sands stock",
+    "Las Vegas Sands earnings",
+    "Las Vegas Sands",
+    "Las Vegas Sands recall",
+    "Las Vegas Sands strike",
+    "Las Vegas Sands regulation"
   ],
   "DASH": [
     "DoorDash stock",
@@ -4340,6 +4313,15 @@
     "DoorDash regulation",
     "DASH"
   ],
+  "NSC": [
+    "NSC",
+    "Norfolk Southern stock",
+    "Norfolk Southern earnings",
+    "Norfolk Southern",
+    "Norfolk Southern recall",
+    "Norfolk Southern strike",
+    "Norfolk Southern regulation"
+  ],
   "FTNT": [
     "Fortinet stock",
     "Fortinet earnings",
@@ -4349,23 +4331,23 @@
     "Fortinet regulation",
     "FTNT"
   ],
-  "ED": [
-    "ED",
-    "Consolidated Edison stock",
-    "Consolidated Edison earnings",
-    "Consolidated Edison",
-    "Consolidated Edison recall",
-    "Consolidated Edison strike",
-    "Consolidated Edison regulation"
+  "TRGP": [
+    "TRGP",
+    "Targa Resources stock",
+    "Targa Resources earnings",
+    "Targa Resources",
+    "Targa Resources recall",
+    "Targa Resources strike",
+    "Targa Resources regulation"
   ],
-  "CSGP": [
-    "CSGP",
-    "CoStar Group stock",
-    "CoStar Group earnings",
-    "CoStar Group",
-    "CoStar Group recall",
-    "CoStar Group strike",
-    "CoStar Group regulation"
+  "XEL": [
+    "XEL",
+    "Xcel Energy stock",
+    "Xcel Energy earnings",
+    "Xcel Energy",
+    "Xcel Energy recall",
+    "Xcel Energy strike",
+    "Xcel Energy regulation"
   ],
   "EXPE": [
     "EXPE",
@@ -4376,6 +4358,24 @@
     "Expedia Group strike",
     "Expedia Group regulation"
   ],
+  "CSGP": [
+    "CSGP",
+    "CoStar Group stock",
+    "CoStar Group earnings",
+    "CoStar Group",
+    "CoStar Group recall",
+    "CoStar Group strike",
+    "CoStar Group regulation"
+  ],
+  "ED": [
+    "ED",
+    "Consolidated Edison stock",
+    "Consolidated Edison earnings",
+    "Consolidated Edison",
+    "Consolidated Edison recall",
+    "Consolidated Edison strike",
+    "Consolidated Edison regulation"
+  ],
   "ITW": [
     "ITW",
     "Illinois Tool Works stock",
@@ -4384,15 +4384,6 @@
     "Illinois Tool Works recall",
     "Illinois Tool Works strike",
     "Illinois Tool Works regulation"
-  ],
-  "PNC": [
-    "PNC",
-    "PNC Financial Services stock",
-    "PNC Financial Services earnings",
-    "PNC Financial Services",
-    "PNC Financial Services recall",
-    "PNC Financial Services strike",
-    "PNC Financial Services regulation"
   ],
   "SYF": [
     "SYF",
@@ -4403,14 +4394,14 @@
     "Synchrony Financial strike",
     "Synchrony Financial regulation"
   ],
-  "SBUX": [
-    "Starbucks stock",
-    "Starbucks earnings",
-    "Starbucks",
-    "Starbucks recall",
-    "Starbucks strike",
-    "Starbucks regulation",
-    "SBUX"
+  "PNC": [
+    "PNC",
+    "PNC Financial Services stock",
+    "PNC Financial Services earnings",
+    "PNC Financial Services",
+    "PNC Financial Services recall",
+    "PNC Financial Services strike",
+    "PNC Financial Services regulation"
   ],
   "PLD": [
     "Prologis stock",
@@ -4421,49 +4412,14 @@
     "Prologis regulation",
     "PLD"
   ],
-  "COP": [
-    "ConocoPhillips stock",
-    "ConocoPhillips earnings",
-    "ConocoPhillips",
-    "ConocoPhillips recall",
-    "ConocoPhillips strike",
-    "ConocoPhillips regulation",
-    "COP"
-  ],
-  "MSI": [
-    "MSI",
-    "Motorola Solutions stock",
-    "Motorola Solutions earnings",
-    "Motorola Solutions",
-    "Motorola Solutions recall",
-    "Motorola Solutions strike",
-    "Motorola Solutions regulation"
-  ],
-  "D": [
-    "Dominion Energy stock",
-    "Dominion Energy earnings",
-    "Dominion Energy",
-    "Dominion Energy recall",
-    "Dominion Energy strike",
-    "Dominion Energy regulation"
-  ],
-  "AZO": [
-    "AutoZone stock",
-    "AutoZone earnings",
-    "AutoZone",
-    "AutoZone recall",
-    "AutoZone strike",
-    "AutoZone regulation",
-    "AZO"
-  ],
-  "CINF": [
-    "CINF",
-    "Cincinnati Financial stock",
-    "Cincinnati Financial earnings",
-    "Cincinnati Financial",
-    "Cincinnati Financial recall",
-    "Cincinnati Financial strike",
-    "Cincinnati Financial regulation"
+  "SBUX": [
+    "Starbucks stock",
+    "Starbucks earnings",
+    "Starbucks",
+    "Starbucks recall",
+    "Starbucks strike",
+    "Starbucks regulation",
+    "SBUX"
   ],
   "MAR": [
     "MAR",
@@ -4474,6 +4430,50 @@
     "Marriott International strike",
     "Marriott International regulation"
   ],
+  "CINF": [
+    "CINF",
+    "Cincinnati Financial stock",
+    "Cincinnati Financial earnings",
+    "Cincinnati Financial",
+    "Cincinnati Financial recall",
+    "Cincinnati Financial strike",
+    "Cincinnati Financial regulation"
+  ],
+  "AZO": [
+    "AutoZone stock",
+    "AutoZone earnings",
+    "AutoZone",
+    "AutoZone recall",
+    "AutoZone strike",
+    "AutoZone regulation",
+    "AZO"
+  ],
+  "D": [
+    "Dominion Energy stock",
+    "Dominion Energy earnings",
+    "Dominion Energy",
+    "Dominion Energy recall",
+    "Dominion Energy strike",
+    "Dominion Energy regulation"
+  ],
+  "MSI": [
+    "MSI",
+    "Motorola Solutions stock",
+    "Motorola Solutions earnings",
+    "Motorola Solutions",
+    "Motorola Solutions recall",
+    "Motorola Solutions strike",
+    "Motorola Solutions regulation"
+  ],
+  "RMD": [
+    "ResMed stock",
+    "ResMed earnings",
+    "ResMed",
+    "ResMed recall",
+    "ResMed strike",
+    "ResMed regulation",
+    "RMD"
+  ],
   "YUM": [
     "YUM",
     "Yum! Brands stock",
@@ -4482,6 +4482,42 @@
     "Yum! Brands recall",
     "Yum! Brands strike",
     "Yum! Brands regulation"
+  ],
+  "COP": [
+    "ConocoPhillips stock",
+    "ConocoPhillips earnings",
+    "ConocoPhillips",
+    "ConocoPhillips recall",
+    "ConocoPhillips strike",
+    "ConocoPhillips regulation",
+    "COP"
+  ],
+  "WRB": [
+    "WRB",
+    "W. R. Berkley Corporation stock",
+    "W. R. Berkley Corporation earnings",
+    "W. R. Berkley Corporation",
+    "W. R. Berkley Corporation recall",
+    "W. R. Berkley Corporation strike",
+    "W. R. Berkley Corporation regulation"
+  ],
+  "DLR": [
+    "DLR",
+    "Digital Realty stock",
+    "Digital Realty earnings",
+    "Digital Realty",
+    "Digital Realty recall",
+    "Digital Realty strike",
+    "Digital Realty regulation"
+  ],
+  "ADSK": [
+    "Autodesk stock",
+    "Autodesk earnings",
+    "Autodesk",
+    "Autodesk recall",
+    "Autodesk strike",
+    "Autodesk regulation",
+    "ADSK"
   ],
   "AMT": [
     "AMT",
@@ -4501,59 +4537,14 @@
     "Intercontinental Exchange strike",
     "Intercontinental Exchange regulation"
   ],
-  "RMD": [
-    "ResMed stock",
-    "ResMed earnings",
-    "ResMed",
-    "ResMed recall",
-    "ResMed strike",
-    "ResMed regulation",
-    "RMD"
-  ],
-  "WRB": [
-    "WRB",
-    "W. R. Berkley Corporation stock",
-    "W. R. Berkley Corporation earnings",
-    "W. R. Berkley Corporation",
-    "W. R. Berkley Corporation recall",
-    "W. R. Berkley Corporation strike",
-    "W. R. Berkley Corporation regulation"
-  ],
-  "ADSK": [
-    "Autodesk stock",
-    "Autodesk earnings",
-    "Autodesk",
-    "Autodesk recall",
-    "Autodesk strike",
-    "Autodesk regulation",
-    "ADSK"
-  ],
-  "DLR": [
-    "DLR",
-    "Digital Realty stock",
-    "Digital Realty earnings",
-    "Digital Realty",
-    "Digital Realty recall",
-    "Digital Realty strike",
-    "Digital Realty regulation"
-  ],
-  "REGN": [
-    "REGN",
-    "Regeneron Pharmaceuticals stock",
-    "Regeneron Pharmaceuticals earnings",
-    "Regeneron Pharmaceuticals",
-    "Regeneron Pharmaceuticals recall",
-    "Regeneron Pharmaceuticals strike",
-    "Regeneron Pharmaceuticals regulation"
-  ],
-  "KMI": [
-    "KMI",
-    "Kinder Morgan stock",
-    "Kinder Morgan earnings",
-    "Kinder Morgan",
-    "Kinder Morgan recall",
-    "Kinder Morgan strike",
-    "Kinder Morgan regulation"
+  "VLTO": [
+    "Veralto stock",
+    "Veralto earnings",
+    "Veralto",
+    "Veralto recall",
+    "Veralto strike",
+    "Veralto regulation",
+    "VLTO"
   ],
   "BRO": [
     "BRO",
@@ -4564,14 +4555,22 @@
     "Brown & Brown strike",
     "Brown & Brown regulation"
   ],
-  "VLTO": [
-    "Veralto stock",
-    "Veralto earnings",
-    "Veralto",
-    "Veralto recall",
-    "Veralto strike",
-    "Veralto regulation",
-    "VLTO"
+  "REGN": [
+    "REGN",
+    "Regeneron Pharmaceuticals stock",
+    "Regeneron Pharmaceuticals earnings",
+    "Regeneron Pharmaceuticals",
+    "Regeneron Pharmaceuticals recall",
+    "Regeneron Pharmaceuticals strike",
+    "Regeneron Pharmaceuticals regulation"
+  ],
+  "K": [
+    "Kellanova stock",
+    "Kellanova earnings",
+    "Kellanova",
+    "Kellanova recall",
+    "Kellanova strike",
+    "Kellanova regulation"
   ],
   "SO": [
     "SO",
@@ -4582,13 +4581,14 @@
     "Southern Company strike",
     "Southern Company regulation"
   ],
-  "K": [
-    "Kellanova stock",
-    "Kellanova earnings",
-    "Kellanova",
-    "Kellanova recall",
-    "Kellanova strike",
-    "Kellanova regulation"
+  "KMI": [
+    "KMI",
+    "Kinder Morgan stock",
+    "Kinder Morgan earnings",
+    "Kinder Morgan",
+    "Kinder Morgan recall",
+    "Kinder Morgan strike",
+    "Kinder Morgan regulation"
   ],
   "HCA": [
     "HCA",
@@ -4599,15 +4599,6 @@
     "HCA Healthcare strike",
     "HCA Healthcare regulation"
   ],
-  "CNP": [
-    "CNP",
-    "CenterPoint Energy stock",
-    "CenterPoint Energy earnings",
-    "CenterPoint Energy",
-    "CenterPoint Energy recall",
-    "CenterPoint Energy strike",
-    "CenterPoint Energy regulation"
-  ],
   "MPC": [
     "MPC",
     "Marathon Petroleum stock",
@@ -4616,6 +4607,15 @@
     "Marathon Petroleum recall",
     "Marathon Petroleum strike",
     "Marathon Petroleum regulation"
+  ],
+  "CNP": [
+    "CNP",
+    "CenterPoint Energy stock",
+    "CenterPoint Energy earnings",
+    "CenterPoint Energy",
+    "CenterPoint Energy recall",
+    "CenterPoint Energy strike",
+    "CenterPoint Energy regulation"
   ],
   "TRV": [
     "TRV",
@@ -4635,6 +4635,15 @@
     "eBay Inc. strike",
     "eBay Inc. regulation"
   ],
+  "NEM": [
+    "Newmont stock",
+    "Newmont earnings",
+    "Newmont",
+    "Newmont recall",
+    "Newmont strike",
+    "Newmont regulation",
+    "NEM"
+  ],
   "SHW": [
     "Sherwin-Williams stock",
     "Sherwin-Williams earnings",
@@ -4652,15 +4661,6 @@
     "Truist Financial recall",
     "Truist Financial strike",
     "Truist Financial regulation"
-  ],
-  "NEM": [
-    "Newmont stock",
-    "Newmont earnings",
-    "Newmont",
-    "Newmont recall",
-    "Newmont strike",
-    "Newmont regulation",
-    "NEM"
   ],
   "ETR": [
     "Entergy stock",

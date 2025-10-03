@@ -1216,7 +1216,7 @@ async function fetchTextWithFallback(attempts = [], { timeoutMs = 8000, label = 
 }
 
 function normalizeKoKeywordTerm(value) {
-  return String(value || '')
+  const cleaned = String(value || '')
     .replace(/\u00A0/g, ' ')
     .replace(/\r/g, ' ')
     .replace(/[\[\]{}]/g, ' ')
@@ -1225,6 +1225,16 @@ function normalizeKoKeywordTerm(value) {
     .replace(/[()]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+
+  if (!cleaned) return '';
+  if (cleaned.includes('\uFFFD')) return '';
+  if (/https?:\/\//i.test(cleaned)) return '';
+
+  const compact = cleaned.replace(/\s+/g, '');
+  if (compact.length < 2 || compact.length > 40) return '';
+  if (!hasHangulText(cleaned)) return '';
+
+  return cleaned;
 }
 
 function parseEIECKeywordText(text, { maxEntries = 60 } = {}) {
@@ -1857,10 +1867,10 @@ async function aggregateKoreanKeywords(allKeywords) {
   const aggregated = new Map();
 
   for (const kw of allKeywords) {
-    const koTerm = String(kw.term_ko || kw.term || '').trim();
-    if (!koTerm || !containsHangul(koTerm)) continue;
+    const normalizedKo = normalizeKoKeywordTerm(kw.term_ko || kw.term || '');
+    if (!normalizedKo) continue;
 
-    const key = koTerm.toLowerCase();
+    const key = normalizedKo.toLowerCase();
     const existing = aggregated.get(key);
 
     if (existing) {
@@ -1869,7 +1879,7 @@ async function aggregateKoreanKeywords(allKeywords) {
       existing.sources.add(kw.source || 'unknown');
     } else {
       aggregated.set(key, {
-        term_ko: koTerm,
+        term_ko: normalizedKo,
         count: 1,
         score: Number(kw.score || 1),
         sources: new Set([kw.source || 'unknown'])
@@ -2306,14 +2316,17 @@ export async function collectSignificantPhrases({ targetCount = 30 } = {}) {
     console.log(`  ${i + 1}. "${p.text}" - score: ${p.score}, count: ${p.count}`);
   });
 
-  // Return top N
-  return scored.slice(0, targetCount).map(p => ({
-    term_ko: p.text,
-    score: p.score,
-    count: p.count,
-    length: p.length,
-    source: 'significance_analysis'
-  }));
+  // Return top N (filtering to phrases of reasonable length)
+  return scored
+    .filter(p => p.length >= 2 && p.length <= 3)
+    .slice(0, targetCount)
+    .map(p => ({
+      term_ko: p.text,
+      score: p.score,
+      count: p.count,
+      length: p.length,
+      source: 'significance_analysis'
+    }));
 }
 
 // Write output
@@ -2535,8 +2548,8 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   };
 
   const addAggregatedKeyword = (enRaw, koRaw, { translator } = {}) => {
-    const koText = String(koRaw || '').trim();
-    if (!koText || !hasHangulText(koText)) return;
+    const koText = normalizeKoKeywordTerm(koRaw);
+    if (!koText) return;
     const enText = formatTagDisplay(enRaw || '');
     const key = toKeywordKey(enText, koText);
     if (!key) return;
@@ -2561,8 +2574,8 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   };
 
   const addKoreanCandidate = async (koSource, enHint, { translator } = {}) => {
-    const koTerm = String(koSource || '').trim();
-    if (!koTerm || !hasHangulText(koTerm)) return;
+    const koTerm = normalizeKoKeywordTerm(koSource);
+    if (!koTerm) return;
     let enTerm = formatTagDisplay(enHint || '');
     if (!enTerm || enTerm.toLowerCase() === koTerm.toLowerCase()) {
       const translated = await translateKoTermToEn(koTerm);
@@ -2576,8 +2589,8 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   const addEnglishCandidate = async (enSource, koHint) => {
     const baseTerm = formatTagDisplay(enSource || '');
     if (!baseTerm) return;
-    const storedKo = String(koHint || '').trim();
-    if (storedKo && hasHangulText(storedKo)) {
+    const storedKo = normalizeKoKeywordTerm(koHint);
+    if (storedKo) {
       setTranslationCache(baseTerm, storedKo);
       addAggregatedKeyword(baseTerm, storedKo);
       return;
@@ -2797,9 +2810,10 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
     const seen = new Set();
     for (const entry of list) {
       if (!entry || typeof entry !== 'object') continue;
+      const termKo = normalizeKoKeywordTerm(entry.term_ko || entry.term || '');
+      if (!termKo) continue;
       const term = formatTagDisplay(entry.term || '');
-      const termKo = String(entry.term_ko || '').trim();
-      const key = (termKo || term).toLowerCase();
+      const key = termKo.toLowerCase();
       if (!key || seen.has(key)) continue;
       seen.add(key);
       out.push({ term, term_ko: termKo });
@@ -4734,10 +4748,8 @@ export async function buildNewsCachesCli() {
 if (import.meta.url === `file://${process.argv[1]}`) {
   if (process.argv.includes('--build-caches')) {
     buildNewsCachesCli().catch(e => { console.error(e); process.exit(1); });
-  } else if (process.argv.includes('--korean-first-keywords')) {
-    writeKoreanFirstTagsJson().catch(e => { console.error(e); process.exit(1); });
   } else if (process.argv.includes('--build-keywords')) {
-    buildMarketKeywordSnapshot().catch(e => { console.error(e); process.exit(1); });
+    writeSignificantPhrasesJson().catch(e => { console.error(e); process.exit(1); });
   } else if (process.argv.includes('--significant-phrases')) {
     writeSignificantPhrasesJson().catch(e => { console.error(e); process.exit(1); });
   }
