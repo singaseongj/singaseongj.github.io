@@ -193,6 +193,13 @@ const INVEST_ZUM_URL = 'https://invest.zum.com/';
 
 const DATALAB_KEYWORD_COUNT = Number(process.env.DATALAB_KEYWORD_COUNT || 10);
 
+const FINANCE_TREND_KEYWORD_GROUPS = [
+  { category: 'Stock Market', keywords: ['주식', '코스피', '코스닥', '주가'] },
+  { category: 'Economy', keywords: ['환율', '금리', '경제 전망', 'GDP'] },
+  { category: 'Business', keywords: ['삼성전자', '현대자동차', '네이버', '카카오'] },
+  { category: 'Finance', keywords: ['비트코인', 'ETF', '채권', '펀드'] }
+];
+
 const DATALAB_TREND_KEYWORDS = [
   {
     text: { ko: 'AI 반도체 투자', en: 'AI semiconductor investment' },
@@ -654,6 +661,92 @@ async function fetchDatalabKeywordMetrics(configs){
   }
 
   return metrics;
+}
+
+async function fetchFinanceTrendKeywords({ lookbackDays = 35, limit = 16 } = {}) {
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || process.env.NAVER_ID || '';
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || process.env.NAVER_SECRET || '';
+  if (!NAVER_ID || !NAVER_SECRET || SKIP_NAVER) return [];
+
+  const now = new Date();
+  const endDate = now.toISOString().slice(0, 10);
+  const lookback = Math.max(7, Number.isFinite(lookbackDays) ? lookbackDays : 35);
+  const startDate = new Date(now.getTime() - lookback * 24 * 3600 * 1000).toISOString().slice(0, 10);
+
+  const groups = [];
+  const metaByGroup = new Map();
+  for (const cfg of FINANCE_TREND_KEYWORD_GROUPS) {
+    if (!cfg || !Array.isArray(cfg.keywords)) continue;
+    for (const keyword of cfg.keywords) {
+      const term = String(keyword || '').trim();
+      if (!term) continue;
+      const groupName = `${cfg.category}:${term}`;
+      groups.push({ groupName, keyword: term });
+      metaByGroup.set(groupName, { category: cfg.category, term });
+    }
+  }
+
+  if (!groups.length) return [];
+
+  const collected = [];
+  for (const batch of chunk(groups, 5)) {
+    let res = {};
+    try {
+      res = await fetchNaverDataLabBatch(batch, {
+        startDate,
+        endDate,
+        timeUnit: 'week',
+        NAVER_ID,
+        NAVER_SECRET
+      });
+    } catch (err) {
+      console.warn('[keywords] failed to fetch finance trend batch:', err?.message || err);
+      continue;
+    }
+
+    for (const entry of batch) {
+      const key = entry.groupName;
+      const metrics = res?.[key] || res?.[entry.keyword];
+      if (!metrics) continue;
+      const meta = metaByGroup.get(key) || { category: '', term: entry.keyword };
+      const popularity = Number.isFinite(metrics.popularity01) ? Math.max(0, metrics.popularity01) : 0;
+      const asvi = Number.isFinite(metrics.lastAsvi) ? metrics.lastAsvi / 100 : 0;
+      const spikeBonus = metrics.spike ? 0.18 : 0;
+      const persistBonus = metrics.persist ? 0.1 : 0;
+      const score = popularity * 0.6 + Math.max(0, asvi) * 0.3 + spikeBonus + persistBonus;
+
+      collected.push({
+        term_ko: meta.term,
+        category: meta.category || '',
+        score,
+        metrics: {
+          popularity,
+          lastAsvi: Number.isFinite(metrics.lastAsvi) ? metrics.lastAsvi : 0,
+          spike: !!metrics.spike,
+          persist: !!metrics.persist
+        }
+      });
+    }
+  }
+
+  if (!collected.length) return [];
+
+  const deduped = new Map();
+  for (const item of collected) {
+    if (!item?.term_ko) continue;
+    const key = item.term_ko;
+    const existing = deduped.get(key);
+    if (!existing || item.score > existing.score) {
+      deduped.set(key, item);
+    }
+  }
+
+  const ranked = Array.from(deduped.values()).sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return a.term_ko.localeCompare(b.term_ko);
+  });
+
+  return ranked.slice(0, Math.max(1, limit));
 }
 
 function dedupeArticlesByUrl(articles){
@@ -2336,36 +2429,131 @@ export async function collectSignificantPhrases({ targetCount = 30 } = {}) {
 
 // Write output
 export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE } = {}) {
-  const phrases = await collectSignificantPhrases({ targetCount: 30 });
+  const targetCount = 30;
+  const phrases = await collectSignificantPhrases({ targetCount });
 
-  if (!phrases.length) {
+  let financeTrendBoost = [];
+  try {
+    financeTrendBoost = await fetchFinanceTrendKeywords({ limit: 12 });
+  } catch (err) {
+    console.warn('[Significance] failed to fetch finance trend keywords:', err?.message || err);
+  }
+
+  if (!phrases.length && !financeTrendBoost.length) {
     console.error('[Significance] No significant phrases found');
     return null;
   }
 
-  // For now, keep Korean only (you'll fix translation later)
+  const aggregated = new Map();
+
+  const registerEntry = (koTerm, { score = 0, mentions = 1 } = {}) => {
+    const normalizedKo = normalizeKoKeywordTerm(koTerm);
+    if (!normalizedKo) return;
+
+    const significanceScore = Math.max(1, Math.round(score));
+    const mentionCount = Math.max(1, Math.round(mentions));
+
+    if (aggregated.has(normalizedKo)) {
+      const existing = aggregated.get(normalizedKo);
+      existing.significance_score = Math.max(existing.significance_score, significanceScore);
+      existing.mentions = Math.max(existing.mentions, mentionCount);
+      return;
+    }
+
+    aggregated.set(normalizedKo, {
+      term_ko: normalizedKo,
+      significance_score: significanceScore,
+      mentions: mentionCount
+    });
+  };
+
+  for (const phrase of phrases) {
+    if (!phrase) continue;
+    registerEntry(phrase.term_ko || phrase.term, {
+      score: Number.isFinite(phrase.score) ? phrase.score : 0,
+      mentions: Number.isFinite(phrase.count) ? phrase.count : 1
+    });
+  }
+
+  let injectedTrends = 0;
+  for (const trend of financeTrendBoost) {
+    if (!trend) continue;
+    const koTerm = trend.term_ko || trend.term;
+    if (!koTerm) continue;
+
+    const popularity = Number.isFinite(trend?.metrics?.popularity)
+      ? trend.metrics.popularity
+      : 0;
+    const baseScore = Number.isFinite(trend.score) ? trend.score : 0;
+    let scaledScore = Math.round(baseScore * 120);
+    if (trend?.metrics?.spike) scaledScore += 20;
+    if (trend?.metrics?.persist) scaledScore += 10;
+    scaledScore = Math.max(50, scaledScore);
+    const estimatedMentions = Math.max(1, Math.round(popularity * 20));
+
+    registerEntry(koTerm, { score: scaledScore, mentions: estimatedMentions });
+    injectedTrends += 1;
+  }
+
+  if (!aggregated.size) {
+    console.error('[Significance] No valid phrases after normalization');
+    return null;
+  }
+
+  const ranked = Array.from(aggregated.values())
+    .sort((a, b) => {
+      if (b.significance_score !== a.significance_score) {
+        return b.significance_score - a.significance_score;
+      }
+      if (b.mentions !== a.mentions) {
+        return b.mentions - a.mentions;
+      }
+      return a.term_ko.localeCompare(b.term_ko);
+    })
+    .slice(0, Math.min(aggregated.size, targetCount + Math.min(injectedTrends, 5)));
+
+  const discoveredKeywords = [];
+  for (const entry of ranked) {
+    const koTerm = entry.term_ko;
+    let termEn = '';
+    try {
+      const translation = await translateKoTermToEn(koTerm, { includeMeta: true });
+      termEn = formatTagDisplay(translation.text || '');
+      if (termEn) {
+        setTranslationCache(termEn, koTerm);
+      }
+    } catch (err) {
+      console.warn(`[Significance] translation failed for "${koTerm}":`, err?.message || err);
+    }
+
+    const finalTerm = termEn || formatTagDisplay(koTerm);
+    discoveredKeywords.push({
+      term: finalTerm,
+      term_ko: koTerm,
+      significance_score: entry.significance_score,
+      mentions: entry.mentions
+    });
+  }
+
+  const nowIso = new Date().toISOString();
   const payload = {
-    date: new Date().toISOString().slice(0, 10),
+    date: nowIso.slice(0, 10),
     window: '5_hours',
-    total_phrases: phrases.length,
-    discovered_keywords: phrases.map(p => ({
-      term: p.term_ko, // Keep Korean for now
-      term_ko: p.term_ko,
-      significance_score: p.score,
-      mentions: p.count
-    })),
+    total_phrases: discoveredKeywords.length,
+    discovered_keywords: discoveredKeywords,
     metadata: {
       collection_method: 'significance_over_frequency',
       phrase_length: '2-3 words',
       scoring: 'signal_words + context_relevance',
-      generated_at: new Date().toISOString()
+      generated_at: nowIso,
+      finance_trend_keywords: injectedTrends
     }
   };
 
   ensureDirFor(outputPath);
   await fsp.writeFile(outputPath, JSON.stringify(payload, null, 2));
 
-  console.log(`[Significance] wrote ${phrases.length} significant phrases`);
+  console.log(`[Significance] wrote ${discoveredKeywords.length} significant phrases (finance trends added: ${injectedTrends})`);
   return payload;
 }
 function buildDiscoveredKeywordsFromStats(tagStats, { limit = 50 } = {}) {
@@ -2628,6 +2816,11 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     const koTerm = entry?.text?.ko || entry?.text?.en || '';
     const enTerm = entry?.text?.en || '';
     await addKoreanCandidate(koTerm, enTerm, { translator: 'naver-datalab' });
+  }
+
+  const financeTrendBoost = await fetchFinanceTrendKeywords({ limit: Math.max(16, normalizedTags.length) });
+  for (const trend of financeTrendBoost) {
+    await addKoreanCandidate(trend?.term_ko || '', '', { translator: 'naver-datalab' });
   }
 
   const koKeywordBoost = await collectEconomyKoKeywords({ limit: Math.max(30, normalizedTags.length) });
