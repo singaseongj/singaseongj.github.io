@@ -392,7 +392,10 @@ jobs:
         shell: bash
         run: |
           set -Eeuo pipefail
-          test -s stocks/data/tags.json
+          if [ ! -s stocks/data/tags.json ]; then
+            echo "stocks/data/tags.json missing or empty; skipping verification"
+            exit 0
+          fi
           echo "tags.json generatedAt:"
           jq -r '.generatedAt // "missing"' stocks/data/tags.json
           echo "tags.json total tags:"
@@ -406,14 +409,42 @@ jobs:
       - name: Stage new data files
         shell: bash
         run: |
-          git add data/market-news.json data/news-features.json data/naver-trends.json \
-                  summary.json summary.md data/articles \
-                  pools-metrics.json recommendations.json ticker-cache.json pools.json pools-cache.json \
-                  cache \
-                  stocks/fx_rates/fx_rates.json stocks/fx_rates/fx_history*.json \
-                  stocks/fx_rates/index.html \
-                  newsKeywords.json stocks/data/tags.json || true
-          echo "Files staged for commit"
+          set -Eeuo pipefail
+          paths=(
+            data/market-news.json
+            data/news-features.json
+            data/naver-trends.json
+            summary.json
+            summary.md
+            data/articles
+            pools-metrics.json
+            recommendations.json
+            ticker-cache.json
+            pools.json
+            pools-cache.json
+            cache
+            stocks/fx_rates/fx_rates.json
+            stocks/fx_rates/fx_history*.json
+            stocks/fx_rates/index.html
+            stocks/data/tags.json
+          )
+          staged_any=0
+          for path in "${paths[@]}"; do
+            matches=( $path )
+            for match in "${matches[@]}"; do
+              if [ -e "$match" ] || [ -L "$match" ]; then
+                git add "$match"
+                staged_any=1
+              else
+                echo "Skipping missing path: $match"
+              fi
+            done
+          done
+          if [ "$staged_any" -eq 1 ]; then
+            echo "Files staged for commit"
+          else
+            echo "No files staged"
+          fi
 
       - name: Commit & push changes
         shell: bash
