@@ -380,13 +380,13 @@ jobs:
       - name: Build article cache
         run: node build-articles.js
 
-      - name: Clear prior market keyword snapshot
-        run: rm -f newsKeywords.json
-
       - name: Build significance-based keyword snapshot
         env:
           MARKET_TAG_FILE: stocks/data/tags.json
-        run: node src/news/fetchByTicker.js --significant-phrases
+        run: |
+          set -Eeuo pipefail
+          node src/news/fetchByTicker.js --significant-phrases
+          test -s stocks/data/tags.json
 
       - name: Verify market tag snapshot
         shell: bash
@@ -397,9 +397,9 @@ jobs:
             exit 0
           fi
           echo "tags.json generatedAt:"
-          jq -r '.generatedAt // "missing"' stocks/data/tags.json
+          jq -r '.metadata.generated_at // .metadata.generatedAt // .generated_at // .generatedAt // "missing"' stocks/data/tags.json
           echo "tags.json total tags:"
-          jq -r '.total // "missing"' stocks/data/tags.json
+          jq -r '.total_phrases // .total // (.discovered_keywords | length) // "missing"' stocks/data/tags.json
 
       - name: Prune cache directory
         env:
