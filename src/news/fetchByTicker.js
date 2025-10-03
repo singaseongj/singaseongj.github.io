@@ -40,6 +40,7 @@ const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
 const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
 const DEEPL_API_KEY = (process.env.DEEPL_API_KEY || '').trim();
+const DEEPL_API_URL = (process.env.DEEPL_API_URL || '').trim();
 const NAVER_CLIENT_ID = (process.env.NAVER_CLIENT_ID || '').trim();
 const NAVER_CLIENT_SECRET = (process.env.NAVER_CLIENT_SECRET || '').trim();
 const PYTHON_BIN = (process.env.PYTHON_BIN || process.env.PYTHON || 'python3').trim();
@@ -978,12 +979,22 @@ function hasHangulText(value) {
   return HANGUL_REGEX.test(String(value || ''));
 }
 
+function resolveDeepLEndpoint() {
+  if (DEEPL_API_URL) {
+    return DEEPL_API_URL.replace(/\/?$/, '') + '/v2/translate';
+  }
+  const isFreeKey = /:fx$/i.test(DEEPL_API_KEY);
+  const base = isFreeKey ? 'https://api-free.deepl.com' : 'https://api.deepl.com';
+  return `${base}/v2/translate`;
+}
+
 async function translateWithDeepL(text, { targetLang = 'KO', sourceLang = 'EN' } = {}) {
   if (!DEEPL_API_KEY) return null;
   const raw = String(text || '').trim();
   if (!raw) return null;
   try {
-    const res = await fetch('https://api.deepl.com/v2/translate', {
+    const endpoint = resolveDeepLEndpoint();
+    const res = await fetch(endpoint, {
       method: 'POST',
       headers: {
         'Authorization': `DeepL-Auth-Key ${DEEPL_API_KEY}`,
@@ -998,7 +1009,7 @@ async function translateWithDeepL(text, { targetLang = 'KO', sourceLang = 'EN' }
     });
     if (!res.ok) {
       const errText = await res.text().catch(() => res.statusText);
-      console.warn(`[keywords] DeepL translation failed (${res.status}):`, errText);
+      console.warn(`[keywords] DeepL translation failed (${res.status}) via ${endpoint}:`, errText);
       return null;
     }
     const data = await res.json().catch(() => null);
@@ -1015,7 +1026,21 @@ async function translateWithDeepL(text, { targetLang = 'KO', sourceLang = 'EN' }
 async function ensureTranslationModule() {
   if (!translationModulePromise) {
     translationModulePromise = import('@vitalets/google-translate-api')
-      .then(mod => mod?.default ?? mod)
+      .then(mod => {
+        const candidates = [
+          mod?.default,
+          mod?.default?.translate,
+          mod?.translate,
+          mod
+        ];
+        for (const candidate of candidates) {
+          if (typeof candidate === 'function') {
+            return candidate;
+          }
+        }
+        console.warn('[keywords] translation module did not provide a callable export.');
+        return null;
+      })
       .catch(err => {
         console.warn('[keywords] failed to load translation module:', err?.message || err);
         return null;

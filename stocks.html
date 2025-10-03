@@ -308,7 +308,7 @@
       if (tagsDataPromise) return tagsDataPromise;
 
       const cacheBust = Date.now();
-      const candidates = ['tags.json', 'stocks/data/tags.json'];
+      const candidates = ['stocks/data/tags.json', 'tags.json'];
 
       tagsDataPromise = (async () => {
         for (const path of candidates) {
@@ -333,6 +333,55 @@
       }
     }
 
+    const KEYWORD_STOPWORDS = ['환율', '펀드', '금리', '시장', '증시', '주식'];
+    const KEYWORD_STOPWORD_KEYS = new Set(
+      KEYWORD_STOPWORDS.map(term => normalizeTermKey(term)).filter(Boolean)
+    );
+    const KEYWORD_STOPWORD_COMPACT = new Set(
+      KEYWORD_STOPWORDS.map(term => term.replace(/\s+/g, '').toLowerCase()).filter(Boolean)
+    );
+
+    function isStopwordCandidate(term) {
+      const text = String(term || '').trim();
+      if (!text) return false;
+      const normalized = normalizeTermKey(text);
+      if (normalized && KEYWORD_STOPWORD_KEYS.has(normalized)) return true;
+      const compact = text.replace(/\s+/g, '').toLowerCase();
+      if (compact && KEYWORD_STOPWORD_COMPACT.has(compact)) return true;
+      return false;
+    }
+
+    function hasMultipleWords(text) {
+      const trimmed = String(text || '').trim();
+      if (!trimmed) return false;
+      const parts = trimmed.split(/\s+/).filter(Boolean);
+      return parts.length >= 2;
+    }
+
+    function resolveTermPair(item) {
+      let enTerm = '';
+      let koTerm = '';
+      if (item && typeof item === 'object') {
+        if (typeof item.term === 'string') {
+          enTerm = item.term.trim();
+        } else if (typeof item.term_en === 'string') {
+          enTerm = item.term_en.trim();
+        }
+        if (typeof item.term_ko === 'string') {
+          koTerm = item.term_ko.trim();
+        } else if (typeof item.termKo === 'string') {
+          koTerm = item.termKo.trim();
+        }
+        if (!enTerm && typeof item.text === 'string') {
+          enTerm = item.text.trim();
+        }
+        if (!koTerm && typeof item.text === 'string') {
+          koTerm = item.text.trim();
+        }
+      }
+      return { enTerm, koTerm };
+    }
+
     function extractKeywordsFromTags(data, limit = 10) {
       if (!data || typeof data !== 'object') return [];
       const pool = [];
@@ -340,20 +389,71 @@
       if (Array.isArray(data.discovered_keywords)) pool.push(...data.discovered_keywords);
       if (Array.isArray(data.top_keywords)) pool.push(...data.top_keywords);
 
-      const seen = new Set();
-      const result = [];
+      const enriched = [];
       for (const item of pool) {
         if (!item || typeof item !== 'object') continue;
-        const term = typeof item.term === 'string' ? item.term.trim() : '';
-        const termKo = typeof item.term_ko === 'string' ? item.term_ko.trim() : '';
-        const koKey = termKo ? termKo.toLowerCase() : '';
-        const dedupeKey = normalizeTermKey(term) || koKey;
+        const { enTerm, koTerm } = resolveTermPair(item);
+        const baseTerm = koTerm || enTerm;
+        if (!baseTerm) continue;
+        if (isStopwordCandidate(baseTerm) || isStopwordCandidate(enTerm) || isStopwordCandidate(koTerm)) continue;
+        if (!hasMultipleWords(baseTerm) && !hasMultipleWords(enTerm) && !hasMultipleWords(koTerm)) continue;
+
+        const scoreCandidates = [
+          item.significance_score,
+          item.significanceScore,
+          item.significance,
+          item.score,
+          item.weight
+        ];
+        const mentionCandidates = [item.mentions, item.count, item.frequency];
+        const score = scoreCandidates
+          .map(val => Number(val))
+          .find(val => Number.isFinite(val));
+        const mentions = mentionCandidates
+          .map(val => Number(val))
+          .find(val => Number.isFinite(val));
+
+        const entry = {
+          term: enTerm,
+          term_ko: koTerm,
+          significance_score: Number.isFinite(score) ? score : 0,
+          mentions: Number.isFinite(mentions) ? mentions : 0
+        };
+
+        const koQuery = koTerm || enTerm;
+        const enQuery = enTerm || koTerm;
+        const searchKo = koQuery ? buildNewsSearchUrl(koQuery, 'ko') : '';
+        const searchEn = enQuery ? buildNewsSearchUrl(enQuery, 'en') : '';
+        if (searchKo || searchEn) {
+          entry.search = {};
+          if (searchKo) entry.search.ko = searchKo;
+          if (searchEn) entry.search.en = searchEn;
+        }
+
+        enriched.push(entry);
+      }
+
+      enriched.sort((a, b) => {
+        if (b.significance_score !== a.significance_score) return b.significance_score - a.significance_score;
+        if (b.mentions !== a.mentions) return b.mentions - a.mentions;
+        const labelA = (a.term || a.term_ko || '').toString();
+        const labelB = (b.term || b.term_ko || '').toString();
+        return labelA.localeCompare(labelB, currentLang === 'ko' ? 'ko' : 'en');
+      });
+
+      const seen = new Set();
+      const results = [];
+      for (const entry of enriched) {
+        if (results.length >= limit) break;
+        const primaryKey = normalizeTermKey(entry.term) || '';
+        const koKey = entry.term_ko ? entry.term_ko.replace(/\s+/g, '').toLowerCase() : '';
+        const dedupeKey = primaryKey || koKey;
         if (!dedupeKey || seen.has(dedupeKey)) continue;
         seen.add(dedupeKey);
-        result.push({ term, term_ko: termKo });
-        if (result.length >= limit) break;
+        results.push(entry);
       }
-      return result;
+
+      return results;
     }
 
     function buildUpdatedLabelsFromTags(data) {
