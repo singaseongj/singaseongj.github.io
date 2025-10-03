@@ -248,6 +248,8 @@
     let keywordLoadFailed = false;
     let tagKoLookup = null;
     let tagKoLookupPromise = null;
+    let tagsDataCache = null;
+    let tagsDataPromise = null;
 
     function escapeHtml(str) {
       return String(str || '')
@@ -300,15 +302,93 @@
       return map;
     }
 
+    async function fetchTagsData() {
+      if (tagsDataCache) return tagsDataCache;
+      if (tagsDataPromise) return tagsDataPromise;
+
+      const cacheBust = Date.now();
+      const candidates = ['tags.json', 'stocks/data/tags.json'];
+
+      tagsDataPromise = (async () => {
+        for (const path of candidates) {
+          try {
+            const url = `${path}${path.includes('?') ? '&' : '?'}_=${cacheBust}`;
+            const res = await fetch(url, { cache: 'no-store' });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const data = await res.json();
+            tagsDataCache = data;
+            return data;
+          } catch (err) {
+            console.warn('Failed to load tags data from', path, err);
+          }
+        }
+        throw new Error('Unable to load tags data');
+      })();
+
+      try {
+        return await tagsDataPromise;
+      } finally {
+        tagsDataPromise = null;
+      }
+    }
+
+    function extractKeywordsFromTags(data, limit = 10) {
+      if (!data || typeof data !== 'object') return [];
+      const pool = [];
+      if (Array.isArray(data.keywords)) pool.push(...data.keywords);
+      if (Array.isArray(data.discovered_keywords)) pool.push(...data.discovered_keywords);
+      if (Array.isArray(data.top_keywords)) pool.push(...data.top_keywords);
+
+      const seen = new Set();
+      const result = [];
+      for (const item of pool) {
+        if (!item || typeof item !== 'object') continue;
+        const term = typeof item.term === 'string' ? item.term.trim() : '';
+        const termKo = typeof item.term_ko === 'string' ? item.term_ko.trim() : '';
+        const koKey = termKo ? termKo.toLowerCase() : '';
+        const dedupeKey = normalizeTermKey(term) || koKey;
+        if (!dedupeKey || seen.has(dedupeKey)) continue;
+        seen.add(dedupeKey);
+        result.push({ term, term_ko: termKo });
+        if (result.length >= limit) break;
+      }
+      return result;
+    }
+
+    function buildUpdatedLabelsFromTags(data) {
+      if (!data || typeof data !== 'object') {
+        return { ko: '', en: '' };
+      }
+      const iso = data?.metadata?.generated_at || data?.generatedAt || data?.generated_at;
+      let stamp = null;
+      if (iso) {
+        const parsed = new Date(iso);
+        if (!Number.isNaN(parsed.getTime())) {
+          stamp = parsed;
+        }
+      }
+      if (!stamp && typeof data?.date === 'string') {
+        const parsed = new Date(data.date);
+        if (!Number.isNaN(parsed.getTime())) {
+          stamp = parsed;
+        }
+      }
+      if (stamp) {
+        return {
+          ko: stamp.toLocaleString('ko-KR'),
+          en: stamp.toLocaleString('en-US')
+        };
+      }
+      if (typeof data?.date === 'string') {
+        return { ko: data.date, en: data.date };
+      }
+      return { ko: '', en: '' };
+    }
+
     async function loadTagKoLookup() {
       if (tagKoLookup) return tagKoLookup;
       if (tagKoLookupPromise) return tagKoLookupPromise;
-      const url = 'stocks/data/tags.json?_=' + Date.now();
-      tagKoLookupPromise = fetch(url, { cache: 'no-store' })
-        .then(res => {
-          if (!res.ok) throw new Error('HTTP ' + res.status);
-          return res.json();
-        })
+      tagKoLookupPromise = fetchTagsData()
         .then(data => {
           tagKoLookup = buildTagKoLookup(data);
           return tagKoLookup;
@@ -351,6 +431,39 @@
       const gl = lang === 'ko' ? 'KR' : 'US';
       const ceid = `${gl}:${hl}`;
       return `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=nws&hl=${hl}&gl=${gl}&ceid=${encodeURIComponent(ceid)}`;
+    }
+
+    function buildKeywordItem(entry, lang) {
+      if (!entry) return '';
+
+      const enTerm = typeof entry?.term === 'string' ? entry.term.trim() : '';
+      const koTerm = String(getKoTermForEntry(entry) || '').trim();
+      const display = lang === 'ko'
+        ? (koTerm || enTerm)
+        : (enTerm || koTerm);
+      const label = escapeHtml(display || '');
+      const koQuery = koTerm || enTerm;
+      const enQuery = enTerm || koTerm;
+      const koUrl = entry?.search?.ko || (koQuery ? buildNewsSearchUrl(koQuery, 'ko') : '');
+      const enUrl = entry?.search?.en || (enQuery ? buildNewsSearchUrl(enQuery, 'en') : '');
+
+      const buttons = [];
+      if (koUrl) {
+        buttons.push(`<a class="keyword-btn" data-lang="ko" href="${escapeHtml(koUrl)}" target="_blank" rel="noopener noreferrer">한국어</a>`);
+      }
+      if (enUrl) {
+        buttons.push(`<a class="keyword-btn" data-lang="en" href="${escapeHtml(enUrl)}" target="_blank" rel="noopener noreferrer">English</a>`);
+      }
+
+      const actionsHtml = buttons.length ? `<div class="keyword-actions">${buttons.join('')}</div>` : '';
+      return `<li><div class="keyword-header"><span class="keyword-text">${label}</span>${actionsHtml}</div></li>`;
+    }
+
+    function buildKeywordListHtml(entries, lang) {
+      if (!Array.isArray(entries) || !entries.length) {
+        return '';
+      }
+      return entries.map(entry => buildKeywordItem(entry, lang)).filter(Boolean).join('');
     }
 
     function applyTranslations() {
@@ -547,27 +660,7 @@
         listEl.innerHTML = `<li class="empty">${translations[currentLang].keywordError}</li>`;
         errorEl.style.display = 'none';
       } else {
-        const items = keywords.map(entry => {
-          const enTerm = typeof entry?.term === 'string' ? entry.term.trim() : '';
-          const koTerm = String(getKoTermForEntry(entry) || '').trim();
-          const display = currentLang === 'ko'
-            ? (koTerm || enTerm)
-            : (enTerm || koTerm);
-          const label = escapeHtml(display || '');
-          const koQuery = koTerm || enTerm;
-          const enQuery = enTerm || koTerm;
-          const koUrl = entry?.search?.ko || (koQuery ? buildNewsSearchUrl(koQuery, 'ko') : '');
-          const enUrl = entry?.search?.en || (enQuery ? buildNewsSearchUrl(enQuery, 'en') : '');
-          const buttons = [];
-          if (koUrl) {
-            buttons.push(`<a class="keyword-btn" data-lang="ko" href="${escapeHtml(koUrl)}" target="_blank" rel="noopener noreferrer">한국어</a>`);
-          }
-          if (enUrl) {
-            buttons.push(`<a class="keyword-btn" data-lang="en" href="${escapeHtml(enUrl)}" target="_blank" rel="noopener noreferrer">English</a>`);
-          }
-          const actionsHtml = buttons.length ? `<div class="keyword-actions">${buttons.join('')}</div>` : '';
-          return `<li><div class="keyword-header"><span class="keyword-text">${label}</span>${actionsHtml}</div></li>`;
-        }).join('');
+        const items = buildKeywordListHtml(keywords, currentLang);
         listEl.innerHTML = items || `<li class="empty">${translations[currentLang].keywordError}</li>`;
         errorEl.style.display = 'none';
       }
@@ -620,12 +713,15 @@
     async function loadKeywordHighlights() {
       keywordLoadFailed = false;
       try {
-        const res = await fetch('newsKeywords.json?_=' + Date.now(), { cache: 'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        keywordSnapshot = await res.json();
-        keywordLoadFailed = false;
+        const tagsData = await fetchTagsData();
+        const keywords = extractKeywordsFromTags(tagsData, 10);
+        if (!keywords.length) throw new Error('No keywords available');
+        keywordSnapshot = {
+          keywords,
+          updatedAt: buildUpdatedLabelsFromTags(tagsData)
+        };
       } catch (err) {
-        console.warn('newsKeywords.json load failed', err);
+        console.warn('Unable to load tags keywords', err);
         keywordSnapshot = null;
         keywordLoadFailed = true;
       }
