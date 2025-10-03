@@ -2840,15 +2840,47 @@ async function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10
   return out;
 }
 
-export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE } = {}){
+export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, preCollected = null } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
   const existingTagSnapshot = readJsonSafe(TAG_OUTPUT_FILE) || null;
 
-  let collectionResult = { keywords: [], totalRaw: 0, uniqueTerms: 0 };
-  try {
-    collectionResult = await collectKoreanFirstKeywords({ targetCount: 30 });
-  } catch (err) {
-    console.warn('[Korean-First] collection failed:', err.message);
+  const normalizeCollection = (input) => {
+    if (!input || typeof input !== 'object') {
+      return { keywords: [], totalRaw: 0, uniqueTerms: 0 };
+    }
+
+    const keywords = Array.isArray(input.keywords)
+      ? input.keywords.map((kw) => {
+          if (!kw || typeof kw !== 'object') return {};
+          const sources = Array.isArray(kw.sources)
+            ? kw.sources.filter(Boolean)
+            : (kw.sources ? [kw.sources].filter(Boolean) : []);
+          return { ...kw, sources };
+        })
+      : [];
+
+    const totalRawValue = Number(input.totalRaw);
+    const uniqueTermsValue = Number(input.uniqueTerms);
+
+    return {
+      keywords,
+      totalRaw: Number.isFinite(totalRawValue) ? totalRawValue : keywords.length,
+      uniqueTerms: Number.isFinite(uniqueTermsValue) ? uniqueTermsValue : keywords.length
+    };
+  };
+
+  const providedCollection = preCollected && typeof preCollected === 'object'
+    ? normalizeCollection(preCollected)
+    : null;
+
+  let collectionResult = providedCollection || { keywords: [], totalRaw: 0, uniqueTerms: 0 };
+
+  if (!providedCollection) {
+    try {
+      collectionResult = normalizeCollection(await collectKoreanFirstKeywords({ targetCount: 30 }));
+    } catch (err) {
+      console.warn('[Korean-First] collection failed:', err.message);
+    }
   }
 
   let tagSnapshot = existingTagSnapshot;
