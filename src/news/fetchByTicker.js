@@ -1012,42 +1012,6 @@ async function translateWithDeepL(text, { targetLang = 'KO', sourceLang = 'EN' }
   return null;
 }
 
-async function translateWithNaverPapago(text, { targetLang = 'ko', sourceLang = 'en' } = {}) {
-  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) return null;
-  const raw = String(text || '').trim();
-  if (!raw) return null;
-  try {
-    const params = new URLSearchParams({
-      source: String(sourceLang || 'en').toLowerCase(),
-      target: String(targetLang || 'ko').toLowerCase(),
-      text: raw
-    });
-    const res = await fetch('https://openapi.naver.com/v1/papago/n2mt', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'X-Naver-Client-Id': NAVER_CLIENT_ID,
-        'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
-        'User-Agent': 'stock-recs/1.2 (+github-actions)'
-      },
-      body: params
-    });
-    if (!res.ok) {
-      const errText = await res.text().catch(() => res.statusText);
-      console.warn(`[keywords] Naver Papago translation failed (${res.status}):`, errText);
-      return null;
-    }
-    const data = await res.json().catch(() => null);
-    const translated = data?.message?.result?.translatedText;
-    if (translated) {
-      return String(translated).trim();
-    }
-  } catch (err) {
-    console.warn(`[keywords] Papago request failed for "${raw}":`, err?.message || err);
-  }
-  return null;
-}
-
 async function ensureTranslationModule() {
   if (!translationModulePromise) {
     translationModulePromise = import('@vitalets/google-translate-api')
@@ -1098,15 +1062,7 @@ async function translateKoTermToEn(koText, { includeMeta = false } = {}) {
     }
   }
 
-  if (NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
-    const papago = await translateWithNaverPapago(raw, { sourceLang: 'ko', targetLang: 'en' });
-    const papagoText = String(papago || '').trim();
-    if (papagoText) {
-      return buildResult(papagoText, 'papago');
-    }
-  }
-
-  return buildResult('', '');
+  return '';
 }
 
 async function getLocalizedKeywordTexts(enText) {
@@ -1140,8 +1096,8 @@ async function getLocalizedKeywordTexts(enText) {
   let translator = 'none';
   let attemptedDeepL = false;
   let usedDeepL = false;
-  let attemptedNaver = false;
-  let usedNaver = false;
+  let attemptedGoogle = false;
+  let usedGoogle = false;
   let complete = false;
   const fallbackDictionary = String(dictionaryKoRaw || '').trim();
 
@@ -1165,6 +1121,7 @@ async function getLocalizedKeywordTexts(enText) {
   if (!ko) {
     const translatorModule = await ensureTranslationModule();
     if (translatorModule) {
+      attemptedGoogle = true;
       try {
         const result = await translatorModule(en, { from: 'en', to: 'ko' });
         const translated = String(result?.text || '').trim();
@@ -1172,6 +1129,7 @@ async function getLocalizedKeywordTexts(enText) {
           if (isCompleteKoTranslation(en, translated)) {
             ko = translated;
             translator = usedDeepL ? 'deepl+google' : 'google';
+            usedGoogle = true;
             complete = true;
           } else {
             console.warn(`[keywords] Google translation incomplete for "${en}":`, translated);
@@ -1179,22 +1137,6 @@ async function getLocalizedKeywordTexts(enText) {
         }
       } catch (err) {
         console.warn(`[keywords] failed to translate "${en}":`, err?.message || err);
-      }
-    }
-  }
-
-  if (!ko && NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
-    attemptedNaver = true;
-    const papago = await translateWithNaverPapago(en, { sourceLang: 'en', targetLang: 'ko' });
-    const papagoText = String(papago || '').trim();
-    if (papagoText) {
-      if (isCompleteKoTranslation(en, papagoText)) {
-        ko = papagoText;
-        translator = translator === 'none' ? 'papago' : `${translator}+papago`;
-        usedNaver = true;
-        complete = true;
-      } else {
-        console.warn(`[keywords] Papago translation incomplete for "${en}":`, papagoText);
       }
     }
   }
@@ -1212,7 +1154,7 @@ async function getLocalizedKeywordTexts(enText) {
   }
 
   setTranslationCache(en, ko);
-  return { en, ko, meta: { translator, attemptedDeepL, usedDeepL, attemptedNaver, usedNaver, complete } };
+  return { en, ko, meta: { translator, attemptedDeepL, usedDeepL, attemptedGoogle, usedGoogle, complete } };
 }
 
 async function runKrWordRankCollector({ limit = 30, queries = [] } = {}) {
@@ -2025,15 +1967,17 @@ async function translateKoreanKeywordToEnglish(koTerm) {
     }
   }
 
-  if (NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
+  const translatorModule = await ensureTranslationModule();
+  if (translatorModule) {
     try {
-      const papago = await translateWithNaverPapago(koTerm, { sourceLang: 'ko', targetLang: 'en' });
-      if (papago && papago !== koTerm) {
-        setTranslationCache(papago, koTerm);
-        return papago;
+      const result = await translatorModule(koTerm, { from: 'ko', to: 'en' });
+      const translated = String(result?.text || '').trim();
+      if (translated && translated !== koTerm) {
+        setTranslationCache(translated, koTerm);
+        return translated;
       }
     } catch (err) {
-      console.warn(`[Papago] translation failed for "${koTerm}":`, err.message);
+      console.warn(`[Google] translation failed for "${koTerm}":`, err?.message || err);
     }
   }
 
@@ -2114,7 +2058,7 @@ export async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, p
       translations[kw.term] = {
         en: kw.term,
         ko: kw.term_ko,
-        translator: DEEPL_API_KEY ? 'deepl' : (NAVER_CLIENT_ID ? 'papago' : 'dictionary')
+        translator: DEEPL_API_KEY ? 'deepl' : 'google'
       };
     }
   }
