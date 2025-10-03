@@ -5,8 +5,8 @@ name: Build & Publish Stock Recommendations
 on:
   workflow_dispatch:
   schedule:
-    # Every 5 hours (cron is UTC; cadence doesn't depend on timezone)
-    - cron: '0 */5 * * *'
+    # Every 6 hours (cron is UTC; runs 4 times daily)
+    - cron: '0 */6 * * *'
 
 jobs:
   build-publish:
