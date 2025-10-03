@@ -193,6 +193,13 @@ const INVEST_ZUM_URL = 'https://invest.zum.com/';
 
 const DATALAB_KEYWORD_COUNT = Number(process.env.DATALAB_KEYWORD_COUNT || 10);
 
+const FINANCE_TREND_KEYWORD_GROUPS = [
+  { category: 'Stock Market', keywords: ['주식', '코스피', '코스닥', '주가'] },
+  { category: 'Economy', keywords: ['환율', '금리', '경제 전망', 'GDP'] },
+  { category: 'Business', keywords: ['삼성전자', '현대자동차', '네이버', '카카오'] },
+  { category: 'Finance', keywords: ['비트코인', 'ETF', '채권', '펀드'] }
+];
+
 const DATALAB_TREND_KEYWORDS = [
   {
     text: { ko: 'AI 반도체 투자', en: 'AI semiconductor investment' },
@@ -654,6 +661,92 @@ async function fetchDatalabKeywordMetrics(configs){
   }
 
   return metrics;
+}
+
+async function fetchFinanceTrendKeywords({ lookbackDays = 35, limit = 16 } = {}) {
+  const NAVER_ID = process.env.NAVER_CLIENT_ID || process.env.NAVER_ID || '';
+  const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || process.env.NAVER_SECRET || '';
+  if (!NAVER_ID || !NAVER_SECRET || SKIP_NAVER) return [];
+
+  const now = new Date();
+  const endDate = now.toISOString().slice(0, 10);
+  const lookback = Math.max(7, Number.isFinite(lookbackDays) ? lookbackDays : 35);
+  const startDate = new Date(now.getTime() - lookback * 24 * 3600 * 1000).toISOString().slice(0, 10);
+
+  const groups = [];
+  const metaByGroup = new Map();
+  for (const cfg of FINANCE_TREND_KEYWORD_GROUPS) {
+    if (!cfg || !Array.isArray(cfg.keywords)) continue;
+    for (const keyword of cfg.keywords) {
+      const term = String(keyword || '').trim();
+      if (!term) continue;
+      const groupName = `${cfg.category}:${term}`;
+      groups.push({ groupName, keyword: term });
+      metaByGroup.set(groupName, { category: cfg.category, term });
+    }
+  }
+
+  if (!groups.length) return [];
+
+  const collected = [];
+  for (const batch of chunk(groups, 5)) {
+    let res = {};
+    try {
+      res = await fetchNaverDataLabBatch(batch, {
+        startDate,
+        endDate,
+        timeUnit: 'week',
+        NAVER_ID,
+        NAVER_SECRET
+      });
+    } catch (err) {
+      console.warn('[keywords] failed to fetch finance trend batch:', err?.message || err);
+      continue;
+    }
+
+    for (const entry of batch) {
+      const key = entry.groupName;
+      const metrics = res?.[key] || res?.[entry.keyword];
+      if (!metrics) continue;
+      const meta = metaByGroup.get(key) || { category: '', term: entry.keyword };
+      const popularity = Number.isFinite(metrics.popularity01) ? Math.max(0, metrics.popularity01) : 0;
+      const asvi = Number.isFinite(metrics.lastAsvi) ? metrics.lastAsvi / 100 : 0;
+      const spikeBonus = metrics.spike ? 0.18 : 0;
+      const persistBonus = metrics.persist ? 0.1 : 0;
+      const score = popularity * 0.6 + Math.max(0, asvi) * 0.3 + spikeBonus + persistBonus;
+
+      collected.push({
+        term_ko: meta.term,
+        category: meta.category || '',
+        score,
+        metrics: {
+          popularity,
+          lastAsvi: Number.isFinite(metrics.lastAsvi) ? metrics.lastAsvi : 0,
+          spike: !!metrics.spike,
+          persist: !!metrics.persist
+        }
+      });
+    }
+  }
+
+  if (!collected.length) return [];
+
+  const deduped = new Map();
+  for (const item of collected) {
+    if (!item?.term_ko) continue;
+    const key = item.term_ko;
+    const existing = deduped.get(key);
+    if (!existing || item.score > existing.score) {
+      deduped.set(key, item);
+    }
+  }
+
+  const ranked = Array.from(deduped.values()).sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return a.term_ko.localeCompare(b.term_ko);
+  });
+
+  return ranked.slice(0, Math.max(1, limit));
 }
 
 function dedupeArticlesByUrl(articles){
@@ -2628,6 +2721,11 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     const koTerm = entry?.text?.ko || entry?.text?.en || '';
     const enTerm = entry?.text?.en || '';
     await addKoreanCandidate(koTerm, enTerm, { translator: 'naver-datalab' });
+  }
+
+  const financeTrendBoost = await fetchFinanceTrendKeywords({ limit: Math.max(16, normalizedTags.length) });
+  for (const trend of financeTrendBoost) {
+    await addKoreanCandidate(trend?.term_ko || '', '', { translator: 'naver-datalab' });
   }
 
   const koKeywordBoost = await collectEconomyKoKeywords({ limit: Math.max(30, normalizedTags.length) });
