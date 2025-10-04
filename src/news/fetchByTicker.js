@@ -125,6 +125,7 @@ const KEYWORD_MARKET_QUERIES = [
 ];
 
 const TAG_OUTPUT_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
+const TAG_TIMEZONE = process.env.TAG_TIMEZONE || 'Asia/Seoul';
 const TAG_COLLECTION_WINDOW_DAYS = Number(process.env.TAG_COLLECTION_LOOKBACK_DAYS || 14);
 const TAG_COLLECTION_PAGE_LIMIT = Number(process.env.TAG_COLLECTION_PAGE_LIMIT || 5);
 const TAG_COLLECTION_PAGE_SIZE = Number(process.env.TAG_COLLECTION_PAGE_SIZE || 40);
@@ -2355,7 +2356,7 @@ async function extractZumSignificantPhrases() {
 }
 
 // Main collection function
-export async function collectSignificantPhrases({ targetCount = 30 } = {}) {
+export async function collectSignificantPhrases({ targetCount = 50 } = {}) {
   console.log('[Significance] Collecting newsworthy 2-3 word phrases...');
 
   const collectors = [
@@ -2378,10 +2379,15 @@ export async function collectSignificantPhrases({ targetCount = 30 } = {}) {
   // Score by significance
   const scored = scorePhrasesbySignificance(allPhrases);
 
-  console.log('[Significance] Top 20 by significance score:');
-  scored.slice(0, 20).forEach((p, i) => {
-    console.log(`  ${i + 1}. "${p.text}" - score: ${p.score}, count: ${p.count}`);
-  });
+  const previewCount = Math.min(20, scored.length);
+  if (previewCount > 0) {
+    console.log(`[Significance] Top ${previewCount} by significance score:`);
+    scored.slice(0, previewCount).forEach((p, i) => {
+      console.log(`  ${i + 1}. "${p.text}" - score: ${p.score}, count: ${p.count}`);
+    });
+  } else {
+    console.log('[Significance] No phrases available for preview');
+  }
 
   // Return top N (filtering to phrases of reasonable length)
   return scored
@@ -2398,7 +2404,7 @@ export async function collectSignificantPhrases({ targetCount = 30 } = {}) {
 
 // Write output
 export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE } = {}) {
-  const targetCount = 30;
+  const targetCount = Number(process.env.SIGNIFICANT_PHRASE_TARGET || 50) || 50;
   const phrases = await collectSignificantPhrases({ targetCount });
 
   let financeTrendBoost = [];
@@ -2858,12 +2864,54 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     }
   }
 
-  const payload = {
-    date: asOfDate,
+  const generatedAt = new Date();
+  const generatedAtIso = generatedAt.toISOString();
+  const normalizedDate = typeof asOfDate === 'string' && asOfDate
+    ? asOfDate.slice(0, 10)
+    : daysAgo(0);
+
+  let generatedAtLocal = '';
+  try {
+    const parts = new Intl.DateTimeFormat('sv-SE', {
+      timeZone: TAG_TIMEZONE,
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    }).formatToParts(generatedAt);
+    const lookup = (type) => parts.find(p => p.type === type)?.value || '';
+    const localDate = `${lookup('year')}-${lookup('month')}-${lookup('day')}`;
+    const localTime = `${lookup('hour')}:${lookup('minute')}:${lookup('second')}`;
+    if (localDate.trim() && localTime.trim()) {
+      generatedAtLocal = `${localDate}T${localTime}`;
+    }
+  } catch {
+    generatedAtLocal = '';
+  }
+
+  const metadata = {
+    date: normalizedDate,
     window: `${TAG_COLLECTION_WINDOW_DAYS}_days`,
+    generated_at: generatedAtIso,
+    timezone: TAG_TIMEZONE,
+    article_count: derivedArticleCount,
+    fallback_used: Boolean(fallbackUsed)
+  };
+  if (generatedAtLocal) {
+    metadata.generated_at_local = generatedAtLocal;
+  }
+
+  const payload = {
+    date: normalizedDate,
+    window: metadata.window,
     total_articles: derivedArticleCount,
     discovered_keywords: localizedDiscovered,
-    translations
+    translations,
+    generated_at: generatedAtIso,
+    timezone: TAG_TIMEZONE,
+    metadata
   };
 
   ensureDirFor(TAG_OUTPUT_FILE);
