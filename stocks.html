@@ -333,7 +333,7 @@
       }
     }
 
-    const KEYWORD_STOPWORDS = ['환율', '펀드', '금리', '시장', '증시', '주식'];
+    const KEYWORD_STOPWORDS = ['펀드', '금리', '시장', '증시', '주식'];
     const KEYWORD_STOPWORD_KEYS = new Set(
       KEYWORD_STOPWORDS.map(term => normalizeTermKey(term)).filter(Boolean)
     );
@@ -467,6 +467,14 @@
           || data?.generated_at
           || data?.generatedAt
           || '',
+        generatedAtLocal: data?.metadata?.generated_at_local
+          || data?.metadata?.generatedAtLocal
+          || data?.generated_at_local
+          || data?.generatedAtLocal
+          || '',
+        timezone: data?.metadata?.timezone
+          || data?.timezone
+          || '',
         date: data?.date || data?.metadata?.date || '',
         window: data?.window || data?.metadata?.window || ''
       };
@@ -477,13 +485,15 @@
       if (meta.generatedAt) {
         const stamp = new Date(meta.generatedAt);
         if (!Number.isNaN(stamp.getTime())) {
+          const tz = typeof meta.timezone === 'string' && meta.timezone.trim() ? meta.timezone.trim() : 'Asia/Seoul';
+          const tzLabel = tz === 'Asia/Seoul' ? 'KST' : tz;
           try {
             const fmtEn = new Intl.DateTimeFormat('en-US', {
               dateStyle: 'medium',
               timeStyle: 'short',
-              timeZone: 'Asia/Seoul'
+              timeZone: tz
             }).format(stamp);
-            result.en = `Updated ${fmtEn} KST`;
+            result.en = `Updated ${fmtEn} ${tzLabel}`;
           } catch {
             result.en = `Updated ${meta.generatedAt}`;
           }
@@ -491,13 +501,18 @@
             const fmtKo = new Intl.DateTimeFormat('ko-KR', {
               dateStyle: 'medium',
               timeStyle: 'short',
-              timeZone: 'Asia/Seoul'
+              timeZone: tz
             }).format(stamp);
             result.ko = `${fmtKo} 기준 업데이트`;
           } catch {
             result.ko = `${meta.generatedAt} 기준 업데이트`;
           }
         }
+      } else if (meta.generatedAtLocal) {
+        const tz = typeof meta.timezone === 'string' && meta.timezone.trim() ? meta.timezone.trim() : 'Asia/Seoul';
+        const tzLabel = tz === 'Asia/Seoul' ? 'KST' : tz;
+        result.en = `Updated ${meta.generatedAtLocal} ${tzLabel}`;
+        result.ko = `${meta.generatedAtLocal} 기준 업데이트`;
       }
 
       if (!result.en && meta.date) {
@@ -508,8 +523,11 @@
       }
 
       if (windowLabel) {
-        result.en = result.en ? `${result.en} (${windowLabel})` : windowLabel;
-        result.ko = result.ko ? `${result.ko} (${windowLabel})` : windowLabel;
+        const normalizedWindow = windowLabel.replace(/\s+/g, ' ').trim();
+        if (normalizedWindow && !/^5\s*hours$/i.test(normalizedWindow)) {
+          result.en = result.en ? `${result.en} (${normalizedWindow})` : normalizedWindow;
+          result.ko = result.ko ? `${result.ko} (${normalizedWindow})` : normalizedWindow;
+        }
       }
 
       return result;
