@@ -5569,7 +5569,20 @@ export async function buildNewsCachesCli() {
   console.log(`[news-caches] wrote ${NEWS_FEATURES_FILE} and ${NAVER_TRENDS_FILE}`);
 
   // 3) Ticker keyword snapshot merged into newsKeywords.json
-  const tagSnapshotForKeywords = readJsonSafe(TAG_OUTPUT_FILE) || null;
+  let tagSnapshotForKeywords = null;
+
+  try {
+    const latestTags = await writeSignificantPhrasesJson({ outputPath: TAG_OUTPUT_FILE });
+    if (latestTags) {
+      tagSnapshotForKeywords = latestTags;
+    }
+  } catch (err) {
+    console.warn('[news-caches] failed to build significant phrase tags:', err?.message || err);
+  }
+
+  if (!tagSnapshotForKeywords) {
+    tagSnapshotForKeywords = readJsonSafe(TAG_OUTPUT_FILE) || null;
+  }
   const keywordPayload = buildNewsKeywords(collectedArticles, { tagSnapshot: tagSnapshotForKeywords });
   const tickerCount = Object.keys(keywordPayload.tickers).length;
   if (tickerCount) {
