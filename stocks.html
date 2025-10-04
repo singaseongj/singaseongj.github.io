@@ -333,7 +333,7 @@
       }
     }
 
-    const KEYWORD_STOPWORDS = ['환율', '펀드', '금리', '시장', '증시', '주식'];
+    const KEYWORD_STOPWORDS = ['펀드', '금리', '시장', '증시', '주식'];
     const KEYWORD_STOPWORD_KEYS = new Set(
       KEYWORD_STOPWORDS.map(term => normalizeTermKey(term)).filter(Boolean)
     );
@@ -523,8 +523,11 @@
       }
 
       if (windowLabel) {
-        result.en = result.en ? `${result.en} (${windowLabel})` : windowLabel;
-        result.ko = result.ko ? `${result.ko} (${windowLabel})` : windowLabel;
+        const normalizedWindow = windowLabel.replace(/\s+/g, ' ').trim();
+        if (normalizedWindow && !/^5\s*hours$/i.test(normalizedWindow)) {
+          result.en = result.en ? `${result.en} (${normalizedWindow})` : normalizedWindow;
+          result.ko = result.ko ? `${result.ko} (${normalizedWindow})` : normalizedWindow;
+        }
       }
 
       return result;
