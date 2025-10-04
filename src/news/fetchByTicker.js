@@ -2404,8 +2404,9 @@ export async function collectSignificantPhrases({ targetCount = 50 } = {}) {
 
 // Write output
 export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE } = {}) {
-  const targetCount = Number(process.env.SIGNIFICANT_PHRASE_TARGET || 50) || 50;
-  const phrases = await collectSignificantPhrases({ targetCount });
+  const desiredCount = Number(process.env.MARKET_TAG_LIMIT || 30) || 30;
+  const phraseCollectionTarget = Math.max(desiredCount, Number(process.env.SIGNIFICANT_PHRASE_TARGET || desiredCount) || desiredCount);
+  const phrases = await collectSignificantPhrases({ targetCount: phraseCollectionTarget });
 
   let financeTrendBoost = [];
   try {
@@ -2421,24 +2422,38 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
 
   const aggregated = new Map();
 
-  const registerEntry = (koTerm, { score = 0, mentions = 1 } = {}) => {
+  const hasAtLeastTwoWords = (value = '') => String(value).trim().split(/\s+/).filter(Boolean).length >= 2;
+
+  const registerEntry = (koTerm, { score = 0, mentions = 1, source = '', english = '' } = {}) => {
     const normalizedKo = normalizeKoKeywordTerm(koTerm);
     if (!normalizedKo) return;
+    if (!hasAtLeastTwoWords(normalizedKo)) return;
 
     const significanceScore = Math.max(1, Math.round(score));
     const mentionCount = Math.max(1, Math.round(mentions));
+    const sourceLabel = String(source || '').trim();
+    const englishHint = formatTagDisplay(english || '');
 
     if (aggregated.has(normalizedKo)) {
       const existing = aggregated.get(normalizedKo);
       existing.significance_score = Math.max(existing.significance_score, significanceScore);
       existing.mentions = Math.max(existing.mentions, mentionCount);
+      if (sourceLabel) existing.sources.add(sourceLabel);
+      if (englishHint) existing.englishHints.add(englishHint);
       return;
     }
+
+    const sources = new Set();
+    if (sourceLabel) sources.add(sourceLabel);
+    const englishHints = new Set();
+    if (englishHint) englishHints.add(englishHint);
 
     aggregated.set(normalizedKo, {
       term_ko: normalizedKo,
       significance_score: significanceScore,
-      mentions: mentionCount
+      mentions: mentionCount,
+      sources,
+      englishHints
     });
   };
 
@@ -2446,7 +2461,9 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     if (!phrase) continue;
     registerEntry(phrase.term_ko || phrase.term, {
       score: Number.isFinite(phrase.score) ? phrase.score : 0,
-      mentions: Number.isFinite(phrase.count) ? phrase.count : 1
+      mentions: Number.isFinite(phrase.count) ? phrase.count : 1,
+      source: 'significance',
+      english: phrase.term
     });
   }
 
@@ -2466,8 +2483,30 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     scaledScore = Math.max(50, scaledScore);
     const estimatedMentions = Math.max(1, Math.round(popularity * 20));
 
-    registerEntry(koTerm, { score: scaledScore, mentions: estimatedMentions });
+    registerEntry(koTerm, {
+      score: scaledScore,
+      mentions: estimatedMentions,
+      source: 'finance_trend',
+      english: trend.term
+    });
     injectedTrends += 1;
+  }
+
+  if (aggregated.size < desiredCount) {
+    try {
+      const fallback = await collectKoreanFirstKeywords({ targetCount: desiredCount * 2 });
+      for (const kw of fallback?.keywords || []) {
+        if (!kw) continue;
+        registerEntry(kw.term_ko || kw.term, {
+          score: Number.isFinite(kw.score) ? kw.score : Number.isFinite(kw.count) ? kw.count : 1,
+          mentions: Number.isFinite(kw.count) ? kw.count : 1,
+          source: 'korean_first',
+          english: kw.term
+        });
+      }
+    } catch (err) {
+      console.warn('[Significance] korean-first fallback failed:', err?.message || err);
+    }
   }
 
   if (!aggregated.size) {
@@ -2475,8 +2514,21 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     return null;
   }
 
-  const ranked = Array.from(aggregated.values())
+  const aggregatedList = Array.from(aggregated.values());
+  const maxSignificance = aggregatedList.reduce((acc, item) => Math.max(acc, Number(item.significance_score) || 0), 0);
+  const maxMentions = aggregatedList.reduce((acc, item) => Math.max(acc, Number(item.mentions) || 0), 0);
+
+  const ranked = aggregatedList
+    .map(item => {
+      const significanceRatio = maxSignificance > 0 ? (item.significance_score / maxSignificance) : 0;
+      const mentionRatio = maxMentions > 0 ? (item.mentions / maxMentions) : 0;
+      const combinedScore = 0.7 * significanceRatio + 0.3 * mentionRatio;
+      return { ...item, combined_score: Number(combinedScore.toFixed(6)) };
+    })
     .sort((a, b) => {
+      if (b.combined_score !== a.combined_score) {
+        return b.combined_score - a.combined_score;
+      }
       if (b.significance_score !== a.significance_score) {
         return b.significance_score - a.significance_score;
       }
@@ -2485,29 +2537,45 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       }
       return a.term_ko.localeCompare(b.term_ko);
     })
-    .slice(0, Math.min(aggregated.size, targetCount + Math.min(injectedTrends, 5)));
+    .slice(0, desiredCount);
 
   const discoveredKeywords = [];
   for (const entry of ranked) {
     const koTerm = entry.term_ko;
     let termEn = '';
+    const englishHints = entry.englishHints ? Array.from(entry.englishHints).map(h => formatTagDisplay(h || '')).filter(Boolean) : [];
+    if (englishHints.length) {
+      termEn = englishHints.find(text => hasAtLeastTwoWords(text)) || englishHints[0];
+    }
     try {
-      const translation = await translateKoTermToEn(koTerm, { includeMeta: true });
-      termEn = formatTagDisplay(translation.text || '');
-      if (termEn) {
-        setTranslationCache(termEn, koTerm);
+      if (!termEn) {
+        const translation = await translateKoTermToEn(koTerm, { includeMeta: true });
+        termEn = formatTagDisplay(translation.text || '');
+        if (termEn) {
+          setTranslationCache(termEn, koTerm);
+          if (translation.translator) {
+            englishHints.push(termEn);
+          }
+        }
       }
     } catch (err) {
       console.warn(`[Significance] translation failed for "${koTerm}":`, err?.message || err);
     }
 
     const finalTerm = termEn || formatTagDisplay(koTerm);
-    discoveredKeywords.push({
+    const keywordRecord = {
       term: finalTerm,
       term_ko: koTerm,
       significance_score: entry.significance_score,
-      mentions: entry.mentions
-    });
+      mentions: entry.mentions,
+      combined_score: entry.combined_score
+    };
+
+    if (entry.sources && entry.sources.size) {
+      keywordRecord.sources = Array.from(entry.sources).sort();
+    }
+
+    discoveredKeywords.push(keywordRecord);
   }
 
   const nowIso = new Date().toISOString();
@@ -2519,9 +2587,10 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     metadata: {
       collection_method: 'significance_over_frequency',
       phrase_length: '2-3 words',
-      scoring: 'signal_words + context_relevance',
+      scoring: 'frequency_weighted_significance',
       generated_at: nowIso,
-      finance_trend_keywords: injectedTrends
+      finance_trend_keywords: injectedTrends,
+      keyword_limit: desiredCount
     }
   };
 
