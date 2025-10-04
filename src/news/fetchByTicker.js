@@ -2153,6 +2153,64 @@ const SIGNIFICANT_CONTEXTS = new Set([
   'AI', 'HBM', '전기차', '원자력', '수소', '태양광', 'LNG'
 ]);
 
+const FINANCE_PRIORITY_KEYWORDS = new Map([
+  ['금융', 36],
+  ['경제', 30],
+  ['비즈니스', 26],
+  ['마케팅', 18],
+  ['증시', 34],
+  ['주식', 32],
+  ['주가', 30],
+  ['시장', 22],
+  ['산업', 18],
+  ['은행', 32],
+  ['투자', 30],
+  ['채권', 24],
+  ['펀드', 24],
+  ['자본', 18],
+  ['거래', 16],
+  ['환율', 34],
+  ['금리', 34],
+  ['통화', 20],
+  ['재정', 18],
+  ['고용', 16],
+  ['finance', 28],
+  ['financial', 28],
+  ['economy', 26],
+  ['economic', 26],
+  ['business', 22],
+  ['marketing', 18],
+  ['stock', 22],
+  ['stocks', 22],
+  ['market', 20],
+  ['markets', 20],
+  ['bank', 26],
+  ['banking', 26],
+  ['invest', 22],
+  ['investment', 26],
+  ['investor', 20],
+  ['fiscal', 18],
+  ['monetary', 18]
+]);
+
+function computeFinanceKeywordBoost(text) {
+  if (!text) return 0;
+  let boost = 0;
+  const raw = String(text);
+  const lower = raw.toLowerCase();
+  for (const [keyword, weight] of FINANCE_PRIORITY_KEYWORDS.entries()) {
+    if (!keyword) continue;
+    if (/[\u3131-\u318E\uAC00-\uD7A3]/.test(keyword)) {
+      if (raw.includes(keyword)) {
+        boost += weight;
+      }
+    } else if (lower.includes(keyword)) {
+      boost += weight;
+    }
+  }
+  return boost;
+}
+
 // Extract 2-3 word meaningful phrases from text
 function extractSignificantPhrases(text) {
   const cleaned = text
@@ -2212,56 +2270,171 @@ function isPhraseSignificant(phrase) {
 }
 
 // Score phrases by significance (not frequency)
-function scorePhrasesbySignificance(phrases) {
+function scorePhrasesbySignificance(phrases, { datalabKeywords = [] } = {}) {
   const scored = new Map();
+  const datalabIndex = Array.isArray(datalabKeywords)
+    ? datalabKeywords
+        .map(item => ({
+          term: normalizeKoKeywordTerm(item?.term_ko || item?.term || ''),
+          score: Number(item?.score) || 0,
+          category: item?.category || ''
+        }))
+        .filter(entry => entry.term)
+    : [];
 
-  for (const { text, length } of phrases) {
-    const existing = scored.get(text);
+  for (const phrase of phrases || []) {
+    if (!phrase) continue;
+    const rawText = String(phrase?.text || '').replace(/\s+/g, ' ').trim();
+    if (!rawText) continue;
 
+    const length = Number.isFinite(phrase?.length) ? phrase.length : rawText.split(/\s+/).length;
+    if (length < 2) continue;
+
+    const words = rawText.split(/\s+/);
+    const meta = phrase?.meta && typeof phrase.meta === 'object' ? phrase.meta : {};
+    const financeBoost = Number.isFinite(meta.financeBoost) ? meta.financeBoost : computeFinanceKeywordBoost(rawText);
+    const scoreHint = Number.isFinite(phrase?.scoreHint) ? phrase.scoreHint : 0;
+
+    const providedMatches = Array.isArray(meta.datalabMatches)
+      ? meta.datalabMatches.filter(match => match && match.term_ko)
+      : [];
+    const datalabMatches = providedMatches.length
+      ? providedMatches
+      : datalabIndex
+          .filter(entry => rawText.includes(entry.term))
+          .map(entry => ({ term_ko: entry.term, score: entry.score, category: entry.category }));
+
+    let score = length * 10;
+
+    for (const w of words) {
+      if ([...SIGNAL_WORDS.positive].some(s => w.includes(s))) score += 32;
+      if ([...SIGNAL_WORDS.negative].some(s => w.includes(s))) score += 32;
+      if ([...SIGNAL_WORDS.change].some(s => w.includes(s))) score += 26;
+      if ([...SIGNAL_WORDS.policy].some(s => w.includes(s))) score += 22;
+    }
+
+    for (const w of words) {
+      if (Array.from(SIGNIFICANT_CONTEXTS).some(c => w.includes(c))) score += 15;
+    }
+
+    score += financeBoost;
+    score += scoreHint;
+
+    let datalabBonus = 0;
+    for (const match of datalabMatches) {
+      if (!match?.term_ko) continue;
+      const baseScore = Number(match?.score) || 0;
+      datalabBonus += Math.max(18, baseScore * 120);
+    }
+    score += datalabBonus;
+
+    const existing = scored.get(rawText);
     if (existing) {
       existing.count += 1;
-    } else {
-      // Calculate significance score
-      let score = 0;
-
-      // Length bonus (3-word phrases are more specific)
-      score += length * 10;
-
-      // Signal strength
-      const words = text.split(/\s+/);
-      for (const w of words) {
-        if ([...SIGNAL_WORDS.positive].some(s => w.includes(s))) score += 30;
-        if ([...SIGNAL_WORDS.negative].some(s => w.includes(s))) score += 30;
-        if ([...SIGNAL_WORDS.change].some(s => w.includes(s))) score += 25;
-        if ([...SIGNAL_WORDS.policy].some(s => w.includes(s))) score += 20;
+      existing.score = Math.max(existing.score, score);
+      existing.financeBoost = Math.max(existing.financeBoost, financeBoost);
+      if (phrase?.source) existing.sources.add(phrase.source);
+      if (Array.isArray(meta.sources)) {
+        for (const src of meta.sources) {
+          if (src) existing.sources.add(src);
+        }
       }
-
-      // Context relevance
-      for (const w of words) {
-        if (Array.from(SIGNIFICANT_CONTEXTS).some(c => w.includes(c))) score += 15;
+      if (meta.headlines) {
+        for (const headline of meta.headlines) {
+          if (!headline) continue;
+          const key = `${headline.title || ''}__${headline.url || ''}`;
+          if (!existing.headlineKeys.has(key) && existing.headlines.length < 3) {
+            existing.headlineKeys.add(key);
+            existing.headlines.push(headline);
+          }
+        }
       }
-
-      scored.set(text, {
-        text,
-        count: 1,
-        score,
-        length
-      });
+      if (meta.tickerFile) {
+        existing.tickerFiles.add(meta.tickerFile);
+      }
+      if (datalabMatches.length) {
+        for (const match of datalabMatches) {
+          if (!match?.term_ko) continue;
+          const record = existing.datalabMatches.get(match.term_ko) || { term_ko: match.term_ko, score: 0, hits: 0, categories: new Set() };
+          record.score = Math.max(record.score, Number(match.score) || 0);
+          record.hits += 1;
+          if (match.category) record.categories.add(match.category);
+          existing.datalabMatches.set(match.term_ko, record);
+        }
+      }
+      continue;
     }
+
+    const entry = {
+      text: rawText,
+      count: 1,
+      score,
+      length,
+      financeBoost,
+      sources: new Set(),
+      datalabMatches: new Map(),
+      headlines: [],
+      headlineKeys: new Set(),
+      tickerFiles: new Set()
+    };
+
+    if (phrase?.source) {
+      entry.sources.add(phrase.source);
+    }
+    if (Array.isArray(meta.sources)) {
+      for (const src of meta.sources) {
+        if (src) entry.sources.add(src);
+      }
+    }
+    if (!entry.sources.size) {
+      entry.sources.add('news');
+    }
+
+    if (meta.headlines) {
+      for (const headline of meta.headlines) {
+        if (!headline) continue;
+        const key = `${headline.title || ''}__${headline.url || ''}`;
+        if (!entry.headlineKeys.has(key) && entry.headlines.length < 3) {
+          entry.headlineKeys.add(key);
+          entry.headlines.push(headline);
+        }
+      }
+    }
+
+    if (meta.tickerFile) {
+      entry.tickerFiles.add(meta.tickerFile);
+    }
+
+    for (const match of datalabMatches) {
+      if (!match?.term_ko) continue;
+      const record = { term_ko: match.term_ko, score: Number(match.score) || 0, hits: 1, categories: new Set() };
+      if (match.category) record.categories.add(match.category);
+      entry.datalabMatches.set(match.term_ko, record);
+    }
+
+    scored.set(rawText, entry);
   }
 
-  // Sort by significance score, NOT frequency
-  // This ensures "조선업체 호황" (high significance, low freq)
-  // ranks above "환율 변동" (low significance, high freq)
   return Array.from(scored.values())
+    .map(entry => ({
+      text: entry.text,
+      length: entry.length,
+      score: Math.round(entry.score),
+      count: entry.count,
+      financeBoost: entry.financeBoost,
+      sources: Array.from(entry.sources),
+      datalabMatches: Array.from(entry.datalabMatches.values()).map(match => ({
+        term_ko: match.term_ko,
+        score: match.score,
+        hits: match.hits,
+        categories: match.categories ? Array.from(match.categories) : []
+      })),
+      headlines: entry.headlines.slice(0, 3),
+      tickerFiles: Array.from(entry.tickerFiles)
+    }))
     .sort((a, b) => {
-      // Primary: significance score
       if (b.score !== a.score) return b.score - a.score;
-
-      // Secondary: count (tie-breaker)
       if (b.count !== a.count) return b.count - a.count;
-
-      // Tertiary: prefer longer phrases
       return b.length - a.length;
     });
 }
@@ -2355,8 +2528,129 @@ async function extractZumSignificantPhrases() {
   }
 }
 
+async function collectCachedArticleSignificantPhrases({ datalabKeywords = [] } = {}) {
+  const articleDir = path.join('data', 'articles');
+  let files = [];
+  try {
+    files = await fsp.readdir(articleDir);
+  } catch (err) {
+    console.warn('[Significance] article cache directory missing:', err?.message || err);
+    return { phrases: [], stats: { processedArticles: 0, filesProcessed: 0, extractedPhrases: 0, datalabTerms: [] } };
+  }
+
+  const jsonFiles = files.filter(name => name.endsWith('.json'));
+  if (!jsonFiles.length) {
+    return { phrases: [], stats: { processedArticles: 0, filesProcessed: 0, extractedPhrases: 0, datalabTerms: [] } };
+  }
+
+  jsonFiles.sort((a, b) => b.localeCompare(a));
+
+  const datalabIndex = Array.isArray(datalabKeywords)
+    ? datalabKeywords
+        .map(item => ({
+          term: normalizeKoKeywordTerm(item?.term_ko || item?.term || ''),
+          score: Number(item?.score) || 0,
+          category: item?.category || ''
+        }))
+        .filter(entry => entry.term)
+    : [];
+
+  const maxArticles = Number(process.env.CACHED_ARTICLE_TAG_TOTAL_LIMIT || 4000);
+  const perFileLimit = Number(process.env.CACHED_ARTICLE_TAG_ARTICLE_LIMIT || 30);
+  const maxFileCount = Number(process.env.CACHED_ARTICLE_TAG_FILE_LIMIT || 200);
+
+  const phrases = [];
+  let processedArticles = 0;
+  let filesProcessed = 0;
+
+  for (const file of jsonFiles) {
+    if (Number.isFinite(maxFileCount) && maxFileCount > 0 && filesProcessed >= maxFileCount) {
+      break;
+    }
+
+    let articles = [];
+    try {
+      const raw = await fsp.readFile(path.join(articleDir, file), 'utf8');
+      articles = JSON.parse(raw);
+    } catch (err) {
+      console.warn(`[Significance] failed to parse cached article file ${file}:`, err?.message || err);
+      continue;
+    }
+
+    if (!Array.isArray(articles) || !articles.length) {
+      continue;
+    }
+
+    filesProcessed += 1;
+    const subset = Number.isFinite(perFileLimit) && perFileLimit > 0 ? articles.slice(0, perFileLimit) : articles;
+
+    for (const article of subset) {
+      if (Number.isFinite(maxArticles) && maxArticles > 0 && processedArticles >= maxArticles) {
+        break;
+      }
+      processedArticles += 1;
+
+      const parts = [];
+      if (article?.title) parts.push(stripHtml(article.title));
+      if (article?.summary) parts.push(stripHtml(article.summary));
+      if (article?.body) parts.push(stripHtml(article.body));
+      const combined = parts.join(' ').trim();
+      if (!combined) continue;
+
+      const extracted = extractSignificantPhrases(combined);
+      if (!Array.isArray(extracted) || !extracted.length) continue;
+
+      const headline = article?.title
+        ? { title: stripHtml(article.title), url: article?.url || '', source: article?.source || '' }
+        : null;
+
+      for (const phrase of extracted) {
+        const cleaned = normalizeKoKeywordTerm(phrase?.text || '');
+        if (!cleaned) continue;
+
+        const financeBoost = computeFinanceKeywordBoost(cleaned);
+        const matches = datalabIndex
+          .filter(entry => cleaned.includes(entry.term))
+          .map(entry => ({ term_ko: entry.term, score: entry.score, category: entry.category }));
+
+        const meta = {
+          financeBoost,
+          datalabMatches: matches,
+          headlines: headline ? [headline] : [],
+          sources: [article?.source || 'article_cache'],
+          tickerFile: file
+        };
+
+        phrases.push({
+          text: cleaned,
+          length: Number.isFinite(phrase?.length) ? phrase.length : cleaned.split(/\s+/).length,
+          source: 'article_cache',
+          scoreHint: financeBoost,
+          meta
+        });
+      }
+    }
+
+    if (Number.isFinite(maxArticles) && maxArticles > 0 && processedArticles >= maxArticles) {
+      break;
+    }
+  }
+
+  console.log(`[Significance] cached article phrases extracted: ${phrases.length} (files: ${filesProcessed}, articles: ${processedArticles})`);
+
+  return {
+    phrases,
+    stats: {
+      processedArticles,
+      filesProcessed,
+      extractedPhrases: phrases.length,
+      datalabTerms: datalabIndex.map(entry => entry.term)
+    }
+  };
+}
+
 // Main collection function
-export async function collectSignificantPhrases({ targetCount = 50 } = {}) {
+export async function collectSignificantPhrases({ targetCount = 50, datalabKeywords = [] } = {}) {
   console.log('[Significance] Collecting newsworthy 2-3 word phrases...');
 
   const collectors = [
@@ -2364,6 +2658,15 @@ export async function collectSignificantPhrases({ targetCount = 50 } = {}) {
     extractKDISignificantPhrases(),
     extractZumSignificantPhrases()
   ];
+
+  let articleCacheStats = { processedArticles: 0, filesProcessed: 0, extractedPhrases: 0, datalabTerms: [] };
+  try {
+    const articleResult = await collectCachedArticleSignificantPhrases({ datalabKeywords });
+    articleCacheStats = articleResult.stats;
+    collectors.push(Promise.resolve(articleResult.phrases));
+  } catch (err) {
+    console.warn('[Significance] failed to derive cached article phrases:', err?.message || err);
+  }
 
   const results = await Promise.allSettled(collectors);
   const allPhrases = [];
@@ -2376,8 +2679,7 @@ export async function collectSignificantPhrases({ targetCount = 50 } = {}) {
 
   console.log(`[Significance] collected ${allPhrases.length} total phrases`);
 
-  // Score by significance
-  const scored = scorePhrasesbySignificance(allPhrases);
+  const scored = scorePhrasesbySignificance(allPhrases, { datalabKeywords });
 
   const previewCount = Math.min(20, scored.length);
   if (previewCount > 0) {
@@ -2389,8 +2691,7 @@ export async function collectSignificantPhrases({ targetCount = 50 } = {}) {
     console.log('[Significance] No phrases available for preview');
   }
 
-  // Return top N (filtering to phrases of reasonable length)
-  return scored
+  const filtered = scored
     .filter(p => p.length >= 2 && p.length <= 3)
     .slice(0, targetCount)
     .map(p => ({
@@ -2398,22 +2699,41 @@ export async function collectSignificantPhrases({ targetCount = 50 } = {}) {
       score: p.score,
       count: p.count,
       length: p.length,
-      source: 'significance_analysis'
+      source: 'significance_analysis',
+      metadata: {
+        financeBoost: p.financeBoost,
+        datalabMatches: p.datalabMatches,
+        sources: p.sources,
+        headlines: p.headlines,
+        tickerFiles: p.tickerFiles
+      }
     }));
+
+  return {
+    phrases: filtered,
+    meta: {
+      articleCache: articleCacheStats,
+      datalabTermsUsed: Array.from(new Set(datalabKeywords
+        .map(item => normalizeKoKeywordTerm(item?.term_ko || item?.term || ''))
+        .filter(Boolean)))
+    }
+  };
 }
 
 // Write output
 export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE } = {}) {
   const desiredCount = Number(process.env.MARKET_TAG_LIMIT || 30) || 30;
   const phraseCollectionTarget = Math.max(desiredCount, Number(process.env.SIGNIFICANT_PHRASE_TARGET || desiredCount) || desiredCount);
-  const phrases = await collectSignificantPhrases({ targetCount: phraseCollectionTarget });
-
   let financeTrendBoost = [];
   try {
-    financeTrendBoost = await fetchFinanceTrendKeywords({ limit: 12 });
+    financeTrendBoost = await fetchFinanceTrendKeywords({ limit: Math.max(16, desiredCount) });
   } catch (err) {
     console.warn('[Significance] failed to fetch finance trend keywords:', err?.message || err);
   }
+
+  const phraseCollection = await collectSignificantPhrases({ targetCount: phraseCollectionTarget, datalabKeywords: financeTrendBoost });
+  const phrases = Array.isArray(phraseCollection?.phrases) ? phraseCollection.phrases : [];
+  const collectionMeta = phraseCollection?.meta || {};
 
   if (!phrases.length && !financeTrendBoost.length) {
     console.error('[Significance] No significant phrases found');
@@ -2424,7 +2744,63 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
 
   const hasAtLeastTwoWords = (value = '') => String(value).trim().split(/\s+/).filter(Boolean).length >= 2;
 
-  const registerEntry = (koTerm, { score = 0, mentions = 1, source = '', english = '' } = {}) => {
+  const applyMetadataToEntry = (entry, meta) => {
+    if (!meta || typeof meta !== 'object') return;
+
+    if (Array.isArray(meta.sources)) {
+      for (const src of meta.sources) {
+        const value = String(src || '').trim();
+        if (value) entry.sources.add(value);
+      }
+    }
+
+    if (Array.isArray(meta.headlines)) {
+      for (const headline of meta.headlines) {
+        if (!headline) continue;
+        const title = String(headline.title || '').trim();
+        const url = String(headline.url || '').trim();
+        const source = String(headline.source || '').trim();
+        const key = `${title}__${url}`;
+        if (!entry.headlineKeys.has(key) && entry.headlines.length < 3) {
+          entry.headlineKeys.add(key);
+          entry.headlines.push({ title, url, source });
+        }
+      }
+    }
+
+    if (Number.isFinite(meta.financeBoost)) {
+      entry.financeBoost = Math.max(Number(entry.financeBoost || 0), Number(meta.financeBoost));
+    }
+
+    if (Array.isArray(meta.tickerFiles)) {
+      for (const file of meta.tickerFiles) {
+        const value = String(file || '').trim();
+        if (value) entry.tickerFiles.add(value);
+      }
+    }
+
+    if (Array.isArray(meta.datalabMatches)) {
+      for (const match of meta.datalabMatches) {
+        if (!match) continue;
+        const term = normalizeKoKeywordTerm(match.term_ko || match.term || '');
+        if (!term) continue;
+        const record = entry.datalabMatches.get(term) || { term_ko: term, score: 0, hits: 0, categories: new Set() };
+        const numericScore = Number(match.score);
+        if (Number.isFinite(numericScore)) {
+          record.score = Math.max(record.score, numericScore);
+        }
+        record.hits += Number.isFinite(match.hits) && match.hits > 0 ? match.hits : 1;
+        const categories = Array.isArray(match.categories) ? match.categories : [];
+        for (const category of categories) {
+          const value = String(category || '').trim();
+          if (value) record.categories.add(value);
+        }
+        entry.datalabMatches.set(term, record);
+      }
+    }
+  };
+
+  const registerEntry = (koTerm, { score = 0, mentions = 1, source = '', english = '', metadata = null } = {}) => {
     const normalizedKo = normalizeKoKeywordTerm(koTerm);
     if (!normalizedKo) return;
     if (!hasAtLeastTwoWords(normalizedKo)) return;
@@ -2440,6 +2816,7 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       existing.mentions = Math.max(existing.mentions, mentionCount);
       if (sourceLabel) existing.sources.add(sourceLabel);
       if (englishHint) existing.englishHints.add(englishHint);
+      applyMetadataToEntry(existing, metadata);
       return;
     }
 
@@ -2453,8 +2830,15 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       significance_score: significanceScore,
       mentions: mentionCount,
       sources,
-      englishHints
+      englishHints,
+      financeBoost: Number.isFinite(metadata?.financeBoost) ? Number(metadata.financeBoost) : 0,
+      datalabMatches: new Map(),
+      headlines: [],
+      headlineKeys: new Set(),
+      tickerFiles: new Set()
     });
+
+    applyMetadataToEntry(aggregated.get(normalizedKo), metadata);
   };
 
   for (const phrase of phrases) {
@@ -2462,8 +2846,9 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     registerEntry(phrase.term_ko || phrase.term, {
       score: Number.isFinite(phrase.score) ? phrase.score : 0,
       mentions: Number.isFinite(phrase.count) ? phrase.count : 1,
-      source: 'significance',
-      english: phrase.term
+      source: phrase.source || 'significance',
+      english: phrase.term,
+      metadata: phrase.metadata || null
     });
   }
 
@@ -2540,6 +2925,7 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     .slice(0, desiredCount);
 
   const discoveredKeywords = [];
+  const datalabMatchedTerms = new Set();
   for (const entry of ranked) {
     const koTerm = entry.term_ko;
     let termEn = '';
@@ -2575,6 +2961,27 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       keywordRecord.sources = Array.from(entry.sources).sort();
     }
 
+    if (Number.isFinite(entry.financeBoost) && entry.financeBoost > 0) {
+      keywordRecord.finance_boost = Number(entry.financeBoost.toFixed(1));
+    }
+
+    if (entry.datalabMatches && entry.datalabMatches.size) {
+      const matches = Array.from(entry.datalabMatches.values()).map(match => ({
+        term_ko: match.term_ko,
+        score: Number.isFinite(match.score) ? Number(match.score.toFixed(3)) : Number(match.score || 0),
+        hits: match.hits,
+        categories: match.categories ? Array.from(match.categories) : []
+      }));
+      if (matches.length) {
+        keywordRecord.datalab_matches = matches;
+        matches.forEach(match => datalabMatchedTerms.add(match.term_ko));
+      }
+    }
+
+    if (Array.isArray(entry.headlines) && entry.headlines.length) {
+      keywordRecord.headlines = entry.headlines;
+    }
+
     discoveredKeywords.push(keywordRecord);
   }
 
@@ -2593,6 +3000,21 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       keyword_limit: desiredCount
     }
   };
+
+  if (collectionMeta?.articleCache) {
+    const cacheMeta = collectionMeta.articleCache;
+    payload.metadata.article_cache_files = cacheMeta.filesProcessed || 0;
+    payload.metadata.article_cache_articles = cacheMeta.processedArticles || 0;
+    payload.metadata.article_cache_phrases = cacheMeta.extractedPhrases || 0;
+  }
+
+  if (Array.isArray(collectionMeta?.datalabTermsUsed) && collectionMeta.datalabTermsUsed.length) {
+    payload.metadata.datalab_terms_used = collectionMeta.datalabTermsUsed;
+  }
+
+  if (datalabMatchedTerms.size) {
+    payload.metadata.matched_datalab_terms = Array.from(datalabMatchedTerms).sort();
+  }
 
   ensureDirFor(outputPath);
   await fsp.writeFile(outputPath, JSON.stringify(payload, null, 2));
