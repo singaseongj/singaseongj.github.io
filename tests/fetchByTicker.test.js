@@ -10,10 +10,8 @@ const ORIGINAL_KEYWORD_FILE = process.env.MARKET_KEYWORD_FILE;
 test('buildMarketKeywordSnapshot writes tags and keyword snapshots from pre-collected data', async (t) => {
   const tmpDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'fetchByTicker-'));
   const tagFile = path.join(tmpDir, 'tags.json');
-  const keywordFile = path.join(tmpDir, 'newsKeywords.json');
-
   process.env.MARKET_TAG_FILE = tagFile;
-  process.env.MARKET_KEYWORD_FILE = keywordFile;
+  process.env.MARKET_KEYWORD_FILE = tagFile;
 
   t.after(async () => {
     if (ORIGINAL_TAG_FILE === undefined) {
@@ -42,10 +40,9 @@ test('buildMarketKeywordSnapshot writes tags and keyword snapshots from pre-coll
 
   const mod = await import('../src/news/fetchByTicker.js');
 
-  const snapshot = await mod.buildMarketKeywordSnapshot({ outputPath: keywordFile, preCollected });
+  const snapshot = await mod.buildMarketKeywordSnapshot({ outputPath: tagFile, preCollected });
 
   const tagContent = JSON.parse(await fsp.readFile(tagFile, 'utf8'));
-  const keywordContent = JSON.parse(await fsp.readFile(keywordFile, 'utf8'));
 
   assert.equal(tagContent.discovered_keywords.length, 2);
   assert.deepEqual(tagContent.discovered_keywords, [
@@ -60,12 +57,15 @@ test('buildMarketKeywordSnapshot writes tags and keyword snapshots from pre-coll
   assert.equal(typeof translationEntry.translator, 'string');
   assert.notEqual(translationEntry.translator.trim(), '');
 
-  assert.equal(keywordContent.keywords.length, 2);
-  assert.deepEqual(keywordContent.keywords, [
+  assert.equal(tagContent.keywords.length, 2);
+  assert.deepEqual(tagContent.keywords, [
     { term: 'Semiconductor Boom', term_ko: '반도체 호황' },
     { term: 'Battery Demand', term_ko: '배터리 수요' }
   ]);
 
   assert.equal(snapshot.keywords.length, 2);
   assert.equal(snapshot.keywords[0].term_ko, '반도체 호황');
+
+  assert.deepEqual(snapshot.keywords, tagContent.keywords);
+  assert.deepEqual(snapshot.discovered_keywords, tagContent.discovered_keywords);
 });

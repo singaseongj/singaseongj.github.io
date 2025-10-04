@@ -116,7 +116,6 @@ function to01(x){ return Math.max(0, Math.min(1, x)); }
 function ensureDirFor(file){ try { fs.mkdirSync(path.dirname(file), { recursive:true }); } catch {} }
 function readJsonSafe(p){ try { return JSON.parse(fs.readFileSync(p,'utf8')); } catch { return null; } }
 
-const KEYWORD_OUTPUT_FILE = process.env.MARKET_KEYWORD_FILE || 'newsKeywords.json';
 const KEYWORD_MARKET_QUERIES = [
   { market: 'KOSPI', queries: ['코스피', 'KOSPI index', 'KOSPI market trend'], locales: ['ko', 'en'] },
   { market: 'KOSDAQ', queries: ['코스닥', 'KOSDAQ', 'KOSDAQ market outlook'], locales: ['ko', 'en'] },
@@ -125,6 +124,7 @@ const KEYWORD_MARKET_QUERIES = [
 ];
 
 const TAG_OUTPUT_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
+const KEYWORD_OUTPUT_FILE = process.env.MARKET_KEYWORD_FILE || TAG_OUTPUT_FILE;
 const TAG_TIMEZONE = process.env.TAG_TIMEZONE || 'Asia/Seoul';
 const TAG_COLLECTION_WINDOW_DAYS = Number(process.env.TAG_COLLECTION_LOOKBACK_DAYS || 14);
 const TAG_COLLECTION_PAGE_LIMIT = Number(process.env.TAG_COLLECTION_PAGE_LIMIT || 5);
@@ -2724,6 +2724,15 @@ export async function collectSignificantPhrases({ targetCount = 50, datalabKeywo
 export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE } = {}) {
   const desiredCount = Number(process.env.MARKET_TAG_LIMIT || 30) || 30;
   const phraseCollectionTarget = Math.max(desiredCount, Number(process.env.SIGNIFICANT_PHRASE_TARGET || desiredCount) || desiredCount);
+  const existingSnapshot = readJsonSafe(outputPath) || null;
+
+  if (existingSnapshot) {
+    try {
+      primeTranslationCacheFromSnapshot(existingSnapshot);
+    } catch (err) {
+      console.warn('[Significance] failed to prime translations from existing snapshot:', err?.message || err);
+    }
+  }
   let financeTrendBoost = [];
   try {
     financeTrendBoost = await fetchFinanceTrendKeywords({ limit: Math.max(16, desiredCount) });
@@ -3383,6 +3392,7 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   }
 
   const metadata = {
+    ...(existingSnapshot?.metadata && typeof existingSnapshot.metadata === 'object' ? existingSnapshot.metadata : {}),
     date: normalizedDate,
     window: `${TAG_COLLECTION_WINDOW_DAYS}_days`,
     generated_at: generatedAtIso,
@@ -3395,8 +3405,10 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
   }
 
   const payload = {
+    ...(existingSnapshot || {}),
     date: normalizedDate,
     window: metadata.window,
+    total_phrases: discoveredKeywords.length,
     total_articles: derivedArticleCount,
     discovered_keywords: localizedDiscovered,
     translations,
@@ -3405,11 +3417,11 @@ async function writeTagsJsonFile(tags, stats = new Map(), {
     metadata
   };
 
-  ensureDirFor(TAG_OUTPUT_FILE);
-  await fsp.writeFile(TAG_OUTPUT_FILE, JSON.stringify(payload, null, 2));
+  ensureDirFor(outputPath);
+  await fsp.writeFile(outputPath, JSON.stringify(payload, null, 2));
 
   const suffix = fallbackUsed ? ' (fallback)' : '';
-  console.log(`[keywords] wrote ${TAG_OUTPUT_FILE} with ${localizedDiscovered.length} keywords${suffix}`);
+  console.log(`[keywords] wrote ${outputPath} with ${localizedDiscovered.length} keywords${suffix}`);
   return payload;
 }
 
@@ -3543,7 +3555,7 @@ async function buildNewsKeywordsFromTagSnapshot(snapshot, tagStats, { limit = 10
 
 export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, preCollected = null } = {}){
   const existingSnapshot = readJsonSafe(outputPath) || {};
-  const existingTagSnapshot = readJsonSafe(TAG_OUTPUT_FILE) || null;
+  const existingTagSnapshot = readJsonSafe(outputPath) || null;
 
   const normalizeCollection = (input) => {
     if (!input || typeof input !== 'object') {
@@ -3586,7 +3598,7 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
 
   let tagSnapshot = existingTagSnapshot;
   try {
-    const snapshot = await writeKoreanFirstTagsJson({ outputPath: TAG_OUTPUT_FILE, preCollected: collectionResult });
+    const snapshot = await writeKoreanFirstTagsJson({ outputPath, preCollected: collectionResult });
     if (snapshot) {
       tagSnapshot = snapshot;
     }
@@ -3633,9 +3645,13 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   const updatedKo = now.toLocaleString('ko-KR', { timeZone: tz, hour12: false });
   const updatedEn = now.toLocaleString('en-US', { timeZone: tz });
 
-  const markets = Array.isArray(existingSnapshot?.markets) ? existingSnapshot.markets : [];
+  let markets = Array.isArray(existingSnapshot?.markets) ? existingSnapshot.markets : [];
+  if (!markets.length) {
+    markets = KEYWORD_MARKET_QUERIES.map(m => m.market);
+  }
 
-  const payload = {
+  const mergedSnapshot = {
+    ...(tagSnapshot || existingSnapshot || {}),
     generatedAt: now.toISOString(),
     timezone: tz,
     updatedAt: {
@@ -3646,17 +3662,17 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
     markets
   };
 
-  if (existingSnapshot?.tickerKeywords) {
-    payload.tickerKeywords = existingSnapshot.tickerKeywords;
+  if (existingSnapshot?.tickerKeywords && !mergedSnapshot.tickerKeywords) {
+    mergedSnapshot.tickerKeywords = existingSnapshot.tickerKeywords;
   }
-  if (existingSnapshot?.tickerKeywordsMeta) {
-    payload.tickerKeywordsMeta = existingSnapshot.tickerKeywordsMeta;
+  if (existingSnapshot?.tickerKeywordsMeta && !mergedSnapshot.tickerKeywordsMeta) {
+    mergedSnapshot.tickerKeywordsMeta = existingSnapshot.tickerKeywordsMeta;
   }
 
   ensureDirFor(outputPath);
-  await fsp.writeFile(outputPath, JSON.stringify(payload, null, 2));
-  console.log(`[keywords] wrote ${outputPath} with ${payload.keywords.length} entries`);
-  return payload;
+  await fsp.writeFile(outputPath, JSON.stringify(mergedSnapshot, null, 2));
+  console.log(`[keywords] wrote ${outputPath} with ${keywords.length} entries`);
+  return mergedSnapshot;
 }
 
 // --- Ticker-level keyword builder (domain-aware tokenizer) ---
@@ -5538,7 +5554,6 @@ async function _cliCollectUniverse() {
 export async function buildNewsCachesCli() {
   const NEWS_FEATURES_FILE = process.env.NEWS_FEATURES_FILE || 'data/news-features.json';
   const NAVER_TRENDS_FILE  = process.env.NAVER_TRENDS_FILE  || 'data/naver-trends.json';
-  const NEWS_KEYWORDS_FILE = process.env.NEWS_KEYWORDS_FILE || 'newsKeywords.json';
   await fsp.mkdir(path.dirname(NEWS_FEATURES_FILE), { recursive: true });
   await fsp.mkdir(path.dirname(NAVER_TRENDS_FILE),  { recursive: true });
 
@@ -5568,14 +5583,27 @@ export async function buildNewsCachesCli() {
   await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
   console.log(`[news-caches] wrote ${NEWS_FEATURES_FILE} and ${NAVER_TRENDS_FILE}`);
 
-  // 3) Ticker keyword snapshot merged into newsKeywords.json
-  const tagSnapshotForKeywords = readJsonSafe(TAG_OUTPUT_FILE) || null;
+  // 3) Ticker keyword snapshot merged into tags.json
+  let tagSnapshotForKeywords = null;
+
+  try {
+    const latestTags = await writeSignificantPhrasesJson({ outputPath: TAG_OUTPUT_FILE });
+    if (latestTags) {
+      tagSnapshotForKeywords = latestTags;
+    }
+  } catch (err) {
+    console.warn('[news-caches] failed to build significant phrase tags:', err?.message || err);
+  }
+
+  if (!tagSnapshotForKeywords) {
+    tagSnapshotForKeywords = readJsonSafe(TAG_OUTPUT_FILE) || null;
+  }
   const keywordPayload = buildNewsKeywords(collectedArticles, { tagSnapshot: tagSnapshotForKeywords });
   const tickerCount = Object.keys(keywordPayload.tickers).length;
   if (tickerCount) {
-    await fsp.mkdir(path.dirname(NEWS_KEYWORDS_FILE), { recursive: true }).catch(()=>{});
-    const existing = readJsonSafe(NEWS_KEYWORDS_FILE) || {};
-    const fresh = {
+    const existing = tagSnapshotForKeywords || readJsonSafe(TAG_OUTPUT_FILE) || {};
+    const merged = {
+      ...existing,
       generatedAt: existing?.generatedAt || keywordPayload.generated_at,
       timezone: existing?.timezone || 'Asia/Seoul',
       updatedAt: existing?.updatedAt || {},
@@ -5587,8 +5615,9 @@ export async function buildNewsCachesCli() {
         version: keywordPayload.version,
       }
     };
-    await fsp.writeFile(NEWS_KEYWORDS_FILE, JSON.stringify(fresh, null, 2));
-    console.log(`[news-caches] updated ${NEWS_KEYWORDS_FILE} with ${tickerCount} ticker keyword sets`);
+    ensureDirFor(TAG_OUTPUT_FILE);
+    await fsp.writeFile(TAG_OUTPUT_FILE, JSON.stringify(merged, null, 2));
+    console.log(`[news-caches] updated ${TAG_OUTPUT_FILE} with ${tickerCount} ticker keyword sets`);
   } else {
     console.log('[news-caches] no ticker keywords derived from collected articles');
   }
