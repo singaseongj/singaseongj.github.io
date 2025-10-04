@@ -1303,6 +1303,72 @@ function normalizeKoKeywordTerm(value) {
   return cleaned;
 }
 
+const KO_SIGNATURE_NOISE = new Set([
+  '호조', '호조에', '급등', '급락', '재상승', '재하락', '재상승은', '재하락은',
+  '앞두고', '꼽은', 'quot', 'vs', 'vs', 'vs.', '재상승도', '재상승이', '재하락이',
+  '재하락도', '애널리스트', '애널리스트는', '낮은', '높은'
+]);
+
+const KO_SIGNATURE_WEAK = new Set(['금리', '환율', '수혜', '금융', '주가']);
+
+const KO_SIGNATURE_CANONICAL = new Map([
+  ['국채금리', '채권금리'],
+  ['국채 금리', '채권금리'],
+  ['국채', '채권'],
+  ['미국채', '미국 채권']
+]);
+
+const KO_PARTICLE_REGEX = /(에서|으로써|으로서|으로는|으로도|으로|로써|로서|로는|로도|로|에게서|에게|까지|부터|만|이나|이라도|이라고|이라며|이라면|이라니|이라서|이라는|이라며|이라|이며|으며|으로|로|은|는|이|가|을|를|와|과|도|에|에서|께|까지|부터|년)$/;
+
+function stripKoParticles(token) {
+  let result = token;
+  while (result.length > 1) {
+    const next = result.replace(KO_PARTICLE_REGEX, '');
+    if (next === result) break;
+    result = next;
+  }
+  return result;
+}
+
+function buildKoKeywordSignature(value) {
+  const normalized = normalizeKoKeywordTerm(value);
+  if (!normalized) return '';
+  const rawTokens = normalized.split(/\s+/);
+  const tokens = [];
+  for (const raw of rawTokens) {
+    let token = raw.replace(/[^\uAC00-\uD7A30-9]/g, '');
+    if (!token) continue;
+    token = stripKoParticles(token);
+    if (!token || token.length < 2) continue;
+    if (/^\d+$/.test(token)) continue;
+    if (STOPWORDS_KO.has(token)) continue;
+    const canonical = KO_SIGNATURE_CANONICAL.get(token) || KO_SIGNATURE_CANONICAL.get(token.replace(/\s+/g, '')) || token;
+    if (KO_SIGNATURE_NOISE.has(canonical)) continue;
+    tokens.push(canonical);
+  }
+
+  if (!tokens.length) return '';
+
+  if (tokens.length > 1) {
+    const filtered = tokens.filter(token => !KO_SIGNATURE_WEAK.has(token));
+    if (filtered.length) {
+      tokens.length = 0;
+      tokens.push(...filtered);
+    }
+  }
+
+  const unique = [];
+  const seen = new Set();
+  for (const token of tokens) {
+    if (seen.has(token)) continue;
+    seen.add(token);
+    unique.push(token);
+  }
+
+  if (!unique.length) return '';
+  return unique.join('|');
+}
+
 function parseEIECKeywordText(text, { maxEntries = 60 } = {}) {
   if (!text) return [];
   const plain = String(text)
@@ -2242,6 +2308,58 @@ function extractSignificantPhrases(text) {
   return phrases;
 }
 
+// Normalize phrase for diversity comparison
+function normalizeForDiversity(text) {
+  return String(text || '')
+    .replace(/[\s\-]/g, '')
+    .replace(/상승|급등|증가/g, '↑')
+    .replace(/하락|급락|감소/g, '↓')
+    .toLowerCase();
+}
+
+// Remove semantically similar phrases
+function semanticDedup(phrases, threshold = 0.6) {
+  const kept = [];
+
+  for (const phrase of phrases) {
+    const tokens = new Set(String(phrase.text || '').split(/\s+/));
+    let isDuplicate = false;
+
+    for (const existing of kept) {
+      const existingTokens = new Set(String(existing.text || '').split(/\s+/));
+      const intersection = new Set([...tokens].filter(x => existingTokens.has(x)));
+      const union = new Set([...tokens, ...existingTokens]);
+      const similarity = union.size === 0 ? 0 : intersection.size / union.size;
+
+      if (similarity > threshold) {
+        isDuplicate = true;
+        break;
+      }
+    }
+
+    if (!isDuplicate) {
+      kept.push(phrase);
+    }
+  }
+
+  return kept;
+}
+
+// Category patterns for diversity
+const DIVERSITY_CATEGORIES = {
+  rates: /금리|이자|기준금리|interest|rate/i,
+  fx: /환율|달러|원화|currency|exchange/i,
+  industry: /반도체|조선|2차전지|AI|배터리|semiconductor|battery/i,
+  indicators: /CPI|GDP|실업|물가|inflation|employment/i,
+  corporate: /실적|수주|매출|영업이익|earnings|revenue/i,
+  policy: /정책|규제|연준|Fed|FOMC|policy/i,
+  trade: /수출|수입|무역|export|import|trade/i,
+  energy: /유가|LNG|에너지|oil|energy/i
+};
+
+const DIVERSITY_SIMILARITY_THRESHOLD = Number(process.env.KEYWORD_SIMILARITY_THRESHOLD || 0.6);
+const KEYWORDS_PER_CATEGORY = Number(process.env.KEYWORDS_PER_CATEGORY || 4);
+
 // Check if phrase is significant (contains signal + context)
 function isPhraseSignificant(phrase) {
   const words = phrase.split(/\s+/);
@@ -2267,6 +2385,34 @@ function isPhraseSignificant(phrase) {
   // Example: "조선업체 호황" = context(조선) + signal(호황) ✓
   // Example: "환율" = context(환율) only ✗
   return hasSignal && hasContext;
+}
+
+// Categorize and ensure diverse selection
+function categorizeAndDiversify(phrases, perCategory = KEYWORDS_PER_CATEGORY) {
+  const categories = {};
+
+  for (const phrase of phrases) {
+    let assigned = false;
+    for (const [cat, pattern] of Object.entries(DIVERSITY_CATEGORIES)) {
+      if (pattern.test(phrase.text)) {
+        (categories[cat] = categories[cat] || []).push(phrase);
+        assigned = true;
+        break;
+      }
+    }
+    if (!assigned) {
+      (categories.other = categories.other || []).push(phrase);
+    }
+  }
+
+  const diversified = [];
+  for (const items of Object.values(categories)) {
+    items.sort((a, b) => b.score - a.score);
+    const limit = Number.isFinite(perCategory) && perCategory > 0 ? perCategory : items.length;
+    diversified.push(...items.slice(0, limit));
+  }
+
+  return diversified.sort((a, b) => b.score - a.score);
 }
 
 // Score phrases by significance (not frequency)
@@ -2415,7 +2561,24 @@ function scorePhrasesbySignificance(phrases, { datalabKeywords = [] } = {}) {
     scored.set(rawText, entry);
   }
 
-  return Array.from(scored.values())
+  const diversityMap = new Map();
+  for (const [rawText, entry] of scored.entries()) {
+    const normKey = normalizeForDiversity(rawText) || rawText.toLowerCase().replace(/\s+/g, '');
+    if (!normKey) continue;
+
+    if (diversityMap.has(normKey)) {
+      const existing = diversityMap.get(normKey);
+      if (entry.score > existing.score) {
+        diversityMap.set(normKey, { ...entry, text: rawText });
+      }
+    } else {
+      diversityMap.set(normKey, { ...entry, text: rawText });
+    }
+  }
+
+  const dedupedEntries = Array.from(diversityMap.values());
+
+  return dedupedEntries
     .map(entry => ({
       text: entry.text,
       length: entry.length,
@@ -2691,9 +2854,21 @@ export async function collectSignificantPhrases({ targetCount = 50, datalabKeywo
     console.log('[Significance] No phrases available for preview');
   }
 
-  const filtered = scored
+  const safeTarget = Number.isFinite(targetCount) && targetCount > 0 ? Number(targetCount) : targetCount;
+  const candidateLimit = Number.isFinite(safeTarget) && safeTarget > 0
+    ? Math.min(scored.length, safeTarget * 3)
+    : scored.length;
+
+  let filtered = scored
     .filter(p => p.length >= 2 && p.length <= 3)
-    .slice(0, targetCount)
+    .slice(0, candidateLimit);
+
+  filtered = semanticDedup(filtered, DIVERSITY_SIMILARITY_THRESHOLD);
+  filtered = categorizeAndDiversify(filtered, KEYWORDS_PER_CATEGORY);
+
+  const finalTarget = Number.isFinite(safeTarget) && safeTarget > 0 ? safeTarget : filtered.length;
+  const final = filtered
+    .slice(0, finalTarget)
     .map(p => ({
       term_ko: p.text,
       score: p.score,
@@ -2710,7 +2885,7 @@ export async function collectSignificantPhrases({ targetCount = 50, datalabKeywo
     }));
 
   return {
-    phrases: filtered,
+    phrases: final,
     meta: {
       articleCache: articleCacheStats,
       datalabTermsUsed: Array.from(new Set(datalabKeywords
@@ -2934,9 +3109,17 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     .slice(0, desiredCount);
 
   const discoveredKeywords = [];
+  const usedSignatures = new Set();
   const datalabMatchedTerms = new Set();
   for (const entry of ranked) {
     const koTerm = entry.term_ko;
+    const signature = buildKoKeywordSignature(koTerm);
+    if (signature) {
+      if (usedSignatures.has(signature)) {
+        continue;
+      }
+      usedSignatures.add(signature);
+    }
     let termEn = '';
     const englishHints = entry.englishHints ? Array.from(entry.englishHints).map(h => formatTagDisplay(h || '')).filter(Boolean) : [];
     if (englishHints.length) {
