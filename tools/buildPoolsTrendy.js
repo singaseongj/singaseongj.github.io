@@ -23,7 +23,9 @@ fs.mkdirSync('cache', { recursive: true });
 
 const CACHE_DIR = 'cache';
 const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
-let TAG_FILE = process.env.MARKET_TAG_FILE || 'tags.json';
+const TAG_FILE_ENV = process.env.MARKET_TAG_FILE || '';
+const KEYWORD_FILE_ENV = process.env.MARKET_KEYWORD_FILE || '';
+let TAG_FILE = TAG_FILE_ENV || KEYWORD_FILE_ENV || 'tags.json';
 const TAG_WEIGHT_INPUT = Number(process.env.TAG_EVAL_WEIGHT);
 const TAG_FREQ_WEIGHT_INPUT = Number(process.env.TAG_FREQ_WEIGHT);
 
@@ -208,7 +210,10 @@ function saveNameToSymbol(map) {
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
 const SYMBOL_TO_NAME = {};
-const KEYWORD_SNAPSHOT_PATH = path.join(process.cwd(), 'newsKeywords.json');
+const KEYWORD_SNAPSHOT_BASE = KEYWORD_FILE_ENV || TAG_FILE;
+const KEYWORD_SNAPSHOT_PATH = path.isAbsolute(KEYWORD_SNAPSHOT_BASE)
+  ? KEYWORD_SNAPSHOT_BASE
+  : path.join(process.cwd(), KEYWORD_SNAPSHOT_BASE);
 const KEYWORD_SCORE_WEIGHT = (() => {
   const raw = Number(process.env.KEYWORD_SCORE_WEIGHT ?? 0.1);
   if (!Number.isFinite(raw)) return 0.1;
@@ -1205,7 +1210,8 @@ if (!rawTagData) {
         console.log(`[tags] wrote ${rel} (${snapshot.keywords.length} keywords)`);
       }
     } catch (err) {
-      console.warn('[tags] failed to refresh newsKeywords.json:', err?.message || err);
+      const rel = path.relative(process.cwd(), KEYWORD_SNAPSHOT_PATH) || KEYWORD_SNAPSHOT_PATH;
+      console.warn(`[tags] failed to refresh ${rel}:`, err?.message || err);
     }
   }
 }
