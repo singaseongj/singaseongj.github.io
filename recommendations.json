@@ -168,17 +168,33 @@
   "KOSPI": {
     "safe": [
       {
-        "name": "KT",
+        "name": "LG",
         "sector": null,
-        "ticker": "KT",
-        "searchUrl": "https://www.google.com/search?q=KT",
-        "score": 56,
+        "ticker": "LGND",
+        "searchUrl": "https://www.google.com/search?q=LG",
+        "score": 76,
         "reasons": {
-          "reputationScore": 0,
+          "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
             "sentiment": 0,
-            "blog": 0,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "LG전자",
+        "sector": "경기소비재",
+        "ticker": "066570.KS",
+        "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90",
+        "score": 83,
+        "reasons": {
+          "reputationScore": 0.55,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": -0.05,
+            "blog": 1,
             "naver": 0
           }
         }
@@ -188,9 +204,9 @@
         "sector": "소재",
         "ticker": "051910.KS",
         "searchUrl": "https://www.google.com/search?q=LG%ED%99%94%ED%95%99",
-        "score": 83,
+        "score": 82,
         "reasons": {
-          "reputationScore": 0.5,
+          "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.05,
@@ -204,13 +220,13 @@
         "sector": null,
         "ticker": "NAVER",
         "searchUrl": "https://www.google.com/search?q=NAVER",
-        "score": 56,
+        "score": 77,
         "reasons": {
-          "reputationScore": 0,
+          "reputationScore": 0.55,
           "topKeywords": [],
           "signals": {
-            "sentiment": 0,
-            "blog": 0,
+            "sentiment": -0.2,
+            "blog": 1,
             "naver": 0
           }
         }
@@ -220,29 +236,13 @@
         "sector": "정보기술",
         "ticker": "005930.KS",
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
-        "score": 91,
+        "score": 90,
         "reasons": {
-          "reputationScore": 0.5,
+          "reputationScore": 0.5345454545454545,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.1,
             "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "한화",
-        "sector": "산업재",
-        "ticker": "000880.KS",
-        "searchUrl": "https://www.google.com/search?q=%ED%95%9C%ED%99%94",
-        "score": 56,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
             "naver": 0
           }
         }
@@ -318,7 +318,7 @@
         "sector": "산업재",
         "ticker": "004800.KS",
         "searchUrl": "https://www.google.com/search?q=%ED%9A%A8%EC%84%B1",
-        "score": 25,
+        "score": 26,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-10-05T21:48:12+09:00"
+  "lastUpdated": "2025-10-06T03:30:00+09:00"
 }

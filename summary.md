@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-05T21:48:12+09:00 (KST)**
+- Generated: **2025-10-06T03:30:00+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -92,12 +92,20 @@
 
 ### SAFE (5)
 
-**KT** (KT)
+**LG** (LGND)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-2.1%**, 20d **-0.6%**; volatility (20d): **unknown**
+- Returns: 5d **1.7%**, 20d **21.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=KT
+- News search: https://www.google.com/search?q=LG
+
+**LG전자** (066570.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **-1.9%**, 20d **1.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
 
 **LG화학** (051910.KS)
 
@@ -121,14 +129,6 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
-
-**한화** (000880.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.6%**, 20d **1.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94
 
 ### AGGRESSIVE (5)
 
