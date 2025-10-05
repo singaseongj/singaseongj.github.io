@@ -129,6 +129,7 @@ const TAG_TIMEZONE = process.env.TAG_TIMEZONE || 'Asia/Seoul';
 const TAG_COLLECTION_WINDOW_DAYS = Number(process.env.TAG_COLLECTION_LOOKBACK_DAYS || 14);
 const TAG_COLLECTION_PAGE_LIMIT = Number(process.env.TAG_COLLECTION_PAGE_LIMIT || 5);
 const TAG_COLLECTION_PAGE_SIZE = Number(process.env.TAG_COLLECTION_PAGE_SIZE || 40);
+const TAG_RECENCY_LOOKBACK_HOURS = Math.max(TAG_COLLECTION_WINDOW_DAYS || 0, 1) * 24;
 const ENGLISH_TAG_REGEX = /^[A-Za-z0-9][A-Za-z0-9\-\s&()/.,']{1,60}$/;
 const TAG_STOPWORD_PHRASES = new Set([
   'nasdaq', 'nasdaq 100', '100', '200', '300', '400', '500', 'to'
@@ -1580,6 +1581,51 @@ function chooseTagDisplay(entry) {
   return formatTagDisplay(proper || forms[0]);
 }
 
+function normalizeTimestampValue(value) {
+  if (!value && value !== 0) return 0;
+  if (typeof value === 'number') {
+    if (!Number.isFinite(value)) return 0;
+    if (value > 1e12) return value;
+    if (value > 1e9) return value * 1000;
+    return 0;
+  }
+  if (value instanceof Date) {
+    const ms = value.getTime();
+    return Number.isFinite(ms) ? ms : 0;
+  }
+  const str = String(value || '').trim();
+  if (!str) return 0;
+  if (/^\d{13}$/.test(str)) {
+    const num = Number(str);
+    return Number.isFinite(num) ? num : 0;
+  }
+  if (/^\d{10}$/.test(str)) {
+    const num = Number(str) * 1000;
+    return Number.isFinite(num) ? num : 0;
+  }
+  const parsed = Date.parse(str);
+  return Number.isNaN(parsed) ? 0 : parsed;
+}
+
+function extractArticleTimestamp(article) {
+  if (!article || typeof article !== 'object') return 0;
+  const sources = [article, article.meta || null, article.extra || null];
+  const fields = [
+    'publishedAt', 'published_at', 'publishedAtMs', 'published_at_ms', 'pubDate', 'pub_date',
+    'date', 'datetime', 'timestamp', 'time', 'updatedAt', 'updated_at', 'firstSeenAt',
+    'first_seen_at', 'lastUpdated', 'last_updated', 'lastSeenAt', 'last_seen_at'
+  ];
+  for (const source of sources) {
+    if (!source || typeof source !== 'object') continue;
+    for (const field of fields) {
+      if (!(field in source)) continue;
+      const ms = normalizeTimestampValue(source[field]);
+      if (ms) return ms;
+    }
+  }
+  return 0;
+}
+
 function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', collected, targetCount }) {
   const normalized = normalizeTagCandidate(tag);
   if (!normalized) return false;
@@ -1594,7 +1640,11 @@ function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', co
       markets: new Set(),
       sources: new Set(),
       headlines: [],
-      headlineKeys: new Set()
+      headlineKeys: new Set(),
+      latestPublishedAt: 0,
+      recencySum: 0,
+      recencySamples: 0,
+      recentHits: 0
     };
     stats.set(key, entry);
   }
@@ -1619,6 +1669,24 @@ function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', co
     if (!entry.headlineKeys.has(keyStr) && entry.headlines.length < 3) {
       entry.headlineKeys.add(keyStr);
       entry.headlines.push({ title: article.title, url: article.url, source: article.source || sourceLabel || 'news' });
+    }
+  }
+
+  const publishedMs = extractArticleTimestamp(article);
+  if (publishedMs) {
+    if (!entry.latestPublishedAt || publishedMs > entry.latestPublishedAt) {
+      entry.latestPublishedAt = publishedMs;
+    }
+    if (!entry.recencySamples) entry.recencySamples = 0;
+    if (!entry.recencySum) entry.recencySum = 0;
+    const nowMs = Date.now();
+    const hoursAgo = Math.max(0, (nowMs - publishedMs) / 3600000);
+    const lookbackHours = TAG_RECENCY_LOOKBACK_HOURS > 0 ? TAG_RECENCY_LOOKBACK_HOURS : 24;
+    const recencySample = lookbackHours > 0 ? to01(1 - (hoursAgo / lookbackHours)) : 0;
+    entry.recencySum += recencySample;
+    entry.recencySamples += 1;
+    if (hoursAgo <= 48) {
+      entry.recentHits = (entry.recentHits || 0) + 1;
     }
   }
 
@@ -1904,7 +1972,11 @@ function rebuildTagStatsFromSnapshot(snapshot) {
       markets: new Set(Array.isArray(meta?.markets) ? meta.markets.filter(Boolean) : []),
       sources: new Set(Array.isArray(meta?.sources) ? meta.sources.filter(Boolean) : []),
       headlines: Array.isArray(meta?.sampleHeadlines) ? meta.sampleHeadlines.slice(0, 3) : [],
-      headlineKeys: new Set()
+      headlineKeys: new Set(),
+      latestPublishedAt: normalizeTimestampValue(meta?.latestPublishedAt || meta?.lastSeenAt || meta?.last_seen_at || 0),
+      recencySum: 0,
+      recencySamples: 0,
+      recentHits: 0
     };
     stats.set(key, entry);
   };
@@ -3423,12 +3495,29 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
 function buildDiscoveredKeywordsFromStats(tagStats, { limit = 50 } = {}) {
   if (!tagStats || typeof tagStats.size !== 'number' || tagStats.size === 0) return [];
   const entries = [];
+  const nowMs = Date.now();
+  const lookbackHours = TAG_RECENCY_LOOKBACK_HOURS > 0 ? TAG_RECENCY_LOOKBACK_HOURS : 24;
   for (const entry of tagStats.values()) {
     const term = chooseTagDisplay(entry);
     if (!term) continue;
     const count = Number(entry?.count || 0);
     const weight = computeBusinessTagWeight(entry, term);
-    const weightedCount = count * (Number.isFinite(weight) && weight > 0 ? weight : 1);
+    let weightedCount = count * (Number.isFinite(weight) && weight > 0 ? weight : 1);
+    const recencySamples = Number(entry?.recencySamples || 0);
+    const recencySum = Number(entry?.recencySum || 0);
+    const recentHits = Number(entry?.recentHits || 0);
+    const latestPublishedAt = Number(entry?.latestPublishedAt || 0);
+    if (recencySamples > 0 || recentHits > 0 || latestPublishedAt > 0) {
+      const avgRecency = recencySamples > 0 ? recencySum / recencySamples : 0;
+      let latestBoost = 0;
+      if (latestPublishedAt > 0 && lookbackHours > 0) {
+        const ageHours = Math.max(0, (nowMs - latestPublishedAt) / 3600000);
+        latestBoost = to01(1 - (ageHours / lookbackHours));
+      }
+      const recentHitBoost = recentHits > 0 ? Math.min(recentHits, 5) * 0.05 : 0;
+      const recencyContribution = Math.max(0, Math.min(0.8, avgRecency * 0.6 + latestBoost * 0.5 + recentHitBoost));
+      weightedCount *= 1 + recencyContribution;
+    }
     entries.push({ term, count, weightedCount });
   }
   entries.sort((a, b) => {
