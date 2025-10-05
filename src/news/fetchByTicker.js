@@ -1629,6 +1629,212 @@ function recordTagStat({ stats, tag, article, markets = [], sourceLabel = '', co
   return true;
 }
 
+function createKeywordRegex(keyword) {
+  const normalized = String(keyword || '').trim();
+  if (!normalized) return null;
+  const escaped = normalized
+    .replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
+    .replace(/\s+/g, '\\s+');
+  const hasHangul = /[가-힣]/.test(normalized);
+  if (hasHangul) {
+    return new RegExp(escaped, 'i');
+  }
+  const chars = [...normalized];
+  const startsWord = chars.length ? /\w/.test(chars[0]) : false;
+  const endsWord = chars.length ? /\w/.test(chars[chars.length - 1]) : false;
+  const pattern = startsWord && endsWord ? `\\b${escaped}\\b` : escaped;
+  return new RegExp(pattern, 'i');
+}
+
+const BUSINESS_TAG_COMPANY_KEYWORDS = [
+  'samsung',
+  '삼성',
+  'samsung electronics',
+  '삼성전자',
+  'samsung heavy',
+  '삼성중공업',
+  'hyundai',
+  '현대',
+  'hyundai motor',
+  '현대차',
+  'hyundai heavy',
+  '현대중공업',
+  'korea shipbuilding',
+  '한국조선해양',
+  'hanwha ocean',
+  '한화오션',
+  'hanwha',
+  '한화',
+  'kia',
+  '기아',
+  'lg',
+  '엘지',
+  'lg energy solution',
+  'lg에너지솔루션',
+  'lg chem',
+  'lg화학',
+  'lg electronics',
+  'lg전자',
+  'sk hynix',
+  'sk하이닉스',
+  'sk innovation',
+  'sk이노베이션',
+  'sk telecom',
+  'sk텔레콤',
+  'posco',
+  '포스코',
+  'lotte',
+  '롯데',
+  'doosan',
+  '두산',
+  'naver',
+  '네이버',
+  'kakao',
+  '카카오',
+  'celltrion',
+  '셀트리온',
+  'amorepacific',
+  '아모레퍼시픽',
+  'korean air',
+  '대한항공',
+  'asiana',
+  '아시아나',
+  'hanjin',
+  '한진',
+  'daewoo',
+  '대우',
+  'kepco',
+  '한전',
+  'korea electric power',
+  '한국전력',
+  'korea gas',
+  '한국가스공사',
+  's-oil',
+  '에쓰오일',
+  'korea zinc',
+  '고려아연',
+  'hybe',
+  '하이브',
+  'cj cheiljedang',
+  'cj제일제당',
+  'cj logistics',
+  'cj대한통운',
+  'ls electric',
+  'ls일렉트릭',
+  'lotte chemical',
+  '롯데케미칼',
+  'gs engineering',
+  'gs건설',
+  'hyundai engineering',
+  '현대엔지니어링',
+  'hyundai mobis',
+  '현대모비스',
+  'kia motors',
+  'kia corporation',
+  'samsung sdi',
+  '삼성sdi'
+];
+
+const BUSINESS_TAG_INDUSTRY_KEYWORDS = [
+  'shipbuilding',
+  '조선',
+  'semiconductor',
+  '반도체',
+  'battery',
+  '배터리',
+  'electric vehicle',
+  '전기차',
+  'mobility',
+  '모빌리티',
+  'defense',
+  '방산',
+  'biotech',
+  '바이오',
+  'pharma',
+  '제약',
+  'steel',
+  '철강',
+  'automotive',
+  '자동차',
+  'logistics',
+  '물류',
+  'construction',
+  '건설',
+  'aerospace',
+  '항공',
+  'bank',
+  '은행',
+  'finance',
+  '금융',
+  'investment',
+  '투자',
+  'brokerage',
+  '증권',
+  'lithium',
+  '리튬',
+  'petrochemical',
+  '석유화학',
+  'energy',
+  '에너지',
+  'oil',
+  '유가',
+  'gas',
+  '가스',
+  'refining',
+  '정유',
+  'orders',
+  '수주',
+  'exports',
+  '수출',
+  'earnings',
+  '실적',
+  'merger',
+  '인수합병',
+  'ipo',
+  '상장',
+  'dividend',
+  '배당'
+];
+
+const BUSINESS_TAG_COMPANY_REGEXES = BUSINESS_TAG_COMPANY_KEYWORDS
+  .map(createKeywordRegex)
+  .filter(Boolean);
+const BUSINESS_TAG_INDUSTRY_REGEXES = BUSINESS_TAG_INDUSTRY_KEYWORDS
+  .map(createKeywordRegex)
+  .filter(Boolean);
+
+function computeBusinessTagWeight(entry, displayText = '') {
+  const segments = new Set();
+  if (displayText) segments.add(displayText);
+  if (entry?.display) segments.add(entry.display);
+  if (entry?.forms && typeof entry.forms[Symbol.iterator] === 'function') {
+    for (const value of entry.forms) {
+      if (value) segments.add(value);
+    }
+  }
+  if (Array.isArray(entry?.headlines)) {
+    for (const headline of entry.headlines) {
+      if (headline?.title) segments.add(headline.title);
+    }
+  }
+
+  const haystack = Array.from(segments)
+    .map(part => String(part || '').trim())
+    .filter(Boolean)
+    .join(' ');
+
+  if (!haystack) return 1;
+
+  const companyMatch = BUSINESS_TAG_COMPANY_REGEXES.some(regex => regex.test(haystack));
+  const industryMatch = BUSINESS_TAG_INDUSTRY_REGEXES.some(regex => regex.test(haystack));
+
+  if (!companyMatch && !industryMatch) {
+    return 1;
+  }
+
+  return 1 + (companyMatch ? 0.6 : 0) + (industryMatch ? 0.3 : 0);
+}
+
 function buildTagQueryConfigs() {
   const configs = [];
   const seen = new Set();
@@ -3221,18 +3427,21 @@ function buildDiscoveredKeywordsFromStats(tagStats, { limit = 50 } = {}) {
     const term = chooseTagDisplay(entry);
     if (!term) continue;
     const count = Number(entry?.count || 0);
-    entries.push({ term, count });
+    const weight = computeBusinessTagWeight(entry, term);
+    const weightedCount = count * (Number.isFinite(weight) && weight > 0 ? weight : 1);
+    entries.push({ term, count, weightedCount });
   }
   entries.sort((a, b) => {
+    if ((b.weightedCount || 0) !== (a.weightedCount || 0)) return (b.weightedCount || 0) - (a.weightedCount || 0);
     if (b.count !== a.count) return b.count - a.count;
     return a.term.localeCompare(b.term);
   });
   const top = entries.slice(0, limit);
-  const maxCount = top.length ? Math.max(...top.map(item => item.count || 0)) : 0;
+  const maxWeighted = top.length ? Math.max(...top.map(item => item.weightedCount || 0)) : 0;
   return top.map(item => ({
     term: formatTagDisplay(item.term),
     count: item.count,
-    score: maxCount > 0 ? Number((item.count / maxCount).toFixed(2)) : 0
+    score: maxWeighted > 0 ? Number(((item.weightedCount || 0) / maxWeighted).toFixed(2)) : 0
   })).filter(entry => entry.term);
 }
 
