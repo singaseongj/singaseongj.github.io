@@ -1,7 +1,7 @@
 {
-  "date": "2025-10-04",
+  "date": "2025-10-05",
   "window": "5_hours",
-  "total_phrases": 24,
+  "total_phrases": 21,
   "discovered_keywords": [
     {
       "term": "Rising bond rates on the upswing",
@@ -82,9 +82,9 @@
     {
       "term": "The policy exchange rate revaluation is",
       "term_ko": "정책 환율 재상승은",
-      "significance_score": 224,
+      "significance_score": 225,
       "mentions": 1,
-      "combined_score": 0.834716,
+      "combined_score": 0.837773,
       "sources": [
         "news",
         "significance_analysis"
@@ -93,7 +93,7 @@
       "datalab_matches": [
         {
           "term_ko": "환율",
-          "score": 0.757,
+          "score": 0.763,
           "hits": 1,
           "categories": [
             "Economy"
@@ -144,9 +144,9 @@
     {
       "term": "Tariff policy exchange rates",
       "term_ko": "관세 정책 환율",
-      "significance_score": 192,
+      "significance_score": 193,
       "mentions": 1,
-      "combined_score": 0.7369,
+      "combined_score": 0.739956,
       "sources": [
         "news",
         "significance_analysis"
@@ -155,7 +155,7 @@
       "datalab_matches": [
         {
           "term_ko": "환율",
-          "score": 0.757,
+          "score": 0.763,
           "hits": 1,
           "categories": [
             "Economy"
@@ -423,48 +423,18 @@
       "sources": [
         "finance_trend"
       ]
-    },
-    {
-      "term": "Customs duty pick",
-      "term_ko": "관세부과 pick",
-      "significance_score": 17,
-      "mentions": 1,
-      "combined_score": 0.201965,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
-      "term": "1New Urban Leadership District",
-      "term_ko": "1기신도시 선도지구",
-      "significance_score": 1,
-      "mentions": 1,
-      "combined_score": 0.153057,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
-      "term": "Increase in capitalization of zinc kimberlite",
-      "term_ko": "고려아연 유상증자",
-      "significance_score": 1,
-      "mentions": 1,
-      "combined_score": 0.153057,
-      "sources": [
-        "korean_first"
-      ]
     }
   ],
   "metadata": {
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-3 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-04T18:28:26.582Z",
+    "generated_at": "2025-10-05T01:45:52.897Z",
     "finance_trend_keywords": 16,
     "keyword_limit": 30,
     "article_cache_files": 142,
     "article_cache_articles": 4000,
-    "article_cache_phrases": 381,
+    "article_cache_phrases": 384,
     "datalab_terms_used": [
       "환율",
       "펀드",
@@ -488,10 +458,114 @@
       "환율"
     ]
   },
-  "generatedAt": "2025-10-04T18:28:26.583Z",
+  "generatedAt": "2025-10-05T01:45:57.528Z",
   "timezone": "Asia/Seoul",
-  "updatedAt": {},
-  "keywords": [],
+  "updatedAt": {
+    "en": "Updated Oct 5, 2025, 10:45 AM KST (5 hours)",
+    "ko": "2025. 10. 5. 오전 10:45 기준 업데이트 (5 hours)"
+  },
+  "keywords": [
+    {
+      "term": "Rising bond rates on the upswing",
+      "term_ko": "호조에 채권금리 상승",
+      "score": 1,
+      "mentions": 2,
+      "search": {
+        "ko": "https://www.google.com/search?q=%ED%98%B8%EC%A1%B0%EC%97%90%20%EC%B1%84%EA%B6%8C%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Rising%20bond%20rates%20on%20the%20upswing&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Financial Crisis 2008 2009",
+      "term_ko": "금융위기 2008 2009년",
+      "score": 1,
+      "mentions": 2,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%202008%202009%EB%85%84&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Financial%20Crisis%202008%202009&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "U.S. Financial Crisis 2008",
+      "term_ko": "미국 금융위기 2008",
+      "score": 1,
+      "mentions": 2,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EB%AF%B8%EA%B5%AD%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%202008&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=U.S.%20Financial%20Crisis%202008&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Rising semiconductor stocks surge",
+      "term_ko": "상승 반도체주 급등",
+      "score": 1,
+      "mentions": 2,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%83%81%EC%8A%B9%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EA%B8%89%EB%93%B1&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Rising%20semiconductor%20stocks%20surge&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Tech Stocks on Rising Bond Rates",
+      "term_ko": "채권금리 상승 기술주",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%B1%84%EA%B6%8C%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%20%EA%B8%B0%EC%88%A0%EC%A3%BC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Tech%20Stocks%20on%20Rising%20Bond%20Rates&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "The policy exchange rate revaluation is",
+      "term_ko": "정책 환율 재상승은",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%A0%95%EC%B1%85%20%ED%99%98%EC%9C%A8%20%EC%9E%AC%EC%83%81%EC%8A%B9%EC%9D%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=The%20policy%20exchange%20rate%20revaluation%20is&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Tariff policy exchange rates",
+      "term_ko": "관세 정책 환율",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EA%B4%80%EC%84%B8%20%EC%A0%95%EC%B1%85%20%ED%99%98%EC%9C%A8&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Tariff%20policy%20exchange%20rates&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Rising rates ahead",
+      "term_ko": "금리 앞두고 상승",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EA%B8%88%EB%A6%AC%20%EC%95%9E%EB%91%90%EA%B3%A0%20%EC%83%81%EC%8A%B9&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Rising%20rates%20ahead&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Electric car stocks soar",
+      "term_ko": "전기차 주가 급등",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%A0%84%EA%B8%B0%EC%B0%A8%20%EC%A3%BC%EA%B0%80%20%EA%B8%89%EB%93%B1&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Electric%20car%20stocks%20soar&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "New York Stock Exchange Rally AI",
+      "term_ko": "뉴욕증시 상승 AI",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%8A%B9%20AI&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=New%20York%20Stock%20Exchange%20Rally%20AI&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    }
+  ],
   "markets": [
     "KOSPI",
     "KOSDAQ",
@@ -503,7 +577,7 @@
       "keywords": [
         {
           "term": "삼성전자",
-          "score": 218.281,
+          "score": 269.962,
           "sources": [
             "https://www.bigtanews.co.kr/article/view/big202501250002",
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
@@ -514,8 +588,20 @@
           "term_ko": "삼성전자"
         },
         {
+          "term": "AI",
+          "score": 205.254,
+          "sources": [
+            "https://finance.yahoo.com/news/live/dow-sp-500-nasdaq-notch-records-on-ai-buzz-even-as-government-shutdown-drags-on-200207403.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-mixed-as-ai-optimism-blots-out-us-shutdown-risks-145218407.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-gains-fizzle-with-ai-buzz-trumps-shutdown-threats-in-focus-145218301.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-sp-500-nasdaq-rise-as-ai-optimism-blots-out-us-shutdown-risks-133118033.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-sp-500-nasdaq-jump-as-ai-optimism-blots-out-us-shutdown-risks-133118631.html"
+          ],
+          "term_ko": "인공지능"
+        },
+        {
           "term": "하이닉스",
-          "score": 155.298,
+          "score": 180.096,
           "sources": [
             "https://www.bigtanews.co.kr/article/view/big202501250002",
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
@@ -527,7 +613,7 @@
         },
         {
           "term": "FOMC",
-          "score": 81.054,
+          "score": 91.265,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024050915433776404a01bf698f_1/article.html",
@@ -539,7 +625,7 @@
         },
         {
           "term": "유가",
-          "score": 62.548,
+          "score": 69.958,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/2022120122155175704a01bf698f_1/article.html",
             "http://biz.chosun.com/site/data/html_dir/2018/10/23/2018102300347.html",
@@ -550,7 +636,7 @@
         },
         {
           "term": "디스플레이",
-          "score": 55.792,
+          "score": 61.951,
           "sources": [
             "http://news.etomato.com/pagelog/popup_log.asp?newsseq=225533",
             "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552",
@@ -560,7 +646,7 @@
         },
         {
           "term": "시장",
-          "score": 51.692,
+          "score": 58.205,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/2025041319411763354a01bf698f_1/article.html",
             "http://biz.chosun.com/site/data/html_dir/2018/10/23/2018102300347.html",
@@ -572,7 +658,7 @@
         },
         {
           "term": "달러",
-          "score": 44.046,
+          "score": 48.909,
           "sources": [
             "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552",
             "http://www.edaily.co.kr/news/newspath.asp?newsid=02197606589857840",
@@ -582,7 +668,7 @@
         },
         {
           "term": "금리",
-          "score": 35.237,
+          "score": 39.127,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024050915433776404a01bf698f_1/article.html",
@@ -592,22 +678,13 @@
         },
         {
           "term": "기업",
-          "score": 27.529,
+          "score": 30.568,
           "sources": [
             "http://www.edaily.co.kr/news/newspath.asp?newsid=03552246616124080",
             "https://n.news.naver.com/mnews/article/011/0002648178?sid=101",
             "http://www.newstomato.com/ReadNews.aspx?no=483483"
           ],
           "term_ko": "기업"
-        },
-        {
-          "term": "환율",
-          "score": 27.379,
-          "sources": [
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01459606602905680",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552"
-          ],
-          "term_ko": "환율"
         }
       ]
     },
@@ -873,7 +950,7 @@
       "keywords": [
         {
           "term": "하이닉스",
-          "score": 332.288,
+          "score": 397.178,
           "sources": [
             "https://www.bigtanews.co.kr/article/view/big202501250002",
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
@@ -884,8 +961,20 @@
           "term_ko": "하이닉스"
         },
         {
+          "term": "AI",
+          "score": 207.485,
+          "sources": [
+            "https://finance.yahoo.com/news/live/dow-sp-500-nasdaq-notch-records-on-ai-buzz-even-as-government-shutdown-drags-on-200207403.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-mixed-as-ai-optimism-blots-out-us-shutdown-risks-145218407.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-gains-fizzle-with-ai-buzz-trumps-shutdown-threats-in-focus-145218301.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-sp-500-nasdaq-rise-as-ai-optimism-blots-out-us-shutdown-risks-133118033.html",
+            "https://finance.yahoo.com/news/live/stock-market-today-sp-500-nasdaq-jump-as-ai-optimism-blots-out-us-shutdown-risks-133118631.html"
+          ],
+          "term_ko": "인공지능"
+        },
+        {
           "term": "FOMC",
-          "score": 82.465,
+          "score": 89.173,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024050915433776404a01bf698f_1/article.html",
@@ -897,7 +986,7 @@
         },
         {
           "term": "반도체",
-          "score": 71.519,
+          "score": 76.995,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/2025041319411763354a01bf698f_1/article.html",
             "http://www.newspim.com/news/view/20190530000257",
@@ -908,7 +997,7 @@
         },
         {
           "term": "삼성전자",
-          "score": 63.573,
+          "score": 68.44,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024052720494854574a01bf698f_1/article.html",
@@ -919,7 +1008,7 @@
         },
         {
           "term": "현대차",
-          "score": 40.247,
+          "score": 43.122,
           "sources": [
             "http://www.edaily.co.kr/news/newspath.asp?newsid=01997526592936448",
             "http://www.edaily.co.kr/news/newspath.asp?newsid=01859766592936120",
@@ -929,7 +1018,7 @@
         },
         {
           "term": "PCE",
-          "score": 38.868,
+          "score": 41.423,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024052720494854574a01bf698f_1/article.html",
             "http://www.g-enews.com/ko-kr/news/article/news_all/2022120122155175704a01bf698f_1/article.html"
@@ -938,7 +1027,7 @@
         },
         {
           "term": "금리",
-          "score": 35.775,
+          "score": 38.33,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024050915433776404a01bf698f_1/article.html",
@@ -948,7 +1037,7 @@
         },
         {
           "term": "물가",
-          "score": 32.607,
+          "score": 34.937,
           "sources": [
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024052720494854574a01bf698f_1/article.html",
             "http://www.g-enews.com/ko-kr/news/article/news_all/2024050915433776404a01bf698f_1/article.html",
@@ -958,21 +1047,12 @@
         },
         {
           "term": "디스플레이",
-          "score": 23.598,
+          "score": 25.15,
           "sources": [
             "http://www.edaily.co.kr/news/newspath.asp?newsid=01997526592936448",
             "http://www.edaily.co.kr/news/newspath.asp?newsid=01771206589885392"
           ],
           "term_ko": "디스플레이"
-        },
-        {
-          "term": "연준",
-          "score": 19.434,
-          "sources": [
-            "http://www.g-enews.com/ko-kr/news/article/news_all/202407282024244794a01bf698f_1/article.html",
-            "http://www.g-enews.com/ko-kr/news/article/news_all/2022120122155175704a01bf698f_1/article.html"
-          ],
-          "term_ko": "연준"
         }
       ]
     },
@@ -1044,6 +1124,101 @@
             "http://www.edaily.co.kr/news/newspath.asp?newsid=01682646592933824"
           ],
           "term_ko": "미국시장 미국시장"
+        }
+      ]
+    },
+    "035420.KS": {
+      "keywords": [
+        {
+          "term": "건설",
+          "score": 37.249,
+          "sources": [
+            "http://view.heraldm.com/view.php?ud=20120810000067",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=01728566592934480",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=01807286592906600"
+          ],
+          "term_ko": "건설"
+        },
+        {
+          "term": "NHN",
+          "score": 33.692,
+          "sources": [
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=01151286596119032",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=01767926592933496",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=02030326589882112",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=01843366589881784",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=01840086589881784"
+          ],
+          "term_ko": "NHN"
+        },
+        {
+          "term": "개별기업",
+          "score": 25.867,
+          "sources": [
+            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2016030216043636267",
+            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2016010715532489714",
+            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2014101509072964244"
+          ],
+          "term_ko": "개별기업"
+        },
+        {
+          "term": "철강",
+          "score": 25.86,
+          "sources": [
+            "http://news.einfomax.co.kr/news/articleView.html?idxno=4192496",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=01154566628988568"
+          ],
+          "term_ko": "철강"
+        },
+        {
+          "term": "삼성전자",
+          "score": 21.981,
+          "sources": [
+            "http://www.newstomato.com/ReadNews.aspx?no=509214",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552"
+          ],
+          "term_ko": "삼성전자"
+        },
+        {
+          "term": "JNB",
+          "score": 16.162,
+          "sources": [
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552",
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=02030326589882112"
+          ],
+          "term_ko": "JNB"
+        },
+        {
+          "term": "고용",
+          "score": 12.072,
+          "sources": [
+            "http://www.g-enews.com/ko-kr/news/article/news_all/2024060620363667564a01bf698f_1/article.html"
+          ],
+          "term_ko": "고용"
+        },
+        {
+          "term": "유가",
+          "score": 12.072,
+          "sources": [
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=02105766609468304"
+          ],
+          "term_ko": "유가"
+        },
+        {
+          "term": "환율",
+          "score": 12.072,
+          "sources": [
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552"
+          ],
+          "term_ko": "환율"
+        },
+        {
+          "term": "달러",
+          "score": 12.072,
+          "sources": [
+            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552"
+          ],
+          "term_ko": "달러"
         }
       ]
     },
@@ -1142,101 +1317,6 @@
         }
       ]
     },
-    "035420.KS": {
-      "keywords": [
-        {
-          "term": "건설",
-          "score": 37.249,
-          "sources": [
-            "http://view.heraldm.com/view.php?ud=20120810000067",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01728566592934480",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01807286592906600"
-          ],
-          "term_ko": "건설"
-        },
-        {
-          "term": "NHN",
-          "score": 33.692,
-          "sources": [
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01151286596119032",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01767926592933496",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02030326589882112",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01840086589881784",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01843366589881784"
-          ],
-          "term_ko": "NHN"
-        },
-        {
-          "term": "개별기업",
-          "score": 25.867,
-          "sources": [
-            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2016030216043636267",
-            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2016010715532489714",
-            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2014101509072964244"
-          ],
-          "term_ko": "개별기업"
-        },
-        {
-          "term": "철강",
-          "score": 25.86,
-          "sources": [
-            "http://news.einfomax.co.kr/news/articleView.html?idxno=4192496",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=01154566628988568"
-          ],
-          "term_ko": "철강"
-        },
-        {
-          "term": "삼성전자",
-          "score": 21.981,
-          "sources": [
-            "http://www.newstomato.com/ReadNews.aspx?no=509214",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552"
-          ],
-          "term_ko": "삼성전자"
-        },
-        {
-          "term": "JNB",
-          "score": 16.162,
-          "sources": [
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552",
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02030326589882112"
-          ],
-          "term_ko": "JNB"
-        },
-        {
-          "term": "고용",
-          "score": 12.072,
-          "sources": [
-            "http://www.g-enews.com/ko-kr/news/article/news_all/2024060620363667564a01bf698f_1/article.html"
-          ],
-          "term_ko": "고용"
-        },
-        {
-          "term": "유가",
-          "score": 12.072,
-          "sources": [
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02105766609468304"
-          ],
-          "term_ko": "유가"
-        },
-        {
-          "term": "환율",
-          "score": 12.072,
-          "sources": [
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552"
-          ],
-          "term_ko": "환율"
-        },
-        {
-          "term": "달러",
-          "score": 12.072,
-          "sources": [
-            "http://www.edaily.co.kr/news/newspath.asp?newsid=02253366589916552"
-          ],
-          "term_ko": "달러"
-        }
-      ]
-    },
     "000880.KS": {
       "keywords": [
         {
@@ -1332,6 +1412,19 @@
         }
       ]
     },
+    "000150.KS": {
+      "keywords": [
+        {
+          "term": "개별기업",
+          "score": 11.838,
+          "sources": [
+            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2016020515543259845",
+            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2015111316031638281"
+          ],
+          "term_ko": "개별기업"
+        }
+      ]
+    },
     "373220.KS": {
       "keywords": [
         {
@@ -1415,16 +1508,71 @@
         }
       ]
     },
-    "000150.KS": {
+    "034730.KS": {
       "keywords": [
         {
-          "term": "개별기업",
-          "score": 11.838,
+          "term": "금융시장 수주",
+          "score": 0.5,
           "sources": [
-            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2016020515543259845",
-            "http://news.mtn.co.kr/newscenter/news_viewer.mtn?gidx=2015111316031638281"
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
           ],
-          "term_ko": "개별기업"
+          "term_ko": "금융시장 수주"
+        },
+        {
+          "term": "수주 사업",
+          "score": 1,
+          "sources": [
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
+          ],
+          "term_ko": "수주 사업"
+        },
+        {
+          "term": "사업",
+          "score": 2.811,
+          "sources": [
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
+          ],
+          "term_ko": "사업"
+        },
+        {
+          "term": "KTB",
+          "score": 2.811,
+          "sources": [
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
+          ],
+          "term_ko": "KTB"
+        },
+        {
+          "term": "수주",
+          "score": 2.811,
+          "sources": [
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
+          ],
+          "term_ko": "수주"
+        },
+        {
+          "term": "KTB KTB",
+          "score": 0.5,
+          "sources": [
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
+          ],
+          "term_ko": "KTB KTB"
+        },
+        {
+          "term": "사업 수주",
+          "score": 0.5,
+          "sources": [
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
+          ],
+          "term_ko": "사업 수주"
+        },
+        {
+          "term": "금융시장",
+          "score": 1.968,
+          "sources": [
+            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
+          ],
+          "term_ko": "금융시장"
         }
       ]
     },
@@ -1476,78 +1624,16 @@
           "term_ko": "기업 창업"
         }
       ]
-    },
-    "034730.KS": {
-      "keywords": [
-        {
-          "term": "KTB",
-          "score": 2.811,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "KTB"
-        },
-        {
-          "term": "수주 사업",
-          "score": 1,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "수주 사업"
-        },
-        {
-          "term": "수주",
-          "score": 2.811,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "수주"
-        },
-        {
-          "term": "사업",
-          "score": 2.811,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "사업"
-        },
-        {
-          "term": "금융시장",
-          "score": 1.968,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "금융시장"
-        },
-        {
-          "term": "금융시장 수주",
-          "score": 0.5,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "금융시장 수주"
-        },
-        {
-          "term": "KTB KTB",
-          "score": 0.5,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "KTB KTB"
-        },
-        {
-          "term": "사업 수주",
-          "score": 0.5,
-          "sources": [
-            "http://biz.heraldm.com/common/redirect.jsp?category_id=010106030600&news_id=20120514000102"
-          ],
-          "term_ko": "사업 수주"
-        }
-      ]
     }
   },
   "tickerKeywordsMeta": {
-    "generatedAt": "2025-10-04T18:28:26.583Z",
+    "generatedAt": "2025-10-05T01:45:52.898Z",
     "version": "1.0"
+  },
+  "tagMeta": {
+    "source": "tags.json",
+    "date": "2025-10-05",
+    "window": "5_hours",
+    "generatedAt": "2025-10-05T01:45:52.897Z"
   }
 }

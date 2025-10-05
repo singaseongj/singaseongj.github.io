@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-05T03:30:01+09:00 (KST)**
+- Generated: **2025-10-05T10:47:28+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -141,14 +141,6 @@
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=GS%EB%A6%AC%ED%85%8C%EC%9D%BC
 
-**LX인터내셔널** (001120.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-7.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=LX%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90
-
 **녹십자** (006280.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -156,6 +148,14 @@
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90
+
+**대웅** (003090.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **11.9%**, 20d **0.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85
 
 **대웅제약** (069620.KS)
 
@@ -177,13 +177,13 @@
 
 ### SAFE (5)
 
-**Arm Holdings** (ARM)
+**Alphabet Inc.** (GOOGL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.2%**, 20d **-13.9%**; volatility (20d): **unknown**
+- Returns: 5d **4.1%**, 20d **5.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Arm%20Holdings
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Alphabet%20Inc.
 
 **ASML Holding** (ASML)
 
@@ -199,12 +199,13 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=AstraZeneca
 
-**Mercado Libre** (MELI)
+**O'Reilly Automotive** (ORLY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **0.0%**, 20d **4.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=O'Reilly%20Automotive
 
 **Shopify** (SHOP)
 
@@ -256,13 +257,13 @@
 
 ### SAFE (5)
 
-**Amazon** (AMZN)
+**Alphabet Inc.** (GOOGL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Returns: 5d **4.1%**, 20d **5.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Amazon
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Alphabet%20Inc.
 
 **Apple Inc.** (AAPL)
 
@@ -271,6 +272,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Apple%20Inc.
+
+**Meta Platforms** (META)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.0%**, 20d **7.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Meta%20Platforms
 
 **Microsoft** (MSFT)
 
@@ -287,14 +296,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
-
-**Tesla, Inc.** (TSLA)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.9%**, 20d **9.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Tesla%2C%20Inc.
 
 ### AGGRESSIVE (5)
 
