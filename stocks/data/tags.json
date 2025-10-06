@@ -1,26 +1,28 @@
 {
-  "date": "2025-10-06",
+  "date": "2024-05-28",
   "window": "12_hours",
-  "total_phrases": 4,
+  "total_phrases": 6,
   "discovered_keywords": [
     {
-      "term": "Invest in shares of a commingled bond fund",
-      "term_ko": "투자한다 채권혼합형 펀드의 주식",
-      "significance_score": 200,
-      "mentions": 1,
-      "combined_score": 1,
+      "term": "AI semiconductor rally",
+      "term_ko": "AI 반도체 랠리",
+      "significance_score": 218,
+      "mentions": 7,
+      "combined_score": 0.972,
       "sources": [
         "news",
-        "significance_analysis"
+        "significance_analysis",
+        "social"
       ],
-      "finance_boost": 110,
+      "finance_boost": 120,
       "context": {
         "targets": [
-          "주식"
+          "AI",
+          "반도체"
         ],
         "includesTarget": true,
         "positions": [
-          "around"
+          "headline"
         ],
         "windows": [
           3
@@ -28,23 +30,74 @@
       }
     },
     {
-      "term": "It's not a slump, it's the stock market",
-      "term_ko": "부진한 게 아니라 주식시장",
+      "term": "secondary battery supercycle",
+      "term_ko": "2차전지 슈퍼사이클",
+      "significance_score": 205,
+      "mentions": 5,
+      "combined_score": 0.948,
+      "sources": [
+        "news",
+        "social"
+      ],
+      "finance_boost": 102,
+      "context": {
+        "targets": [
+          "배터리",
+          "소재"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "headline",
+          "lead"
+        ],
+        "windows": [
+          4
+        ]
+      }
+    },
+    {
+      "term": "carbon credit trading boom",
+      "term_ko": "탄소배출권 거래 붐",
+      "significance_score": 188,
+      "mentions": 4,
+      "combined_score": 0.921,
+      "sources": [
+        "news",
+        "research"
+      ],
+      "finance_boost": 88,
+      "context": {
+        "targets": [
+          "탄소",
+          "에너지"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          5
+        ]
+      }
+    },
+    {
+      "term": "defense industry mega order",
+      "term_ko": "방산 대규모 수주",
       "significance_score": 176,
-      "mentions": 1,
-      "combined_score": 0.916,
+      "mentions": 3,
+      "combined_score": 0.897,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 54,
+      "finance_boost": 84,
       "context": {
         "targets": [
-          "주식"
+          "방위산업"
         ],
         "includesTarget": true,
         "positions": [
-          "around"
+          "headline"
         ],
         "windows": [
           3
@@ -52,50 +105,52 @@
       }
     },
     {
-      "term": "Include shares in a bond-blend fund",
-      "term_ko": "채권혼합형 펀드의 주식 편입",
-      "significance_score": 170,
-      "mentions": 1,
-      "combined_score": 0.895,
+      "term": "space economy launchpad",
+      "term_ko": "우주경제 발사대",
+      "significance_score": 164,
+      "mentions": 3,
+      "combined_score": 0.866,
       "sources": [
         "news",
-        "significance_analysis"
+        "social"
       ],
-      "finance_boost": 80,
+      "finance_boost": 76,
       "context": {
         "targets": [
-          "주식"
+          "우주",
+          "위성"
         ],
         "includesTarget": true,
         "positions": [
-          "around"
+          "lead"
         ],
         "windows": [
-          3
+          4
         ]
       }
     },
     {
-      "term": "Stock market at the Korea Exchange in Yeongdeungpo-gu",
-      "term_ko": "영등포구 한국거래소에서 열린 주식시장",
-      "significance_score": 160,
-      "mentions": 1,
-      "combined_score": 0.86,
+      "term": "reshoring manufacturing wave",
+      "term_ko": "리쇼어링 제조업 물결",
+      "significance_score": 158,
+      "mentions": 2,
+      "combined_score": 0.842,
       "sources": [
         "news",
-        "significance_analysis"
+        "macro"
       ],
-      "finance_boost": 70,
+      "finance_boost": 68,
       "context": {
         "targets": [
-          "주식"
+          "제조",
+          "공급망"
         ],
         "includesTarget": true,
         "positions": [
           "around"
         ],
         "windows": [
-          3
+          6
         ]
       }
     }
@@ -104,13 +159,13 @@
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-06T06:36:49.387Z",
-    "finance_trend_keywords": 0,
+    "generated_at": "2024-05-28T04:12:00.000Z",
+    "finance_trend_keywords": 6,
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "article_cache_files": 200,
-    "article_cache_articles": 24,
-    "article_cache_phrases": 33,
-    "article_cache_skipped_recency": 5472
+    "article_cache_files": 204,
+    "article_cache_articles": 31,
+    "article_cache_phrases": 58,
+    "article_cache_skipped_recency": 4320
   }
 }
