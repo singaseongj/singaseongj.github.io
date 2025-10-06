@@ -210,7 +210,7 @@
         updated: '업데이트: ',
         visitsToday: '오늘 방문: {daily} | 총 방문: {total}',
         noPicks: 'No picks available',
-        scoreSuffix: '매력점수',
+        scoreSuffix: '매력점수 / 최근가격 / 1년 전',
         priceNow: '현재가',
         priceYearAgo: '1년 전'
       },
@@ -241,7 +241,7 @@
         updated: 'Updated: ',
         visitsToday: 'Visits today: {daily} | Total: {total}',
         noPicks: 'No picks available',
-        scoreSuffix: 'Attractiveness',
+        scoreSuffix: 'Attractiveness / Recent / 1y bf price',
         priceNow: 'Price',
         priceYearAgo: '1Y Ago'
       }
@@ -294,17 +294,10 @@
       const past = formatPriceValue(item.price1yAgo, item.ticker);
       const parts = [];
       if (now) {
-        parts.push(`${translations[currentLang].priceNow} ${now}`);
+        parts.push(now);
       }
       if (past) {
-        let label = `${translations[currentLang].priceYearAgo} ${past}`;
-        if (item.price1yDate) {
-          try {
-            const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
-            label += ` (${new Date(item.price1yDate).toLocaleDateString(locale)})`;
-          } catch {}
-        }
-        parts.push(label);
+        parts.push(past);
       }
       return parts.join(' / ');
     }

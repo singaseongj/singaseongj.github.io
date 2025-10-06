@@ -1,7 +1,7 @@
 {
   "date": "2025-10-06",
   "window": "12_hours",
-  "total_phrases": 8,
+  "total_phrases": 7,
   "discovered_keywords": [
     {
       "term": "Invest in shares of a commingled bond fund",
@@ -28,11 +28,35 @@
       }
     },
     {
-      "term": "It's not a slump, it's the stock market",
-      "term_ko": "부진한 게 아니라 주식시장",
-      "significance_score": 176,
+      "term": "Include shares in a bond-blend fund",
+      "term_ko": "채권혼합형 펀드의 주식 편입",
+      "significance_score": 170,
       "mentions": 1,
-      "combined_score": 0.916,
+      "combined_score": 0.895,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 80,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "Hardening and in-stock",
+      "term_ko": "강화 및 주식시장 내",
+      "significance_score": 166,
+      "mentions": 1,
+      "combined_score": 0.881,
       "sources": [
         "news",
         "significance_analysis"
@@ -52,64 +76,16 @@
       }
     },
     {
-      "term": "Nikkei 225 average stock price in Tokyo stock market",
-      "term_ko": "도쿄 주식시장 에서 닛케이225평균주가",
-      "significance_score": 174,
+      "term": "6.25 million in equity for ASEAN Cultural Travel",
+      "term_ko": "625만달러를 투자해 아세아문화여행의 주식",
+      "significance_score": 152,
       "mentions": 1,
-      "combined_score": 0.909,
+      "combined_score": 0.832,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 84,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
-    },
-    {
-      "term": "In the stock market, the Nikkei 225 Average Stock Price is below",
-      "term_ko": "주식시장 에서 닛케이225평균주가 이하",
-      "significance_score": 174,
-      "mentions": 1,
-      "combined_score": 0.909,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 84,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
-    },
-    {
-      "term": "From high-interest savings to stocks",
-      "term_ko": "고금리 예 적금부터 주식",
-      "significance_score": 171,
-      "mentions": 1,
-      "combined_score": 0.8985,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 66,
+      "finance_boost": 62,
       "context": {
         "targets": [
           "주식"
@@ -148,8 +124,8 @@
       }
     },
     {
-      "term": "The stock market requires dollars",
-      "term_ko": "요구 주식 시장은 달러",
+      "term": "Demand stock market silver dollars",
+      "term_ko": "요구 주식시장 은 달러",
       "significance_score": 144,
       "mentions": 1,
       "combined_score": 0.804,
@@ -172,8 +148,8 @@
       }
     },
     {
-      "term": "The stock market has been trading on the",
-      "term_ko": "주식 시장은 달러 약세가",
+      "term": "Stock market silver dollar weakness",
+      "term_ko": "주식시장 은 달러 약세가",
       "significance_score": 144,
       "mentions": 1,
       "combined_score": 0.804,
@@ -200,14 +176,14 @@
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-06T12:45:22.568Z",
+    "generated_at": "2025-10-06T18:32:23.944Z",
     "finance_trend_keywords": 0,
     "keyword_limit": 30,
     "lookback_hours": 12,
     "article_cache_files": 200,
-    "article_cache_articles": 6,
+    "article_cache_articles": 0,
     "article_cache_phrases": 0,
-    "article_cache_skipped_recency": 5490
+    "article_cache_skipped_recency": 5495
   },
   "keywords": [
     {
@@ -221,43 +197,33 @@
       }
     },
     {
-      "term": "It's not a slump, it's the stock market",
-      "term_ko": "부진한 게 아니라 주식시장",
+      "term": "Include shares in a bond-blend fund",
+      "term_ko": "채권혼합형 펀드의 주식 편입",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EB%B6%80%EC%A7%84%ED%95%9C%20%EA%B2%8C%20%EC%95%84%EB%8B%88%EB%9D%BC%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=It's%20not%20a%20slump%2C%20it's%20the%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%20%ED%8E%80%EB%93%9C%EC%9D%98%20%EC%A3%BC%EC%8B%9D%20%ED%8E%B8%EC%9E%85&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Include%20shares%20in%20a%20bond-blend%20fund&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "Nikkei 225 average stock price in Tokyo stock market",
-      "term_ko": "도쿄 주식시장 에서 닛케이225평균주가",
+      "term": "Hardening and in-stock",
+      "term_ko": "강화 및 주식시장 내",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EB%8F%84%EC%BF%84%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%EC%84%9C%20%EB%8B%9B%EC%BC%80%EC%9D%B4225%ED%8F%89%EA%B7%A0%EC%A3%BC%EA%B0%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Nikkei%20225%20average%20stock%20price%20in%20Tokyo%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EA%B0%95%ED%99%94%20%EB%B0%8F%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EB%82%B4&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Hardening%20and%20in-stock&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "In the stock market, the Nikkei 225 Average Stock Price is below",
-      "term_ko": "주식시장 에서 닛케이225평균주가 이하",
+      "term": "6.25 million in equity for ASEAN Cultural Travel",
+      "term_ko": "625만달러를 투자해 아세아문화여행의 주식",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%EC%84%9C%20%EB%8B%9B%EC%BC%80%EC%9D%B4225%ED%8F%89%EA%B7%A0%EC%A3%BC%EA%B0%80%20%EC%9D%B4%ED%95%98&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=In%20the%20stock%20market%2C%20the%20Nikkei%20225%20Average%20Stock%20Price%20is%20below&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "From high-interest savings to stocks",
-      "term_ko": "고금리 예 적금부터 주식",
-      "score": 1,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EC%98%88%20%EC%A0%81%EA%B8%88%EB%B6%80%ED%84%B0%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=From%20high-interest%20savings%20to%20stocks&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=625%EB%A7%8C%EB%8B%AC%EB%9F%AC%EB%A5%BC%20%ED%88%AC%EC%9E%90%ED%95%B4%20%EC%95%84%EC%84%B8%EC%95%84%EB%AC%B8%ED%99%94%EC%97%AC%ED%96%89%EC%9D%98%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=6.25%20million%20in%20equity%20for%20ASEAN%20Cultural%20Travel&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
@@ -271,36 +237,36 @@
       }
     },
     {
-      "term": "The stock market requires dollars",
-      "term_ko": "요구 주식 시장은 달러",
+      "term": "Demand stock market silver dollars",
+      "term_ko": "요구 주식시장 은 달러",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%9A%94%EA%B5%AC%20%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%9D%80%20%EB%8B%AC%EB%9F%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=The%20stock%20market%20requires%20dollars&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EC%9A%94%EA%B5%AC%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%9D%80%20%EB%8B%AC%EB%9F%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Demand%20stock%20market%20silver%20dollars&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "The stock market has been trading on the",
-      "term_ko": "주식 시장은 달러 약세가",
+      "term": "Stock market silver dollar weakness",
+      "term_ko": "주식시장 은 달러 약세가",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%9D%80%20%EB%8B%AC%EB%9F%AC%20%EC%95%BD%EC%84%B8%EA%B0%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=The%20stock%20market%20has%20been%20trading%20on%20the&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%9D%80%20%EB%8B%AC%EB%9F%AC%20%EC%95%BD%EC%84%B8%EA%B0%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Stock%20market%20silver%20dollar%20weakness&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     }
   ],
   "updatedAt": {
-    "en": "Updated Oct 6, 2025, 9:45 PM KST (12 hours)",
-    "ko": "2025. 10. 6. 오후 9:45 기준 업데이트 (12 hours)"
+    "en": "Updated Oct 7, 2025, 3:32 AM KST (12 hours)",
+    "ko": "2025. 10. 7. 오전 3:32 기준 업데이트 (12 hours)"
   },
-  "generatedAt": "2025-10-06T12:45:25.203Z",
+  "generatedAt": "2025-10-06T18:32:26.653Z",
   "timezone": "Asia/Seoul",
   "tagMeta": {
     "source": "tags.json",
     "date": "2025-10-06",
     "window": "12_hours",
-    "generatedAt": "2025-10-06T12:45:22.568Z"
+    "generatedAt": "2025-10-06T18:32:23.944Z"
   }
 }

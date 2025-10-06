@@ -437,6 +437,9 @@ async function attachPrices(data, cache) {
   if (!list.length) return;
 
   const now = new Date();
+  const cacheRef = cache || {};
+  const kisEnabled = hasKisCredentials();
+  let cacheDirty = false;
   let quotes = [];
   try {
     quotes = await fetchByTickers(list);
@@ -459,6 +462,157 @@ async function attachPrices(data, cache) {
       priceAsOf: now.toISOString(),
       currency: deriveCurrency(symbol)
     };
+  }
+
+  if (kisEnabled) {
+    for (const symbol of list) {
+      const existing = priceMap[symbol];
+      const baseCurrency = existing?.currency || deriveCurrency(symbol);
+
+      const ensureEntry = () => {
+        if (!priceMap[symbol]) {
+          priceMap[symbol] = { priceAsOf: now.toISOString(), currency: baseCurrency };
+        } else if (!priceMap[symbol].currency) {
+          priceMap[symbol].currency = baseCurrency;
+        }
+      };
+
+      if (isKrxTicker(symbol)) {
+        const needsCurrent = !(existing && Number.isFinite(existing.currentPrice));
+        const needsPrevious = !(existing && Number.isFinite(existing.previousClose));
+        const needsAsOf = !(existing && existing.priceAsOf);
+        if (!needsCurrent && !needsPrevious && !needsAsOf) continue;
+        let snapshot;
+        try {
+          snapshot = await fetchDomesticSnapshot(symbol);
+        } catch (err) {
+          console.warn(`[KIS:KR:quote] ${symbol} ${err.message}`);
+          noteStatus(err);
+        }
+
+        if (snapshot) {
+          const priceAsOf = Number.isFinite(snapshot.timestamp)
+            ? new Date(snapshot.timestamp).toISOString()
+            : now.toISOString();
+          ensureEntry();
+          priceMap[symbol].priceAsOf = priceAsOf;
+          priceMap[symbol].currency = 'KRW';
+          if (Number.isFinite(snapshot.current)) {
+            priceMap[symbol].currentPrice = Number(snapshot.current);
+          }
+          if (Number.isFinite(snapshot.previousClose)) {
+            priceMap[symbol].previousClose = Number(snapshot.previousClose);
+          }
+        }
+
+        const entry = priceMap[symbol];
+        const stillNeedsCurrent = !(entry && Number.isFinite(entry.currentPrice));
+        const stillNeedsAsOf = !(entry && entry.priceAsOf);
+        if (stillNeedsCurrent || stillNeedsAsOf) {
+          try {
+            const latest = await fetchDomesticPriceOnDate(symbol, now, { windowDays: KIS_DOMESTIC_WINDOW_DAYS });
+            if (latest && Number.isFinite(latest.price)) {
+              ensureEntry();
+              const asOf = Number.isFinite(latest.timestamp)
+                ? new Date(latest.timestamp).toISOString()
+                : (priceMap[symbol].priceAsOf || now.toISOString());
+              priceMap[symbol].priceAsOf = asOf;
+              priceMap[symbol].currency = 'KRW';
+              if (!Number.isFinite(priceMap[symbol].currentPrice)) {
+                priceMap[symbol].currentPrice = Number(latest.price);
+              }
+            }
+          } catch (err) {
+            console.warn(`[KIS:KR:recent] ${symbol} ${err.message}`);
+            noteStatus(err);
+          }
+        }
+        continue;
+      }
+
+      if (!isLikelyUsTicker(symbol)) continue;
+      const needsCurrent = !(existing && Number.isFinite(existing.currentPrice));
+      const needsPrevious = !(existing && Number.isFinite(existing.previousClose));
+      const needsAsOf = !(existing && existing.priceAsOf);
+      if (!needsCurrent && !needsPrevious && !needsAsOf) continue;
+
+      const cachedExchange = cacheGetKisExchange(cacheRef, symbol);
+      const hintExchange = KIS_OVERSEAS_HINTS[symbol];
+      const exchanges = uniqueValues([
+        cachedExchange,
+        hintExchange,
+        ...USER_PREFERRED_EXCHANGES,
+        ...DEFAULT_OVERSEAS_EXCHANGES
+      ]);
+      if (!exchanges.length) exchanges.push(...DEFAULT_OVERSEAS_EXCHANGES);
+      const symbolCandidates = expandOverseasSymbolCandidates(symbol);
+      let resolved = false;
+
+      for (const exchange of exchanges) {
+        let detail;
+        try {
+          detail = await fetchOverseasPriceDetail(symbol, exchange, { symbolCandidates });
+        } catch (err) {
+          console.warn(`[KIS:US:detail] ${symbol}/${exchange} ${err.message}`);
+          noteStatus(err);
+        }
+
+        if (detail) {
+          const priceAsOf = Number.isFinite(detail.timestamp)
+            ? new Date(detail.timestamp).toISOString()
+            : now.toISOString();
+          ensureEntry();
+          priceMap[symbol].priceAsOf = priceAsOf;
+          if (!priceMap[symbol].currency) {
+            priceMap[symbol].currency = baseCurrency;
+          }
+          if (Number.isFinite(detail.current)) {
+            priceMap[symbol].currentPrice = Number(detail.current);
+          }
+          if (Number.isFinite(detail.previousClose)) {
+            priceMap[symbol].previousClose = Number(detail.previousClose);
+          }
+        }
+
+        const entry = priceMap[symbol];
+        const needsDaily = !entry || !Number.isFinite(entry.currentPrice) || !entry.priceAsOf;
+        if (needsDaily) {
+          try {
+            const latest = await fetchOverseasPriceOnDate(symbol, now, { exchange, symbolCandidates, windowDays: KIS_OVERSEAS_WINDOW_DAYS });
+            if (latest && Number.isFinite(latest.price)) {
+              ensureEntry();
+              const asOf = Number.isFinite(latest.timestamp)
+                ? new Date(latest.timestamp).toISOString()
+                : (priceMap[symbol].priceAsOf || now.toISOString());
+              priceMap[symbol].priceAsOf = asOf;
+              if (!Number.isFinite(priceMap[symbol].currentPrice)) {
+                priceMap[symbol].currentPrice = Number(latest.price);
+              }
+            }
+          } catch (err) {
+            console.warn(`[KIS:US:recent] ${symbol}/${exchange} ${err.message}`);
+            noteStatus(err);
+          }
+        }
+
+        const updated = priceMap[symbol];
+        const satisfiedCurrent = !needsCurrent || Number.isFinite(updated?.currentPrice);
+        const satisfiedPrevious = !needsPrevious || Number.isFinite(updated?.previousClose);
+        const satisfiedAsOf = !needsAsOf || Boolean(updated?.priceAsOf);
+        if (satisfiedCurrent && satisfiedPrevious && satisfiedAsOf) {
+          if (exchange && exchange !== cachedExchange) {
+            cachePutKisExchange(cacheRef, symbol, exchange);
+            cacheDirty = true;
+          }
+          resolved = true;
+          break;
+        }
+      }
+
+      if (!resolved) {
+        // leave unresolved symbols untouched so other fallbacks can try later
+      }
+    }
   }
 
   const targetDate = new Date(now.getTime() - PRICE_LOOKBACK_DAYS * DAY_MS);
@@ -487,6 +641,14 @@ async function attachPrices(data, cache) {
         if (info.priceAsOf) entry.priceAsOf = info.priceAsOf;
         if (info.currency) entry.priceCurrency = info.currency;
       }
+    }
+  }
+
+  if (cacheDirty) {
+    try {
+      await saveCache(cacheRef);
+    } catch (err) {
+      console.warn('[CACHE] Failed to persist KIS metadata:', err.message);
     }
   }
 }

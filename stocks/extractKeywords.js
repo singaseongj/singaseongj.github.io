@@ -5,7 +5,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
-import { TfIdf } from "natural";
+import natural from "natural";
 import stopword from "stopword";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -49,6 +49,11 @@ async function main() {
 
   const tags = JSON.parse(tagsRaw);
   const financeDict = JSON.parse(dictRaw);
+  const financeWords = Array.isArray(financeDict)
+    ? financeDict
+    : Array.isArray(financeDict.finance_keywords)
+      ? financeDict.finance_keywords
+      : [];
 
   // prepare text corpus from tags.json
   const docs = [];
@@ -70,6 +75,7 @@ async function main() {
   const filtered = allPhrases.filter(p => p.split(" ").length <= 4 && p.split(" ").length >= 2);
   const stopRemoved = filtered.map(p => stopword.removeStopwords(p.split(" ")).join(" "));
 
+  const { TfIdf } = natural;
   const tfidf = new TfIdf();
   stopRemoved.forEach(doc => tfidf.addDocument(doc));
 
@@ -85,7 +91,11 @@ async function main() {
   });
 
   // finance boost
-  const financeSet = new Set(financeDict.map(w => w.toLowerCase()));
+  const financeSet = new Set(
+    financeWords
+      .map(word => (typeof word === "string" ? word.toLowerCase() : ""))
+      .filter(Boolean)
+  );
   for (const phrase in phraseScores) {
     const hasFinance = phrase.split(" ").some(w => financeSet.has(w));
     if (hasFinance) phraseScores[phrase] *= 1.5;
