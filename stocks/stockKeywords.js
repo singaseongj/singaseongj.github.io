@@ -102,9 +102,19 @@ const TAG_KO_DICTIONARY = new Map(Object.entries({
 const EIEC_TREND_URL = 'https://eiec.kdi.re.kr/bigdata/issueTrend.do?cat=%EC%A0%84%EC%B2%B4';
 const INVEST_ZUM_URL = 'https://invest.zum.com/';
 
-const DATALAB_KEYWORD_QUERY = process.env.DATALAB_KEYWORD_QUERY || '주식';
+const DEFAULT_DATALAB_KEYWORD_QUERY = '주식';
+const DATALAB_KEYWORD_QUERY = (process.env.DATALAB_KEYWORD_QUERY || DEFAULT_DATALAB_KEYWORD_QUERY).trim() || DEFAULT_DATALAB_KEYWORD_QUERY;
 const DATALAB_KEYWORD_COUNT = Number(process.env.DATALAB_KEYWORD_COUNT || 50);
 const HANGUL_REGEX = /[\u3131-\u318E\uAC00-\uD7A3]/;
+
+const TAG_CREDIT_FILE = process.env.MARKET_TAG_CREDIT_FILE
+  ? path.resolve(process.env.MARKET_TAG_CREDIT_FILE)
+  : path.join(__dirname, 'data', 'tags-credit.json');
+const TAG_CREDIT_DECAY = Math.min(Math.max(Number(process.env.TAG_CREDIT_DECAY || 0.9), 0), 0.999);
+const TAG_CREDIT_REWARD = Math.max(Number(process.env.TAG_CREDIT_REWARD || 1), 0);
+const TAG_CREDIT_CAP = Math.max(Number(process.env.TAG_CREDIT_CAP || 6), 0);
+const TAG_CREDIT_WEIGHT = Math.max(Number(process.env.TAG_CREDIT_WEIGHT || 0.12), 0);
+const TAG_CREDIT_MAX_BOOST = Math.max(Number(process.env.TAG_CREDIT_MAX_BOOST || 0.6), 0);
 
 function ensureDirFor(file) {
   try {
@@ -118,6 +128,84 @@ function readJsonSafe(p) {
   } catch {
     return null;
   }
+}
+
+function loadRawTagCredit() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(TAG_CREDIT_FILE, 'utf8'));
+    if (parsed && typeof parsed === 'object') {
+      const terms = parsed.terms && typeof parsed.terms === 'object' ? parsed.terms : {};
+      return {
+        terms,
+        updatedAt: typeof parsed.updatedAt === 'string' ? parsed.updatedAt : null,
+      };
+    }
+  } catch {}
+  return { terms: {}, updatedAt: null };
+}
+
+let TAG_CREDIT_STATE = null;
+
+function loadTagCreditState() {
+  if (TAG_CREDIT_STATE) return TAG_CREDIT_STATE;
+  TAG_CREDIT_STATE = loadRawTagCredit();
+  return TAG_CREDIT_STATE;
+}
+
+function getTagCreditValue(termKo) {
+  if (!termKo) return 0;
+  const key = normalizeKoKeywordTerm(termKo).toLowerCase();
+  if (!key) return 0;
+  const state = loadTagCreditState();
+  const value = Number(state.terms[key]);
+  return Number.isFinite(value) ? Math.max(value, 0) : 0;
+}
+
+async function saveTagCreditState(state) {
+  const snapshot = state || loadTagCreditState();
+  ensureDirFor(TAG_CREDIT_FILE);
+  await fsp.writeFile(TAG_CREDIT_FILE, JSON.stringify(snapshot, null, 2));
+}
+
+async function applyTagCreditFromSnapshot(snapshot, { decay = TAG_CREDIT_DECAY, reward = TAG_CREDIT_REWARD } = {}) {
+  if (!snapshot || typeof snapshot !== 'object') return false;
+
+  const keywords = Array.isArray(snapshot.discovered_keywords)
+    ? snapshot.discovered_keywords
+    : Array.isArray(snapshot.keywords)
+      ? snapshot.keywords
+      : [];
+
+  if (!keywords.length) return false;
+
+  const state = loadTagCreditState();
+  const entries = { ...state.terms };
+  const clampedDecay = Number.isFinite(decay) ? Math.min(Math.max(decay, 0), 0.999) : TAG_CREDIT_DECAY;
+  const clampedReward = Number.isFinite(reward) ? Math.max(reward, 0) : TAG_CREDIT_REWARD;
+
+  for (const key of Object.keys(entries)) {
+    const decayed = entries[key] * clampedDecay;
+    if (decayed < 0.01) delete entries[key];
+    else entries[key] = decayed;
+  }
+
+  let applied = 0;
+  for (const keyword of keywords) {
+    const termKo = normalizeKoKeywordTerm(keyword.term_ko || keyword.term || '');
+    if (!termKo) continue;
+    const lower = termKo.toLowerCase();
+    const current = Number(entries[lower]) || 0;
+    const next = Math.min(current + clampedReward, TAG_CREDIT_CAP);
+    entries[lower] = next;
+    applied += 1;
+  }
+
+  state.terms = entries;
+  state.updatedAt = new Date().toISOString();
+  TAG_CREDIT_STATE = state;
+  await saveTagCreditState(state);
+  console.log(`[learning] updated tag credit for ${applied} keywords (decay=${clampedDecay}, reward=${clampedReward})`);
+  return true;
 }
 
 function iso(date) {
@@ -2396,12 +2484,17 @@ async function aggregateKoreanKeywords(allKeywords) {
   let results = Array.from(aggregated.values()).map(item => {
     const domainBoost = KO_DOMAIN_BOOST.has(item.term_ko) ? 1.5 : 1.0;
     const diversityBonus = Math.min(item.sources.size, 3) * 0.2;
+    const creditValue = getTagCreditValue(item.term_ko);
+    const creditBoost = Math.min(creditValue * TAG_CREDIT_WEIGHT, TAG_CREDIT_MAX_BOOST);
+    const multiplier = domainBoost * (1 + diversityBonus) * (1 + creditBoost);
 
     return {
       ...item,
       sources: Array.from(item.sources),
       originalScore: item.score,
-      score: item.score * domainBoost * (1 + diversityBonus)
+      score: item.score * multiplier,
+      credit: creditValue,
+      creditBoost
     };
   });
 
@@ -2555,6 +2648,67 @@ export async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, p
   console.log(`[Korean-First] sources: ${payload.metadata.sources_used.join(', ')}`);
 
   return payload;
+}
+
+export function verifyTagSnapshot(snapshot) {
+  const summary = {
+    ok: false,
+    total: 0,
+    errors: [],
+    sample: [],
+  };
+
+  if (!snapshot || typeof snapshot !== 'object') {
+    summary.errors.push('snapshot_missing');
+    return summary;
+  }
+
+  const keywords = Array.isArray(snapshot.discovered_keywords)
+    ? snapshot.discovered_keywords
+    : Array.isArray(snapshot.keywords)
+      ? snapshot.keywords
+      : [];
+
+  summary.total = keywords.length;
+
+  if (!keywords.length) {
+    summary.errors.push('no_keywords');
+    return summary;
+  }
+
+  let validCount = 0;
+  for (const entry of keywords) {
+    if (!entry || typeof entry !== 'object') {
+      summary.errors.push('invalid_entry');
+      continue;
+    }
+    const termKo = normalizeKoKeywordTerm(entry.term_ko || entry.term || '');
+    const term = formatTagDisplay(entry.term || termKo || '');
+    if (!termKo) {
+      summary.errors.push('missing_term_ko');
+      continue;
+    }
+    if (!containsHangul(termKo)) {
+      summary.errors.push('term_ko_not_hangul');
+      continue;
+    }
+    if (!term) {
+      summary.errors.push('missing_term_en');
+      continue;
+    }
+    if (summary.sample.length < 5) {
+      summary.sample.push({ term, term_ko: termKo });
+    }
+    validCount += 1;
+  }
+
+  if (!validCount) {
+    if (!summary.errors.length) summary.errors.push('no_valid_keywords');
+    return summary;
+  }
+
+  summary.ok = summary.errors.length === 0;
+  return summary;
 }
 
 // REDESIGNED: Extract significant 2-3 word phrases that signal newsworthy events
@@ -4272,5 +4426,72 @@ export {
   daysAgo,
   iso,
   naverSearch,
+  loadTagCreditState,
+  getTagCreditValue,
+  applyTagCreditFromSnapshot,
 };
+
+const isMainModule = (process.argv[1] && path.resolve(process.argv[1])) === __filename;
+
+if (isMainModule) {
+  (async () => {
+    const args = new Set(process.argv.slice(2));
+    const outputPath = process.env.MARKET_TAG_FILE || TAG_OUTPUT_FILE;
+
+    const logSummary = (summary) => {
+      if (!summary) return;
+      if (summary.ok) {
+        console.log(`[verify] tags.json verification succeeded (${summary.total} keywords)`);
+      } else {
+        console.warn(`[verify] tags.json verification issues: ${summary.errors.join(', ')}`);
+      }
+      if (summary.sample?.length) {
+        console.log('[verify] sample keywords:', summary.sample.map(k => `${k.term_ko} (${k.term})`).join(', '));
+      }
+    };
+
+    if (args.has('--build-tags')) {
+      let snapshot = await writeSignificantPhrasesJson({ outputPath });
+      if (!snapshot) {
+        console.warn('[tags] significance builder returned empty result; falling back to korean-first');
+        snapshot = await writeKoreanFirstTagsJson({ outputPath });
+      }
+      if (!snapshot) {
+        console.error('[tags] failed to build snapshot');
+        process.exit(1);
+      }
+
+      const summary = verifyTagSnapshot(snapshot);
+      logSummary(summary);
+      if (!summary.ok) {
+        console.error('[tags] verification failed');
+        process.exit(2);
+      }
+
+      if (!args.has('--no-credit')) {
+        await applyTagCreditFromSnapshot(snapshot);
+      } else {
+        console.log('[learning] credit update skipped (--no-credit)');
+      }
+
+      console.log('[tags] build complete');
+      return;
+    }
+
+    if (args.has('--verify-tags')) {
+      const snapshot = readJsonSafe(outputPath);
+      const summary = verifyTagSnapshot(snapshot);
+      logSummary(summary);
+      if (!summary.ok) process.exit(3);
+      return;
+    }
+
+    console.log('Usage:');
+    console.log('  node stocks/stockKeywords.js --build-tags [--no-credit]');
+    console.log('  node stocks/stockKeywords.js --verify-tags');
+  })().catch(err => {
+    console.error('[tags] unexpected failure:', err);
+    process.exit(1);
+  });
+}
 
