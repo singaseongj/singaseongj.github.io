@@ -1640,11 +1640,7 @@ async function collectEconomyKoKeywords({ limit = 30 } = {}) {
 
   if (NAVER_CLIENT_ID && NAVER_CLIENT_SECRET) {
     const queries = [
-      '경제',
-      '증시',
-      '산업 동향',
-      '비즈니스 뉴스',
-      '금융 시장'
+      '주식'
     ];
     const result = await runKrWordRankCollector({ limit: supplementalLimit, queries });
     if (result && Array.isArray(result?.keywords)) {
@@ -2259,11 +2255,7 @@ async function fetchNaverDatalabTrendingKeywords({ limit = 20 } = {}) {
 // ============= KOREAN-FIRST COLLECTION FUNCTIONS =============
 
 const KO_DOMAIN_BOOST = new Set([
-  '반도체', 'AI', '인공지능', '2차전지', '배터리', '전기차', '조선', '해운',
-  '바이오', '제약', '방산', '원자력', 'SMR', '수소', '클라우드', '로봇',
-  '디스플레이', '철강', '자동차', '금리', '환율', '원달러', '연준', 'CPI',
-  '인플레이션', '경기침체', '수출', '무역', 'LNG', '에너지', '친환경',
-  '헬스케어', '메타버스', '블록체인', 'HBM', '파운드리', '메모리'
+  '주식'
 ]);
 
 async function scrapeDaumRealtimeTrends() {
@@ -2341,7 +2333,7 @@ async function scrapeNateIssueTrends() {
 async function extractNaverNewsKeywords() {
   if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET || SKIP_NAVER) return [];
 
-  const queries = ['증시 동향', '경제 뉴스', '반도체 산업', '2차전지', '금리 전망'];
+  const queries = ['주식'];
   const keywordMap = new Map();
 
   for (const query of queries) {
@@ -2579,8 +2571,7 @@ export async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, p
 // Signal words that indicate something SIGNIFICANT is happening
 const SIGNAL_WORDS = {
   positive: new Set([
-    '호황', '급등', '사상최대', '최고치', '수주', '흑자전환', '확대', '성장',
-    '돌파', '신기록', '증가', '상승', '수출증가', '개선', '회복', '반등'
+    '주식'
   ]),
   negative: new Set([
     '위기', '급락', '적자', '파산', '중단', '폐쇄', '감소', '하락',
@@ -3001,9 +2992,7 @@ async function extractNaverNewsSignificantPhrases() {
 
   // Query for newsworthy events
   const queries = [
-    '반도체 수주', '조선 호황', '2차전지 급등',
-    '금리 인하', '수출 증가', '실적 개선',
-    '공급망 위기', '규제 완화', '정책 발표'
+    '주식'
   ];
 
   const allPhrases = [];
@@ -4288,43 +4277,13 @@ try {
 }
 
 const DOMAIN_LEXICON = new Set([
-  '2차전지','전고체 배터리','배터리','조선해양','조선','해운','반도체','HBM','AI','클라우드','로봇',
-  '방산','원자력','SMR','바이오','제약','철강','자동차','전장','디스플레이','석유화학','정유',
-  '부동산','리츠','건설','물류','원자재','구리','금','환율','달러','유가','수출','수입','무역수지',
-  '금리','기준금리','연준','연방준비제도','소비','고용','실업','임금','경기','경기침체','연착륙',
-  '소프트랜딩','테슬라','엔비디아','삼성전자','하이닉스','현대차','LG에너지솔루션','LNG',
-  'semiconductor','semiconductors','battery','batteries','chip','chips','ai','cloud','robotics','defense',
-  'nuclear','smr','lng','biotech','pharma','pharmaceuticals','steel','automotive','mobility','display','petrochemical',
-  'oil','energy','gas','refining','logistics','export','exports','import','imports','currency','forex','fx',
-  'inflation','recession','growth','earnings','guidance','orders','backlog','naver','kakao'
+  '주식',
+  'stocks'
 ]);
 
 const CANONICAL_MAP = new Map([
-  ['이차전지','2차전지'],
-  ['2차 전지','2차전지'],
-  ['전지','2차전지'],
-  ['전고체배터리','전고체 배터리'],
-  ['배터리','2차전지'],
-  ['조선','조선해양'],
-  ['조선 해양','조선해양'],
-  ['해양','조선해양'],
-  ['조선업','조선해양'],
-  ['해운','조선해양'],
-  ['HBM3','HBM'], ['HBM3e','HBM'], ['HBM3E','HBM'], ['HBM2e','HBM'],
-  ['메모리','반도체'], ['파운드리','반도체'], ['칩','반도체'],
-  ['연방준비제도','연준'],
-  ['soft landing','연착륙'], ['소프트랜딩','연착륙'],
-  ['전기차','자동차'],
-  ['전장화','전장'],
-  ['semiconductors','semiconductor'],
-  ['batteries','battery'],
-  ['chips','chip'],
-  ['markets','market'],
-  ['exports','export'],
-  ['imports','import'],
-  ['interest rates','rates'],
-  ['electric vehicles','electric vehicle'],
-  ['electric vehicle','자동차'],
+  ['주식'],
+  ['stocks'],
 ]);
 
 const BLACKLIST = new Set(['최소','최대','속보','종합','오늘','어제','내일','최근','전문','사진','영상']);
@@ -4333,9 +4292,7 @@ const ECON_SUFFIXES = ['산업','업','시장','수출','수입','무역수지',
   'market','markets','exports','imports','earnings','revenue','revenues','guidance','sales','demand','supply','inflation','rates','rate','yields','yield','forex','currency','currencies','sector','sectors','industry','industries','index','indices','production','manufacturing','chip','chips','battery','batteries','semiconductor','semiconductors','automotive'];
 
 const MACRO_WHITELIST = new Set([
-  'CPI','PPI','PCE','FOMC','GDP','NFP','PMI','ISM','QT','QE',
-  '연준','기준금리','인플레이션','디플레이션','연착륙','경기침체','고용','임금','소비',
-  '2차전지','조선해양','반도체','HBM','AI','LNG'
+  '주식'
 ]);
 
 const KEYWORD_WHITELIST = new Set([...DOMAIN_LEXICON, ...MACRO_WHITELIST]);
