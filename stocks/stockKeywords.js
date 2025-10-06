@@ -2711,8 +2711,12 @@ export function verifyTagSnapshot(snapshot) {
   return summary;
 }
 
-// REDESIGNED: Extract significant 2-3 word phrases that signal newsworthy events
+// REDESIGNED: Extract significant 2-4 word phrases that signal newsworthy events
 // Focus: "조선업체 호황" not "환율"
+
+const SIGNIFICANT_CONTEXT_TARGET = '주식';
+const SIGNIFICANT_CONTEXT_WINDOW_WORDS = Math.max(Number.parseInt(process.env.SIGNIFICANT_CONTEXT_WINDOW_WORDS, 10) || 3, 1);
+const SIGNIFICANT_LOOKUP_WINDOW_HOURS = Math.max(Number.parseInt(process.env.SIGNIFICANT_LOOKUP_WINDOW_HOURS, 10) || 12, 1);
 
 // Signal words that indicate something SIGNIFICANT is happening
 const SIGNAL_WORDS = {
@@ -2804,35 +2808,182 @@ function computeFinanceKeywordBoost(text) {
   return boost;
 }
 
-// Extract 2-3 word meaningful phrases from text
+// Extract 2-4 word meaningful phrases from text, with additional context around 주식
 function extractSignificantPhrases(text) {
+  if (!text) return [];
+
   const cleaned = text
     .replace(/<[^>]*>/g, ' ')
     .replace(/[^가-힣A-Za-z0-9\s]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 
-  const words = cleaned.split(/\s+/);
-  const phrases = [];
+  if (!cleaned) return [];
 
-  // Extract 2-word and 3-word combinations
-  for (let i = 0; i < words.length - 1; i++) {
-    // 2-word phrases
-    const phrase2 = `${words[i]} ${words[i + 1]}`;
-    if (isPhraseSignificant(phrase2)) {
-      phrases.push({ text: phrase2, length: 2 });
+  const words = cleaned.split(/\s+/).filter(Boolean);
+  if (words.length < 2) return [];
+
+  const phrases = [];
+  const seen = new Map();
+
+  const mergeMeta = (existingMeta, extraMeta) => {
+    const base = existingMeta && typeof existingMeta === 'object' ? { ...existingMeta } : {};
+    for (const [key, value] of Object.entries(extraMeta || {})) {
+      if (value === undefined || value === null) continue;
+      if (base[key] === undefined) {
+        base[key] = value;
+      } else if (Array.isArray(base[key])) {
+        const arr = Array.isArray(value) ? value : [value];
+        base[key] = Array.from(new Set([...base[key], ...arr]));
+      } else if (Array.isArray(value)) {
+        base[key] = Array.from(new Set([base[key], ...value]));
+      } else if (base[key] !== value) {
+        base[key] = Array.from(new Set([base[key], value]));
+      }
+    }
+    return base;
+  };
+
+  const pushPhrase = (phraseText, meta = null) => {
+    const normalized = String(phraseText || '').replace(/\s+/g, ' ').trim();
+    if (!normalized) return;
+    const tokens = normalized.split(/\s+/).filter(Boolean);
+    if (tokens.length < 2 || tokens.length > 4) return;
+    const key = normalized;
+    if (seen.has(key)) {
+      if (meta) {
+        const existing = seen.get(key);
+        existing.meta = mergeMeta(existing.meta, meta);
+      }
+      return;
     }
 
-    // 3-word phrases
+    const entry = { text: normalized, length: tokens.length };
+    if (meta && Object.keys(meta).length) {
+      entry.meta = { ...meta };
+    }
+    phrases.push(entry);
+    seen.set(key, entry);
+  };
+
+  // Extract 2-word and 3-word combinations using significance heuristics
+  for (let i = 0; i < words.length - 1; i++) {
+    const phrase2 = `${words[i]} ${words[i + 1]}`;
+    if (isPhraseSignificant(phrase2)) {
+      pushPhrase(phrase2);
+    }
+
     if (i < words.length - 2) {
       const phrase3 = `${words[i]} ${words[i + 1]} ${words[i + 2]}`;
       if (isPhraseSignificant(phrase3)) {
-        phrases.push({ text: phrase3, length: 3 });
+        pushPhrase(phrase3);
       }
     }
   }
 
+  // Capture nearby phrases around the 주식 keyword even if the term itself is absent
+  const contextEntries = extractContextPhrasesAroundTerm(words, {
+    target: SIGNIFICANT_CONTEXT_TARGET,
+    windowSize: SIGNIFICANT_CONTEXT_WINDOW_WORDS
+  });
+
+  for (const entry of contextEntries) {
+    pushPhrase(entry.text, {
+      contextTarget: SIGNIFICANT_CONTEXT_TARGET,
+      includesTarget: entry.includesTarget,
+      contextPosition: entry.position,
+      contextWindow: entry.windowSize
+    });
+  }
+
   return phrases;
+}
+
+function extractContextPhrasesAroundTerm(words, { target = '', windowSize = 2 } = {}) {
+  if (!Array.isArray(words) || !words.length) return [];
+  const normalizedTarget = String(target || '').trim();
+  if (!normalizedTarget) return [];
+
+  const parsedWindow = Number(windowSize);
+  const maxWindow = Number.isFinite(parsedWindow) && parsedWindow >= 1
+    ? Math.min(6, Math.floor(parsedWindow))
+    : 2;
+
+  const hasHangul = (value) => /[가-힣]/.test(String(value || ''));
+  const results = [];
+  const seen = new Set();
+
+  const addPhrase = (phraseWords, meta) => {
+    if (!Array.isArray(phraseWords) || phraseWords.length < 2) return;
+    const normalizedWords = phraseWords
+      .map(word => String(word || '').trim())
+      .filter(Boolean);
+    if (normalizedWords.length < 2 || normalizedWords.length > 4) return;
+    if (!normalizedWords.some(hasHangul)) return;
+    const phraseText = normalizedWords.join(' ');
+    if (!phraseText || seen.has(phraseText)) return;
+    seen.add(phraseText);
+    results.push({
+      text: phraseText,
+      includesTarget: Boolean(meta?.includesTarget),
+      position: meta?.position || 'around',
+      windowSize: maxWindow
+    });
+  };
+
+  for (let idx = 0; idx < words.length; idx++) {
+    const token = String(words[idx] || '').trim();
+    if (!token || !token.includes(normalizedTarget)) continue;
+
+    const start = Math.max(0, idx - maxWindow);
+    const end = Math.min(words.length, idx + maxWindow + 1);
+    const contextSlice = words.slice(start, end);
+
+    for (let offset = 0; offset < contextSlice.length; offset++) {
+      for (let len = 2; len <= Math.min(4, contextSlice.length); len++) {
+        if (offset + len > contextSlice.length) break;
+        const segment = contextSlice.slice(offset, offset + len);
+        const includesTarget = segment.some(word => String(word || '').includes(normalizedTarget));
+        if (!includesTarget) continue;
+        addPhrase(segment, { includesTarget: true, position: 'around' });
+      }
+    }
+
+    const beforeWords = words.slice(Math.max(0, idx - maxWindow), idx);
+    const afterWords = words.slice(idx + 1, Math.min(words.length, idx + 1 + maxWindow));
+
+    const addContextList = (list, position) => {
+      if (!Array.isArray(list) || list.length === 0) return;
+      for (let len = 2; len <= Math.min(3, list.length); len++) {
+        for (let offset = 0; offset <= list.length - len; offset++) {
+          addPhrase(list.slice(offset, offset + len), { includesTarget: false, position });
+        }
+      }
+    };
+
+    addContextList(beforeWords, 'before');
+    addContextList(afterWords, 'after');
+
+    if (beforeWords.length && afterWords.length) {
+      const beforeTail = beforeWords.slice(-2);
+      const afterHead = afterWords.slice(0, 2);
+
+      const bridgeCombos = [];
+      bridgeCombos.push([beforeWords[beforeWords.length - 1], afterWords[0]]);
+      if (beforeTail.length === 2) {
+        bridgeCombos.push([...beforeTail, afterWords[0]]);
+      }
+      if (afterHead.length === 2) {
+        bridgeCombos.push([beforeWords[beforeWords.length - 1], ...afterHead]);
+      }
+
+      for (const combo of bridgeCombos) {
+        addPhrase(combo, { includesTarget: false, position: 'bridge' });
+      }
+    }
+  }
+
+  return results;
 }
 
 // Normalize phrase for diversity comparison
@@ -2891,7 +3042,7 @@ const KEYWORDS_PER_CATEGORY = Number(process.env.KEYWORDS_PER_CATEGORY || 4);
 function isPhraseSignificant(phrase) {
   const words = phrase.split(/\s+/);
 
-  // Must be 2-3 words
+  // Must be 2-3 words for base significance detection
   if (words.length < 2 || words.length > 3) return false;
 
   // Must contain at least one Hangul word
@@ -3001,6 +3152,12 @@ function scorePhrasesbySignificance(phrases, { datalabKeywords = [] } = {}) {
     }
     score += datalabBonus;
 
+    if (meta.contextTarget === SIGNIFICANT_CONTEXT_TARGET) {
+      score += 18;
+      if (!meta.includesTarget) score += 6;
+      if (meta.contextPosition === 'bridge') score += 4;
+    }
+
     const existing = scored.get(rawText);
     if (existing) {
       existing.count += 1;
@@ -3025,6 +3182,16 @@ function scorePhrasesbySignificance(phrases, { datalabKeywords = [] } = {}) {
       if (meta.tickerFile) {
         existing.tickerFiles.add(meta.tickerFile);
       }
+      if (meta.contextTarget) {
+        existing.contextTargets.add(meta.contextTarget);
+        if (meta.contextPosition) existing.contextPositions.add(meta.contextPosition);
+        if (Number.isFinite(meta.contextWindow)) {
+          existing.contextWindows.add(Number(meta.contextWindow));
+        }
+        if (meta.includesTarget) {
+          existing.contextIncludesTarget = true;
+        }
+      }
       if (datalabMatches.length) {
         for (const match of datalabMatches) {
           if (!match?.term_ko) continue;
@@ -3048,7 +3215,11 @@ function scorePhrasesbySignificance(phrases, { datalabKeywords = [] } = {}) {
       datalabMatches: new Map(),
       headlines: [],
       headlineKeys: new Set(),
-      tickerFiles: new Set()
+      tickerFiles: new Set(),
+      contextTargets: new Set(),
+      contextPositions: new Set(),
+      contextIncludesTarget: Boolean(meta.contextTarget && meta.includesTarget),
+      contextWindows: new Set()
     };
 
     if (phrase?.source) {
@@ -3076,6 +3247,13 @@ function scorePhrasesbySignificance(phrases, { datalabKeywords = [] } = {}) {
 
     if (meta.tickerFile) {
       entry.tickerFiles.add(meta.tickerFile);
+    }
+
+    if (meta.contextTarget) {
+      entry.contextTargets.add(meta.contextTarget);
+      if (meta.contextPosition) entry.contextPositions.add(meta.contextPosition);
+      if (Number.isFinite(meta.contextWindow)) entry.contextWindows.add(Number(meta.contextWindow));
+      if (meta.includesTarget) entry.contextIncludesTarget = true;
     }
 
     for (const match of datalabMatches) {
@@ -3120,7 +3298,15 @@ function scorePhrasesbySignificance(phrases, { datalabKeywords = [] } = {}) {
         categories: match.categories ? Array.from(match.categories) : []
       })),
       headlines: entry.headlines.slice(0, 3),
-      tickerFiles: Array.from(entry.tickerFiles)
+      tickerFiles: Array.from(entry.tickerFiles),
+      context: (entry.contextTargets.size || entry.contextPositions.size || entry.contextWindows.size || entry.contextIncludesTarget)
+        ? {
+            targets: Array.from(entry.contextTargets),
+            positions: Array.from(entry.contextPositions),
+            includesTarget: entry.contextIncludesTarget,
+            windows: Array.from(entry.contextWindows)
+          }
+        : undefined
     }))
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
@@ -3248,6 +3434,9 @@ async function collectCachedArticleSignificantPhrases({ datalabKeywords = [] } =
         .filter(entry => entry.term)
     : [];
 
+  const lookbackHours = SIGNIFICANT_LOOKUP_WINDOW_HOURS > 0 ? SIGNIFICANT_LOOKUP_WINDOW_HOURS : 0;
+  const nowMs = Date.now();
+  const cutoffMs = lookbackHours ? nowMs - lookbackHours * 3600000 : 0;
   const maxArticles = Number(process.env.CACHED_ARTICLE_TAG_TOTAL_LIMIT || 4000);
   const perFileLimit = Number(process.env.CACHED_ARTICLE_TAG_ARTICLE_LIMIT || 30);
   const maxFileCount = Number(process.env.CACHED_ARTICLE_TAG_FILE_LIMIT || 200);
@@ -3255,6 +3444,7 @@ async function collectCachedArticleSignificantPhrases({ datalabKeywords = [] } =
   const phrases = [];
   let processedArticles = 0;
   let filesProcessed = 0;
+  let skippedForRecency = 0;
 
   for (const file of jsonFiles) {
     if (Number.isFinite(maxFileCount) && maxFileCount > 0 && filesProcessed >= maxFileCount) {
@@ -3281,6 +3471,13 @@ async function collectCachedArticleSignificantPhrases({ datalabKeywords = [] } =
       if (Number.isFinite(maxArticles) && maxArticles > 0 && processedArticles >= maxArticles) {
         break;
       }
+
+      const publishedMs = extractArticleTimestamp(article);
+      if (cutoffMs && publishedMs && publishedMs < cutoffMs) {
+        skippedForRecency += 1;
+        continue;
+      }
+
       processedArticles += 1;
 
       const parts = [];
@@ -3306,13 +3503,70 @@ async function collectCachedArticleSignificantPhrases({ datalabKeywords = [] } =
           .filter(entry => cleaned.includes(entry.term))
           .map(entry => ({ term_ko: entry.term, score: entry.score, category: entry.category }));
 
+        const baseMeta = phrase?.meta && typeof phrase.meta === 'object' ? { ...phrase.meta } : {};
+        const sourceSet = new Set();
+        if (Array.isArray(baseMeta.sources)) {
+          for (const src of baseMeta.sources) {
+            const value = String(src || '').trim();
+            if (value) sourceSet.add(value);
+          }
+        } else if (baseMeta.sources && typeof baseMeta.sources === 'string') {
+          const value = baseMeta.sources.trim();
+          if (value) sourceSet.add(value);
+        }
+        const articleSource = String(article?.source || '').trim() || 'article_cache';
+        sourceSet.add(articleSource);
+
+        const headlineList = [];
+        const headlineSeen = new Set();
+        const addHeadline = (item) => {
+          if (!item) return;
+          const title = String(item.title || '').trim();
+          const url = String(item.url || '').trim();
+          const key = `${title}__${url}`;
+          if (headlineSeen.has(key)) return;
+          headlineSeen.add(key);
+          headlineList.push({
+            title,
+            url,
+            source: String(item.source || articleSource).trim()
+          });
+        };
+
+        if (Array.isArray(baseMeta.headlines)) {
+          for (const existingHeadline of baseMeta.headlines) {
+            addHeadline(existingHeadline);
+          }
+        }
+        if (headline) {
+          addHeadline(headline);
+        }
+
+        const mergedMatches = Array.isArray(baseMeta.datalabMatches)
+          ? [...baseMeta.datalabMatches]
+          : [];
+        for (const match of matches) {
+          if (!match?.term_ko) continue;
+          if (!mergedMatches.some(existing => existing && existing.term_ko === match.term_ko)) {
+            mergedMatches.push(match);
+          }
+        }
+
         const meta = {
+          ...baseMeta,
           financeBoost,
-          datalabMatches: matches,
-          headlines: headline ? [headline] : [],
-          sources: [article?.source || 'article_cache'],
+          datalabMatches: mergedMatches,
+          sources: Array.from(sourceSet).filter(Boolean),
           tickerFile: file
         };
+
+        if (headlineList.length) {
+          meta.headlines = headlineList.slice(0, 3);
+        }
+
+        if (publishedMs) {
+          meta.publishedAtMs = publishedMs;
+        }
 
         phrases.push({
           text: cleaned,
@@ -3329,7 +3583,7 @@ async function collectCachedArticleSignificantPhrases({ datalabKeywords = [] } =
     }
   }
 
-  console.log(`[Significance] cached article phrases extracted: ${phrases.length} (files: ${filesProcessed}, articles: ${processedArticles})`);
+  console.log(`[Significance] cached article phrases extracted: ${phrases.length} (files: ${filesProcessed}, articles: ${processedArticles}, skipped_recency: ${skippedForRecency})`);
 
   return {
     phrases,
@@ -3337,14 +3591,15 @@ async function collectCachedArticleSignificantPhrases({ datalabKeywords = [] } =
       processedArticles,
       filesProcessed,
       extractedPhrases: phrases.length,
-      datalabTerms: datalabIndex.map(entry => entry.term)
+      datalabTerms: datalabIndex.map(entry => entry.term),
+      skippedForRecency
     }
   };
 }
 
 // Main collection function
 export async function collectSignificantPhrases({ targetCount = 50, datalabKeywords = [] } = {}) {
-  console.log('[Significance] Collecting newsworthy 2-3 word phrases...');
+  console.log(`[Significance] Collecting newsworthy 2-4 word phrases (lookback: ${SIGNIFICANT_LOOKUP_WINDOW_HOURS}h)...`);
 
   const collectors = [
     extractNaverNewsSignificantPhrases(),
@@ -3352,7 +3607,7 @@ export async function collectSignificantPhrases({ targetCount = 50, datalabKeywo
     extractZumSignificantPhrases()
   ];
 
-  let articleCacheStats = { processedArticles: 0, filesProcessed: 0, extractedPhrases: 0, datalabTerms: [] };
+  let articleCacheStats = { processedArticles: 0, filesProcessed: 0, extractedPhrases: 0, datalabTerms: [], skippedForRecency: 0 };
   try {
     const articleResult = await collectCachedArticleSignificantPhrases({ datalabKeywords });
     articleCacheStats = articleResult.stats;
@@ -3390,7 +3645,7 @@ export async function collectSignificantPhrases({ targetCount = 50, datalabKeywo
     : scored.length;
 
   let filtered = scored
-    .filter(p => p.length >= 2 && p.length <= 3)
+    .filter(p => p.length >= 2 && p.length <= 4)
     .slice(0, candidateLimit);
 
   filtered = semanticDedup(filtered, DIVERSITY_SIMILARITY_THRESHOLD);
@@ -3410,7 +3665,8 @@ export async function collectSignificantPhrases({ targetCount = 50, datalabKeywo
         datalabMatches: p.datalabMatches,
         sources: p.sources,
         headlines: p.headlines,
-        tickerFiles: p.tickerFiles
+        tickerFiles: p.tickerFiles,
+        ...(p.context ? { context: p.context } : {})
       }
     }));
 
@@ -3512,6 +3768,45 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
         entry.datalabMatches.set(term, record);
       }
     }
+
+    if (meta.context && typeof meta.context === 'object') {
+      if (!entry.contextTargets) entry.contextTargets = new Set();
+      if (!entry.contextPositions) entry.contextPositions = new Set();
+      if (!entry.contextWindows) entry.contextWindows = new Set();
+      if (typeof entry.contextIncludesTarget !== 'boolean') entry.contextIncludesTarget = false;
+
+      const targets = Array.isArray(meta.context.targets)
+        ? meta.context.targets
+        : (meta.context.targets ? [meta.context.targets] : []);
+      for (const target of targets) {
+        const value = String(target || '').trim();
+        if (value) entry.contextTargets.add(value);
+      }
+
+      const positions = Array.isArray(meta.context.positions)
+        ? meta.context.positions
+        : (meta.context.positions ? [meta.context.positions] : []);
+      for (const position of positions) {
+        const value = String(position || '').trim();
+        if (value) entry.contextPositions.add(value);
+      }
+
+      const windows = Array.isArray(meta.context.windows)
+        ? meta.context.windows
+        : (meta.context.windows ? [meta.context.windows] : []);
+      for (const window of windows) {
+        const numericWindow = Number(window);
+        if (Number.isFinite(numericWindow)) {
+          entry.contextWindows.add(numericWindow);
+        }
+      }
+
+      if (typeof meta.context.includesTarget === 'boolean') {
+        if (meta.context.includesTarget) {
+          entry.contextIncludesTarget = true;
+        }
+      }
+    }
   };
 
   const registerEntry = (koTerm, { score = 0, mentions = 1, source = '', english = '', metadata = null } = {}) => {
@@ -3549,7 +3844,11 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       datalabMatches: new Map(),
       headlines: [],
       headlineKeys: new Set(),
-      tickerFiles: new Set()
+      tickerFiles: new Set(),
+      contextTargets: new Set(),
+      contextPositions: new Set(),
+      contextWindows: new Set(),
+      contextIncludesTarget: false
     });
 
     applyMetadataToEntry(aggregated.get(normalizedKo), metadata);
@@ -3704,22 +4003,40 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       keywordRecord.headlines = entry.headlines;
     }
 
+    if (entry.contextTargets && entry.contextTargets.size) {
+      keywordRecord.context = {
+        targets: Array.from(entry.contextTargets),
+        includesTarget: Boolean(entry.contextIncludesTarget),
+        positions: Array.isArray(entry.contextPositions)
+          ? entry.contextPositions
+          : entry.contextPositions instanceof Set
+            ? Array.from(entry.contextPositions)
+            : [],
+        windows: Array.isArray(entry.contextWindows)
+          ? entry.contextWindows
+          : entry.contextWindows instanceof Set
+            ? Array.from(entry.contextWindows)
+            : []
+      };
+    }
+
     discoveredKeywords.push(keywordRecord);
   }
 
   const nowIso = new Date().toISOString();
   const payload = {
     date: nowIso.slice(0, 10),
-    window: '5_hours',
+    window: `${SIGNIFICANT_LOOKUP_WINDOW_HOURS}_hours`,
     total_phrases: discoveredKeywords.length,
     discovered_keywords: discoveredKeywords,
     metadata: {
       collection_method: 'significance_over_frequency',
-      phrase_length: '2-3 words',
+      phrase_length: '2-4 words',
       scoring: 'frequency_weighted_significance',
       generated_at: nowIso,
       finance_trend_keywords: injectedTrends,
-      keyword_limit: desiredCount
+      keyword_limit: desiredCount,
+      lookback_hours: SIGNIFICANT_LOOKUP_WINDOW_HOURS
     }
   };
 
@@ -3728,6 +4045,9 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     payload.metadata.article_cache_files = cacheMeta.filesProcessed || 0;
     payload.metadata.article_cache_articles = cacheMeta.processedArticles || 0;
     payload.metadata.article_cache_phrases = cacheMeta.extractedPhrases || 0;
+    if (cacheMeta.skippedForRecency) {
+      payload.metadata.article_cache_skipped_recency = cacheMeta.skippedForRecency;
+    }
   }
 
   if (Array.isArray(collectionMeta?.datalabTermsUsed) && collectionMeta.datalabTermsUsed.length) {
