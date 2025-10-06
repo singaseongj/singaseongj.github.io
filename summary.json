@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2025-10-06T10:33:24+09:00",
+  "generatedAtKST": "2025-10-06T13:52:04+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -293,17 +293,45 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "LG전자",
-      "ticker": "066570.KS",
-      "sector": "경기소비재",
+      "name": "CJ",
+      "ticker": "CJ.TO",
+      "sector": null,
       "metrics": {
-        "ret5": -1.9255455712451863,
-        "ret20": 1.4608233731739706,
+        "ret5": 2.35131501860951,
+        "ret20": -0.8042887730928847,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 20,
+        "count": 0,
+        "blogs": 0,
+        "sentiment": null,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=CJ"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **unknown**",
+        "Returns: 5d **2.4%**, 20d **-0.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=CJ"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
+      "name": "LG전자",
+      "ticker": "066570.KS",
+      "sector": "경기소비재",
+      "metrics": {
+        "ret5": -1.859229747675963,
+        "ret20": -4.521963824289406,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 408,
         "blogs": 10,
         "sentiment": -0.050000000000000024,
         "momentum": "very high"
@@ -312,8 +340,8 @@
         "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
-        "Returns: 5d **-1.9%**, 20d **1.5%**; volatility (20d): **unknown**",
+        "News (7d): **408** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "Returns: 5d **-1.9%**, 20d **-4.5%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **경기소비재**",
         "News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90"
@@ -326,13 +354,13 @@
       "ticker": "051910.KS",
       "sector": "소재",
       "metrics": {
-        "ret5": -5.128205128205128,
-        "ret20": -0.1798561151079137,
+        "ret5": -6.666666666666667,
+        "ret20": -5.862068965517241,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 19,
+        "count": 92,
         "blogs": 10,
         "sentiment": -0.05263157894736843,
         "momentum": "very high"
@@ -341,8 +369,8 @@
         "searchUrl": "https://www.google.com/search?q=LG%ED%99%94%ED%95%99"
       },
       "bullets": [
-        "News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
-        "Returns: 5d **-5.1%**, 20d **-0.2%**; volatility (20d): **unknown**",
+        "News (7d): **92** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "Returns: 5d **-6.7%**, 20d **-5.9%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **소재**",
         "News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99"
@@ -351,29 +379,30 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "NAVER",
-      "ticker": "NAVER",
-      "sector": null,
+      "name": "대한항공",
+      "ticker": "003490.KS",
+      "sector": "산업재",
       "metrics": {
-        "ret5": null,
-        "ret20": null,
+        "ret5": -4.408817635270541,
+        "ret20": -0.625,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": null,
-        "momentum": "none"
+        "count": 275,
+        "blogs": 10,
+        "sentiment": -0.05263157894736843,
+        "momentum": "very high"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=NAVER"
+        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5"
       },
       "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **unknown**",
-        "Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**",
+        "News (7d): **275** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "Returns: 5d **-4.4%**, 20d **-0.6%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=NAVER"
+        "Sector: **산업재**",
+        "News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5"
       ]
     },
     {
@@ -383,13 +412,13 @@
       "ticker": "005930.KS",
       "sector": "정보기술",
       "metrics": {
-        "ret5": 4.239256678281069,
-        "ret20": 28.031383737517835,
+        "ret5": -4.125874125874126,
+        "ret20": -0.5079825834542816,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 20,
+        "count": 722,
         "blogs": 10,
         "sentiment": -0.10000000000000005,
         "momentum": "very high"
@@ -398,40 +427,11 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
-        "Returns: 5d **4.2%**, 20d **28.0%**; volatility (20d): **unknown**",
+        "News (7d): **722** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
+        "Returns: 5d **-4.1%**, 20d **-0.5%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **정보기술**",
         "News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
-      "name": "현대백화점",
-      "ticker": "069960.KS",
-      "sector": "경기소비재",
-      "metrics": {
-        "ret5": -3.121516164994426,
-        "ret20": 16.95827725437416,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 8,
-        "blogs": 10,
-        "sentiment": 0,
-        "momentum": "high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90"
-      },
-      "bullets": [
-        "News (7d): **8** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-3.1%**, 20d **17.0%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **경기소비재**",
-        "News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90"
       ]
     },
     {
@@ -696,12 +696,12 @@
     {
       "market": "NASDAQ 100",
       "bucket": "safe",
-      "name": "Shopify",
-      "ticker": "SHOP",
+      "name": "PDD Holdings",
+      "ticker": "PDD",
       "sector": null,
       "metrics": {
-        "ret5": 1.893805980525343,
-        "ret20": 13.722459117368194,
+        "ret5": 3.5762722209348516,
+        "ret20": 8.235922070990126,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -712,13 +712,41 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Shopify"
+        "searchUrl": "https://www.google.com/search?q=PDD%20Holdings"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**",
+        "Returns: 5d **3.6%**, 20d **8.2%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=Shopify"
+        "News search: https://www.google.com/search?q=PDD%20Holdings"
+      ]
+    },
+    {
+      "market": "NASDAQ 100",
+      "bucket": "aggressive",
+      "name": "Atlassian",
+      "ticker": "TEAM",
+      "sector": null,
+      "metrics": {
+        "ret5": 3.200241208880862,
+        "ret20": -12.835335080496515,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Atlassian"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **3.2%**, 20d **-12.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=Atlassian"
       ]
     },
     {
@@ -747,35 +775,6 @@
         "Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners"
-      ]
-    },
-    {
-      "market": "NASDAQ 100",
-      "bucket": "aggressive",
-      "name": "Lululemon",
-      "ticker": "LULU",
-      "sector": "Consumer Discretionary",
-      "metrics": {
-        "ret5": 3.760353518394035,
-        "ret20": -0.4358957190697837,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Lululemon"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **3.8%**, 20d **-0.4%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Consumer Discretionary**",
-        "News search: https://www.google.com/search?q=Lululemon"
       ]
     },
     {
@@ -1012,35 +1011,6 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Allegion",
-      "ticker": "ALLE",
-      "sector": "Industrials",
-      "metrics": {
-        "ret5": 2.065034203246667,
-        "ret20": 4.356262805921025,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Allegion"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.1%**, 20d **4.4%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Industrials**",
-        "News search: https://www.google.com/search?q=Allegion"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
       "name": "Devon Energy",
       "ticker": "DVN",
       "sector": "Energy",
@@ -1070,12 +1040,12 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Nordson Corporation",
-      "ticker": "NDSN",
-      "sector": "Industrials",
+      "name": "F5, Inc.",
+      "ticker": "FFIV",
+      "sector": "Technology",
       "metrics": {
-        "ret5": 2.8414083472432545,
-        "ret20": 3.741722532382632,
+        "ret5": 0.6174931557961991,
+        "ret20": 6.271112951073071,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1086,25 +1056,25 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Nordson%20Corporation"
+        "searchUrl": "https://www.google.com/search?q=F5%2C%20Inc."
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.8%**, 20d **3.7%**; volatility (20d): **unknown**",
+        "Returns: 5d **0.6%**, 20d **6.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Industrials**",
-        "News search: https://www.google.com/search?q=Nordson%20Corporation"
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=F5%2C%20Inc."
       ]
     },
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Principal Financial Group",
-      "ticker": "PFG",
-      "sector": "Financial Services",
+      "name": "Hubbell Incorporated",
+      "ticker": "HUBB",
+      "sector": "Industrials",
       "metrics": {
-        "ret5": 1.9607783385779647,
-        "ret20": 5.326324491166243,
+        "ret5": -2.8738067789902817,
+        "ret20": -5.28392076263989,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1115,14 +1085,43 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Principal%20Financial%20Group"
+        "searchUrl": "https://www.google.com/search?q=Hubbell%20Incorporated"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.0%**, 20d **5.3%**; volatility (20d): **unknown**",
+        "Returns: 5d **-2.9%**, 20d **-5.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Financial Services**",
-        "News search: https://www.google.com/search?q=Principal%20Financial%20Group"
+        "Sector: **Industrials**",
+        "News search: https://www.google.com/search?q=Hubbell%20Incorporated"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Trimble Inc.",
+      "ticker": "TRMB",
+      "sector": "Technology",
+      "metrics": {
+        "ret5": -0.6400746636384493,
+        "ret20": -0.024766712404607764,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Trimble%20Inc."
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-0.6%**, 20d **-0.0%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=Trimble%20Inc."
       ]
     },
     {
@@ -1132,8 +1131,8 @@
       "ticker": "TYL",
       "sector": "Technology",
       "metrics": {
-        "ret5": -4.236077146922562,
-        "ret20": -9.585978588599389,
+        "ret5": -5.093253409520894,
+        "ret20": -10.21859230891226,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1148,7 +1147,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-4.2%**, 20d **-9.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **-5.1%**, 20d **-10.2%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Tyler%20Technologies"
