@@ -1,14 +1,14 @@
 {
-  "date": "2025-10-05",
+  "date": "2025-10-06",
   "window": "5_hours",
-  "total_phrases": 21,
+  "total_phrases": 22,
   "discovered_keywords": [
     {
       "term": "Rising bond rates on the upswing",
       "term_ko": "호조에 채권금리 상승",
       "significance_score": 229,
       "mentions": 2,
-      "combined_score": 1,
+      "combined_score": 0.76,
       "sources": [
         "Naver",
         "article_cache",
@@ -46,7 +46,7 @@
       "term_ko": "채권금리 상승 기술주",
       "significance_score": 229,
       "mentions": 1,
-      "combined_score": 0.85,
+      "combined_score": 0.73,
       "sources": [
         "Naver",
         "article_cache",
@@ -82,9 +82,9 @@
     {
       "term": "Started Samsung Electronics KB Financial",
       "term_ko": "시작됐다 삼성전자 KB금융",
-      "significance_score": 201,
+      "significance_score": 205,
       "mentions": 1,
-      "combined_score": 0.76441,
+      "combined_score": 0.656638,
       "sources": [
         "Naver",
         "article_cache",
@@ -94,7 +94,7 @@
       "datalab_matches": [
         {
           "term_ko": "삼성전자",
-          "score": 0.486,
+          "score": 0.516,
           "hits": 1,
           "categories": [
             "Business"
@@ -110,23 +110,80 @@
       ]
     },
     {
-      "term": "U.S. Financial Crisis 2008",
-      "term_ko": "미국 금융위기 2008",
-      "significance_score": 149,
-      "mentions": 2,
-      "combined_score": 0.755459,
+      "term": "Dollar exchange rate appreciation",
+      "term_ko": "달러 환율 상승도",
+      "significance_score": 204,
+      "mentions": 1,
+      "combined_score": 0.653581,
       "sources": [
-        "Naver",
-        "article_cache",
+        "news",
         "significance_analysis"
       ],
-      "finance_boost": 36,
-      "headlines": [
+      "finance_boost": 34,
+      "datalab_matches": [
         {
-          "title": "&quot;오토존, 트럼프 관세로 자동차 DIY 수리 증가 수혜 전망&quot;",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4357409",
-          "source": "Naver"
+          "term_ko": "환율",
+          "score": 0.775,
+          "hits": 1,
+          "categories": [
+            "Economy"
+          ]
         }
+      ]
+    },
+    {
+      "term": "Exchange rate breaks 1,400 won",
+      "term_ko": "환율 1400원 돌파",
+      "significance_score": 204,
+      "mentions": 1,
+      "combined_score": 0.653581,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 34,
+      "datalab_matches": [
+        {
+          "term_ko": "환율",
+          "score": 0.775,
+          "hits": 1,
+          "categories": [
+            "Economy"
+          ]
+        }
+      ]
+    },
+    {
+      "term": "Exchange rate appreciation performance",
+      "term_ko": "환율 상승도 실적",
+      "significance_score": 204,
+      "mentions": 1,
+      "combined_score": 0.653581,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 34,
+      "datalab_matches": [
+        {
+          "term_ko": "환율",
+          "score": 0.775,
+          "hits": 1,
+          "categories": [
+            "Economy"
+          ]
+        }
+      ]
+    },
+    {
+      "term": "Breakthrough export growth",
+      "term_ko": "돌파 수출 증가",
+      "significance_score": 109,
+      "mentions": 10,
+      "combined_score": 0.633188,
+      "sources": [
+        "news",
+        "significance_analysis"
       ]
     },
     {
@@ -134,7 +191,7 @@
       "term_ko": "금리 앞두고 상승",
       "significance_score": 163,
       "mentions": 1,
-      "combined_score": 0.648253,
+      "combined_score": 0.528253,
       "sources": [
         "Naver",
         "article_cache",
@@ -160,20 +217,21 @@
       ]
     },
     {
-      "term": "Rising semiconductor stocks surge",
-      "term_ko": "상승 반도체주 급등",
-      "significance_score": 109,
+      "term": "U.S. Financial Crisis 2008",
+      "term_ko": "미국 금융위기 2008",
+      "significance_score": 149,
       "mentions": 2,
-      "combined_score": 0.633188,
+      "combined_score": 0.515459,
       "sources": [
         "Naver",
         "article_cache",
         "significance_analysis"
       ],
+      "finance_boost": 36,
       "headlines": [
         {
-          "title": "美증시, 나스닥100 '또 상승'..반도체주 '급등' vs 페이첵스 '추락'",
-          "url": "http://www.choicenews.co.kr/news/articleView.html?idxno=149469",
+          "title": "&quot;오토존, 트럼프 관세로 자동차 DIY 수리 증가 수혜 전망&quot;",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4357409",
           "source": "Naver"
         }
       ]
@@ -183,7 +241,7 @@
       "term_ko": "전기차 주가 급등",
       "significance_score": 155,
       "mentions": 1,
-      "combined_score": 0.623799,
+      "combined_score": 0.503799,
       "sources": [
         "Naver",
         "article_cache",
@@ -213,7 +271,7 @@
       "term_ko": "뉴욕증시 상승 AI",
       "significance_score": 145,
       "mentions": 1,
-      "combined_score": 0.593231,
+      "combined_score": 0.473231,
       "sources": [
         "Naver",
         "article_cache",
@@ -233,7 +291,7 @@
       "term_ko": "급락 반도체 투자심리",
       "significance_score": 137,
       "mentions": 1,
-      "combined_score": 0.568777,
+      "combined_score": 0.448777,
       "sources": [
         "Naver",
         "article_cache",
@@ -249,47 +307,55 @@
       ]
     },
     {
-      "term": "Growth Finance Policy",
-      "term_ko": "성장 금융 정책",
-      "significance_score": 135,
-      "mentions": 1,
-      "combined_score": 0.562664,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 36
-    },
-    {
-      "term": "Financial deregulation",
-      "term_ko": "금융 규제 완화",
+      "term": "Stock price spike secondary battery",
+      "term_ko": "주가 급등 2차전지",
       "significance_score": 125,
       "mentions": 1,
-      "combined_score": 0.532096,
+      "combined_score": 0.412096,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 36
+      "finance_boost": 30,
+      "datalab_matches": [
+        {
+          "term_ko": "주가",
+          "score": 0.007,
+          "hits": 1,
+          "categories": [
+            "Stock Market"
+          ]
+        }
+      ]
     },
     {
-      "term": "Construction Investment Decline Exports",
-      "term_ko": "건설투자 감소 수출",
-      "significance_score": 122,
+      "term": "Stock price spike secondary stocks",
+      "term_ko": "주가 급등 2차전지주",
+      "significance_score": 125,
       "mentions": 1,
-      "combined_score": 0.522926,
+      "combined_score": 0.412096,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 30
+      "finance_boost": 30,
+      "datalab_matches": [
+        {
+          "term_ko": "주가",
+          "score": 0.007,
+          "hits": 1,
+          "categories": [
+            "Stock Market"
+          ]
+        }
+      ]
     },
     {
       "term": "Financial Services Authority Capital Regulation",
       "term_ko": "금융위 자본 규제",
       "significance_score": 121,
       "mentions": 1,
-      "combined_score": 0.519869,
+      "combined_score": 0.399869,
       "sources": [
         "news",
         "significance_analysis"
@@ -297,22 +363,11 @@
       "finance_boost": 54
     },
     {
-      "term": "Booming shipbuilding orders",
-      "term_ko": "호황 조선업 수주",
-      "significance_score": 109,
+      "term": "The Financial Services Commission, under the umbrella of the",
+      "term_ko": "금융위는 산하에 금융규제위원회를",
+      "significance_score": 118,
       "mentions": 1,
-      "combined_score": 0.483188,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ]
-    },
-    {
-      "term": "Temporary financial restrictions",
-      "term_ko": "한시적 금융 규제",
-      "significance_score": 103,
-      "mentions": 1,
-      "combined_score": 0.464847,
+      "combined_score": 0.390699,
       "sources": [
         "news",
         "significance_analysis"
@@ -320,23 +375,46 @@
       "finance_boost": 36
     },
     {
-      "term": "LNG shipping market \"rebounded",
-      "term_ko": "LNG선시장은 quot 반등을",
-      "significance_score": 99,
+      "term": "Shinhan Financial's Shareholder Return Policy",
+      "term_ko": "신한금융은 주주환원 정책",
+      "significance_score": 103,
       "mentions": 1,
-      "combined_score": 0.45262,
+      "combined_score": 0.344847,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 22
+      "finance_boost": 36
+    },
+    {
+      "term": "Improving conversions and exports",
+      "term_ko": "전환과 수출 개선",
+      "significance_score": 103,
+      "mentions": 1,
+      "combined_score": 0.344847,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ]
+    },
+    {
+      "term": "Policy Recently, the Financial Services Commission",
+      "term_ko": "정책 최근 금융위가",
+      "significance_score": 103,
+      "mentions": 1,
+      "combined_score": 0.344847,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 36
     },
     {
       "term": "Surprise CPI announcement",
       "term_ko": "급등 CPI 발표",
       "significance_score": 99,
       "mentions": 1,
-      "combined_score": 0.45262,
+      "combined_score": 0.33262,
       "sources": [
         "Naver",
         "article_cache",
@@ -351,23 +429,11 @@
       ]
     },
     {
-      "term": "Export market recovery and",
-      "term_ko": "수출 시장 회복과",
-      "significance_score": 99,
-      "mentions": 1,
-      "combined_score": 0.45262,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 22
-    },
-    {
       "term": "If the industry's export growth is",
       "term_ko": "산업의 수출 증가세가",
       "significance_score": 95,
       "mentions": 1,
-      "combined_score": 0.440393,
+      "combined_score": 0.320393,
       "sources": [
         "news",
         "significance_analysis"
@@ -375,22 +441,11 @@
       "finance_boost": 18
     },
     {
-      "term": "LNG boom defense",
-      "term_ko": "LNG 호황 방산",
-      "significance_score": 92,
-      "mentions": 1,
-      "combined_score": 0.431223,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ]
-    },
-    {
       "term": "Economic outlook",
       "term_ko": "경제 전망",
       "significance_score": 50,
       "mentions": 1,
-      "combined_score": 0.302838,
+      "combined_score": 0.182838,
       "sources": [
         "finance_trend"
       ]
@@ -400,12 +455,12 @@
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-3 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-05T18:38:42.746Z",
+    "generated_at": "2025-10-06T01:42:35.887Z",
     "finance_trend_keywords": 16,
     "keyword_limit": 30,
     "article_cache_files": 143,
     "article_cache_articles": 4000,
-    "article_cache_phrases": 378,
+    "article_cache_phrases": 366,
     "datalab_terms_used": [
       "환율",
       "펀드",
@@ -426,7 +481,8 @@
       "금리",
       "삼성전자",
       "주가",
-      "채권"
+      "채권",
+      "환율"
     ]
   }
 }

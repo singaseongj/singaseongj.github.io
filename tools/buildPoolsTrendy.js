@@ -281,20 +281,66 @@ function enrichKeywordSnapshot(raw) {
   const snapshot = { ...raw };
   const list = Array.isArray(snapshot.keywords) ? snapshot.keywords : [];
   snapshot.keywords = list;
+
+  const translationIndex = new Map();
+  if (raw?.translations && typeof raw.translations === 'object') {
+    for (const value of Object.values(raw.translations)) {
+      const koRaw = String(value?.ko || value?.term_ko || '').trim();
+      const enRaw = String(value?.en || value?.term || '').trim();
+      if (!koRaw || !enRaw) continue;
+      translationIndex.set(koRaw.toLowerCase(), formatEnglishKeyword(enRaw));
+    }
+  }
+
   snapshot._matchers = list.map(entry => {
-    const ko = String(entry?.term_ko || '').trim();
-    const en = String(entry?.term || '').trim();
-    const texts = [ko, en].filter(Boolean);
-    const lowered = texts.map(t => t.toLowerCase());
-    const regexes = texts
-      .filter(t => t && t.length >= 2)
-      .map(t => {
-        try { return new RegExp(esc(t), 'i'); }
-        catch { return null; }
-      })
-      .filter(Boolean);
-    return { entry, lowered, regexes };
+    const koRaw = String(entry?.term_ko || '').trim();
+    let enRaw = String(entry?.term || entry?.term_en || '').trim();
+    if ((!enRaw || enRaw === koRaw) && koRaw) {
+      const translated = translationIndex.get(koRaw.toLowerCase());
+      if (translated) enRaw = translated;
+    }
+    if (enRaw) {
+      const formatted = formatEnglishKeyword(enRaw);
+      enRaw = formatted;
+      if (formatted && (!entry.term || entry.term === entry.term_ko)) entry.term = formatted;
+      if (formatted && !entry.term_en) entry.term_en = formatted;
+    }
+
+    const loweredSet = new Set();
+    const englishTokens = new Set();
+    const englishRegexes = [];
+    const regexes = [];
+
+    if (koRaw) {
+      loweredSet.add(koRaw.toLowerCase());
+      try { regexes.push(new RegExp(esc(koRaw), 'i')); } catch {}
+    }
+
+    if (enRaw) {
+      const lowerEn = enRaw.toLowerCase();
+      englishTokens.add(lowerEn);
+      for (const part of lowerEn.split(/\s+/)) {
+        const trimmed = part.trim();
+        if (trimmed && trimmed.length >= 2) englishTokens.add(trimmed);
+      }
+      try {
+        const re = new RegExp(esc(enRaw), 'i');
+        regexes.push(re);
+        englishRegexes.push(re);
+      } catch {}
+    }
+
+    englishTokens.forEach(tok => loweredSet.add(tok));
+
+    return {
+      entry,
+      lowered: Array.from(loweredSet),
+      regexes,
+      englishTokens: Array.from(englishTokens),
+      englishRegexes
+    };
   });
+  snapshot._translationIndex = translationIndex;
   return snapshot;
 }
 
@@ -584,18 +630,23 @@ function keywordMatchesForName(name, sym) {
   const known = SYMBOL_TO_NAME[sym];
   if (known && known !== name) hay.push(String(known));
   const normalized = hay.map(h => h.toLowerCase());
+  const isUS = sym && (inIdx(sym, SP500) || inIdx(sym, N100));
   const matches = [];
   for (const matcher of snapshot._matchers) {
+    const tokens = isUS && matcher.englishTokens?.length ? matcher.englishTokens : matcher.lowered;
+    const regexes = isUS && matcher.englishRegexes?.length ? matcher.englishRegexes : matcher.regexes;
     let matched = false;
-    for (const token of matcher.lowered) {
-      if (!token) continue;
-      if (normalized.some(h => h.includes(token) || token.includes(h))) {
-        matched = true;
-        break;
+    if (tokens?.length) {
+      for (const token of tokens) {
+        if (!token) continue;
+        if (normalized.some(h => h.includes(token) || token.includes(h))) {
+          matched = true;
+          break;
+        }
       }
     }
-    if (!matched && matcher.regexes?.length) {
-      matched = matcher.regexes.some(re => hay.some(h => re.test(h)));
+    if (!matched && regexes?.length) {
+      matched = regexes.some(re => hay.some(h => re.test(h)));
     }
     if (matched) matches.push(matcher.entry);
   }
