@@ -168,13 +168,29 @@
   "KOSPI": {
     "safe": [
       {
+        "name": "CJ",
+        "sector": null,
+        "ticker": "CJ.TO",
+        "searchUrl": "https://www.google.com/search?q=CJ",
+        "score": 79,
+        "reasons": {
+          "reputationScore": 0.5,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": -0.05,
+            "blog": 1,
+            "naver": 0
+          }
+        }
+      },
+      {
         "name": "LG전자",
         "sector": "경기소비재",
         "ticker": "066570.KS",
         "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90",
         "score": 79,
         "reasons": {
-          "reputationScore": 0.55,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.05,
@@ -188,9 +204,9 @@
         "sector": "소재",
         "ticker": "051910.KS",
         "searchUrl": "https://www.google.com/search?q=LG%ED%99%94%ED%95%99",
-        "score": 83,
+        "score": 82,
         "reasons": {
-          "reputationScore": 0.55,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.05,
@@ -200,16 +216,16 @@
         }
       },
       {
-        "name": "NAVER",
-        "sector": null,
-        "ticker": "NAVER",
-        "searchUrl": "https://www.google.com/search?q=NAVER",
-        "score": 77,
+        "name": "대한항공",
+        "sector": "산업재",
+        "ticker": "003490.KS",
+        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5",
+        "score": 79,
         "reasons": {
-          "reputationScore": 0.55,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
-            "sentiment": -0.2,
+            "sentiment": -0.05,
             "blog": 1,
             "naver": 0
           }
@@ -222,26 +238,10 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
         "score": 89,
         "reasons": {
-          "reputationScore": 0.55,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
             "sentiment": -0.1,
-            "blog": 1,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "현대백화점",
-        "sector": "경기소비재",
-        "ticker": "069960.KS",
-        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90",
-        "score": 76,
-        "reasons": {
-          "reputationScore": 0.55,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
             "blog": 1,
             "naver": 0
           }
@@ -338,7 +338,7 @@
         "sector": "Communication Services",
         "ticker": "GOOGL",
         "searchUrl": "https://www.google.com/search?q=Alphabet%20Inc.",
-        "score": 75,
+        "score": 76,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -354,7 +354,7 @@
         "sector": null,
         "ticker": "ASML",
         "searchUrl": "https://www.google.com/search?q=ASML%20Holding",
-        "score": 54,
+        "score": 58,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -386,7 +386,7 @@
         "sector": "Consumer Discretionary",
         "ticker": "ORLY",
         "searchUrl": "https://www.google.com/search?q=O'Reilly%20Automotive",
-        "score": 56,
+        "score": 59,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -398,10 +398,10 @@
         }
       },
       {
-        "name": "Shopify",
+        "name": "PDD Holdings",
         "sector": null,
-        "ticker": "SHOP",
-        "searchUrl": "https://www.google.com/search?q=Shopify",
+        "ticker": "PDD",
+        "searchUrl": "https://www.google.com/search?q=PDD%20Holdings",
         "score": 50,
         "reasons": {
           "reputationScore": 0,
@@ -415,6 +415,22 @@
       }
     ],
     "aggressive": [
+      {
+        "name": "Atlassian",
+        "sector": null,
+        "ticker": "TEAM",
+        "searchUrl": "https://www.google.com/search?q=Atlassian",
+        "score": 32,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0
+          }
+        }
+      },
       {
         "name": "Coca-Cola Europacific Partners",
         "sector": null,
@@ -432,27 +448,11 @@
         }
       },
       {
-        "name": "Lululemon",
-        "sector": "Consumer Discretionary",
-        "ticker": "LULU",
-        "searchUrl": "https://www.google.com/search?q=Lululemon",
-        "score": 36,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0
-          }
-        }
-      },
-      {
         "name": "Old Dominion Freight Line",
         "sector": "Industrials",
         "ticker": "ODFL",
         "searchUrl": "https://www.google.com/search?q=Old%20Dominion%20Freight%20Line",
-        "score": 49,
+        "score": 47,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -468,7 +468,7 @@
         "sector": "Technology",
         "ticker": "ON",
         "searchUrl": "https://www.google.com/search?q=Onsemi",
-        "score": 37,
+        "score": 30,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -504,7 +504,7 @@
         "sector": "Communication Services",
         "ticker": "GOOGL",
         "searchUrl": "https://www.google.com/search?q=Alphabet%20Inc.",
-        "score": 75,
+        "score": 76,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -520,7 +520,7 @@
         "sector": "Consumer Discretionary",
         "ticker": "AMZN",
         "searchUrl": "https://www.google.com/search?q=Amazon",
-        "score": 76,
+        "score": 73,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -536,7 +536,7 @@
         "sector": "Technology",
         "ticker": "AAPL",
         "searchUrl": "https://www.google.com/search?q=Apple%20Inc.",
-        "score": 78,
+        "score": 79,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -552,7 +552,7 @@
         "sector": "Technology",
         "ticker": "MSFT",
         "searchUrl": "https://www.google.com/search?q=Microsoft",
-        "score": 78,
+        "score": 79,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -582,10 +582,26 @@
     ],
     "aggressive": [
       {
-        "name": "Allegion",
-        "sector": "Industrials",
-        "ticker": "ALLE",
-        "searchUrl": "https://www.google.com/search?q=Allegion",
+        "name": "Devon Energy",
+        "sector": "Energy",
+        "ticker": "DVN",
+        "searchUrl": "https://www.google.com/search?q=Devon%20Energy",
+        "score": 46,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0
+          }
+        }
+      },
+      {
+        "name": "F5, Inc.",
+        "sector": "Technology",
+        "ticker": "FFIV",
+        "searchUrl": "https://www.google.com/search?q=F5%2C%20Inc.",
         "score": 44,
         "reasons": {
           "reputationScore": 0,
@@ -598,27 +614,11 @@
         }
       },
       {
-        "name": "Devon Energy",
-        "sector": "Energy",
-        "ticker": "DVN",
-        "searchUrl": "https://www.google.com/search?q=Devon%20Energy",
-        "score": 51,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0
-          }
-        }
-      },
-      {
-        "name": "Nordson Corporation",
+        "name": "Hubbell Incorporated",
         "sector": "Industrials",
-        "ticker": "NDSN",
-        "searchUrl": "https://www.google.com/search?q=Nordson%20Corporation",
-        "score": 42,
+        "ticker": "HUBB",
+        "searchUrl": "https://www.google.com/search?q=Hubbell%20Incorporated",
+        "score": 45,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -630,11 +630,11 @@
         }
       },
       {
-        "name": "Principal Financial Group",
-        "sector": "Financial Services",
-        "ticker": "PFG",
-        "searchUrl": "https://www.google.com/search?q=Principal%20Financial%20Group",
-        "score": 42,
+        "name": "Trimble Inc.",
+        "sector": "Technology",
+        "ticker": "TRMB",
+        "searchUrl": "https://www.google.com/search?q=Trimble%20Inc.",
+        "score": 44,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -663,5 +663,5 @@
       }
     ]
   },
-  "lastUpdated": "2025-10-06T10:33:24+09:00"
+  "lastUpdated": "2025-10-06T13:52:04+09:00"
 }
