@@ -67,6 +67,8 @@ jobs:
       DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
       DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
       COINDESK_API: ${{ secrets.COINDESK_API }}
+      KIS_APP_KEY: ${{ secrets.KIS_APP_KEY }}
+      KIS_APP_SECRET: ${{ secrets.KIS_APP_SECRET }}
       # Optional tuning for this module
       NEWS_CONCURRENCY: 2        # your code already defaults to 2; keep it small for SerpApi quotas
       NEWS_TTL_MS: 1800000       # 30m cache TTL (aligns with your comment)
