@@ -1,329 +1,116 @@
 {
   "date": "2025-10-06",
-  "window": "5_hours",
-  "total_phrases": 17,
+  "window": "12_hours",
+  "total_phrases": 4,
   "discovered_keywords": [
     {
-      "term": "U.S. equity rate cuts",
-      "term_ko": "미국주식 금리 인하",
-      "significance_score": 209,
-      "mentions": 2,
+      "term": "Invest in shares of a commingled bond fund",
+      "term_ko": "투자한다 채권혼합형 펀드의 주식",
+      "significance_score": 200,
+      "mentions": 1,
       "combined_score": 1,
       "sources": [
-        "Naver",
-        "article_cache",
+        "news",
         "significance_analysis"
       ],
-      "finance_boost": 66,
-      "headlines": [
-        {
-          "title": "[미국주식] 美 금리 인하 기대감에 배당주 주목... 8월 대표 배당주",
-          "url": "https://www.itooza.com/common/iview.php?no=2025070810024602651",
-          "source": "Naver"
-        }
-      ]
+      "finance_boost": 110,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
     },
     {
-      "term": "How AI can transform the entire stock market",
-      "term_ko": "AI가 주식시장 전체",
-      "significance_score": 185,
+      "term": "It's not a slump, it's the stock market",
+      "term_ko": "부진한 게 아니라 주식시장",
+      "significance_score": 176,
       "mentions": 1,
-      "combined_score": 0.769617,
+      "combined_score": 0.916,
       "sources": [
-        "Naver",
-        "article_cache",
+        "news",
         "significance_analysis"
       ],
       "finance_boost": 54,
-      "headlines": [
-        {
-          "title": "리솔츠 CEO &quot;AI가 美주식시장 전체 떠받치고 있어&quot;",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4367829",
-          "source": "Naver"
-        }
-      ]
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
     },
     {
-      "term": "\"How AI can help the stock market",
-      "term_ko": "quot AI가 주식시장",
-      "significance_score": 185,
+      "term": "Include shares in a bond-blend fund",
+      "term_ko": "채권혼합형 펀드의 주식 편입",
+      "significance_score": 170,
       "mentions": 1,
-      "combined_score": 0.769617,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "finance_boost": 54,
-      "headlines": [
-        {
-          "title": "리솔츠 CEO &quot;AI가 美주식시장 전체 떠받치고 있어&quot;",
-          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4367829",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Fluctuating exchange rates Stock markets",
-      "term_ko": "환율 변동 주식시장",
-      "significance_score": 165,
-      "mentions": 1,
-      "combined_score": 0.702632,
+      "combined_score": 0.895,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 88
+      "finance_boost": 80,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
     },
     {
-      "term": "Solar Plummets in New York Stock Market",
-      "term_ko": "태양광 급락 뉴욕증시도",
-      "significance_score": 145,
+      "term": "Stock market at the Korea Exchange in Yeongdeungpo-gu",
+      "term_ko": "영등포구 한국거래소에서 열린 주식시장",
+      "significance_score": 160,
       "mentions": 1,
-      "combined_score": 0.635646,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "finance_boost": 34,
-      "headlines": [
-        {
-          "title": "트럼프 '그린에너지 지원 철회'에 태양광株 급락…뉴욕증시도 소폭 하락",
-          "url": "https://www.tokenpost.kr/news/market/264867",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Transition to enterprise financing",
-      "term_ko": "기업으로 전환 금융",
-      "significance_score": 143,
-      "mentions": 1,
-      "combined_score": 0.628947,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "finance_boost": 36,
-      "headlines": [
-        {
-          "title": "FICO, AI 데이터 분석 기업으로 전환…금융 프라이버시 '통합 보안' 강조",
-          "url": "https://www.tokenpost.kr/news/tech/280345",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Started Samsung Electronics KB Financial",
-      "term_ko": "시작됐다 삼성전자 KB금융",
-      "significance_score": 143,
-      "mentions": 1,
-      "combined_score": 0.628947,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "finance_boost": 36,
-      "headlines": [
-        {
-          "title": "외국인 자금 쏠림 시작됐다… 삼성전자·KB금융·한화에어로스페이스 '...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=383022",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Transition financial privacy",
-      "term_ko": "전환 금융 프라이버시",
-      "significance_score": 143,
-      "mentions": 1,
-      "combined_score": 0.628947,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "finance_boost": 36,
-      "headlines": [
-        {
-          "title": "FICO, AI 데이터 분석 기업으로 전환…금융 프라이버시 '통합 보안' 강조",
-          "url": "https://www.tokenpost.kr/news/tech/280345",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Overnight pro-stock AI",
-      "term_ko": "간밤의 친주식 AI가",
-      "significance_score": 141,
-      "mentions": 1,
-      "combined_score": 0.622249,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "finance_boost": 32,
-      "headlines": [
-        {
-          "title": "[간밤의 美친주식] AI가 선정한 화제의 미국주식 5선",
-          "url": "http://www.globalepic.co.kr/view.php?ud=20250725074302724f8aee996e1_29",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Pro-Stock AI picks",
-      "term_ko": "친주식 AI가 선정한",
-      "significance_score": 141,
-      "mentions": 1,
-      "combined_score": 0.622249,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "finance_boost": 32,
-      "headlines": [
-        {
-          "title": "[간밤의 美친주식] AI가 선정한 화제의 미국주식 5선",
-          "url": "http://www.globalepic.co.kr/view.php?ud=20250725074302724f8aee996e1_29",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Enforce a zero interest rate policy",
-      "term_ko": "제로금리 정책 시행",
-      "significance_score": 123,
-      "mentions": 1,
-      "combined_score": 0.561962,
+      "combined_score": 0.86,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 34
-    },
-    {
-      "term": "In the wake of weak exports",
-      "term_ko": "수출 부진 여파로",
-      "significance_score": 77,
-      "mentions": 2,
-      "combined_score": 0.557895,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "headlines": [
-        {
-          "title": "S&P500, 제약주 강세에 상승 출발…트럼프, 금리 인하 또 압박",
-          "url": "https://www.tokenpost.kr/news/market/242396",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Sluggish exports to China",
-      "term_ko": "중국 수출 부진",
-      "significance_score": 77,
-      "mentions": 2,
-      "combined_score": 0.557895,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "headlines": [
-        {
-          "title": "S&P500, 제약주 강세에 상승 출발…트럼프, 금리 인하 또 압박",
-          "url": "https://www.tokenpost.kr/news/market/242396",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Zero pricing policy",
-      "term_ko": "가격은 제로금리 정책",
-      "significance_score": 101,
-      "mentions": 1,
-      "combined_score": 0.488278,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 34
-    },
-    {
-      "term": "CPI drops ahead",
-      "term_ko": "CPI 앞두고 하락",
-      "significance_score": 77,
-      "mentions": 1,
-      "combined_score": 0.407895,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "headlines": [
-        {
-          "title": "[뉴욕증시 프리뷰] 미 주가지수 선물 FOMC·CPI 앞두고 하락...엔비디아...",
-          "url": "https://www.newspim.com/news/view/20240610000991",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Slower inflation",
-      "term_ko": "둔화 물가 하락",
-      "significance_score": 77,
-      "mentions": 1,
-      "combined_score": 0.407895,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "headlines": [
-        {
-          "title": "[초점] 美 '태풍의 눈' 주거비 상승세 둔화...물가 하락 견인하나",
-          "url": "http://www.g-enews.com/ko-kr/news/article/news_all/2023051105150822136b49b9d1da_1/article.html",
-          "source": "Naver"
-        }
-      ]
-    },
-    {
-      "term": "Driving down inflation",
-      "term_ko": "물가 하락 견인하나",
-      "significance_score": 77,
-      "mentions": 1,
-      "combined_score": 0.407895,
-      "sources": [
-        "Naver",
-        "article_cache",
-        "significance_analysis"
-      ],
-      "headlines": [
-        {
-          "title": "[초점] 美 '태풍의 눈' 주거비 상승세 둔화...물가 하락 견인하나",
-          "url": "http://www.g-enews.com/ko-kr/news/article/news_all/2023051105150822136b49b9d1da_1/article.html",
-          "source": "Naver"
-        }
-      ]
+      "finance_boost": 70,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
     }
   ],
   "metadata": {
     "collection_method": "significance_over_frequency",
-    "phrase_length": "2-3 words",
+    "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-06T04:53:30.020Z",
+    "generated_at": "2025-10-06T06:36:49.387Z",
     "finance_trend_keywords": 0,
     "keyword_limit": 30,
-    "article_cache_files": 143,
-    "article_cache_articles": 4000,
-    "article_cache_phrases": 168
+    "lookback_hours": 12,
+    "article_cache_files": 200,
+    "article_cache_articles": 24,
+    "article_cache_phrases": 33,
+    "article_cache_skipped_recency": 5472
   }
 }
