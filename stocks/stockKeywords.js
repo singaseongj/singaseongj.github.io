@@ -4,6 +4,9 @@ import path from 'path';
 import { spawn } from 'child_process';
 import { parse } from 'node-html-parser';
 import { fileURLToPath } from 'url';
+import natural from 'natural';
+import sw from 'stopword';
+import pos from 'pos';
 
 const defaultHeaders = {
   'User-Agent': 'stock-recs/1.1 (+ci)',
@@ -1027,7 +1030,7 @@ async function buildDatalabKeywordEntries(){
     }));
 }
 
-function buildKeywordSummary(articles){
+function buildKeywordSummaryLegacy(articles){
   const map = new Map();
   for (const article of articles) {
     const text = `${article.title || ''} ${article.description || ''}`;
@@ -1086,6 +1089,259 @@ function buildKeywordSummary(articles){
       return localized;
     })()
   }));
+}
+
+const FINANCE_TFIDF_PHRASE_MIN = 1;
+const FINANCE_TFIDF_PHRASE_MAX = 3;
+const FINANCE_TFIDF_TREND_WINDOW_HOURS = 12;
+const FINANCE_TFIDF_OUTPUT_LIMIT = 30;
+const FINANCE_TFIDF_MIN_SCORE = 0.5;
+const FINANCE_TFIDF_KEYWORDS = [
+  '주식', '주가', '코스피', '코스닥', 'etf', '공매도', '배당',
+  '매수', '매도', '상장', '증권', '지수', '펀드'
+];
+const FINANCE_TFIDF_KEYWORD_SET = new Set(FINANCE_TFIDF_KEYWORDS.map(k => k.toLowerCase()));
+const FINANCE_TFIDF_EXCLUDE_PATTERN = /(include|invest|bond|blend|fund)/i;
+const financePhraseTagger = new pos.Tagger();
+
+function extractFinancePhrasesNormalized(text, minLen = FINANCE_TFIDF_PHRASE_MIN, maxLen = FINANCE_TFIDF_PHRASE_MAX) {
+  const cleaned = stripHtml(text || '');
+  if (!cleaned) return [];
+  const words = new pos.Lexer().lex(cleaned);
+  if (!words.length) return [];
+  const tagged = financePhraseTagger.tag(words);
+  const phrases = new Set();
+
+  for (let i = 0; i < tagged.length; i += 1) {
+    for (let len = minLen; len <= maxLen; len += 1) {
+      if (i + len > tagged.length) break;
+      const chunk = tagged.slice(i, i + len);
+      const hasNoun = chunk.some(([word, tag]) => {
+        if (!word) return false;
+        if (tag && tag.startsWith('NN')) return true;
+        return /[가-힣]/.test(word);
+      });
+      if (!hasNoun) continue;
+      const phrase = chunk.map(([word]) => word).join(' ').replace(/\s+/g, ' ').trim();
+      if (!phrase || phrase.length < 2) continue;
+      if (!/[A-Za-z가-힣]/.test(phrase)) continue;
+      phrases.add(phrase.toLowerCase());
+    }
+  }
+
+  return Array.from(phrases);
+}
+
+function buildFinanceDocTokens(text) {
+  const cleaned = stripHtml(text || '');
+  if (!cleaned) {
+    return { tokens: [], phraseSet: new Set() };
+  }
+
+  const baseTokens = splitMeaningfulWords(cleaned)
+    .map(item => item.token.toLowerCase())
+    .filter(Boolean);
+  const filteredTokens = sw.removeStopwords(baseTokens);
+  const phraseList = extractFinancePhrasesNormalized(cleaned);
+  const phraseSet = new Set();
+
+  for (const phrase of phraseList) {
+    const normalized = phrase.replace(/\s+/g, ' ').trim();
+    if (normalized) {
+      phraseSet.add(normalized);
+    }
+  }
+
+  const tokenSet = new Set();
+  for (const token of filteredTokens) {
+    const normalized = token.replace(/\s+/g, ' ').trim();
+    if (normalized && normalized.length > 1) {
+      tokenSet.add(normalized);
+    }
+  }
+
+  for (const phrase of phraseSet) {
+    if (phrase.length > 1) {
+      tokenSet.add(phrase);
+    }
+  }
+
+  return { tokens: Array.from(tokenSet), phraseSet };
+}
+
+function computeFinanceTrendWeight(timestamp) {
+  if (!Number.isFinite(timestamp)) return 1;
+  const now = Date.now();
+  const ageHours = Math.max(0, (now - timestamp) / 36e5);
+  if (ageHours < 6) return 1.5;
+  if (ageHours < FINANCE_TFIDF_TREND_WINDOW_HOURS) return 1.2;
+  return 1;
+}
+
+function computeFinanceKeywordFinanceBoost(term) {
+  const lower = term.toLowerCase();
+  for (const keyword of FINANCE_TFIDF_KEYWORD_SET) {
+    if (lower.includes(keyword)) {
+      return 3;
+    }
+  }
+  return 1;
+}
+
+function computeFinanceKeywordScore(tfidfScore, mentions, financeBoost, trendWeight) {
+  return 0.5 * tfidfScore + 0.3 * mentions + 0.2 * financeBoost + 100 * trendWeight;
+}
+
+function buildFinanceTfIdfSummary(articles) {
+  if (!Array.isArray(articles) || !articles.length) return [];
+
+  const documents = [];
+  for (const article of articles) {
+    const text = `${stripHtml(article.title || '')} ${stripHtml(article.description || '')}`.trim();
+    if (!text) continue;
+    const { tokens, phraseSet } = buildFinanceDocTokens(text);
+    if (!tokens.length) continue;
+    const published = article.publishedAt ? new Date(article.publishedAt) : null;
+    const timestamp = published && Number.isFinite(published.getTime()) ? published.getTime() : Date.now();
+    const meta = {
+      market: article.market,
+      source: article.source,
+      headline: article.title && article.url
+        ? { title: stripHtml(article.title), url: article.url, source: article.source }
+        : null
+    };
+    documents.push({ tokens, phraseSet, timestamp, meta });
+  }
+
+  if (!documents.length) return [];
+
+  const tfidf = new natural.TfIdf();
+  for (const doc of documents) {
+    tfidf.addDocument(doc.tokens);
+  }
+
+  const aggregated = new Map();
+
+  documents.forEach((doc, docIndex) => {
+    const allowed = doc.phraseSet.size ? doc.phraseSet : new Set(doc.tokens.map(t => t.toLowerCase()));
+    const trendWeight = computeFinanceTrendWeight(doc.timestamp);
+    const terms = tfidf.listTerms(docIndex);
+
+    for (const item of terms) {
+      const rawTerm = typeof item.term === 'string' ? item.term : '';
+      const normalized = rawTerm.replace(/\s+/g, ' ').trim();
+      if (!normalized) continue;
+
+      const lowerTerm = normalized.toLowerCase();
+      if (allowed.size && !allowed.has(lowerTerm)) continue;
+
+      const wordCount = lowerTerm.split(' ').filter(Boolean).length;
+      if (wordCount < FINANCE_TFIDF_PHRASE_MIN || wordCount > FINANCE_TFIDF_PHRASE_MAX) continue;
+      if (!/[a-z0-9가-힣]/i.test(lowerTerm)) continue;
+      if (FINANCE_TFIDF_EXCLUDE_PATTERN.test(lowerTerm)) continue;
+
+      const financeBoost = computeFinanceKeywordFinanceBoost(lowerTerm);
+      const mentions = Number.isFinite(item.count) ? Math.max(1, item.count) : 1;
+      const combinedScore = computeFinanceKeywordScore(item.tfidf || 0, mentions, financeBoost, trendWeight);
+
+      let entry = aggregated.get(lowerTerm);
+      if (!entry) {
+        entry = {
+          term: normalized,
+          totalScore: 0,
+          mentions: 0,
+          maxTfidf: 0,
+          financeBoost,
+          maxTrendWeight: trendWeight,
+          markets: new Set(),
+          sources: new Set(),
+          headlines: [],
+          headlineKeys: new Set(),
+          seenDocs: new Set()
+        };
+        aggregated.set(lowerTerm, entry);
+      }
+
+      entry.totalScore += combinedScore;
+      entry.maxTfidf = Math.max(entry.maxTfidf, item.tfidf || 0);
+      entry.financeBoost = Math.max(entry.financeBoost, financeBoost);
+      entry.maxTrendWeight = Math.max(entry.maxTrendWeight, trendWeight);
+      entry.seenDocs.add(docIndex);
+      entry.mentions = entry.seenDocs.size;
+
+      if (doc.meta?.market) entry.markets.add(doc.meta.market);
+      if (doc.meta?.source) entry.sources.add(doc.meta.source);
+      if (doc.meta?.headline) {
+        const key = `${doc.meta.headline.title || ''}__${doc.meta.headline.url || ''}`;
+        if (!entry.headlineKeys.has(key) && entry.headlines.length < 3) {
+          entry.headlineKeys.add(key);
+          entry.headlines.push(doc.meta.headline);
+        }
+      }
+    }
+  });
+
+  const scored = Array.from(aggregated.values())
+    // Optional: apply embedding similarity to merge near-duplicate phrases.
+    .map(entry => ({
+      term: entry.term,
+      totalScore: entry.totalScore,
+      mentions: entry.mentions,
+      markets: Array.from(entry.markets),
+      sources: Array.from(entry.sources),
+      sampleHeadlines: entry.headlines,
+      financeBoost: entry.financeBoost,
+      maxTfidf: entry.maxTfidf
+    }))
+    .filter(entry => entry.totalScore > FINANCE_TFIDF_MIN_SCORE)
+    .sort((a, b) => {
+      if (b.totalScore !== a.totalScore) return b.totalScore - a.totalScore;
+      if (b.mentions !== a.mentions) return b.mentions - a.mentions;
+      return b.maxTfidf - a.maxTfidf;
+    })
+    .slice(0, Math.min(FINANCE_TFIDF_OUTPUT_LIMIT, 30));
+
+  if (!scored.length) return [];
+
+  const topCount = Math.min(10, scored.length);
+  const top = scored.slice(0, topCount);
+  const maxScore = top.reduce((max, item) => Math.max(max, item.totalScore), 0) || 1;
+
+  return top.map(item => {
+    const formatted = formatTagDisplay(item.term);
+    const hasHangul = hasHangulText(formatted);
+    const text = {
+      ko: hasHangul ? formatted : '',
+      en: hasHangul ? formatted : formatted
+    };
+    if (!text.ko) text.ko = text.en;
+    if (!text.en) text.en = text.ko;
+
+    const koQuery = text.ko || text.en;
+    const enQuery = text.en || text.ko;
+    const searchUrl = {
+      ko: buildGoogleSearchUrl(koQuery, 'ko'),
+      en: buildGoogleSearchUrl(enQuery, 'en')
+    };
+    if (!searchUrl.ko) delete searchUrl.ko;
+    if (!searchUrl.en) delete searchUrl.en;
+
+    return {
+      text,
+      markets: item.markets,
+      sources: item.sources,
+      mentions: item.mentions,
+      score: Number((item.totalScore / maxScore).toFixed(3)),
+      sampleHeadlines: item.sampleHeadlines,
+      searchUrl
+    };
+  });
+}
+
+function buildKeywordSummary(articles) {
+  const enhanced = buildFinanceTfIdfSummary(articles);
+  if (enhanced.length) return enhanced;
+  return buildKeywordSummaryLegacy(articles);
 }
 
 function isMeaningfulTagCandidate(str) {
