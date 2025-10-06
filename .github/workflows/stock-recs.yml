@@ -411,6 +411,19 @@ jobs:
           echo "tags.json total tags:"
           jq -r '.total_phrases // .total // (.discovered_keywords | length) // "missing"' stocks/data/tags.json
 
+      # Optional: run finance keyword analysis, but keep tags.json as the main output
+      - name: Analyze tags.json with finance dictionary (optional)
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if [ ! -s stocks/data/tags.json ]; then
+            echo "❌ tags.json missing; skipping finance analysis"
+            exit 0
+          fi
+          echo "▶ Running extractKeywords.js for analysis (does not overwrite tags.json)"
+          node stocks/extractKeywords.js || echo "⚠️ extractKeywords.js failed (non-blocking)"
+
       - name: Prune cache directory
         env:
           CACHE_LIMIT: 1000
