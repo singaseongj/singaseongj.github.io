@@ -211,7 +211,8 @@
         noPicks: 'No picks available',
         scoreSuffix: '매력점수 / 최근가격 / 1년 전',
         priceNow: '현재가',
-        priceYearAgo: '1년 전'
+        priceYearAgo: '1년 전',
+        priceUnavailable: '데이터 없음'
       },
       en: {
         title: 'Daily Stock Report Automation',
@@ -242,7 +243,8 @@
         noPicks: 'No picks available',
         scoreSuffix: 'Attractiveness / Recent / 1y bf price',
         priceNow: 'Price',
-        priceYearAgo: '1Y Ago'
+        priceYearAgo: '1Y Ago',
+        priceUnavailable: 'no data'
       }
     };
 
@@ -287,18 +289,21 @@
       }
     }
 
+    function getPriceFallback() {
+      const langEntry = translations[currentLang] || translations.ko || {};
+      return langEntry.priceUnavailable || '데이터 없음';
+    }
+
     function buildPriceText(item) {
-      if (!item) return '';
+      const fallback = getPriceFallback();
+      if (!item || typeof item !== 'object') {
+        return `${fallback} / ${fallback}`;
+      }
       const now = formatPriceValue(item.currentPrice, item.ticker);
       const past = formatPriceValue(item.price1yAgo, item.ticker);
-      const parts = [];
-      if (now) {
-        parts.push(now);
-      }
-      if (past) {
-        parts.push(past);
-      }
-      return parts.join(' / ');
+      const nowText = now ?? fallback;
+      const pastText = past ?? fallback;
+      return `${nowText} / ${pastText}`;
     }
 
     function normalizeTermKey(term) {
@@ -838,11 +843,12 @@
             const link = item.searchUrl ? `<a href="${item.searchUrl}" target="_blank" rel="noopener">${name}</a>` : name;
             const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
             const priceText = buildPriceText(item);
-            const priceMarkup = priceText ? `<span class="price">${escapeHtml(priceText)}</span>` : '';
-            const metaParts = [];
-            if (item.score != null) metaParts.push(escapeHtml(String(item.score)));
-            if (priceMarkup) metaParts.push(priceMarkup);
-            const score = metaParts.length ? `<span class="score">${metaParts.join(' · ')}</span>` : '';
+            const scoreParts = [];
+            if (item.score != null) scoreParts.push(escapeHtml(String(item.score)));
+            if (priceText) {
+              scoreParts.push(`<span class="price">${escapeHtml(priceText)}</span>`);
+            }
+            const score = scoreParts.length ? `<span class="score">${scoreParts.join(' / ')}</span>` : '';
             return `<li>${link}${sector}${score}</li>`;
           });
           const list = itemsArr.length ? itemsArr.join('') : `<li class="empty">${translations[currentLang].noPicks}</li>`;
