@@ -91,6 +91,10 @@ const NAVER_ENABLED = Boolean(NAVER_CLIENT_ID && NAVER_CLIENT_SECRET);
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 12 * 60 * 60 * 1000);
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+const DAY_MS = 24 * 60 * 60 * 1000;
+const PRICE_LOOKBACK_DAYS = Number(process.env.PRICE_LOOKBACK_DAYS || 365);
+const PRICE_WINDOW_DAYS = Number(process.env.PRICE_WINDOW_DAYS || 10);
+const PRICE_HISTORY_CONCURRENCY = Number(process.env.PRICE_HISTORY_CONCURRENCY || 3);
 
 // 429-aware delay
 let consecutive429 = 0;
@@ -130,6 +134,142 @@ function noteStatus(err) {
     }
   } else {
     consecutive429 = 0;
+  }
+}
+
+async function fetchHistoricalPriceYahoo(ticker, targetDate) {
+  const targetMs = targetDate.getTime();
+  const period1 = Math.floor((targetMs - PRICE_WINDOW_DAYS * DAY_MS) / 1000);
+  const period2 = Math.floor((targetMs + PRICE_WINDOW_DAYS * DAY_MS) / 1000);
+  if (!(Number.isFinite(period1) && Number.isFinite(period2) && period2 > period1)) {
+    throw new Error('invalid period for historical price');
+  }
+
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&period1=${period1}&period2=${period2}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  const json = await res.json();
+  if (json?.chart?.error) {
+    throw new Error(json.chart.error?.description || 'yahoo chart error');
+  }
+  const result = json?.chart?.result?.[0];
+  if (!result) throw new Error('missing chart result');
+  const timestamps = Array.isArray(result.timestamp) ? result.timestamp : [];
+  const closes = Array.isArray(result.indicators?.quote?.[0]?.close)
+    ? result.indicators.quote[0].close
+    : [];
+  if (!timestamps.length || !closes.length) throw new Error('empty historical data');
+  const targetSec = Math.floor(targetMs / 1000);
+  let bestIdx = -1;
+  let bestDiff = Infinity;
+  for (let i = 0; i < timestamps.length; i++) {
+    const price = Number(closes[i]);
+    if (!Number.isFinite(price)) continue;
+    const diff = Math.abs(timestamps[i] - targetSec);
+    if (diff < bestDiff) {
+      bestDiff = diff;
+      bestIdx = i;
+    }
+  }
+  if (bestIdx === -1) throw new Error('no valid historical price');
+  return { price: Number(closes[bestIdx]), timestamp: timestamps[bestIdx] * 1000 };
+}
+
+async function fetchHistoricalPricesBatch(tickers, targetDate) {
+  const unique = [...new Set((tickers || []).filter(Boolean))];
+  if (!unique.length) return {};
+  const queue = unique.slice();
+  const out = {};
+  const workers = Math.min(Math.max(1, PRICE_HISTORY_CONCURRENCY), queue.length);
+
+  async function worker() {
+    while (true) {
+      const sym = queue.shift();
+      if (!sym) break;
+      try {
+        const hist = await fetchHistoricalPriceYahoo(sym, targetDate);
+        if (hist) out[sym] = hist;
+      } catch (e) {
+        console.warn(`[PRICE] ${sym} 1y lookup failed: ${e.message}`);
+      }
+      await sleep(150);
+    }
+  }
+
+  await Promise.all(Array.from({ length: workers }, worker));
+  return out;
+}
+
+function deriveCurrency(ticker) {
+  if (/\.K[QS]$/i.test(ticker || '')) return 'KRW';
+  return 'USD';
+}
+
+async function attachPrices(data) {
+  const tickers = new Set();
+  for (const market of Object.keys(data || {})) {
+    for (const bucket of ['safe', 'aggressive']) {
+      const entries = data[market]?.[bucket];
+      if (!Array.isArray(entries)) continue;
+      for (const entry of entries) {
+        if (entry?.ticker) tickers.add(entry.ticker);
+      }
+    }
+  }
+  const list = [...tickers].filter(Boolean);
+  if (!list.length) return;
+
+  const now = new Date();
+  let quotes = [];
+  try {
+    quotes = await fetchByTickers(list);
+  } catch (e) {
+    console.warn('[PRICE] failed to fetch quotes:', e.message || e);
+  }
+  const priceMap = {};
+  for (const q of quotes) {
+    if (!q?.symbol) continue;
+    const symbol = q.symbol;
+    const current = Number.isFinite(q.regularMarketPrice)
+      ? Number(q.regularMarketPrice)
+      : (Number.isFinite(q.regularMarketPreviousClose) ? Number(q.regularMarketPreviousClose) : null);
+    const prevClose = Number.isFinite(q.regularMarketPreviousClose)
+      ? Number(q.regularMarketPreviousClose)
+      : null;
+    priceMap[symbol] = {
+      currentPrice: current,
+      previousClose: prevClose,
+      priceAsOf: now.toISOString(),
+      currency: deriveCurrency(symbol)
+    };
+  }
+
+  const targetDate = new Date(now.getTime() - PRICE_LOOKBACK_DAYS * DAY_MS);
+  const historical = await fetchHistoricalPricesBatch(list, targetDate);
+  for (const [symbol, info] of Object.entries(historical)) {
+    if (!info) continue;
+    if (!priceMap[symbol]) {
+      priceMap[symbol] = { priceAsOf: now.toISOString(), currency: deriveCurrency(symbol) };
+    }
+    if (Number.isFinite(info.price)) priceMap[symbol].price1yAgo = Number(info.price);
+    if (Number.isFinite(info.timestamp)) priceMap[symbol].price1yDate = new Date(info.timestamp).toISOString();
+  }
+
+  for (const market of Object.keys(data || {})) {
+    for (const bucket of ['safe', 'aggressive']) {
+      const entries = data[market]?.[bucket];
+      if (!Array.isArray(entries)) continue;
+      for (const entry of entries) {
+        const symbol = entry?.ticker;
+        const info = symbol ? priceMap[symbol] : null;
+        if (!info) continue;
+        if (Number.isFinite(info.currentPrice)) entry.currentPrice = info.currentPrice;
+        else if (Number.isFinite(info.previousClose)) entry.currentPrice = info.previousClose;
+        if (Number.isFinite(info.price1yAgo)) entry.price1yAgo = info.price1yAgo;
+        if (info.price1yDate) entry.price1yDate = info.price1yDate;
+        if (info.priceAsOf) entry.priceAsOf = info.priceAsOf;
+        if (info.currency) entry.priceCurrency = info.currency;
+      }
+    }
   }
 }
 
@@ -911,6 +1051,12 @@ async function tryFetchAndEnrich() {
 
       data[market][group] = updated;
     }
+  }
+
+  try {
+    await attachPrices(data);
+  } catch (e) {
+    console.warn('[PRICE] Failed to enrich price data:', e?.message || e);
   }
 
   return { data, successCount };

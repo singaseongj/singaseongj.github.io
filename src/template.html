@@ -209,7 +209,9 @@
         updated: '업데이트: ',
         visitsToday: '오늘 방문: {daily} | 총 방문: {total}',
         noPicks: 'No picks available',
-        scoreSuffix: '매력점수'
+        scoreSuffix: '매력점수',
+        priceNow: '현재가',
+        priceYearAgo: '1년 전'
       },
       en: {
         title: 'Daily Stock Report Automation',
@@ -238,7 +240,9 @@
         updated: 'Updated: ',
         visitsToday: 'Visits today: {daily} | Total: {total}',
         noPicks: 'No picks available',
-        scoreSuffix: 'Attractiveness'
+        scoreSuffix: 'Attractiveness',
+        priceNow: 'Price',
+        priceYearAgo: '1Y Ago'
       }
     };
 
@@ -258,6 +262,50 @@
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
+    }
+
+    function isKRTicker(ticker) {
+      return /\.K[QS]$/i.test(ticker || '');
+    }
+
+    function formatPriceValue(value, ticker) {
+      if (!Number.isFinite(value)) return null;
+      const isKR = isKRTicker(ticker);
+      const locale = isKR ? 'ko-KR' : 'en-US';
+      const currency = isKR ? 'KRW' : 'USD';
+      const options = {
+        style: 'currency',
+        currency,
+        maximumFractionDigits: isKR ? 0 : 2,
+        minimumFractionDigits: isKR ? 0 : 2
+      };
+      if (isKR) options.minimumFractionDigits = 0;
+      try {
+        return new Intl.NumberFormat(locale, options).format(value);
+      } catch {
+        return value.toLocaleString(locale);
+      }
+    }
+
+    function buildPriceText(item) {
+      if (!item) return '';
+      const now = formatPriceValue(item.currentPrice, item.ticker);
+      const past = formatPriceValue(item.price1yAgo, item.ticker);
+      const parts = [];
+      if (now) {
+        parts.push(`${translations[currentLang].priceNow} ${now}`);
+      }
+      if (past) {
+        let label = `${translations[currentLang].priceYearAgo} ${past}`;
+        if (item.price1yDate) {
+          try {
+            const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
+            label += ` (${new Date(item.price1yDate).toLocaleDateString(locale)})`;
+          } catch {}
+        }
+        parts.push(label);
+      }
+      return parts.join(' / ');
     }
 
     function normalizeTermKey(term) {
@@ -796,7 +844,12 @@
             const name = FULL_NAME_MAP[item.name] || item.name;
             const link = item.searchUrl ? `<a href="${item.searchUrl}" target="_blank" rel="noopener">${name}</a>` : name;
             const sector = item.sector ? `<span class="sector">${item.sector}</span>` : '';
-            const score = item.score != null ? `<span class="score">${item.score}</span>` : '';
+            const priceText = buildPriceText(item);
+            const priceMarkup = priceText ? `<span class="price">${escapeHtml(priceText)}</span>` : '';
+            const metaParts = [];
+            if (item.score != null) metaParts.push(escapeHtml(String(item.score)));
+            if (priceMarkup) metaParts.push(priceMarkup);
+            const score = metaParts.length ? `<span class="score">${metaParts.join(' · ')}</span>` : '';
             return `<li>${link}${sector}${score}</li>`;
           });
           const list = itemsArr.length ? itemsArr.join('') : `<li class="empty">${translations[currentLang].noPicks}</li>`;
