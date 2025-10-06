@@ -1,7 +1,7 @@
 {
   "date": "2025-10-06",
   "window": "12_hours",
-  "total_phrases": 4,
+  "total_phrases": 8,
   "discovered_keywords": [
     {
       "term": "Invest in shares of a commingled bond fund",
@@ -52,16 +52,16 @@
       }
     },
     {
-      "term": "Include shares of a bond-blend fund",
-      "term_ko": "채권혼합형 펀드의 주식 편입",
-      "significance_score": 170,
+      "term": "Nikkei 225 average stock price in Tokyo stock market",
+      "term_ko": "도쿄 주식시장 에서 닛케이225평균주가",
+      "significance_score": 174,
       "mentions": 1,
-      "combined_score": 0.895,
+      "combined_score": 0.909,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 80,
+      "finance_boost": 84,
       "context": {
         "targets": [
           "주식"
@@ -76,16 +76,112 @@
       }
     },
     {
-      "term": "Stock market at the Korea Exchange in Yeongdeungpo-gu",
-      "term_ko": "영등포구 한국거래소에서 열린 주식시장",
-      "significance_score": 160,
+      "term": "In the stock market, the Nikkei 225 Average Stock Price is below",
+      "term_ko": "주식시장 에서 닛케이225평균주가 이하",
+      "significance_score": 174,
       "mentions": 1,
-      "combined_score": 0.86,
+      "combined_score": 0.909,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 70,
+      "finance_boost": 84,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "From high-interest savings to stocks",
+      "term_ko": "고금리 예 적금부터 주식",
+      "significance_score": 171,
+      "mentions": 1,
+      "combined_score": 0.8985,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 66,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "Weak Dollar and Demand for Domestic Stimulus Stock Market",
+      "term_ko": "약달러와 내수부양 요구 주식시장",
+      "significance_score": 144,
+      "mentions": 1,
+      "combined_score": 0.804,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 54,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "The stock market requires dollars",
+      "term_ko": "요구 주식 시장은 달러",
+      "significance_score": 144,
+      "mentions": 1,
+      "combined_score": 0.804,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 54,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "The stock market has been trading on the",
+      "term_ko": "주식 시장은 달러 약세가",
+      "significance_score": 144,
+      "mentions": 1,
+      "combined_score": 0.804,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 54,
       "context": {
         "targets": [
           "주식"
@@ -104,14 +200,14 @@
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-06T06:33:48.402Z",
+    "generated_at": "2025-10-06T12:45:22.568Z",
     "finance_trend_keywords": 0,
     "keyword_limit": 30,
     "lookback_hours": 12,
     "article_cache_files": 200,
-    "article_cache_articles": 24,
-    "article_cache_phrases": 33,
-    "article_cache_skipped_recency": 5472
+    "article_cache_articles": 6,
+    "article_cache_phrases": 0,
+    "article_cache_skipped_recency": 5490
   },
   "keywords": [
     {
@@ -135,36 +231,76 @@
       }
     },
     {
-      "term": "Include shares of a bond-blend fund",
-      "term_ko": "채권혼합형 펀드의 주식 편입",
+      "term": "Nikkei 225 average stock price in Tokyo stock market",
+      "term_ko": "도쿄 주식시장 에서 닛케이225평균주가",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%20%ED%8E%80%EB%93%9C%EC%9D%98%20%EC%A3%BC%EC%8B%9D%20%ED%8E%B8%EC%9E%85&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Include%20shares%20of%20a%20bond-blend%20fund&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EB%8F%84%EC%BF%84%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%EC%84%9C%20%EB%8B%9B%EC%BC%80%EC%9D%B4225%ED%8F%89%EA%B7%A0%EC%A3%BC%EA%B0%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Nikkei%20225%20average%20stock%20price%20in%20Tokyo%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "Stock market at the Korea Exchange in Yeongdeungpo-gu",
-      "term_ko": "영등포구 한국거래소에서 열린 주식시장",
+      "term": "In the stock market, the Nikkei 225 Average Stock Price is below",
+      "term_ko": "주식시장 에서 닛케이225평균주가 이하",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%EC%97%90%EC%84%9C%20%EC%97%B4%EB%A6%B0%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Stock%20market%20at%20the%20Korea%20Exchange%20in%20Yeongdeungpo-gu&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%EC%84%9C%20%EB%8B%9B%EC%BC%80%EC%9D%B4225%ED%8F%89%EA%B7%A0%EC%A3%BC%EA%B0%80%20%EC%9D%B4%ED%95%98&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=In%20the%20stock%20market%2C%20the%20Nikkei%20225%20Average%20Stock%20Price%20is%20below&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "From high-interest savings to stocks",
+      "term_ko": "고금리 예 적금부터 주식",
+      "score": 1,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EC%98%88%20%EC%A0%81%EA%B8%88%EB%B6%80%ED%84%B0%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=From%20high-interest%20savings%20to%20stocks&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Weak Dollar and Demand for Domestic Stimulus Stock Market",
+      "term_ko": "약달러와 내수부양 요구 주식시장",
+      "score": 1,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%95%BD%EB%8B%AC%EB%9F%AC%EC%99%80%20%EB%82%B4%EC%88%98%EB%B6%80%EC%96%91%20%EC%9A%94%EA%B5%AC%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Weak%20Dollar%20and%20Demand%20for%20Domestic%20Stimulus%20Stock%20Market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "The stock market requires dollars",
+      "term_ko": "요구 주식 시장은 달러",
+      "score": 1,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%9A%94%EA%B5%AC%20%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%9D%80%20%EB%8B%AC%EB%9F%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=The%20stock%20market%20requires%20dollars&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "The stock market has been trading on the",
+      "term_ko": "주식 시장은 달러 약세가",
+      "score": 1,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%9D%80%20%EB%8B%AC%EB%9F%AC%20%EC%95%BD%EC%84%B8%EA%B0%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=The%20stock%20market%20has%20been%20trading%20on%20the&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     }
   ],
   "updatedAt": {
-    "en": "Updated Oct 6, 2025, 3:33 PM KST (12 hours)",
-    "ko": "2025. 10. 6. 오후 3:33 기준 업데이트 (12 hours)"
+    "en": "Updated Oct 6, 2025, 9:45 PM KST (12 hours)",
+    "ko": "2025. 10. 6. 오후 9:45 기준 업데이트 (12 hours)"
   },
-  "generatedAt": "2025-10-06T06:33:51.608Z",
+  "generatedAt": "2025-10-06T12:45:25.203Z",
   "timezone": "Asia/Seoul",
   "tagMeta": {
     "source": "tags.json",
     "date": "2025-10-06",
     "window": "12_hours",
-    "generatedAt": "2025-10-06T06:33:48.402Z"
+    "generatedAt": "2025-10-06T12:45:22.568Z"
   }
 }

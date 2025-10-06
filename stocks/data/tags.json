@@ -1,7 +1,7 @@
 {
   "date": "2025-10-06",
   "window": "12_hours",
-  "total_phrases": 4,
+  "total_phrases": 8,
   "discovered_keywords": [
     {
       "term": "Invest in shares of a commingled bond fund",
@@ -52,16 +52,16 @@
       }
     },
     {
-      "term": "Include shares in a bond-blend fund",
-      "term_ko": "채권혼합형 펀드의 주식 편입",
-      "significance_score": 170,
+      "term": "Nikkei 225 average stock price in Tokyo stock market",
+      "term_ko": "도쿄 주식시장 에서 닛케이225평균주가",
+      "significance_score": 174,
       "mentions": 1,
-      "combined_score": 0.895,
+      "combined_score": 0.909,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 80,
+      "finance_boost": 84,
       "context": {
         "targets": [
           "주식"
@@ -76,16 +76,112 @@
       }
     },
     {
-      "term": "Stock market at the Korea Exchange in Yeongdeungpo-gu",
-      "term_ko": "영등포구 한국거래소에서 열린 주식시장",
-      "significance_score": 160,
+      "term": "In the stock market, the Nikkei 225 Average Stock Price is below",
+      "term_ko": "주식시장 에서 닛케이225평균주가 이하",
+      "significance_score": 174,
       "mentions": 1,
-      "combined_score": 0.86,
+      "combined_score": 0.909,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 70,
+      "finance_boost": 84,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "From high-interest savings to stocks",
+      "term_ko": "고금리 예 적금부터 주식",
+      "significance_score": 171,
+      "mentions": 1,
+      "combined_score": 0.8985,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 66,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "Weak Dollar and Demand for Domestic Stimulus Stock Market",
+      "term_ko": "약달러와 내수부양 요구 주식시장",
+      "significance_score": 144,
+      "mentions": 1,
+      "combined_score": 0.804,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 54,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "The stock market requires dollars",
+      "term_ko": "요구 주식 시장은 달러",
+      "significance_score": 144,
+      "mentions": 1,
+      "combined_score": 0.804,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 54,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "The stock market has been trading on the",
+      "term_ko": "주식 시장은 달러 약세가",
+      "significance_score": 144,
+      "mentions": 1,
+      "combined_score": 0.804,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 54,
       "context": {
         "targets": [
           "주식"
@@ -104,13 +200,13 @@
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-06T06:36:49.387Z",
+    "generated_at": "2025-10-06T12:48:41.817Z",
     "finance_trend_keywords": 0,
     "keyword_limit": 30,
     "lookback_hours": 12,
     "article_cache_files": 200,
-    "article_cache_articles": 24,
-    "article_cache_phrases": 33,
-    "article_cache_skipped_recency": 5472
+    "article_cache_articles": 6,
+    "article_cache_phrases": 0,
+    "article_cache_skipped_recency": 5489
   }
 }

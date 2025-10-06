@@ -14,6 +14,14 @@ import { existsSync } from 'fs';
 import path from 'node:path';
 import { nowKSTISO } from './utils/time.js';
 import { fetchByTickers } from './src/data/quotes.js';
+import {
+  hasKisCredentials,
+  fetchDomesticPriceOnDate,
+  fetchDomesticSnapshot,
+  fetchOverseasPriceOnDate,
+  fetchOverseasPriceDetail,
+  expandOverseasSymbolCandidates
+} from './utils/kis.js';
 
 async function readJSON(p, fallback=null){
   try { return JSON.parse(await fs.readFile(p, 'utf8')); }
@@ -91,6 +99,40 @@ const NAVER_ENABLED = Boolean(NAVER_CLIENT_ID && NAVER_CLIENT_SECRET);
 const NEWS_TTL_MS = Number(process.env.NEWS_TTL_MS || 12 * 60 * 60 * 1000);
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+const DAY_MS = 24 * 60 * 60 * 1000;
+const PRICE_LOOKBACK_DAYS = Number(process.env.PRICE_LOOKBACK_DAYS || 365);
+const PRICE_WINDOW_DAYS = Number(process.env.PRICE_WINDOW_DAYS || 10);
+const PRICE_HISTORY_CONCURRENCY = Number(process.env.PRICE_HISTORY_CONCURRENCY || 3);
+const DEFAULT_OVERSEAS_EXCHANGES = (process.env.KIS_FALLBACK_EXCHANGES || 'NAS,NYS,AMS')
+  .split(',')
+  .map(s => s.trim().toUpperCase())
+  .filter(Boolean);
+const USER_PREFERRED_EXCHANGES = (process.env.KIS_PREFERRED_EXCHANGES || '')
+  .split(',')
+  .map(s => s.trim().toUpperCase())
+  .filter(Boolean);
+const KIS_EXCHANGE_TTL_MS = Number(process.env.KIS_EXCHANGE_TTL_MS || 30 * DAY_MS);
+const KIS_DOMESTIC_WINDOW_DAYS = Number(process.env.KIS_DOMESTIC_WINDOW_DAYS || 12);
+const KIS_OVERSEAS_WINDOW_DAYS = Number(process.env.KIS_OVERSEAS_WINDOW_DAYS || 20);
+const KIS_RECENT_FALLBACK_DAYS = Number(process.env.KIS_RECENT_FALLBACK_DAYS || 3);
+const KIS_OVERSEAS_HINTS = {
+  'BRK-B': 'NYS',
+  'BRK-A': 'NYS',
+  'PLTR': 'NYS',
+  'PATH': 'NYS',
+  'JNJ': 'NYS',
+  'PG': 'NYS',
+  'V': 'NYS',
+  'KO': 'NYS',
+  'NOW': 'NYS',
+  'LLY': 'NYS',
+  'UBER': 'NYS',
+  'NRG': 'NYS',
+  'JPM': 'NYS',
+  'UNH': 'NYS',
+  'SNOW': 'NYS',
+  'SHOP': 'NYS'
+};
 
 // 429-aware delay
 let consecutive429 = 0;
@@ -130,6 +172,322 @@ function noteStatus(err) {
     }
   } else {
     consecutive429 = 0;
+  }
+}
+
+async function fetchHistoricalPriceYahoo(ticker, targetDate) {
+  const targetMs = targetDate.getTime();
+  const period1 = Math.floor((targetMs - PRICE_WINDOW_DAYS * DAY_MS) / 1000);
+  const period2 = Math.floor((targetMs + PRICE_WINDOW_DAYS * DAY_MS) / 1000);
+  if (!(Number.isFinite(period1) && Number.isFinite(period2) && period2 > period1)) {
+    throw new Error('invalid period for historical price');
+  }
+
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?interval=1d&period1=${period1}&period2=${period2}`;
+  const res = await fetchWithRetry(url, { headers: HEADERS_JSON });
+  const json = await res.json();
+  if (json?.chart?.error) {
+    throw new Error(json.chart.error?.description || 'yahoo chart error');
+  }
+  const result = json?.chart?.result?.[0];
+  if (!result) throw new Error('missing chart result');
+  const timestamps = Array.isArray(result.timestamp) ? result.timestamp : [];
+  const closes = Array.isArray(result.indicators?.quote?.[0]?.close)
+    ? result.indicators.quote[0].close
+    : [];
+  if (!timestamps.length || !closes.length) throw new Error('empty historical data');
+  const targetSec = Math.floor(targetMs / 1000);
+  let bestIdx = -1;
+  let bestDiff = Infinity;
+  for (let i = 0; i < timestamps.length; i++) {
+    const price = Number(closes[i]);
+    if (!Number.isFinite(price)) continue;
+    const diff = Math.abs(timestamps[i] - targetSec);
+    if (diff < bestDiff) {
+      bestDiff = diff;
+      bestIdx = i;
+    }
+  }
+  if (bestIdx === -1) throw new Error('no valid historical price');
+  return { price: Number(closes[bestIdx]), timestamp: timestamps[bestIdx] * 1000 };
+}
+
+async function fetchHistoricalPricesYahooBatch(tickers, targetDate) {
+  const unique = [...new Set((tickers || []).filter(Boolean))];
+  if (!unique.length) return {};
+  const queue = unique.slice();
+  const out = {};
+  const workers = Math.min(Math.max(1, PRICE_HISTORY_CONCURRENCY), queue.length);
+
+  async function worker() {
+    while (true) {
+      const sym = queue.shift();
+      if (!sym) break;
+      try {
+        const hist = await fetchHistoricalPriceYahoo(sym, targetDate);
+        if (hist) out[sym] = hist;
+      } catch (e) {
+        console.warn(`[PRICE] ${sym} 1y lookup failed: ${e.message}`);
+      }
+      await sleep(150);
+    }
+  }
+
+  await Promise.all(Array.from({ length: workers }, worker));
+  return out;
+}
+
+function uniqueValues(values) {
+  const seen = new Set();
+  const out = [];
+  for (const value of values || []) {
+    if (!value) continue;
+    const normalized = typeof value === 'string' ? value.toUpperCase() : value;
+    const key = typeof normalized === 'string' ? normalized : JSON.stringify(normalized);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(normalized);
+  }
+  return out;
+}
+
+const isKrxTicker = ticker => /\.K[QS]$/i.test(ticker || '');
+const isLikelyUsTicker = ticker => /^[A-Z0-9.\-]+$/.test(ticker || '') && !isKrxTicker(ticker);
+
+function isRecentDate(targetDate, windowDays) {
+  if (!(targetDate instanceof Date) || Number.isNaN(targetDate.getTime())) return false;
+  return Math.abs(Date.now() - targetDate.getTime()) <= windowDays * DAY_MS;
+}
+
+function pickDomesticSnapshotForDate(snapshot, targetDate) {
+  if (!snapshot) return null;
+  const targetMs = targetDate.getTime();
+  const tradeTs = Number(snapshot.timestamp);
+  if (!Number.isFinite(tradeTs)) return null;
+  if (Number.isFinite(snapshot.previousClose)) {
+    const prevTs = tradeTs - DAY_MS;
+    if (Math.abs(prevTs - targetMs) <= DAY_MS * 2) {
+      return { price: snapshot.previousClose, timestamp: prevTs };
+    }
+  }
+  if (Number.isFinite(snapshot.current) && Math.abs(tradeTs - targetMs) <= DAY_MS * 2) {
+    return { price: snapshot.current, timestamp: tradeTs };
+  }
+  return null;
+}
+
+function pickOverseasDetailForDate(detail, targetDate) {
+  if (!detail) return null;
+  const targetMs = targetDate.getTime();
+  const ts = Number(detail.timestamp);
+  if (!Number.isFinite(ts)) return null;
+  if (Number.isFinite(detail.previousClose)) {
+    const prevTs = ts - DAY_MS;
+    if (Math.abs(prevTs - targetMs) <= DAY_MS * 2) {
+      return { price: detail.previousClose, timestamp: prevTs };
+    }
+  }
+  if (Number.isFinite(detail.current) && Math.abs(ts - targetMs) <= DAY_MS * 2) {
+    return { price: detail.current, timestamp: ts };
+  }
+  return null;
+}
+
+async function fetchHistoricalPricesBatch(tickers, targetDate, cache) {
+  const uniqueTickers = [...new Set((tickers || []).filter(Boolean))];
+  if (!uniqueTickers.length) return {};
+  const out = {};
+  const fallback = [];
+  const kisEnabled = hasKisCredentials();
+  let cacheDirty = false;
+  const cacheRef = cache || {};
+
+  if (kisEnabled) {
+    for (const symbol of uniqueTickers) {
+      if (isKrxTicker(symbol)) {
+        let resolved = false;
+        try {
+          const res = await fetchDomesticPriceOnDate(symbol, targetDate, { windowDays: KIS_DOMESTIC_WINDOW_DAYS });
+          if (res && Number.isFinite(res.price)) {
+            out[symbol] = { price: res.price, timestamp: res.timestamp };
+            resolved = true;
+          }
+        } catch (err) {
+          console.warn(`[KIS:KR] ${symbol} ${err.message}`);
+          noteStatus(err);
+        }
+        if (!resolved && isRecentDate(targetDate, KIS_RECENT_FALLBACK_DAYS)) {
+          try {
+            const snap = await fetchDomesticSnapshot(symbol);
+            const approx = pickDomesticSnapshotForDate(snap, targetDate);
+            if (approx) {
+              out[symbol] = approx;
+              resolved = true;
+            }
+          } catch (err) {
+            console.warn(`[KIS:KR:snapshot] ${symbol} ${err.message}`);
+            noteStatus(err);
+          }
+        }
+        if (!resolved) fallback.push(symbol);
+        continue;
+      }
+
+      if (isLikelyUsTicker(symbol)) {
+        const cachedExchange = cacheGetKisExchange(cacheRef, symbol);
+        const hintExchange = KIS_OVERSEAS_HINTS[symbol];
+        const exchanges = uniqueValues([
+          cachedExchange,
+          hintExchange,
+          ...USER_PREFERRED_EXCHANGES,
+          ...DEFAULT_OVERSEAS_EXCHANGES
+        ]);
+        if (!exchanges.length) exchanges.push(...DEFAULT_OVERSEAS_EXCHANGES);
+        const symbolCandidates = expandOverseasSymbolCandidates(symbol);
+        let resolved = false;
+        let lastError;
+        for (const exchange of exchanges) {
+          try {
+            const res = await fetchOverseasPriceOnDate(symbol, targetDate, {
+              exchange,
+              symbolCandidates,
+              windowDays: KIS_OVERSEAS_WINDOW_DAYS
+            });
+            if (res && Number.isFinite(res.price)) {
+              out[symbol] = { price: res.price, timestamp: res.timestamp };
+              if (exchange && exchange !== cachedExchange) {
+                cachePutKisExchange(cacheRef, symbol, exchange);
+                cacheDirty = true;
+              }
+              resolved = true;
+              break;
+            }
+          } catch (err) {
+            lastError = err;
+            noteStatus(err);
+          }
+        }
+        if (!resolved && isRecentDate(targetDate, KIS_RECENT_FALLBACK_DAYS)) {
+          for (const exchange of exchanges) {
+            try {
+              const detail = await fetchOverseasPriceDetail(symbol, exchange, { symbolCandidates });
+              const approx = pickOverseasDetailForDate(detail, targetDate);
+              if (approx) {
+                out[symbol] = approx;
+                if (exchange && exchange !== cachedExchange) {
+                  cachePutKisExchange(cacheRef, symbol, exchange);
+                  cacheDirty = true;
+                }
+                resolved = true;
+                break;
+              }
+            } catch (err) {
+              lastError = err;
+              noteStatus(err);
+            }
+          }
+        }
+        if (!resolved) {
+          if (lastError) console.warn(`[KIS:US] ${symbol} ${lastError.message}`);
+          fallback.push(symbol);
+        }
+        continue;
+      }
+
+      fallback.push(symbol);
+    }
+  } else {
+    fallback.push(...uniqueTickers);
+  }
+
+  if (cacheDirty) {
+    try {
+      await saveCache(cacheRef);
+    } catch (err) {
+      console.warn('[CACHE] Failed to persist KIS metadata:', err.message);
+    }
+  }
+
+  const remaining = uniqueTickers.filter(sym => !out[sym]);
+  const fallbackSymbols = uniqueValues([...fallback, ...remaining]);
+  if (fallbackSymbols.length) {
+    const yahoo = await fetchHistoricalPricesYahooBatch(fallbackSymbols, targetDate);
+    Object.assign(out, yahoo);
+  }
+  return out;
+}
+
+function deriveCurrency(ticker) {
+  if (/\.K[QS]$/i.test(ticker || '')) return 'KRW';
+  return 'USD';
+}
+
+async function attachPrices(data, cache) {
+  const tickers = new Set();
+  for (const market of Object.keys(data || {})) {
+    for (const bucket of ['safe', 'aggressive']) {
+      const entries = data[market]?.[bucket];
+      if (!Array.isArray(entries)) continue;
+      for (const entry of entries) {
+        if (entry?.ticker) tickers.add(entry.ticker);
+      }
+    }
+  }
+  const list = [...tickers].filter(Boolean);
+  if (!list.length) return;
+
+  const now = new Date();
+  let quotes = [];
+  try {
+    quotes = await fetchByTickers(list);
+  } catch (e) {
+    console.warn('[PRICE] failed to fetch quotes:', e.message || e);
+  }
+  const priceMap = {};
+  for (const q of quotes) {
+    if (!q?.symbol) continue;
+    const symbol = q.symbol;
+    const current = Number.isFinite(q.regularMarketPrice)
+      ? Number(q.regularMarketPrice)
+      : (Number.isFinite(q.regularMarketPreviousClose) ? Number(q.regularMarketPreviousClose) : null);
+    const prevClose = Number.isFinite(q.regularMarketPreviousClose)
+      ? Number(q.regularMarketPreviousClose)
+      : null;
+    priceMap[symbol] = {
+      currentPrice: current,
+      previousClose: prevClose,
+      priceAsOf: now.toISOString(),
+      currency: deriveCurrency(symbol)
+    };
+  }
+
+  const targetDate = new Date(now.getTime() - PRICE_LOOKBACK_DAYS * DAY_MS);
+  const historical = await fetchHistoricalPricesBatch(list, targetDate, cache);
+  for (const [symbol, info] of Object.entries(historical)) {
+    if (!info) continue;
+    if (!priceMap[symbol]) {
+      priceMap[symbol] = { priceAsOf: now.toISOString(), currency: deriveCurrency(symbol) };
+    }
+    if (Number.isFinite(info.price)) priceMap[symbol].price1yAgo = Number(info.price);
+    if (Number.isFinite(info.timestamp)) priceMap[symbol].price1yDate = new Date(info.timestamp).toISOString();
+  }
+
+  for (const market of Object.keys(data || {})) {
+    for (const bucket of ['safe', 'aggressive']) {
+      const entries = data[market]?.[bucket];
+      if (!Array.isArray(entries)) continue;
+      for (const entry of entries) {
+        const symbol = entry?.ticker;
+        const info = symbol ? priceMap[symbol] : null;
+        if (!info) continue;
+        if (Number.isFinite(info.currentPrice)) entry.currentPrice = info.currentPrice;
+        else if (Number.isFinite(info.previousClose)) entry.currentPrice = info.previousClose;
+        if (Number.isFinite(info.price1yAgo)) entry.price1yAgo = info.price1yAgo;
+        if (info.price1yDate) entry.price1yDate = info.price1yDate;
+        if (info.priceAsOf) entry.priceAsOf = info.priceAsOf;
+        if (info.currency) entry.priceCurrency = info.currency;
+      }
+    }
   }
 }
 
@@ -510,6 +868,19 @@ function cachePutSearchUrl(cache, name, url) {
   const nk = normalizeKey(name);
   cache._searchUrls = cache._searchUrls || {};
   cache._searchUrls[nk] = { value: url, ts: Date.now() };
+}
+
+function cacheGetKisExchange(cache, symbol) {
+  const entry = cache?._kisExchanges?.[symbol];
+  if (!entry) return undefined;
+  if (Date.now() - entry.ts > KIS_EXCHANGE_TTL_MS) return undefined;
+  return entry.value;
+}
+
+function cachePutKisExchange(cache, symbol, exchange) {
+  if (!exchange) return;
+  cache._kisExchanges = cache._kisExchanges || {};
+  cache._kisExchanges[symbol] = { value: exchange.toUpperCase(), ts: Date.now() };
 }
 
 const looksKorean = s => /[가-힣]/.test(s);
@@ -911,6 +1282,12 @@ async function tryFetchAndEnrich() {
 
       data[market][group] = updated;
     }
+  }
+
+  try {
+    await attachPrices(data, cache);
+  } catch (e) {
+    console.warn('[PRICE] Failed to enrich price data:', e?.message || e);
   }
 
   return { data, successCount };
