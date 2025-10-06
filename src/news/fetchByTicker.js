@@ -792,8 +792,21 @@ async function collectDatalabKeywordSeeds({ query = DATALAB_KEYWORD_QUERY, limit
 
   if (!SKIP_NAVER && NAVER_ID && NAVER_SECRET) {
     try {
-      const res = await naverSearch({ query: cleanedQuery, NAVER_ID, NAVER_SECRET });
-      for (const item of res?.items || []) {
+      // Focus on stock market queries across multiple indices
+      const stockQueries = [
+        '주식',
+        '주식 시장',
+        '코스피',
+        '코스닥',
+        'S&P 500',
+        'NASDAQ'
+      ];
+      const allItems = [];
+      for (const q of stockQueries) {
+        const res = await naverSearch({ query: q, NAVER_ID, NAVER_SECRET });
+        allItems.push(...(res?.items || []));
+      }
+      for (const item of allItems) {
         const title = stripHtml(item?.title || '');
         const description = stripHtml(item?.description || '');
         const text = `${title} ${description}`.trim();
@@ -805,7 +818,7 @@ async function collectDatalabKeywordSeeds({ query = DATALAB_KEYWORD_QUERY, limit
         }
       }
     } catch (err) {
-      console.warn(`[keywords] Naver DataLab seeds failed for query "${cleanedQuery}":`, err?.message || err);
+      console.warn('[keywords] Naver DataLab seeds failed for stock queries:', err?.message || err);
     }
   }
 
@@ -2333,7 +2346,17 @@ async function scrapeNateIssueTrends() {
 async function extractNaverNewsKeywords() {
   if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET || SKIP_NAVER) return [];
 
-  const queries = ['주식'];
+  const queries = [
+    '주식',
+    '주식 시장',
+    '증권',
+    '코스피',
+    '코스닥',
+    'S&P 500',
+    'S&P500',
+    'NASDAQ',
+    '나스닥'
+  ];
   const keywordMap = new Map();
 
   for (const query of queries) {
@@ -2992,7 +3015,12 @@ async function extractNaverNewsSignificantPhrases() {
 
   // Query for newsworthy events
   const queries = [
-    '주식'
+    '주식',
+    '주식 시장',
+    '코스피',
+    '코스닥',
+    'S&P 500',
+    'NASDAQ'
   ];
 
   const allPhrases = [];
