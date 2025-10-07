@@ -1,14 +1,14 @@
 {
   "date": "2025-10-07",
   "window": "12_hours",
-  "total_phrases": 11,
+  "total_phrases": 7,
   "discovered_keywords": [
     {
       "term": "Invest in shares of a commingled bond fund",
-      "term_ko": "투자한다 채권혼합형 펀드의 주식",
+      "term_ko": "투자 채권혼합형 펀드의 주식",
       "significance_score": 200,
       "mentions": 1,
-      "combined_score": 1,
+      "combined_score": 8.605693372504161,
       "sources": [
         "news",
         "significance_analysis"
@@ -29,10 +29,10 @@
     },
     {
       "term": "OpenAI and capital in the stock market",
-      "term_ko": "주식시장 에서 오픈AI와 자본",
-      "significance_score": 177,
+      "term_ko": "증시 에서 오픈AI와 자본",
+      "significance_score": 221.25,
       "mentions": 1,
-      "combined_score": 0.9195,
+      "combined_score": 4.051446407827817,
       "sources": [
         "news",
         "significance_analysis"
@@ -53,34 +53,10 @@
     },
     {
       "term": "Maotai This sentiment is reflected in the stock market",
-      "term_ko": "마오타이 이런 분위기는 주식시장",
+      "term_ko": "마오타이 증시",
       "significance_score": 176,
       "mentions": 1,
-      "combined_score": 0.916,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 54,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
-    },
-    {
-      "term": "Sentiment is reflected in the stock market",
-      "term_ko": "분위기는 주식 시장에도 반영돼",
-      "significance_score": 176,
-      "mentions": 1,
-      "combined_score": 0.916,
+      "combined_score": 8.08031149511855,
       "sources": [
         "news",
         "significance_analysis"
@@ -101,10 +77,10 @@
     },
     {
       "term": "This sentiment is also reflected in the stock market",
-      "term_ko": "이런 분위기는 주식 시장에도",
+      "term_ko": "증시 에도",
       "significance_score": 176,
       "mentions": 1,
-      "combined_score": 0.916,
+      "combined_score": 8.08031149511855,
       "sources": [
         "news",
         "significance_analysis"
@@ -124,11 +100,11 @@
       }
     },
     {
-      "term": "The AI boom has a stock market",
-      "term_ko": "AI 붐에는 주식 시장",
-      "significance_score": 159,
+      "term": "The stock market was affected by the government shutdown's",
+      "term_ko": "증시은 정부 폐쇄의",
+      "significance_score": 176,
       "mentions": 1,
-      "combined_score": 0.8565,
+      "combined_score": 4.040155747559275,
       "sources": [
         "news",
         "significance_analysis"
@@ -149,10 +125,10 @@
     },
     {
       "term": "In the US stock market, OpenAI and",
-      "term_ko": "미국 주식시장 에서 오픈AI와",
-      "significance_score": 159,
+      "term_ko": "미국 증시 에서 오픈AI와",
+      "significance_score": 198.75,
       "mentions": 1,
-      "combined_score": 0.8565,
+      "combined_score": 7.686124126016687,
       "sources": [
         "news",
         "significance_analysis"
@@ -172,41 +148,11 @@
       }
     },
     {
-      "term": "Customs duty pick",
-      "term_ko": "관세부과 pick",
-      "significance_score": 17,
-      "mentions": 1,
-      "combined_score": 0.3595,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
-      "term": "1New Urban Leadership District",
-      "term_ko": "1기신도시 선도지구",
-      "significance_score": 1,
-      "mentions": 1,
-      "combined_score": 0.3035,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
-      "term": "Increase in capitalization of zinc kimberlite",
-      "term_ko": "고려아연 유상증자",
-      "significance_score": 1,
-      "mentions": 1,
-      "combined_score": 0.3035,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
       "term": "Samsung Electronics stock",
       "term_ko": "삼성전자 주식",
       "significance_score": 1,
       "mentions": 1,
-      "combined_score": 0.3035,
+      "combined_score": 0.7204119982655924,
       "sources": [
         "naver_search"
       ]
@@ -216,104 +162,74 @@
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-07T12:44:25.509Z",
+    "generated_at": "2025-10-07T18:32:26.615Z",
     "finance_trend_keywords": 0,
     "keyword_limit": 30,
     "lookback_hours": 12,
     "article_cache_files": 200,
     "article_cache_articles": 0,
     "article_cache_phrases": 0,
-    "article_cache_skipped_recency": 5440
+    "article_cache_skipped_recency": 5419
   },
   "keywords": [
     {
       "term": "Invest in shares of a commingled bond fund",
-      "term_ko": "투자한다 채권혼합형 펀드의 주식",
+      "term_ko": "투자 채권혼합형 펀드의 주식",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%ED%88%AC%EC%9E%90%ED%95%9C%EB%8B%A4%20%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%20%ED%8E%80%EB%93%9C%EC%9D%98%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "ko": "https://www.google.com/search?q=%ED%88%AC%EC%9E%90%20%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%20%ED%8E%80%EB%93%9C%EC%9D%98%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
         "en": "https://www.google.com/search?q=Invest%20in%20shares%20of%20a%20commingled%20bond%20fund&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
       "term": "OpenAI and capital in the stock market",
-      "term_ko": "주식시장 에서 오픈AI와 자본",
+      "term_ko": "증시 에서 오픈AI와 자본",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%EC%84%9C%20%EC%98%A4%ED%94%88AI%EC%99%80%20%EC%9E%90%EB%B3%B8&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "ko": "https://www.google.com/search?q=%EC%A6%9D%EC%8B%9C%20%EC%97%90%EC%84%9C%20%EC%98%A4%ED%94%88AI%EC%99%80%20%EC%9E%90%EB%B3%B8&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
         "en": "https://www.google.com/search?q=OpenAI%20and%20capital%20in%20the%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
       "term": "Maotai This sentiment is reflected in the stock market",
-      "term_ko": "마오타이 이런 분위기는 주식시장",
+      "term_ko": "마오타이 증시",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EB%A7%88%EC%98%A4%ED%83%80%EC%9D%B4%20%EC%9D%B4%EB%9F%B0%20%EB%B6%84%EC%9C%84%EA%B8%B0%EB%8A%94%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "ko": "https://www.google.com/search?q=%EB%A7%88%EC%98%A4%ED%83%80%EC%9D%B4%20%EC%A6%9D%EC%8B%9C&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
         "en": "https://www.google.com/search?q=Maotai%20This%20sentiment%20is%20reflected%20in%20the%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "Sentiment is reflected in the stock market",
-      "term_ko": "분위기는 주식 시장에도 반영돼",
-      "score": 1,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%EB%B6%84%EC%9C%84%EA%B8%B0%EB%8A%94%20%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%97%90%EB%8F%84%20%EB%B0%98%EC%98%81%EB%8F%BC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Sentiment%20is%20reflected%20in%20the%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
       "term": "This sentiment is also reflected in the stock market",
-      "term_ko": "이런 분위기는 주식 시장에도",
+      "term_ko": "증시 에도",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%9D%B4%EB%9F%B0%20%EB%B6%84%EC%9C%84%EA%B8%B0%EB%8A%94%20%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%97%90%EB%8F%84&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "ko": "https://www.google.com/search?q=%EC%A6%9D%EC%8B%9C%20%EC%97%90%EB%8F%84&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
         "en": "https://www.google.com/search?q=This%20sentiment%20is%20also%20reflected%20in%20the%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "The AI boom has a stock market",
-      "term_ko": "AI 붐에는 주식 시장",
+      "term": "The stock market was affected by the government shutdown's",
+      "term_ko": "증시은 정부 폐쇄의",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=AI%20%EB%B6%90%EC%97%90%EB%8A%94%20%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=The%20AI%20boom%20has%20a%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EC%A6%9D%EC%8B%9C%EC%9D%80%20%EC%A0%95%EB%B6%80%20%ED%8F%90%EC%87%84%EC%9D%98&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=The%20stock%20market%20was%20affected%20by%20the%20government%20shutdown's&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
       "term": "In the US stock market, OpenAI and",
-      "term_ko": "미국 주식시장 에서 오픈AI와",
+      "term_ko": "미국 증시 에서 오픈AI와",
       "score": 1,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%EC%84%9C%20%EC%98%A4%ED%94%88AI%EC%99%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "ko": "https://www.google.com/search?q=%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%97%90%EC%84%9C%20%EC%98%A4%ED%94%88AI%EC%99%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
         "en": "https://www.google.com/search?q=In%20the%20US%20stock%20market%2C%20OpenAI%20and&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "1New Urban Leadership District",
-      "term_ko": "1기신도시 선도지구",
-      "score": 1,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=1%EA%B8%B0%EC%8B%A0%EB%8F%84%EC%8B%9C%20%EC%84%A0%EB%8F%84%EC%A7%80%EA%B5%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=1New%20Urban%20Leadership%20District&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "Increase in capitalization of zinc kimberlite",
-      "term_ko": "고려아연 유상증자",
-      "score": 1,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%EA%B3%A0%EB%A0%A4%EC%95%84%EC%97%B0%20%EC%9C%A0%EC%83%81%EC%A6%9D%EC%9E%90&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Increase%20in%20capitalization%20of%20zinc%20kimberlite&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
@@ -328,15 +244,15 @@
     }
   ],
   "updatedAt": {
-    "en": "Updated Oct 7, 2025, 9:44 PM KST (12 hours)",
-    "ko": "2025. 10. 7. 오후 9:44 기준 업데이트 (12 hours)"
+    "en": "Updated Oct 8, 2025, 3:32 AM KST (12 hours)",
+    "ko": "2025. 10. 8. 오전 3:32 기준 업데이트 (12 hours)"
   },
-  "generatedAt": "2025-10-07T12:44:28.308Z",
+  "generatedAt": "2025-10-07T18:32:29.212Z",
   "timezone": "Asia/Seoul",
   "tagMeta": {
     "source": "tags.json",
     "date": "2025-10-07",
     "window": "12_hours",
-    "generatedAt": "2025-10-07T12:44:25.509Z"
+    "generatedAt": "2025-10-07T18:32:26.615Z"
   }
 }

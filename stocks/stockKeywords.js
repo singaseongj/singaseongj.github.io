@@ -4418,7 +4418,7 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     })
     .slice(0, desiredCount);
 
-  const discoveredKeywords = [];
+  let discoveredKeywords = [];
   const usedSignatures = new Set();
   const datalabMatchedTerms = new Set();
   for (const entry of ranked) {
@@ -4503,6 +4503,77 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
 
     discoveredKeywords.push(keywordRecord);
   }
+
+  // Final keyword scoring loop
+  for (const kw of discoveredKeywords) {
+    const freq = kw.mentions || 1;
+    const sig = kw.significance_score || 0;
+    // ✅ Improved weighting and normalization
+    const logFreq = Math.log10(freq + 1);
+    const normSig = Math.sqrt(sig);
+    kw.combined_score = 0.6 * normSig + 0.4 * logFreq;
+
+    // ✅ Penalize plain or generic "주식"/"주식시장" terms
+    const termKo = kw.term_ko || '';
+    if (/^주식\s*$/.test(termKo) || /^주식\s?시장/.test(termKo)) {
+      kw.combined_score *= 0.5;
+    }
+
+    // ✅ Downweight verb-heavy phrases ("한다", "되다", etc.)
+    if (/[다]$/.test(termKo)) {
+      kw.significance_score *= 0.7;
+    }
+
+    // ✅ Trend boost for key finance or sectoral terms
+    const TREND_TERMS = [
+      'AI',
+      '반도체',
+      '배터리',
+      '전기차',
+      '금리',
+      '인플레이션',
+      '에너지',
+      '환율',
+      'ETF',
+      '원유',
+      '수출',
+      '산업',
+      '기술'
+    ];
+    const termEn = kw.term || '';
+    if (TREND_TERMS.some(t => termEn.includes(t) || termKo.includes(t))) {
+      kw.significance_score *= 1.25;
+    }
+  }
+
+  // ✅ Semantic deduplication (reduce repetitive "주식시장" variants)
+  const uniqueKeywords = [];
+  const seenKeys = new Set();
+  for (const kw of discoveredKeywords) {
+    const baseKey = (kw.term_ko || kw.term || '')
+      .replace(/\s+/g, '')
+      .replace(/주식시장?|시장|투자|한다|반영/g, '');
+    if (![...seenKeys].some(k => baseKey.includes(k) || k.includes(baseKey))) {
+      seenKeys.add(baseKey);
+      uniqueKeywords.push(kw);
+    }
+  }
+  discoveredKeywords = uniqueKeywords;
+
+  // ✅ Style improvement (cleaner Korean phrasing)
+  function stylizeKeyword(termKo = '') {
+    return termKo
+      .replace(/주식\s?시장/g, '증시')
+      .replace(/투자한다|투자하다/g, '투자')
+      .replace(/이런\s?분위기는|분위기는/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  discoveredKeywords = discoveredKeywords.map(k => ({
+    ...k,
+    term_ko: stylizeKeyword(k.term_ko)
+  }));
 
   const nowIso = new Date().toISOString();
   const payload = {
