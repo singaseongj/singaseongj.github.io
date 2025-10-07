@@ -120,6 +120,34 @@ const TAG_CREDIT_WEIGHT = Math.max(Number(process.env.TAG_CREDIT_WEIGHT || 0.12)
 const TAG_CREDIT_MAX_BOOST = Math.max(Number(process.env.TAG_CREDIT_MAX_BOOST || 0.6), 0);
 const FINANCE_KEYWORDS_FILE = path.join(__dirname, 'data', 'finance_keywords.json');
 
+async function runExtractKeywords({ tagsPath = null } = {}) {
+  const scriptPath = path.join(__dirname, 'extractKeywords.js');
+  const env = { ...process.env };
+  if (tagsPath) {
+    env.MARKET_TAG_FILE = tagsPath;
+  }
+
+  await new Promise((resolve, reject) => {
+    const proc = spawn(process.execPath, [scriptPath], {
+      stdio: 'inherit',
+      env,
+    });
+
+    proc.on('error', reject);
+    proc.on('exit', (code, signal) => {
+      if (code === 0) {
+        resolve();
+      } else {
+        const reason =
+          code !== null
+            ? new Error(`extractKeywords exited with code ${code}`)
+            : new Error(`extractKeywords exited due to signal ${signal}`);
+        reject(reason);
+      }
+    });
+  });
+}
+
 function ensureDirFor(file) {
   try {
     fs.mkdirSync(path.dirname(file), { recursive: true });
@@ -5239,6 +5267,12 @@ if (isMainModule) {
       if (!summary.ok) {
         console.error('[tags] verification failed');
         process.exit(2);
+      }
+
+      try {
+        await runExtractKeywords({ tagsPath: outputPath });
+      } catch (err) {
+        console.warn('[tags] refined keyword extraction failed:', err?.message || err);
       }
 
       if (!args.has('--no-credit')) {
