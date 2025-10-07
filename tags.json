@@ -1,14 +1,38 @@
 {
-  "date": "2025-10-06",
+  "date": "2025-10-07",
   "window": "12_hours",
-  "total_phrases": 7,
+  "total_phrases": 10,
   "discovered_keywords": [
+    {
+      "term": "The stock market was affected by the government shutdown's",
+      "term_ko": "주식 시장은 정부 폐쇄의",
+      "significance_score": 176,
+      "mentions": 2,
+      "combined_score": 0.916,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 54,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
     {
       "term": "Invest in shares of a commingled bond fund",
       "term_ko": "투자한다 채권혼합형 펀드의 주식",
       "significance_score": 200,
       "mentions": 1,
-      "combined_score": 1,
+      "combined_score": 0.85,
       "sources": [
         "news",
         "significance_analysis"
@@ -28,16 +52,16 @@
       }
     },
     {
-      "term": "Include shares in a bond-blend fund",
-      "term_ko": "채권혼합형 펀드의 주식 편입",
-      "significance_score": 170,
+      "term": "Stock market pressures for rate cuts",
+      "term_ko": "금리인하를 압박한 원인이 주식시장",
+      "significance_score": 193,
       "mentions": 1,
-      "combined_score": 0.895,
+      "combined_score": 0.8255,
       "sources": [
         "news",
         "significance_analysis"
       ],
-      "finance_boost": 80,
+      "finance_boost": 88,
       "context": {
         "targets": [
           "주식"
@@ -52,35 +76,11 @@
       }
     },
     {
-      "term": "Hardening and in-stock",
-      "term_ko": "강화 및 주식시장 내",
-      "significance_score": 166,
+      "term": "THE",
+      "term_ko": "투자자가 주식 으로 전환할",
+      "significance_score": 178,
       "mentions": 1,
-      "combined_score": 0.881,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 54,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
-    },
-    {
-      "term": "6.25 million in equity for ASEAN Cultural Travel",
-      "term_ko": "625만달러를 투자해 아세아문화여행의 주식",
-      "significance_score": 152,
-      "mentions": 1,
-      "combined_score": 0.832,
+      "combined_score": 0.773,
       "sources": [
         "news",
         "significance_analysis"
@@ -100,11 +100,35 @@
       }
     },
     {
-      "term": "Weak Dollar and Demand for Domestic Stimulus Stock Market",
-      "term_ko": "약달러와 내수부양 요구 주식시장",
+      "term": "Investing in the domestic stock market",
+      "term_ko": "국내 주식시장 에 투자하는",
+      "significance_score": 174,
+      "mentions": 1,
+      "combined_score": 0.759,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 84,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "Holdings valued at $3.73 million in the domestic stock market",
+      "term_ko": "보유가액은 373만원 국내 주식시장",
       "significance_score": 144,
       "mentions": 1,
-      "combined_score": 0.804,
+      "combined_score": 0.654,
       "sources": [
         "news",
         "significance_analysis"
@@ -124,59 +148,51 @@
       }
     },
     {
-      "term": "Demand stock market silver dollars",
-      "term_ko": "요구 주식시장 은 달러",
-      "significance_score": 144,
+      "term": "Customs duty pick",
+      "term_ko": "관세부과 pick",
+      "significance_score": 17,
       "mentions": 1,
-      "combined_score": 0.804,
+      "combined_score": 0.2095,
       "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 54,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
+        "korean_first"
+      ]
     },
     {
-      "term": "Stock market silver dollar weakness",
-      "term_ko": "주식시장 은 달러 약세가",
-      "significance_score": 144,
+      "term": "1New Urban Leadership District",
+      "term_ko": "1기신도시 선도지구",
+      "significance_score": 1,
       "mentions": 1,
-      "combined_score": 0.804,
+      "combined_score": 0.1535,
       "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 54,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
+        "korean_first"
+      ]
+    },
+    {
+      "term": "Increase in capitalization of zinc kimberlite",
+      "term_ko": "고려아연 유상증자",
+      "significance_score": 1,
+      "mentions": 1,
+      "combined_score": 0.1535,
+      "sources": [
+        "korean_first"
+      ]
+    },
+    {
+      "term": "Samsung Electronics stock",
+      "term_ko": "삼성전자 주식",
+      "significance_score": 1,
+      "mentions": 1,
+      "combined_score": 0.1535,
+      "sources": [
+        "naver_search"
+      ]
     }
   ],
   "metadata": {
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-06T18:32:23.944Z",
+    "generated_at": "2025-10-07T01:29:41.872Z",
     "finance_trend_keywords": 0,
     "keyword_limit": 30,
     "lookback_hours": 12,
@@ -187,9 +203,19 @@
   },
   "keywords": [
     {
+      "term": "The stock market was affected by the government shutdown's",
+      "term_ko": "주식 시장은 정부 폐쇄의",
+      "score": 1,
+      "mentions": 2,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%9D%80%20%EC%A0%95%EB%B6%80%20%ED%8F%90%EC%87%84%EC%9D%98&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=The%20stock%20market%20was%20affected%20by%20the%20government%20shutdown's&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
       "term": "Invest in shares of a commingled bond fund",
       "term_ko": "투자한다 채권혼합형 펀드의 주식",
-      "score": 1,
+      "score": 0.8,
       "mentions": 1,
       "search": {
         "ko": "https://www.google.com/search?q=%ED%88%AC%EC%9E%90%ED%95%9C%EB%8B%A4%20%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%20%ED%8E%80%EB%93%9C%EC%9D%98%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
@@ -197,76 +223,96 @@
       }
     },
     {
-      "term": "Include shares in a bond-blend fund",
-      "term_ko": "채권혼합형 펀드의 주식 편입",
-      "score": 1,
+      "term": "Stock market pressures for rate cuts",
+      "term_ko": "금리인하를 압박한 원인이 주식시장",
+      "score": 0.8,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%20%ED%8E%80%EB%93%9C%EC%9D%98%20%EC%A3%BC%EC%8B%9D%20%ED%8E%B8%EC%9E%85&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Include%20shares%20in%20a%20bond-blend%20fund&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%EB%A5%BC%20%EC%95%95%EB%B0%95%ED%95%9C%20%EC%9B%90%EC%9D%B8%EC%9D%B4%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Stock%20market%20pressures%20for%20rate%20cuts&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "Hardening and in-stock",
-      "term_ko": "강화 및 주식시장 내",
-      "score": 1,
+      "term": "THE",
+      "term_ko": "투자자가 주식 으로 전환할",
+      "score": 0.8,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EA%B0%95%ED%99%94%20%EB%B0%8F%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EB%82%B4&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Hardening%20and%20in-stock&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%ED%88%AC%EC%9E%90%EC%9E%90%EA%B0%80%20%EC%A3%BC%EC%8B%9D%20%EC%9C%BC%EB%A1%9C%20%EC%A0%84%ED%99%98%ED%95%A0&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=THE&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "6.25 million in equity for ASEAN Cultural Travel",
-      "term_ko": "625만달러를 투자해 아세아문화여행의 주식",
-      "score": 1,
+      "term": "Investing in the domestic stock market",
+      "term_ko": "국내 주식시장 에 투자하는",
+      "score": 0.8,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=625%EB%A7%8C%EB%8B%AC%EB%9F%AC%EB%A5%BC%20%ED%88%AC%EC%9E%90%ED%95%B4%20%EC%95%84%EC%84%B8%EC%95%84%EB%AC%B8%ED%99%94%EC%97%AC%ED%96%89%EC%9D%98%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=6.25%20million%20in%20equity%20for%20ASEAN%20Cultural%20Travel&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%20%ED%88%AC%EC%9E%90%ED%95%98%EB%8A%94&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Investing%20in%20the%20domestic%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "Weak Dollar and Demand for Domestic Stimulus Stock Market",
-      "term_ko": "약달러와 내수부양 요구 주식시장",
-      "score": 1,
+      "term": "Holdings valued at $3.73 million in the domestic stock market",
+      "term_ko": "보유가액은 373만원 국내 주식시장",
+      "score": 0.8,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%95%BD%EB%8B%AC%EB%9F%AC%EC%99%80%20%EB%82%B4%EC%88%98%EB%B6%80%EC%96%91%20%EC%9A%94%EA%B5%AC%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Weak%20Dollar%20and%20Demand%20for%20Domestic%20Stimulus%20Stock%20Market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EB%B3%B4%EC%9C%A0%EA%B0%80%EC%95%A1%EC%9D%80%20373%EB%A7%8C%EC%9B%90%20%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Holdings%20valued%20at%20%243.73%20million%20in%20the%20domestic%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "Demand stock market silver dollars",
-      "term_ko": "요구 주식시장 은 달러",
-      "score": 1,
+      "term": "1New Urban Leadership District",
+      "term_ko": "1기신도시 선도지구",
+      "score": 0.8,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%9A%94%EA%B5%AC%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%9D%80%20%EB%8B%AC%EB%9F%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Demand%20stock%20market%20silver%20dollars&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=1%EA%B8%B0%EC%8B%A0%EB%8F%84%EC%8B%9C%20%EC%84%A0%EB%8F%84%EC%A7%80%EA%B5%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=1New%20Urban%20Leadership%20District&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
-      "term": "Stock market silver dollar weakness",
-      "term_ko": "주식시장 은 달러 약세가",
-      "score": 1,
+      "term": "Increase in capitalization of zinc kimberlite",
+      "term_ko": "고려아연 유상증자",
+      "score": 0.8,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%9D%80%20%EB%8B%AC%EB%9F%AC%20%EC%95%BD%EC%84%B8%EA%B0%80&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Stock%20market%20silver%20dollar%20weakness&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EA%B3%A0%EB%A0%A4%EC%95%84%EC%97%B0%20%EC%9C%A0%EC%83%81%EC%A6%9D%EC%9E%90&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Increase%20in%20capitalization%20of%20zinc%20kimberlite&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Samsung Electronics stock",
+      "term_ko": "삼성전자 주식",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Samsung%20Electronics%20stock&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Customs duty pick",
+      "term_ko": "관세부과 pick",
+      "score": 0.302,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EA%B4%80%EC%84%B8%EB%B6%80%EA%B3%BC%20pick&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Customs%20duty%20pick&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     }
   ],
   "updatedAt": {
-    "en": "Updated Oct 7, 2025, 3:32 AM KST (12 hours)",
-    "ko": "2025. 10. 7. 오전 3:32 기준 업데이트 (12 hours)"
+    "en": "Updated Oct 7, 2025, 10:29 AM KST (12 hours)",
+    "ko": "2025. 10. 7. 오전 10:29 기준 업데이트 (12 hours)"
   },
-  "generatedAt": "2025-10-06T18:32:26.653Z",
+  "generatedAt": "2025-10-07T01:29:44.493Z",
   "timezone": "Asia/Seoul",
   "tagMeta": {
     "source": "tags.json",
-    "date": "2025-10-06",
+    "date": "2025-10-07",
     "window": "12_hours",
-    "generatedAt": "2025-10-06T18:32:23.944Z"
+    "generatedAt": "2025-10-07T01:29:41.872Z"
   }
 }
