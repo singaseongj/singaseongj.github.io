@@ -118,6 +118,7 @@ const TAG_CREDIT_REWARD = Math.max(Number(process.env.TAG_CREDIT_REWARD || 1), 0
 const TAG_CREDIT_CAP = Math.max(Number(process.env.TAG_CREDIT_CAP || 6), 0);
 const TAG_CREDIT_WEIGHT = Math.max(Number(process.env.TAG_CREDIT_WEIGHT || 0.12), 0);
 const TAG_CREDIT_MAX_BOOST = Math.max(Number(process.env.TAG_CREDIT_MAX_BOOST || 0.6), 0);
+const FINANCE_KEYWORDS_FILE = path.join(__dirname, 'data', 'finance_keywords.json');
 
 function ensureDirFor(file) {
   try {
@@ -1740,6 +1741,182 @@ function normalizeKoKeywordTerm(value) {
   if (!hasHangulText(cleaned)) return '';
 
   return cleaned;
+}
+
+let FINANCE_KEYWORD_CACHE = null;
+
+function loadFinanceKeywordList() {
+  if (Array.isArray(FINANCE_KEYWORD_CACHE) && FINANCE_KEYWORD_CACHE.length) {
+    return [...FINANCE_KEYWORD_CACHE];
+  }
+
+  try {
+    const raw = JSON.parse(fs.readFileSync(FINANCE_KEYWORDS_FILE, 'utf8'));
+    const keywords = Array.isArray(raw?.finance_keywords) ? raw.finance_keywords : [];
+    FINANCE_KEYWORD_CACHE = keywords
+      .map(item => String(item || '').trim())
+      .filter(Boolean);
+  } catch (err) {
+    console.warn('[keywords] failed to load finance keywords:', err?.message || err);
+    FINANCE_KEYWORD_CACHE = [];
+  }
+
+  return [...FINANCE_KEYWORD_CACHE];
+}
+
+function sampleFinanceKeywords(list, count) {
+  if (!Array.isArray(list) || list.length === 0 || count <= 0) return [];
+  const copy = [...list];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy.slice(0, Math.min(count, copy.length));
+}
+
+function normalizeKoreanMultiwordPhrase(value) {
+  const normalized = normalizeKoKeywordTerm(value);
+  if (!normalized) return '';
+  const words = normalized.split(/\s+/).filter(Boolean);
+  if (words.length < 2 || words.length > 3) return '';
+  return normalized;
+}
+
+async function fetchNaverRelatedKeywords(query) {
+  const searchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(query)}`;
+  try {
+    const res = await fetchWithTimeout(searchUrl, { timeout: 7000 });
+    const html = await res.text();
+    const root = parse(html);
+
+    const anchors = root.querySelectorAll('ul._related_keyword a, div.related_srch a');
+    const keywords = anchors.map(a => a.text.trim()).filter(k => k && k !== query);
+    return Array.from(new Set(keywords)).slice(0, 10);
+  } catch (err) {
+    console.warn(`[related] failed for "${query}":`, err?.message || err);
+    return [];
+  }
+}
+
+async function collectRandomFinanceKeywordSearchPhrases({
+  sampleSize = 30,
+  perKeywordLimit: _perKeywordLimit = 6,
+  totalLimit = 50
+} = {}) {
+  if (SKIP_NAVER) return [];
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) return [];
+  void _perKeywordLimit;
+
+  const financeKeywords = loadFinanceKeywordList();
+  if (!financeKeywords.length) return [];
+
+  const koreanOnly = financeKeywords.filter(k => HANGUL_REGEX.test(k));
+  if (!koreanOnly.length) return [];
+
+  const desiredCount = Math.max(1, sampleSize);
+  const initialPool = sampleFinanceKeywords(koreanOnly, Math.max(desiredCount, 50));
+
+  const stockCandidates = [];
+  const nonStockCandidates = [];
+  for (const term of initialPool) {
+    const trimmed = String(term || '').trim();
+    if (!trimmed) continue;
+    if (trimmed.includes('주식')) stockCandidates.push(trimmed);
+    else nonStockCandidates.push(trimmed);
+  }
+
+  const maxStockShare = Math.max(0, Math.floor(desiredCount * 0.3));
+  const stockSample = stockCandidates.slice(0, maxStockShare || 1);
+
+  const isValidWordCount = (value) => {
+    const words = String(value || '')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+    return words.length >= 2 && words.length <= 3;
+  };
+
+  const nonStockSample = [];
+  for (const term of nonStockCandidates) {
+    if (!isValidWordCount(term)) continue;
+    nonStockSample.push(term);
+    if (nonStockSample.length >= desiredCount - stockSample.length) break;
+  }
+
+  const addMoreFromPool = (targetSet) => {
+    if (targetSet.size >= desiredCount) return;
+    const shuffledPool = sampleFinanceKeywords(koreanOnly, koreanOnly.length);
+    for (const term of shuffledPool) {
+      if (targetSet.size >= desiredCount) break;
+      if (!isValidWordCount(term)) continue;
+      const normalized = normalizeKoreanMultiwordPhrase(term);
+      if (normalized) targetSet.add(normalized);
+    }
+  };
+
+  const candidateSet = new Set();
+  for (const term of [...stockSample, ...nonStockSample]) {
+    const normalized = normalizeKoreanMultiwordPhrase(term);
+    if (normalized) candidateSet.add(normalized);
+  }
+
+  addMoreFromPool(candidateSet);
+
+  try {
+    const relatedToStock = await fetchNaverRelatedKeywords('주식');
+    for (const related of relatedToStock) {
+      const normalized = normalizeKoreanMultiwordPhrase(related);
+      if (normalized) candidateSet.add(normalized);
+    }
+  } catch (err) {
+    console.warn('[keywords] failed to fetch related stock keywords:', err?.message || err);
+  }
+
+  addMoreFromPool(candidateSet);
+
+  if (!candidateSet.size) return [];
+
+  const candidateList = Array.from(candidateSet);
+  const shuffledCandidates = sampleFinanceKeywords(candidateList, candidateList.length);
+  const limitedCandidates = shuffledCandidates.slice(0, desiredCount);
+
+  const aggregated = new Map();
+
+  for (const keyword of limitedCandidates) {
+    const normalizedKeyword = normalizeKoreanMultiwordPhrase(keyword);
+    if (!normalizedKeyword) continue;
+    try {
+      const articles = await fetchNaverKeywordArticles(normalizedKeyword);
+      const totalArticles = Array.isArray(articles) ? articles.length : 0;
+      const matchScore = Array.isArray(articles)
+        ? articles.filter(article => (article?.title || '').includes(normalizedKeyword)).length
+        : 0;
+      const baseScore = Math.min(1, (totalArticles * 0.04) + (matchScore * 0.1));
+      const mentions = Math.max(1, matchScore || Math.round(totalArticles * 0.2));
+
+      const entry = {
+        term_ko: normalizedKeyword,
+        score: Number(baseScore.toFixed(2)),
+        mentions,
+        keywords: [normalizedKeyword]
+      };
+      aggregated.set(normalizedKeyword.toLowerCase(), entry);
+    } catch (err) {
+      console.warn('[keywords] failed to score keyword', normalizedKeyword, err?.message || err);
+    }
+  }
+
+  if (!aggregated.size) return [];
+
+  console.log(`[keywords] scored ${aggregated.size} finance keyword phrases from ${limitedCandidates.length} keywords (pool ${candidateSet.size})`);
+
+  return Array.from(aggregated.values())
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      if (b.mentions !== a.mentions) return b.mentions - a.mentions;
+      return a.term_ko.localeCompare(b.term_ko);
+    })
+    .slice(0, Math.max(1, Math.min(totalLimit, aggregated.size)));
 }
 
 const KO_SIGNATURE_NOISE = new Set([
@@ -4119,6 +4296,26 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
       english: phrase.term,
       metadata: phrase.metadata || null
     });
+  }
+
+  try {
+    const financeSearchPhrases = await collectRandomFinanceKeywordSearchPhrases({
+      sampleSize: 30,
+      perKeywordLimit: 6,
+      totalLimit: Math.max(desiredCount, 40)
+    });
+    if (financeSearchPhrases.length) {
+      for (const phrase of financeSearchPhrases) {
+        registerEntry(phrase.term_ko, {
+          score: Number.isFinite(phrase.score) ? phrase.score : 0,
+          mentions: Number.isFinite(phrase.mentions) ? phrase.mentions : 1,
+          source: 'naver_search'
+        });
+      }
+      console.log(`[Significance] Added ${financeSearchPhrases.length} phrases from Naver finance keyword search`);
+    }
+  } catch (err) {
+    console.warn('[Significance] failed to include finance keyword search phrases:', err?.message || err);
   }
 
   let injectedTrends = 0;
