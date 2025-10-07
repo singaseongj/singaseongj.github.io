@@ -1,12 +1,12 @@
-// extractKeywords.js
-// ESM version — Node.js 20+
-// Goal: analyze tags.json using finance keyword dictionary, without overwriting tags.json
+// extractKeywords.js (refined)
+// ESM + POS tagging + semantic boosting + noise filtering
 
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
-import natural from "natural";
+import { TfIdf } from "natural";
 import stopword from "stopword";
+import pos from "pos";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,7 +15,6 @@ const TAGS_PATH = path.resolve(__dirname, "data", "tags.json");
 const DICT_PATH = path.resolve(__dirname, "data", "finance_keywords.json");
 const OUTPUT_PATH = path.resolve(__dirname, "data", "output_keywords.json");
 
-// ---- helper functions ----
 function cleanText(text) {
   return text
     .toLowerCase()
@@ -24,106 +23,127 @@ function cleanText(text) {
     .trim();
 }
 
-function extractPhrases(text, minWords = 2, maxWords = 4) {
-  const words = text.split(/\s+/).filter(Boolean);
+// 🧠 Noun phrase extraction (POS)
+function extractNounPhrases(text) {
+  const words = new pos.Lexer().lex(text);
+  const tagger = new pos.Tagger();
+  const tagged = tagger.tag(words);
   const phrases = [];
-  for (let i = 0; i < words.length; i++) {
-    for (let j = minWords; j <= maxWords; j++) {
-      if (i + j <= words.length) {
-        const phrase = words.slice(i, i + j).join(" ");
-        phrases.push(phrase);
-      }
-    }
+  let current = [];
+  for (const [word, tag] of tagged) {
+    if (tag.startsWith("NN") || tag.startsWith("JJ")) current.push(word);
+    else if (current.length >= 2) {
+      phrases.push(current.join(" "));
+      current = [];
+    } else current = [];
   }
+  if (current.length >= 2) phrases.push(current.join(" "));
   return phrases;
 }
 
-// ---- main workflow ----
+// 🧹 Filter noisy or overly specific phrases
+function isNoisy(phrase) {
+  return (
+    /\d+/.test(phrase) ||
+    /(shares?|co\.?|corp\.?|inc\.?|ltd\.?|company|holding|fund|bond|percent|price)/i.test(
+      phrase
+    ) ||
+    phrase.length < 5 ||
+    phrase.split(" ").length > 5
+  );
+}
+
+// 💡 Semantic boost (finance-related overlap)
+function semanticBoost(phrase, financeSet) {
+  const words = phrase.split(" ");
+  const overlap = words.filter((w) => financeSet.has(w)).length;
+  return 1 + overlap * 0.3;
+}
+
 async function main() {
-  console.log("📈 Starting extractKeywords.js");
+  console.log("🚀 Running improved extractKeywords.js");
 
   const [tagsRaw, dictRaw] = await Promise.all([
     fs.readFile(TAGS_PATH, "utf-8"),
-    fs.readFile(DICT_PATH, "utf-8")
+    fs.readFile(DICT_PATH, "utf-8"),
   ]);
 
   const tags = JSON.parse(tagsRaw);
   const financeDict = JSON.parse(dictRaw);
-  const financeWords = Array.isArray(financeDict)
-    ? financeDict
-    : Array.isArray(financeDict.finance_keywords)
-      ? financeDict.finance_keywords
-      : [];
+  const financeSet = new Set(financeDict.map((w) => w.toLowerCase()));
 
-  // prepare text corpus from tags.json
-  const docs = [];
-  const allTexts = [];
-
-  const keywords = [
+  const allTexts = [
     ...(tags.discovered_keywords || []),
     ...(tags.keywords || []),
-    ...(tags.top_keywords || [])
-  ];
+    ...(tags.top_keywords || []),
+  ]
+    .map((kw) => cleanText(kw.term || kw.term_ko || ""))
+    .filter(Boolean);
 
-  for (const kw of keywords) {
-    const text = cleanText(kw.term || kw.term_ko || "");
-    if (!text) continue;
-    allTexts.push(text);
-  }
+  // 1️⃣ Extract noun phrases
+  const phrases = allTexts.flatMap(extractNounPhrases).filter((p) => !isNoisy(p));
 
-  const allPhrases = allTexts.flatMap(t => extractPhrases(t));
-  const filtered = allPhrases.filter(p => p.split(" ").length <= 4 && p.split(" ").length >= 2);
-  const stopRemoved = filtered.map(p => stopword.removeStopwords(p.split(" ")).join(" "));
+  // 2️⃣ Stopword removal
+  const cleaned = phrases
+    .map((p) => stopword.removeStopwords(p.split(" ")).join(" "))
+    .filter((p) => p.split(" ").length >= 2);
 
-  const { TfIdf } = natural;
+  // 3️⃣ TF-IDF scoring
   const tfidf = new TfIdf();
-  stopRemoved.forEach(doc => tfidf.addDocument(doc));
+  cleaned.forEach((doc) => tfidf.addDocument(doc));
 
-  // compute score per phrase
   const phraseScores = {};
-  stopRemoved.forEach((phrase, i) => {
-    const terms = phrase.split(" ");
-    terms.forEach(term => {
-      tfidf.tfidfs(term, (j, measure) => {
+  cleaned.forEach((phrase) => {
+    phrase.split(" ").forEach((term) => {
+      tfidf.tfidfs(term, (i, measure) => {
         phraseScores[phrase] = (phraseScores[phrase] || 0) + measure;
       });
     });
   });
 
-  // finance boost
-  const financeSet = new Set(
-    financeWords
-      .map(word => (typeof word === "string" ? word.toLowerCase() : ""))
-      .filter(Boolean)
-  );
+  // 4️⃣ Semantic finance boost
   for (const phrase in phraseScores) {
-    const hasFinance = phrase.split(" ").some(w => financeSet.has(w));
-    if (hasFinance) phraseScores[phrase] *= 1.5;
+    phraseScores[phrase] *= semanticBoost(phrase, financeSet);
   }
 
-  // sort and pick top 30
+  // 5️⃣ Time-decay weight (prefer recent)
+  const generatedAt = new Date(tags.metadata?.generated_at || Date.now());
+  const ageHours = (Date.now() - generatedAt.getTime()) / 3600000;
+  const timeWeight = Math.max(0.5, 1 - ageHours / 48);
+  for (const phrase in phraseScores) {
+    phraseScores[phrase] *= timeWeight;
+  }
+
+  // 6️⃣ Sort + deduplicate semantically similar
   const sorted = Object.entries(phraseScores)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 30)
-    .map(([term, score]) => ({
-      term,
-      score: +score.toFixed(3),
-      hasFinanceWord: phraseScores[term] > 0
-    }));
+    .map(([term, score]) => ({ term, score: +score.toFixed(3) }));
+
+  const seen = new Set();
+  const final = [];
+  for (const { term, score } of sorted) {
+    const key = term.replace(/\s+/g, "").toLowerCase();
+    if (![...seen].some((k) => key.includes(k) || k.includes(key))) {
+      seen.add(key);
+      final.push({ term, score });
+    }
+    if (final.length >= 30) break;
+  }
 
   const output = {
+    date: new Date().toISOString().split("T")[0],
     generated_at: new Date().toISOString(),
-    total_phrases: sorted.length,
+    total_phrases: final.length,
     analyzed_from: path.basename(TAGS_PATH),
     finance_keywords_used: financeSet.size,
-    top_keywords: sorted
+    keywords: final,
   };
 
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2), "utf-8");
-  console.log(`✅ Wrote ${sorted.length} analyzed phrases to ${OUTPUT_PATH}`);
+  console.log(`✅ Wrote refined keywords to ${OUTPUT_PATH}`);
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error("❌ extractKeywords.js failed:", err);
   process.exit(1);
 });
