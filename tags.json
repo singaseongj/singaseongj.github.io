@@ -1,14 +1,38 @@
 {
   "date": "2025-10-07",
   "window": "12_hours",
-  "total_phrases": 10,
+  "total_phrases": 7,
   "discovered_keywords": [
     {
-      "term": "The stock market was affected by the government shutdown's",
-      "term_ko": "주식 시장은 정부 폐쇄의",
-      "significance_score": 176,
+      "term": "100 shares of Hankook Financial Holding Co.",
+      "term_ko": "한국금융지주가 한국투자증권의 100 주식",
+      "significance_score": 233,
+      "mentions": 1,
+      "combined_score": 0.85,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 128,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "The AI boom has a stock market",
+      "term_ko": "AI 붐에는 주식 시장",
+      "significance_score": 159,
       "mentions": 2,
-      "combined_score": 0.916,
+      "combined_score": 0.777682,
       "sources": [
         "news",
         "significance_analysis"
@@ -28,11 +52,59 @@
       }
     },
     {
+      "term": "Transferring financial investments, such as stocks",
+      "term_ko": "이전이 주식 등 금융투자",
+      "significance_score": 203,
+      "mentions": 1,
+      "combined_score": 0.759871,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 98,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
+      "term": "Focus on financial investments such as stocks",
+      "term_ko": "주식 등 금융투자 중심으로",
+      "significance_score": 203,
+      "mentions": 1,
+      "combined_score": 0.759871,
+      "sources": [
+        "news",
+        "significance_analysis"
+      ],
+      "finance_boost": 98,
+      "context": {
+        "targets": [
+          "주식"
+        ],
+        "includesTarget": true,
+        "positions": [
+          "around"
+        ],
+        "windows": [
+          3
+        ]
+      }
+    },
+    {
       "term": "Invest in shares of a commingled bond fund",
       "term_ko": "투자한다 채권혼합형 펀드의 주식",
       "significance_score": 200,
       "mentions": 1,
-      "combined_score": 0.85,
+      "combined_score": 0.750858,
       "sources": [
         "news",
         "significance_analysis"
@@ -52,35 +124,11 @@
       }
     },
     {
-      "term": "Stock market pressures for rate cuts",
-      "term_ko": "금리인하를 압박한 원인이 주식시장",
-      "significance_score": 193,
+      "term": "To invest in stocks in US dollars",
+      "term_ko": "주식에 투자하려면 미국 달러로",
+      "significance_score": 152,
       "mentions": 1,
-      "combined_score": 0.8255,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 88,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
-    },
-    {
-      "term": "THE",
-      "term_ko": "투자자가 주식 으로 전환할",
-      "significance_score": 178,
-      "mentions": 1,
-      "combined_score": 0.773,
+      "combined_score": 0.606652,
       "sources": [
         "news",
         "significance_analysis"
@@ -100,89 +148,11 @@
       }
     },
     {
-      "term": "Investing in the domestic stock market",
-      "term_ko": "국내 주식시장 에 투자하는",
-      "significance_score": 174,
-      "mentions": 1,
-      "combined_score": 0.759,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 84,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
-    },
-    {
-      "term": "Holdings valued at $3.73 million in the domestic stock market",
-      "term_ko": "보유가액은 373만원 국내 주식시장",
-      "significance_score": 144,
-      "mentions": 1,
-      "combined_score": 0.654,
-      "sources": [
-        "news",
-        "significance_analysis"
-      ],
-      "finance_boost": 54,
-      "context": {
-        "targets": [
-          "주식"
-        ],
-        "includesTarget": true,
-        "positions": [
-          "around"
-        ],
-        "windows": [
-          3
-        ]
-      }
-    },
-    {
-      "term": "Customs duty pick",
-      "term_ko": "관세부과 pick",
-      "significance_score": 17,
-      "mentions": 1,
-      "combined_score": 0.2095,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
-      "term": "1New Urban Leadership District",
-      "term_ko": "1기신도시 선도지구",
-      "significance_score": 1,
-      "mentions": 1,
-      "combined_score": 0.1535,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
-      "term": "Increase in capitalization of zinc kimberlite",
-      "term_ko": "고려아연 유상증자",
-      "significance_score": 1,
-      "mentions": 1,
-      "combined_score": 0.1535,
-      "sources": [
-        "korean_first"
-      ]
-    },
-    {
       "term": "Samsung Electronics stock",
       "term_ko": "삼성전자 주식",
       "significance_score": 1,
       "mentions": 1,
-      "combined_score": 0.1535,
+      "combined_score": 0.153004,
       "sources": [
         "naver_search"
       ]
@@ -192,24 +162,54 @@
     "collection_method": "significance_over_frequency",
     "phrase_length": "2-4 words",
     "scoring": "frequency_weighted_significance",
-    "generated_at": "2025-10-07T01:29:41.872Z",
+    "generated_at": "2025-10-07T06:32:59.133Z",
     "finance_trend_keywords": 0,
     "keyword_limit": 30,
     "lookback_hours": 12,
     "article_cache_files": 200,
     "article_cache_articles": 0,
     "article_cache_phrases": 0,
-    "article_cache_skipped_recency": 5495
+    "article_cache_skipped_recency": 5466
   },
   "keywords": [
     {
-      "term": "The stock market was affected by the government shutdown's",
-      "term_ko": "주식 시장은 정부 폐쇄의",
+      "term": "The AI boom has a stock market",
+      "term_ko": "AI 붐에는 주식 시장",
       "score": 1,
       "mentions": 2,
       "search": {
-        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5%EC%9D%80%20%EC%A0%95%EB%B6%80%20%ED%8F%90%EC%87%84%EC%9D%98&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=The%20stock%20market%20was%20affected%20by%20the%20government%20shutdown's&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=AI%20%EB%B6%90%EC%97%90%EB%8A%94%20%EC%A3%BC%EC%8B%9D%20%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=The%20AI%20boom%20has%20a%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "100 shares of Hankook Financial Holding Co.",
+      "term_ko": "한국금융지주가 한국투자증권의 100 주식",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC%EA%B0%80%20%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%EC%9D%98%20100%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=100%20shares%20of%20Hankook%20Financial%20Holding%20Co.&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Transferring financial investments, such as stocks",
+      "term_ko": "이전이 주식 등 금융투자",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%9D%B4%EC%A0%84%EC%9D%B4%20%EC%A3%BC%EC%8B%9D%20%EB%93%B1%20%EA%B8%88%EC%9C%B5%ED%88%AC%EC%9E%90&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Transferring%20financial%20investments%2C%20such%20as%20stocks&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+      }
+    },
+    {
+      "term": "Focus on financial investments such as stocks",
+      "term_ko": "주식 등 금융투자 중심으로",
+      "score": 0.8,
+      "mentions": 1,
+      "search": {
+        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%20%EB%93%B1%20%EA%B8%88%EC%9C%B5%ED%88%AC%EC%9E%90%20%EC%A4%91%EC%8B%AC%EC%9C%BC%EB%A1%9C&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=Focus%20on%20financial%20investments%20such%20as%20stocks&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
@@ -223,63 +223,13 @@
       }
     },
     {
-      "term": "Stock market pressures for rate cuts",
-      "term_ko": "금리인하를 압박한 원인이 주식시장",
+      "term": "To invest in stocks in US dollars",
+      "term_ko": "주식에 투자하려면 미국 달러로",
       "score": 0.8,
       "mentions": 1,
       "search": {
-        "ko": "https://www.google.com/search?q=%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%EB%A5%BC%20%EC%95%95%EB%B0%95%ED%95%9C%20%EC%9B%90%EC%9D%B8%EC%9D%B4%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Stock%20market%20pressures%20for%20rate%20cuts&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "THE",
-      "term_ko": "투자자가 주식 으로 전환할",
-      "score": 0.8,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%ED%88%AC%EC%9E%90%EC%9E%90%EA%B0%80%20%EC%A3%BC%EC%8B%9D%20%EC%9C%BC%EB%A1%9C%20%EC%A0%84%ED%99%98%ED%95%A0&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=THE&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "Investing in the domestic stock market",
-      "term_ko": "국내 주식시장 에 투자하는",
-      "score": 0.8,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5%20%EC%97%90%20%ED%88%AC%EC%9E%90%ED%95%98%EB%8A%94&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Investing%20in%20the%20domestic%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "Holdings valued at $3.73 million in the domestic stock market",
-      "term_ko": "보유가액은 373만원 국내 주식시장",
-      "score": 0.8,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%EB%B3%B4%EC%9C%A0%EA%B0%80%EC%95%A1%EC%9D%80%20373%EB%A7%8C%EC%9B%90%20%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Holdings%20valued%20at%20%243.73%20million%20in%20the%20domestic%20stock%20market&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "1New Urban Leadership District",
-      "term_ko": "1기신도시 선도지구",
-      "score": 0.8,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=1%EA%B8%B0%EC%8B%A0%EB%8F%84%EC%8B%9C%20%EC%84%A0%EB%8F%84%EC%A7%80%EA%B5%AC&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=1New%20Urban%20Leadership%20District&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
-    },
-    {
-      "term": "Increase in capitalization of zinc kimberlite",
-      "term_ko": "고려아연 유상증자",
-      "score": 0.8,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%EA%B3%A0%EB%A0%A4%EC%95%84%EC%97%B0%20%EC%9C%A0%EC%83%81%EC%A6%9D%EC%9E%90&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Increase%20in%20capitalization%20of%20zinc%20kimberlite&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
+        "ko": "https://www.google.com/search?q=%EC%A3%BC%EC%8B%9D%EC%97%90%20%ED%88%AC%EC%9E%90%ED%95%98%EB%A0%A4%EB%A9%B4%20%EB%AF%B8%EA%B5%AD%20%EB%8B%AC%EB%9F%AC%EB%A1%9C&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
+        "en": "https://www.google.com/search?q=To%20invest%20in%20stocks%20in%20US%20dollars&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
     },
     {
@@ -291,28 +241,18 @@
         "ko": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EC%A3%BC%EC%8B%9D&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
         "en": "https://www.google.com/search?q=Samsung%20Electronics%20stock&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
       }
-    },
-    {
-      "term": "Customs duty pick",
-      "term_ko": "관세부과 pick",
-      "score": 0.302,
-      "mentions": 1,
-      "search": {
-        "ko": "https://www.google.com/search?q=%EA%B4%80%EC%84%B8%EB%B6%80%EA%B3%BC%20pick&tbm=nws&hl=ko&gl=KR&ceid=KR%3Ako",
-        "en": "https://www.google.com/search?q=Customs%20duty%20pick&tbm=nws&hl=en&gl=US&ceid=US%3Aen"
-      }
     }
   ],
   "updatedAt": {
-    "en": "Updated Oct 7, 2025, 10:29 AM KST (12 hours)",
-    "ko": "2025. 10. 7. 오전 10:29 기준 업데이트 (12 hours)"
+    "en": "Updated Oct 7, 2025, 3:32 PM KST (12 hours)",
+    "ko": "2025. 10. 7. 오후 3:32 기준 업데이트 (12 hours)"
   },
-  "generatedAt": "2025-10-07T01:29:44.493Z",
+  "generatedAt": "2025-10-07T06:33:01.714Z",
   "timezone": "Asia/Seoul",
   "tagMeta": {
     "source": "tags.json",
     "date": "2025-10-07",
     "window": "12_hours",
-    "generatedAt": "2025-10-07T01:29:41.872Z"
+    "generatedAt": "2025-10-07T06:32:59.133Z"
   }
 }
