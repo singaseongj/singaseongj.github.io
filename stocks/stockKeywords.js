@@ -4575,6 +4575,81 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     term_ko: stylizeKeyword(k.term_ko)
   }));
 
+  // ✅ NEW: Improve keyword variety by clustering similar roots and sampling top themes
+  const clusterKeywords = (keywords) => {
+    const clusters = {};
+    for (const kw of keywords) {
+      const root = ((kw.term_ko || kw.term || '')
+        .replace(/(시장|투자|증시|관련|영향|추세|분위기|주가|기업|경제|주식)/g, '')
+        .replace(/\s+/g, '')
+        .slice(0, 6)) || '';
+      if (!clusters[root]) clusters[root] = [];
+      clusters[root].push(kw);
+    }
+    const representatives = Object.values(clusters)
+      .map(group => group.sort((a, b) => (b.combined_score || 0) - (a.combined_score || 0))[0]);
+    return representatives;
+  };
+
+  discoveredKeywords = clusterKeywords(discoveredKeywords);
+
+  // ✅ NEW: Sector & macro boost (theme diversity)
+  const MACRO_TERMS = ['금리', '환율', '인플레이션', '무역', '경제성장', '수출', '물가'];
+  const SECTOR_TERMS = ['반도체', '배터리', '전기차', '에너지', '바이오', '건설', 'AI', '테크', '은행', '보험'];
+
+  for (const kw of discoveredKeywords) {
+    const termKo = kw.term_ko || '';
+    const termEn = kw.term || '';
+    if (SECTOR_TERMS.some(t => termKo.includes(t) || termEn.includes(t))) {
+      kw.significance_score *= 1.35;
+    }
+    if (MACRO_TERMS.some(t => termKo.includes(t) || termEn.includes(t))) {
+      kw.significance_score *= 1.25;
+    }
+  }
+
+  // ✅ NEW: Topic penalty — reduce dominance of "증시"/"주식" repetition
+  for (const kw of discoveredKeywords) {
+    const termKo = kw.term_ko || '';
+    const repeated = (termKo.match(/증시/g) || termKo.match(/주식/g) || []);
+    if (repeated.length > 1) {
+      kw.combined_score *= 0.5;
+    }
+  }
+
+  // ✅ NEW: Rank rebalancing to favor variety and shorter, readable phrases
+  discoveredKeywords = discoveredKeywords
+    .map(k => {
+      const termKo = k.term_ko || '';
+      const currentScore = Number.isFinite(k.combined_score) ? k.combined_score : 0;
+      return {
+        ...k,
+        combined_score: currentScore * (1 + 0.05 * (5 - Math.min(termKo.length, 5)))
+      };
+    })
+    .sort((a, b) => (b.combined_score || 0) - (a.combined_score || 0))
+    .slice(0, 30);
+
+  // ✅ NEW: Diversity summary (logged to console for debugging)
+  try {
+    const distinctRoots = new Set(
+      discoveredKeywords.map(k => (k.term_ko || '')
+        .replace(/(시장|투자|증시|주식|기업|경제)/g, '')
+        .slice(0, 4))
+    );
+    console.log(`🌐 Keyword Diversity Report: ${distinctRoots.size} unique roots among ${discoveredKeywords.length} keywords.`);
+    console.table(discoveredKeywords.slice(0, 10).map((k, i) => ({
+      rank: i + 1,
+      term_ko: k.term_ko,
+      term: k.term,
+      score: (k.combined_score || 0).toFixed(3),
+      sig: (k.significance_score || 0).toFixed(1),
+      mentions: k.mentions
+    })));
+  } catch (err) {
+    console.warn('⚠️ Diversity log failed:', err);
+  }
+
   const nowIso = new Date().toISOString();
   const payload = {
     date: nowIso.slice(0, 10),
