@@ -7,11 +7,20 @@
   <style>
     body { font-family: sans-serif; margin: 20px; background: #fafafa; }
     canvas { width: 100%; max-width: 900px; height: 450px; }
+    h3 { margin-top: 30px; }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 5px; }
+    .up { color: #109618; }
+    .down { color: #dc3912; }
   </style>
 </head>
 <body>
   <h2>📊 Finance Keyword Trend Tracker</h2>
   <canvas id="trendChart"></canvas>
+  <h3>📈 Top Rising Keywords</h3>
+  <ul id="rising"></ul>
+  <h3>📉 Top Falling Keywords</h3>
+  <ul id="falling"></ul>
   <script>
     async function drawChart() {
       const resp = await fetch("../data/keyword_trends.csv");
@@ -39,6 +48,31 @@
           plugins: { legend: { position: "bottom" } }
         }
       });
+
+      // --- Show Top Rising/Falling ---
+      try {
+        const logResp = await fetch("../data/trend_log.json");
+        const log = await logResp.json();
+        if (log.length >= 2) {
+          const last = log[log.length - 1];
+          const changes = last.changes || [];
+          const rising = changes.filter(c => c.delta !== "+new" && Number(c.delta) > 5)
+                                .map(c => c.term);
+          const falling = changes.filter(c => c.delta !== "+new" && Number(c.delta) < -5)
+                                 .map(c => c.term);
+
+          const risingList = document.getElementById("rising");
+          const fallingList = document.getElementById("falling");
+          risingList.innerHTML = rising.length
+            ? rising.map(t => `<li class="up">⬆️ ${t}</li>`).join("")
+            : "<li>None</li>";
+          fallingList.innerHTML = falling.length
+            ? falling.map(t => `<li class="down">⬇️ ${t}</li>`).join("")
+            : "<li>None</li>";
+        }
+      } catch (err) {
+        console.warn("Trend log unavailable:", err);
+      }
     }
     drawChart();
   </script>
