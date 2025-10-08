@@ -223,8 +223,13 @@ jobs:
             exit 0
           fi
 
-          if ! git status --short -- data/tags.json | grep -q 'data/tags.json'; then
-            echo "No tag updates detected"
+          files=(data/tags.json)
+          if [ -f data/keyword_trends.csv ]; then
+            files+=(data/keyword_trends.csv)
+          fi
+
+          if ! git status --short -- "${files[@]}" | grep -q '.'; then
+            echo "No tag or keyword trend updates detected"
             exit 0
           fi
 
@@ -235,8 +240,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin "$branch"
           git pull --rebase origin "$branch"
-          git add data/tags.json
-          git commit -m "chore: update market tags"
+          git add "${files[@]}"
+          git commit -m "chore: update market tags and keyword trends"
           git push origin "HEAD:$branch"
 
       - name: "Preflight: DeepSearch"
