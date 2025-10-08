@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-08T10:31:40+09:00 (KST)**
+- Generated: **2025-10-08T15:35:11+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -94,7 +94,7 @@
 
 **LG전자** (066570.KS)
 
-- News (7d): **261** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **262** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-1.9%**, 20d **1.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -110,7 +110,7 @@
 
 **기아** (000270.KS)
 
-- News (7d): **171** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **173** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **2.2%**, 20d **-2.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -126,7 +126,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **479** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **493** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **4.2%**, 20d **28.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -141,6 +141,14 @@
 - Earnings window (±10d): **No**
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=GS%EB%A6%AC%ED%85%8C%EC%9D%BC
+
+**금호타이어** (073240.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.4%**, 20d **-5.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%EA%B8%88%ED%98%B8%ED%83%80%EC%9D%B4%EC%96%B4
 
 **녹십자** (006280.KS)
 
@@ -165,14 +173,6 @@
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
-
-**효성** (004800.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.0%**, 20d **-2.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%ED%9A%A8%EC%84%B1
 
 ## NASDAQ 100
 
@@ -326,13 +326,13 @@
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Hubbell%20Incorporated
 
-**Tyler Technologies** (TYL)
+**Teradyne** (TER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.2%**, 20d **-13.0%**; volatility (20d): **unknown**
+- Returns: 5d **1.8%**, 20d **21.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Tyler%20Technologies
+- News search: https://www.google.com/search?q=Teradyne
 
 **UDR, Inc.** (UDR)
 
