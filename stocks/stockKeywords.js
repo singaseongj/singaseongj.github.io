@@ -289,6 +289,55 @@ async function generateKeywords() {
   };
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(result, null, 2));
   console.log(`✅ Saved ${discovered_keywords.length} tags to ${OUTPUT_PATH}`);
+
+  // --- Trend tracking ---
+  const TREND_LOG_PATH = "./data/trend_log.json";
+  let trendLog = [];
+  if (fs.existsSync(TREND_LOG_PATH)) {
+    try {
+      trendLog = JSON.parse(fs.readFileSync(TREND_LOG_PATH, "utf8"));
+    } catch {
+      trendLog = [];
+    }
+  }
+
+  // Compare with last run
+  const prev = trendLog.length ? trendLog[trendLog.length - 1] : null;
+  const trendEntry = {
+    date: result.date,
+    top_terms: discovered_keywords.map((k) => ({
+      term: k.term,
+      score: k.final_score,
+    })),
+  };
+
+  if (prev) {
+    const prevScores = Object.fromEntries(prev.top_terms.map((t) => [t.term, t.score]));
+    trendEntry.changes = discovered_keywords.map((k) => {
+      const diff = prevScores[k.term]
+        ? (k.final_score - prevScores[k.term]).toFixed(2)
+        : "+new";
+      return { term: k.term, delta: diff };
+    });
+
+    const rising = trendEntry.changes
+      .filter((c) => c.delta !== "+new" && Number(c.delta) > 5)
+      .map((c) => c.term);
+    const falling = trendEntry.changes
+      .filter((c) => c.delta !== "+new" && Number(c.delta) < -5)
+      .map((c) => c.term);
+
+    if (rising.length || falling.length) {
+      console.log(`📈 Rising: ${rising.join(", ")}`);
+      console.log(`📉 Falling: ${falling.join(", ")}`);
+    }
+  }
+
+  // Keep last 10 trend logs
+  trendLog.push(trendEntry);
+  if (trendLog.length > 10) trendLog = trendLog.slice(-10);
+  fs.writeFileSync(TREND_LOG_PATH, JSON.stringify(trendLog, null, 2));
+  console.log("🪄 Updated trend_log.json");
 }
 
 generateKeywords().catch((err) => console.error("❌ Generation failed:", err));
