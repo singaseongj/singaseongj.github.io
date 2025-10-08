@@ -223,7 +223,12 @@ jobs:
             exit 0
           fi
 
-          files=(data/tags.json)
+          # Stage all relevant data outputs
+          files=(
+            data/tags.json
+            data/news-features.json
+            data/naver-trends.json
+          )
           if [ -f data/keyword_trends.csv ]; then
             files+=(data/keyword_trends.csv)
           fi
