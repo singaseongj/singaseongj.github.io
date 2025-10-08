@@ -244,7 +244,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin "$branch"
-          git pull --rebase origin "$branch"
+          git stash --include-untracked
+          git pull --rebase origin "$branch" || git pull --no-rebase origin "$branch"
+          git stash pop || true
           git add "${files[@]}"
           git commit -m "chore: update market tags and keyword trends"
           git push origin "HEAD:$branch"
