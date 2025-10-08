@@ -223,8 +223,13 @@ jobs:
             exit 0
           fi
 
-          if ! git status --short -- data/tags.json | grep -q 'data/tags.json'; then
-            echo "No tag updates detected"
+          files=(data/tags.json)
+          if [ -f data/keyword_trends.csv ]; then
+            files+=(data/keyword_trends.csv)
+          fi
+
+          if ! git status --short -- "${files[@]}" | grep -q '.'; then
+            echo "No tag or keyword trend updates detected"
             exit 0
           fi
 
@@ -235,8 +240,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin "$branch"
           git pull --rebase origin "$branch"
-          git add data/tags.json
-          git commit -m "chore: update market tags"
+          git add "${files[@]}"
+          git commit -m "chore: update market tags and keyword trends"
           git push origin "HEAD:$branch"
 
       - name: "Preflight: DeepSearch"
@@ -461,7 +466,9 @@ jobs:
             stocks/fx_rates/fx_rates.json
             stocks/fx_rates/fx_history*.json
             stocks/fx_rates/index.html
-            data/tags.json
+            stocks/data/tags.json
+            data/keyword_trends.csv
+            stocks/keywords.html
           )
           staged_any=0
           for path in "${paths[@]}"; do
@@ -479,6 +486,65 @@ jobs:
             echo "Files staged for commit"
           else
             echo "No files staged"
+          fi
+
+      - name: Ensure keyword trend chart page exists
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p stocks
+          if [ ! -f stocks/keywords.html ]; then
+            cat > stocks/keywords.html <<'EOF'
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>📈 Keyword Trends</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background: #fafafa; }
+    canvas { width: 100%; max-width: 900px; height: 450px; }
+  </style>
+</head>
+<body>
+  <h2>📊 Finance Keyword Trend Tracker</h2>
+  <canvas id="trendChart"></canvas>
+  <script>
+    async function drawChart() {
+      const resp = await fetch("../data/keyword_trends.csv");
+      const text = await resp.text();
+      const rows = text.trim().split("\n").slice(1).map(r => r.split(","));
+      const dates = [...new Set(rows.map(r => r[0]))];
+      const termGroups = {};
+      rows.forEach(([date, term, score]) => {
+        if (!termGroups[term]) termGroups[term] = {};
+        termGroups[term][date] = parseFloat(score);
+      });
+      const colors = ["#3366cc","#dc3912","#ff9900","#109618","#990099","#0099c6","#dd4477"];
+      const datasets = Object.keys(termGroups).slice(0,7).map((term,i)=>({
+        label: term,
+        data: dates.map(d=>termGroups[term][d]||null),
+        borderColor: colors[i%colors.length],
+        fill: false,
+        tension: 0.2
+      }));
+      new Chart(document.getElementById("trendChart"), {
+        type: "line",
+        data: { labels: dates, datasets },
+        options: {
+          scales: { y: { title: { display: true, text: "Score" } } },
+          plugins: { legend: { position: "bottom" } }
+        }
+      });
+    }
+    drawChart();
+  </script>
+</body>
+</html>
+EOF
+            echo "✅ Created stocks/keywords.html"
+          else
+            echo "ℹ️ stocks/keywords.html already exists"
           fi
 
       - name: Commit & push changes

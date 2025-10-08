@@ -338,6 +338,17 @@ async function generateKeywords() {
   if (trendLog.length > 10) trendLog = trendLog.slice(-10);
   fs.writeFileSync(TREND_LOG_PATH, JSON.stringify(trendLog, null, 2));
   console.log("🪄 Updated trend_log.json");
+
+  // --- Export to CSV ---
+  const CSV_PATH = "./data/keyword_trends.csv";
+  const csvLines = ["date,term,score"];
+  trendLog.forEach((entry) => {
+    entry.top_terms.forEach((t) => {
+      csvLines.push(`${entry.date},"${t.term}",${t.score}`);
+    });
+  });
+  fs.writeFileSync(CSV_PATH, csvLines.join("\n"));
+  console.log("📊 Exported keyword_trends.csv");
 }
 
 generateKeywords().catch((err) => console.error("❌ Generation failed:", err));
