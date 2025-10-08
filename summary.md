@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-08T03:34:42+09:00 (KST)**
+- Generated: **2025-10-08T10:31:40+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -94,7 +94,7 @@
 
 **LG전자** (066570.KS)
 
-- News (7d): **346** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **261** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-1.9%**, 20d **1.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -102,7 +102,7 @@
 
 **LG화학** (051910.KS)
 
-- News (7d): **66** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **65** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-5.1%**, 20d **-0.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
@@ -110,7 +110,7 @@
 
 **기아** (000270.KS)
 
-- News (7d): **221** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **171** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **2.2%**, 20d **-2.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -118,7 +118,7 @@
 
 **대한항공** (003490.KS)
 
-- News (7d): **247** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **144** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **0.0%**, 20d **-3.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -126,7 +126,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **670** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **479** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **4.2%**, 20d **28.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -158,13 +158,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD
 
-**오리온홀딩스** (001800.KS)
+**한샘** (009240.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.1%**, 20d **-6.6%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **-10.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8%ED%99%80%EB%94%A9%EC%8A%A4
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
 
 **효성** (004800.KS)
 
@@ -218,19 +218,20 @@
 
 ### AGGRESSIVE (5)
 
-**Atlassian** (TEAM)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.2%**, 20d **-12.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Atlassian
-
 **Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
+
+**Lululemon** (LULU)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.8%**, 20d **-0.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Lululemon
 
 **Old Dominion Freight Line** (ODFL)
 
@@ -259,13 +260,13 @@
 
 ### SAFE (5)
 
-**Alphabet Inc.** (GOOGL)
+**Amazon** (AMZN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.1%**, 20d **5.6%**; volatility (20d): **unknown**
+- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Alphabet%20Inc.
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Amazon
 
 **Apple Inc.** (AAPL)
 
@@ -275,13 +276,13 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Apple%20Inc.
 
-**Broadcom** (AVGO)
+**Meta Platforms** (META)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.1%**, 20d **-0.8%**; volatility (20d): **unknown**
+- Returns: 5d **-0.0%**, 20d **7.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Broadcom
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Meta%20Platforms
 
 **Microsoft** (MSFT)
 
@@ -301,13 +302,13 @@
 
 ### AGGRESSIVE (5)
 
-**Erie Indemnity** (ERIE)
+**AES Corporation** (AES)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.7%**, 20d **-0.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.2%**, 20d **2.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=Erie%20Indemnity
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=AES%20Corporation
 
 **F5, Inc.** (FFIV)
 
@@ -325,19 +326,19 @@
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Hubbell%20Incorporated
 
-**Trimble Inc.** (TRMB)
+**Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.6%**, 20d **-0.0%**; volatility (20d): **unknown**
+- Returns: 5d **-7.2%**, 20d **-13.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Trimble%20Inc.
+- News search: https://www.google.com/search?q=Tyler%20Technologies
 
-**Weyerhaeuser** (WY)
+**UDR, Inc.** (UDR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.0%**, 20d **-2.9%**; volatility (20d): **unknown**
+- Returns: 5d **-3.0%**, 20d **-7.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
-- News search: https://www.google.com/search?q=Weyerhaeuser
+- News search: https://www.google.com/search?q=UDR%2C%20Inc.
 
