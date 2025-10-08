@@ -25,7 +25,7 @@ const CACHE_DIR = 'cache';
 const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
 const TAG_FILE_ENV = process.env.MARKET_TAG_FILE || '';
 const KEYWORD_FILE_ENV = process.env.MARKET_KEYWORD_FILE || '';
-let TAG_FILE = TAG_FILE_ENV || KEYWORD_FILE_ENV || 'tags.json';
+let TAG_FILE = TAG_FILE_ENV || KEYWORD_FILE_ENV || path.join('data', 'tags.json');
 const TAG_WEIGHT_INPUT = Number(process.env.TAG_EVAL_WEIGHT);
 const TAG_FREQ_WEIGHT_INPUT = Number(process.env.TAG_FREQ_WEIGHT);
 
@@ -244,6 +244,7 @@ function normalizeKey(s) {
 
 const TAG_FILE_CANDIDATES = Array.from(new Set([
   TAG_FILE,
+  path.join('data', 'tags.json'),
   'tags.json',
   'stocks/data/tags.json'
 ].filter(Boolean)));
