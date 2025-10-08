@@ -59,6 +59,14 @@
     margin-bottom: 0.75rem;
     font-size: 1.3rem;
   }
+  .keyword-box h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .keyword-box h3 a:hover,
+  .keyword-box h3 a:focus-visible {
+    text-decoration: underline;
+  }
   .keyword-list {
     list-style: none;
     padding: 0;
@@ -165,7 +173,7 @@
     </section>
 
     <section id="keywordHighlights" class="keyword-box" aria-labelledby="keywordTitle">
-      <h3 id="keywordTitle" data-i18n="keywordTitle">오늘의 키워드</h3>
+      <h3 id="keywordTitle"><a data-i18n="keywordTitle" href="stocks/keywords.html">오늘의 키워드</a></h3>
       <div id="keywordUpdated" class="last-updated"></div>
       <ul id="keywordList" class="keyword-list"></ul>
       <div id="keywordError" class="error" role="alert" style="display:none;"></div>
@@ -354,7 +362,7 @@
       if (tagsDataPromise) return tagsDataPromise;
 
       const cacheBust = Date.now();
-      const candidates = ['stocks/data/tags.json', 'tags.json'];
+      const candidates = ['data/tags.json', 'tags.json'];
 
       tagsDataPromise = (async () => {
         for (const path of candidates) {

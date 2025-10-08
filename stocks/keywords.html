@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>📈 Keyword Trends</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background: #fafafa; }
+    canvas { width: 100%; max-width: 900px; height: 450px; margin-top: 10px; }
+    h3 { margin-top: 30px; }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 5px; cursor: pointer; }
+    .up { color: #109618; }
+    .down { color: #dc3912; }
+    .hidden { display: none; }
+    button { margin-right: 10px; padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; background: #f4f4f4; cursor: pointer; }
+    button:hover { background: #e4e4e4; }
+  </style>
+</head>
+<body>
+  <h2>📊 Finance Keyword Trend Tracker</h2>
+  <div>
+    <button id="showTrend">Show Score Trends</button>
+    <button id="showDelta">Show Score Changes</button>
+  </div>
+  <canvas id="trendChart"></canvas>
+  <canvas id="deltaChart" class="hidden"></canvas>
+
+  <h3>📈 Top Rising Keywords</h3>
+  <ul id="rising"></ul>
+
+  <h3>📉 Top Falling Keywords</h3>
+  <ul id="falling"></ul>
+
+  <script>
+    async function drawCharts() {
+      const resp = await fetch("../data/keyword_trends.csv");
+      const text = await resp.text();
+      const rows = text.trim().split("\n").slice(1).map(r => r.split(","));
+      const dates = [...new Set(rows.map(r => r[0]))];
+      const termGroups = {};
+      rows.forEach(([date, term, score]) => {
+        if (!termGroups[term]) termGroups[term] = {};
+        termGroups[term][date] = parseFloat(score);
+      });
+
+      const colors = [
+        "#3366cc","#dc3912","#ff9900","#109618","#990099",
+        "#0099c6","#dd4477","#66aa00","#b82e2e","#316395"
+      ];
+
+      const datasets = Object.keys(termGroups).slice(0, 10).map((term, i) => ({
+        label: term,
+        data: dates.map(d => termGroups[term][d] || null),
+        borderColor: colors[i % colors.length],
+        borderWidth: 2,
+        fill: false,
+        tension: 0.3,
+      }));
+
+      const trendCtx = document.getElementById("trendChart");
+      const trendChart = new Chart(trendCtx, {
+        type: "line",
+        data: { labels: dates, datasets },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "bottom",
+              onClick: (e, legendItem) => {
+                const index = legendItem.datasetIndex;
+                const meta = trendChart.getDatasetMeta(index);
+                meta.hidden = meta.hidden === null ? !trendChart.data.datasets[index].hidden : null;
+                trendChart.update();
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)}`
+              }
+            }
+          },
+          scales: {
+            y: { title: { display: true, text: "Score" } },
+            x: { title: { display: true, text: "Date" } }
+          }
+        }
+      });
+
+      // --- Load trend_log.json for delta chart + top movers ---
+      try {
+        const logResp = await fetch("../data/trend_log.json");
+        const log = await logResp.json();
+        if (log.length >= 2) {
+          const last = log[log.length - 1];
+          const changes = last.changes || [];
+
+          const rising = changes
+            .filter(c => c.delta !== "+new" && Number(c.delta) > 5)
+            .map(c => c.term);
+          const falling = changes
+            .filter(c => c.delta !== "+new" && Number(c.delta) < -5)
+            .map(c => c.term);
+
+          // List updates
+          const risingList = document.getElementById("rising");
+          const fallingList = document.getElementById("falling");
+          risingList.innerHTML = rising.length
+            ? rising.map(t => `<li class="up term" data-term="${t}">⬆️ ${t}</li>`).join("")
+            : "<li>None</li>";
+          fallingList.innerHTML = falling.length
+            ? falling.map(t => `<li class="down term" data-term="${t}">⬇️ ${t}</li>`).join("")
+            : "<li>None</li>";
+
+          // --- Delta Chart ---
+          const deltaCtx = document.getElementById("deltaChart");
+          const deltaData = changes
+            .filter(c => c.delta !== "+new")
+            .map(c => ({ term: c.term, delta: parseFloat(c.delta) }))
+            .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
+            .slice(0, 10);
+
+          const deltaChart = new Chart(deltaCtx, {
+            type: "bar",
+            data: {
+              labels: deltaData.map(d => d.term),
+              datasets: [{
+                label: "Score Change (Δ)",
+                data: deltaData.map(d => d.delta),
+                backgroundColor: deltaData.map(d => d.delta > 0 ? "#109618aa" : "#dc3912aa")
+              }]
+            },
+            options: {
+              responsive: true,
+              scales: {
+                y: { title: { display: true, text: "Δ Score" } },
+                x: { ticks: { autoSkip: false } }
+              },
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: { label: ctx => `Δ ${ctx.parsed.y.toFixed(2)}` }
+                }
+              }
+            }
+          });
+
+          // --- Click to highlight curve ---
+          document.querySelectorAll(".term").forEach(el => {
+            el.addEventListener("click", () => {
+              const targetTerm = el.dataset.term;
+              trendChart.data.datasets.forEach(ds => {
+                ds.hidden = ds.label !== targetTerm;
+              });
+              trendChart.update();
+            });
+          });
+
+          // --- Toggle buttons ---
+          const trendBtn = document.getElementById("showTrend");
+          const deltaBtn = document.getElementById("showDelta");
+          const trendCanvas = document.getElementById("trendChart");
+          const deltaCanvas = document.getElementById("deltaChart");
+
+          trendBtn.addEventListener("click", () => {
+            trendCanvas.classList.remove("hidden");
+            deltaCanvas.classList.add("hidden");
+          });
+          deltaBtn.addEventListener("click", () => {
+            trendCanvas.classList.add("hidden");
+            deltaCanvas.classList.remove("hidden");
+          });
+        }
+      } catch (err) {
+        console.warn("Trend log unavailable:", err);
+      }
+    }
+
+    drawCharts();
+  </script>
+</body>
+</html>
