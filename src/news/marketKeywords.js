@@ -1,16 +1,17 @@
-import fs from 'fs';
-import fsp from 'fs/promises';
-import path from 'path';
+const fs = require('fs');
+const fsp = require('fs/promises');
+const path = require('path');
 
+// CommonJS-compatible polyfill for fetch
 if (typeof fetch === 'undefined') {
-  const { default: fetchPolyfill } = await import('node-fetch');
-  globalThis.fetch = fetchPolyfill;
+  const fetchPolyfill = (...args) => import('node-fetch').then(({ default: f }) => f(...args));
+  global.fetch = fetchPolyfill;
 }
 
 const HANGUL_REGEX = /[\u3131-\u318E\uAC00-\uD7A3]/;
 const SMALL_WORDS = new Set(['and', 'or', 'the', 'a', 'an', 'for', 'to', 'of', 'in', 'on', 'by', 'at', 'with']);
 
-export const KEYWORD_MARKET_QUERIES = [
+const KEYWORD_MARKET_QUERIES = [
   { market: 'KOSPI', query: '코스피 주요 이슈' },
   { market: 'KOSDAQ', query: '코스닥 주요 이슈' },
   { market: 'S&P 500', query: 'us stock market top themes' },
@@ -18,8 +19,8 @@ export const KEYWORD_MARKET_QUERIES = [
 ];
 
 const DEFAULT_TAG_FILE = path.join('data', 'tags.json');
-export const TAG_OUTPUT_FILE = process.env.MARKET_TAG_FILE || DEFAULT_TAG_FILE;
-export const KEYWORD_OUTPUT_FILE = process.env.MARKET_KEYWORD_FILE || TAG_OUTPUT_FILE;
+const TAG_OUTPUT_FILE = process.env.MARKET_TAG_FILE || DEFAULT_TAG_FILE;
+const KEYWORD_OUTPUT_FILE = process.env.MARKET_KEYWORD_FILE || TAG_OUTPUT_FILE;
 
 const translationCache = new Map();
 
@@ -38,16 +39,16 @@ function readJsonSafe(filePath) {
   }
 }
 
-export function hasHangulText(str) {
+function hasHangulText(str) {
   return HANGUL_REGEX.test(String(str || ''));
 }
 
-export function normalizeKoKeywordTerm(term) {
+function normalizeKoKeywordTerm(term) {
   const raw = String(term || '').replace(/\s+/g, ' ').trim();
   return raw;
 }
 
-export function formatTagDisplay(term) {
+function formatTagDisplay(term) {
   const raw = String(term || '').replace(/\s+/g, ' ').trim();
   if (!raw) return '';
   if (hasHangulText(raw)) {
@@ -65,14 +66,14 @@ export function formatTagDisplay(term) {
     .join(' ');
 }
 
-export function setTranslationCache(term, termKo) {
+function setTranslationCache(term, termKo) {
   const formatted = formatTagDisplay(term);
   const normalizedKo = normalizeKoKeywordTerm(termKo);
   if (!formatted || !normalizedKo) return;
   translationCache.set(formatted, normalizedKo);
 }
 
-export function translateTagToKo(term) {
+function translateTagToKo(term) {
   const formatted = formatTagDisplay(term);
   if (!formatted) return '';
   const cached = translationCache.get(formatted);
@@ -104,7 +105,7 @@ function collectEntriesFromSnapshot(snapshot) {
   return entries;
 }
 
-export function buildTermKoLookup(snapshot) {
+function buildTermKoLookup(snapshot) {
   const lookup = new Map();
   for (const entry of collectEntriesFromSnapshot(snapshot)) {
     if (!entry.term) continue;
@@ -116,13 +117,13 @@ export function buildTermKoLookup(snapshot) {
   return lookup;
 }
 
-export function lookupKoFromMap(map, term) {
+function lookupKoFromMap(map, term) {
   if (!map || typeof map.get !== 'function') return null;
   const formatted = formatTagDisplay(term);
   return map.get(formatted) || null;
 }
 
-export function primeTranslationCacheFromSnapshot(snapshot) {
+function primeTranslationCacheFromSnapshot(snapshot) {
   for (const entry of collectEntriesFromSnapshot(snapshot)) {
     if (entry.term && entry.term_ko) {
       setTranslationCache(entry.term, entry.term_ko);
@@ -152,7 +153,7 @@ function dedupeKeywords(list) {
   return out;
 }
 
-export async function collectSignificantPhrases({ preCollected = null, snapshotPath = TAG_OUTPUT_FILE } = {}) {
+async function collectSignificantPhrases({ preCollected = null, snapshotPath = TAG_OUTPUT_FILE } = {}) {
   if (preCollected && typeof preCollected === 'object') {
     const normalized = Array.isArray(preCollected.keywords)
       ? preCollected.keywords.map(normalizeKeywordEntry).filter(Boolean)
@@ -194,7 +195,7 @@ function buildTranslationMap(keywords) {
   return out;
 }
 
-export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, preCollected = null } = {}) {
+async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, preCollected = null } = {}) {
   const collected = await collectSignificantPhrases({ preCollected, snapshotPath: outputPath });
   const keywords = dedupeKeywords(collected.keywords || []);
   const now = new Date();
@@ -222,17 +223,17 @@ export async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_F
   return base;
 }
 
-export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE, preCollected = null } = {}) {
+async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE, preCollected = null } = {}) {
   return buildMarketKeywordSnapshot({ outputPath, preCollected });
 }
 
-export async function collectKoreanFirstKeywords({ snapshot = null, preCollected = null } = {}) {
+async function collectKoreanFirstKeywords({ snapshot = null, preCollected = null } = {}) {
   const baseSnapshot = snapshot || (await buildMarketKeywordSnapshot({ outputPath: null, preCollected }));
   const keywords = Array.isArray(baseSnapshot?.keywords) ? baseSnapshot.keywords : [];
   return keywords.filter((item) => hasHangulText(item.term_ko || item.term));
 }
 
-export async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, snapshot = null, preCollected = null } = {}) {
+async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, snapshot = null, preCollected = null } = {}) {
   const keywords = await collectKoreanFirstKeywords({ snapshot, preCollected });
   const payload = {
     generatedAt: new Date().toISOString(),
@@ -246,7 +247,7 @@ export async function writeKoreanFirstTagsJson({ outputPath = TAG_OUTPUT_FILE, s
   return payload;
 }
 
-export async function naverSearch({
+async function naverSearch({
   query,
   NAVER_ID,
   NAVER_SECRET,
@@ -268,3 +269,24 @@ export async function naverSearch({
   }
   return res.json();
 }
+
+// 🧩 Export CommonJS module
+module.exports = {
+  KEYWORD_MARKET_QUERIES,
+  TAG_OUTPUT_FILE,
+  KEYWORD_OUTPUT_FILE,
+  hasHangulText,
+  normalizeKoKeywordTerm,
+  formatTagDisplay,
+  setTranslationCache,
+  translateTagToKo,
+  buildTermKoLookup,
+  lookupKoFromMap,
+  primeTranslationCacheFromSnapshot,
+  collectSignificantPhrases,
+  buildMarketKeywordSnapshot,
+  writeSignificantPhrasesJson,
+  collectKoreanFirstKeywords,
+  writeKoreanFirstTagsJson,
+  naverSearch
+};
