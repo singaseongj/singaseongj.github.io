@@ -136,7 +136,7 @@ const {
   lookupKoFromMap,
   primeTranslationCacheFromSnapshot,
   naverSearch,
-} = require('./marketKeywords.js');
+} = require('./marketKeywords.cjs');
 
 export {
   collectKoreanFirstKeywords,
