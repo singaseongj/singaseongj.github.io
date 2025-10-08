@@ -354,7 +354,7 @@
       if (tagsDataPromise) return tagsDataPromise;
 
       const cacheBust = Date.now();
-      const candidates = ['stocks/data/tags.json', 'tags.json'];
+      const candidates = ['data/tags.json', 'tags.json'];
 
       tagsDataPromise = (async () => {
         for (const path of candidates) {

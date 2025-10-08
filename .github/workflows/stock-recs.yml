@@ -218,12 +218,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -f stocks/data/tags.json ]; then
+          if [ ! -f data/tags.json ]; then
             echo "tags.json not found; skipping commit"
             exit 0
           fi
 
-          if ! git status --short -- stocks/data/tags.json | grep -q 'stocks/data/tags.json'; then
+          if ! git status --short -- data/tags.json | grep -q 'data/tags.json'; then
             echo "No tag updates detected"
             exit 0
           fi
@@ -235,7 +235,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin "$branch"
           git pull --rebase origin "$branch"
-          git add stocks/data/tags.json
+          git add data/tags.json
           git commit -m "chore: update market tags"
           git push origin "HEAD:$branch"
 
@@ -386,7 +386,7 @@ jobs:
 
       - name: Build significance-based keyword snapshot
         env:
-          MARKET_TAG_FILE: stocks/data/tags.json
+          MARKET_TAG_FILE: data/tags.json
           KEYWORD_SIMILARITY_THRESHOLD: "0.6"
           KEYWORDS_PER_CATEGORY: "4"
           NEWS_TTL_MS: "600000"
@@ -396,22 +396,32 @@ jobs:
           rm -rf cache/news-*.json
           find data/articles -name "*.json" -mtime +0 -delete 2>/dev/null || true
           # Generate fresh keywords
-          node stocks/stockKeywords.js --build-tags
-          node stocks/stockKeywords.js --verify-tags
-          test -s stocks/data/tags.json
+          node <<'NODE'
+const { createRequire } = require('module');
+const req = createRequire(process.cwd() + '/');
+const fetchShim = (...args) => {
+  if (typeof globalThis.fetch === 'function') {
+    return globalThis.fetch(...args);
+  }
+  return import('node-fetch').then(mod => mod.default(...args));
+};
+req.cache[req.resolve('node-fetch')] = { exports: fetchShim };
+req('./stocks/stockKeywords.js');
+NODE
+          test -s data/tags.json
 
       - name: Verify market tag snapshot
         shell: bash
         run: |
           set -Eeuo pipefail
-          if [ ! -s stocks/data/tags.json ]; then
-            echo "stocks/data/tags.json missing or empty; skipping verification"
+          if [ ! -s data/tags.json ]; then
+            echo "data/tags.json missing or empty; skipping verification"
             exit 0
           fi
           echo "tags.json generatedAt:"
-          jq -r '.metadata.generated_at // .metadata.generatedAt // .generated_at // .generatedAt // "missing"' stocks/data/tags.json
+          jq -r '.metadata.generated_at // .metadata.generatedAt // .generated_at // .generatedAt // "missing"' data/tags.json
           echo "tags.json total tags:"
-          jq -r '.total_phrases // .total // (.discovered_keywords | length) // "missing"' stocks/data/tags.json
+          jq -r '.total_phrases // .total // (.discovered_keywords | length) // "missing"' data/tags.json
 
       # Optional: run finance keyword analysis, but keep tags.json as the main output
       - name: Analyze tags.json with finance dictionary (optional)
@@ -419,7 +429,7 @@ jobs:
         shell: bash
         run: |
           set -Eeuo pipefail
-          if [ ! -s stocks/data/tags.json ]; then
+          if [ ! -s data/tags.json ]; then
             echo "❌ tags.json missing; skipping finance analysis"
             exit 0
           fi
@@ -451,7 +461,7 @@ jobs:
             stocks/fx_rates/fx_rates.json
             stocks/fx_rates/fx_history*.json
             stocks/fx_rates/index.html
-            stocks/data/tags.json
+            data/tags.json
           )
           staged_any=0
           for path in "${paths[@]}"; do
