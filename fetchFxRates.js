@@ -17,7 +17,7 @@ const HISTORY_PREFIX = 'fx_history';
 const HISTORY_MANIFEST = path.join(OUT_DIR, `${HISTORY_PREFIX}_manifest.json`);
 const LEGACY_HISTORY = path.join(OUT_DIR, 'fx_history.json');
 
-const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD', 'GOLD', 'BTC'];
+const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD', 'GOLD', 'BTC', 'SP500'];
 const TROY_OUNCE_TO_GRAM = 31.1034768;
 
 const blankSeries = () => Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
@@ -768,6 +768,15 @@ async function fetchGoldBitcoinKRW() {
     console.warn(`[FX] Bitcoin history fetch failed: ${err.message}`);
   }
 
+  await sleep(400);
+
+  let sp500Data = null;
+  try {
+    sp500Data = await fetchYahooDailySeries('^GSPC', start, end);
+  } catch (err) {
+    console.warn(`[FX] S&P 500 history fetch failed: ${err.message}`);
+  }
+
   let goldSeries = goldData
     ? convertUsdSeriesToKrw(goldData.points, usdMap, year)
         .map(point => {
@@ -781,6 +790,9 @@ async function fetchGoldBitcoinKRW() {
     : [];
   let bitcoinSeries = btcData
     ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
+    : [];
+  let sp500Series = sp500Data
+    ? convertUsdSeriesToKrw(sp500Data.points, usdMap, year)
     : [];
 
   const btcPointIsStale = (point) => {
@@ -836,6 +848,7 @@ async function fetchGoldBitcoinKRW() {
   interpolatedGapPoints.push(...gapResult.interpolated);
 
   let latestGold = goldSeries.length ? goldSeries[goldSeries.length - 1] : null;
+  let latestSp500 = sp500Series.length ? sp500Series[sp500Series.length - 1] : null;
 
   if ((!goldSeries.length || !latestGold) && process.env.DATA_API_KEY) {
     try {
@@ -861,6 +874,7 @@ async function fetchGoldBitcoinKRW() {
   const extraLastUpdateds = [];
   if (latestGold?.t) extraLastUpdateds.push(latestGold.t);
   if (latestBitcoin?.t) extraLastUpdateds.push(latestBitcoin.t);
+  if (latestSp500?.t) extraLastUpdateds.push(latestSp500.t);
   if (coindeskPoint?.t && !extraLastUpdateds.includes(coindeskPoint.t)) {
     extraLastUpdateds.push(coindeskPoint.t);
   }
@@ -880,8 +894,10 @@ async function fetchGoldBitcoinKRW() {
     year,
     goldSeries,
     bitcoinSeries,
+    sp500Series,
     latestGold,
     latestBitcoin,
+    latestSp500,
     extraLastUpdateds,
   };
 }
@@ -1488,6 +1504,12 @@ async function main(){
     ensureItem('BTC', 'Bitcoin (1 BTC)');
   }
 
+  if (commodityData?.latestSp500) {
+    ensureItem('SP500', 'S&P 500 (1 pt)').krw = commodityData.latestSp500.v;
+  } else {
+    ensureItem('SP500', 'S&P 500 (1 pt)');
+  }
+
   const out = { lastUpdated: nowKSTISO(), items };
   await fs.writeFile(OUT, JSON.stringify(out, null, 2));
   console.log(`FX: wrote ${OUT} at ${out.lastUpdated}`);
@@ -1499,6 +1521,9 @@ async function main(){
   }
   if (commodityData?.bitcoinSeries?.length) {
     extraSeries.BTC = commodityData.bitcoinSeries;
+  }
+  if (commodityData?.sp500Series?.length) {
+    extraSeries.SP500 = commodityData.sp500Series;
   }
   await updateHistory(out, {
     extraSeries,
