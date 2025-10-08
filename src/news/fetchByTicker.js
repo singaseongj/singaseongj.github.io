@@ -31,7 +31,7 @@ import {
   lookupKoFromMap,
   primeTranslationCacheFromSnapshot,
   naverSearch,
-} from '../../stocks/stockKeywords.js';
+} from './marketKeywords.js';
 
 export {
   collectKoreanFirstKeywords,
@@ -39,7 +39,7 @@ export {
   collectSignificantPhrases,
   writeSignificantPhrasesJson,
   buildMarketKeywordSnapshot,
-} from '../../stocks/stockKeywords.js';
+} from './marketKeywords.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
