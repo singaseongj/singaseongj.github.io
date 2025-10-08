@@ -4623,6 +4623,72 @@ export async function writeSignificantPhrasesJson({ outputPath = TAG_OUTPUT_FILE
     }
   }
 
+  // ✅ Integrate Naver Trends and News Features for dynamic boosting
+  let trendTerms = [];
+  try {
+    const naverTrendsPath = path.join(__dirname, 'data', 'naver-trends.json');
+    const naverTrends = JSON.parse(fs.readFileSync(naverTrendsPath, 'utf8'));
+    const trendItems = naverTrends.trends || naverTrends.keywords || [];
+    trendTerms = trendItems
+      .map(t => (t?.keyword || t?.term || t?.title || (typeof t === 'string' ? t : '') || '').trim())
+      .filter(Boolean)
+      .slice(0, 50);
+    console.log(`📈 Loaded ${trendTerms.length} trending terms from Naver Trends`);
+  } catch (err) {
+    console.warn('⚠️ Failed to load Naver Trends:', err?.message || err);
+  }
+
+  let newsFeatures = [];
+  try {
+    const newsFeaturesPath = path.join(__dirname, 'data', 'news-features.json');
+    const newsData = JSON.parse(fs.readFileSync(newsFeaturesPath, 'utf8'));
+    newsFeatures = (newsData.topics || [])
+      .map(f => (f?.title || f?.term || f?.keyword || '').trim())
+      .filter(Boolean)
+      .slice(0, 50);
+    console.log(`📰 Loaded ${newsFeatures.length} feature topics from news data`);
+  } catch (err) {
+    console.warn('⚠️ Failed to load news-features.json:', err?.message || err);
+  }
+
+  // ✅ Combine dynamic trending themes
+  const dynamicTrends = new Set([...trendTerms, ...newsFeatures]);
+
+  // ✅ Trend relevance scoring
+  for (const kw of discoveredKeywords) {
+    const term = (kw.term || '').toLowerCase();
+    const termKo = (kw.term_ko || '').toLowerCase();
+
+    const matchedTrends = [...dynamicTrends].filter(
+      t => t && (term.includes(t.toLowerCase()) || termKo.includes(t.toLowerCase()))
+    );
+
+    if (matchedTrends.length > 0) {
+      const boost = 1.4 + matchedTrends.length * 0.1;
+      kw.combined_score *= boost;
+      kw.significance_score *= 1.2;
+      kw.trend_matches = matchedTrends;
+    }
+  }
+
+  // ✅ Sort and keep top-scoring keywords after trend adaptation
+  discoveredKeywords.sort((a, b) => b.combined_score - a.combined_score);
+  discoveredKeywords = discoveredKeywords.slice(0, 30);
+
+  console.log('🔥 Dynamic trend integration complete.');
+  try {
+    console.table(
+      discoveredKeywords.slice(0, 10).map((k, i) => ({
+        rank: i + 1,
+        term_ko: k.term_ko,
+        score: Number.isFinite(k.combined_score) ? k.combined_score.toFixed(2) : '0.00',
+        trends: Array.isArray(k.trend_matches) ? k.trend_matches.join(', ') : ''
+      }))
+    );
+  } catch (err) {
+    console.warn('⚠️ Dynamic trend console.table failed:', err?.message || err);
+  }
+
   // ✅ Deduplicate by root form (Korean & English)
   const seen = new Set();
   const unique = [];
