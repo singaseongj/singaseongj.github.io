@@ -13,34 +13,6 @@ import { computeReputation } from './reputation.js';
 // for CLI-only cache builders
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
 import { buildKeywordDict } from '../trends/keywordBuilder.js';
-import {
-  KEYWORD_MARKET_QUERIES,
-  TAG_OUTPUT_FILE,
-  KEYWORD_OUTPUT_FILE,
-  collectKoreanFirstKeywords,
-  writeKoreanFirstTagsJson,
-  collectSignificantPhrases,
-  writeSignificantPhrasesJson,
-  buildMarketKeywordSnapshot,
-  formatTagDisplay,
-  translateTagToKo,
-  setTranslationCache,
-  hasHangulText,
-  normalizeKoKeywordTerm,
-  buildTermKoLookup,
-  lookupKoFromMap,
-  primeTranslationCacheFromSnapshot,
-  naverSearch,
-} from './marketKeywords.js';
-
-export {
-  collectKoreanFirstKeywords,
-  writeKoreanFirstTagsJson,
-  collectSignificantPhrases,
-  writeSignificantPhrasesJson,
-  buildMarketKeywordSnapshot,
-} from './marketKeywords.js';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -145,6 +117,34 @@ function readJsonSafe(p){ try { return JSON.parse(fs.readFileSync(p,'utf8')); } 
 
 // --- Ticker-level keyword builder (domain-aware tokenizer) ---
 const require = createRequire(import.meta.url);
+
+const {
+  KEYWORD_MARKET_QUERIES,
+  TAG_OUTPUT_FILE,
+  KEYWORD_OUTPUT_FILE,
+  collectKoreanFirstKeywords,
+  writeKoreanFirstTagsJson,
+  collectSignificantPhrases,
+  writeSignificantPhrasesJson,
+  buildMarketKeywordSnapshot,
+  formatTagDisplay,
+  translateTagToKo,
+  setTranslationCache,
+  hasHangulText,
+  normalizeKoKeywordTerm,
+  buildTermKoLookup,
+  lookupKoFromMap,
+  primeTranslationCacheFromSnapshot,
+  naverSearch,
+} = require('./marketKeywords.js');
+
+export {
+  collectKoreanFirstKeywords,
+  writeKoreanFirstTagsJson,
+  collectSignificantPhrases,
+  writeSignificantPhrasesJson,
+  buildMarketKeywordSnapshot,
+};
 
 let okt = null;
 try {
