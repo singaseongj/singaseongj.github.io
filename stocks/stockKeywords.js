@@ -13,11 +13,17 @@ const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
 const OUTPUT_PATH = "./data/tags.json";
 const FINANCE_DICT_PATH = "./data/finance_keywords.json";
 const STOPWORDS_PATH = "./data/stopwords.txt";
-const STOPWORD_STATS_PATH = "./data/stopword_stats.json";
-const PRUNE_INTERVAL = 10; // every 10 runs
 const ARTICLE_DIRS = ["./news", "./articles"];
 const LOOKBACK_HOURS = 12;
 const KEYWORD_LIMIT = 30;
+
+// Stopword management
+const STOPWORD_STATS_PATH = "./data/stopword_stats.json";
+const PRUNE_INTERVAL = 10;
+
+// CLI flag
+const args = process.argv.slice(2);
+const FORCE_RESET = args.includes("--reset-stopwords");
 
 // 🧩 Load Stopwords dynamically
 function loadStopwords() {
@@ -41,6 +47,13 @@ function loadStopwords() {
   ]);
 }
 const STOPWORDS = loadStopwords();
+
+// Optional reset flag
+if (FORCE_RESET && fs.existsSync(STOPWORDS_PATH)) {
+  const baseWords = Array.from(STOPWORDS).slice(0, 50);
+  fs.writeFileSync(STOPWORDS_PATH, baseWords.join("\n"));
+  console.log("🧹 Stopwords reset (kept core 50 common words)");
+}
 
 function loadStopwordStats() {
   if (fs.existsSync(STOPWORD_STATS_PATH)) {
@@ -138,7 +151,6 @@ function collectArticles() {
 
 function computeTfIdfPhrases(texts, topN = 100) {
   const tf = {}, df = {};
-  const tokenFreq = {};
   texts.forEach((text) => {
     const phrases = extractPhrasesFromText(text);
     const seen = new Set();
@@ -149,14 +161,6 @@ function computeTfIdfPhrases(texts, topN = 100) {
         seen.add(p);
       }
     });
-    const tokens = text
-      .replace(/[^\p{L}\p{N}\s]/gu, " ")
-      .toLowerCase()
-      .split(/\s+/)
-      .filter((t) => t.length > 1);
-    tokens.forEach((token) => {
-      tokenFreq[token] = (tokenFreq[token] || 0) + 1;
-    });
   });
   const N = texts.length || 1;
   const scores = Object.entries(tf).map(([phrase, freq]) => {
@@ -164,21 +168,30 @@ function computeTfIdfPhrases(texts, topN = 100) {
     return [phrase, freq * idf];
   });
   scores.sort((a, b) => b[1] - a[1]);
+  const phrases = scores.slice(0, topN).map(([term, score]) => ({
+    term,
+    term_ko: term,
+    significance_score: score,
+    mentions: tf[term],
+    combined_score: score,
+    sources: ["tfidf"],
+    finance_boost: 0,
+    context: {},
+  }));
 
-  // --- Learn new stopwords and maintain stats ---
+  // --- Learn and prune stopwords dynamically ---
   const stats = loadStopwordStats();
   stats.runs += 1;
 
-  // count token frequency for this run
-  Object.entries(tokenFreq).forEach(([t, f]) => {
+  Object.entries(tf).forEach(([t, f]) => {
     stats.counts[t] = (stats.counts[t] || 0) + f;
   });
 
-  // detect frequent new tokens
   const avgFreq =
-    Object.values(tokenFreq).reduce((a, b) => a + b, 0) /
-    Object.keys(tokenFreq).length;
-  const frequent = Object.entries(tokenFreq)
+    Object.keys(tf).length === 0
+      ? 0
+      : Object.values(tf).reduce((a, b) => a + b, 0) / Object.keys(tf).length;
+  const frequent = Object.entries(tf)
     .filter(([_, f]) => f > avgFreq * 3)
     .map(([t]) => t)
     .filter((t) => !STOPWORDS.has(t));
@@ -189,7 +202,6 @@ function computeTfIdfPhrases(texts, topN = 100) {
     frequent.forEach((t) => STOPWORDS.add(t));
   }
 
-  // prune rarely used stopwords every N runs
   if (stats.runs % PRUNE_INTERVAL === 0) {
     const threshold = 2;
     const surviving = [...STOPWORDS].filter((t) => (stats.counts[t] || 0) >= threshold);
@@ -197,23 +209,13 @@ function computeTfIdfPhrases(texts, topN = 100) {
     console.log(`✂️ Pruned stopwords: ${STOPWORDS.size - surviving.length}`);
     STOPWORDS.clear();
     surviving.forEach((t) => STOPWORDS.add(t));
-    // reset stats for next cycle
     stats.runs = 0;
     stats.counts = {};
   }
 
   saveStopwordStats(stats);
 
-  return scores.slice(0, topN).map(([term, score]) => ({
-    term,
-    term_ko: term,
-    significance_score: score,
-    mentions: tf[term],
-    combined_score: score,
-    sources: ["tfidf"],
-    finance_boost: 0,
-    context: {},
-  }));
+  return phrases;
 }
 
 // ---- MAIN ----
