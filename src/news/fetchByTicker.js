@@ -13,6 +13,14 @@ import { computeReputation } from './reputation.js';
 // for CLI-only cache builders
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
 import { buildKeywordDict } from '../trends/keywordBuilder.js';
+
+// --- Detect external keyword builder ---
+const STOCK_KEYWORDS_PATH = path.resolve("stocks/stockKeywords.js");
+const HAS_STOCK_KEYWORDS = fs.existsSync(STOCK_KEYWORDS_PATH);
+if (HAS_STOCK_KEYWORDS) {
+  console.log("🧠 Detected stockKeywords.js — disabling internal tag generation");
+  process.env.SKIP_TAGS = "1";
+}
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
