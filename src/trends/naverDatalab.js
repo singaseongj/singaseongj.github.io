@@ -138,6 +138,7 @@ export async function fetchNaverTrends(options, _retry = 0) {
           });
         } catch (err) {
           if (err.name === 'AbortError') {
+            console.warn(`[naver] Request timeout for group ${chunk.map(g => g.groupName).join(', ')}`);
             console.warn('⚠️ Naver API fetch aborted (timeout or rate limit)');
             return null;
           }
