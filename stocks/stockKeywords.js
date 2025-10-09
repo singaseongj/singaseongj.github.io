@@ -4,7 +4,6 @@
  */
 
 const fs = require("fs");
-const path = require("path");
 const fetch = require("node-fetch");
 const crypto = require("crypto");
 
@@ -13,7 +12,6 @@ const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
 const OUTPUT_PATH = "./data/tags.json";
 const FINANCE_DICT_PATH = "./data/finance_keywords.json";
 const STOPWORDS_PATH = "./data/stopwords.txt";
-const ARTICLE_DIRS = ["./news", "./articles", "./cache"];
 const LOOKBACK_HOURS = 12;
 const KEYWORD_LIMIT = 30;
 
@@ -136,37 +134,37 @@ function extractPhrasesFromText(text, minLen = 2, maxLen = 4) {
   return phrases;
 }
 
-function collectArticles() {
-  const texts = [];
-  for (const dir of ARTICLE_DIRS) {
-    if (!fs.existsSync(dir)) continue;
-    const files = fs.readdirSync(dir).filter((f) =>
-      f.endsWith(".txt") || f.endsWith(".md") || f.endsWith(".json")
-    );
-    for (const file of files) {
-      const fullPath = path.join(dir, file);
-      const content = fs.readFileSync(fullPath, "utf8");
-      if (file.endsWith(".json")) {
-        try {
-          const json = JSON.parse(content);
-          // Common keys for your cached news files
-          if (json.content) texts.push(json.content);
-          else if (json.body) texts.push(json.body);
-          else if (Array.isArray(json.articles)) {
-            json.articles.forEach(a => {
-              if (a.title) texts.push(a.title);
-              if (a.description) texts.push(a.description);
-              if (a.content) texts.push(a.content);
-            });
-          }
-          continue;
-        } catch (err) {
-          console.warn(`⚠️ Skipped invalid JSON: ${file}`, err.message);
-        }
+// ---- NAVER NEWS COLLECTOR ----
+async function collectArticles() {
+  console.log("📰 Fetching articles directly from Naver API...");
+  const queries = ["주식", "증시", "금리", "환율", "ETF", "반도체", "미국 증시"];
+  const headers = {
+    "X-Naver-Client-Id": NAVER_CLIENT_ID,
+    "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
+  };
+  let texts = [];
+
+  for (const q of queries) {
+    try {
+      const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=20&sort=date`;
+      const res = await fetch(url, { headers });
+      if (!res.ok) {
+        console.warn(`⚠️ Naver search for '${q}' failed (${res.status})`);
+        continue;
       }
-      texts.push(content);
+      const data = await res.json();
+      const items = data.items || [];
+      items.forEach(item => {
+        const text = [item.title, item.description, item.link].join(" ");
+        texts.push(text.replace(/<[^>]+>/g, ""));
+      });
+      await new Promise(r => setTimeout(r, 500));
+    } catch (err) {
+      console.warn(`⚠️ Failed fetching Naver articles for ${q}:`, err.message);
     }
   }
+
+  if (texts.length === 0) console.warn("⚠️ No Naver articles collected, continuing with empty set");
   return texts;
 }
 
@@ -248,7 +246,7 @@ async function generateKeywords() {
     trends.results[0].data.forEach((d) => trendSet.add(d.title || d.period));
 
   const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
-  const articles = collectArticles();
+  const articles = await collectArticles();
   let discovered_keywords = computeTfIdfPhrases(articles, 150);
 
   // Finance boost
