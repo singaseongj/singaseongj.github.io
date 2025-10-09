@@ -138,14 +138,6 @@ const {
   naverSearch,
 } = require('./marketKeywords.js');
 
-export {
-  collectKoreanFirstKeywords,
-  writeKoreanFirstTagsJson,
-  collectSignificantPhrases,
-  writeSignificantPhrasesJson,
-  buildMarketKeywordSnapshot,
-};
-
 let okt = null;
 try {
   const mod = require('open-korean-text-node');

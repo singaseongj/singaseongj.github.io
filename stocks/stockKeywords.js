@@ -5,7 +5,14 @@
 
 const fs = require("fs");
 const path = require("path");
-const fetch = require("node-fetch");
+let fetch;
+try {
+  // Prefer CommonJS require when available
+  const fetched = require("node-fetch");
+  fetch = fetched.default || fetched;
+} catch (err) {
+  fetch = async (...args) => (await import("node-fetch")).default(...args);
+}
 const crypto = require("crypto");
 
 const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID;

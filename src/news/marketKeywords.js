@@ -5,7 +5,7 @@ const path = require('path');
 // CommonJS-compatible polyfill for fetch
 if (typeof fetch === 'undefined') {
   const fetchPolyfill = (...args) => import('node-fetch').then(({ default: f }) => f(...args));
-  global.fetch = fetchPolyfill;
+  globalThis.fetch = fetchPolyfill;
 }
 
 const HANGUL_REGEX = /[\u3131-\u318E\uAC00-\uD7A3]/;
@@ -270,7 +270,6 @@ async function naverSearch({
   return res.json();
 }
 
-// 🧩 Export CommonJS module
 module.exports = {
   KEYWORD_MARKET_QUERIES,
   TAG_OUTPUT_FILE,
@@ -288,5 +287,5 @@ module.exports = {
   writeSignificantPhrasesJson,
   collectKoreanFirstKeywords,
   writeKoreanFirstTagsJson,
-  naverSearch
+  naverSearch,
 };
