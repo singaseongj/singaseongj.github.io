@@ -6,6 +6,7 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 const crypto = require("crypto");
+const cheerio = require("cheerio");
 
 const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID;
 const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
@@ -149,6 +150,34 @@ async function fetchNaverTrends() {
   }
 }
 
+async function fetchDaumNews() {
+  const url = "https://news.daum.net/breakingnews/economic";
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Daum fetch failed: ${res.statusText}`);
+  const html = await res.text();
+  const $ = cheerio.load(html);
+  const items = [];
+  $("ul.list_news2 li a.link_txt").each((i, el) => {
+    const title = $(el).text().trim();
+    if (title.length > 5) items.push(title);
+  });
+  return items;
+}
+
+async function fetchNateNews() {
+  const url = "https://m.news.nate.com/section?mid=m02";
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Nate fetch failed: ${res.statusText}`);
+  const html = await res.text();
+  const $ = cheerio.load(html);
+  const items = [];
+  $("div.mduSubjectList strong.tit a").each((i, el) => {
+    const title = $(el).text().trim();
+    if (title.length > 5) items.push(title);
+  });
+  return items;
+}
+
 // ---- PHRASE EXTRACTION ----
 function extractPhrasesFromText(text, minLen = 2, maxLen = 4) {
   const tokens = text
@@ -273,12 +302,24 @@ function computeTfIdfPhrases(texts, topN = 100) {
 async function generateKeywords() {
   console.log("🚀 Generating tags.json ...");
   const trends = await fetchNaverTrends();
+  const [daumNews, nateNews] = await Promise.allSettled([
+    fetchDaumNews(),
+    fetchNateNews(),
+  ]);
+  const backupNews = [
+    ...(daumNews.value || []),
+    ...(nateNews.value || []),
+  ];
+  if (backupNews.length) {
+    console.log(`📰 Collected ${backupNews.length} headlines from Daum/Nate`);
+  }
   const trendSet = new Set();
   if (trends?.results?.[0]?.data)
     trends.results[0].data.forEach((d) => trendSet.add(d.title || d.period));
 
   const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
   const articles = await collectArticles();
+  articles.push(...backupNews);
   let discovered_keywords = computeTfIdfPhrases(articles, 150);
 
   // Finance boost
