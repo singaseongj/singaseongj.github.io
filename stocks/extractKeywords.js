@@ -74,7 +74,19 @@ async function main() {
 
   const tags = JSON.parse(tagsRaw);
   const financeDict = JSON.parse(dictRaw);
-  const financeSet = new Set(financeDict.map((w) => w.toLowerCase()));
+  const financeKeywords = Array.isArray(financeDict)
+    ? financeDict
+    : Array.isArray(financeDict.finance_keywords)
+    ? financeDict.finance_keywords
+    : [];
+
+  if (financeKeywords.length === 0) {
+    console.warn(
+      "⚠️ finance_keywords.json did not contain a keyword array; continuing with an empty set"
+    );
+  }
+
+  const financeSet = new Set(financeKeywords.map((w) => w.toLowerCase()));
 
   const allTexts = [
     ...(tags.discovered_keywords || []),
