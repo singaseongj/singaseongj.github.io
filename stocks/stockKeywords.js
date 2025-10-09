@@ -8,6 +8,16 @@ const fetch = require("node-fetch");
 const crypto = require("crypto");
 const cheerio = require("cheerio");
 
+// Reusable headers for portals that gate on UA
+const UA_HEADERS = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" };
+
+// URL/fragment filters
+const URL_RE = /https?:\/\/\S+/gi;
+const BAD_FRAGMENT = new Set([
+  "http","https","www","co","kr","com","net","org","news","article","mnews","idxno","html",
+  "view","read","amp","utm","ref","story","mobile","sid","aid"
+]);
+
 const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID;
 const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
 const OUTPUT_PATH = "./data/tags.json";
@@ -82,6 +92,18 @@ function isStopwordToken(t) {
   return STOPWORDS.has(t.toLowerCase());
 }
 
+function looksUrlishToken(t) {
+  // reject tokens with dots/slashes or that are obvious url/path crumbs
+  return /\//.test(t) || /\./.test(t) || BAD_FRAGMENT.has(t.toLowerCase());
+}
+
+function isGoodSingleWord(t) {
+  // Allow 1-word “keywords” if they are Hangul (≥2 chars) or ≥3 ascii letters
+  if (/[가-힣]{2,}/.test(t)) return true;
+  if (/^[A-Za-z]{3,}$/.test(t)) return true;
+  return false;
+}
+
 // ---- NAVER API ----
 async function fetchNaverTrends() {
   try {
@@ -118,7 +140,7 @@ async function fetchNaverTrends() {
     try {
       // Fetch Nate news (mobile version is simpler)
       const html = await fetch("https://m.news.nate.com/section?mid=m02&sq=1138989", {
-        headers: { "User-Agent": "Mozilla/5.0 (compatible; StockBot/1.0)" },
+        headers: UA_HEADERS,
       }).then((r) => r.text());
 
       // Extract top article titles
@@ -150,19 +172,86 @@ async function fetchNaverTrends() {
   }
 }
 
+async function fetchNaverSearchFromFinanceDict() {
+  console.log("🌐 Fetching Naver search results from finance_keywords.json ...");
+  const headers = {
+    "X-Naver-Client-Id": NAVER_CLIENT_ID,
+    "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
+  };
+
+  // Load finance keywords dynamically
+  const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
+  // 🔁 Randomly sample 40 keywords per run for variety
+  const shuffled = financeDict.sort(() => 0.5 - Math.random());
+  const keywords = shuffled.slice(0, 40);
+  console.log(`🎯 Using ${keywords.length} random finance keywords (e.g., ${keywords.slice(0, 5).join(", ")} ...)`);
+
+  const texts = [];
+
+  for (const kw of keywords) {
+    for (const type of ["webkr", "blog", "news"]) {
+      const url = `https://openapi.naver.com/v1/search/${type}.json?query=${encodeURIComponent(kw)}&display=10&sort=date`;
+      try {
+        const res = await fetch(url, { headers });
+        if (!res.ok) {
+          console.warn(`⚠️ Naver ${type} search failed for ${kw}: ${res.statusText}`);
+          continue;
+        }
+        const data = await res.json();
+        const items = data.items || [];
+        items.forEach((item) => {
+          const text = `${item.title || ""} ${item.description || ""}`;
+          const cleaned = text
+            .replace(/<[^>]+>/g, " ")
+            .replace(/https?:\/\/\S+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+          if (cleaned.length > 10) texts.push(cleaned);
+        });
+        await new Promise((r) => setTimeout(r, 150 + Math.random() * 250));
+      } catch (err) {
+        console.warn(`⚠️ Naver ${type} search error for ${kw}:`, err.message);
+      }
+    }
+  }
+
+  console.log(`🌐 Collected ${texts.length} items from Naver Search (finance keywords)`);
+
+  // ---- Google News RSS fallback ----
+  if (texts.length < 200) {
+    console.log("📰 Fetching supplemental Google News headlines ...");
+    try {
+      const rss = await fetch(
+        "https://news.google.com/rss/search?q=주식+증시+금리+환율+site:naver.com+OR+site:hankyung.com&hl=ko&gl=KR&ceid=KR:ko",
+        { headers: { "User-Agent": "Mozilla/5.0 (compatible; StockBot/1.0)" } }
+      ).then((r) => r.text());
+      const titles = [...rss.matchAll(/<title>([^<]+)<\/title>/g)]
+        .map((m) => m[1])
+        .filter((t) => t.length > 5 && !t.includes("Google 뉴스"));
+      console.log(`🧩 Added ${titles.length} Google News headlines`);
+      texts.push(...titles);
+    } catch (err) {
+      console.warn("⚠️ Google News fetch failed:", err.message);
+    }
+  }
+  return texts;
+}
+
 async function fetchDaumNews() {
-  const url = "https://news.daum.net/breakingnews/economic";
+  // mobile endpoint renders server-side
+  const url = "https://m.news.daum.net/breakingnews/economic";
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers: UA_HEADERS });
     if (!res.ok) throw new Error(`Daum fetch failed: ${res.statusText}`);
     const html = await res.text();
     const $ = cheerio.load(html);
     const headlines = [];
-    $("ul.list_news2 li a.link_txt").each((i, el) => {
+    $("a.link_news, strong.tit_thumb, a.link_txt").each((i, el) => {
       const title = $(el).text().trim();
       if (title.length > 5) headlines.push(title);
     });
     console.log(`📰 Daum headlines: ${headlines.length}`);
+    if (!headlines.length) console.warn("⚠️ Daum HTML sample:", html.slice(0, 200));
     return headlines;
   } catch (err) {
     console.warn("⚠️ Daum news fetch failed:", err.message);
@@ -173,16 +262,18 @@ async function fetchDaumNews() {
 async function fetchNateNews() {
   const url = "https://m.news.nate.com/section?mid=m02";
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers: UA_HEADERS });
     if (!res.ok) throw new Error(`Nate fetch failed: ${res.statusText}`);
     const html = await res.text();
     const $ = cheerio.load(html);
     const headlines = [];
-    $("strong.tit a").each((i, el) => {
+    // try multiple possible containers
+    $("strong.tit a, a.tit, div.mduSubject a").each((i, el) => {
       const title = $(el).text().trim();
       if (title.length > 5) headlines.push(title);
     });
     console.log(`📰 Nate headlines: ${headlines.length}`);
+    if (!headlines.length) console.warn("⚠️ Nate HTML sample:", html.slice(0, 200));
     return headlines;
   } catch (err) {
     console.warn("⚠️ Nate news fetch failed:", err.message);
@@ -193,16 +284,17 @@ async function fetchNateNews() {
 async function fetchZumNews() {
   const url = "https://m.news.zum.com/home";
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers: UA_HEADERS });
     if (!res.ok) throw new Error(`Zum fetch failed: ${res.statusText}`);
     const html = await res.text();
     const $ = cheerio.load(html);
     const headlines = [];
-    $("a.item-desc, .headline a, .item-title").each((i, el) => {
+    $("a.item-desc, .headline a, .item-title, strong.tit a").each((i, el) => {
       const title = $(el).text().trim();
       if (title.length > 5) headlines.push(title);
     });
     console.log(`📰 Zum headlines: ${headlines.length}`);
+    if (!headlines.length) console.warn("⚠️ Zum HTML sample:", html.slice(0, 200));
     return headlines;
   } catch (err) {
     console.warn("⚠️ Zum news fetch failed:", err.message);
@@ -213,16 +305,18 @@ async function fetchZumNews() {
 async function fetchMkNews() {
   const url = "https://m.mk.co.kr";
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers: UA_HEADERS });
     if (!res.ok) throw new Error(`MK fetch failed: ${res.statusText}`);
     const html = await res.text();
     const $ = cheerio.load(html);
     const headlines = [];
-    $("a.news_ttl, a.headline, .news_item a").each((i, el) => {
+    // wider net for MK mobile
+    $("a.news_ttl, a.headline, .news_item a, .tit a, .list_area a").each((i, el) => {
       const title = $(el).text().trim();
       if (title.length > 5) headlines.push(title);
     });
     console.log(`📰 MK headlines: ${headlines.length}`);
+    if (!headlines.length) console.warn("⚠️ MK HTML sample:", html.slice(0, 200));
     return headlines;
   } catch (err) {
     console.warn("⚠️ MK news fetch failed:", err.message);
@@ -233,16 +327,17 @@ async function fetchMkNews() {
 async function fetchHankyungNews() {
   const url = "https://m.hankyung.com/economy";
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers: UA_HEADERS });
     if (!res.ok) throw new Error(`Hankyung fetch failed: ${res.statusText}`);
     const html = await res.text();
     const $ = cheerio.load(html);
     const headlines = [];
-    $("a.news-tit, a.link_news, .article_tit a").each((i, el) => {
+    $("a.news-tit, a.link_news, .article_tit a, .news_list a").each((i, el) => {
       const title = $(el).text().trim();
       if (title.length > 5) headlines.push(title);
     });
     console.log(`📰 Hankyung headlines: ${headlines.length}`);
+    if (!headlines.length) console.warn("⚠️ Hankyung HTML sample:", html.slice(0, 200));
     return headlines;
   } catch (err) {
     console.warn("⚠️ Hankyung news fetch failed:", err.message);
@@ -253,16 +348,17 @@ async function fetchHankyungNews() {
 async function fetchChosunBizNews() {
   const url = "https://biz.chosun.com/";
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers: UA_HEADERS });
     if (!res.ok) throw new Error(`ChosunBiz fetch failed: ${res.statusText}`);
     const html = await res.text();
     const $ = cheerio.load(html);
     const headlines = [];
-    $("h2.news_ttl a, div.list_item a.tit, a.link_txt").each((i, el) => {
+    $("h2.news_ttl a, div.list_item a.tit, a.link_txt, .story-card a").each((i, el) => {
       const title = $(el).text().trim();
       if (title.length > 5) headlines.push(title);
     });
     console.log(`📰 ChosunBiz headlines: ${headlines.length}`);
+    if (!headlines.length) console.warn("⚠️ ChosunBiz HTML sample:", html.slice(0, 200));
     return headlines;
   } catch (err) {
     console.warn("⚠️ ChosunBiz news fetch failed:", err.message);
@@ -273,16 +369,17 @@ async function fetchChosunBizNews() {
 async function fetchYonhapNews() {
   const url = "https://m.yna.co.kr/economy/all";
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers: UA_HEADERS });
     if (!res.ok) throw new Error(`Yonhap fetch failed: ${res.statusText}`);
     const html = await res.text();
     const $ = cheerio.load(html);
     const headlines = [];
-    $("strong.tit-news a, div.list-type038 a").each((i, el) => {
+    $("strong.tit-news a, div.list-type038 a, .list-type023 a").each((i, el) => {
       const title = $(el).text().trim();
       if (title.length > 5) headlines.push(title);
     });
     console.log(`📰 Yonhap headlines: ${headlines.length}`);
+    if (!headlines.length) console.warn("⚠️ Yonhap HTML sample:", html.slice(0, 200));
     return headlines;
   } catch (err) {
     console.warn("⚠️ Yonhap news fetch failed:", err.message);
@@ -291,17 +388,29 @@ async function fetchYonhapNews() {
 }
 
 // ---- PHRASE EXTRACTION ----
-function extractPhrasesFromText(text, minLen = 2, maxLen = 4) {
+function extractPhrasesFromText(text, minLen = 1, maxLen = 4) {
+  // Strip URLs first, then normalize and split
   const tokens = text
+    .replace(URL_RE, " ")
     .replace(/[^\p{L}\p{N}\s]/gu, " ")
     .split(/\s+/)
-    .filter((t) => t.length > 1 && !isStopwordToken(t));
+    .filter((t) => {
+      if (!t) return false;
+      if (t.length <= 1) return false;             // too short
+      if (/^\d+$/.test(t)) return false;           // pure numbers
+      if (looksUrlishToken(t)) return false;       // url/path crumbs
+      if (isStopwordToken(t)) return false;        // external stopwords
+      // For single-word phrases we will re-check via isGoodSingleWord later
+      return true;
+    });
   const phrases = [];
   for (let i = 0; i < tokens.length; i++) {
     for (let len = minLen; len <= maxLen; len++) {
       const slice = tokens.slice(i, i + len);
-      if (slice.length === len && !slice.some(isStopwordToken))
+      if (slice.length === len && !slice.some(isStopwordToken)) {
+        if (len === 1 && !isGoodSingleWord(slice[0])) continue;
         phrases.push(slice.join(" "));
+      }
     }
   }
   return phrases;
@@ -328,13 +437,22 @@ async function collectArticles() {
       const data = await res.json();
       const items = data.items || [];
       items.forEach(item => {
-        const text = [item.title, item.description, item.link].join(" ");
-        texts.push(text.replace(/<[^>]+>/g, ""));
+        // DO NOT include item.link; strip HTML tags and URLs from text
+        const text = [item.title || "", item.description || ""].join(" ");
+        const cleaned = text
+          .replace(/<[^>]+>/g, " ")
+          .replace(URL_RE, " ");
+        if (cleaned.trim()) texts.push(cleaned.trim());
       });
       await new Promise(r => setTimeout(r, 500));
     } catch (err) {
       console.warn(`⚠️ Failed fetching Naver articles for ${q}:`, err.message);
     }
+  }
+
+  const financeDictTexts = await fetchNaverSearchFromFinanceDict();
+  if (financeDictTexts.length) {
+    texts.push(...financeDictTexts);
   }
 
   if (texts.length === 0) console.warn("⚠️ No Naver articles collected, continuing with empty set");
@@ -386,12 +504,15 @@ function computeTfIdfPhrases(texts, topN = 100) {
   const frequent = Object.entries(tf)
     .filter(([_, f]) => f > avgFreq * 3)
     .map(([t]) => t)
-    .filter((t) => !STOPWORDS.has(t));
+    .filter((t) => !STOPWORDS.has(t))
+    // never learn URLish or 1-word junk as stopwords
+    .filter((t) => !looksUrlishToken(t) && (t.includes(" ") || isGoodSingleWord(t)));
 
   if (frequent.length > 0) {
-    console.log(`🧠 Learned ${frequent.length} new stopwords`);
-    fs.appendFileSync(STOPWORDS_PATH, "\n" + frequent.join("\n"));
-    frequent.forEach((t) => STOPWORDS.add(t));
+    const toAdd = frequent.slice(0, 50); // cap growth per run
+    console.log(`🧠 Learned ${toAdd.length} new stopwords (capped)`);
+    fs.appendFileSync(STOPWORDS_PATH, "\n" + toAdd.join("\n"));
+    toAdd.forEach((t) => STOPWORDS.add(t));
   }
 
   if (stats.runs % PRUNE_INTERVAL === 0) {
@@ -447,7 +568,7 @@ async function generateKeywords() {
   const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
   const articles = await collectArticles();
   // Merge portal headlines into the corpus
-  articles.push(...backupHeadlines);
+  articles.push(...backupHeadlines.map(t => t.replace(URL_RE, " ").trim()).filter(Boolean));
   let discovered_keywords = computeTfIdfPhrases(articles, 150);
 
   // Finance boost
