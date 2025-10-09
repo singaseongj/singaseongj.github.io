@@ -4,16 +4,20 @@
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
-import { TfIdf } from "natural";
-import stopword from "stopword";
-import pos from "pos";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+const { TfIdf } = require("natural");
+const stopword = require("stopword");
+const pos = require("pos");
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const TAGS_PATH = path.resolve(__dirname, "data", "tags.json");
-const DICT_PATH = path.resolve(__dirname, "data", "finance_keywords.json");
-const OUTPUT_PATH = path.resolve(__dirname, "data", "output_keywords.json");
+const DATA_DIR = path.resolve(__dirname, "..", "data");
+const TAGS_PATH = path.join(DATA_DIR, "tags.json");
+const DICT_PATH = path.join(DATA_DIR, "finance_keywords.json");
+const OUTPUT_PATH = path.join(DATA_DIR, "output_keywords.json");
 
 function cleanText(text) {
   return text
