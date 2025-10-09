@@ -7,7 +7,6 @@ const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
 const NAVER_URL = 'https://openapi.naver.com/v1/datalab/search';
 const MAX_GROUPS_PER_REQ = 5; // DataLab hard limit
 const DEFAULT_TTL_MS = Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6 * 60 * 60 * 1000);
-const REQ_TIMEOUT_MS = Number(process.env.NAVER_REQ_TIMEOUT_MS || 8000);
 
 const NAVER_CACHE_DIR = path.join('cache', 'naver');
 fs.mkdirSync(NAVER_CACHE_DIR, { recursive: true });
@@ -79,7 +78,19 @@ function clamp01(x){ return Math.max(0, Math.min(1, x)); }
  * baskets: Array<{ groupName: string, keywords: string[], weight?: number, symbol?: string }>
  * Returns: { perSymbol: { [symbol]: { naverPopularity, spike, persist, lastAsvi, debug } }, raw: ... }
  */
-export async function fetchNaverTrends({ baskets, startDate, endDate, timeUnit='date', device='', ages=[], gender='', cacheTtlMs=DEFAULT_TTL_MS, budgetLeftMs=Infinity }) {
+export async function fetchNaverTrends(options, _retry = 0) {
+  const originalOptions = options ?? {};
+  const {
+    baskets = [],
+    startDate,
+    endDate,
+    timeUnit = 'date',
+    device = '',
+    ages = [],
+    gender = '',
+    cacheTtlMs = DEFAULT_TTL_MS,
+    budgetLeftMs = Infinity,
+  } = originalOptions;
   if (!NAVER_ID || !NAVER_SECRET) {
     console.warn('[naver] missing NAVER_CLIENT_ID/SECRET; returning empty');
     return { perSymbol:{}, raw:[] };
@@ -91,6 +102,7 @@ export async function fetchNaverTrends({ baskets, startDate, endDate, timeUnit='
   }
 
   const results = [];
+  let remainingBudget = Number.isFinite(budgetLeftMs) ? Math.max(0, Number(budgetLeftMs)) : Infinity;
   for (const chunk of chunks){
     const endpoint = NAVER_URL;
     const body = {
@@ -103,24 +115,56 @@ export async function fetchNaverTrends({ baskets, startDate, endDate, timeUnit='
 
     let json = await readCache(cacheKey, ttl);
     if (!json) {
-      const controller = new AbortController();
-      const perReq = Math.min(budgetLeftMs ?? 30000, REQ_TIMEOUT_MS);
-      const timer = setTimeout(() => controller.abort(), perReq);
-
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
+      if (Number.isFinite(remainingBudget) && remainingBudget <= 0) {
+        console.warn('[naver] budget exhausted before completing fetch; returning partial results');
+        json = { results: [] };
+      } else {
+        const headers = {
           'X-Naver-Client-Id': NAVER_ID,
           'X-Naver-Client-Secret': NAVER_SECRET,
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-        signal: controller.signal,
-      }).finally(() => clearTimeout(timer));
+        };
 
-      if (!res.ok) throw new Error(`Naver HTTP ${res.status}`);
-      json = await res.json();
-      await writeCache(cacheKey, json);
+        const start = Date.now();
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 10000); // 10s timeout
+        let res;
+        try {
+          res = await fetch(endpoint, {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(body),
+            signal: controller.signal,
+          });
+        } catch (err) {
+          if (err.name === 'AbortError') {
+            console.warn('⚠️ Naver API fetch aborted (timeout or rate limit)');
+            return null;
+          }
+          throw err;
+        } finally {
+          clearTimeout(timeout);
+          const elapsed = Date.now() - start;
+          if (Number.isFinite(remainingBudget)) {
+            remainingBudget = Math.max(0, remainingBudget - elapsed);
+          }
+        }
+
+        if (!res.ok) {
+          if (_retry === 0 && (res.status === 429 || res.status >= 500)) {
+            console.warn(`⚠️ Retrying Naver API after ${res.status}...`);
+            await new Promise(r => setTimeout(r, 3000));
+            return fetchNaverTrends({ ...originalOptions, budgetLeftMs: Math.max(0, remainingBudget) }, _retry + 1);
+          }
+          throw new Error(`Naver API error ${res.status}: ${await res.text()}`);
+        }
+
+        json = await res.json();
+        await writeCache(cacheKey, json);
+      }
+    } else if (Number.isFinite(remainingBudget)) {
+      // Using cached response; still decrement to avoid runaway loops when cache reads dominate.
+      remainingBudget = Math.max(0, remainingBudget - 1);
     }
 
     results.push(json);
