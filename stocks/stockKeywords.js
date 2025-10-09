@@ -210,6 +210,26 @@ async function fetchZumNews() {
   }
 }
 
+async function fetchMkNews() {
+  const url = "https://m.mk.co.kr";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`MK fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("a.news_ttl, a.headline, .news_item a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 MK headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ MK news fetch failed:", err.message);
+    return [];
+  }
+}
+
 // ---- PHRASE EXTRACTION ----
 function extractPhrasesFromText(text, minLen = 2, maxLen = 4) {
   const tokens = text
@@ -334,15 +354,18 @@ function computeTfIdfPhrases(texts, topN = 100) {
 async function generateKeywords() {
   console.log("🚀 Generating tags.json ...");
   const trends = await fetchNaverTrends();
-  // 🔹 Collect backup headlines from local portals
-  const [daum, nate, zum] = await Promise.all([
+  // 🔹 Collect backup headlines from major Korean portals
+  const [daum, nate, zum, mk] = await Promise.all([
     fetchDaumNews(),
     fetchNateNews(),
     fetchZumNews(),
+    fetchMkNews(),
   ]);
-  const backupHeadlines = [...daum, ...nate, ...zum];
+  const backupHeadlines = [...daum, ...nate, ...zum, ...mk];
   if (backupHeadlines.length) {
-    console.log(`🧩 Added ${backupHeadlines.length} fallback headlines (Daum/Nate/Zum)`);
+    console.log(
+      `🧩 Added ${backupHeadlines.length} fallback headlines (Daum/Nate/Zum/MK)`
+    );
   }
   const trendSet = new Set();
   if (trends?.results?.[0]?.data)
@@ -350,7 +373,7 @@ async function generateKeywords() {
 
   const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
   const articles = await collectArticles();
-  // Merge portal headlines into article corpus
+  // Merge portal headlines into the corpus
   articles.push(...backupHeadlines);
   let discovered_keywords = computeTfIdfPhrases(articles, 150);
 
