@@ -112,8 +112,40 @@ async function fetchNaverTrends() {
     console.log("✅ Updated Naver finance trends");
     return data;
   } catch (err) {
-    console.warn("⚠️ Naver API skipped:", err.message);
-    return null;
+    console.warn("⚠️ Naver API failed, falling back to Nate:", err.message);
+
+    try {
+      // Fetch Nate news (mobile version is simpler)
+      const html = await fetch("https://m.news.nate.com/section?mid=m02&sq=1138989", {
+        headers: { "User-Agent": "Mozilla/5.0 (compatible; StockBot/1.0)" },
+      }).then((r) => r.text());
+
+      // Extract top article titles
+      const matches = [...html.matchAll(/<strong[^>]*>([^<]+)<\/strong>/g)];
+      const trending = matches.map((m) => m[1].trim()).filter(Boolean).slice(0, 10);
+
+      const backup = {
+        source: "nate.com",
+        results: [
+          {
+            title: "Nate Trends",
+            data: trending.map((title, i) => ({ rank: i + 1, title })),
+          },
+        ],
+      };
+
+      fs.writeFileSync("./data/nate-trends.json", JSON.stringify(backup, null, 2));
+      console.log(`✅ Fallback: saved ${trending.length} Nate trends`);
+
+      // 🔁 Inject Nate trends into TF-IDF scoring later
+      if (globalThis.__trend_terms == null) globalThis.__trend_terms = [];
+      globalThis.__trend_terms.push(...trending);
+
+      return backup;
+    } catch (err2) {
+      console.warn("❌ Nate backup also failed:", err2.message);
+      return null;
+    }
   }
 }
 
@@ -266,6 +298,13 @@ async function generateKeywords() {
     "경기 회복 둔화 인플레이션",
     "투자 심리 기관 외국인 수급",
   ].map((t) => ({ text: t, vec: vectorize(t) }));
+
+  // 🔁 Include Nate backup keywords if available
+  const extraTrends = (globalThis.__trend_terms || []).slice(0, 10);
+  if (extraTrends.length) {
+    console.log(`💡 Including ${extraTrends.length} Nate trends in weighting`);
+    themes.push(...extraTrends.map((t) => ({ text: t, vec: vectorize(t) })));
+  }
 
   for (const kw of discovered_keywords) {
     const v = vectorize(kw.term_ko);
