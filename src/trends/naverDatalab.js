@@ -91,6 +91,7 @@ export async function fetchNaverTrends({ baskets, startDate, endDate, timeUnit='
   }
 
   const results = [];
+  let remainingBudget = Number.isFinite(budgetLeftMs) ? Math.max(0, Number(budgetLeftMs)) : Infinity;
   for (const chunk of chunks){
     const endpoint = NAVER_URL;
     const body = {
@@ -103,24 +104,64 @@ export async function fetchNaverTrends({ baskets, startDate, endDate, timeUnit='
 
     let json = await readCache(cacheKey, ttl);
     if (!json) {
-      const controller = new AbortController();
-      const perReq = Math.min(budgetLeftMs ?? 30000, REQ_TIMEOUT_MS);
-      const timer = setTimeout(() => controller.abort(), perReq);
-
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'X-Naver-Client-Id': NAVER_ID,
-          'X-Naver-Client-Secret': NAVER_SECRET,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-        signal: controller.signal,
-      }).finally(() => clearTimeout(timer));
-
-      if (!res.ok) throw new Error(`Naver HTTP ${res.status}`);
-      json = await res.json();
-      await writeCache(cacheKey, json);
+      const maxAttempts = Number(process.env.NAVER_MAX_RETRIES || 2);
+      let attempt = 0;
+      let lastErr = null;
+      while (attempt < maxAttempts) {
+        attempt += 1;
+        if (Number.isFinite(remainingBudget) && remainingBudget <= 0) {
+          console.warn('[naver] budget exhausted before completing fetch; returning partial results');
+          break;
+        }
+        const controller = new AbortController();
+        const perReqBudget = Number.isFinite(remainingBudget) ? remainingBudget : Infinity;
+        const perReq = Number.isFinite(perReqBudget) ? Math.max(1, Math.min(perReqBudget, REQ_TIMEOUT_MS)) : REQ_TIMEOUT_MS;
+        const start = Date.now();
+        const timer = setTimeout(() => controller.abort(), perReq);
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'X-Naver-Client-Id': NAVER_ID,
+              'X-Naver-Client-Secret': NAVER_SECRET,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body),
+            signal: controller.signal,
+          });
+          if (!res.ok) throw new Error(`Naver HTTP ${res.status}`);
+          json = await res.json();
+          await writeCache(cacheKey, json);
+          lastErr = null;
+          break;
+        } catch (err) {
+          lastErr = err;
+          const errName = err?.name || err?.code || 'Error';
+          if (errName === 'AbortError' || errName === 'UND_ERR_ABORTED') {
+            console.warn(`[naver] request aborted (attempt ${attempt}/${maxAttempts})`);
+          } else {
+            console.warn(`[naver] request failed (attempt ${attempt}/${maxAttempts}): ${err?.message || err}`);
+          }
+          if (attempt >= maxAttempts) {
+            break;
+          }
+        } finally {
+          clearTimeout(timer);
+          const elapsed = Date.now() - start;
+          if (Number.isFinite(remainingBudget)) {
+            remainingBudget = Math.max(0, remainingBudget - elapsed);
+          }
+        }
+      }
+      if (!json) {
+        if (lastErr) {
+          console.warn(`[naver] falling back to empty result after failure: ${lastErr?.message || lastErr}`);
+        }
+        json = { results: [] };
+      }
+    } else if (Number.isFinite(remainingBudget)) {
+      // Using cached response; still decrement to avoid runaway loops when cache reads dominate.
+      remainingBudget = Math.max(0, remainingBudget - 1);
     }
 
     results.push(json);
