@@ -791,8 +791,9 @@ async function fetchGoldBitcoinKRW() {
   let bitcoinSeries = btcData
     ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
     : [];
+  // ✅ Use raw USD index values (no KRW conversion)
   let sp500Series = sp500Data
-    ? convertUsdSeriesToKrw(sp500Data.points, usdMap, year)
+    ? sp500Data.points.map(p => ({ t: p.iso, v: p.value }))
     : [];
 
   const btcPointIsStale = (point) => {
@@ -1505,9 +1506,9 @@ async function main(){
   }
 
   if (commodityData?.latestSp500) {
-    ensureItem('SP500', 'S&P 500 (1 pt)').krw = commodityData.latestSp500.v;
+    ensureItem('SP500', 'S&P 500 (USD index)').krw = commodityData.latestSp500.v;
   } else {
-    ensureItem('SP500', 'S&P 500 (1 pt)');
+    ensureItem('SP500', 'S&P 500 (USD index)');
   }
 
   const out = { lastUpdated: nowKSTISO(), items };
