@@ -1035,7 +1035,20 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
   const seen = new Set();
   let posHits = 0, negHits = 0, totalW = 0, rawCount = 0;
   for (const q of queries) {
-    const res = await naverSearch({ query: q, NAVER_ID, NAVER_SECRET });
+    if (process.env.DEBUG_NAVER === '1') {
+      console.log(`[naver-debug] Querying Naver with: "${q}"`);
+    }
+
+    let res;
+    try {
+      res = await naverSearch({ query: q, NAVER_ID, NAVER_SECRET });
+      if (process.env.DEBUG_NAVER === '1') {
+        console.log(`[naver-debug] Naver response for "${q}": ${res?.items?.length || 0} items`);
+      }
+    } catch (err) {
+      console.error(`[naver-debug] Failed Naver call for "${q}":`, err.message);
+      continue;
+    }
     for (const it of res?.items || []) {
       const key = normalizeTitle(it.title);
       if (!key || seen.has(key)) continue;
