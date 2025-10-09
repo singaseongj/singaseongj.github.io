@@ -209,6 +209,12 @@ jobs:
           DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
         run: |
           set -euo pipefail
+          export SKIP_NAVER=${SKIP_NAVER:-0}
+          if [ "$SKIP_NAVER" = "1" ]; then
+            echo "Skipping Naver API (SKIP_NAVER=1)"
+          else
+            node src/trends/naverDatalab.js || echo "⚠️ Naver API failed, continuing..."
+          fi
           node src/news/fetchByTicker.js --build-caches
           test -s data/news-features.json
           test -s data/naver-trends.json
