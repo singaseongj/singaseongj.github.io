@@ -1,435 +1,439 @@
 {
+  "generatedAt": "2025-10-09T18:33:08.480Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-10-09",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "https news",
-      "term_ko": "https news",
-      "significance_score": 129.45438120870938,
-      "mentions": 62,
-      "combined_score": 194.18157181306407,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8185829826110268,
-      "final_score": 152.29875992136536
+      "term": "Https News",
+      "term_ko": "https news"
     },
     {
-      "term": "naver com",
-      "term_ko": "naver com",
-      "significance_score": 128.3424281403792,
-      "mentions": 61,
-      "combined_score": 192.51364221056883,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8659548886131113,
-      "final_score": 152.07864731966043
+      "term": "Naver Com",
+      "term_ko": "naver com"
     },
     {
-      "term": "https news naver com",
-      "term_ko": "https news naver com",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.9120469453101823,
-      "final_score": 151.81572832512398
+      "term": "Https News Naver Com",
+      "term_ko": "https news naver com"
     },
     {
-      "term": "com mnews",
-      "term_ko": "com mnews",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.912029007636202,
-      "final_score": 151.8153695716444
+      "term": "Com Mnews",
+      "term_ko": "com mnews"
     },
     {
-      "term": "com mnews article",
-      "term_ko": "com mnews article",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8985440531684252,
-      "final_score": 151.54567048228884
+      "term": "Com Mnews Article",
+      "term_ko": "com mnews article"
     },
     {
-      "term": "news naver com mnews",
-      "term_ko": "news naver com mnews",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8926400491889264,
-      "final_score": 151.42759040269888
+      "term": "News Naver Com Mnews",
+      "term_ko": "news naver com mnews"
     },
     {
-      "term": "news naver",
-      "term_ko": "news naver",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8719131813983614,
-      "final_score": 151.01305304688756
+      "term": "News Naver",
+      "term_ko": "news naver"
     },
     {
-      "term": "https news naver",
-      "term_ko": "https news naver",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8588723572134481,
-      "final_score": 150.7522365631893
+      "term": "Https News Naver",
+      "term_ko": "https news naver"
     },
     {
-      "term": "news naver com",
-      "term_ko": "news naver com",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8571966302425992,
-      "final_score": 150.71872202377233
+      "term": "News Naver Com",
+      "term_ko": "news naver com"
     },
     {
-      "term": "naver com mnews article",
-      "term_ko": "naver com mnews article",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 190.8211277413148,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8550933767187465,
-      "final_score": 150.67665695329526
+      "term": "Naver Com Mnews Article",
+      "term_ko": "naver com mnews article"
     },
     {
-      "term": "mnews article",
-      "term_ko": "mnews article",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 165.37831070913947,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.7973986204619651,
-      "final_score": 136.801353312072
+      "term": "Mnews Article",
+      "term_ko": "mnews article"
     },
     {
-      "term": "naver com mnews",
-      "term_ko": "naver com mnews",
-      "significance_score": 127.21408516087652,
-      "mentions": 60,
-      "combined_score": 165.37831070913947,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.7391492759245929,
-      "final_score": 135.63636642132457
+      "term": "Naver Com Mnews",
+      "term_ko": "naver com mnews"
     },
     {
-      "term": "kr news",
-      "term_ko": "kr news",
-      "significance_score": 95.96033091374345,
-      "mentions": 37,
-      "combined_score": 143.94049637061516,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8929671276569027,
-      "final_score": 118.61769001256866
+      "term": "Kr News",
+      "term_ko": "kr news"
     },
     {
-      "term": "sid 101",
-      "term_ko": "sid 101",
-      "significance_score": 95.96033091374345,
-      "mentions": 37,
-      "combined_score": 143.94049637061516,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8607618644020908,
-      "final_score": 117.97358474747243
+      "term": "Sid 101",
+      "term_ko": "sid 101"
     },
     {
-      "term": "https www",
-      "term_ko": "https www",
-      "significance_score": 103.736157048763,
-      "mentions": 42,
-      "combined_score": 134.8570041633919,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.7883992792987704,
-      "final_score": 114.31733478230026
+      "term": "Https Www",
+      "term_ko": "https www"
     },
     {
-      "term": "co kr",
-      "term_ko": "co kr",
-      "significance_score": 90.24183482780751,
-      "mentions": 33,
-      "combined_score": 135.36275224171126,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8856226268472019,
-      "final_score": 112.46637910614193
+      "term": "Co Kr",
+      "term_ko": "co kr"
     },
     {
-      "term": "articleView html idxno",
-      "term_ko": "articleView html idxno",
-      "significance_score": 82.06742582058051,
-      "mentions": 29,
-      "combined_score": 123.10113873087076,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.9438880158167999,
-      "final_score": 105.04855742794552
+      "term": "Articleview Html Idxno",
+      "term_ko": "articleView html idxno"
     },
     {
-      "term": "articleView html",
-      "term_ko": "articleView html",
-      "significance_score": 82.06742582058051,
-      "mentions": 29,
-      "combined_score": 123.10113873087076,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8716037508861687,
-      "final_score": 103.60287212933291
+      "term": "Articleview Html",
+      "term_ko": "articleView html"
     },
     {
-      "term": "html idxno",
-      "term_ko": "html idxno",
-      "significance_score": 82.06742582058051,
-      "mentions": 29,
-      "combined_score": 123.10113873087076,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8356423607653638,
-      "final_score": 102.88364432691681
+      "term": "Html Idxno",
+      "term_ko": "html idxno"
     },
     {
-      "term": "news articleView html",
-      "term_ko": "news articleView html",
-      "significance_score": 82.06742582058051,
-      "mentions": 29,
-      "combined_score": 123.10113873087076,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8104088285483018,
-      "final_score": 102.37897368257556
+      "term": "News Articleview Html",
+      "term_ko": "news articleView html"
     },
     {
-      "term": "co kr news",
-      "term_ko": "co kr news",
-      "significance_score": 74.32530197082762,
-      "mentions": 25,
-      "combined_score": 111.48795295624143,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8670241769695022,
-      "final_score": 95.38205060875904
+      "term": "Co Kr News",
+      "term_ko": "co kr news"
     },
     {
-      "term": "news articleView html idxno",
-      "term_ko": "news articleView html idxno",
-      "significance_score": 82.06742582058051,
-      "mentions": 29,
-      "combined_score": 106.68765356675466,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.7892706243462879,
-      "final_score": 93.74946701647724
+      "term": "News Articleview Html Idxno",
+      "term_ko": "news articleView html idxno"
     },
     {
-      "term": "kr news articleView html",
-      "term_ko": "kr news articleView html",
-      "significance_score": 72.29358700767327,
-      "mentions": 24,
-      "combined_score": 108.4403805115099,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8759884702291586,
-      "final_score": 93.4280357626401
+      "term": "Kr News Articleview Html",
+      "term_ko": "kr news articleView html"
     },
     {
-      "term": "news articleView",
-      "term_ko": "news articleView",
-      "significance_score": 82.06742582058051,
-      "mentions": 29,
-      "combined_score": 106.68765356675466,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.7416107748020394,
-      "final_score": 92.79627002559226
+      "term": "News Articleview",
+      "term_ko": "news articleView"
     },
     {
-      "term": "kr news articleView",
-      "term_ko": "kr news articleView",
-      "significance_score": 72.29358700767327,
-      "mentions": 24,
-      "combined_score": 108.4403805115099,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8209905315583056,
-      "final_score": 92.32807698922305
+      "term": "Kr News Articleview",
+      "term_ko": "kr news articleView"
     },
     {
-      "term": "co kr news articleView",
-      "term_ko": "co kr news articleView",
-      "significance_score": 61.47215052271132,
-      "mentions": 19,
-      "combined_score": 92.20822578406697,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8349566383976694,
-      "final_score": 81.24489081680026
+      "term": "Co Kr News Articleview",
+      "term_ko": "co kr news articleView"
     },
     {
-      "term": "http www",
-      "term_ko": "http www",
-      "significance_score": 54.36632436477393,
-      "mentions": 16,
-      "combined_score": 81.5494865471609,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8467942289677378,
-      "final_score": 74.02052516236739
+      "term": "Http Www",
+      "term_ko": "http www"
     },
     {
-      "term": "coinreaders com",
-      "term_ko": "coinreaders com",
-      "significance_score": 43.9939111127166,
-      "mentions": 12,
-      "combined_score": 65.9908666690749,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8942091833484492,
-      "final_score": 64.07779033532142
+      "term": "Coinreaders Com",
+      "term_ko": "coinreaders com"
     },
     {
-      "term": "http coinreaders com",
-      "term_ko": "http coinreaders com",
-      "significance_score": 43.9939111127166,
-      "mentions": 12,
-      "combined_score": 65.9908666690749,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8885237367843235,
-      "final_score": 63.9640814040389
+      "term": "Http Coinreaders Com",
+      "term_ko": "http coinreaders com"
     },
     {
-      "term": "http coinreaders",
-      "term_ko": "http coinreaders",
-      "significance_score": 43.9939111127166,
-      "mentions": 12,
-      "combined_score": 65.9908666690749,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8737727304031828,
-      "final_score": 63.66906127641609
+      "term": "Http Coinreaders",
+      "term_ko": "http coinreaders"
     }
   ],
-  "metadata": {
-    "collection_method": "semantic_tfidf_trend",
-    "phrase_length": "2-4 words",
-    "scoring": "semantic_hybrid",
-    "generated_at": "2025-10-09T12:49:54.362Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12
+  "discovered_keywords": [
+    {
+      "term": "Https News",
+      "term_ko": "https news"
+    },
+    {
+      "term": "Naver Com",
+      "term_ko": "naver com"
+    },
+    {
+      "term": "Https News Naver Com",
+      "term_ko": "https news naver com"
+    },
+    {
+      "term": "Com Mnews",
+      "term_ko": "com mnews"
+    },
+    {
+      "term": "Com Mnews Article",
+      "term_ko": "com mnews article"
+    },
+    {
+      "term": "News Naver Com Mnews",
+      "term_ko": "news naver com mnews"
+    },
+    {
+      "term": "News Naver",
+      "term_ko": "news naver"
+    },
+    {
+      "term": "Https News Naver",
+      "term_ko": "https news naver"
+    },
+    {
+      "term": "News Naver Com",
+      "term_ko": "news naver com"
+    },
+    {
+      "term": "Naver Com Mnews Article",
+      "term_ko": "naver com mnews article"
+    },
+    {
+      "term": "Mnews Article",
+      "term_ko": "mnews article"
+    },
+    {
+      "term": "Naver Com Mnews",
+      "term_ko": "naver com mnews"
+    },
+    {
+      "term": "Kr News",
+      "term_ko": "kr news"
+    },
+    {
+      "term": "Sid 101",
+      "term_ko": "sid 101"
+    },
+    {
+      "term": "Https Www",
+      "term_ko": "https www"
+    },
+    {
+      "term": "Co Kr",
+      "term_ko": "co kr"
+    },
+    {
+      "term": "Articleview Html Idxno",
+      "term_ko": "articleView html idxno"
+    },
+    {
+      "term": "Articleview Html",
+      "term_ko": "articleView html"
+    },
+    {
+      "term": "Html Idxno",
+      "term_ko": "html idxno"
+    },
+    {
+      "term": "News Articleview Html",
+      "term_ko": "news articleView html"
+    },
+    {
+      "term": "Co Kr News",
+      "term_ko": "co kr news"
+    },
+    {
+      "term": "News Articleview Html Idxno",
+      "term_ko": "news articleView html idxno"
+    },
+    {
+      "term": "Kr News Articleview Html",
+      "term_ko": "kr news articleView html"
+    },
+    {
+      "term": "News Articleview",
+      "term_ko": "news articleView"
+    },
+    {
+      "term": "Kr News Articleview",
+      "term_ko": "kr news articleView"
+    },
+    {
+      "term": "Co Kr News Articleview",
+      "term_ko": "co kr news articleView"
+    },
+    {
+      "term": "Http Www",
+      "term_ko": "http www"
+    },
+    {
+      "term": "Coinreaders Com",
+      "term_ko": "coinreaders com"
+    },
+    {
+      "term": "Http Coinreaders Com",
+      "term_ko": "http coinreaders com"
+    },
+    {
+      "term": "Http Coinreaders",
+      "term_ko": "http coinreaders"
+    }
+  ],
+  "translations": {
+    "Https News": {
+      "en": "Https News",
+      "ko": "https news",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Naver Com": {
+      "en": "Naver Com",
+      "ko": "naver com",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Https News Naver Com": {
+      "en": "Https News Naver Com",
+      "ko": "https news naver com",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Com Mnews": {
+      "en": "Com Mnews",
+      "ko": "com mnews",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Com Mnews Article": {
+      "en": "Com Mnews Article",
+      "ko": "com mnews article",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "News Naver Com Mnews": {
+      "en": "News Naver Com Mnews",
+      "ko": "news naver com mnews",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "News Naver": {
+      "en": "News Naver",
+      "ko": "news naver",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Https News Naver": {
+      "en": "Https News Naver",
+      "ko": "https news naver",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "News Naver Com": {
+      "en": "News Naver Com",
+      "ko": "news naver com",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Naver Com Mnews Article": {
+      "en": "Naver Com Mnews Article",
+      "ko": "naver com mnews article",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Mnews Article": {
+      "en": "Mnews Article",
+      "ko": "mnews article",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Naver Com Mnews": {
+      "en": "Naver Com Mnews",
+      "ko": "naver com mnews",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Kr News": {
+      "en": "Kr News",
+      "ko": "kr news",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Sid 101": {
+      "en": "Sid 101",
+      "ko": "sid 101",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Https Www": {
+      "en": "Https Www",
+      "ko": "https www",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Co Kr": {
+      "en": "Co Kr",
+      "ko": "co kr",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Articleview Html Idxno": {
+      "en": "Articleview Html Idxno",
+      "ko": "articleView html idxno",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Articleview Html": {
+      "en": "Articleview Html",
+      "ko": "articleView html",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Html Idxno": {
+      "en": "Html Idxno",
+      "ko": "html idxno",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "News Articleview Html": {
+      "en": "News Articleview Html",
+      "ko": "news articleView html",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Co Kr News": {
+      "en": "Co Kr News",
+      "ko": "co kr news",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "News Articleview Html Idxno": {
+      "en": "News Articleview Html Idxno",
+      "ko": "news articleView html idxno",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Kr News Articleview Html": {
+      "en": "Kr News Articleview Html",
+      "ko": "kr news articleView html",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "News Articleview": {
+      "en": "News Articleview",
+      "ko": "news articleView",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Kr News Articleview": {
+      "en": "Kr News Articleview",
+      "ko": "kr news articleView",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Co Kr News Articleview": {
+      "en": "Co Kr News Articleview",
+      "ko": "co kr news articleView",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Http Www": {
+      "en": "Http Www",
+      "ko": "http www",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Coinreaders Com": {
+      "en": "Coinreaders Com",
+      "ko": "coinreaders com",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Http Coinreaders Com": {
+      "en": "Http Coinreaders Com",
+      "ko": "http coinreaders com",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    },
+    "Http Coinreaders": {
+      "en": "Http Coinreaders",
+      "ko": "http coinreaders",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-09T18:33:08.480Z"
+    }
   }
 }
