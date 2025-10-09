@@ -172,6 +172,53 @@ async function fetchNaverTrends() {
   }
 }
 
+async function fetchNaverSearchFromFinanceDict() {
+  console.log("🌐 Fetching Naver search results from finance_keywords.json ...");
+  const headers = {
+    "X-Naver-Client-Id": NAVER_CLIENT_ID,
+    "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
+  };
+
+  // Load finance keywords dynamically
+  const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
+  // 🔁 Randomly sample 40 keywords per run for variety
+  const shuffled = financeDict.sort(() => 0.5 - Math.random());
+  const keywords = shuffled.slice(0, 40);
+  console.log(`🎯 Using ${keywords.length} random finance keywords (e.g., ${keywords.slice(0, 5).join(", ")} ...)`);
+
+  const texts = [];
+
+  for (const kw of keywords) {
+    for (const type of ["webkr", "blog", "news"]) {
+      const url = `https://openapi.naver.com/v1/search/${type}.json?query=${encodeURIComponent(kw)}&display=10&sort=date`;
+      try {
+        const res = await fetch(url, { headers });
+        if (!res.ok) {
+          console.warn(`⚠️ Naver ${type} search failed for ${kw}: ${res.statusText}`);
+          continue;
+        }
+        const data = await res.json();
+        const items = data.items || [];
+        items.forEach((item) => {
+          const text = `${item.title || ""} ${item.description || ""}`;
+          const cleaned = text
+            .replace(/<[^>]+>/g, " ")
+            .replace(/https?:\/\/\S+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+          if (cleaned.length > 10) texts.push(cleaned);
+        });
+        await new Promise((r) => setTimeout(r, 150 + Math.random() * 250));
+      } catch (err) {
+        console.warn(`⚠️ Naver ${type} search error for ${kw}:`, err.message);
+      }
+    }
+  }
+
+  console.log(`🌐 Collected ${texts.length} items from Naver Search (finance keywords)`);
+  return texts;
+}
+
 async function fetchDaumNews() {
   // mobile endpoint renders server-side
   const url = "https://m.news.daum.net/breakingnews/economic";
@@ -383,6 +430,11 @@ async function collectArticles() {
     } catch (err) {
       console.warn(`⚠️ Failed fetching Naver articles for ${q}:`, err.message);
     }
+  }
+
+  const financeDictTexts = await fetchNaverSearchFromFinanceDict();
+  if (financeDictTexts.length) {
+    texts.push(...financeDictTexts);
   }
 
   if (texts.length === 0) console.warn("⚠️ No Naver articles collected, continuing with empty set");
