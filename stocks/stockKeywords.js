@@ -4,16 +4,15 @@
  */
 
 const fs = require("fs");
-const path = require("path");
 const fetch = require("node-fetch");
 const crypto = require("crypto");
+const cheerio = require("cheerio");
 
 const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID;
 const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
 const OUTPUT_PATH = "./data/tags.json";
 const FINANCE_DICT_PATH = "./data/finance_keywords.json";
 const STOPWORDS_PATH = "./data/stopwords.txt";
-const ARTICLE_DIRS = ["./news", "./articles", "./cache"];
 const LOOKBACK_HOURS = 12;
 const KEYWORD_LIMIT = 30;
 
@@ -114,8 +113,180 @@ async function fetchNaverTrends() {
     console.log("✅ Updated Naver finance trends");
     return data;
   } catch (err) {
-    console.warn("⚠️ Naver API skipped:", err.message);
-    return null;
+    console.warn("⚠️ Naver API failed, falling back to Nate:", err.message);
+
+    try {
+      // Fetch Nate news (mobile version is simpler)
+      const html = await fetch("https://m.news.nate.com/section?mid=m02&sq=1138989", {
+        headers: { "User-Agent": "Mozilla/5.0 (compatible; StockBot/1.0)" },
+      }).then((r) => r.text());
+
+      // Extract top article titles
+      const matches = [...html.matchAll(/<strong[^>]*>([^<]+)<\/strong>/g)];
+      const trending = matches.map((m) => m[1].trim()).filter(Boolean).slice(0, 10);
+
+      const backup = {
+        source: "nate.com",
+        results: [
+          {
+            title: "Nate Trends",
+            data: trending.map((title, i) => ({ rank: i + 1, title })),
+          },
+        ],
+      };
+
+      fs.writeFileSync("./data/nate-trends.json", JSON.stringify(backup, null, 2));
+      console.log(`✅ Fallback: saved ${trending.length} Nate trends`);
+
+      // 🔁 Inject Nate trends into TF-IDF scoring later
+      if (globalThis.__trend_terms == null) globalThis.__trend_terms = [];
+      globalThis.__trend_terms.push(...trending);
+
+      return backup;
+    } catch (err2) {
+      console.warn("❌ Nate backup also failed:", err2.message);
+      return null;
+    }
+  }
+}
+
+async function fetchDaumNews() {
+  const url = "https://news.daum.net/breakingnews/economic";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Daum fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("ul.list_news2 li a.link_txt").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Daum headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Daum news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchNateNews() {
+  const url = "https://m.news.nate.com/section?mid=m02";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Nate fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("strong.tit a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Nate headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Nate news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchZumNews() {
+  const url = "https://m.news.zum.com/home";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Zum fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("a.item-desc, .headline a, .item-title").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Zum headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Zum news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchMkNews() {
+  const url = "https://m.mk.co.kr";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`MK fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("a.news_ttl, a.headline, .news_item a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 MK headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ MK news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchHankyungNews() {
+  const url = "https://m.hankyung.com/economy";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Hankyung fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("a.news-tit, a.link_news, .article_tit a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Hankyung headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Hankyung news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchChosunBizNews() {
+  const url = "https://biz.chosun.com/";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`ChosunBiz fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("h2.news_ttl a, div.list_item a.tit, a.link_txt").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 ChosunBiz headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ ChosunBiz news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchYonhapNews() {
+  const url = "https://m.yna.co.kr/economy/all";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Yonhap fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("strong.tit-news a, div.list-type038 a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Yonhap headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Yonhap news fetch failed:", err.message);
+    return [];
   }
 }
 
@@ -136,37 +307,37 @@ function extractPhrasesFromText(text, minLen = 2, maxLen = 4) {
   return phrases;
 }
 
-function collectArticles() {
-  const texts = [];
-  for (const dir of ARTICLE_DIRS) {
-    if (!fs.existsSync(dir)) continue;
-    const files = fs.readdirSync(dir).filter((f) =>
-      f.endsWith(".txt") || f.endsWith(".md") || f.endsWith(".json")
-    );
-    for (const file of files) {
-      const fullPath = path.join(dir, file);
-      const content = fs.readFileSync(fullPath, "utf8");
-      if (file.endsWith(".json")) {
-        try {
-          const json = JSON.parse(content);
-          // Common keys for your cached news files
-          if (json.content) texts.push(json.content);
-          else if (json.body) texts.push(json.body);
-          else if (Array.isArray(json.articles)) {
-            json.articles.forEach(a => {
-              if (a.title) texts.push(a.title);
-              if (a.description) texts.push(a.description);
-              if (a.content) texts.push(a.content);
-            });
-          }
-          continue;
-        } catch (err) {
-          console.warn(`⚠️ Skipped invalid JSON: ${file}`, err.message);
-        }
+// ---- NAVER NEWS COLLECTOR ----
+async function collectArticles() {
+  console.log("📰 Fetching articles directly from Naver API...");
+  const queries = ["주식", "증시", "금리", "환율", "ETF", "반도체", "미국 증시"];
+  const headers = {
+    "X-Naver-Client-Id": NAVER_CLIENT_ID,
+    "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
+  };
+  let texts = [];
+
+  for (const q of queries) {
+    try {
+      const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(q)}&display=20&sort=date`;
+      const res = await fetch(url, { headers });
+      if (!res.ok) {
+        console.warn(`⚠️ Naver search for '${q}' failed (${res.status})`);
+        continue;
       }
-      texts.push(content);
+      const data = await res.json();
+      const items = data.items || [];
+      items.forEach(item => {
+        const text = [item.title, item.description, item.link].join(" ");
+        texts.push(text.replace(/<[^>]+>/g, ""));
+      });
+      await new Promise(r => setTimeout(r, 500));
+    } catch (err) {
+      console.warn(`⚠️ Failed fetching Naver articles for ${q}:`, err.message);
     }
   }
+
+  if (texts.length === 0) console.warn("⚠️ No Naver articles collected, continuing with empty set");
   return texts;
 }
 
@@ -243,12 +414,40 @@ function computeTfIdfPhrases(texts, topN = 100) {
 async function generateKeywords() {
   console.log("🚀 Generating tags.json ...");
   const trends = await fetchNaverTrends();
+  // 🔹 Collect backup headlines from major Korean portals
+  const [daum, nate, zum, mk, hankyung, chosun, yonhap] = await Promise.all([
+    fetchDaumNews(),
+    fetchNateNews(),
+    fetchZumNews(),
+    fetchMkNews(),
+    fetchHankyungNews(),
+    fetchChosunBizNews(),
+    fetchYonhapNews(),
+  ]);
+
+  const backupHeadlines = [
+    ...daum,
+    ...nate,
+    ...zum,
+    ...mk,
+    ...hankyung,
+    ...chosun,
+    ...yonhap,
+  ];
+
+  if (backupHeadlines.length) {
+    console.log(
+      `🧩 Added ${backupHeadlines.length} fallback headlines (Daum/Nate/Zum/MK/Hankyung/ChosunBiz/Yonhap)`
+    );
+  }
   const trendSet = new Set();
   if (trends?.results?.[0]?.data)
     trends.results[0].data.forEach((d) => trendSet.add(d.title || d.period));
 
   const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
-  const articles = collectArticles();
+  const articles = await collectArticles();
+  // Merge portal headlines into the corpus
+  articles.push(...backupHeadlines);
   let discovered_keywords = computeTfIdfPhrases(articles, 150);
 
   // Finance boost
@@ -268,6 +467,13 @@ async function generateKeywords() {
     "경기 회복 둔화 인플레이션",
     "투자 심리 기관 외국인 수급",
   ].map((t) => ({ text: t, vec: vectorize(t) }));
+
+  // 🔁 Include Nate backup keywords if available
+  const extraTrends = (globalThis.__trend_terms || []).slice(0, 10);
+  if (extraTrends.length) {
+    console.log(`💡 Including ${extraTrends.length} Nate trends in weighting`);
+    themes.push(...extraTrends.map((t) => ({ text: t, vec: vectorize(t) })));
+  }
 
   for (const kw of discovered_keywords) {
     const v = vectorize(kw.term_ko);

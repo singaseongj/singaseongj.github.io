@@ -13,6 +13,14 @@ import { computeReputation } from './reputation.js';
 // for CLI-only cache builders
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
 import { buildKeywordDict } from '../trends/keywordBuilder.js';
+
+// --- Detect external keyword builder ---
+const STOCK_KEYWORDS_PATH = path.resolve("stocks/stockKeywords.js");
+const HAS_STOCK_KEYWORDS = fs.existsSync(STOCK_KEYWORDS_PATH);
+if (HAS_STOCK_KEYWORDS) {
+  console.log("🧠 Detected stockKeywords.js — disabling internal tag generation");
+  process.env.SKIP_TAGS = "1";
+}
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -1035,7 +1043,20 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
   const seen = new Set();
   let posHits = 0, negHits = 0, totalW = 0, rawCount = 0;
   for (const q of queries) {
-    const res = await naverSearch({ query: q, NAVER_ID, NAVER_SECRET });
+    if (process.env.DEBUG_NAVER === '1') {
+      console.log(`[naver-debug] Querying Naver with: "${q}"`);
+    }
+
+    let res;
+    try {
+      res = await naverSearch({ query: q, NAVER_ID, NAVER_SECRET });
+      if (process.env.DEBUG_NAVER === '1') {
+        console.log(`[naver-debug] Naver response for "${q}": ${res?.items?.length || 0} items`);
+      }
+    } catch (err) {
+      console.error(`[naver-debug] Failed Naver call for "${q}":`, err.message);
+      continue;
+    }
     for (const it of res?.items || []) {
       const key = normalizeTitle(it.title);
       if (!key || seen.has(key)) continue;
