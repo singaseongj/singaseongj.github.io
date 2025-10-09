@@ -216,6 +216,24 @@ async function fetchNaverSearchFromFinanceDict() {
   }
 
   console.log(`🌐 Collected ${texts.length} items from Naver Search (finance keywords)`);
+
+  // ---- Google News RSS fallback ----
+  if (texts.length < 200) {
+    console.log("📰 Fetching supplemental Google News headlines ...");
+    try {
+      const rss = await fetch(
+        "https://news.google.com/rss/search?q=주식+증시+금리+환율+site:naver.com+OR+site:hankyung.com&hl=ko&gl=KR&ceid=KR:ko",
+        { headers: { "User-Agent": "Mozilla/5.0 (compatible; StockBot/1.0)" } }
+      ).then((r) => r.text());
+      const titles = [...rss.matchAll(/<title>([^<]+)<\/title>/g)]
+        .map((m) => m[1])
+        .filter((t) => t.length > 5 && !t.includes("Google 뉴스"));
+      console.log(`🧩 Added ${titles.length} Google News headlines`);
+      texts.push(...titles);
+    } catch (err) {
+      console.warn("⚠️ Google News fetch failed:", err.message);
+    }
+  }
   return texts;
 }
 
