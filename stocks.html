@@ -1059,8 +1059,13 @@
       .then(data => {
         const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
         const parts = (data.items || []).map(it => {
-          const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
-          return `<span class="fx-item">${it.label} = ${v}</span>`;
+          const rawLabel = String(it.label || '');
+          const cleanLabel = rawLabel.replace(/\s*\(USD index\)\s*/i, '');
+          const isSp500 = (it.from || '').toUpperCase() === 'SP500' || /S&P\s*500/i.test(rawLabel);
+          const formattedValue = (typeof it.krw === 'number')
+            ? `${fmt.format(it.krw)}${isSp500 ? 'pts' : '원'}`
+            : '—';
+          return `<span class="fx-item">${cleanLabel}= ${formattedValue}</span>`;
         });
         const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
         line.innerHTML = parts.join(' • ') + ' • ' + stamp;
