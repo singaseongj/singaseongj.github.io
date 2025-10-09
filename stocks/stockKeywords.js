@@ -230,6 +230,66 @@ async function fetchMkNews() {
   }
 }
 
+async function fetchHankyungNews() {
+  const url = "https://m.hankyung.com/economy";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Hankyung fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("a.news-tit, a.link_news, .article_tit a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Hankyung headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Hankyung news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchChosunBizNews() {
+  const url = "https://biz.chosun.com/";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`ChosunBiz fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("h2.news_ttl a, div.list_item a.tit, a.link_txt").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 ChosunBiz headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ ChosunBiz news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchYonhapNews() {
+  const url = "https://m.yna.co.kr/economy/all";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Yonhap fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("strong.tit-news a, div.list-type038 a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Yonhap headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Yonhap news fetch failed:", err.message);
+    return [];
+  }
+}
+
 // ---- PHRASE EXTRACTION ----
 function extractPhrasesFromText(text, minLen = 2, maxLen = 4) {
   const tokens = text
@@ -355,16 +415,29 @@ async function generateKeywords() {
   console.log("🚀 Generating tags.json ...");
   const trends = await fetchNaverTrends();
   // 🔹 Collect backup headlines from major Korean portals
-  const [daum, nate, zum, mk] = await Promise.all([
+  const [daum, nate, zum, mk, hankyung, chosun, yonhap] = await Promise.all([
     fetchDaumNews(),
     fetchNateNews(),
     fetchZumNews(),
     fetchMkNews(),
+    fetchHankyungNews(),
+    fetchChosunBizNews(),
+    fetchYonhapNews(),
   ]);
-  const backupHeadlines = [...daum, ...nate, ...zum, ...mk];
+
+  const backupHeadlines = [
+    ...daum,
+    ...nate,
+    ...zum,
+    ...mk,
+    ...hankyung,
+    ...chosun,
+    ...yonhap,
+  ];
+
   if (backupHeadlines.length) {
     console.log(
-      `🧩 Added ${backupHeadlines.length} fallback headlines (Daum/Nate/Zum/MK)`
+      `🧩 Added ${backupHeadlines.length} fallback headlines (Daum/Nate/Zum/MK/Hankyung/ChosunBiz/Yonhap)`
     );
   }
   const trendSet = new Set();
