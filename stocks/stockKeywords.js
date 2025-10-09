@@ -13,7 +13,7 @@ const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
 const OUTPUT_PATH = "./data/tags.json";
 const FINANCE_DICT_PATH = "./data/finance_keywords.json";
 const STOPWORDS_PATH = "./data/stopwords.txt";
-const ARTICLE_DIRS = ["./news", "./articles"];
+const ARTICLE_DIRS = ["./news", "./articles", "./cache"];
 const LOOKBACK_HOURS = 12;
 const KEYWORD_LIMIT = 30;
 
@@ -140,9 +140,30 @@ function collectArticles() {
   const texts = [];
   for (const dir of ARTICLE_DIRS) {
     if (!fs.existsSync(dir)) continue;
-    const files = fs.readdirSync(dir).filter((f) => f.endsWith(".txt") || f.endsWith(".md"));
+    const files = fs.readdirSync(dir).filter((f) =>
+      f.endsWith(".txt") || f.endsWith(".md") || f.endsWith(".json")
+    );
     for (const file of files) {
-      const content = fs.readFileSync(path.join(dir, file), "utf8");
+      const fullPath = path.join(dir, file);
+      const content = fs.readFileSync(fullPath, "utf8");
+      if (file.endsWith(".json")) {
+        try {
+          const json = JSON.parse(content);
+          // Common keys for your cached news files
+          if (json.content) texts.push(json.content);
+          else if (json.body) texts.push(json.body);
+          else if (Array.isArray(json.articles)) {
+            json.articles.forEach(a => {
+              if (a.title) texts.push(a.title);
+              if (a.description) texts.push(a.description);
+              if (a.content) texts.push(a.content);
+            });
+          }
+          continue;
+        } catch (err) {
+          console.warn(`⚠️ Skipped invalid JSON: ${file}`, err.message);
+        }
+      }
       texts.push(content);
     }
   }
