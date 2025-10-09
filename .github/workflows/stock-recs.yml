@@ -177,6 +177,9 @@ jobs:
           echo "npm ci failed after retries."
           exit 1
 
+      - name: Ensure cheerio dependency
+        run: npm install cheerio@^1.0.0 --no-save
+
       - name: Run ESM smoke tests (non-blocking)
         shell: bash
         run: |

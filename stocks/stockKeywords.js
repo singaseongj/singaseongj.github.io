@@ -152,30 +152,62 @@ async function fetchNaverTrends() {
 
 async function fetchDaumNews() {
   const url = "https://news.daum.net/breakingnews/economic";
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Daum fetch failed: ${res.statusText}`);
-  const html = await res.text();
-  const $ = cheerio.load(html);
-  const items = [];
-  $("ul.list_news2 li a.link_txt").each((i, el) => {
-    const title = $(el).text().trim();
-    if (title.length > 5) items.push(title);
-  });
-  return items;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Daum fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("ul.list_news2 li a.link_txt").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Daum headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Daum news fetch failed:", err.message);
+    return [];
+  }
 }
 
 async function fetchNateNews() {
   const url = "https://m.news.nate.com/section?mid=m02";
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Nate fetch failed: ${res.statusText}`);
-  const html = await res.text();
-  const $ = cheerio.load(html);
-  const items = [];
-  $("div.mduSubjectList strong.tit a").each((i, el) => {
-    const title = $(el).text().trim();
-    if (title.length > 5) items.push(title);
-  });
-  return items;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Nate fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("strong.tit a").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Nate headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Nate news fetch failed:", err.message);
+    return [];
+  }
+}
+
+async function fetchZumNews() {
+  const url = "https://m.news.zum.com/home";
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Zum fetch failed: ${res.statusText}`);
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    const headlines = [];
+    $("a.item-desc, .headline a, .item-title").each((i, el) => {
+      const title = $(el).text().trim();
+      if (title.length > 5) headlines.push(title);
+    });
+    console.log(`📰 Zum headlines: ${headlines.length}`);
+    return headlines;
+  } catch (err) {
+    console.warn("⚠️ Zum news fetch failed:", err.message);
+    return [];
+  }
 }
 
 // ---- PHRASE EXTRACTION ----
@@ -302,16 +334,15 @@ function computeTfIdfPhrases(texts, topN = 100) {
 async function generateKeywords() {
   console.log("🚀 Generating tags.json ...");
   const trends = await fetchNaverTrends();
-  const [daumNews, nateNews] = await Promise.allSettled([
+  // 🔹 Collect backup headlines from local portals
+  const [daum, nate, zum] = await Promise.all([
     fetchDaumNews(),
     fetchNateNews(),
+    fetchZumNews(),
   ]);
-  const backupNews = [
-    ...(daumNews.value || []),
-    ...(nateNews.value || []),
-  ];
-  if (backupNews.length) {
-    console.log(`📰 Collected ${backupNews.length} headlines from Daum/Nate`);
+  const backupHeadlines = [...daum, ...nate, ...zum];
+  if (backupHeadlines.length) {
+    console.log(`🧩 Added ${backupHeadlines.length} fallback headlines (Daum/Nate/Zum)`);
   }
   const trendSet = new Set();
   if (trends?.results?.[0]?.data)
@@ -319,7 +350,8 @@ async function generateKeywords() {
 
   const financeDict = JSON.parse(fs.readFileSync(FINANCE_DICT_PATH, "utf8")).finance_keywords;
   const articles = await collectArticles();
-  articles.push(...backupNews);
+  // Merge portal headlines into article corpus
+  articles.push(...backupHeadlines);
   let discovered_keywords = computeTfIdfPhrases(articles, 150);
 
   // Finance boost
