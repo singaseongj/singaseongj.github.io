@@ -291,11 +291,17 @@ async function fetchYonhapNews() {
 }
 
 // ---- PHRASE EXTRACTION ----
-function extractPhrasesFromText(text, minLen = 2, maxLen = 4) {
+function extractPhrasesFromText(text, minLen = 1, maxLen = 4) {
+  // Normalize and split the text
   const tokens = text
     .replace(/[^\p{L}\p{N}\s]/gu, " ")
     .split(/\s+/)
-    .filter((t) => t.length > 1 && !isStopwordToken(t));
+    .filter((t) =>
+      t.length > 1 && // skip 1-character tokens
+      !isStopwordToken(t) && // remove common stopwords
+      !/^\d+$/.test(t) && // skip pure numbers
+      !/^(https?|www|co|kr|naver|com)$/i.test(t) // remove common URL fragments
+    );
   const phrases = [];
   for (let i = 0; i < tokens.length; i++) {
     for (let len = minLen; len <= maxLen; len++) {
