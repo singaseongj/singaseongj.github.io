@@ -405,31 +405,19 @@ jobs:
       - name: Build article cache
         run: node build-articles.js
 
-      - name: Build significance-based keyword snapshot
-        env:
-          MARKET_TAG_FILE: data/tags.json
-          KEYWORD_SIMILARITY_THRESHOLD: "0.6"
-          KEYWORDS_PER_CATEGORY: "4"
-          NEWS_TTL_MS: "600000"
-        run: |
-          set -Eeuo pipefail
-          # Clear stale caches to force fresh data collection
-          rm -rf cache/news-*.json
-          find data/articles -name "*.json" -mtime +0 -delete 2>/dev/null || true
-          # Generate fresh keywords
-          node <<'NODE'
-          const { createRequire } = require('module');
-          const req = createRequire(process.cwd() + '/');
-          const fetchShim = (...args) => {
-            if (typeof globalThis.fetch === 'function') {
-              return globalThis.fetch(...args);
-            }
-            return import('node-fetch').then(mod => mod.default(...args));
-          };
-          req.cache[req.resolve('node-fetch')] = { exports: fetchShim };
-          req('./stocks/stockKeywords.js');
-          NODE
-          test -s data/tags.json
+      - name: Build trending keyword tags
+  env:
+    NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+    NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+    DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+  run: |
+    set -Eeuo pipefail
+    # Clear stale caches to force fresh data collection
+    rm -rf cache/news-*.json
+    find data/articles -name "*.json" -mtime +0 -delete 2>/dev/null || true
+    # Generate fresh keywords
+    node stocks/stockKeywords.js
+    test -s data/tags.json
 
       - name: Verify market tag snapshot
         shell: bash
