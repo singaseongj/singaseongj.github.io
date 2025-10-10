@@ -45,7 +45,10 @@ const HANGUL_SUFFIXES = [
   '에',
 ];
 
-const englishFallbackMap = new Map();
+const fallbackMaps = {
+  EN: new Map(),
+  KO: new Map(),
+};
 
 function normalizeForComparison(value) {
   if (!value) return '';
@@ -69,32 +72,33 @@ function normalizeForComparison(value) {
 }
 
 function buildFallbackMap(source) {
-  englishFallbackMap.clear();
+  for (const map of Object.values(fallbackMaps)) {
+    map.clear();
+  }
   if (!source || typeof source !== 'object') return;
 
-  console.log(`📚 Loading ${Object.keys(source).length} pre-translated terms from finance_keywords_en`);
+  const entries = Object.entries(source);
+  console.log(`📚 Loading ${entries.length} pre-translated terms from finance_keywords_en`);
 
-  for (const [key, value] of Object.entries(source)) {
-    const normalizedKey = normalizeForComparison(key);
-    if (!normalizedKey) continue;
-    const cleanTranslation = String(value || '').trim();
-    if (!cleanTranslation) continue;
-    englishFallbackMap.set(key, cleanTranslation);
-    englishFallbackMap.set(normalizedKey, cleanTranslation);
+  for (const [koTerm, enTerm] of entries) {
+    registerFallback(koTerm, enTerm, 'EN');
+    registerFallback(enTerm, koTerm, 'KO');
   }
-  
-  console.log(`✅ Loaded ${englishFallbackMap.size} translation mappings`);
+
+  const totalMappings = Object.values(fallbackMaps).reduce((sum, map) => sum + map.size, 0);
+  console.log(`✅ Loaded ${totalMappings} translation mappings across languages`);
 }
 
-function registerFallback(keyword, translation) {
-  const normalized = normalizeForComparison(keyword);
-  const cleanTranslation = String(translation || '').trim();
-  if (!normalized || !cleanTranslation) {
+function registerFallback(sourceTerm, translatedTerm, targetLang) {
+  const normalized = normalizeForComparison(sourceTerm);
+  const cleanTranslation = String(translatedTerm || '').trim();
+  const map = fallbackMaps[targetLang];
+  if (!normalized || !cleanTranslation || !map) {
     return;
   }
 
-  englishFallbackMap.set(keyword, cleanTranslation);
-  englishFallbackMap.set(normalized, cleanTranslation);
+  map.set(sourceTerm, cleanTranslation);
+  map.set(normalized, cleanTranslation);
 }
 
 function dedupeKeywords(rawKeywords) {
@@ -132,6 +136,10 @@ function dedupeKeywords(rawKeywords) {
   return deduped;
 }
 
+function containsHangul(value) {
+  return /[가-힣]/.test(String(value || ''));
+}
+
 const SAMPLE_SIZE = 30;
 const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
 const REQUEST_DELAY_MS = 180;
@@ -152,12 +160,20 @@ if (!DEEPL_API_KEY) {
 function loadFinanceKeywords() {
   const raw = JSON.parse(fs.readFileSync(FINANCE_KEYWORDS_PATH, 'utf8'));
   const keywords = Array.isArray(raw.finance_keywords) ? raw.finance_keywords : [];
-  
+
   console.log(`📥 Loaded ${keywords.length} keywords from file`);
-  
-  const cleaned = keywords.filter((kw) => typeof kw === 'string' && /[가-힣]/.test(kw));
-  console.log(`🧹 After filtering Korean text: ${cleaned.length} keywords`);
-  
+
+  const cleaned = keywords
+    .map((kw) => (typeof kw === 'string' ? kw.trim() : ''))
+    .filter((kw) => kw.length > 0);
+
+  const koreanCount = cleaned.filter((kw) => containsHangul(kw)).length;
+  const nonKoreanCount = cleaned.length - koreanCount;
+
+  console.log(
+    `🧹 After trimming invalid entries: ${cleaned.length} keywords (KO: ${koreanCount}, EN/Other: ${nonKoreanCount})`,
+  );
+
   const deduped = dedupeKeywords(cleaned);
   console.log(`🔄 After deduplication: ${deduped.length} keywords`);
 
@@ -265,33 +281,39 @@ async function evaluateKeyword(keyword) {
 
 const translationCache = new Map();
 
-async function translateToEnglish(text) {
+async function translateText(text, { targetLang, sourceLang } = {}) {
   const normalized = (text || '').trim();
-  if (!normalized) return '';
-  
-  if (translationCache.has(normalized)) {
-    const cached = translationCache.get(normalized);
-    console.log(`   💾 Using cached: "${normalized}" → "${cached}"`);
-    return cached;
+  if (!normalized) {
+    return { text: '', method: 'failed' };
   }
 
-  // Check fallback map FIRST (from finance_keywords_en)
+  const cacheKey = `${targetLang || 'UNK'}::${normalized}`;
+  if (translationCache.has(cacheKey)) {
+    const cached = translationCache.get(cacheKey);
+    console.log(
+      `   💾 Using cached (${sourceLang || 'auto'}→${targetLang || 'auto'}): "${normalized}" → "${cached}"`,
+    );
+    return { text: cached, method: 'cached' };
+  }
+
   const normalizedKey = normalizeForComparison(normalized);
-  const fallbackTranslation = englishFallbackMap.get(normalized) || englishFallbackMap.get(normalizedKey);
-  
+  const fallbackMap = targetLang ? fallbackMaps[targetLang] : undefined;
+  const fallbackTranslation = fallbackMap && (fallbackMap.get(normalized) || fallbackMap.get(normalizedKey));
+
   if (fallbackTranslation && fallbackTranslation !== normalized) {
-    console.log(`   📖 Using pre-translated: "${normalized}" → "${fallbackTranslation}"`);
-    translationCache.set(normalized, fallbackTranslation);
-    return fallbackTranslation;
+    console.log(
+      `   📖 Using pre-translated (${sourceLang || 'auto'}→${targetLang}): "${normalized}" → "${fallbackTranslation}"`,
+    );
+    translationCache.set(cacheKey, fallbackTranslation);
+    return { text: fallbackTranslation, method: 'preTranslated' };
   }
 
-  // Only call DeepL if no pre-translation exists
-  console.log(`   🌐 Calling DeepL API for: "${normalized}"`);
+  console.log(`   🌐 Calling DeepL API (${sourceLang || 'auto'}→${targetLang}) for: "${normalized}"`);
   const params = new URLSearchParams();
   params.append('auth_key', DEEPL_API_KEY);
   params.append('text', normalized);
-  params.append('target_lang', 'EN');
-  params.append('source_lang', 'KO');
+  if (targetLang) params.append('target_lang', targetLang);
+  if (sourceLang) params.append('source_lang', sourceLang);
 
   try {
     const res = await fetch(DEEPL_API_URL, {
@@ -306,15 +328,24 @@ async function translateToEnglish(text) {
     const translation =
       (Array.isArray(data.translations) && data.translations[0] && data.translations[0].text) || '';
     const translated = translation.trim();
-    const finalTranslation = translated && translated !== normalized ? translated : normalized;
-    translationCache.set(normalized, finalTranslation);
-    registerFallback(normalized, finalTranslation);
-    console.log(`   ✅ DeepL translated: "${normalized}" → "${finalTranslation}"`);
-    return finalTranslation;
+    const finalTranslation = translated || normalized;
+
+    translationCache.set(cacheKey, finalTranslation);
+    if (targetLang) {
+      registerFallback(normalized, finalTranslation, targetLang);
+    }
+    if (sourceLang && finalTranslation !== normalized) {
+      registerFallback(finalTranslation, normalized, sourceLang);
+    }
+
+    console.log(
+      `   ✅ DeepL translated (${sourceLang || 'auto'}→${targetLang || 'auto'}): "${normalized}" → "${finalTranslation}"`,
+    );
+    return { text: finalTranslation, method: 'deepl' };
   } catch (err) {
     console.warn(`⚠️  Failed to translate "${normalized}": ${err.message}`);
-    translationCache.set(normalized, normalized);
-    return normalized;
+    translationCache.set(cacheKey, normalized);
+    return { text: normalized, method: 'failed' };
   }
 }
 
@@ -329,7 +360,7 @@ async function buildTags() {
   
   const keywords = loadFinanceKeywords();
   if (!keywords.length) {
-    throw new Error('finance_keywords.json does not contain any usable Korean keywords.');
+    throw new Error('finance_keywords.json does not contain any usable keywords.');
   }
 
   console.log(`📊 Total keywords available: ${keywords.length}`);
@@ -341,13 +372,13 @@ async function buildTags() {
   console.log(`🎯 Selected ${sampled.length} random finance keywords for evaluation.`);
 
   const evaluated = [];
-  let translationStats = {
+  const translationStats = {
     cached: 0,
     preTranslated: 0,
     deepl: 0,
-    failed: 0
+    failed: 0,
   };
-  
+
   for (const keyword of sampled) {
     let result;
     try {
@@ -369,24 +400,32 @@ async function buildTags() {
       };
     }
 
-    // Translate the Korean term to English
-    const beforeLog = console.log;
-    let translationType = 'cached';
-    console.log = (...args) => {
-      const msg = args.join(' ');
-      if (msg.includes('💾 Using cached')) translationType = 'cached';
-      else if (msg.includes('📖 Using pre-translated')) translationType = 'preTranslated';
-      else if (msg.includes('🌐 Calling DeepL')) translationType = 'deepl';
-      else if (msg.includes('⚠️  Failed to translate')) translationType = 'failed';
-      beforeLog(...args);
-    };
-    
-    const translatedTerm = await translateToEnglish(result.term_ko);
-    console.log = beforeLog;
-    
-    translationStats[translationType]++;
-    result.term = translatedTerm;
-    
+    const keywordIsKorean = containsHangul(keyword);
+
+    if (keywordIsKorean) {
+      result.term_ko = keyword;
+      const { text: translatedTerm, method } = await translateText(keyword, {
+        sourceLang: 'KO',
+        targetLang: 'EN',
+      });
+      if (translationStats[method] === undefined) {
+        translationStats[method] = 0;
+      }
+      translationStats[method] += 1;
+      result.term = translatedTerm;
+    } else {
+      result.term = keyword;
+      const { text: translatedTerm, method } = await translateText(keyword, {
+        sourceLang: 'EN',
+        targetLang: 'KO',
+      });
+      if (translationStats[method] === undefined) {
+        translationStats[method] = 0;
+      }
+      translationStats[method] += 1;
+      result.term_ko = translatedTerm;
+    }
+
     evaluated.push(result);
     await delay(REQUEST_DELAY_MS + Math.floor(Math.random() * 120));
   }
