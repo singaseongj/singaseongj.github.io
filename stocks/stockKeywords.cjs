@@ -408,10 +408,7 @@ async function buildTags() {
         sourceLang: 'KO',
         targetLang: 'EN',
       });
-      if (translationStats[method] === undefined) {
-        translationStats[method] = 0;
-      }
-      translationStats[method] += 1;
+      translationStats[method] = (translationStats[method] || 0) + 1;
       result.term = translatedTerm;
     } else {
       result.term = keyword;
@@ -419,10 +416,7 @@ async function buildTags() {
         sourceLang: 'EN',
         targetLang: 'KO',
       });
-      if (translationStats[method] === undefined) {
-        translationStats[method] = 0;
-      }
-      translationStats[method] += 1;
+      translationStats[method] = (translationStats[method] || 0) + 1;
       result.term_ko = translatedTerm;
     }
 
