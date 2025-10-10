@@ -420,6 +420,12 @@ jobs:
           node stocks/stockKeywords.js
           test -s data/tags.json
 
+      - name: Refresh finance keyword dictionary
+        run: |
+          set -Eeuo pipefail
+          node stocks/generateFinanceKeywords.js
+          test -s data/finance_keywords.json
+
       - name: Verify market tag snapshot
         shell: bash
         run: |
@@ -473,6 +479,7 @@ jobs:
             stocks/fx_rates/index.html
             data/tags.json
             data/keyword_trends.csv
+            data/finance_keywords.json
             stocks/keywords.html
           )
           staged_any=0
