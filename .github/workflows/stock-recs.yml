@@ -410,6 +410,7 @@ jobs:
     NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
     NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
     DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+  shell: bash
   run: |
     set -Eeuo pipefail
     # Clear stale caches to force fresh data collection
