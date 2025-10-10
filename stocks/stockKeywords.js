@@ -21,6 +21,113 @@ const DEEPL_API_URL = process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
 const FINANCE_KEYWORDS_PATH = path.resolve(__dirname, '../data/finance_keywords.json');
 
+const HANGUL_SUFFIXES = [
+  '으로써',
+  '으로서',
+  '이라면',
+  '이라도',
+  '이라고',
+  '라고',
+  '라고도',
+  '라고는',
+  '으로',
+  '에서',
+  '에게서',
+  '에게',
+  '한테',
+  '처럼',
+  '까지',
+  '부터',
+  '은',
+  '는',
+  '을',
+  '를',
+  '에',
+];
+
+const englishFallbackMap = new Map();
+
+function normalizeForComparison(value) {
+  if (!value) return '';
+  let normalized = String(value).trim().replace(/\s+/g, '');
+  normalized = normalized.replace(/[\u0021-\u002f\u003a-\u0040\u005b-\u0060\u007b-\u007e]/g, '');
+
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const suffix of HANGUL_SUFFIXES) {
+      if (normalized.length <= suffix.length + 1) continue;
+      if (normalized.endsWith(suffix)) {
+        normalized = normalized.slice(0, -suffix.length);
+        changed = true;
+        break;
+      }
+    }
+  }
+
+  return normalized;
+}
+
+function buildFallbackMap(source) {
+  englishFallbackMap.clear();
+  if (!source || typeof source !== 'object') return;
+
+  for (const [key, value] of Object.entries(source)) {
+    const normalizedKey = normalizeForComparison(key);
+    if (!normalizedKey) continue;
+    const cleanTranslation = String(value || '').trim();
+    if (!cleanTranslation) continue;
+    englishFallbackMap.set(key, cleanTranslation);
+    englishFallbackMap.set(normalizedKey, cleanTranslation);
+  }
+}
+
+function registerFallback(keyword, translation) {
+  const normalized = normalizeForComparison(keyword);
+  const cleanTranslation = String(translation || '').trim();
+  if (!normalized || !cleanTranslation) {
+    return;
+  }
+
+  englishFallbackMap.set(keyword, cleanTranslation);
+  englishFallbackMap.set(normalized, cleanTranslation);
+}
+
+function dedupeKeywords(rawKeywords) {
+  const deduped = [];
+  const seen = [];
+
+  for (const keyword of rawKeywords) {
+    const trimmed = String(keyword || '').trim();
+    if (!trimmed) continue;
+
+    const normalized = normalizeForComparison(trimmed);
+    if (!normalized) continue;
+
+    let similar = false;
+    for (const existing of seen) {
+      if (existing === normalized) {
+        similar = true;
+        break;
+      }
+      if (existing.includes(normalized) || normalized.includes(existing)) {
+        const lengthDiff = Math.abs(existing.length - normalized.length);
+        if (lengthDiff <= 2) {
+          similar = true;
+          break;
+        }
+      }
+    }
+
+    if (similar) continue;
+
+    seen.push(normalized);
+    deduped.push(trimmed);
+  }
+
+  return deduped;
+}
+
 const SAMPLE_SIZE = 30;
 const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
 const REQUEST_DELAY_MS = 180;
@@ -41,10 +148,11 @@ if (!DEEPL_API_KEY) {
 function loadFinanceKeywords() {
   const raw = JSON.parse(fs.readFileSync(FINANCE_KEYWORDS_PATH, 'utf8'));
   const keywords = Array.isArray(raw.finance_keywords) ? raw.finance_keywords : [];
-  const cleaned = keywords
-    .map((kw) => String(kw).trim())
-    .filter((kw) => kw.length >= 2 && /[가-힣]/.test(kw));
-  return Array.from(new Set(cleaned));
+  const cleaned = keywords.filter((kw) => typeof kw === 'string' && /[가-힣]/.test(kw));
+  const deduped = dedupeKeywords(cleaned);
+
+  buildFallbackMap(raw.finance_keywords_en);
+  return deduped;
 }
 
 function shuffleSample(list, size) {
@@ -144,6 +252,10 @@ async function translateToEnglish(text) {
     return translationCache.get(normalized);
   }
 
+  const normalizedKey = normalizeForComparison(normalized);
+  const fallbackTranslation =
+    englishFallbackMap.get(normalized) || englishFallbackMap.get(normalizedKey) || normalized;
+
   const params = new URLSearchParams();
   params.append('auth_key', DEEPL_API_KEY);
   params.append('text', normalized);
@@ -162,13 +274,15 @@ async function translateToEnglish(text) {
     const data = await res.json();
     const translation =
       (Array.isArray(data.translations) && data.translations[0] && data.translations[0].text) || '';
-    const translated = translation.trim() || normalized;
-    translationCache.set(normalized, translated);
-    return translated;
+    const translated = translation.trim();
+    const finalTranslation = translated && translated !== normalized ? translated : fallbackTranslation;
+    translationCache.set(normalized, finalTranslation);
+    registerFallback(normalized, finalTranslation);
+    return finalTranslation;
   } catch (err) {
     console.warn(`⚠️  Failed to translate "${normalized}": ${err.message}`);
-    translationCache.set(normalized, normalized);
-    return normalized;
+    translationCache.set(normalized, fallbackTranslation);
+    return fallbackTranslation;
   }
 }
 
