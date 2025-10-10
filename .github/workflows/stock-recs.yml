@@ -423,7 +423,7 @@ jobs:
       - name: Refresh finance keyword dictionary
         run: |
           set -Eeuo pipefail
-          node stocks/generateFinanceKeywords.js
+          node stocks/generateFinanceKeywords.cjs
           test -s data/finance_keywords.json
 
       - name: Verify market tag snapshot
