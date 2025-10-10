@@ -140,6 +140,36 @@ function containsHangul(value) {
   return /[가-힣]/.test(String(value || ''));
 }
 
+function ensureLanguagePlacement(result, originalKeyword) {
+  if (!result || typeof result !== 'object') return;
+
+  const termHasHangul = containsHangul(result.term);
+  const termKoHasHangul = containsHangul(result.term_ko);
+  const originalIsKorean = containsHangul(originalKeyword);
+
+  if (termHasHangul && !termKoHasHangul) {
+    console.warn(
+      `   🔁 Swapping term fields for "${originalKeyword}" to keep Korean in term_ko and English in term.`,
+    );
+    const originalTerm = result.term;
+    result.term = result.term_ko;
+    result.term_ko = originalTerm;
+    return;
+  }
+
+  if (!termKoHasHangul) {
+    if (originalIsKorean) {
+      if (termHasHangul) {
+        console.warn(`   ⚠️ Unable to translate Korean keyword "${originalKeyword}" into English.`);
+        result.term = '';
+      }
+    } else if (result.term_ko) {
+      console.warn(`   ⚠️ Unable to translate English keyword "${originalKeyword}" into Korean.`);
+      result.term_ko = '';
+    }
+  }
+}
+
 const SAMPLE_SIZE = 30;
 const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
 const REQUEST_DELAY_MS = 180;
@@ -408,10 +438,7 @@ async function buildTags() {
         sourceLang: 'KO',
         targetLang: 'EN',
       });
-      if (translationStats[method] === undefined) {
-        translationStats[method] = 0;
-      }
-      translationStats[method] += 1;
+      translationStats[method] = (translationStats[method] || 0) + 1;
       result.term = translatedTerm;
     } else {
       result.term = keyword;
@@ -419,12 +446,11 @@ async function buildTags() {
         sourceLang: 'EN',
         targetLang: 'KO',
       });
-      if (translationStats[method] === undefined) {
-        translationStats[method] = 0;
-      }
-      translationStats[method] += 1;
+      translationStats[method] = (translationStats[method] || 0) + 1;
       result.term_ko = translatedTerm;
     }
+
+    ensureLanguagePlacement(result, keyword);
 
     evaluated.push(result);
     await delay(REQUEST_DELAY_MS + Math.floor(Math.random() * 120));

@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-10T15:40:58+09:00 (KST)**
+- Generated: **2025-10-10T21:40:09+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -59,7 +59,7 @@
 **HLB제약** (047920.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.2%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-6.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=HLB%EC%A0%9C%EC%95%BD
@@ -101,7 +101,7 @@
 
 **KB금융** (105560.KS)
 
-- News (7d): **25** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **29** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **2.6%**, 20d **8.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
@@ -109,23 +109,23 @@
 
 **LG전자** (066570.KS)
 
-- News (7d): **186** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **3.3%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **193** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **3.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
 
 **LG화학** (051910.KS)
 
-- News (7d): **4** (blogs: 10) — momentum: **medium**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-1.4%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **5** (blogs: 10) — momentum: **medium**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **-1.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
 **삼성전자** (005930.KS)
 
-- News (7d): **385** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **444** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **13.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -152,7 +152,7 @@
 **유니드** (014830.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **5.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%9C%A0%EB%8B%88%EB%93%9C
