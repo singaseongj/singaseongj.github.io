@@ -2,7 +2,7 @@
 'use strict';
 
 /**
- * stockKeywords.js — Naver search driven keyword scorer
+ * stockKeywords.cjs — Naver search driven keyword scorer
  *
  * This script samples Korean finance/business keywords from data/finance_keywords.json,
  * evaluates their current relevance with the Naver Search Open API, and writes
