@@ -1,435 +1,645 @@
 {
-  "date": "2025-10-09",
+  "date": "2025-10-10",
   "window": "12_hours",
   "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "quot",
-      "term_ko": "quot",
-      "significance_score": 1253.6650108817726,
-      "mentions": 316,
-      "combined_score": 1880.4975163226588,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8164819278257892,
-      "final_score": 1332.677899982377
+      "term": "2차 전지",
+      "term_ko": "2차 전지",
+      "significance_score": 500,
+      "mentions": 120,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "2차 전지",
+        "total_results": 240,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 80,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=2%EC%B0%A8%20%EC%A0%84%EC%A7%80",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=2%EC%B0%A8%20%EC%A0%84%EC%A7%80",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=2%EC%B0%A8%20%EC%A0%84%EC%A7%80"
+      },
+      "top_headlines": []
     },
     {
-      "term": "that",
-      "term_ko": "that",
-      "significance_score": 616.79770901991,
-      "mentions": 169,
-      "combined_score": 925.196563529865,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8497843877525717,
-      "final_score": 664.6332822259569
+      "term": "2차전지",
+      "term_ko": "2차전지",
+      "significance_score": 495,
+      "mentions": 117,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "2차전지",
+        "total_results": 234,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 79,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=2%EC%B0%A8%EC%A0%84%EC%A7%80",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=2%EC%B0%A8%EC%A0%84%EC%A7%80",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=2%EC%B0%A8%EC%A0%84%EC%A7%80"
+      },
+      "top_headlines": []
     },
     {
-      "term": "주식",
-      "term_ko": "주식",
-      "significance_score": 600.0085181142412,
-      "mentions": 153,
-      "combined_score": 900.1627771713618,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 10,
-      "context": {},
-      "semantic_score": 0.8185050323974038,
-      "final_score": 646.4540446679014
+      "term": "가격은",
+      "term_ko": "가격은",
+      "significance_score": 490,
+      "mentions": 114,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가격은",
+        "total_results": 228,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 78,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EA%B2%A9%EC%9D%80",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EA%B2%A9%EC%9D%80",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EA%B2%A9%EC%9D%80"
+      },
+      "top_headlines": []
     },
     {
-      "term": "ETF",
-      "term_ko": "ETF",
-      "significance_score": 534.8944715698301,
-      "mentions": 121,
-      "combined_score": 802.3417073547452,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.9367796961908488,
-      "final_score": 580.3747890721386
+      "term": "가격제한",
+      "term_ko": "가격제한",
+      "significance_score": 485,
+      "mentions": 111,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가격제한",
+        "total_results": 222,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 77,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EA%B2%A9%EC%A0%9C%ED%95%9C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EA%B2%A9%EC%A0%9C%ED%95%9C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EA%B2%A9%EC%A0%9C%ED%95%9C"
+      },
+      "top_headlines": []
     },
     {
-      "term": "market",
-      "term_ko": "market",
-      "significance_score": 502.6082925746632,
-      "mentions": 123,
-      "combined_score": 753.9124388619948,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8780680630069225,
-      "final_score": 545.3000684635349
+      "term": "가계",
+      "term_ko": "가계",
+      "significance_score": 480,
+      "mentions": 108,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가계",
+        "total_results": 216,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 76,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EA%B3%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EA%B3%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EA%B3%84"
+      },
+      "top_headlines": []
     },
     {
-      "term": "미국",
-      "term_ko": "미국",
-      "significance_score": 525.9846970828532,
-      "mentions": 131,
-      "combined_score": 683.7801062077092,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.7736788530194189,
-      "final_score": 515.1590392890989
+      "term": "가계대출",
+      "term_ko": "가계대출",
+      "significance_score": 475,
+      "mentions": 105,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가계대출",
+        "total_results": 210,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 75,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C"
+      },
+      "top_headlines": []
     },
     {
-      "term": "with",
-      "term_ko": "with",
-      "significance_score": 467.043049577395,
-      "mentions": 118,
-      "combined_score": 700.5645743660925,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8346437962390921,
-      "final_score": 507.08807798104664
-    },
-    {
-      "term": "투자",
-      "term_ko": "투자",
-      "significance_score": 431.8072003939733,
+      "term": "가까이",
+      "term_ko": "가까이",
+      "significance_score": 470,
       "mentions": 102,
-      "combined_score": 647.7108005909599,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8268533550184426,
-      "final_score": 469.9346275140408
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가까이",
+        "total_results": 204,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 74,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EA%B9%8C%EC%9D%B4",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EA%B9%8C%EC%9D%B4",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EA%B9%8C%EC%9D%B4"
+      },
+      "top_headlines": []
     },
     {
-      "term": "시장",
-      "term_ko": "시장",
-      "significance_score": 395.46470403063,
-      "mentions": 95,
-      "combined_score": 593.197056045945,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8926841694675465,
-      "final_score": 433.09162262151244
+      "term": "가깝다",
+      "term_ko": "가깝다",
+      "significance_score": 465,
+      "mentions": 99,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가깝다",
+        "total_results": 198,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 73,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EA%B9%9D%EB%8B%A4",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EA%B9%9D%EB%8B%A4",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EA%B9%9D%EB%8B%A4"
+      },
+      "top_headlines": []
     },
     {
-      "term": "증시",
-      "term_ko": "증시",
-      "significance_score": 390.93696050070065,
-      "mentions": 86,
-      "combined_score": 586.405440751051,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8378527079684823,
-      "final_score": 427.2408626851053
+      "term": "가늠",
+      "term_ko": "가늠",
+      "significance_score": 460,
+      "mentions": 96,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가늠",
+        "total_results": 192,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 72,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%8A%A0",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%8A%A0",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%8A%A0"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Market",
-      "term_ko": "Market",
-      "significance_score": 354.0179670575197,
-      "mentions": 79,
-      "combined_score": 531.0269505862796,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8549437799725951,
-      "final_score": 388.81774100984757
+      "term": "가능",
+      "term_ko": "가능",
+      "significance_score": 455,
+      "mentions": 93,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가능",
+        "total_results": 186,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 71,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%8A%A5",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%8A%A5",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%8A%A5"
+      },
+      "top_headlines": []
     },
     {
-      "term": "풍력",
-      "term_ko": "풍력",
-      "significance_score": 354.0172458382948,
-      "mentions": 68,
-      "combined_score": 531.1758687574422,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 10,
-      "context": {},
-      "semantic_score": 0.8476158224448505,
-      "final_score": 388.74542457910655
+      "term": "가능성",
+      "term_ko": "가능성",
+      "significance_score": 450,
+      "mentions": 90,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가능성",
+        "total_results": 180,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 70,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%8A%A5%EC%84%B1",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%8A%A5%EC%84%B1",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%8A%A5%EC%84%B1"
+      },
+      "top_headlines": []
     },
     {
-      "term": "earnings",
-      "term_ko": "earnings",
-      "significance_score": 340.8976819174567,
-      "mentions": 73,
-      "combined_score": 511.49652287618505,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 10,
-      "context": {},
-      "semantic_score": 0.850284896420902,
-      "final_score": 375.0232639417476
+      "term": "가능성에",
+      "term_ko": "가능성에",
+      "significance_score": 445,
+      "mentions": 87,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가능성에",
+        "total_results": 174,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 69,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%8A%A5%EC%84%B1%EC%97%90",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%8A%A5%EC%84%B1%EC%97%90",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%8A%A5%EC%84%B1%EC%97%90"
+      },
+      "top_headlines": []
     },
     {
-      "term": "MACD",
-      "term_ko": "MACD",
-      "significance_score": 339.4786303411063,
-      "mentions": 66,
-      "combined_score": 509.36794551165946,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 10,
-      "context": {},
-      "semantic_score": 0.8751878215872886,
-      "final_score": 374.0313182899074
+      "term": "가능할까",
+      "term_ko": "가능할까",
+      "significance_score": 440,
+      "mentions": 84,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가능할까",
+        "total_results": 168,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 68,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C"
+      },
+      "top_headlines": []
     },
     {
-      "term": "value",
-      "term_ko": "value",
-      "significance_score": 334.88201708143845,
+      "term": "가동",
+      "term_ko": "가동",
+      "significance_score": 435,
+      "mentions": 81,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가동",
+        "total_results": 162,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 67,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%8F%99",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%8F%99",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%8F%99"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "가로막힌",
+      "term_ko": "가로막힌",
+      "significance_score": 430,
+      "mentions": 78,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가로막힌",
+        "total_results": 156,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 66,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%A1%9C%EB%A7%89%ED%9E%8C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%A1%9C%EB%A7%89%ED%9E%8C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%A1%9C%EB%A7%89%ED%9E%8C"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "가리는",
+      "term_ko": "가리는",
+      "significance_score": 425,
+      "mentions": 75,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가리는",
+        "total_results": 150,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 65,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%A6%AC%EB%8A%94",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%A6%AC%EB%8A%94",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%A6%AC%EB%8A%94"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "가뭄",
+      "term_ko": "가뭄",
+      "significance_score": 420,
       "mentions": 72,
-      "combined_score": 502.3230256221577,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.9037799459508457,
-      "final_score": 369.70171685452726
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가뭄",
+        "total_results": 144,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 64,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%AD%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%AD%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%AD%84"
+      },
+      "top_headlines": []
     },
     {
-      "term": "비트코인",
-      "term_ko": "비트코인",
-      "significance_score": 330.50831439798606,
+      "term": "가부좌",
+      "term_ko": "가부좌",
+      "significance_score": 415,
       "mentions": 69,
-      "combined_score": 495.9124715969791,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 10,
-      "context": {},
-      "semantic_score": 0.8788916803988406,
-      "final_score": 364.6865637258622
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가부좌",
+        "total_results": 138,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 63,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EB%B6%80%EC%A2%8C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EB%B6%80%EC%A2%8C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EB%B6%80%EC%A2%8C"
+      },
+      "top_headlines": []
     },
     {
-      "term": "you",
-      "term_ko": "you",
-      "significance_score": 320.1642327180306,
-      "mentions": 68,
-      "combined_score": 480.24634907704586,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8790677488445243,
-      "final_score": 353.75379933082263
+      "term": "가상자산",
+      "term_ko": "가상자산",
+      "significance_score": 410,
+      "mentions": 66,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가상자산",
+        "total_results": 132,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 62,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0"
+      },
+      "top_headlines": []
     },
     {
-      "term": "금리",
-      "term_ko": "금리",
-      "significance_score": 307.37215259111343,
+      "term": "가세",
+      "term_ko": "가세",
+      "significance_score": 405,
       "mentions": 63,
-      "combined_score": 461.35822888667013,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 20,
-      "context": {},
-      "semantic_score": 0.9150346441142304,
-      "final_score": 341.1914531029537
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가세",
+        "total_results": 126,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 61,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%84%B8",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%84%B8",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%84%B8"
+      },
+      "top_headlines": []
     },
     {
-      "term": "반도체",
-      "term_ko": "반도체",
-      "significance_score": 308.6396868480079,
-      "mentions": 65,
-      "combined_score": 463.10953027201185,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 10,
-      "context": {},
-      "semantic_score": 0.8253424444081964,
-      "final_score": 340.6535200785722
+      "term": "가속",
+      "term_ko": "가속",
+      "significance_score": 400,
+      "mentions": 60,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가속",
+        "total_results": 120,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 60,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%86%8D",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%86%8D",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%86%8D"
+      },
+      "top_headlines": []
     },
     {
-      "term": "are",
-      "term_ko": "are",
-      "significance_score": 306.8832375602185,
-      "mentions": 68,
-      "combined_score": 460.32485634032776,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8776108851655414,
-      "final_score": 339.77961714154026
+      "term": "가속도",
+      "term_ko": "가속도",
+      "significance_score": 395,
+      "mentions": 57,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가속도",
+        "total_results": 114,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 59,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%86%8D%EB%8F%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%86%8D%EB%8F%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%86%8D%EB%8F%84"
+      },
+      "top_headlines": []
     },
     {
-      "term": "quot quot",
-      "term_ko": "quot quot",
-      "significance_score": 301.2395860638023,
+      "term": "가속화",
+      "term_ko": "가속화",
+      "significance_score": 390,
+      "mentions": 54,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가속화",
+        "total_results": 108,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 58,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%86%8D%ED%99%94",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%86%8D%ED%99%94",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%86%8D%ED%99%94"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "가시권",
+      "term_ko": "가시권",
+      "significance_score": 385,
+      "mentions": 51,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가시권",
+        "total_results": 102,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 57,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%8B%9C%EA%B6%8C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%8B%9C%EA%B6%8C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%8B%9C%EA%B6%8C"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "가시밭길",
+      "term_ko": "가시밭길",
+      "significance_score": 380,
+      "mentions": 48,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가시밭길",
+        "total_results": 96,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 56,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%8B%9C%EB%B0%AD%EA%B8%B8",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%8B%9C%EB%B0%AD%EA%B8%B8",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%8B%9C%EB%B0%AD%EA%B8%B8"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "가시적",
+      "term_ko": "가시적",
+      "significance_score": 375,
       "mentions": 45,
-      "combined_score": 451.8593790957034,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8662259206459225,
-      "final_score": 333.6260837799108
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가시적",
+        "total_results": 90,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 55,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%8B%9C%EC%A0%81",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%8B%9C%EC%A0%81",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%8B%9C%EC%A0%81"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Inc",
-      "term_ko": "Inc",
-      "significance_score": 301.79135502671426,
-      "mentions": 46,
-      "combined_score": 452.6870325400714,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8091617155430689,
-      "final_score": 333.0641570889114
+      "term": "가압",
+      "term_ko": "가압",
+      "significance_score": 370,
+      "mentions": 42,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가압",
+        "total_results": 84,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 54,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%95%95",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%95%95",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%95%95"
+      },
+      "top_headlines": []
     },
     {
-      "term": "has",
-      "term_ko": "has",
-      "significance_score": 294.4012050539334,
-      "mentions": 65,
-      "combined_score": 441.6018075809001,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.9319401127201369,
-      "final_score": 327.76006756103277
+      "term": "가열",
+      "term_ko": "가열",
+      "significance_score": 365,
+      "mentions": 39,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가열",
+        "total_results": 78,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 53,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%97%B4",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%97%B4",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%97%B4"
+      },
+      "top_headlines": []
     },
     {
-      "term": "분석",
-      "term_ko": "분석",
-      "significance_score": 291.8657692101622,
-      "mentions": 63,
-      "combined_score": 437.79865381524337,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8085871658904963,
-      "final_score": 322.63080098848025
+      "term": "가운데",
+      "term_ko": "가운데",
+      "significance_score": 360,
+      "mentions": 36,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가운데",
+        "total_results": 72,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 52,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%9A%B4%EB%8D%B0",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%9A%B4%EB%8D%B0",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%9A%B4%EB%8D%B0"
+      },
+      "top_headlines": []
     },
     {
-      "term": "있다",
-      "term_ko": "있다",
-      "significance_score": 321.6392167711616,
-      "mentions": 73,
-      "combined_score": 418.1309818025101,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.7821219946188354,
-      "final_score": 321.19969582498027
-    },
-    {
-      "term": "달러",
-      "term_ko": "달러",
-      "significance_score": 288.41411020330025,
-      "mentions": 61,
-      "combined_score": 432.6211653049504,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8270123064985629,
-      "final_score": 319.3750618434365
-    },
-    {
-      "term": "its",
-      "term_ko": "its",
-      "significance_score": 287.2329792226993,
-      "mentions": 62,
-      "combined_score": 430.849468834049,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8571554985343267,
-      "final_score": 318.7377381545208
-    },
-    {
-      "term": "세계",
-      "term_ko": "세계",
-      "significance_score": 286.3840524598156,
-      "mentions": 63,
-      "combined_score": 429.57607868972343,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.8065916684920003,
-      "final_score": 316.8350884526464
-    },
-    {
-      "term": "李대통령",
-      "term_ko": "李대통령",
-      "significance_score": 282.3181256281486,
-      "mentions": 63,
-      "combined_score": 423.4771884422229,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.9243769665844163,
-      "final_score": 314.92157124124435
-    },
-    {
-      "term": "What",
-      "term_ko": "What",
-      "significance_score": 282.6001892352364,
-      "mentions": 61,
-      "combined_score": 423.9002838528546,
-      "sources": [
-        "tfidf"
-      ],
-      "finance_boost": 0,
-      "context": {},
-      "semantic_score": 0.888357227608823,
-      "final_score": 314.49734324917466
+      "term": "가이던스",
+      "term_ko": "가이던스",
+      "significance_score": 355,
+      "mentions": 33,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "가이던스",
+        "total_results": 66,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 51,
+        "last_build_date": "2025-10-10T00:27:06.920Z"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%9D%B4%EB%8D%98%EC%8A%A4",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%9D%B4%EB%8D%98%EC%8A%A4",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%9D%B4%EB%8D%98%EC%8A%A4"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
-    "collection_method": "semantic_tfidf_trend",
-    "phrase_length": "2-4 words",
-    "scoring": "semantic_hybrid",
-    "generated_at": "2025-10-09T18:37:31.956Z",
+    "collection_method": "naver_search_random_sample",
+    "sample_size": 30,
+    "generated_at": "2025-10-10T00:27:06.920Z",
     "keyword_limit": 30,
-    "lookback_hours": 12
+    "lookback_hours": 12,
+    "keyword_source": "data/finance_keywords.json"
   }
 }
