@@ -45,7 +45,10 @@ const HANGUL_SUFFIXES = [
   '에',
 ];
 
-const englishFallbackMap = new Map();
+const fallbackMaps = {
+  EN: new Map(),
+  KO: new Map(),
+};
 
 function normalizeForComparison(value) {
   if (!value) return '';
@@ -69,28 +72,33 @@ function normalizeForComparison(value) {
 }
 
 function buildFallbackMap(source) {
-  englishFallbackMap.clear();
+  for (const map of Object.values(fallbackMaps)) {
+    map.clear();
+  }
   if (!source || typeof source !== 'object') return;
 
-  for (const [key, value] of Object.entries(source)) {
-    const normalizedKey = normalizeForComparison(key);
-    if (!normalizedKey) continue;
-    const cleanTranslation = String(value || '').trim();
-    if (!cleanTranslation) continue;
-    englishFallbackMap.set(key, cleanTranslation);
-    englishFallbackMap.set(normalizedKey, cleanTranslation);
+  const entries = Object.entries(source);
+  console.log(`📚 Loading ${entries.length} pre-translated terms from finance_keywords_en`);
+
+  for (const [koTerm, enTerm] of entries) {
+    registerFallback(koTerm, enTerm, 'EN');
+    registerFallback(enTerm, koTerm, 'KO');
   }
+
+  const totalMappings = Object.values(fallbackMaps).reduce((sum, map) => sum + map.size, 0);
+  console.log(`✅ Loaded ${totalMappings} translation mappings across languages`);
 }
 
-function registerFallback(keyword, translation) {
-  const normalized = normalizeForComparison(keyword);
-  const cleanTranslation = String(translation || '').trim();
-  if (!normalized || !cleanTranslation) {
+function registerFallback(sourceTerm, translatedTerm, targetLang) {
+  const normalized = normalizeForComparison(sourceTerm);
+  const cleanTranslation = String(translatedTerm || '').trim();
+  const map = fallbackMaps[targetLang];
+  if (!normalized || !cleanTranslation || !map) {
     return;
   }
 
-  englishFallbackMap.set(keyword, cleanTranslation);
-  englishFallbackMap.set(normalized, cleanTranslation);
+  map.set(sourceTerm, cleanTranslation);
+  map.set(normalized, cleanTranslation);
 }
 
 function dedupeKeywords(rawKeywords) {
@@ -128,6 +136,10 @@ function dedupeKeywords(rawKeywords) {
   return deduped;
 }
 
+function containsHangul(value) {
+  return /[가-힣]/.test(String(value || ''));
+}
+
 const SAMPLE_SIZE = 30;
 const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
 const REQUEST_DELAY_MS = 180;
@@ -148,20 +160,44 @@ if (!DEEPL_API_KEY) {
 function loadFinanceKeywords() {
   const raw = JSON.parse(fs.readFileSync(FINANCE_KEYWORDS_PATH, 'utf8'));
   const keywords = Array.isArray(raw.finance_keywords) ? raw.finance_keywords : [];
-  const cleaned = keywords.filter((kw) => typeof kw === 'string' && /[가-힣]/.test(kw));
-  const deduped = dedupeKeywords(cleaned);
 
+  console.log(`📥 Loaded ${keywords.length} keywords from file`);
+
+  const cleaned = keywords
+    .map((kw) => (typeof kw === 'string' ? kw.trim() : ''))
+    .filter((kw) => kw.length > 0);
+
+  const koreanCount = cleaned.filter((kw) => containsHangul(kw)).length;
+  const nonKoreanCount = cleaned.length - koreanCount;
+
+  console.log(
+    `🧹 After trimming invalid entries: ${cleaned.length} keywords (KO: ${koreanCount}, EN/Other: ${nonKoreanCount})`,
+  );
+
+  const deduped = dedupeKeywords(cleaned);
+  console.log(`🔄 After deduplication: ${deduped.length} keywords`);
+
+  // Build fallback map BEFORE returning
   buildFallbackMap(raw.finance_keywords_en);
   return deduped;
 }
 
 function shuffleSample(list, size) {
   const pool = [...list];
+  
+  // Fisher-Yates shuffle with enhanced randomness
   for (let i = pool.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
-  return pool.slice(0, Math.min(size, pool.length));
+  
+  const sampled = pool.slice(0, Math.min(size, pool.length));
+  
+  console.log(`🔀 Shuffled ${pool.length} keywords, selected first ${sampled.length}`);
+  console.log(`   First 5 from shuffled pool: ${sampled.slice(0, 5).join(', ')}`);
+  console.log(`   Last 5 from shuffled pool: ${sampled.slice(-5).join(', ')}`);
+  
+  return sampled;
 }
 
 function cleanSnippet(value) {
@@ -245,22 +281,39 @@ async function evaluateKeyword(keyword) {
 
 const translationCache = new Map();
 
-async function translateToEnglish(text) {
+async function translateText(text, { targetLang, sourceLang } = {}) {
   const normalized = (text || '').trim();
-  if (!normalized) return '';
-  if (translationCache.has(normalized)) {
-    return translationCache.get(normalized);
+  if (!normalized) {
+    return { text: '', method: 'failed' };
+  }
+
+  const cacheKey = `${targetLang || 'UNK'}::${normalized}`;
+  if (translationCache.has(cacheKey)) {
+    const cached = translationCache.get(cacheKey);
+    console.log(
+      `   💾 Using cached (${sourceLang || 'auto'}→${targetLang || 'auto'}): "${normalized}" → "${cached}"`,
+    );
+    return { text: cached, method: 'cached' };
   }
 
   const normalizedKey = normalizeForComparison(normalized);
-  const fallbackTranslation =
-    englishFallbackMap.get(normalized) || englishFallbackMap.get(normalizedKey) || normalized;
+  const fallbackMap = targetLang ? fallbackMaps[targetLang] : undefined;
+  const fallbackTranslation = fallbackMap && (fallbackMap.get(normalized) || fallbackMap.get(normalizedKey));
 
+  if (fallbackTranslation && fallbackTranslation !== normalized) {
+    console.log(
+      `   📖 Using pre-translated (${sourceLang || 'auto'}→${targetLang}): "${normalized}" → "${fallbackTranslation}"`,
+    );
+    translationCache.set(cacheKey, fallbackTranslation);
+    return { text: fallbackTranslation, method: 'preTranslated' };
+  }
+
+  console.log(`   🌐 Calling DeepL API (${sourceLang || 'auto'}→${targetLang}) for: "${normalized}"`);
   const params = new URLSearchParams();
   params.append('auth_key', DEEPL_API_KEY);
   params.append('text', normalized);
-  params.append('target_lang', 'EN');
-  params.append('source_lang', 'KO');
+  if (targetLang) params.append('target_lang', targetLang);
+  if (sourceLang) params.append('source_lang', sourceLang);
 
   try {
     const res = await fetch(DEEPL_API_URL, {
@@ -275,14 +328,24 @@ async function translateToEnglish(text) {
     const translation =
       (Array.isArray(data.translations) && data.translations[0] && data.translations[0].text) || '';
     const translated = translation.trim();
-    const finalTranslation = translated && translated !== normalized ? translated : fallbackTranslation;
-    translationCache.set(normalized, finalTranslation);
-    registerFallback(normalized, finalTranslation);
-    return finalTranslation;
+    const finalTranslation = translated || normalized;
+
+    translationCache.set(cacheKey, finalTranslation);
+    if (targetLang) {
+      registerFallback(normalized, finalTranslation, targetLang);
+    }
+    if (sourceLang && finalTranslation !== normalized) {
+      registerFallback(finalTranslation, normalized, sourceLang);
+    }
+
+    console.log(
+      `   ✅ DeepL translated (${sourceLang || 'auto'}→${targetLang || 'auto'}): "${normalized}" → "${finalTranslation}"`,
+    );
+    return { text: finalTranslation, method: 'deepl' };
   } catch (err) {
     console.warn(`⚠️  Failed to translate "${normalized}": ${err.message}`);
-    translationCache.set(normalized, fallbackTranslation);
-    return fallbackTranslation;
+    translationCache.set(cacheKey, normalized);
+    return { text: normalized, method: 'failed' };
   }
 }
 
@@ -292,15 +355,30 @@ function delay(ms) {
 
 async function buildTags() {
   console.log('🚀 Generating data/tags.json from finance_keywords.json');
+  console.log(`🕐 Execution time: ${new Date().toISOString()}`);
+  console.log(`🎲 Random seed check: ${Math.random()}`);
+  
   const keywords = loadFinanceKeywords();
   if (!keywords.length) {
-    throw new Error('finance_keywords.json does not contain any usable Korean keywords.');
+    throw new Error('finance_keywords.json does not contain any usable keywords.');
   }
+
+  console.log(`📊 Total keywords available: ${keywords.length}`);
+  console.log(`   First 10: ${keywords.slice(0, 10).join(', ')}`);
+  console.log(`   Middle 10 (around #${Math.floor(keywords.length/2)}): ${keywords.slice(Math.floor(keywords.length/2), Math.floor(keywords.length/2) + 10).join(', ')}`);
+  console.log(`   Last 10: ${keywords.slice(-10).join(', ')}`);
 
   const sampled = shuffleSample(keywords, SAMPLE_SIZE);
   console.log(`🎯 Selected ${sampled.length} random finance keywords for evaluation.`);
 
   const evaluated = [];
+  const translationStats = {
+    cached: 0,
+    preTranslated: 0,
+    deepl: 0,
+    failed: 0,
+  };
+
   for (const keyword of sampled) {
     let result;
     try {
@@ -322,12 +400,44 @@ async function buildTags() {
       };
     }
 
-    const translatedTerm = await translateToEnglish(result.term_ko || result.term);
-    result.term = translatedTerm || result.term || result.term_ko;
+    const keywordIsKorean = containsHangul(keyword);
+
+    if (keywordIsKorean) {
+      result.term_ko = keyword;
+      const { text: translatedTerm, method } = await translateText(keyword, {
+        sourceLang: 'KO',
+        targetLang: 'EN',
+      });
+      if (translationStats[method] === undefined) {
+        translationStats[method] = 0;
+      }
+      translationStats[method] += 1;
+      result.term = translatedTerm;
+    } else {
+      result.term = keyword;
+      const { text: translatedTerm, method } = await translateText(keyword, {
+        sourceLang: 'EN',
+        targetLang: 'KO',
+      });
+      if (translationStats[method] === undefined) {
+        translationStats[method] = 0;
+      }
+      translationStats[method] += 1;
+      result.term_ko = translatedTerm;
+    }
+
     evaluated.push(result);
     await delay(REQUEST_DELAY_MS + Math.floor(Math.random() * 120));
   }
 
+  console.log('\n📊 Translation Statistics:');
+  console.log(`   💾 Cached: ${translationStats.cached}`);
+  console.log(`   📖 Pre-translated: ${translationStats.preTranslated}`);
+  console.log(`   🌐 DeepL API calls: ${translationStats.deepl}`);
+  console.log(`   ⚠️  Failed: ${translationStats.failed}`);
+
+  // Sort by significance score (highest first) - THIS is why it looks "alphabetic"
+  // The original random order is being overwritten here!
   evaluated.sort((a, b) => b.significance_score - a.significance_score);
 
   const now = new Date();
