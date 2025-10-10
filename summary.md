@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-10T21:40:09+09:00 (KST)**
+- Generated: **2025-10-11T03:29:02+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -109,7 +109,7 @@
 
 **LG전자** (066570.KS)
 
-- News (7d): **193** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **194** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **3.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -125,7 +125,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **444** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **445** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **13.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -334,7 +334,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.7%**, 20d **-8.6%**; volatility (20d): **unknown**
+- Returns: 5d **1.0%**, 20d **-6.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
