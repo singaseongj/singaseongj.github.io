@@ -708,18 +708,24 @@ async function fetchYahooDailySeries(symbol, startMs, endMs) {
 
 function sanitizeSeriesPoints(points, year) {
   if (!Array.isArray(points)) return [];
+  const targetYear = Number.isFinite(year) ? Math.trunc(year) : null;
   const byDay = new Map();
   for (const point of points) {
     if (!point || typeof point.t !== 'string' || typeof point.v !== 'number') continue;
-    if (point.v <= 0) continue;
-    const d = new Date(point.t);
-    if (!Number.isFinite(d.getTime())) continue;
-    if (Number.isFinite(year) && d.getFullYear() !== year) continue;
+    const value = Number(point.v);
+    if (!Number.isFinite(value) || value <= 0) continue;
     const dayKey = point.t.slice(0, 10);
-    byDay.set(dayKey, { t: point.t, v: point.v });
+    if (!dayKey || dayKey.length !== 10) continue;
+    if (Number.isFinite(targetYear)) {
+      const yearNum = Number(dayKey.slice(0, 4));
+      if (!Number.isFinite(yearNum) || yearNum !== targetYear) continue;
+    }
+    const iso = point.t.length >= 19 ? point.t : `${dayKey}T00:00:00+09:00`;
+    byDay.set(dayKey, { t: iso, v: value });
   }
-  const arr = Array.from(byDay.values());
-  arr.sort((a, b) => new Date(a.t) - new Date(b.t));
+  const arr = Array.from(byDay.entries())
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([, point]) => point);
   return arr;
 }
 
@@ -792,9 +798,19 @@ async function fetchGoldBitcoinKRW() {
     ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
     : [];
   // ✅ Use raw USD index values (no KRW conversion)
-  let sp500Series = sp500Data
-    ? sp500Data.points.map(p => ({ t: p.iso, v: p.value }))
-    : [];
+  let sp500Series = [];
+  if (sp500Data?.points?.length) {
+    const mapped = [];
+    for (const point of sp500Data.points) {
+      const iso = typeof point?.iso === 'string' ? point.iso : null;
+      const rawValue = Number(point?.value);
+      if (!iso || !Number.isFinite(rawValue)) continue;
+      const rounded = Number(rawValue.toFixed(2));
+      if (!Number.isFinite(rounded)) continue;
+      mapped.push({ t: iso, v: rounded });
+    }
+    sp500Series = sanitizeSeriesPoints(mapped, year);
+  }
 
   const btcPointIsStale = (point) => {
     if (!point || typeof point.t !== 'string') return true;
