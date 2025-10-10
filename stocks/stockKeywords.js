@@ -152,8 +152,14 @@ if (!DEEPL_API_KEY) {
 function loadFinanceKeywords() {
   const raw = JSON.parse(fs.readFileSync(FINANCE_KEYWORDS_PATH, 'utf8'));
   const keywords = Array.isArray(raw.finance_keywords) ? raw.finance_keywords : [];
+  
+  console.log(`📥 Loaded ${keywords.length} keywords from file`);
+  
   const cleaned = keywords.filter((kw) => typeof kw === 'string' && /[가-힣]/.test(kw));
+  console.log(`🧹 After filtering Korean text: ${cleaned.length} keywords`);
+  
   const deduped = dedupeKeywords(cleaned);
+  console.log(`🔄 After deduplication: ${deduped.length} keywords`);
 
   // Build fallback map BEFORE returning
   buildFallbackMap(raw.finance_keywords_en);
@@ -264,14 +270,16 @@ async function translateToEnglish(text) {
   if (!normalized) return '';
   
   if (translationCache.has(normalized)) {
-    return translationCache.get(normalized);
+    const cached = translationCache.get(normalized);
+    console.log(`   💾 Using cached: "${normalized}" → "${cached}"`);
+    return cached;
   }
 
   // Check fallback map FIRST (from finance_keywords_en)
   const normalizedKey = normalizeForComparison(normalized);
   const fallbackTranslation = englishFallbackMap.get(normalized) || englishFallbackMap.get(normalizedKey);
   
-  if (fallbackTranslation) {
+  if (fallbackTranslation && fallbackTranslation !== normalized) {
     console.log(`   📖 Using pre-translated: "${normalized}" → "${fallbackTranslation}"`);
     translationCache.set(normalized, fallbackTranslation);
     return fallbackTranslation;
@@ -301,6 +309,7 @@ async function translateToEnglish(text) {
     const finalTranslation = translated && translated !== normalized ? translated : normalized;
     translationCache.set(normalized, finalTranslation);
     registerFallback(normalized, finalTranslation);
+    console.log(`   ✅ DeepL translated: "${normalized}" → "${finalTranslation}"`);
     return finalTranslation;
   } catch (err) {
     console.warn(`⚠️  Failed to translate "${normalized}": ${err.message}`);
@@ -332,6 +341,13 @@ async function buildTags() {
   console.log(`🎯 Selected ${sampled.length} random finance keywords for evaluation.`);
 
   const evaluated = [];
+  let translationStats = {
+    cached: 0,
+    preTranslated: 0,
+    deepl: 0,
+    failed: 0
+  };
+  
   for (const keyword of sampled) {
     let result;
     try {
@@ -354,12 +370,32 @@ async function buildTags() {
     }
 
     // Translate the Korean term to English
+    const beforeLog = console.log;
+    let translationType = 'cached';
+    console.log = (...args) => {
+      const msg = args.join(' ');
+      if (msg.includes('💾 Using cached')) translationType = 'cached';
+      else if (msg.includes('📖 Using pre-translated')) translationType = 'preTranslated';
+      else if (msg.includes('🌐 Calling DeepL')) translationType = 'deepl';
+      else if (msg.includes('⚠️  Failed to translate')) translationType = 'failed';
+      beforeLog(...args);
+    };
+    
     const translatedTerm = await translateToEnglish(result.term_ko);
+    console.log = beforeLog;
+    
+    translationStats[translationType]++;
     result.term = translatedTerm;
     
     evaluated.push(result);
     await delay(REQUEST_DELAY_MS + Math.floor(Math.random() * 120));
   }
+
+  console.log('\n📊 Translation Statistics:');
+  console.log(`   💾 Cached: ${translationStats.cached}`);
+  console.log(`   📖 Pre-translated: ${translationStats.preTranslated}`);
+  console.log(`   🌐 DeepL API calls: ${translationStats.deepl}`);
+  console.log(`   ⚠️  Failed: ${translationStats.failed}`);
 
   // Sort by significance score (highest first) - THIS is why it looks "alphabetic"
   // The original random order is being overwritten here!
