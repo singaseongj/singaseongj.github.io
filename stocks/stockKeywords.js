@@ -72,6 +72,8 @@ function buildFallbackMap(source) {
   englishFallbackMap.clear();
   if (!source || typeof source !== 'object') return;
 
+  console.log(`📚 Loading ${Object.keys(source).length} pre-translated terms from finance_keywords_en`);
+
   for (const [key, value] of Object.entries(source)) {
     const normalizedKey = normalizeForComparison(key);
     if (!normalizedKey) continue;
@@ -80,6 +82,8 @@ function buildFallbackMap(source) {
     englishFallbackMap.set(key, cleanTranslation);
     englishFallbackMap.set(normalizedKey, cleanTranslation);
   }
+  
+  console.log(`✅ Loaded ${englishFallbackMap.size} translation mappings`);
 }
 
 function registerFallback(keyword, translation) {
@@ -151,17 +155,27 @@ function loadFinanceKeywords() {
   const cleaned = keywords.filter((kw) => typeof kw === 'string' && /[가-힣]/.test(kw));
   const deduped = dedupeKeywords(cleaned);
 
+  // Build fallback map BEFORE returning
   buildFallbackMap(raw.finance_keywords_en);
   return deduped;
 }
 
 function shuffleSample(list, size) {
   const pool = [...list];
+  
+  // Fisher-Yates shuffle with enhanced randomness
   for (let i = pool.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
-  return pool.slice(0, Math.min(size, pool.length));
+  
+  const sampled = pool.slice(0, Math.min(size, pool.length));
+  
+  console.log(`🔀 Shuffled ${pool.length} keywords, selected first ${sampled.length}`);
+  console.log(`   First 5 from shuffled pool: ${sampled.slice(0, 5).join(', ')}`);
+  console.log(`   Last 5 from shuffled pool: ${sampled.slice(-5).join(', ')}`);
+  
+  return sampled;
 }
 
 function cleanSnippet(value) {
@@ -248,14 +262,23 @@ const translationCache = new Map();
 async function translateToEnglish(text) {
   const normalized = (text || '').trim();
   if (!normalized) return '';
+  
   if (translationCache.has(normalized)) {
     return translationCache.get(normalized);
   }
 
+  // Check fallback map FIRST (from finance_keywords_en)
   const normalizedKey = normalizeForComparison(normalized);
-  const fallbackTranslation =
-    englishFallbackMap.get(normalized) || englishFallbackMap.get(normalizedKey) || normalized;
+  const fallbackTranslation = englishFallbackMap.get(normalized) || englishFallbackMap.get(normalizedKey);
+  
+  if (fallbackTranslation) {
+    console.log(`   📖 Using pre-translated: "${normalized}" → "${fallbackTranslation}"`);
+    translationCache.set(normalized, fallbackTranslation);
+    return fallbackTranslation;
+  }
 
+  // Only call DeepL if no pre-translation exists
+  console.log(`   🌐 Calling DeepL API for: "${normalized}"`);
   const params = new URLSearchParams();
   params.append('auth_key', DEEPL_API_KEY);
   params.append('text', normalized);
@@ -275,14 +298,14 @@ async function translateToEnglish(text) {
     const translation =
       (Array.isArray(data.translations) && data.translations[0] && data.translations[0].text) || '';
     const translated = translation.trim();
-    const finalTranslation = translated && translated !== normalized ? translated : fallbackTranslation;
+    const finalTranslation = translated && translated !== normalized ? translated : normalized;
     translationCache.set(normalized, finalTranslation);
     registerFallback(normalized, finalTranslation);
     return finalTranslation;
   } catch (err) {
     console.warn(`⚠️  Failed to translate "${normalized}": ${err.message}`);
-    translationCache.set(normalized, fallbackTranslation);
-    return fallbackTranslation;
+    translationCache.set(normalized, normalized);
+    return normalized;
   }
 }
 
@@ -292,10 +315,18 @@ function delay(ms) {
 
 async function buildTags() {
   console.log('🚀 Generating data/tags.json from finance_keywords.json');
+  console.log(`🕐 Execution time: ${new Date().toISOString()}`);
+  console.log(`🎲 Random seed check: ${Math.random()}`);
+  
   const keywords = loadFinanceKeywords();
   if (!keywords.length) {
     throw new Error('finance_keywords.json does not contain any usable Korean keywords.');
   }
+
+  console.log(`📊 Total keywords available: ${keywords.length}`);
+  console.log(`   First 10: ${keywords.slice(0, 10).join(', ')}`);
+  console.log(`   Middle 10 (around #${Math.floor(keywords.length/2)}): ${keywords.slice(Math.floor(keywords.length/2), Math.floor(keywords.length/2) + 10).join(', ')}`);
+  console.log(`   Last 10: ${keywords.slice(-10).join(', ')}`);
 
   const sampled = shuffleSample(keywords, SAMPLE_SIZE);
   console.log(`🎯 Selected ${sampled.length} random finance keywords for evaluation.`);
@@ -322,12 +353,16 @@ async function buildTags() {
       };
     }
 
-    const translatedTerm = await translateToEnglish(result.term_ko || result.term);
-    result.term = translatedTerm || result.term || result.term_ko;
+    // Translate the Korean term to English
+    const translatedTerm = await translateToEnglish(result.term_ko);
+    result.term = translatedTerm;
+    
     evaluated.push(result);
     await delay(REQUEST_DELAY_MS + Math.floor(Math.random() * 120));
   }
 
+  // Sort by significance score (highest first) - THIS is why it looks "alphabetic"
+  // The original random order is being overwritten here!
   evaluated.sort((a, b) => b.significance_score - a.significance_score);
 
   const now = new Date();
