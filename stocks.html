@@ -450,7 +450,9 @@
         const baseTerm = koTerm || enTerm;
         if (!baseTerm) continue;
         if (isStopwordCandidate(baseTerm) || isStopwordCandidate(enTerm) || isStopwordCandidate(koTerm)) continue;
-        if (!hasMultipleWords(baseTerm) && !hasMultipleWords(enTerm) && !hasMultipleWords(koTerm)) continue;
+        // ✅ Allow single-word terms too, only skip ultra-short (1 char) noise
+        const normalized = (baseTerm || '').trim();
+        if (normalized.length < 2) continue;
 
         const scoreCandidates = [
           item.significance_score,
