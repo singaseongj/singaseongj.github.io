@@ -15,6 +15,8 @@ const path = require('path');
 
 const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID;
 const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
+const DEEPL_API_KEY = process.env.DEEPL_API_KEY || process.env.DEEPL_AUTH_KEY;
+const DEEPL_API_URL = process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v2/translate';
 
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
 const FINANCE_KEYWORDS_PATH = path.resolve(__dirname, '../data/finance_keywords.json');
@@ -27,6 +29,12 @@ const WINDOW_LABEL = '12_hours';
 if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) {
   console.error('❌ NAVER_CLIENT_ID and NAVER_CLIENT_SECRET environment variables are required.');
   console.error('   Please obtain credentials from https://developers.naver.com and set them before running this script.');
+  process.exit(1);
+}
+
+if (!DEEPL_API_KEY) {
+  console.error('❌ DEEPL_API_KEY (or DEEPL_AUTH_KEY) environment variable is required for DeepL translation.');
+  console.error('   Please provide a valid DeepL API key to generate translated terms.');
   process.exit(1);
 }
 
@@ -127,6 +135,43 @@ async function evaluateKeyword(keyword) {
   };
 }
 
+const translationCache = new Map();
+
+async function translateToEnglish(text) {
+  const normalized = (text || '').trim();
+  if (!normalized) return '';
+  if (translationCache.has(normalized)) {
+    return translationCache.get(normalized);
+  }
+
+  const params = new URLSearchParams();
+  params.append('auth_key', DEEPL_API_KEY);
+  params.append('text', normalized);
+  params.append('target_lang', 'EN');
+  params.append('source_lang', 'KO');
+
+  try {
+    const res = await fetch(DEEPL_API_URL, {
+      method: 'POST',
+      body: params,
+    });
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`DeepL error ${res.status}: ${errText}`);
+    }
+    const data = await res.json();
+    const translation =
+      (Array.isArray(data.translations) && data.translations[0] && data.translations[0].text) || '';
+    const translated = translation.trim() || normalized;
+    translationCache.set(normalized, translated);
+    return translated;
+  } catch (err) {
+    console.warn(`⚠️  Failed to translate "${normalized}": ${err.message}`);
+    translationCache.set(normalized, normalized);
+    return normalized;
+  }
+}
+
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -143,12 +188,12 @@ async function buildTags() {
 
   const evaluated = [];
   for (const keyword of sampled) {
+    let result;
     try {
-      const result = await evaluateKeyword(keyword);
-      evaluated.push(result);
+      result = await evaluateKeyword(keyword);
     } catch (err) {
       console.warn(`⚠️  Failed to evaluate "${keyword}": ${err.message}`);
-      evaluated.push({
+      result = {
         term: keyword,
         term_ko: keyword,
         significance_score: 0,
@@ -160,8 +205,12 @@ async function buildTags() {
         },
         search: buildSearchLinks(keyword),
         top_headlines: [],
-      });
+      };
     }
+
+    const translatedTerm = await translateToEnglish(result.term_ko || result.term);
+    result.term = translatedTerm || result.term || result.term_ko;
+    evaluated.push(result);
     await delay(REQUEST_DELAY_MS + Math.floor(Math.random() * 120));
   }
 
