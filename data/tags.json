@@ -1,439 +1,1001 @@
 {
-  "generatedAt": "2025-10-11T12:33:23.569Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-10-11",
   "window": "12_hours",
   "total_phrases": 30,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Closing Price",
-      "term_ko": "종가"
-    },
-    {
-      "term": "5g",
-      "term_ko": "5g"
-    },
-    {
-      "term": "Fed",
-      "term_ko": "Fed"
-    },
-    {
-      "term": "Fintech",
-      "term_ko": "핀테크"
-    },
-    {
-      "term": "Domestic Stock Market",
-      "term_ko": "국내증시"
-    },
-    {
-      "term": "Net Purchase of Futures",
-      "term_ko": "선물순매수"
-    },
-    {
-      "term": "Financial Stocks",
-      "term_ko": "금융주"
-    },
-    {
-      "term": "Capital Erosion",
-      "term_ko": "자본잠식"
-    },
-    {
-      "term": "Chief of Investigation",
-      "term_ko": "소부장"
-    },
-    {
-      "term": "House Sale",
-      "term_ko": "주택판매"
-    },
-    {
-      "term": "Default Risk",
-      "term_ko": "부도위험"
-    },
-    {
-      "term": "Otc",
-      "term_ko": "Otc"
-    },
-    {
-      "term": "Cds",
-      "term_ko": "Cds"
-    },
-    {
-      "term": "Defi",
-      "term_ko": "디파이"
-    },
-    {
-      "term": "Blockchain",
-      "term_ko": "블록체인"
-    },
-    {
-      "term": "Delta",
-      "term_ko": "델타"
-    },
-    {
-      "term": "Fsb",
-      "term_ko": "Fsb"
-    },
-    {
-      "term": "Defensive Stock",
-      "term_ko": "방어주"
-    },
-    {
-      "term": "Covered Call",
-      "term_ko": "커버드콜"
-    },
-    {
-      "term": "Nikkei225",
-      "term_ko": "Nikkei225"
-    },
-    {
-      "term": "Fundingrate",
-      "term_ko": "펀딩 비율"
-    },
-    {
-      "term": "Insurtech",
-      "term_ko": "인슈어테크"
-    },
-    {
-      "term": "Grossdomesticproduct",
-      "term_ko": "국내총생산"
-    },
-    {
-      "term": "Digitalbanking",
-      "term_ko": "디지털 뱅킹"
-    },
-    {
-      "term": "Valuestock",
-      "term_ko": "가치주"
-    },
-    {
-      "term": "Batteryrecycling",
-      "term_ko": "배터리 재활용"
-    },
-    {
-      "term": "Treasurymanagement",
-      "term_ko": "재무 관리"
-    },
-    {
-      "term": "Earningssurprise",
-      "term_ko": "수익 서프라이즈"
-    },
-    {
-      "term": "Growthstock",
-      "term_ko": "성장 재고"
-    },
-    {
-      "term": "Governmentpensionfund",
-      "term_ko": "정부 연금 기금"
-    }
-  ],
   "discovered_keywords": [
     {
-      "term": "Closing Price",
-      "term_ko": "종가"
+      "term": "Synthesis",
+      "term_ko": "종합",
+      "significance_score": 9453663,
+      "mentions": 15753387,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "종합",
+        "total_results": 15753387,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1431.19,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:08 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A2%85%ED%95%A9",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A2%85%ED%95%A9",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A2%85%ED%95%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "국정자원 중단 시스템 248개 재가동…복구율 35%( 종합 )",
+          "summary": "추가 복구한 시스템은 △해양수산부 어촌어항관리시스템 △기획재정부 경제교육 종합 포털(부분복구) △조달청 공사비정보광장 △조달청 목록정보 △ 조달청 이음장터 △조달청 공사원가통합관리 시스템 6개다....",
+          "link": "https://www.news1.kr/society/incident-accident/5937816",
+          "pubDate": "Sat, 11 Oct 2025 21:28:00 +0900"
+        },
+        {
+          "title": "화재로 멈춘 시스템 중 248개 정상화...복구율 35%",
+          "summary": "추가로 정상화된 서비스는 기획재정부 경제교육 종합 포털 일부와 조달청 이음장터 등 모두 6개라고 덧붙였습니다. 정부는 지난 연휴 기간 새로 도입한 서버와 네트워크 장비가 오는 15일 모두 설치되고 나면, 복구...",
+          "link": "https://www.ytn.co.kr/_ln/0115_202510112128188150",
+          "pubDate": "Sat, 11 Oct 2025 21:28:00 +0900"
+        },
+        {
+          "title": "1193회 로또 1등 각 17억원씩…자동 9명·수동 7명( 종합 )",
+          "summary": "판매점은 ▲미나식품(서울 강서구 금낭화로91-12) ▲스파(서울 노원구 동일로1493 주공10단지 종합 상가111) ▲지에스(GS)25 신길센트럴점(서울 영등포구 도림로308 1층) ▲코리아슈퍼(대구 달서구 달구벌대로1130...",
+          "link": "https://www.newsis.com/view/NISX20251011_0003358998",
+          "pubDate": "Sat, 11 Oct 2025 21:24:00 +0900"
+        }
+      ]
     },
     {
-      "term": "5g",
-      "term_ko": "5g"
+      "term": "supply and demand",
+      "term_ko": "수급",
+      "significance_score": 1799447,
+      "mentions": 2996435,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "수급",
+        "total_results": 2996435,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1385.85,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:17 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%88%98%EA%B8%89",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%88%98%EA%B8%89",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%88%98%EA%B8%89"
+      },
+      "top_headlines": [
+        {
+          "title": "‘혐중몰이’ 나선 국힘…與 “괴담·혐오로 여론 선동” 직격",
+          "summary": "또한 “건강보험, 선거권, 부동산 거래에서 중국인이 과도한 혜택을 받는다는 주장은 명백한 허위”라며 “건강보험의 경우, 지난해 중국인 가입자는 9369억 원을 납부하고 9314억 원을 수급 해 55억 원의 흑자를 냈다”고...",
+          "link": "https://m.skyedaily.com/news_view.html?ID=287378",
+          "pubDate": "Sat, 11 Oct 2025 21:06:00 +0900"
+        },
+        {
+          "title": "청주시의회, 베트남 진출 청주기업 코엠에스 공무국외출장 방문",
+          "summary": "간담회에서는 베트남 현지 사업장이 겪고 있는 인력 수급 문제, 인허가 절차의 복잡성, 행정처리 지연 등의 애로사항은 물론, 청주시와 베트남 정부 차원의 지원 정책에 대한 기업의 요구사항도 논의됐다. 또한 수출, 마케팅...",
+          "link": "https://www.ngonews.kr/news/articleView.html?idxno=215743",
+          "pubDate": "Sat, 11 Oct 2025 20:50:00 +0900"
+        },
+        {
+          "title": "유등교 가설교 '중고 복공판' 사용..KS기준도 없어/데스크",
+          "summary": "이근희 / 대전시 도로계획팀장\"단가, 경제성 측면 그리고 어떤 자재물 수급 현황 그런 측면에서 저희가 현장에 그렇게(중고 자재) 적용이 된 것으로 알고 있습니다.\" 건설업계에서는 제조업체도 불분명하고 유통 과정도 알...",
+          "link": "https://tjmbc.co.kr/article/qs_roIzxYsCb",
+          "pubDate": "Sat, 11 Oct 2025 20:40:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Fed",
-      "term_ko": "Fed"
+      "term": "market psychology",
+      "term_ko": "시장심리",
+      "significance_score": 902676,
+      "mentions": 1501775,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "시장심리",
+        "total_results": 1501775,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1410.89,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:22 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%9C%EC%9E%A5%EC%8B%AC%EB%A6%AC",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%8B%9C%EC%9E%A5%EC%8B%AC%EB%A6%AC",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%8B%9C%EC%9E%A5%EC%8B%AC%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "비트코인·이더리움·도지코인, 왜 이렇게 급락했을까?",
+          "summary": "비트코인(Bitcoin, BTC), 이더리움(Ethereum, ETH), 도지코인(Dogecoin, DOGE) 가격이 폭락하면서 암호화폐 시장 전반에 강한 매도 심리 가 번지고 있다. 이번 급락은 도널드 트럼프 미국 대통령의 대중(對中) 관세 발표 직후...",
+          "link": "http://coinreaders.com/191824",
+          "pubDate": "Sat, 11 Oct 2025 21:28:00 +0900"
+        },
+        {
+          "title": "비트코인 투자 심리 '극단적 공포' 수준으로 하락",
+          "summary": "해당 지수는 시장 참가자들의 감정을 수치화해 투자 과열이나 위축을 나타내는 지표로, 극단적 공포 상태는 일반적으로 투자자들이 시장 에 대해 강한 불안 심리 를 느끼고 있음을 의미한다. 일각에서는 이러한...",
+          "link": "https://www.tokenpost.kr/news/breaking/293487",
+          "pubDate": "Sat, 11 Oct 2025 21:24:00 +0900"
+        },
+        {
+          "title": "中 중추절 황금연휴에 터질 황금알들 [생생中國]",
+          "summary": "연초부터 꺼내든 부양책에도 내수 시장 침체가 지속되는 가운데 이번 연휴를 계기로 소비 심리 가 살아나기를 기대하는 모습이다. 최근 중국 지방정부들은 이번 연휴 기간에 맞춰 소비 활성화를 위한 프로그램을...",
+          "link": "https://www.mk.co.kr/article/11429952",
+          "pubDate": "Sat, 11 Oct 2025 21:01:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Fintech",
-      "term_ko": "핀테크"
+      "term": "investment caution",
+      "term_ko": "투자주의",
+      "significance_score": 577763,
+      "mentions": 960429,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "투자주의",
+        "total_results": 960429,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1306,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:14 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%88%AC%EC%9E%90%EC%A3%BC%EC%9D%98",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%88%AC%EC%9E%90%EC%A3%BC%EC%9D%98",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%88%AC%EC%9E%90%EC%A3%BC%EC%9D%98"
+      },
+      "top_headlines": [
+        {
+          "title": "BYD, 브라질서 누적 1400만 대 친환경차 달성…글로벌 확장 가속",
+          "summary": "중국 전기차 업체 BYD가 브라질 바이아 주의 승용차 공장에서 누적 1400만 번째 친환경차를 공식 출고했다고... 단순 투자 자가 아닌 장기적 파트너\"라고 말했다. BYD는 올해 브라질 파라주 벨렝에서 열리는 제30차 유엔...",
+          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=383917",
+          "pubDate": "Sat, 11 Oct 2025 20:22:00 +0900"
+        },
+        {
+          "title": "암호화폐 시장, 24시간 동안 레버리지 포지션 13억3700만 달러 청산",
+          "summary": "못할 때 강제로 포지션이 종료되는 현상을 말한다. 이번 대규모 청산은 암호화폐 시장 전반의 급격한 하락과 높은 변동성을 보여주는 중요한 지표로, 투자 자들은 높은 레버리지 사용에 주의 할 필요가 있다.",
+          "link": "https://www.tokenpost.kr/news/cryptocurrency/293478",
+          "pubDate": "Sat, 11 Oct 2025 20:02:00 +0900"
+        },
+        {
+          "title": "[돈이 보이는 경제] 노후 생활비 걱정에 주택연금 인기… 주의 할 점은?",
+          "summary": "실제 얼마나 도움이 되고 주의 할 점은 없는지, 오늘 <돈이 보이는 경제>에서 최수용 기자가 알아봤습니다.... 또 집값이 올라도 월 지급액은 그대로여서 투자 수단으론 적합하지 않습니다. 다만, 이런 시세 차익은 결국...",
+          "link": "https://news.tvchosun.com/site/data/html_dir/2025/10/11/2025101190143.html",
+          "pubDate": "Sat, 11 Oct 2025 19:32:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Domestic Stock Market",
-      "term_ko": "국내증시"
+      "term": "overseas investment",
+      "term_ko": "해외투자",
+      "significance_score": 457289,
+      "mentions": 759720,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "해외투자",
+        "total_results": 759720,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1256.91,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:13 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90"
+      },
+      "top_headlines": [
+        {
+          "title": "[ 투자 튜브 ON] ⑨ 더 넓게 보고 더 멀리 달린 'TIGER ETF' 레이싱카, '1천...",
+          "summary": "해외 주식 투자 자들을 위한 콘텐츠 개발에도 소홀하지 않고 있다. 미래에셋자산운용 관계자는 \"미국, 중국 주식에 대한 관심이 높아지면서 TIGER ETF는 미국과 중국에 투자 할 수 있는 ETF를 소개하는 영상을 꾸준하게...",
+          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=782302",
+          "pubDate": "Sat, 11 Oct 2025 19:38:00 +0900"
+        },
+        {
+          "title": "환율 1,430원 돌파…보험사 환헤지 '경보등'",
+          "summary": "최근 원·달러 환율이 1,430원대를 돌파하며 연고점을 경신하자, 해외투자 자산에 대한 환헤지(환위험 방어) 비용이 눈덩이처럼 불어날 수 있다는 경고음이 커지고 있다. 대형 보험사들은 장기 헤지 계약으로 일부...",
+          "link": "http://www.fins.co.kr/news/articleView.html?idxno=106167",
+          "pubDate": "Sat, 11 Oct 2025 19:16:00 +0900"
+        },
+        {
+          "title": "코트라 해외 무역관 73% 투자 유치 성과 '0'…국민 세금만 축낸다",
+          "summary": "대한무역 투자 진흥공사법 제1조에 따르면 코트라의 설립 목적으로 '무역 진흥과 국내외 기업 간 투자 및 해외 시장 개척, 중소기업 해외 진출 지원 등'을 규정하고 있다. 그러나 최근 5년간 성과를 보면 다수의...",
+          "link": "https://www.newsis.com/view/NISX20251011_0003358967",
+          "pubDate": "Sat, 11 Oct 2025 18:51:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Net Purchase of Futures",
-      "term_ko": "선물순매수"
+      "term": "algorithm",
+      "term_ko": "알고리즘",
+      "significance_score": 407735,
+      "mentions": 677085,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "알고리즘",
+        "total_results": 677085,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1283.75,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:23 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"
+      },
+      "top_headlines": [
+        {
+          "title": "해외에선 알고리즘 규제 논의 불 붙지만…국내는 제자리",
+          "summary": "이렇게 우리가 디지털 세상에 빠져드는데는, 이른바 알고리즘 추천 구조가 한 몫을 합니다. 나보다 더 나를... \"] 유튜브 추천 알고리즘 에 따라 비슷한 성향의 정보만 보는 경우가 많은데, 정작 자신은 객관적 정보라고 믿는...",
+          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8378292&ref=A",
+          "pubDate": "Sat, 11 Oct 2025 21:21:00 +0900"
+        },
+        {
+          "title": "中 로봇 수출 성장세 심상찮다…장쑤성에서만 올해 75%↑",
+          "summary": "자체 기술 개발을 통해 로봇 핵심 알고리즘 과 소프트웨어 및 하드웨어 기술을 확보한 것이 주요 경쟁력으로 평가받는다. 난퉁(南通) 소재 이리타이커지(意利太科技)는 10만4900위안(약 2000만원) 규모의 로봇팔을 지난...",
+          "link": "https://www.irobotnews.com/news/articleView.html?idxno=42742",
+          "pubDate": "Sat, 11 Oct 2025 18:10:00 +0900"
+        },
+        {
+          "title": "[Opinion] 가을에 관한 소고(小考) [문화 전반]",
+          "summary": "그의 음악을 듣게 된 것은 단순히 음악 앱의 알고리즘 추천 때문이었는데, 처음 듣고 독창성에 충격을 받아서 전곡을 찾아 듣게 되었다. 재즈적인 요소가 느껴지기도 하지만, 결코 한 장르로 국한할 수 없는 것이 매력이다....",
+          "link": "https://www.artinsight.co.kr/news/view.php?no=77852",
+          "pubDate": "Sat, 11 Oct 2025 17:44:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Financial Stocks",
-      "term_ko": "금융주"
+      "term": "unicorn",
+      "term_ko": "유니콘",
+      "significance_score": 138541,
+      "mentions": 228932,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "유니콘",
+        "total_results": 228932,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 981.67,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:07 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9C%A0%EB%8B%88%EC%BD%98",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9C%A0%EB%8B%88%EC%BD%98",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9C%A0%EB%8B%88%EC%BD%98"
+      },
+      "top_headlines": [
+        {
+          "title": "'제10회 대전혁신기술교류회' 10월 14일 개최… 국방·로봇 산업 동향 논...",
+          "summary": "대전시가 오는 10월 14일 신세계 엑스포타워 유니콘 라운지에서 '제10회 대전혁신기술교류회(DITEC)'를 개최한다고 밝혔다. 이번 교류회는 'Defense & Robotics, 대전이 주도하는 국방·로봇 기술혁신'이라는 주제로 대전시 6대...",
+          "link": "https://www.mtnews.net/news/articleView.html?idxno=22860",
+          "pubDate": "Sat, 11 Oct 2025 11:18:00 +0900"
+        },
+        {
+          "title": "[굿모닝 예향] 디지털헬스케어 ‘눔’ 이사회 의장, 정세주",
+          "summary": "아무런 연고도 없는 이국땅에서 유니콘 기업(기업가치 10억 달러 이상 비상장사)을 세운 ‘아메리칸 드림’... 세계적인 유니콘 기업으로 성공하기까지 주변의 도움을 받은 만큼 자신도 사회에 보답하는 ‘선한 영향력’...",
+          "link": "http://www.kwangju.co.kr/article.php?aid=1760148000790297295",
+          "pubDate": "Sat, 11 Oct 2025 11:02:00 +0900"
+        },
+        {
+          "title": "\"찌르고 킁킁\" 반려견 후각으로 암 찾는 스타트업…美서 뭉칫돈",
+          "summary": "것이 목표\"라며 \"전쟁 지역, 난민캠프, 기후재난 지역 등 의료 사각지대에서도 하이디를 통해 더 많은 환자를 돌보고, 더 나은 의료 결과를 만들 수 있다\"고 말했다. [머니투데이 스타트업 미디어 플랫폼 유니콘 팩토리]",
+          "link": "https://www.mt.co.kr/future/2025/10/11/2025101014591397293",
+          "pubDate": "Sat, 11 Oct 2025 10:00:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Capital Erosion",
-      "term_ko": "자본잠식"
+      "term": "Editing principles",
+      "term_ko": "편집 원칙",
+      "significance_score": 67959,
+      "mentions": 111208,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "편집 원칙",
+        "total_results": 111208,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1034.52,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:23 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%8E%B8%EC%A7%91%20%EC%9B%90%EC%B9%99",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%8E%B8%EC%A7%91%20%EC%9B%90%EC%B9%99",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%8E%B8%EC%A7%91%20%EC%9B%90%EC%B9%99"
+      },
+      "top_headlines": [
+        {
+          "title": "'캄보디아 대학생' 국내 유인책 검거...외교부 \"무대응, 사실과 달라\"",
+          "summary": "신고 원칙 '은 대사관 자체 방침이 아니라 현지 경찰의 공식 요구라고 해명했습니다. 정부는 유가족에게도... 당분간 '캄보디아 공포'는 쉽게 가라앉지 않을 전망입니다. YTN 이광연입니다. 영상 편집 :박정란 디자인:김진호",
+          "link": "https://www.ytn.co.kr/_ln/0103_202510111834361107",
+          "pubDate": "Sat, 11 Oct 2025 18:34:00 +0900"
+        },
+        {
+          "title": "핵연료 가격의 불안정성과 한국의 에너지 안보를 위한 다자적 협력 모델...",
+          "summary": "운영 원칙 을 중심으로 협력적인 접근 방식을 취하고 있음. - 유렌코는 블랙박스 모델을 통해 민감한 기술... [세종정책브리프 2025-25]​ <2025.10.10.>에 실린 것으로 연구소의 동의를 얻어 게재합니다. < 편집 자>​​ 피터 워드",
+          "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=research&wr_id=11159",
+          "pubDate": "Sat, 11 Oct 2025 09:10:00 +0900"
+        },
+        {
+          "title": "'작동하는 보수'의 출현: 다카이치 총리 시대의 일본을 읽는 법",
+          "summary": "왕통의 원칙 훼손으로 읽는 경향이 뚜렷하다. 이시바가 ‘조심스러운 전진’을 말할 때 그는 ‘질서의 유지’... 이제 일본 사회가 스스로 증명해야 할 과제다. 편집 : 꾸물마빡 디자인 : 꾸물기사 : 임상훈 인문결연구소 소장",
+          "link": "http://www.ddanzi.com/861498385",
+          "pubDate": "Sat, 11 Oct 2025 08:22:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Chief of Investigation",
-      "term_ko": "소부장"
+      "term": "bear market",
+      "term_ko": "하락장",
+      "significance_score": 40253,
+      "mentions": 64701,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "하락장",
+        "total_results": 64701,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1232.76,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:13 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%98%EB%9D%BD%EC%9E%A5",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%95%98%EB%9D%BD%EC%9E%A5",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%95%98%EB%9D%BD%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "이더리움($ETH), 해커 매도 vs 고래 매수…1조 원대 자금 이동 속 극단적...",
+          "summary": "이와는 대조적으로, 고래 투자자들은 하락장 을 매수 기회로 삼았다. 룩온체인이 포착한 정보에 따르면... 이 하락장 이 단순한 공포 매도 이상의 시사점을 담고 있음을 말해주고 있다. 시장이 흔들릴 때 누가...",
+          "link": "https://www.tokenpost.kr/news/cryptocurrency/293481",
+          "pubDate": "Sat, 11 Oct 2025 20:16:00 +0900"
+        },
+        {
+          "title": "비트코인 하루 만에 17% 폭락…암호화폐 시총 1,250조 원 증발",
+          "summary": "이번 하락장 은 지난 금요일 밤에서 토요일 오전 사이 급격히 진행됐다. 비트코인은 일요일 12만 4,000달러(약 1억 7,236만 원), 월요일 12만 6,000달러(약 1억 7,514만 원)까지 올라 사상 최고가를 기록한 뒤 점진적으로...",
+          "link": "https://www.tokenpost.kr/news/cryptocurrency/293474",
+          "pubDate": "Sat, 11 Oct 2025 19:56:00 +0900"
+        },
+        {
+          "title": "라이트코인, 22% 폭락…지금이 매수 기회일까, 추가 하락일까",
+          "summary": "온체인 데이터는 투자자들이 하락장 을 매수 기회로 보고 있음을 보여준다. 코인글래스(CoinGlass) 자료에 따르면 지난 24시간 동안 거래소에서 약 1,058만 달러 규모의 LTC가 순유출되며 매집 조짐이 확인됐다. 또한...",
+          "link": "http://coinreaders.com/191805",
+          "pubDate": "Sat, 11 Oct 2025 18:30:00 +0900"
+        }
+      ]
     },
     {
-      "term": "House Sale",
-      "term_ko": "주택판매"
+      "term": "income statement",
+      "term_ko": "손익계산서",
+      "significance_score": 15630,
+      "mentions": 25563,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "손익계산서",
+        "total_results": 25563,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 92.16,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:14 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%86%90%EC%9D%B5%EA%B3%84%EC%82%B0%EC%84%9C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%86%90%EC%9D%B5%EA%B3%84%EC%82%B0%EC%84%9C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%86%90%EC%9D%B5%EA%B3%84%EC%82%B0%EC%84%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "SSG만 웃는다? 삼성도 꿀맛 휴식…하루 밀린 준PO, 양 팀 손익 계산은",
+          "summary": "우천 취소의 ' 손익계산서 '는 순연된 2차전의 결과로 완성된다. 현재까지는 양 팀 모두 나쁘지 않은 상황이지만, 2차전의 승패가 결정된 이후론 희비가 크게 엇갈릴 수도 있다.",
+          "link": "https://www.news1.kr/sports/baseball/5937506",
+          "pubDate": "Sat, 11 Oct 2025 06:00:00 +0900"
+        },
+        {
+          "title": "기업회계 위주의 주관사 회계시험, 아파트 회계 중심으로 개선해야",
+          "summary": "공동주택 회계는 관리비 부과·징수, 장기수선충당금 적립, 예치금과 잡수입 처리 등을 다루지만 시험은 기업회계 기준 분개, 손익계산서 , 원가회계 등 문제가 다수다. 지난 6월 28일 치러진 제28회 주택관리사보...",
+          "link": "http://www.aptn.co.kr/news/articleView.html?idxno=110262",
+          "pubDate": "Fri, 10 Oct 2025 09:22:00 +0900"
+        },
+        {
+          "title": "[Y피플] 예능의 바다로 간 장원영, 손익 계산서 엔 '순이익'",
+          "summary": "이처럼 예능의 바다에 과감하게 다이빙을 한 장원영이 손에 쥔 손익계산서 는 아직까지 '순이익'이다. 최근의 유튜브 예능 출연으로 브랜드 가치 상승이라는 실질적 이익을 얻었고, '아이브' 장원영이 아닌 '자연인...",
+          "link": "https://star.ytn.co.kr/_sn/0117_202510081000016646",
+          "pubDate": "Wed, 08 Oct 2025 10:00:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Default Risk",
-      "term_ko": "부도위험"
+      "term": "Notifications\nShortcuts",
+      "term_ko": "알림\n바로가기",
+      "significance_score": 10783,
+      "mentions": 17639,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "알림\n바로가기",
+        "total_results": 17639,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:06 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%8C%EB%A6%BC%0A%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%95%8C%EB%A6%BC%0A%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%95%8C%EB%A6%BC%0A%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "커져가는 스미싱 공포…'모니터링·인증제'로 본격 대응",
+          "summary": "정부부처가 지난달 26일 국정자원 화재 이후 스미싱 피해를 사전 예방하기 위해 정부는 정부시스템 장애 관련 안내 알림 에서 '인터넷 주소 바로가기 (URL)'가 포함된 문자 및 사회관계망서비스(SNS) 안내문자를 일절 발송하지...",
+          "link": "https://www.asiatoday.co.kr/view.php?key=20251002010001173",
+          "pubDate": "Mon, 06 Oct 2025 14:02:00 +0900"
+        },
+        {
+          "title": "\"AI가 답이다\"…식품업계, AI 도입 가속화",
+          "summary": "정보 알림 앱 'H-카페테리아'로 혼잡도 현황을 알려주는 서비스다. 특히, 5개 이상 복수 코너를 운영하는... 및 바로가기 링크 제공해 답변을 고도화할 예정이다. CJ제일제당 관계자는 \"향후 개인 맞춤형 큐레이션을 더욱...",
+          "link": "https://www.newspim.com/news/view/20251001001053",
+          "pubDate": "Mon, 06 Oct 2025 08:20:00 +0900"
+        },
+        {
+          "title": "터치 한 번이면 투자 완성... 키움증권, '영웅문S#' 간편모드 전격 도입...",
+          "summary": "투자 초보자들이 자주 겪는 불편함을 줄이기 위해 자주 쓰는 기능 바로가기 , 테마별 관심종목, 간단주문 창... 키움증권은 AI 리포트 추천, 자동 리밸런싱, 종목 알림 서비스 등 다양한 지능형 기능을 단계적으로 적용할...",
+          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=382982",
+          "pubDate": "Sun, 05 Oct 2025 12:28:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Otc",
-      "term_ko": "Otc"
+      "term": "vega",
+      "term_ko": "",
+      "significance_score": 5795,
+      "mentions": 9117,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "vega",
+        "total_results": 9117,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 124.93,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:19 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=vega",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=vega",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=vega"
+      },
+      "top_headlines": [
+        {
+          "title": "These Students Are Scared. Friends and Teachers Are Their Protectors.",
+          "summary": "Norma Vega , the principal of Ellis Preparatory Academy, whose student Dylan Lopez Contreras was... Vega said that the city’s outpouring of support for him and other young migrants reminded her...",
+          "link": "https://www.nytimes.com/2025/10/11/nyregion/schools-immigrant-children-deportation.html?partner=naver",
+          "pubDate": "Sat, 11 Oct 2025 16:02:00 +0900"
+        },
+        {
+          "title": "팬텍, 美 ITC 특허침해 조사서 HMD 제소 취하",
+          "summary": "팬텍은 1991년 설립된 국내 휴대폰 제조사로, '베가( VEGA )'와 '스카이(SKY)' 브랜드로 한때 삼성·LG에 이어 국내 3위 휴대폰 업체로 성장했다. 그러나 스마트폰 시장이 삼성과 애플 중심의 과점 체제로 재편되면서...",
+          "link": "https://www.kpinews.kr/newsView/1065569006610031",
+          "pubDate": "Fri, 10 Oct 2025 08:29:00 +0900"
+        },
+        {
+          "title": "스타버스트, AI 에이전트 위한 차세대 데이터 플랫폼 공개… '데이터 이...",
+          "summary": "제품 마케팅 디렉터 네이선 베가(Nathan Vega )는 “기업 다수가 데이터 파편화와 거버넌스 결여로 AI 도입에 어려움을 겪고 있다”며 “스타버스트 플랫폼은 구조화된 데이터와 비정형 데이터를 통합 분석할 수 있는...",
+          "link": "https://www.tokenpost.kr/news/ai/292825",
+          "pubDate": "Thu, 09 Oct 2025 21:14:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Cds",
-      "term_ko": "Cds"
+      "term": "stoploss",
+      "term_ko": "스톱로스",
+      "significance_score": 5575,
+      "mentions": 8558,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "stoploss",
+        "total_results": 8558,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 240.57,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:21 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=stoploss",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=stoploss",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=stoploss"
+      },
+      "top_headlines": [
+        {
+          "title": "하루 만에 42% 급락한 암호화폐(코인) 리플, 도대체 무슨 일이 있었나",
+          "summary": "코인피디아 등에 따르면 이러한 연속적인 물량 출회는 거래소 유동성을 압박하며 일련의 자동 손절매( Stop - loss ) 발동을 촉발시켰다. 결과적으로 24시간 만에 XRP 관련 파생상품 거래 청산 규모가 7억 9900만 달러에...",
+          "link": "https://www.wikitree.co.kr/articles/1087246",
+          "pubDate": "Sat, 11 Oct 2025 19:18:00 +0900"
+        },
+        {
+          "title": "María Corina Machado, Venezuela Opposition Leader, Is Awarded Nobel Peac...",
+          "summary": "to stop the flow of illegal drug income to the regime,” Ms. Machado told the BBC last week.... the loss of political freedoms. Ms. Machado and her allies sought to show the election had been...",
+          "link": "https://www.nytimes.com/2025/10/10/world/americas/machado-venezuela-nobel-peace-prize.html?partner=naver",
+          "pubDate": "Sat, 11 Oct 2025 05:06:00 +0900"
+        },
+        {
+          "title": "The Most Common Signs of a Heart Attack",
+          "summary": "All senses decline with age, but taste loss is surprisingly common. One study estimated that... Can I Stop It? The Week in Well Here are some stories you don’t want to miss: Some parents have...",
+          "link": "https://www.nytimes.com/2025/10/10/well/common-signs-heart-attack.html?partner=naver",
+          "pubDate": "Fri, 10 Oct 2025 18:05:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Defi",
-      "term_ko": "디파이"
+      "term": "bitcoinetf",
+      "term_ko": "비트코인 에프",
+      "significance_score": 4850,
+      "mentions": 5849,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "bitcoinetf",
+        "total_results": 5849,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1140.94,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:10 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=bitcoinetf",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=bitcoinetf",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=bitcoinetf"
+      },
+      "top_headlines": [
+        {
+          "title": "비트코인 다음은 솔라나·XRP...암호화폐 자금 회전, 판도 바뀐다",
+          "summary": "금과 비트코인( Bitcoin , BTC)이 시장의 중심 흐름을 주도하는 가운데, 알트코인 대표 주자로 거론되는 두... 솔라나는 현재 이더리움 대비 성장률이 30% 높아 ETF 승인 기대감도 커지고 있다. 분석에 따르면 솔라나는 단기...",
+          "link": "http://coinreaders.com/191809",
+          "pubDate": "Sat, 11 Oct 2025 19:02:00 +0900"
+        },
+        {
+          "title": "관세 폭탄 한 방에 4,100억 달러 증발…암호화폐 시장, 어디로 갈까?",
+          "summary": "비트코인( Bitcoin , BTC)은 8% 넘게 하락해 11만 1,208달러까지 밀렸고, 이더리움(Ethereum, ETH) 역시 13% 급락해 3... 여기에 미국 증권거래위원회(SEC)가 솔라나와 엑스알피 등 현물 ETF 승인 결정을 정부 셧다운을 이유로...",
+          "link": "http://coinreaders.com/191807",
+          "pubDate": "Sat, 11 Oct 2025 18:34:00 +0900"
+        },
+        {
+          "title": "미·중 관세 합의 가능성 78%…코인 시장, 조정보다 반등?",
+          "summary": "10월 11일(현지시간) 코인마켓캡 데이터에 따르면 비트코인( Bitcoin , BTC)은 11만 2,512달러로 전일 대비 7.51... ETF 자금 유입세도 여전히 완전히 끊기지 않았다는 점 역시 긍정적인 요인으로 꼽힌다. 일부...",
+          "link": "http://coinreaders.com/191793",
+          "pubDate": "Sat, 11 Oct 2025 15:44:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Blockchain",
-      "term_ko": "블록체인"
+      "term": "msciworld",
+      "term_ko": "",
+      "significance_score": 2850,
+      "mentions": 4321,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "msciworld",
+        "total_results": 4321,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 57.29,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:20 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=msciworld",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=msciworld",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=msciworld"
+      },
+      "top_headlines": [
+        {
+          "title": "베트남증시, FTSE러셀 '프런티어→신흥시장' 승격…내년 4월부터",
+          "summary": "한국은 예정대로 내년 4월부터 세계국채지수(WGBI· World Government Bond Index)에 편입된다. 10일 외신에... 베트남정부는 올해 안에 FTSE 러셀의 요건을 충족하고, 2030년까지 MSCI 신흥시장 지위 획득을 목표로 하고...",
+          "link": "https://www.insidevina.com/news/articleView.html?idxno=41109",
+          "pubDate": "Fri, 10 Oct 2025 11:40:00 +0900"
+        },
+        {
+          "title": "[IMF연차총회②] 주가 급등·금(金) 비중 최고·부채 100% 시대…한·미...",
+          "summary": "8일(현지시간)열린 2025년 IMF 연차총회(Annual Meetings)에서 크리스탈리나 게오르기에바 IMF 총재는 'GLOBAL EQUITY PRICES ARE SURGING(세계 주가 급등)'이라는 슬라이드를 통해 \"미국 S&P500지수가 MSCI World 를 장기적으로 앞서며...",
+          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=46957",
+          "pubDate": "Thu, 09 Oct 2025 16:50:00 +0900"
+        },
+        {
+          "title": "FTSE 러셀 \"韓, WGBI 편입 내년 4월 확정 재확인…국채 시장 신뢰↑\"(종합...",
+          "summary": "한국 국채의 '세계국채지수(WGBI· World government Bond Index)' 편입이 내년 4월로 재차 확인됐다. 기획재정부는... 모건스탠리캐피털인터내셔널( MSCI ), 크리스퍼테라퓨틱스(CRSP)와 함께 WGBI 등 세계 최대 시장지수...",
+          "link": "https://www.newsis.com/view/NISX20251008_0003356563",
+          "pubDate": "Wed, 08 Oct 2025 07:21:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Delta",
-      "term_ko": "델타"
+      "term": "lockup",
+      "term_ko": "잠금",
+      "significance_score": 607,
+      "mentions": 644,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "lockup",
+        "total_results": 644,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 20.23,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:11 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=lockup",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=lockup",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=lockup"
+      },
+      "top_headlines": [
+        {
+          "title": "Amina Bank Achieves First Global Regulation-Approved Institutional POL St...",
+          "summary": "Risk Factors and Investor Eligibility: AMINA's comprehensive risk disclosure framework addresses regulatory uncertainty, lockup periods, market risks, and slashing risks through institutional...",
+          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=146407",
+          "pubDate": "Thu, 09 Oct 2025 17:50:00 +0900"
+        },
+        {
+          "title": "What Fuels Revolution, Social Embarrassment and Public Acclaim? It’s Co...",
+          "summary": "The scenario is this: Two crooks, partners in crime, have been apprehended and sentenced to six months in the lockup . But the prosecutor knows that another, bigger crime has also been committed...",
+          "link": "https://www.nytimes.com/2025/09/22/books/review/when-everyone-knows-that-everyone-knows-steven-pinker.html?partner=naver",
+          "pubDate": "Mon, 22 Sep 2025 18:02:00 +0900"
+        },
+        {
+          "title": "He Raised Three Marines. His Wife Is American. The U.S. Wants to Deport H...",
+          "summary": "They arrived at the lockup , which can hold nearly 2,000 immigrants, before sunrise and waited... Barranco had his hearing after 19 days in lockup . The government asked the judge to hold him...",
+          "link": "https://www.nytimes.com/2025/09/17/us/narciso-barranco-ice-deport-marines-trump.html?partner=naver",
+          "pubDate": "Wed, 17 Sep 2025 18:02:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Fsb",
-      "term_ko": "Fsb"
+      "term": "fibonacci",
+      "term_ko": "피보나치",
+      "significance_score": 435,
+      "mentions": 376,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "fibonacci",
+        "total_results": 376,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 9.59,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:22 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=fibonacci",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=fibonacci",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=fibonacci"
+      },
+      "top_headlines": [
+        {
+          "title": "비트코인 신고가에도 XRP는 침체… \"피보나치로 본 상승 여력 충분\"",
+          "summary": "그는 기술적 분석 도구인 피보나치 확장( Fibonacci Extension) 수준을 사용하여 향후 XRP가 도달할 수 있는 세 가지 핵심 가격대를 제시하며, 현재의 부진을 딛고 상승할 가능성을 시사했다. XRP는 지난 7월 최고치인 3.66달러를...",
+          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=383336",
+          "pubDate": "Thu, 09 Oct 2025 07:12:00 +0900"
+        },
+        {
+          "title": "\"데자뷔처럼 똑같다\" XRP 차트, 과거 사이클 완벽 재현",
+          "summary": "XRP는 현재 피보나치( Fibonacci ) 중간 밴드 부근에서 거래되고 있으며, 이 구간은 과거 두 차례 강세장에서 모두 대규모 상승 전환점으로 작용했다. 특히 RSI(상대강도지수)가 70 미만으로 유지되고 있어 과거 급등...",
+          "link": "http://coinreaders.com/190891",
+          "pubDate": "Tue, 07 Oct 2025 15:16:00 +0900"
+        },
+        {
+          "title": "비트코인, 내년 1분기에 16만 달러 간다?",
+          "summary": "현재 상승세는 피보나치( Fibonacci ) 확장 2.0 구간을 따라가고 있으며, 과거 시장 사이클에서 이 지점은 주요 고점 형성 시기와 일치했다. 이에 따라 비트코인은 2026년 1분기, 약 16만 달러 부근에서 정점을 찍을...",
+          "link": "http://coinreaders.com/190861",
+          "pubDate": "Tue, 07 Oct 2025 09:28:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Defensive Stock",
-      "term_ko": "방어주"
+      "term": "[MLB] Seattle beats Detroit in 15 extra innings to advance to ALCS",
+      "term_ko": "[MLB] 시애틀, 연장 15회 혈투끝 디트로이트 꺾고 ALCS 진출",
+      "significance_score": 76,
+      "mentions": 1,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "[MLB] 시애틀, 연장 15회 혈투끝 디트로이트 꺾고 ALCS 진출",
+        "total_results": 1,
+        "returned_results": 1,
+        "display_count": 1,
+        "recency_weight": 65.19,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:18 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%5BMLB%5D%20%EC%8B%9C%EC%95%A0%ED%8B%80%2C%20%EC%97%B0%EC%9E%A5%2015%ED%9A%8C%20%ED%98%88%ED%88%AC%EB%81%9D%20%EB%94%94%ED%8A%B8%EB%A1%9C%EC%9D%B4%ED%8A%B8%20%EA%BA%BE%EA%B3%A0%20ALCS%20%EC%A7%84%EC%B6%9C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%5BMLB%5D%20%EC%8B%9C%EC%95%A0%ED%8B%80%2C%20%EC%97%B0%EC%9E%A5%2015%ED%9A%8C%20%ED%98%88%ED%88%AC%EB%81%9D%20%EB%94%94%ED%8A%B8%EB%A1%9C%EC%9D%B4%ED%8A%B8%20%EA%BA%BE%EA%B3%A0%20ALCS%20%EC%A7%84%EC%B6%9C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%5BMLB%5D%20%EC%8B%9C%EC%95%A0%ED%8B%80%2C%20%EC%97%B0%EC%9E%A5%2015%ED%9A%8C%20%ED%98%88%ED%88%AC%EB%81%9D%20%EB%94%94%ED%8A%B8%EB%A1%9C%EC%9D%B4%ED%8A%B8%20%EA%BA%BE%EA%B3%A0%20ALCS%20%EC%A7%84%EC%B6%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "[MLB] 시애틀, 연장 15회 혈투끝 디트로이트 꺾고 ALCS 진출",
+          "summary": "걸쳐 연장 15회 혈투를 펼친 끝에 아메리칸리그 챔피언십시리즈( ALCS ) 무대에 올랐다. 시애틀 은 11일... 시애틀 은 13일부터 뉴욕 양키스를 꺾고 올라온 토론토 블루제이스와 월드시리즈 진출 을 다툰다. 시애틀 은...",
+          "link": "https://www.newspim.com/news/view/20251011000065",
+          "pubDate": "Sat, 11 Oct 2025 14:48:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Covered Call",
-      "term_ko": "커버드콜"
+      "term": "U.S. shutdown enters 10th day with no breakthrough...White House to start furloughing government workers (roundup)",
+      "term_ko": "돌파구 못 찾는 美 셧다운 열흘째…백악관, 공무원 해고 돌입(종합)",
+      "significance_score": 69,
+      "mentions": 1,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "돌파구 못 찾는 美 셧다운 열흘째…백악관, 공무원 해고 돌입(종합)",
+        "total_results": 1,
+        "returned_results": 1,
+        "display_count": 1,
+        "recency_weight": 58.1,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:12 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EB%8F%8C%ED%8C%8C%EA%B5%AC%20%EB%AA%BB%20%EC%B0%BE%EB%8A%94%20%E7%BE%8E%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%97%B4%ED%9D%98%EC%A7%B8%E2%80%A6%EB%B0%B1%EC%95%85%EA%B4%80%2C%20%EA%B3%B5%EB%AC%B4%EC%9B%90%20%ED%95%B4%EA%B3%A0%20%EB%8F%8C%EC%9E%85(%EC%A2%85%ED%95%A9)",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%8F%8C%ED%8C%8C%EA%B5%AC%20%EB%AA%BB%20%EC%B0%BE%EB%8A%94%20%E7%BE%8E%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%97%B4%ED%9D%98%EC%A7%B8%E2%80%A6%EB%B0%B1%EC%95%85%EA%B4%80%2C%20%EA%B3%B5%EB%AC%B4%EC%9B%90%20%ED%95%B4%EA%B3%A0%20%EB%8F%8C%EC%9E%85(%EC%A2%85%ED%95%A9)",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%8F%8C%ED%8C%8C%EA%B5%AC%20%EB%AA%BB%20%EC%B0%BE%EB%8A%94%20%E7%BE%8E%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%97%B4%ED%9D%98%EC%A7%B8%E2%80%A6%EB%B0%B1%EC%95%85%EA%B4%80%2C%20%EA%B3%B5%EB%AC%B4%EC%9B%90%20%ED%95%B4%EA%B3%A0%20%EB%8F%8C%EC%9E%85(%EC%A2%85%ED%95%A9)"
+      },
+      "top_headlines": [
+        {
+          "title": "돌파구 못 찾는 美 셧다운 열흘째…백악관, 공무원 해고 돌입(종합)",
+          "summary": "(현지시간) 열흘째 에 접어든 가운데, 백악관 이 연방정부 공무원 해고 절차에 돌입 했다. 셧다운 원인이 된 임시예산안 처리를 놓고 공화당과 민주당이 좀처럼 입장차를 좁히지 못하면서 도널드 트럼프 대통령이 ' 공무원 ...",
+          "link": "https://www.yna.co.kr/view/AKR20251011004751071?input=1195m",
+          "pubDate": "Sat, 11 Oct 2025 07:42:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Nikkei225",
-      "term_ko": "Nikkei225"
+      "term": "hotwallet",
+      "term_ko": "핫월렛",
+      "significance_score": 64,
+      "mentions": 6,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "hotwallet",
+        "total_results": 6,
+        "returned_results": 6,
+        "display_count": 6,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:09 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=hotwallet",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=hotwallet",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=hotwallet"
+      },
+      "top_headlines": [
+        {
+          "title": "가상자산 거래소 지닥, 180억여원 해킹 사고 후폭풍... 현재 진행상황은...",
+          "summary": "핫월렛( HotWallet )이 해킹됐다. 이번 해킹 사고로 지닥이 탈취당한 가상자산은 전체 보관 자산의 23%에... 핫월렛보다 보안성 높은 콜드월렛, 어떤 특징 있을까암호화폐 지갑은 크게 핫월렛( HotWallet )과 콜드월렛(ColdWallet)...",
+          "link": "http://www.boannews.com/media/view.asp?idx=117274&kind=",
+          "pubDate": "Thu, 20 Apr 2023 10:44:00 +0900"
+        },
+        {
+          "title": "안랩, 암호화폐 지갑 주소 변경하는 악성코드 주의 당부",
+          "summary": "보안성 강화를 위해 업계에서는 거래소 자산의 70% 이상을 핫월렛( HotWallet )에서 콜드월렛(cold wallet)으로 보관도록 권고하고 있다. 안랩 이재진 연구원은 \"최근 암호화폐 가격이 상승하면서 이번 암호화폐 탈취 시도...",
+          "link": "http://www.fintechpost.co.kr/news/articleView.html?idxno=117122",
+          "pubDate": "Tue, 18 Aug 2020 00:21:00 +0900"
+        },
+        {
+          "title": "생체인식+쿨월렛 암호화폐거래소 '비트팍스' 떴다",
+          "summary": "쿨월렛(CoolWallet) 시스템은 핫월렛( HotWallet )시스템 보안상의 단점을 보완한 시스템으로 거래 발생 시에만 온라인 상태가 되고 평상시에는 인터넷과 연결이 단절되기 때문에 보안성이 뛰어난 전자지갑 시스템이다....",
+          "link": "http://www.gametoc.co.kr/news/articleView.html?idxno=49547",
+          "pubDate": "Wed, 24 Oct 2018 06:40:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Fundingrate",
-      "term_ko": "펀딩 비율"
+      "term": "'Premium strategy' worked...US Delta Air Lines posts earnings, share price 'mixed' 이데일리 5 hours ago",
+      "term_ko": "‘프리미엄 전략’ 통했다…美 델타항공, 실적·주가 ‘쌍끌이’ 이데일리 5시간 전",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "‘프리미엄 전략’ 통했다…美 델타항공, 실적·주가 ‘쌍끌이’ 이데일리 5시간 전",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:08 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%E2%80%98%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EC%A0%84%EB%9E%B5%E2%80%99%20%ED%86%B5%ED%96%88%EB%8B%A4%E2%80%A6%E7%BE%8E%20%EB%8D%B8%ED%83%80%ED%95%AD%EA%B3%B5%2C%20%EC%8B%A4%EC%A0%81%C2%B7%EC%A3%BC%EA%B0%80%20%E2%80%98%EC%8C%8D%EB%81%8C%EC%9D%B4%E2%80%99%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%205%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%E2%80%98%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EC%A0%84%EB%9E%B5%E2%80%99%20%ED%86%B5%ED%96%88%EB%8B%A4%E2%80%A6%E7%BE%8E%20%EB%8D%B8%ED%83%80%ED%95%AD%EA%B3%B5%2C%20%EC%8B%A4%EC%A0%81%C2%B7%EC%A3%BC%EA%B0%80%20%E2%80%98%EC%8C%8D%EB%81%8C%EC%9D%B4%E2%80%99%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%205%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%E2%80%98%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EC%A0%84%EB%9E%B5%E2%80%99%20%ED%86%B5%ED%96%88%EB%8B%A4%E2%80%A6%E7%BE%8E%20%EB%8D%B8%ED%83%80%ED%95%AD%EA%B3%B5%2C%20%EC%8B%A4%EC%A0%81%C2%B7%EC%A3%BC%EA%B0%80%20%E2%80%98%EC%8C%8D%EB%81%8C%EC%9D%B4%E2%80%99%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%205%EC%8B%9C%EA%B0%84%20%EC%A0%84"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Insurtech",
-      "term_ko": "인슈어테크"
+      "term": "bestexecution",
+      "term_ko": "최고의 실행",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "bestexecution",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:10 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=bestexecution",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=bestexecution",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=bestexecution"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Grossdomesticproduct",
-      "term_ko": "국내총생산"
+      "term": "interestratecut",
+      "term_ko": "",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "interestratecut",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:11 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=interestratecut",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=interestratecut",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=interestratecut"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Digitalbanking",
-      "term_ko": "디지털 뱅킹"
+      "term": "servicesindex",
+      "term_ko": "서비스 인덱스",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "servicesindex",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:13 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=servicesindex",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=servicesindex",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=servicesindex"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Valuestock",
-      "term_ko": "가치주"
+      "term": "Having two or more pension accounts can reduce taxes on withdrawals WeeklyDonga 6 hours ago",
+      "term_ko": "개인연금 계좌 2개 이상이면 인출할 때 세금 줄어 이득  주간동아 6시간 전",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "개인연금 계좌 2개 이상이면 인출할 때 세금 줄어 이득  주간동아 6시간 전",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:15 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%9C%EC%9D%B8%EC%97%B0%EA%B8%88%20%EA%B3%84%EC%A2%8C%202%EA%B0%9C%20%EC%9D%B4%EC%83%81%EC%9D%B4%EB%A9%B4%20%EC%9D%B8%EC%B6%9C%ED%95%A0%20%EB%95%8C%20%EC%84%B8%EA%B8%88%20%EC%A4%84%EC%96%B4%20%EC%9D%B4%EB%93%9D%20%20%EC%A3%BC%EA%B0%84%EB%8F%99%EC%95%84%206%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%9C%EC%9D%B8%EC%97%B0%EA%B8%88%20%EA%B3%84%EC%A2%8C%202%EA%B0%9C%20%EC%9D%B4%EC%83%81%EC%9D%B4%EB%A9%B4%20%EC%9D%B8%EC%B6%9C%ED%95%A0%20%EB%95%8C%20%EC%84%B8%EA%B8%88%20%EC%A4%84%EC%96%B4%20%EC%9D%B4%EB%93%9D%20%20%EC%A3%BC%EA%B0%84%EB%8F%99%EC%95%84%206%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%9C%EC%9D%B8%EC%97%B0%EA%B8%88%20%EA%B3%84%EC%A2%8C%202%EA%B0%9C%20%EC%9D%B4%EC%83%81%EC%9D%B4%EB%A9%B4%20%EC%9D%B8%EC%B6%9C%ED%95%A0%20%EB%95%8C%20%EC%84%B8%EA%B8%88%20%EC%A4%84%EC%96%B4%20%EC%9D%B4%EB%93%9D%20%20%EC%A3%BC%EA%B0%84%EB%8F%99%EC%95%84%206%EC%8B%9C%EA%B0%84%20%EC%A0%84"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Batteryrecycling",
-      "term_ko": "배터리 재활용"
+      "term": "putcallratio",
+      "term_ko": "풋콜 비율",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "putcallratio",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:15 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=putcallratio",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=putcallratio",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=putcallratio"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Treasurymanagement",
-      "term_ko": "재무 관리"
+      "term": "Video [Lepo] Sweden, a cold country, is an emerging wine producer... and breaks the 'alcohol taboo' JTBC 19 hours ago",
+      "term_ko": "동영상 [르포] 추운 나라 스웨덴이 신흥 와인 산지로…'술의 금기'도 깼다 JTBC 19시간 전",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "동영상 [르포] 추운 나라 스웨덴이 신흥 와인 산지로…'술의 금기'도 깼다 JTBC 19시간 전",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:16 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EB%8F%99%EC%98%81%EC%83%81%20%5B%EB%A5%B4%ED%8F%AC%5D%20%EC%B6%94%EC%9A%B4%20%EB%82%98%EB%9D%BC%20%EC%8A%A4%EC%9B%A8%EB%8D%B4%EC%9D%B4%20%EC%8B%A0%ED%9D%A5%20%EC%99%80%EC%9D%B8%20%EC%82%B0%EC%A7%80%EB%A1%9C%E2%80%A6'%EC%88%A0%EC%9D%98%20%EA%B8%88%EA%B8%B0'%EB%8F%84%20%EA%B9%BC%EB%8B%A4%20JTBC%2019%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%8F%99%EC%98%81%EC%83%81%20%5B%EB%A5%B4%ED%8F%AC%5D%20%EC%B6%94%EC%9A%B4%20%EB%82%98%EB%9D%BC%20%EC%8A%A4%EC%9B%A8%EB%8D%B4%EC%9D%B4%20%EC%8B%A0%ED%9D%A5%20%EC%99%80%EC%9D%B8%20%EC%82%B0%EC%A7%80%EB%A1%9C%E2%80%A6'%EC%88%A0%EC%9D%98%20%EA%B8%88%EA%B8%B0'%EB%8F%84%20%EA%B9%BC%EB%8B%A4%20JTBC%2019%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%8F%99%EC%98%81%EC%83%81%20%5B%EB%A5%B4%ED%8F%AC%5D%20%EC%B6%94%EC%9A%B4%20%EB%82%98%EB%9D%BC%20%EC%8A%A4%EC%9B%A8%EB%8D%B4%EC%9D%B4%20%EC%8B%A0%ED%9D%A5%20%EC%99%80%EC%9D%B8%20%EC%82%B0%EC%A7%80%EB%A1%9C%E2%80%A6'%EC%88%A0%EC%9D%98%20%EA%B8%88%EA%B8%B0'%EB%8F%84%20%EA%B9%BC%EB%8B%A4%20JTBC%2019%EC%8B%9C%EA%B0%84%20%EC%A0%84"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Earningssurprise",
-      "term_ko": "수익 서프라이즈"
+      "term": "Heavy rains, droughts... AI protects the 'smart water management era' in rural areas 6 hours ago",
+      "term_ko": "집중호우·가뭄 잦아진 농촌… AI가 지키는 ‘스마트 물관리 시대’  중부일보 6시간 전",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "집중호우·가뭄 잦아진 농촌… AI가 지키는 ‘스마트 물관리 시대’  중부일보 6시간 전",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:17 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A7%91%EC%A4%91%ED%98%B8%EC%9A%B0%C2%B7%EA%B0%80%EB%AD%84%20%EC%9E%A6%EC%95%84%EC%A7%84%20%EB%86%8D%EC%B4%8C%E2%80%A6%20AI%EA%B0%80%20%EC%A7%80%ED%82%A4%EB%8A%94%20%E2%80%98%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EB%AC%BC%EA%B4%80%EB%A6%AC%20%EC%8B%9C%EB%8C%80%E2%80%99%20%20%EC%A4%91%EB%B6%80%EC%9D%BC%EB%B3%B4%206%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A7%91%EC%A4%91%ED%98%B8%EC%9A%B0%C2%B7%EA%B0%80%EB%AD%84%20%EC%9E%A6%EC%95%84%EC%A7%84%20%EB%86%8D%EC%B4%8C%E2%80%A6%20AI%EA%B0%80%20%EC%A7%80%ED%82%A4%EB%8A%94%20%E2%80%98%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EB%AC%BC%EA%B4%80%EB%A6%AC%20%EC%8B%9C%EB%8C%80%E2%80%99%20%20%EC%A4%91%EB%B6%80%EC%9D%BC%EB%B3%B4%206%EC%8B%9C%EA%B0%84%20%EC%A0%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A7%91%EC%A4%91%ED%98%B8%EC%9A%B0%C2%B7%EA%B0%80%EB%AD%84%20%EC%9E%A6%EC%95%84%EC%A7%84%20%EB%86%8D%EC%B4%8C%E2%80%A6%20AI%EA%B0%80%20%EC%A7%80%ED%82%A4%EB%8A%94%20%E2%80%98%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EB%AC%BC%EA%B4%80%EB%A6%AC%20%EC%8B%9C%EB%8C%80%E2%80%99%20%20%EC%A4%91%EB%B6%80%EC%9D%BC%EB%B3%B4%206%EC%8B%9C%EA%B0%84%20%EC%A0%84"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Growthstock",
-      "term_ko": "성장 재고"
+      "term": "buildingpermits",
+      "term_ko": "건물 허가",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "buildingpermits",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:19 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=buildingpermits",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=buildingpermits",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=buildingpermits"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Governmentpensionfund",
-      "term_ko": "정부 연금 기금"
+      "term": "housingstarts",
+      "term_ko": "하우징스타트",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "housingstarts",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Sat, 11 Oct 2025 21:36:20 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=housingstarts",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=housingstarts",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=housingstarts"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "Closing Price": {
-      "en": "Closing Price",
-      "ko": "종가",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "5g": {
-      "en": "5g",
-      "ko": "5g",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Fed": {
-      "en": "Fed",
-      "ko": "Fed",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Fintech": {
-      "en": "Fintech",
-      "ko": "핀테크",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Domestic Stock Market": {
-      "en": "Domestic Stock Market",
-      "ko": "국내증시",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Net Purchase of Futures": {
-      "en": "Net Purchase of Futures",
-      "ko": "선물순매수",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Financial Stocks": {
-      "en": "Financial Stocks",
-      "ko": "금융주",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Capital Erosion": {
-      "en": "Capital Erosion",
-      "ko": "자본잠식",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Chief of Investigation": {
-      "en": "Chief of Investigation",
-      "ko": "소부장",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "House Sale": {
-      "en": "House Sale",
-      "ko": "주택판매",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Default Risk": {
-      "en": "Default Risk",
-      "ko": "부도위험",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Otc": {
-      "en": "Otc",
-      "ko": "Otc",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Cds": {
-      "en": "Cds",
-      "ko": "Cds",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Defi": {
-      "en": "Defi",
-      "ko": "디파이",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Blockchain": {
-      "en": "Blockchain",
-      "ko": "블록체인",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Delta": {
-      "en": "Delta",
-      "ko": "델타",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Fsb": {
-      "en": "Fsb",
-      "ko": "Fsb",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Defensive Stock": {
-      "en": "Defensive Stock",
-      "ko": "방어주",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Covered Call": {
-      "en": "Covered Call",
-      "ko": "커버드콜",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Nikkei225": {
-      "en": "Nikkei225",
-      "ko": "Nikkei225",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Fundingrate": {
-      "en": "Fundingrate",
-      "ko": "펀딩 비율",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Insurtech": {
-      "en": "Insurtech",
-      "ko": "인슈어테크",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Grossdomesticproduct": {
-      "en": "Grossdomesticproduct",
-      "ko": "국내총생산",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Digitalbanking": {
-      "en": "Digitalbanking",
-      "ko": "디지털 뱅킹",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Valuestock": {
-      "en": "Valuestock",
-      "ko": "가치주",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Batteryrecycling": {
-      "en": "Batteryrecycling",
-      "ko": "배터리 재활용",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Treasurymanagement": {
-      "en": "Treasurymanagement",
-      "ko": "재무 관리",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Earningssurprise": {
-      "en": "Earningssurprise",
-      "ko": "수익 서프라이즈",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Growthstock": {
-      "en": "Growthstock",
-      "ko": "성장 재고",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    },
-    "Governmentpensionfund": {
-      "en": "Governmentpensionfund",
-      "ko": "정부 연금 기금",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-11T12:33:23.569Z"
-    }
+  "metadata": {
+    "collection_method": "naver_search_random_sample",
+    "sample_size": 30,
+    "generated_at": "2025-10-11T12:36:24.328Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "data/finance_keywords.json"
   }
 }
