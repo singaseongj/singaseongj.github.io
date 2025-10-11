@@ -124,16 +124,28 @@ async function loadCheerio() {
   try {
     // Try ESM import first (cheerio 1.0+)
     const cheerioModule = await import('cheerio');
-    return cheerioModule.load || cheerioModule.default?.load || cheerioModule;
+    if (cheerioModule && typeof cheerioModule.load === 'function') {
+      return cheerioModule;
+    }
+    if (cheerioModule?.default && typeof cheerioModule.default.load === 'function') {
+      return cheerioModule.default;
+    }
+    console.warn('⚠️ Cheerio module loaded but no load() function found');
   } catch (err) {
     // Fallback to CJS require
     try {
-      return require('cheerio');
+      const cheerioCjs = require('cheerio');
+      if (cheerioCjs && typeof cheerioCjs.load === 'function') {
+        return cheerioCjs;
+      }
+      console.warn('⚠️ CommonJS cheerio loaded but no load() function found');
     } catch (requireErr) {
       console.warn('⚠️ Cheerio not available, scraping disabled');
       return null;
     }
   }
+
+  return null;
 }
 
 // 📰 Multi-site scraping with corpus saving
