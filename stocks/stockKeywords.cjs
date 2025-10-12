@@ -136,6 +136,92 @@ function dedupeKeywords(rawKeywords) {
   return deduped;
 }
 
+function commonPrefixLength(a, b) {
+  const minLength = Math.min(a.length, b.length);
+  let idx = 0;
+  while (idx < minLength && a[idx] === b[idx]) {
+    idx += 1;
+  }
+  return idx;
+}
+
+function levenshteinDistance(a, b) {
+  const lenA = a.length;
+  const lenB = b.length;
+  if (lenA === 0) return lenB;
+  if (lenB === 0) return lenA;
+
+  const dp = Array.from({ length: lenA + 1 }, () => new Array(lenB + 1).fill(0));
+  for (let i = 0; i <= lenA; i += 1) dp[i][0] = i;
+  for (let j = 0; j <= lenB; j += 1) dp[0][j] = j;
+
+  for (let i = 1; i <= lenA; i += 1) {
+    for (let j = 1; j <= lenB; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost,
+      );
+    }
+  }
+
+  return dp[lenA][lenB];
+}
+
+function areStringsSimilar(a, b) {
+  const normA = normalizeForComparison(a);
+  const normB = normalizeForComparison(b);
+  if (!normA || !normB) return false;
+  if (normA === normB) return true;
+
+  if (normA.includes(normB) || normB.includes(normA)) {
+    return true;
+  }
+
+  const prefix = commonPrefixLength(normA, normB);
+  const minLength = Math.min(normA.length, normB.length);
+  if (minLength <= 2) {
+    return false;
+  }
+
+  if (prefix >= minLength - 1) {
+    return true;
+  }
+
+  const distance = levenshteinDistance(normA, normB);
+  const threshold = Math.max(1, Math.floor(minLength * 0.4));
+  if (prefix >= 2 && distance <= threshold) {
+    return true;
+  }
+
+  return false;
+}
+
+function areResultsSimilar(a, b) {
+  if (!a || !b) return false;
+  const primaryA = containsHangul(a.term_ko) ? a.term_ko : a.term;
+  const primaryB = containsHangul(b.term_ko) ? b.term_ko : b.term;
+
+  if (areStringsSimilar(primaryA, primaryB)) {
+    return true;
+  }
+
+  if (a.term && b.term && !containsHangul(a.term) && !containsHangul(b.term)) {
+    if (areStringsSimilar(a.term, b.term)) {
+      return true;
+    }
+  }
+
+  if (a.term_ko && b.term_ko) {
+    if (areStringsSimilar(a.term_ko, b.term_ko)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 function containsHangul(value) {
   return /[가-힣]/.test(String(value || ''));
 }
@@ -466,12 +552,36 @@ async function buildTags() {
   // The original random order is being overwritten here!
   evaluated.sort((a, b) => b.significance_score - a.significance_score);
 
+  const uniqueEvaluated = [];
+  const similarDiscarded = [];
+
+  for (const item of evaluated) {
+    const duplicate = uniqueEvaluated.find((existing) => areResultsSimilar(existing, item));
+    if (duplicate) {
+      similarDiscarded.push({ kept: duplicate, dropped: item });
+      continue;
+    }
+    uniqueEvaluated.push(item);
+  }
+
+  if (similarDiscarded.length) {
+    console.log(`\n🧮 Removed ${similarDiscarded.length} similar keywords after scoring.`);
+    for (const { kept, dropped } of similarDiscarded.slice(0, 5)) {
+      console.log(
+        `   ↳ Dropped "${dropped.term_ko || dropped.term}" (score ${dropped.significance_score}) in favor of "${kept.term_ko || kept.term}" (score ${kept.significance_score}).`,
+      );
+    }
+    if (similarDiscarded.length > 5) {
+      console.log(`   …and ${similarDiscarded.length - 5} more similar pairs.`);
+    }
+  }
+
   const now = new Date();
   const result = {
     date: now.toISOString().split('T')[0],
     window: WINDOW_LABEL,
-    total_phrases: evaluated.length,
-    discovered_keywords: evaluated,
+    total_phrases: uniqueEvaluated.length,
+    discovered_keywords: uniqueEvaluated,
     metadata: {
       collection_method: 'naver_search_random_sample',
       sample_size: SAMPLE_SIZE,
@@ -479,11 +589,12 @@ async function buildTags() {
       keyword_limit: SAMPLE_SIZE,
       lookback_hours: 12,
       keyword_source: path.relative(process.cwd(), FINANCE_KEYWORDS_PATH),
+      similar_keywords_removed: similarDiscarded.length,
     },
   };
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(result, null, 2));
-  console.log(`✅ Saved ${evaluated.length} keywords to ${OUTPUT_PATH}`);
+  console.log(`✅ Saved ${uniqueEvaluated.length} keywords to ${OUTPUT_PATH}`);
 }
 
 if (require.main === module) {
