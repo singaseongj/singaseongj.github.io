@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2025-10-13T21:40:02+09:00",
+  "generatedAtKST": "2025-10-14T03:27:56+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -293,6 +293,35 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
+      "name": "KB금융",
+      "ticker": "105560.KS",
+      "sector": "금융",
+      "metrics": {
+        "ret5": 2.6246719160104988,
+        "ret20": 8.110599078341014,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 55,
+        "blogs": 10,
+        "sentiment": -0.05000000000000001,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5"
+      },
+      "bullets": [
+        "News (7d): **55** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "Returns: 5d **2.6%**, 20d **8.1%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **금융**",
+        "News search: https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
       "name": "LG전자",
       "ticker": "066570.KS",
       "sector": "경기소비재",
@@ -317,35 +346,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **경기소비재**",
         "News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
-      "name": "LG화학",
-      "ticker": "051910.KS",
-      "sector": "소재",
-      "metrics": {
-        "ret5": 0.7142857142857143,
-        "ret20": null,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 5,
-        "blogs": 10,
-        "sentiment": -0.05263157894736843,
-        "momentum": "medium"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=LG%ED%99%94%ED%95%99"
-      },
-      "bullets": [
-        "News (7d): **5** (blogs: 10) — momentum: **medium**, sentiment: **slightly negative (-0.05)**",
-        "Returns: 5d **0.7%**, 20d **n/a**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **소재**",
-        "News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99"
       ]
     },
     {
@@ -419,7 +419,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 38,
+        "count": 39,
         "blogs": 10,
         "sentiment": 0.05263157894736843,
         "momentum": "very high"
@@ -428,7 +428,7 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C"
       },
       "bullets": [
-        "News (7d): **38** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
+        "News (7d): **39** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
         "Returns: 5d **-0.7%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **금융**",
@@ -1070,12 +1070,41 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
+      "name": "Insulet Corporation",
+      "ticker": "PODD",
+      "sector": "Healthcare",
+      "metrics": {
+        "ret5": 0.6801614105624167,
+        "ret20": -7.781601081840899,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Insulet%20Corporation"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **0.7%**, 20d **-7.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Healthcare**",
+        "News search: https://www.google.com/search?q=Insulet%20Corporation"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
       "name": "Jabil",
       "ticker": "JBL",
       "sector": "Technology",
       "metrics": {
-        "ret5": -4.003363155476473,
-        "ret20": -9.375872322868737,
+        "ret5": -1.075669181298037,
+        "ret20": -7.421551348375263,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1090,39 +1119,10 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-4.0%**, 20d **-9.4%**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.1%**, 20d **-7.4%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Jabil"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
-      "name": "Revvity",
-      "ticker": "RVTY",
-      "sector": "Healthcare",
-      "metrics": {
-        "ret5": -6.124403986526838,
-        "ret20": 6.540361999890075,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Revvity"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-6.1%**, 20d **6.5%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Healthcare**",
-        "News search: https://www.google.com/search?q=Revvity"
       ]
     },
     {
@@ -1132,8 +1132,8 @@
       "ticker": "TYL",
       "sector": "Technology",
       "metrics": {
-        "ret5": 0.292397909308511,
-        "ret20": -7.482706014794746,
+        "ret5": 2.864598275633569,
+        "ret20": -5.378529171139987,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1148,7 +1148,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.3%**, 20d **-7.5%**; volatility (20d): **unknown**",
+        "Returns: 5d **2.9%**, 20d **-5.4%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Tyler%20Technologies"
