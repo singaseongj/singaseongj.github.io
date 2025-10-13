@@ -1,1098 +1,439 @@
 {
+  "generatedAt": "2025-10-13T12:38:07.157Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-10-13",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "low price",
-      "term_ko": "저가",
-      "significance_score": 619735,
-      "mentions": 1030167,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "저가",
-        "total_results": 1030167,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1434.69,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:02 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A0%80%EA%B0%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A0%80%EA%B0%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A0%80%EA%B0%80"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 소형 아파트도 10억 시대...규제 풍선효과로 시장 '대표 평형' 자리...",
-          "summary": "두 감소 지역은 모두 새 아파트나 역세권 랜드마크 단지보다는 저가 단지 거래 비중이 상대적으로 높아지면서 올해 평균 가격이 낮게 나타난 것으로 분석된다. 최근 3년간 거래가격 추이를 보면 전용 59...",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=314478",
-          "pubDate": "Mon, 13 Oct 2025 15:32:00 +0900"
-        },
-        {
-          "title": "현대로템, 장중 210,000원 기록… 전일 대비 4.55% 하락",
-          "summary": "출처=현대로템 시가는 217,500원이었고, 고가는 220,000원, 저가 는 208,500원을 기록했다. 가격 변동폭은 11,500원이었다. 현재 현대로템 주가는 코스피 시장에서 시가총액 순위 24위를 차지하고 있다. 총 607...",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=456630",
-          "pubDate": "Mon, 13 Oct 2025 15:32:00 +0900"
-        },
-        {
-          "title": "초고수, 오후에도 두산에너빌 주목…삼성전자는 저가 매수 [주식 초고수...",
-          "summary": "美 빅테크 첫 가스터빈 수출한 두산에너빌 풀매수 삼성전자, 미중 갈등에 조정 받자 저가 매수 나서 주식... 이에 따라 초고수들은 오히려 저가 매수 기회라고 판단한 것으로 보인다. 반면 초고수들은 네이버를 대거...",
-          "link": "https://www.mk.co.kr/article/11440031",
-          "pubDate": "Mon, 13 Oct 2025 15:30:00 +0900"
-        }
-      ]
+      "term": "Low Price",
+      "term_ko": "저가"
     },
     {
-      "term": "momentum",
-      "term_ko": "모멘텀",
-      "significance_score": 494664,
-      "mentions": 821722,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "모멘텀",
-        "total_results": 821722,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1430.45,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:59 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%AA%A8%EB%A9%98%ED%85%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%AA%A8%EB%A9%98%ED%85%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%AA%A8%EB%A9%98%ED%85%80"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 소형 아파트도 10억 시대...규제 풍선효과로 시장 '대표 평형' 자리...",
-          "summary": "9월 소형 매매평균가격도 1.25% 올라 중소형·중형(각 0.94%) 상승률을 뛰어넘으며 5개 면적 가운데 유일하게 오름세를 보인 모멘텀 변화도 이같은 전망에 힘을 싣는다. 6·27 대출 규제의 효과가 약해진 데 이어 9·7...",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=314478",
-          "pubDate": "Mon, 13 Oct 2025 15:32:00 +0900"
-        },
-        {
-          "title": "카카오, 연말까지 계열사 절반 축소...\"경영 내실 다지겠다\"",
-          "summary": "현재 카카오는 AI와 카카오톡의 결합을 통한 새로운 성장 모멘텀 실현에 박차를 가하고 있다. 오는 10월 말 출시되는 오픈AI와의 공동 프로덕트인 '챗GPT 포 카카오'는 별도의 앱 설치 없이 카카오톡 채팅탭에서 바로...",
-          "link": "http://www.thelec.kr/news/articleView.html?idxno=41948",
-          "pubDate": "Mon, 13 Oct 2025 15:30:00 +0900"
-        },
-        {
-          "title": "도지코인 11% 급등, 기관 자금 유입에 상승 탄력 강화",
-          "summary": "특히 기술적 지표상 모멘텀 이 강하게 유지되며, MACD와 RSI 모두 강세 신호를 보이고 있는 것으로 나타났다. 보도에 따르면 도지코인의 상승은 밈코인 전반의 반등세와 함께 진행됐다. 지난 2025년 10월 12일 오전...",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15835831",
-          "pubDate": "Mon, 13 Oct 2025 15:26:00 +0900"
-        }
-      ]
+      "term": "Momentum",
+      "term_ko": "모멘텀"
     },
     {
-      "term": "cryptocurrency",
-      "term_ko": "암호화폐",
-      "significance_score": 401459,
-      "mentions": 666376,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "암호화폐",
-        "total_results": 666376,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1433.73,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:53 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90"
-      },
-      "top_headlines": [
-        {
-          "title": "솔라나(Solana), 단기 저점 통과 후 반등세 강화 전망",
-          "summary": "특히 암호화폐 시장은 내재가치보다 투자심리에 좌우되는 경향이 강하므로, 단기 급등에 따른 과열 매수는 리스크를 높일 수 있다. 투자자들은 시장 심리에 기반한 급등락 가능성을 충분히 고려해야 한다....",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15835841",
-          "pubDate": "Mon, 13 Oct 2025 15:30:00 +0900"
-        },
-        {
-          "title": "바이낸스, 분산형 AI 플랫폼 '리콜' 신규 상장 발표",
-          "summary": "출처: X @WuBlockchain 암호화폐 거래소 바이낸스는 2025년 10월 15일 오후 9시(한국시간)에 분산형 AI 기술 마켓플레이스 리콜(RECALL)을 바이낸스 알파 플랫폼에 상장한다고 밝혔다. 이어서 같은 날 오후 9시...",
-          "link": "https://www.tokenpost.kr/news/breaking/293805",
-          "pubDate": "Mon, 13 Oct 2025 15:30:00 +0900"
-        },
-        {
-          "title": "비트코인, 대규모 청산 뒤 다시 반등...강력한 저항선 돌파 시도",
-          "summary": "10월 13일(현지시간) 암호화폐 전문 매체 뉴스BTC에 따르면, 비트코인은 11만 3,500달러 저항을 넘어 단기 회복세를 보였지만, 11만 6,000달러와 100시간 단순이동평균선 아래에서 거래가 이어지고 있다. 시세...",
-          "link": "http://coinreaders.com/192045",
-          "pubDate": "Mon, 13 Oct 2025 15:30:00 +0900"
-        }
-      ]
+      "term": "Cryptocurrency",
+      "term_ko": "암호화폐"
     },
     {
-      "term": "Public offering price",
-      "term_ko": "공모가",
-      "significance_score": 201010,
-      "mentions": 332310,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "공모가",
-        "total_results": 332310,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1424.31,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:00 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B3%B5%EB%AA%A8%EA%B0%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B3%B5%EB%AA%A8%EA%B0%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B3%B5%EB%AA%A8%EA%B0%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[국감] 통신비 10년 새 20%↑…LTE 요금제 폐지에도 '고지 부족' 논란",
-          "summary": "라쿠텐의 진입 이후 일본 주요 통신사들도 요금을 내리는 추세라는 점을 거론하며, 이 의원은 \"국민들의 통신비 절감을 위해 실질적이고 현실적인 공모가 필요하다\"고 덧붙였다. 국내에서도 제4 이동통신 도입은...",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=844167",
-          "pubDate": "Mon, 13 Oct 2025 15:24:00 +0900"
-        },
-        {
-          "title": "코스피 새내기 달바글로벌, 오버행 이슈 잠재울까",
-          "summary": "이 영향 등으로 에이피알의 주가는 한동안 공모가 를 오르내렸다. 그러나 상장 1년 후 에이피알 주가는 급등했다. 매 분기 역대급 실적을 경신한 가운데, 오버행 이슈는 마무리 됐고 주주환원 정책은 큰 효과를...",
-          "link": "https://www.newstopkorea.com/news/articleView.html?idxno=40288",
-          "pubDate": "Mon, 13 Oct 2025 15:16:00 +0900"
-        },
-        {
-          "title": "군위군, ‘농촌기본소득 시범사업’ 공모…지속 가능 지역 전환 행보",
-          "summary": "공모가 확정되면 30일 이상 거주한 군민에게 매월 15만원 상당의 지역사랑상품권을 지급한다. 상품권은 군내 상권에서만 사용할 수 있어 소비와 순환이 함께 이뤄지는 구조로 설계됐다. 이번 사업은 정부가 2026년부터...",
-          "link": "https://sports.donga.com/region/article/all/20251013/132548619/1",
-          "pubDate": "Mon, 13 Oct 2025 15:10:00 +0900"
-        }
-      ]
+      "term": "Public Offering Price",
+      "term_ko": "공모가"
     },
     {
-      "term": "value investment",
-      "term_ko": "가치투자",
-      "significance_score": 200596,
-      "mentions": 331596,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "가치투자",
-        "total_results": 331596,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1438.19,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:07 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%80%EC%B9%98%ED%88%AC%EC%9E%90",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%80%EC%B9%98%ED%88%AC%EC%9E%90",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%80%EC%B9%98%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "MBK 파트너스, '사회적 책임 위원회' 출범…\"ESG 경영 강화 나선다\"",
-          "summary": "참여해 투자 활동이 사회적 가치 와 조화를 이루는 방향을 모색해 나가겠다\"고 밝혔다. MBK 파트너스 관계자는 \"사회적 책임 위원회 출범은 사모 투자 운용사로서 신의성실의 원칙에 따른 수탁자의 책무를 다하고...",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1681894",
-          "pubDate": "Mon, 13 Oct 2025 15:32:00 +0900"
-        },
-        {
-          "title": "MBK 파트너스, '사회적 책임 위원회' 출범…위원장에 이영성 전 한국일...",
-          "summary": "참여해 투자 활동이 사회적 가치 와 조화를 이루는 방향을 모색해 나가겠다\"고 강조했다. 위원회는 투자 활동 과정에 사회적 책임이 체계적으로 반영되도록 하고, 주주, 임직원, 고객 및 협력사 등 다양한 이해관계자에...",
-          "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=234681",
-          "pubDate": "Mon, 13 Oct 2025 15:32:00 +0900"
-        },
-        {
-          "title": "서울 소형 아파트도 10억 시대...규제 풍선효과로 시장 '대표 평형' 자리...",
-          "summary": "투자 가치 까지 염두에 두고 적어도 국민평형을 원하던 수요자들이 역대급으로 대출 허들이 높아지자 상대적으로 대출 규제도 적고 가격도 덜 오른 소형 아파트로 눈길을 돌린 것이다. 치솟는 서울 집값잡기에...",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=314478",
-          "pubDate": "Mon, 13 Oct 2025 15:32:00 +0900"
-        }
-      ]
+      "term": "Value Investment",
+      "term_ko": "가치투자"
     },
     {
-      "term": "grain",
-      "term_ko": "곡물",
-      "significance_score": 189350,
-      "mentions": 312984,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "곡물",
-        "total_results": 312984,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1359.16,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:54 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B3%A1%EB%AC%BC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B3%A1%EB%AC%BC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B3%A1%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "5년간 먹거리 물가 22.9% 폭등…과일·빵 40% 치솟아",
-          "summary": "'빵 및 곡물 ' 항목 전체 상승률만 해도 28.0%에 달했고, 과자·빙과류·당류도 27.8% 올랐다. 고춧가루·참깨... 전문가들은 \"향후 1~2년간 국제 곡물 가격과 원재료 수입단가가 안정되지 않는다면 물가 압력은 쉽게...",
-          "link": "https://www.newswhoplus.com/news/articleView.html?idxno=42945",
-          "pubDate": "Mon, 13 Oct 2025 15:24:00 +0900"
-        },
-        {
-          "title": "태안군, 2025년산 공공비축미 3,810톤 매입, '쌀값 안정·식량위기 대비...",
-          "summary": "또한 포대벼는 수분 13.0~15.0% 범위의 건조 곡물 만 매입한다. 군 관계자는 \"삼광·친들 재배 여부 확인과 수분 관리 등 출하 요건을 철저히 지켜달라\"며 \"공공비축미 매입을 통해 지역 쌀값 안정과 식량안보...",
-          "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2231822",
-          "pubDate": "Mon, 13 Oct 2025 14:56:00 +0900"
-        },
-        {
-          "title": "제주양돈농협, 사룟값 13원 인하",
-          "summary": "제주양돈농협(조합장 고권진·사진) 청정배합사료공장(공장장 양태호)은 하반기 국제 곡물 가격이 안정세에... 고권진 조합장은 \"최근 국제 곡물 가격과 환율이 안정세를 보이긴 하나 실질적인 하락 효과를 체감하기는...",
-          "link": "https://www.chukkyung.co.kr/news/articleView.html?idxno=78031",
-          "pubDate": "Mon, 13 Oct 2025 14:50:00 +0900"
-        }
-      ]
+      "term": "Grain",
+      "term_ko": "곡물"
     },
     {
-      "term": "conference call",
-      "term_ko": "컨퍼런스콜",
-      "significance_score": 108360,
-      "mentions": 178891,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "컨퍼런스콜",
-        "total_results": 178891,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 825.86,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:06 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%EC%BD%9C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%EC%BD%9C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%EC%BD%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "LG엔솔 3분기 '어닝서프라이즈'...미국 ESS 양산설비가 효자노릇한 듯",
-          "summary": "한편 LG엔솔은 오는 30일 실적발표 컨퍼런스콜 을 열고 3분기 확정 실적을 공개한다. 어떤 분야에서 구체적으로 얼마나 호조를 보였는지는 그때 가서야 자세히 드러날 전망이다.",
-          "link": "http://thetracker.co.kr/View.aspx?No=3812218",
-          "pubDate": "Mon, 13 Oct 2025 14:26:00 +0900"
-        },
-        {
-          "title": "LG전자, 3분기 잠정 실적 시장 기대 '상회'…가전·전장 '선방'(종합)",
-          "summary": "▲중동 ▲동남아 ▲중남미 ▲아프리카 등 글로벌 사우스 진출도 강화했다. 한편 LG전자는 오는 31일 2025년 3분기 실적발표 컨퍼런스콜 을 갖는다. 사업본부별 실적 등은 이날 나온다.",
-          "link": "https://www.techm.kr/news/articleView.html?idxno=145254",
-          "pubDate": "Mon, 13 Oct 2025 11:22:00 +0900"
-        },
-        {
-          "title": "LG전자, 3분기 실적 ‘선방’⋯ B2B·전장 중심 체질 강화",
-          "summary": "인도법인 상장을 통해 대규모 자금 조달을 추진, 사업 체질 개선과 미래 성장 투자에 속도를 낼 계획이다. 한편, LG전자는 오는 31일 3분기 실적발표 컨퍼런스 콜 을 열고 사업본부별 경영실적 세부 내용을 발표한다.",
-          "link": "https://www.viva100.com/article/20251013500568",
-          "pubDate": "Mon, 13 Oct 2025 11:20:00 +0900"
-        }
-      ]
+      "term": "Conference Call",
+      "term_ko": "컨퍼런스콜"
     },
     {
-      "term": "Latest economic news",
-      "term_ko": "경제 최신 뉴스",
-      "significance_score": 100857,
-      "mentions": 165486,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "경제 최신 뉴스",
-        "total_results": 165486,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1365.31,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:03 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B2%BD%EC%A0%9C%20%EC%B5%9C%EC%8B%A0%20%EB%89%B4%EC%8A%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B2%BD%EC%A0%9C%20%EC%B5%9C%EC%8B%A0%20%EB%89%B4%EC%8A%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B2%BD%EC%A0%9C%20%EC%B5%9C%EC%8B%A0%20%EB%89%B4%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[군포·과천 뉴스 ] 군포시, 책과 숲이 만나는 감성축제 '2025 제11회 군포...",
-          "summary": "이번 교육은 컴퓨터와 스마트기기 기초 사용법부터 최신 인공지능(AI) 활용 기술까지 다양한 주제로... 이번 사업은 학생들의 졸업앨범 구입에 따른 경제 적 부담을 줄이고, 졸업의 의미를 더욱 소중한 추억으로 남길 수...",
-          "link": "https://news.ifm.kr/news/articleView.html?idxno=454402",
-          "pubDate": "Mon, 13 Oct 2025 14:44:00 +0900"
-        },
-        {
-          "title": "SK, 글로벌 AI 혁신 선도…AI 서밋 2025 개최",
-          "summary": "최태원 SK그룹 회장 사진=연합 뉴스 SK그룹은 인공지능(AI) 생태계 발전을 위한 글로벌 협력의 장인 'SK AI... 빅테크와 최신 AI 동향을 공유하며 미래 청사진을 제시하는 자리다. 이번 행사는 'AI Now & Next'라는 주제로...",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=536099",
-          "pubDate": "Mon, 13 Oct 2025 14:34:00 +0900"
-        },
-        {
-          "title": "SK, 글로벌 'AI 서밋 2025' 개최…AI 미래 전략 공개",
-          "summary": "빅테크들은 특히 최신 AI 기술력을 전시해 국내에서 글로벌 AI 동향을 직접 볼 수 있는 기회를 마련한다. SK그룹은 SK AI 서밋 2025에 앞서 이달 28일 아시아태평양 경제 협력체(APEC) 정상회의 CEO 서밋 부대행사로...",
-          "link": "https://www.betanews.net/article/view/beta202510130036",
-          "pubDate": "Mon, 13 Oct 2025 14:32:00 +0900"
-        }
-      ]
+      "term": "Latest Economic News",
+      "term_ko": "경제 최신 뉴스"
     },
     {
-      "term": "high price",
-      "term_ko": "높은 가격",
-      "significance_score": 40307,
-      "mentions": 64680,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "high price",
-        "total_results": 64680,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1298.96,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:51 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=high%20price",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=high%20price",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=high%20price"
-      },
-      "top_headlines": [
-        {
-          "title": "정희용 의원, 국민 여론 기반 농정 자료집 공개…“현장 체감 반영한 정...",
-          "summary": "Thirty-three percent of farmer respondents said \"joining should be carefully considered.\" Demand for Strengthening the Price Competitiveness of Domestic Agricultural Products is High Regarding food security, 41% of the...",
-          "link": "http://www.breaknews.com/1153241",
-          "pubDate": "Mon, 13 Oct 2025 15:06:00 +0900"
-        },
-        {
-          "title": "New housing curbs to come this week as prices remain unrestrained",
-          "summary": "slowed price increases, but the effect has since faded as speculative buying resumed. According to financial authorities, the new policy is likely to tighten loan-to-value ratios for high -priced...",
-          "link": "https://www.koreaherald.com/article/10592295?ref=naver",
-          "pubDate": "Mon, 13 Oct 2025 14:49:00 +0900"
-        },
-        {
-          "title": "Jeonse Loans Face Stricter DSR Regulations",
-          "summary": "certain price , effectively prohibiting loans, similar to the policy during the Moon Jae-in administration. However, these options are reportedly not high on the financial authorities' priority...",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=253915",
-          "pubDate": "Mon, 13 Oct 2025 13:54:00 +0900"
-        }
-      ]
+      "term": "High Price",
+      "term_ko": "높은 가격"
     },
     {
-      "term": "beta",
-      "term_ko": "베타",
-      "significance_score": 16945,
-      "mentions": 27289,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "beta",
-        "total_results": 27289,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 371.58,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:02 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=beta",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=beta",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=beta"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴트리247, ‘식물성 멜라토닌’ 신제품 출시",
-          "summary": "특히 미국의 공인시험기관인 Beta Analytic의 원료 검증을 통과해 국제 공신력을 확보했다고 업체 측은 전했다. 뉴트리247 관계자는 “이번 제품은 ‘과장이 아닌 과학으로 잠을 준비한다’는 브랜드 철학을 담은...",
-          "link": "http://www.segyebiz.com/newsView/20251013507176?OutUrl=naver",
-          "pubDate": "Mon, 13 Oct 2025 11:54:00 +0900"
-        },
-        {
-          "title": "반려동물들에서 발견된 치매 병리 신호",
-          "summary": "알츠하이머병 연구의 오랜 축은 '아밀로이드 베타(amyloid beta )' 가설이다. 아밀로이드 베라라는 단백질이... 관련 연구 바로 보러 가기 Amyloid- Beta Pathology Increases Synaptic Engulfment by Glia in Feline Cognitive Dysfunction Syndrome: A...",
-          "link": "https://www.sciencetimes.co.kr/news/sn/260969",
-          "pubDate": "Mon, 13 Oct 2025 09:16:00 +0900"
-        },
-        {
-          "title": "암호화폐 시장, 트럼프·베이징 '화해 제스처'에 극적 반등... 위험 심리...",
-          "summary": "한때 자립적인 투기 생태계로 여겨졌던 암호화폐는 이제 글로벌 위험 심리에 대한 고베타(High- Beta ) 자산처럼 거래되고 있다. 이는 마치 무역 전쟁, 인플레이션, AI 기반 산업 구조조정에 대한 불안감을 나타내는 디지털...",
-          "link": "https://www.g-enews.com/view.php?ud=202510130711024845e250e8e188_1",
-          "pubDate": "Mon, 13 Oct 2025 07:18:00 +0900"
-        }
-      ]
+      "term": "Beta",
+      "term_ko": "베타"
     },
     {
-      "term": "income statement",
-      "term_ko": "손익계산서",
-      "significance_score": 15682,
-      "mentions": 25565,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "손익계산서",
-        "total_results": 25565,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 143.17,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:00 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%86%90%EC%9D%B5%EA%B3%84%EC%82%B0%EC%84%9C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%86%90%EC%9D%B5%EA%B3%84%EC%82%B0%EC%84%9C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%86%90%EC%9D%B5%EA%B3%84%EC%82%B0%EC%84%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[더벨]종근당, 수익성 개선 프로젝트 일환 'R&D 분할' 시나리오",
-          "summary": "하지만 자회사를 설립한 후 자금을 출자할 경우 종속기업에 대한 투자로 인식돼 손익계산서 상 비용을 줄일 수 있다. 영업이익률 등 수익성 지표도 개선된다. 자회사는 자산으로 인식돼 오히려 자산이 늘어나는...",
-          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202510011759269240101978",
-          "pubDate": "Mon, 13 Oct 2025 08:48:00 +0900"
-        },
-        {
-          "title": "한진칼, 대한전선, 서울신문 지분 인수... 대형 부동산 사업도 추진 [기...",
-          "summary": "호반건설이 참여한 자양5구역피에프브이의 손익계산서 상 이자비용은 2023년 268억원에서 2024년 320억원으로 대폭 상승했다. 차입금 규모도 증가해 2023년말 기준 4260억원(단기 4260억원)이던 차입금 규모가 2024년말 4860억원...",
-          "link": "http://www.joseilbo.com/news/news_read.php?uid=554334&class=17&grp=",
-          "pubDate": "Mon, 13 Oct 2025 07:01:00 +0900"
-        },
-        {
-          "title": "SSG만 웃는다? 삼성도 꿀맛 휴식…하루 밀린 준PO, 양 팀 손익 계산은",
-          "summary": "우천 취소의 ' 손익계산서 '는 순연된 2차전의 결과로 완성된다. 현재까지는 양 팀 모두 나쁘지 않은 상황이지만, 2차전의 승패가 결정된 이후론 희비가 크게 엇갈릴 수도 있다.",
-          "link": "https://www.news1.kr/sports/baseball/5937506",
-          "pubDate": "Sat, 11 Oct 2025 06:00:00 +0900"
-        }
-      ]
+      "term": "Income Statement",
+      "term_ko": "손익계산서"
     },
     {
-      "term": "metaverse",
-      "term_ko": "메타버스",
-      "significance_score": 14941,
-      "mentions": 24449,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "metaverse",
-        "total_results": 24449,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 71.95,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:58 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=metaverse",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=metaverse",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=metaverse"
-      },
-      "top_headlines": [
-        {
-          "title": "Is SM Entertainment founder’s ‘CAWMAN’ the next evolution of K-pop?",
-          "summary": "Lee Soo-man promotes AI-driven storytelling format merging animation, music and metaverse Lee... A20 metaverse origin story, or MOS. The MOS world, produced in the CAWMAN style, will expand...",
-          "link": "https://www.koreaherald.com/article/10592313?ref=naver",
-          "pubDate": "Mon, 13 Oct 2025 15:05:00 +0900"
-        },
-        {
-          "title": "올림플래닛, 'NexTech Week 2025 [Autumn] - XR·메타버스 엑스포' 참가",
-          "summary": "(XR & Metaverse Expo Tokyo)'에 참가한다고 밝혔다. 이번 전시에서 올림플래닛은 차세대 메타버스 플랫폼... XR & Metaverse Expo Tokyo는 가상현실(VR), 증강현실(AR), 혼합현실(MR), 메타버스 전반의 최신 서비스와 기술을...",
-          "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202510100657&t=NN",
-          "pubDate": "Fri, 10 Oct 2025 15:58:00 +0900"
-        },
-        {
-          "title": "[UP! START] 올림플래닛, 일본 'XR·메타버스 엑스포' 참가",
-          "summary": "(XR & Metaverse Expo Tokyo)'에 참가했다. XR & Metaverse Expo Tokyo는 가상현실(VR), 증강현실(AR), 혼합현실(MR), 메타버스 등 차세대 기술을 총망라한 B2B 전시회로, 엔터테인먼트·교육·제조·마케팅 등 다양한 산업의...",
-          "link": "https://www.nbntv.co.kr/news/articleView.html?idxno=4010545",
-          "pubDate": "Fri, 10 Oct 2025 13:04:00 +0900"
-        }
-      ]
+      "term": "Metaverse",
+      "term_ko": "메타버스"
     },
     {
-      "term": "short interest",
-      "term_ko": "숏 이자",
-      "significance_score": 14130,
-      "mentions": 22216,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "short interest",
-        "total_results": 22216,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 600.79,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:04 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=short%20interest",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=short%20interest",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=short%20interest"
-      },
-      "top_headlines": [
-        {
-          "title": "인천교육청, 학교폭력 예방 숏폼 아카데미 ‘함께 만드는 안전교실’ 운...",
-          "summary": "> Incheon Office of Education to Operate \"Safe Classroom Together,\" a Short -Form Academy for School Violence... The finalized content will be submitted to the \"Safe Society Public Interest Campaign Contest\" hosted by...",
-          "link": "http://www.breaknews.com/1153197",
-          "pubDate": "Mon, 13 Oct 2025 13:34:00 +0900"
-        },
-        {
-          "title": "Singaporean pediatric resident in Korea finds greatest joy when children ...",
-          "summary": "Her deep interest in Korean culture meant she had no hesitation. Starting her life in Korea in... a short period, the difference in physical workload compared to Singapore's residency system was...",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=29235",
-          "pubDate": "Mon, 13 Oct 2025 11:22:00 +0900"
-        },
-        {
-          "title": "Ethereum co-founder Hoskinson eyes S. Korea for blockchain-AI collaborati...",
-          "summary": "strong interest in contributing to the country’s ambitious vision. “Several projects in... That makes a short trip extremely productive,” said Hoskinson, assessing the Korean market's...",
-          "link": "https://www.koreaherald.com/article/10591977?ref=naver",
-          "pubDate": "Mon, 13 Oct 2025 10:18:00 +0900"
-        }
-      ]
+      "term": "Short Interest",
+      "term_ko": "숏 이자"
     },
     {
-      "term": "lock up",
-      "term_ko": "잠그기",
-      "significance_score": 6446,
-      "mentions": 10072,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "lock up",
-        "total_results": 10072,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 203.12,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:56 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=lock%20up",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=lock%20up",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=lock%20up"
-      },
-      "top_headlines": [
-        {
-          "title": "Bang Si-hyuk’s legal battle turns on when BTS success became ‘predicta...",
-          "summary": "Police believe Bang used this indirect structure to bypass a lock - up restriction that prevented him from immediately selling his own shares. HYBE counters that the arrangement was a high-risk...",
-          "link": "https://www.koreatimes.co.kr/path/A2025101222410000465",
-          "pubDate": "Mon, 13 Oct 2025 12:08:00 +0900"
-        },
-        {
-          "title": "Semiconductors propel Kospi past 3,600 amid AI boom",
-          "summary": "According to the Korea Exchange on October 12, the Kospi closed at 3,610.60 on October 10, up 1.... investors lock in gains. The prolonged U.S. federal government shutdown adds another layer of...",
-          "link": "https://en.asiatoday.co.kr/view.php?key=20251013000819524",
-          "pubDate": "Mon, 13 Oct 2025 08:22:00 +0900"
-        },
-        {
-          "title": "He’s Cuing a New Era at One of America’s Oldest Orchestras",
-          "summary": "He picked up the violin at 5 and soon began performing in the amateur orchestra conducted by his... in lock step with the soloist, Hélène Grimaud. His baton work in a suite from Strauss’s...",
-          "link": "https://www.nytimes.com/2025/10/12/arts/music/cristian-macelaru-cincinnati-symphony-orchestra.html?partner=naver",
-          "pubDate": "Sun, 12 Oct 2025 18:03:00 +0900"
-        }
-      ]
+      "term": "Lock Up",
+      "term_ko": "잠그기"
     },
     {
-      "term": "�̷����� ‘TIGER �̱�S&..",
-      "term_ko": "",
-      "significance_score": 3061,
-      "mentions": 4424,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "�̷����� ‘TIGER �̱�S&..",
-        "total_results": 4424,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 206.59,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:54 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EF%BF%BD%CC%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%E2%80%98TIGER%20%EF%BF%BD%CC%B1%EF%BF%BDS%26..",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EF%BF%BD%CC%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%E2%80%98TIGER%20%EF%BF%BD%CC%B1%EF%BF%BDS%26..",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EF%BF%BD%CC%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%E2%80%98TIGER%20%EF%BF%BD%CC%B1%EF%BF%BDS%26.."
-      },
-      "top_headlines": [
-        {
-          "title": "우리은행 KB금융그룹 신한카드 外(금융 레이더)",
-          "summary": "그동안 ' TIGER 미국S&P500 ETF'는 '해외주식형 ETF 최초 국내 전체 ETF 순자산 1위', '아시아 최대 규모 S&P500 지수 ETF' 등 유의미한 성과를 만들어 내며 국내 ETF 시장의 성장을 견인했다. 대규모 채용 패키지 실시=신한은행...",
-          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3049850",
-          "pubDate": "Mon, 13 Oct 2025 15:24:00 +0900"
-        },
-        {
-          "title": "[제약소식] 대원제약, 20~24일 'D-Talks AGORA WEEK' 온라인 학술 심포지...",
-          "summary": "TIGER 2025'에서 1위를 차지하고 기념촬영을 하고 있다. [사진=메디맵바이오] 메디맵바이오는 일본 최대 바이오 클러스터 쇼난 헬스 이노베이션 파크에서 열린 제약·바이오 스타트업 피치 이벤트 'Innovation Tiger 2025...",
-          "link": "http://www.mkhealth.co.kr/news/articleView.html?idxno=75649",
-          "pubDate": "Mon, 13 Oct 2025 10:42:00 +0900"
-        },
-        {
-          "title": "Slow Letter: October 13, 2025.",
-          "summary": "the tiger ’ s den but catching the tiger from outside. Chosun Ilbo’ s subheadings capture the interview’ s intent: “Not the Democratic Party’ s second brigade.” “Should center on the...",
-          "link": "https://slownews.kr/146849",
-          "pubDate": "Mon, 13 Oct 2025 08:02:00 +0900"
-        }
-      ]
+      "term": "�̷����� ‘tiger �̱�s&..",
+      "term_ko": "�̷����� ‘tiger �̱�s&.."
     },
     {
-      "term": "lower limit price",
-      "term_ko": "하한가",
-      "significance_score": 1397,
-      "mentions": 1888,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "lower limit price",
-        "total_results": 1888,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 64.48,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:57 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=lower%20limit%20price",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=lower%20limit%20price",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=lower%20limit%20price"
-      },
-      "top_headlines": [
-        {
-          "title": "Slow Letter: October 13, 2025.",
-          "summary": "on price appreciation.” What Matters Now. Peace Talks in Egypt Today, Without Key Players.... A proposal to lower the DSR (Debt Service Ratio) limit from 40% to 35% is also under review....",
-          "link": "https://slownews.kr/146849",
-          "pubDate": "Mon, 13 Oct 2025 08:02:00 +0900"
-        },
-        {
-          "title": "Sugar tax on cola? Debate heats up in Korea over introducing a levy on ex...",
-          "summary": "to price changes. Critics also point out that, as an indirect tax, a sugar levy would apply the same rate regardless of income level, meaning lower -income consumers would bear a heavier relative...",
-          "link": "https://www.koreatimes.co.kr/path/A2025100808160000094",
-          "pubDate": "Wed, 08 Oct 2025 12:50:00 +0900"
-        },
-        {
-          "title": "They Got to Live a Life of Luxury. Then Came the Fine Print.",
-          "summary": "Her Visa credit card had a strict $2,000 monthly spending limit , but Klarna alone offered her... -using households this year, it found that individuals employing delay-pay have “ lower overall...",
-          "link": "https://www.nytimes.com/2025/10/07/magazine/buy-now-pay-later-klarna-affirm-shopping.html?partner=naver",
-          "pubDate": "Tue, 07 Oct 2025 18:02:00 +0900"
-        }
-      ]
+      "term": "Lower Limit Price",
+      "term_ko": "하한가"
     },
     {
-      "term": "financial conduct authority",
-      "term_ko": "금융 행위 당국",
-      "significance_score": 1071,
-      "mentions": 1452,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "financial conduct authority",
-        "total_results": 1452,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:52 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=financial%20conduct%20authority",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=financial%20conduct%20authority",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=financial%20conduct%20authority"
-      },
-      "top_headlines": [
-        {
-          "title": "They Got to Live a Life of Luxury. Then Came the Fine Print.",
-          "summary": "A similar 2025 paper from Britain’s Financial Conduct Authority discovered that B.N.P.L. users were “on average, younger, less credit-worthy” and “have higher levels of unsecured debt.”...",
-          "link": "https://www.nytimes.com/2025/10/07/magazine/buy-now-pay-later-klarna-affirm-shopping.html?partner=naver",
-          "pubDate": "Tue, 07 Oct 2025 18:02:00 +0900"
-        },
-        {
-          "title": "White House Uses Shutdown to Maximize Pain and Punish Political Foes",
-          "summary": "The longer the standoff continues, the greater the chances of financial harm to American... legal authority to conduct mass layoffs under cover of a shutdown. The case is pending in a federal...",
-          "link": "https://www.nytimes.com/2025/10/01/us/politics/white-house-shutdown-punishment.html?partner=naver",
-          "pubDate": "Thu, 02 Oct 2025 06:20:00 +0900"
-        },
-        {
-          "title": "Supreme Court Allows Lisa Cook to Remain at Fed, for Now",
-          "summary": "legal authority to do so” and “look forward to that case being fully played out at the... criminal conduct in a financial matter’” that Mr. Trump says makes her unfit to serve on the...",
-          "link": "https://www.nytimes.com/2025/10/01/us/politics/supreme-court-lisa-cook-fed.html?partner=naver",
-          "pubDate": "Thu, 02 Oct 2025 00:04:00 +0900"
-        }
-      ]
+      "term": "Financial Conduct Authority",
+      "term_ko": "금융 행위 당국"
     },
     {
-      "term": "M-Print",
-      "term_ko": "",
-      "significance_score": 904,
-      "mentions": 1039,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "M-Print",
-        "total_results": 1039,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 80.34,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:51 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=M-Print",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=M-Print",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=M-Print"
-      },
-      "top_headlines": [
-        {
-          "title": "Susan Griffin, a Leading Voice of Ecofeminism, Is Dead at 82",
-          "summary": "Richard M . Nixon by calling for his impeachment two years before Watergate. For Ramparts, Ms.... Yet it was “Woman and Nature,” out in 1978 and consistently in print ever since, that made her...",
-          "link": "https://www.nytimes.com/2025/10/12/books/susan-griffin-dead.html?partner=naver",
-          "pubDate": "Mon, 13 Oct 2025 02:26:00 +0900"
-        },
-        {
-          "title": "Corrections: Oct. 11, 2025",
-          "summary": "Corrections that appeared in print on Saturday, Oct. 11, 2025. INTERNATIONAL An article on... An obituary on Thursday about Joan Kennedy, the former wife of Senator Edward M . Kennedy...",
-          "link": "https://www.nytimes.com/2025/10/11/pageoneplus/corrections-oct-11-2025.html?partner=naver",
-          "pubDate": "Sat, 11 Oct 2025 13:00:00 +0900"
-        },
-        {
-          "title": "[핫프로덕트] 저스트스캔 디지털 치과 솔루션 '저스트스캔'",
-          "summary": "just Print 5: 디지털 치과진료의 핵심 동력 저스트스캔 솔루션의 중심 장비 ‘just Print 5’는 AI 기반 자동 서포트 생성과 최적화된 슬라이싱 알고리즘을 탑재한 3D 프린터로, 사용 편의성과 재현성을 높였다. 고해상도...",
-          "link": "https://www.dentalnews.or.kr/news/article.html?no=45387",
-          "pubDate": "Thu, 09 Oct 2025 08:24:00 +0900"
-        }
-      ]
+      "term": "M-print",
+      "term_ko": "M-print"
     },
     {
-      "term": "strangle",
-      "term_ko": "스트랭글",
-      "significance_score": 379,
-      "mentions": 298,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "스트랭글",
-        "total_results": 298,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:49 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%8A%A4%ED%8A%B8%EB%9E%AD%EA%B8%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%8A%A4%ED%8A%B8%EB%9E%AD%EA%B8%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%8A%A4%ED%8A%B8%EB%9E%AD%EA%B8%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[동북아⑧] 전쟁이 바꾼 철도, 철도가 바꾼 전선",
-          "summary": "스트랭글 작전과 철도 복구 전쟁 1951년 1월, 매슈 리지웨이가 미8군 사령관으로 부임했다. 그는 새로운 전략을 세웠다. 철도를 끊어 적의 보급을 막는 것이었다. 8월부터 ' 스트랭글 작전'이 시작됐다. B-29...",
-          "link": "https://www.incheontoday.com/news/articleView.html?idxno=308653",
-          "pubDate": "Mon, 22 Sep 2025 14:30:00 +0900"
-        },
-        {
-          "title": "[해외선물 데일리] 나스닥선물 시황 및 전략(6월 25일)",
-          "summary": "주요 경제 이벤트나 연준 발언 전까지 큰 방향성 없이 수급 위주 움직임 가능 포지션 축소 후 옵션 전략 병행 추천 → 예상 박스권에 따라 스트래들/ 스트랭글 등 변동성 대응 전략 유리 설명: 현재 나스닥...",
-          "link": "https://www.bizwork.co.kr/news/articleView.html?idxno=403196",
-          "pubDate": "Wed, 25 Jun 2025 07:30:00 +0900"
-        },
-        {
-          "title": "[해외선물 데일리] 나스닥 선물 및 시황(5월 23일)",
-          "summary": "스트래들/ 스트랭글 병행 가능 ■ 요점 \"단기 저점 확인, 하지만 추세 전환은 아직 미지수.\" 21,040선은 지지 확인되었으나, 매도세는 여전히 고점에서 버티고 있음. 당장은 박스권 트레이딩 유효, 단...",
-          "link": "https://www.bizwork.co.kr/news/articleView.html?idxno=402033",
-          "pubDate": "Fri, 23 May 2025 07:30:00 +0900"
-        }
-      ]
+      "term": "Strangle",
+      "term_ko": "스트랭글"
     },
     {
-      "term": "A collection of corrections, clarifications, and counterpoints",
-      "term_ko": "고침, 정정・반론 보도 모음",
-      "significance_score": 332,
-      "mentions": 112,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "고침, 정정・반론 보도 모음",
-        "total_results": 112,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 64.85,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:05 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B3%A0%EC%B9%A8%2C%20%EC%A0%95%EC%A0%95%E3%83%BB%EB%B0%98%EB%A1%A0%20%EB%B3%B4%EB%8F%84%20%EB%AA%A8%EC%9D%8C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B3%A0%EC%B9%A8%2C%20%EC%A0%95%EC%A0%95%E3%83%BB%EB%B0%98%EB%A1%A0%20%EB%B3%B4%EB%8F%84%20%EB%AA%A8%EC%9D%8C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B3%A0%EC%B9%A8%2C%20%EC%A0%95%EC%A0%95%E3%83%BB%EB%B0%98%EB%A1%A0%20%EB%B3%B4%EB%8F%84%20%EB%AA%A8%EC%9D%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[ 정정 · 반론보도 분석] \"오보 바로잡습니다\"…9월, 정정 · 반론보도 21건",
-          "summary": "네이버의 ' 고침 기사 정정 · 반론 ·추후 보도 ' 모음 은 △ 고침 기사 △언론중재법에 따른 정정 · 반론 ·추후 보도 △인터넷선거심의위원회의 불공정 선거 보도 경고 및 주의를 받은 기사 등 총 3개 섹션으로 구성돼 있다. 이 중...",
-          "link": "https://www.banronbodo.com/news/articleView.html?idxno=31014",
-          "pubDate": "Mon, 13 Oct 2025 08:24:00 +0900"
-        },
-        {
-          "title": "[ 정정 · 반론보도 분석] 매일경제, '깡통 순찰차 전국 배치 논란' 정정 보...",
-          "summary": "반론보도 닷컴이 지난달 네이버의 ' 고침 기사 정정 · 반론 ·추후 보도 ' 모음 을 분석한 결과 총건수는 13건으로 26개 언론사에서 올린 것으로 집계됐다. 세부적으로 지난달 ' 정정 · 반론 ·추후 보도 '에는 12개 매체에서 23건...",
-          "link": "https://www.banronbodo.com/news/articleView.html?idxno=30886",
-          "pubDate": "Mon, 15 Sep 2025 09:00:00 +0900"
-        },
-        {
-          "title": "[ 정정 · 반론보도 분석] 머니투데이,\" [단독]'완판' 28억 강남 아파트, 들...",
-          "summary": "반론보도 닷컴이 지난달 네이버의 ' 고침 기사 정정 · 반론 ·추후 보도 ' 모음 을 분석한 결과 총건수는 23건으로 29개 언론사에서 올린 것으로 집계됐다. 세부적으로 지난달 ' 정정 · 반론 ·추후 보도 '에는 18개 매체에서 23건, ' 고침 ...",
-          "link": "https://www.banronbodo.com/news/articleView.html?idxno=30697",
-          "pubDate": "Wed, 06 Aug 2025 15:26:00 +0900"
-        }
-      ]
+      "term": "A Collection of Corrections, Clarifications, and Counterpoints",
+      "term_ko": "고침, 정정・반론 보도 모음"
     },
     {
-      "term": "non farm payrolls",
-      "term_ko": "비농장 급여",
-      "significance_score": 301,
-      "mentions": 169,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "non farm payrolls",
-        "total_results": 169,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:48 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=non%20farm%20payrolls",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=non%20farm%20payrolls",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=non%20farm%20payrolls"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Currencies Steady as U.S. Shutdown Weighs on Markets, RBI Policy in...",
-          "summary": "economic data, including the non - farm payrolls report expected later this week. In Asia, currency markets showed limited movement. The Japanese yen held flat against the dollar, while the...",
-          "link": "https://www.econotimes.com/Asian-Currencies-Steady-as-US-Shutdown-Weighs-on-Markets-RBI-Policy-in-Focus-1722055",
-          "pubDate": "Wed, 01 Oct 2025 13:58:00 +0900"
-        },
-        {
-          "title": "Asian Currencies Steady as Investors Await U.S. Shutdown Decision; Austra...",
-          "summary": "A shutdown could delay the release of crucial economic reports, including Friday’s non - farm payrolls —a key indicator for Federal Reserve decision-making. Upcoming U.S. data this week includes...",
-          "link": "https://www.econotimes.com/Asian-Currencies-Steady-as-Investors-Await-US-Shutdown-Decision-Australian-Dollar-Rises-on-RBA-Hold-1721951",
-          "pubDate": "Tue, 30 Sep 2025 14:46:00 +0900"
-        },
-        {
-          "title": "U.S. Stock Futures Steady as Investors Await Fed Rate Cut Decision",
-          "summary": "labor market data fueled these expectations, as non - farm payrolls grew by only 22,000 in August, unemployment climbed to 4.3%, and weekly jobless claims hit their highest level in nearly four...",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Investors-Await-Fed-Rate-Cut-Decision-1720571",
-          "pubDate": "Mon, 15 Sep 2025 11:00:00 +0900"
-        }
-      ]
+      "term": "Non Farm Payrolls",
+      "term_ko": "비농장 급여"
     },
     {
       "term": "Iron Auto Opens Audi Haeundae Showroom to Expand Customer Contact Points",
-      "term_ko": "아이언오토, '아우디 해운대 전시장' 개소…고객 접점 확대",
-      "significance_score": 246,
-      "mentions": 4,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "아이언오토, '아우디 해운대 전시장' 개소…고객 접점 확대",
-        "total_results": 4,
-        "returned_results": 4,
-        "display_count": 4,
-        "recency_weight": 203.65,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:59 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%84%EC%9D%B4%EC%96%B8%EC%98%A4%ED%86%A0%2C%20'%EC%95%84%EC%9A%B0%EB%94%94%20%ED%95%B4%EC%9A%B4%EB%8C%80%20%EC%A0%84%EC%8B%9C%EC%9E%A5'%20%EA%B0%9C%EC%86%8C%E2%80%A6%EA%B3%A0%EA%B0%9D%20%EC%A0%91%EC%A0%90%20%ED%99%95%EB%8C%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%95%84%EC%9D%B4%EC%96%B8%EC%98%A4%ED%86%A0%2C%20'%EC%95%84%EC%9A%B0%EB%94%94%20%ED%95%B4%EC%9A%B4%EB%8C%80%20%EC%A0%84%EC%8B%9C%EC%9E%A5'%20%EA%B0%9C%EC%86%8C%E2%80%A6%EA%B3%A0%EA%B0%9D%20%EC%A0%91%EC%A0%90%20%ED%99%95%EB%8C%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%95%84%EC%9D%B4%EC%96%B8%EC%98%A4%ED%86%A0%2C%20'%EC%95%84%EC%9A%B0%EB%94%94%20%ED%95%B4%EC%9A%B4%EB%8C%80%20%EC%A0%84%EC%8B%9C%EC%9E%A5'%20%EA%B0%9C%EC%86%8C%E2%80%A6%EA%B3%A0%EA%B0%9D%20%EC%A0%91%EC%A0%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "아우디 코리아, 부산 신세계 센텀시티몰에 ' 해운대 전시장' 신규 오픈",
-          "summary": "아우디 코리아의 공식 딜러사인 아이언오토 가 부산 신세계 센텀시티몰에 '아우디 해운대 전시장' 을 새롭게 열었다고 13일 밝혔다. 이번 전시장 오픈은 고객 접점 확대 를 목표로 하는 '시티몰 컨셉 스토어' 형태로 운영된다....",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=844158",
-          "pubDate": "Mon, 13 Oct 2025 14:40:00 +0900"
-        },
-        {
-          "title": "[TOP's Pick] [자동차·부품] 한국타이어, 'TBX 월동준비 페스티벌' 프로...",
-          "summary": "공식딜러사인 아이언오토 가 부산 신세계 센텀시티몰에 ‘ 아우디 해운대 전시장 ’을 신규 오픈. 아우디 해운대 전시장 은 고객 접점 확대 를 위해 도입한 ‘시티몰 컨셉 스토어’ 형태로, 총 294.8㎡ 규모에 최대 3대의...",
-          "link": "https://www.topdaily.kr/articles/105971",
-          "pubDate": "Mon, 13 Oct 2025 10:40:00 +0900"
-        },
-        {
-          "title": "아이언오토, '아우디 해운대 전시장' 개소…고객 접점 확대",
-          "summary": "스티브 콜로티 아우디 코리아 사장 \" 고객 만족 최우선 가치\" 아우디 공식 딜러사 아이언오토 가 부산에 '아우디 해운대 전시장' 을 신규로 열며 고객 접점 을 확대 했다. 아우디 코리아는 최근 아이언오토 가 부산 해운대 구...",
-          "link": "https://news.tf.co.kr/read/economy/2251232.htm",
-          "pubDate": "Mon, 13 Oct 2025 08:58:00 +0900"
-        }
-      ]
+      "term_ko": "아이언오토, '아우디 해운대 전시장' 개소…고객 접점 확대"
     },
     {
-      "term": "Gold vault balances hit $1.5 trillion... Silver bars sold 2.5x last year's total in two days",
-      "term_ko": "금통장 잔액 1.5조 돌파… 실버바도 이틀간 작년 전체 2.5배 팔려",
-      "significance_score": 125,
-      "mentions": 2,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "금통장 잔액 1.5조 돌파… 실버바도 이틀간 작년 전체 2.5배 팔려",
-        "total_results": 2,
-        "returned_results": 2,
-        "display_count": 2,
-        "recency_weight": 103.65,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:06 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B8%88%ED%86%B5%EC%9E%A5%20%EC%9E%94%EC%95%A1%201.5%EC%A1%B0%20%EB%8F%8C%ED%8C%8C%E2%80%A6%20%EC%8B%A4%EB%B2%84%EB%B0%94%EB%8F%84%20%EC%9D%B4%ED%8B%80%EA%B0%84%20%EC%9E%91%EB%85%84%20%EC%A0%84%EC%B2%B4%202.5%EB%B0%B0%20%ED%8C%94%EB%A0%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B8%88%ED%86%B5%EC%9E%A5%20%EC%9E%94%EC%95%A1%201.5%EC%A1%B0%20%EB%8F%8C%ED%8C%8C%E2%80%A6%20%EC%8B%A4%EB%B2%84%EB%B0%94%EB%8F%84%20%EC%9D%B4%ED%8B%80%EA%B0%84%20%EC%9E%91%EB%85%84%20%EC%A0%84%EC%B2%B4%202.5%EB%B0%B0%20%ED%8C%94%EB%A0%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B8%88%ED%86%B5%EC%9E%A5%20%EC%9E%94%EC%95%A1%201.5%EC%A1%B0%20%EB%8F%8C%ED%8C%8C%E2%80%A6%20%EC%8B%A4%EB%B2%84%EB%B0%94%EB%8F%84%20%EC%9D%B4%ED%8B%80%EA%B0%84%20%EC%9E%91%EB%85%84%20%EC%A0%84%EC%B2%B4%202.5%EB%B0%B0%20%ED%8C%94%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "금통장 잔액 1.5조 돌파… 실버바도 이틀간 작년 전체 2.5배 팔려",
-          "summary": "1∼2일 이틀간 실버바 가 20억2200만 원어치 팔리며 뜨거운 투자 열기를 이어갔다. 이는 지난해 전체 실버바 판매액(8억 원)의 2.5배 에 달하는 수준이다. 올 들어 누적 실버바 판매액은 104억5900만 원으로 작년 연간과...",
-          "link": "https://www.donga.com/news/Economy/article/all/20251012/132543761/2",
-          "pubDate": "Mon, 13 Oct 2025 03:04:00 +0900"
-        },
-        {
-          "title": "‘지금 금 산다’ 금통장 잔액 1.5조 원 돌파 ··· 실버바 이틀간 작년 판...",
-          "summary": "추석연휴 전 영업일인 지난 1~2일 이틀 에만 지난해 전체 (8억원) 판매액의 2.5배 에 달하는 20억2200만원 어치가 팔렸다. 올해 실버바 의 누적 판매액은 104억5900만원으로 작년 판매액의 13배를 웃돈다. 국제 은 가격은...",
-          "link": "https://www.khan.co.kr/article/202510121141001",
-          "pubDate": "Sun, 12 Oct 2025 11:41:00 +0900"
-        }
-      ]
+      "term": "Gold Vault Balances Hit $1.5 Trillion... Silver Bars Sold 2.5x Last Year's Total in Two Days",
+      "term_ko": "금통장 잔액 1.5조 돌파… 실버바도 이틀간 작년 전체 2.5배 팔려"
     },
     {
-      "term": "Residential electricity bills strategized as a 'poverty tax'...further crushing low-income households",
-      "term_ko": "'빈곤세'로 전략한 가정용 전기요금…저소득 가구 더 짓눌렀다",
-      "significance_score": 61,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "'빈곤세'로 전략한 가정용 전기요금…저소득 가구 더 짓눌렀다",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 50.44,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:50 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query='%EB%B9%88%EA%B3%A4%EC%84%B8'%EB%A1%9C%20%EC%A0%84%EB%9E%B5%ED%95%9C%20%EA%B0%80%EC%A0%95%EC%9A%A9%20%EC%A0%84%EA%B8%B0%EC%9A%94%EA%B8%88%E2%80%A6%EC%A0%80%EC%86%8C%EB%93%9D%20%EA%B0%80%EA%B5%AC%20%EB%8D%94%20%EC%A7%93%EB%88%8C%EB%A0%80%EB%8B%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query='%EB%B9%88%EA%B3%A4%EC%84%B8'%EB%A1%9C%20%EC%A0%84%EB%9E%B5%ED%95%9C%20%EA%B0%80%EC%A0%95%EC%9A%A9%20%EC%A0%84%EA%B8%B0%EC%9A%94%EA%B8%88%E2%80%A6%EC%A0%80%EC%86%8C%EB%93%9D%20%EA%B0%80%EA%B5%AC%20%EB%8D%94%20%EC%A7%93%EB%88%8C%EB%A0%80%EB%8B%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query='%EB%B9%88%EA%B3%A4%EC%84%B8'%EB%A1%9C%20%EC%A0%84%EB%9E%B5%ED%95%9C%20%EA%B0%80%EC%A0%95%EC%9A%A9%20%EC%A0%84%EA%B8%B0%EC%9A%94%EA%B8%88%E2%80%A6%EC%A0%80%EC%86%8C%EB%93%9D%20%EA%B0%80%EA%B5%AC%20%EB%8D%94%20%EC%A7%93%EB%88%8C%EB%A0%80%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'빈곤세'로 전략한 가정용 전기요금…저소득 가구 더 짓눌렀다",
-          "summary": "전기 가 필수재로 자리 잡으면서 전기 사용량이 더 이상 요금 이나 소득에 좌우되지 않게 된 결과로 풀이된다. 소득이 낮은 가구 에 요금 인상 영향이 집중되면서 전기요금 이 빈곤세 가 되고 있다는 지적이 나온다....",
-          "link": "https://www.hankyung.com/article/202510123400i",
-          "pubDate": "Sun, 12 Oct 2025 17:59:00 +0900"
-        }
-      ]
+      "term": "Residential Electricity Bills Strategized As a 'poverty Tax'...further Crushing Low-income Households",
+      "term_ko": "'빈곤세'로 전략한 가정용 전기요금…저소득 가구 더 짓눌렀다"
     },
     {
-      "term": "From 'crypto president' to 'top villain'...coin liquidations ranked #1 and #2 in the world, both 'Trump'",
-      "term_ko": "‘가상자산 대통령’에서 ‘최고 빌런’으로…코인 청산 1·2위 모두 ‘트럼프’",
-      "significance_score": 60,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "‘가상자산 대통령’에서 ‘최고 빌런’으로…코인 청산 1·2위 모두 ‘트럼프’",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 49,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:55 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%E2%80%98%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0%20%EB%8C%80%ED%86%B5%EB%A0%B9%E2%80%99%EC%97%90%EC%84%9C%20%E2%80%98%EC%B5%9C%EA%B3%A0%20%EB%B9%8C%EB%9F%B0%E2%80%99%EC%9C%BC%EB%A1%9C%E2%80%A6%EC%BD%94%EC%9D%B8%20%EC%B2%AD%EC%82%B0%201%C2%B72%EC%9C%84%20%EB%AA%A8%EB%91%90%20%E2%80%98%ED%8A%B8%EB%9F%BC%ED%94%84%E2%80%99",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%E2%80%98%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0%20%EB%8C%80%ED%86%B5%EB%A0%B9%E2%80%99%EC%97%90%EC%84%9C%20%E2%80%98%EC%B5%9C%EA%B3%A0%20%EB%B9%8C%EB%9F%B0%E2%80%99%EC%9C%BC%EB%A1%9C%E2%80%A6%EC%BD%94%EC%9D%B8%20%EC%B2%AD%EC%82%B0%201%C2%B72%EC%9C%84%20%EB%AA%A8%EB%91%90%20%E2%80%98%ED%8A%B8%EB%9F%BC%ED%94%84%E2%80%99",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%E2%80%98%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0%20%EB%8C%80%ED%86%B5%EB%A0%B9%E2%80%99%EC%97%90%EC%84%9C%20%E2%80%98%EC%B5%9C%EA%B3%A0%20%EB%B9%8C%EB%9F%B0%E2%80%99%EC%9C%BC%EB%A1%9C%E2%80%A6%EC%BD%94%EC%9D%B8%20%EC%B2%AD%EC%82%B0%201%C2%B72%EC%9C%84%20%EB%AA%A8%EB%91%90%20%E2%80%98%ED%8A%B8%EB%9F%BC%ED%94%84%E2%80%99"
-      },
-      "top_headlines": [
-        {
-          "title": "‘가상자산 대통령’에서 ‘최고 빌런’으로…코인 청산 1·2위 모두 ‘ ...",
-          "summary": "역대 최고 치를 기록했다. 지난 2월 무역전쟁 시사 발언 이후 대규모 청산 에 이어 하루 기준 청산 금액 역대 1·2위 에 ' 트럼프 리스크'가 자리했다. 12일 코인 글래스에 따르면 10일 가상자산 시장에서 191억5600만달러(한화...",
-          "link": "https://www.dt.co.kr/article/12022291?ref=naver",
-          "pubDate": "Sun, 12 Oct 2025 16:33:00 +0900"
-        }
-      ]
+      "term": "From 'crypto President' to 'top Villain'...coin Liquidations Ranked #1 and #2 in the World, Both 'trump'",
+      "term_ko": "‘가상자산 대통령’에서 ‘최고 빌런’으로…코인 청산 1·2위 모두 ‘트럼프’"
     },
     {
-      "term": "Q3 startup investment tops $2 trillion for the first time in 2 years, but it's in the hands of a few [VC Weekly]",
-      "term_ko": "3분기 스타트업 투자 2년만에 2조원 넘었지만 소수에 몰려[주간VC동향]",
-      "significance_score": 59,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "3분기 스타트업 투자 2년만에 2조원 넘었지만 소수에 몰려[주간VC동향]",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 47.97,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:49 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=3%EB%B6%84%EA%B8%B0%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%ED%88%AC%EC%9E%90%202%EB%85%84%EB%A7%8C%EC%97%90%202%EC%A1%B0%EC%9B%90%20%EB%84%98%EC%97%88%EC%A7%80%EB%A7%8C%20%EC%86%8C%EC%88%98%EC%97%90%20%EB%AA%B0%EB%A0%A4%5B%EC%A3%BC%EA%B0%84VC%EB%8F%99%ED%96%A5%5D",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=3%EB%B6%84%EA%B8%B0%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%ED%88%AC%EC%9E%90%202%EB%85%84%EB%A7%8C%EC%97%90%202%EC%A1%B0%EC%9B%90%20%EB%84%98%EC%97%88%EC%A7%80%EB%A7%8C%20%EC%86%8C%EC%88%98%EC%97%90%20%EB%AA%B0%EB%A0%A4%5B%EC%A3%BC%EA%B0%84VC%EB%8F%99%ED%96%A5%5D",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=3%EB%B6%84%EA%B8%B0%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%ED%88%AC%EC%9E%90%202%EB%85%84%EB%A7%8C%EC%97%90%202%EC%A1%B0%EC%9B%90%20%EB%84%98%EC%97%88%EC%A7%80%EB%A7%8C%20%EC%86%8C%EC%88%98%EC%97%90%20%EB%AA%B0%EB%A0%A4%5B%EC%A3%BC%EA%B0%84VC%EB%8F%99%ED%96%A5%5D"
-      },
-      "top_headlines": [
-        {
-          "title": "3분기 스타트업 투자 2년만에 2조원 넘었지만 소수에 몰려[주간VC동향]",
-          "summary": "만에 2조원 을 다시 넘어섰다. 다만 전체 투자 건수는 전년 동기 대비 3분의 1이 감소해 소수 투자 에 집중되는 모습을 보였다. 12일 더브이씨에 따르면 3 ·4 분기 스타트업 및 중소기업 대상 투자 금액이 직전 분기 (2...",
-          "link": "http://www.fnnews.com/news/202510121446202173",
-          "pubDate": "Sun, 12 Oct 2025 15:31:00 +0900"
-        }
-      ]
+      "term": "Q3 Startup Investment Tops $2 Trillion for the First Time in 2 Years, But It's in the Hands of a Few [vc Weekly]",
+      "term_ko": "3분기 스타트업 투자 2년만에 2조원 넘었지만 소수에 몰려[주간VC동향]"
     },
     {
       "term": "����ä �ݸ�, 3bp ���� ��..",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "����ä �ݸ�, 3bp ���� ��..",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:47 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%A4%20%EF%BF%BD%DD%B8%EF%BF%BD%2C%203bp%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD..",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%A4%20%EF%BF%BD%DD%B8%EF%BF%BD%2C%203bp%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD..",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%A4%20%EF%BF%BD%DD%B8%EF%BF%BD%2C%203bp%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD.."
-      },
-      "top_headlines": []
+      "term_ko": "����ä �ݸ�, 3bp ���� ��.."
     },
     {
-      "term": "'Wind farm' Fujian to invest ₱20 trillion to ₱40 trillion in R&D... Korean government's investment nears ₱1 trillion Dong-A Ilbo 22 minutes ago",
-      "term_ko": "‘풍력기지’ 푸젠성, R&D에 年20조∼40조 투자… 韓정부 투자액 육박 동아일보 22분 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "‘풍력기지’ 푸젠성, R&D에 年20조∼40조 투자… 韓정부 투자액 육박 동아일보 22분 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 13 Oct 2025 15:32:56 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%E2%80%98%ED%92%8D%EB%A0%A5%EA%B8%B0%EC%A7%80%E2%80%99%20%ED%91%B8%EC%A0%A0%EC%84%B1%2C%20R%26D%EC%97%90%20%E5%B9%B420%EC%A1%B0%E2%88%BC40%EC%A1%B0%20%ED%88%AC%EC%9E%90%E2%80%A6%20%E9%9F%93%EC%A0%95%EB%B6%80%20%ED%88%AC%EC%9E%90%EC%95%A1%20%EC%9C%A1%EB%B0%95%20%EB%8F%99%EC%95%84%EC%9D%BC%EB%B3%B4%2022%EB%B6%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%E2%80%98%ED%92%8D%EB%A0%A5%EA%B8%B0%EC%A7%80%E2%80%99%20%ED%91%B8%EC%A0%A0%EC%84%B1%2C%20R%26D%EC%97%90%20%E5%B9%B420%EC%A1%B0%E2%88%BC40%EC%A1%B0%20%ED%88%AC%EC%9E%90%E2%80%A6%20%E9%9F%93%EC%A0%95%EB%B6%80%20%ED%88%AC%EC%9E%90%EC%95%A1%20%EC%9C%A1%EB%B0%95%20%EB%8F%99%EC%95%84%EC%9D%BC%EB%B3%B4%2022%EB%B6%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%E2%80%98%ED%92%8D%EB%A0%A5%EA%B8%B0%EC%A7%80%E2%80%99%20%ED%91%B8%EC%A0%A0%EC%84%B1%2C%20R%26D%EC%97%90%20%E5%B9%B420%EC%A1%B0%E2%88%BC40%EC%A1%B0%20%ED%88%AC%EC%9E%90%E2%80%A6%20%E9%9F%93%EC%A0%95%EB%B6%80%20%ED%88%AC%EC%9E%90%EC%95%A1%20%EC%9C%A1%EB%B0%95%20%EB%8F%99%EC%95%84%EC%9D%BC%EB%B3%B4%2022%EB%B6%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "'wind Farm' Fujian to Invest ₱20 Trillion to ₱40 Trillion in R&d... Korean Government's Investment Nears ₱1 Trillion Dong-a Ilbo 22 Minutes Ago",
+      "term_ko": "‘풍력기지’ 푸젠성, R&D에 年20조∼40조 투자… 韓정부 투자액 육박 동아일보 22분 전"
     },
     {
-      "term": "'Korean science' breaks retirement pensions, 'Japanese science' wins another Nobel Prize The Korea Times 17 hours ago",
-      "term_ko": "퇴직연금까지 깨는 '한국 과학', 노벨상 또 받은 '일본 과학' 한국일보 17시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "퇴직연금까지 깨는 '한국 과학', 노벨상 또 받은 '일본 과학' 한국일보 17시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:01 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%ED%87%B4%EC%A7%81%EC%97%B0%EA%B8%88%EA%B9%8C%EC%A7%80%20%EA%B9%A8%EB%8A%94%20'%ED%95%9C%EA%B5%AD%20%EA%B3%BC%ED%95%99'%2C%20%EB%85%B8%EB%B2%A8%EC%83%81%20%EB%98%90%20%EB%B0%9B%EC%9D%80%20'%EC%9D%BC%EB%B3%B8%20%EA%B3%BC%ED%95%99'%20%ED%95%9C%EA%B5%AD%EC%9D%BC%EB%B3%B4%2017%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%87%B4%EC%A7%81%EC%97%B0%EA%B8%88%EA%B9%8C%EC%A7%80%20%EA%B9%A8%EB%8A%94%20'%ED%95%9C%EA%B5%AD%20%EA%B3%BC%ED%95%99'%2C%20%EB%85%B8%EB%B2%A8%EC%83%81%20%EB%98%90%20%EB%B0%9B%EC%9D%80%20'%EC%9D%BC%EB%B3%B8%20%EA%B3%BC%ED%95%99'%20%ED%95%9C%EA%B5%AD%EC%9D%BC%EB%B3%B4%2017%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%87%B4%EC%A7%81%EC%97%B0%EA%B8%88%EA%B9%8C%EC%A7%80%20%EA%B9%A8%EB%8A%94%20'%ED%95%9C%EA%B5%AD%20%EA%B3%BC%ED%95%99'%2C%20%EB%85%B8%EB%B2%A8%EC%83%81%20%EB%98%90%20%EB%B0%9B%EC%9D%80%20'%EC%9D%BC%EB%B3%B8%20%EA%B3%BC%ED%95%99'%20%ED%95%9C%EA%B5%AD%EC%9D%BC%EB%B3%B4%2017%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "'korean Science' Breaks Retirement Pensions, 'japanese Science' Wins Another Nobel Prize the Korea Times 17 Hours Ago",
+      "term_ko": "퇴직연금까지 깨는 '한국 과학', 노벨상 또 받은 '일본 과학' 한국일보 17시간 전"
     },
     {
-      "term": "\"���� �⺻�ε���\" KT ��ŷ��� �������ĵ� �� �ϰ� �������",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"���� �⺻�ε���\" KT ��ŷ��� �������ĵ� �� �ϰ� �������",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 13 Oct 2025 15:33:03 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%E2%BA%BB%EF%BF%BD%CE%B5%EF%BF%BD%EF%BF%BD%EF%BF%BD%22%20KT%20%EF%BF%BD%EF%BF%BD%C5%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C4%B5%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%CF%B0%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%E2%BA%BB%EF%BF%BD%CE%B5%EF%BF%BD%EF%BF%BD%EF%BF%BD%22%20KT%20%EF%BF%BD%EF%BF%BD%C5%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C4%B5%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%CF%B0%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%E2%BA%BB%EF%BF%BD%CE%B5%EF%BF%BD%EF%BF%BD%EF%BF%BD%22%20KT%20%EF%BF%BD%EF%BF%BD%C5%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C4%B5%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%CF%B0%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"
-      },
-      "top_headlines": []
+      "term": "\"���� �⺻�ε���\" Kt ��ŷ��� �������ĵ� �� �ϰ� �������",
+      "term_ko": "\"���� �⺻�ε���\" Kt ��ŷ��� �������ĵ� �� �ϰ� �������"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_random_sample",
-    "sample_size": 30,
-    "generated_at": "2025-10-13T06:33:07.509Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "discovered_keywords": [
+    {
+      "term": "Low Price",
+      "term_ko": "저가"
+    },
+    {
+      "term": "Momentum",
+      "term_ko": "모멘텀"
+    },
+    {
+      "term": "Cryptocurrency",
+      "term_ko": "암호화폐"
+    },
+    {
+      "term": "Public Offering Price",
+      "term_ko": "공모가"
+    },
+    {
+      "term": "Value Investment",
+      "term_ko": "가치투자"
+    },
+    {
+      "term": "Grain",
+      "term_ko": "곡물"
+    },
+    {
+      "term": "Conference Call",
+      "term_ko": "컨퍼런스콜"
+    },
+    {
+      "term": "Latest Economic News",
+      "term_ko": "경제 최신 뉴스"
+    },
+    {
+      "term": "High Price",
+      "term_ko": "높은 가격"
+    },
+    {
+      "term": "Beta",
+      "term_ko": "베타"
+    },
+    {
+      "term": "Income Statement",
+      "term_ko": "손익계산서"
+    },
+    {
+      "term": "Metaverse",
+      "term_ko": "메타버스"
+    },
+    {
+      "term": "Short Interest",
+      "term_ko": "숏 이자"
+    },
+    {
+      "term": "Lock Up",
+      "term_ko": "잠그기"
+    },
+    {
+      "term": "�̷����� ‘tiger �̱�s&..",
+      "term_ko": "�̷����� ‘tiger �̱�s&.."
+    },
+    {
+      "term": "Lower Limit Price",
+      "term_ko": "하한가"
+    },
+    {
+      "term": "Financial Conduct Authority",
+      "term_ko": "금융 행위 당국"
+    },
+    {
+      "term": "M-print",
+      "term_ko": "M-print"
+    },
+    {
+      "term": "Strangle",
+      "term_ko": "스트랭글"
+    },
+    {
+      "term": "A Collection of Corrections, Clarifications, and Counterpoints",
+      "term_ko": "고침, 정정・반론 보도 모음"
+    },
+    {
+      "term": "Non Farm Payrolls",
+      "term_ko": "비농장 급여"
+    },
+    {
+      "term": "Iron Auto Opens Audi Haeundae Showroom to Expand Customer Contact Points",
+      "term_ko": "아이언오토, '아우디 해운대 전시장' 개소…고객 접점 확대"
+    },
+    {
+      "term": "Gold Vault Balances Hit $1.5 Trillion... Silver Bars Sold 2.5x Last Year's Total in Two Days",
+      "term_ko": "금통장 잔액 1.5조 돌파… 실버바도 이틀간 작년 전체 2.5배 팔려"
+    },
+    {
+      "term": "Residential Electricity Bills Strategized As a 'poverty Tax'...further Crushing Low-income Households",
+      "term_ko": "'빈곤세'로 전략한 가정용 전기요금…저소득 가구 더 짓눌렀다"
+    },
+    {
+      "term": "From 'crypto President' to 'top Villain'...coin Liquidations Ranked #1 and #2 in the World, Both 'trump'",
+      "term_ko": "‘가상자산 대통령’에서 ‘최고 빌런’으로…코인 청산 1·2위 모두 ‘트럼프’"
+    },
+    {
+      "term": "Q3 Startup Investment Tops $2 Trillion for the First Time in 2 Years, But It's in the Hands of a Few [vc Weekly]",
+      "term_ko": "3분기 스타트업 투자 2년만에 2조원 넘었지만 소수에 몰려[주간VC동향]"
+    },
+    {
+      "term": "����ä �ݸ�, 3bp ���� ��..",
+      "term_ko": "����ä �ݸ�, 3bp ���� ��.."
+    },
+    {
+      "term": "'wind Farm' Fujian to Invest ₱20 Trillion to ₱40 Trillion in R&d... Korean Government's Investment Nears ₱1 Trillion Dong-a Ilbo 22 Minutes Ago",
+      "term_ko": "‘풍력기지’ 푸젠성, R&D에 年20조∼40조 투자… 韓정부 투자액 육박 동아일보 22분 전"
+    },
+    {
+      "term": "'korean Science' Breaks Retirement Pensions, 'japanese Science' Wins Another Nobel Prize the Korea Times 17 Hours Ago",
+      "term_ko": "퇴직연금까지 깨는 '한국 과학', 노벨상 또 받은 '일본 과학' 한국일보 17시간 전"
+    },
+    {
+      "term": "\"���� �⺻�ε���\" Kt ��ŷ��� �������ĵ� �� �ϰ� �������",
+      "term_ko": "\"���� �⺻�ε���\" Kt ��ŷ��� �������ĵ� �� �ϰ� �������"
+    }
+  ],
+  "translations": {
+    "Low Price": {
+      "en": "Low Price",
+      "ko": "저가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Momentum": {
+      "en": "Momentum",
+      "ko": "모멘텀",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Cryptocurrency": {
+      "en": "Cryptocurrency",
+      "ko": "암호화폐",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Public Offering Price": {
+      "en": "Public Offering Price",
+      "ko": "공모가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Value Investment": {
+      "en": "Value Investment",
+      "ko": "가치투자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Grain": {
+      "en": "Grain",
+      "ko": "곡물",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Conference Call": {
+      "en": "Conference Call",
+      "ko": "컨퍼런스콜",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Latest Economic News": {
+      "en": "Latest Economic News",
+      "ko": "경제 최신 뉴스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "High Price": {
+      "en": "High Price",
+      "ko": "높은 가격",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Beta": {
+      "en": "Beta",
+      "ko": "베타",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Income Statement": {
+      "en": "Income Statement",
+      "ko": "손익계산서",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Metaverse": {
+      "en": "Metaverse",
+      "ko": "메타버스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Short Interest": {
+      "en": "Short Interest",
+      "ko": "숏 이자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Lock Up": {
+      "en": "Lock Up",
+      "ko": "잠그기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "�̷����� ‘tiger �̱�s&..": {
+      "en": "�̷����� ‘tiger �̱�s&..",
+      "ko": "�̷����� ‘tiger �̱�s&..",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Lower Limit Price": {
+      "en": "Lower Limit Price",
+      "ko": "하한가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Financial Conduct Authority": {
+      "en": "Financial Conduct Authority",
+      "ko": "금융 행위 당국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "M-print": {
+      "en": "M-print",
+      "ko": "M-print",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Strangle": {
+      "en": "Strangle",
+      "ko": "스트랭글",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "A Collection of Corrections, Clarifications, and Counterpoints": {
+      "en": "A Collection of Corrections, Clarifications, and Counterpoints",
+      "ko": "고침, 정정・반론 보도 모음",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Non Farm Payrolls": {
+      "en": "Non Farm Payrolls",
+      "ko": "비농장 급여",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Iron Auto Opens Audi Haeundae Showroom to Expand Customer Contact Points": {
+      "en": "Iron Auto Opens Audi Haeundae Showroom to Expand Customer Contact Points",
+      "ko": "아이언오토, '아우디 해운대 전시장' 개소…고객 접점 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Gold Vault Balances Hit $1.5 Trillion... Silver Bars Sold 2.5x Last Year's Total in Two Days": {
+      "en": "Gold Vault Balances Hit $1.5 Trillion... Silver Bars Sold 2.5x Last Year's Total in Two Days",
+      "ko": "금통장 잔액 1.5조 돌파… 실버바도 이틀간 작년 전체 2.5배 팔려",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Residential Electricity Bills Strategized As a 'poverty Tax'...further Crushing Low-income Households": {
+      "en": "Residential Electricity Bills Strategized As a 'poverty Tax'...further Crushing Low-income Households",
+      "ko": "'빈곤세'로 전략한 가정용 전기요금…저소득 가구 더 짓눌렀다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "From 'crypto President' to 'top Villain'...coin Liquidations Ranked #1 and #2 in the World, Both 'trump'": {
+      "en": "From 'crypto President' to 'top Villain'...coin Liquidations Ranked #1 and #2 in the World, Both 'trump'",
+      "ko": "‘가상자산 대통령’에서 ‘최고 빌런’으로…코인 청산 1·2위 모두 ‘트럼프’",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "Q3 Startup Investment Tops $2 Trillion for the First Time in 2 Years, But It's in the Hands of a Few [vc Weekly]": {
+      "en": "Q3 Startup Investment Tops $2 Trillion for the First Time in 2 Years, But It's in the Hands of a Few [vc Weekly]",
+      "ko": "3분기 스타트업 투자 2년만에 2조원 넘었지만 소수에 몰려[주간VC동향]",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "����ä �ݸ�, 3bp ���� ��..": {
+      "en": "����ä �ݸ�, 3bp ���� ��..",
+      "ko": "����ä �ݸ�, 3bp ���� ��..",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "'wind Farm' Fujian to Invest ₱20 Trillion to ₱40 Trillion in R&d... Korean Government's Investment Nears ₱1 Trillion Dong-a Ilbo 22 Minutes Ago": {
+      "en": "'wind Farm' Fujian to Invest ₱20 Trillion to ₱40 Trillion in R&d... Korean Government's Investment Nears ₱1 Trillion Dong-a Ilbo 22 Minutes Ago",
+      "ko": "‘풍력기지’ 푸젠성, R&D에 年20조∼40조 투자… 韓정부 투자액 육박 동아일보 22분 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "'korean Science' Breaks Retirement Pensions, 'japanese Science' Wins Another Nobel Prize the Korea Times 17 Hours Ago": {
+      "en": "'korean Science' Breaks Retirement Pensions, 'japanese Science' Wins Another Nobel Prize the Korea Times 17 Hours Ago",
+      "ko": "퇴직연금까지 깨는 '한국 과학', 노벨상 또 받은 '일본 과학' 한국일보 17시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    },
+    "\"���� �⺻�ε���\" Kt ��ŷ��� �������ĵ� �� �ϰ� �������": {
+      "en": "\"���� �⺻�ε���\" Kt ��ŷ��� �������ĵ� �� �ϰ� �������",
+      "ko": "\"���� �⺻�ε���\" Kt ��ŷ��� �������ĵ� �� �ϰ� �������",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-13T12:38:07.158Z"
+    }
   }
 }
