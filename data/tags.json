@@ -1,1075 +1,439 @@
 {
+  "generatedAt": "2025-10-14T06:28:16.862Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-10-14",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Daily Economy",
-      "term_ko": "매일 경제",
-      "significance_score": 874673,
-      "mentions": 1455287,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "매일 경제",
-        "total_results": 1455287,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1301,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:11 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%A4%EC%9D%BC%20%EA%B2%BD%EC%A0%9C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%A7%A4%EC%9D%BC%20%EA%B2%BD%EC%A0%9C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%A7%A4%EC%9D%BC%20%EA%B2%BD%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국광고주협회, '2025 광고주가 뽑은 올해의 신문기획상' 수상작 발표",
-          "summary": "수상작으로는 △문화일보 △동아일보 △ 매일경제 신문 △서울경제신문 등의 4건의 기획 기사가 선정됐다. 올해 수상작들은 우리 사회와 기업이 직면한 도전과 과제를 심층적으로 다루면서도 새로운 기회와 해법을...",
-          "link": "https://www.banronbodo.com/news/articleView.html?idxno=31028",
-          "pubDate": "Tue, 14 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "서울 경제 신문 등 4건 '광고주가 뽑은 올해의 신문기획상' 수상",
-          "summary": "서울경제신문, 문화일보, 동아일보, 매일경제 신문 등 4건의 기획기사가 ‘광고주가 뽑은 올해의 신문기획상’ 수상작으로 선정됐다. 한국광고주협회는 ‘2025 한국광고주대회’ KAA 어워즈(Awards)에서 이같은 수상작을...",
-          "link": "https://www.sedaily.com/NewsView/2GZ6B8LC76",
-          "pubDate": "Tue, 14 Oct 2025 09:55:00 +0900"
-        },
-        {
-          "title": "매일경제 \"캄보디아 실종 신고 쏟아지는데...피해 통계도 없는 경찰\"",
-          "summary": "매일경제 는 <캄보디아 실종 신고 쏟아지는데...피해 현황 통계도 없는 경찰>에서 정부의 총체적 대응 실패를 전면에 내세웠다. \"경찰청 국가수사본부 관계자는 이날 정례 기자간담회에서 '현재까지 (또 다른 사망 사례가)...",
-          "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=329362",
-          "pubDate": "Tue, 14 Oct 2025 09:35:00 +0900"
-        }
-      ]
+      "term_ko": "매일 경제"
     },
     {
-      "term": "subscription",
-      "term_ko": "청약",
-      "significance_score": 842031,
-      "mentions": 1400666,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "청약",
-        "total_results": 1400666,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1431.52,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:13 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%B2%AD%EC%95%BD",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%B2%AD%EC%95%BD",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%B2%AD%EC%95%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "“내 집 마련에 불리할까봐···” 혼인신고 미루는 신혼부부 늘었다",
-          "summary": "주택 청약 기회나 대출한도 등 측면에서 부부가 불이익을 겪는 구조 탓에 이런 현상이 벌어진다는 지적이... 결혼했지만 혼인신고를 미루는 대표적인 이유로 주택담보대출 한도 축소, 주택 청약 기회 축소, 취득세 중과...",
-          "link": "https://weekly.khan.co.kr/article/202510141011001",
-          "pubDate": "Tue, 14 Oct 2025 10:12:00 +0900"
-        },
-        {
-          "title": "LG전자 인도법인 상장 전날 ‘열기 폭발’…비공식 시장 프리미엄 400루...",
-          "summary": "한국 회사의 인도 지사인 LG전자 인도는 총 청약 금액이 40조 루피를 돌파한 국내 최초의 기업공개(IPO)가 되어 시장 역사를 만들었다. 이는 10,000억 루피 이상의 규모를 가진 인도에서 가장 많이 청약 된 IPO가 됐다. LIC...",
-          "link": "https://www.g-enews.com/view.php?ud=2025101410080225000c8c1c064d_1",
-          "pubDate": "Tue, 14 Oct 2025 10:10:00 +0900"
-        },
-        {
-          "title": "강남·여의도 출퇴근 최적 입지 ‘신대방역 더하이브 퍼스트’ 주목",
-          "summary": "45대 1 경쟁률을 기록하며 청약 을 마쳤다. 이 단지는 지하철 2호선을 이용해 시청역(13분), 여의도역(12분)... ‘신대방역 더하이브 퍼스트’는 청약 통장, 전매제한, 지역제한이 없는 분양 조건으로 분양돼 진입 장벽이...",
-          "link": "https://www.viva100.com/article/20251014500361",
-          "pubDate": "Tue, 14 Oct 2025 10:08:00 +0900"
-        }
-      ]
+      "term": "Subscription",
+      "term_ko": "청약"
     },
     {
-      "term": "market share",
-      "term_ko": "시장점유율",
-      "significance_score": 825885,
-      "mentions": 1373751,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "시장점유율",
-        "total_results": 1373751,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1434.43,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:12 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%9C%EC%9E%A5%EC%A0%90%EC%9C%A0%EC%9C%A8",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%8B%9C%EC%9E%A5%EC%A0%90%EC%9C%A0%EC%9C%A8",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%8B%9C%EC%9E%A5%EC%A0%90%EC%9C%A0%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "정의선號 출범 5년만 매출 100조원 껑충···글로벌 '빅3' 도약",
-          "summary": "아이오닉 5·EV6 등 전용 전기차를 앞세워 글로벌 시장 점유율 을 높였고, 하이브리드 모델은 미국 시장에서 올해 1분기 3위에 오르며 존재감을 강화했다. SNE리서치에 따르면 현대차그룹은 올해 상반기 글로벌 전기차...",
-          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=415980",
-          "pubDate": "Tue, 14 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "글로벌 전기차 시장 , 8월까지 27.7% 성장…중국 독주 속 현대차그룹 7위...",
-          "summary": "시장점유율 은 3.2%다. 아이오닉 5와 기아 EV3가 실적을 견인했고, 캐스퍼 인스터, EV5, 크레타 일렉트릭 등 전략형 소형 모델도 긍정적인 반응을 얻고 있다. 특히 북미 시장에서 11만8000대를 인도하며 GM과 테슬라에...",
-          "link": "http://www.queen.co.kr/news/articleView.html?idxno=443793",
-          "pubDate": "Tue, 14 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "댓글 소통에 숏폼 리포트?…증권사 리테일, 플랫폼 ‘진화’",
-          "summary": "시장 점유율 1%에도 미치지 못해 사실상 개점휴업 상태수준이던 메리츠증권의 고객예탁자산은 12조원을 웃돌면서 리테일 시장내 가능성을 증명해냈다. 메리츠증권은 여기에 그치지 않고 새로운 형식의 플랫폼을 구상...",
-          "link": "http://theviewers.co.kr/View.aspx?No=3813057",
-          "pubDate": "Tue, 14 Oct 2025 10:18:00 +0900"
-        }
-      ]
+      "term": "Market Share",
+      "term_ko": "시장점유율"
     },
     {
-      "term": "s&p 500",
-      "term_ko": "",
-      "significance_score": 417199,
-      "mentions": 692607,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "s&p 500",
-        "total_results": 692607,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1435.16,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:12 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=s%26p%20500",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=s%26p%20500",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=s%26p%20500"
-      },
-      "top_headlines": [
-        {
-          "title": "장중..아시아 6國증시 '혼조', 한국-대만증시 '급등', TSMC '껑충'",
-          "summary": "앞서 13일(미국시간) 뉴욕증권거래소에 따르면 이날 뉴욕증시에서는 우량주 중심의 다우존스 지수(+1.29%), 대형주 중심의 S&P500 지수(+1.56%), 기술주 중심의 나스닥 종합 지수(+2.21%) 중소형주 중심의 러셀2000 지수...",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=155139",
-          "pubDate": "Tue, 14 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "코스피 장중 3640선 돌파…사상 최고 또 경신",
-          "summary": "다우존스30산업평균지수는 1.29% 올랐고 스탠더드앤드푸어스( S&P ) 500 지수와 나스닥지수도 각각 1.56%, 2.21% 올랐다. 특히 챗GPT 개발사인 오픈AI와 자체 AI(인공지능) 칩 개발 관련 합의 소식을 발표한 브로드컴이 9....",
-          "link": "https://www.mydaily.co.kr/page/view/2025101410190790301",
-          "pubDate": "Tue, 14 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "코스피, 사상최고치 3640P 돌파...'어닝서프라이즈' 삼전 신고가",
-          "summary": "다우존스30산업평균지수는 전 거래일 대비 1.29% 상승하며 4만6067.58에 마감했다. 스탠다드앤드푸어스( S&P ) 500 지수는 1.56% 올라 6654.72포인트를, 나스닥지수는 2.21% 뛰며 2만2694.61에 거래를 종료했다. 오늘경제",
-          "link": "https://www.startuptoday.co.kr/news/articleView.html?idxno=522707",
-          "pubDate": "Tue, 14 Oct 2025 10:18:00 +0900"
-        }
-      ]
+      "term": "S&p 500",
+      "term_ko": "S&p 500"
     },
     {
-      "term": "Market opening",
-      "term_ko": "시장개장",
-      "significance_score": 408061,
-      "mentions": 677374,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "시장개장",
-        "total_results": 677374,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1436.16,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:03 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%9C%EC%9E%A5%EA%B0%9C%EC%9E%A5",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%8B%9C%EC%9E%A5%EA%B0%9C%EC%9E%A5",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%8B%9C%EC%9E%A5%EA%B0%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 장중 3640선 돌파…사상 최고 또 경신",
-          "summary": "이날 코스닥 지수도 전거래일 대비 4.88포인트(0.57%) 오른 865.37로 개장 해 상승폭을 키우는 중이다. 코스닥 시장 에서 개인은 349억원을 기관은 202억원을 순매수했다. 외국인은 522억원을 순매도했다.",
-          "link": "https://www.mydaily.co.kr/page/view/2025101410190790301",
-          "pubDate": "Tue, 14 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "[ 개장 시황] 코스피, 장 초반 3640대 돌파…사상 최고치 경신",
-          "summary": "지수는 4.88포인트(0.57%) 오른 865.37로 개장 해 상승폭을 키워가고 있다. 코스닥 시장 에서 개인은 461억 원을 순매수했다. 외국인과 기관은 각각 424억 원과 58억 원을 순매도했다. 시가총액 상위주는...",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=782796",
-          "pubDate": "Tue, 14 Oct 2025 10:18:00 +0900"
-        },
-        {
-          "title": "삼성전자, 반도체 호황에 '어닝 서프라이즈' … '10만전자' 기대감 솔솔...",
-          "summary": "뉴데일리 전한신 기자 = 삼성전자가 올해 3분기 시장 의 예상치를 뛰어넘는 ‘어닝 서프라이즈’를... 이날 삼성전자는 개장 전 3분기 잠정실적을 발표했다. 삼성전자의 3분기 잠정 매출과 영업이익은 각각...",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/10/14/2025101400065.html",
-          "pubDate": "Tue, 14 Oct 2025 10:18:00 +0900"
-        }
-      ]
+      "term": "Market Opening",
+      "term_ko": "시장개장"
     },
     {
-      "term": "underrated",
-      "term_ko": "저평가",
-      "significance_score": 318073,
-      "mentions": 527435,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "저평가",
-        "total_results": 527435,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1412.28,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:00 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A0%80%ED%8F%89%EA%B0%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A0%80%ED%8F%89%EA%B0%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A0%80%ED%8F%89%EA%B0%80"
-      },
-      "top_headlines": [
-        {
-          "title": "엑시온그룹 \"합병 후 로봇∙AI 기반 신성장 본격화\"",
-          "summary": "엑시온그룹 관계자는 \"그동안 저평가 받았던 회사의 가치를 이번 신사업을 통해 새롭게 평가 받을 것\"이라며 \"로봇∙AI∙건설이 결합된 스마트 인더스트리 혁신을 통해 글로벌 시장에서 경쟁우위를 확보해나가겠다\"고...",
-          "link": "https://www.newsis.com/view/NISX20251014_0003361469",
-          "pubDate": "Tue, 14 Oct 2025 10:16:00 +0900"
-        },
-        {
-          "title": "[N2 특징주] 일진전기, AI·북미 전력 인프라 핵심 수혜주 부각...주가 동...",
-          "summary": "유안타증권은 일진전기 주가가 동종업계 대비 저평가 됐다고 분석했다. 그러면서 일진전기가 북미 송전·배전망 교체와 AI 데이터센터 전력 인프라 확충의 핵심 수혜 업체로, 2025년~2026년 이익 성장의 가시성이...",
-          "link": "https://www.news2day.co.kr/article/20251014500097",
-          "pubDate": "Tue, 14 Oct 2025 09:52:00 +0900"
-        },
-        {
-          "title": "엑시온그룹, 합병 후 로봇·AI 기반 신성장 본격화",
-          "summary": "엑시온그룹 관계자는 \"회사가 그동안 저평가 받았던 회사의 가치를 이번 신사업을 통해 새로운 가치로 평가받을 것\"이라며 \"로봇·AI·건설이 결합된 스마트 인더스트리 혁신을 통해 글로벌 시장에서 경쟁우위를...",
-          "link": "https://view.asiae.co.kr/article/2025101409442997111",
-          "pubDate": "Tue, 14 Oct 2025 09:44:00 +0900"
-        }
-      ]
+      "term": "Underrated",
+      "term_ko": "저평가"
     },
     {
-      "term": "PC version",
-      "term_ko": "PC버전",
-      "significance_score": 140858,
-      "mentions": 232046,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "PC버전",
-        "total_results": 232046,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1430.69,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:10 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=PC%EB%B2%84%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=PC%EB%B2%84%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=PC%EB%B2%84%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "드림에이지 '아키텍트', 21일 사전 다운로드 및 캐릭터 생성 시작",
-          "summary": "사전 다운로드는 PC 버전 의 경우 구글 플레이 게임즈, 모바일은 구글 플레이 스토어와 애플 앱스토어를 통해 22일까지 진행된다. 이번 사전 캐릭터 생성을 통해 이용자는 닉네임을 선점하고 직업 선택과...",
-          "link": "https://zdnet.co.kr/view/?no=20251014101517",
-          "pubDate": "Tue, 14 Oct 2025 10:21:00 +0900"
-        },
-        {
-          "title": "넷마블, 남미 최대 게임 전시회 ‘브라질 게임쇼’서 ‘몬길: STAR DIVE’...",
-          "summary": "PC 와 모바일을 비롯해 플레이스테이션5(PS5) 콘솔 버전 으로도 개발 중이며, 지난 ‘도쿄게임쇼 2025’에서 콘솔 버전 이 처음 공개됐다. ‘오디세이 3D’는 별도의 3D 안경 없이 입체 영상을 구현하는 모니터로, 양사...",
-          "link": "https://biz.chosun.com/it-science/ict/2025/10/14/OYVIE5YVCBFLJD2FQGC56IYPX4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "pubDate": "Tue, 14 Oct 2025 10:21:00 +0900"
-        },
-        {
-          "title": "컴투스홀딩스 기대작 ‘페이탈 클로’, 스팀 넥스트 페스트 참가",
-          "summary": "스팀 넥스트 페스트는 글로벌 PC 게임 유통 플랫폼 ‘스팀’에서 진행하는 온라인 행사로 출시를 앞둔... 페이탈 클로의 데모 버전 은 24일까지 스팀에서 체험할 수 있다. 데모 버전 은 전체 스토리의 도입부로, 약...",
-          "link": "http://www.fntimes.com/html/view.php?ud=2025101410171320297492587736_18",
-          "pubDate": "Tue, 14 Oct 2025 10:20:00 +0900"
-        }
-      ]
+      "term": "Pc Version",
+      "term_ko": "PC버전"
     },
     {
-      "term": "intrinsic value",
-      "term_ko": "내재가치",
-      "significance_score": 81283,
-      "mentions": 132872,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "내재가치",
-        "total_results": 132872,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1360.05,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:15 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%82%B4%EC%9E%AC%EA%B0%80%EC%B9%98",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%82%B4%EC%9E%AC%EA%B0%80%EC%B9%98",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%82%B4%EC%9E%AC%EA%B0%80%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "'대종로 470 : 정면, 입면, 배면' 특별기획전",
-          "summary": "이후 지난 20년간 대전창작센터는 역사성을 내재 한 실험과 상상의 장으로 기능하며 미술관의 역할을 확장해 왔다. 특히 2023년부터는 공립미술관 최초로 기획의 영역을 개방한 을 통해 능동적인 예술 가치 를 생산하며...",
-          "link": "https://www.ilyoseoul.co.kr/news/articleView.html?idxno=508182",
-          "pubDate": "Tue, 14 Oct 2025 10:14:00 +0900"
-        },
-        {
-          "title": "[ESG 칼럼] 공급망 경쟁력 핵심, 글로벌 민간 ESG 평가",
-          "summary": "규제가 줄어들면 관리가 쉬워질 줄 알았으나, 글로벌 가치 사슬의 현실은 전혀 다르다. 하위 공급망에서... 특히 평가 중심, 기준 중심의 시장 환경에서는 ESG 성숙도를 선제적으로 내재 화하고, 필요한 데이터를...",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=365474",
-          "pubDate": "Tue, 14 Oct 2025 09:54:00 +0900"
-        },
-        {
-          "title": "정의선 취임 5주년…현대차그룹, '글로벌 톱 3' 굳히기",
-          "summary": "또한 핵심 기술의 내재 화와 글로벌 협업, 우수 인재 영입을 통해 미래 산업 경쟁력을 내실화했다. 이 같은... 올 상반기 영업이익률은 8.7%로 글로벌 2위에 오르며 RV(레저용 차량)와 제네시스 등 고부가 가치 차종의 확대가...",
-          "link": "http://www.newscape.co.kr/news/articleView.html?idxno=116550",
-          "pubDate": "Tue, 14 Oct 2025 09:34:00 +0900"
-        }
-      ]
+      "term": "Intrinsic Value",
+      "term_ko": "내재가치"
     },
     {
       "term": "Earnings Surprise",
-      "term_ko": "어닝서프라이즈",
-      "significance_score": 65423,
-      "mentions": 106312,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "어닝서프라이즈",
-        "total_results": 106312,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1435.63,
-        "last_build_date": "Tue, 14 Oct 2025 10:21:59 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%96%B4%EB%8B%9D%EC%84%9C%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%96%B4%EB%8B%9D%EC%84%9C%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%96%B4%EB%8B%9D%EC%84%9C%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88"
-      },
-      "top_headlines": [
-        {
-          "title": "삼성전자, 반도체 호황에 ' 어닝 서프라이즈 ' … '10만전자' 기대감 솔솔...",
-          "summary": "뉴데일리 전한신 기자 = 삼성전자가 올해 3분기 시장의 예상치를 뛰어넘는 ‘ 어닝 서프라이즈 ’를 기록하며 5개 분기 만에 영업익 ‘10조 클럽’에 복귀했다. AI(인공지능) 확산에 따른 메모리 수요·가격 상승과...",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/10/14/2025101400065.html",
-          "pubDate": "Tue, 14 Oct 2025 10:18:00 +0900"
-        },
-        {
-          "title": "코스피, 사상최고치 3640P 돌파...' 어닝서프라이즈 ' 삼전 신고가",
-          "summary": "미국 대통령 도널드 트럼프이 미중 무역전쟁 우려와 관련해 진화에 나서면서 간밤 뉴욕증시가 강세를 보였고, 나아가 이날 삼성전자의 ' 어닝 서프라이즈 '(기업의 실적이 예상했던 것보다 좋은 경우 시장에서...",
-          "link": "https://www.startuptoday.co.kr/news/articleView.html?idxno=522707",
-          "pubDate": "Tue, 14 Oct 2025 10:18:00 +0900"
-        },
-        {
-          "title": "[개장시황] 코스피, 장 초반 3640대 돌파…사상 최고치 경신",
-          "summary": "◆ 삼성전자 ' 어닝 서프라이즈 '…2.8% 상승 이날 시장 전망치를 웃도는 3분기 잠정실적을 발표한 삼성전자는 전장보다 2.79% 오른 9만5900원에 거래되고 있다. 장중 한때 9만6000원까지 올라 52주 신고가를...",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=782796",
-          "pubDate": "Tue, 14 Oct 2025 10:18:00 +0900"
-        }
-      ]
+      "term_ko": "어닝서프라이즈"
     },
     {
-      "term": "cac 40",
-      "term_ko": "",
-      "significance_score": 59745,
-      "mentions": 97631,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "cac 40",
-        "total_results": 97631,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 965.93,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:00 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=cac%2040",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=cac%2040",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=cac%2040"
-      },
-      "top_headlines": [
-        {
-          "title": "[글로벌마켓 모닝 브리핑] 미·중 불안 완화에 반등⋯금값, 사상 첫 4100...",
-          "summary": "독일 프랑크푸르트 증시 DAX 지수는 146.47인트(0.60%) 상승한 2만4387.93에, 영국 런던 증시 FTSE 100 지수는 15.40포인트(0.16%) 전진한 9442.87에, 프랑스 파리 증시의 CAC 40 지수는 16.26포인트(0.21%) 오른 7934.26에 각각 거래를...",
-          "link": "https://www.etoday.co.kr/news/view/2514381",
-          "pubDate": "Tue, 14 Oct 2025 09:02:00 +0900"
-        },
-        {
-          "title": "'우주의 기운' 반도체주...오늘도 호재 폭발 - 와우넷 오늘장전략",
-          "summary": "전일 미국 · 유럽 증시 - 다우산업 : 46067.58 (+587.98p, 1.29%) - S&P500 : 6654.72 (+102.21p, 1.56%) - 나스닥 : 22694.61 (+490.18p, 2.21%) - 영국 FTSE100 : 9442.87 (+15.4p, 0.16%) - 프랑스 CAC40 : 7934.26 (+16.26p, 0.21%) - 독일 DAX : 24387.93 (+146....",
-          "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202510140355&t=NN",
-          "pubDate": "Tue, 14 Oct 2025 08:30:00 +0900"
-        },
-        {
-          "title": "유럽증시, 미중간 무역갈등 완화 기대감 등 영향 일제히 올라⋯독일 0.6...",
-          "summary": "프랑스 파리 증시의 CAC40 지수는 0.21% 상승한 7934.26으로 거래를 마쳤다. 영국 런던 증시의 FTSE100지수는 0.16% 전진한 9442.87로 장을 끝냈다. 범유럽 지수인 Stoxx600지수는 전장보다 0.44% 뛴 566.63을 기록했다. 유럽증시는...",
-          "link": "http://www.econonews.co.kr/news/articleView.html?idxno=408775",
-          "pubDate": "Tue, 14 Oct 2025 07:56:00 +0900"
-        }
-      ]
+      "term": "Cac 40",
+      "term_ko": "Cac 40"
     },
     {
-      "term": "employment",
-      "term_ko": "고용",
-      "significance_score": 45351,
-      "mentions": 73360,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "employment",
-        "total_results": 73360,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1134.65,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:15 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=employment",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=employment",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=employment"
-      },
-      "top_headlines": [
-        {
-          "title": "안도걸 의원, \"퇴직연금 '기금화 개혁' 통해 제2의 공적연금 자리매김\"...",
-          "summary": "\" He added, \"As the economic control tower, the Deputy Prime Minister should personally lead a task force inter-ministerial, including the Ministry of Employment and Labor and the Financial Services Commission, to...",
-          "link": "http://www.breaknews.com/1153495",
-          "pubDate": "Tue, 14 Oct 2025 09:44:00 +0900"
-        },
-        {
-          "title": "Slow Letter: October 14, 2025.",
-          "summary": "The Democratic Party has decided to form a special committee on overseas employment fraud. Cooperation from Cambodian police is proving difficult. Yoo Jae-sung (Acting Police Commissioner) stated...",
-          "link": "https://slownews.kr/146947",
-          "pubDate": "Tue, 14 Oct 2025 08:00:00 +0900"
-        },
-        {
-          "title": "[Interview] Jeonbuk National University banks on physical AI field to boo...",
-          "summary": "and employment opportunities. “Our goal is to ensure international students are not just here to study and leave,” Yang said. “We want them to become part of the community, contributing as...",
-          "link": "https://www.koreatimes.co.kr/path/A2025090914250004278",
-          "pubDate": "Tue, 14 Oct 2025 07:00:00 +0900"
-        }
-      ]
+      "term": "Employment",
+      "term_ko": "고용"
     },
     {
-      "term": "platinum",
-      "term_ko": "플래티넘",
-      "significance_score": 15936,
-      "mentions": 25621,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "platinum",
-        "total_results": 25621,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 363.83,
-        "last_build_date": "Tue, 14 Oct 2025 10:21:58 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=platinum",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=platinum",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=platinum"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘 금시세 얼마…금값 상승의 주요 원인은?",
-          "summary": "백금( Platinum )은 살 때 327,000원으로 2,000원 상승(0.61%), 팔 때는 269,000원으로 1,000원 상승(0.37%)했다. 은(Silver)은 살 때 11,550원, 팔 때 8,440원으로 각각 240원(2.08%), 180원(2.13%) 상승했다. 금 자료사진. 한편 금값 상승의...",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=536196",
-          "pubDate": "Tue, 14 Oct 2025 10:02:00 +0900"
-        },
-        {
-          "title": "[오늘 금시세]미·중 갈등 심화 우려 속 금값 4,100달러 돌파 전망",
-          "summary": "백금( Platinum -3.75g) 시세는 내가 살 때 315,000원, 내가 팔 때는 269,000원으로 전날과 같았다. 국제... 백금( Platinum -3.75g) 시세는 내가 살 때 302,000원, 내가 팔 때는 259,000원으로 전날과 같았다. 국제 금값은...",
-          "link": "http://www.namdonews.com/news/articleView.html?idxno=835693",
-          "pubDate": "Tue, 14 Oct 2025 09:20:00 +0900"
-        },
-        {
-          "title": "[BTS News] 방탄소년단 정국 ‘GOLDEN’, 솔로 앨범으로 이룬 ‘트리플 밀...",
-          "summary": "또 위버스 앱에서만 들을 수 있는 QR 코드 형식의 플랫폼 앨범인 'GOLDEN (Weverse)'도 25만 장을 달성해 '플래티넘'( Platinum ) 인증까지 함께 획득했다. 한편, 'GOLDEN'은 미국 음악 매체 '빌보드'(Billboard) 메인 앨범...",
-          "link": "http://theviewers.co.kr/View.aspx?No=3812756",
-          "pubDate": "Tue, 14 Oct 2025 08:12:00 +0900"
-        }
-      ]
+      "term": "Platinum",
+      "term_ko": "플래티넘"
     },
     {
-      "term": "cash flow",
-      "term_ko": "현금 흐름",
-      "significance_score": 7778,
-      "mentions": 12203,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "cash flow",
-        "total_results": 12203,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 256.23,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:02 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=cash%20flow",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=cash%20flow",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=cash%20flow"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI and Broadcom Officially Announce Custom AI Chipset Development",
-          "summary": "a 1GW AI data center,\" and \"While OpenAI's enterprise value reaches $500 billion, it is burning through massive amounts of cash and is expected to have negative cash flow until the end of the 2020s.\"",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=253959",
-          "pubDate": "Tue, 14 Oct 2025 09:30:00 +0900"
-        },
-        {
-          "title": "The Secret Behind a Bioventure’s Success in Bio-based Cosmetics",
-          "summary": "“The stable cash flow from our cosmetics business directly supports our ongoing diabetes drug R&D,” Kim said. “New drug development takes more than a decade and requires massive investment....",
-          "link": "http://www.edaily.co.kr/news/newspath.asp?newsid=01731846642332920",
-          "pubDate": "Tue, 14 Oct 2025 06:03:00 +0900"
-        },
-        {
-          "title": "Investors Fear the Return of the U.S.-China Trade War",
-          "summary": "China dominates the global flow of these vital materials, giving it potential leverage for... 5 billion in cash . It also recently expanded a partnership with Sumitomo Mitsui of Japan that...",
-          "link": "https://www.nytimes.com/2025/10/13/business/dealbook/us-china-trade-war-trump.html?partner=naver",
-          "pubDate": "Mon, 13 Oct 2025 21:08:00 +0900"
-        }
-      ]
+      "term": "Cash Flow",
+      "term_ko": "현금 흐름"
     },
     {
-      "term": "earnings guidance",
-      "term_ko": "수익 가이던스",
-      "significance_score": 2394,
-      "mentions": 2431,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "earnings guidance",
-        "total_results": 2431,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 735.72,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:08 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=earnings%20guidance",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=earnings%20guidance",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=earnings%20guidance"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul stocks open sharply higher on chip rebound, eased trade war woes",
-          "summary": "14 (Yonhap) -- South Korean stocks opened higher Tuesday as Samsung Electronics delivered a better-than-expected earnings guidance and U.S. President Donald Trump softened rhetoric around...",
-          "link": "https://en.yna.co.kr/view/AEN20251014002200320?input=2106m",
-          "pubDate": "Tue, 14 Oct 2025 09:43:00 +0900"
-        },
-        {
-          "title": "(2nd LD) Samsung Electronics logs largest operating earnings in over 3 yr...",
-          "summary": "Samsung Electronics-Q3 earnings guidance Samsung Electronics logs largest operating earnings in over 3 yrs in Q3 SEOUL, Oct. 14 (Yonhap) -- Samsung Electronics Co. on Tuesday estimated its third...",
-          "link": "https://en.yna.co.kr/view/AEN20251014001152320?input=2106m",
-          "pubDate": "Tue, 14 Oct 2025 08:45:00 +0900"
-        },
-        {
-          "title": "(LEAD) Samsung Electronics logs largest operating earnings in over 3 yrs ...",
-          "summary": "Samsung Electronics-Q3 earnings guidance Samsung Electronics logs largest operating earnings in over 3 yrs in Q3 SEOUL, Oct. 14 (Yonhap) -- Samsung Electronics Co. on Tuesday estimated its third...",
-          "link": "https://en.yna.co.kr/view/AEN20251014001151320?input=2106m",
-          "pubDate": "Tue, 14 Oct 2025 08:00:00 +0900"
-        }
-      ]
+      "term": "Earnings Guidance",
+      "term_ko": "수익 가이던스"
     },
     {
-      "term": "central bank digital currency",
-      "term_ko": "중앙은행 디지털 화폐",
-      "significance_score": 2047,
-      "mentions": 3078,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "central bank digital currency",
-        "total_results": 3078,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:14 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=central%20bank%20digital%20currency",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=central%20bank%20digital%20currency",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=central%20bank%20digital%20currency"
-      },
-      "top_headlines": [
-        {
-          "title": "Who Gained From U.S. Aid to Argentina?",
-          "summary": "had also “finalized a $20 billion currency swap framework” with the Argentine central bank ... the digital platforms where users can bet on nearly anything: political elections, N.F.L. games...",
-          "link": "https://www.nytimes.com/2025/10/10/business/dealbook/aid-argentina-investors-bessent.html?partner=naver",
-          "pubDate": "Fri, 10 Oct 2025 21:32:00 +0900"
-        },
-        {
-          "title": "Oracle Fears Add to Doubts About the A.I. Rally",
-          "summary": "The latest criticism came on Wednesday from the Bank of England: The central bank released... The state requires digital currency companies to obtain a so-called BitLicense to operate. It issued...",
-          "link": "https://www.nytimes.com/2025/10/08/business/dealbook/oracle-artificial-intelligence-bubble.html?partner=naver",
-          "pubDate": "Wed, 08 Oct 2025 21:26:00 +0900"
-        },
-        {
-          "title": "Taliban Orders Nationwide Internet and Mobile Data Shutdown in Afghanista...",
-          "summary": "Afghanistan has been plunged into near-total digital darkness after the Taliban ordered a... and currency markets have all been impacted, with the central bank reportedly relying on outdated...",
-          "link": "https://www.econotimes.com/Taliban-Orders-Nationwide-Internet-and-Mobile-Data-Shutdown-in-Afghanistan-1722069",
-          "pubDate": "Wed, 01 Oct 2025 17:30:00 +0900"
-        }
-      ]
+      "term": "Central Bank Digital Currency",
+      "term_ko": "중앙은행 디지털 화폐"
     },
     {
-      "term": "supply and demand imbalance",
-      "term_ko": "수요와 공급의 불균형",
-      "significance_score": 767,
-      "mentions": 869,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "supply and demand imbalance",
-        "total_results": 869,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 45.67,
-        "last_build_date": "Tue, 14 Oct 2025 10:21:56 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=supply%20and%20demand%20imbalance",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=supply%20and%20demand%20imbalance",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=supply%20and%20demand%20imbalance"
-      },
-      "top_headlines": [
-        {
-          "title": "Slow Letter: October 13, 2025.",
-          "summary": "Politico analyzed: “The imbalance between Beijing’s long-term strategy and the Trump... On September 7, expanded supply was promised. Now, the third policy package arrives this week....",
-          "link": "https://slownews.kr/146849",
-          "pubDate": "Mon, 13 Oct 2025 08:02:00 +0900"
-        },
-        {
-          "title": "Chipmakers' Q3 earnings outlook rosy due to AI boom",
-          "summary": "By Lee Gyu-lee Samsung Electronics and SK hynix are expected to deliver handsome third-quarter... the supply - demand imbalance has pushed up memory prices. OpenAI’s ambitious Stargate Project, a...",
-          "link": "https://www.koreatimes.co.kr/path/A2025101013500000542",
-          "pubDate": "Fri, 10 Oct 2025 15:20:00 +0900"
-        },
-        {
-          "title": "22% Jump in Electricity Rates Dominates New Jersey Governor’s Race",
-          "summary": "serve, and we are working with our stakeholders on multiple fronts to alleviate this supply / demand imbalance .” The issues with PJM are just one reason for electricity price increases. The cost...",
-          "link": "https://www.nytimes.com/2025/10/09/business/new-jersey-electricity-prices-governor-election.html?partner=naver",
-          "pubDate": "Fri, 10 Oct 2025 00:46:00 +0900"
-        }
-      ]
+      "term": "Supply and Demand Imbalance",
+      "term_ko": "수요와 공급의 불균형"
     },
     {
-      "term": "SPC Chairman Youngin Heo 'accelerates' goal of 1,000 North American stores by 2030",
-      "term_ko": "SPC 허영인 회장, 2030년 북미 1000호점 목표 ‘속도’",
-      "significance_score": 175,
-      "mentions": 12,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "SPC 허영인 회장, 2030년 북미 1000호점 목표 ‘속도’",
-        "total_results": 12,
-        "returned_results": 12,
-        "display_count": 12,
-        "recency_weight": 47.98,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:02 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=SPC%20%ED%97%88%EC%98%81%EC%9D%B8%20%ED%9A%8C%EC%9E%A5%2C%202030%EB%85%84%20%EB%B6%81%EB%AF%B8%201000%ED%98%B8%EC%A0%90%20%EB%AA%A9%ED%91%9C%20%E2%80%98%EC%86%8D%EB%8F%84%E2%80%99",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=SPC%20%ED%97%88%EC%98%81%EC%9D%B8%20%ED%9A%8C%EC%9E%A5%2C%202030%EB%85%84%20%EB%B6%81%EB%AF%B8%201000%ED%98%B8%EC%A0%90%20%EB%AA%A9%ED%91%9C%20%E2%80%98%EC%86%8D%EB%8F%84%E2%80%99",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=SPC%20%ED%97%88%EC%98%81%EC%9D%B8%20%ED%9A%8C%EC%9E%A5%2C%202030%EB%85%84%20%EB%B6%81%EB%AF%B8%201000%ED%98%B8%EC%A0%90%20%EB%AA%A9%ED%91%9C%20%E2%80%98%EC%86%8D%EB%8F%84%E2%80%99"
-      },
-      "top_headlines": [
-        {
-          "title": "SPC 허영인 회장, 2030년 북미 1000호점 목표 ‘속도’",
-          "summary": "현재 SPC 그룹은 북미 에 250여 개 매장을 운영하고 있으며, 2030년 까지 1000개 매장 개설을 목표 로 세웠다.... SPC 그룹 관계자는 “파리바게뜨 미국 제빵공장 건립은 허영인 SPC 그룹 회장 의 적극적인 글로벌 사업 강화...",
-          "link": "https://www.seoul.co.kr/news/economy/2025/10/13/20251013500041?wlog_tag3=naver",
-          "pubDate": "Mon, 13 Oct 2025 10:21:00 +0900"
-        },
-        {
-          "title": "K-푸드, 북미 현지화 드라이브… 베이커리·치킨 '공급망 구축 레이스'",
-          "summary": "SPC ( 회장 허영인 ) 파리바게뜨, CJ푸드빌(대표 김찬호) 뚜레쥬르, BBQ( 회장 윤홍근), 교촌에프엔비( 회장 ... 평가받으며, 2030년 북미 1000호점 돌파를 목표 로 한다. 미국 내 현지 생산기지 설립은 CJ푸드빌 역사상 처음이며...",
-          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3049112",
-          "pubDate": "Thu, 18 Sep 2025 00:00:00 +0900"
-        },
-        {
-          "title": "SPC 파리바게뜨, 美 텍사스 생산 거점 구축… 2030년 북미 1000호점 '정조...",
-          "summary": "사이 속도 가 붙고 있다. 매장 수는 2023년 120여개에서 2024년 210여개로 늘었고, 올해 9월 기준 250여개를 기록하며 2년 새 두 배 가까이 증가했다. 파리바게뜨는 2030년 까지 북미 지역에 1000개 매장 개설을 목표 로 하고...",
-          "link": "https://www.ajunews.com/view/20250917153041697",
-          "pubDate": "Wed, 17 Sep 2025 15:44:00 +0900"
-        }
-      ]
+      "term": "Spc Chairman Youngin Heo 'accelerates' Goal of 1,000 North American Stores by 2030",
+      "term_ko": "SPC 허영인 회장, 2030년 북미 1000호점 목표 ‘속도’"
     },
     {
-      "term": "\"Shipbuilding, more multi-level subcontracting lowers productivity...need to get more 'skilled'\"",
-      "term_ko": "\"조선업, 다단계 하청 많을수록 생산성 하락…'숙련도' 높여야\"",
-      "significance_score": 125,
-      "mentions": 2,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"조선업, 다단계 하청 많을수록 생산성 하락…'숙련도' 높여야\"",
-        "total_results": 2,
-        "returned_results": 2,
-        "display_count": 2,
-        "recency_weight": 103.38,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:09 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EC%A1%B0%EC%84%A0%EC%97%85%2C%20%EB%8B%A4%EB%8B%A8%EA%B3%84%20%ED%95%98%EC%B2%AD%20%EB%A7%8E%EC%9D%84%EC%88%98%EB%A1%9D%20%EC%83%9D%EC%82%B0%EC%84%B1%20%ED%95%98%EB%9D%BD%E2%80%A6'%EC%88%99%EB%A0%A8%EB%8F%84'%20%EB%86%92%EC%97%AC%EC%95%BC%22",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EC%A1%B0%EC%84%A0%EC%97%85%2C%20%EB%8B%A4%EB%8B%A8%EA%B3%84%20%ED%95%98%EC%B2%AD%20%EB%A7%8E%EC%9D%84%EC%88%98%EB%A1%9D%20%EC%83%9D%EC%82%B0%EC%84%B1%20%ED%95%98%EB%9D%BD%E2%80%A6'%EC%88%99%EB%A0%A8%EB%8F%84'%20%EB%86%92%EC%97%AC%EC%95%BC%22",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EC%A1%B0%EC%84%A0%EC%97%85%2C%20%EB%8B%A4%EB%8B%A8%EA%B3%84%20%ED%95%98%EC%B2%AD%20%EB%A7%8E%EC%9D%84%EC%88%98%EB%A1%9D%20%EC%83%9D%EC%82%B0%EC%84%B1%20%ED%95%98%EB%9D%BD%E2%80%A6'%EC%88%99%EB%A0%A8%EB%8F%84'%20%EB%86%92%EC%97%AC%EC%95%BC%22"
-      },
-      "top_headlines": [
-        {
-          "title": "\" 조선업, 다단계 하청 많을수록 생산성 하락…'숙련도' 높여야 \"",
-          "summary": "조선업 에 다단계 하청 인력이 많을수록 생산성 이 떨어진다는 연구 결과가 나왔다. 또 상대적으로 임금이... 초래하는 다단계 하청 구조의 제도적 억제를 위해 직접고용을 유도할 수 있는 본공 전환 지원금이나 숙련도 별...",
-          "link": "https://www.widedaily.com/news/articleView.html?idxno=279967",
-          "pubDate": "Mon, 13 Oct 2025 14:34:00 +0900"
-        },
-        {
-          "title": "\" 조선업, 다단계 하청 많을수록 생산성 하락…'숙련도' 높여야 \"",
-          "summary": "조선업 에 다단계 하청 인력이 많을수록 생산성 이 떨어진다는 연구 결과가 나왔다. 또 상대적으로 임금이... 초래하는 다단계 하청 구조의 제도적 억제를 위해 직접고용을 유도할 수 있는 본공 전환 지원금이나 숙련도 별...",
-          "link": "https://www.newsis.com/view/NISX20251013_0003360254",
-          "pubDate": "Mon, 13 Oct 2025 13:33:00 +0900"
-        }
-      ]
+      "term": "\"shipbuilding, More Multi-level Subcontracting Lowers Productivity...need to Get More 'skilled'\"",
+      "term_ko": "\"조선업, 다단계 하청 많을수록 생산성 하락…'숙련도' 높여야\""
     },
     {
-      "term": "U.S. appeals court brakes on Trump 'National Guard deployment to Chicago'...but upholds federal control",
-      "term_ko": "美항소법원도 트럼프 '주방위군 시카고 투입' 제동…연방통제는 인정",
-      "significance_score": 122,
-      "mentions": 3,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "美항소법원도 트럼프 '주방위군 시카고 투입' 제동…연방통제는 인정",
-        "total_results": 3,
-        "returned_results": 3,
-        "display_count": 3,
-        "recency_weight": 90.1,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:01 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%E7%BE%8E%ED%95%AD%EC%86%8C%EB%B2%95%EC%9B%90%EB%8F%84%20%ED%8A%B8%EB%9F%BC%ED%94%84%20'%EC%A3%BC%EB%B0%A9%EC%9C%84%EA%B5%B0%20%EC%8B%9C%EC%B9%B4%EA%B3%A0%20%ED%88%AC%EC%9E%85'%20%EC%A0%9C%EB%8F%99%E2%80%A6%EC%97%B0%EB%B0%A9%ED%86%B5%EC%A0%9C%EB%8A%94%20%EC%9D%B8%EC%A0%95",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%E7%BE%8E%ED%95%AD%EC%86%8C%EB%B2%95%EC%9B%90%EB%8F%84%20%ED%8A%B8%EB%9F%BC%ED%94%84%20'%EC%A3%BC%EB%B0%A9%EC%9C%84%EA%B5%B0%20%EC%8B%9C%EC%B9%B4%EA%B3%A0%20%ED%88%AC%EC%9E%85'%20%EC%A0%9C%EB%8F%99%E2%80%A6%EC%97%B0%EB%B0%A9%ED%86%B5%EC%A0%9C%EB%8A%94%20%EC%9D%B8%EC%A0%95",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%E7%BE%8E%ED%95%AD%EC%86%8C%EB%B2%95%EC%9B%90%EB%8F%84%20%ED%8A%B8%EB%9F%BC%ED%94%84%20'%EC%A3%BC%EB%B0%A9%EC%9C%84%EA%B5%B0%20%EC%8B%9C%EC%B9%B4%EA%B3%A0%20%ED%88%AC%EC%9E%85'%20%EC%A0%9C%EB%8F%99%E2%80%A6%EC%97%B0%EB%B0%A9%ED%86%B5%EC%A0%9C%EB%8A%94%20%EC%9D%B8%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "美항소법원도 트럼프 '주방위군 시카고 투입' 제동…연방통제는 인정",
-          "summary": "일리노이주 JB 프리츠커 주지사와 민주당 지도부는 주 방위군 의 시카고 배치에 강하게 반대해 왔다. 항소법원 은 트럼프 대통령이 연방 재산 보호와 이민 단속을 이유로 군을 투입 하려 한 것이 법적 권한을 초과했는지에...",
-          "link": "https://www.news1.kr/world/usa-canada/5938338",
-          "pubDate": "Mon, 13 Oct 2025 08:41:00 +0900"
-        },
-        {
-          "title": "美항소법원도 ' 시카고 주방위군 투입' 제동… 부통령 \"내란법 발동 검토...",
-          "summary": "이어 연방 항소법원도 일리노이주 시카고 에 대한 도널드 트럼프 미 대통령의 주방위군 투입 계획에 제동 을... 제7순회 항소법원 은 11일(현지시간) 현재 일리노이주에 파견된 주방위군 이 연방 정부 통제 하에 그 지역에 남을...",
-          "link": "http://www.joseilbo.com/news/news_read.php?uid=554329&class=42&grp=",
-          "pubDate": "Mon, 13 Oct 2025 06:09:00 +0900"
-        },
-        {
-          "title": "\"군 파견은 불법\" 美 연방 법원 , 트럼프 의 LA 주방위군 투입 제동",
-          "summary": "로이터통신 등 외신에 따르면 12일(현지시간) 샌프란시스코 소재 연방 법원 의 찰스 브레이어 판사는 \" 트럼프 대통령의 조치는 의회의 법률을 따르지 않은 불법 행위\"라며 \" 주방위군 통제 권을 즉시 뉴섬 주지사에게...",
-          "link": "http://www.seoulwire.com/news/articleView.html?idxno=655670",
-          "pubDate": "Fri, 13 Jun 2025 14:12:00 +0900"
-        }
-      ]
+      "term": "U.s. Appeals Court Brakes on Trump 'national Guard Deployment to Chicago'...but Upholds Federal Control",
+      "term_ko": "美항소법원도 트럼프 '주방위군 시카고 투입' 제동…연방통제는 인정"
     },
     {
-      "term": "I put a tracker on my discarded clothes",
-      "term_ko": "버린 옷에 추적기를 달았다",
-      "significance_score": 106,
-      "mentions": 10,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "버린 옷에 추적기를 달았다",
-        "total_results": 10,
-        "returned_results": 10,
-        "display_count": 10,
-        "recency_weight": 0,
-        "last_build_date": "Tue, 14 Oct 2025 10:21:57 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%B2%84%EB%A6%B0%20%EC%98%B7%EC%97%90%20%EC%B6%94%EC%A0%81%EA%B8%B0%EB%A5%BC%20%EB%8B%AC%EC%95%98%EB%8B%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%B2%84%EB%A6%B0%20%EC%98%B7%EC%97%90%20%EC%B6%94%EC%A0%81%EA%B8%B0%EB%A5%BC%20%EB%8B%AC%EC%95%98%EB%8B%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%B2%84%EB%A6%B0%20%EC%98%B7%EC%97%90%20%EC%B6%94%EC%A0%81%EA%B8%B0%EB%A5%BC%20%EB%8B%AC%EC%95%98%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "버려진 옷 61%가 국외로… ‘친환경 옷 수거’는 허구다",
-          "summary": "헌 옷 153벌에 추적기를 달았다 . 이 옷들을 여러 지역 의류수거함에 넣었다. 1년이 흘렀다. 머나먼 나라에서... 한겨레21은 2024년 12월 ‘당신이 버린 옷 의 최후’(제1545호 참조)라는 제목을 내건 통권호(한 권 전체를...",
-          "link": "https://h21.hani.co.kr/arti/society/environment/57984.html",
-          "pubDate": "Mon, 15 Sep 2025 06:34:00 +0900"
-        },
-        {
-          "title": "수거함에 버린 옷 , 어디로 갔을까 [인터랙티브]",
-          "summary": "▶디지털 인터랙티브 ‘ 버린 옷에 추적기를 달았다 ’ 페이지는 여기서 볼 수 있습니다 : https://story.hani.co.kr/usedclothes 많은 사람들이 재활용될 거라는 기대로 헌 옷을 의류수거함에 넣는다. 그러나 헌 옷의 최후는...",
-          "link": "https://h21.hani.co.kr/arti/society/environment/56674.html",
-          "pubDate": "Tue, 07 Jan 2025 11:14:00 +0900"
-        },
-        {
-          "title": "패스트패션 업체 녹색경영, 친환경인가 그린워싱인가",
-          "summary": "☞디지털 인터랙티브 ‘ 버린 옷에 추적기를 달았다 ’ 페이지는 여기서 볼 수 있습니다. https://story.hani.co.kr/usedclothes ☞주요기사 한국서 버린 옷, 인도서 불타다…4700㎞ 밖 ‘헌 옷의 무덤’ https://www.hani.co.kr/arti...",
-          "link": "https://www.hani.co.kr/arti/society/environment/1176657.html",
-          "pubDate": "Tue, 07 Jan 2025 06:02:00 +0900"
-        }
-      ]
+      "term": "I Put a Tracker on My Discarded Clothes",
+      "term_ko": "버린 옷에 추적기를 달았다"
     },
     {
-      "term": "[300SCOREBOARD-Defense]\"Restoring, Not Transitioning, Control? Did the U.S. Take It Away?\"",
-      "term_ko": "[300스코어보드-국방위]\"전작권 전환 아닌 회복? 미국이 빼앗아 갔나\"",
-      "significance_score": 74,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "[300스코어보드-국방위]\"전작권 전환 아닌 회복? 미국이 빼앗아 갔나\"",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 63.8,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:10 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%5B300%EC%8A%A4%EC%BD%94%EC%96%B4%EB%B3%B4%EB%93%9C-%EA%B5%AD%EB%B0%A9%EC%9C%84%5D%22%EC%A0%84%EC%9E%91%EA%B6%8C%20%EC%A0%84%ED%99%98%20%EC%95%84%EB%8B%8C%20%ED%9A%8C%EB%B3%B5%3F%20%EB%AF%B8%EA%B5%AD%EC%9D%B4%20%EB%B9%BC%EC%95%97%EC%95%84%20%EA%B0%94%EB%82%98%22",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%5B300%EC%8A%A4%EC%BD%94%EC%96%B4%EB%B3%B4%EB%93%9C-%EA%B5%AD%EB%B0%A9%EC%9C%84%5D%22%EC%A0%84%EC%9E%91%EA%B6%8C%20%EC%A0%84%ED%99%98%20%EC%95%84%EB%8B%8C%20%ED%9A%8C%EB%B3%B5%3F%20%EB%AF%B8%EA%B5%AD%EC%9D%B4%20%EB%B9%BC%EC%95%97%EC%95%84%20%EA%B0%94%EB%82%98%22",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%5B300%EC%8A%A4%EC%BD%94%EC%96%B4%EB%B3%B4%EB%93%9C-%EA%B5%AD%EB%B0%A9%EC%9C%84%5D%22%EC%A0%84%EC%9E%91%EA%B6%8C%20%EC%A0%84%ED%99%98%20%EC%95%84%EB%8B%8C%20%ED%9A%8C%EB%B3%B5%3F%20%EB%AF%B8%EA%B5%AD%EC%9D%B4%20%EB%B9%BC%EC%95%97%EC%95%84%20%EA%B0%94%EB%82%98%22"
-      },
-      "top_headlines": [
-        {
-          "title": "[300스코어보드-국방위]\"전작권 전환 아닌 회복? 미국이 빼앗아 갔나 \"",
-          "summary": "전환 이 아닌 ' 회복 '이라는 용어를 쓴 데 대해서도 \" 회복 은 국민들이 들었을 때 ( 미국이 ) 빼앗아 갔었나 (라고)... 한편 머니투데이 더 300 (the 300 ) 국감 스코어보드 의 평가 기준은 △정책 전문성 △이슈 파이팅 △국감 준비도...",
-          "link": "https://www.mt.co.kr/politics/2025/10/14/2025101322130430393",
-          "pubDate": "Tue, 14 Oct 2025 02:10:00 +0900"
-        }
-      ]
+      "term": "[300scoreboard-defense]\"restoring, Not Transitioning, Control? Did the U.s. Take It Away?\"",
+      "term_ko": "[300스코어보드-국방위]\"전작권 전환 아닌 회복? 미국이 빼앗아 갔나\""
     },
     {
-      "term": "Same salary at the same company, but thousands of dollars difference in retirement savings",
-      "term_ko": "같은 회사 월급인데, 퇴직금이 수천만원 차이 나네",
-      "significance_score": 73,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "같은 회사 월급인데, 퇴직금이 수천만원 차이 나네",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 62.26,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:13 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%99%EC%9D%80%20%ED%9A%8C%EC%82%AC%20%EC%9B%94%EA%B8%89%EC%9D%B8%EB%8D%B0%2C%20%ED%87%B4%EC%A7%81%EA%B8%88%EC%9D%B4%20%EC%88%98%EC%B2%9C%EB%A7%8C%EC%9B%90%20%EC%B0%A8%EC%9D%B4%20%EB%82%98%EB%84%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%99%EC%9D%80%20%ED%9A%8C%EC%82%AC%20%EC%9B%94%EA%B8%89%EC%9D%B8%EB%8D%B0%2C%20%ED%87%B4%EC%A7%81%EA%B8%88%EC%9D%B4%20%EC%88%98%EC%B2%9C%EB%A7%8C%EC%9B%90%20%EC%B0%A8%EC%9D%B4%20%EB%82%98%EB%84%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%99%EC%9D%80%20%ED%9A%8C%EC%82%AC%20%EC%9B%94%EA%B8%89%EC%9D%B8%EB%8D%B0%2C%20%ED%87%B4%EC%A7%81%EA%B8%88%EC%9D%B4%20%EC%88%98%EC%B2%9C%EB%A7%8C%EC%9B%90%20%EC%B0%A8%EC%9D%B4%20%EB%82%98%EB%84%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "같은 회사 월급인데, 퇴직금이 수천만원 차이 나네",
-          "summary": "조선일보 머니 / 은퇴 스쿨 김동엽 미래에셋투자와연금센터 상무 같은 회사 월급인데 퇴직금 은 수천만 원 차이 가 난다. 똑 같은 성과급도 내는 세금이 다르다. 어떻게 된 걸까? 지난달 30일 공개된 조선일보 유튜브 채널...",
-          "link": "https://www.chosun.com/economy/money/2025/10/14/HCTPBY3GTFEN5LNUMSTMKXMT3M/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-          "pubDate": "Tue, 14 Oct 2025 00:38:00 +0900"
-        }
-      ]
+      "term": "Same Salary at the Same Company, But Thousands of Dollars Difference in Retirement Savings",
+      "term_ko": "같은 회사 월급인데, 퇴직금이 수천만원 차이 나네"
     },
     {
-      "term": "Trump takes a step back: \"I have a good relationship with Xi Jinping\"",
-      "term_ko": "한발 물러선 트럼프 “시진핑과 관계 좋다”",
-      "significance_score": 66,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "한발 물러선 트럼프 “시진핑과 관계 좋다”",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 55.53,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:03 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%9C%EB%B0%9C%20%EB%AC%BC%EB%9F%AC%EC%84%A0%20%ED%8A%B8%EB%9F%BC%ED%94%84%20%E2%80%9C%EC%8B%9C%EC%A7%84%ED%95%91%EA%B3%BC%20%EA%B4%80%EA%B3%84%20%EC%A2%8B%EB%8B%A4%E2%80%9D",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%95%9C%EB%B0%9C%20%EB%AC%BC%EB%9F%AC%EC%84%A0%20%ED%8A%B8%EB%9F%BC%ED%94%84%20%E2%80%9C%EC%8B%9C%EC%A7%84%ED%95%91%EA%B3%BC%20%EA%B4%80%EA%B3%84%20%EC%A2%8B%EB%8B%A4%E2%80%9D",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%95%9C%EB%B0%9C%20%EB%AC%BC%EB%9F%AC%EC%84%A0%20%ED%8A%B8%EB%9F%BC%ED%94%84%20%E2%80%9C%EC%8B%9C%EC%A7%84%ED%95%91%EA%B3%BC%20%EA%B4%80%EA%B3%84%20%EC%A2%8B%EB%8B%A4%E2%80%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "한발 물러선 트럼프 “ 시진핑과 관계 좋다 ”",
-          "summary": "트럼프 대통령은 12일(현지시간) 자신의 사회 관계 망서비스(SNS) 트루스소셜을 통해 미·중 무역 갈등 우려가 커지고 있는 것과 관련해 “미국은 중국을 해치려는 것이 아니라 도우려는 것”이라며 “중국에 대해...",
-          "link": "https://www.segye.com/newsView/20251013514617?OutUrl=naver",
-          "pubDate": "Mon, 13 Oct 2025 17:54:00 +0900"
-        }
-      ]
+      "term": "Trump Takes a Step Back: \"i Have a Good Relationship with Xi Jinping\"",
+      "term_ko": "한발 물러선 트럼프 “시진핑과 관계 좋다”"
     },
     {
-      "term": "Bitcoin: $12.7K→$10.2K→$11.5K...'Upover' Expectations Shattered",
-      "term_ko": "12.7만→10.2만→11.5만달러…'업토버' 기대감 무너뜨린 비트코인",
-      "significance_score": 61,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "12.7만→10.2만→11.5만달러…'업토버' 기대감 무너뜨린 비트코인",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 50.85,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:06 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=12.7%EB%A7%8C%E2%86%9210.2%EB%A7%8C%E2%86%9211.5%EB%A7%8C%EB%8B%AC%EB%9F%AC%E2%80%A6'%EC%97%85%ED%86%A0%EB%B2%84'%20%EA%B8%B0%EB%8C%80%EA%B0%90%20%EB%AC%B4%EB%84%88%EB%9C%A8%EB%A6%B0%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=12.7%EB%A7%8C%E2%86%9210.2%EB%A7%8C%E2%86%9211.5%EB%A7%8C%EB%8B%AC%EB%9F%AC%E2%80%A6'%EC%97%85%ED%86%A0%EB%B2%84'%20%EA%B8%B0%EB%8C%80%EA%B0%90%20%EB%AC%B4%EB%84%88%EB%9C%A8%EB%A6%B0%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=12.7%EB%A7%8C%E2%86%9210.2%EB%A7%8C%E2%86%9211.5%EB%A7%8C%EB%8B%AC%EB%9F%AC%E2%80%A6'%EC%97%85%ED%86%A0%EB%B2%84'%20%EA%B8%B0%EB%8C%80%EA%B0%90%20%EB%AC%B4%EB%84%88%EB%9C%A8%EB%A6%B0%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "12.7만→10.2만→11.5만달러…'업토버' 기대감 무너뜨린 비트코인",
-          "summary": "이 같은 발언을 기점으로 비트코인 가격도 다시 상승하기 시작했다. 이에 ' 업토버' 기대감 은 여전히 유효하다는 전망도 나온다. 김 센터장은 \" 비트코인 의 펀더멘털은 변하지 않았으며, '패닉셀(공포감에 매도하는 것)...",
-          "link": "https://www.news1.kr/finance/blockchain-fintech/5938878",
-          "pubDate": "Mon, 13 Oct 2025 13:13:00 +0900"
-        }
-      ]
+      "term": "Bitcoin: $12.7k→$10.2k→$11.5k...'upover' Expectations Shattered",
+      "term_ko": "12.7만→10.2만→11.5만달러…'업토버' 기대감 무너뜨린 비트코인"
     },
     {
-      "term": "Army finds 270 rounds of live ammunition left unattended for more than three years in an on-premises ammunition depot",
-      "term_ko": "육군 영내 탄약고에서 3년 넘게 방치된 실탄 270여 발 발견",
-      "significance_score": 57,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "육군 영내 탄약고에서 3년 넘게 방치된 실탄 270여 발 발견",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 46.6,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:08 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9C%A1%EA%B5%B0%20%EC%98%81%EB%82%B4%20%ED%83%84%EC%95%BD%EA%B3%A0%EC%97%90%EC%84%9C%203%EB%85%84%20%EB%84%98%EA%B2%8C%20%EB%B0%A9%EC%B9%98%EB%90%9C%20%EC%8B%A4%ED%83%84%20270%EC%97%AC%20%EB%B0%9C%20%EB%B0%9C%EA%B2%AC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9C%A1%EA%B5%B0%20%EC%98%81%EB%82%B4%20%ED%83%84%EC%95%BD%EA%B3%A0%EC%97%90%EC%84%9C%203%EB%85%84%20%EB%84%98%EA%B2%8C%20%EB%B0%A9%EC%B9%98%EB%90%9C%20%EC%8B%A4%ED%83%84%20270%EC%97%AC%20%EB%B0%9C%20%EB%B0%9C%EA%B2%AC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9C%A1%EA%B5%B0%20%EC%98%81%EB%82%B4%20%ED%83%84%EC%95%BD%EA%B3%A0%EC%97%90%EC%84%9C%203%EB%85%84%20%EB%84%98%EA%B2%8C%20%EB%B0%A9%EC%B9%98%EB%90%9C%20%EC%8B%A4%ED%83%84%20270%EC%97%AC%20%EB%B0%9C%20%EB%B0%9C%EA%B2%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "육군 영내 탄약고에서 3년 넘게 방치된 실탄 270여 발 발견",
-          "summary": "지난 7월 15일 인천광역시에 위치한 육군 17사단의 영내 탄약고 인근에서 3년 넘게 방치된 실탄 270여 발 이 발견 돼 군 당국이 수사 중이다. 13일 육군 에 따르면 해당 탄은 K2 소총 실사격에 쓰이는 5.56㎜ 보통탄으로, 총...",
-          "link": "https://www.news1.kr/diplomacy/defense-diplomacy/5938468",
-          "pubDate": "Mon, 13 Oct 2025 08:58:00 +0900"
-        }
-      ]
+      "term": "Army Finds 270 Rounds of Live Ammunition Left Unattended for More Than Three Years in an On-premises Ammunition Depot",
+      "term_ko": "육군 영내 탄약고에서 3년 넘게 방치된 실탄 270여 발 발견"
     },
     {
-      "term": "From 'Eldorado' to 'Coastal Pier'...the stands were packed, PS in 7 years, get it right first time",
-      "term_ko": "'엘도라도'부터 '연안부두'까지…관중석까지 꽉 찼다, 7년 만의 PS, 준비부터 제대로 한다",
-      "significance_score": 48,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "'엘도라도'부터 '연안부두'까지…관중석까지 꽉 찼다, 7년 만의 PS, 준비부터 제대로 한다",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 37.9,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:05 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query='%EC%97%98%EB%8F%84%EB%9D%BC%EB%8F%84'%EB%B6%80%ED%84%B0%20'%EC%97%B0%EC%95%88%EB%B6%80%EB%91%90'%EA%B9%8C%EC%A7%80%E2%80%A6%EA%B4%80%EC%A4%91%EC%84%9D%EA%B9%8C%EC%A7%80%20%EA%BD%89%20%EC%B0%BC%EB%8B%A4%2C%207%EB%85%84%20%EB%A7%8C%EC%9D%98%20PS%2C%20%EC%A4%80%EB%B9%84%EB%B6%80%ED%84%B0%20%EC%A0%9C%EB%8C%80%EB%A1%9C%20%ED%95%9C%EB%8B%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query='%EC%97%98%EB%8F%84%EB%9D%BC%EB%8F%84'%EB%B6%80%ED%84%B0%20'%EC%97%B0%EC%95%88%EB%B6%80%EB%91%90'%EA%B9%8C%EC%A7%80%E2%80%A6%EA%B4%80%EC%A4%91%EC%84%9D%EA%B9%8C%EC%A7%80%20%EA%BD%89%20%EC%B0%BC%EB%8B%A4%2C%207%EB%85%84%20%EB%A7%8C%EC%9D%98%20PS%2C%20%EC%A4%80%EB%B9%84%EB%B6%80%ED%84%B0%20%EC%A0%9C%EB%8C%80%EB%A1%9C%20%ED%95%9C%EB%8B%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query='%EC%97%98%EB%8F%84%EB%9D%BC%EB%8F%84'%EB%B6%80%ED%84%B0%20'%EC%97%B0%EC%95%88%EB%B6%80%EB%91%90'%EA%B9%8C%EC%A7%80%E2%80%A6%EA%B4%80%EC%A4%91%EC%84%9D%EA%B9%8C%EC%A7%80%20%EA%BD%89%20%EC%B0%BC%EB%8B%A4%2C%207%EB%85%84%20%EB%A7%8C%EC%9D%98%20PS%2C%20%EC%A4%80%EB%B9%84%EB%B6%80%ED%84%B0%20%EC%A0%9C%EB%8C%80%EB%A1%9C%20%ED%95%9C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'엘도라도'부터 '연안부두'까지…관중석까지 꽉 찼다, 7년 만의 PS, 준비 ...",
-          "summary": "관중석 을 개방했고, 응원단까지 배치하면서 포스트시즌 못지 않은 열기를 더했다. 이날 한화가 개방한... 삼성을 대표하는 응원가 '엘도라도 '와 SSG를 상징하는 '연안부두 '도 나왔다. 첫 경기였던 12일에는 '불펜 데이'로...",
-          "link": "https://www.sportschosun.com/baseball/2025-10-12/202510130100061180007119",
-          "pubDate": "Mon, 13 Oct 2025 00:16:00 +0900"
-        }
-      ]
+      "term": "From 'eldorado' to 'coastal Pier'...the Stands Were Packed, Ps in 7 Years, Get It Right First Time",
+      "term_ko": "'엘도라도'부터 '연안부두'까지…관중석까지 꽉 찼다, 7년 만의 PS, 준비부터 제대로 한다"
     },
     {
-      "term": "greenhydrogen",
-      "term_ko": "녹색 수소",
-      "significance_score": 21,
-      "mentions": 2,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "greenhydrogen",
-        "total_results": 2,
-        "returned_results": 2,
-        "display_count": 2,
-        "recency_weight": 0,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:05 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=greenhydrogen",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=greenhydrogen",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=greenhydrogen"
-      },
-      "top_headlines": [
-        {
-          "title": "인도, 그린수소 생산 허브로 도약 추진",
-          "summary": "분야에서 매력적인 시장이 형성될 것으로 예상됨에 따라 지속적인 관심이 필요해 보인다. 자료: Ministry of Power, greenhydrogen -india.com, evreporter.com, bloomberg, National portal of India, KOTRA 콜카타 무역관 자료 종합 등",
-          "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=197876",
-          "pubDate": "Tue, 01 Nov 2022 18:17:00 +0900"
-        },
-        {
-          "title": "수소 에너지에도 종류가···그린·블루 수소 차이점은?",
-          "summary": "방법은 물론 저장부터 필요한 곳까지 운송하는 것 또한 중요한데, 신재생에너지의 간헐성과 불확실성으로 인해 저장 및 운송이 용이하지 않은 경우가 있다. _ greenhydrogen _04 그린수소 에너지 개요도. 출처 = 현대차그룹 HMG 저널.",
-          "link": "https://www.ekn.kr/web/view.php?key=20210917010002884",
-          "pubDate": "Sun, 19 Sep 2021 07:00:00 +0900"
-        }
-      ]
+      "term": "Greenhydrogen",
+      "term_ko": "녹색 수소"
     },
     {
       "term": "61 coal plants to close from this year...\"We need realistic job cuts\" 이데일리 17 hours ago",
-      "term_ko": "올해부터 문 닫는 61개 석탄발전소…“현실적 일자리 축소 대책 필요” 이데일리 17시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "올해부터 문 닫는 61개 석탄발전소…“현실적 일자리 축소 대책 필요” 이데일리 17시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Tue, 14 Oct 2025 10:21:58 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%98%AC%ED%95%B4%EB%B6%80%ED%84%B0%20%EB%AC%B8%20%EB%8B%AB%EB%8A%94%2061%EA%B0%9C%20%EC%84%9D%ED%83%84%EB%B0%9C%EC%A0%84%EC%86%8C%E2%80%A6%E2%80%9C%ED%98%84%EC%8B%A4%EC%A0%81%20%EC%9D%BC%EC%9E%90%EB%A6%AC%20%EC%B6%95%EC%86%8C%20%EB%8C%80%EC%B1%85%20%ED%95%84%EC%9A%94%E2%80%9D%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%2017%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%98%AC%ED%95%B4%EB%B6%80%ED%84%B0%20%EB%AC%B8%20%EB%8B%AB%EB%8A%94%2061%EA%B0%9C%20%EC%84%9D%ED%83%84%EB%B0%9C%EC%A0%84%EC%86%8C%E2%80%A6%E2%80%9C%ED%98%84%EC%8B%A4%EC%A0%81%20%EC%9D%BC%EC%9E%90%EB%A6%AC%20%EC%B6%95%EC%86%8C%20%EB%8C%80%EC%B1%85%20%ED%95%84%EC%9A%94%E2%80%9D%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%2017%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%98%AC%ED%95%B4%EB%B6%80%ED%84%B0%20%EB%AC%B8%20%EB%8B%AB%EB%8A%94%2061%EA%B0%9C%20%EC%84%9D%ED%83%84%EB%B0%9C%EC%A0%84%EC%86%8C%E2%80%A6%E2%80%9C%ED%98%84%EC%8B%A4%EC%A0%81%20%EC%9D%BC%EC%9E%90%EB%A6%AC%20%EC%B6%95%EC%86%8C%20%EB%8C%80%EC%B1%85%20%ED%95%84%EC%9A%94%E2%80%9D%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%2017%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term_ko": "올해부터 문 닫는 61개 석탄발전소…“현실적 일자리 축소 대책 필요” 이데일리 17시간 전"
     },
     {
-      "term": "batteryrecycling",
-      "term_ko": "배터리 재활용",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "batteryrecycling",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:04 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=batteryrecycling",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=batteryrecycling",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=batteryrecycling"
-      },
-      "top_headlines": []
+      "term": "Batteryrecycling",
+      "term_ko": "배터리 재활용"
     },
     {
-      "term": "\"I'll just follow the president\": 85% of ETFs fail to track 'KODEX 200' Seoul Economic 4 hours ago",
-      "term_ko": "“그냥 대통령 따라 살 걸” ETF 85%가 'KODEX 200' 못 따라가 서울경제 4시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "“그냥 대통령 따라 살 걸” ETF 85%가 'KODEX 200' 못 따라가 서울경제 4시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Tue, 14 Oct 2025 10:22:07 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%E2%80%9C%EA%B7%B8%EB%83%A5%20%EB%8C%80%ED%86%B5%EB%A0%B9%20%EB%94%B0%EB%9D%BC%20%EC%82%B4%20%EA%B1%B8%E2%80%9D%20ETF%2085%25%EA%B0%80%20'KODEX%20200'%20%EB%AA%BB%20%EB%94%B0%EB%9D%BC%EA%B0%80%20%EC%84%9C%EC%9A%B8%EA%B2%BD%EC%A0%9C%204%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%E2%80%9C%EA%B7%B8%EB%83%A5%20%EB%8C%80%ED%86%B5%EB%A0%B9%20%EB%94%B0%EB%9D%BC%20%EC%82%B4%20%EA%B1%B8%E2%80%9D%20ETF%2085%25%EA%B0%80%20'KODEX%20200'%20%EB%AA%BB%20%EB%94%B0%EB%9D%BC%EA%B0%80%20%EC%84%9C%EC%9A%B8%EA%B2%BD%EC%A0%9C%204%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%E2%80%9C%EA%B7%B8%EB%83%A5%20%EB%8C%80%ED%86%B5%EB%A0%B9%20%EB%94%B0%EB%9D%BC%20%EC%82%B4%20%EA%B1%B8%E2%80%9D%20ETF%2085%25%EA%B0%80%20'KODEX%20200'%20%EB%AA%BB%20%EB%94%B0%EB%9D%BC%EA%B0%80%20%EC%84%9C%EC%9A%B8%EA%B2%BD%EC%A0%9C%204%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "\"i'll Just Follow the President\": 85% of Etfs Fail to Track 'kodex 200' Seoul Economic 4 Hours Ago",
+      "term_ko": "“그냥 대통령 따라 살 걸” ETF 85%가 'KODEX 200' 못 따라가 서울경제 4시간 전"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_random_sample",
-    "sample_size": 30,
-    "generated_at": "2025-10-14T01:22:16.068Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "discovered_keywords": [
+    {
+      "term": "Daily Economy",
+      "term_ko": "매일 경제"
+    },
+    {
+      "term": "Subscription",
+      "term_ko": "청약"
+    },
+    {
+      "term": "Market Share",
+      "term_ko": "시장점유율"
+    },
+    {
+      "term": "S&p 500",
+      "term_ko": "S&p 500"
+    },
+    {
+      "term": "Market Opening",
+      "term_ko": "시장개장"
+    },
+    {
+      "term": "Underrated",
+      "term_ko": "저평가"
+    },
+    {
+      "term": "Pc Version",
+      "term_ko": "PC버전"
+    },
+    {
+      "term": "Intrinsic Value",
+      "term_ko": "내재가치"
+    },
+    {
+      "term": "Earnings Surprise",
+      "term_ko": "어닝서프라이즈"
+    },
+    {
+      "term": "Cac 40",
+      "term_ko": "Cac 40"
+    },
+    {
+      "term": "Employment",
+      "term_ko": "고용"
+    },
+    {
+      "term": "Platinum",
+      "term_ko": "플래티넘"
+    },
+    {
+      "term": "Cash Flow",
+      "term_ko": "현금 흐름"
+    },
+    {
+      "term": "Earnings Guidance",
+      "term_ko": "수익 가이던스"
+    },
+    {
+      "term": "Central Bank Digital Currency",
+      "term_ko": "중앙은행 디지털 화폐"
+    },
+    {
+      "term": "Supply and Demand Imbalance",
+      "term_ko": "수요와 공급의 불균형"
+    },
+    {
+      "term": "Spc Chairman Youngin Heo 'accelerates' Goal of 1,000 North American Stores by 2030",
+      "term_ko": "SPC 허영인 회장, 2030년 북미 1000호점 목표 ‘속도’"
+    },
+    {
+      "term": "\"shipbuilding, More Multi-level Subcontracting Lowers Productivity...need to Get More 'skilled'\"",
+      "term_ko": "\"조선업, 다단계 하청 많을수록 생산성 하락…'숙련도' 높여야\""
+    },
+    {
+      "term": "U.s. Appeals Court Brakes on Trump 'national Guard Deployment to Chicago'...but Upholds Federal Control",
+      "term_ko": "美항소법원도 트럼프 '주방위군 시카고 투입' 제동…연방통제는 인정"
+    },
+    {
+      "term": "I Put a Tracker on My Discarded Clothes",
+      "term_ko": "버린 옷에 추적기를 달았다"
+    },
+    {
+      "term": "[300scoreboard-defense]\"restoring, Not Transitioning, Control? Did the U.s. Take It Away?\"",
+      "term_ko": "[300스코어보드-국방위]\"전작권 전환 아닌 회복? 미국이 빼앗아 갔나\""
+    },
+    {
+      "term": "Same Salary at the Same Company, But Thousands of Dollars Difference in Retirement Savings",
+      "term_ko": "같은 회사 월급인데, 퇴직금이 수천만원 차이 나네"
+    },
+    {
+      "term": "Trump Takes a Step Back: \"i Have a Good Relationship with Xi Jinping\"",
+      "term_ko": "한발 물러선 트럼프 “시진핑과 관계 좋다”"
+    },
+    {
+      "term": "Bitcoin: $12.7k→$10.2k→$11.5k...'upover' Expectations Shattered",
+      "term_ko": "12.7만→10.2만→11.5만달러…'업토버' 기대감 무너뜨린 비트코인"
+    },
+    {
+      "term": "Army Finds 270 Rounds of Live Ammunition Left Unattended for More Than Three Years in an On-premises Ammunition Depot",
+      "term_ko": "육군 영내 탄약고에서 3년 넘게 방치된 실탄 270여 발 발견"
+    },
+    {
+      "term": "From 'eldorado' to 'coastal Pier'...the Stands Were Packed, Ps in 7 Years, Get It Right First Time",
+      "term_ko": "'엘도라도'부터 '연안부두'까지…관중석까지 꽉 찼다, 7년 만의 PS, 준비부터 제대로 한다"
+    },
+    {
+      "term": "Greenhydrogen",
+      "term_ko": "녹색 수소"
+    },
+    {
+      "term": "61 coal plants to close from this year...\"We need realistic job cuts\" 이데일리 17 hours ago",
+      "term_ko": "올해부터 문 닫는 61개 석탄발전소…“현실적 일자리 축소 대책 필요” 이데일리 17시간 전"
+    },
+    {
+      "term": "Batteryrecycling",
+      "term_ko": "배터리 재활용"
+    },
+    {
+      "term": "\"i'll Just Follow the President\": 85% of Etfs Fail to Track 'kodex 200' Seoul Economic 4 Hours Ago",
+      "term_ko": "“그냥 대통령 따라 살 걸” ETF 85%가 'KODEX 200' 못 따라가 서울경제 4시간 전"
+    }
+  ],
+  "translations": {
+    "Daily Economy": {
+      "en": "Daily Economy",
+      "ko": "매일 경제",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Subscription": {
+      "en": "Subscription",
+      "ko": "청약",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Market Share": {
+      "en": "Market Share",
+      "ko": "시장점유율",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "S&p 500": {
+      "en": "S&p 500",
+      "ko": "S&p 500",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Market Opening": {
+      "en": "Market Opening",
+      "ko": "시장개장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Underrated": {
+      "en": "Underrated",
+      "ko": "저평가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Pc Version": {
+      "en": "Pc Version",
+      "ko": "PC버전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Intrinsic Value": {
+      "en": "Intrinsic Value",
+      "ko": "내재가치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Earnings Surprise": {
+      "en": "Earnings Surprise",
+      "ko": "어닝서프라이즈",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Cac 40": {
+      "en": "Cac 40",
+      "ko": "Cac 40",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Employment": {
+      "en": "Employment",
+      "ko": "고용",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Platinum": {
+      "en": "Platinum",
+      "ko": "플래티넘",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Cash Flow": {
+      "en": "Cash Flow",
+      "ko": "현금 흐름",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Earnings Guidance": {
+      "en": "Earnings Guidance",
+      "ko": "수익 가이던스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Central Bank Digital Currency": {
+      "en": "Central Bank Digital Currency",
+      "ko": "중앙은행 디지털 화폐",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Supply and Demand Imbalance": {
+      "en": "Supply and Demand Imbalance",
+      "ko": "수요와 공급의 불균형",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Spc Chairman Youngin Heo 'accelerates' Goal of 1,000 North American Stores by 2030": {
+      "en": "Spc Chairman Youngin Heo 'accelerates' Goal of 1,000 North American Stores by 2030",
+      "ko": "SPC 허영인 회장, 2030년 북미 1000호점 목표 ‘속도’",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "\"shipbuilding, More Multi-level Subcontracting Lowers Productivity...need to Get More 'skilled'\"": {
+      "en": "\"shipbuilding, More Multi-level Subcontracting Lowers Productivity...need to Get More 'skilled'\"",
+      "ko": "\"조선업, 다단계 하청 많을수록 생산성 하락…'숙련도' 높여야\"",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "U.s. Appeals Court Brakes on Trump 'national Guard Deployment to Chicago'...but Upholds Federal Control": {
+      "en": "U.s. Appeals Court Brakes on Trump 'national Guard Deployment to Chicago'...but Upholds Federal Control",
+      "ko": "美항소법원도 트럼프 '주방위군 시카고 투입' 제동…연방통제는 인정",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "I Put a Tracker on My Discarded Clothes": {
+      "en": "I Put a Tracker on My Discarded Clothes",
+      "ko": "버린 옷에 추적기를 달았다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "[300scoreboard-defense]\"restoring, Not Transitioning, Control? Did the U.s. Take It Away?\"": {
+      "en": "[300scoreboard-defense]\"restoring, Not Transitioning, Control? Did the U.s. Take It Away?\"",
+      "ko": "[300스코어보드-국방위]\"전작권 전환 아닌 회복? 미국이 빼앗아 갔나\"",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Same Salary at the Same Company, But Thousands of Dollars Difference in Retirement Savings": {
+      "en": "Same Salary at the Same Company, But Thousands of Dollars Difference in Retirement Savings",
+      "ko": "같은 회사 월급인데, 퇴직금이 수천만원 차이 나네",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Trump Takes a Step Back: \"i Have a Good Relationship with Xi Jinping\"": {
+      "en": "Trump Takes a Step Back: \"i Have a Good Relationship with Xi Jinping\"",
+      "ko": "한발 물러선 트럼프 “시진핑과 관계 좋다”",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Bitcoin: $12.7k→$10.2k→$11.5k...'upover' Expectations Shattered": {
+      "en": "Bitcoin: $12.7k→$10.2k→$11.5k...'upover' Expectations Shattered",
+      "ko": "12.7만→10.2만→11.5만달러…'업토버' 기대감 무너뜨린 비트코인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Army Finds 270 Rounds of Live Ammunition Left Unattended for More Than Three Years in an On-premises Ammunition Depot": {
+      "en": "Army Finds 270 Rounds of Live Ammunition Left Unattended for More Than Three Years in an On-premises Ammunition Depot",
+      "ko": "육군 영내 탄약고에서 3년 넘게 방치된 실탄 270여 발 발견",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "From 'eldorado' to 'coastal Pier'...the Stands Were Packed, Ps in 7 Years, Get It Right First Time": {
+      "en": "From 'eldorado' to 'coastal Pier'...the Stands Were Packed, Ps in 7 Years, Get It Right First Time",
+      "ko": "'엘도라도'부터 '연안부두'까지…관중석까지 꽉 찼다, 7년 만의 PS, 준비부터 제대로 한다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Greenhydrogen": {
+      "en": "Greenhydrogen",
+      "ko": "녹색 수소",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "61 coal plants to close from this year...\"We need realistic job cuts\" 이데일리 17 hours ago": {
+      "en": "61 coal plants to close from this year...\"We need realistic job cuts\" 이데일리 17 hours ago",
+      "ko": "올해부터 문 닫는 61개 석탄발전소…“현실적 일자리 축소 대책 필요” 이데일리 17시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "Batteryrecycling": {
+      "en": "Batteryrecycling",
+      "ko": "배터리 재활용",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    },
+    "\"i'll Just Follow the President\": 85% of Etfs Fail to Track 'kodex 200' Seoul Economic 4 Hours Ago": {
+      "en": "\"i'll Just Follow the President\": 85% of Etfs Fail to Track 'kodex 200' Seoul Economic 4 Hours Ago",
+      "ko": "“그냥 대통령 따라 살 걸” ETF 85%가 'KODEX 200' 못 따라가 서울경제 4시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-14T06:28:16.862Z"
+    }
   }
 }
