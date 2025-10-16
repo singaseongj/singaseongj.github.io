@@ -1,540 +1,215 @@
 {
+  "generatedAt": "2025-10-16T18:27:08.500Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-10-16",
   "window": "12_hours",
   "total_phrases": 14,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "aviation",
-      "term_ko": "항공",
-      "significance_score": 2930053,
-      "mentions": 4880695,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "항공",
-        "total_results": 4880695,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1436.44,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:28 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%AD%EA%B3%B5",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%95%AD%EA%B3%B5",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%95%AD%EA%B3%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "대법 현장국감, 이튿날까지 법사위 공방",
-          "summary": "과학기술정보방송통신위원회의 원자력안전위원회와 우주 항공 청 국감에선 민주당 김우영 의원과 국민의힘 박정훈 의원 간 폭언 문자 논란 공방이 '난장판'으로 치달으며 파행됐다. 박 의원은 신상 발언을 통해 \"동료...",
-          "link": "https://www.ulsanpress.net/news/articleView.html?idxno=560932",
-          "pubDate": "Thu, 16 Oct 2025 21:42:00 +0900"
-        },
-        {
-          "title": "캄보디아 경찰 “온라인 스캠 가담한 한국인 59명 내일 추방”",
-          "summary": "앞서 한국 정부는 항공 편을 준비하고 있으며 이번 주말까지 국내로 송환하는 게 목표라고 밝힌 바 다. 경찰은 체포영장이 발부된 한국인부터 국내로 데려간갈 계획인 것으로 전해졌다.",
-          "link": "https://biz.chosun.com/international/international_general/2025/10/16/5M2CPSOF3ZHY7GOYYQCUCRVQLY/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "pubDate": "Thu, 16 Oct 2025 21:39:00 +0900"
-        },
-        {
-          "title": "[속보] 캄보디아 경찰 “온라인 사기 범죄 가담 한국인 59명 내일 추방한...",
-          "summary": "한국 정부는 항공 편을 준비해 이번 주말까지 이들을 국내로 송환하는 게 목표라고 밝혔다. 경찰은 체포영장이 발부된 한국인부터 국내로 송환할 계획인 것으로 전해졌다.",
-          "link": "https://www.dt.co.kr/article/12023425?ref=naver",
-          "pubDate": "Thu, 16 Oct 2025 21:38:00 +0900"
-        }
-      ]
+      "term": "Aviation",
+      "term_ko": "항공"
     },
     {
-      "term": "new stock",
-      "term_ko": "신주",
-      "significance_score": 281493,
-      "mentions": 466476,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "신주",
-        "total_results": 466476,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1407.84,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:32 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%EC%A3%BC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%8B%A0%EC%A3%BC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%8B%A0%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "삼성전자 “성과연동 주식보상, 자사주 소각 회피용 루머는 사실 아냐”",
-          "summary": "소각을 발표한 8조4000억원 중 3조500억원은 이미 소각했다. 나머지 5조3500억원도 정해진 일정에 따라 소각할 예정이다. 이와 함께 삼성전자는 임직원 주식 보상을 위해 신주 를 발행할 계획도 없는 것으로 알려졌다.",
-          "link": "https://www.mk.co.kr/article/11443720",
-          "pubDate": "Thu, 16 Oct 2025 21:30:00 +0900"
-        },
-        {
-          "title": "삼성전자 \"PSU 도입, 자사주 소각 회피용 아냐\"",
-          "summary": "아울러 임직원 주식 보상을 위해 신주 발행을 할 계획이 없으며 주가 상승으로 인한 재원이 부족할 경우 추가로 자사주를 매입할 계획인 것으로 알려졌다. 한편 삼성전자는 PSU 제도 도입을 통해 CL 1~2 직원에게는...",
-          "link": "https://view.asiae.co.kr/article/2025101621292427705",
-          "pubDate": "Thu, 16 Oct 2025 21:29:00 +0900"
-        },
-        {
-          "title": "골드앤에스 주가, 24%대↓... '냉탕'",
-          "summary": "신주 상장 예정일은 내년 1월 6일이다. 한편 골드앤에스는 시원스쿨랩과 전국 110여 개 분원을 보유한 영어 교육 브랜드 '토킹클럽'을 통해 영어 수험 대비와 온·오프라인 학원 서비스를 제공하고 있다. 또한...",
-          "link": "https://www.ggilbo.com/news/articleView.html?idxno=1118413",
-          "pubDate": "Thu, 16 Oct 2025 21:28:00 +0900"
-        }
-      ]
+      "term": "New Stock",
+      "term_ko": "신주"
     },
     {
-      "term": "short selling",
-      "term_ko": "공매도",
-      "significance_score": 101657,
-      "mentions": 166917,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "공매도",
-        "total_results": 166917,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1306.33,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:25 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B3%B5%EB%A7%A4%EB%8F%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B3%B5%EB%A7%A4%EB%8F%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B3%B5%EB%A7%A4%EB%8F%84"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 캐시, 약세 신호 '뚜렷'…450달러 지지선 지킬 수 있을까",
-          "summary": "공매도 포지션이 우위를 점하고 있어 시장 전반의 약세 심리를 강화하고 있는 상황이다. 기술적 측면에서도 추가 하락 가능성이 높게 나타나고 있다. BCH는 이번 주 초 추세선 돌파에 실패한 이후 하루 만에 약 5...",
-          "link": "http://coinreaders.com/192894",
-          "pubDate": "Thu, 16 Oct 2025 19:50:00 +0900"
-        },
-        {
-          "title": "[코인 시황] 비트코인, 11만달러서 숨고르기...비트코인-금 상관성 0.9로...",
-          "summary": "Fx프로의 알렉스 쿠프치케비치는 \" 공매도 세력은 어느 정도 포지션을 정리한 상태\"라며 \"매수세는 명확한 근거가 나올 때까지 관망하고 있다. 미·중 갈등이 그 계기는 아니다\"라고 말했다. ◆ \"디지털 금\" 서사...",
-          "link": "https://www.newspim.com/news/view/20251016001152",
-          "pubDate": "Thu, 16 Oct 2025 19:48:00 +0900"
-        },
-        {
-          "title": "비트코인, 10만 달러 다시 테스트할까…시장 불안 속 전망 주목",
-          "summary": "공매도 포지션이 우위를 점하며 시장 참가자들이 리스크를 줄이고 있는 모습이다. 과거에도 이러한 극단적 펀딩 리셋 국면은 공포의 정점과 과도한 레버리지 청산 이후 회복 국면으로 전환되는 경우가 많았다....",
-          "link": "http://coinreaders.com/192863",
-          "pubDate": "Thu, 16 Oct 2025 18:22:00 +0900"
-        }
-      ]
+      "term": "Short Selling",
+      "term_ko": "공매도"
     },
     {
-      "term": "natural gas",
-      "term_ko": "천연 가스",
-      "significance_score": 15957,
-      "mentions": 25146,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "natural gas",
-        "total_results": 25146,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 669.12,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:33 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=natural%20gas",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=natural%20gas",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=natural%20gas"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Treasury Secretary: 'Expect Trade Agreement with S. Korea in 10 Days...",
-          "summary": "When asked if he thought Japan should reduce imports of Russian liquefied natural gas (LNG), Bessent emphasized that anyone who purchases Russian energy is subsidizing attacks on the Ukrainian...",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=254234",
-          "pubDate": "Thu, 16 Oct 2025 18:44:00 +0900"
-        },
-        {
-          "title": "의식주 물가, 5년간 연 평균 4.6%↑..체감-실제 물가 괴리 커졌다",
-          "summary": "This is due to the surge in natural gas prices and the rising exchange rate in 2021-2022 due to the aftermath of COVID-19 and the Russo-Russian War. Prices of water and housing-related services rose significantly (an...",
-          "link": "http://www.breaknews.com/1154205",
-          "pubDate": "Thu, 16 Oct 2025 12:48:00 +0900"
-        },
-        {
-          "title": "Essential Goods Inflation Averages 4.6% Annually, Surpassing Official Rat...",
-          "summary": "The COVID-19 pandemic and the Russia-Ukraine conflict led to a spike in international natural gas prices, while currency depreciation contributed to a more than 33% increase in apartment...",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=254169",
-          "pubDate": "Thu, 16 Oct 2025 11:10:00 +0900"
-        }
-      ]
+      "term": "Natural Gas",
+      "term_ko": "천연 가스"
     },
     {
-      "term": "[Table] Foreign Currency Exchange Rate Notification Table",
-      "term_ko": "[표] 외국환율고시표",
-      "significance_score": 3469,
-      "mentions": 5229,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "[표] 외국환율고시표",
-        "total_results": 5229,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 131.67,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:30 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%5B%ED%91%9C%5D%20%EC%99%B8%EA%B5%AD%ED%99%98%EC%9C%A8%EA%B3%A0%EC%8B%9C%ED%91%9C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%5B%ED%91%9C%5D%20%EC%99%B8%EA%B5%AD%ED%99%98%EC%9C%A8%EA%B3%A0%EC%8B%9C%ED%91%9C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%5B%ED%91%9C%5D%20%EC%99%B8%EA%B5%AD%ED%99%98%EC%9C%A8%EA%B3%A0%EC%8B%9C%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[표] 외국환율고시표",
-          "summary": "",
-          "link": "https://www.mk.co.kr/article/11443467",
-          "pubDate": "Thu, 16 Oct 2025 17:35:00 +0900"
-        },
-        {
-          "title": "[표] 외국환율고시표",
-          "summary": "",
-          "link": "https://www.mk.co.kr/article/11442323",
-          "pubDate": "Wed, 15 Oct 2025 17:39:00 +0900"
-        },
-        {
-          "title": "[표] 외국환율고시표",
-          "summary": "",
-          "link": "https://www.mk.co.kr/article/11441238",
-          "pubDate": "Tue, 14 Oct 2025 17:37:00 +0900"
-        }
-      ]
+      "term": "[table] Foreign Currency Exchange Rate Notification Table",
+      "term_ko": "[표] 외국환율고시표"
     },
     {
-      "term": "market anxiety",
-      "term_ko": "시장 불안",
-      "significance_score": 2794,
-      "mentions": 3807,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "market anxiety",
-        "total_results": 3807,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 309.38,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:33 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=market%20anxiety",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=market%20anxiety",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=market%20anxiety"
-      },
-      "top_headlines": [
-        {
-          "title": "Why Do We Love Spooky Season? It’s in Our Genes!",
-          "summary": "the anxiety and unrest of the past few years would seem ample confirmation — as Scrivner points out, the overall box-office market share for the horror genre has more than doubled since 2020....",
-          "link": "https://www.nytimes.com/2025/10/16/books/review/colton-scrivner-morbidly-curious.html?partner=naver",
-          "pubDate": "Thu, 16 Oct 2025 18:04:00 +0900"
-        },
-        {
-          "title": "[Column] Lesch-Nyhan syndrome: A rare inherited disease where self-harm c...",
-          "summary": "Muscle relaxants may help alleviate anxiety and muscle rigidity. Persistent muscle rigidity can... of market failure), and the challenge that treatment would need to target fetuses or very young...",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=29292",
-          "pubDate": "Thu, 16 Oct 2025 13:44:00 +0900"
-        },
-        {
-          "title": "농해수위 국감, 해수부 부산 이전·북극항로 '역대급' 격돌 예고",
-          "summary": "eliminate market uncertainty.\" Regarding the development of the Northern Sea Route, there were calls for a... public anxiety .\" While respecting expert opinions, we must secure funding to expand testing infrastructure...",
-          "link": "http://www.breaknews.com/1154146",
-          "pubDate": "Thu, 16 Oct 2025 08:54:00 +0900"
-        }
-      ]
+      "term": "Market Anxiety",
+      "term_ko": "시장 불안"
     },
     {
-      "term": "headline inflation",
-      "term_ko": "헤드라인 인플레이션",
-      "significance_score": 988,
-      "mentions": 1313,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "headline inflation",
-        "total_results": 1313,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:25 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=headline%20inflation",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=headline%20inflation",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=headline%20inflation"
-      },
-      "top_headlines": [
-        {
-          "title": "[Contribution] The equity market correction – Was that it?",
-          "summary": "expected inflation to start moving higher as the impact of tariffs finally shows in the data.... This was spot on at the headline level, although it appears it was the sell-off in the bond market...",
-          "link": "https://www.koreaherald.com/article/10592437?ref=naver",
-          "pubDate": "Mon, 13 Oct 2025 17:17:00 +0900"
-        },
-        {
-          "title": "U.S. Economy Surges Ahead Under Trump as Europe Struggles to Keep Pace",
-          "summary": "Headline inflation holds steady around 3%, while productivity in the non-financial corporate sector has surged roughly 3.5% year on year. This improvement is fueled by a sharp rise in investment...",
-          "link": "https://www.econotimes.com/US-Economy-Surges-Ahead-Under-Trump-as-Europe-Struggles-to-Keep-Pace-1722972",
-          "pubDate": "Sat, 11 Oct 2025 21:02:00 +0900"
-        },
-        {
-          "title": "Investors Ignore Shutdown and Weak Labor Data as Stocks Reach New Highs",
-          "summary": "than headline -grabbing political events. \"Historically, shutdowns have triggered short-lived... \" The primary risks to watch remain upside surprises in inflation , geopolitical shocks, or a...",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=146379",
-          "pubDate": "Fri, 03 Oct 2025 21:26:00 +0900"
-        }
-      ]
+      "term": "Headline Inflation",
+      "term_ko": "헤드라인 인플레이션"
     },
     {
-      "term": "leveraged buyout",
-      "term_ko": "레버리지 바이아웃",
-      "significance_score": 696,
-      "mentions": 581,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "leveraged buyout",
-        "total_results": 581,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 147,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:27 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=leveraged%20buyout",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=leveraged%20buyout",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=leveraged%20buyout"
-      },
-      "top_headlines": [
-        {
-          "title": "유동수, ‘MBK 방지법’ 발의…“자회사에 빚 떠넘기는 M&A 막겠다”",
-          "summary": "LBO( Leveraged Buyout )는 인수 목적의 특수목적회사(SPC)가 인수 대상 기업을 담보로 차입을 일으켜 그 자금으로 기업을 인수하는 방식이다. LBO는 인수 후 피인수 기업과 인수 주체(SPC)를 합병시켜 인수 부채를 피인수기업이...",
-          "link": "https://biz.chosun.com/policy/politics/assembly/2025/10/16/U4JPX6Y5GRH7XFQ637YTSPDPEM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "pubDate": "Thu, 16 Oct 2025 16:02:00 +0900"
-        },
-        {
-          "title": "MBK's Michael Kim grilled on ‘empty pledge’ to rescue Homeplus",
-          "summary": "Lawmakers questioned whether MBK’s leveraged buyout in 2015 — funded mostly by debt — had left the company hollowed out and unable to reinvest, contributing to its collapse. Kim said he had...",
-          "link": "https://www.koreaherald.com/article/10594121?ref=naver",
-          "pubDate": "Wed, 15 Oct 2025 15:12:00 +0900"
-        },
-        {
-          "title": "MBK Chairman Apologizes Over Homeplus Debacle",
-          "summary": "The deal was a leveraged buyout where the private equity company used a combination of eqity and acquisition financing, with the bulk of the funds coming from loans secured by Homeplus assets....",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=254031",
-          "pubDate": "Tue, 14 Oct 2025 17:56:00 +0900"
-        }
-      ]
+      "term": "Leveraged Buyout",
+      "term_ko": "레버리지 바이아웃"
     },
     {
-      "term": "reverse sale",
-      "term_ko": "리버스 세일",
-      "significance_score": 603,
-      "mentions": 651,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "reverse sale",
-        "total_results": 651,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 12.54,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:30 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=reverse%20sale",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=reverse%20sale",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=reverse%20sale"
-      },
-      "top_headlines": [
-        {
-          "title": "AI Transition and Legal Risks: Kakao Faces Its October Test",
-          "summary": "According to industry sources on the 14th, reverse engineer Blaho Thibault shared on X (formerly... the sale of excess shares. In the extreme, the FSC could require Kakao to divest all KakaoBank...",
-          "link": "https://it.chosun.com/news/articleView.html?idxno=2023092148812",
-          "pubDate": "Tue, 14 Oct 2025 10:16:00 +0900"
-        },
-        {
-          "title": "A Stolen 50-Pound Dinosaur Named Clair Is Returned After Outrage",
-          "summary": "The outpouring was probably what helped reverse the dino-napping. Clair was returned 10 days... Online, the fiberglass statues are listed for sale for more than $1,500. But the community stepped...",
-          "link": "https://www.nytimes.com/2025/10/08/us/dinosaur-stolen-california-gas-station.html?partner=naver",
-          "pubDate": "Thu, 09 Oct 2025 10:22:00 +0900"
-        },
-        {
-          "title": "52 Great Books for Toddlers",
-          "summary": "Will your own little sugar-chasing, bedtime-refusing mayhem-maker be fooled by this reverse ... Caps for Sale by Esphyr Slobodkina The fanciful tale of a cap-peddler who wears his entire stock on...",
-          "link": "https://www.nytimes.com/2025/10/01/books/review/best-toddler-books.html?partner=naver",
-          "pubDate": "Wed, 01 Oct 2025 18:02:00 +0900"
-        }
-      ]
+      "term": "Reverse Sale",
+      "term_ko": "리버스 세일"
     },
     {
-      "term": "statistical arbitrage",
-      "term_ko": "통계적 차익거래",
-      "significance_score": 217,
-      "mentions": 29,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "statistical arbitrage",
-        "total_results": 29,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:29 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=statistical%20arbitrage",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=statistical%20arbitrage",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=statistical%20arbitrage"
-      },
-      "top_headlines": [
-        {
-          "title": "[시사금융용어] 통계적 차익거래",
-          "summary": "◆ 통계적 차익거래( Statistical arbitrage )는 스태트 아브라고도 불리는 퀀트 트레이딩 전략이다. 컴퓨터가 수천 종류의 주식을 추적하고, 주식 사이의 관계를 기반으로 트레이딩을 실행하는 방식으로, 컴퓨터가 주식...",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4292723",
-          "pubDate": "Wed, 27 Dec 2023 07:36:00 +0900"
-        },
-        {
-          "title": "호세 비냘스 SC 의장 \"글로벌 경제 탄력적…한·중·일 등 亞시장이 성장...",
-          "summary": "(regulatory arbitrage )’ 현상이 발생한다”며 “은행이 공급했던 자금을 사모펀드나 기타... Digital technologies such as machine learning and statistical work can increase the productivity of the labor force...",
-          "link": "https://www.sedaily.com/NewsView/29X7IEU9O1",
-          "pubDate": "Sun, 12 Nov 2023 17:56:00 +0900"
-        },
-        {
-          "title": "성균관대학교 BK21 핀테크교육연구단, 싱가포르서 'Global AI Finance Resear...",
-          "summary": "올해 기조 연설은 시카고대학의 Dacheng Xiu 교수와 조지아텍의 Sudheer Chava 교수가 맡았으며 \"NLP in finance\" 와 \"The statistical limit of arbitrage \"를 주제로 연설을 진행한다. 한편 핀테크융합전공 석박사과정생...",
-          "link": "https://www.lecturernews.com/news/articleView.html?idxno=114122",
-          "pubDate": "Mon, 12 Dec 2022 12:54:00 +0900"
-        }
-      ]
+      "term": "Statistical Arbitrage",
+      "term_ko": "통계적 차익거래"
     },
     {
-      "term": "[NOTICE] Maeil Business - Land Institute Defense Industry Forum",
-      "term_ko": "[알립니다] 매일경제·랜드연구소 방위산업포럼",
-      "significance_score": 65,
-      "mentions": 2,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "[알립니다] 매일경제·랜드연구소 방위산업포럼",
-        "total_results": 2,
-        "returned_results": 2,
-        "display_count": 2,
-        "recency_weight": 44.03,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:26 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%5B%EC%95%8C%EB%A6%BD%EB%8B%88%EB%8B%A4%5D%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%C2%B7%EB%9E%9C%EB%93%9C%EC%97%B0%EA%B5%AC%EC%86%8C%20%EB%B0%A9%EC%9C%84%EC%82%B0%EC%97%85%ED%8F%AC%EB%9F%BC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%5B%EC%95%8C%EB%A6%BD%EB%8B%88%EB%8B%A4%5D%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%C2%B7%EB%9E%9C%EB%93%9C%EC%97%B0%EA%B5%AC%EC%86%8C%20%EB%B0%A9%EC%9C%84%EC%82%B0%EC%97%85%ED%8F%AC%EB%9F%BC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%5B%EC%95%8C%EB%A6%BD%EB%8B%88%EB%8B%A4%5D%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%C2%B7%EB%9E%9C%EB%93%9C%EC%97%B0%EA%B5%AC%EC%86%8C%20%EB%B0%A9%EC%9C%84%EC%82%B0%EC%97%85%ED%8F%AC%EB%9F%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[알립니다] 매일경제·랜드연구소 방위산업포럼",
-          "summary": "매일경제 가 미국 최고 권위의 국방·안보 연구기관인 랜드연구소 와 함께 KoDiF(Korea Defense Industry Forum·한국 방위산업포럼 )를 개최합니다. 미·중 대립과 안보 지형 변동, 글로벌 공급망 재편 속에서 방위산업 은...",
-          "link": "https://www.mk.co.kr/article/11442353",
-          "pubDate": "Wed, 15 Oct 2025 17:45:00 +0900"
-        },
-        {
-          "title": "[알립니다] 제1회 매경 한국 방위산업포럼",
-          "summary": "23일 여의도서 개최 매일경제 가 미국 최고 권위의 국방·안보 연구기관인 랜드연구소 와 함께 KoDiF(Korea Defense Industry Forum·한국 방위산업포럼 )를 개최합니다. 미·중 대립과 안보 지형 변동, 글로벌 공급망 재편...",
-          "link": "https://www.mk.co.kr/article/11433271",
-          "pubDate": "Tue, 30 Sep 2025 18:16:00 +0900"
-        }
-      ]
+      "term": "[notice] Maeil Business - Land Institute Defense Industry Forum",
+      "term_ko": "[알립니다] 매일경제·랜드연구소 방위산업포럼"
     },
     {
-      "term": "Car roadside assistance will now be available on islands",
-      "term_ko": "앞으로 섬에서도 자동차 긴급출동서비스 받는다",
-      "significance_score": 32,
-      "mentions": 3,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "앞으로 섬에서도 자동차 긴급출동서비스 받는다",
-        "total_results": 3,
-        "returned_results": 3,
-        "display_count": 3,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:28 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%9E%EC%9C%BC%EB%A1%9C%20%EC%84%AC%EC%97%90%EC%84%9C%EB%8F%84%20%EC%9E%90%EB%8F%99%EC%B0%A8%20%EA%B8%B4%EA%B8%89%EC%B6%9C%EB%8F%99%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%B0%9B%EB%8A%94%EB%8B%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%95%9E%EC%9C%BC%EB%A1%9C%20%EC%84%AC%EC%97%90%EC%84%9C%EB%8F%84%20%EC%9E%90%EB%8F%99%EC%B0%A8%20%EA%B8%B4%EA%B8%89%EC%B6%9C%EB%8F%99%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%B0%9B%EB%8A%94%EB%8B%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%95%9E%EC%9C%BC%EB%A1%9C%20%EC%84%AC%EC%97%90%EC%84%9C%EB%8F%84%20%EC%9E%90%EB%8F%99%EC%B0%A8%20%EA%B8%B4%EA%B8%89%EC%B6%9C%EB%8F%99%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%B0%9B%EB%8A%94%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "휴맥스모빌리티, '제주전기 자동차 서비스 ' 인수…\"충전 사업 확대\"",
-          "summary": "원격관제충전 서비스 , 긴급출동 , 사용자 멤버십 서비스 , 24 콜센터를 운영 중인 전기차충전 서비스 및... '신재생 전기차의 섬 '으로 안착하는데 많은 역할을 했다는 평가를 받는다 . 최근에는 LG엔솔과 함께, 산업부...",
-          "link": "http://www.efnews.co.kr/news/articleView.html?idxno=95309",
-          "pubDate": "Wed, 06 Apr 2022 14:20:00 +0900"
-        },
-        {
-          "title": "2030년까지 전기차 보급률 100%… ‘탄소제로 섬 ’으로",
-          "summary": "도가 제주전기 자동차 서비스 에 운영을 맡긴 콜센터는 전기차 충전시설 고장 등 전기차 운전자들의 불편 신고를 받아 문제 해결 방법을 안내하고 긴급 현장 출동 서비스 도 한다. 전기차와 충전기에 대한 정보를...",
-          "link": "http://www.segye.com/content/html/2015/04/09/20150409004070.html?OutUrl=naver",
-          "pubDate": "Fri, 10 Apr 2015 01:29:00 +0900"
-        },
-        {
-          "title": "[InterviewⅡ] 김순환 동부화재 사장 질(質)경영 힘입어 국외 진출 시동",
-          "summary": "본격적으로 자동차 보험 영업을 하고 있답니다. 하와이 지역에서 동부화재는 시장점유율 3위입니다. 현지인들이 동부화재의 긴급출동서비스 에 만족해하고 있어요. 주로 한국 교포들과 기업들을 대상으로 영업하는 국내...",
-          "link": "http://news.mk.co.kr/news_forward.php?no=651552&year=2007",
-          "pubDate": "Wed, 28 Nov 2007 12:01:00 +0900"
-        }
-      ]
+      "term": "Car Roadside Assistance Will Now Be Available on Islands",
+      "term_ko": "앞으로 섬에서도 자동차 긴급출동서비스 받는다"
     },
     {
-      "term": "�Ｚ ڸ���Ŀ������ ETF, ..",
-      "term_ko": "",
-      "significance_score": 11,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "�Ｚ ڸ���Ŀ������ ETF, ..",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:32 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EF%BF%BD%EF%BC%BA%20%DA%B8%EF%BF%BD%EF%BF%BD%EF%BF%BD%C4%BF%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20ETF%2C%20..",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EF%BF%BD%EF%BC%BA%20%DA%B8%EF%BF%BD%EF%BF%BD%EF%BF%BD%C4%BF%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20ETF%2C%20..",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EF%BF%BD%EF%BC%BA%20%DA%B8%EF%BF%BD%EF%BF%BD%EF%BF%BD%C4%BF%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20ETF%2C%20.."
-      },
-      "top_headlines": [
-        {
-          "title": "��ȣ�� SC�������� �",
-          "summary": "ݵ�, �����������( ETF ), ä... �ƿ﷯ �Ｚ ����, ������, īī�����̸� ���� ������ �ſ뿩�� ��ǰ �ǸŸ...",
-          "link": "http://magazine.hankyung.com/money/apps/news?popup=0&nid=02&c1=2002&nkey=2019092700173040672&mode=sub_view",
-          "pubDate": "Fri, 27 Sep 2019 10:49:00 +0900"
-        }
-      ]
+      "term": "�ｚ ڸ���ŀ������ Etf, ..",
+      "term_ko": "�ｚ ڸ���ŀ������ Etf, .."
     },
     {
-      "term": "securitiestokenoffering",
-      "term_ko": "증권형 토큰 오퍼링",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "securitiestokenoffering",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 21:43:31 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=securitiestokenoffering",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=securitiestokenoffering",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=securitiestokenoffering"
-      },
-      "top_headlines": []
+      "term": "Securitiestokenoffering",
+      "term_ko": "증권형 토큰 오퍼링"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_random_sample",
-    "sample_size": 30,
-    "generated_at": "2025-10-16T12:43:34.319Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "data/finance_keywords.json",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "discovered_keywords": [
+    {
+      "term": "Aviation",
+      "term_ko": "항공"
+    },
+    {
+      "term": "New Stock",
+      "term_ko": "신주"
+    },
+    {
+      "term": "Short Selling",
+      "term_ko": "공매도"
+    },
+    {
+      "term": "Natural Gas",
+      "term_ko": "천연 가스"
+    },
+    {
+      "term": "[table] Foreign Currency Exchange Rate Notification Table",
+      "term_ko": "[표] 외국환율고시표"
+    },
+    {
+      "term": "Market Anxiety",
+      "term_ko": "시장 불안"
+    },
+    {
+      "term": "Headline Inflation",
+      "term_ko": "헤드라인 인플레이션"
+    },
+    {
+      "term": "Leveraged Buyout",
+      "term_ko": "레버리지 바이아웃"
+    },
+    {
+      "term": "Reverse Sale",
+      "term_ko": "리버스 세일"
+    },
+    {
+      "term": "Statistical Arbitrage",
+      "term_ko": "통계적 차익거래"
+    },
+    {
+      "term": "[notice] Maeil Business - Land Institute Defense Industry Forum",
+      "term_ko": "[알립니다] 매일경제·랜드연구소 방위산업포럼"
+    },
+    {
+      "term": "Car Roadside Assistance Will Now Be Available on Islands",
+      "term_ko": "앞으로 섬에서도 자동차 긴급출동서비스 받는다"
+    },
+    {
+      "term": "�ｚ ڸ���ŀ������ Etf, ..",
+      "term_ko": "�ｚ ڸ���ŀ������ Etf, .."
+    },
+    {
+      "term": "Securitiestokenoffering",
+      "term_ko": "증권형 토큰 오퍼링"
+    }
+  ],
+  "translations": {
+    "Aviation": {
+      "en": "Aviation",
+      "ko": "항공",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "New Stock": {
+      "en": "New Stock",
+      "ko": "신주",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Short Selling": {
+      "en": "Short Selling",
+      "ko": "공매도",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Natural Gas": {
+      "en": "Natural Gas",
+      "ko": "천연 가스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "[table] Foreign Currency Exchange Rate Notification Table": {
+      "en": "[table] Foreign Currency Exchange Rate Notification Table",
+      "ko": "[표] 외국환율고시표",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Market Anxiety": {
+      "en": "Market Anxiety",
+      "ko": "시장 불안",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Headline Inflation": {
+      "en": "Headline Inflation",
+      "ko": "헤드라인 인플레이션",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Leveraged Buyout": {
+      "en": "Leveraged Buyout",
+      "ko": "레버리지 바이아웃",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Reverse Sale": {
+      "en": "Reverse Sale",
+      "ko": "리버스 세일",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Statistical Arbitrage": {
+      "en": "Statistical Arbitrage",
+      "ko": "통계적 차익거래",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "[notice] Maeil Business - Land Institute Defense Industry Forum": {
+      "en": "[notice] Maeil Business - Land Institute Defense Industry Forum",
+      "ko": "[알립니다] 매일경제·랜드연구소 방위산업포럼",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Car Roadside Assistance Will Now Be Available on Islands": {
+      "en": "Car Roadside Assistance Will Now Be Available on Islands",
+      "ko": "앞으로 섬에서도 자동차 긴급출동서비스 받는다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "�ｚ ڸ���ŀ������ Etf, ..": {
+      "en": "�ｚ ڸ���ŀ������ Etf, ..",
+      "ko": "�ｚ ڸ���ŀ������ Etf, ..",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    },
+    "Securitiestokenoffering": {
+      "en": "Securitiestokenoffering",
+      "ko": "증권형 토큰 오퍼링",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T18:27:08.500Z"
+    }
   }
 }
