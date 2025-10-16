@@ -160,7 +160,8 @@ function sanitizeKeywordList(keywords) {
 
   const cleaned = keywords
     .map((kw) => (typeof kw === 'string' ? kw.trim() : ''))
-    .filter((kw) => kw.length > 0);
+    .filter((kw) => kw.length > 0)
+    .filter((kw) => kw.split(/\s+/).filter(Boolean).length <= 5);
 
   return dedupeKeywords(cleaned);
 }
@@ -699,41 +700,27 @@ async function buildTags() {
   console.log('🚀 Generating data/tags.json from finance_keywords.json');
   console.log(`🕐 Execution time: ${new Date().toISOString()}`);
   console.log(`🎲 Random seed check: ${Math.random()}`);
-  
-  const fallbackKeywordPool = loadFinanceKeywords();
-  if (!fallbackKeywordPool.length) {
-    throw new Error('finance_keywords.json does not contain any usable keywords.');
-  }
 
-  console.log(`📊 Total keywords available: ${fallbackKeywordPool.length}`);
-  console.log(`   First 10: ${fallbackKeywordPool.slice(0, 10).join(', ')}`);
-  console.log(
-    `   Middle 10 (around #${Math.floor(fallbackKeywordPool.length / 2)}): ${fallbackKeywordPool
-      .slice(Math.floor(fallbackKeywordPool.length / 2), Math.floor(fallbackKeywordPool.length / 2) + 10)
-      .join(', ')}`,
-  );
-  console.log(`   Last 10: ${fallbackKeywordPool.slice(-10).join(', ')}`);
-
-  let sampled = await fetchLLMKeywords({ desiredCount: SAMPLE_SIZE });
+  let sampled = sanitizeKeywordList(await fetchLLMKeywords({ desiredCount: SAMPLE_SIZE }));
   let keywordCollectionMethod = 'naver_search_llm_seeded';
 
   if (!sampled.length) {
-    sampled = shuffleSample(fallbackKeywordPool, SAMPLE_SIZE);
-    keywordCollectionMethod = 'naver_search_random_sample';
-  }
-
-  sampled = sanitizeKeywordList(sampled);
-
-  if (sampled.length < SAMPLE_SIZE) {
-    if (sampled.length > 0) {
-      console.log(
-        `ℹ️ ${
-          keywordCollectionMethod === 'naver_search_llm_seeded' ? 'tinyllama worker' : 'Fallback pool'
-        } returned ${sampled.length} keywords; supplementing to target ${SAMPLE_SIZE}.`,
-      );
+    const fallbackKeywordPool = loadFinanceKeywords();
+    if (!fallbackKeywordPool.length) {
+      throw new Error('finance_keywords.json does not contain any usable keywords.');
     }
-    const supplement = shuffleSample(fallbackKeywordPool, SAMPLE_SIZE);
-    sampled = sanitizeKeywordList([...sampled, ...supplement]);
+
+    console.log(`📊 Total keywords available: ${fallbackKeywordPool.length}`);
+    console.log(`   First 10: ${fallbackKeywordPool.slice(0, 10).join(', ')}`);
+    console.log(
+      `   Middle 10 (around #${Math.floor(fallbackKeywordPool.length / 2)}): ${fallbackKeywordPool
+        .slice(Math.floor(fallbackKeywordPool.length / 2), Math.floor(fallbackKeywordPool.length / 2) + 10)
+        .join(', ')}`,
+    );
+    console.log(`   Last 10: ${fallbackKeywordPool.slice(-10).join(', ')}`);
+
+    sampled = sanitizeKeywordList(shuffleSample(fallbackKeywordPool, SAMPLE_SIZE));
+    keywordCollectionMethod = 'naver_search_random_sample';
   }
 
   sampled = sampled.slice(0, SAMPLE_SIZE);
