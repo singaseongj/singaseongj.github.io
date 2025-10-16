@@ -1,906 +1,439 @@
 {
+  "generatedAt": "2025-10-16T06:28:07.665Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-10-16",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "retail sales",
-      "term_ko": "소매판매",
-      "significance_score": 135525,
-      "mentions": 223502,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "소매판매",
-        "total_results": 223502,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1223.79,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:10 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%86%8C%EB%A7%A4%ED%8C%90%EB%A7%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%86%8C%EB%A7%A4%ED%8C%90%EB%A7%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%86%8C%EB%A7%A4%ED%8C%90%EB%A7%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[신윤우의 외환분석] 무역합의 기대감",
-          "summary": "미 정부 셧다운으로 이날 밤 발표될 예정이었던 미국의 주간 실업수당 청구건수나 9월 생산자물가지수(PPI), 소매판매 등은 공표되지 않을 전망이다. 연준 고위 관계자들은 잇달아 공식 발언을 내놓는다. 미셸 보먼...",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4378686",
-          "pubDate": "Thu, 16 Oct 2025 09:54:00 +0900"
-        },
-        {
-          "title": "10월15일 국제유가 WTI‧Brent유↓, Dubai유 ↑",
-          "summary": "시카고 연방준비제도은행에 따르면 자동차와 부품을 제외한 미국 9월 소매 판매 는 노동시장 침체 및 수입관세로 인한 물가상승 영향으로 상승 폭이 둔화한 것으로 추정됐다. 16일 발표 예정이던 종합 소매...",
-          "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=218740",
-          "pubDate": "Thu, 16 Oct 2025 09:48:00 +0900"
-        },
-        {
-          "title": "미중 무역 갈등 따른 소비 위축에 유가 하락 지속",
-          "summary": "시카고 연방준비제도은행에 따르면 자동차와 부품을 제외한 미국 9월 소매 판매 는 노동시장 침체 및 수입관세로 인한 물가상승 영향으로 상승 폭이 둔화한 것으로 추정됐다. 국제에너지기구(IEA)는 OPEC+ 생산량...",
-          "link": "http://www.e-platform.net/news/articleView.html?idxno=97050",
-          "pubDate": "Thu, 16 Oct 2025 09:44:00 +0900"
-        }
-      ]
+      "term": "Retail Sales",
+      "term_ko": "소매판매"
     },
     {
-      "term": "Stock market outlook",
-      "term_ko": "증시전망",
-      "significance_score": 73890,
-      "mentions": 120902,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "증시전망",
-        "total_results": 120902,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1148.39,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:16 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A6%9D%EC%8B%9C%EC%A0%84%EB%A7%9D",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A6%9D%EC%8B%9C%EC%A0%84%EB%A7%9D",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A6%9D%EC%8B%9C%EC%A0%84%EB%A7%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "신영증권 \"부동산 시장 10·15대책에 단기 경색 전망 , 증시 포함 자본시...",
-          "summary": "부동산 시장이 10·15대책에 따라 단기적으로 얼어붙을 것으로 전망 됐다. 금리인하와 대체 투자자산 등 국내... 이 같은 현상이 반복되면 10·15대책의 효과도 단기에 그칠 것으로 전망 됐다. 박 연구원은 \"그동안 강남3구와...",
-          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=415572",
-          "pubDate": "Thu, 16 Oct 2025 08:52:00 +0900"
-        },
-        {
-          "title": "[굿모닝 증시 ]美, 혼조 마감…\"한국, 반도체·AI 중심 상승출발 전망 \"",
-          "summary": "이날 한국 증시 전망 에 대해 이성훈 키움증권 연구원은 \"AI 산업 확장 기대감이 이어진 미 증시를 반영하면서 반도체를 필두로 AI 관련주를 중심으로 상승 출발할 것\"이라고 말했다. 그러면서 \"전날 국내 증시는...",
-          "link": "https://view.asiae.co.kr/article/2025101608201127058",
-          "pubDate": "Thu, 16 Oct 2025 08:23:00 +0900"
-        },
-        {
-          "title": "'더 센' 부동산 규제에 자금 증시 로?…이재명發 '머니무브' 본격화하나",
-          "summary": "미 연방준비제도(Fed·연준)발(發) 유동성 확대 전망 도 증시 에 긍정적인 영향을 미쳤지만, 전날 발표된 이재명 정부의 3차 고강도 부동산 대출 규제가 투자심리를 빠르게 밀어 올렸다. 이경민 대신증권 FICC리서치 부장은...",
-          "link": "https://www.news1.kr/finance/general-stock/5942421",
-          "pubDate": "Thu, 16 Oct 2025 06:42:00 +0900"
-        }
-      ]
+      "term": "Stock Market Outlook",
+      "term_ko": "증시전망"
     },
     {
-      "term": "Stock-secured loan",
-      "term_ko": "주식담보대출",
-      "significance_score": 58740,
-      "mentions": 95314,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "주식담보대출",
-        "total_results": 95314,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1351.99,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:10 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A3%BC%EC%8B%9D%EB%8B%B4%EB%B3%B4%EB%8C%80%EC%B6%9C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A3%BC%EC%8B%9D%EB%8B%B4%EB%B3%B4%EB%8C%80%EC%B6%9C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A3%BC%EC%8B%9D%EB%8B%B4%EB%B3%B4%EB%8C%80%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "與 \"10·15 부동산대책, 어쩔 수 없는 조치…尹·오세훈 탓\"",
-          "summary": "주택 담보대출 (주담대) 한도가 4억원, 25억원 초과 주택은 2억원으로 각각 줄어든다. 대출 규제에서 제외돼온... 대통령은 주식 시장이 더 활성화되길 바라고 있다. 마음 놓고 투자할 수 있도록 시장이 건전하고 튼튼하게...",
-          "link": "https://www.hankyung.com/article/2025101621097",
-          "pubDate": "Thu, 16 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "[인터뷰] 국토부 \"문재인 시즌2는 없다\"",
-          "summary": "이 외에도 대출 규제, 제가 말씀드렸던 대출 규제는 주택 담보대출 15억 이하 아파트에 대해선 6억까지, 15억... 지금 금리 인하, 우리나라뿐만 아니라 전 세계가 금리 인하 기조인 데다가 금리 인하가 되면 주식 시장 올라가고...",
-          "link": "https://www.nocutnews.co.kr/news/6413684?utm_source=naver&utm_medium=article&utm_campaign=20251016095121",
-          "pubDate": "Thu, 16 Oct 2025 09:52:00 +0900"
-        },
-        {
-          "title": "[장중시황]코스피 장중 3700 터치…부동산 규제에 '머니무브'",
-          "summary": "주택 담보대출 한도를 축소하고, 토지거래허가구역과 투기과열지구를 확대 지정하는 등 강도 높은 규제 방안을 내놨다. 이로 인해 부동산 투자 매력이 약화됐다는 평가가 나오면서 시중 유동성이 주식 시장으로...",
-          "link": "https://www.newsway.co.kr/news/view?ud=2025101609370617379",
-          "pubDate": "Thu, 16 Oct 2025 09:40:00 +0900"
-        }
-      ]
+      "term": "Stock-secured Loan",
+      "term_ko": "주식담보대출"
     },
     {
-      "term": "Balance of balance",
-      "term_ko": "균형의 균형",
-      "significance_score": 39451,
-      "mentions": 63380,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "Balance of balance",
-        "total_results": 63380,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1223.05,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:14 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=Balance%20of%20balance",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=Balance%20of%20balance",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=Balance%20of%20balance"
-      },
-      "top_headlines": [
-        {
-          "title": "What’s next for multilateralism?",
-          "summary": "For all the U.N.’s defects, a return to nineteenth-century balance - of -power politics, with no restraints on the use of force, would be far worse. So, what comes next? On the sidelines of the...",
-          "link": "https://www.koreatimes.co.kr/path/A2025101513160004766",
-          "pubDate": "Thu, 16 Oct 2025 10:20:00 +0900"
-        },
-        {
-          "title": "Trump Confirms CIA Authorization for Covert Operations in Venezuela Amid ...",
-          "summary": "escalation of American efforts to pressure President Nicolás Maduro’s government. The... As the situation unfolds, global attention is once again turning to Venezuela, where the balance ...",
-          "link": "https://www.econotimes.com/Trump-Confirms-CIA-Authorization-for-Covert-Operations-in-Venezuela-Amid-Maduro-Tensions-1723362",
-          "pubDate": "Thu, 16 Oct 2025 10:04:00 +0900"
-        },
-        {
-          "title": "S. Korea logs 88.3 tln-won fiscal deficit in first 8 months of year",
-          "summary": "The managed fiscal balance , a key gauge of fiscal health calculated on stricter terms, posted a deficit of 88.3 trillion won in the cited period, according to data from the Ministry of Economy...",
-          "link": "https://en.yna.co.kr/view/AEN20251016001500320?input=2106m",
-          "pubDate": "Thu, 16 Oct 2025 10:00:00 +0900"
-        }
-      ]
+      "term": "Balance of Balance",
+      "term_ko": "균형의 균형"
     },
     {
-      "term": "order book",
-      "term_ko": "주문서",
-      "significance_score": 10017,
-      "mentions": 15470,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "order book",
-        "total_results": 15470,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 534.94,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:08 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=order%20book",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=order%20book",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=order%20book"
-      },
-      "top_headlines": [
-        {
-          "title": "[단독] 고팍스 품은 바이낸스, 한국 재입성…토종 코인거래소 초긴장",
-          "summary": "업계 전문가들은 이번 인수의 가장 큰 변수로 ‘오더북( Order book ·호가창) 통합’ 여부를 꼽는다. 만약 금융당국이 고팍스와 바이낸스의 오더북 통합을 허용한다면, 국내 투자자들은 고팍스를 통해 바이낸스의 막대한...",
-          "link": "https://www.mk.co.kr/article/11442869",
-          "pubDate": "Thu, 16 Oct 2025 09:39:00 +0900"
-        },
-        {
-          "title": "When the Trump Guardrails Fall",
-          "summary": "a book — that focused on the efforts by his aides to contain his impulses and stop him from... They refused to order the Justice Department to investigate his rivals, telling him that what he...",
-          "link": "https://www.nytimes.com/2025/10/15/us/politics/trump-second-term-guardrails.html?partner=naver",
-          "pubDate": "Thu, 16 Oct 2025 07:26:00 +0900"
-        },
-        {
-          "title": "[Aptos Experience] “거래 인프라의 소음을 혁신으로 바꾸다”…Aptos, 온...",
-          "summary": "“상반기에는 App Store Order Book 의 테스트넷을 공개해 Decibel의 핵심인 고성능 주문장 엔진( Order Book Engine)을 완성했고, 8월에는 Decibel 브랜드를 공식 론칭하며 DevNet Access Program을 시작해 핵심 빌더들이 직접...",
-          "link": "https://www.tokenpost.kr/news/insights/294804",
-          "pubDate": "Thu, 16 Oct 2025 00:18:00 +0900"
-        }
-      ]
+      "term": "Order Book",
+      "term_ko": "주문서"
     },
     {
-      "term": "A criminal complex in Phnom Penh, Cambodia.",
-      "term_ko": "캄보디아 프놈펜에서 촬영한 한 범죄단지",
-      "significance_score": 1372,
-      "mentions": 87,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "캄보디아 프놈펜에서 촬영한 한 범죄단지",
-        "total_results": 87,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1119.4,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:15 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%BA%84%EB%B3%B4%EB%94%94%EC%95%84%20%ED%94%84%EB%86%88%ED%8E%9C%EC%97%90%EC%84%9C%20%EC%B4%AC%EC%98%81%ED%95%9C%20%ED%95%9C%20%EB%B2%94%EC%A3%84%EB%8B%A8%EC%A7%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%BA%84%EB%B3%B4%EB%94%94%EC%95%84%20%ED%94%84%EB%86%88%ED%8E%9C%EC%97%90%EC%84%9C%20%EC%B4%AC%EC%98%81%ED%95%9C%20%ED%95%9C%20%EB%B2%94%EC%A3%84%EB%8B%A8%EC%A7%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%BA%84%EB%B3%B4%EB%94%94%EC%95%84%20%ED%94%84%EB%86%88%ED%8E%9C%EC%97%90%EC%84%9C%20%EC%B4%AC%EC%98%81%ED%95%9C%20%ED%95%9C%20%EB%B2%94%EC%A3%84%EB%8B%A8%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[단독] 산 꼭대기에 대규모 범죄 단지 …‘대학생 사망’ 캄보디아 보코...",
-          "summary": "산의 범죄 단지 를 현장 취재했습니다. 민정희 기자의 보도입니다. [리포트] 캄보디아 수도 프놈펜에서 200km... 옮기는 방안을 추진하고 있습니다. KBS 뉴스 민정희입니다. 촬영 기자:서원철/영상편집:서윤지/그래픽:유건수",
-          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8382403&ref=A",
-          "pubDate": "Thu, 16 Oct 2025 09:41:00 +0900"
-        },
-        {
-          "title": "'그것이 알고싶다' 캄보디아 특별판 88일의 추적",
-          "summary": "인신매매와 살인, 감금과 고문 등 강력 범죄 가 공공연하게 벌어지고 있다는 캄보디아 ‘웬치’. 현지 취재 결과, 수도 프놈펜 뿐 아니라 대도시 시아누크빌과 태국과의 국경지역에도 범죄단지 가 여럿 존재하는 걸로...",
-          "link": "https://enter.etoday.co.kr/news/view/286019",
-          "pubDate": "Thu, 16 Oct 2025 07:00:00 +0900"
-        },
-        {
-          "title": "[단독] 산 꼭대기에 대규모 범죄 단지 …‘대학생 사망’ 캄보디아 보코...",
-          "summary": "산의 범죄 단지 를 현장 취재했습니다. 민정희 기자의 보도입니다. [리포트] 캄보디아 수도 프놈펜에서 200km... 옮기는 방안을 추진하고 있습니다. KBS 뉴스 민정희입니다. 촬영 기자:서원철/영상편집:서윤지/그래픽:유건수",
-          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8382197&ref=A",
-          "pubDate": "Thu, 16 Oct 2025 06:08:00 +0900"
-        }
-      ]
+      "term": "A Criminal Complex in Phnom Penh, Cambodia.",
+      "term_ko": "캄보디아 프놈펜에서 촬영한 한 범죄단지"
     },
     {
-      "term": "Execution price",
-      "term_ko": "체결 가격",
-      "significance_score": 935,
-      "mentions": 1140,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "Execution price",
-        "total_results": 1140,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 51.34,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:21 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=Execution%20price",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=Execution%20price",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=Execution%20price"
-      },
-      "top_headlines": [
-        {
-          "title": "법무부, 불법체류자 형사처벌 회피 방지 위한 제도개선 추진",
-          "summary": "the price .\" According to the Ministry of Justice, when receiving an illegal alien from the police at the... fair execution of criminal justice procedures. Minister of Justice Jeong Seong-ho stated, “We will continue...",
-          "link": "http://www.breaknews.com/1153853",
-          "pubDate": "Wed, 15 Oct 2025 13:44:00 +0900"
-        },
-        {
-          "title": "“흩어진 링크를 신뢰 기반의 선택으로 바꾸죠.” 이현호 링크루트 대표",
-          "summary": "He defines this as a \"culture of light execution , heavy responsibility.\" As the service expanded, its social... Based on verified links, it provides price , inventory, and sales information, leading to purchases and visits....",
-          "link": "https://www.venturesquare.net/1007442",
-          "pubDate": "Tue, 07 Oct 2025 10:56:00 +0900"
-        },
-        {
-          "title": "No thanksgiving food offered to ex-first couple in jail",
-          "summary": "on Execution of Sentences and Treatment of Inmates. Due to budget cuts for special meals in... The former first lady was arrested in August on charges including stock price manipulation and...",
-          "link": "https://www.koreatimes.co.kr/path/A2025100614200000118",
-          "pubDate": "Mon, 06 Oct 2025 14:58:00 +0900"
-        }
-      ]
+      "term": "Execution Price",
+      "term_ko": "체결 가격"
     },
     {
       "term": "진에어, 다카마쓰 특별 혜택기획전 진행",
-      "term_ko": "진에어, 다카마쓰 특별 혜택기획전 진행",
-      "significance_score": 359,
-      "mentions": 35,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "진에어, 다카마쓰 특별 혜택기획전 진행",
-        "total_results": 35,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 137.83,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:22 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A7%84%EC%97%90%EC%96%B4%2C%20%EB%8B%A4%EC%B9%B4%EB%A7%88%EC%93%B0%20%ED%8A%B9%EB%B3%84%20%ED%98%9C%ED%83%9D%EA%B8%B0%ED%9A%8D%EC%A0%84%20%EC%A7%84%ED%96%89",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A7%84%EC%97%90%EC%96%B4%2C%20%EB%8B%A4%EC%B9%B4%EB%A7%88%EC%93%B0%20%ED%8A%B9%EB%B3%84%20%ED%98%9C%ED%83%9D%EA%B8%B0%ED%9A%8D%EC%A0%84%20%EC%A7%84%ED%96%89",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A7%84%EC%97%90%EC%96%B4%2C%20%EB%8B%A4%EC%B9%B4%EB%A7%88%EC%93%B0%20%ED%8A%B9%EB%B3%84%20%ED%98%9C%ED%83%9D%EA%B8%B0%ED%9A%8D%EC%A0%84%20%EC%A7%84%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "[여행24시] 모두투어, 임직원 대상 20억 규모 특별 격려금 지급 外",
-          "summary": "이벤트를 진행 한다고 밝혔다. 나노바나나는 구글이 개발한 AI 기반 이미지 편집 모델이다. 원본을 훼손하지... ◆ 진에어, 다카마쓰 특별 혜택 기획전 진에어 는 항공 운임 및 부가서비스 혜택 으로 구성된 다카마쓰 가을...",
-          "link": "https://dealsite.co.kr/articles/149506",
-          "pubDate": "Tue, 14 Oct 2025 16:06:00 +0900"
-        },
-        {
-          "title": "진에어, 日 다카마쓰 항공운임 최대 50% 할인… 특별 기획전 진행",
-          "summary": "부가서비스 혜택 으로 구성된 다카마쓰 가을 여행 특별 기획전 을 마련했다. 진에어 다카마쓰 노선은... 이번 기획전 은 예술, 미식, 골프까지 다양한 경험을 할 수 있다. 기획전 은 13일부터 26일까지 진행 되며, 이...",
-          "link": "http://www.dailylog.co.kr/news/articleView.html?idxno=26069",
-          "pubDate": "Tue, 14 Oct 2025 10:52:00 +0900"
-        },
-        {
-          "title": "[브리프] 진에어 제주항공 에어서울 놀유니버스 여기어때 롯데관광 하나...",
-          "summary": "■ 진에어, 다카마쓰 특별 혜택기획전 진행 |진에어 진에어가 13일 항공 운임, 부가서비스 혜택으로 구성된 다카마쓰 가을 여행 특별 기획전을 마련했다. 진에어 다카마쓰 노선은 취항 1년 만에 누적 탑승객 10만명을...",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=341454",
-          "pubDate": "Mon, 13 Oct 2025 21:48:00 +0900"
-        }
-      ]
+      "term_ko": "진에어, 다카마쓰 특별 혜택기획전 진행"
     },
     {
-      "term": "A 'military balloon' to fill the satellite-drone gap",
-      "term_ko": "위성·드론 빈틈 메우는 ‘군용 풍선’",
-      "significance_score": 155,
-      "mentions": 2,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "위성·드론 빈틈 메우는 ‘군용 풍선’",
-        "total_results": 2,
-        "returned_results": 2,
-        "display_count": 2,
-        "recency_weight": 133.74,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:15 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9C%84%EC%84%B1%C2%B7%EB%93%9C%EB%A1%A0%20%EB%B9%88%ED%8B%88%20%EB%A9%94%EC%9A%B0%EB%8A%94%20%E2%80%98%EA%B5%B0%EC%9A%A9%20%ED%92%8D%EC%84%A0%E2%80%99",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9C%84%EC%84%B1%C2%B7%EB%93%9C%EB%A1%A0%20%EB%B9%88%ED%8B%88%20%EB%A9%94%EC%9A%B0%EB%8A%94%20%E2%80%98%EA%B5%B0%EC%9A%A9%20%ED%92%8D%EC%84%A0%E2%80%99",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9C%84%EC%84%B1%C2%B7%EB%93%9C%EB%A1%A0%20%EB%B9%88%ED%8B%88%20%EB%A9%94%EC%9A%B0%EB%8A%94%20%E2%80%98%EA%B5%B0%EC%9A%A9%20%ED%92%8D%EC%84%A0%E2%80%99"
-      },
-      "top_headlines": [
-        {
-          "title": "[조간브리핑]韓 과학계, 단기 성과주의 시스템이 혁신 발목···R&D 체질...",
-          "summary": "[조선일보] 위성·드론 빈틈 메우는 ' 군용 풍선 ' 위성 과 드론 이 하늘을 뒤덮는 최첨단 기술 시대에 때아닌 ' 군용 풍선 '이 새롭게 주목받고 있다. 미국을 비롯한 각국 군대가 감시·통신·정찰을 목적으로 18세기부터 쓰던...",
-          "link": "http://www.hellodd.com/news/articleView.html?idxno=109516",
-          "pubDate": "Thu, 16 Oct 2025 09:56:00 +0900"
-        },
-        {
-          "title": "위성·드론 빈틈 메우는 ‘군용 풍선’",
-          "summary": "中이 촉발… 美 등 대응 나서 군사용 풍선 다시 ‘르네상스’ 위성 과 드론 이 하늘을 뒤덮는 최첨단 기술 시대에 때아닌 ‘군용 풍선’ 이 새롭게 주목받고 있다. 미국을 비롯한 각국 군대가 감시·통신·정찰을 목적으로...",
-          "link": "https://www.chosun.com/economy/science/2025/10/16/BEYPR7Z7CNDTHCPGKFMVFBIM44/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-          "pubDate": "Thu, 16 Oct 2025 00:37:00 +0900"
-        }
-      ]
+      "term": "A 'military Balloon' to Fill the Satellite-drone Gap",
+      "term_ko": "위성·드론 빈틈 메우는 ‘군용 풍선’"
     },
     {
-      "term": "Ethereum and other major altcoins plunge more than 10%, but long-term upside remains in sight",
-      "term_ko": "이더리움 등 주요 알트코인 10% 이상 폭락에도 장기적 상승 기대감",
-      "significance_score": 104,
-      "mentions": 7,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "이더리움 등 주요 알트코인 10% 이상 폭락에도 장기적 상승 기대감",
-        "total_results": 7,
-        "returned_results": 7,
-        "display_count": 7,
-        "recency_weight": 29.51,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:15 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%20%EB%93%B1%20%EC%A3%BC%EC%9A%94%20%EC%95%8C%ED%8A%B8%EC%BD%94%EC%9D%B8%2010%25%20%EC%9D%B4%EC%83%81%20%ED%8F%AD%EB%9D%BD%EC%97%90%EB%8F%84%20%EC%9E%A5%EA%B8%B0%EC%A0%81%20%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%20%EB%93%B1%20%EC%A3%BC%EC%9A%94%20%EC%95%8C%ED%8A%B8%EC%BD%94%EC%9D%B8%2010%25%20%EC%9D%B4%EC%83%81%20%ED%8F%AD%EB%9D%BD%EC%97%90%EB%8F%84%20%EC%9E%A5%EA%B8%B0%EC%A0%81%20%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%20%EB%93%B1%20%EC%A3%BC%EC%9A%94%20%EC%95%8C%ED%8A%B8%EC%BD%94%EC%9D%B8%2010%25%20%EC%9D%B4%EC%83%81%20%ED%8F%AD%EB%9D%BD%EC%97%90%EB%8F%84%20%EC%9E%A5%EA%B8%B0%EC%A0%81%20%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "이더리움 등 주요 알트코인 10% 이상 폭락에도 장기적 상승 기대감",
-          "summary": "이더리움 가격도 4000달러선이 무너지며 한 때 3500달러대까지 떨어지기도 했다. 엑스알피와 솔라나 등 다른 주요 알트코인 가격도 이날 하루에만 10% 이상 하락했다. 일부 알트코인 의 경우 90% 이상 폭락 했다. 11일에만...",
-          "link": "https://www.hankyung.com/article/2025101467251",
-          "pubDate": "Tue, 14 Oct 2025 15:55:00 +0900"
-        },
-        {
-          "title": "[ 알트 트레저리] 비트 코인 만으론 부족하다? 알트코인 트레저리 판도 총...",
-          "summary": "IO 최근에는 비트 코인 을 넘어 이더리움 (ETH), 솔라나(SOL), XRP, BNB, 하이퍼레인(HYPE), 라이트 코인 (LTC), 도지 코인 (DOGE), 페치(FET) 등 다양한 알트코인 이 기업 재무전략에 편입되기 시작했다. 애니모카브랜드...",
-          "link": "https://www.tokenpost.kr/news/insights/279769",
-          "pubDate": "Mon, 25 Aug 2025 14:18:00 +0900"
-        },
-        {
-          "title": "[속보] 암호화폐 대왕고래 \"무더기 매물 폭탄\" …뉴욕증시 JP모건 \" 비트...",
-          "summary": "반면, ADA는 50%, XRP는 20%, SOL은 18% 상승 하는 등 트럼프의 발표에 따른 단기적 급등세가 두드러졌다. 그러나 전문가들은 이러한 알트코인 의 급등이 장기적 으로 유지될지 불확실하며, 오히려 비트 코인 의 안정성이 더욱...",
-          "link": "http://www.g-enews.com/ko-kr/news/article/news_all/2025030910341721384a01bf698f_1/article.html",
-          "pubDate": "Sun, 09 Mar 2025 10:44:00 +0900"
-        }
-      ]
+      "term": "Ethereum and Other Major Altcoins Plunge More Than 10%, But Long-term Upside Remains in Sight",
+      "term_ko": "이더리움 등 주요 알트코인 10% 이상 폭락에도 장기적 상승 기대감"
     },
     {
       "term": "與-退出 野...曺 '반쪽국감', Supreme Court entered the chamber and made a concluding remark (synthesis)",
-      "term_ko": "대법관실 들어간 與·퇴장한 野…曺 '반쪽국감' 출석 마무리발언(종합)",
-      "significance_score": 71,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "대법관실 들어간 與·퇴장한 野…曺 '반쪽국감' 출석 마무리발언(종합)",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 60.55,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:14 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%8C%80%EB%B2%95%EA%B4%80%EC%8B%A4%20%EB%93%A4%EC%96%B4%EA%B0%84%20%E8%88%87%C2%B7%ED%87%B4%EC%9E%A5%ED%95%9C%20%E9%87%8E%E2%80%A6%E6%9B%BA%20'%EB%B0%98%EC%AA%BD%EA%B5%AD%EA%B0%90'%20%EC%B6%9C%EC%84%9D%20%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%B0%9C%EC%96%B8(%EC%A2%85%ED%95%A9)",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%8C%80%EB%B2%95%EA%B4%80%EC%8B%A4%20%EB%93%A4%EC%96%B4%EA%B0%84%20%E8%88%87%C2%B7%ED%87%B4%EC%9E%A5%ED%95%9C%20%E9%87%8E%E2%80%A6%E6%9B%BA%20'%EB%B0%98%EC%AA%BD%EA%B5%AD%EA%B0%90'%20%EC%B6%9C%EC%84%9D%20%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%B0%9C%EC%96%B8(%EC%A2%85%ED%95%A9)",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%8C%80%EB%B2%95%EA%B4%80%EC%8B%A4%20%EB%93%A4%EC%96%B4%EA%B0%84%20%E8%88%87%C2%B7%ED%87%B4%EC%9E%A5%ED%95%9C%20%E9%87%8E%E2%80%A6%E6%9B%BA%20'%EB%B0%98%EC%AA%BD%EA%B5%AD%EA%B0%90'%20%EC%B6%9C%EC%84%9D%20%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%B0%9C%EC%96%B8(%EC%A2%85%ED%95%A9)"
-      },
-      "top_headlines": [
-        {
-          "title": "대법관실 들어간 與·퇴장한 野…曺 '반쪽국감' 출석 마무리발언(종합)",
-          "summary": "민주, 초유의 대법원 현장검증 강행…대법정·소법정· 대법관실 들러 국힘 \"불법 점령\"·\"사법 장악\" 반발... 조 대법원장은 국감 종료 직전인 오후 8시 30분께 국감 장에 나와 국감 을 마무리 짓는 종합 발언 을 했다. 앞서 조...",
-          "link": "https://www.yna.co.kr/view/AKR20251015148451004?input=1195m",
-          "pubDate": "Wed, 15 Oct 2025 22:57:00 +0900"
-        }
-      ]
+      "term_ko": "대법관실 들어간 與·퇴장한 野…曺 '반쪽국감' 출석 마무리발언(종합)"
     },
     {
-      "term": "\"It was more important to control Yoo's 3-point shooting than Yang Jun-seok\" Why?",
-      "term_ko": "정관장 유도훈 감독 \"양준석보다 유기상의 3점포 제어가 중요했다\" 그 이유는?",
-      "significance_score": 69,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "정관장 유도훈 감독 \"양준석보다 유기상의 3점포 제어가 중요했다\" 그 이유는?",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 58.85,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:11 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A0%95%EA%B4%80%EC%9E%A5%20%EC%9C%A0%EB%8F%84%ED%9B%88%20%EA%B0%90%EB%8F%85%20%22%EC%96%91%EC%A4%80%EC%84%9D%EB%B3%B4%EB%8B%A4%20%EC%9C%A0%EA%B8%B0%EC%83%81%EC%9D%98%203%EC%A0%90%ED%8F%AC%20%EC%A0%9C%EC%96%B4%EA%B0%80%20%EC%A4%91%EC%9A%94%ED%96%88%EB%8B%A4%22%20%EA%B7%B8%20%EC%9D%B4%EC%9C%A0%EB%8A%94%3F",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A0%95%EA%B4%80%EC%9E%A5%20%EC%9C%A0%EB%8F%84%ED%9B%88%20%EA%B0%90%EB%8F%85%20%22%EC%96%91%EC%A4%80%EC%84%9D%EB%B3%B4%EB%8B%A4%20%EC%9C%A0%EA%B8%B0%EC%83%81%EC%9D%98%203%EC%A0%90%ED%8F%AC%20%EC%A0%9C%EC%96%B4%EA%B0%80%20%EC%A4%91%EC%9A%94%ED%96%88%EB%8B%A4%22%20%EA%B7%B8%20%EC%9D%B4%EC%9C%A0%EB%8A%94%3F",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A0%95%EA%B4%80%EC%9E%A5%20%EC%9C%A0%EB%8F%84%ED%9B%88%20%EA%B0%90%EB%8F%85%20%22%EC%96%91%EC%A4%80%EC%84%9D%EB%B3%B4%EB%8B%A4%20%EC%9C%A0%EA%B8%B0%EC%83%81%EC%9D%98%203%EC%A0%90%ED%8F%AC%20%EC%A0%9C%EC%96%B4%EA%B0%80%20%EC%A4%91%EC%9A%94%ED%96%88%EB%8B%A4%22%20%EA%B7%B8%20%EC%9D%B4%EC%9C%A0%EB%8A%94%3F"
-      },
-      "top_headlines": [
-        {
-          "title": "[현장인터뷰] 정관장 유도훈 감독 \" 양준석보다 유기상의 3점포 제어가 중...",
-          "summary": "유도훈 감독 은 대구 가스공사 시절 LG에게 단 한 차례도 이기지 못했다. 유 감독 은 이 질문에 웃으면서 \" 정관장 에서는 승률 100%라 생각한다\"고 농담을 던졌다. 그는 \"양준석이 LG의 공격 시발점이지만, 유기상의 3점포 를 막는...",
-          "link": "https://www.sportschosun.com/basketball/2025-10-15/202510150100087470011413",
-          "pubDate": "Wed, 15 Oct 2025 21:14:00 +0900"
-        }
-      ]
+      "term": "\"it Was More Important to Control Yoo's 3-point Shooting Than Yang Jun-seok\" Why?",
+      "term_ko": "정관장 유도훈 감독 \"양준석보다 유기상의 3점포 제어가 중요했다\" 그 이유는?"
     },
     {
-      "term": "\"Victory Tasted with Cold Beer\" ⋯Casjohn's 'Blue Wave' [On-Site] [Site",
-      "term_ko": "\"시원한 맥주로 맛본 승리\"⋯카스존이 만든 '푸른 물결' [현장]",
-      "significance_score": 68,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"시원한 맥주로 맛본 승리\"⋯카스존이 만든 '푸른 물결' [현장]",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 57.61,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:12 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EC%8B%9C%EC%9B%90%ED%95%9C%20%EB%A7%A5%EC%A3%BC%EB%A1%9C%20%EB%A7%9B%EB%B3%B8%20%EC%8A%B9%EB%A6%AC%22%E2%8B%AF%EC%B9%B4%EC%8A%A4%EC%A1%B4%EC%9D%B4%20%EB%A7%8C%EB%93%A0%20'%ED%91%B8%EB%A5%B8%20%EB%AC%BC%EA%B2%B0'%20%5B%ED%98%84%EC%9E%A5%5D",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EC%8B%9C%EC%9B%90%ED%95%9C%20%EB%A7%A5%EC%A3%BC%EB%A1%9C%20%EB%A7%9B%EB%B3%B8%20%EC%8A%B9%EB%A6%AC%22%E2%8B%AF%EC%B9%B4%EC%8A%A4%EC%A1%B4%EC%9D%B4%20%EB%A7%8C%EB%93%A0%20'%ED%91%B8%EB%A5%B8%20%EB%AC%BC%EA%B2%B0'%20%5B%ED%98%84%EC%9E%A5%5D",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EC%8B%9C%EC%9B%90%ED%95%9C%20%EB%A7%A5%EC%A3%BC%EB%A1%9C%20%EB%A7%9B%EB%B3%B8%20%EC%8A%B9%EB%A6%AC%22%E2%8B%AF%EC%B9%B4%EC%8A%A4%EC%A1%B4%EC%9D%B4%20%EB%A7%8C%EB%93%A0%20'%ED%91%B8%EB%A5%B8%20%EB%AC%BC%EA%B2%B0'%20%5B%ED%98%84%EC%9E%A5%5D"
-      },
-      "top_headlines": [
-        {
-          "title": "\" 시원한 맥주로 맛본 승리 \"⋯ 카스존이 만든 '푸른 물결' [현장]",
-          "summary": "\" 시원한 카스 를 마시며 승리 까지 맛볼 수 있어서 너무 즐겁네요.\" 14일 서울월드컵경기장에서 열린 한국과... 카스 의 상징인 푸른 색의 좌석 커버를 사용해 마치 태극 문양을 연상케 했다. 오비맥주에 따르면 브라질...",
-          "link": "http://www.inews24.com/view/1895734",
-          "pubDate": "Wed, 15 Oct 2025 20:01:00 +0900"
-        }
-      ]
+      "term": "\"victory Tasted with Cold Beer\" ⋯casjohn's 'blue Wave' [on-site] [site",
+      "term_ko": "\"시원한 맥주로 맛본 승리\"⋯카스존이 만든 '푸른 물결' [현장]"
     },
     {
-      "term": "\"It's moved like a museum\"...Jung Yong-jin's commerce innovation starts [Repo].",
-      "term_ko": "“박물관처럼 옮겨왔네” 쓱 ‘미지엄’…정용진式 커머스 혁신 시동[르포]",
-      "significance_score": 65,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "“박물관처럼 옮겨왔네” 쓱 ‘미지엄’…정용진式 커머스 혁신 시동[르포]",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 54.59,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:18 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%E2%80%9C%EB%B0%95%EB%AC%BC%EA%B4%80%EC%B2%98%EB%9F%BC%20%EC%98%AE%EA%B2%A8%EC%99%94%EB%84%A4%E2%80%9D%20%EC%93%B1%20%E2%80%98%EB%AF%B8%EC%A7%80%EC%97%84%E2%80%99%E2%80%A6%EC%A0%95%EC%9A%A9%EC%A7%84%E5%BC%8F%20%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%ED%98%81%EC%8B%A0%20%EC%8B%9C%EB%8F%99%5B%EB%A5%B4%ED%8F%AC%5D",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%E2%80%9C%EB%B0%95%EB%AC%BC%EA%B4%80%EC%B2%98%EB%9F%BC%20%EC%98%AE%EA%B2%A8%EC%99%94%EB%84%A4%E2%80%9D%20%EC%93%B1%20%E2%80%98%EB%AF%B8%EC%A7%80%EC%97%84%E2%80%99%E2%80%A6%EC%A0%95%EC%9A%A9%EC%A7%84%E5%BC%8F%20%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%ED%98%81%EC%8B%A0%20%EC%8B%9C%EB%8F%99%5B%EB%A5%B4%ED%8F%AC%5D",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%E2%80%9C%EB%B0%95%EB%AC%BC%EA%B4%80%EC%B2%98%EB%9F%BC%20%EC%98%AE%EA%B2%A8%EC%99%94%EB%84%A4%E2%80%9D%20%EC%93%B1%20%E2%80%98%EB%AF%B8%EC%A7%80%EC%97%84%E2%80%99%E2%80%A6%EC%A0%95%EC%9A%A9%EC%A7%84%E5%BC%8F%20%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%ED%98%81%EC%8B%A0%20%EC%8B%9C%EB%8F%99%5B%EB%A5%B4%ED%8F%AC%5D"
-      },
-      "top_headlines": [
-        {
-          "title": "“ 박물관처럼 옮겨왔네 ” 쓱 ‘미지엄’…정용진式 커머스 혁신 시동[ 르...",
-          "summary": "최근 정용진 신세계그룹 회장이 다양한 이 커머스 전략을 시도하는 가운데 미지엄 도 그 일환이라는 평가다. 행사는 1~4층까지 박물관처럼 층별 콘셉트를 달리해 체험에 방점을 찍었다. 입구에 들어서면 가장 먼저...",
-          "link": "http://www.edaily.co.kr/news/newspath.asp?newsid=03883526642333248",
-          "pubDate": "Wed, 15 Oct 2025 16:59:00 +0900"
-        }
-      ]
+      "term": "\"it's Moved Like a Museum\"...jung Yong-jin's Commerce Innovation Starts [repo].",
+      "term_ko": "“박물관처럼 옮겨왔네” 쓱 ‘미지엄’…정용진式 커머스 혁신 시동[르포]"
     },
     {
-      "term": "'It's amazing' Kim Yeon-kyung becomes a Korean legend! No. 10 retired permanently→Holds one more retirement ceremony",
-      "term_ko": "‘대단하네’ 김연경, 韓 레전드 반열 올랐다! 등번호 10번 영구결번 확정→은퇴식도 한 번 더 연다",
-      "significance_score": 48,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "‘대단하네’ 김연경, 韓 레전드 반열 올랐다! 등번호 10번 영구결번 확정→은퇴식도 한 번 더 연다",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 37.65,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:13 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%E2%80%98%EB%8C%80%EB%8B%A8%ED%95%98%EB%84%A4%E2%80%99%20%EA%B9%80%EC%97%B0%EA%B2%BD%2C%20%E9%9F%93%20%EB%A0%88%EC%A0%84%EB%93%9C%20%EB%B0%98%EC%97%B4%20%EC%98%AC%EB%9E%90%EB%8B%A4!%20%EB%93%B1%EB%B2%88%ED%98%B8%2010%EB%B2%88%20%EC%98%81%EA%B5%AC%EA%B2%B0%EB%B2%88%20%ED%99%95%EC%A0%95%E2%86%92%EC%9D%80%ED%87%B4%EC%8B%9D%EB%8F%84%20%ED%95%9C%20%EB%B2%88%20%EB%8D%94%20%EC%97%B0%EB%8B%A4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%E2%80%98%EB%8C%80%EB%8B%A8%ED%95%98%EB%84%A4%E2%80%99%20%EA%B9%80%EC%97%B0%EA%B2%BD%2C%20%E9%9F%93%20%EB%A0%88%EC%A0%84%EB%93%9C%20%EB%B0%98%EC%97%B4%20%EC%98%AC%EB%9E%90%EB%8B%A4!%20%EB%93%B1%EB%B2%88%ED%98%B8%2010%EB%B2%88%20%EC%98%81%EA%B5%AC%EA%B2%B0%EB%B2%88%20%ED%99%95%EC%A0%95%E2%86%92%EC%9D%80%ED%87%B4%EC%8B%9D%EB%8F%84%20%ED%95%9C%20%EB%B2%88%20%EB%8D%94%20%EC%97%B0%EB%8B%A4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%E2%80%98%EB%8C%80%EB%8B%A8%ED%95%98%EB%84%A4%E2%80%99%20%EA%B9%80%EC%97%B0%EA%B2%BD%2C%20%E9%9F%93%20%EB%A0%88%EC%A0%84%EB%93%9C%20%EB%B0%98%EC%97%B4%20%EC%98%AC%EB%9E%90%EB%8B%A4!%20%EB%93%B1%EB%B2%88%ED%98%B8%2010%EB%B2%88%20%EC%98%81%EA%B5%AC%EA%B2%B0%EB%B2%88%20%ED%99%95%EC%A0%95%E2%86%92%EC%9D%80%ED%87%B4%EC%8B%9D%EB%8F%84%20%ED%95%9C%20%EB%B2%88%20%EB%8D%94%20%EC%97%B0%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "‘대단하네’ 김연경, 韓 레전드 반열 올랐다! 등번호 10번 영구결번 확...",
-          "summary": "김연경 의 은퇴식 을 거행한다. 그리고 이 자리에서 김연경 의 등번호 ‘ 10번 ’의 영구 결번 행사를 함께... 한국 배구계의 한 획을 그은 레전드 답게 오는 18일 성대한 은퇴식 이 한 번 더 열린다. 한일전산여고...",
-          "link": "http://www.osen.co.kr/article/G1112675262",
-          "pubDate": "Wed, 15 Oct 2025 00:02:00 +0900"
-        }
-      ]
+      "term": "'it's Amazing' Kim Yeon-kyung Becomes a Korean Legend! No. 10 Retired Permanently→holds One More Retirement Ceremony",
+      "term_ko": "‘대단하네’ 김연경, 韓 레전드 반열 올랐다! 등번호 10번 영구결번 확정→은퇴식도 한 번 더 연다"
     },
     {
-      "term": "Samsung's Won Tae-in 'strong in big games', 'Ryu Ji-hyun Ho' also singles out",
-      "term_ko": "'큰 경기에 강한' 삼성 원태인 활약에 '류지현 호'도 싱글벙글",
-      "significance_score": 39,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "'큰 경기에 강한' 삼성 원태인 활약에 '류지현 호'도 싱글벙글",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 28.58,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:16 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query='%ED%81%B0%20%EA%B2%BD%EA%B8%B0%EC%97%90%20%EA%B0%95%ED%95%9C'%20%EC%82%BC%EC%84%B1%20%EC%9B%90%ED%83%9C%EC%9D%B8%20%ED%99%9C%EC%95%BD%EC%97%90%20'%EB%A5%98%EC%A7%80%ED%98%84%20%ED%98%B8'%EB%8F%84%20%EC%8B%B1%EA%B8%80%EB%B2%99%EA%B8%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query='%ED%81%B0%20%EA%B2%BD%EA%B8%B0%EC%97%90%20%EA%B0%95%ED%95%9C'%20%EC%82%BC%EC%84%B1%20%EC%9B%90%ED%83%9C%EC%9D%B8%20%ED%99%9C%EC%95%BD%EC%97%90%20'%EB%A5%98%EC%A7%80%ED%98%84%20%ED%98%B8'%EB%8F%84%20%EC%8B%B1%EA%B8%80%EB%B2%99%EA%B8%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query='%ED%81%B0%20%EA%B2%BD%EA%B8%B0%EC%97%90%20%EA%B0%95%ED%95%9C'%20%EC%82%BC%EC%84%B1%20%EC%9B%90%ED%83%9C%EC%9D%B8%20%ED%99%9C%EC%95%BD%EC%97%90%20'%EB%A5%98%EC%A7%80%ED%98%84%20%ED%98%B8'%EB%8F%84%20%EC%8B%B1%EA%B8%80%EB%B2%99%EA%B8%80"
-      },
-      "top_headlines": [
-        {
-          "title": "'큰 경기에 강한' 삼성 원태인 활약에 '류지현 호'도 싱글벙글",
-          "summary": "이와 같은 원태인 의 활약 상에 삼성 도 함박웃음 짓지만, 내년 월드베이스볼클래식(WBC)을 앞둔 한국 야구대표팀 '류지현 호' 에도 희소식이다. 원태인 은 한국야구위원회(KBO) 전력강화위원회가 최근 선발한 11월 체코...",
-          "link": "https://www.yna.co.kr/view/AKR20251014117800007?input=1195m",
-          "pubDate": "Tue, 14 Oct 2025 14:59:00 +0900"
-        }
-      ]
+      "term": "Samsung's Won Tae-in 'strong in Big Games', 'ryu Ji-hyun Ho' Also Singles Out",
+      "term_ko": "'큰 경기에 강한' 삼성 원태인 활약에 '류지현 호'도 싱글벙글"
     },
     {
-      "term": "'Travel Insurance' Becomes a Must-Have for Young People...New Enrollment Surges",
-      "term_ko": "젊은층 필수템 자리잡은 ‘여행자보험’…신규 가입 급증",
-      "significance_score": 34,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "젊은층 필수템 자리잡은 ‘여행자보험’…신규 가입 급증",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 23,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:11 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A0%8A%EC%9D%80%EC%B8%B5%20%ED%95%84%EC%88%98%ED%85%9C%20%EC%9E%90%EB%A6%AC%EC%9E%A1%EC%9D%80%20%E2%80%98%EC%97%AC%ED%96%89%EC%9E%90%EB%B3%B4%ED%97%98%E2%80%99%E2%80%A6%EC%8B%A0%EA%B7%9C%20%EA%B0%80%EC%9E%85%20%EA%B8%89%EC%A6%9D",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A0%8A%EC%9D%80%EC%B8%B5%20%ED%95%84%EC%88%98%ED%85%9C%20%EC%9E%90%EB%A6%AC%EC%9E%A1%EC%9D%80%20%E2%80%98%EC%97%AC%ED%96%89%EC%9E%90%EB%B3%B4%ED%97%98%E2%80%99%E2%80%A6%EC%8B%A0%EA%B7%9C%20%EA%B0%80%EC%9E%85%20%EA%B8%89%EC%A6%9D",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A0%8A%EC%9D%80%EC%B8%B5%20%ED%95%84%EC%88%98%ED%85%9C%20%EC%9E%90%EB%A6%AC%EC%9E%A1%EC%9D%80%20%E2%80%98%EC%97%AC%ED%96%89%EC%9E%90%EB%B3%B4%ED%97%98%E2%80%99%E2%80%A6%EC%8B%A0%EA%B7%9C%20%EA%B0%80%EC%9E%85%20%EA%B8%89%EC%A6%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "해외여행 늘며 젊은층 필수템 자리잡은 ‘ 이것’… 신규 가입 급증 , 뭐길...",
-          "summary": "20대 가입 급증 항공지 지연·무사고 환급 등 ‘맞춤 특약’ 다양 “해외여행 갈 때 여행자보험 은 필수템 ... 모든 연령층에서 계약 건수가 늘었으나 특히 젊은층 의 가입 증가세가 뚜렷하다. 20∼29세 비중은 2021년 9.1%에...",
-          "link": "https://www.mk.co.kr/article/11440671",
-          "pubDate": "Tue, 14 Oct 2025 09:24:00 +0900"
-        }
-      ]
+      "term": "'travel Insurance' Becomes a Must-have for Young People...new Enrollment Surges",
+      "term_ko": "젊은층 필수템 자리잡은 ‘여행자보험’…신규 가입 급증"
     },
     {
-      "term": "US Treasury Secretary Besant \"likely to meet with Trump in South Korea\"",
-      "term_ko": "베선트 美재무장관 \"트럼프 한국서 시진핑과 만날 듯\"",
-      "significance_score": 21,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "베선트 美재무장관 \"트럼프 한국서 시진핑과 만날 듯\"",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 10.53,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:08 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%B2%A0%EC%84%A0%ED%8A%B8%20%E7%BE%8E%EC%9E%AC%EB%AC%B4%EC%9E%A5%EA%B4%80%20%22%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%95%9C%EA%B5%AD%EC%84%9C%20%EC%8B%9C%EC%A7%84%ED%95%91%EA%B3%BC%20%EB%A7%8C%EB%82%A0%20%EB%93%AF%22",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%B2%A0%EC%84%A0%ED%8A%B8%20%E7%BE%8E%EC%9E%AC%EB%AC%B4%EC%9E%A5%EA%B4%80%20%22%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%95%9C%EA%B5%AD%EC%84%9C%20%EC%8B%9C%EC%A7%84%ED%95%91%EA%B3%BC%20%EB%A7%8C%EB%82%A0%20%EB%93%AF%22",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%B2%A0%EC%84%A0%ED%8A%B8%20%E7%BE%8E%EC%9E%AC%EB%AC%B4%EC%9E%A5%EA%B4%80%20%22%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%95%9C%EA%B5%AD%EC%84%9C%20%EC%8B%9C%EC%A7%84%ED%95%91%EA%B3%BC%20%EB%A7%8C%EB%82%A0%20%EB%93%AF%22"
-      },
-      "top_headlines": [
-        {
-          "title": "베선트 美재무장관 \" 트럼프 한국서 시진핑과 만날 듯 \"",
-          "summary": "도널드 트럼프 미국 대통령이 이달 말 한국 아시아태평양경제협력체(APEC) 정상회담에서 시진핑 중국 국가주석과 회동할 것으로 보인다고 스콧 베선트 미국 재무장관 이 말했다. 베선트 장관 은 이날 폭스뉴스 비즈니스...",
-          "link": "https://www.mt.co.kr/world/2025/10/13/2025101320420991006",
-          "pubDate": "Mon, 13 Oct 2025 20:55:00 +0900"
-        }
-      ]
+      "term": "Us Treasury Secretary Besant \"likely to Meet with Trump in South Korea\"",
+      "term_ko": "베선트 美재무장관 \"트럼프 한국서 시진핑과 만날 듯\""
     },
     {
-      "term": "'KODEX �ݵ�ü ETF' ..",
-      "term_ko": "",
-      "significance_score": 21,
-      "mentions": 2,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "'KODEX �ݵ�ü ETF' ..",
-        "total_results": 2,
-        "returned_results": 2,
-        "display_count": 2,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:11 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query='KODEX%20%EF%BF%BD%DD%B5%EF%BF%BD%C3%BC%20ETF'%20..",
-        "blog": "https://search.naver.com/search.naver?where=blog&query='KODEX%20%EF%BF%BD%DD%B5%EF%BF%BD%C3%BC%20ETF'%20..",
-        "cafe": "https://search.naver.com/search.naver?where=post&query='KODEX%20%EF%BF%BD%DD%B5%EF%BF%BD%C3%BC%20ETF'%20.."
-      },
-      "top_headlines": [
-        {
-          "title": "���̱� ETF �� 33% ���ͷ���",
-          "summary": "ݵ� ( ETF )�� ���� ������ �� �ڸ����� ���ϴ... �̿ܿ��� ���� ���ͷ��� �� 'TIGER �̱�S&P500'(38.95%), 'KODEX ...",
-          "link": "https://magazine.hankyung.com/money/article/202411188201c",
-          "pubDate": "Mon, 02 Dec 2024 09:48:00 +0900"
-        },
-        {
-          "title": "������ ���� ����Ŭ",
-          "summary": "������ �������� �ݵ� ( ETF )�� 10�� �뼼 ����忡... (TIGER) �����ǹ��� �ڵ���( KODEX ) �������� ETF �� ��ǥ...",
-          "link": "https://magazine.hankyung.com/money/article/2021012700189033642",
-          "pubDate": "Wed, 27 Jan 2021 09:07:00 +0900"
-        }
-      ]
+      "term": "'kodex �ݵ�ü Etf' ..",
+      "term_ko": "'kodex �ݵ�ü Etf' .."
     },
     {
-      "term": "Trump \"would be honored to set foot in Gaza...will go at the right time\"",
-      "term_ko": "트럼프 \"가자지구 발 딛게 되면 영광…적절한 시점에 갈 것\"",
-      "significance_score": 11,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "트럼프 \"가자지구 발 딛게 되면 영광…적절한 시점에 갈 것\"",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:13 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%ED%8A%B8%EB%9F%BC%ED%94%84%20%22%EA%B0%80%EC%9E%90%EC%A7%80%EA%B5%AC%20%EB%B0%9C%20%EB%94%9B%EA%B2%8C%20%EB%90%98%EB%A9%B4%20%EC%98%81%EA%B4%91%E2%80%A6%EC%A0%81%EC%A0%88%ED%95%9C%20%EC%8B%9C%EC%A0%90%EC%97%90%20%EA%B0%88%20%EA%B2%83%22",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%8A%B8%EB%9F%BC%ED%94%84%20%22%EA%B0%80%EC%9E%90%EC%A7%80%EA%B5%AC%20%EB%B0%9C%20%EB%94%9B%EA%B2%8C%20%EB%90%98%EB%A9%B4%20%EC%98%81%EA%B4%91%E2%80%A6%EC%A0%81%EC%A0%88%ED%95%9C%20%EC%8B%9C%EC%A0%90%EC%97%90%20%EA%B0%88%20%EA%B2%83%22",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%8A%B8%EB%9F%BC%ED%94%84%20%22%EA%B0%80%EC%9E%90%EC%A7%80%EA%B5%AC%20%EB%B0%9C%20%EB%94%9B%EA%B2%8C%20%EB%90%98%EB%A9%B4%20%EC%98%81%EA%B4%91%E2%80%A6%EC%A0%81%EC%A0%88%ED%95%9C%20%EC%8B%9C%EC%A0%90%EC%97%90%20%EA%B0%88%20%EA%B2%83%22"
-      },
-      "top_headlines": [
-        {
-          "title": "트럼프 \" 가자지구 발 딛게 되면 영광…적절한 시점에 갈 것 \"",
-          "summary": "있다면 영광 일 것 \"이라고 답했다. 트럼프 는 이어 \" 가자지구 를 직접 방문하지는 않았지만, 나는 그곳을 보고... 적절한 속도로 가야 한다\"라고 말해 적절한 타이밍 때 방문하겠다는 의사를 밝혔다. 트럼프 대통령은 지난달...",
-          "link": "https://www.news1.kr/world/usa-canada/5938451",
-          "pubDate": "Mon, 13 Oct 2025 09:17:00 +0900"
-        }
-      ]
+      "term": "Trump \"would Be Honored to Set Foot in Gaza...will Go at the Right Time\"",
+      "term_ko": "트럼프 \"가자지구 발 딛게 되면 영광…적절한 시점에 갈 것\""
     },
     {
-      "term": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����TV",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����TV",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:12 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%22%EF%BF%BD%EF%BF%BD%C4%A1%EF%BF%BD%DA%B4%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%DD%BF%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%D8%B8%EF%BF%BD%207300%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%C8%B4%EF%BF%BD%EF%BF%BD%D1%B1%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BDTV",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%22%EF%BF%BD%EF%BF%BD%C4%A1%EF%BF%BD%DA%B4%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%DD%BF%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%D8%B8%EF%BF%BD%207300%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%C8%B4%EF%BF%BD%EF%BF%BD%D1%B1%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BDTV",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%22%EF%BF%BD%EF%BF%BD%C4%A1%EF%BF%BD%DA%B4%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%DD%BF%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%D8%B8%EF%BF%BD%207300%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%C8%B4%EF%BF%BD%EF%BF%BD%D1%B1%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BDTV"
-      },
-      "top_headlines": []
+      "term": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����tv",
+      "term_ko": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����tv"
     },
     {
-      "term": "JP��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "JP��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:15 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=JP%EF%BF%BD%EF%BF%BD%2C%20%DA%B8%C3%B7%EF%BF%BD%DC%BB%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20100%EF%BF%BD%EF%BF%BD%DE%B7%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%DA%A1%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CC%BF%EF%BF%BD%C5%A5%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C7%BB%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=JP%EF%BF%BD%EF%BF%BD%2C%20%DA%B8%C3%B7%EF%BF%BD%DC%BB%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20100%EF%BF%BD%EF%BF%BD%DE%B7%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%DA%A1%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CC%BF%EF%BF%BD%C5%A5%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C7%BB%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=JP%EF%BF%BD%EF%BF%BD%2C%20%DA%B8%C3%B7%EF%BF%BD%DC%BB%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20100%EF%BF%BD%EF%BF%BD%DE%B7%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%DA%A1%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CC%BF%EF%BF%BD%C5%A5%20%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C7%BB%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"
-      },
-      "top_headlines": []
+      "term": "Jp��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����",
+      "term_ko": "Jp��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����"
     },
     {
-      "term": "Prosecutor who cried in the National Assembly--\"If there is improper wrongdoing, including mine, it will be dealt with\" Seoul Economic 3 hours ago",
-      "term_ko": "국회서 울음 터트린 검사···“저 포함해 부적절한 잘못있으면 처분” 서울경제 3시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "국회서 울음 터트린 검사···“저 포함해 부적절한 잘못있으면 처분” 서울경제 3시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:17 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AD%ED%9A%8C%EC%84%9C%20%EC%9A%B8%EC%9D%8C%20%ED%84%B0%ED%8A%B8%EB%A6%B0%20%EA%B2%80%EC%82%AC%C2%B7%C2%B7%C2%B7%E2%80%9C%EC%A0%80%20%ED%8F%AC%ED%95%A8%ED%95%B4%20%EB%B6%80%EC%A0%81%EC%A0%88%ED%95%9C%20%EC%9E%98%EB%AA%BB%EC%9E%88%EC%9C%BC%EB%A9%B4%20%EC%B2%98%EB%B6%84%E2%80%9D%20%EC%84%9C%EC%9A%B8%EA%B2%BD%EC%A0%9C%203%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AD%ED%9A%8C%EC%84%9C%20%EC%9A%B8%EC%9D%8C%20%ED%84%B0%ED%8A%B8%EB%A6%B0%20%EA%B2%80%EC%82%AC%C2%B7%C2%B7%C2%B7%E2%80%9C%EC%A0%80%20%ED%8F%AC%ED%95%A8%ED%95%B4%20%EB%B6%80%EC%A0%81%EC%A0%88%ED%95%9C%20%EC%9E%98%EB%AA%BB%EC%9E%88%EC%9C%BC%EB%A9%B4%20%EC%B2%98%EB%B6%84%E2%80%9D%20%EC%84%9C%EC%9A%B8%EA%B2%BD%EC%A0%9C%203%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AD%ED%9A%8C%EC%84%9C%20%EC%9A%B8%EC%9D%8C%20%ED%84%B0%ED%8A%B8%EB%A6%B0%20%EA%B2%80%EC%82%AC%C2%B7%C2%B7%C2%B7%E2%80%9C%EC%A0%80%20%ED%8F%AC%ED%95%A8%ED%95%B4%20%EB%B6%80%EC%A0%81%EC%A0%88%ED%95%9C%20%EC%9E%98%EB%AA%BB%EC%9E%88%EC%9C%BC%EB%A9%B4%20%EC%B2%98%EB%B6%84%E2%80%9D%20%EC%84%9C%EC%9A%B8%EA%B2%BD%EC%A0%9C%203%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "Prosecutor Who Cried in the National Assembly--\"if There Is Improper Wrongdoing, Including Mine, It Will Be Dealt With\" Seoul Economic 3 Hours Ago",
+      "term_ko": "국회서 울음 터트린 검사···“저 포함해 부적절한 잘못있으면 처분” 서울경제 3시간 전"
     },
     {
-      "term": "[Exclusive] Korea Real Estate Agency in the midst of 'backlog of homework'--will delay reconstruction, redevelopment Maeil Business 19 minutes ago",
-      "term_ko": "[단독]‘밀린 숙제’ 중인 한국부동산원···이러다 재건축·재개발 늦어질라 매일경제 19분 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "[단독]‘밀린 숙제’ 중인 한국부동산원···이러다 재건축·재개발 늦어질라 매일경제 19분 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:17 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%5B%EB%8B%A8%EB%8F%85%5D%E2%80%98%EB%B0%80%EB%A6%B0%20%EC%88%99%EC%A0%9C%E2%80%99%20%EC%A4%91%EC%9D%B8%20%ED%95%9C%EA%B5%AD%EB%B6%80%EB%8F%99%EC%82%B0%EC%9B%90%C2%B7%C2%B7%C2%B7%EC%9D%B4%EB%9F%AC%EB%8B%A4%20%EC%9E%AC%EA%B1%B4%EC%B6%95%C2%B7%EC%9E%AC%EA%B0%9C%EB%B0%9C%20%EB%8A%A6%EC%96%B4%EC%A7%88%EB%9D%BC%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%2019%EB%B6%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%5B%EB%8B%A8%EB%8F%85%5D%E2%80%98%EB%B0%80%EB%A6%B0%20%EC%88%99%EC%A0%9C%E2%80%99%20%EC%A4%91%EC%9D%B8%20%ED%95%9C%EA%B5%AD%EB%B6%80%EB%8F%99%EC%82%B0%EC%9B%90%C2%B7%C2%B7%C2%B7%EC%9D%B4%EB%9F%AC%EB%8B%A4%20%EC%9E%AC%EA%B1%B4%EC%B6%95%C2%B7%EC%9E%AC%EA%B0%9C%EB%B0%9C%20%EB%8A%A6%EC%96%B4%EC%A7%88%EB%9D%BC%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%2019%EB%B6%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%5B%EB%8B%A8%EB%8F%85%5D%E2%80%98%EB%B0%80%EB%A6%B0%20%EC%88%99%EC%A0%9C%E2%80%99%20%EC%A4%91%EC%9D%B8%20%ED%95%9C%EA%B5%AD%EB%B6%80%EB%8F%99%EC%82%B0%EC%9B%90%C2%B7%C2%B7%C2%B7%EC%9D%B4%EB%9F%AC%EB%8B%A4%20%EC%9E%AC%EA%B1%B4%EC%B6%95%C2%B7%EC%9E%AC%EA%B0%9C%EB%B0%9C%20%EB%8A%A6%EC%96%B4%EC%A7%88%EB%9D%BC%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%2019%EB%B6%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "[exclusive] Korea Real Estate Agency in the Midst of 'backlog of Homework'--will Delay Reconstruction, Redevelopment Maeil Business 19 Minutes Ago",
+      "term_ko": "[단독]‘밀린 숙제’ 중인 한국부동산원···이러다 재건축·재개발 늦어질라 매일경제 19분 전"
     },
     {
-      "term": "\"Once a contract is signed,\" brokerage firms bustling...real estate buyers \"dream of owning their own home distant\" Maeil Business News just now",
-      "term_ko": "“일단 가계약부터” 중개업소 북새통…실수요자들 “내 집 마련 꿈 멀어져” 매일경제 방금 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "“일단 가계약부터” 중개업소 북새통…실수요자들 “내 집 마련 꿈 멀어져” 매일경제 방금 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:19 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%E2%80%9C%EC%9D%BC%EB%8B%A8%20%EA%B0%80%EA%B3%84%EC%95%BD%EB%B6%80%ED%84%B0%E2%80%9D%20%EC%A4%91%EA%B0%9C%EC%97%85%EC%86%8C%20%EB%B6%81%EC%83%88%ED%86%B5%E2%80%A6%EC%8B%A4%EC%88%98%EC%9A%94%EC%9E%90%EB%93%A4%20%E2%80%9C%EB%82%B4%20%EC%A7%91%20%EB%A7%88%EB%A0%A8%20%EA%BF%88%20%EB%A9%80%EC%96%B4%EC%A0%B8%E2%80%9D%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%20%EB%B0%A9%EA%B8%88%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%E2%80%9C%EC%9D%BC%EB%8B%A8%20%EA%B0%80%EA%B3%84%EC%95%BD%EB%B6%80%ED%84%B0%E2%80%9D%20%EC%A4%91%EA%B0%9C%EC%97%85%EC%86%8C%20%EB%B6%81%EC%83%88%ED%86%B5%E2%80%A6%EC%8B%A4%EC%88%98%EC%9A%94%EC%9E%90%EB%93%A4%20%E2%80%9C%EB%82%B4%20%EC%A7%91%20%EB%A7%88%EB%A0%A8%20%EA%BF%88%20%EB%A9%80%EC%96%B4%EC%A0%B8%E2%80%9D%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%20%EB%B0%A9%EA%B8%88%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%E2%80%9C%EC%9D%BC%EB%8B%A8%20%EA%B0%80%EA%B3%84%EC%95%BD%EB%B6%80%ED%84%B0%E2%80%9D%20%EC%A4%91%EA%B0%9C%EC%97%85%EC%86%8C%20%EB%B6%81%EC%83%88%ED%86%B5%E2%80%A6%EC%8B%A4%EC%88%98%EC%9A%94%EC%9E%90%EB%93%A4%20%E2%80%9C%EB%82%B4%20%EC%A7%91%20%EB%A7%88%EB%A0%A8%20%EA%BF%88%20%EB%A9%80%EC%96%B4%EC%A0%B8%E2%80%9D%20%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%20%EB%B0%A9%EA%B8%88%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "\"once a Contract Is Signed,\" Brokerage Firms Bustling...real Estate Buyers \"dream of Owning Their Own Home Distant\" Maeil Business News Just Now",
+      "term_ko": "“일단 가계약부터” 중개업소 북새통…실수요자들 “내 집 마련 꿈 멀어져” 매일경제 방금 전"
     },
     {
-      "term": "Adults enjoy it too---Transformed into an experiential playground Ulsan Daily UTV 8 hours ago",
-      "term_ko": "어른도 즐긴다···체험형 이색 놀이터로 대변신 울산매일UTV 8시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "어른도 즐긴다···체험형 이색 놀이터로 대변신 울산매일UTV 8시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:20 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%96%B4%EB%A5%B8%EB%8F%84%20%EC%A6%90%EA%B8%B4%EB%8B%A4%C2%B7%C2%B7%C2%B7%EC%B2%B4%ED%97%98%ED%98%95%20%EC%9D%B4%EC%83%89%20%EB%86%80%EC%9D%B4%ED%84%B0%EB%A1%9C%20%EB%8C%80%EB%B3%80%EC%8B%A0%20%EC%9A%B8%EC%82%B0%EB%A7%A4%EC%9D%BCUTV%208%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%96%B4%EB%A5%B8%EB%8F%84%20%EC%A6%90%EA%B8%B4%EB%8B%A4%C2%B7%C2%B7%C2%B7%EC%B2%B4%ED%97%98%ED%98%95%20%EC%9D%B4%EC%83%89%20%EB%86%80%EC%9D%B4%ED%84%B0%EB%A1%9C%20%EB%8C%80%EB%B3%80%EC%8B%A0%20%EC%9A%B8%EC%82%B0%EB%A7%A4%EC%9D%BCUTV%208%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%96%B4%EB%A5%B8%EB%8F%84%20%EC%A6%90%EA%B8%B4%EB%8B%A4%C2%B7%C2%B7%C2%B7%EC%B2%B4%ED%97%98%ED%98%95%20%EC%9D%B4%EC%83%89%20%EB%86%80%EC%9D%B4%ED%84%B0%EB%A1%9C%20%EB%8C%80%EB%B3%80%EC%8B%A0%20%EC%9A%B8%EC%82%B0%EB%A7%A4%EC%9D%BCUTV%208%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "Adults Enjoy It Too---transformed Into an Experiential Playground Ulsan Daily Utv 8 Hours Ago",
+      "term_ko": "어른도 즐긴다···체험형 이색 놀이터로 대변신 울산매일UTV 8시간 전"
     },
     {
-      "term": "Celebrate���� \"���Ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"",
-      "term_ko": "찴���� \"���Ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "찴���� \"���Ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:23:20 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%B0%B4%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%D3%BC%EF%BF%BD%EF%BF%BD%EF%BF%BD%2C%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%A2%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%F2%A1%A6%B1%D7%B5%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%DF%B1%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%DF%BF%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%DF%B4%EF%BF%BD%22",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%B0%B4%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%D3%BC%EF%BF%BD%EF%BF%BD%EF%BF%BD%2C%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%A2%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%F2%A1%A6%B1%D7%B5%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%DF%B1%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%DF%BF%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%DF%B4%EF%BF%BD%22",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%B0%B4%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%22%EF%BF%BD%EF%BF%BD%EF%BF%BD%D3%BC%EF%BF%BD%EF%BF%BD%EF%BF%BD%2C%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C3%A2%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%F2%A1%A6%B1%D7%B5%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%DF%B1%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%DF%BF%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%DF%B4%EF%BF%BD%22"
-      },
-      "top_headlines": []
+      "term": "Celebrate���� \"���ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"",
+      "term_ko": "찴���� \"���Ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\""
     },
     {
-      "term": "\"Baked but not broken\"... WTO Director-General pleads for broken free trade 4 hours ago",
-      "term_ko": "\"굽었지만 부서지지 않았다\"… 무너진 자유무역에 WTO사무총장 항변 이데일리 4시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"굽었지만 부서지지 않았다\"… 무너진 자유무역에 WTO사무총장 항변 이데일리 4시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:13 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EA%B5%BD%EC%97%88%EC%A7%80%EB%A7%8C%20%EB%B6%80%EC%84%9C%EC%A7%80%EC%A7%80%20%EC%95%8A%EC%95%98%EB%8B%A4%22%E2%80%A6%20%EB%AC%B4%EB%84%88%EC%A7%84%20%EC%9E%90%EC%9C%A0%EB%AC%B4%EC%97%AD%EC%97%90%20WTO%EC%82%AC%EB%AC%B4%EC%B4%9D%EC%9E%A5%20%ED%95%AD%EB%B3%80%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%204%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EA%B5%BD%EC%97%88%EC%A7%80%EB%A7%8C%20%EB%B6%80%EC%84%9C%EC%A7%80%EC%A7%80%20%EC%95%8A%EC%95%98%EB%8B%A4%22%E2%80%A6%20%EB%AC%B4%EB%84%88%EC%A7%84%20%EC%9E%90%EC%9C%A0%EB%AC%B4%EC%97%AD%EC%97%90%20WTO%EC%82%AC%EB%AC%B4%EC%B4%9D%EC%9E%A5%20%ED%95%AD%EB%B3%80%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%204%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EA%B5%BD%EC%97%88%EC%A7%80%EB%A7%8C%20%EB%B6%80%EC%84%9C%EC%A7%80%EC%A7%80%20%EC%95%8A%EC%95%98%EB%8B%A4%22%E2%80%A6%20%EB%AC%B4%EB%84%88%EC%A7%84%20%EC%9E%90%EC%9C%A0%EB%AC%B4%EC%97%AD%EC%97%90%20WTO%EC%82%AC%EB%AC%B4%EC%B4%9D%EC%9E%A5%20%ED%95%AD%EB%B3%80%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%204%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "\"baked But Not Broken\"... Wto Director-general Pleads for Broken Free Trade 4 Hours Ago",
+      "term_ko": "\"굽었지만 부서지지 않았다\"… 무너진 자유무역에 WTO사무총장 항변 이데일리 4시간 전"
     },
     {
-      "term": "HealthDevelopment 365 selected for 'Korea LBS Startup Challenge' MoneyToday 11 hours ago",
-      "term_ko": "건강디딤돌365, '코리아 LBS 스타트업 챌린지' 선정 머니투데이 11시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "건강디딤돌365, '코리아 LBS 스타트업 챌린지' 선정 머니투데이 11시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:13 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B1%B4%EA%B0%95%EB%94%94%EB%94%A4%EB%8F%8C365%2C%20'%EC%BD%94%EB%A6%AC%EC%95%84%20LBS%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EC%B1%8C%EB%A6%B0%EC%A7%80'%20%EC%84%A0%EC%A0%95%20%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%2011%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B1%B4%EA%B0%95%EB%94%94%EB%94%A4%EB%8F%8C365%2C%20'%EC%BD%94%EB%A6%AC%EC%95%84%20LBS%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EC%B1%8C%EB%A6%B0%EC%A7%80'%20%EC%84%A0%EC%A0%95%20%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%2011%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B1%B4%EA%B0%95%EB%94%94%EB%94%A4%EB%8F%8C365%2C%20'%EC%BD%94%EB%A6%AC%EC%95%84%20LBS%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EC%B1%8C%EB%A6%B0%EC%A7%80'%20%EC%84%A0%EC%A0%95%20%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%2011%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term": "Healthdevelopment 365 Selected for 'korea Lbs Startup Challenge' Moneytoday 11 Hours Ago",
+      "term_ko": "건강디딤돌365, '코리아 LBS 스타트업 챌린지' 선정 머니투데이 11시간 전"
     },
     {
       "term": "\"AI is not a bubble\"...US bull market enters its fourth year, US-China conflict is the biggest risk [Oh Mi Joo] 머니투데이 4 hours ago",
-      "term_ko": "\"AI는 버블 아냐\"…4년째 접어든 美 강세장, 미중 갈등이 최대 리스크[오미주] 머니투데이 4시간 전",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"AI는 버블 아냐\"…4년째 접어든 美 강세장, 미중 갈등이 최대 리스크[오미주] 머니투데이 4시간 전",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Thu, 16 Oct 2025 10:24:17 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22AI%EB%8A%94%20%EB%B2%84%EB%B8%94%20%EC%95%84%EB%83%90%22%E2%80%A64%EB%85%84%EC%A7%B8%20%EC%A0%91%EC%96%B4%EB%93%A0%20%E7%BE%8E%20%EA%B0%95%EC%84%B8%EC%9E%A5%2C%20%EB%AF%B8%EC%A4%91%20%EA%B0%88%EB%93%B1%EC%9D%B4%20%EC%B5%9C%EB%8C%80%20%EB%A6%AC%EC%8A%A4%ED%81%AC%5B%EC%98%A4%EB%AF%B8%EC%A3%BC%5D%20%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%204%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22AI%EB%8A%94%20%EB%B2%84%EB%B8%94%20%EC%95%84%EB%83%90%22%E2%80%A64%EB%85%84%EC%A7%B8%20%EC%A0%91%EC%96%B4%EB%93%A0%20%E7%BE%8E%20%EA%B0%95%EC%84%B8%EC%9E%A5%2C%20%EB%AF%B8%EC%A4%91%20%EA%B0%88%EB%93%B1%EC%9D%B4%20%EC%B5%9C%EB%8C%80%20%EB%A6%AC%EC%8A%A4%ED%81%AC%5B%EC%98%A4%EB%AF%B8%EC%A3%BC%5D%20%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%204%EC%8B%9C%EA%B0%84%20%EC%A0%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22AI%EB%8A%94%20%EB%B2%84%EB%B8%94%20%EC%95%84%EB%83%90%22%E2%80%A64%EB%85%84%EC%A7%B8%20%EC%A0%91%EC%96%B4%EB%93%A0%20%E7%BE%8E%20%EA%B0%95%EC%84%B8%EC%9E%A5%2C%20%EB%AF%B8%EC%A4%91%20%EA%B0%88%EB%93%B1%EC%9D%B4%20%EC%B5%9C%EB%8C%80%20%EB%A6%AC%EC%8A%A4%ED%81%AC%5B%EC%98%A4%EB%AF%B8%EC%A3%BC%5D%20%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%204%EC%8B%9C%EA%B0%84%20%EC%A0%84"
-      },
-      "top_headlines": []
+      "term_ko": "\"AI는 버블 아냐\"…4년째 접어든 美 강세장, 미중 갈등이 최대 리스크[오미주] 머니투데이 4시간 전"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_random_sample",
-    "sample_size": 30,
-    "generated_at": "2025-10-16T01:24:17.871Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "discovered_keywords": [
+    {
+      "term": "Retail Sales",
+      "term_ko": "소매판매"
+    },
+    {
+      "term": "Stock Market Outlook",
+      "term_ko": "증시전망"
+    },
+    {
+      "term": "Stock-secured Loan",
+      "term_ko": "주식담보대출"
+    },
+    {
+      "term": "Balance of Balance",
+      "term_ko": "균형의 균형"
+    },
+    {
+      "term": "Order Book",
+      "term_ko": "주문서"
+    },
+    {
+      "term": "A Criminal Complex in Phnom Penh, Cambodia.",
+      "term_ko": "캄보디아 프놈펜에서 촬영한 한 범죄단지"
+    },
+    {
+      "term": "Execution Price",
+      "term_ko": "체결 가격"
+    },
+    {
+      "term": "진에어, 다카마쓰 특별 혜택기획전 진행",
+      "term_ko": "진에어, 다카마쓰 특별 혜택기획전 진행"
+    },
+    {
+      "term": "A 'military Balloon' to Fill the Satellite-drone Gap",
+      "term_ko": "위성·드론 빈틈 메우는 ‘군용 풍선’"
+    },
+    {
+      "term": "Ethereum and Other Major Altcoins Plunge More Than 10%, But Long-term Upside Remains in Sight",
+      "term_ko": "이더리움 등 주요 알트코인 10% 이상 폭락에도 장기적 상승 기대감"
+    },
+    {
+      "term": "與-退出 野...曺 '반쪽국감', Supreme Court entered the chamber and made a concluding remark (synthesis)",
+      "term_ko": "대법관실 들어간 與·퇴장한 野…曺 '반쪽국감' 출석 마무리발언(종합)"
+    },
+    {
+      "term": "\"it Was More Important to Control Yoo's 3-point Shooting Than Yang Jun-seok\" Why?",
+      "term_ko": "정관장 유도훈 감독 \"양준석보다 유기상의 3점포 제어가 중요했다\" 그 이유는?"
+    },
+    {
+      "term": "\"victory Tasted with Cold Beer\" ⋯casjohn's 'blue Wave' [on-site] [site",
+      "term_ko": "\"시원한 맥주로 맛본 승리\"⋯카스존이 만든 '푸른 물결' [현장]"
+    },
+    {
+      "term": "\"it's Moved Like a Museum\"...jung Yong-jin's Commerce Innovation Starts [repo].",
+      "term_ko": "“박물관처럼 옮겨왔네” 쓱 ‘미지엄’…정용진式 커머스 혁신 시동[르포]"
+    },
+    {
+      "term": "'it's Amazing' Kim Yeon-kyung Becomes a Korean Legend! No. 10 Retired Permanently→holds One More Retirement Ceremony",
+      "term_ko": "‘대단하네’ 김연경, 韓 레전드 반열 올랐다! 등번호 10번 영구결번 확정→은퇴식도 한 번 더 연다"
+    },
+    {
+      "term": "Samsung's Won Tae-in 'strong in Big Games', 'ryu Ji-hyun Ho' Also Singles Out",
+      "term_ko": "'큰 경기에 강한' 삼성 원태인 활약에 '류지현 호'도 싱글벙글"
+    },
+    {
+      "term": "'travel Insurance' Becomes a Must-have for Young People...new Enrollment Surges",
+      "term_ko": "젊은층 필수템 자리잡은 ‘여행자보험’…신규 가입 급증"
+    },
+    {
+      "term": "Us Treasury Secretary Besant \"likely to Meet with Trump in South Korea\"",
+      "term_ko": "베선트 美재무장관 \"트럼프 한국서 시진핑과 만날 듯\""
+    },
+    {
+      "term": "'kodex �ݵ�ü Etf' ..",
+      "term_ko": "'kodex �ݵ�ü Etf' .."
+    },
+    {
+      "term": "Trump \"would Be Honored to Set Foot in Gaza...will Go at the Right Time\"",
+      "term_ko": "트럼프 \"가자지구 발 딛게 되면 영광…적절한 시점에 갈 것\""
+    },
+    {
+      "term": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����tv",
+      "term_ko": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����tv"
+    },
+    {
+      "term": "Jp��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����",
+      "term_ko": "Jp��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����"
+    },
+    {
+      "term": "Prosecutor Who Cried in the National Assembly--\"if There Is Improper Wrongdoing, Including Mine, It Will Be Dealt With\" Seoul Economic 3 Hours Ago",
+      "term_ko": "국회서 울음 터트린 검사···“저 포함해 부적절한 잘못있으면 처분” 서울경제 3시간 전"
+    },
+    {
+      "term": "[exclusive] Korea Real Estate Agency in the Midst of 'backlog of Homework'--will Delay Reconstruction, Redevelopment Maeil Business 19 Minutes Ago",
+      "term_ko": "[단독]‘밀린 숙제’ 중인 한국부동산원···이러다 재건축·재개발 늦어질라 매일경제 19분 전"
+    },
+    {
+      "term": "\"once a Contract Is Signed,\" Brokerage Firms Bustling...real Estate Buyers \"dream of Owning Their Own Home Distant\" Maeil Business News Just Now",
+      "term_ko": "“일단 가계약부터” 중개업소 북새통…실수요자들 “내 집 마련 꿈 멀어져” 매일경제 방금 전"
+    },
+    {
+      "term": "Adults Enjoy It Too---transformed Into an Experiential Playground Ulsan Daily Utv 8 Hours Ago",
+      "term_ko": "어른도 즐긴다···체험형 이색 놀이터로 대변신 울산매일UTV 8시간 전"
+    },
+    {
+      "term": "Celebrate���� \"���ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"",
+      "term_ko": "찴���� \"���Ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\""
+    },
+    {
+      "term": "\"baked But Not Broken\"... Wto Director-general Pleads for Broken Free Trade 4 Hours Ago",
+      "term_ko": "\"굽었지만 부서지지 않았다\"… 무너진 자유무역에 WTO사무총장 항변 이데일리 4시간 전"
+    },
+    {
+      "term": "Healthdevelopment 365 Selected for 'korea Lbs Startup Challenge' Moneytoday 11 Hours Ago",
+      "term_ko": "건강디딤돌365, '코리아 LBS 스타트업 챌린지' 선정 머니투데이 11시간 전"
+    },
+    {
+      "term": "\"AI is not a bubble\"...US bull market enters its fourth year, US-China conflict is the biggest risk [Oh Mi Joo] 머니투데이 4 hours ago",
+      "term_ko": "\"AI는 버블 아냐\"…4년째 접어든 美 강세장, 미중 갈등이 최대 리스크[오미주] 머니투데이 4시간 전"
+    }
+  ],
+  "translations": {
+    "Retail Sales": {
+      "en": "Retail Sales",
+      "ko": "소매판매",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Stock Market Outlook": {
+      "en": "Stock Market Outlook",
+      "ko": "증시전망",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Stock-secured Loan": {
+      "en": "Stock-secured Loan",
+      "ko": "주식담보대출",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Balance of Balance": {
+      "en": "Balance of Balance",
+      "ko": "균형의 균형",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Order Book": {
+      "en": "Order Book",
+      "ko": "주문서",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "A Criminal Complex in Phnom Penh, Cambodia.": {
+      "en": "A Criminal Complex in Phnom Penh, Cambodia.",
+      "ko": "캄보디아 프놈펜에서 촬영한 한 범죄단지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Execution Price": {
+      "en": "Execution Price",
+      "ko": "체결 가격",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "진에어, 다카마쓰 특별 혜택기획전 진행": {
+      "en": "진에어, 다카마쓰 특별 혜택기획전 진행",
+      "ko": "진에어, 다카마쓰 특별 혜택기획전 진행",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "A 'military Balloon' to Fill the Satellite-drone Gap": {
+      "en": "A 'military Balloon' to Fill the Satellite-drone Gap",
+      "ko": "위성·드론 빈틈 메우는 ‘군용 풍선’",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Ethereum and Other Major Altcoins Plunge More Than 10%, But Long-term Upside Remains in Sight": {
+      "en": "Ethereum and Other Major Altcoins Plunge More Than 10%, But Long-term Upside Remains in Sight",
+      "ko": "이더리움 등 주요 알트코인 10% 이상 폭락에도 장기적 상승 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "與-退出 野...曺 '반쪽국감', Supreme Court entered the chamber and made a concluding remark (synthesis)": {
+      "en": "與-退出 野...曺 '반쪽국감', Supreme Court entered the chamber and made a concluding remark (synthesis)",
+      "ko": "대법관실 들어간 與·퇴장한 野…曺 '반쪽국감' 출석 마무리발언(종합)",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "\"it Was More Important to Control Yoo's 3-point Shooting Than Yang Jun-seok\" Why?": {
+      "en": "\"it Was More Important to Control Yoo's 3-point Shooting Than Yang Jun-seok\" Why?",
+      "ko": "정관장 유도훈 감독 \"양준석보다 유기상의 3점포 제어가 중요했다\" 그 이유는?",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "\"victory Tasted with Cold Beer\" ⋯casjohn's 'blue Wave' [on-site] [site": {
+      "en": "\"victory Tasted with Cold Beer\" ⋯casjohn's 'blue Wave' [on-site] [site",
+      "ko": "\"시원한 맥주로 맛본 승리\"⋯카스존이 만든 '푸른 물결' [현장]",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "\"it's Moved Like a Museum\"...jung Yong-jin's Commerce Innovation Starts [repo].": {
+      "en": "\"it's Moved Like a Museum\"...jung Yong-jin's Commerce Innovation Starts [repo].",
+      "ko": "“박물관처럼 옮겨왔네” 쓱 ‘미지엄’…정용진式 커머스 혁신 시동[르포]",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "'it's Amazing' Kim Yeon-kyung Becomes a Korean Legend! No. 10 Retired Permanently→holds One More Retirement Ceremony": {
+      "en": "'it's Amazing' Kim Yeon-kyung Becomes a Korean Legend! No. 10 Retired Permanently→holds One More Retirement Ceremony",
+      "ko": "‘대단하네’ 김연경, 韓 레전드 반열 올랐다! 등번호 10번 영구결번 확정→은퇴식도 한 번 더 연다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Samsung's Won Tae-in 'strong in Big Games', 'ryu Ji-hyun Ho' Also Singles Out": {
+      "en": "Samsung's Won Tae-in 'strong in Big Games', 'ryu Ji-hyun Ho' Also Singles Out",
+      "ko": "'큰 경기에 강한' 삼성 원태인 활약에 '류지현 호'도 싱글벙글",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "'travel Insurance' Becomes a Must-have for Young People...new Enrollment Surges": {
+      "en": "'travel Insurance' Becomes a Must-have for Young People...new Enrollment Surges",
+      "ko": "젊은층 필수템 자리잡은 ‘여행자보험’…신규 가입 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Us Treasury Secretary Besant \"likely to Meet with Trump in South Korea\"": {
+      "en": "Us Treasury Secretary Besant \"likely to Meet with Trump in South Korea\"",
+      "ko": "베선트 美재무장관 \"트럼프 한국서 시진핑과 만날 듯\"",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "'kodex �ݵ�ü Etf' ..": {
+      "en": "'kodex �ݵ�ü Etf' ..",
+      "ko": "'kodex �ݵ�ü Etf' ..",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Trump \"would Be Honored to Set Foot in Gaza...will Go at the Right Time\"": {
+      "en": "Trump \"would Be Honored to Set Foot in Gaza...will Go at the Right Time\"",
+      "ko": "트럼프 \"가자지구 발 딛게 되면 영광…적절한 시점에 갈 것\"",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����tv": {
+      "en": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����tv",
+      "ko": "\"���� �� ���\"��ġ�ڴ� ���ݿ� ���ظ� 7300�� ���ȴ��ѱ�����tv",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Jp��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����": {
+      "en": "Jp��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����",
+      "ko": "Jp��, ڸ÷�ܻ���� 100��޷� ���ڡ����̿�ť �� ������ǻ�� ������ ����",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "Prosecutor Who Cried in the National Assembly--\"if There Is Improper Wrongdoing, Including Mine, It Will Be Dealt With\" Seoul Economic 3 Hours Ago": {
+      "en": "Prosecutor Who Cried in the National Assembly--\"if There Is Improper Wrongdoing, Including Mine, It Will Be Dealt With\" Seoul Economic 3 Hours Ago",
+      "ko": "국회서 울음 터트린 검사···“저 포함해 부적절한 잘못있으면 처분” 서울경제 3시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "[exclusive] Korea Real Estate Agency in the Midst of 'backlog of Homework'--will Delay Reconstruction, Redevelopment Maeil Business 19 Minutes Ago": {
+      "en": "[exclusive] Korea Real Estate Agency in the Midst of 'backlog of Homework'--will Delay Reconstruction, Redevelopment Maeil Business 19 Minutes Ago",
+      "ko": "[단독]‘밀린 숙제’ 중인 한국부동산원···이러다 재건축·재개발 늦어질라 매일경제 19분 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.665Z"
+    },
+    "\"once a Contract Is Signed,\" Brokerage Firms Bustling...real Estate Buyers \"dream of Owning Their Own Home Distant\" Maeil Business News Just Now": {
+      "en": "\"once a Contract Is Signed,\" Brokerage Firms Bustling...real Estate Buyers \"dream of Owning Their Own Home Distant\" Maeil Business News Just Now",
+      "ko": "“일단 가계약부터” 중개업소 북새통…실수요자들 “내 집 마련 꿈 멀어져” 매일경제 방금 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.666Z"
+    },
+    "Adults Enjoy It Too---transformed Into an Experiential Playground Ulsan Daily Utv 8 Hours Ago": {
+      "en": "Adults Enjoy It Too---transformed Into an Experiential Playground Ulsan Daily Utv 8 Hours Ago",
+      "ko": "어른도 즐긴다···체험형 이색 놀이터로 대변신 울산매일UTV 8시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.666Z"
+    },
+    "Celebrate���� \"���ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"": {
+      "en": "Celebrate���� \"���ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"",
+      "ko": "찴���� \"���Ӽ���, ����â�� ���򡦱׵��� ����� �߱��� �߿����ߴ�\"",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.666Z"
+    },
+    "\"baked But Not Broken\"... Wto Director-general Pleads for Broken Free Trade 4 Hours Ago": {
+      "en": "\"baked But Not Broken\"... Wto Director-general Pleads for Broken Free Trade 4 Hours Ago",
+      "ko": "\"굽었지만 부서지지 않았다\"… 무너진 자유무역에 WTO사무총장 항변 이데일리 4시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.666Z"
+    },
+    "Healthdevelopment 365 Selected for 'korea Lbs Startup Challenge' Moneytoday 11 Hours Ago": {
+      "en": "Healthdevelopment 365 Selected for 'korea Lbs Startup Challenge' Moneytoday 11 Hours Ago",
+      "ko": "건강디딤돌365, '코리아 LBS 스타트업 챌린지' 선정 머니투데이 11시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.666Z"
+    },
+    "\"AI is not a bubble\"...US bull market enters its fourth year, US-China conflict is the biggest risk [Oh Mi Joo] 머니투데이 4 hours ago": {
+      "en": "\"AI is not a bubble\"...US bull market enters its fourth year, US-China conflict is the biggest risk [Oh Mi Joo] 머니투데이 4 hours ago",
+      "ko": "\"AI는 버블 아냐\"…4년째 접어든 美 강세장, 미중 갈등이 최대 리스크[오미주] 머니투데이 4시간 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-16T06:28:07.666Z"
+    }
   }
 }
