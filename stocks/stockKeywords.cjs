@@ -17,7 +17,12 @@ const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID;
 const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
 const DEEPL_API_KEY = process.env.DEEPL_API_KEY || process.env.DEEPL_AUTH_KEY;
 const DEEPL_API_URL = process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v2/translate';
+const LLM_WORKER_URL =
+  process.env.LLM_WORKER_URL || 'https://tight-cloud-0f5e.seongj1589.workers.dev/api/generate';
+const LLM_MODEL = process.env.LLM_MODEL || 'tinyllama';
+const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 25000;
 
+const SAMPLE_SIZE = 30;
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
 const FINANCE_KEYWORDS_PATH = path.resolve(__dirname, '../data/finance_keywords.json');
 
@@ -134,6 +139,130 @@ function dedupeKeywords(rawKeywords) {
   }
 
   return deduped;
+}
+
+function sanitizeKeywordList(keywords) {
+  if (!Array.isArray(keywords)) return [];
+
+  const cleaned = keywords
+    .map((kw) => (typeof kw === 'string' ? kw.trim() : ''))
+    .filter((kw) => kw.length > 0);
+
+  return dedupeKeywords(cleaned);
+}
+
+function extractKeywordsFromLLMResponse(rawText) {
+  if (!rawText) return [];
+
+  const trimmed = String(rawText).trim();
+  if (!trimmed) return [];
+
+  const candidates = [];
+  const fencedMatch = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fencedMatch && fencedMatch[1]) {
+    candidates.push(fencedMatch[1].trim());
+  }
+  candidates.push(trimmed);
+
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+    try {
+      const parsed = JSON.parse(candidate);
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+      if (parsed && Array.isArray(parsed.keywords)) {
+        return parsed.keywords;
+      }
+      if (parsed && Array.isArray(parsed.items)) {
+        return parsed.items;
+      }
+    } catch (err) {
+      // Continue trying other parsing strategies.
+    }
+  }
+
+  const lines = trimmed
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^[\s\u2022*\-]*\d{0,2}[.)]?\s*/u, '').trim())
+    .filter((line) => line.length > 0);
+
+  if (lines.length === 1 && /[,;]/.test(lines[0])) {
+    return lines[0]
+      .split(/[,;]/)
+      .map((part) => part.trim())
+      .filter((part) => part.length > 0);
+  }
+
+  return lines;
+}
+
+async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
+  if (!LLM_WORKER_URL) {
+    console.warn('⚠️  LLM worker URL is not configured. Skipping LLM keyword generation.');
+    return [];
+  }
+
+  const prompt = [
+    `You are assisting with building finance keyword tags for Naver DataLab and Naver Search.`,
+    `Provide ${desiredCount} timely finance or market related search keywords relevant to Korean investors.`,
+    `Mix Korean and English phrases (company names, macro topics, asset classes).`,
+    `Each keyword must be concise (under six words) and free of numbering or commentary.`,
+    `Respond ONLY with a JSON array of strings.`,
+  ].join('\n');
+
+  console.log('🤖 Requesting financial keywords from tinyllama worker…');
+
+  const payload = {
+    model: LLM_MODEL,
+    prompt,
+    stream: false,
+    history: [],
+    messages: [{ role: 'user', content: prompt }],
+  };
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), LLM_REQUEST_TIMEOUT_MS);
+
+  try {
+    const response = await fetch(LLM_WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`HTTP ${response.status}: ${text.slice(0, 200)}`);
+    }
+
+    const result = await response.json();
+    const llmText = String(result.response || result.message?.content || '').trim();
+
+    if (!llmText) {
+      throw new Error('Empty response from LLM worker.');
+    }
+
+    const extracted = extractKeywordsFromLLMResponse(llmText);
+    const sanitized = sanitizeKeywordList(extracted).slice(0, desiredCount);
+
+    if (!sanitized.length) {
+      throw new Error('No keywords could be parsed from LLM response.');
+    }
+
+    console.log(`🤖 tinyllama provided ${sanitized.length} keyword candidates.`);
+    return sanitized;
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      console.warn(`⚠️  LLM request timed out after ${LLM_REQUEST_TIMEOUT_MS}ms.`);
+    } else {
+      console.warn(`⚠️  Failed to retrieve keywords from LLM worker: ${err.message}`);
+    }
+    return [];
+  } finally {
+    clearTimeout(timeoutId);
+  }
 }
 
 function commonPrefixLength(a, b) {
@@ -256,7 +385,6 @@ function ensureLanguagePlacement(result, originalKeyword) {
   }
 }
 
-const SAMPLE_SIZE = 30;
 const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
 const REQUEST_DELAY_MS = 180;
 const WINDOW_LABEL = '12_hours';
@@ -474,18 +602,51 @@ async function buildTags() {
   console.log(`🕐 Execution time: ${new Date().toISOString()}`);
   console.log(`🎲 Random seed check: ${Math.random()}`);
   
-  const keywords = loadFinanceKeywords();
-  if (!keywords.length) {
+  const fallbackKeywordPool = loadFinanceKeywords();
+  if (!fallbackKeywordPool.length) {
     throw new Error('finance_keywords.json does not contain any usable keywords.');
   }
 
-  console.log(`📊 Total keywords available: ${keywords.length}`);
-  console.log(`   First 10: ${keywords.slice(0, 10).join(', ')}`);
-  console.log(`   Middle 10 (around #${Math.floor(keywords.length/2)}): ${keywords.slice(Math.floor(keywords.length/2), Math.floor(keywords.length/2) + 10).join(', ')}`);
-  console.log(`   Last 10: ${keywords.slice(-10).join(', ')}`);
+  console.log(`📊 Total keywords available: ${fallbackKeywordPool.length}`);
+  console.log(`   First 10: ${fallbackKeywordPool.slice(0, 10).join(', ')}`);
+  console.log(
+    `   Middle 10 (around #${Math.floor(fallbackKeywordPool.length / 2)}): ${fallbackKeywordPool
+      .slice(Math.floor(fallbackKeywordPool.length / 2), Math.floor(fallbackKeywordPool.length / 2) + 10)
+      .join(', ')}`,
+  );
+  console.log(`   Last 10: ${fallbackKeywordPool.slice(-10).join(', ')}`);
 
-  const sampled = shuffleSample(keywords, SAMPLE_SIZE);
-  console.log(`🎯 Selected ${sampled.length} random finance keywords for evaluation.`);
+  let sampled = await fetchLLMKeywords({ desiredCount: SAMPLE_SIZE });
+  let keywordCollectionMethod = 'naver_search_llm_seeded';
+
+  if (!sampled.length) {
+    sampled = shuffleSample(fallbackKeywordPool, SAMPLE_SIZE);
+    keywordCollectionMethod = 'naver_search_random_sample';
+  }
+
+  sampled = sanitizeKeywordList(sampled);
+
+  if (sampled.length < SAMPLE_SIZE) {
+    if (sampled.length > 0) {
+      console.log(
+        `ℹ️ ${
+          keywordCollectionMethod === 'naver_search_llm_seeded' ? 'tinyllama worker' : 'Fallback pool'
+        } returned ${sampled.length} keywords; supplementing to target ${SAMPLE_SIZE}.`,
+      );
+    }
+    const supplement = shuffleSample(fallbackKeywordPool, SAMPLE_SIZE);
+    sampled = sanitizeKeywordList([...sampled, ...supplement]);
+  }
+
+  sampled = sampled.slice(0, SAMPLE_SIZE);
+
+  if (!sampled.length) {
+    throw new Error('Unable to obtain any keywords for evaluation.');
+  }
+
+  console.log(
+    `🎯 Selected ${sampled.length} finance keywords for evaluation (${keywordCollectionMethod === 'naver_search_llm_seeded' ? 'tinyllama worker' : 'finance_keywords.json fallback'}).`,
+  );
 
   const evaluated = [];
   const translationStats = {
@@ -577,20 +738,30 @@ async function buildTags() {
   }
 
   const now = new Date();
+  const fallbackKeywordSource = path.relative(process.cwd(), FINANCE_KEYWORDS_PATH);
+  const metadata = {
+    collection_method: keywordCollectionMethod,
+    sample_size: SAMPLE_SIZE,
+    generated_at: now.toISOString(),
+    keyword_limit: SAMPLE_SIZE,
+    lookback_hours: 12,
+    keyword_source:
+      keywordCollectionMethod === 'naver_search_llm_seeded' ? LLM_WORKER_URL : fallbackKeywordSource,
+    fallback_keyword_source: fallbackKeywordSource,
+    similar_keywords_removed: similarDiscarded.length,
+  };
+
+  if (keywordCollectionMethod === 'naver_search_llm_seeded') {
+    metadata.llm_model = LLM_MODEL;
+    metadata.llm_keywords_requested = SAMPLE_SIZE;
+  }
+
   const result = {
     date: now.toISOString().split('T')[0],
     window: WINDOW_LABEL,
     total_phrases: uniqueEvaluated.length,
     discovered_keywords: uniqueEvaluated,
-    metadata: {
-      collection_method: 'naver_search_random_sample',
-      sample_size: SAMPLE_SIZE,
-      generated_at: now.toISOString(),
-      keyword_limit: SAMPLE_SIZE,
-      lookback_hours: 12,
-      keyword_source: path.relative(process.cwd(), FINANCE_KEYWORDS_PATH),
-      similar_keywords_removed: similarDiscarded.length,
-    },
+    metadata,
   };
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(result, null, 2));
