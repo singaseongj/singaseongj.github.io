@@ -22,6 +22,20 @@ const LLM_WORKER_URL =
 const LLM_MODEL = process.env.LLM_MODEL || 'tinyllama';
 const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 25000;
 
+const CEREBRAS_API_URL =
+  process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completion';
+const CEREBRAS_API_KEY = process.env.CEREBRAS_API_KEY;
+const CEREBRAS_MODEL = process.env.CEREBRAS_MODEL || 'llama3.1-8b';
+const CEREBRAS_REQUEST_TIMEOUT_MS =
+  Number(process.env.CEREBRAS_REQUEST_TIMEOUT_MS) || 20000;
+const CEREBRAS_MAX_TOKENS = Number(process.env.CEREBRAS_MAX_TOKENS) || 400;
+const CEREBRAS_TEMPERATURE =
+  process.env.CEREBRAS_TEMPERATURE !== undefined
+    ? Number(process.env.CEREBRAS_TEMPERATURE)
+    : 0.7;
+const CEREBRAS_TOP_P =
+  process.env.CEREBRAS_TOP_P !== undefined ? Number(process.env.CEREBRAS_TOP_P) : 0.85;
+
 const SAMPLE_SIZE = 30;
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
 const FINANCE_KEYWORDS_PATH = path.resolve(__dirname, '../data/finance_keywords.json');
@@ -197,21 +211,105 @@ function extractKeywordsFromLLMResponse(rawText) {
   return lines;
 }
 
-async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
-  if (!LLM_WORKER_URL) {
-    console.warn('⚠️  LLM worker URL is not configured. Skipping LLM keyword generation.');
-    return [];
-  }
-
-  const prompt = [
+function buildKeywordPrompt(desiredCount) {
+  return [
     `You are assisting with building finance keyword tags for Naver DataLab and Naver Search.`,
     `Provide ${desiredCount} timely finance or market related search keywords relevant to Korean investors.`,
     `Mix Korean and English phrases (company names, macro topics, asset classes).`,
     `Each keyword must be concise (under six words) and free of numbering or commentary.`,
     `Respond ONLY with a JSON array of strings.`,
   ].join('\n');
+}
 
-  console.log('🤖 Requesting financial keywords from tinyllama worker…');
+async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}) {
+  if (!CEREBRAS_API_KEY) {
+    console.warn('⚠️  CEREBRAS_API_KEY is not configured. Skipping Cerebras keyword generation.');
+    return [];
+  }
+
+  const requestPrompt = prompt || buildKeywordPrompt(desiredCount);
+  console.log('🤖 Requesting financial keywords from Cerebras…');
+
+  const payload = {
+    model: CEREBRAS_MODEL,
+    messages: [
+      { role: 'system', content: 'You are a helpful assistant that only returns valid JSON.' },
+      { role: 'user', content: requestPrompt },
+    ],
+    max_completion_tokens: CEREBRAS_MAX_TOKENS,
+    temperature: CEREBRAS_TEMPERATURE,
+    top_p: CEREBRAS_TOP_P,
+    stream: false,
+  };
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), CEREBRAS_REQUEST_TIMEOUT_MS);
+
+  try {
+    const response = await fetch(CEREBRAS_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${CEREBRAS_API_KEY}`,
+      },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`HTTP ${response.status}: ${text.slice(0, 200)}`);
+    }
+
+    const result = await response.json();
+    const choice = Array.isArray(result.choices) ? result.choices[0] : undefined;
+    const llmText = String(
+      choice?.message?.content ||
+        choice?.delta?.content ||
+        result.response ||
+        result.message?.content ||
+        ''
+    ).trim();
+
+    if (!llmText) {
+      throw new Error('Empty response from Cerebras.');
+    }
+
+    const extracted = extractKeywordsFromLLMResponse(llmText);
+    const sanitized = sanitizeKeywordList(extracted).slice(0, desiredCount);
+
+    if (!sanitized.length) {
+      throw new Error('No keywords could be parsed from Cerebras response.');
+    }
+
+    console.log(`🤖 Cerebras provided ${sanitized.length} keyword candidates.`);
+    return sanitized;
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      console.warn(`⚠️  Cerebras request timed out after ${CEREBRAS_REQUEST_TIMEOUT_MS}ms.`);
+    } else {
+      console.warn(`⚠️  Failed to retrieve keywords from Cerebras: ${err.message}`);
+    }
+    return [];
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
+async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
+  const prompt = buildKeywordPrompt(desiredCount);
+
+  const cerebrasKeywords = await fetchCerebrasKeywords({ desiredCount, prompt });
+  if (cerebrasKeywords.length) {
+    return cerebrasKeywords;
+  }
+
+  if (!LLM_WORKER_URL) {
+    console.warn('⚠️  LLM worker URL is not configured. Skipping fallback keyword generation.');
+    return [];
+  }
+
+  console.log('🤖 Cerebras unavailable — falling back to tinyllama worker…');
 
   const payload = {
     model: LLM_MODEL,
