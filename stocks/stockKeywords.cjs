@@ -23,7 +23,7 @@ const LLM_MODEL = process.env.LLM_MODEL || 'tinyllama';
 const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 25000;
 
 const CEREBRAS_API_URL =
-  process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completion';
+  process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completions';
 const CEREBRAS_API_KEY = process.env.CEREBRAS_API_KEY;
 const CEREBRAS_MODEL = process.env.CEREBRAS_MODEL || 'llama3.1-8b';
 const CEREBRAS_REQUEST_TIMEOUT_MS =
