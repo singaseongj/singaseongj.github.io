@@ -1454,6 +1454,19 @@ async function updateHistory(snapshot, options = {}) {
 async function main(){
   await fs.mkdir(OUT_DIR, { recursive:true });
 
+  let previousSnapshot = null;
+  if (existsSync(OUT)) {
+    try {
+      const prevRaw = await fs.readFile(OUT, 'utf-8');
+      const parsed = JSON.parse(prevRaw);
+      if (Array.isArray(parsed?.items)) {
+        previousSnapshot = parsed;
+      }
+    } catch (err) {
+      console.warn(`[FX] Failed to read previous FX snapshot: ${err.message}`);
+    }
+  }
+
   let items = null;
   const providers = [naverProvider];
   if (process.env.USE_EXIM_FX_BACKUP === '1') {
@@ -1474,17 +1487,9 @@ async function main(){
   }
 
   if (!items) {
-    if (existsSync(OUT)) {
+    if (Array.isArray(previousSnapshot?.items)) {
       console.warn('FX: all providers failed; falling back to previous snapshot');
-      try {
-        const prevRaw = await fs.readFile(OUT, 'utf-8');
-        const prev = JSON.parse(prevRaw);
-        if (Array.isArray(prev?.items)) {
-          items = prev.items.map(it => ({ ...it }));
-        }
-      } catch (err) {
-        console.warn(`[FX] Failed to read fallback FX file: ${err.message}`);
-      }
+      items = previousSnapshot.items.map(it => ({ ...it }));
     }
     if (!items) {
       items = itemsFromRates({}); // all nulls
@@ -1492,6 +1497,22 @@ async function main(){
   }
 
   items = Array.isArray(items) ? items : [];
+
+  const previousItems = Array.isArray(previousSnapshot?.items) ? previousSnapshot.items : [];
+  const previousValueFor = (codeOrItem) => {
+    const code = typeof codeOrItem === 'string' ? codeOrItem : keyFromItem(codeOrItem ?? {});
+    if (!code) return null;
+    for (const prev of previousItems) {
+      const prevCode = keyFromItem(prev ?? {});
+      if (prevCode === code || prev?.from === code) {
+        const value = Number(prev?.krw);
+        if (Number.isFinite(value)) {
+          return value;
+        }
+      }
+    }
+    return null;
+  };
 
   let commodityData = null;
   try {
@@ -1509,22 +1530,31 @@ async function main(){
     return found;
   };
 
-  if (commodityData?.latestGold) {
-    ensureItem('GOLD', 'Gold (1 g)').krw = commodityData.latestGold.v;
-  } else {
-    ensureItem('GOLD', 'Gold (1 g)');
-  }
+  const setItemValue = (code, fallbackLabel, value) => {
+    const item = ensureItem(code, fallbackLabel);
+    if (Number.isFinite(value)) {
+      item.krw = value;
+    } else if (!Number.isFinite(Number(item.krw))) {
+      const prev = previousValueFor(code);
+      if (Number.isFinite(prev)) {
+        item.krw = prev;
+      }
+    }
+    return item;
+  };
 
-  if (commodityData?.latestBitcoin) {
-    ensureItem('BTC', 'Bitcoin (1 BTC)').krw = commodityData.latestBitcoin.v;
-  } else {
-    ensureItem('BTC', 'Bitcoin (1 BTC)');
-  }
+  setItemValue('GOLD', 'Gold (1 g)', commodityData?.latestGold?.v);
+  setItemValue('BTC', 'Bitcoin (1 BTC)', commodityData?.latestBitcoin?.v);
+  setItemValue('SP500', 'S&P 500 (USD index)', commodityData?.latestSp500?.v);
 
-  if (commodityData?.latestSp500) {
-    ensureItem('SP500', 'S&P 500 (USD index)').krw = commodityData.latestSp500.v;
-  } else {
-    ensureItem('SP500', 'S&P 500 (USD index)');
+  for (const item of items) {
+    const numeric = Number(item?.krw);
+    if (!Number.isFinite(numeric)) {
+      const prev = previousValueFor(item);
+      if (Number.isFinite(prev)) {
+        item.krw = prev;
+      }
+    }
   }
 
   const out = { lastUpdated: nowKSTISO(), items };
