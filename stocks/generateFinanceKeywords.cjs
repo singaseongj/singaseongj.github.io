@@ -4,7 +4,6 @@
 const fs = require('fs');
 const path = require('path');
 const iconv = require('iconv-lite');
-const { parse: parseContentType } = require('content-type');
 
 // Fetch polyfill for older Node.js (Node 18+ has native fetch)
 const fetch = globalThis.fetch || require('node-fetch');
@@ -17,6 +16,21 @@ function normalizeCharset(cs = '') {
   return c || 'utf-8';
 }
 
+function parseCharsetFromContentType(header = '') {
+  if (typeof header !== 'string' || !header) return null;
+  const parts = header.split(';');
+  for (const part of parts) {
+    const trimmed = part.trim();
+    if (/^charset=/i.test(trimmed)) {
+      const value = trimmed.split('=')[1];
+      if (value) {
+        return normalizeCharset(value.replace(/^"|"$/g, '').replace(/^'|'$/g, ''));
+      }
+    }
+  }
+  return null;
+}
+
 async function fetchHtmlWithCorrectEncoding(url) {
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   const buf = Buffer.from(await res.arrayBuffer());
@@ -25,10 +39,8 @@ async function fetchHtmlWithCorrectEncoding(url) {
   let charset = 'utf-8';
   const ct = res.headers.get('content-type');
   if (ct) {
-    try {
-      const { parameters } = parseContentType(ct);
-      if (parameters.charset) charset = normalizeCharset(parameters.charset);
-    } catch {}
+    const parsedCharset = parseCharsetFromContentType(ct);
+    if (parsedCharset) charset = parsedCharset;
   }
 
   // 2) Decode once (header guess)
