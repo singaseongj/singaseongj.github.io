@@ -20,7 +20,7 @@ const DEEPL_API_URL = process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v
 const LLM_WORKER_URL =
   process.env.LLM_WORKER_URL || 'https://tight-cloud-0f5e.seongj1589.workers.dev/api/generate';
 const LLM_MODEL = process.env.LLM_MODEL || 'tinyllama';
-const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 25000;
+const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 30000;
 
 const CEREBRAS_API_URL =
   process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completions';
