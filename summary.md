@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-17T15:28:57+09:00 (KST)**
+- Generated: **2025-10-17T21:39:42+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -95,8 +95,8 @@
 
 **LG전자** (066570.KS)
 
-- News (7d): **550** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **6.2%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **553** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **6.6%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
@@ -104,14 +104,14 @@
 **LG화학** (051910.KS)
 
 - News (7d): **15** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **22.4%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **21.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
 **기아** (000270.KS)
 
-- News (7d): **198** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **213** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **11.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -119,15 +119,15 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1655** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **3.6%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **1705** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- Returns: 5d **3.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 **현대차** (005380.KS)
 
-- News (7d): **765** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- News (7d): **778** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
 - Returns: 5d **12.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -143,13 +143,13 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
 
-**HL만도** (204320.KS)
+**HD현대건설기계** (267270.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.8%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-2.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=HL%EB%A7%8C%EB%8F%84
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EA%B1%B4%EC%84%A4%EA%B8%B0%EA%B3%84
 
 **녹십자** (006280.KS)
 
