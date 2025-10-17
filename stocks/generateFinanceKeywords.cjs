@@ -3,9 +3,48 @@
 
 const fs = require('fs');
 const path = require('path');
+const iconv = require('iconv-lite');
+const { parse: parseContentType } = require('content-type');
 
 // Fetch polyfill for older Node.js (Node 18+ has native fetch)
 const fetch = globalThis.fetch || require('node-fetch');
+
+function normalizeCharset(cs = '') {
+  const c = cs.toLowerCase();
+  if (['euc-kr', 'ks_c_5601-1987', 'x-windows-949', 'ms949', 'windows-949', 'korean'].includes(c)) {
+    return 'cp949'; // iconv-lite's most compatible decoder for EUC-KR family
+  }
+  return c || 'utf-8';
+}
+
+async function fetchHtmlWithCorrectEncoding(url) {
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  const buf = Buffer.from(await res.arrayBuffer());
+
+  // 1) From HTTP header
+  let charset = 'utf-8';
+  const ct = res.headers.get('content-type');
+  if (ct) {
+    try {
+      const { parameters } = parseContentType(ct);
+      if (parameters.charset) charset = normalizeCharset(parameters.charset);
+    } catch {}
+  }
+
+  // 2) Decode once (header guess)
+  let html = iconv.decode(buf, charset);
+
+  // 3) Sniff <meta charset> and re-decode if needed
+  const m = html.match(/<meta[^>]+charset=["']?\s*([\w-]+)\s*["']?/i);
+  if (m && m[1]) {
+    const metaCharset = normalizeCharset(m[1]);
+    if (metaCharset && metaCharset !== charset) {
+      html = iconv.decode(buf, metaCharset);
+    }
+  }
+
+  return html;
+}
 
 const DATA_DIR = path.resolve(__dirname, '../data');
 const TAGS_PATH = path.join(DATA_DIR, 'tags.json');
@@ -26,6 +65,8 @@ function isLikelyKeyword(term) {
   if (typeof term !== 'string') return false;
   const cleaned = term.trim();
   if (!cleaned || cleaned.length < 2) return false;
+  const wordCount = cleaned.split(/\s+/).filter(Boolean).length;
+  if (wordCount > 6) return false;
   if (/https?:\/\//i.test(cleaned)) return false;
   if (!/[A-Za-z가-힣]/.test(cleaned)) return false;
   if (cleaned.length > 60) return false;
@@ -158,17 +199,16 @@ async function fetchFromNewsSites() {
 
   const allItems = [];
   const sources = [
-    { name: 'Naver', url: 'https://finance.naver.com/news/' },
-    { name: 'Nate', url: 'https://m.news.nate.com/section?mid=m02&sq=1138989' },
-    { name: 'Daum', url: 'https://news.daum.net/economic/' },
-    { name: 'MK', url: 'https://m.mk.co.kr/news/economy/' },
+    { name: 'Naver', url: 'https://news.naver.com/' },
+    { name: 'Nate', url: 'https://m.news.nate.com/rank/list?mid=m2001' },
+    { name: 'Daum', url: 'https://news.daum.net/' },
+    { name: 'MK', url: 'https://m.mk.co.kr/news/' },
     { name: 'Zum', url: 'https://m.news.zum.com/home' },
   ];
 
   for (const { name, url } of sources) {
     try {
-      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-      const html = await res.text();
+      const html = await fetchHtmlWithCorrectEncoding(url); // ⬅️ use our decoder
       const $ = cheerio.load(html);
 
       $('a, strong, h2, h3').each((_, el) => {

@@ -20,10 +20,10 @@ const DEEPL_API_URL = process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v
 const LLM_WORKER_URL =
   process.env.LLM_WORKER_URL || 'https://tight-cloud-0f5e.seongj1589.workers.dev/api/generate';
 const LLM_MODEL = process.env.LLM_MODEL || 'tinyllama';
-const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 25000;
+const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 30000;
 
 const CEREBRAS_API_URL =
-  process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completion';
+  process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completions';
 const CEREBRAS_API_KEY = process.env.CEREBRAS_API_KEY;
 const CEREBRAS_MODEL = process.env.CEREBRAS_MODEL || 'llama3.1-8b';
 const CEREBRAS_REQUEST_TIMEOUT_MS =
@@ -213,14 +213,9 @@ function extractKeywordsFromLLMResponse(rawText) {
 }
 
 function buildKeywordPrompt(desiredCount) {
-  return [
-    `You are assisting with building finance keyword tags for Naver DataLab and Naver Search.`,
-    `Provide ${desiredCount} timely finance or market related search keywords relevant to Korean investors.`,
-    `Mix Korean and English phrases (company names, macro topics, asset classes).`,
-    `Each keyword must be concise (under six words) and free of numbering or commentary.`,
-    `Respond ONLY with a JSON array of strings.`,
-  ].join('\n');
+  return `Output ONLY a valid JSON array of ${desiredCount} short trendy latest topic search keywords (each <6 words). No code fences, no numbering, no extra text.`;
 }
+
 
 async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}) {
   if (!CEREBRAS_API_KEY) {
@@ -251,7 +246,8 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${CEREBRAS_API_KEY}`,
+        Authorization: 'Bearer ${CEREBRAS_API_KEY}',
+        'User-Agent': 'stocks-keywords-script',
       },
       body: JSON.stringify(payload),
       signal: controller.signal,
