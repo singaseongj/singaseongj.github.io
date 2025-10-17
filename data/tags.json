@@ -1,165 +1,75 @@
 {
-  "date": "2025-10-16",
+  "generatedAt": "2025-10-17T01:20:22.179Z",
+  "timezone": "Asia/Seoul",
+  "date": "2025-10-17",
   "window": "12_hours",
   "total_phrases": 4,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "treasury stock",
-      "term_ko": "자사주",
-      "significance_score": 286703,
-      "mentions": 475240,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "자사주",
-        "total_results": 475240,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1358.71,
-        "last_build_date": "Fri, 17 Oct 2025 03:30:30 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9E%90%EC%82%AC%EC%A3%BC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9E%90%EC%82%AC%EC%A3%BC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9E%90%EC%82%AC%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "조현준 효성 회장 ‘16억 횡령’ 징역 2년-집유 확정",
-          "summary": "조 회장은 2013년 7월 자신이 대주주인 갤럭시아일렉트로닉스(GE)의 상장이 무산돼 투자 지분을 사들여야 하는 부담을 안았고, 대금 마련을 위해 GE에 유상감자· 자사주 매입을 하도록 해 179억 원의 손해를 끼친 혐의를...",
-          "link": "https://www.donga.com/news/Society/article/all/20251017/132579745/2",
-          "pubDate": "Fri, 17 Oct 2025 03:05:00 +0900"
-        },
-        {
-          "title": "“ 자사주 소각 피하자” 기업 EB 발행 2배로 늘었다",
-          "summary": "올해 자사주 를 활용해 교환사채(EB)를 발행한 기업이 지난해의 두 배가 넘는 것으로 나타났다. 정부와 여당이 추진 중인 ‘ 자사주 의무소각 규제’를 피하기 위한 수단이라는 지적이 나오자 금융당국이 제동을 걸었다....",
-          "link": "https://www.donga.com/news/Economy/article/all/20251016/132578154/2",
-          "pubDate": "Fri, 17 Oct 2025 03:04:00 +0900"
-        },
-        {
-          "title": "“주식보상, 자사주 소각 회피용 아니다” 삼성전자, PSU 루머 사내 공지...",
-          "summary": "제도가 자사주 소각 의무를 회피하기 위한 수단이라는 일부 주장에 대해 “사실무근”이라고 반박했다. 삼성전자는 16일 사내 공지를 통해 “상법 개정에 따른 자사주 소각 의무를 회피하기 위한 수단으로 PSU 제도를...",
-          "link": "https://www.kmib.co.kr/article/view.asp?arcid=1760621528&code=11151400&cp=nv",
-          "pubDate": "Fri, 17 Oct 2025 00:57:00 +0900"
-        }
-      ]
+      "term": "Treasury Stock",
+      "term_ko": "자사주"
     },
     {
-      "term": "financial statements",
-      "term_ko": "재무제표",
-      "significance_score": 243765,
-      "mentions": 403894,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "재무제표",
-        "total_results": 403894,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1228.52,
-        "last_build_date": "Fri, 17 Oct 2025 03:30:32 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9E%AC%EB%AC%B4%EC%A0%9C%ED%91%9C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9E%AC%EB%AC%B4%EC%A0%9C%ED%91%9C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9E%AC%EB%AC%B4%EC%A0%9C%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권소식] 신임 금융위 사무처장에 신진창 금정국장/\"제2의 론스타, MB...",
-          "summary": "◆ 금융위원회 산하 증권선물위원회는 회계처리 기준을 위반해 재무제표 를 작성·공시한 모델솔루션 등 2개사에 감사인 지정 등 조치를 의결했다고 15일 밝혔다. 모델솔루션은 지난 2022년 원자재 매입 관련...",
-          "link": "https://www.asiatime.co.kr/article/20251017500004",
-          "pubDate": "Fri, 17 Oct 2025 00:50:00 +0900"
-        },
-        {
-          "title": "PRS 활용한 부채성 자금조달 봇물…'숨은 빚' 경고등",
-          "summary": "재무제표 상 부채로 잡히지는 않지만 결국 상환해야 하는 돈이기 때문이다. 특히 재무부담이 큰 그룹이 주로... 부채성 자금조달은 갚아야하는 돈이라 부채 성격을 갖고 있지만 재무제표 상 부채로 표시되지 않는 형태의...",
-          "link": "http://www.edaily.co.kr/news/newspath.asp?newsid=04260726642333576",
-          "pubDate": "Thu, 16 Oct 2025 18:48:00 +0900"
-        },
-        {
-          "title": "‘오래 잘나가는 기업’은 여성 인력을 키운다...“한국 중요한 변곡점...",
-          "summary": "그는 “한국은 ISSB 기준과 정합성이 있는 지속가능성 공시 기준을 마련 중이고 KSSB가 초안을 작성하고 있다”며 ”전통적 재무제표 만으로는 기업가치 판단에 한계가 있다. 글로벌 투자자들은 기업이 단기·중기...",
-          "link": "http://www.edaily.co.kr/news/newspath.asp?newsid=04244326642333576",
-          "pubDate": "Thu, 16 Oct 2025 18:41:00 +0900"
-        }
-      ]
+      "term": "Financial Statements",
+      "term_ko": "재무제표"
     },
     {
-      "term": "circuit breaker",
-      "term_ko": "회로 차단기",
-      "significance_score": 2243,
-      "mentions": 2234,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "circuit breaker",
-        "total_results": 2234,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 702.48,
-        "last_build_date": "Fri, 17 Oct 2025 03:30:31 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=circuit%20breaker",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=circuit%20breaker",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=circuit%20breaker"
-      },
-      "top_headlines": [
-        {
-          "title": "HD현대일렉트릭, UL 인증으로 북미 전력시장 본격 공략",
-          "summary": "The company is expanding its business scope by securing North American safety certifications in the low- and medium-voltage circuit breaker sector, following its success in ultra-high-voltage transformers. HD Hyundai...",
-          "link": "http://www.breaknews.com/1154175",
-          "pubDate": "Thu, 16 Oct 2025 10:52:00 +0900"
-        },
-        {
-          "title": "한울5호기, 발전기 차단기 개방으로 터빈 정지",
-          "summary": "한국수력원자력(주) 한울원자력본부(본부장 이세용)는 “10월15일 오전 1시 21분경 한울5호기(100만kW급)에서 발전기 차단기(GCB, Generator Circuit Breaker )가 비정상 개방되어 터빈을 수동으로 정지했다”고 밝혔다....",
-          "link": "http://www.cfnews.kr/news.aspx/101863",
-          "pubDate": "Thu, 16 Oct 2025 04:52:00 +0900"
-        },
-        {
-          "title": "한울5호기, 발전기 차단기 개방으로 터빈 정지",
-          "summary": "한국수력원자력(주) 한울원자력본부는 “10월 15일 오전 1시 21분경 한울5호기(100만kW급)에서 발전기 차단기(GCB, Generator Circuit Breaker )가 비정상 개방되어 터빈을 수동으로 정지하였다”고 밝혔다....",
-          "link": "https://www.ksmnews.co.kr/news/view.php?idx=568807",
-          "pubDate": "Wed, 15 Oct 2025 20:37:00 +0900"
-        }
-      ]
+      "term": "Circuit Breaker",
+      "term_ko": "회로 차단기"
     },
     {
-      "term": "London silver price hits $53.55/oz...record high",
-      "term_ko": "런던 은가격 온스당 53.55달러…사상최고치 돌파",
-      "significance_score": 27,
-      "mentions": 1,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "런던 은가격 온스당 53.55달러…사상최고치 돌파",
-        "total_results": 1,
-        "returned_results": 1,
-        "display_count": 1,
-        "recency_weight": 16.29,
-        "last_build_date": "Fri, 17 Oct 2025 03:30:32 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%9F%B0%EB%8D%98%20%EC%9D%80%EA%B0%80%EA%B2%A9%20%EC%98%A8%EC%8A%A4%EB%8B%B9%2053.55%EB%8B%AC%EB%9F%AC%E2%80%A6%EC%82%AC%EC%83%81%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EB%8F%8C%ED%8C%8C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%9F%B0%EB%8D%98%20%EC%9D%80%EA%B0%80%EA%B2%A9%20%EC%98%A8%EC%8A%A4%EB%8B%B9%2053.55%EB%8B%AC%EB%9F%AC%E2%80%A6%EC%82%AC%EC%83%81%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EB%8F%8C%ED%8C%8C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%9F%B0%EB%8D%98%20%EC%9D%80%EA%B0%80%EA%B2%A9%20%EC%98%A8%EC%8A%A4%EB%8B%B9%2053.55%EB%8B%AC%EB%9F%AC%E2%80%A6%EC%82%AC%EC%83%81%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EB%8F%8C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "런던 은가격 온스당 53.55달러…사상최고치 돌파",
-          "summary": "금가격도 온스당 4,101달러로 또다시 사상 최고치 돌파 를 시도하고 있다. 14일(현지시간) 런던 시장에서 현물 은은 전 날보다 4% 넘게 상승한 온스당 53.55달러 로 런던 에서 1980년에 기록한 사상 최고치 52.50달러를 45년만에...",
-          "link": "https://www.hankyung.com/article/202510148546i",
-          "pubDate": "Tue, 14 Oct 2025 19:48:00 +0900"
-        }
-      ]
+      "term": "London Silver Price Hits $53.55/oz...record High",
+      "term_ko": "런던 은가격 온스당 53.55달러…사상최고치 돌파"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_random_sample",
-    "sample_size": 30,
-    "generated_at": "2025-10-16T18:30:33.238Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "data/finance_keywords.json",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "discovered_keywords": [
+    {
+      "term": "Treasury Stock",
+      "term_ko": "자사주"
+    },
+    {
+      "term": "Financial Statements",
+      "term_ko": "재무제표"
+    },
+    {
+      "term": "Circuit Breaker",
+      "term_ko": "회로 차단기"
+    },
+    {
+      "term": "London Silver Price Hits $53.55/oz...record High",
+      "term_ko": "런던 은가격 온스당 53.55달러…사상최고치 돌파"
+    }
+  ],
+  "translations": {
+    "Treasury Stock": {
+      "en": "Treasury Stock",
+      "ko": "자사주",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-17T01:20:22.179Z"
+    },
+    "Financial Statements": {
+      "en": "Financial Statements",
+      "ko": "재무제표",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-17T01:20:22.179Z"
+    },
+    "Circuit Breaker": {
+      "en": "Circuit Breaker",
+      "ko": "회로 차단기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-17T01:20:22.179Z"
+    },
+    "London Silver Price Hits $53.55/oz...record High": {
+      "en": "London Silver Price Hits $53.55/oz...record High",
+      "ko": "런던 은가격 온스당 53.55달러…사상최고치 돌파",
+      "translator": "pre-collected",
+      "cachedAt": "2025-10-17T01:20:22.179Z"
+    }
   }
 }
