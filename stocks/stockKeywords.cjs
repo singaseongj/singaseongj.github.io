@@ -23,7 +23,7 @@ const LLM_MODEL = process.env.LLM_MODEL || 'tinyllama';
 const LLM_REQUEST_TIMEOUT_MS = Number(process.env.LLM_REQUEST_TIMEOUT_MS) || 25000;
 
 const CEREBRAS_API_URL =
-  process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completion';
+  process.env.CEREBRAS_API_URL || 'https://api.cerebras.ai/v1/chat/completions';
 const CEREBRAS_API_KEY = process.env.CEREBRAS_API_KEY;
 const CEREBRAS_MODEL = process.env.CEREBRAS_MODEL || 'llama3.1-8b';
 const CEREBRAS_REQUEST_TIMEOUT_MS =
@@ -251,7 +251,8 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${CEREBRAS_API_KEY}`,
+        Authorization: 'Bearer ${CEREBRAS_API_KEY}',
+        'User-Agent': 'stocks-keywords-script',
       },
       body: JSON.stringify(payload),
       signal: controller.signal,
