@@ -26,6 +26,8 @@ function isLikelyKeyword(term) {
   if (typeof term !== 'string') return false;
   const cleaned = term.trim();
   if (!cleaned || cleaned.length < 2) return false;
+  const wordCount = cleaned.split(/\s+/).filter(Boolean).length;
+  if (wordCount > 6) return false;
   if (/https?:\/\//i.test(cleaned)) return false;
   if (!/[A-Za-z가-힣]/.test(cleaned)) return false;
   if (cleaned.length > 60) return false;
