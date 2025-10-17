@@ -213,14 +213,9 @@ function extractKeywordsFromLLMResponse(rawText) {
 }
 
 function buildKeywordPrompt(desiredCount) {
-  return [
-    `You are assisting with building finance keyword tags for Naver DataLab and Naver Search.`,
-    `Provide ${desiredCount} timely finance or market related search keywords relevant to Korean investors.`,
-    `Mix Korean and English phrases (company names, macro topics, asset classes).`,
-    `Each keyword must be concise (under six words) and free of numbering or commentary.`,
-    `Respond ONLY with a JSON array of strings.`,
-  ].join('\n');
+  return `Output ONLY a valid JSON array of ${desiredCount} short trendy latest topic search keywords (each <6 words). No code fences, no numbering, no extra text.`;
 }
+
 
 async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}) {
   if (!CEREBRAS_API_KEY) {
