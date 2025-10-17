@@ -1,75 +1,272 @@
 {
-  "generatedAt": "2025-10-17T01:20:22.179Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-10-17",
   "window": "12_hours",
-  "total_phrases": 4,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Treasury Stock",
-      "term_ko": "자사주"
-    },
-    {
-      "term": "Financial Statements",
-      "term_ko": "재무제표"
-    },
-    {
-      "term": "Circuit Breaker",
-      "term_ko": "회로 차단기"
-    },
-    {
-      "term": "London Silver Price Hits $53.55/oz...record High",
-      "term_ko": "런던 은가격 온스당 53.55달러…사상최고치 돌파"
-    }
-  ],
+  "total_phrases": 7,
   "discovered_keywords": [
     {
-      "term": "Treasury Stock",
-      "term_ko": "자사주"
+      "term": "income stock",
+      "term_ko": "수입 재고",
+      "significance_score": 6573,
+      "mentions": 8983,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "income stock",
+        "total_results": 8983,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 983.64,
+        "last_build_date": "Fri, 17 Oct 2025 10:23:47 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=income%20stock",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=income%20stock",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=income%20stock"
+      },
+      "top_headlines": [
+        {
+          "title": "KB운용, RISE 인컴투자 가이드북 발간",
+          "summary": "인컴 자산을 ▲배당( Stock Dividend) ▲이자(Fixed Income ) ▲옵션 프리미엄(Covered Call) ▲임대수익(REITs)·이용료(Infra) 등 네 가지로 구분해 각 자산이 만들어내는 현금흐름의 구조와 특성을 안내한다. 이를 통해...",
+          "link": "https://www.meconomynews.com/news/articleView.html?idxno=121540",
+          "pubDate": "Fri, 17 Oct 2025 09:04:00 +0900"
+        },
+        {
+          "title": "한국투자증권, JP모건과 파트너십 구축…NH투자증권, '농심천심 일손돕...",
+          "summary": "가이드북은 인컴 자산을 △배당( Stock Dividend) △이자(Fixed Income ) △옵션 프리미엄(Covered Call) △임대수익(REITs)·이용료(Infra) 등 네 가지로 구분하고, 각 자산이 만들어내는 현금흐름의 구조와 특성을 체계적으로...",
+          "link": "http://www.sisaon.co.kr/news/articleView.html?idxno=176379",
+          "pubDate": "Thu, 16 Oct 2025 17:48:00 +0900"
+        },
+        {
+          "title": "KB자산운용, 'RISE 인컴투자 가이드북' 발간",
+          "summary": "가이드북은 인컴 자산을 △배당( Stock Dividend) △이자(Fixed Income ) △옵션 프리미엄(Covered Call) △임대수익(REITs)·이용료(Infra) 등 네 가지로 구분하고, 각 자산이 만들어내는 현금흐름의 구조와 특성을 체계적으로...",
+          "link": "https://www.smarttoday.co.kr/news/articleView.html?idxno=93704",
+          "pubDate": "Thu, 16 Oct 2025 16:18:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Financial Statements",
-      "term_ko": "재무제표"
+      "term": "financialstatement",
+      "term_ko": "재무상태표",
+      "significance_score": 6557,
+      "mentions": 10274,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "재무상태표",
+        "total_results": 10274,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 192.12,
+        "last_build_date": "Fri, 17 Oct 2025 10:23:46 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C%ED%91%9C",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C%ED%91%9C",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C%ED%91%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "李 정부 경제팀 전원 미국행…한·미 관세협상 타결 임박 가능성",
+          "summary": "미 재무부가 공개한 지난 8월 '미국 재무부 환안정기금 재무상태표 '에 따르면 ESF의 자산 규모는 약 2210억 달러로 3500억 달러에 크게 못 미친다. 때문에 길게는 10년에 걸쳐 단계적으로 투자를 집행하는 분산투자 방안도...",
+          "link": "https://www.ajunews.com/view/20251016155018170",
+          "pubDate": "Thu, 16 Oct 2025 16:48:00 +0900"
+        },
+        {
+          "title": "[컴투스 공시 분석] 게임 유저 북적이며 반등 모색... 수익률 개선 관건",
+          "summary": "재무상태표 로 확인할 수 있는 현금성 자산은 약 2598억원이다. 다만 컴투스는 올해 5월 열린 1분기 실적발표 콘퍼런스콜에서 \"3000~4000억원의 현금을 보유하고 있다\"고 밝힌 바 있다. 이 설명이 맞는다면 투자자산 중...",
+          "link": "https://www.meconomynews.com/news/articleView.html?idxno=121052",
+          "pubDate": "Thu, 16 Oct 2025 15:08:00 +0900"
+        },
+        {
+          "title": "하림家 왕자의 귀환…김준영, 김홍국 회장 지분 넘본다",
+          "summary": "올품의 별도기준 재무상태표 실제 올품의 재무지표 등을 보면 지주회사 요건에 아직 모자라는게 사실이다. 작년 말 별도기준 자산은 3366억원으로, 지주사 기준 5천억원에 1천억원 이상 모자란다. 총자산 대비 자회사...",
+          "link": "http://thetracker.co.kr/View.aspx?No=3816241",
+          "pubDate": "Thu, 16 Oct 2025 10:52:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Circuit Breaker",
-      "term_ko": "회로 차단기"
+      "term": "travel owner",
+      "term_ko": "여행주",
+      "significance_score": 6527,
+      "mentions": 10497,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "여행주",
+        "total_results": 10497,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 28.8,
+        "last_build_date": "Fri, 17 Oct 2025 10:23:48 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%97%AC%ED%96%89%EC%A3%BC",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%97%AC%ED%96%89%EC%A3%BC",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%97%AC%ED%96%89%EC%A3%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "[이슈딜] 10만전자 눈앞…\"여기가 끝이 아니다\"",
+          "summary": "하지만 주가적 차원에서는 뭐 크게 또 뭐 화장품이나 엔터나 여행주 이런 걸로 짜증 나게 할지는 모르겠습니다만, 오히려 조선보다는 그쪽에 피해가 있을지는 모르겠지만 그런 것들 때문에 막 주가가 지수적으로 영향을...",
+          "link": "https://news.dealsitetv.com/articles/160195",
+          "pubDate": "Wed, 15 Oct 2025 15:12:00 +0900"
+        },
+        {
+          "title": "[미리보는 이데일리 신문]“원재룟값 40% 뛰었다” 고환율에 기업 비명",
+          "summary": "몰려드는데…카지노· 여행주 엇갈린 전망, 왜 △스포츠 -홍정민, 두달 만에 우승 트로피 번쩍 “올해 목표는 상금왕” -운명 가를 3차전…‘SSG 앤더슨 vs 삼성 원태인’ 에이스 정면승부 -‘배구 레전드’ 문성민...",
+          "link": "http://www.edaily.co.kr/news/newspath.asp?newsid=01784326642332264",
+          "pubDate": "Sun, 12 Oct 2025 20:54:00 +0900"
+        },
+        {
+          "title": "외국인 관광객 몰려드는데…여행·카지노株 엇갈린 전망, 왜",
+          "summary": "한국을 찾는 외국인 관광객이 올해 2000만명을 돌파할 것으로 전망되는 가운데, 여행주 와 카지노주의 희비가 엇갈리고 있다. 증권가는 카지노주에 대한 비중을 확대를 권고하는 반면 여행주 에 대해서는 눈높이를...",
+          "link": "http://www.edaily.co.kr/news/newspath.asp?newsid=01479286642332264",
+          "pubDate": "Sun, 12 Oct 2025 13:50:00 +0900"
+        }
+      ]
     },
     {
-      "term": "London Silver Price Hits $53.55/oz...record High",
-      "term_ko": "런던 은가격 온스당 53.55달러…사상최고치 돌파"
+      "term": "currency risk",
+      "term_ko": "환율 위험",
+      "significance_score": 4109,
+      "mentions": 5936,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "currency risk",
+        "total_results": 5936,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 347.59,
+        "last_build_date": "Fri, 17 Oct 2025 10:23:43 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=currency%20risk",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=currency%20risk",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=currency%20risk"
+      },
+      "top_headlines": [
+        {
+          "title": "Slow Letter: October 17, 2025.",
+          "summary": "Third, currency swaps are also critical. Scott Bessent (U.S. Treasury Secretary) said, “If I... the risk of judicial manipulation by weaponizing personnel authority and judicial administration....",
+          "link": "https://slownews.kr/147152",
+          "pubDate": "Fri, 17 Oct 2025 08:14:00 +0900"
+        },
+        {
+          "title": "Foreign exchange market to stabilize as Korea, US close to reaching tarif...",
+          "summary": "Korean currency weakened past the key 1,400-won threshold against the U.S. dollar. On Thursday... isolate risk or raise money. As for the bonds, they would be issued in U.S. dollars, not won, to...",
+          "link": "https://www.koreatimes.co.kr/path/A2025101615190001919",
+          "pubDate": "Thu, 16 Oct 2025 16:16:00 +0900"
+        },
+        {
+          "title": "Hana Financial to spend $70 bil. on AI, exports, inclusive finance",
+          "summary": "Around 14 trillion won will be spent to assist small exporters and strengthen supply chain resilience, including foreign currency risk management and trade financing. Meanwhile, of the remaining...",
+          "link": "https://www.koreatimes.co.kr/path/A2025101615310004034",
+          "pubDate": "Thu, 16 Oct 2025 15:52:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Gunjin Lawyer \"Chanel bag and necklace delivery admitted...no prior solicitation\"",
+      "term_ko": "건진법사 \"샤넬백·목걸이 전달 인정…사전청탁 없었다\"",
+      "significance_score": 53,
+      "mentions": 2,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "건진법사 \"샤넬백·목걸이 전달 인정…사전청탁 없었다\"",
+        "total_results": 2,
+        "returned_results": 2,
+        "display_count": 2,
+        "recency_weight": 31.84,
+        "last_build_date": "Fri, 17 Oct 2025 10:23:44 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B1%B4%EC%A7%84%EB%B2%95%EC%82%AC%20%22%EC%83%A4%EB%84%AC%EB%B0%B1%C2%B7%EB%AA%A9%EA%B1%B8%EC%9D%B4%20%EC%A0%84%EB%8B%AC%20%EC%9D%B8%EC%A0%95%E2%80%A6%EC%82%AC%EC%A0%84%EC%B2%AD%ED%83%81%20%EC%97%86%EC%97%88%EB%8B%A4%22",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B1%B4%EC%A7%84%EB%B2%95%EC%82%AC%20%22%EC%83%A4%EB%84%AC%EB%B0%B1%C2%B7%EB%AA%A9%EA%B1%B8%EC%9D%B4%20%EC%A0%84%EB%8B%AC%20%EC%9D%B8%EC%A0%95%E2%80%A6%EC%82%AC%EC%A0%84%EC%B2%AD%ED%83%81%20%EC%97%86%EC%97%88%EB%8B%A4%22",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B1%B4%EC%A7%84%EB%B2%95%EC%82%AC%20%22%EC%83%A4%EB%84%AC%EB%B0%B1%C2%B7%EB%AA%A9%EA%B1%B8%EC%9D%B4%20%EC%A0%84%EB%8B%AC%20%EC%9D%B8%EC%A0%95%E2%80%A6%EC%82%AC%EC%A0%84%EC%B2%AD%ED%83%81%20%EC%97%86%EC%97%88%EB%8B%A4%22"
+      },
+      "top_headlines": [
+        {
+          "title": "건진법사 \" 샤넬백·목걸이 전달 인정…사전 청탁 없었다 \"",
+          "summary": "샤넬백 과 고가의 목걸이 를 전달 한 혐의를 받는 건진법사 전성배 씨가 처음으로 자신이 한 게 맞다고 인정 했... 다만 전 씨 측은 \"수수 당시 사전 청탁 은 없었고 사후 청탁 만 존재해 알선수재죄가 성립하지 않고, 자신은 김...",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008291797&plink=ORI&cooper=NAVER",
+          "pubDate": "Wed, 15 Oct 2025 07:29:00 +0900"
+        },
+        {
+          "title": "건진법사 \" 샤넬백·목걸이 전달 인정…사전청탁 없었다 \"",
+          "summary": "건진법사 전성배 씨가 오늘(14일) 자신의 첫 재판에서 명품 가방과 목걸이 를 김건희 여사 측에 전달 했다고 처음으로 인정 했습니다. 다만 \"금품을 주고받을 당시에 청탁 은 없었고, 자신은 전달 자에 불과하기 때문에...",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008291463&plink=ORI&cooper=NAVER",
+          "pubDate": "Tue, 14 Oct 2025 21:09:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "�Ｚ���� '��Ȱ'��SK���̴н� ��ġ�� '�޸� 1��'",
+      "term_ko": "",
+      "significance_score": 32,
+      "mentions": 3,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "�Ｚ���� '��Ȱ'��SK���̴н� ��ġ�� '�޸� 1��'",
+        "total_results": 3,
+        "returned_results": 3,
+        "display_count": 3,
+        "recency_weight": 0,
+        "last_build_date": "Fri, 17 Oct 2025 10:23:47 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EF%BF%BD%EF%BC%BA%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20'%EF%BF%BD%EF%BF%BD%C8%B0'%EF%BF%BD%EF%BF%BDSK%EF%BF%BD%EF%BF%BD%EF%BF%BD%CC%B4%D0%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%C4%A1%EF%BF%BD%EF%BF%BD%20'%EF%BF%BD%DE%B8%EF%BF%BD%201%EF%BF%BD%EF%BF%BD'",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EF%BF%BD%EF%BC%BA%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20'%EF%BF%BD%EF%BF%BD%C8%B0'%EF%BF%BD%EF%BF%BDSK%EF%BF%BD%EF%BF%BD%EF%BF%BD%CC%B4%D0%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%C4%A1%EF%BF%BD%EF%BF%BD%20'%EF%BF%BD%DE%B8%EF%BF%BD%201%EF%BF%BD%EF%BF%BD'",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EF%BF%BD%EF%BC%BA%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20'%EF%BF%BD%EF%BF%BD%C8%B0'%EF%BF%BD%EF%BF%BDSK%EF%BF%BD%EF%BF%BD%EF%BF%BD%CC%B4%D0%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%C4%A1%EF%BF%BD%EF%BF%BD%20'%EF%BF%BD%DE%B8%EF%BF%BD%201%EF%BF%BD%EF%BF%BD'"
+      },
+      "top_headlines": [
+        {
+          "title": "[����][Red & Blue]������Ŀ��,",
+          "summary": "Ǯ����ϴ� ������ � Ȱ � �ֽ��ϴ�. ������Ŀ... ����뿡�� ���̴� 'Catalase'�� �Ｚ���� , SK���̴н� , TSMC �...",
+          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202410141337517680104819",
+          "pubDate": "Thu, 24 Oct 2024 08:02:00 +0900"
+        },
+        {
+          "title": "������� ���� ���",
+          "summary": "ͼ��� ��ġ�� ������ �̹��� ���̶�� ȸ������ �ð��� �ִ�. ī�� ���� ������� 1�� �� �Ｚ ...",
+          "link": "https://magazine.hankyung.com/money/article/202210202535c",
+          "pubDate": "Wed, 26 Oct 2022 12:58:00 +0900"
+        },
+        {
+          "title": "�ѱ� ����, 2�б� �����",
+          "summary": "ϴ��� ���� ��ġ�� ����� ������ �����ϴ... ʿ��� �Ｚ���ڿ� SK���̴н� , ���� 3������ LGȭ�а� SK ...",
+          "link": "http://magazine.hankyung.com/money/apps/news?popup=0&nid=02&c1=2002&nkey=2019052900169042532&mode=sub_view",
+          "pubDate": "Wed, 29 May 2019 10:04:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "\"��cook�� �Ͼ��µ�\"��1800���� ����, '�ҷ�ǰ' �̾���",
+      "term_ko": "\"��쿡�� �Ͼ��µ�\"��1800���� ����, '�ҷ�ǰ' �̾���",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "\"��쿡�� �Ͼ��µ�\"��1800���� ����, '�ҷ�ǰ' �̾���",
+        "total_results": 0,
+        "returned_results": 0,
+        "display_count": 0,
+        "recency_weight": 0,
+        "last_build_date": "Fri, 17 Oct 2025 10:23:45 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%22%EF%BF%BD%EE%B8%A3%EF%BF%BD%EC%BF%A1%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%CF%BE%EF%BF%BD%EF%BF%BD%C2%B5%EF%BF%BD%22%EF%BF%BD%EF%BF%BD1800%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%2C%20'%EF%BF%BD%D2%B7%EF%BF%BD%C7%B0'%20%EF%BF%BD%CC%BE%EF%BF%BD%EF%BF%BD%EF%BF%BD",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EF%BF%BD%EE%B8%A3%EF%BF%BD%EC%BF%A1%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%CF%BE%EF%BF%BD%EF%BF%BD%C2%B5%EF%BF%BD%22%EF%BF%BD%EF%BF%BD1800%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%2C%20'%EF%BF%BD%D2%B7%EF%BF%BD%C7%B0'%20%EF%BF%BD%CC%BE%EF%BF%BD%EF%BF%BD%EF%BF%BD",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EF%BF%BD%EE%B8%A3%EF%BF%BD%EC%BF%A1%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%CF%BE%EF%BF%BD%EF%BF%BD%C2%B5%EF%BF%BD%22%EF%BF%BD%EF%BF%BD1800%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%2C%20'%EF%BF%BD%D2%B7%EF%BF%BD%C7%B0'%20%EF%BF%BD%CC%BE%EF%BF%BD%EF%BF%BD%EF%BF%BD"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "Treasury Stock": {
-      "en": "Treasury Stock",
-      "ko": "자사주",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-17T01:20:22.179Z"
-    },
-    "Financial Statements": {
-      "en": "Financial Statements",
-      "ko": "재무제표",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-17T01:20:22.179Z"
-    },
-    "Circuit Breaker": {
-      "en": "Circuit Breaker",
-      "ko": "회로 차단기",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-17T01:20:22.179Z"
-    },
-    "London Silver Price Hits $53.55/oz...record High": {
-      "en": "London Silver Price Hits $53.55/oz...record High",
-      "ko": "런던 은가격 온스당 53.55달러…사상최고치 돌파",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-17T01:20:22.179Z"
-    }
+  "metadata": {
+    "collection_method": "naver_search_random_sample",
+    "sample_size": 30,
+    "generated_at": "2025-10-17T01:23:48.922Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "data/finance_keywords.json",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 0
   }
 }
