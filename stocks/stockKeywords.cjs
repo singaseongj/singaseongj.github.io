@@ -246,7 +246,7 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer ${CEREBRAS_API_KEY}',
+        Authorization: `Bearer ${CEREBRAS_API_KEY}`,
         'User-Agent': 'stocks-keywords-script',
       },
       body: JSON.stringify(payload),
