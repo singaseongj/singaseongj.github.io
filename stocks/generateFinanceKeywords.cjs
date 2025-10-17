@@ -158,10 +158,10 @@ async function fetchFromNewsSites() {
 
   const allItems = [];
   const sources = [
-    { name: 'Naver', url: 'https://finance.naver.com/news/' },
-    { name: 'Nate', url: 'https://m.news.nate.com/section?mid=m02&sq=1138989' },
-    { name: 'Daum', url: 'https://news.daum.net/economic/' },
-    { name: 'MK', url: 'https://m.mk.co.kr/news/economy/' },
+    { name: 'Naver', url: 'https://news.naver.com/' },
+    { name: 'Nate', url: 'https://m.news.nate.com/rank/list?mid=m2001' },
+    { name: 'Daum', url: 'https://news.daum.net/' },
+    { name: 'MK', url: 'https://m.mk.co.kr/news/' },
     { name: 'Zum', url: 'https://m.news.zum.com/home' },
   ];
 
