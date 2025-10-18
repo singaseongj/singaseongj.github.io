@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-18T10:18:11+09:00 (KST)**
+- Generated: **2025-10-18T15:27:01+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -100,21 +100,21 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
-**SK하이닉스** (000660.KS)
-
-- News (7d): **127** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
-- Returns: 5d **8.8%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
-
 **대한항공** (003490.KS)
 
-- News (7d): **360** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **397** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-2.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
+
+**두산** (000150.KS)
+
+- News (7d): **88** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.17)**
+- Returns: 5d **17.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼성SDI** (006400.KS)
 
@@ -126,13 +126,21 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1543** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **1545** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **3.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 ### AGGRESSIVE (5)
+
+**GS건설** (006360.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.1%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
 
 **HD현대건설기계** (267270.KS)
 
@@ -165,14 +173,6 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%97%90%EB%84%88%EC%A7%80%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88
-
-**코스모화학** (005420.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.1%**, 20d **-0.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%AA%A8%ED%99%94%ED%95%99
 
 ## NASDAQ 100
 
