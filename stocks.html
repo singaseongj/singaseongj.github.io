@@ -455,13 +455,22 @@
         if (normalized.length < 2) continue;
 
         const scoreCandidates = [
+          item.search_scores?.total_score,
+          item.search_scores?.scaled_score,
+          item.search_scores?.raw_score,
           item.significance_score,
           item.significanceScore,
           item.significance,
           item.score,
           item.weight
         ];
-        const mentionCandidates = [item.mentions, item.count, item.frequency];
+        const mentionCandidates = [
+          item.search_scores?.weekly_search_volume,
+          item.search_scores?.past_24h_volume,
+          item.mentions,
+          item.count,
+          item.frequency
+        ];
         const score = scoreCandidates
           .map(val => Number(val))
           .find(val => Number.isFinite(val));
