@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-19T21:35:39+09:00 (KST)**
+- Generated: **2025-10-20T03:25:57+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -118,7 +118,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1621** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **1624** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **3.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -126,7 +126,7 @@
 
 **한화** (000880.KS)
 
-- News (7d): **5120** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5133** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-1.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
