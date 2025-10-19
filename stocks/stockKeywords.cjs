@@ -481,6 +481,7 @@ function ensureLanguagePlacement(result, originalKeyword) {
 }
 
 const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
+const NAVER_DATALAB_ENDPOINT = 'https://openapi.naver.com/v1/datalab/search';
 const REQUEST_DELAY_MS = 180;
 const WINDOW_LABEL = '12_hours';
 
@@ -561,7 +562,169 @@ function buildSearchLinks(keyword) {
   };
 }
 
+function formatDateForDatalab(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function parseDatalabPeriod(period) {
+  if (!period || typeof period !== 'string') return NaN;
+  // Period strings are delivered as "YYYY-MM-DD" or "YYYY-MM-DD HH:00:00" when using timeUnit=hour
+  const normalized = period.includes(' ') ? period.replace(' ', 'T') : `${period}T00:00:00`;
+  const timestamp = Date.parse(normalized);
+  return Number.isFinite(timestamp) ? timestamp : NaN;
+}
+
+async function fetchHourlySearchTrend(keyword) {
+  const now = new Date();
+  const endDate = new Date(now.getTime());
+  const startDate = new Date(now.getTime() - 8 * 24 * 60 * 60 * 1000);
+
+  const payload = {
+    startDate: formatDateForDatalab(startDate),
+    endDate: formatDateForDatalab(endDate),
+    timeUnit: 'hour',
+    keywordGroups: [
+      {
+        groupName: keyword,
+        keywords: [keyword],
+      },
+    ],
+  };
+
+  const res = await fetch(NAVER_DATALAB_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Naver-Client-Id': NAVER_CLIENT_ID,
+      'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`NAVER DataLab error ${res.status}: ${text}`);
+  }
+
+  const json = await res.json();
+  const rows = json?.results?.[0]?.data;
+  if (!Array.isArray(rows)) return [];
+
+  return rows
+    .map((row) => {
+      const timestamp = parseDatalabPeriod(row.period);
+      const ratio = Number(row.ratio);
+      return {
+        period: row.period,
+        timestamp,
+        value: Number.isFinite(ratio) ? ratio : 0,
+      };
+    })
+    .filter((row) => Number.isFinite(row.timestamp))
+    .sort((a, b) => a.timestamp - b.timestamp);
+}
+
+function computeTimeCorrection(timestamp) {
+  const reference = Number.isFinite(timestamp) ? new Date(timestamp) : new Date();
+  const hour = reference.getHours();
+  const day = reference.getDay();
+
+  const circadian = Math.cos(((hour + 1) / 24) * Math.PI * 2) * 0.12;
+  const weekendAdjustment = day === 0 || day === 6 ? 0.05 : 0;
+
+  return Number((circadian + weekendAdjustment).toFixed(6));
+}
+
+function computeSearchScoreComponents(hourlyData, now = Date.now()) {
+  if (!Array.isArray(hourlyData) || hourlyData.length === 0) {
+    return null;
+  }
+
+  const HOUR_MS = 60 * 60 * 1000;
+  const DAY_MS = 24 * HOUR_MS;
+  const WEEK_MS = 7 * DAY_MS;
+
+  let lastTimestamp = null;
+  let recentHourVolume = 0;
+  let past24hVolume = 0;
+  let weeklyVolume = 0;
+  let weeklyDataPoints = 0;
+
+  for (const entry of hourlyData) {
+    const { timestamp, value } = entry;
+    if (!Number.isFinite(timestamp)) continue;
+    if (!Number.isFinite(value)) continue;
+
+    if (!lastTimestamp || timestamp > lastTimestamp) {
+      lastTimestamp = timestamp;
+    }
+
+    const delta = now - timestamp;
+    if (delta <= HOUR_MS) {
+      recentHourVolume += value;
+    }
+    if (delta <= DAY_MS) {
+      past24hVolume += value;
+    }
+    if (delta <= WEEK_MS) {
+      weeklyVolume += value;
+      weeklyDataPoints += 1;
+    }
+  }
+
+  if (!Number.isFinite(lastTimestamp)) {
+    return null;
+  }
+
+  const weeklyAverageVolume = weeklyDataPoints > 0 ? weeklyVolume / weeklyDataPoints : 0;
+  const safeRecentHour = recentHourVolume || 0;
+  const safePast24h = past24hVolume > 0 ? past24hVolume : 1;
+  const safeWeekAvg = weeklyAverageVolume > 0 ? weeklyAverageVolume : 1;
+
+  const dayScore = safeRecentHour / safePast24h;
+  const weekScore = safeRecentHour / safeWeekAvg;
+  const correctionFactor = computeTimeCorrection(lastTimestamp);
+  const weeklySearchVolume = weeklyVolume;
+  const decayFactor = weeklySearchVolume > 0 ? Math.pow(2, -Math.log(Math.max(weeklySearchVolume, 1))) : 1;
+
+  const hoursSinceLast = Math.max((now - lastTimestamp) / HOUR_MS, 1 / 60);
+  const timeWeight = 1 / hoursSinceLast;
+
+  const rawScore = (dayScore * weekScore - correctionFactor) * decayFactor * timeWeight;
+  const clampedRawScore = Number.isFinite(rawScore) ? rawScore : 0;
+  const adjustedScore = Math.max(0, clampedRawScore);
+  const scaledScore = adjustedScore * 1000;
+
+  return {
+    recentHourVolume: Number(safeRecentHour.toFixed(4)),
+    past24hVolume: Number(past24hVolume.toFixed(4)),
+    weeklySearchVolume: Number(weeklySearchVolume.toFixed(4)),
+    weeklyAverageVolume: Number(weeklyAverageVolume.toFixed(4)),
+    dayScore: Number(dayScore.toFixed(6)),
+    weekScore: Number(weekScore.toFixed(6)),
+    correctionFactor,
+    decayFactor: Number(decayFactor.toFixed(6)),
+    timeWeight: Number(timeWeight.toFixed(6)),
+    lastTimestamp,
+    rawScore: Number(clampedRawScore.toFixed(6)),
+    scaledScore: Number(scaledScore.toFixed(2)),
+    totalScore: Math.round(scaledScore),
+  };
+}
+
 async function evaluateKeyword(keyword) {
+  let datalabRows = [];
+  let datalabScores = null;
+  try {
+    datalabRows = await fetchHourlySearchTrend(keyword);
+    datalabScores = computeSearchScoreComponents(datalabRows);
+  } catch (err) {
+    console.warn(`   ⚠️ Failed to fetch DataLab stats for "${keyword}":`, err.message || err);
+  }
+
   const url = `${NAVER_NEWS_ENDPOINT}?query=${encodeURIComponent(keyword)}&display=20&sort=date`;
   const headers = {
     'X-Naver-Client-Id': NAVER_CLIENT_ID,
@@ -586,7 +749,9 @@ async function evaluateKeyword(keyword) {
     return sum + weight;
   }, 0);
   const displayCount = Number(data.display) || items.length;
-  const score = Math.round(total * 0.6 + items.length * 10 + recencyScore);
+
+  const fallbackScore = Math.round(total * 0.6 + items.length * 10 + recencyScore);
+  const finalScore = datalabScores?.totalScore ?? fallbackScore;
 
   const topHeadlines = items.slice(0, 3).map((item) => ({
     title: cleanSnippet(item.title),
@@ -596,26 +761,60 @@ async function evaluateKeyword(keyword) {
   }));
 
   console.log(
-    `🔎 ${keyword.padEnd(16, ' ')} → score ${String(score).padStart(5)} (total ${String(total).padStart(4)}, recent ${String(items.length).padStart(2)})`
+    `🔎 ${keyword.padEnd(16, ' ')} → score ${String(finalScore).padStart(5)} (DataLab ${datalabScores?.totalScore ?? 'n/a'}, fallback ${fallbackScore})`
   );
 
-  return {
+  const mentions = Number.isFinite(datalabScores?.weeklySearchVolume)
+    ? Math.round(datalabScores.weeklySearchVolume)
+    : total;
+
+  const evaluation = {
+    source: 'naver_search_news',
+    query: keyword,
+    total_results: total,
+    returned_results: items.length,
+    display_count: displayCount,
+    recency_weight: Number(recencyScore.toFixed(2)),
+    last_build_date: data.lastBuildDate || null,
+  };
+
+  if (datalabScores) {
+    evaluation.search_trends = {
+      source: 'naver_datalab_search',
+      time_unit: 'hour',
+      rows: datalabRows.slice(-24),
+    };
+  }
+
+  const result = {
     term: keyword,
     term_ko: keyword,
-    significance_score: score,
-    mentions: total,
-    evaluation: {
-      source: 'naver_search_news',
-      query: keyword,
-      total_results: total,
-      returned_results: items.length,
-      display_count: displayCount,
-      recency_weight: Number(recencyScore.toFixed(2)),
-      last_build_date: data.lastBuildDate || null,
-    },
+    significance_score: finalScore,
+    mentions,
+    evaluation,
     search: buildSearchLinks(keyword),
     top_headlines: topHeadlines,
   };
+
+  if (datalabScores) {
+    result.search_scores = {
+      recent_hour_volume: datalabScores.recentHourVolume,
+      past_24h_volume: datalabScores.past24hVolume,
+      weekly_search_volume: datalabScores.weeklySearchVolume,
+      weekly_average_volume: datalabScores.weeklyAverageVolume,
+      day_score: datalabScores.dayScore,
+      week_score: datalabScores.weekScore,
+      correction_factor: datalabScores.correctionFactor,
+      decay_factor: datalabScores.decayFactor,
+      time_weight: datalabScores.timeWeight,
+      raw_score: datalabScores.rawScore,
+      scaled_score: datalabScores.scaledScore,
+      total_score: datalabScores.totalScore,
+      last_observation: datalabScores.lastTimestamp,
+    };
+  }
+
+  return result;
 }
 
 const translationCache = new Map();
