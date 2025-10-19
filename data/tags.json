@@ -1,383 +1,1179 @@
 {
-  "generatedAt": "2025-10-19T18:24:10.361Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-10-19",
   "window": "12_hours",
-  "total_phrases": 26,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Internet of Things",
-      "term_ko": "사물 인터넷"
-    },
-    {
-      "term": "Electric Vehicles",
-      "term_ko": "전기 자동차"
-    },
-    {
-      "term": "Online Education",
-      "term_ko": "온라인 교육"
-    },
-    {
-      "term": "Artificial Intelligence Future",
-      "term_ko": "인공 지능의 미래"
-    },
-    {
-      "term": "Data Analytics",
-      "term_ko": "데이터 분석"
-    },
-    {
-      "term": "Cloud Computing",
-      "term_ko": "클라우드 컴퓨팅"
-    },
-    {
-      "term": "Eco Friendly Products",
-      "term_ko": "친환경 제품"
-    },
-    {
-      "term": "Climate Change Impact",
-      "term_ko": "기후 변화 영향"
-    },
-    {
-      "term": "Autonomous Vehicles",
-      "term_ko": "자율 주행 차량"
-    },
-    {
-      "term": "Blockchain Technology",
-      "term_ko": "블록체인 기술"
-    },
-    {
-      "term": "5g Networks",
-      "term_ko": "5G 네트워크"
-    },
-    {
-      "term": "Renewable Energy Sources",
-      "term_ko": "재생 가능 에너지원"
-    },
-    {
-      "term": "Smart Home Devices",
-      "term_ko": "스마트 홈 디바이스"
-    },
-    {
-      "term": "Mobile Payments",
-      "term_ko": "모바일 결제"
-    },
-    {
-      "term": "Social Media Trends",
-      "term_ko": "소셜 미디어 트렌드"
-    },
-    {
-      "term": "Quantum Computing",
-      "term_ko": "양자 컴퓨팅"
-    },
-    {
-      "term": "Sustainable Fashion",
-      "term_ko": "지속 가능한 패션"
-    },
-    {
-      "term": "Virtual Reality Games",
-      "term_ko": "가상 현실 게임"
-    },
-    {
-      "term": "Personalized Medicine",
-      "term_ko": "개인 맞춤 의학"
-    },
-    {
-      "term": "Space Exploration News",
-      "term_ko": "우주 탐사 뉴스"
-    },
-    {
-      "term": "Digital Payments Growth",
-      "term_ko": "디지털 결제 성장"
-    },
-    {
-      "term": "Healthcare Innovations",
-      "term_ko": "의료 서비스 혁신"
-    },
-    {
-      "term": "Virtual Event Planning",
-      "term_ko": "가상 이벤트 계획"
-    },
-    {
-      "term": "Sustainable Living Tips",
-      "term_ko": "지속 가능한 생활 팁"
-    },
-    {
-      "term": "Cybersecurity Threats Rising",
-      "term_ko": "증가하는 사이버 보안 위협"
-    },
-    {
-      "term": "Cyberbullying Prevention",
-      "term_ko": "사이버 괴롭힘 예방"
-    }
-  ],
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "Internet of Things",
-      "term_ko": "사물 인터넷"
+      "term": "Climate Change",
+      "term_ko": "기후 변화",
+      "significance_score": 52041,
+      "mentions": 84987,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Climate Change",
+        "total_results": 84987,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 848.45,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:54 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Climate%20Change",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Climate%20Change",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Climate%20Change"
+      },
+      "top_headlines": [
+        {
+          "title": "Ministry of Climate , Energy and Environment must deliver real results",
+          "summary": "Yoo Yeon-chul The author is the former ambassador for Climate Change and Head of the Reset Korea Climate Response Committee. The newly launched Ministry of Climate, Energy and Environment marks...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-10-20/opinion/columns/Ministry-of-Climate-Energy-and-Environment-must-deliver-real-results/2423530",
+          "pubDate": "Mon, 20 Oct 2025 00:04:00 +0900"
+        },
+        {
+          "title": "An Ode to October Baseball",
+          "summary": "Congress should change that, Bob Bauer and Jack Goldsmith write. It’s not fair that Virginia... The story, set in a near-future Kolkata in the throes of climate disaster, follows a woman who is...",
+          "link": "https://www.nytimes.com/2025/10/19/world/la-dodgers-postseason-louvre-robbery.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 20:30:00 +0900"
+        },
+        {
+          "title": "What Happens When the Ice Melts? Three Women in Alaska Are Sounding an Al...",
+          "summary": "Art is increasingly being used to address climate change — from the impact of wildfires in Los Angeles to the iceberg art of Olafur Eliasson, which physically shows warming in a tangible way....",
+          "link": "https://www.nytimes.com/2025/10/19/arts/design/alaska-women-climate-change-exhibit.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 18:02:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Artificial Intelligence",
+      "term_ko": "인공 지능",
+      "significance_score": 41166,
+      "mentions": 66468,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Artificial Intelligence",
+        "total_results": 66468,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1084.76,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:04 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Artificial%20Intelligence",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Artificial%20Intelligence",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Artificial%20Intelligence"
+      },
+      "top_headlines": [
+        {
+          "title": "Brokerages expand global alliances as Koreans invest more in US stocks",
+          "summary": "27 featuring two analysts from Los Angeles-based brokerage Wedbush to discuss market trends and artificial intelligence . The event follows Hana's strategic tie-up with Wedbush last year, when it...",
+          "link": "https://www.koreatimes.co.kr/path/A2025101914350003790",
+          "pubDate": "Mon, 20 Oct 2025 01:00:00 +0900"
+        },
+        {
+          "title": "「친절한 경제신문」AI가 그린 그림, 지식 재산권의 새 시대 열리나?",
+          "summary": "ㆍAI(인공 지능): Artificial Intelligence 의 줄임말로, 컴퓨터나 기계가 인간처럼 학습하고 추론하며 문제를 해결하는 능력을 갖추도록 만든 기술. ㆍ화제: 사람들 사이에 많이 이야기되거나 주목받는 사건이나 이슈....",
+          "link": "https://www.kidshankook.kr/news/articleView.html?idxno=15211",
+          "pubDate": "Sun, 19 Oct 2025 22:04:00 +0900"
+        },
+        {
+          "title": "What Is Sora Slop For, Exactly?",
+          "summary": "So I didn’t know what to expect when I opened Sora, OpenAI’s new app that delivers a never-ending feed of brief videos generated by artificial intelligence . It looks a lot like TikTok or...",
+          "link": "https://www.nytimes.com/2025/10/19/opinion/ai-sora-slop.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 22:00:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Renewable Energy",
+      "term_ko": "재생 에너지",
+      "significance_score": 22910,
+      "mentions": 36683,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Renewable Energy",
+        "total_results": 36683,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 700.28,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:10 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Renewable%20Energy",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Renewable%20Energy",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Renewable%20Energy"
+      },
+      "top_headlines": [
+        {
+          "title": "Ministry of Climate, Energy and Environment must deliver real results",
+          "summary": "Many small- and medium-sized companies already face new requirements in overseas tenders, such as commitments to 100 percent renewable energy under the RE100 initiative and full life-cycle...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-10-20/opinion/columns/Ministry-of-Climate-Energy-and-Environment-must-deliver-real-results/2423530",
+          "pubDate": "Mon, 20 Oct 2025 00:04:00 +0900"
+        },
+        {
+          "title": "Czech governor calls for expanded Korean investment",
+          "summary": "He urged investment in renewable and hydrogen energy , highlighting Ostrava Technical University’s leadership in energy innovation and plans for an AI supercomputer and quantum research hub...",
+          "link": "https://www.koreaherald.com/article/10596526?ref=naver",
+          "pubDate": "Sun, 19 Oct 2025 17:42:00 +0900"
+        },
+        {
+          "title": "Cambodia scam fallout continues despite weekend repatriations",
+          "summary": "A planned ceremony to hand over the project to use renewable energy for the water supply to Cambodian authorities has been postponed, according to the Science and Technology Policy Institute...",
+          "link": "https://www.koreaherald.com/article/10596466?ref=naver",
+          "pubDate": "Sun, 19 Oct 2025 15:05:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Internet Of Things",
+      "term_ko": "사물 인터넷",
+      "significance_score": 20911,
+      "mentions": 34126,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Internet Of Things",
+        "total_results": 34126,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 234.9,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:06 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Internet%20Of%20Things",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Internet%20Of%20Things",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Internet%20Of%20Things"
+      },
+      "top_headlines": [
+        {
+          "title": "I Tried to Toughen Up My Son. Things Didn’t Go as Planned.",
+          "summary": "the internet but turned out to be the moldiest, stinkiest hotel I’ve ever stayed in. Early the... or of trying new things , and my life is much better for it. What I wanted for Saul was to get...",
+          "link": "https://www.nytimes.com/2025/10/19/magazine/national-parks-badlands-roosevelt-south-dakota.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 18:02:00 +0900"
+        },
+        {
+          "title": "The Risk That Built America",
+          "summary": "No railroads in the 19th century or internet in the 21st. Every one of those started with a bet... You can’t have both of these things . You write that the U.S. is relatively less constrained by...",
+          "link": "https://www.nytimes.com/2025/10/18/business/dealbook/the-risk-that-built-america.html?partner=naver",
+          "pubDate": "Sat, 18 Oct 2025 21:00:00 +0900"
+        },
+        {
+          "title": "The Culture Wars Came for Wikipedia. Jimmy Wales Is Staying the Course.",
+          "summary": "understanding of just about everything. It’s the closest thing the internet has to a public... kinds of things that, if we do our job well, which I think we have in this case, we’re going to...",
+          "link": "https://www.nytimes.com/2025/10/18/magazine/jimmy-wales-interview.html?partner=naver",
+          "pubDate": "Sat, 18 Oct 2025 18:16:00 +0900"
+        }
+      ]
     },
     {
       "term": "Electric Vehicles",
-      "term_ko": "전기 자동차"
+      "term_ko": "전기 자동차",
+      "significance_score": 18385,
+      "mentions": 29486,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Electric Vehicles",
+        "total_results": 29486,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 493.39,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:01 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Electric%20Vehicles",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Electric%20Vehicles",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Electric%20Vehicles"
+      },
+      "top_headlines": [
+        {
+          "title": "Trump’s Crackdown on Chinese Students Ignores a Startling New Reality",
+          "summary": "Chinese institutions hold the highest spots in our rankings in technologies that underpin industries either already dominated by China — including drones, solar panels and electric vehicles ...",
+          "link": "https://www.nytimes.com/2025/10/19/opinion/chinese-students-universities-trump.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 19:02:00 +0900"
+        },
+        {
+          "title": "광주시, 전기이륜차 배터리 교환형 충전시설 50기 확충…'2045 탄소중립...",
+          "summary": "In addition to expanding charging facilities, Gwangju City is providing subsidies for 130 electric motorcycles this year to promote the use of eco-friendly vehicles . Subsidies are provided at varying rates, ranging...",
+          "link": "http://www.breaknews.com/1154806",
+          "pubDate": "Sun, 19 Oct 2025 16:50:00 +0900"
+        },
+        {
+          "title": "광주시, 미래차 사업 전환 지원 '자동차부품업체 역량강화사업' 35개사 ...",
+          "summary": "Lee Dong-hyeon, head of the Future Automobile Industry Division at Gwangju City, said, \"The paradigm shift toward the future automobile industry, including electric vehicles , hydrogen vehicles, and autonomous vehicles...",
+          "link": "http://www.breaknews.com/1154805",
+          "pubDate": "Sun, 19 Oct 2025 16:50:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Online Education",
-      "term_ko": "온라인 교육"
+      "term": "Virtual Reality",
+      "term_ko": "가상 현실",
+      "significance_score": 16738,
+      "mentions": 27378,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Virtual Reality",
+        "total_results": 27378,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 110.73,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:03 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Virtual%20Reality",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Virtual%20Reality",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Virtual%20Reality"
+      },
+      "top_headlines": [
+        {
+          "title": "판 커지는 ‘스마트 글라스’ 시장…삼성전자, 메타·애플에 도전장",
+          "summary": "안드로이드 XR은 가상현실(VR, Virtual Reality ) 글라스 등 다양한 폼팩터에 확장되도록 설계됐다. 삼성전자는 홈페이지(뉴스룸)에서 “멀티모달 AI 시대의 새로운 비전과 AI 네이티브 기기의 새로운 카테고리를...",
+          "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0200&key=20251020.22015004218",
+          "pubDate": "Sun, 19 Oct 2025 18:29:00 +0900"
+        },
+        {
+          "title": "‘2025 코스메틱 360’이 보여준 뷰티의 미래",
+          "summary": "By simulating the interactions of numerous ingredient combinations in a virtual environment, predicting consumer... a reality . The process is predicted to unfold as follows: First, advanced sensors and imaging technologies...",
+          "link": "https://www.venturesquare.net/1009330",
+          "pubDate": "Sat, 18 Oct 2025 09:56:00 +0900"
+        },
+        {
+          "title": "KAI to Showcase KF-21, AAP Drone and AI Pilot Tech at ADEX 2025 in Seoul",
+          "summary": "Combining realtime streaming and virtual reality , the exhibit aims to overcome current VR training limitations and present an advanced maintenance support model. In the Space Zone, KAI will...",
+          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=146652",
+          "pubDate": "Fri, 17 Oct 2025 14:32:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Artificial Intelligence Future",
-      "term_ko": "인공 지능의 미래"
+      "term": "Online Learning",
+      "term_ko": "온라인 학습",
+      "significance_score": 7886,
+      "mentions": 12493,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Online Learning",
+        "total_results": 12493,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 190.27,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:03 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Online%20Learning",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Online%20Learning",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Online%20Learning"
+      },
+      "top_headlines": [
+        {
+          "title": "대구행복진흥원–씨엠비대구방송 협약 체결...‘평생학습’이 집으로 간...",
+          "summary": "This will allow citizens to easily access a variety of lifelong learning information through local broadcasting and online platforms, and is expected to significantly increase the accessibility of digital learning content....",
+          "link": "http://www.breaknews.com/1154756",
+          "pubDate": "Sat, 18 Oct 2025 18:20:00 +0900"
+        },
+        {
+          "title": "경북 초등교육, 미래형 초등 교육과정 운영",
+          "summary": "The Urban-Rural Connection Classroom and the Joint Curriculum are bridging regional educational gaps and expanding learning opportunities through online collaborative classes between schools in the province, other cities...",
+          "link": "http://www.breaknews.com/1154759",
+          "pubDate": "Sat, 18 Oct 2025 18:20:00 +0900"
+        },
+        {
+          "title": "The Culture Wars Came for Wikipedia. Jimmy Wales Is Staying the Course.",
+          "summary": "That’s just part of learning what the world is about. So those words that were there... But now we live online , so obviously the impact is much more. You chose at a certain point to make...",
+          "link": "https://www.nytimes.com/2025/10/18/magazine/jimmy-wales-interview.html?partner=naver",
+          "pubDate": "Sat, 18 Oct 2025 18:16:00 +0900"
+        }
+      ]
     },
     {
       "term": "Data Analytics",
-      "term_ko": "데이터 분석"
-    },
-    {
-      "term": "Cloud Computing",
-      "term_ko": "클라우드 컴퓨팅"
+      "term_ko": "데이터 분석",
+      "significance_score": 6634,
+      "mentions": 10532,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Data Analytics",
+        "total_results": 10532,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 114.84,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:07 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Data%20Analytics",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Data%20Analytics",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Data%20Analytics"
+      },
+      "top_headlines": [
+        {
+          "title": "Wealthy Americans Are Spending. People With Less Are Struggling.",
+          "summary": "households now account for nearly half of all spending, Moody’s Analytics recently estimated... to data from the Federal Reserve Bank of Atlanta. Slower wage growth, combined with persistent...",
+          "link": "https://www.nytimes.com/2025/10/19/business/economic-divide-spending-inflation-jobs.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 18:03:00 +0900"
+        },
+        {
+          "title": "‘2025 코스메틱 360’이 보여준 뷰티의 미래",
+          "summary": "The event's special zone, \"Design the Desire,\" focused on how AI and data analytics , combined with human creativity, can design future hit products. This led to specific methodologies for developing novel, high-performance...",
+          "link": "https://www.venturesquare.net/1009330",
+          "pubDate": "Sat, 18 Oct 2025 09:56:00 +0900"
+        },
+        {
+          "title": "Samsung to Invest $110 Million in Grail to Expand Multicancer Early Detec...",
+          "summary": "clinical data and analytics will be applied to offer more precise, personalized health management via Samsung Health. Harpal Kumar, Grail's president of global operations, said the partnership...",
+          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=146653",
+          "pubDate": "Fri, 17 Oct 2025 14:48:00 +0900"
+        }
+      ]
     },
     {
       "term": "Eco Friendly Products",
-      "term_ko": "친환경 제품"
+      "term_ko": "친환경 제품",
+      "significance_score": 5727,
+      "mentions": 8655,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Eco Friendly Products",
+        "total_results": 8655,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 333.51,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:56 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Eco%20Friendly%20Products",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Eco%20Friendly%20Products",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Eco%20Friendly%20Products"
+      },
+      "top_headlines": [
+        {
+          "title": "전남도, '남도국제미식산업박람회'서 투자유치 총력",
+          "summary": "The complex aims to create a food-specialized complex that processes locally produced, eco - friendly agricultural and specialty products to create high added value. Its convenient location, close to the West Coast...",
+          "link": "http://www.breaknews.com/1154798",
+          "pubDate": "Sun, 19 Oct 2025 16:50:00 +0900"
+        },
+        {
+          "title": "2025 Future Innovation Tech Expo (FIX 2025) to Open on October 22 under t...",
+          "summary": "Expo, eco - friendly mobility, next-generation vehicles, secondary batteries, and components will be exhibited. The Daegu Robot Expo will showcase a range of products , including industrial robots...",
+          "link": "https://us.aving.net/news/articleView.html?idxno=52741",
+          "pubDate": "Sun, 19 Oct 2025 14:58:00 +0900"
+        },
+        {
+          "title": "[전문가 진단]미국과 중국의 경제 전쟁 최대 매물 '희토류(Rare-earth eleme...",
+          "summary": "into products . Since the 1970s, China has monopolized the rare earth market, building a massive economy based... We must keep in mind that as key global industries become increasingly eco - friendly , the demand for key...",
+          "link": "http://www.breaknews.com/1154787",
+          "pubDate": "Sun, 19 Oct 2025 09:36:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Climate Change Impact",
-      "term_ko": "기후 변화 영향"
+      "term": "Social Media Impact",
+      "term_ko": "소셜 미디어 영향력",
+      "significance_score": 5511,
+      "mentions": 8504,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Social Media Impact",
+        "total_results": 8504,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 208.52,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:59 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Social%20Media%20Impact",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Social%20Media%20Impact",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Social%20Media%20Impact"
+      },
+      "top_headlines": [
+        {
+          "title": "An Artist Explores Community, Without the People",
+          "summary": "its impact on our current moment.” The show draws from the extensive time Backström has spent... Johnson’s 1960s social policy, the Great Society, which sought to reduce poverty and racism?...",
+          "link": "https://www.nytimes.com/2025/10/19/arts/design/great-society-fia-backstrom-queens-museum.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 18:02:00 +0900"
+        },
+        {
+          "title": "[전문가 진단]미국과 중국의 경제 전쟁 최대 매물 '희토류(Rare-earth eleme...",
+          "summary": "YouTube, social media , and Reels, popular among anti-China activists, would also be unavailable without... immediate impact on South Korean industry. The South Korean auto parts industry will inevitably suffer, with...",
+          "link": "http://www.breaknews.com/1154787",
+          "pubDate": "Sun, 19 Oct 2025 09:36:00 +0900"
+        },
+        {
+          "title": "부산 직장인 74.4%, 생성형 AI 활용 중…일자리 변화는 우려와 대비 공존",
+          "summary": "4% of workers use generative AI for their work, but concerns about the impact of AI on jobs are also... ▶ The most common AI learning path is self-study through social media ; official education to strengthen expertise...",
+          "link": "http://www.breaknews.com/1154744",
+          "pubDate": "Sat, 18 Oct 2025 18:20:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Autonomous Vehicles",
-      "term_ko": "자율 주행 차량"
+      "term": "Space Exploration",
+      "term_ko": "우주 탐험",
+      "significance_score": 3989,
+      "mentions": 6162,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Space Exploration",
+        "total_results": 6162,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 91.61,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:53 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Space%20Exploration",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Space%20Exploration",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Space%20Exploration"
+      },
+      "top_headlines": [
+        {
+          "title": "대전교육청, ‘2025 대전수학축전’ 대전컨벤션센터서 개막",
+          "summary": "The festival features 60 math exploration booths operated by approximately 500 elementary, middle, and high... This year, the expanded operating space is particularly noteworthy, aiming to enhance visitor satisfaction....",
+          "link": "http://www.breaknews.com/1154742",
+          "pubDate": "Sat, 18 Oct 2025 16:08:00 +0900"
+        },
+        {
+          "title": "Brandi Carlile Climbed Music’s Peak. Then She Had to Start Over.",
+          "summary": "The project and the new collaborators “put me in a really permissive space , sonically,” she... her exploration . What did she conclude? “I don’t think so,” she said. “I do think it is...",
+          "link": "https://www.nytimes.com/2025/10/17/arts/music/brandi-carlile-returning-to-myself.html?partner=naver",
+          "pubDate": "Sat, 18 Oct 2025 00:08:00 +0900"
+        },
+        {
+          "title": "An Army of Robot Telescopes in Texas Makes the Stars Feel Closer Than Eve...",
+          "summary": "“Our mission is to make space exploration , and space in general, more accessible to everyone,” Mr. Kim said. In the future, the founders imagine schools and universities setting up or renting...",
+          "link": "https://www.nytimes.com/2025/10/17/science/starfront-observatories-remote-astronomy.html?partner=naver",
+          "pubDate": "Fri, 17 Oct 2025 18:02:00 +0900"
+        }
+      ]
     },
     {
       "term": "Blockchain Technology",
-      "term_ko": "블록체인 기술"
+      "term_ko": "블록체인 기술",
+      "significance_score": 3940,
+      "mentions": 5985,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Blockchain Technology",
+        "total_results": 5985,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 149.36,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:05 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Blockchain%20Technology",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Blockchain%20Technology",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Blockchain%20Technology"
+      },
+      "top_headlines": [
+        {
+          "title": "KB Financial explores support strategies for advanced industries, startup...",
+          "summary": "fintech, blockchain and cybersecurity. They also held meetings with relevant Dubai government... driving technology , and Space42, an AI-based global satellite and geospatial analytics company....",
+          "link": "https://www.koreatimes.co.kr/path/A2025101912550001995",
+          "pubDate": "Sun, 19 Oct 2025 14:04:00 +0900"
+        },
+        {
+          "title": "Chinese Tech Giants Halt Hong Kong Stablecoin Plans Amid Regulatory Press...",
+          "summary": "The suspension of these projects highlights the delicate balance between innovation and regulation in China’s approach to blockchain technology and digital finance. This development marks a...",
+          "link": "https://www.econotimes.com/Chinese-Tech-Giants-Halt-Hong-Kong-Stablecoin-Plans-Amid-Regulatory-Pressure-1723589",
+          "pubDate": "Sun, 19 Oct 2025 09:54:00 +0900"
+        },
+        {
+          "title": "BNY Mellon Advances Stablecoin Infrastructure, Stays Cautious on Issuing ...",
+          "summary": "BNY Mellon is accelerating its blockchain initiatives, exploring stablecoin infrastructure... Executives noted that many corporations are looking to adopt stablecoin technology without developing...",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=38577",
+          "pubDate": "Fri, 17 Oct 2025 21:22:00 +0900"
+        }
+      ]
     },
     {
-      "term": "5g Networks",
-      "term_ko": "5G 네트워크"
+      "term": "5G Networks",
+      "term_ko": "5G 네트워크",
+      "significance_score": 3670,
+      "mentions": 5784,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "5G Networks",
+        "total_results": 5784,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:57 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=5G%20Networks",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=5G%20Networks",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=5G%20Networks"
+      },
+      "top_headlines": [
+        {
+          "title": "SK Telecom Develops Military Communications Relay Drone in Partnership wi...",
+          "summary": "The military is currently using 5G spectrum under the \"e-Um\" network to implement such relay... commercial networks . This is expected to significantly extend signal transmission distance and...",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=254093",
+          "pubDate": "Wed, 15 Oct 2025 13:40:00 +0900"
+        },
+        {
+          "title": "Aukua Unveils the MGA8410 Advanced Ethernet & IP Test Platform",
+          "summary": "enterprise networks , as well as for aerospace, defense, automotive, industrial automation, and... 2. 5G / 5G /10GBASE-T1(IEEE 802.3ch). \"The MGA8410 represents a major step forward for our customers...",
+          "link": "https://www.itbiznews.com/news/articleView.html?idxno=183345",
+          "pubDate": "Tue, 14 Oct 2025 12:20:00 +0900"
+        },
+        {
+          "title": "AI·친환경 바람 타고 성장하는 베트남 데이터센터 시장",
+          "summary": "그린 5G 네트워크를 정부의 핵심 방향으로 설정했다”며, 외국인 투자자의 참여 확대를 위한... IPTP Networks (사이프러스) 다낭하이테크파크 10 (최소) - [자료: 현지 언론 등 KOTRA 하노이 무역관] 이 가운데...",
+          "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=234821",
+          "pubDate": "Mon, 13 Oct 2025 11:58:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Renewable Energy Sources",
-      "term_ko": "재생 가능 에너지원"
+      "term": "E-commerce Growth",
+      "term_ko": "전자상거래 성장",
+      "significance_score": 3244,
+      "mentions": 4929,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "E-commerce Growth",
+        "total_results": 4929,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 86.56,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:09 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=E-commerce%20Growth",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=E-commerce%20Growth",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=E-commerce%20Growth"
+      },
+      "top_headlines": [
+        {
+          "title": "[Pangyo Event] Gyeonggi Business & Science Accelerator successfully hosts...",
+          "summary": "global e-commerce operations. Soft Landers (CEO Manju Han) unveiled a platform that simplifies... The 9th event once again demonstrated the growth potential and technological strength of Pangyo's...",
+          "link": "https://us.aving.net/news/articleView.html?idxno=52738",
+          "pubDate": "Sun, 19 Oct 2025 07:12:00 +0900"
+        },
+        {
+          "title": "K-beauty has great growth potential in Malaysia!",
+          "summary": "K-Beauty is poised for significant growth in Malaysia's beauty market. The 2025 Cosmobeauty... has also been booming, with most international product purchases now made through e-commerce platforms.",
+          "link": "https://www.thebk.co.kr/news/articleView.html?idxno=303128",
+          "pubDate": "Sat, 18 Oct 2025 14:16:00 +0900"
+        },
+        {
+          "title": "2025 경기도 기후테크 컨퍼런스 개최",
+          "summary": "of Commerce in Korea), Mylene Duolgeroff (World Bank), and Park Geon-hoo (NH Investment & Securities), to... unicorn growth strategies and examples of open innovation collaboration. Attendees include Roy Torbert (D3)...",
+          "link": "http://www.breaknews.com/1154309",
+          "pubDate": "Thu, 16 Oct 2025 16:36:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Smart Home Devices",
-      "term_ko": "스마트 홈 디바이스"
+      "term": "Virtual Events",
+      "term_ko": "가상 이벤트",
+      "significance_score": 2893,
+      "mentions": 4464,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Virtual Events",
+        "total_results": 4464,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 14.58,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:55 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Virtual%20Events",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Virtual%20Events",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Virtual%20Events"
+      },
+      "top_headlines": [
+        {
+          "title": "Nory Doesn’t Go to School Here Anymore",
+          "summary": "numerous events for Miguel Contreras Learning Complex in Los Angeles. She also managed to... Nory was recently allowed to re-enroll in the district’s virtual academy as a temporarily relocated...",
+          "link": "https://www.nytimes.com/2025/10/17/us/ice-immigration-deportations.html?partner=naver",
+          "pubDate": "Fri, 17 Oct 2025 18:02:00 +0900"
+        },
+        {
+          "title": "AhnLab Expands Presence in Southeast Asia through Participation in Cybers...",
+          "summary": "a virtual environment. AhnLab XDR also received positive feedback for its capability to analyze relationship among various security events within an organization to identify potential risks. At...",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=254055",
+          "pubDate": "Wed, 15 Oct 2025 09:58:00 +0900"
+        },
+        {
+          "title": "The Pope Needs to Be More Specific",
+          "summary": "by events . “Our deepest convictions,” the pope suggests in “Dilexi Te,\" may end up empty... A new tyranny is being born, invisible and often virtual , which unilaterally and relentlessly...",
+          "link": "https://www.nytimes.com/2025/10/14/opinion/pope-leo-dilexi-te-politics.html?partner=naver",
+          "pubDate": "Wed, 15 Oct 2025 06:50:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Mobile Payments",
-      "term_ko": "모바일 결제"
+      "term": "Robotics Industry",
+      "term_ko": "로봇 산업",
+      "significance_score": 2863,
+      "mentions": 3777,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Robotics Industry",
+        "total_results": 3777,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 396.56,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:00 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Robotics%20Industry",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Robotics%20Industry",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Robotics%20Industry"
+      },
+      "top_headlines": [
+        {
+          "title": "Trump’s Crackdown on Chinese Students Ignores a Startling New Reality",
+          "summary": "and robotics . Beijing also is building a national innovation system — linking academia, industry and defense — designed to bolster China’s military and technological strength. In recent...",
+          "link": "https://www.nytimes.com/2025/10/19/opinion/chinese-students-universities-trump.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 19:02:00 +0900"
+        },
+        {
+          "title": "Nvidia's Jensen Huang to join other business leaders at APEC CEO Summit",
+          "summary": "Nvidia said the CEO will share the company’s vision on AI, robotics , digital twins and autonomous driving. Industry watchers speculate that he may meet separately with Samsung Electronics...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-10-19/business/industry/Nvidias-Jensen-Huang-to-join-other-business-leaders-at-APEC-CEO-Summit/2423548",
+          "pubDate": "Sun, 19 Oct 2025 17:07:00 +0900"
+        },
+        {
+          "title": "Jensen Huang, global tech leaders to attend APEC CEO Summit",
+          "summary": "AI, robotics , digital twins and autonomous driving. Huang’s attendance is expected to draw greater global attention to the APEC CEO Summit, given his influence in the AI industry . Nvidia is the...",
+          "link": "https://www.koreatimes.co.kr/path/A2025101912100003137",
+          "pubDate": "Sun, 19 Oct 2025 15:10:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Social Media Trends",
-      "term_ko": "소셜 미디어 트렌드"
+      "term": "Digital Payments",
+      "term_ko": "디지털 결제",
+      "significance_score": 2724,
+      "mentions": 3690,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Digital Payments",
+        "total_results": 3690,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 309.8,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:11 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Digital%20Payments",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Digital%20Payments",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Digital%20Payments"
+      },
+      "top_headlines": [
+        {
+          "title": "Trump and Colombian President Trade Digital Attacks Over Boat Strikes",
+          "summary": "stop payments and subsidies — or worse. “Petro, a low rated and very unpopular leader, with a fresh mouth toward America, better close up these killing fields immediately, or the United...",
+          "link": "https://www.nytimes.com/2025/10/19/us/politics/trump-colombia-petro-aid.html?partner=naver",
+          "pubDate": "Mon, 20 Oct 2025 02:08:00 +0900"
+        },
+        {
+          "title": "The government must take direct control of seasonal worker management",
+          "summary": "Reviewing employment contracts, verifying wage payments and inspecting housing conditions should... Introducing a digital employment contract platform would prevent employers from altering...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-10-20/opinion/columns/The-government-must-take-direct-control-of-seasonal-worker-management/2423484",
+          "pubDate": "Mon, 20 Oct 2025 00:03:00 +0900"
+        },
+        {
+          "title": "[Pangyo Event] Gyeonggi Business & Science Accelerator successfully hosts...",
+          "summary": "Soft Landers (CEO Manju Han) unveiled a platform that simplifies transactions and payments for relocation services, highlighting the potential for digital transformation in the sector. Cure-in...",
+          "link": "https://us.aving.net/news/articleView.html?idxno=52738",
+          "pubDate": "Sun, 19 Oct 2025 07:12:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Cyber Attacks",
+      "term_ko": "사이버 공격",
+      "significance_score": 2319,
+      "mentions": 3520,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Cyber Attacks",
+        "total_results": 3520,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 6.81,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:08 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Cyber%20Attacks",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Cyber%20Attacks",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Cyber%20Attacks"
+      },
+      "top_headlines": [
+        {
+          "title": "Hackers Breach Airport PA Systems Across Canada and U.S., Broadcast Pro-H...",
+          "summary": "for Cyber Security and other agencies. Victoria International Airport, also in British Columbia... cloud software, urging stronger cybersecurity measures to prevent similar attacks in the future.",
+          "link": "https://www.econotimes.com/Hackers-Breach-Airport-PA-Systems-Across-Canada-and-US-Broadcast-Pro-Hamas-Messages-1723478",
+          "pubDate": "Fri, 17 Oct 2025 10:16:00 +0900"
+        },
+        {
+          "title": "Hacked Airport P.A. Systems Broadcast Anti-Trump and Pro-Hamas Messages",
+          "summary": "The voice also seems to say, “Turkish hacker Cyber Islam was here.” “This is absolutely... the attacks on its airports and was working with law enforcement to ensure there “were no...",
+          "link": "https://www.nytimes.com/2025/10/16/us/airports-hacked-us-canada-trump-hamas.html?partner=naver",
+          "pubDate": "Fri, 17 Oct 2025 03:04:00 +0900"
+        },
+        {
+          "title": "박정현 국회의원 \"지자체 해킹 시도 4년 새 4,788만 건…정보 유출 우려...",
+          "summary": "While the types of attacks are becoming increasingly diverse and the number of incidents is rapidly... Therefore, calls are gaining traction for strengthening the integrated cyber crisis management system between the...",
+          "link": "http://www.breaknews.com/1153446",
+          "pubDate": "Mon, 13 Oct 2025 22:08:00 +0900"
+        }
+      ]
     },
     {
       "term": "Quantum Computing",
-      "term_ko": "양자 컴퓨팅"
+      "term_ko": "양자 컴퓨팅",
+      "significance_score": 2022,
+      "mentions": 2876,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Quantum Computing",
+        "total_results": 2876,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 96.63,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:51 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Quantum%20Computing",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Quantum%20Computing",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Quantum%20Computing"
+      },
+      "top_headlines": [
+        {
+          "title": "Trump’s Crackdown on Chinese Students Ignores a Startling New Reality",
+          "summary": "In March, it announced plans to set up a $138 billion venture capital fund to support start-ups focused on strategic technologies such as quantum computing , semiconductors and A.I. The Trump...",
+          "link": "https://www.nytimes.com/2025/10/19/opinion/chinese-students-universities-trump.html?partner=naver",
+          "pubDate": "Sun, 19 Oct 2025 19:02:00 +0900"
+        },
+        {
+          "title": "[GAM] ⑩ '칩 제조부터 다르다' 몸값 뛰는 장비 업체들",
+          "summary": "업체가 캐나다의 양자 컴퓨터 업체 자나두(Xanadu)와 공동으로 진행중인 광자 양자 컴퓨팅(photonic quantum computing ) 프로젝트는 초전도 전이 가장자리 센서(TES)의 300mm 제조 공정 개발을 목표로 한다. 두 개 업체는 전략적...",
+          "link": "https://www.newspim.com/news/view/20251017001011",
+          "pubDate": "Fri, 17 Oct 2025 16:15:00 +0900"
+        },
+        {
+          "title": "Google Aims for Quantum Computing Breakthrough in 10 Years",
+          "summary": "Google CEO Sundar Pichai has projected the advent of the quantum computing era within the next decade. This vision aims to secure commercially viable quantum computers within a few years...",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=254323",
+          "pubDate": "Fri, 17 Oct 2025 14:56:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Smart Homes",
+      "term_ko": "스마트 홈",
+      "significance_score": 1623,
+      "mentions": 2336,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Smart Homes",
+        "total_results": 2336,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 21.09,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:10 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Smart%20Homes",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Smart%20Homes",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Smart%20Homes"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 시대, 한·베·아세안의 미래를 논하다… 'CICON ASEAN5 2025' 10월 호치...",
+          "summary": "K- SMART 대표, 쨘 득 딘(Tran Duc Thinh) 베트남경제무역개발컨설팅센터(VICENDETI) 부소장(셋째줄)권기룡... (Kiba Homes ) 창립자겸 대표, 이성민 GRC홀딩스 부회장,이영옥 진주쉘 대표 (다섯째줄),스티브 부이(Steve Bui)...",
+          "link": "https://www.livesnews.com/news/article.html?no=55478",
+          "pubDate": "Fri, 17 Oct 2025 16:34:00 +0900"
+        },
+        {
+          "title": "코리아씨이오서밋, 호치민에서 'CICON ASEAN5 2025' 대규모 컨퍼런스의 ...",
+          "summary": "K- SMART 대표/쨘 득 딘(Tran Duc Thinh) 베트남경제무역개발컨설팅센터(VICENDETI) 부소장 (셋째줄)권기룡... (Kiba Homes ) 창립자겸 대표/ 이성민 GRC홀딩스 부회장/이영옥 진주쉘 대표 (다섯째줄)/스티브 부이(Steve...",
+          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=365837",
+          "pubDate": "Fri, 17 Oct 2025 11:26:00 +0900"
+        },
+        {
+          "title": "[6.3 제9회 전국동시지방선거 기초자치단체장 선거 누가 뛰고 있나?]②과...",
+          "summary": "single-family homes . There are also many pending issues, both large and small, such as education and... a smart , high-tech city.” Former Gwacheon City Council Chairperson Go Geum-ran was born in Gwacheon and...",
+          "link": "http://www.breaknews.com/1154369",
+          "pubDate": "Thu, 16 Oct 2025 20:52:00 +0900"
+        }
+      ]
     },
     {
       "term": "Sustainable Fashion",
-      "term_ko": "지속 가능한 패션"
-    },
-    {
-      "term": "Virtual Reality Games",
-      "term_ko": "가상 현실 게임"
+      "term_ko": "지속 가능한 패션",
+      "significance_score": 1518,
+      "mentions": 2127,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Sustainable Fashion",
+        "total_results": 2127,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 41.79,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:50 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Sustainable%20Fashion",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Sustainable%20Fashion",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Sustainable%20Fashion"
+      },
+      "top_headlines": [
+        {
+          "title": "전주시 '제19회 평생학습한마당' 개최",
+          "summary": "fosters sustainable cities through learning and fosters intergenerational learning. With the participation... and fashion shows, allowing all generations to learn and express themselves together. On the first day of the...",
+          "link": "http://www.breaknews.com/1154676",
+          "pubDate": "Sat, 18 Oct 2025 00:12:00 +0900"
+        },
+        {
+          "title": "경기도, ‘2025 업사이클 빌리지 페스티벌’ 개최",
+          "summary": "A variety of cultural experiences, including busking performances, eco-gardening, and an upcycle fashion show... a \" sustainable lifestyle.\" Kim Hye-ae, president of the Gyeonggi Environmental Energy Promotion Agency...",
+          "link": "http://www.breaknews.com/1154632",
+          "pubDate": "Fri, 17 Oct 2025 18:04:00 +0900"
+        },
+        {
+          "title": "2026 S/S 서스테이너블 패션 아트 쇼, 지속가능 패션과 예술의 융합을 선...",
+          "summary": "이번 행사( SUSTAINABLE FASHION ART SHOW)는 지속 가능한 패션과 예술 산업의 협업 가치를 창출하고, 장르간의 발전을 도모하기 위해 기획된 융합전시다. 제로-웨이스트, 업사이클링, 리사이클링, 에코-드로잉 등 다양한...",
+          "link": "http://digitalchosun.dizzo.com/site/data/html_dir/2025/10/17/2025101780026.html",
+          "pubDate": "Fri, 17 Oct 2025 09:52:00 +0900"
+        }
+      ]
     },
     {
       "term": "Personalized Medicine",
-      "term_ko": "개인 맞춤 의학"
+      "term_ko": "개인 맞춤 의학",
+      "significance_score": 1248,
+      "mentions": 1584,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Personalized Medicine",
+        "total_results": 1584,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 97.82,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:58 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Personalized%20Medicine",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Personalized%20Medicine",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Personalized%20Medicine"
+      },
+      "top_headlines": [
+        {
+          "title": "힘찬병원, 마코로봇 인공관절수술 연구 ‘국내 최다 국제논문’ 발표",
+          "summary": "of Personalized Medicine )에 게재됐다. 또한, 힘찬병원은 국내 최초로 마코로봇 고관절 인공관절수술에 대한 연구 논문을 SCIE급 국제 학술지에 발표하며 연구 영역을 무릎뿐만 아니라 고관절까지 확장했다. <로봇 보조...",
+          "link": "http://www.livesnews.com/news/article.html?no=55467",
+          "pubDate": "Sat, 18 Oct 2025 10:00:00 +0900"
+        },
+        {
+          "title": "힘찬병원, 마코로봇 인공관절수술 연구 '국내 최다 국제논문' 발표… 세...",
+          "summary": "of Personalized Medicine )에 게재됐다. 나아가 힘찬병원은 국내 최초로 마코로봇 고관절 인공관절수술에 대한 연구 논문을 SCIE급 국제 학술지에 발표하며 연구 영역을 무릎뿐만 아니라 고관절까지 확장했다.<로봇 보조...",
+          "link": "https://www.job-post.co.kr/news/articleView.html?idxno=183555",
+          "pubDate": "Sat, 18 Oct 2025 09:00:00 +0900"
+        },
+        {
+          "title": "힘찬병원, 마코로봇 인공관절수술 연구 '국내 최다 국제논문' 발표… 세...",
+          "summary": "of Personalized Medicine )에 게재됐다. 나아가 힘찬병원은 국내 최초로 마코로봇 고관절 인공관절수술에 대한 연구 논문을 SCIE급 국제 학술지에 발표하며 연구 영역을 무릎뿐만 아니라 고관절까지 확장했다. <로봇 보조...",
+          "link": "http://www.biotimes.co.kr/news/articleView.html?idxno=24655",
+          "pubDate": "Sat, 18 Oct 2025 09:00:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Space Exploration News",
-      "term_ko": "우주 탐사 뉴스"
+      "term": "Cloud Gaming",
+      "term_ko": "클라우드 게임",
+      "significance_score": 1141,
+      "mentions": 1569,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Cloud Gaming",
+        "total_results": 1569,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:02 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Cloud%20Gaming",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Cloud%20Gaming",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Cloud%20Gaming"
+      },
+      "top_headlines": [
+        {
+          "title": "Fibocom Debuts Industry-First ALL-IN-ONE AI CPE at NetworkX 2025",
+          "summary": "seamless cloud -based voice interaction. Users can conveniently manage network settings and... online gaming and conferencing performance through AI-based QoS optimization. Beyond enabling...",
+          "link": "https://www.itbiznews.com/news/articleView.html?idxno=183528",
+          "pubDate": "Wed, 15 Oct 2025 12:00:00 +0900"
+        },
+        {
+          "title": "A Mystery C.E.O. and Billions in Sales: Is China Buying Banned Nvidia Chi...",
+          "summary": "From China to Singapore Megaspeed was created in 2023 when 7Road, a Chinese gaming and cloud computing company with ties to state-backed investors, split off its overseas operation in Singapore...",
+          "link": "https://www.nytimes.com/2025/10/09/technology/nvidia-chips-china-megaspeed.html?partner=naver",
+          "pubDate": "Fri, 10 Oct 2025 02:56:00 +0900"
+        },
+        {
+          "title": "NBA Returns to China with Alibaba Partnership and Historic Macau Games",
+          "summary": "Under the new deal, Alibaba Cloud becomes the official cloud computing and AI partner of NBA... non- gaming sectors. Local casino operators, including Sands, Wynn Macau, MGM China, and Melco...",
+          "link": "https://www.econotimes.com/NBA-Returns-to-China-with-Alibaba-Partnership-and-Historic-Macau-Games-1722786",
+          "pubDate": "Thu, 09 Oct 2025 14:20:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Digital Payments Growth",
-      "term_ko": "디지털 결제 성장"
+      "term": "Cybersecurity Threats",
+      "term_ko": "사이버 보안 위협",
+      "significance_score": 1128,
+      "mentions": 1529,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Cybersecurity Threats",
+        "total_results": 1529,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 10.49,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:52 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Cybersecurity%20Threats",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Cybersecurity%20Threats",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Cybersecurity%20Threats"
+      },
+      "top_headlines": [
+        {
+          "title": "Two months later, gov't admits hackers accessed internal platforms, digit...",
+          "summary": "-based cybersecurity publication, claimed that the Ministry of the Interior and Safety, Ministry... To counter security threats related to certificate theft or duplication, the government...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-10-17/national/socialAffairs/Two-months-later-govt-admits-hackers-accessed-internal-platforms-digital-certificates/2422629",
+          "pubDate": "Fri, 17 Oct 2025 13:56:00 +0900"
+        },
+        {
+          "title": "AhnLab Expands Presence in Southeast Asia through Participation in Cybers...",
+          "summary": "\" His in-depth insights into the ransomware attack ecosystem — one of Malaysia's major cybersecurity threats — drew strong engagement from the audience, further sparking interest in AhnLab...",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=254055",
+          "pubDate": "Wed, 15 Oct 2025 09:58:00 +0900"
+        },
+        {
+          "title": "Trump Says Federal Layoffs Have Begun During Government Shutdown",
+          "summary": "Officials at the Department of Homeland Security confirmed that terminations would fall on the Cybersecurity and Infrastructure Security Agency, which helps protect against threats to the...",
+          "link": "https://www.nytimes.com/2025/10/10/us/politics/federal-layoffs-government-shutdown.html?partner=naver",
+          "pubDate": "Sat, 11 Oct 2025 01:50:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Digital Wellness",
+      "term_ko": "디지털 웰니스",
+      "significance_score": 1065,
+      "mentions": 1298,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Digital Wellness",
+        "total_results": 1298,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 85.72,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:54 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Digital%20Wellness",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Digital%20Wellness",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Digital%20Wellness"
+      },
+      "top_headlines": [
+        {
+          "title": "Nvidia's Jensen Huang to join other business leaders at APEC CEO Summit",
+          "summary": "shipbuilding, digital assets, energy and retail — the “K-Tech Innovation Showcase,” the “Taste APEC: Wine & Liquor Fair,” the “K-beauty Pavilion\" and wellness zone and art...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-10-19/business/industry/Nvidias-Jensen-Huang-to-join-other-business-leaders-at-APEC-CEO-Summit/2423548",
+          "pubDate": "Sun, 19 Oct 2025 17:07:00 +0900"
+        },
+        {
+          "title": "Samsung C&T and Samsung Electronics Invest $110M in U.S. Cancer Diagnosti...",
+          "summary": "Park Heon-soo, Head of Samsung Electronics' Digital Health Team, added that the partnership will help provide personalized, tech-driven wellness experiences. Harpal Kumar, President of...",
+          "link": "http://www.kdfnews.com/news/articleView.html?idxno=168204",
+          "pubDate": "Sat, 18 Oct 2025 03:30:00 +0900"
+        },
+        {
+          "title": "For Trump’s Aides and Officials, the Battle Online Is Always On",
+          "summary": "of Digital Strategy, and President Obama, widely considered an innovator, using the internet to... and even his nominee for Surgeon General, Casey Means, a wellness influencer. “Mike Pence was...",
+          "link": "https://www.nytimes.com/2025/10/10/style/trump-officials-social-media.html?partner=naver",
+          "pubDate": "Fri, 10 Oct 2025 22:40:00 +0900"
+        }
+      ]
     },
     {
       "term": "Healthcare Innovations",
-      "term_ko": "의료 서비스 혁신"
+      "term_ko": "의료 서비스 혁신",
+      "significance_score": 747,
+      "mentions": 899,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Healthcare Innovations",
+        "total_results": 899,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 8.05,
+        "last_build_date": "Mon, 20 Oct 2025 03:27:07 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Healthcare%20Innovations",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Healthcare%20Innovations",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Healthcare%20Innovations"
+      },
+      "top_headlines": [
+        {
+          "title": "[GITEX GLOBAL 2025] \"K-Startups Knock on Dubai's Door\" — A 14-Week Glob...",
+          "summary": "Ten promising startups showcased their innovations and global scale-up potential. \"Not just a... TESSER unveiled \"Ontol,\" an AI healthcare agent that connects hospitals and patients in real time...",
+          "link": "https://us.aving.net/news/articleView.html?idxno=52731",
+          "pubDate": "Fri, 17 Oct 2025 11:30:00 +0900"
+        },
+        {
+          "title": "그린리본, ‘AI 페스타 2025’ 참가",
+          "summary": "Green Ribbon CEO Cheon Myeong-ho said, “AI Festa was an important forum for discussing the future of data and technology, and Green Ribbon showcased AI innovations that connect insurance and healthcare .” He added, “We...",
+          "link": "https://www.venturesquare.net/1008754",
+          "pubDate": "Wed, 15 Oct 2025 14:54:00 +0900"
+        },
+        {
+          "title": "Seoul hosts world's top neurologists for 27th World Congress of Neurology",
+          "summary": "WCN 2025 comprehensively covers the latest research and clinical innovations in neuroscience... digital healthcare . It features around 130 sessions, including Plenary Lectures, Teaching Courses...",
+          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=29259",
+          "pubDate": "Tue, 14 Oct 2025 16:00:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Virtual Event Planning",
-      "term_ko": "가상 이벤트 계획"
+      "term": "Remote Work Trends",
+      "term_ko": "원격 근무 트렌드",
+      "significance_score": 470,
+      "mentions": 450,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Remote Work Trends",
+        "total_results": 450,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:59 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Remote%20Work%20Trends",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Remote%20Work%20Trends",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Remote%20Work%20Trends"
+      },
+      "top_headlines": [
+        {
+          "title": "Wacky Labels and Silly Names Are Killing Craft Beer",
+          "summary": "People with remote jobs aren’t going for drinks after work , and taproom traffic hasn’t... Breweries expanded too fast and chased trends too hard, trying to be everything but beer. But beer...",
+          "link": "https://www.nytimes.com/2025/10/13/opinion/how-to-save-beer.html?partner=naver",
+          "pubDate": "Mon, 13 Oct 2025 18:03:00 +0900"
+        },
+        {
+          "title": "[TGS] CEO Baek Young-hoon: \"We Will Make Smilegate a Company Everyone in ...",
+          "summary": "With the spread of remote work , PC demand rose, leading to a larger base of players using PCs.... We want to work with studios that can read market trends , understand their target audiences, and...",
+          "link": "https://www.gamevu.co.kr/news/articleView.html?idxno=52283",
+          "pubDate": "Thu, 09 Oct 2025 14:40:00 +0900"
+        },
+        {
+          "title": "Harvard Students Skip Class and Still Get High Grades, Faculty Say",
+          "summary": "Half of that increase happened during remote instruction. “Students are very worried about... These trends play out differently from school to school, however. At public universities like the...",
+          "link": "https://www.nytimes.com/2025/10/06/us/harvard-students-absenteeism.html?partner=naver",
+          "pubDate": "Tue, 07 Oct 2025 00:46:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Sustainable Living Tips",
-      "term_ko": "지속 가능한 생활 팁"
+      "term": "Metaverse Revolution",
+      "term_ko": "메타버스 혁명",
+      "significance_score": 413,
+      "mentions": 355,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Metaverse Revolution",
+        "total_results": 355,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:49 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Metaverse%20Revolution",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Metaverse%20Revolution",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Metaverse%20Revolution"
+      },
+      "top_headlines": [
+        {
+          "title": "[6.3 제9회 전국동시지방선거 기초자치단체장 선거 누가 뛰고 있나?]③군...",
+          "summary": "transportation revolution in the metropolitan area, and secured the Special Act on Underground Railway... Kang emphasizes his ability to prepare for the AI ​​and metaverse era, and his key pledges include...",
+          "link": "http://www.breaknews.com/1154368",
+          "pubDate": "Thu, 16 Oct 2025 20:52:00 +0900"
+        },
+        {
+          "title": "DIC 2025 창업경진대회 참가자 모집.. “AI·메타버스 등 창업 아이템 대...",
+          "summary": "Industrial Revolution , broadcasting and new media content, virtual reality and immersive media, gaming and cultural arts convergence ideas, AI-based services, the metaverse , and non-face-to-face services. Applications...",
+          "link": "https://www.venturesquare.net/1007413",
+          "pubDate": "Tue, 30 Sep 2025 17:50:00 +0900"
+        },
+        {
+          "title": "한국전문언론인협회, 안혁수 (주)에코플라이 대표이사 ‘혁신리더 대상...",
+          "summary": "Furthermore, based on an eco-friendly philosophy, a key trend in the Fourth Industrial Revolution , Ahn has... Furthermore, my goal is to integrate digital technologies such as artificial intelligence and the metaverse to...",
+          "link": "http://www.breaknews.com/1149286",
+          "pubDate": "Mon, 22 Sep 2025 11:54:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Cybersecurity Threats Rising",
-      "term_ko": "증가하는 사이버 보안 위협"
-    },
-    {
-      "term": "Cyberbullying Prevention",
-      "term_ko": "사이버 괴롭힘 예방"
+      "term": "AI Ethics Debate",
+      "term_ko": "AI 윤리 토론",
+      "significance_score": 259,
+      "mentions": 98,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "AI Ethics Debate",
+        "total_results": 98,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Mon, 20 Oct 2025 03:26:50 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=AI%20Ethics%20Debate",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=AI%20Ethics%20Debate",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=AI%20Ethics%20Debate"
+      },
+      "top_headlines": [
+        {
+          "title": "Does abolishing the Prosecution Service really protect crime victims?",
+          "summary": "Kim Dae-gwang The author is an attorney and secretary general of the Legal Ethics Council The... However, debate over prosecution reform is hardly new. During the Moon Jae-in administration, the...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-10-16/opinion/columns/Does-abolishing-the-Prosecution-Service-really-protect-crime-victims/2420669",
+          "pubDate": "Thu, 16 Oct 2025 00:04:00 +0900"
+        },
+        {
+          "title": "UNESCO to Convene in Samarkand to Set Global Priorities and Debate Ethics ...",
+          "summary": "The conference will also coincide with several prize ceremonies, including the UNESCOUzbekistan Beruniy Prize on AI Ethics (6 November) and the UNESCOGreece Melina Mercouri International Prize (7...",
+          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=146529",
+          "pubDate": "Tue, 14 Oct 2025 15:54:00 +0900"
+        },
+        {
+          "title": "[APEC 2025] Gyeongju at the Center of the World: APEC 2025 and the City's...",
+          "summary": "APEC AI Cooperation Network to strengthen collaboration in technology, data ethics , and... The city that once governed a thousand years of Korean history now hosts the debate on how the Asia...",
+          "link": "https://www.gokorea.kr/news/articleView.html?idxno=842792",
+          "pubDate": "Tue, 14 Oct 2025 10:22:00 +0900"
+        }
+      ]
     }
   ],
-  "translations": {
-    "Internet of Things": {
-      "en": "Internet of Things",
-      "ko": "사물 인터넷",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Electric Vehicles": {
-      "en": "Electric Vehicles",
-      "ko": "전기 자동차",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Online Education": {
-      "en": "Online Education",
-      "ko": "온라인 교육",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Artificial Intelligence Future": {
-      "en": "Artificial Intelligence Future",
-      "ko": "인공 지능의 미래",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Data Analytics": {
-      "en": "Data Analytics",
-      "ko": "데이터 분석",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Cloud Computing": {
-      "en": "Cloud Computing",
-      "ko": "클라우드 컴퓨팅",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Eco Friendly Products": {
-      "en": "Eco Friendly Products",
-      "ko": "친환경 제품",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Climate Change Impact": {
-      "en": "Climate Change Impact",
-      "ko": "기후 변화 영향",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Autonomous Vehicles": {
-      "en": "Autonomous Vehicles",
-      "ko": "자율 주행 차량",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Blockchain Technology": {
-      "en": "Blockchain Technology",
-      "ko": "블록체인 기술",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "5g Networks": {
-      "en": "5g Networks",
-      "ko": "5G 네트워크",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Renewable Energy Sources": {
-      "en": "Renewable Energy Sources",
-      "ko": "재생 가능 에너지원",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Smart Home Devices": {
-      "en": "Smart Home Devices",
-      "ko": "스마트 홈 디바이스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Mobile Payments": {
-      "en": "Mobile Payments",
-      "ko": "모바일 결제",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Social Media Trends": {
-      "en": "Social Media Trends",
-      "ko": "소셜 미디어 트렌드",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Quantum Computing": {
-      "en": "Quantum Computing",
-      "ko": "양자 컴퓨팅",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Sustainable Fashion": {
-      "en": "Sustainable Fashion",
-      "ko": "지속 가능한 패션",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Virtual Reality Games": {
-      "en": "Virtual Reality Games",
-      "ko": "가상 현실 게임",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Personalized Medicine": {
-      "en": "Personalized Medicine",
-      "ko": "개인 맞춤 의학",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Space Exploration News": {
-      "en": "Space Exploration News",
-      "ko": "우주 탐사 뉴스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Digital Payments Growth": {
-      "en": "Digital Payments Growth",
-      "ko": "디지털 결제 성장",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Healthcare Innovations": {
-      "en": "Healthcare Innovations",
-      "ko": "의료 서비스 혁신",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Virtual Event Planning": {
-      "en": "Virtual Event Planning",
-      "ko": "가상 이벤트 계획",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Sustainable Living Tips": {
-      "en": "Sustainable Living Tips",
-      "ko": "지속 가능한 생활 팁",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Cybersecurity Threats Rising": {
-      "en": "Cybersecurity Threats Rising",
-      "ko": "증가하는 사이버 보안 위협",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    },
-    "Cyberbullying Prevention": {
-      "en": "Cyberbullying Prevention",
-      "ko": "사이버 괴롭힘 예방",
-      "translator": "pre-collected",
-      "cachedAt": "2025-10-19T18:24:10.361Z"
-    }
+  "metadata": {
+    "collection_method": "naver_search_llm_seeded",
+    "sample_size": 30,
+    "generated_at": "2025-10-19T18:27:12.284Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "https://tight-cloud-0f5e.seongj1589.workers.dev/api/generate",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 0,
+    "llm_model": "tinyllama",
+    "llm_keywords_requested": 30
   }
 }
