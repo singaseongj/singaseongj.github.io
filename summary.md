@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-20T21:41:10+09:00 (KST)**
+- Generated: **2025-10-21T03:30:37+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -110,7 +110,7 @@
 
 **대한항공** (003490.KS)
 
-- News (7d): **501** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **502** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **2.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -118,7 +118,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1846** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **1872** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **5.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -126,7 +126,7 @@
 
 **한화** (000880.KS)
 
-- News (7d): **5247** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **5249** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **5.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -158,13 +158,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD
 
-**코스모신소재** (005070.KS)
+**롯데에너지머티리얼즈** (020150.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.4%**, 20d **12.5%**; volatility (20d): **unknown**
+- Returns: 5d **0.0%**, 20d **3.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8B%A0%EC%86%8C%EC%9E%AC
+- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%97%90%EB%84%88%EC%A7%80%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88
 
 **한샘** (009240.KS)
 
@@ -310,7 +310,7 @@
 **Revvity** (RVTY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.8%**, 20d **7.7%**; volatility (20d): **unknown**
+- Returns: 5d **4.6%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Revvity
@@ -326,7 +326,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.3%**, 20d **-5.4%**; volatility (20d): **unknown**
+- Returns: 5d **1.1%**, 20d **-4.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
@@ -334,7 +334,7 @@
 **Zebra Technologies** (ZBRA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.3%**, 20d **-7.9%**; volatility (20d): **unknown**
+- Returns: 5d **7.9%**, 20d **-3.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Zebra%20Technologies
