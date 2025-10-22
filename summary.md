@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-22T21:41:33+09:00 (KST)**
+- Generated: **2025-10-23T03:31:25+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -94,7 +94,7 @@
 
 **LG전자** (066570.KS)
 
-- News (7d): **520** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **521** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **6.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -118,7 +118,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1714** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **1717** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **3.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -303,7 +303,7 @@
 **Omnicom Group** (OMC)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **3.2%**; volatility (20d): **unknown**
+- Returns: 5d **3.2%**, 20d **6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Communication Services**
 - News search: https://www.google.com/search?q=Omnicom%20Group
@@ -311,7 +311,7 @@
 **Principal Financial Group** (PFG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.3%**, 20d **-3.7%**; volatility (20d): **unknown**
+- Returns: 5d **-2.3%**, 20d **-3.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Principal%20Financial%20Group
@@ -327,7 +327,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.5%**, 20d **-1.8%**; volatility (20d): **unknown**
+- Returns: 5d **3.0%**, 20d **-1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
@@ -335,7 +335,7 @@
 **Zimmer Biomet** (ZBH)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.4%**, 20d **2.4%**; volatility (20d): **unknown**
+- Returns: 5d **4.8%**, 20d **5.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Zimmer%20Biomet
