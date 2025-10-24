@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-24T21:41:58+09:00 (KST)**
+- Generated: **2025-10-25T03:28:50+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -134,6 +134,14 @@
 
 ### AGGRESSIVE (5)
 
+**GS건설** (006360.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.1%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
+
 **LX인터내셔널** (001120.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -165,14 +173,6 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%A0%95%EB%B0%80%ED%99%94%ED%95%99
-
-**에스엘** (005850.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.4%**, 20d **-6.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%97%98
 
 ## NASDAQ 100
 
@@ -298,13 +298,13 @@
 
 ### AGGRESSIVE (5)
 
-**Dollar Tree** (DLTR)
+**Evergy** (EVRG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **-1.1%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **2.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://www.google.com/search?q=Dollar%20Tree
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=Evergy
 
 **Expeditors International** (EXPD)
 
@@ -317,7 +317,7 @@
 **Snap-on** (SNA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.7%**, 20d **2.9%**; volatility (20d): **unknown**
+- Returns: 5d **1.3%**, 20d **0.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Snap-on
@@ -333,7 +333,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.0%**, 20d **-1.1%**; volatility (20d): **unknown**
+- Returns: 5d **1.4%**, 20d **-3.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
