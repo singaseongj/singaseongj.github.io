@@ -577,15 +577,15 @@ function parseDatalabPeriod(period) {
   return Number.isFinite(timestamp) ? timestamp : NaN;
 }
 
-async function fetchHourlySearchTrend(keyword) {
+function buildDatalabPayload(keyword, timeUnit) {
   const now = new Date();
   const endDate = new Date(now.getTime());
   const startDate = new Date(now.getTime() - 8 * 24 * 60 * 60 * 1000);
 
-  const payload = {
+  return {
     startDate: formatDateForDatalab(startDate),
     endDate: formatDateForDatalab(endDate),
-    timeUnit: 'hour',
+    timeUnit,
     keywordGroups: [
       {
         groupName: keyword,
@@ -593,6 +593,10 @@ async function fetchHourlySearchTrend(keyword) {
       },
     ],
   };
+}
+
+async function requestDatalabTrend(keyword, timeUnit) {
+  const payload = buildDatalabPayload(keyword, timeUnit);
 
   const res = await fetch(NAVER_DATALAB_ENDPOINT, {
     method: 'POST',
@@ -611,7 +615,9 @@ async function fetchHourlySearchTrend(keyword) {
 
   const json = await res.json();
   const rows = json?.results?.[0]?.data;
-  if (!Array.isArray(rows)) return [];
+  if (!Array.isArray(rows)) {
+    return [];
+  }
 
   return rows
     .map((row) => {
@@ -627,6 +633,43 @@ async function fetchHourlySearchTrend(keyword) {
     .sort((a, b) => a.timestamp - b.timestamp);
 }
 
+function isTimeUnitError(error) {
+  if (!error) return false;
+  const message = String(error.message || error || '').toLowerCase();
+  if (!message) return false;
+  return (
+    message.includes('.timeunit') ||
+    message.includes('"timeunit"') ||
+    message.includes('should be equal to one of the allowed values')
+  );
+}
+
+async function fetchSearchTrendData(keyword) {
+  const attemptedTimeUnits = ['hour', 'date'];
+
+  for (const timeUnit of attemptedTimeUnits) {
+    try {
+      const rows = await requestDatalabTrend(keyword, timeUnit);
+      return { rows, timeUnit };
+    } catch (err) {
+      const isLastAttempt = timeUnit === attemptedTimeUnits[attemptedTimeUnits.length - 1];
+      if (isLastAttempt) {
+        throw err;
+      }
+
+      if (!isTimeUnitError(err)) {
+        throw err;
+      }
+
+      console.warn(
+        `   ⚠️ NAVER DataLab rejected timeUnit="${timeUnit}" for "${keyword}" — retrying with coarser granularity`
+      );
+    }
+  }
+
+  return { rows: [], timeUnit: null };
+}
+
 function computeTimeCorrection(timestamp) {
   const reference = Number.isFinite(timestamp) ? new Date(timestamp) : new Date();
   const hour = reference.getHours();
@@ -638,22 +681,96 @@ function computeTimeCorrection(timestamp) {
   return Number((circadian + weekendAdjustment).toFixed(6));
 }
 
-function computeSearchScoreComponents(hourlyData, now = Date.now()) {
-  if (!Array.isArray(hourlyData) || hourlyData.length === 0) {
-    return null;
+function determineTimeResolution(metadata = {}) {
+  const normalized = String(metadata?.timeUnit || '').trim().toLowerCase();
+  if (normalized === 'hour' || normalized === 'date' || normalized === 'day' || normalized === 'week' || normalized === 'month') {
+    return normalized === 'day' ? 'date' : normalized;
   }
+  return null;
+}
+
+function calculateMedian(values) {
+  if (!Array.isArray(values) || values.length === 0) return NaN;
+  const sorted = [...values].sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  if (sorted.length % 2 === 0) {
+    return (sorted[mid - 1] + sorted[mid]) / 2;
+  }
+  return sorted[mid];
+}
+
+function inferTimeUnitFromData(rows) {
+  if (!Array.isArray(rows) || rows.length < 2) return null;
+  const deltas = [];
+  for (let i = 1; i < rows.length; i += 1) {
+    const prev = rows[i - 1];
+    const curr = rows[i];
+    if (!Number.isFinite(prev.timestamp) || !Number.isFinite(curr.timestamp)) continue;
+    const delta = curr.timestamp - prev.timestamp;
+    if (Number.isFinite(delta) && delta > 0) {
+      deltas.push(delta);
+    }
+  }
+  const medianDelta = calculateMedian(deltas);
+  if (!Number.isFinite(medianDelta)) return null;
 
   const HOUR_MS = 60 * 60 * 1000;
   const DAY_MS = 24 * HOUR_MS;
   const WEEK_MS = 7 * DAY_MS;
 
-  let lastTimestamp = null;
-  let recentHourVolume = 0;
-  let past24hVolume = 0;
-  let weeklyVolume = 0;
-  let weeklyDataPoints = 0;
+  if (medianDelta <= 2 * HOUR_MS) return 'hour';
+  if (medianDelta <= 2 * DAY_MS) return 'date';
+  if (medianDelta <= 2 * WEEK_MS) return 'week';
+  return 'month';
+}
 
-  for (const entry of hourlyData) {
+function resolveBucketSize(rows, metadata = {}) {
+  const declaredUnit = determineTimeResolution(metadata);
+  const inferredUnit = inferTimeUnitFromData(rows);
+  const effectiveUnit = declaredUnit || inferredUnit || 'hour';
+
+  const HOUR_MS = 60 * 60 * 1000;
+  const DAY_MS = 24 * HOUR_MS;
+  const WEEK_MS = 7 * DAY_MS;
+
+  switch (effectiveUnit) {
+    case 'hour':
+      return { bucketMs: HOUR_MS, effectiveUnit };
+    case 'date':
+      return { bucketMs: DAY_MS, effectiveUnit };
+    case 'week':
+      return { bucketMs: WEEK_MS, effectiveUnit };
+    case 'month':
+      return { bucketMs: 30 * DAY_MS, effectiveUnit };
+    default:
+      return { bucketMs: HOUR_MS, effectiveUnit: 'hour' };
+  }
+}
+
+function computeSearchScoreComponents(dataRows, options = {}) {
+  const rows = Array.isArray(dataRows) ? dataRows : [];
+  if (rows.length === 0) {
+    return null;
+  }
+
+  const { bucketMs, effectiveUnit } = resolveBucketSize(rows, { timeUnit: options.timeUnit });
+  const now = Number.isFinite(options.now) ? options.now : Date.now();
+
+  const HOUR_MS = 60 * 60 * 1000;
+  const DAY_MS = 24 * HOUR_MS;
+  const WEEK_MS = 7 * DAY_MS;
+
+  const shortWindowMs = bucketMs;
+  const mediumWindowMs = Math.max(bucketMs * 3, effectiveUnit === 'hour' ? DAY_MS : bucketMs * 2);
+  const longWindowMs = Math.max(bucketMs * 7, WEEK_MS);
+
+  let lastTimestamp = null;
+  let shortWindowVolume = 0;
+  let mediumWindowVolume = 0;
+  let longWindowVolume = 0;
+  let longWindowDataPoints = 0;
+
+  for (const entry of rows) {
     const { timestamp, value } = entry;
     if (!Number.isFinite(timestamp)) continue;
     if (!Number.isFinite(value)) continue;
@@ -663,15 +780,15 @@ function computeSearchScoreComponents(hourlyData, now = Date.now()) {
     }
 
     const delta = now - timestamp;
-    if (delta <= HOUR_MS) {
-      recentHourVolume += value;
+    if (delta <= shortWindowMs) {
+      shortWindowVolume += value;
     }
-    if (delta <= DAY_MS) {
-      past24hVolume += value;
+    if (delta <= mediumWindowMs) {
+      mediumWindowVolume += value;
     }
-    if (delta <= WEEK_MS) {
-      weeklyVolume += value;
-      weeklyDataPoints += 1;
+    if (delta <= longWindowMs) {
+      longWindowVolume += value;
+      longWindowDataPoints += 1;
     }
   }
 
@@ -679,18 +796,21 @@ function computeSearchScoreComponents(hourlyData, now = Date.now()) {
     return null;
   }
 
-  const weeklyAverageVolume = weeklyDataPoints > 0 ? weeklyVolume / weeklyDataPoints : 0;
-  const safeRecentHour = recentHourVolume || 0;
-  const safePast24h = past24hVolume > 0 ? past24hVolume : 1;
+  const weeklyAverageVolume =
+    longWindowDataPoints > 0 ? longWindowVolume / longWindowDataPoints : 0;
+  const safeShortWindow = shortWindowVolume || 0;
+  const safeMediumWindow = mediumWindowVolume > 0 ? mediumWindowVolume : 1;
   const safeWeekAvg = weeklyAverageVolume > 0 ? weeklyAverageVolume : 1;
 
-  const dayScore = safeRecentHour / safePast24h;
-  const weekScore = safeRecentHour / safeWeekAvg;
+  const dayScore = safeShortWindow / safeMediumWindow;
+  const weekScore = safeShortWindow / safeWeekAvg;
   const correctionFactor = computeTimeCorrection(lastTimestamp);
-  const weeklySearchVolume = weeklyVolume;
-  const decayFactor = weeklySearchVolume > 0 ? Math.pow(2, -Math.log(Math.max(weeklySearchVolume, 1))) : 1;
+  const weeklySearchVolume = longWindowVolume;
+  const decayFactor =
+    weeklySearchVolume > 0 ? Math.pow(2, -Math.log(Math.max(weeklySearchVolume, 1))) : 1;
 
-  const hoursSinceLast = Math.max((now - lastTimestamp) / HOUR_MS, 1 / 60);
+  const minimumHours = Math.max(bucketMs / HOUR_MS, 1 / 60);
+  const hoursSinceLast = Math.max((now - lastTimestamp) / HOUR_MS, minimumHours);
   const timeWeight = 1 / hoursSinceLast;
 
   const rawScore = (dayScore * weekScore - correctionFactor) * decayFactor * timeWeight;
@@ -698,11 +818,21 @@ function computeSearchScoreComponents(hourlyData, now = Date.now()) {
   const adjustedScore = Math.max(0, clampedRawScore);
   const scaledScore = adjustedScore * 1000;
 
+  const recentWindowVolume = Number(safeShortWindow.toFixed(4));
+  const mediumWindowTotal = Number(mediumWindowVolume.toFixed(4));
+  const longWindowTotal = Number(longWindowVolume.toFixed(4));
+  const weekAverageRounded = Number(weeklyAverageVolume.toFixed(4));
+
   return {
-    recentHourVolume: Number(safeRecentHour.toFixed(4)),
-    past24hVolume: Number(past24hVolume.toFixed(4)),
-    weeklySearchVolume: Number(weeklySearchVolume.toFixed(4)),
-    weeklyAverageVolume: Number(weeklyAverageVolume.toFixed(4)),
+    timeUnit: effectiveUnit,
+    bucketSizeHours: Number((bucketMs / HOUR_MS).toFixed(2)),
+    shortWindowHours: Number((shortWindowMs / HOUR_MS).toFixed(2)),
+    mediumWindowHours: Number((mediumWindowMs / HOUR_MS).toFixed(2)),
+    longWindowHours: Number((longWindowMs / HOUR_MS).toFixed(2)),
+    recentWindowVolume,
+    comparisonWindowVolume: mediumWindowTotal,
+    weeklySearchVolume: longWindowTotal,
+    weeklyAverageVolume: weekAverageRounded,
     dayScore: Number(dayScore.toFixed(6)),
     weekScore: Number(weekScore.toFixed(6)),
     correctionFactor,
@@ -712,15 +842,23 @@ function computeSearchScoreComponents(hourlyData, now = Date.now()) {
     rawScore: Number(clampedRawScore.toFixed(6)),
     scaledScore: Number(scaledScore.toFixed(2)),
     totalScore: Math.round(scaledScore),
+    // Backwards compatible field names for existing downstream usage.
+    recentHourVolume: recentWindowVolume,
+    past24hVolume: mediumWindowTotal,
   };
 }
 
 async function evaluateKeyword(keyword) {
   let datalabRows = [];
   let datalabScores = null;
+  let datalabTimeUnit = null;
   try {
-    datalabRows = await fetchHourlySearchTrend(keyword);
-    datalabScores = computeSearchScoreComponents(datalabRows);
+    const datalabResult = await fetchSearchTrendData(keyword);
+    datalabRows = datalabResult.rows;
+    datalabTimeUnit = datalabResult.timeUnit || null;
+    datalabScores = computeSearchScoreComponents(datalabRows, {
+      timeUnit: datalabResult.timeUnit,
+    });
   } catch (err) {
     console.warn(`   ⚠️ Failed to fetch DataLab stats for "${keyword}":`, err.message || err);
   }
@@ -779,10 +917,15 @@ async function evaluateKeyword(keyword) {
   };
 
   if (datalabScores) {
+    const rowsToInclude = Math.min(
+      datalabRows.length,
+      datalabTimeUnit === 'hour' ? 24 : datalabRows.length
+    );
     evaluation.search_trends = {
       source: 'naver_datalab_search',
-      time_unit: 'hour',
-      rows: datalabRows.slice(-24),
+      time_unit: datalabTimeUnit || datalabScores.timeUnit || 'unknown',
+      bucket_size_hours: datalabScores.bucketSizeHours,
+      rows: datalabRows.slice(-rowsToInclude),
     };
   }
 
@@ -798,6 +941,11 @@ async function evaluateKeyword(keyword) {
 
   if (datalabScores) {
     result.search_scores = {
+      time_unit: datalabScores.timeUnit,
+      bucket_size_hours: datalabScores.bucketSizeHours,
+      short_window_hours: datalabScores.shortWindowHours,
+      medium_window_hours: datalabScores.mediumWindowHours,
+      long_window_hours: datalabScores.longWindowHours,
       recent_hour_volume: datalabScores.recentHourVolume,
       past_24h_volume: datalabScores.past24hVolume,
       weekly_search_volume: datalabScores.weeklySearchVolume,
