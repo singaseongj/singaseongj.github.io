@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-25T15:26:58+09:00 (KST)**
+- Generated: **2025-10-25T21:35:11+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -102,7 +102,7 @@
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **357** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- News (7d): **358** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
 - Returns: 5d **9.6%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -118,7 +118,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1460** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **1467** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **0.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -126,7 +126,7 @@
 
 **현대건설** (000720.KS)
 
-- News (7d): **160** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **163** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **18.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
