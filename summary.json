@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2025-10-26T10:28:05+09:00",
+  "generatedAtKST": "2025-10-26T15:27:57+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -293,6 +293,34 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
+      "name": "CJ",
+      "ticker": "CJ.TO",
+      "sector": null,
+      "metrics": {
+        "ret5": 2.35131501860951,
+        "ret20": -0.8042887730928847,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": null,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=CJ"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **unknown**",
+        "Returns: 5d **2.4%**, 20d **-0.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=CJ"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
       "name": "LG전자",
       "ticker": "066570.KS",
       "sector": "경기소비재",
@@ -303,7 +331,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 434,
+        "count": 450,
         "blogs": 10,
         "sentiment": -0.050000000000000024,
         "momentum": "very high"
@@ -312,7 +340,7 @@
         "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **434** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "News (7d): **450** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
         "Returns: 5d **4.5%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **경기소비재**",
@@ -351,35 +379,6 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "대한항공",
-      "ticker": "003490.KS",
-      "sector": "산업재",
-      "metrics": {
-        "ret5": 1.1286681715575622,
-        "ret20": null,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 474,
-        "blogs": 10,
-        "sentiment": -0.05263157894736843,
-        "momentum": "very high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5"
-      },
-      "bullets": [
-        "News (7d): **474** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
-        "Returns: 5d **1.1%**, 20d **n/a**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **산업재**",
-        "News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
       "name": "삼성전자",
       "ticker": "005930.KS",
       "sector": "정보기술",
@@ -390,7 +389,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 1469,
+        "count": 1505,
         "blogs": 10,
         "sentiment": -0.10000000000000005,
         "momentum": "very high"
@@ -399,7 +398,7 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **1469** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
+        "News (7d): **1505** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
         "Returns: 5d **0.9%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **정보기술**",
@@ -419,7 +418,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 94,
+        "count": 98,
         "blogs": 10,
         "sentiment": 0.05263157894736843,
         "momentum": "very high"
@@ -428,7 +427,7 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C"
       },
       "bullets": [
-        "News (7d): **94** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
+        "News (7d): **98** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
         "Returns: 5d **4.2%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **금융**",
@@ -462,6 +461,35 @@
         "Earnings window (±10d): **No**",
         "Sector: **산업재**",
         "News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "aggressive",
+      "name": "GS리테일",
+      "ticker": "007070.KS",
+      "sector": "필수소비재",
+      "metrics": {
+        "ret5": -1.56062424969988,
+        "ret20": 0.1832620647525962,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=GS%EB%A6%AC%ED%85%8C%EC%9D%BC"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-1.6%**, 20d **0.2%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **필수소비재**",
+        "News search: https://www.google.com/search?q=GS%EB%A6%AC%ED%85%8C%EC%9D%BC"
       ]
     },
     {
@@ -520,35 +548,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **헬스케어**",
         "News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "aggressive",
-      "name": "롯데에너지머티리얼즈",
-      "ticker": "020150.KS",
-      "sector": "소재",
-      "metrics": {
-        "ret5": 0,
-        "ret20": 3.8,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%97%90%EB%84%88%EC%A7%80%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.0%**, 20d **3.8%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **소재**",
-        "News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%97%90%EB%84%88%EC%A7%80%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88"
       ]
     },
     {
