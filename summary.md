@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-27T15:32:55+09:00 (KST)**
+- Generated: **2025-10-27T21:42:00+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -83,7 +83,7 @@
 **케이아이엔엑스** (093320.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-3.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%95%84%EC%9D%B4%EC%97%94%EC%97%91%EC%8A%A4
@@ -92,24 +92,25 @@
 
 ### SAFE (5)
 
-**LG** (LGND)
+**LG전자** (066570.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **1.7%**, 20d **21.8%**; volatility (20d): **unknown**
+- News (7d): **480** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **-2.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **402** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
-- Returns: 5d **10.4%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **439** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- Returns: 5d **10.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
 **대한항공** (003490.KS)
 
-- News (7d): **503** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **513** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-1.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -117,19 +118,19 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1606** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **3.7%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **1703** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- Returns: 5d **4.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
-**한화** (000880.KS)
+**현대건설** (000720.KS)
 
-- News (7d): **9376** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **20.7%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **265** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **22.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
-- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94
+- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EA%B1%B4%EC%84%A4
 
 ### AGGRESSIVE (5)
 
@@ -157,14 +158,6 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD
 
-**신세계** (004170.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.5%**, 20d **-3.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%EC%8B%A0%EC%84%B8%EA%B3%84
-
 **에스엘** (005850.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -172,6 +165,14 @@
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%97%98
+
+**한샘** (009240.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.8%**, 20d **-10.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
 
 ## NASDAQ 100
 
