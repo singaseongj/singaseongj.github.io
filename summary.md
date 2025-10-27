@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-27T21:42:00+09:00 (KST)**
+- Generated: **2025-10-28T03:30:18+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -102,7 +102,7 @@
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **439** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- News (7d): **440** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
 - Returns: 5d **10.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -110,7 +110,7 @@
 
 **대한항공** (003490.KS)
 
-- News (7d): **513** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **520** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-1.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -118,7 +118,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1703** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **1704** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **4.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -126,7 +126,7 @@
 
 **현대건설** (000720.KS)
 
-- News (7d): **265** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **267** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **22.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -299,13 +299,13 @@
 
 ### AGGRESSIVE (5)
 
-**Evergy** (EVRG)
+**Dollar Tree** (DLTR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **2.7%**; volatility (20d): **unknown**
+- Returns: 5d **-0.4%**, 20d **-1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Evergy
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Dollar%20Tree
 
 **Expeditors International** (EXPD)
 
@@ -314,14 +314,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Expeditors%20International
-
-**Halliburton** (HAL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **19.2%**, 20d **5.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Energy**
-- News search: https://www.google.com/search?q=Halliburton
 
 **Trimble Inc.** (TRMB)
 
@@ -334,8 +326,16 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.6%**, 20d **-4.0%**; volatility (20d): **unknown**
+- Returns: 5d **0.3%**, 20d **-3.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
+
+**Verisign** (VRSN)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-8.1%**, 20d **-13.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Verisign
 
