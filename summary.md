@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-30T21:41:06+09:00 (KST)**
+- Generated: **2025-10-31T03:30:17+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -238,6 +238,14 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=GlobalFoundries
 
+**Lululemon** (LULU)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.8%**, 20d **-0.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Lululemon
+
 **Old Dominion Freight Line** (ODFL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -245,13 +253,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Old%20Dominion%20Freight%20Line
-
-**Zscaler** (ZS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Zscaler
 
 ## S&P 500
 
@@ -310,7 +311,7 @@
 **Quest Diagnostics** (DGX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.5%**, 20d **-4.0%**; volatility (20d): **unknown**
+- Returns: 5d **-3.9%**, 20d **-2.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Quest%20Diagnostics
@@ -318,7 +319,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.8%**, 20d **-4.5%**; volatility (20d): **unknown**
+- Returns: 5d **-6.8%**, 20d **-3.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
@@ -326,7 +327,7 @@
 **Zebra Technologies** (ZBRA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-10.5%**, 20d **-7.2%**; volatility (20d): **unknown**
+- Returns: 5d **-16.0%**, 20d **-10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Zebra%20Technologies
@@ -334,7 +335,7 @@
 **Zimmer Biomet** (ZBH)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **0.8%**; volatility (20d): **unknown**
+- Returns: 5d **-4.1%**, 20d **-0.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Zimmer%20Biomet
