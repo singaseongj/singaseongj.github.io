@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-10-31T21:40:52+09:00 (KST)**
+- Generated: **2025-11-01T03:29:49+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -48,6 +48,14 @@
 
 ### AGGRESSIVE (5)
 
+**동운아나텍** (094170.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.2%**, 20d **-2.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EB%8F%99%EC%9A%B4%EC%95%84%EB%82%98%ED%85%8D
+
 **미래생명자원** (100790.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -80,21 +88,13 @@
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%BB%B4%ED%88%AC%EC%8A%A4
 
-**케이아이엔엑스** (093320.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.7%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%95%84%EC%9D%B4%EC%97%94%EC%97%91%EC%8A%A4
-
 ## KOSPI
 
 ### SAFE (5)
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **899** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- News (7d): **900** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
 - Returns: 5d **9.6%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -110,7 +110,7 @@
 
 **대한항공** (003490.KS)
 
-- News (7d): **245** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **252** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-1.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -118,7 +118,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **2933** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **2939** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **8.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -158,13 +158,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85%EC%A0%9C%EC%95%BD
 
-**신세계** (004170.KS)
+**빙그레** (005180.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.5%**, 20d **-3.3%**; volatility (20d): **unknown**
+- Returns: 5d **1.1%**, 20d **-12.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%EC%8B%A0%EC%84%B8%EA%B3%84
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=%EB%B9%99%EA%B7%B8%EB%A0%88
 
 **하이트진로** (000080.KS)
 
@@ -238,6 +238,14 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=GlobalFoundries
 
+**Lululemon** (LULU)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.8%**, 20d **-0.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Lululemon
+
 **Old Dominion Freight Line** (ODFL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -245,13 +253,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Old%20Dominion%20Freight%20Line
-
-**Zscaler** (ZS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Zscaler
 
 ## S&P 500
 
@@ -326,7 +327,7 @@
 **Quest Diagnostics** (DGX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **-2.9%**; volatility (20d): **unknown**
+- Returns: 5d **-3.3%**, 20d **-1.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Quest%20Diagnostics
@@ -334,7 +335,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.4%**, 20d **-4.0%**; volatility (20d): **unknown**
+- Returns: 5d **-5.5%**, 20d **-4.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
