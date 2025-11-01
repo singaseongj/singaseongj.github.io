@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-01T21:36:02+09:00 (KST)**
+- Generated: **2025-11-02T03:25:47+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -110,7 +110,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **2807** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **2812** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **8.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -118,7 +118,7 @@
 
 **현대모비스** (012330.KS)
 
-- News (7d): **97** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **98** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **2.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -126,7 +126,7 @@
 
 **현대차** (005380.KS)
 
-- News (7d): **1403** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- News (7d): **1404** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
 - Returns: 5d **14.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
