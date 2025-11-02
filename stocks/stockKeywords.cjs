@@ -213,7 +213,7 @@ function extractKeywordsFromLLMResponse(rawText) {
 }
 
 function buildKeywordPrompt(desiredCount) {
-  return `Output ONLY a valid JSON array of ${desiredCount} short trendy latest topic search keywords (each <6 words). No code fences, no numbering, no extra text.`;
+  return `Output ONLY a valid JSON array of ${desiredCount} Latest trending search keywords (each <6 words). No code fences, no numbering, no extra text.`;
 }
 
 
