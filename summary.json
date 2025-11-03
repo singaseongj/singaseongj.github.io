@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2025-11-03T21:41:43+09:00",
+  "generatedAtKST": "2025-11-04T03:29:04+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -390,7 +390,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 3034,
+        "count": 3039,
         "blogs": 10,
         "sentiment": -0.10000000000000005,
         "momentum": "very high"
@@ -399,7 +399,7 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **3034** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
+        "News (7d): **3039** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
         "Returns: 5d **8.9%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **정보기술**",
@@ -419,7 +419,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 217,
+        "count": 220,
         "blogs": 10,
         "sentiment": -0.05,
         "momentum": "very high"
@@ -428,7 +428,7 @@
         "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4"
       },
       "bullets": [
-        "News (7d): **217** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "News (7d): **220** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
         "Returns: 5d **-1.8%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **경기소비재**",
@@ -896,6 +896,35 @@
     {
       "market": "S&P 500",
       "bucket": "safe",
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "metrics": {
+        "ret5": 2.372547078556482,
+        "ret20": -0.4648365753812941,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Amazon"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Consumer Discretionary**",
+        "News search: https://www.google.com/search?q=Amazon"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "safe",
       "name": "Apple Inc.",
       "ticker": "AAPL",
       "sector": "Technology",
@@ -920,35 +949,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Apple%20Inc."
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "safe",
-      "name": "Meta Platforms",
-      "ticker": "META",
-      "sector": "Communication Services",
-      "metrics": {
-        "ret5": -0.045466997490091136,
-        "ret20": 7.5042046664005335,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Meta%20Platforms"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.0%**, 20d **7.5%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Communication Services**",
-        "News search: https://www.google.com/search?q=Meta%20Platforms"
       ]
     },
     {
@@ -1103,8 +1103,8 @@
       "ticker": "TYL",
       "sector": "Technology",
       "metrics": {
-        "ret5": -6.369675945271866,
-        "ret20": -5.267132311556349,
+        "ret5": -9.47137794545347,
+        "ret20": -7.130767785546108,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1119,7 +1119,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-6.4%**, 20d **-5.3%**; volatility (20d): **unknown**",
+        "Returns: 5d **-9.5%**, 20d **-7.1%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Tyler%20Technologies"
@@ -1132,8 +1132,8 @@
       "ticker": "WY",
       "sector": "Real Estate",
       "metrics": {
-        "ret5": -3.725405660889532,
-        "ret20": -8.43949350480235,
+        "ret5": -5.641130376408337,
+        "ret20": -9.194704539765011,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1148,7 +1148,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-3.7%**, 20d **-8.4%**; volatility (20d): **unknown**",
+        "Returns: 5d **-5.6%**, 20d **-9.2%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Real Estate**",
         "News search: https://www.google.com/search?q=Weyerhaeuser"
