@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-03T21:41:43+09:00 (KST)**
+- Generated: **2025-11-04T03:29:04+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -118,7 +118,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **3034** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **3039** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **8.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -126,7 +126,7 @@
 
 **현대모비스** (012330.KS)
 
-- News (7d): **217** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **220** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-1.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
@@ -266,6 +266,14 @@
 - Sector: **Communication Services**
 - News search: https://www.google.com/search?q=Alphabet%20Inc.
 
+**Amazon** (AMZN)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Amazon
+
 **Apple Inc.** (AAPL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -273,14 +281,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Apple%20Inc.
-
-**Meta Platforms** (META)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.0%**, 20d **7.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Meta%20Platforms
 
 **Microsoft** (MSFT)
 
@@ -327,7 +327,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.4%**, 20d **-5.3%**; volatility (20d): **unknown**
+- Returns: 5d **-9.5%**, 20d **-7.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
@@ -335,7 +335,7 @@
 **Weyerhaeuser** (WY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.7%**, 20d **-8.4%**; volatility (20d): **unknown**
+- Returns: 5d **-5.6%**, 20d **-9.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Weyerhaeuser
