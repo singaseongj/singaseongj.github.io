@@ -1,411 +1,939 @@
 {
-  "generatedAt": "2025-11-04T18:28:11.442Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-11-04",
   "window": "12_hours",
-  "total_phrases": 28,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "New Music",
-      "term_ko": "새로운 음악"
-    },
-    {
-      "term": "New Movies",
-      "term_ko": "새 영화"
-    },
-    {
-      "term": "Bts Army",
-      "term_ko": "방탄소년단 군대"
-    },
-    {
-      "term": "The Rings",
-      "term_ko": "반지"
-    },
-    {
-      "term": "Netflix Series",
-      "term_ko": "넷플릭스 시리즈"
-    },
-    {
-      "term": "New Iphone",
-      "term_ko": "새로운 iPhone"
-    },
-    {
-      "term": "The Matrix",
-      "term_ko": "매트릭스"
-    },
-    {
-      "term": "Gaming News",
-      "term_ko": "게임 뉴스"
-    },
-    {
-      "term": "Marvel Movies",
-      "term_ko": "마블 영화"
-    },
-    {
-      "term": "Spider-man 3",
-      "term_ko": "스파이더맨 3"
-    },
-    {
-      "term": "Ps5 Games",
-      "term_ko": "PS5 게임"
-    },
-    {
-      "term": "House of Gucci",
-      "term_ko": "하우스 오브 구찌"
-    },
-    {
-      "term": "The Mandalorian",
-      "term_ko": "만달로리안"
-    },
-    {
-      "term": "Taylor Lautner",
-      "term_ko": "테일러 라우트너"
-    },
-    {
-      "term": "Fortnite Dance",
-      "term_ko": "포트나이트 댄스"
-    },
-    {
-      "term": "Taylor Swift",
-      "term_ko": "테일러 스위프트"
-    },
-    {
-      "term": "Gta V",
-      "term_ko": "Gta V"
-    },
-    {
-      "term": "Meta Quest",
-      "term_ko": "메타 퀘스트"
-    },
-    {
-      "term": "Iphone 14",
-      "term_ko": "Iphone 14"
-    },
-    {
-      "term": "Disney Plus",
-      "term_ko": "디즈니 플러스"
-    },
-    {
-      "term": "Apple Watch",
-      "term_ko": "Apple Watch"
-    },
-    {
-      "term": "Squid Game",
-      "term_ko": "오징어 게임"
-    },
-    {
-      "term": "The Witcher",
-      "term_ko": "위쳐"
-    },
-    {
-      "term": "Kanye West",
-      "term_ko": "카니예 웨스트"
-    },
-    {
-      "term": "The Office",
-      "term_ko": "사무실"
-    },
-    {
-      "term": "Star Wars",
-      "term_ko": "스타워즈"
-    },
-    {
-      "term": "Amazon Prime",
-      "term_ko": "아마존 프라임"
-    },
-    {
-      "term": "Harry Styles",
-      "term_ko": "해리 스타일스"
-    }
-  ],
+  "total_phrases": 23,
   "discovered_keywords": [
     {
-      "term": "New Music",
-      "term_ko": "새로운 음악"
+      "term": "new TV shows",
+      "term_ko": "새로운 TV 프로그램",
+      "significance_score": 8651,
+      "mentions": 13594,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "new TV shows",
+        "total_results": 13594,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 294.91,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:36 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=new%20TV%20shows",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=new%20TV%20shows",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=new%20TV%20shows"
+      },
+      "top_headlines": [
+        {
+          "title": "How the Cop Show ‘Barney Miller’ Made Gay TV History, 50 Years Ago",
+          "summary": "of New York gay life and activism. That Marty and Darryl were taken seriously by the police — at least make-believe TV cops whom Marty calls his “friends” — was a testament to the efforts...",
+          "link": "https://www.nytimes.com/2025/11/04/arts/television/barney-miller-gay-couple.html?partner=naver",
+          "pubDate": "Wed, 05 Nov 2025 00:28:00 +0900"
+        },
+        {
+          "title": "‘2025 MAMA’, 고윤정·안효섭·임시완·조유리·주지훈 등 시상자 라인...",
+          "summary": "Lee Joon-hyuk, who has driven box office success with his new characters in projects like the TVING original... Jo Se-ho, who has showcased his unique style in K-variety shows with his smooth hosting skills and empathy...",
+          "link": "http://www.breaknews.com/1158807",
+          "pubDate": "Tue, 04 Nov 2025 11:26:00 +0900"
+        },
+        {
+          "title": "The Best Movies and TV Shows Coming to Netflix in November",
+          "summary": "Every month, Netflix adds movies and TV shows to its library. Here are our picks for some of November’s most promising new titles. (Note: Streaming services occasionally change schedules...",
+          "link": "https://www.nytimes.com/2025/11/03/arts/television/netflix-new-best-november.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 06:38:00 +0900"
+        }
+      ]
     },
     {
-      "term": "New Movies",
-      "term_ko": "새 영화"
+      "term": "new video games",
+      "term_ko": "새로운 비디오 게임",
+      "significance_score": 6786,
+      "mentions": 10436,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "new video games",
+        "total_results": 10436,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 324.58,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:26 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=new%20video%20games",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=new%20video%20games",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=new%20video%20games"
+      },
+      "top_headlines": [
+        {
+          "title": "At the Gun Range",
+          "summary": "Click the video below to see the data. Other Big Stories The consumer products giant that owns... That’s a new look for the Rock. GAMES Here is today’s Spelling Bee. Yesterday’s pangrams...",
+          "link": "https://www.nytimes.com/2025/11/04/briefing/at-the-gun-range.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 21:16:00 +0900"
+        },
+        {
+          "title": "Gaming, gambling and stock trading",
+          "summary": "The trading boom finally exploded with Covid lockdowns, unlocking a new culture I call 3G: the... (online video games ) and gambling (online and sports betting) to buy and sell stocks on a daily...",
+          "link": "https://www.koreatimes.co.kr/path/A2025110312140004521",
+          "pubDate": "Tue, 04 Nov 2025 16:30:00 +0900"
+        },
+        {
+          "title": "The Trump Administration Plans to Offer Only Partial Food Stamp Benefits",
+          "summary": "Prison: Ernastiaze Moore had been in a New York prison for 11 days when he was beaten so badly his eye socket had to be reconstructed. Despite video , the guards weren’t punished. Science: Got a...",
+          "link": "https://www.nytimes.com/2025/11/03/briefing/food-stamps-tylenol-maker-margaret-atwood.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 07:58:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Bts Army",
-      "term_ko": "방탄소년단 군대"
+      "term": "new car models",
+      "term_ko": "새로운 자동차 모델",
+      "significance_score": 5754,
+      "mentions": 8892,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "new car models",
+        "total_results": 8892,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 218.89,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:29 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=new%20car%20models",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=new%20car%20models",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=new%20car%20models"
+      },
+      "top_headlines": [
+        {
+          "title": "MEPSGEN partners with Sungkyunkwan University to develop glioblastoma tum...",
+          "summary": "MEPSGEN said the new MEPS-BBB-TME platform could be extended to other central nervous system (CNS) disease models in the future, supporting preclinical drug screening, BBB penetration studies...",
+          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=29497",
+          "pubDate": "Tue, 04 Nov 2025 15:28:00 +0900"
+        },
+        {
+          "title": "Foreign carmakers turn to direct online sales, bypassing dealerships",
+          "summary": "Tesla has set a successful example under its new sales paradigm by selling exclusively online... rival models from Hyundai Motor and Kia by a wide margin. One of the key advantages of direct...",
+          "link": "https://www.koreatimes.co.kr/path/A2025110414210005708",
+          "pubDate": "Tue, 04 Nov 2025 15:24:00 +0900"
+        },
+        {
+          "title": "엔카닷컴 \"11월 중고차 비수기..국산 디젤 SUV 시세 상승\"",
+          "summary": "17% on average, due to the off-season ahead of year-end promotions and the release of new models . However, domestic car prices rebounded, particularly for major models , with an overall average increase of 0.56...",
+          "link": "http://www.breaknews.com/1158793",
+          "pubDate": "Tue, 04 Nov 2025 09:52:00 +0900"
+        }
+      ]
     },
     {
-      "term": "The Rings",
-      "term_ko": "반지"
+      "term": "AI technology news",
+      "term_ko": "AI 기술 뉴스",
+      "significance_score": 5599,
+      "mentions": 7424,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "AI technology news",
+        "total_results": 7424,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 944.2,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:17 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=AI%20technology%20news",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=AI%20technology%20news",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=AI%20technology%20news"
+      },
+      "top_headlines": [
+        {
+          "title": "Lee puts forth record-high 2026 budget with focus on AI",
+          "summary": "Physical AI and use of the technology in robots and automobiles. Next year's defense spending... deadline for the parliamentary budget review is set for December 2nd. Yoon Jung-min, Arirang News .",
+          "link": "https://www.arirang.com/news/view?id=288896",
+          "pubDate": "Tue, 04 Nov 2025 20:00:00 +0900"
+        },
+        {
+          "title": "Lee puts forth record-high 2026 budget with focus on AI",
+          "summary": "Physical AI and use of the technology in robots and automobiles. Next year's defense spending... deadline for the parliamentary budget review is set for December 2nd. Yoon Jung-min, Arirang News .",
+          "link": "https://www.arirang.com/news/view?id=288880",
+          "pubDate": "Tue, 04 Nov 2025 17:00:00 +0900"
+        },
+        {
+          "title": "화성특례시, 지자체 최대 규모 AI 공모전 ‘화성왔성’ 본접수 시작",
+          "summary": "It is assumed that there may be errors in the English translation.> [Break News Gyeonggi Southern = Hwaseong... The contest, themed \"My Hwaseong, Completed with AI ,\" seeks content created using AI technology , utilizing...",
+          "link": "http://www.breaknews.com/1158853",
+          "pubDate": "Tue, 04 Nov 2025 16:22:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Netflix Series",
-      "term_ko": "넷플릭스 시리즈"
+      "term": "top 10 songs",
+      "term_ko": "상위 10곡",
+      "significance_score": 4638,
+      "mentions": 7184,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "top 10 songs",
+        "total_results": 7184,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 127.54,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:28 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=top%2010%20songs",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=top%2010%20songs",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=top%2010%20songs"
+      },
+      "top_headlines": [
+        {
+          "title": "아이들 미연 ‘My, Lover’, 국내외 차트 1위 석권..글로벌 영향력 입증",
+          "summary": "On Kugou Music, following \"Say My Name\"'s #1 chart position, all songs on the album successfully charted, successfully lining up the Top 10 . \"Say My Name\" also topped the Korean charts on China's TME (Tencent Music...",
+          "link": "http://www.breaknews.com/1158884",
+          "pubDate": "Tue, 04 Nov 2025 15:06:00 +0900"
+        },
+        {
+          "title": "‘나 혼자 산다’ 1위, 11월 예능 브랜드평판 정상..2위 ‘놀면 뭐하니...",
+          "summary": "The top 30 entertainment program brand reputation rankings for November 2025 were as follows: I Live Alone... Immortal Songs , I'm Solo, National Singing Contest, King of Mask Singer, Gayo Stage, 2 Days & 1 Night, Men...",
+          "link": "http://www.breaknews.com/1158512",
+          "pubDate": "Mon, 03 Nov 2025 14:46:00 +0900"
+        },
+        {
+          "title": "All Day Project returns",
+          "summary": "the top spot on Melon’s Top 100 Chart only four days after the debut and went on to sweep all... 10 on Melon’s main songs chart. Separately, the five bandmates grabbed the spotlight at the...",
+          "link": "https://www.koreaherald.com/article/10607476?ref=naver",
+          "pubDate": "Mon, 03 Nov 2025 12:15:00 +0900"
+        }
+      ]
     },
     {
-      "term": "New Iphone",
-      "term_ko": "새로운 iPhone"
+      "term": "latest home security",
+      "term_ko": "최신 홈 보안",
+      "significance_score": 4094,
+      "mentions": 6286,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "latest home security",
+        "total_results": 6286,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 122.21,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:44 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=latest%20home%20security",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=latest%20home%20security",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=latest%20home%20security"
+      },
+      "top_headlines": [
+        {
+          "title": "5 Things We’re Watching on Election Day in California",
+          "summary": "The latest polling shows that Proposition 50 is likely to pass. See what the gerrymandered... ballot security , and compliance with federal law,” the Justice Department said in a statement....",
+          "link": "https://www.nytimes.com/2025/11/04/us/california-election-guide.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 23:30:00 +0900"
+        },
+        {
+          "title": "Man Shot by ICE Was Not Trying to Run Over Agent, Lawyers Say",
+          "summary": "Tricia McLaughlin, a spokeswoman for the Department of Homeland Security , said on Monday that at... The altercation was the latest high-profile incident in which federal agents fired shots at...",
+          "link": "https://www.nytimes.com/2025/11/03/us/ontario-ice-agent-shooting.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 09:46:00 +0900"
+        },
+        {
+          "title": "Twenty Years On, Darfur Tips Into Chaos Again",
+          "summary": "The latest atrocities have brought strident condemnation, but it has largely been limited to policy circles — the United Nations Security Council, some members of the U.S. Congress and a...",
+          "link": "https://www.nytimes.com/2025/10/31/world/africa/darfur-sudan-atrocities.html?partner=naver",
+          "pubDate": "Sat, 01 Nov 2025 07:02:00 +0900"
+        }
+      ]
     },
     {
-      "term": "The Matrix",
-      "term_ko": "매트릭스"
+      "term": "latest tech news",
+      "term_ko": "최신 기술 뉴스",
+      "significance_score": 3710,
+      "mentions": 5634,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "latest tech news",
+        "total_results": 5634,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 129.62,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:38 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=latest%20tech%20news",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=latest%20tech%20news",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=latest%20tech%20news"
+      },
+      "top_headlines": [
+        {
+          "title": "The Trump Administration Plans to Offer Only Partial Food Stamp Benefits",
+          "summary": "top news Jamaica: Hurricane Melissa destroyed 90 percent of the homes in Black River. In this video, survivors from the coastal town recounted their experiences. Tech : OpenAI signed a $38 billion...",
+          "link": "https://www.nytimes.com/2025/11/03/briefing/food-stamps-tylenol-maker-margaret-atwood.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 07:58:00 +0900"
+        },
+        {
+          "title": "The Economic and Legal Case Against Trump’s Tariffs",
+          "summary": "news : Kimberly-Clark will buy Kenvue, the maker of Tylenol, for more than $40 billion. We’ve... More Fed fireworks Traders aren’t buying the latest warning by Jay Powell, the Fed chair, not...",
+          "link": "https://www.nytimes.com/2025/11/03/business/dealbook/trump-tariffs-supreme-court.html?partner=naver",
+          "pubDate": "Mon, 03 Nov 2025 22:28:00 +0900"
+        },
+        {
+          "title": "‘2025 부산국제수산엑스포’ 5일 개막…29개국 460개사 참가",
+          "summary": "[Here is an English news article] Busan International Seafood Expo Opens November 5 with 460 Firms from 29... the latest global seafood trends. Programs such as trade meetings with overseas buyers, matching sessions...",
+          "link": "http://www.breaknews.com/1158503",
+          "pubDate": "Mon, 03 Nov 2025 13:46:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Gaming News",
-      "term_ko": "게임 뉴스"
+      "term": "latest sports news",
+      "term_ko": "최신 스포츠 뉴스",
+      "significance_score": 3495,
+      "mentions": 5150,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "latest sports news",
+        "total_results": 5150,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 204.75,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:25 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=latest%20sports%20news",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=latest%20sports%20news",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=latest%20sports%20news"
+      },
+      "top_headlines": [
+        {
+          "title": "At the Gun Range",
+          "summary": "THE LATEST NEWS Dick Cheney Dick Cheney, widely regarded as the most powerful vice president in... SPORTS N.F.L.: The league’s trade deadline is this afternoon. What happens when players gets...",
+          "link": "https://www.nytimes.com/2025/11/04/briefing/at-the-gun-range.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 21:16:00 +0900"
+        },
+        {
+          "title": "The Trump Administration Plans to Offer Only Partial Food Stamp Benefits",
+          "summary": "Here’s the latest at the end of Monday. The Trump administration said today that it would send... Sports : Investments allowed India’s top female cricket players to play full time. They just...",
+          "link": "https://www.nytimes.com/2025/11/03/briefing/food-stamps-tylenol-maker-margaret-atwood.html?partner=naver",
+          "pubDate": "Tue, 04 Nov 2025 07:58:00 +0900"
+        },
+        {
+          "title": "Our Election Guide",
+          "summary": "Now, let’s get you caught up on the latest news . THE LATEST NEWS Trump Administration... SPORTS Personal victory: After facing seemingly insurmountable odds, India’s national women’s...",
+          "link": "https://www.nytimes.com/2025/11/03/briefing/our-election-guide.html?partner=naver",
+          "pubDate": "Mon, 03 Nov 2025 21:06:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Marvel Movies",
-      "term_ko": "마블 영화"
+      "term": "new music releases",
+      "term_ko": "새로운 음원 발매",
+      "significance_score": 2115,
+      "mentions": 3101,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "new music releases",
+        "total_results": 3101,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 54.88,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:42 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=new%20music%20releases",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=new%20music%20releases",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=new%20music%20releases"
+      },
+      "top_headlines": [
+        {
+          "title": "리센느, 미니 3집 ‘lip bomb’ 프로모션 스케줄러 공개..본격 컴백 카운...",
+          "summary": "It is assumed that there may be errors in the English translation.> Resene Releases Promotion Schedule for 3rd Mini Album \"Lip Bomb\"... Full-Fledged Comeback Countdown Release Date: 25th at 6 PM KST via Various Music ...",
+          "link": "http://www.breaknews.com/1158672",
+          "pubDate": "Mon, 03 Nov 2025 17:54:00 +0900"
+        },
+        {
+          "title": "Sunday Special: The Year in Gaming",
+          "summary": "This year has been a banner year for video games, with an abundance of surprise releases and... Amazon Music | YouTube | iHeartRadio Unlock full access to New York Times podcasts and explore...",
+          "link": "https://www.nytimes.com/2025/11/02/podcasts/the-daily/sunday-special-the-year-in-gaming.html?partner=naver",
+          "pubDate": "Sun, 02 Nov 2025 20:02:00 +0900"
+        },
+        {
+          "title": "Itzhak Perlman Wasn’t Sure About Doing ‘Schindler’s List’",
+          "summary": "two new box-set releases of his recordings. “I’m very old, so usually they like to choose... the music for this movie “Schindler’s List,” and I foolishly said that I’d think about if...",
+          "link": "https://www.nytimes.com/2025/11/01/arts/music/itzhak-perlman.html?partner=naver",
+          "pubDate": "Sat, 01 Nov 2025 18:02:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Spider-man 3",
-      "term_ko": "스파이더맨 3"
+      "term": "top travel destinations",
+      "term_ko": "인기 여행지",
+      "significance_score": 1217,
+      "mentions": 1560,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "top travel destinations",
+        "total_results": 1560,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 80.99,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:23 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=top%20travel%20destinations",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=top%20travel%20destinations",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=top%20travel%20destinations"
+      },
+      "top_headlines": [
+        {
+          "title": "[Graphic News] Palaces top Seoul’s autumn travel hot spots",
+          "summary": "autumn destinations , while outdoor spots like Seoul Forest, Cheonggyecheon and Namsan also... the top spots. Visitors often shared experiences such as wearing hanbok, taking nighttime tours...",
+          "link": "https://www.koreaherald.com/article/10607854?ref=naver",
+          "pubDate": "Tue, 04 Nov 2025 08:01:00 +0900"
+        },
+        {
+          "title": "[Graphic News] South Korea tops Asia’s list for food lovers",
+          "summary": "by travel platform Agoda. The survey of 4,000 travelers found that 64 percent of those planning... For Korean travelers, the top food destinations abroad are Japan, Vietnam and Thailand.",
+          "link": "https://www.koreaherald.com/article/10606919?ref=naver",
+          "pubDate": "Mon, 03 Nov 2025 08:01:00 +0900"
+        },
+        {
+          "title": "성주군, ‘트윙클 성주!’로 야간관광 도시 성공적 도약",
+          "summary": "as top keywords related to \"Seongju travel ,\" demonstrating a shift from the traditional focus on \"nature\" and \"suburban travel \" to \"family-oriented tourist destinations .\" Seongju County Governor Lee Byeong-hwan...",
+          "link": "http://www.breaknews.com/1157902",
+          "pubDate": "Thu, 30 Oct 2025 17:18:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Ps5 Games",
-      "term_ko": "PS5 게임"
+      "term": "latest fashion trends",
+      "term_ko": "최신 패션 트렌드",
+      "significance_score": 785,
+      "mentions": 975,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "latest fashion trends",
+        "total_results": 975,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:20 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=latest%20fashion%20trends",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=latest%20fashion%20trends",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=latest%20fashion%20trends"
+      },
+      "top_headlines": [
+        {
+          "title": "Surreal Creatures Gather at Michigan’s Cranbrook Art Museum",
+          "summary": "a fashion brand in the traditional sense,” says Bennani. “We don’t follow trends or... Fittingly, New Tangier’s latest collection is a tribute to classic cinema, with pieces like the wool...",
+          "link": "https://www.nytimes.com/2025/10/30/t-magazine/haas-brothers-cranbrook-art-museum.html?partner=naver",
+          "pubDate": "Thu, 30 Oct 2025 18:06:00 +0900"
+        },
+        {
+          "title": "2025 패패부산 & 2025 부산패션위크 오는 30일 벡스코서 개막",
+          "summary": "and fashion industries, with participation from 387 companies operating 388 booths. Under the theme ‘Wisdom of Sensitivity,’ the exhibition will showcase cutting-edge technologies and latest trends such as...",
+          "link": "http://www.breaknews.com/1157135",
+          "pubDate": "Tue, 28 Oct 2025 15:18:00 +0900"
+        },
+        {
+          "title": "The U.S. Is Deploying an Aircraft Carrier to Latin America",
+          "summary": "Here’s the latest at the end of Friday. In a dramatic escalation of American military might in... Wedding dresses: See what trends stood out from Bridal Fashion Week. WHAT TO DO THIS WEEKEND...",
+          "link": "https://www.nytimes.com/2025/10/24/briefing/us-aircraft-carrier-world-series.html?partner=naver",
+          "pubDate": "Sat, 25 Oct 2025 06:46:00 +0900"
+        }
+      ]
     },
     {
-      "term": "House of Gucci",
-      "term_ko": "하우스 오브 구찌"
+      "term": "best restaurants near me",
+      "term_ko": "내 주변 최고의 레스토랑",
+      "significance_score": 718,
+      "mentions": 863,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "best restaurants near me",
+        "total_results": 863,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:24 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=best%20restaurants%20near%20me",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=best%20restaurants%20near%20me",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=best%20restaurants%20near%20me"
+      },
+      "top_headlines": [
+        {
+          "title": "Marathon Medallion Will Remind Runners of the Course",
+          "summary": "Here are the best places to go to cheer, whether you want to follow one runner or watch them all go by. And here is our guide to the race. Partly sunny, high near 56. Windy, with gusts as high as...",
+          "link": "https://www.nytimes.com/2025/10/31/nyregion/marathon-medallion-road-runners.html?partner=naver",
+          "pubDate": "Fri, 31 Oct 2025 18:03:00 +0900"
+        },
+        {
+          "title": "Gyeongju ready to welcome the world as APEC week begins",
+          "summary": "(Choi Jae-hee/The Korea Herald) Banners promoting the APEC summit hang along roads near the... Some restaurants in the complex were busy preparing to welcome foreign national visitors, equipped...",
+          "link": "https://www.koreaherald.com/article/10602289?ref=naver",
+          "pubDate": "Mon, 27 Oct 2025 15:54:00 +0900"
+        },
+        {
+          "title": "The Brazilian City Where the Festivities Stretch From the Cliff Top to th...",
+          "summary": "This place comes with me everywhere.” The Experts The photographer and chef Angeluci Figueiredo runs four restaurants in Salvador: Preta Tira Chapéu, Peixe Voador and Preta Bistrô in the city...",
+          "link": "https://www.nytimes.com/2025/10/24/t-magazine/salvador-brazil-travel-guide.html?partner=naver",
+          "pubDate": "Sat, 25 Oct 2025 00:02:00 +0900"
+        }
+      ]
     },
     {
-      "term": "The Mandalorian",
-      "term_ko": "만달로리안"
+      "term": "stock market update",
+      "term_ko": "주식 시장 업데이트",
+      "significance_score": 594,
+      "mentions": 657,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "stock market update",
+        "total_results": 657,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:19 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=stock%20market%20update",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=stock%20market%20update",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=stock%20market%20update"
+      },
+      "top_headlines": [
+        {
+          "title": "Can Paul Atkins ‘Make I.P.O.s Great Again’?",
+          "summary": "Despite a soaring stock market , an increasing number of executives seem to share Chen’s... Atkins wants to update the rule governing the shareholder proposal process so companies can exclude...",
+          "link": "https://www.nytimes.com/2025/11/01/business/dealbook/paul-atkins-ipos.html?partner=naver",
+          "pubDate": "Sat, 01 Nov 2025 21:00:00 +0900"
+        },
+        {
+          "title": "Samsung Biologics climbs to global top 3 as US advances bioindustry limit...",
+          "summary": "24 Hong Kong stock -exchange filing put the sold units at roughly 3.5 percent of group revenue... Europe's market leader is leaning into the moment. In an Oct. 23 update , Lonza said CDMO...",
+          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=29468",
+          "pubDate": "Fri, 31 Oct 2025 17:58:00 +0900"
+        },
+        {
+          "title": "Gambling Is Killing Sports and Consuming America",
+          "summary": "We see gambling everywhere now — in our soaring stock market , the booms and busts of Bitcoin... an update of LeBron James’s injury status to bettors on an N.B.A. game. A Miami Heat guard...",
+          "link": "https://www.nytimes.com/2025/10/28/opinion/sports-gambling-major-leagues.html?partner=naver",
+          "pubDate": "Tue, 28 Oct 2025 18:04:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Taylor Lautner",
-      "term_ko": "테일러 라우트너"
+      "term": "new iPhone release date",
+      "term_ko": "새로운 iPhone 출시일",
+      "significance_score": 405,
+      "mentions": 341,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "new iPhone release date",
+        "total_results": 341,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:16 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=new%20iPhone%20release%20date",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=new%20iPhone%20release%20date",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=new%20iPhone%20release%20date"
+      },
+      "top_headlines": [
+        {
+          "title": "A Teen in Love With a Chatbot Killed Himself. Can the Chatbot Be Held Res...",
+          "summary": "Nearby was Sewell’s iPhone — the same device Megan had confiscated a few days earlier, after... But Google was delaying the release until it finished checking it for safety. On the Meena team...",
+          "link": "https://www.nytimes.com/2025/10/24/magazine/character-ai-chatbot-lawsuit-teen-suicide-free-speech.html?partner=naver",
+          "pubDate": "Fri, 24 Oct 2025 18:03:00 +0900"
+        },
+        {
+          "title": "Samsung Electronics Unveils Galaxy S25 FE Ahead of iPhone 17 Launch",
+          "summary": "The release date is set for Sept. 19, which is also the day Apple launches its new product, the iPhone 17. The Galaxy S25 FE features One UI 8, providing a tailored AI experience for users. It...",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=252353",
+          "pubDate": "Thu, 18 Sep 2025 13:56:00 +0900"
+        },
+        {
+          "title": "SKT, 아이폰 17 시리즈 사전예약 개시..프로모션 혜택 공개",
+          "summary": "and iPhone 17) until the 18th. The official release date is the 19th. To celebrate the launch of the new iPhones, SKT is offering three months of iCloud+ 200GB (monthly subscription fee: 4,400 won) free of charge to...",
+          "link": "http://www.breaknews.com/1147193",
+          "pubDate": "Fri, 12 Sep 2025 10:32:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Fortnite Dance",
-      "term_ko": "포트나이트 댄스"
+      "term": "best outdoor gear",
+      "term_ko": "최고의 아웃도어 장비",
+      "significance_score": 390,
+      "mentions": 316,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "best outdoor gear",
+        "total_results": 316,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:39 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=best%20outdoor%20gear",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=best%20outdoor%20gear",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=best%20outdoor%20gear"
+      },
+      "top_headlines": [
+        {
+          "title": "[브리프]아모레퍼시픽 LF F&F 아이오페 후아유 젝시미스 外",
+          "summary": "(wearable gear ) '헬리녹스 웨어(Helinox Wear)'를 공식 론칭한다. 헬리녹스는 알루미늄 소재를 활용한 등산... (Urban & Outdoor ), 혁신과 전통(Innovate & Traditional)이 공존하는 조화의 미학을 추구하며, 이러한 듀얼리티는 제품...",
+          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=342024",
+          "pubDate": "Wed, 22 Oct 2025 19:02:00 +0900"
+        },
+        {
+          "title": "Surfing, Not Shots: Bachelor and Bachelorette Parties Go Outdoors",
+          "summary": "his best man, Doug Worboys, asked him to choose 12 friends for a mystery weekend last October.... Shooting the Rapids For Jack Richardson, 31, of New York City, the idea of sharing an outdoor ...",
+          "link": "https://www.nytimes.com/2025/10/01/travel/bachelor-bachelorette-parties-getaways.html?partner=naver",
+          "pubDate": "Wed, 01 Oct 2025 18:04:00 +0900"
+        },
+        {
+          "title": "BLACKYAK I&C Advances as a Leader in Forest Safety with IT-Integrated Val...",
+          "summary": "The deal combines BLACKYAK's expertise in outdoor apparel and gear with LINSOL's cutting-edge IT... BLACKYAK I&C will leverage its outdoor experience to design products that best utilize LINSOL's...",
+          "link": "https://us.aving.net/news/articleView.html?idxno=52592",
+          "pubDate": "Tue, 30 Sep 2025 19:40:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Taylor Swift",
-      "term_ko": "테일러 스위프트"
+      "term": "best coffee makers",
+      "term_ko": "최고의 커피 메이커",
+      "significance_score": 358,
+      "mentions": 206,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "best coffee makers",
+        "total_results": 206,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 34.74,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:22 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=best%20coffee%20makers",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=best%20coffee%20makers",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=best%20coffee%20makers"
+      },
+      "top_headlines": [
+        {
+          "title": "Korean beverage companies enhance zero calorie line-up as demand soars",
+          "summary": "alcohol makers are tapping into the trend. Brewing company Hite Jinro Co. has been promoting Terra Light as a zero-sugar, lower-calorie beer option, noting it is now the company’s third- best ...",
+          "link": "https://www.mk.co.kr/article/11458291",
+          "pubDate": "Mon, 03 Nov 2025 14:16:00 +0900"
+        },
+        {
+          "title": "For This Writer, the Personal and Political Are Inseparable",
+          "summary": "of coffee pots to prevent drips on the tablecloth during, as Erpenbeck recalls, family reunions.... “espresso makers in their luggage.” Erpenbeck did not share in the general euphoria...",
+          "link": "https://www.nytimes.com/2025/10/05/books/review/jenny-erpenbeck-things-that-disappear.html?partner=naver",
+          "pubDate": "Sun, 05 Oct 2025 18:02:00 +0900"
+        },
+        {
+          "title": "Did Google Just Get Spared? Investors Think So.",
+          "summary": "They include: Stop paying makers of web browsers and smartphones for exclusive rights to provide... And just last month, Keurig Dr Pepper said that it would acquire the European coffee company...",
+          "link": "https://www.nytimes.com/2025/09/03/business/dealbook/google-search-antitrust-breakup.html?partner=naver",
+          "pubDate": "Wed, 03 Sep 2025 21:12:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Gta V",
-      "term_ko": "Gta V"
+      "term": "best home decor",
+      "term_ko": "최고의 홈 데코",
+      "significance_score": 316,
+      "mentions": 193,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "best home decor",
+        "total_results": 193,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:33 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=best%20home%20decor",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=best%20home%20decor",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=best%20home%20decor"
+      },
+      "top_headlines": [
+        {
+          "title": "Through their lenses: 4 live music photographers on life in pit",
+          "summary": "As far as sensors go, the Sony is one of the best for low light, so ideal for night and event... The decor is also awesome. You can tell the venue owners really poured a ton of themselves into...",
+          "link": "https://www.koreatimes.co.kr/path/A2025090300480001707",
+          "pubDate": "Wed, 17 Sep 2025 05:50:00 +0900"
+        },
+        {
+          "title": "Soak in African culture, try latest games and select your own coffee bean...",
+          "summary": "The cafe has more than one home : Another branch sits in Seoul’s theater district of Daehangno. Less crowded than its Euljiro sibling, it carries its own charm, with period decor with mother-of...",
+          "link": "https://www.koreaherald.com/article/10573672?ref=naver",
+          "pubDate": "Fri, 12 Sep 2025 09:01:00 +0900"
+        },
+        {
+          "title": "The Seongsu-dong aesthetic: Discovering Gen Z's Instagrammable playground",
+          "summary": "It is also home to one of the largest K-pop agencies, SM Entertainment. Right next to it sits... The spacious eatery has Nordic decor with ample natural light. Serving brunch and baked goods...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-08-29/culture/foodTravel/The-Seongsudong-aesthetic-Discovering-Gen-Zs-Instagrammable-playground/2386100",
+          "pubDate": "Fri, 29 Aug 2025 07:00:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Meta Quest",
-      "term_ko": "메타 퀘스트"
+      "term": "best fitness apps",
+      "term_ko": "최고의 피트니스 앱",
+      "significance_score": 296,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "best fitness apps",
+        "total_results": 160,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:37 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=best%20fitness%20apps",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=best%20fitness%20apps",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=best%20fitness%20apps"
+      },
+      "top_headlines": [
+        {
+          "title": "에스지랩, 지능형 골프클럽으로 골프 산업의 미래 선도",
+          "summary": "and fitness categories at CES 2025, the world's largest IT and consumer electronics show held in Las Vegas, USA. It received a T3 rating from Technology Credit Rating and was also selected as one of TIME Magazine's \"The Best ...",
+          "link": "https://www.venturesquare.net/1010571",
+          "pubDate": "Sat, 25 Oct 2025 10:03:00 +0900"
+        },
+        {
+          "title": "Life Got Hard. The Sims Got Easy.",
+          "summary": "The Sims rendered magic from the mundane, becoming an instant best seller. In total, four base... Fitness wearables compress physical activity into open or closed rings, and sleep into a score....",
+          "link": "https://www.nytimes.com/2025/10/08/magazine/the-sims-easy-mode.html?partner=naver",
+          "pubDate": "Wed, 08 Oct 2025 18:02:00 +0900"
+        },
+        {
+          "title": "When Did Everything Become So ‘Intentional’?",
+          "summary": "Already fatigued with and distrustful of dating apps , many people have gravitated toward... The average fitness influencer exhorts that getting in shape is not a matter of desire or even...",
+          "link": "https://www.nytimes.com/2025/09/29/style/when-did-everything-become-so-intentional.html?partner=naver",
+          "pubDate": "Mon, 29 Sep 2025 18:02:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Iphone 14",
-      "term_ko": "Iphone 14"
+      "term": "best smartphones 2024",
+      "term_ko": "2024년 최고의 스마트폰",
+      "significance_score": 291,
+      "mentions": 151,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "best smartphones 2024",
+        "total_results": 151,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:27 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=best%20smartphones%202024",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=best%20smartphones%202024",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=best%20smartphones%202024"
+      },
+      "top_headlines": [
+        {
+          "title": "창원시, ‘초정밀 BIS’로 경남 혁신 최우수상",
+          "summary": "This system won the grand prize at the \"2025 Innovation Best Practice Competition\" hosted by Gyeongsangnam-do Province, setting an example for smart transportation administration. This system, which began in 2024 and is...",
+          "link": "http://www.breaknews.com/1156283",
+          "pubDate": "Fri, 24 Oct 2025 12:50:00 +0900"
+        },
+        {
+          "title": "U.S. Charges N.B.A. Figures in Gambling Schemes That Tainted Games",
+          "summary": "and smartphones . Each indictment described schemes that the authorities said defrauded gamblers;... athletes and teams to set up fraudulent bets between December 2022 and March 2024 . The...",
+          "link": "https://www.nytimes.com/live/2025/10/23/nyregion/nba-illegal-gambling-arrests/nba-gambling-charges?partner=naver",
+          "pubDate": "Thu, 23 Oct 2025 22:54:00 +0900"
+        },
+        {
+          "title": "[Pangyo Tech] Kakao Mobility launches 'Robot Valet' service in collaborat...",
+          "summary": "through smartphones . Under current law, parking robots are classified as \"mechanical parking... driving and spatial efficiency earned it the \" Best Innovation Award\" at CES 2024 and FIX 2025.",
+          "link": "https://us.aving.net/news/articleView.html?idxno=52735",
+          "pubDate": "Fri, 17 Oct 2025 20:52:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Disney Plus",
-      "term_ko": "디즈니 플러스"
+      "term": "new kitchen gadgets",
+      "term_ko": "새로운 주방 가제트",
+      "significance_score": 280,
+      "mentions": 134,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "new kitchen gadgets",
+        "total_results": 134,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:39 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=new%20kitchen%20gadgets",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=new%20kitchen%20gadgets",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=new%20kitchen%20gadgets"
+      },
+      "top_headlines": [
+        {
+          "title": "It’s Time for That Often-Dreaded Task: Buying Back-to-School Supplies",
+          "summary": "With technology increasingly used in the classroom, requests for gadgets like wired headsets have become standard. Students use them for drills via laptop computers. One 2025 list for a New York...",
+          "link": "https://www.nytimes.com/2025/08/01/your-money/back-to-school-supplies-parents.html?partner=naver",
+          "pubDate": "Fri, 01 Aug 2025 22:02:00 +0900"
+        },
+        {
+          "title": "‘Quincaillerie’ Is French for ‘Hardware Store,’ but It Means So Much...",
+          "summary": "You’ll be astonished by the household and kitchen gadgets you had no idea existed (like a... Caitlin Shetterly’s new novel, “The Gulf of Lions,” set in France, will be published in 2026....",
+          "link": "https://www.nytimes.com/2025/07/17/travel/quincaillerie-french-hardware-store.html?partner=naver",
+          "pubDate": "Thu, 17 Jul 2025 18:02:00 +0900"
+        },
+        {
+          "title": "The Old Man and the iPhone",
+          "summary": "The very gizmos, gadgets , hacks and programs meant to simplify tasks also complicate them. You... across kitchen floors or nose them pathetically in their negligent caretakers’ directions....",
+          "link": "https://www.nytimes.com/2025/05/22/opinion/the-old-man-and-the-iphone.html?partner=naver",
+          "pubDate": "Fri, 23 May 2025 01:00:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Apple Watch",
-      "term_ko": "Apple Watch"
+      "term": "upcoming concerts near me",
+      "term_ko": "내 주변에서 예정된 콘서트",
+      "significance_score": 256,
+      "mentions": 94,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "upcoming concerts near me",
+        "total_results": 94,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:24 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=upcoming%20concerts%20near%20me",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=upcoming%20concerts%20near%20me",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=upcoming%20concerts%20near%20me"
+      },
+      "top_headlines": [
+        {
+          "title": "Natasha Rothwell and Samara Joy on Finding Their Voices",
+          "summary": "this upcoming album? S.J.: More mature themes like the loss of a mentor, being overwhelmed by life, having to press forward. What I hope to present in person [at my concerts ] is a full emotional...",
+          "link": "https://www.nytimes.com/2024/09/20/t-magazine/natasha-rothwell-samara-joy.html?partner=naver",
+          "pubDate": "Fri, 20 Sep 2024 18:02:00 +0900"
+        },
+        {
+          "title": "Weeekly talks future music, YouTube aspirations and why it's 'much more c...",
+          "summary": "their upcoming album. “We don’t need to talk when we order food. We will also sing the exact... Soeun: Our relationship with each other will stay the same, but I hope to hold fan concerts and...",
+          "link": "https://koreajoongangdaily.joins.com/news/2024-08-07/entertainment/kpop/Weeekly-talks-future-music-YouTube-aspirations-and-why-its-much-more-comfortable-with-its-fans/2106904",
+          "pubDate": "Wed, 07 Aug 2024 08:00:00 +0900"
+        },
+        {
+          "title": "Madonna Brings Massive Free Concert to Rio, Capping Celebration Tour",
+          "summary": "inspire me .” It was also something of a landmark moment for live concerts globally. At a time... Hangout, an upcoming music festival on Alabama’s Gulf Coast that is among the annual events...",
+          "link": "https://www.nytimes.com/2024/05/05/arts/music/madonna-free-celebration-concert-rio-brazil.html?partner=naver",
+          "pubDate": "Mon, 06 May 2024 00:32:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Squid Game",
-      "term_ko": "오징어 게임"
+      "term": "Bitcoin price today live",
+      "term_ko": "오늘 실시간 비트코인 가격",
+      "significance_score": 246,
+      "mentions": 76,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Bitcoin price today live",
+        "total_results": 76,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:15 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Bitcoin%20price%20today%20live",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Bitcoin%20price%20today%20live",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Bitcoin%20price%20today%20live"
+      },
+      "top_headlines": [
+        {
+          "title": "The Rules of Investing Are Being Loosened. Could It Lead to the Next 1929...",
+          "summary": "Today , Strategy’s stock no longer trades on software sales; it rises and falls almost entirely with the price of Bitcoin . For investors, the appeal is obvious: It is an easy way to buy into...",
+          "link": "https://www.nytimes.com/2025/10/13/magazine/investing-private-equity-crypto-crash-1929.html?partner=naver",
+          "pubDate": "Mon, 13 Oct 2025 18:02:00 +0900"
+        },
+        {
+          "title": "Slow Letter: October 13, 2025.",
+          "summary": "Bitcoin fell nearly 8% to $111,816 after Donald Trump (U.S. President) posted on Truth Social... on price appreciation.” What Matters Now. Peace Talks in Egypt Today , Without Key Players....",
+          "link": "https://slownews.kr/146849",
+          "pubDate": "Mon, 13 Oct 2025 08:02:00 +0900"
+        },
+        {
+          "title": "Crypto exchange CEO - Bitcoin Price Commentary",
+          "summary": "Bitcoin 's price action today reads like a market learning to live with itself: less froth, more calibration. That doesn't mean the road ahead is linear or without shocks, but it does suggest...",
+          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=145022",
+          "pubDate": "Wed, 27 Aug 2025 02:22:00 +0900"
+        }
+      ]
     },
     {
-      "term": "The Witcher",
-      "term_ko": "위쳐"
-    },
-    {
-      "term": "Kanye West",
-      "term_ko": "카니예 웨스트"
-    },
-    {
-      "term": "The Office",
-      "term_ko": "사무실"
-    },
-    {
-      "term": "Star Wars",
-      "term_ko": "스타워즈"
-    },
-    {
-      "term": "Amazon Prime",
-      "term_ko": "아마존 프라임"
-    },
-    {
-      "term": "Harry Styles",
-      "term_ko": "해리 스타일스"
+      "term": "best wireless earbuds",
+      "term_ko": "최고의 무선 이어버드",
+      "significance_score": 239,
+      "mentions": 65,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "best wireless earbuds",
+        "total_results": 65,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Wed, 05 Nov 2025 03:31:42 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=best%20wireless%20earbuds",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=best%20wireless%20earbuds",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=best%20wireless%20earbuds"
+      },
+      "top_headlines": [
+        {
+          "title": "노이즈 캔슬링 특허 부족했나...삼성전자, 오스람서 美특허 18건 매입",
+          "summary": "(The Best Noise Cancelling Earbuds of 2025)에 자브라와 애플 등의 5개 제품을 선정했다. 5개 제품은 △자브라... Truly Wireless ) △앤커 사운드코더 스페이스 A40 트룰리 와이어리스(Anker Soundcore Space A40 Truly Wireless ) △애플...",
+          "link": "http://www.thelec.kr/news/articleView.html?idxno=33472",
+          "pubDate": "Thu, 06 Mar 2025 15:38:00 +0900"
+        },
+        {
+          "title": "Economics Has a Name for the Costs of Loneliness",
+          "summary": "If I want to hear music, I can listen to the world’s best through wireless earbuds ; I don’t need to go down to the firemen’s muster and listen to my neighbors toot their horns. But so, so...",
+          "link": "https://www.nytimes.com/2025/01/17/opinion/social-capital-loneliness.html?partner=naver",
+          "pubDate": "Sat, 18 Jan 2025 05:00:00 +0900"
+        },
+        {
+          "title": "Samsung to open Galaxy Experience Space in 7 major world cities after Unp...",
+          "summary": "new wireless earbuds and new Galaxy smartwatches. Samsung said its Galaxy Experience Space will... to best suit each form factor, from the newest Galaxy Z series to the broader Galaxy ecosystem...",
+          "link": "https://www.koreatimes.co.kr/www/tech/2024/07/133_378037.html?na",
+          "pubDate": "Thu, 04 Jul 2024 16:30:00 +0900"
+        }
+      ]
     }
   ],
-  "translations": {
-    "New Music": {
-      "en": "New Music",
-      "ko": "새로운 음악",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "New Movies": {
-      "en": "New Movies",
-      "ko": "새 영화",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Bts Army": {
-      "en": "Bts Army",
-      "ko": "방탄소년단 군대",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "The Rings": {
-      "en": "The Rings",
-      "ko": "반지",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Netflix Series": {
-      "en": "Netflix Series",
-      "ko": "넷플릭스 시리즈",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "New Iphone": {
-      "en": "New Iphone",
-      "ko": "새로운 iPhone",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "The Matrix": {
-      "en": "The Matrix",
-      "ko": "매트릭스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Gaming News": {
-      "en": "Gaming News",
-      "ko": "게임 뉴스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Marvel Movies": {
-      "en": "Marvel Movies",
-      "ko": "마블 영화",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Spider-man 3": {
-      "en": "Spider-man 3",
-      "ko": "스파이더맨 3",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Ps5 Games": {
-      "en": "Ps5 Games",
-      "ko": "PS5 게임",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "House of Gucci": {
-      "en": "House of Gucci",
-      "ko": "하우스 오브 구찌",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "The Mandalorian": {
-      "en": "The Mandalorian",
-      "ko": "만달로리안",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Taylor Lautner": {
-      "en": "Taylor Lautner",
-      "ko": "테일러 라우트너",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Fortnite Dance": {
-      "en": "Fortnite Dance",
-      "ko": "포트나이트 댄스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Taylor Swift": {
-      "en": "Taylor Swift",
-      "ko": "테일러 스위프트",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Gta V": {
-      "en": "Gta V",
-      "ko": "Gta V",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Meta Quest": {
-      "en": "Meta Quest",
-      "ko": "메타 퀘스트",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Iphone 14": {
-      "en": "Iphone 14",
-      "ko": "Iphone 14",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Disney Plus": {
-      "en": "Disney Plus",
-      "ko": "디즈니 플러스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Apple Watch": {
-      "en": "Apple Watch",
-      "ko": "Apple Watch",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Squid Game": {
-      "en": "Squid Game",
-      "ko": "오징어 게임",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "The Witcher": {
-      "en": "The Witcher",
-      "ko": "위쳐",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Kanye West": {
-      "en": "Kanye West",
-      "ko": "카니예 웨스트",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "The Office": {
-      "en": "The Office",
-      "ko": "사무실",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Star Wars": {
-      "en": "Star Wars",
-      "ko": "스타워즈",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Amazon Prime": {
-      "en": "Amazon Prime",
-      "ko": "아마존 프라임",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    },
-    "Harry Styles": {
-      "en": "Harry Styles",
-      "ko": "해리 스타일스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-04T18:28:11.442Z"
-    }
+  "metadata": {
+    "collection_method": "naver_search_llm_seeded",
+    "sample_size": 30,
+    "generated_at": "2025-11-04T18:31:44.528Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "https://tight-cloud-0f5e.seongj1589.workers.dev/api/generate",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 6,
+    "llm_model": "tinyllama",
+    "llm_keywords_requested": 30
   }
 }
