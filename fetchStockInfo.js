@@ -75,6 +75,12 @@ const newsFeatures = JSON.parse(
 const naverTrends = JSON.parse(
   await readFile(new URL('./data/naver-trends.json', import.meta.url), 'utf8')
 );
+let dynamicTickerMap = {};
+try {
+  dynamicTickerMap = JSON.parse(
+    await readFile(new URL('./dynamicTickerMap.json', import.meta.url), 'utf8')
+  );
+} catch {}
 
 const OUT_FILE = path.resolve(process.cwd(), 'recommendations.json');
 const MAX_AGE_MS = 6 * 60 * 60 * 1000;
@@ -806,7 +812,7 @@ const HEADERS_JSON = {
 const normalizeForYahoo = s => s.replace(/\./g, '-'); // if you decide to use it later
 
 // Extended static ticker mapping including KOSDAQ
-const TICKER_MAP = {
+const BASE_TICKER_MAP = {
   // KOSPI
   '삼성전자': '005930.KS', 'SK하이닉스': '000660.KS', '삼성바이오로직스': '207940.KS',
   '현대차': '005380.KS', 'LG에너지솔루션': '373220.KS', '한화에어로스페이스': '012450.KS',
@@ -834,6 +840,13 @@ const TICKER_MAP = {
   'NRG Energy': 'NRG', 'JPMorgan Chase': 'JPM', 'UnitedHealth': 'UNH',
   'Moderna': 'MRNA', 'Zoom': 'ZM', 'MongoDB': 'MDB', 'Snowflake': 'SNOW'
 };
+
+const DYNAMIC_TICKER_MAP = Object.fromEntries(
+  Object.entries(dynamicTickerMap || {})
+    .filter(([name, sym]) => typeof name === 'string' && typeof sym === 'string' && name && sym)
+);
+
+const TICKER_MAP = { ...BASE_TICKER_MAP, ...DYNAMIC_TICKER_MAP };
 
 // Normalizer to match buildPoolsTrendy
 function normalizeKey(s) {
