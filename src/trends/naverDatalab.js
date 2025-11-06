@@ -5,6 +5,7 @@ import crypto from 'crypto';
 const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
 const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
 const NAVER_URL = 'https://openapi.naver.com/v1/datalab/search';
+const NAVER_UA = 'Mozilla/5.0 (compatible; SingaseongTrends/1.0; +https://singaseongj.github.io/)';
 const MAX_GROUPS_PER_REQ = 5; // DataLab hard limit
 const DEFAULT_TTL_MS = Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6 * 60 * 60 * 1000);
 
@@ -31,6 +32,16 @@ async function writeCache(key, data) {
   const tmp = `${p}.tmp`;
   await fs.promises.writeFile(tmp, JSON.stringify(data));
   await fs.promises.rename(tmp, p);
+}
+
+async function readCacheStale(key) {
+  const p = cachePath(key);
+  try {
+    const txt = await fs.promises.readFile(p, 'utf8');
+    return JSON.parse(txt);
+  } catch {
+    return null;
+  }
 }
 
 export function rollingMedian(arr, win) {
@@ -123,6 +134,7 @@ export async function fetchNaverTrends(options, _retry = 0) {
           'X-Naver-Client-Id': NAVER_ID,
           'X-Naver-Client-Secret': NAVER_SECRET,
           'Content-Type': 'application/json',
+          'User-Agent': NAVER_UA,
         };
 
         const start = Date.now();
@@ -157,10 +169,23 @@ export async function fetchNaverTrends(options, _retry = 0) {
             await new Promise(r => setTimeout(r, 3000));
             return fetchNaverTrends({ ...originalOptions, budgetLeftMs: Math.max(0, remainingBudget) }, _retry + 1);
           }
-          throw new Error(`Naver API error ${res.status}: ${await res.text()}`);
+          if (res.status === 403) {
+            const stale = await readCacheStale(cacheKey);
+            if (stale) {
+              console.warn('[naver] 403 Forbidden – using cached response');
+              json = stale;
+            } else {
+              const body = await res.text().catch(() => '');
+              throw new Error(`Naver API error 403: ${body.slice(0, 120)}`);
+            }
+          } else {
+            throw new Error(`Naver API error ${res.status}: ${await res.text()}`);
+          }
         }
 
-        json = await res.json();
+        if (!json) {
+          json = await res.json();
+        }
         await writeCache(cacheKey, json);
       }
     } else if (Number.isFinite(remainingBudget)) {
