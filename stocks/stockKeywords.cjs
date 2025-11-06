@@ -69,6 +69,48 @@ const fallbackMaps = {
   KO: new Map(),
 };
 
+const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+const KST_TIME_ZONE = 'Asia/Seoul';
+const kstDateFormatter = new Intl.DateTimeFormat('en-CA', {
+  timeZone: KST_TIME_ZONE,
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+
+function formatDateKST(date) {
+  return kstDateFormatter.format(date);
+}
+
+function last24hDatesKST() {
+  const now = new Date();
+  const endDate = formatDateKST(now);
+  const startDate = formatDateKST(new Date(now.getTime() - ONE_DAY_MS));
+  return { startDate, endDate };
+}
+
+function chunkArray(items, chunkSize) {
+  const size = Math.max(1, Number(chunkSize) || 1);
+  const chunks = [];
+  for (let i = 0; i < items.length; i += size) {
+    chunks.push(items.slice(i, i + size));
+  }
+  return chunks;
+}
+
+function limitWords(phrase, maxWords = 2) {
+  if (!phrase) return '';
+  const parts = String(phrase)
+    .split(/\s+/)
+    .filter(Boolean);
+  if (!parts.length) return '';
+  const cap = Math.max(1, Number.isFinite(maxWords) ? Math.floor(maxWords) : 2);
+  if (parts.length <= cap) {
+    return parts.join(' ');
+  }
+  return parts.slice(0, cap).join(' ');
+}
+
 function normalizeForComparison(value) {
   if (!value) return '';
   let normalized = String(value).trim().replace(/\s+/g, '');
@@ -294,16 +336,37 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}
 }
 
 async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
-  const prompt = buildKeywordPrompt(desiredCount);
+  const limit = Number.isFinite(desiredCount) && desiredCount > 0 ? Math.min(Math.floor(desiredCount), SAMPLE_SIZE * 2) : SAMPLE_SIZE;
 
-  const cerebrasKeywords = await fetchCerebrasKeywords({ desiredCount, prompt });
+  const trendingSeeds = await fetchTrendingKeywordsFromNaver({ limit });
+  if (trendingSeeds.length) {
+    try {
+      const trimmed = await trimKeywordsWithCerebras(trendingSeeds, { maxWords: 2, limit });
+      if (trimmed.length) {
+        console.log(`📈 Using ${trimmed.length} trending keywords from NAVER DataLab.`);
+        return { keywords: trimmed, method: 'naver_search_trending_seeded' };
+      }
+    } catch (err) {
+      console.warn(`⚠️  Failed to trim NAVER trending keywords with Cerebras: ${err.message}`);
+    }
+
+    const locallyTrimmed = sanitizeKeywordList(trendingSeeds.map((kw) => limitWords(kw, 2))).slice(0, limit);
+    if (locallyTrimmed.length) {
+      console.log(`📈 Using ${locallyTrimmed.length} NAVER trending keywords with local trimming.`);
+      return { keywords: locallyTrimmed, method: 'naver_search_trending_seeded' };
+    }
+  }
+
+  const prompt = buildKeywordPrompt(limit);
+
+  const cerebrasKeywords = await fetchCerebrasKeywords({ desiredCount: limit, prompt });
   if (cerebrasKeywords.length) {
-    return cerebrasKeywords;
+    return { keywords: cerebrasKeywords, method: 'naver_search_llm_seeded' };
   }
 
   if (!LLM_WORKER_URL) {
     console.warn('⚠️  LLM worker URL is not configured. Skipping fallback keyword generation.');
-    return [];
+    return { keywords: [], method: 'naver_search_llm_seeded' };
   }
 
   console.log('🤖 Cerebras unavailable — falling back to tinyllama worker…');
@@ -340,21 +403,21 @@ async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
     }
 
     const extracted = extractKeywordsFromLLMResponse(llmText);
-    const sanitized = sanitizeKeywordList(extracted).slice(0, desiredCount);
+    const sanitized = sanitizeKeywordList(extracted).slice(0, limit);
 
     if (!sanitized.length) {
       throw new Error('No keywords could be parsed from LLM response.');
     }
 
     console.log(`🤖 tinyllama provided ${sanitized.length} keyword candidates.`);
-    return sanitized;
+    return { keywords: sanitized, method: 'naver_search_llm_seeded' };
   } catch (err) {
     if (err.name === 'AbortError') {
       console.warn(`⚠️  LLM request timed out after ${LLM_REQUEST_TIMEOUT_MS}ms.`);
     } else {
       console.warn(`⚠️  Failed to retrieve keywords from LLM worker: ${err.message}`);
     }
-    return [];
+    return { keywords: [], method: 'naver_search_llm_seeded' };
   } finally {
     clearTimeout(timeoutId);
   }
@@ -482,6 +545,7 @@ function ensureLanguagePlacement(result, originalKeyword) {
 
 const NAVER_NEWS_ENDPOINT = 'https://openapi.naver.com/v1/search/news.json';
 const NAVER_DATALAB_ENDPOINT = 'https://openapi.naver.com/v1/datalab/search';
+const NAVER_TREND_MAX_KEYWORDS_PER_REQUEST = 5;
 const REQUEST_DELAY_MS = 180;
 const WINDOW_LABEL = '12_hours';
 
@@ -1039,13 +1103,183 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function computeTrendScoreFromSeries(series) {
+  const values = Array.isArray(series)
+    ? series
+        .map((entry) => {
+          const raw = entry?.ratio ?? entry?.value ?? entry?.searches;
+          const numeric = Number(raw);
+          return Number.isFinite(numeric) ? numeric : null;
+        })
+        .filter((value) => value !== null)
+    : [];
+
+  if (!values.length) {
+    return null;
+  }
+
+  const last = values[values.length - 1];
+  const prev = values.length > 1 ? values[values.length - 2] : last;
+  const avg = values.reduce((sum, value) => sum + value, 0) / values.length;
+  const peak = values.reduce((max, value) => (value > max ? value : max), values[0]);
+
+  const momentum = last - prev;
+  const deviation = last - avg;
+  const normalizedPeak = peak > 0 ? last / peak : 0;
+  const score = last * 0.6 + momentum * 0.3 + deviation * 0.1 + normalizedPeak * 10;
+
+  return {
+    score,
+    last,
+    momentum,
+    deviation,
+    normalizedPeak,
+  };
+}
+
+async function fetchTrendingKeywordsFromNaver({ limit = SAMPLE_SIZE, sampleSize } = {}) {
+  const effectiveLimit = Number.isFinite(limit) && limit > 0 ? Math.min(Math.floor(limit), SAMPLE_SIZE * 2) : SAMPLE_SIZE;
+  const effectiveSampleSize = Number.isFinite(sampleSize) && sampleSize > 0
+    ? Math.max(Math.floor(sampleSize), effectiveLimit)
+    : Math.max(effectiveLimit * 3, 30);
+
+  let fallbackKeywordPool;
+  try {
+    fallbackKeywordPool = loadFinanceKeywords();
+  } catch (err) {
+    console.warn(`⚠️  Unable to load finance keywords for NAVER trend seeding: ${err.message}`);
+    return [];
+  }
+
+  if (!Array.isArray(fallbackKeywordPool) || !fallbackKeywordPool.length) {
+    console.warn('⚠️  Finance keyword list is empty; skipping NAVER trend seeding.');
+    return [];
+  }
+
+  const samplePool = shuffleSample(fallbackKeywordPool, effectiveSampleSize);
+  if (!samplePool.length) {
+    return [];
+  }
+
+  console.log(`📈 Probing NAVER DataLab for trending keywords using ${samplePool.length} samples…`);
+  const { startDate, endDate } = last24hDatesKST();
+  const batches = chunkArray(samplePool, NAVER_TREND_MAX_KEYWORDS_PER_REQUEST);
+  const candidateScores = [];
+
+  for (const batch of batches) {
+    const payload = {
+      startDate,
+      endDate,
+      timeUnit: 'date',
+      keywordGroups: batch.map((keyword) => ({ groupName: keyword, keywords: [keyword] })),
+    };
+
+    try {
+      const res = await fetch(NAVER_DATALAB_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Naver-Client-Id': NAVER_CLIENT_ID,
+          'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        console.warn(
+          `⚠️  NAVER DataLab trend seed request failed (${res.status}): ${text.slice(0, 120)}`,
+        );
+      } else {
+        const json = await res.json();
+        const results = Array.isArray(json?.results) ? json.results : [];
+        for (const item of results) {
+          const keyword = item?.title || batch[0];
+          const scoreInfo = computeTrendScoreFromSeries(item?.data);
+          if (!scoreInfo) continue;
+          candidateScores.push({
+            keyword,
+            score: scoreInfo.score,
+            lastValue: scoreInfo.last,
+          });
+        }
+      }
+    } catch (err) {
+      console.warn(`⚠️  Failed to fetch NAVER trend seeds for [${batch.join(', ')}]: ${err.message}`);
+    }
+
+    if (batches.length > 1) {
+      await delay(REQUEST_DELAY_MS);
+    }
+  }
+
+  if (!candidateScores.length) {
+    console.warn('⚠️  No trending keywords retrieved from NAVER DataLab.');
+    return [];
+  }
+
+  candidateScores.sort((a, b) => {
+    if (!Number.isFinite(b.score) && !Number.isFinite(a.score)) return 0;
+    if (!Number.isFinite(b.score)) return -1;
+    if (!Number.isFinite(a.score)) return 1;
+    if (b.score === a.score) {
+      return (b.lastValue || 0) - (a.lastValue || 0);
+    }
+    return b.score - a.score;
+  });
+
+  const orderedKeywords = candidateScores.map((entry) => entry.keyword);
+  const sanitized = sanitizeKeywordList(orderedKeywords).slice(0, effectiveLimit);
+
+  if (!sanitized.length) {
+    return [];
+  }
+
+  console.log(`📈 NAVER DataLab provided ${sanitized.length} trending keyword candidates.`);
+  return sanitized;
+}
+
+async function trimKeywordsWithCerebras(keywords, { maxWords = 2, limit } = {}) {
+  const baseList = sanitizeKeywordList(Array.isArray(keywords) ? keywords : []);
+  if (!baseList.length) {
+    return [];
+  }
+
+  const effectiveLimit = Number.isFinite(limit) && limit > 0 ? Math.min(Math.floor(limit), baseList.length) : baseList.length;
+  const truncated = baseList.map((kw) => limitWords(kw, maxWords));
+
+  if (!CEREBRAS_API_KEY) {
+    console.warn('⚠️  CEREBRAS_API_KEY is not configured. Returning locally trimmed keywords.');
+    return truncated.slice(0, effectiveLimit);
+  }
+
+  console.log(`✂️  Trimming ${effectiveLimit} NAVER trending keywords with Cerebras (≤${maxWords} words)…`);
+
+  const prompt = [
+    `You will receive a JSON array of trending finance-related keywords.`,
+    `Shorten each keyword to at most ${maxWords} words while preserving its core meaning and language.`,
+    `Return ONLY a JSON array of ${effectiveLimit} trimmed keywords in the same order. No explanations, numbering, or code fences.`,
+    `Keywords: ${JSON.stringify(truncated.slice(0, effectiveLimit))}`,
+  ].join(' ');
+
+  const trimmed = await fetchCerebrasKeywords({ desiredCount: effectiveLimit, prompt });
+  const cleaned = sanitizeKeywordList((trimmed.length ? trimmed : truncated).map((kw) => limitWords(kw, maxWords)));
+
+  if (!cleaned.length) {
+    return truncated.slice(0, effectiveLimit);
+  }
+
+  return cleaned.slice(0, effectiveLimit);
+}
+
 async function buildTags() {
   console.log('🚀 Generating data/tags.json from finance_keywords.json');
   console.log(`🕐 Execution time: ${new Date().toISOString()}`);
   console.log(`🎲 Random seed check: ${Math.random()}`);
 
-  let sampled = sanitizeKeywordList(await fetchLLMKeywords({ desiredCount: SAMPLE_SIZE }));
-  let keywordCollectionMethod = 'naver_search_llm_seeded';
+  const llmSeedResult = await fetchLLMKeywords({ desiredCount: SAMPLE_SIZE });
+  let sampled = sanitizeKeywordList(llmSeedResult?.keywords || []);
+  let keywordCollectionMethod = llmSeedResult?.method || 'naver_search_llm_seeded';
 
   if (!sampled.length) {
     const fallbackKeywordPool = loadFinanceKeywords();
@@ -1072,9 +1306,14 @@ async function buildTags() {
     throw new Error('Unable to obtain any keywords for evaluation.');
   }
 
-  console.log(
-    `🎯 Selected ${sampled.length} finance keywords for evaluation (${keywordCollectionMethod === 'naver_search_llm_seeded' ? 'tinyllama worker' : 'finance_keywords.json fallback'}).`,
-  );
+  const methodDescriptionMap = {
+    naver_search_trending_seeded: 'NAVER DataLab trending feed',
+    naver_search_llm_seeded: 'tinyllama worker',
+    naver_search_random_sample: 'finance_keywords.json fallback',
+  };
+
+  const methodDescription = methodDescriptionMap[keywordCollectionMethod] || keywordCollectionMethod;
+  console.log(`🎯 Selected ${sampled.length} finance keywords for evaluation (${methodDescription}).`);
 
   const evaluated = [];
   const translationStats = {
@@ -1167,14 +1406,21 @@ async function buildTags() {
 
   const now = new Date();
   const fallbackKeywordSource = path.relative(process.cwd(), FINANCE_KEYWORDS_PATH);
+  const { startDate: trendStart, endDate: trendEnd } = last24hDatesKST();
+  const keywordSource =
+    keywordCollectionMethod === 'naver_search_llm_seeded'
+      ? LLM_WORKER_URL
+      : keywordCollectionMethod === 'naver_search_trending_seeded'
+        ? `NAVER DataLab ${trendStart}→${trendEnd}`
+        : fallbackKeywordSource;
+
   const metadata = {
     collection_method: keywordCollectionMethod,
     sample_size: SAMPLE_SIZE,
     generated_at: now.toISOString(),
     keyword_limit: SAMPLE_SIZE,
     lookback_hours: 12,
-    keyword_source:
-      keywordCollectionMethod === 'naver_search_llm_seeded' ? LLM_WORKER_URL : fallbackKeywordSource,
+    keyword_source: keywordSource,
     fallback_keyword_source: fallbackKeywordSource,
     similar_keywords_removed: similarDiscarded.length,
   };
