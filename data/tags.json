@@ -1,201 +1,980 @@
 {
-  "generatedAt": "2025-11-06T06:29:49.355Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-11-06",
   "window": "12_hours",
-  "total_phrases": 13,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "New Video Games",
-      "term_ko": "새로운 비디오 게임"
-    },
-    {
-      "term": "New Music Releases",
-      "term_ko": "새로운 음원 발매"
-    },
-    {
-      "term": "Taylor Swift Music",
-      "term_ko": "테일러 스위프트 음악"
-    },
-    {
-      "term": "Best Netflix Shows",
-      "term_ko": "최고의 넷플릭스 프로그램"
-    },
-    {
-      "term": "Best Streaming Services",
-      "term_ko": "최고의 스트리밍 서비스"
-    },
-    {
-      "term": "New Iphone Features",
-      "term_ko": "새로운 iPhone 기능"
-    },
-    {
-      "term": "New Marvel Movie",
-      "term_ko": "새로운 마블 영화"
-    },
-    {
-      "term": "Ariana Grande Music",
-      "term_ko": "아리아나 그란데 음악"
-    },
-    {
-      "term": "Iphone 15 Price",
-      "term_ko": "iPhone 15 가격"
-    },
-    {
-      "term": "Best Android Phones",
-      "term_ko": "최고의 안드로이드 휴대폰"
-    },
-    {
-      "term": "Best Smartphones 2023",
-      "term_ko": "2023년 최고의 스마트폰"
-    },
-    {
-      "term": "Best Gaming Laptops",
-      "term_ko": "최고의 게이밍 노트북"
-    },
-    {
-      "term": "Iphone 15 Rumors",
-      "term_ko": "아이폰 15 루머"
-    }
-  ],
+  "total_phrases": 9,
   "discovered_keywords": [
     {
-      "term": "New Video Games",
-      "term_ko": "새로운 비디오 게임"
+      "term": "game owner",
+      "term_ko": "게임주",
+      "significance_score": 0,
+      "mentions": 347,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "게임주",
+        "total_results": 32045,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 420.94,
+        "last_build_date": "Thu, 06 Nov 2025 15:32:58 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 49.87834
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 67.6399
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 61.55717
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 40.14598
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 46.71532
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 56.44768
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 41.84914
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B2%8C%EC%9E%84%EC%A3%BC",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B2%8C%EC%9E%84%EC%A3%BC",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B2%8C%EC%9E%84%EC%A3%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "[올댓차이나] 홍콩 증시, 中 기술주 매수에 반등 출발…H주 1.11%↑",
+          "summary": "반면 완구주 파오파오마터는 급락하고 온라인 교육주 신둥팡, 게임주 왕이, 스마트폰주 샤오미, 광학부품주 순위광학, 중국생물제약, 알리건강, 징둥건강, 마카오 카지노주 인허오락, 의류주 선저우 국제, 스포츠...",
+          "link": "https://www.newsis.com/view/NISX20251106_0003392656",
+          "pubDate": "Thu, 06 Nov 2025 11:34:00 +0900"
+        },
+        {
+          "title": "삼성전자 두고 엇갈린 시선…외국인은 팔고, 기관은 샀다",
+          "summary": "썸에이지 주가 차트 / 키움증권 화면 캡처 외국인은 게임주 인 썸에이지를 가장 많이 팔고 있으며, 대한전선, 대원전선 등 최근 상승세를 보인 전선주에 대해서도 매도 물량을 쏟아내고 있다. 증권가에서는 기관이 반도체...",
+          "link": "http://www.newstnt.com/news/articleView.html?idxno=551260",
+          "pubDate": "Thu, 06 Nov 2025 10:30:00 +0900"
+        },
+        {
+          "title": "[업앤다운] 게임주 하락…티쓰리↑·크래프톤↓",
+          "summary": "5일 코스피(-2.85%)와 코스닥(-2.66%)이 모두 하락한 가운데 게임주 (-3.36%)도 하락했다. 상승주는 5개였고 하락주는 26개였다. 오늘 게임주 중에서는 티쓰리(204610)의 상승률이 가장 높았다. 티쓰리는 전일대비...",
+          "link": "https://www.nspna.com/news/?mode=view&newsid=785524",
+          "pubDate": "Wed, 05 Nov 2025 17:50:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 98.2968,
+        "weekly_search_volume": 346.7153,
+        "weekly_average_volume": 57.7859,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.017355,
+        "time_weight": 0.025285,
+        "raw_score": -0.000051,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "New Music Releases",
-      "term_ko": "새로운 음원 발매"
+      "term": "emerging",
+      "term_ko": "이머징",
+      "significance_score": 0,
+      "mentions": 458,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "emerging",
+        "total_results": 67880,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1375.05,
+        "last_build_date": "Thu, 06 Nov 2025 15:32:59 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 81
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 86
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 81
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 55
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 43
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 83
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 96
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=emerging",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=emerging",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=emerging"
+      },
+      "top_headlines": [
+        {
+          "title": "[종교연합 운동]신천지교회 만국초청 계시록 특강...“종교 화합’ 메카...",
+          "summary": "Religious leaders unanimously agreed, saying, \"Revelation is the power to bring about peace.\" - Reporter Park Jeong-dae The \"Revelation Special Lecture for All Nations\" is rapidly emerging as a mecca for unity and...",
+          "link": "http://www.breaknews.com/1159533",
+          "pubDate": "Thu, 06 Nov 2025 15:20:00 +0900"
+        },
+        {
+          "title": "Why are beauty retailers rushing to festivals?",
+          "summary": "(CJ Olive Young) As Korea’s beauty market picks up steam, festivals are emerging as a major battle ground for brands, especially among digital-first players expanding into beauty. Once known...",
+          "link": "https://www.koreaherald.com/article/10610518?ref=naver",
+          "pubDate": "Thu, 06 Nov 2025 15:04:00 +0900"
+        },
+        {
+          "title": "AMCHAM, FTC chair discuss Korea’s fair trade policy direction",
+          "summary": "to emerging technologies such as artificial intelligence, and the importance of strengthening communication with multinational companies. Kim expressed his appreciation to Ju for his leadership...",
+          "link": "https://www.koreatimes.co.kr/path/A2025110614270002409",
+          "pubDate": "Thu, 06 Nov 2025 14:44:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 196,
+        "weekly_search_volume": 458,
+        "weekly_average_volume": 76.3333,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.01431,
+        "time_weight": 0.025285,
+        "raw_score": -0.000042,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "Taylor Swift Music",
-      "term_ko": "테일러 스위프트 음악"
+      "term": "russell 2000",
+      "term_ko": "러셀 2000",
+      "significance_score": 0,
+      "mentions": 354,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "russell 2000",
+        "total_results": 2560,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 111.83,
+        "last_build_date": "Thu, 06 Nov 2025 15:33:00 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 100
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 46.15384
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 38.46153
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 38.46153
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 38.46153
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 38.46153
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=russell%202000",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=russell%202000",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=russell%202000"
+      },
+      "top_headlines": [
+        {
+          "title": "[캡엣지|CapEdge] VLCC 선가 반등·운임 고공행진… 원유운반선 주가 '기...",
+          "summary": "5일(현지시간) 드류리(Drewry) 해운금융리서치에 따르면, 10월 말 기준 Drewry Crude Tanker Equity Index(DCTEI)는 연초 대비 51.1% 급등하며, 같은 기간 S&P500(16%)· Russell2000 (10.6%)을 압도했다. VLCC(초대형 원유운반선)...",
+          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=48430",
+          "pubDate": "Wed, 05 Nov 2025 05:56:00 +0900"
+        },
+        {
+          "title": "FTSE 러셀, 체인링크와 블록체인 금융 결합 가속",
+          "summary": "블록체인으로 구현되는 에프에스이 러셀의 지수로는 '러셀 1000(Russell 1000)', '러셀 2000( Russell 2000 )', '러셀 3000(Russell 3000)' 등이 있는 것으로 파악됐다. 체인링크는 현지시간으로 지난 11월 3일 에프에스이 러셀이 자사...",
+          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=246054",
+          "pubDate": "Wed, 05 Nov 2025 05:10:00 +0900"
+        },
+        {
+          "title": "[오후 뉴스브리핑] XUSD 디페깅 발생...$0.909 外",
+          "summary": "FTSE러셀( Russell )이 주요 지수 데이터의 온체이화를 위해 체인링크(LINK)와 협력한다고 더블록이 전했다. 이번 파트너십을 통해 러셀1000· 2000 ·3000 등 주요 벤치마크와 FTSE 지수 데이터가 체인링크 데이터 발행...",
+          "link": "https://www.tokenpost.kr/news/briefing/299693",
+          "pubDate": "Tue, 04 Nov 2025 12:04:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 76.9231,
+        "weekly_search_volume": 353.8461,
+        "weekly_average_volume": 58.9744,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.017112,
+        "time_weight": 0.025284,
+        "raw_score": -0.00005,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "Best Netflix Shows",
-      "term_ko": "최고의 넷플릭스 프로그램"
+      "term": "algorithm",
+      "term_ko": "알고리즘",
+      "significance_score": 0,
+      "mentions": 421,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "algorithm",
+        "total_results": 10352,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1042.39,
+        "last_build_date": "Thu, 06 Nov 2025 15:33:01 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 82.66666
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 86.66666
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 64
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 45.33333
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 57.33333
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 64
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 90.66666
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=algorithm",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=algorithm",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=algorithm"
+      },
+      "top_headlines": [
+        {
+          "title": "AI Boosts Image Transmission Speed 45 Times",
+          "summary": "Additionally, they developed and applied a semantic filtering algorithm that filters out information that is always true, such as \"a person has a head,\" or redundant information like \"holding a...",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=255849",
+          "pubDate": "Thu, 06 Nov 2025 15:14:00 +0900"
+        },
+        {
+          "title": "Why are beauty retailers rushing to festivals?",
+          "summary": "Once known for online-only sales playbooks and algorithm -driven marketing, these companies are now pouring resources into large-scale, in-person events to build emotional connection and brand...",
+          "link": "https://www.koreaherald.com/article/10610518?ref=naver",
+          "pubDate": "Thu, 06 Nov 2025 15:04:00 +0900"
+        },
+        {
+          "title": "광명시, 한국전력공사 AI 산불 조기 대응 시스템 도입",
+          "summary": "KEPCO's system analyzes images captured by thermal imaging surveillance cameras using an AI-based diagnostic algorithm to automatically detect signs of danger, such as smoke or flames. If a threat is detected, it is...",
+          "link": "http://www.breaknews.com/1159510",
+          "pubDate": "Thu, 06 Nov 2025 14:22:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 190.6667,
+        "weekly_search_volume": 421.3333,
+        "weekly_average_volume": 70.2222,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015162,
+        "time_weight": 0.025284,
+        "raw_score": -0.000044,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "Best Streaming Services",
-      "term_ko": "최고의 스트리밍 서비스"
+      "term": "custody",
+      "term_ko": "양육권",
+      "significance_score": 0,
+      "mentions": 449,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "custody",
+        "total_results": 36107,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1357.45,
+        "last_build_date": "Thu, 06 Nov 2025 15:33:02 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 81.54761
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 65.47619
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 51.19047
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 43.45238
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 85.71428
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 88.69047
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 80.35714
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=custody",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=custody",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=custody"
+      },
+      "top_headlines": [
+        {
+          "title": "BDACS Wins 'Ripple Innovation Award 2025' in New York",
+          "summary": "BDACS, a leading digital asset custody firm for institutions, was the only Korean company... Through this award, BDACS was recognized for its secure and reliable custody technology, robust...",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=39357",
+          "pubDate": "Thu, 06 Nov 2025 15:30:00 +0900"
+        },
+        {
+          "title": "비댁스, 리플 '이노베이션 어워드 2025' 수상",
+          "summary": "특히 리플이 강조하는 '실사용 중심의 혁신(Real-World Utility)' 영역에서 비댁스가 구현한 '프라임 커스터디 솔루션(Prime Custody Solution)'이 높은 평가를 받은 것으로 알려졌다. 프라임 커스터디 솔루션은 KRW/USD 기반...",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=39353",
+          "pubDate": "Thu, 06 Nov 2025 15:24:00 +0900"
+        },
+        {
+          "title": "비댁스, 리플 '이노베이션 어워드' 수상…프라임 커스터디 솔루션 고평...",
+          "summary": "비댁스는 리플이 강조하는 '실사용 중심의 혁신(Real-World Utility)' 영역에서 자사 '프라임 커스터디 솔루션(Prime Custody Solution)'이 높은 평가를 받았다고 설명했다. 프라임 커스터디 솔루션은 KRW/USD(원화/달러화)...",
+          "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=127114",
+          "pubDate": "Thu, 06 Nov 2025 15:14:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 169.0476,
+        "weekly_search_volume": 449.4047,
+        "weekly_average_volume": 74.9008,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014499,
+        "time_weight": 0.025284,
+        "raw_score": -0.000042,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "New Iphone Features",
-      "term_ko": "새로운 iPhone 기능"
+      "term": "JIBS",
+      "term_ko": "",
+      "significance_score": 0,
+      "mentions": 415,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "JIBS",
+        "total_results": 38287,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1277.85,
+        "last_build_date": "Thu, 06 Nov 2025 15:33:03 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 92.22797
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 84.45595
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 97.92746
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 48.18652
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 40.93264
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 66.83937
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 61.13989
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=JIBS",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=JIBS",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=JIBS"
+      },
+      "top_headlines": [
+        {
+          "title": "kg에 4만원... 불과 2년 만에 제주 앞바다 뒤덮은 최고급 식재료",
+          "summary": "2023년 제주 지역 방송사 JIBS 는 제주시 구좌읍 해안가에서 청색꽃게가 처음 발견됐다고 보도했다. 성인 손바닥만 한 집게발과 등껍질에 톱처럼 뾰족한 돌기가 나 있는 이 게는 톱날꽃게라는 정식 국명을 갖고 있지만...",
+          "link": "https://www.wikitree.co.kr/articles/1093183",
+          "pubDate": "Thu, 06 Nov 2025 15:26:00 +0900"
+        },
+        {
+          "title": "폭우에 취소됐다 두달 만에… 연삼로 ‘차없는 거리’ 걷기 행사 30일 열...",
+          "summary": "걷기코스는 애향운동장을 출발해 한라명동칼국수와 JIBS 제주방송을 거쳐 되돌아오는 총 4㎞ 구간이다. 특히 이 중 500m는 ‘러너존(Runner Zone)’으로 지정해 걷기 참가자와 러너가 함께 어울리는 역동적 프로그램으로...",
+          "link": "https://www.seoul.co.kr/news/life/health-news/2025/11/06/20251106500149?wlog_tag3=naver",
+          "pubDate": "Thu, 06 Nov 2025 14:35:00 +0900"
+        },
+        {
+          "title": "[부고] 강명철 씨( JIBS 제주방송 보도국 부장) 모친상",
+          "summary": "■ 이윤보 씨 별세, 강명철 씨( JIBS 제주방송 보도국 부장) 모친상 = 6일, 제주시 부민장례식장 10분향실, 발인 8일 오전 8시, 장지 서귀포시 성산읍 선영. (064)742-5000. * 부고 게재 문의는 카톡 뉴스1제보, 이메일...",
+          "link": "https://www.news1.kr/local/jeju/5967350",
+          "pubDate": "Thu, 06 Nov 2025 14:09:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 161.1399,
+        "weekly_search_volume": 415.0259,
+        "weekly_average_volume": 69.171,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015321,
+        "time_weight": 0.025284,
+        "raw_score": -0.000045,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "New Marvel Movie",
-      "term_ko": "새로운 마블 영화"
+      "term": "Artificial Intelligence",
+      "term_ko": "인공 지능",
+      "significance_score": 0,
+      "mentions": 436,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Artificial Intelligence",
+        "total_results": 68048,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1426.74,
+        "last_build_date": "Thu, 06 Nov 2025 15:33:04 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 70.55214
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 53.98773
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 66.87116
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 66.25766
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 51.53374
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 70.55214
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 80.36809
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Artificial%20Intelligence",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Artificial%20Intelligence",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Artificial%20Intelligence"
+      },
+      "top_headlines": [
+        {
+          "title": "Naver to Invest $693M in AI Infrastructure, Launch Agent N Assistant",
+          "summary": "Naver will invest over KRW 1 trillion (US$693 million) next year to expand its artificial intelligence infrastructure and introduce a new AI agent across its main services, including search...",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=39362",
+          "pubDate": "Thu, 06 Nov 2025 15:30:00 +0900"
+        },
+        {
+          "title": "Naver Invests $13M in Japan's Note to Boost AI and Content Growth",
+          "summary": "The deal is part of Naver's strategy to enhance its artificial intelligence capabilities and strengthen content-driven services across Asia. Note operates one of Japan's most popular publishing...",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=39360",
+          "pubDate": "Thu, 06 Nov 2025 15:28:00 +0900"
+        },
+        {
+          "title": "LS Cable Wins $380M Power Distribution Deal with U.S. Tech Firm",
+          "summary": "These systems are critical for the growing demand in data centers and artificial intelligence infrastructure. The company plans to expand production capacity at its Korean and U.S. facilities and...",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=39361",
+          "pubDate": "Thu, 06 Nov 2025 15:28:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 180.3681,
+        "weekly_search_volume": 435.5828,
+        "weekly_average_volume": 72.5971,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014816,
+        "time_weight": 0.025284,
+        "raw_score": -0.000043,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "Ariana Grande Music",
-      "term_ko": "아리아나 그란데 음악"
+      "term": "swing investment",
+      "term_ko": "스윙투자",
+      "significance_score": 0,
+      "mentions": 403,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "스윙투자",
+        "total_results": 18366,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 587.32,
+        "last_build_date": "Thu, 06 Nov 2025 15:33:05 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 66.66666
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 60.60606
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 30.30303
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 51.51515
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 63.63636
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 75.75757
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 81.81818
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%8A%A4%EC%9C%99%ED%88%AC%EC%9E%90",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%8A%A4%EC%9C%99%ED%88%AC%EC%9E%90",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%8A%A4%EC%9C%99%ED%88%AC%EC%9E%90"
+      },
+      "top_headlines": [
+        {
+          "title": "[특징주 분석] 대진첨단소재 -16.55%↓, 5,750원…2차전지소재 관련주·오...",
+          "summary": "투자 자 유의사항으로는 단기 테마 변동성, 주요주주 매물 출회 가능성, 재무 변동성 확대에 따른 추가 조정 리스크를 들 수 있다. 공시·수주·증설 등 이벤트 전후로 스윙 이 커질 수 있어 손절·익절 규칙을 구체화한...",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15865949",
+          "pubDate": "Thu, 06 Nov 2025 14:18:00 +0900"
+        },
+        {
+          "title": "성장 정체기 진입 롯데월드·에버랜드, 테마존·신규 어트랙션 등 도입...",
+          "summary": "정용진 신세계 회장은 경기도 화성시 송산그린시티에 약 4조6000억원을 투자 해 대규모 국제 테마파크... 또 부산 롯데월드는 지난 10월부터 신규 어트랙션 3종(댄싱모리스·뱅앤드롭·쿠키 스윙 )을 선보이며 가족 단위...",
+          "link": "https://www.ceoscoredaily.com/page/view/2025110515001401401",
+          "pubDate": "Thu, 06 Nov 2025 07:02:00 +0900"
+        },
+        {
+          "title": "[시황 분석] 미국 뉴욕증시 나스닥↑ 테슬라↑ 엔비디아↓, 저가매수",
+          "summary": "기업별로는 테슬라가 +4%대 급등하며 투자 심리를 견인했다. 배터리 원가 절감 기대, 완성차 전반 반사익... 레버리지 ETF는 상승장에서 수익률이 눈에 띄게 확대됐지만, 장 막판 스윙 에서 변동성 2차 미분에 취약해...",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15865360",
+          "pubDate": "Thu, 06 Nov 2025 07:02:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 157.5757,
+        "weekly_search_volume": 403.0303,
+        "weekly_average_volume": 67.1717,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015636,
+        "time_weight": 0.025283,
+        "raw_score": -0.000046,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     },
     {
-      "term": "Iphone 15 Price",
-      "term_ko": "iPhone 15 가격"
-    },
-    {
-      "term": "Best Android Phones",
-      "term_ko": "최고의 안드로이드 휴대폰"
-    },
-    {
-      "term": "Best Smartphones 2023",
-      "term_ko": "2023년 최고의 스마트폰"
-    },
-    {
-      "term": "Best Gaming Laptops",
-      "term_ko": "최고의 게이밍 노트북"
-    },
-    {
-      "term": "Iphone 15 Rumors",
-      "term_ko": "아이폰 15 루머"
+      "term": "journalist",
+      "term_ko": "저널리스트",
+      "significance_score": 0,
+      "mentions": 467,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "journalist",
+        "total_results": 59613,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 983.05,
+        "last_build_date": "Thu, 06 Nov 2025 15:33:06 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-29",
+              "timestamp": 1761663600000,
+              "value": 95.18072
+            },
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 83.13253
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 69.87951
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 57.83132
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 61.44578
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 96.38554
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 81.92771
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=journalist",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=journalist",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=journalist"
+      },
+      "top_headlines": [
+        {
+          "title": "Sudan Is in Free Fall",
+          "summary": "A Sudanese journalist , Muammar Ibrahim, stayed behind to document atrocities while thousands fled a genocidal blood bath in El Fasher, the capital of North Darfur in Sudan. He was abducted and...",
+          "link": "https://www.nytimes.com/2025/11/06/opinion/sudan-darfur-el-fasher-uae.html?partner=naver",
+          "pubDate": "Thu, 06 Nov 2025 15:02:00 +0900"
+        },
+        {
+          "title": "Arirang TV's video journalist Kim Woosung receives \"Award for News\" at 20...",
+          "summary": "Arirang TV's video journalist Kim Woosung received the \"Award for News\" at the 2025 Hinzpeter... Established in 2021, the Hinzpeter Awards commemorate German journalist Jurgen Hinzpeter, who...",
+          "link": "https://www.arirang.com/news/view?id=288978",
+          "pubDate": "Thu, 06 Nov 2025 12:00:00 +0900"
+        },
+        {
+          "title": "일 몬티노 출시 20주년 앞두고 미리 만난 3대 티모라쏘",
+          "summary": "선정 Certified Sommelier by Associazione Italiana Sommelier Columnist of Korean Wine Magazines Wine Judge from International Wine Awards Awarded as Best Foreign Journalist for Roero Wine Region Langhe Wines Ambassador Organizer of Winery Tour in Main Italian Wine Region First Level",
+          "link": "https://www.sommeliertimes.com/news/articleView.html?idxno=129906",
+          "pubDate": "Thu, 06 Nov 2025 11:06:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 181.9277,
+        "weekly_search_volume": 467.4699,
+        "weekly_average_volume": 77.9116,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014108,
+        "time_weight": 0.025283,
+        "raw_score": -0.000041,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762268400000
+      }
     }
   ],
-  "translations": {
-    "New Video Games": {
-      "en": "New Video Games",
-      "ko": "새로운 비디오 게임",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "New Music Releases": {
-      "en": "New Music Releases",
-      "ko": "새로운 음원 발매",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Taylor Swift Music": {
-      "en": "Taylor Swift Music",
-      "ko": "테일러 스위프트 음악",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Best Netflix Shows": {
-      "en": "Best Netflix Shows",
-      "ko": "최고의 넷플릭스 프로그램",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Best Streaming Services": {
-      "en": "Best Streaming Services",
-      "ko": "최고의 스트리밍 서비스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "New Iphone Features": {
-      "en": "New Iphone Features",
-      "ko": "새로운 iPhone 기능",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "New Marvel Movie": {
-      "en": "New Marvel Movie",
-      "ko": "새로운 마블 영화",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Ariana Grande Music": {
-      "en": "Ariana Grande Music",
-      "ko": "아리아나 그란데 음악",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Iphone 15 Price": {
-      "en": "Iphone 15 Price",
-      "ko": "iPhone 15 가격",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Best Android Phones": {
-      "en": "Best Android Phones",
-      "ko": "최고의 안드로이드 휴대폰",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Best Smartphones 2023": {
-      "en": "Best Smartphones 2023",
-      "ko": "2023년 최고의 스마트폰",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Best Gaming Laptops": {
-      "en": "Best Gaming Laptops",
-      "ko": "최고의 게이밍 노트북",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    },
-    "Iphone 15 Rumors": {
-      "en": "Iphone 15 Rumors",
-      "ko": "아이폰 15 루머",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-06T06:29:49.355Z"
-    }
+  "metadata": {
+    "collection_method": "naver_search_trending_seeded",
+    "sample_size": 30,
+    "generated_at": "2025-11-06T06:33:07.075Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "NAVER DataLab 2025-11-05→2025-11-06",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 0
   }
 }

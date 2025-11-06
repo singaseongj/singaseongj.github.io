@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-06T10:26:18+09:00 (KST)**
+- Generated: **2025-11-06T15:31:40+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -41,7 +41,7 @@
 **휴젤** (145020.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-16.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-16.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%9C%B4%EC%A0%A4
@@ -94,43 +94,43 @@
 
 **LG전자** (066570.KS)
 
-- News (7d): **605** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **4.1%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **625** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **5.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **530** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
-- Returns: 5d **4.5%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **539** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.06)**
+- Returns: 5d **4.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
 **대한항공** (003490.KS)
 
-- News (7d): **226** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-3.1%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **257** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **-2.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
 
+**삼성SDI** (006400.KS)
+
+- News (7d): **145** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.11)**
+- Returns: 5d **-1.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1SDI
+
 **삼성전자** (005930.KS)
 
-- News (7d): **2848** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **-4.0%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **2904** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- Returns: 5d **-4.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
-
-**셀트리온** (068270.KS)
-
-- News (7d): **212** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.07)**
-- Returns: 5d **0.1%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
 ### AGGRESSIVE (5)
 
@@ -145,7 +145,7 @@
 **SK케미칼** (285130.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **8.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=SK%EC%BC%80%EB%AF%B8%EC%B9%BC
@@ -158,6 +158,14 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90
 
+**롯데웰푸드** (280360.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **10.8%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%9B%B0%ED%91%B8%EB%93%9C
+
 **롯데칠성** (005300.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -165,14 +173,6 @@
 - Earnings window (±10d): **No**
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%B9%A0%EC%84%B1
-
-**쿠쿠홈시스** (192400.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.0%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%EC%BF%A0%EC%BF%A0%ED%99%88%EC%8B%9C%EC%8A%A4
 
 ## NASDAQ 100
 
