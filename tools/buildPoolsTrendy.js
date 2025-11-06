@@ -210,6 +210,12 @@ function saveNameToSymbol(map) {
 }
 const NAME_TO_SYMBOL = loadNameToSymbol();
 const SYMBOL_TO_NAME = {};
+const DYNAMIC_TICKER_FILE = path.join(process.cwd(), 'dynamicTickerMap.json');
+let DYNAMIC_TICKER_MAP = {};
+try {
+  const raw = fs.readFileSync(DYNAMIC_TICKER_FILE, 'utf8');
+  DYNAMIC_TICKER_MAP = JSON.parse(raw);
+} catch {}
 const KEYWORD_SNAPSHOT_BASE = KEYWORD_FILE_ENV || TAG_FILE;
 const KEYWORD_SNAPSHOT_PATH = path.isAbsolute(KEYWORD_SNAPSHOT_BASE)
   ? KEYWORD_SNAPSHOT_BASE
@@ -761,6 +767,32 @@ try {
   const t = JSON.parse(await fsp.readFile(NAVER_TRENDS_FILE, 'utf8'));
   NAVER_TRENDS = (t && t.perSymbol) ? t.perSymbol : (t || {});
 } catch {}
+
+for (const [name, symbol] of Object.entries(DYNAMIC_TICKER_MAP)) {
+  if (!symbol) continue;
+  const nk = normalizeKey(name);
+  if (nk) {
+    NAME_TO_SYMBOL[nk] = NAME_TO_SYMBOL[nk] || symbol;
+    SYMBOL_TO_NAME[symbol] = SYMBOL_TO_NAME[symbol] || name;
+  }
+}
+
+for (const [sym, trend] of Object.entries(NAVER_TRENDS)) {
+  if (!trend || typeof trend !== 'object') continue;
+  const nf = (NEWS_FEATURES[sym] ||= {});
+  if (nf.naverPopularity == null && trend.naverPopularity != null) {
+    nf.naverPopularity = trend.naverPopularity;
+  }
+  if (nf.naverSpike == null && trend.spike != null) {
+    nf.naverSpike = trend.spike;
+  }
+  if (nf.naverAsvi == null && trend.lastAsvi != null) {
+    nf.naverAsvi = trend.lastAsvi;
+  }
+  if (nf.naverPersist == null && trend.persist != null) {
+    nf.naverPersist = trend.persist;
+  }
+}
 
 let PREV_METRICS = {};
 try {
