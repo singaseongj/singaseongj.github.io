@@ -1,1022 +1,159 @@
 {
+  "generatedAt": "2025-11-07T18:26:51.662Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-07",
   "window": "12_hours",
   "total_phrases": 10,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Careers",
-      "term_ko": "인재채용",
-      "significance_score": 0,
-      "mentions": 267,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "인재채용",
-        "total_results": 765087,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1396.65,
-        "last_build_date": "Fri, 07 Nov 2025 21:41:56 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 58.33333
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 41.66666
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 41.66666
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 41.66666
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 83.33333
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9D%B8%EC%9E%AC%EC%B1%84%EC%9A%A9",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9D%B8%EC%9E%AC%EC%B1%84%EC%9A%A9",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9D%B8%EC%9E%AC%EC%B1%84%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "조선대, 2025 CSU 진로취업페스타 '두드리면 열릴지니' 개최",
-          "summary": "특히, 이번 행사에는 공공기관, 대기업 및 지역 강소기업 등 다수 기업이 참여해 채용 ·직무 정보를 제공하며, 청년 인재 와의 현장 소통을 강화할 계획이다. 김재홍 조선대학교 취업학생처장은 \"이번 페스타가 학생들이...",
-          "link": "http://www.kyosu.net/news/articleView.html?idxno=148582",
-          "pubDate": "Fri, 07 Nov 2025 21:26:00 +0900"
-        },
-        {
-          "title": "국립순천대 SW중심대학사업단, SW 융합 인재 위한 'SW CONNECT FESTA 2025' 연...",
-          "summary": "기업 채용 및 취업 상담 부스(약 7개 기업 참여) ▲AI 굿즈 제작 및 VR/AR 체험 프로그램 등 다양한 전시·체험 프로그램이 운영될 예정이다. 이번 행사는 SW 융합 인재 양성을 위한 실질적인 탐색형 프로그램으로...",
-          "link": "http://www.kyosu.net/news/articleView.html?idxno=148584",
-          "pubDate": "Fri, 07 Nov 2025 21:26:00 +0900"
-        },
-        {
-          "title": "이재명 대통령, \"다시 과학기술인을 꿈꾸는 대한민국\" 선언... R&D 분야에...",
-          "summary": "과학기술 인재 확보와 연구개발(R&D) 생태계 혁신을 위한 국가 전략을 공식 발표했다. 이번 보고회는... 특히 출연연 신진연구자 연 600명 신규 채용 , 전문연구직 신설 및 확대, 기초연구 예산 확대 등이 포함된다. 재직...",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=37119",
-          "pubDate": "Fri, 07 Nov 2025 21:14:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 183.3333,
-        "weekly_search_volume": 266.6667,
-        "weekly_average_volume": 66.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.020818,
-        "time_weight": 0.021882,
-        "raw_score": -0.000053,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term_ko": "인재채용"
     },
     {
       "term": "Machine Learning",
-      "term_ko": "머신러닝",
-      "significance_score": 0,
-      "mentions": 471,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "머신러닝",
-        "total_results": 240970,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1356.88,
-        "last_build_date": "Fri, 07 Nov 2025 21:41:57 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 96.22641
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 79.62264
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 42.6415
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 60.37735
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 77.35849
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 95.84905
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 95.09433
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "GC녹십자, AI 머신러닝 기반 '혈우병 환자 관절병증 예측 모델' 개발 나...",
-          "summary": "이에 따라 GC녹십자는 약 20년간 축적된 실사용 빅데이터에 AI 머신러닝 기법을 적용해 관절 손상 위험을 사전에 예측할 수 있는 모델을 개발한다. 이 예측 모델은 '그린모노'와 '그린진에프' 등 혈우병 치료제 사용...",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=367936",
-          "pubDate": "Fri, 07 Nov 2025 21:24:00 +0900"
-        },
-        {
-          "title": "경남대, 마산공고와 '대학 연계 지역 맞춤 인재양성 프로그램' 운영",
-          "summary": "우선 기계공학부에서는 진철규 교수가 '미래모빌리티 공학기초' 강의를 통해 자작자동차의 설계부터 제작 및 주행까지의 과정을 시연하고, 신정활 교수는 '파이썬을 활용한 머신러닝 '을 주제로 데이터 기반 인공지능...",
-          "link": "http://www.kyosu.net/news/articleView.html?idxno=148546",
-          "pubDate": "Fri, 07 Nov 2025 20:46:00 +0900"
-        },
-        {
-          "title": "경남대, 마산공고와 ‘대학 연계 지역 맞춤 인재양성 프로그램’ 운영",
-          "summary": "우선 기계공학부에서는 진철규 교수가 ‘미래모빌리티 공학기초’ 강의를 통해 자작자동차의 설계부터 제작 및 주행까지의 과정을 시연하고, 신정활 교수는 ‘파이썬을 활용한 머신러닝 ’을 주제로 데이터 기반...",
-          "link": "https://www.cnbnews.com/news/article.html?no=759931",
-          "pubDate": "Fri, 07 Nov 2025 18:02:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 195.0943,
-        "weekly_search_volume": 471.3207,
-        "weekly_average_volume": 78.5535,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014028,
-        "time_weight": 0.021882,
-        "raw_score": -0.000036,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term_ko": "머신러닝"
     },
     {
       "term": "Libraries",
-      "term_ko": "라이브러리",
-      "significance_score": 0,
-      "mentions": 427,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "라이브러리",
-        "total_results": 130928,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1219.87,
-        "last_build_date": "Fri, 07 Nov 2025 21:41:58 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 65.92178
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 51.39664
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 59.21787
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 71.50837
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 90.50279
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 87.70949
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 67.0391
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "수소의 날, 풍성한 이벤트 펼친 '수소안전뮤지엄'",
-          "summary": "미니 라이브러리 정기간행물 과월호 13종을 증정하기도 했다. '탄소중립 낱말퍼즐'에서는 탄소중립, 수소에너지, 시험인증과 관련한 상식 낱말퍼즐 퀴즈 정답시 기념품을 증정하고, '캐릭터 디지털 타투'에서는 신기술을...",
-          "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=219600",
-          "pubDate": "Fri, 07 Nov 2025 18:08:00 +0900"
-        },
-        {
-          "title": "15년째 딸 찾아다니는 엄마, 보험 사실 감춘 이유",
-          "summary": "덧붙이는 글 | 한국 독립예술영화의 유통 배급 환경 개선을 위해 영화진흥위원회에서 설립한 인디그라운드는 2025년 3월부터 총 18개의 큐레이션을 통해 ‘2024 독립영화 라이브러리 ’ 90편(장편 22편, 단편 68편)을 소개/상영할...",
-          "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003181044&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
-          "pubDate": "Fri, 07 Nov 2025 17:56:00 +0900"
-        },
-        {
-          "title": "[토픽]해외게임통신 543호, \"제1회 e스포츠 올림픽 개최 무산\"",
-          "summary": "플레이스테이션 스토어에서 게임 라이브러리 에 추가한 일부 PS5 게임을 클라우드 스트리밍으로 즐길 수 있는데요. 또한 검색 기능 지원과 함께 클라우드 스트리밍 중 게임을 구매할 수 있는 기능이 추가됐습니다....",
-          "link": "https://www.fomos.kr/redirect/news_view?news_cate_id=7&entry_id=148587",
-          "pubDate": "Fri, 07 Nov 2025 16:10:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 154.7486,
-        "weekly_search_volume": 427.3743,
-        "weekly_average_volume": 71.229,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.015013,
-        "time_weight": 0.021882,
-        "raw_score": -0.000038,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term_ko": "라이브러리"
     },
     {
       "term": "Jaehyun Choi",
-      "term_ko": "배정현",
-      "significance_score": 0,
-      "mentions": 328,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "배정현",
-        "total_results": 8635,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 952.82,
-        "last_build_date": "Fri, 07 Nov 2025 21:41:59 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 20.68965
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 34.48275
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 48.27586
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 62.06896
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 82.75862
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 34.48275
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%B0%B0%EC%A0%95%ED%98%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%B0%B0%EC%A0%95%ED%98%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%B0%B0%EC%A0%95%ED%98%84"
-      },
-      "top_headlines": [
-        {
-          "title": "밤하늘 수놓은 금빛 트리…11월의 크리스마스",
-          "summary": "올해 크리스마스 성지는 어딜지, 배정현 기자가 다녀왔습니다. [기자] 도심 한가운데 초대형 스크린이 금빛... 특별한 추억 쌓기가 펼쳐집니다. 채널A 뉴스 배정현 입니다. 영상취재 : 김근목 김래범 영상편집 : 김지향",
-          "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000499826",
-          "pubDate": "Fri, 07 Nov 2025 19:58:00 +0900"
-        },
-        {
-          "title": "대통령실 \"한미 정상회담 당시 '핵잠 국내 건조' 전제로 논의\"",
-          "summary": "뉴데일리 배정현 기자 = 대통령실이 경주 아시아태평양경제협력체(APEC) 정상회의 기간 열린 한미... 하면 결정이 빨리 될 수 있고, 새 문안을 놓고 다시 한다면 모레까지 안 될 수 있다\"고 설명했다. 뉴데일리 배정현",
-          "link": "https://www.newdaily.co.kr/site/data/html/2025/11/07/2025110700311.html",
-          "pubDate": "Fri, 07 Nov 2025 17:04:00 +0900"
-        },
-        {
-          "title": "[속보] 대통령실 \"원잠 선체 한국서 건조, 한미 정상 간 논의된 내용\"",
-          "summary": "뉴데일리 배정현 기자 = 뉴데일리 배정현",
-          "link": "https://www.newdaily.co.kr/site/data/html/2025/11/07/2025110700276.html",
-          "pubDate": "Fri, 07 Nov 2025 16:02:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 117.2414,
-        "weekly_search_volume": 327.5862,
-        "weekly_average_volume": 65.5172,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.018051,
-        "time_weight": 0.021882,
-        "raw_score": -0.000046,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term_ko": "배정현"
     },
     {
-      "term": "alpha",
-      "term_ko": "알파",
-      "significance_score": 0,
-      "mentions": 512,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "알파",
-        "total_results": 721545,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1388.55,
-        "last_build_date": "Fri, 07 Nov 2025 21:42:00 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 94.76975
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 83.74076
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 62.47868
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 63.04718
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 93.40534
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 99.65889
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 93.06424
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%8C%ED%8C%8C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%95%8C%ED%8C%8C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%95%8C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "여기저기 콜록콜록 신경쓰이죠?…英의사가 밝힌 최강 보충제 5가지",
-          "summary": "아마씨, 치아씨드, 호두 같은 식물성 식품에는 알파 리놀렌산(ALA)이 들어 있는데, 우리 몸이 이를 EPA와 DHA로 바꿀 수 있다. 더비셔 박사는 “영국 전역에서 오메가3 수치가 낮은 것이 정말 우려스럽다”며 “오메가3는...",
-          "link": "https://www.seoul.co.kr/news/life/health-news/2025/11/07/20251107500404?wlog_tag3=naver",
-          "pubDate": "Fri, 07 Nov 2025 21:27:00 +0900"
-        },
-        {
-          "title": "수단 반군, 미국 중재 인도주의적 휴전안에 동의",
-          "summary": "내전의 인도주의적 위기를 해결하고 민간인 보호를 강화하는 목적\"이라고 설명했습니다. 신속지원군은 지난달 26일 정부군의 서부 최후 거점이던 북다르푸르주 주도 알파 시르를 장악한 지 11일 만에 휴전안에 동의했습니다.",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1503139",
-          "pubDate": "Fri, 07 Nov 2025 20:18:00 +0900"
-        },
-        {
-          "title": "KT 알파 쇼핑, 실내자전거 방송 기획 확대",
-          "summary": "KT 알파 쇼핑은 접이식 실내자전거 ‘스포틀러 원더바이크’를 홈쇼핑에서 최초로 선보인다. 이번 방송에는... KT 알파 쇼핑 관계자는 “올해 겨울 홈트레이닝 편성 확대에 따라 실내 운동기구 기획에 집중했다”며 “기상...",
-          "link": "http://www.lawissue.co.kr/view.php?ud=202511071806033383204ead0791_12",
-          "pubDate": "Fri, 07 Nov 2025 19:34:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 193.0642,
-        "weekly_search_volume": 511.6543,
-        "weekly_average_volume": 85.2757,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.013252,
-        "time_weight": 0.021882,
-        "raw_score": -0.000034,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term": "Alpha",
+      "term_ko": "알파"
     },
     {
       "term": "Robust",
-      "term_ko": "로버스트",
-      "significance_score": 0,
-      "mentions": 267,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "로버스트",
-        "total_results": 1469,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 14.4,
-        "last_build_date": "Fri, 07 Nov 2025 21:42:01 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 23.80952
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 42.85714
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 57.14285
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 28.57142
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 80.95238
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%A1%9C%EB%B2%84%EC%8A%A4%ED%8A%B8",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%A1%9C%EB%B2%84%EC%8A%A4%ED%8A%B8",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%A1%9C%EB%B2%84%EC%8A%A4%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "레디 로버스트 머신-구영테크, 건설기계 분야 '피지컬 AI' 기술 고도화 맞...",
-          "summary": "레디 로버스트 머신(대표 정태랑)이 구영테크(회장 이희화)와 '사물인터넷(IoT) 및 인공지능(AI) 기반 고장... 협약 체결과 함께 구영테크는 레디 로버스트 머신의 AI 기반 축압기 예지 진단 소프트웨어(SW) 발주 및 납품...",
-          "link": "https://www.etnews.com/20251105000090",
-          "pubDate": "Wed, 05 Nov 2025 12:06:00 +0900"
-        },
-        {
-          "title": "[시선집중] 최종건 “금관은 과했고, 바둑판은 약했다? 실리 챙기는 선...",
-          "summary": "◎ 최종건 > 영어 원문을 보니까 로버스트 (robust)라는 표현을 쓴 것 같은데 견고한 무역과 투자라고 하면 원활한 재화와 금융의 흐름을 이야기하겠죠. 결국 자유무역을 얘기하고 싶은 건데 미국이 반대한 것으로 알려져...",
-          "link": "https://n.news.naver.com/mnews/article/214/0001459123?sid=100",
-          "pubDate": "Mon, 03 Nov 2025 10:35:00 +0900"
-        },
-        {
-          "title": "[정치쇼] 김건 \"한미 정상회담 C+…잘한 것 같은 '착시현상'\"",
-          "summary": "그런데 그걸 갖다가 견고한 무역 뭐 이런, 그러니까 영어로 로버스트 트레이드(robust trade)라는 말을 만들어내고, 그다음에 복원력, 그다음에 모두에게 혜택이 되는 무역 뭐 이런 용어를 써서요. 비슷한 뜻이지만 다...",
-          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008316126&plink=ORI&cooper=NAVER",
-          "pubDate": "Mon, 03 Nov 2025 09:14:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 109.5238,
-        "weekly_search_volume": 266.6667,
-        "weekly_average_volume": 66.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.020818,
-        "time_weight": 0.021882,
-        "raw_score": -0.000053,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term_ko": "로버스트"
     },
     {
-      "term": "ESS",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 377,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "ESS",
-        "total_results": 229265,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1361.94,
-        "last_build_date": "Fri, 07 Nov 2025 21:42:02 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 74.1322
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 60.48898
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 32.77995
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 39.26954
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 86.38696
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 59.52309
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 59.3118
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=ESS",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=ESS",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=ESS"
-      },
-      "top_headlines": [
-        {
-          "title": "중부발전, ‘2025년 재난 대비 상시 훈련’ 시행",
-          "summary": "특히, 연료전지 설비 화재 대응 훈련 시, 최근 이슈인 ESS (에너지저장장치)와 연료전지의 차이점을 소방서와 함께 논의해 화재 대응의 최적 방안을 도출하고 훈련에 적용했다. 더불어 소방 전문가 자문을 통해 옥외 소화전...",
-          "link": "https://www.busan.com/view/busan/view.php?code=2025110721210716243",
-          "pubDate": "Fri, 07 Nov 2025 21:22:00 +0900"
-        },
-        {
-          "title": "중부발전, 인천발전본부서 '2025년 재난 대비 상시 훈련' 실시",
-          "summary": "특히 연료전지 설비 화재 대응 훈련 시, 최근 이슈인 ESS (에너지저장장치)와 연료전지의 차이점을 소방서와 함께 논의해 화재 대응의 최적 방안을 도출하고 훈련에 적용했다. 중부발전 관계자는 \"지역사회 및 유관기관과의...",
-          "link": "http://www.seoulwire.com/news/articleView.html?idxno=679508",
-          "pubDate": "Fri, 07 Nov 2025 21:22:00 +0900"
-        },
-        {
-          "title": "남종섭 도의원, 경기도 데이터센터 화재 대응 매뉴얼 전면 개선 촉구",
-          "summary": "정부의 에너지저장장치( ESS ) 관련 법령 개정이 완료되기까지 시간이 걸리는 만큼, 실제 화재 사례 분석을 토대로 단기적 대안을 마련해야 한다고 주문했다. 이에 대해 조창래 수원소방서장은 수원소방서가 경기도청...",
-          "link": "http://www.ttlnews.com/news/articleView.html?idxno=3047155",
-          "pubDate": "Fri, 07 Nov 2025 19:16:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 118.8349,
-        "weekly_search_volume": 377.2713,
-        "weekly_average_volume": 62.8786,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.016368,
-        "time_weight": 0.021882,
-        "raw_score": -0.000042,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term": "Ess",
+      "term_ko": "Ess"
     },
     {
-      "term": "KOSDAQ",
-      "term_ko": "코스닥",
-      "significance_score": 0,
-      "mentions": 288,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "코스닥",
-        "total_results": 2903415,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1412.6,
-        "last_build_date": "Fri, 07 Nov 2025 21:42:03 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 58.21209
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 43.25664
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 5.82799
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 4.75602
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 48.24759
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 66.72525
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 62.68968
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EC%8A%A4%EB%8B%A5",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%BD%94%EC%8A%A4%EB%8B%A5",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%BD%94%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "엔켐, '사채 되팔기' 악순환에 주가 폭락…내년 2500억 상환 '시한폭탄'",
-          "summary": "◆주가 8만 원 '추락'…기발행 CB 차익실현 영향 7일 한국거래소에 따르면 이차전지 전해액 생산기업 엔켐은 이날 코스닥 시장에서 전일 대비 4.19% 하락한 8만원에 장을 마감했다. 이는 연초 대비 40%가량 하락한...",
-          "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=350416",
-          "pubDate": "Fri, 07 Nov 2025 21:32:00 +0900"
-        },
-        {
-          "title": "[상한가 종목] 이노테크-싸이닉솔루션 이어 포인트모바일 상한가 마감",
-          "summary": "환경시험 장비 전문기업 이노테크가 코스닥 시장 상장 첫날 300% 오르며 '따따블'(공모가 대비 4배)에 성공했다. 2013년 설립된 이노테크는 신뢰성 환경시험 장비와 특수 시험장비 개발·제조에 특화된 '복합 신뢰성...",
-          "link": "http://www.econonews.co.kr/news/articleView.html?idxno=412660",
-          "pubDate": "Fri, 07 Nov 2025 21:30:00 +0900"
-        },
-        {
-          "title": "코스닥 , 기관과 외인 매도에 하락 마감...펩트론 상승 VS 에코프로, HLB,...",
-          "summary": "뉴시스 그래픽 코스닥 이 기관과 외인의 매도에 하락 마감했다. 7일 코스닥 은 전일 대비 2.38%(21.36포인트) 하락한 876.81로 거래를 마쳤다. 개인은 950억 원 순매수했지만 기관과 외인이 각각 622억원, 11억원을...",
-          "link": "http://www.econonews.co.kr/news/articleView.html?idxno=412663",
-          "pubDate": "Fri, 07 Nov 2025 21:30:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 162.6897,
-        "weekly_search_volume": 288.2465,
-        "weekly_average_volume": 48.0411,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.019725,
-        "time_weight": 0.021881,
-        "raw_score": -0.00005,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term": "Kosdaq",
+      "term_ko": "코스닥"
     },
     {
-      "term": "back office",
-      "term_ko": "백 오피스",
-      "significance_score": 0,
-      "mentions": 179,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "back office",
-        "total_results": 77824,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1344.54,
-        "last_build_date": "Fri, 07 Nov 2025 21:42:04 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 100
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 35.71428
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 42.85714
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 85.71428
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 50
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=back%20office",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=back%20office",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=back%20office"
-      },
-      "top_headlines": [
-        {
-          "title": "The Shutdown Hits Airports",
-          "summary": "They’re considering slaughtering cows to cut back . Trump announced a deal with drugmakers to... Turns out, a lot came from “The Office .” Sweet! Are some kinds of sugar “less bad” than...",
-          "link": "https://www.nytimes.com/2025/11/07/briefing/the-shutdown-hits-airports.html?partner=naver",
-          "pubDate": "Fri, 07 Nov 2025 21:14:00 +0900"
-        },
-        {
-          "title": "Samsung chief's right-hand man steps back in early leadership reshuffle",
-          "summary": "Joining Samsung in 1983, he later served in the financial team of the Samsung Secretariat Office , the precursor to the Future Strategy Office . In 2011, Chung became head of the management support...",
-          "link": "https://koreajoongangdaily.joins.com/news/2025-11-07/business/industry/Samsung-chiefs-righthand-man-steps-back-in-early-leadership-reshuffle/2439461",
-          "pubDate": "Fri, 07 Nov 2025 19:51:00 +0900"
-        },
-        {
-          "title": "It’s Not Just Cuomo Who Lost. It’s Cuomoism.",
-          "summary": "Back on Aug. 8, at 5:40 p.m., the retirement-aged nepo baby and disgraced former governor of New... governor’s office is an inferior, but also in the way he repeatedly demonstrates without an...",
-          "link": "https://www.nytimes.com/2025/11/07/opinion/mamdani-cuomo-election.html?partner=naver",
-          "pubDate": "Fri, 07 Nov 2025 19:04:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 135.7143,
-        "weekly_search_volume": 178.5714,
-        "weekly_average_volume": 59.5238,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.027489,
-        "time_weight": 0.021881,
-        "raw_score": -0.00007,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term": "Back Office",
+      "term_ko": "백 오피스"
     },
     {
-      "term": "Today's readings",
-      "term_ko": "오늘의 매경",
-      "significance_score": 0,
-      "mentions": 200,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "오늘의 매경",
-        "total_results": 444984,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 67.48,
-        "last_build_date": "Fri, 07 Nov 2025 21:42:05 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 83.33333
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%A7%A4%EA%B2%BD",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%A7%A4%EA%B2%BD",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%A7%A4%EA%B2%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "\"난 순례형, 넌 충성형\" … 5가지 유형으로 본 '뮤덕의 세계'",
-          "summary": "매경 ·NOL티켓 빅데이터 분석 \"대극장은 입문용이죠, 좋은 공연은 대학로에 있어요.\" \"대학로 작품은 너무... 뮤지컬 산업이 성숙기에 접어들면서 오늘의 뮤덕 세계는 하나의 동질적 집단이 아니라 여러 취향을 가진...",
-          "link": "https://www.mk.co.kr/article/11462645",
-          "pubDate": "Fri, 07 Nov 2025 17:11:00 +0900"
-        },
-        {
-          "title": "[PICK & FIT] \"승리의 기운, 건강까지 잇는다\"…프로-스펙스, LG트윈스 우...",
-          "summary": "하루 6개 품목을 한정 수량으로 판매하는 ' 오늘의 특가' 코너와 1만원대 초가성비 상품을 모은 '만원의... 방수 소재를 넘어 오래 지속되는 따뜻함'이라는 가치를 구현함을 보여주는 자리\"라고 말했다. ( 매경 헬스, )",
-          "link": "http://www.mkhealth.co.kr/news/articleView.html?idxno=75989",
-          "pubDate": "Mon, 03 Nov 2025 15:00:00 +0900"
-        },
-        {
-          "title": "\"한 우물만 파는 장인정신이 日노벨상 원동력 … 한국도 배울 건 배워야...",
-          "summary": "건강비결 ◆ 매경 이 만난 사람 ◆ 일본을 향한 한국의 '애증'의 정서는 얽히고설켜 있지만, 두 나라가 서로... 그는 \"역사적 인물을 통해 오늘의 일본을 살펴본 시도가 국내에선 많지 않았다\"며 \"일본인의 삶을 들여다보면...",
-          "link": "https://www.mk.co.kr/article/11455871",
-          "pubDate": "Thu, 30 Oct 2025 16:50:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 100,
-        "weekly_search_volume": 200,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.025413,
-        "time_weight": 0.021881,
-        "raw_score": -0.000064,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
+      "term": "Today's Readings",
+      "term_ko": "오늘의 매경"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_trending_seeded",
-    "sample_size": 30,
-    "generated_at": "2025-11-07T12:42:05.990Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "NAVER DataLab 2025-11-06→2025-11-07",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "discovered_keywords": [
+    {
+      "term": "Careers",
+      "term_ko": "인재채용"
+    },
+    {
+      "term": "Machine Learning",
+      "term_ko": "머신러닝"
+    },
+    {
+      "term": "Libraries",
+      "term_ko": "라이브러리"
+    },
+    {
+      "term": "Jaehyun Choi",
+      "term_ko": "배정현"
+    },
+    {
+      "term": "Alpha",
+      "term_ko": "알파"
+    },
+    {
+      "term": "Robust",
+      "term_ko": "로버스트"
+    },
+    {
+      "term": "Ess",
+      "term_ko": "Ess"
+    },
+    {
+      "term": "Kosdaq",
+      "term_ko": "코스닥"
+    },
+    {
+      "term": "Back Office",
+      "term_ko": "백 오피스"
+    },
+    {
+      "term": "Today's Readings",
+      "term_ko": "오늘의 매경"
+    }
+  ],
+  "translations": {
+    "Careers": {
+      "en": "Careers",
+      "ko": "인재채용",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Machine Learning": {
+      "en": "Machine Learning",
+      "ko": "머신러닝",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Libraries": {
+      "en": "Libraries",
+      "ko": "라이브러리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Jaehyun Choi": {
+      "en": "Jaehyun Choi",
+      "ko": "배정현",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Alpha": {
+      "en": "Alpha",
+      "ko": "알파",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Robust": {
+      "en": "Robust",
+      "ko": "로버스트",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Ess": {
+      "en": "Ess",
+      "ko": "Ess",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Kosdaq": {
+      "en": "Kosdaq",
+      "ko": "코스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Back Office": {
+      "en": "Back Office",
+      "ko": "백 오피스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    },
+    "Today's Readings": {
+      "en": "Today's Readings",
+      "ko": "오늘의 매경",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-07T18:26:51.663Z"
+    }
   }
 }
