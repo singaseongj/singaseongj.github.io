@@ -1186,8 +1186,11 @@ async function resolveTicker(name, cache) {
   // 1) If it's literally a KR/US ticker we already know from index or static, pass through (canon form).
   const maybeTicker = canonSymbol(raw);
   const isTickerShape = looksLikeTickerShape(maybeTicker);
-  if (isTickerShape && (INDEX_SYMBOL_SET.has(maybeTicker) || STATIC_SECTORS[maybeTicker] || TICKER_MAP[raw] || TICKER_MAP[nk])) {
-    return maybeTicker;
+  if (isTickerShape) {
+    if (STATIC_MAP[nk]) return canonSymbol(STATIC_MAP[nk]);
+    if (TICKER_MAP[raw]) return canonSymbol(TICKER_MAP[raw]);
+    if (TICKER_MAP[nk]) return canonSymbol(TICKER_MAP[nk]);
+    if (INDEX_SYMBOL_SET.has(maybeTicker) || STATIC_SECTORS[maybeTicker]) return maybeTicker;
   }
 
   // 2) Static name->ticker first (your static + index map merged)
