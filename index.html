@@ -77,11 +77,61 @@
         /* Hero Section */
         header { margin-top: 80px; padding: 100px 0 80px; text-align: center; position: relative; }
         .hero-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .hero-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
         h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 1.5rem;
+            font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800;
             background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;
         }
         .subtitle { font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 3rem; font-weight: 300; }
+
+        .model-select {
+            margin-top: 0.35rem;
+            margin-left: auto;
+            text-align: right;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.12);
+            max-width: 260px;
+        }
+        .model-select label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+        .model-select select {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            font-weight: 600;
+            color: var(--text-primary);
+            background-color: #fff;
+            box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.08);
+        }
+        .model-status {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .model-description {
+            margin-top: 0.25rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
 
         /* Game Styles */
         .game-container {
@@ -214,6 +264,13 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links { flex-direction: column; align-items: center; display: flex; }
+            .hero-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .model-select {
+                text-align: left;
+                width: 100%;
+                max-width: none;
+                margin-left: 0;
+            }
             h1 { font-size: 2.5rem; }
             .subtitle { font-size: 1.25rem; }
         }
@@ -237,7 +294,18 @@
 
     <header>
         <div class="hero-content animate-in">
-            <h1>Singaseong Apps &amp; Tools</h1>
+            <div class="hero-header">
+                <h1>Singaseong Apps &amp; Tools</h1>
+                <div class="model-select" aria-live="polite">
+                    <label for="modelSelect">LLM Model</label>
+                    <select id="modelSelect" name="modelSelect">
+                        <option value="Qwen2:0.5B" selected>Qwen2:0.5B</option>
+                        <option value="tinyllama">tinyllama</option>
+                    </select>
+                    <div class="model-status">Active: <span id="modelStatus">Qwen2:0.5B</span></div>
+                    <p class="model-description" id="modelDescription">Uses chat-style prompts with role-based message history.</p>
+                </div>
+            </div>
             <p class="subtitle">Guides, downloads, and classroom use cases</p>
 
             <div style="margin: 2rem 0;">
@@ -430,6 +498,176 @@
             <a href="mailto:admin@singaseong.uk">Contact</a>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const API_URL = 'https://tight-cloud-0f5e.seongj1589.workers.dev/api/generate';
+            const STORAGE_KEY = 'singaseong_llm_model';
+            const DEFAULT_PROMPT = 'Provide a short welcome message for Singaseong Apps visitors.';
+
+            const strategies = {
+                'Qwen2:0.5B': {
+                    description: 'Uses chat-style prompts with role-based message history.',
+                    buildPayload(prompt, options = {}) {
+                        const history = Array.isArray(options.history) ? options.history : [];
+                        const baseMessages = [
+                            { role: 'system', content: options.systemPrompt || 'You are a helpful assistant for Singaseong Apps visitors.' },
+                            { role: 'user', content: prompt }
+                        ];
+                        const messages = history.length ? history.concat(baseMessages) : baseMessages;
+                        return {
+                            model: 'Qwen2:0.5B',
+                            messages,
+                            stream: false,
+                        };
+                    },
+                    parseResponse(payload) {
+                        if (!payload) return '';
+                        if (typeof payload.response === 'string' && payload.response.trim()) {
+                            return payload.response.trim();
+                        }
+                        const messageContent = payload.message?.content;
+                        if (typeof messageContent === 'string') {
+                            return messageContent.trim();
+                        }
+                        if (Array.isArray(payload.choices) && payload.choices.length) {
+                            const first = payload.choices[0];
+                            return (first?.message?.content || '').trim();
+                        }
+                        return '';
+                    },
+                },
+                'tinyllama': {
+                    description: 'Works best with a single serialized prompt and optional lightweight history.',
+                    buildPayload(prompt, options = {}) {
+                        const history = Array.isArray(options.history) ? options.history : [];
+                        const serializedHistory = history
+                            .map(entry => `${entry.role.toUpperCase()}: ${entry.content}`)
+                            .join('\n');
+                        const formattedPrompt = serializedHistory
+                            ? `${serializedHistory}\nUSER: ${prompt}\nASSISTANT:`
+                            : prompt;
+                        return {
+                            model: 'tinyllama',
+                            prompt: formattedPrompt,
+                            stream: false,
+                            history,
+                        };
+                    },
+                    parseResponse(payload) {
+                        if (!payload) return '';
+                        if (typeof payload.response === 'string' && payload.response.trim()) {
+                            return payload.response.trim();
+                        }
+                        if (Array.isArray(payload.results) && payload.results.length) {
+                            const text = payload.results
+                                .map(result => (typeof result.text === 'string' ? result.text : ''))
+                                .join('\n');
+                            return text.trim();
+                        }
+                        return (payload.message?.content || '').trim();
+                    },
+                },
+            };
+
+            const selectEl = document.getElementById('modelSelect');
+            const statusEl = document.getElementById('modelStatus');
+            const descriptionEl = document.getElementById('modelDescription');
+
+            if (!selectEl) {
+                return;
+            }
+
+            let savedModel = null;
+            try {
+                savedModel = localStorage.getItem(STORAGE_KEY);
+            } catch (err) {
+                console.warn('LLM model preference unavailable', err);
+            }
+            if (savedModel && strategies[savedModel]) {
+                selectEl.value = savedModel;
+            }
+
+            function refreshUI(model) {
+                if (!strategies[model]) return;
+                if (statusEl) {
+                    statusEl.textContent = model;
+                }
+                if (descriptionEl) {
+                    descriptionEl.textContent = strategies[model].description;
+                }
+            }
+
+            async function callLLM(prompt, options = {}) {
+                const model = options.model || selectEl.value;
+                const strategy = strategies[model];
+                if (!strategy) {
+                    throw new Error(`Unsupported model: ${model}`);
+                }
+                const payload = strategy.buildPayload(prompt || DEFAULT_PROMPT, options);
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    signal: options.signal,
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const result = await response.json();
+                const text = strategy.parseResponse(result);
+                return { text, raw: result, model };
+            }
+
+            selectEl.addEventListener('change', (event) => {
+                const selectedModel = event.target.value;
+                if (strategies[selectedModel]) {
+                    try {
+                        localStorage.setItem(STORAGE_KEY, selectedModel);
+                    } catch (err) {
+                        console.warn('Unable to persist LLM model preference', err);
+                    }
+                    refreshUI(selectedModel);
+                }
+            });
+
+            refreshUI(selectEl.value);
+
+            window.llmClient = {
+                call: callLLM,
+                get model() {
+                    return selectEl.value;
+                },
+                set model(value) {
+                    if (!strategies[value]) return;
+                    selectEl.value = value;
+                    try {
+                        localStorage.setItem(STORAGE_KEY, value);
+                    } catch (err) {
+                        console.warn('Unable to persist LLM model preference', err);
+                    }
+                    refreshUI(value);
+                },
+                describe(model = selectEl.value) {
+                    return strategies[model]?.description || '';
+                },
+                buildPayload(prompt, options = {}) {
+                    const model = options.model || selectEl.value;
+                    const strategy = strategies[model];
+                    if (!strategy) {
+                        throw new Error(`Unsupported model: ${model}`);
+                    }
+                    return strategy.buildPayload(prompt || DEFAULT_PROMPT, options);
+                },
+                listModels() {
+                    return Object.keys(strategies);
+                },
+                getStrategy(model) {
+                    return strategies[model] ? { ...strategies[model] } : undefined;
+                }
+            };
+        })();
+    </script>
 
     <script>
         // Smooth scrolling for navigation links
