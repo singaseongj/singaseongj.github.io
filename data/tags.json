@@ -1,21 +1,407 @@
 {
   "date": "2025-11-07",
   "window": "12_hours",
-  "total_phrases": 6,
+  "total_phrases": 7,
   "discovered_keywords": [
     {
-      "term": "2035 NDC",
+      "term": "Data transactions",
+      "term_ko": "데이터 거래",
+      "significance_score": 508324,
+      "mentions": 844484,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "데이터 거래",
+        "total_results": 844484,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1433.85,
+        "last_build_date": "Fri, 07 Nov 2025 15:32:44 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B1%B0%EB%9E%98",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B1%B0%EB%9E%98",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B1%B0%EB%9E%98"
+      },
+      "top_headlines": [
+        {
+          "title": "삼쩜삼, 중고폰 사업 인수로 '탈세금' 시동...\"생활경제 플랫폼 전환\"",
+          "summary": "자비스가 기존 세무 플랫폼의 데이터 와 고객 기반을 얼마나 효과적으로 활용할 수 있을지가 관건이다.... 비엘큐의 물류·검수 역량을 삼쩜삼 플랫폼과 얼마나 빠르게 접합시키고, 가입자를 중고폰 거래 로 전환시킬 수...",
+          "link": "http://www.dailypop.kr/news/articleView.html?idxno=92963",
+          "pubDate": "Fri, 07 Nov 2025 15:30:00 +0900"
+        },
+        {
+          "title": "[기고] 쇼핑의 진화: 검색에서 추천으로, 그리고 추천에서 대화로",
+          "summary": "사용자 측면에서는 신뢰 구축과 개인정보 보호에 대한 우려가 있으며, 법적·윤리적 관점에서 구매 결정의 책임, 데이터 활용 범위, 에이전트 간 거래 에서 발생할 분쟁 해결 기준도 마련돼야 한다. 다만 이러한...",
+          "link": "http://www.itdaily.kr/news/articleView.html?idxno=236228",
+          "pubDate": "Fri, 07 Nov 2025 15:26:00 +0900"
+        },
+        {
+          "title": "[특징주 분석] 한화솔루션 4.53%↓, 26,350원…3분기 적자 전환·미국 통...",
+          "summary": "KRX 정보 데이터 시스템에 따르면 장중 기준 한화솔루션 주가는 26,350원으로, 전일 대비 4.53% 하락세를... 기관 역시 최근 6 거래 일 중 4 거래 일을 순매도하며 투자심리 개선을 제약했다. 개인 투자자들이 이탈한 물량을...",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15867195",
+          "pubDate": "Fri, 07 Nov 2025 15:26:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "KDX Data",
+      "term_ko": "KDX 데이터",
+      "significance_score": 1415,
+      "mentions": 1937,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "KDX 데이터",
+        "total_results": 1937,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 52.68,
+        "last_build_date": "Fri, 07 Nov 2025 15:32:39 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=KDX%20%EB%8D%B0%EC%9D%B4%ED%84%B0",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=KDX%20%EB%8D%B0%EC%9D%B4%ED%84%B0",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=KDX%20%EB%8D%B0%EC%9D%B4%ED%84%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "CES 혁신상 심사위원에 최은수 대표",
+          "summary": "전시회인 ‘CES 2026’의 혁신상 심사위원으로 선정됐다. 올해에 이어 2년째다. 최 대표는 국내 최초 데이터 거래소인 KDX 한국 데이터 거래소 창업자 출신으로 현재 서울과학종합대학원대 AI 석학교수도 맡고 있다.",
+          "link": "https://www.hankyung.com/article/2025110563241",
+          "pubDate": "Wed, 05 Nov 2025 18:00:00 +0900"
+        },
+        {
+          "title": "클라우스DX, 재외동포신문과 '재외동포 디지털 혁신과 토큰증권 기반 투...",
+          "summary": "클라우스DX는 디지털전환 시대에 인공지능(AI), 빅 데이터 , 블록체인 및 클라우드 등의 다양한 정보기술... 조각투자 장외거래소 예비인가를 위한 한국거래소와 코스콤 주관의 KDX 컨소시엄(가칭)에 참여하고 있다....",
+          "link": "http://www.e2news.com/news/articleView.html?idxno=324723",
+          "pubDate": "Wed, 05 Nov 2025 17:46:00 +0900"
+        },
+        {
+          "title": "최은수 인텔리빅스 대표, 2년 연속 ‘CES2026 혁신상’ 심사위원 선정",
+          "summary": "최 대표는 MBN 보도국장과 보도본부장을 역임했으며, 국내 최초 데이터 거래소인 KDX 한국 데이터 거래소를 창업한 이력이 있다. 현재 그는 인텔리빅스 대표로서 순찰로봇, 국방경계AI 등 다양한 AI 개발을 주도하고...",
+          "link": "https://www.kyeonggi.com/article/20251103580161",
+          "pubDate": "Mon, 03 Nov 2025 18:34:00 +0900"
+        }
+      ]
+    },
+    {
+      "term": "Cybercrime",
+      "term_ko": "사이버 범죄",
+      "significance_score": 0,
+      "mentions": 421,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "사이버 범죄",
+        "total_results": 102283,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1431.02,
+        "last_build_date": "Fri, 07 Nov 2025 15:32:38 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 100
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 65.75342
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 31.50684
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 35.61643
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 84.9315
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 90.41095
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 91.78082
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 86.30136
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%AC%EC%9D%B4%EB%B2%84%20%EB%B2%94%EC%A3%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%82%AC%EC%9D%B4%EB%B2%84%20%EB%B2%94%EC%A3%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%82%AC%EC%9D%B4%EB%B2%84%20%EB%B2%94%EC%A3%84"
+      },
+      "top_headlines": [
+        {
+          "title": "북, 탄도미사일 추정 발사체 1발 700㎞ 날아 동해상 낙하(종합 2보)",
+          "summary": "미국 재무부는 지난 4일(현지시간) 북한 정권의 사이버 범죄 수익 자금 세탁에 관여한 북한 국적자 8명과 북한 소재 기관 2곳을 제재 대상으로 새롭게 지정했습니다. 미국 국무부도 북한산 석탄·철광석의 대중국 수출에...",
+          "link": "http://www.newstomato.com/ReadNews.aspx?no=1280849&inflow=N",
+          "pubDate": "Fri, 07 Nov 2025 15:22:00 +0900"
+        },
+        {
+          "title": "북한, 동해로 탄도미사일 1발 발사…李 정부 출범 이후 두 번째",
+          "summary": "다만 앞서 미 국무부가 지난 3일(현지시간) 북한산 석탄·철광석 불법 환적에 관여한 제3국 선박을 유엔 제제 대상으로 지정해야 한다고 한 데 이어 4일엔 미 재무부가 사이버 범죄 , 정보기술 노동자 사기 등 북한의...",
+          "link": "http://www.sisafocus.co.kr/news/articleView.html?idxno=349822",
+          "pubDate": "Fri, 07 Nov 2025 15:22:00 +0900"
+        },
+        {
+          "title": "北, 평북 대관 일대서 SRBM 1발 발사…700㎞ 날아가",
+          "summary": "최근 미 재무부가 북한 정권의 사이버 범죄 수익 세탁에 관여한 북한 국적자 8명과 북한 소재 기관 2곳을 새롭게 제재 대상에 추가하고, 미 국무부가 북한산 석탄과 철광석 중국 수출에 관여한 제3국 선박 7척에 대해 유엔...",
+          "link": "https://biz.heraldcorp.com/article/10611425?ref=naver",
+          "pubDate": "Fri, 07 Nov 2025 15:17:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 178.0822,
+        "weekly_search_volume": 420.5479,
+        "weekly_average_volume": 70.0913,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015181,
+        "time_weight": 0.025288,
+        "raw_score": -0.000044,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762354800000
+      }
+    },
+    {
+      "term": "AI bias",
+      "term_ko": "AI 편향",
+      "significance_score": 0,
+      "mentions": 225,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "AI 편향",
+        "total_results": 24418,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1350.64,
+        "last_build_date": "Fri, 07 Nov 2025 15:32:40 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 31.25
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 37.5
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 37.5
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 50
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=AI%20%ED%8E%B8%ED%96%A5",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=AI%20%ED%8E%B8%ED%96%A5",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=AI%20%ED%8E%B8%ED%96%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 시대…'소비자 보호법' 개선 방향 모색",
+          "summary": "한영수 한국법제연구원장은 \" AI 는 상품 추천과 계약 체결 등에서 효율성과 편의를 높이지만, 데이터 편향 과 알고리즘의 불투명성, 책임 주체의 모호성 등 새로운 형태의 소비자 피해와 법적 쟁점을 낳고 있다\"고 말했다....",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1685825",
+          "pubDate": "Fri, 07 Nov 2025 15:22:00 +0900"
+        },
+        {
+          "title": "국제사이버보안인증협회, AI 윤리와 사이버 보안 세미나 개최",
+          "summary": "트위터 AI 가 혐오와 사회적인 편향 성 문제 증폭 사례, 2021년 유럽연합은 세계 최초로 인공지능 관련 규정 초안 발표, 틱톡에서 톰 크루즈 딥페이크 영상이 수천만 조회 수 기록 사례, 2022년 구글이 AI 윤리 그룹장을...",
+          "link": "https://www.dailysecu.com/news/articleView.html?idxno=202166",
+          "pubDate": "Fri, 07 Nov 2025 15:02:00 +0900"
+        },
+        {
+          "title": "여수시의회, 지역교육 협력 강화 논의…“민·관 협력으로 여수교육 신...",
+          "summary": "낮고 편향 가능성이 높다\"며 조사 시기 조정과 온라인 병행 방식을 제안했다. 또 행정과 학교 간 회계 차이... 문갑태 부의장은 \"교육경비 보조금 심의위원회의 구성을 확대해 민간 전문가 참여를 보장해야 한다\"며 \" AI ·로봇...",
+          "link": "https://news.tf.co.kr/read/national/2260245.htm",
+          "pubDate": "Fri, 07 Nov 2025 14:59:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 87.5,
+        "weekly_search_volume": 225,
+        "weekly_average_volume": 56.25,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.02342,
+        "time_weight": 0.025288,
+        "raw_score": -0.000069,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762354800000
+      }
+    },
+    {
+      "term": "liquidation",
+      "term_ko": "청산",
+      "significance_score": 0,
+      "mentions": 389,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "liquidation",
+        "total_results": 3273,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 140.18,
+        "last_build_date": "Fri, 07 Nov 2025 15:32:41 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-10-30",
+              "timestamp": 1761750000000,
+              "value": 76.5432
+            },
+            {
+              "period": "2025-10-31",
+              "timestamp": 1761836400000,
+              "value": 60.49382
+            },
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 29.62962
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 33.33333
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 74.07407
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 77.77777
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 74.07407
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=liquidation",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=liquidation",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=liquidation"
+      },
+      "top_headlines": [
+        {
+          "title": "윌리 우 \"스트래티지, 비트코인 청산 가능성 희박\"",
+          "summary": "MSTR liquidation in the next bear market? I doubt it, Here's their debt, the date the debt is due and the price MSTR stock needs to exceed to prevent partial liquidation of their BTC treasury to pay the debt. Equivalent BTC price assumes mNAV 1.0...",
+          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=602708",
+          "pubDate": "Thu, 06 Nov 2025 10:46:00 +0900"
+        },
+        {
+          "title": "비트코인 10만 달러 붕괴…하루 새 20억 달러 선물 청산 사태",
+          "summary": "'선물 청산(futures liquidation )'은 레버리지를 이용해 거래한 포지션이 증거금 유지 한도 아래로 떨어질 경우 강제적으로 포지션이 청산되는 절차를 의미한다. 이번에 하루 동안 발생한 20억 달러 규모의 청산은 다수의...",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15865402",
+          "pubDate": "Thu, 06 Nov 2025 07:46:00 +0900"
+        },
+        {
+          "title": "Bitcoin Collapses Below $100,000 for First Time in 4 Months, Ethereum Als...",
+          "summary": "The background of this sharp decline is interpreted as the aftermath of the massive cryptocurrency liquidation events that occurred in October. Analysis suggests that portfolio losses among...",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=255724",
+          "pubDate": "Wed, 05 Nov 2025 13:54:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 151.8518,
+        "weekly_search_volume": 388.8889,
+        "weekly_average_volume": 64.8148,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.016028,
+        "time_weight": 0.025288,
+        "raw_score": -0.000047,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762354800000
+      }
+    },
+    {
+      "term": "APEC",
       "term_ko": "",
       "significance_score": 0,
-      "mentions": 212,
+      "mentions": 165,
       "evaluation": {
         "source": "naver_search_news",
-        "query": "2035 NDC",
-        "total_results": 5677,
+        "query": "APEC",
+        "total_results": 333102,
         "returned_results": 20,
         "display_count": 20,
-        "recency_weight": 1413,
-        "last_build_date": "Fri, 07 Nov 2025 10:27:02 +0900",
+        "recency_weight": 1436.61,
+        "last_build_date": "Fri, 07 Nov 2025 15:32:42 +0900",
         "search_trends": {
           "source": "naver_datalab_search",
           "time_unit": "date",
@@ -24,69 +410,69 @@
             {
               "period": "2025-10-30",
               "timestamp": 1761750000000,
-              "value": 15.70996
+              "value": 85.85065
             },
             {
               "period": "2025-10-31",
               "timestamp": 1761836400000,
-              "value": 17.52265
+              "value": 100
             },
             {
               "period": "2025-11-01",
               "timestamp": 1761922800000,
-              "value": 8.45921
+              "value": 85.03852
             },
             {
               "period": "2025-11-02",
               "timestamp": 1762009200000,
-              "value": 7.55287
+              "value": 31.65727
             },
             {
               "period": "2025-11-03",
               "timestamp": 1762095600000,
-              "value": 26.28398
+              "value": 22.58419
             },
             {
               "period": "2025-11-04",
               "timestamp": 1762182000000,
-              "value": 24.47129
+              "value": 12.29754
             },
             {
               "period": "2025-11-05",
               "timestamp": 1762268400000,
-              "value": 45.31722
+              "value": 8.23505
             },
             {
               "period": "2025-11-06",
               "timestamp": 1762354800000,
-              "value": 100
+              "value": 5.4518
             }
           ]
         }
       },
       "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=2035%20NDC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=2035%20NDC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=2035%20NDC"
+        "news": "https://search.naver.com/search.naver?where=news&query=APEC",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=APEC",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=APEC"
       },
       "top_headlines": [
         {
-          "title": "정부 제시 2035 탄소감축 목표, 산업계 달성 불가능 의견",
-          "summary": "정부는 6일 서울 영등포구 국회의원회관에서 '2035 국가 온실가스 감축 목표( 2035 NDC )' 공청회를 열고 최종 후보 2가지를 공개했다. 최종 2035 NDC 는 다음 주 대통령 직속 2050 탄소중립녹색성장위원회와 국무회의 심의...",
-          "link": "https://www.gasnews.com/news/articleView.html?idxno=122509",
-          "pubDate": "Fri, 07 Nov 2025 10:26:00 +0900"
+          "title": "이재명 대통령, 10일 국내 7대 그룹 총수 초청…관세 타결 후속 논의",
+          "summary": "한·미 관세협상 및 APEC 정상회의 성과를 기반으로 대기업의 투자·고용 확대 논의가 이뤄질 전망이다.7일... 대통령실과 재계에 따르면 이번 만남은 경주 APEC 정상회의와 한·미 관세협상 타결 과정에서 기업들의 협력을...",
+          "link": "http://theviewers.co.kr/View.aspx?No=3845854",
+          "pubDate": "Fri, 07 Nov 2025 15:30:00 +0900"
         },
         {
-          "title": "2035 년 온실가스 감축 목표 '50∼60%' 또는 '53∼60%'로 압축",
-          "summary": "정부는 6일 서울 영등포구 국회의원회관에서 열린 '2035 국가 온실가스 감축 목표( 2035 NDC )' 공청회에서 이 같은 최종 후보 2가지를 공개했다. 최종안은 다음 주 대통령 직속 2050 탄소중립녹색성장위원회와 국무회의...",
-          "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2351371",
-          "pubDate": "Fri, 07 Nov 2025 10:22:00 +0900"
+          "title": "최윤범號 고려아연, 전략광물 선제적 투자로 성장세 이어간다",
+          "summary": "최 회장은 지난 달 아시아태평양경제협력체( APEC ) 정상회의가 열린 경주에서 개최된 한미 최고경영자(CEO) 비즈니스 라운드 테이블에서 \"안정적인 전략 광물 공급망을 구축해 한미 양국의 경제 안보 성공 모델을 만들어...",
+          "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=74004",
+          "pubDate": "Fri, 07 Nov 2025 15:30:00 +0900"
         },
         {
-          "title": "온실가스 감축까지 덮쳤다…탄소중립에 내몰리는 철강산업",
-          "summary": "더군다나 미국은 유엔기후변화협약 총회에 대표단을 파견하지 않는 등 기후협약을 무시하는 중이며, 유럽연합(EU) 또한 아직 공식적인 2035 NDC 를 제출하지 않았다. 강성욱 한국철강협회 경영본부장은 지난 6일 열린 2035...",
-          "link": "https://www.ddaily.co.kr/page/view/2025110700530707250",
-          "pubDate": "Fri, 07 Nov 2025 10:07:00 +0900"
+          "title": "김학홍 경북도 행정부지사, 오스트리아·헝가리 방문...문화·관광·경제...",
+          "summary": "이번 방문은 2025 경주 APEC 정상회의의 성공 개최 성과를 토대로 경상북도의 국제협력 외연을 유럽으로... 김 부지사는 현지 주요 인사들과 만나 2025 경주 APEC 정상회의의 성과를 공유하고, 경북의 전통과 예술을 통해...",
+          "link": "https://www.wikitree.co.kr/articles/1093391",
+          "pubDate": "Fri, 07 Nov 2025 15:30:00 +0900"
         }
       ],
       "search_scores": {
@@ -96,33 +482,33 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "past_24h_volume": 145.3172,
-        "weekly_search_volume": 212.0846,
-        "weekly_average_volume": 35.3474,
+        "past_24h_volume": 13.6868,
+        "weekly_search_volume": 165.2644,
+        "weekly_average_volume": 27.5441,
         "day_score": 0,
         "week_score": 0,
         "correction_factor": 0.115911,
-        "decay_factor": 0.0244,
-        "time_weight": 0.029027,
-        "raw_score": -0.000082,
+        "decay_factor": 0.029005,
+        "time_weight": 0.025288,
+        "raw_score": -0.000085,
         "scaled_score": 0,
         "total_score": 0,
         "last_observation": 1762354800000
       }
     },
     {
-      "term": "balance sheet",
-      "term_ko": "대차 대조표",
+      "term": "AI Photos",
+      "term_ko": "AI 사진",
       "significance_score": 0,
-      "mentions": 354,
+      "mentions": 236,
       "evaluation": {
         "source": "naver_search_news",
-        "query": "balance sheet",
-        "total_results": 4337,
+        "query": "AI 사진",
+        "total_results": 1023429,
         "returned_results": 20,
         "display_count": 20,
-        "recency_weight": 256.01,
-        "last_build_date": "Fri, 07 Nov 2025 10:27:03 +0900",
+        "recency_weight": 1437.76,
+        "last_build_date": "Fri, 07 Nov 2025 15:32:43 +0900",
         "search_trends": {
           "source": "naver_datalab_search",
           "time_unit": "date",
@@ -131,69 +517,69 @@
             {
               "period": "2025-10-30",
               "timestamp": 1761750000000,
-              "value": 100
+              "value": 46.50766
             },
             {
               "period": "2025-10-31",
               "timestamp": 1761836400000,
-              "value": 57.6923
+              "value": 100
             },
             {
               "period": "2025-11-01",
               "timestamp": 1761922800000,
-              "value": 23.07692
+              "value": 77.93867
             },
             {
               "period": "2025-11-02",
               "timestamp": 1762009200000,
-              "value": 30.76923
+              "value": 54.68483
             },
             {
               "period": "2025-11-03",
               "timestamp": 1762095600000,
-              "value": 92.30769
+              "value": 33.81601
             },
             {
               "period": "2025-11-04",
               "timestamp": 1762182000000,
-              "value": 84.61538
+              "value": 26.74616
             },
             {
               "period": "2025-11-05",
               "timestamp": 1762268400000,
-              "value": 80.76923
+              "value": 22.82793
             },
             {
               "period": "2025-11-06",
               "timestamp": 1762354800000,
-              "value": 42.30769
+              "value": 19.93185
             }
           ]
         }
       },
       "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=balance%20sheet",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=balance%20sheet",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=balance%20sheet"
+        "news": "https://search.naver.com/search.naver?where=news&query=AI%20%EC%82%AC%EC%A7%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=AI%20%EC%82%AC%EC%A7%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=AI%20%EC%82%AC%EC%A7%84"
       },
       "top_headlines": [
         {
-          "title": "Grupo Aeromexico Raises $222.8 Million in U.S. IPO, Marking Major Comebac...",
-          "summary": "The funds raised will help the airline strengthen its balance sheet , expand its route network, and invest in modern aircraft to improve operational efficiency. Backed by Apollo Global Management...",
-          "link": "https://www.econotimes.com/Grupo-Aeromexico-Raises-2228-Million-in-US-IPO-Marking-Major-Comeback-1725270",
-          "pubDate": "Thu, 06 Nov 2025 14:22:00 +0900"
+          "title": "한우자조금, '한우농가 디지털정보 활용 및 생산성 향상' 국제 심포지엄...",
+          "summary": "사진 =한우자조금 제공 매일일보 = 이선민 기자 | 한우자조금관리위원회(이하 한우자조금)는 한우산업의 지속가능한 발전과 인공지능( AI ) 시대 대응 전략 마련을 위해 지난 5일 정부세종컨벤션센터에서 '한우농가...",
+          "link": "http://www.m-i.kr/news/articleView.html?idxno=1300650",
+          "pubDate": "Fri, 07 Nov 2025 15:30:00 +0900"
         },
         {
-          "title": "\"AI설비투자, 바이마르 공화국 빵값처럼 급등…수많은 불확실성 존재\"",
-          "summary": "그러면서 \"장부 외(off- balance - sheet ) 거래는 과거 위기 사례가 많은데, 현재는 데이터센터 임차인(대형 IT기업)의 신용이 이를 뒷받침하고 있다\"고 부연했다. 사모신용 AI 조달 거래 추이 BCA는 최근 급속도로 확산하는...",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4382588",
-          "pubDate": "Thu, 06 Nov 2025 11:20:00 +0900"
+          "title": "로보월드 2025, 20주년을 맞아 ‘K-로봇 산업의 심장’으로 성장",
+          "summary": "사진 . 로봇기술 산업통상부가 주최하고 한국 AI ·로봇산업협회, 한국로봇산업진흥원, 제어·로봇·시스템학회가 공동 주관하는 ‘2025 로보월드(ROBOTWORLD 2025)’가 11월 5일(수) 경기 고양시 킨텍스 제1전시장 1...",
+          "link": "http://robotzine.co.kr/entry/276413",
+          "pubDate": "Fri, 07 Nov 2025 15:30:00 +0900"
         },
         {
-          "title": "Youngstown Steel, Yoshida II and Dames & Moore: Here’s what the lawyers...",
-          "summary": "the balance of power between the president and Congress. Here are a few key cases: Youngstown Sheet & Tube Company v. Sawyer (1952) What is it? The landmark separation of powers case arose from...",
-          "link": "https://www.nytimes.com/live/2025/11/05/us/trump-tariffs-supreme-court/key-tariffs-cases-supreme-court?partner=naver",
-          "pubDate": "Thu, 06 Nov 2025 00:14:00 +0900"
+          "title": "삼성전자, AI 폰 '갤럭시 A17 LTE' 출시…가격 31만 9천원",
+          "summary": "등 AI 기능 지원해 사용성 강화 삼성전자가 필수 성능을 강화하고 AI 기능도 탑재한 실속형 스마트폰... 특히, 후면 카메라에 적용된 '광학식 손떨림 보정(OIS)' 기능은 어두운 환경에서 사진 촬영 시 흔들림과 빛...",
+          "link": "http://www.mhj21.com/170403",
+          "pubDate": "Fri, 07 Nov 2025 15:30:00 +0900"
         }
       ],
       "search_scores": {
@@ -203,433 +589,15 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "past_24h_volume": 123.0769,
-        "weekly_search_volume": 353.8461,
-        "weekly_average_volume": 58.9744,
+        "past_24h_volume": 42.7598,
+        "weekly_search_volume": 235.9455,
+        "weekly_average_volume": 39.3242,
         "day_score": 0,
         "week_score": 0,
         "correction_factor": 0.115911,
-        "decay_factor": 0.017112,
-        "time_weight": 0.029027,
-        "raw_score": -0.000058,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
-    },
-    {
-      "term": "beta",
-      "term_ko": "베타",
-      "significance_score": 0,
-      "mentions": 390,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "beta",
-        "total_results": 27543,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1086.56,
-        "last_build_date": "Fri, 07 Nov 2025 10:27:04 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 48.52941
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 55.88235
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 20.58823
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 27.94117
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 69.11764
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 85.29411
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 86.7647
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=beta",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=beta",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=beta"
-      },
-      "top_headlines": [
-        {
-          "title": "[사이테크+] \"위 세포 유전자 조작해 인슐린 생성…당뇨병 치료 새 가능...",
-          "summary": "제1형 당뇨병은 췌장에 있는 베타세포( beta cell)가 인슐린을 충분히 생산하지 못해서 발생하며 전 세계 약 950만명이 이 질환을 앓고 있는 것으로 추정된다. 인슐린이 부족하면 혈당이 높은 상태로 유지돼...",
-          "link": "https://www.yna.co.kr/view/AKR20251106138900017?input=1195m",
-          "pubDate": "Fri, 07 Nov 2025 05:00:00 +0900"
-        },
-        {
-          "title": "스탠다드차타드 '마지막 저점' 분석…비트코인 3단계 매수전략",
-          "summary": "이러한 상반된 사례들은 비트코인이 전통적 '안전자산'이라기보다, 유동성 국면 전환에서 성과가 갈리는 고베타(high beta ) 자산임을 시사한다. 영향 분석 측면에서, 크립토뉴스는 파르잠 에흐사니(Farzam Ehsani) VALR...",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15866441",
-          "pubDate": "Thu, 06 Nov 2025 23:58:00 +0900"
-        },
-        {
-          "title": "[증권가] 한국투자증권 키움증권 신한투자증권 NH투자증권 DB증권 한화투...",
-          "summary": "이 상품은 소수 종목 집중투자와 현금 비중 조절을 결합한 'K-Alpha, U.S- Beta ' 전략으로 알파 수익과 안정성을 동시에 추구하며, 최소 가입금액은 3000만원이다. 신규 가입자에게는 해외주식 양도소득세 신고대행...",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=343088",
-          "pubDate": "Thu, 06 Nov 2025 22:06:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 186.7647,
-        "weekly_search_volume": 389.7058,
-        "weekly_average_volume": 64.951,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.016004,
-        "time_weight": 0.029027,
-        "raw_score": -0.000054,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
-    },
-    {
-      "term": "5G",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 420,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "5G",
-        "total_results": 774071,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1438.23,
-        "last_build_date": "Fri, 07 Nov 2025 10:27:05 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 100
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 71.61016
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 60.59322
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 57.62711
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 96.18644
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 69.49152
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 69.06779
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 67.37288
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=5G",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=5G",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=5G"
-      },
-      "top_headlines": [
-        {
-          "title": "KT, 3분기 영업익 5382억 전년比 16%↑…\"클라우드·DC·부동산 성장\"(종...",
-          "summary": "2025년 3분기 기준 5G 가입자는 전체 핸드셋 가입자의 80.7%를 차지했다. 유선 사업 매출은 1.5% 증가했다. 인터넷 사업 매출이 2.3% 늘었으며, 미디어 사업은 3.1% 증가했다. 기업서비스 매출은 저수익 사업의 합리화...",
-          "link": "http://www.4th.kr/news/articleView.html?idxno=2099650",
-          "pubDate": "Fri, 07 Nov 2025 10:26:00 +0900"
-        },
-        {
-          "title": "악성코드 감염 KT, 개인정보 유출 없었나…개보위, 조사 착수",
-          "summary": "앞서 SKT는 해킹으로 LTE· 5G 전체 이용자 2324만4649명(알뜰폰 포함·중복 제외)의 개인정보가 유출된 것으로 확인됐다. SKT 서버에서는 BPF도어 계열 27종을 포함해 타이니셸 3종, 웹셸, 오픈소스 악성코드 크로스C2, 슬리버...",
-          "link": "https://www.delighti.co.kr/news/articleView.html?idxno=105348",
-          "pubDate": "Fri, 07 Nov 2025 10:26:00 +0900"
-        },
-        {
-          "title": "KT, 3분기 영업익 5382억원…전년비 16%↑",
-          "summary": "2025년 3분기 기준 5G 가입자는 전체 핸드셋 가입자의 80.7%를 차지했다. 유선 사업 매출은 전년 동기 대비 1.5% 증가했다. 인터넷 사업 매출이 2.3% 늘었으며, 미디어 사업은 전년 동기 대비 3.1% 증가했다. 기업서비스...",
-          "link": "http://www.newsdream.kr/news/articleView.html?idxno=99550",
-          "pubDate": "Fri, 07 Nov 2025 10:24:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 136.4407,
-        "weekly_search_volume": 420.339,
-        "weekly_average_volume": 70.0565,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.015187,
-        "time_weight": 0.029026,
-        "raw_score": -0.000051,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
-    },
-    {
-      "term": "Amazon Prime",
-      "term_ko": "아마존 프라임",
-      "significance_score": 0,
-      "mentions": 415,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "Amazon Prime",
-        "total_results": 6286,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 747.21,
-        "last_build_date": "Fri, 07 Nov 2025 10:27:06 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-30",
-              "timestamp": 1761750000000,
-              "value": 45
-            },
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 25
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 75
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 50
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 60
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 65
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 65
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=Amazon%20Prime",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=Amazon%20Prime",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=Amazon%20Prime"
-      },
-      "top_headlines": [
-        {
-          "title": "At a Climate Summit Without the U.S., Allies and Rivals Call for Action",
-          "summary": "imperiled Amazon rainforest, with several of America’s global allies and rivals alike making... Keir Starmer, the British prime minister, said homegrown energy — wind and nuclear power in...",
-          "link": "https://www.nytimes.com/2025/11/06/climate/cop30-speeches-belem-brazil-climate.html?partner=naver",
-          "pubDate": "Fri, 07 Nov 2025 05:42:00 +0900"
-        },
-        {
-          "title": "BRAZIL COP30",
-          "summary": "COP30 leaders' summit begins in the Brazilian Amazon Brazilian President Luiz Inacio Lula da Silva (R) talks with UK Prime Minister Keir Starmer (L) and Prince William, Prince of Wales (C) during...",
-          "link": "https://n.news.naver.com/mnews/article/091/0010045508?sid=104",
-          "pubDate": "Fri, 07 Nov 2025 05:40:00 +0900"
-        },
-        {
-          "title": "BRAZIL COP30",
-          "summary": "COP30 leaders' summit begins in the Brazilian Amazon Brazilian President Luiz Inacio Lula da Silva (C) poses alongside UK Prime Minister Keir Starmer (L) and Prince William, Prince of Wales...",
-          "link": "https://n.news.naver.com/mnews/article/091/0010045117?sid=104",
-          "pubDate": "Fri, 07 Nov 2025 04:30:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 165,
-        "weekly_search_volume": 415,
-        "weekly_average_volume": 69.1667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.015322,
-        "time_weight": 0.029026,
-        "raw_score": -0.000052,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762354800000
-      }
-    },
-    {
-      "term": "Minjang Jang Reporter",
-      "term_ko": "장민주 기자",
-      "significance_score": 0,
-      "mentions": 245,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "장민주 기자",
-        "total_results": 1055,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 34.41,
-        "last_build_date": "Fri, 07 Nov 2025 10:27:07 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 86.36363
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 50
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 27.27272
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 27.27272
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 40.90909
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9E%A5%EB%AF%BC%EC%A3%BC%20%EA%B8%B0%EC%9E%90",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9E%A5%EB%AF%BC%EC%A3%BC%20%EA%B8%B0%EC%9E%90",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9E%A5%EB%AF%BC%EC%A3%BC%20%EA%B8%B0%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"행정수도 세종 대한민국의 새로운 도약 촉매제\"",
-          "summary": "［동양일보 윤여군 기자 ］ ▲ 31회 한·일 지역정책연구회가 시청 대회의실에서 열렸다. 참석자들이... 장민주 세종시 정책기획관이 발제자로 나서 '대한민국 균형발전 선도도시의 현재와 미래, 행정수도 세종'을 주제로...",
-          "link": "http://www.dynews.co.kr/news/articleView.html?idxno=826227",
-          "pubDate": "Wed, 05 Nov 2025 20:52:00 +0900"
-        },
-        {
-          "title": "공공시설 느는데…유지비 대기도 힘든 행정수도",
-          "summary": "박병준 기자 입니다. [리포트] 수영장부터 체육관, 도서관까지 다양한 편의 시설을 갖춘 세종시의 복합... [ 장민주 /세종시 정책기획관 : \"우리 시와 같은 구조를 가지고 있는 제주도 같은 경우에는 보통 교부세 일정 비율을...",
-          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8395967&ref=A",
-          "pubDate": "Fri, 31 Oct 2025 21:42:00 +0900"
-        },
-        {
-          "title": "[ 기자 가만난세상] 전쟁을 기억하는 방식",
-          "summary": "장민주 외교안보부 기자 하지만 전쟁 박물관을 들어선 순간 ‘그들은 목숨을 바쳤다’는 말이 다르게 다가왔다. 건물 안에는 세계대전 전투 장면을 정교하게 재현한 모형이 전시돼 있었다. 총을 맞은 전우가 바로 옆에서...",
-          "link": "https://www.segye.com/newsView/20251020513715?OutUrl=naver",
-          "pubDate": "Mon, 20 Oct 2025 22:54:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 68.1818,
-        "weekly_search_volume": 245.4545,
-        "weekly_average_volume": 49.0909,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.022049,
-        "time_weight": 0.029026,
-        "raw_score": -0.000074,
+        "decay_factor": 0.022662,
+        "time_weight": 0.025287,
+        "raw_score": -0.000066,
         "scaled_score": 0,
         "total_score": 0,
         "last_observation": 1762354800000
@@ -639,7 +607,7 @@
   "metadata": {
     "collection_method": "naver_search_trending_seeded",
     "sample_size": 30,
-    "generated_at": "2025-11-07T01:27:08.355Z",
+    "generated_at": "2025-11-07T06:32:45.037Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
     "keyword_source": "NAVER DataLab 2025-11-06→2025-11-07",
