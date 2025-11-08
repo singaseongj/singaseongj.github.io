@@ -1,231 +1,47 @@
 {
+  "generatedAt": "2025-11-08T18:24:39.510Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-08",
   "window": "12_hours",
   "total_phrases": 2,
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
+    {
+      "term": "Corporal Chae",
+      "term_ko": "채 상병"
+    },
+    {
+      "term": "2035 Ndc",
+      "term_ko": "2035 Ndc"
+    }
+  ],
   "discovered_keywords": [
     {
       "term": "Corporal Chae",
-      "term_ko": "채 상병",
-      "significance_score": 0,
-      "mentions": 444,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "채 상병",
-        "total_results": 63035,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1267.81,
-        "last_build_date": "Sat, 08 Nov 2025 21:38:21 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 69.11764
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 62.74509
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 49.5098
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 77.45098
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 83.33333
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 41.66666
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 91.66666
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%B1%84%20%EC%83%81%EB%B3%91",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%B1%84%20%EC%83%81%EB%B3%91",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%B1%84%20%EC%83%81%EB%B3%91"
-      },
-      "top_headlines": [
-        {
-          "title": "민주 \"클러치백 선물, 국정 사유화\"...말 아낀 국민의힘",
-          "summary": "'3대 특검' 수사가 정작 의혹의 본질인 계엄 해제 표결 방해나 채 상병 순직 사건 수사 외압, 도이치모터스 주가조각 등은 밝혀내지 못하고 있다고 지적했습니다. [신 동 욱 / 국민의힘 최고위원 : 무슨 가방만 잔뜩 나오고...",
-          "link": "https://www.ytn.co.kr/_ln/0101_202511081845238413",
-          "pubDate": "Sat, 08 Nov 2025 18:45:00 +0900"
-        },
-        {
-          "title": "尹, 해병특검 소환 두 차례 연속 불응…3차 출석 통보 받아",
-          "summary": "윤 전 대통령은 해병대 채 상병 순직 사건 외압 의혹을 받고 있다. 이를 수사 중인 이명현 특별검사팀의 소환 요청에 출석 요구에 응하지 않은 것이다. 지난달 23일 첫 소환 통보에 이어 두 번째 불출석이다. 이에 특검팀은...",
-          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1293564",
-          "pubDate": "Sat, 08 Nov 2025 15:32:00 +0900"
-        },
-        {
-          "title": "채상병 특검, 윤에 \"11일 출석 하라\" 3차 통보...최후통첩?",
-          "summary": "윤석열 전 대통령이 채 상병 특검의 2차 소환 요구에도 응하지 않았습니다. 특검은 오는 11일 출석하라고 3차 소환통보를 했는데, 여기에도 응하지 않으면 강제구인에 나설 것으로 보입니다. 이만수 기자가 보도합니다....",
-          "link": "https://www.ytn.co.kr/_ln/0103_202511081459015055",
-          "pubDate": "Sat, 08 Nov 2025 14:59:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 191.6667,
-        "weekly_search_volume": 443.6274,
-        "weekly_average_volume": 73.9379,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014629,
-        "time_weight": 0.021911,
-        "raw_score": -0.000037,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term_ko": "채 상병"
     },
     {
-      "term": "2035 NDC",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 250,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "2035 NDC",
-        "total_results": 5754,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1125.26,
-        "last_build_date": "Sat, 08 Nov 2025 21:38:22 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 17.52265
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 8.45921
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 7.55287
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 26.28398
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 24.47129
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 45.31722
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 46.82779
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=2035%20NDC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=2035%20NDC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=2035%20NDC"
-      },
-      "top_headlines": [
-        {
-          "title": "탄소감축 투자기업에 3천억 신규 융자···민간 투자 1조 유발",
-          "summary": "박동일 산업정책실장은 “정부는 조만간 2035 국가온실가스감축목표( NDC ) 발표를 앞두고 있다”며 “산업계가 저탄소·고부가가치 구조로 전환하기 위해 선제적 투자에 나설 필요가 있다”고 강조했다.",
-          "link": "https://www.kbmaeil.com/article/20251108500092",
-          "pubDate": "Sat, 08 Nov 2025 16:58:00 +0900"
-        },
-        {
-          "title": "\" 2035 NDC (안), 국가 경제·산업 붕괴 우려…전면 재수립해야\"",
-          "summary": "기후에너지환경부가 발표한 2035 NDC 계획을 두고 '비현실적', '비과학적'이라는 비판을 원자력학계에서 제기했다. 7일 한국원자력학회(회장 이기복)는 성명서를 통해 '기후에너지환경부는 지난 6일 국회 공청회에서 2035년...",
-          "link": "http://www.e-platform.net/news/articleView.html?idxno=97612",
-          "pubDate": "Sat, 08 Nov 2025 16:10:00 +0900"
-        },
-        {
-          "title": "한국지엠 철수설 점입가경···불난 집에 NDC ·노란봉투법 ‘부채질’",
-          "summary": "'2035 국가 온실가스 감축 목표'( 2035 NDC ) 수립과 '노동조합법 제2·3조 개정안'(노란봉투법) 시행은 여기에 '부채질'을 할 것으로 우려된다. 8일 업계에 따르면 기후에너지환경부는 최근 ' 2035 NDC ' 공청회를 열고 최종 후보...",
-          "link": "https://www.ekn.kr/web/view.php?key=20251108025055045",
-          "pubDate": "Sat, 08 Nov 2025 15:00:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 146.8278,
-        "weekly_search_volume": 250.4531,
-        "weekly_average_volume": 41.7422,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.021744,
-        "time_weight": 0.021911,
-        "raw_score": -0.000055,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term": "2035 Ndc",
+      "term_ko": "2035 Ndc"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_trending_seeded",
-    "sample_size": 30,
-    "generated_at": "2025-11-08T12:38:23.057Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "NAVER DataLab 2025-11-07→2025-11-08",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "translations": {
+    "Corporal Chae": {
+      "en": "Corporal Chae",
+      "ko": "채 상병",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T18:24:39.510Z"
+    },
+    "2035 Ndc": {
+      "en": "2035 Ndc",
+      "ko": "2035 Ndc",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T18:24:39.510Z"
+    }
   }
 }
