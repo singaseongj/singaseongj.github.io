@@ -35,6 +35,8 @@ const CEREBRAS_TEMPERATURE =
     : 0.7;
 const CEREBRAS_TOP_P =
   process.env.CEREBRAS_TOP_P !== undefined ? Number(process.env.CEREBRAS_TOP_P) : 0.85;
+const CEREBRAS_PROMPT_CHAR_LIMIT = Number(process.env.CEREBRAS_PROMPT_CHAR_LIMIT) || 7000;
+const CEREBRAS_MIN_DYNAMIC_TEXT = Number(process.env.CEREBRAS_MIN_DYNAMIC_TEXT) || 1200;
 
 const SAMPLE_SIZE = 30;
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
@@ -133,6 +135,28 @@ function limitWords(phrase, maxWords = 2) {
     return parts.join(' ');
   }
   return parts.slice(0, cap).join(' ');
+}
+
+function shrinkPromptForCerebras(prompt, targetLength = CEREBRAS_PROMPT_CHAR_LIMIT) {
+  if (!prompt) return '';
+  const safeLimit = Math.max(400, Number(targetLength) || CEREBRAS_PROMPT_CHAR_LIMIT);
+  if (prompt.length <= safeLimit) {
+    return prompt;
+  }
+
+  const ellipsis = '\n[...trimmed due to length...]';
+  const sliceLength = Math.max(100, safeLimit - ellipsis.length);
+  const trimmed = prompt.slice(0, sliceLength);
+  return `${trimmed}${ellipsis}`;
+}
+
+function isContextLengthError(error) {
+  if (!error) return false;
+  const message =
+    typeof error === 'string'
+      ? error
+      : error.message || error?.response || error?.description || '';
+  return /context_length_exceeded|reduce the length of the messages|too long/i.test(message);
 }
 
 function normalizeForComparison(value) {
@@ -283,80 +307,116 @@ function buildKeywordPrompt(desiredCount) {
 }
 
 
-async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}) {
+async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allowAutoTruncate = true } = {}) {
   if (!CEREBRAS_API_KEY) {
     console.warn('⚠️  CEREBRAS_API_KEY is not configured. Skipping Cerebras keyword generation.');
     return [];
   }
 
-  const requestPrompt = prompt || buildKeywordPrompt(desiredCount);
-  console.log('🤖 Requesting financial keywords from Cerebras…');
-
-  const payload = {
-    model: CEREBRAS_MODEL,
-    messages: [
-      { role: 'system', content: 'You are a helpful assistant that only returns valid JSON.' },
-      { role: 'user', content: requestPrompt },
-    ],
-    max_completion_tokens: CEREBRAS_MAX_TOKENS,
-    temperature: CEREBRAS_TEMPERATURE,
-    top_p: CEREBRAS_TOP_P,
-    stream: false,
-  };
-
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), CEREBRAS_REQUEST_TIMEOUT_MS);
-
-  try {
-    const response = await fetch(CEREBRAS_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${CEREBRAS_API_KEY}`,
-        'User-Agent': 'stocks-keywords-script',
-      },
-      body: JSON.stringify(payload),
-      signal: controller.signal,
-    });
-
-    if (!response.ok) {
-      const text = await response.text();
-      throw new Error(`HTTP ${response.status}: ${text.slice(0, 200)}`);
-    }
-
-    const result = await response.json();
-    const choice = Array.isArray(result.choices) ? result.choices[0] : undefined;
-    const llmText = String(
-      choice?.message?.content ||
-        choice?.delta?.content ||
-        result.response ||
-        result.message?.content ||
-        ''
-    ).trim();
-
-    if (!llmText) {
-      throw new Error('Empty response from Cerebras.');
-    }
-
-    const extracted = extractKeywordsFromLLMResponse(llmText);
-    const sanitized = sanitizeKeywordList(extracted).slice(0, desiredCount);
-
-    if (!sanitized.length) {
-      throw new Error('No keywords could be parsed from Cerebras response.');
-    }
-
-    console.log(`🤖 Cerebras provided ${sanitized.length} keyword candidates.`);
-    return sanitized;
-  } catch (err) {
-    if (err.name === 'AbortError') {
-      console.warn(`⚠️  Cerebras request timed out after ${CEREBRAS_REQUEST_TIMEOUT_MS}ms.`);
-    } else {
-      console.warn(`⚠️  Failed to retrieve keywords from Cerebras: ${err.message}`);
-    }
+  let promptToUse = (prompt || buildKeywordPrompt(desiredCount)).trim();
+  if (!promptToUse) {
+    console.warn('⚠️  Attempted to call Cerebras with an empty prompt.');
     return [];
-  } finally {
-    clearTimeout(timeoutId);
   }
+
+  const maxAttempts = allowAutoTruncate ? 2 : 1;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    if (attempt === 1) {
+      console.log('🤖 Requesting financial keywords from Cerebras…');
+    } else {
+      console.log('🔁 Retrying Cerebras request with trimmed prompt…');
+    }
+
+    const payload = {
+      model: CEREBRAS_MODEL,
+      messages: [
+        { role: 'system', content: 'You are a helpful assistant that only returns valid JSON.' },
+        { role: 'user', content: promptToUse },
+      ],
+      max_completion_tokens: CEREBRAS_MAX_TOKENS,
+      temperature: CEREBRAS_TEMPERATURE,
+      top_p: CEREBRAS_TOP_P,
+      stream: false,
+    };
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), CEREBRAS_REQUEST_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(CEREBRAS_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${CEREBRAS_API_KEY}`,
+          'User-Agent': 'stocks-keywords-script',
+        },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+
+      if (!response.ok) {
+        const text = await response.text();
+        throw new Error(`HTTP ${response.status}: ${text.slice(0, 200)}`);
+      }
+
+      const result = await response.json();
+      const choice = Array.isArray(result.choices) ? result.choices[0] : undefined;
+      const llmText = String(
+        choice?.message?.content ||
+          choice?.delta?.content ||
+          result.response ||
+          result.message?.content ||
+          ''
+      ).trim();
+
+      if (!llmText) {
+        throw new Error('Empty response from Cerebras.');
+      }
+
+      const extracted = extractKeywordsFromLLMResponse(llmText);
+      const sanitized = sanitizeKeywordList(extracted).slice(0, desiredCount);
+
+      if (!sanitized.length) {
+        throw new Error('No keywords could be parsed from Cerebras response.');
+      }
+
+      console.log(`🤖 Cerebras provided ${sanitized.length} keyword candidates.`);
+      return sanitized;
+    } catch (err) {
+      if (err.name === 'AbortError') {
+        console.warn(`⚠️  Cerebras request timed out after ${CEREBRAS_REQUEST_TIMEOUT_MS}ms.`);
+        return [];
+      }
+
+      if (
+        allowAutoTruncate &&
+        attempt < maxAttempts &&
+        isContextLengthError(err) &&
+        promptToUse.length > CEREBRAS_MIN_DYNAMIC_TEXT
+      ) {
+        const nextLimit = Math.max(
+          CEREBRAS_MIN_DYNAMIC_TEXT,
+          Math.min(CEREBRAS_PROMPT_CHAR_LIMIT, Math.floor(promptToUse.length * 0.8)),
+        );
+        const trimmedPrompt = shrinkPromptForCerebras(promptToUse, nextLimit);
+        if (trimmedPrompt.length < promptToUse.length) {
+          console.warn(
+            `⚠️  Cerebras prompt too long (len=${promptToUse.length}). Retrying with ${trimmedPrompt.length} characters.`,
+          );
+          promptToUse = trimmedPrompt;
+          continue;
+        }
+      }
+
+      console.warn(`⚠️  Failed to retrieve keywords from Cerebras: ${err.message}`);
+      return [];
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  return [];
 }
 
 async function requestKeywordsFromWorker({ prompt, limit } = {}) {
@@ -632,22 +692,58 @@ async function collectBaseline(
   return { news, blogs, from, to };
 }
 
-async function extractWindowKeywordsKorean(text, max = TRENDING_WINDOW_MAX_LLM_KEYWORDS) {
-  if (!text) {
-    return [];
-  }
-
-  const truncated = text.slice(0, TRENDING_WINDOW_TEXT_SLICE);
-  const prompt = [
-    `아래의 한국어 뉴스/블로그 텍스트에서 금융 및 비즈니스 관련 핵심 검색 키워드를 최대 ${max}개 도출하세요.`,
+function buildWindowExtractionPrompt(text, maxKeywords) {
+  const safeMax = Number.isFinite(maxKeywords) && maxKeywords > 0 ? Math.floor(maxKeywords) : 0;
+  const instructionLines = [
+    `아래의 한국어 뉴스/블로그 텍스트에서 금융 및 비즈니스 관련 핵심 검색 키워드를 최대 ${safeMax || TRENDING_WINDOW_MAX_LLM_KEYWORDS}개 도출하세요.`,
     '조건:',
     '- 1~4어절의 간결한 표현',
     '- 동의어나 중복 표현 제거',
     '- 결과는 JSON 배열 형식만 출력 (설명 금지)',
     '',
     '텍스트:',
-    truncated,
-  ].join('\n');
+  ];
+
+  const header = instructionLines.join('\n');
+  const headerWithNewline = `${header}\n`;
+  const rawInput = String(text || '').slice(0, TRENDING_WINDOW_TEXT_SLICE);
+
+  const remainingBudget = CEREBRAS_PROMPT_CHAR_LIMIT - headerWithNewline.length;
+  const minimumBudget = Math.min(CEREBRAS_MIN_DYNAMIC_TEXT, Math.max(0, remainingBudget));
+  const effectiveBudget = Math.max(
+    0,
+    Math.min(TRENDING_WINDOW_TEXT_SLICE, remainingBudget > 0 ? remainingBudget : minimumBudget),
+  );
+
+  let snippet = rawInput.slice(0, effectiveBudget);
+  const wasTruncated = rawInput.length > snippet.length;
+  if (wasTruncated && snippet.length > 0) {
+    const marker = '\n[중략]\n';
+    const adjusted = Math.max(0, effectiveBudget - marker.length);
+    snippet = `${snippet.slice(0, adjusted)}${marker}`;
+  }
+
+  const prompt = `${headerWithNewline}${snippet}`;
+
+  return {
+    prompt,
+    truncated: wasTruncated,
+    snippetLength: snippet.length,
+    originalLength: text ? String(text).length : 0,
+  };
+}
+
+async function extractWindowKeywordsKorean(text, max = TRENDING_WINDOW_MAX_LLM_KEYWORDS) {
+  if (!text) {
+    return [];
+  }
+
+  const { prompt, truncated, snippetLength, originalLength } = buildWindowExtractionPrompt(text, max);
+  if (truncated) {
+    console.log(
+      `✂️  Trimmed news/blog sample for Cerebras from ${originalLength} to ${snippetLength} characters.`,
+    );
+  }
 
   const cerebrasKeywords = await fetchCerebrasKeywords({ desiredCount: max, prompt });
   if (cerebrasKeywords.length) {
@@ -1710,7 +1806,11 @@ async function trimKeywordsWithCerebras(keywords, { maxWords = 2, limit } = {}) 
     `Keywords: ${JSON.stringify(truncated.slice(0, effectiveLimit))}`,
   ].join(' ');
 
-  const trimmed = await fetchCerebrasKeywords({ desiredCount: effectiveLimit, prompt });
+  const trimmed = await fetchCerebrasKeywords({
+    desiredCount: effectiveLimit,
+    prompt,
+    allowAutoTruncate: false,
+  });
   const cleaned = sanitizeKeywordList((trimmed.length ? trimmed : truncated).map((kw) => limitWords(kw, maxWords)));
 
   if (!cleaned.length) {

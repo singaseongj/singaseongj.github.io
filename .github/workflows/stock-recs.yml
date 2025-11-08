@@ -453,6 +453,13 @@ jobs:
           echo "▶ Running extractKeywords.js for analysis (does not overwrite tags.json)"
           node stocks/extractKeywords.js || echo "⚠️ extractKeywords.js failed (non-blocking)"
 
+      - name: Trim finance keyword dictionary
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          node stocks/trimFinanceKeywords.cjs
+          test -s data/finance_keywords.json
+
       - name: Prune cache directory
         env:
           CACHE_LIMIT: 1000
