@@ -37,6 +37,8 @@ const CEREBRAS_TOP_P =
   process.env.CEREBRAS_TOP_P !== undefined ? Number(process.env.CEREBRAS_TOP_P) : 0.85;
 const CEREBRAS_PROMPT_CHAR_LIMIT = Number(process.env.CEREBRAS_PROMPT_CHAR_LIMIT) || 7000;
 const CEREBRAS_MIN_DYNAMIC_TEXT = Number(process.env.CEREBRAS_MIN_DYNAMIC_TEXT) || 1200;
+const CEREBRAS_DYNAMIC_TEXT_CHAR_LIMIT =
+  Number(process.env.CEREBRAS_DYNAMIC_TEXT_CHAR_LIMIT) || 3000;
 
 const SAMPLE_SIZE = 30;
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
@@ -755,10 +757,13 @@ function buildWindowExtractionPrompt(text, maxKeywords) {
 
   const remainingBudget = CEREBRAS_PROMPT_CHAR_LIMIT - headerWithNewline.length;
   const minimumBudget = Math.min(CEREBRAS_MIN_DYNAMIC_TEXT, Math.max(0, remainingBudget));
-  const effectiveBudget = Math.max(
-    0,
-    Math.min(TRENDING_WINDOW_TEXT_SLICE, remainingBudget > 0 ? remainingBudget : minimumBudget),
+  const dynamicBudget = remainingBudget > 0 ? remainingBudget : minimumBudget;
+  const cappedBudget = Math.min(
+    TRENDING_WINDOW_TEXT_SLICE,
+    CEREBRAS_DYNAMIC_TEXT_CHAR_LIMIT,
+    dynamicBudget,
   );
+  const effectiveBudget = Math.max(0, Math.floor(cappedBudget));
 
   let snippet = rawInput.slice(0, effectiveBudget);
   const wasTruncated = rawInput.length > snippet.length;
@@ -1828,6 +1833,51 @@ async function fetchTrendingKeywordsFromNaver({ limit = SAMPLE_SIZE, sampleSize 
   return sanitized;
 }
 
+async function topOffKeywordsWithDataLab(keywords, desiredCount = SAMPLE_SIZE) {
+  const sanitizedBase = sanitizeKeywordList(Array.isArray(keywords) ? keywords : []);
+  const target =
+    Number.isFinite(desiredCount) && desiredCount > 0 ? Math.floor(desiredCount) : SAMPLE_SIZE;
+  const cappedBase = sanitizedBase.slice(0, target);
+
+  if (cappedBase.length >= target) {
+    return { keywords: cappedBase, added: [] };
+  }
+
+  let datalabCandidates = [];
+  try {
+    datalabCandidates = await fetchTrendingKeywordsFromNaver({
+      limit: Math.max(target * 2, SAMPLE_SIZE),
+    });
+  } catch (err) {
+    console.warn(`⚠️  Unable to retrieve NAVER DataLab candidates for top-off: ${err.message}`);
+  }
+
+  if (!datalabCandidates.length) {
+    return { keywords: cappedBase, added: [] };
+  }
+
+  const missing = target - cappedBase.length;
+  const existing = new Set(cappedBase);
+  const additions = [];
+
+  for (const candidate of datalabCandidates) {
+    if (existing.has(candidate)) continue;
+    additions.push(candidate);
+    existing.add(candidate);
+    if (additions.length >= missing) {
+      break;
+    }
+  }
+
+  if (!additions.length) {
+    return { keywords: cappedBase, added: [] };
+  }
+
+  const combined = sanitizeKeywordList([...cappedBase, ...additions]).slice(0, target);
+
+  return { keywords: combined, added: additions.slice(0, missing) };
+}
+
 async function trimKeywordsWithCerebras(keywords, { maxWords = 2, limit } = {}) {
   const baseList = sanitizeKeywordList(Array.isArray(keywords) ? keywords : []);
   if (!baseList.length) {
@@ -1874,6 +1924,21 @@ async function buildTags() {
   let sampled = sanitizeKeywordList(llmSeedResult?.keywords || []);
   let keywordCollectionMethod = llmSeedResult?.method || 'naver_search_llm_seeded';
   const windowMetadata = llmSeedResult?.windowMetadata;
+  let datalabTopOffKeywords = [];
+  let financeTopOffKeywords = [];
+
+  if (sampled.length < SAMPLE_SIZE) {
+    const { keywords: toppedOff, added } = await topOffKeywordsWithDataLab(sampled, SAMPLE_SIZE);
+    if (added.length) {
+      console.log(
+        `📈 Filled ${added.length} missing keywords from NAVER DataLab trending candidates to reach ${
+          toppedOff.length
+        } entries.`,
+      );
+      sampled = toppedOff;
+      datalabTopOffKeywords = added;
+    }
+  }
 
   if (!sampled.length) {
     const fallbackKeywordPool = loadFinanceKeywords();
@@ -1892,6 +1957,28 @@ async function buildTags() {
 
     sampled = sanitizeKeywordList(shuffleSample(fallbackKeywordPool, SAMPLE_SIZE));
     keywordCollectionMethod = 'naver_search_random_sample';
+  } else if (sampled.length < SAMPLE_SIZE) {
+    try {
+      const fallbackKeywordPool = loadFinanceKeywords();
+      const missing = SAMPLE_SIZE - sampled.length;
+      const existing = new Set(sampled);
+      const additions = [];
+      for (const candidate of fallbackKeywordPool) {
+        if (existing.has(candidate)) continue;
+        additions.push(candidate);
+        existing.add(candidate);
+        if (additions.length >= missing) break;
+      }
+      if (additions.length) {
+        sampled = sanitizeKeywordList([...sampled, ...additions]).slice(0, SAMPLE_SIZE);
+        financeTopOffKeywords = additions.slice(0, missing);
+        console.log(
+          `📥 Added ${financeTopOffKeywords.length} fallback finance keywords to reach ${sampled.length}.`,
+        );
+      }
+    } catch (err) {
+      console.warn(`⚠️  Unable to load finance keywords for fallback: ${err.message}`);
+    }
   }
 
   sampled = sampled.slice(0, SAMPLE_SIZE);
@@ -2044,6 +2131,20 @@ async function buildTags() {
         candidate_count: windowMetadata.candidateCount,
       };
     }
+  }
+
+  if (datalabTopOffKeywords.length) {
+    metadata.datalab_top_off = {
+      added: datalabTopOffKeywords.length,
+      keywords: datalabTopOffKeywords,
+    };
+  }
+
+  if (financeTopOffKeywords.length) {
+    metadata.finance_fallback_top_off = {
+      added: financeTopOffKeywords.length,
+      keywords: financeTopOffKeywords,
+    };
   }
 
   const result = {
