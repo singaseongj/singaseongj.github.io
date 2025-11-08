@@ -1,781 +1,131 @@
 {
+  "generatedAt": "2025-11-08T06:26:17.744Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-08",
   "window": "12_hours",
   "total_phrases": 8,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Backer",
-      "term_ko": "백워",
-      "significance_score": 249,
-      "mentions": 81,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "백워",
-        "total_results": 81,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:08 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%B0%B1%EC%9B%8C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%B0%B1%EC%9B%8C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%B0%B1%EC%9B%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[대중문화칼럼] K팝의 ' 백워 드 스필오버'의 의미와 과제",
-          "summary": "K팝과 관련해 백워 드 스필오버라는 개념이 주목받고 있는데, 이를 봐도 수평적 파급효과 개념이 잘 드러나고 있다. 옆으로 팬덤의 외연이 확장해가는 현상이기 때문이다. 본래 ' 백워 드 스필오버'는 특정 가수의...",
-          "link": "https://www.newscj.com/news/articleView.html?idxno=3060576",
-          "pubDate": "Tue, 05 Sep 2023 18:02:00 +0900"
-        },
-        {
-          "title": "국제유가, 중국발 원유수요 둔화 우려 하락",
-          "summary": "프라이스 퓨처그룹의 필 플린 애널리스트는 \"WTI와 브렌트가 모두 선물가격보다 현물가격이 높은 백워 테이션 상태로 유가 하락이 지배하는 분위기\"라고 설명했다. 오안다의 크레이그 얼람 선임 시장 애널리스트는...",
-          "link": "http://www.g-enews.com/ko-kr/news/article/news_all/20221126062503548b5d048c6f3_1/article.html",
-          "pubDate": "Sat, 26 Nov 2022 07:48:00 +0900"
-        },
-        {
-          "title": "국제유가, 중국 코로나 확산에 올들어 최저치...WTI, 2.1%↓76달러에 마...",
-          "summary": "프라이스 퓨처그룹의 필 플린 애널리스트는 \"WTI와 브렌트가 모두 선물가격보다 현물가격이 높은 백워 테이션 상태로 유가 하락이 지배하는 분위기\"라고 설명했다. 투자자들은 중국의 코로나19 확산세를 주시하고...",
-          "link": "http://www.getnews.co.kr/news/articleView.html?idxno=607423",
-          "pubDate": "Sat, 26 Nov 2022 05:36:00 +0900"
-        }
-      ]
+      "term_ko": "백워"
     },
     {
       "term": "Jimin Lee",
-      "term_ko": "이지민",
-      "significance_score": 0,
-      "mentions": 447,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "이지민",
-        "total_results": 31788,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 54.74,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:03 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 76.65369
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 94.16342
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 78.21011
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 73.92996
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 76.65369
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 64.20233
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 60.31128
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9D%B4%EC%A7%80%EB%AF%BC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9D%B4%EC%A7%80%EB%AF%BC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9D%B4%EC%A7%80%EB%AF%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "기무간이 몸소 워크숍 출격, 대중에게 한발 더 다가서는 서울무용제",
-          "summary": "그밖에 김다운, 이지민 , 조인호, 지경민, 김진아, 이영철의 ‘남판여판춤판’, 각종 국내외 경연에서 두각을 나타낸 신예 무용가들이 선보이는 ‘열정춤판’으로 우리나라 무용계의 현재와 미래를 조망하는 기회도...",
-          "link": "https://www.joongang.co.kr/article/25380310",
-          "pubDate": "Fri, 07 Nov 2025 10:20:00 +0900"
-        },
-        {
-          "title": "퇴근후 오직 나만을 위한 술 ‘자가소주’ 출시",
-          "summary": "전통주 큐레이션·유통 플랫폼 대동여주도(대표 이지민 ·이세민)가 5일 서울 종로구 동숭길 ‘순대실록’ 식당에서 웹소설 <서울 자가에 대기업 다니는 김부장 이야기>를 모티브로 한 전통 안동소주 ‘자가소주’ 출시...",
-          "link": "https://www.newspim.com/news/view/20251105000574",
-          "pubDate": "Wed, 05 Nov 2025 11:45:00 +0900"
-        },
-        {
-          "title": "대동여주도,웹소설 <서울 자가에 대기업 다니는 김부장 이야기> 모티브...",
-          "summary": "전통주 큐레이션·유통 플랫폼 대동여주도(대표 이지민 ·이세민)가 5일 서울 종로구 동숭길 ‘순대실록’ 식당에서 웹소설 <서울 자가에 대기업 다니는 김부장 이야기>를 모티브로 한 전통 안동소주 ‘자가소주’ 출시...",
-          "link": "https://www.newspim.com/news/view/20251105000577",
-          "pubDate": "Wed, 05 Nov 2025 11:45:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 124.5136,
-        "weekly_search_volume": 447.4708,
-        "weekly_average_volume": 74.5785,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014542,
-        "time_weight": 0.029069,
-        "raw_score": -0.000049,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term_ko": "이지민"
     },
     {
       "term": "The Korea Times",
-      "term_ko": "한국일보",
-      "significance_score": 0,
-      "mentions": 550,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "한국일보",
-        "total_results": 811197,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1240.12,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:05 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 84.5052
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 69.96527
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 65.01736
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 95.83333
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 99.30555
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 97.65625
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 92.10069
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%9C%EA%B5%AD%EC%9D%BC%EB%B3%B4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%95%9C%EA%B5%AD%EC%9D%BC%EB%B3%B4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%95%9C%EA%B5%AD%EC%9D%BC%EB%B3%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[주요 신문 사설](8일 조간)",
-          "summary": "가능하다 ▲ 한국일보 = 외교 성과로 상승 李 대통령 지지율… '내치 불만' 경청을 대통령실 \"한국형 원잠 국내에서 건조\", 반드시 관철하길 울산 붕괴 사고…잇따른 공공부문 산재 사망, 정부 각성해야 ▲ 매일경제 = \"中...",
-          "link": "https://www.yna.co.kr/view/AKR20251108023400505?input=1195m",
-          "pubDate": "Sat, 08 Nov 2025 10:00:00 +0900"
-        },
-        {
-          "title": "[전국 주요 신문 톱뉴스](8일 조간)",
-          "summary": "예약 ▲ 한국일보 = 철제 타워 하단부터 철거… '안전'은 없었다 ▲ 매일경제 = 쇄신 택한 삼성…이재용 '속도경영' ▲ 서울경제 = 국가과학자 5년간 100명 뽑는다 ▲ 한국경제 = 속도 내는 뉴삼성 사업지원실 신설 (서울...",
-          "link": "https://www.yna.co.kr/view/AKR20251108023000505?input=1195m",
-          "pubDate": "Sat, 08 Nov 2025 10:00:00 +0900"
-        },
-        {
-          "title": "시월 어느 날, 제주 안덕계곡에서 생긴 일",
-          "summary": "김수종 칼럼니스트·전 한국일보 주필 제주는 이미 관광의 섬이다. 하지만 관광의 질을 높이려면, 판에 박힌 코스와 포토존을 넘어선 '경험의 문화'가 필요하다. 올레길을 걷다 우연히 마을 음악제를 만나 한두 시간 머물며...",
-          "link": "https://www.jejusori.net/news/articleView.html?idxno=441030",
-          "pubDate": "Sat, 08 Nov 2025 09:18:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 189.7569,
-        "weekly_search_volume": 549.9132,
-        "weekly_average_volume": 91.6522,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.012606,
-        "time_weight": 0.029069,
-        "raw_score": -0.000042,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term_ko": "한국일보"
     },
     {
-      "term": "soybean",
-      "term_ko": "대두",
-      "significance_score": 0,
-      "mentions": 237,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "대두",
-        "total_results": 700983,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1350.62,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:06 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 46.04395
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 38.46153
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 42.63736
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 40.54945
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 40.54945
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 38.35164
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 36.92307
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EB%8C%80%EB%91%90",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%8C%80%EB%91%90",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%8C%80%EB%91%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[기획특집]APEC이후 발표되는 이재명 정부의 심상치 않은 지표들...물가...",
-          "summary": "그간 급등세를 보였던 코스피의 상승세가 한풀 꺾이는 모습과 함께, 주가 상승으로 인해 가려졌던 물가와 환율 급등세가 다시금 대두 되는 모양새다. 이재명 대통령의 APEC 성과 '총망라'...GPU 26만장, 핵추진 잠수함 등...",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=282686",
-          "pubDate": "Sat, 08 Nov 2025 10:12:00 +0900"
-        },
-        {
-          "title": "중국, 부동산·소비·수출 부진 '3중 파고' 위험 고조",
-          "summary": "다만 \"미국산 대두 등 대미 수입이 늘더라도 중국 전체 수입을 자극하기에는 제한적\"이라며 \"수출이 소비 부진을 상쇄해온 만큼, 수출까지 둔화된다면 부동산·소비·수출의 '3중 타격'에 직면할 위험이 있다\"고...",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=156433",
-          "pubDate": "Sat, 08 Nov 2025 09:54:00 +0900"
-        },
-        {
-          "title": "中, 미국산 대두 ·원목 수입 재개…정상회담 후속 조치",
-          "summary": "중국 정부가 미국산 대두 및 원목에 대한 수입 제한 조치를 해제했다. 이는 지난달 부산에서 열린 미중... 중국 해관총서는 7일 공지를 통해 “CHS, 루이드레퓌스 컴퍼니, EGT 등 3개 미국 기업의 대두 수출 자격을 회복한다”...",
-          "link": "https://www.newsis.com/view/NISX20251108_0003395141",
-          "pubDate": "Sat, 08 Nov 2025 09:48:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 75.2747,
-        "weekly_search_volume": 237.4725,
-        "weekly_average_volume": 39.5788,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.022561,
-        "time_weight": 0.029068,
-        "raw_score": -0.000076,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term": "Soybean",
+      "term_ko": "대두"
     },
     {
-      "term": "VIX",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 319,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "VIX",
-        "total_results": 58115,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1385.61,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:06 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 29.4048
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 14.58415
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 6.74024
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 26.76389
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 64.13086
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 43.43713
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 77.53251
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=VIX",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=VIX",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=VIX"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 버블 우려 속 셧다운 진전…뉴욕증시, 혼조 마감",
-          "summary": "따르면 연방기금금리 선물시장에서 12월에 기준금리가 동결될 확률은 33.4%로 반영됐다. 전날 마감 무렵의 30.4%보다 올랐다. 시카고옵션거래소(CBOE) 변동성 지수( VIX )는 전장 대비 0.42포인트(2.15%) 내린 19.08을 가리켰다.",
-          "link": "https://view.asiae.co.kr/article/2025110809362951065",
-          "pubDate": "Sat, 08 Nov 2025 09:36:00 +0900"
-        },
-        {
-          "title": "[분석] 거래액 45.6%↑·비트코인·이더리움·리플 XRP·도지·파이↑",
-          "summary": "연준 금리 동결 기대(12월 동결 확률 33.4%)와 VIX 19.08 하락도 변동성 완화 기대를 키우며 크립토로의 베타 유입을 자극했다. 무엇이 가장 활발했는지를 거래규모로 보면 업비트에 따르면 상위 10종목은 리플 XRP(5...",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15867931",
-          "pubDate": "Sat, 08 Nov 2025 09:02:00 +0900"
-        },
-        {
-          "title": "[미국 증시 브리핑 · 11월 7일] 미국 주요 지수 혼조세 마감",
-          "summary": "VIX 지수는 19.08포인트로 전일 대비 0.42포인트(-2.15%) 하락하며, 안정적인 시장 상황을 나타내었다. VIX 지수는 일반적으로 20 미만일 때 안정적이고 스트레스가 적은 시장으로 간주된다.",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194448",
-          "pubDate": "Sat, 08 Nov 2025 09:02:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 120.9696,
-        "weekly_search_volume": 318.6046,
-        "weekly_average_volume": 53.1008,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.018403,
-        "time_weight": 0.029068,
-        "raw_score": -0.000062,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term": "Vix",
+      "term_ko": "Vix"
     },
     {
       "term": "Politics",
-      "term_ko": "정치",
-      "significance_score": 0,
-      "mentions": 525,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "정치",
-        "total_results": 9943171,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1436.82,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:09 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 86.61417
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 71.65354
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 69.02887
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 90.02624
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 91.07611
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 95.01312
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 79.79002
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A0%95%EC%B9%98",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A0%95%EC%B9%98",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A0%95%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "오세훈·명태균, 특검 출석…'비공표 여론조사' 두고 대질(종합)",
-          "summary": "김건희 특검팀(특별검사 민중기)은 8일 오전 9시부터 정치 자금법 위반 혐의를 받는 오 시장에 관한 피의자 조사를 진행한다. 이날 오전 8시59분 특검 사무실이 있는 건물 앞에 모습을 드러낸 오 시장은 \"이 자료를 봐달라....",
-          "link": "https://www.newsis.com/view/NISX20251108_0003395162",
-          "pubDate": "Sat, 08 Nov 2025 10:20:00 +0900"
-        },
-        {
-          "title": "튀르키예, 네타냐후 등 이스라엘 고위직 37명 체포영장",
-          "summary": "기디온 사르 이스라엘 외무장관은 소셜미디어를 통해 “이번 조치는 레제프 타이이프 에르도안 튀르키예 대통령의 정치 적 쇼에 불과하다”며 “튀르키예의 사법부는 이미 정적과 언론인을 억압하는 수단이 된 지 오래”...",
-          "link": "https://www.newsis.com/view/NISX20251108_0003395153",
-          "pubDate": "Sat, 08 Nov 2025 10:18:00 +0900"
-        },
-        {
-          "title": "오세훈·명태균, 특검 출석…오 \"여론조사 제공 없어\"·명 \"치매냐\"",
-          "summary": "(8일) 정치 브로커 명태균 씨가 연루된 '여론조사비 대납 의혹'을 수사하는 민중기 특별검사팀에 출석했습니다. 오 시장은 오늘 오전 9시쯤 서울 종로구 KT건물에 마련된 특검 사무실에 출석했습니다. 정치 자금법 위반...",
-          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008323728&plink=ORI&cooper=NAVER",
-          "pubDate": "Sat, 08 Nov 2025 10:18:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 179.79,
-        "weekly_search_volume": 524.9344,
-        "weekly_average_volume": 87.4891,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.013019,
-        "time_weight": 0.029068,
-        "raw_score": -0.000044,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term_ko": "정치"
     },
     {
       "term": "Financials",
-      "term_ko": "재무상태",
-      "significance_score": 0,
-      "mentions": 283,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "재무상태",
-        "total_results": 114312,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 994.96,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:10 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 83.33333
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9E%AC%EB%AC%B4%EC%83%81%ED%83%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "시티그룹 \"비트코인 약세, 나스닥 하락 경고 신호\"",
-          "summary": "메타와 알파벳은 데이터센터 확충을 위해 대규모 부채를 조달했으며, 이는 닷컴 버블 시기의 자금 조달 방식과 유사하지만 현재의 기업 재무 상태 는 상대적으로 건전하다고 평가했다. 그러나 이러한 부채 확장이 채권...",
-          "link": "https://www.tokenpost.kr/news/breaking/300918",
-          "pubDate": "Fri, 07 Nov 2025 18:06:00 +0900"
-        },
-        {
-          "title": "홈플러스, 회생계획안 제출 기간 또 연장",
-          "summary": "두 기업 모두 유통업 경험이 없고 재무상태 가 좋지 않기 때문이다. 하렉스인포텍은 지난해 매출 3억원, 영업손실 33억원을 기록한 것으로 알려졌다. 미국 투자자문사를 통해 한화 2조8000억원 상당을 조달해...",
-          "link": "https://www.asiatime.co.kr/article/20251107500323",
-          "pubDate": "Fri, 07 Nov 2025 17:42:00 +0900"
-        },
-        {
-          "title": "가계 부채 사상 최고치 경신…3분기 18조5900억불 기록",
-          "summary": "보고서는 “전체적으로 가계의 재무 상태 는 비교적 안정적이지만 젊은층 대출자 사이에서 취약성 조짐이 나타나고 있다”고 분석했다. 특히 학자금 대출은 1조6500억 달러로 역대 최고치를 기록했다. 연방정부의 상환...",
-          "link": "https://www.koreadaily.com/article/20251106235330237",
-          "pubDate": "Fri, 07 Nov 2025 16:54:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 83.3333,
-        "weekly_search_volume": 283.3333,
-        "weekly_average_volume": 94.4444,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.019962,
-        "time_weight": 0.029067,
-        "raw_score": -0.000067,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term_ko": "재무상태"
     },
     {
-      "term": "housing price",
-      "term_ko": "주택가격",
-      "significance_score": 0,
-      "mentions": 445,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "주택가격",
-        "total_results": 525657,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1283.34,
-        "last_build_date": "Sat, 08 Nov 2025 10:24:11 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-10-31",
-              "timestamp": 1761836400000,
-              "value": 47.82608
-            },
-            {
-              "period": "2025-11-01",
-              "timestamp": 1761922800000,
-              "value": 40.57971
-            },
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 24.63768
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 81.15942
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 89.85507
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 82.60869
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 66.66666
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A3%BC%ED%83%9D%EA%B0%80%EA%B2%A9",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A3%BC%ED%83%9D%EA%B0%80%EA%B2%A9",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A3%BC%ED%83%9D%EA%B0%80%EA%B2%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "집, 안식처이자 투자처…“생애주기별 주택 전략 필요”",
-          "summary": "보고서는 우선 가구의 소득 대비 주택가격 이 낮아지는 현상에 주목했다. 국토교통부의 주거실태조사에 따르면 2023년 자가가구의 연소득 대비 주택가격 비율(PIR)은 전국 평균 6.3배로 2022년과 같은 수준을 유지했다....",
-          "link": "https://www.nongmin.com/article/20251104500171",
-          "pubDate": "Sat, 08 Nov 2025 10:01:00 +0900"
-        },
-        {
-          "title": "\"그린벨트 해제 검토\"···태릉골프장·세곡동 '공급 카드' 급부상",
-          "summary": "세곡·자곡동 일대는 강남과 가깝지만 상대적으로 저렴한 가격 에 주택 을 공급할 수 있어, 실수요자들에게 실질적 혜택이 돌아갈 수 있다는 평가다. ◇환경 훼손·행정 절차 부담…\"단기 안정책으론 한계\" 다만 실제 해제가...",
-          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=416785",
-          "pubDate": "Sat, 08 Nov 2025 09:02:00 +0900"
-        },
-        {
-          "title": "[단독] 주택 통계 못 받았다면서?…10·15 대책 이틀전 주택 통계 받았다...",
-          "summary": "7일 김은혜 국민의힘 의원실에 따르면 한국부동산원은 지난 10월 13일 16시께 9월 전국 주택가격 동향조사 통계를 국토부에 발신했다. 대책 발표 이틀 전 9월 통계를 확보한 셈이다. 국토부는 이와 관련, “투기과열지구와...",
-          "link": "https://www.sedaily.com/NewsView/2H0DI4PLUV",
-          "pubDate": "Sat, 08 Nov 2025 08:06:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "past_24h_volume": 149.2754,
-        "weekly_search_volume": 444.9275,
-        "weekly_average_volume": 74.1546,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.0146,
-        "time_weight": 0.029067,
-        "raw_score": -0.000049,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762441200000
-      }
+      "term": "Housing Price",
+      "term_ko": "주택가격"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_trending_seeded",
-    "sample_size": 30,
-    "generated_at": "2025-11-08T01:24:11.458Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "NAVER DataLab 2025-11-07→2025-11-08",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0
+  "discovered_keywords": [
+    {
+      "term": "Backer",
+      "term_ko": "백워"
+    },
+    {
+      "term": "Jimin Lee",
+      "term_ko": "이지민"
+    },
+    {
+      "term": "The Korea Times",
+      "term_ko": "한국일보"
+    },
+    {
+      "term": "Soybean",
+      "term_ko": "대두"
+    },
+    {
+      "term": "Vix",
+      "term_ko": "Vix"
+    },
+    {
+      "term": "Politics",
+      "term_ko": "정치"
+    },
+    {
+      "term": "Financials",
+      "term_ko": "재무상태"
+    },
+    {
+      "term": "Housing Price",
+      "term_ko": "주택가격"
+    }
+  ],
+  "translations": {
+    "Backer": {
+      "en": "Backer",
+      "ko": "백워",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    },
+    "Jimin Lee": {
+      "en": "Jimin Lee",
+      "ko": "이지민",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    },
+    "The Korea Times": {
+      "en": "The Korea Times",
+      "ko": "한국일보",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    },
+    "Soybean": {
+      "en": "Soybean",
+      "ko": "대두",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    },
+    "Vix": {
+      "en": "Vix",
+      "ko": "Vix",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    },
+    "Politics": {
+      "en": "Politics",
+      "ko": "정치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    },
+    "Financials": {
+      "en": "Financials",
+      "ko": "재무상태",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    },
+    "Housing Price": {
+      "en": "Housing Price",
+      "ko": "주택가격",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T06:26:17.744Z"
+    }
   }
 }
