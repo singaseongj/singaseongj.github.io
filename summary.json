@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2025-11-08T15:28:06+09:00",
+  "generatedAtKST": "2025-11-08T21:35:57+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -323,6 +323,34 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
+      "name": "LG",
+      "ticker": "LGND",
+      "sector": null,
+      "metrics": {
+        "ret5": 1.653259273661314,
+        "ret20": 21.842981635417498,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": null,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=LG"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **unknown**",
+        "Returns: 5d **1.7%**, 20d **21.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=LG"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
       "name": "LG전자",
       "ticker": "066570.KS",
       "sector": "경기소비재",
@@ -333,7 +361,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 446,
+        "count": 447,
         "blogs": 10,
         "sentiment": -0.050000000000000024,
         "momentum": "very high"
@@ -342,7 +370,7 @@
         "searchUrl": "https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **446** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "News (7d): **447** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
         "Returns: 5d **0.8%**, 20d **11.8%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **경기소비재**",
@@ -362,7 +390,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 1598,
+        "count": 1601,
         "blogs": 10,
         "sentiment": -0.10000000000000005,
         "momentum": "very high"
@@ -371,7 +399,7 @@
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **1598** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
+        "News (7d): **1601** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**",
         "Returns: 5d **-8.9%**, 20d **3.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **정보기술**",
@@ -405,35 +433,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **금융**",
         "News search: https://www.google.com/search?q=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
-      "name": "아모레퍼시픽",
-      "ticker": "090430.KS",
-      "sector": "필수소비재",
-      "metrics": {
-        "ret5": -2.6294820717131477,
-        "ret20": 2.9486099410278013,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 71,
-        "blogs": 10,
-        "sentiment": 0,
-        "momentum": "very high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD"
-      },
-      "bullets": [
-        "News (7d): **71** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-2.6%**, 20d **2.9%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **필수소비재**",
-        "News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD"
       ]
     },
     {
@@ -1042,35 +1041,6 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Incyte",
-      "ticker": "INCY",
-      "sector": "Healthcare",
-      "metrics": {
-        "ret5": 13.37184376456577,
-        "ret20": 26.467779829884535,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Incyte"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **13.4%**, 20d **26.5%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Healthcare**",
-        "News search: https://www.google.com/search?q=Incyte"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
       "name": "Ralph Lauren Corporation",
       "ticker": "RL",
       "sector": "Consumer Discretionary",
@@ -1153,6 +1123,35 @@
         "Earnings window (±10d): **No**",
         "Sector: **Industrials**",
         "News search: https://www.google.com/search?q=Southwest%20Airlines"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Tyler Technologies",
+      "ticker": "TYL",
+      "sector": "Technology",
+      "metrics": {
+        "ret5": -2.6939102227284635,
+        "ret20": -8.087899777949978,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Tyler%20Technologies"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-2.7%**, 20d **-8.1%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=Tyler%20Technologies"
       ]
     }
   ]

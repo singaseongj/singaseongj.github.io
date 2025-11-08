@@ -137,6 +137,23 @@ function limitWords(phrase, maxWords = 2) {
   return parts.slice(0, cap).join(' ');
 }
 
+function enforceKeywordWordCount(keywords, { minWords = 1, maxWords = 3 } = {}) {
+  if (!Array.isArray(keywords)) {
+    return [];
+  }
+
+  const min = Math.max(1, Number.isFinite(minWords) ? Math.floor(minWords) : 1);
+  const max = Math.max(min, Number.isFinite(maxWords) ? Math.floor(maxWords) : min);
+
+  const truncated = keywords.map((keyword) => limitWords(keyword, max));
+  const filtered = truncated.filter((keyword) => {
+    const wordCount = keyword.split(/\s+/).filter(Boolean).length;
+    return wordCount >= min && wordCount <= max;
+  });
+
+  return dedupeKeywords(filtered);
+}
+
 function shrinkPromptForCerebras(prompt, targetLength = CEREBRAS_PROMPT_CHAR_LIMIT) {
   if (!prompt) return '';
   const safeLimit = Math.max(400, Number(targetLength) || CEREBRAS_PROMPT_CHAR_LIMIT);
@@ -245,11 +262,23 @@ function dedupeKeywords(rawKeywords) {
   return deduped;
 }
 
+function cleanKeyword(keyword) {
+  if (typeof keyword !== 'string') {
+    return '';
+  }
+
+  return String(keyword)
+    .replace(/["'`“”‘’‚‛„‟‹›«»]/g, '')
+    .replace(/[，,]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function sanitizeKeywordList(keywords) {
   if (!Array.isArray(keywords)) return [];
 
   const cleaned = keywords
-    .map((kw) => (typeof kw === 'string' ? kw.trim() : ''))
+    .map((kw) => cleanKeyword(kw))
     .filter((kw) => kw.length > 0)
     .filter((kw) => kw.split(/\s+/).filter(Boolean).length <= 5);
 
@@ -303,7 +332,15 @@ function extractKeywordsFromLLMResponse(rawText) {
 }
 
 function buildKeywordPrompt(desiredCount) {
-  return `Output ONLY a valid JSON array of ${desiredCount} Latest trending search keywords (each <6 words). No code fences, no numbering, no extra text.`;
+  const count = Number.isFinite(desiredCount) && desiredCount > 0 ? Math.floor(desiredCount) : SAMPLE_SIZE;
+  return [
+    `최신 한국 트렌드를 반영한 검색 키워드를 ${count}개 작성해 주세요.`,
+    '요구사항:',
+    '- 각 키워드는 2~3어절의 간결한 표현일 것',
+    '- 금융/경제 분야에 한정하지 말고 현재 화제가 되는 다양한 주제를 포함할 것',
+    '- 따옴표, 쉼표 등 불필요한 구두점은 제거할 것',
+    '- 결과는 JSON 배열만 출력 (설명, 코드 블록, 번호 매기기 금지)',
+  ].join('\n');
 }
 
 
@@ -323,7 +360,7 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allow
 
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     if (attempt === 1) {
-      console.log('🤖 Requesting financial keywords from Cerebras…');
+      console.log('🤖 Requesting trending keywords from Cerebras…');
     } else {
       console.log('🔁 Retrying Cerebras request with trimmed prompt…');
     }
@@ -375,14 +412,18 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allow
       }
 
       const extracted = extractKeywordsFromLLMResponse(llmText);
-      const sanitized = sanitizeKeywordList(extracted).slice(0, desiredCount);
+      const sanitized = sanitizeKeywordList(extracted);
+      const constrained = enforceKeywordWordCount(sanitized, { minWords: 2, maxWords: 3 }).slice(
+        0,
+        desiredCount,
+      );
 
-      if (!sanitized.length) {
-        throw new Error('No keywords could be parsed from Cerebras response.');
+      if (!constrained.length) {
+        throw new Error('No keywords met the 2~3 word requirement from Cerebras response.');
       }
 
-      console.log(`🤖 Cerebras provided ${sanitized.length} keyword candidates.`);
-      return sanitized;
+      console.log(`🤖 Cerebras provided ${constrained.length} keyword candidates.`);
+      return constrained;
     } catch (err) {
       if (err.name === 'AbortError') {
         console.warn(`⚠️  Cerebras request timed out after ${CEREBRAS_REQUEST_TIMEOUT_MS}ms.`);
@@ -460,14 +501,18 @@ async function requestKeywordsFromWorker({ prompt, limit } = {}) {
     }
 
     const extracted = extractKeywordsFromLLMResponse(llmText);
-    const sanitized = sanitizeKeywordList(extracted).slice(0, effectiveLimit);
+    const sanitized = sanitizeKeywordList(extracted);
+    const constrained = enforceKeywordWordCount(sanitized, { minWords: 2, maxWords: 3 }).slice(
+      0,
+      effectiveLimit,
+    );
 
-    if (!sanitized.length) {
-      throw new Error('No keywords could be parsed from LLM response.');
+    if (!constrained.length) {
+      throw new Error('No keywords met the 2~3 word requirement from LLM response.');
     }
 
-    console.log(`🤖 tinyllama provided ${sanitized.length} keyword candidates.`);
-    return sanitized;
+    console.log(`🤖 tinyllama provided ${constrained.length} keyword candidates.`);
+    return constrained;
   } catch (err) {
     if (err.name === 'AbortError') {
       console.warn(`⚠️  LLM request timed out after ${LLM_REQUEST_TIMEOUT_MS}ms.`);
@@ -1112,7 +1157,7 @@ function loadFinanceKeywords() {
   console.log(`📥 Loaded ${keywords.length} keywords from file`);
 
   const cleaned = keywords
-    .map((kw) => (typeof kw === 'string' ? kw.trim() : ''))
+    .map((kw) => cleanKeyword(kw))
     .filter((kw) => kw.length > 0);
 
   const koreanCount = cleaned.filter((kw) => containsHangul(kw)).length;
