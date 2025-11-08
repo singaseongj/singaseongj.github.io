@@ -40,6 +40,30 @@ const SAMPLE_SIZE = 30;
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
 const FINANCE_KEYWORDS_PATH = path.resolve(__dirname, '../data/finance_keywords.json');
 
+const TRENDING_WINDOW_HOURS = Number(process.env.TRENDING_WINDOW_HOURS) || 24;
+const TRENDING_WINDOW_NEWS_PAGES = Number(process.env.TRENDING_WINDOW_NEWS_PAGES) || 3;
+const TRENDING_WINDOW_BLOG_PAGES = Number(process.env.TRENDING_WINDOW_BLOG_PAGES) || 3;
+const TRENDING_BASELINE_DAYS = Number(process.env.TRENDING_BASELINE_DAYS) || 7;
+const TRENDING_BASELINE_NEWS_PAGES = Number(process.env.TRENDING_BASELINE_NEWS_PAGES) || 6;
+const TRENDING_BASELINE_BLOG_PAGES = Number(process.env.TRENDING_BASELINE_BLOG_PAGES) || 6;
+const TRENDING_WINDOW_MAX_LLM_KEYWORDS = Number(process.env.TRENDING_WINDOW_MAX_LLM_KEYWORDS) || 40;
+const TRENDING_WINDOW_TEXT_SLICE = Number(process.env.TRENDING_WINDOW_TEXT_SLICE) || 18000;
+
+const TRENDING_SEED_FALLBACKS = [
+  '증시 뉴스',
+  '경제 동향',
+  '금융 정책',
+  '기술주 뉴스',
+  '반도체 산업',
+  '에너지 시장',
+  '원자재 가격',
+  '환율 전망',
+  '소비자 물가',
+  '부동산 시장',
+  '글로벌 경제',
+  '스타트업 투자',
+];
+
 const HANGUL_SUFFIXES = [
   '으로써',
   '으로서',
@@ -335,41 +359,14 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt } = {}
   }
 }
 
-async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
-  const limit = Number.isFinite(desiredCount) && desiredCount > 0 ? Math.min(Math.floor(desiredCount), SAMPLE_SIZE * 2) : SAMPLE_SIZE;
-
-  const trendingSeeds = await fetchTrendingKeywordsFromNaver({ limit });
-  if (trendingSeeds.length) {
-    try {
-      const trimmed = await trimKeywordsWithCerebras(trendingSeeds, { maxWords: 2, limit });
-      if (trimmed.length) {
-        console.log(`📈 Using ${trimmed.length} trending keywords from NAVER DataLab.`);
-        return { keywords: trimmed, method: 'naver_search_trending_seeded' };
-      }
-    } catch (err) {
-      console.warn(`⚠️  Failed to trim NAVER trending keywords with Cerebras: ${err.message}`);
-    }
-
-    const locallyTrimmed = sanitizeKeywordList(trendingSeeds.map((kw) => limitWords(kw, 2))).slice(0, limit);
-    if (locallyTrimmed.length) {
-      console.log(`📈 Using ${locallyTrimmed.length} NAVER trending keywords with local trimming.`);
-      return { keywords: locallyTrimmed, method: 'naver_search_trending_seeded' };
-    }
-  }
-
-  const prompt = buildKeywordPrompt(limit);
-
-  const cerebrasKeywords = await fetchCerebrasKeywords({ desiredCount: limit, prompt });
-  if (cerebrasKeywords.length) {
-    return { keywords: cerebrasKeywords, method: 'naver_search_llm_seeded' };
-  }
-
+async function requestKeywordsFromWorker({ prompt, limit } = {}) {
   if (!LLM_WORKER_URL) {
     console.warn('⚠️  LLM worker URL is not configured. Skipping fallback keyword generation.');
-    return { keywords: [], method: 'naver_search_llm_seeded' };
+    return [];
   }
 
-  console.log('🤖 Cerebras unavailable — falling back to tinyllama worker…');
+  const effectiveLimit =
+    Number.isFinite(limit) && limit > 0 ? Math.min(Math.floor(limit), SAMPLE_SIZE * 2) : SAMPLE_SIZE;
 
   const payload = {
     model: LLM_MODEL,
@@ -403,24 +400,475 @@ async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
     }
 
     const extracted = extractKeywordsFromLLMResponse(llmText);
-    const sanitized = sanitizeKeywordList(extracted).slice(0, limit);
+    const sanitized = sanitizeKeywordList(extracted).slice(0, effectiveLimit);
 
     if (!sanitized.length) {
       throw new Error('No keywords could be parsed from LLM response.');
     }
 
     console.log(`🤖 tinyllama provided ${sanitized.length} keyword candidates.`);
-    return { keywords: sanitized, method: 'naver_search_llm_seeded' };
+    return sanitized;
   } catch (err) {
     if (err.name === 'AbortError') {
       console.warn(`⚠️  LLM request timed out after ${LLM_REQUEST_TIMEOUT_MS}ms.`);
     } else {
       console.warn(`⚠️  Failed to retrieve keywords from LLM worker: ${err.message}`);
     }
-    return { keywords: [], method: 'naver_search_llm_seeded' };
+    return [];
   } finally {
     clearTimeout(timeoutId);
   }
+}
+
+function nowKST() {
+  return new Date(new Date().toLocaleString('en-US', { timeZone: KST_TIME_ZONE }));
+}
+
+function subHours(date, hours) {
+  return new Date(date.getTime() - hours * 60 * 60 * 1000);
+}
+
+function fmtYMD(date) {
+  return date.toISOString().slice(0, 10);
+}
+
+function yyyymmddToDateKST(yyyymmdd) {
+  if (!yyyymmdd || yyyymmdd.length < 8) {
+    return new Date(NaN);
+  }
+  const iso = `${yyyymmdd.slice(0, 4)}-${yyyymmdd.slice(4, 6)}-${yyyymmdd.slice(6, 8)}T00:00:00+09:00`;
+  return new Date(iso);
+}
+
+async function naverSearchNews(query, { display = 100, start = 1, sort = 'date' } = {}) {
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) {
+    throw new Error('NAVER credentials are required for news search.');
+  }
+
+  const url = `https://openapi.naver.com/v1/search/news.json?query=${encodeURIComponent(query)}&display=${display}&start=${start}&sort=${sort}`;
+  const response = await fetch(url, {
+    headers: {
+      'X-Naver-Client-Id': NAVER_CLIENT_ID,
+      'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+    },
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`Naver news error ${response.status}: ${text.slice(0, 120)}`);
+  }
+
+  const json = await response.json();
+  return Array.isArray(json?.items) ? json.items : [];
+}
+
+async function naverSearchBlog(query, { display = 100, start = 1, sort = 'date' } = {}) {
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) {
+    throw new Error('NAVER credentials are required for blog search.');
+  }
+
+  const url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURIComponent(query)}&display=${display}&start=${start}&sort=${sort}`;
+  const response = await fetch(url, {
+    headers: {
+      'X-Naver-Client-Id': NAVER_CLIENT_ID,
+      'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+    },
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`Naver blog error ${response.status}: ${text.slice(0, 120)}`);
+  }
+
+  const json = await response.json();
+  return Array.isArray(json?.items) ? json.items : [];
+}
+
+async function naverDatalabDaily(groups, { startDate, endDate }) {
+  if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) {
+    throw new Error('NAVER credentials are required for DataLab API.');
+  }
+
+  const payload = {
+    startDate,
+    endDate,
+    timeUnit: 'date',
+    keywordGroups: groups,
+  };
+
+  const response = await fetch(NAVER_DATALAB_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Naver-Client-Id': NAVER_CLIENT_ID,
+      'X-Naver-Client-Secret': NAVER_CLIENT_SECRET,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`Datalab error ${response.status}: ${text.slice(0, 120)}`);
+  }
+
+  const json = await response.json();
+  return Array.isArray(json?.results) ? json.results : [];
+}
+
+function stripMarkup(text) {
+  return String(text || '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+async function collectWindow(seeds, { hours = TRENDING_WINDOW_HOURS, newsPages = TRENDING_WINDOW_NEWS_PAGES, blogPages = TRENDING_WINDOW_BLOG_PAGES } = {}) {
+  const now = nowKST();
+  const since = subHours(now, hours);
+
+  const news = [];
+  for (const query of seeds) {
+    for (let i = 0; i < newsPages; i += 1) {
+      try {
+        const start = 1 + i * 100;
+        const items = await naverSearchNews(query, { display: 100, start, sort: 'date' });
+        for (const item of items) {
+          const timestamp = new Date(item.pubDate);
+          if (!Number.isNaN(+timestamp) && timestamp >= since && timestamp <= now) {
+            news.push({
+              source: 'news',
+              query,
+              when: timestamp,
+              text: stripMarkup(`${item.title} ${item.description}`),
+            });
+          }
+        }
+      } catch (err) {
+        console.warn(`⚠️  Failed to fetch NAVER news for "${query}": ${err.message}`);
+      }
+    }
+  }
+
+  const blogs = [];
+  const today = fmtYMD(now).replaceAll('-', '');
+  const yesterday = fmtYMD(subHours(now, 24)).replaceAll('-', '');
+
+  for (const query of seeds) {
+    for (let i = 0; i < blogPages; i += 1) {
+      try {
+        const start = 1 + i * 100;
+        const items = await naverSearchBlog(query, { display: 100, start, sort: 'date' });
+        for (const item of items) {
+          const postDate = item.postdate;
+          if (postDate !== today && postDate !== yesterday) {
+            continue;
+          }
+          const timestamp = yyyymmddToDateKST(postDate);
+          const inWindow =
+            postDate === today || (postDate === yesterday && timestamp > since && timestamp <= now);
+          if (Number.isNaN(+timestamp) || !inWindow) {
+            continue;
+          }
+          blogs.push({
+            source: 'blog',
+            query,
+            when: timestamp,
+            text: stripMarkup(`${item.title} ${item.description}`),
+          });
+        }
+      } catch (err) {
+        console.warn(`⚠️  Failed to fetch NAVER blogs for "${query}": ${err.message}`);
+      }
+    }
+  }
+
+  return { news, blogs, since, now };
+}
+
+async function collectBaseline(
+  seeds,
+  { days = TRENDING_BASELINE_DAYS, newsPages = TRENDING_BASELINE_NEWS_PAGES, blogPages = TRENDING_BASELINE_BLOG_PAGES } = {},
+  windowSince,
+) {
+  const from = subHours(windowSince, days * 24);
+  const to = windowSince;
+
+  const news = [];
+  for (const query of seeds) {
+    for (let i = 0; i < newsPages; i += 1) {
+      try {
+        const start = 1 + i * 100;
+        const items = await naverSearchNews(query, { display: 100, start, sort: 'date' });
+        for (const item of items) {
+          const timestamp = new Date(item.pubDate);
+          if (!Number.isNaN(+timestamp) && timestamp >= from && timestamp < to) {
+            news.push(stripMarkup(`${item.title} ${item.description}`));
+          }
+        }
+      } catch (err) {
+        console.warn(`⚠️  Failed to fetch NAVER baseline news for "${query}": ${err.message}`);
+      }
+    }
+  }
+
+  const blogs = [];
+  for (const query of seeds) {
+    for (let i = 0; i < blogPages; i += 1) {
+      try {
+        const start = 1 + i * 100;
+        const items = await naverSearchBlog(query, { display: 100, start, sort: 'date' });
+        for (const item of items) {
+          const timestamp = yyyymmddToDateKST(item.postdate);
+          if (!Number.isNaN(+timestamp) && timestamp >= from && timestamp < to) {
+            blogs.push(stripMarkup(`${item.title} ${item.description}`));
+          }
+        }
+      } catch (err) {
+        console.warn(`⚠️  Failed to fetch NAVER baseline blogs for "${query}": ${err.message}`);
+      }
+    }
+  }
+
+  return { news, blogs, from, to };
+}
+
+async function extractWindowKeywordsKorean(text, max = TRENDING_WINDOW_MAX_LLM_KEYWORDS) {
+  if (!text) {
+    return [];
+  }
+
+  const truncated = text.slice(0, TRENDING_WINDOW_TEXT_SLICE);
+  const prompt = [
+    `아래의 한국어 뉴스/블로그 텍스트에서 금융 및 비즈니스 관련 핵심 검색 키워드를 최대 ${max}개 도출하세요.`,
+    '조건:',
+    '- 1~4어절의 간결한 표현',
+    '- 동의어나 중복 표현 제거',
+    '- 결과는 JSON 배열 형식만 출력 (설명 금지)',
+    '',
+    '텍스트:',
+    truncated,
+  ].join('\n');
+
+  const cerebrasKeywords = await fetchCerebrasKeywords({ desiredCount: max, prompt });
+  if (cerebrasKeywords.length) {
+    return cerebrasKeywords;
+  }
+
+  const fallback = await requestKeywordsFromWorker({ prompt, limit: max });
+  return fallback.slice(0, max);
+}
+
+function escapeRegExp(value) {
+  return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function countFreq(texts, phrase) {
+  if (!phrase || !Array.isArray(texts) || !texts.length) {
+    return 0;
+  }
+  const joined = texts.join('\n');
+  const matches = joined.match(new RegExp(escapeRegExp(phrase), 'g')) || [];
+  return matches.length;
+}
+
+function burstScore(keyword, windowTexts, baselineTexts, hours = TRENDING_WINDOW_HOURS, baselineDays = TRENDING_BASELINE_DAYS, alpha = 1) {
+  const c24 = countFreq(windowTexts, keyword);
+  const c7d = countFreq(baselineTexts, keyword);
+  const expected24 = baselineDays > 0 ? c7d / baselineDays : 0;
+  const lift = (c24 + alpha) / (expected24 + alpha);
+  return { c24, c7d, lift };
+}
+
+async function datalabMomentum(keywords) {
+  if (!Array.isArray(keywords) || !keywords.length) {
+    return [];
+  }
+
+  const end = fmtYMD(nowKST());
+  const start = fmtYMD(subHours(nowKST(), 72));
+  const results = [];
+
+  for (let i = 0; i < keywords.length; i += 5) {
+    const groupSlice = keywords.slice(i, i + 5);
+    const groups = groupSlice.map((keyword) => ({ groupName: keyword, keywords: [keyword] }));
+
+    try {
+      const response = await naverDatalabDaily(groups, { startDate: start, endDate: end });
+      for (const entry of response) {
+        const data = Array.isArray(entry?.data) ? entry.data : [];
+        if (data.length >= 2) {
+          const latest = Number(data[data.length - 1]?.ratio) || 0;
+          const previous = Number(data[data.length - 2]?.ratio) || 0;
+          results.push({ keyword: entry.title, dl_momentum: latest - previous, dl_latest: latest });
+        } else {
+          results.push({ keyword: entry?.title, dl_momentum: 0, dl_latest: 0 });
+        }
+      }
+    } catch (err) {
+      console.warn(`⚠️  Failed to retrieve DataLab momentum for [${groupSlice.join(', ')}]: ${err.message}`);
+      for (const keyword of groupSlice) {
+        results.push({ keyword, dl_momentum: 0, dl_latest: 0 });
+      }
+    }
+  }
+
+  return results;
+}
+
+async function trending24h({
+  seeds,
+  hours = TRENDING_WINDOW_HOURS,
+  newsPages = TRENDING_WINDOW_NEWS_PAGES,
+  blogPages = TRENDING_WINDOW_BLOG_PAGES,
+  baselineDays = TRENDING_BASELINE_DAYS,
+  baselineNewsPages = TRENDING_BASELINE_NEWS_PAGES,
+  baselineBlogPages = TRENDING_BASELINE_BLOG_PAGES,
+} = {}) {
+  const validSeeds = sanitizeKeywordList(Array.isArray(seeds) ? seeds : []).slice(0, 30);
+  if (!validSeeds.length) {
+    throw new Error('No valid seeds supplied for trending keyword generation.');
+  }
+
+  const { news, blogs, since, now } = await collectWindow(validSeeds, {
+    hours,
+    newsPages,
+    blogPages,
+  });
+  const windowTexts = [...news.map((item) => item.text), ...blogs.map((item) => item.text)].filter(Boolean);
+
+  if (!windowTexts.length) {
+    throw new Error('Window collection did not yield any documents.');
+  }
+
+  const sampleForLLM = windowTexts.join('\n');
+  const candidates = await extractWindowKeywordsKorean(sampleForLLM, TRENDING_WINDOW_MAX_LLM_KEYWORDS);
+
+  if (!candidates.length) {
+    throw new Error('LLM did not return any candidate keywords for the trending window.');
+  }
+
+  const baseline = await collectBaseline(
+    validSeeds,
+    { days: baselineDays, newsPages: baselineNewsPages, blogPages: baselineBlogPages },
+    since,
+  );
+  const baselineTexts = [...baseline.news, ...baseline.blogs].filter(Boolean);
+
+  const burst = candidates.map((keyword) => ({
+    keyword,
+    ...burstScore(keyword, windowTexts, baselineTexts, hours, baselineDays, 1),
+  }));
+
+  const momentum = await datalabMomentum(candidates);
+  const momentumMap = new Map(momentum.map((entry) => [entry.keyword, entry]));
+  const tanh = (value) => Math.tanh(value);
+
+  const scored = burst
+    .map((entry) => {
+      const dataLab = momentumMap.get(entry.keyword) || { dl_momentum: 0, dl_latest: 0 };
+      const finalScore =
+        0.7 * tanh(Math.log(entry.lift || 1)) + 0.3 * tanh((dataLab.dl_momentum || 0) / 10);
+      return { ...entry, ...dataLab, score: finalScore };
+    })
+    .sort((a, b) => b.score - a.score);
+
+  return {
+    seeds: validSeeds,
+    hours,
+    baselineDays,
+    window: { since: since.toISOString(), now: now.toISOString() },
+    top: scored,
+  };
+}
+
+async function fetchTrendingKeywordsFromWindow({ limit = SAMPLE_SIZE } = {}) {
+  const fallbackSeeds = sanitizeKeywordList(TRENDING_SEED_FALLBACKS);
+  let seeds = [...fallbackSeeds];
+
+  try {
+    const financeKeywords = sanitizeKeywordList(loadFinanceKeywords());
+    if (financeKeywords.length) {
+      const sampleSize = Math.max(Math.floor(limit * 2), 12);
+      const sampled = shuffleSample(financeKeywords, sampleSize);
+      seeds = sanitizeKeywordList([...sampled, ...fallbackSeeds]);
+    }
+  } catch (err) {
+    console.warn(`⚠️  Unable to load finance keywords for trending window seeding: ${err.message}`);
+  }
+
+  const effectiveSeedCap = Math.max(8, Math.min(limit * 2, 20));
+  const seedList = sanitizeKeywordList(seeds).slice(0, effectiveSeedCap);
+
+  if (!seedList.length) {
+    return { keywords: [], metadata: null };
+  }
+
+  try {
+    const trending = await trending24h({ seeds: seedList });
+    const keywords = sanitizeKeywordList((trending?.top || []).map((item) => item.keyword)).slice(0, limit);
+    return {
+      keywords,
+      metadata: {
+        seeds: trending?.seeds || seedList,
+        window: trending?.window || null,
+        hours: trending?.hours || TRENDING_WINDOW_HOURS,
+        baselineDays: trending?.baselineDays || TRENDING_BASELINE_DAYS,
+        candidateCount: Array.isArray(trending?.top) ? trending.top.length : 0,
+      },
+    };
+  } catch (err) {
+    console.warn(`⚠️  Failed to build 24h trending keywords: ${err.message}`);
+    return { keywords: [], metadata: null };
+  }
+}
+
+async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
+  const limit =
+    Number.isFinite(desiredCount) && desiredCount > 0 ? Math.min(Math.floor(desiredCount), SAMPLE_SIZE * 2) : SAMPLE_SIZE;
+
+  const windowTrending = await fetchTrendingKeywordsFromWindow({ limit });
+  if (windowTrending.keywords.length) {
+    console.log(`📈 Using ${windowTrending.keywords.length} keywords from NAVER 24h news/blog pipeline.`);
+    return {
+      keywords: windowTrending.keywords,
+      method: 'naver_search_window_trending',
+      windowMetadata: windowTrending.metadata,
+    };
+  }
+
+  const trendingSeeds = await fetchTrendingKeywordsFromNaver({ limit });
+  if (trendingSeeds.length) {
+    try {
+      const trimmed = await trimKeywordsWithCerebras(trendingSeeds, { maxWords: 2, limit });
+      if (trimmed.length) {
+        console.log(`📈 Using ${trimmed.length} trending keywords from NAVER DataLab.`);
+        return { keywords: trimmed, method: 'naver_search_trending_seeded' };
+      }
+    } catch (err) {
+      console.warn(`⚠️  Failed to trim NAVER trending keywords with Cerebras: ${err.message}`);
+    }
+
+    const locallyTrimmed = sanitizeKeywordList(trendingSeeds.map((kw) => limitWords(kw, 2))).slice(0, limit);
+    if (locallyTrimmed.length) {
+      console.log(`📈 Using ${locallyTrimmed.length} NAVER trending keywords with local trimming.`);
+      return { keywords: locallyTrimmed, method: 'naver_search_trending_seeded' };
+    }
+  }
+
+  const prompt = buildKeywordPrompt(limit);
+
+  const cerebrasKeywords = await fetchCerebrasKeywords({ desiredCount: limit, prompt });
+  if (cerebrasKeywords.length) {
+    return { keywords: cerebrasKeywords, method: 'naver_search_llm_seeded' };
+  }
+
+  console.log('🤖 Cerebras unavailable — falling back to tinyllama worker…');
+  const workerKeywords = await requestKeywordsFromWorker({ prompt, limit });
+  if (workerKeywords.length) {
+    return { keywords: workerKeywords, method: 'naver_search_llm_seeded' };
+  }
+
+  return { keywords: [], method: 'naver_search_llm_seeded' };
 }
 
 function commonPrefixLength(a, b) {
@@ -1280,6 +1728,7 @@ async function buildTags() {
   const llmSeedResult = await fetchLLMKeywords({ desiredCount: SAMPLE_SIZE });
   let sampled = sanitizeKeywordList(llmSeedResult?.keywords || []);
   let keywordCollectionMethod = llmSeedResult?.method || 'naver_search_llm_seeded';
+  const windowMetadata = llmSeedResult?.windowMetadata;
 
   if (!sampled.length) {
     const fallbackKeywordPool = loadFinanceKeywords();
@@ -1307,6 +1756,7 @@ async function buildTags() {
   }
 
   const methodDescriptionMap = {
+    naver_search_window_trending: 'NAVER 24h news/blog pipeline',
     naver_search_trending_seeded: 'NAVER DataLab trending feed',
     naver_search_llm_seeded: 'tinyllama worker',
     naver_search_random_sample: 'finance_keywords.json fallback',
@@ -1407,12 +1857,19 @@ async function buildTags() {
   const now = new Date();
   const fallbackKeywordSource = path.relative(process.cwd(), FINANCE_KEYWORDS_PATH);
   const { startDate: trendStart, endDate: trendEnd } = last24hDatesKST();
-  const keywordSource =
-    keywordCollectionMethod === 'naver_search_llm_seeded'
-      ? LLM_WORKER_URL
-      : keywordCollectionMethod === 'naver_search_trending_seeded'
-        ? `NAVER DataLab ${trendStart}→${trendEnd}`
-        : fallbackKeywordSource;
+  let keywordSource;
+  if (keywordCollectionMethod === 'naver_search_llm_seeded') {
+    keywordSource = LLM_WORKER_URL;
+  } else if (keywordCollectionMethod === 'naver_search_trending_seeded') {
+    keywordSource = `NAVER DataLab ${trendStart}→${trendEnd}`;
+  } else if (keywordCollectionMethod === 'naver_search_window_trending') {
+    const windowRange = windowMetadata?.window
+      ? `${windowMetadata.window.since}→${windowMetadata.window.now}`
+      : `${trendStart}→${trendEnd}`;
+    keywordSource = `NAVER 24h news/blog window ${windowRange} (Cerebras ${CEREBRAS_MODEL})`;
+  } else {
+    keywordSource = fallbackKeywordSource;
+  }
 
   const metadata = {
     collection_method: keywordCollectionMethod,
@@ -1428,6 +1885,20 @@ async function buildTags() {
   if (keywordCollectionMethod === 'naver_search_llm_seeded') {
     metadata.llm_model = LLM_MODEL;
     metadata.llm_keywords_requested = SAMPLE_SIZE;
+  }
+
+  if (keywordCollectionMethod === 'naver_search_window_trending') {
+    metadata.llm_model = CEREBRAS_MODEL;
+    metadata.llm_keywords_requested = SAMPLE_SIZE;
+    if (windowMetadata) {
+      metadata.window_trending = {
+        seeds: windowMetadata.seeds,
+        window: windowMetadata.window,
+        hours: windowMetadata.hours,
+        baseline_days: windowMetadata.baselineDays,
+        candidate_count: windowMetadata.candidateCount,
+      };
+    }
   }
 
   const result = {
