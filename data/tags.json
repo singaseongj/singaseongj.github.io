@@ -1,399 +1,257 @@
 {
+  "generatedAt": "2025-11-08T12:34:09.456Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-08",
   "window": "12_hours",
   "total_phrases": 17,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "\"AI\",",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"AI\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:18 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22AI%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22AI%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22AI%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"ai\",",
+      "term_ko": "\"ai\","
     },
     {
-      "term": "\"Stock Market\",",
-      "term_ko": "\"증시\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"증시\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:19 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EC%A6%9D%EC%8B%9C%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EC%A6%9D%EC%8B%9C%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EC%A6%9D%EC%8B%9C%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"stock Market\",",
+      "term_ko": "\"증시\","
     },
     {
-      "term": "\"Artificial Intelligence\",",
-      "term_ko": "\"인공지능\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"인공지능\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:20 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"artificial Intelligence\",",
+      "term_ko": "\"인공지능\","
     },
     {
-      "term": "\"Bubble\",",
-      "term_ko": "\"버블\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"버블\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:21 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EB%B2%84%EB%B8%94%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EB%B2%84%EB%B8%94%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EB%B2%84%EB%B8%94%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"bubble\",",
+      "term_ko": "\"버블\","
     },
     {
-      "term": "\"Consumer Psychology\",",
-      "term_ko": "\"소비심리\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"소비심리\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:22 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EC%86%8C%EB%B9%84%EC%8B%AC%EB%A6%AC%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EC%86%8C%EB%B9%84%EC%8B%AC%EB%A6%AC%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EC%86%8C%EB%B9%84%EC%8B%AC%EB%A6%AC%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"consumer Psychology\",",
+      "term_ko": "\"소비심리\","
     },
     {
-      "term": "\"Exchange Rate\",",
-      "term_ko": "\"환율\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"환율\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:23 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%ED%99%98%EC%9C%A8%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%ED%99%98%EC%9C%A8%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%ED%99%98%EC%9C%A8%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"exchange Rate\",",
+      "term_ko": "\"환율\","
     },
     {
-      "term": "\"Dollars\",",
-      "term_ko": "\"달러\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"달러\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:23 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EB%8B%AC%EB%9F%AC%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EB%8B%AC%EB%9F%AC%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EB%8B%AC%EB%9F%AC%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"dollars\",",
+      "term_ko": "\"달러\","
     },
     {
-      "term": "\"Gold\",",
-      "term_ko": "\"금\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"금\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:24 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EA%B8%88%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EA%B8%88%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EA%B8%88%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"gold\",",
+      "term_ko": "\"금\","
     },
     {
-      "term": "\"Tesla\",",
-      "term_ko": "\"테슬라\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"테슬라\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:25 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%ED%85%8C%EC%8A%AC%EB%9D%BC%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%ED%85%8C%EC%8A%AC%EB%9D%BC%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%ED%85%8C%EC%8A%AC%EB%9D%BC%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"tesla\",",
+      "term_ko": "\"테슬라\","
     },
     {
-      "term": "\"Musk\",",
-      "term_ko": "\"머스크\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"머스크\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:26 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EB%A8%B8%EC%8A%A4%ED%81%AC%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EB%A8%B8%EC%8A%A4%ED%81%AC%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EB%A8%B8%EC%8A%A4%ED%81%AC%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"musk\",",
+      "term_ko": "\"머스크\","
     },
     {
-      "term": "\"IPO\",",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"IPO\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:27 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22IPO%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22IPO%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22IPO%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"ipo\",",
+      "term_ko": "\"ipo\","
     },
     {
-      "term": "\"Business\",",
-      "term_ko": "\"비즈니스\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"비즈니스\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:29 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"business\",",
+      "term_ko": "\"비즈니스\","
     },
     {
-      "term": "\"New York\",",
-      "term_ko": "\"뉴욕\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"뉴욕\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:30 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EB%89%B4%EC%9A%95%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EB%89%B4%EC%9A%95%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EB%89%B4%EC%9A%95%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"new York\",",
+      "term_ko": "\"뉴욕\","
     },
     {
-      "term": "\"Securities\",",
-      "term_ko": "\"증권\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"증권\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:31 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EC%A6%9D%EA%B6%8C%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EC%A6%9D%EA%B6%8C%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EC%A6%9D%EA%B6%8C%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"securities\",",
+      "term_ko": "\"증권\","
     },
     {
-      "term": "\"Domestic\",",
-      "term_ko": "\"국내\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"국내\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:33 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EA%B5%AD%EB%82%B4%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EA%B5%AD%EB%82%B4%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EA%B5%AD%EB%82%B4%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"domestic\",",
+      "term_ko": "\"국내\","
     },
     {
-      "term": "\"Foreigner\",",
-      "term_ko": "\"외국인\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"외국인\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:34 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%EC%99%B8%EA%B5%AD%EC%9D%B8%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%EC%99%B8%EA%B5%AD%EC%9D%B8%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%EC%99%B8%EA%B5%AD%EC%9D%B8%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"foreigner\",",
+      "term_ko": "\"외국인\","
     },
     {
-      "term": "\"Investments\",",
-      "term_ko": "\"투자\",",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "\"투자\",",
-        "total_results": 0,
-        "returned_results": 0,
-        "display_count": 0,
-        "recency_weight": 0,
-        "last_build_date": "Sat, 08 Nov 2025 15:30:35 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%22%ED%88%AC%EC%9E%90%22%2C",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%22%ED%88%AC%EC%9E%90%22%2C",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%22%ED%88%AC%EC%9E%90%22%2C"
-      },
-      "top_headlines": []
+      "term": "\"investments\",",
+      "term_ko": "\"투자\","
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_window_trending",
-    "sample_size": 30,
-    "generated_at": "2025-11-08T06:30:36.615Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "NAVER 24h news/blog window 2025-11-07T06:29:05.000Z→2025-11-08T06:29:05.000Z (Cerebras llama3.1-8b)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 3,
-    "llm_model": "llama3.1-8b",
-    "llm_keywords_requested": 30,
-    "window_trending": {
-      "seeds": [
-        "증시 뉴스",
-        "경제 동향",
-        "금융 정책",
-        "기술주 뉴스",
-        "반도체 산업",
-        "에너지 시장",
-        "원자재 가격",
-        "환율 전망",
-        "소비자 물가",
-        "부동산 시장",
-        "글로벌 경제",
-        "스타트업 투자"
-      ],
-      "window": {
-        "since": "2025-11-07T06:29:05.000Z",
-        "now": "2025-11-08T06:29:05.000Z"
-      },
-      "hours": 24,
-      "baseline_days": 7,
-      "candidate_count": 20
+  "discovered_keywords": [
+    {
+      "term": "\"ai\",",
+      "term_ko": "\"ai\","
+    },
+    {
+      "term": "\"stock Market\",",
+      "term_ko": "\"증시\","
+    },
+    {
+      "term": "\"artificial Intelligence\",",
+      "term_ko": "\"인공지능\","
+    },
+    {
+      "term": "\"bubble\",",
+      "term_ko": "\"버블\","
+    },
+    {
+      "term": "\"consumer Psychology\",",
+      "term_ko": "\"소비심리\","
+    },
+    {
+      "term": "\"exchange Rate\",",
+      "term_ko": "\"환율\","
+    },
+    {
+      "term": "\"dollars\",",
+      "term_ko": "\"달러\","
+    },
+    {
+      "term": "\"gold\",",
+      "term_ko": "\"금\","
+    },
+    {
+      "term": "\"tesla\",",
+      "term_ko": "\"테슬라\","
+    },
+    {
+      "term": "\"musk\",",
+      "term_ko": "\"머스크\","
+    },
+    {
+      "term": "\"ipo\",",
+      "term_ko": "\"ipo\","
+    },
+    {
+      "term": "\"business\",",
+      "term_ko": "\"비즈니스\","
+    },
+    {
+      "term": "\"new York\",",
+      "term_ko": "\"뉴욕\","
+    },
+    {
+      "term": "\"securities\",",
+      "term_ko": "\"증권\","
+    },
+    {
+      "term": "\"domestic\",",
+      "term_ko": "\"국내\","
+    },
+    {
+      "term": "\"foreigner\",",
+      "term_ko": "\"외국인\","
+    },
+    {
+      "term": "\"investments\",",
+      "term_ko": "\"투자\","
+    }
+  ],
+  "translations": {
+    "\"ai\",": {
+      "en": "\"ai\",",
+      "ko": "\"ai\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"stock Market\",": {
+      "en": "\"stock Market\",",
+      "ko": "\"증시\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"artificial Intelligence\",": {
+      "en": "\"artificial Intelligence\",",
+      "ko": "\"인공지능\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"bubble\",": {
+      "en": "\"bubble\",",
+      "ko": "\"버블\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"consumer Psychology\",": {
+      "en": "\"consumer Psychology\",",
+      "ko": "\"소비심리\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"exchange Rate\",": {
+      "en": "\"exchange Rate\",",
+      "ko": "\"환율\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"dollars\",": {
+      "en": "\"dollars\",",
+      "ko": "\"달러\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"gold\",": {
+      "en": "\"gold\",",
+      "ko": "\"금\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"tesla\",": {
+      "en": "\"tesla\",",
+      "ko": "\"테슬라\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"musk\",": {
+      "en": "\"musk\",",
+      "ko": "\"머스크\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"ipo\",": {
+      "en": "\"ipo\",",
+      "ko": "\"ipo\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"business\",": {
+      "en": "\"business\",",
+      "ko": "\"비즈니스\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"new York\",": {
+      "en": "\"new York\",",
+      "ko": "\"뉴욕\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"securities\",": {
+      "en": "\"securities\",",
+      "ko": "\"증권\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"domestic\",": {
+      "en": "\"domestic\",",
+      "ko": "\"국내\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"foreigner\",": {
+      "en": "\"foreigner\",",
+      "ko": "\"외국인\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
+    },
+    "\"investments\",": {
+      "en": "\"investments\",",
+      "ko": "\"투자\",",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-08T12:34:09.456Z"
     }
   }
 }
