@@ -1845,7 +1845,7 @@ async function trimKeywordsWithCerebras(keywords, { maxWords = 2, limit } = {}) 
   console.log(`✂️  Trimming ${effectiveLimit} NAVER trending keywords with Cerebras (≤${maxWords} words)…`);
 
   const prompt = [
-    `You will receive a JSON array of trending finance-related keywords.`,
+    `You will receive a JSON array of trending keywords.`,
     `Shorten each keyword to at most ${maxWords} words while preserving its core meaning and language.`,
     `Return ONLY a JSON array of ${effectiveLimit} trimmed keywords in the same order. No explanations, numbering, or code fences.`,
     `Keywords: ${JSON.stringify(truncated.slice(0, effectiveLimit))}`,
