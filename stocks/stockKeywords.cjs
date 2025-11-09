@@ -434,12 +434,10 @@ function extractKeywordsFromLLMResponse(rawText) {
 function buildKeywordPrompt(desiredCount) {
   const count = Number.isFinite(desiredCount) && desiredCount > 0 ? Math.floor(desiredCount) : SAMPLE_SIZE;
   return [
-    `최신 한국 트렌드를 반영한 검색 키워드를 ${count}개 작성해 주세요.`,
-    '요구사항:',
-    '- 각 키워드는 2~3어절의 간결한 표현일 것',
-    '- 금융/경제 분야에 한정하지 말고 현재 화제가 되는 다양한 주제를 포함할 것',
-    '- 따옴표, 쉼표 등 불필요한 구두점은 제거할 것',
-    '- 결과는 JSON 배열만 출력 (설명, 코드 블록, 번호 매기기 금지)',
+    'Please extract and list the top trending keywords and key phrases that appear most frequently or prominently across these articles.',
+    `Aim for ${Math.min(Math.max(count, 10), 20)} total items when possible.`,
+    'Return only the keywords and phrases, sorted by frequency or importance, in a clean list or comma-separated format.',
+    'Output strictly as a JSON array of strings with no extra commentary, code fences, numbering, or explanations.',
   ].join('\n');
 }
 
