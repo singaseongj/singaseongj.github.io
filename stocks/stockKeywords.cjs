@@ -264,16 +264,113 @@ function dedupeKeywords(rawKeywords) {
   return deduped;
 }
 
+function stripKeywordLabel(value) {
+  if (!value) return '';
+
+  let stripped = String(value).trim();
+  const labelPattern = /^(?:keywords?|keyword|overview|summary|키워드|개요)\s*[:：\-–—]?\s*/i;
+
+  while (labelPattern.test(stripped)) {
+    stripped = stripped.replace(labelPattern, '').trim();
+  }
+
+  return stripped;
+}
+
 function cleanKeyword(keyword) {
   if (typeof keyword !== 'string') {
     return '';
   }
 
-  return String(keyword)
+  const withoutQuotes = String(keyword)
     .replace(/["'`“”‘’‚‛„‟‹›«»]/g, '')
-    .replace(/[，,]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/[，,]/g, ' ');
+
+  const withoutLabels = stripKeywordLabel(withoutQuotes);
+
+  return withoutLabels.replace(/\s+/g, ' ').trim();
+}
+
+function isTooGenericKeyword(keyword) {
+  if (!keyword) return true;
+
+  const normalized = String(keyword).trim();
+  if (!normalized) return true;
+
+  const compact = normalized.replace(/\s+/g, ' ').toLowerCase();
+  const tokens = compact.split(' ');
+
+  if (tokens.length === 1) {
+    const genericSingles = new Set([
+      '정부',
+      '비즈니스',
+      '경제',
+      '정치',
+      '사회',
+      '금융',
+      '산업',
+      '시장',
+      'business',
+      'government',
+      'economy',
+      'politics',
+      'society',
+      'finance',
+      'industry',
+      'market',
+    ]);
+    if (genericSingles.has(compact)) {
+      return true;
+    }
+  }
+
+  if (tokens.length <= 2) {
+    const genericPairPrefixes = new Set([
+      '정부',
+      '비즈니스',
+      '경제',
+      '정치',
+      '사회',
+      '금융',
+      '산업',
+      '시장',
+      '기술',
+      'business',
+      'government',
+      'economy',
+      'politics',
+      'society',
+      'finance',
+      'industry',
+      'market',
+      'technology',
+    ]);
+
+    const suffix = tokens[tokens.length - 1];
+    if (suffix === '관련' && genericPairPrefixes.has(tokens[0])) {
+      return true;
+    }
+
+    const compactNoSpace = compact.replace(/\s+/g, '');
+    const genericCompacts = [
+      '정부관련',
+      '비즈니스관련',
+      '경제동향',
+      '경제이슈',
+      '정치동향',
+      '정치이슈',
+      '사회이슈',
+      '시장동향',
+      'markettrends',
+      'businessissues',
+      'governmentpolicy',
+    ];
+    if (genericCompacts.includes(compactNoSpace)) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 function sanitizeKeywordList(keywords) {
@@ -282,6 +379,7 @@ function sanitizeKeywordList(keywords) {
   const cleaned = keywords
     .map((kw) => cleanKeyword(kw))
     .filter((kw) => kw.length > 0)
+    .filter((kw) => !isTooGenericKeyword(kw))
     .filter((kw) => kw.split(/\s+/).filter(Boolean).length <= 5);
 
   return dedupeKeywords(cleaned);
