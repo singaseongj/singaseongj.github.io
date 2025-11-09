@@ -45,27 +45,27 @@ const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
 const FINANCE_KEYWORDS_PATH = path.resolve(__dirname, '../data/finance_keywords.json');
 
 const TRENDING_WINDOW_HOURS = Number(process.env.TRENDING_WINDOW_HOURS) || 24;
-const TRENDING_WINDOW_NEWS_PAGES = Number(process.env.TRENDING_WINDOW_NEWS_PAGES) || 3;
-const TRENDING_WINDOW_BLOG_PAGES = Number(process.env.TRENDING_WINDOW_BLOG_PAGES) || 3;
+const TRENDING_WINDOW_NEWS_PAGES = Number(process.env.TRENDING_WINDOW_NEWS_PAGES) || 5;
+const TRENDING_WINDOW_BLOG_PAGES = Number(process.env.TRENDING_WINDOW_BLOG_PAGES) || 5;
 const TRENDING_BASELINE_DAYS = Number(process.env.TRENDING_BASELINE_DAYS) || 7;
 const TRENDING_BASELINE_NEWS_PAGES = Number(process.env.TRENDING_BASELINE_NEWS_PAGES) || 6;
 const TRENDING_BASELINE_BLOG_PAGES = Number(process.env.TRENDING_BASELINE_BLOG_PAGES) || 6;
-const TRENDING_WINDOW_MAX_LLM_KEYWORDS = Number(process.env.TRENDING_WINDOW_MAX_LLM_KEYWORDS) || 40;
+const TRENDING_WINDOW_MAX_LLM_KEYWORDS = Number(process.env.TRENDING_WINDOW_MAX_LLM_KEYWORDS) || 50;
 const TRENDING_WINDOW_TEXT_SLICE = Number(process.env.TRENDING_WINDOW_TEXT_SLICE) || 18000;
 
 const TRENDING_SEED_FALLBACKS = [
-  '증시 뉴스',
-  '경제 동향',
-  '금융 정책',
-  '기술주 뉴스',
-  '반도체 산업',
-  '에너지 시장',
-  '원자재 가격',
-  '환율 전망',
-  '소비자 물가',
-  '부동산 시장',
-  '글로벌 경제',
-  '스타트업 투자',
+  '실시간 검색어',
+  '화제의 뉴스',
+  '이슈',
+  '속보',
+  '긴급',
+  '오늘의 화제',
+  '핫이슈',
+  '연예',
+  '스포츠',
+  '게임',
+  '정치',
+  '사건사고',
 ];
 
 const HANGUL_SUFFIXES = [
@@ -247,11 +247,8 @@ function dedupeKeywords(rawKeywords) {
         break;
       }
       if (existing.includes(normalized) || normalized.includes(existing)) {
-        const lengthDiff = Math.abs(existing.length - normalized.length);
-        if (lengthDiff <= 2) {
-          similar = true;
-          break;
-        }
+        similar = true;
+        break;
       }
     }
 
@@ -283,7 +280,7 @@ function cleanKeyword(keyword) {
   }
 
   const withoutQuotes = String(keyword)
-    .replace(/["'`“”‘’‚‛„‟‹›«»]/g, '')
+    .replace(/["'`""''‚‛„‟‹›«»]/g, '')
     .replace(/[，,]/g, ' ');
 
   const withoutLabels = stripKeywordLabel(withoutQuotes);
@@ -300,77 +297,87 @@ function isTooGenericKeyword(keyword) {
   const compact = normalized.replace(/\s+/g, ' ').toLowerCase();
   const tokens = compact.split(' ');
 
+  const genericSingles = new Set([
+    '정부', '비즈니스', '경제', '정치', '사회', '금융', '산업', '시장',
+    '기술', '투자', '주식', '뉴스', '동향', '이슈', '관련', '분석',
+    '전망', '업계', '기업', '회사', '증시', '코스피', '나스닥',
+    '오늘', '내일', '어제', '최근', '현재', '상황',
+    'business', 'government', 'economy', 'politics', 'society',
+    'finance', 'industry', 'market', 'technology', 'investment',
+    'stock', 'news', 'trend', 'issue', 'analysis', 'outlook',
+    'sector', 'company', 'corporate', 'today', 'recent', 'current',
+  ]);
+
   if (tokens.length === 1) {
-    const genericSingles = new Set([
-      '정부',
-      '비즈니스',
-      '경제',
-      '정치',
-      '사회',
-      '금융',
-      '산업',
-      '시장',
-      'business',
-      'government',
-      'economy',
-      'politics',
-      'society',
-      'finance',
-      'industry',
-      'market',
-    ]);
     if (genericSingles.has(compact)) {
       return true;
     }
   }
 
-  if (tokens.length <= 2) {
-    const genericPairPrefixes = new Set([
-      '정부',
-      '비즈니스',
-      '경제',
-      '정치',
-      '사회',
-      '금융',
-      '산업',
-      '시장',
-      '기술',
-      'business',
-      'government',
-      'economy',
-      'politics',
-      'society',
-      'finance',
-      'industry',
-      'market',
-      'technology',
+  if (tokens.length === 2) {
+    const genericPrefixes = new Set([
+      '정부', '경제', '금융', '산업', '시장', '주식', '증시', '오늘',
+      'stock', 'market', 'economic', 'financial', 'industry', 'today',
     ]);
 
-    const suffix = tokens[tokens.length - 1];
-    if (suffix === '관련' && genericPairPrefixes.has(tokens[0])) {
+    const genericSuffixes = new Set([
+      '관련', '동향', '이슈', '뉴스', '전망', '분석', '시장', '상황',
+      'news', 'trend', 'issue', 'market', 'outlook', 'analysis', 'situation',
+    ]);
+
+    if (genericPrefixes.has(tokens[0]) && genericSuffixes.has(tokens[1])) {
       return true;
     }
+  }
 
-    const compactNoSpace = compact.replace(/\s+/g, '');
-    const genericCompacts = [
-      '정부관련',
-      '비즈니스관련',
-      '경제동향',
-      '경제이슈',
-      '정치동향',
-      '정치이슈',
-      '사회이슈',
-      '시장동향',
-      'markettrends',
-      'businessissues',
-      'governmentpolicy',
-    ];
-    if (genericCompacts.includes(compactNoSpace)) {
+  const vaguePatterns = [
+    /^(경제|금융|산업|시장|정치|사회)\s+(동향|이슈|뉴스|상황|분석)/,
+    /^(stock|market|economic|financial|political)\s+(news|trend|issue|situation|analysis)/,
+    /관련\s*$/,
+    /\s+related$/,
+    /^.{1,2}$/,
+  ];
+
+  for (const pattern of vaguePatterns) {
+    if (pattern.test(compact)) {
       return true;
     }
   }
 
   return false;
+}
+
+function calculateSpecificityScore(keyword) {
+  if (!keyword) return 0;
+
+  const normalized = String(keyword).trim().toLowerCase();
+  const tokens = normalized.split(/\s+/).filter(Boolean);
+
+  let score = 100;
+
+  if (tokens.length === 1) score -= 20;
+
+  if (tokens.length >= 2 && tokens.length <= 4) score += 20;
+
+  const genericWords = new Set([
+    '관련', '동향', '이슈', '뉴스', '시장', '산업', '상황', '분석',
+    'related', 'trend', 'news', 'market', 'industry', 'situation', 'analysis',
+  ]);
+
+  for (const token of tokens) {
+    if (genericWords.has(token)) score -= 20;
+  }
+
+  if (/[0-9]/.test(normalized)) score += 15;
+  if (/[A-Z]{2,}/.test(keyword)) score += 10;
+
+  const specificEntities = /삼성|현대|LG|SK|카카오|네이버|롤드컵|토트넘|맨유|손흥민|Apple|Tesla|Microsoft|Google|Amazon|NVIDIA|Champions|League/i;
+  if (specificEntities.test(keyword)) score += 30;
+
+  const viralCategories = /축구|야구|농구|게임|e스포츠|영화|드라마|아이돌|케이팝|football|soccer|basketball|game|esports|movie|drama|kpop/i;
+  if (viralCategories.test(normalized)) score += 25;
+
+  return Math.max(0, score);
 }
 
 function sanitizeKeywordList(keywords) {
@@ -412,7 +419,7 @@ function extractKeywordsFromLLMResponse(rawText) {
         return parsed.items;
       }
     } catch (err) {
-      // Continue trying other parsing strategies.
+      // continue
     }
   }
 
@@ -434,13 +441,21 @@ function extractKeywordsFromLLMResponse(rawText) {
 function buildKeywordPrompt(desiredCount) {
   const count = Number.isFinite(desiredCount) && desiredCount > 0 ? Math.floor(desiredCount) : SAMPLE_SIZE;
   return [
-    '다음 기사 전반에서 가장 자주 등장하거나 눈에 띄는 상위 트렌드 키워드와 핵심 구문을 추출해 나열해 주세요.',
-    `가능하면 총 ${Math.min(Math.max(count, 10), SAMPLE_SIZE)}개의 항목을 목표로 해 주세요.`,
-    '빈도 또는 중요도 순으로 정렬된 키워드와 구문만 깔끔한 목록이나 쉼표 구분 형식으로 반환해 주세요.',
+    '다음 기사 전반에서 가장 화제가 되고 있는 구체적인 키워드와 이슈를 추출해 주세요.',
+    `총 ${Math.min(Math.max(count, 10), SAMPLE_SIZE)}개의 항목을 목표로 해 주세요.`,
+    '',
+    '**중요 규칙:**',
+    '- 구체적인 고유명사, 사건명, 인물명, 브랜드명 우선 (예: "롤드컵", "손흥민", "토트넘 대 맨유")',
+    '- 일반적인 단어는 절대 금지 (예: "경제 뉴스", "시장 동향", "금융 이슈" 등)',
+    '- 2~4어절의 구체적 표현',
+    '- 실시간 검색어처럼 화제성 있는 키워드',
+    '',
+    '나쁜 예시: "경제 동향", "시장 이슈", "정치 뉴스"',
+    '좋은 예시: "엔비디아 실적", "한국은행 금리 인상", "삼성 반도체", "넷플릭스 오징어게임"',
+    '',
     '출력은 추가 설명, 코드 블록, 번호 매기기 없이 문자열만 담긴 JSON 배열 형식을 엄격히 지켜 주세요.',
   ].join('\n');
 }
-
 
 async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allowAutoTruncate = true } = {}) {
   if (!CEREBRAS_API_KEY) {
@@ -466,7 +481,7 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allow
     const payload = {
       model: CEREBRAS_MODEL,
       messages: [
-        { role: 'system', content: 'You are a helpful assistant that only returns valid JSON.' },
+        { role: 'system', content: 'You are a helpful assistant that extracts viral trending keywords and returns only valid JSON arrays.' },
         { role: 'user', content: promptToUse },
       ],
       max_completion_tokens: CEREBRAS_MAX_TOKENS,
@@ -511,16 +526,18 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allow
 
       const extracted = extractKeywordsFromLLMResponse(llmText);
       const sanitized = sanitizeKeywordList(extracted);
-      const constrained = enforceKeywordWordCount(sanitized, { minWords: 2, maxWords: 3 }).slice(
+
+      const specific = sanitized.filter((kw) => calculateSpecificityScore(kw) >= 60);
+      const constrained = enforceKeywordWordCount(specific, { minWords: 2, maxWords: 4 }).slice(
         0,
         desiredCount,
       );
 
       if (!constrained.length) {
-        throw new Error('No keywords met the 2~3 word requirement from Cerebras response.');
+        throw new Error('No keywords met the specificity requirements from Cerebras response.');
       }
 
-      console.log(`🤖 Cerebras provided ${constrained.length} keyword candidates.`);
+      console.log(`🤖 Cerebras provided ${constrained.length} specific keyword candidates.`);
       return constrained;
     } catch (err) {
       if (err.name === 'AbortError') {
@@ -600,13 +617,15 @@ async function requestKeywordsFromWorker({ prompt, limit } = {}) {
 
     const extracted = extractKeywordsFromLLMResponse(llmText);
     const sanitized = sanitizeKeywordList(extracted);
-    const constrained = enforceKeywordWordCount(sanitized, { minWords: 2, maxWords: 3 }).slice(
+
+    const specific = sanitized.filter((kw) => calculateSpecificityScore(kw) >= 60);
+    const constrained = enforceKeywordWordCount(specific, { minWords: 2, maxWords: 4 }).slice(
       0,
       effectiveLimit,
     );
 
     if (!constrained.length) {
-      throw new Error('No keywords met the 2~3 word requirement from LLM response.');
+      throw new Error('No keywords met the specificity requirements from LLM response.');
     }
 
     console.log(`🤖 tinyllama provided ${constrained.length} keyword candidates.`);
@@ -785,6 +804,7 @@ async function collectWindow(seeds, { hours = TRENDING_WINDOW_HOURS, newsPages =
     }
   }
 
+  console.log(`📊 Collected ${news.length} news items and ${blogs.length} blog posts from last ${hours} hours`);
   return { news, blogs, since, now };
 }
 
@@ -838,11 +858,17 @@ async function collectBaseline(
 function buildWindowExtractionPrompt(text, maxKeywords) {
   const safeMax = Number.isFinite(maxKeywords) && maxKeywords > 0 ? Math.floor(maxKeywords) : 0;
   const instructionLines = [
-    `아래의 한국어 뉴스/블로그 텍스트에서 금융 및 비즈니스 관련 핵심 검색 키워드를 최대 ${safeMax || TRENDING_WINDOW_MAX_LLM_KEYWORDS}개 도출하세요.`,
-    '조건:',
-    '- 1~4어절의 간결한 표현',
-    '- 동의어나 중복 표현 제거',
+    `아래의 한국어 뉴스/블로그 텍스트에서 실시간으로 가장 화제가 되는 구체적인 키워드를 최대 ${safeMax || TRENDING_WINDOW_MAX_LLM_KEYWORDS}개 도출하세요.`,
+    '',
+    '**중요 규칙:**',
+    '- 구체적인 고유명사만 추출 (인물, 팀명, 브랜드, 사건명 등)',
+    '- 2~4어절의 구체적 표현',
+    '- 일반 명사는 절대 금지 (경제, 시장, 동향, 이슈 등)',
+    '- 실시간 검색어나 구글 트렌드에 나올 법한 화제성 키워드',
     '- 결과는 JSON 배열 형식만 출력 (설명 금지)',
+    '',
+    '나쁜 예시: "경제 동향", "시장 이슈", "금융 뉴스"',
+    '좋은 예시: "롤드컵 결승", "손흥민 골", "삼성전자 실적", "넷플릭스 오징어게임"',
     '',
     '텍스트:',
   ];
@@ -917,7 +943,9 @@ function burstScore(keyword, windowTexts, baselineTexts, hours = TRENDING_WINDOW
   const c24 = countFreq(windowTexts, keyword);
   const c7d = countFreq(baselineTexts, keyword);
   const expected24 = baselineDays > 0 ? c7d / baselineDays : 0;
-  const lift = (c24 + alpha) / (expected24 + alpha);
+
+  const lift = c24 > 0 && expected24 === 0 ? 1000 : (c24 + alpha) / (expected24 + alpha);
+
   return { c24, c7d, lift };
 }
 
@@ -989,6 +1017,8 @@ async function trending24h({
     throw new Error('LLM did not return any candidate keywords for the trending window.');
   }
 
+  console.log(`🎯 LLM extracted ${candidates.length} candidate keywords from ${windowTexts.length} documents`);
+
   const baseline = await collectBaseline(
     validSeeds,
     { days: baselineDays, newsPages: baselineNewsPages, blogPages: baselineBlogPages },
@@ -1008,9 +1038,14 @@ async function trending24h({
   const scored = burst
     .map((entry) => {
       const dataLab = momentumMap.get(entry.keyword) || { dl_momentum: 0, dl_latest: 0 };
+      const specificityBonus = calculateSpecificityScore(entry.keyword) / 100;
+
       const finalScore =
-        0.7 * tanh(Math.log(entry.lift || 1)) + 0.3 * tanh((dataLab.dl_momentum || 0) / 10);
-      return { ...entry, ...dataLab, score: finalScore };
+        0.5 * tanh(Math.log(entry.lift || 1)) +
+        0.3 * tanh((dataLab.dl_momentum || 0) / 10) +
+        0.2 * specificityBonus;
+
+      return { ...entry, ...dataLab, score: finalScore, specificityScore: specificityBonus * 100 };
     })
     .sort((a, b) => b.score - a.score);
 
@@ -1048,6 +1083,12 @@ async function fetchTrendingKeywordsFromWindow({ limit = SAMPLE_SIZE } = {}) {
   try {
     const trending = await trending24h({ seeds: seedList });
     const keywords = sanitizeKeywordList((trending?.top || []).map((item) => item.keyword)).slice(0, limit);
+
+    console.log(`\n🔥 Top ${Math.min(10, keywords.length)} viral keywords by score:`);
+    trending.top.slice(0, 10).forEach((item, idx) => {
+      console.log(`   ${idx + 1}. ${item.keyword} (score: ${item.score.toFixed(4)}, lift: ${item.lift.toFixed(2)}, specificity: ${item.specificityScore.toFixed(0)})`);
+    });
+
     return {
       keywords,
       metadata: {
@@ -1068,9 +1109,10 @@ async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
   const limit =
     Number.isFinite(desiredCount) && desiredCount > 0 ? Math.min(Math.floor(desiredCount), SAMPLE_SIZE * 2) : SAMPLE_SIZE;
 
+  console.log('🔍 Attempting to fetch viral trending keywords from NAVER 24h news/blog window...');
   const windowTrending = await fetchTrendingKeywordsFromWindow({ limit });
   if (windowTrending.keywords.length) {
-    console.log(`📈 Using ${windowTrending.keywords.length} keywords from NAVER 24h news/blog pipeline.`);
+    console.log(`📈 Using ${windowTrending.keywords.length} viral keywords from NAVER 24h news/blog pipeline.`);
     return {
       keywords: windowTrending.keywords,
       method: 'naver_search_window_trending',
@@ -1158,8 +1200,9 @@ function areStringsSimilar(a, b) {
 
   const prefix = commonPrefixLength(normA, normB);
   const minLength = Math.min(normA.length, normB.length);
-  if (minLength <= 2) {
-    return false;
+
+  if (minLength <= 3) {
+    return normA === normB;
   }
 
   if (prefix >= minLength - 1) {
@@ -1167,7 +1210,8 @@ function areStringsSimilar(a, b) {
   }
 
   const distance = levenshteinDistance(normA, normB);
-  const threshold = Math.max(1, Math.floor(minLength * 0.4));
+  const threshold = Math.max(1, Math.floor(minLength * 0.25));
+
   if (prefix >= 2 && distance <= threshold) {
     return true;
   }
@@ -1271,26 +1315,24 @@ function loadFinanceKeywords() {
   const deduped = dedupeKeywords(cleaned);
   console.log(`🔄 After deduplication: ${deduped.length} keywords`);
 
-  // Build fallback map BEFORE returning
   buildFallbackMap(raw.finance_keywords_en);
   return deduped;
 }
 
 function shuffleSample(list, size) {
   const pool = [...list];
-  
-  // Fisher-Yates shuffle with enhanced randomness
+
   for (let i = pool.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
-  
+
   const sampled = pool.slice(0, Math.min(size, pool.length));
-  
+
   console.log(`🔀 Shuffled ${pool.length} keywords, selected first ${sampled.length}`);
   console.log(`   First 5 from shuffled pool: ${sampled.slice(0, 5).join(', ')}`);
   console.log(`   Last 5 from shuffled pool: ${sampled.slice(-5).join(', ')}`);
-  
+
   return sampled;
 }
 
@@ -1325,7 +1367,6 @@ function formatDateForDatalab(date) {
 
 function parseDatalabPeriod(period) {
   if (!period || typeof period !== 'string') return NaN;
-  // Period strings are delivered as "YYYY-MM-DD" or "YYYY-MM-DD HH:00:00" when using timeUnit=hour
   const normalized = period.includes(' ') ? period.replace(' ', 'T') : `${period}T00:00:00`;
   const timestamp = Date.parse(normalized);
   return Number.isFinite(timestamp) ? timestamp : NaN;
@@ -1570,7 +1611,7 @@ function computeSearchScoreComponents(dataRows, options = {}) {
   const rawScore = (dayScore * weekScore - correctionFactor) * decayFactor * timeWeight;
   const clampedRawScore = Number.isFinite(rawScore) ? rawScore : 0;
   const adjustedScore = Math.max(0, clampedRawScore);
-  const scaledScore = adjustedScore * 1000;
+  const scaledScore = Number((adjustedScore * 1000).toFixed(2));
 
   const recentWindowVolume = Number(safeShortWindow.toFixed(4));
   const mediumWindowTotal = Number(mediumWindowVolume.toFixed(4));
@@ -1593,12 +1634,11 @@ function computeSearchScoreComponents(dataRows, options = {}) {
     decayFactor: Number(decayFactor.toFixed(6)),
     timeWeight: Number(timeWeight.toFixed(6)),
     lastTimestamp,
-    rawScore: Number(clampedRawScore.toFixed(6)),
-    scaledScore: Number(scaledScore.toFixed(2)),
+    rawScore: Number(adjustedScore.toFixed(6)),
+    scaledScore,
     totalScore: Math.round(scaledScore),
-    // Backwards compatible field names for existing downstream usage.
     recentHourVolume: recentWindowVolume,
-    past24hVolume: mediumWindowTotal,
+    past_24h_volume: mediumWindowTotal,
   };
 }
 
@@ -1653,7 +1693,7 @@ async function evaluateKeyword(keyword) {
   }));
 
   console.log(
-    `🔎 ${keyword.padEnd(16, ' ')} → score ${String(finalScore).padStart(5)} (DataLab ${datalabScores?.totalScore ?? 'n/a'}, fallback ${fallbackScore})`
+    `🔎 ${keyword.padEnd(20, ' ')} → score ${String(finalScore).padStart(5)} (DataLab ${datalabScores?.totalScore ?? 'n/a'}, fallback ${fallbackScore})`
   );
 
   const mentions = Number.isFinite(datalabScores?.weeklySearchVolume)
@@ -2012,7 +2052,7 @@ async function trimKeywordsWithCerebras(keywords, { maxWords = 2, limit } = {}) 
 }
 
 async function buildTags() {
-  console.log('🚀 Generating data/tags.json from finance_keywords.json');
+  console.log('🚀 Generating data/tags.json with viral trending keywords');
   console.log(`🕐 Execution time: ${new Date().toISOString()}`);
   console.log(`🎲 Random seed check: ${Math.random()}`);
 
@@ -2084,14 +2124,14 @@ async function buildTags() {
   }
 
   const methodDescriptionMap = {
-    naver_search_window_trending: 'NAVER 24h news/blog pipeline',
+    naver_search_window_trending: 'NAVER 24h news/blog viral pipeline',
     naver_search_trending_seeded: 'NAVER DataLab trending feed',
     naver_search_llm_seeded: 'tinyllama worker',
     naver_search_random_sample: 'finance_keywords.json fallback',
   };
 
   const methodDescription = methodDescriptionMap[keywordCollectionMethod] || keywordCollectionMethod;
-  console.log(`🎯 Selected ${sampled.length} finance keywords for evaluation (${methodDescription}).`);
+  console.log(`🎯 Selected ${sampled.length} keywords for evaluation (${methodDescription}).`);
 
   const evaluated = [];
   const translationStats = {
@@ -2154,31 +2194,76 @@ async function buildTags() {
   console.log(`   🌐 DeepL API calls: ${translationStats.deepl}`);
   console.log(`   ⚠️  Failed: ${translationStats.failed}`);
 
-  // Sort by significance score (highest first) - THIS is why it looks "alphabetic"
-  // The original random order is being overwritten here!
   evaluated.sort((a, b) => b.significance_score - a.significance_score);
 
   const uniqueEvaluated = [];
   const similarDiscarded = [];
+  const seenNormalizations = new Set();
 
   for (const item of evaluated) {
-    const duplicate = uniqueEvaluated.find((existing) => areResultsSimilar(existing, item));
-    if (duplicate) {
-      similarDiscarded.push({ kept: duplicate, dropped: item });
+    const itemNormalized = normalizeForComparison(item.term_ko || item.term);
+
+    if (seenNormalizations.has(itemNormalized)) {
+      similarDiscarded.push({ kept: null, dropped: item, reason: 'exact_match' });
       continue;
     }
+
+    const duplicate = uniqueEvaluated.find((existing) => {
+      return areStringsSimilar(existing.term_ko || existing.term, item.term_ko || item.term) ||
+             areStringsSimilar(existing.term, item.term);
+    });
+
+    if (duplicate) {
+      similarDiscarded.push({ kept: duplicate, dropped: item, reason: 'similar' });
+      continue;
+    }
+
+    const specificityScore = calculateSpecificityScore(item.term_ko || item.term);
+    if (specificityScore < 50) {
+      similarDiscarded.push({ kept: null, dropped: item, reason: 'too_generic' });
+      continue;
+    }
+
+    seenNormalizations.add(itemNormalized);
     uniqueEvaluated.push(item);
   }
 
   if (similarDiscarded.length) {
-    console.log(`\n🧮 Removed ${similarDiscarded.length} similar keywords after scoring.`);
-    for (const { kept, dropped } of similarDiscarded.slice(0, 5)) {
-      console.log(
-        `   ↳ Dropped "${dropped.term_ko || dropped.term}" (score ${dropped.significance_score}) in favor of "${kept.term_ko || kept.term}" (score ${kept.significance_score}).`,
-      );
+    console.log(`\n🧮 Removed ${similarDiscarded.length} keywords after deduplication and specificity filtering.`);
+
+    const reasonCounts = {
+      exact_match: 0,
+      similar: 0,
+      too_generic: 0,
+    };
+
+    for (const { reason } of similarDiscarded) {
+      reasonCounts[reason] = (reasonCounts[reason] || 0) + 1;
+    }
+
+    console.log(`   📊 Removal breakdown:`);
+    console.log(`      - Exact matches: ${reasonCounts.exact_match}`);
+    console.log(`      - Similar keywords: ${reasonCounts.similar}`);
+    console.log(`      - Too generic: ${reasonCounts.too_generic}`);
+
+    console.log(`\n   🔍 Examples of removed keywords:`);
+    for (const { kept, dropped, reason } of similarDiscarded.slice(0, 5)) {
+      if (reason === 'too_generic') {
+        console.log(
+          `   ↳ Dropped "${dropped.term_ko || dropped.term}" (score ${dropped.significance_score}) - ${reason}`
+        );
+      } else if (kept) {
+        console.log(
+          `   ↳ Dropped "${dropped.term_ko || dropped.term}" (score ${dropped.significance_score}) in favor of "${kept.term_ko || kept.term}" (score ${kept.significance_score}) - ${reason}`
+        );
+      } else {
+        console.log(
+          `   ↳ Dropped "${dropped.term_ko || dropped.term}" (score ${dropped.significance_score}) - ${reason}`
+        );
+      }
     }
     if (similarDiscarded.length > 5) {
-      console.log(`   …and ${similarDiscarded.length - 5} more similar pairs.`);
+      console.log(`   …and ${similarDiscarded.length - 5} more.`);
     }
   }
 
@@ -2194,7 +2279,7 @@ async function buildTags() {
     const windowRange = windowMetadata?.window
       ? `${windowMetadata.window.since}→${windowMetadata.window.now}`
       : `${trendStart}→${trendEnd}`;
-    keywordSource = `NAVER 24h news/blog window ${windowRange} (Cerebras ${CEREBRAS_MODEL})`;
+    keywordSource = `NAVER 24h viral news/blog window ${windowRange} (Cerebras ${CEREBRAS_MODEL})`;
   } else {
     keywordSource = fallbackKeywordSource;
   }
@@ -2208,6 +2293,11 @@ async function buildTags() {
     keyword_source: keywordSource,
     fallback_keyword_source: fallbackKeywordSource,
     similar_keywords_removed: similarDiscarded.length,
+    removal_breakdown: {
+      exact_match: similarDiscarded.filter((d) => d.reason === 'exact_match').length,
+      similar: similarDiscarded.filter((d) => d.reason === 'similar').length,
+      too_generic: similarDiscarded.filter((d) => d.reason === 'too_generic').length,
+    },
   };
 
   if (keywordCollectionMethod === 'naver_search_llm_seeded') {
@@ -2252,7 +2342,13 @@ async function buildTags() {
   };
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(result, null, 2));
-  console.log(`✅ Saved ${uniqueEvaluated.length} keywords to ${OUTPUT_PATH}`);
+  console.log(`\n✅ Saved ${uniqueEvaluated.length} viral trending keywords to ${OUTPUT_PATH}`);
+
+  console.log(`\n🔥 Top 10 viral keywords by significance score:`);
+  uniqueEvaluated.slice(0, 10).forEach((item, idx) => {
+    const specificityScore = calculateSpecificityScore(item.term_ko || item.term);
+    console.log(`   ${idx + 1}. ${(item.term_ko || item.term).padEnd(25)} (score: ${item.significance_score}, specificity: ${specificityScore.toFixed(0)})`);
+  });
 }
 
 if (require.main === module) {
@@ -2263,3 +2359,4 @@ if (require.main === module) {
 }
 
 module.exports = { buildTags };
+
