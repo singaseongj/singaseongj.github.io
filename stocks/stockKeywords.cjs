@@ -434,10 +434,10 @@ function extractKeywordsFromLLMResponse(rawText) {
 function buildKeywordPrompt(desiredCount) {
   const count = Number.isFinite(desiredCount) && desiredCount > 0 ? Math.floor(desiredCount) : SAMPLE_SIZE;
   return [
-    'Please extract and list the top trending keywords and key phrases that appear most frequently or prominently across these articles.',
-    `Aim for ${Math.min(Math.max(count, 10), 20)} total items when possible.`,
-    'Return only the keywords and phrases, sorted by frequency or importance, in a clean list or comma-separated format.',
-    'Output strictly as a JSON array of strings with no extra commentary, code fences, numbering, or explanations.',
+    '다음 기사 전반에서 가장 자주 등장하거나 눈에 띄는 상위 트렌드 키워드와 핵심 구문을 추출해 나열해 주세요.',
+    `가능하면 총 ${Math.min(Math.max(count, 10), SAMPLE_SIZE)}개의 항목을 목표로 해 주세요.`,
+    '빈도 또는 중요도 순으로 정렬된 키워드와 구문만 깔끔한 목록이나 쉼표 구분 형식으로 반환해 주세요.',
+    '출력은 추가 설명, 코드 블록, 번호 매기기 없이 문자열만 담긴 JSON 배열 형식을 엄격히 지켜 주세요.',
   ].join('\n');
 }
 
