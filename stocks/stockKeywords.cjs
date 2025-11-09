@@ -264,16 +264,113 @@ function dedupeKeywords(rawKeywords) {
   return deduped;
 }
 
+function stripKeywordLabel(value) {
+  if (!value) return '';
+
+  let stripped = String(value).trim();
+  const labelPattern = /^(?:keywords?|keyword|overview|summary|키워드|개요)\s*[:：\-–—]?\s*/i;
+
+  while (labelPattern.test(stripped)) {
+    stripped = stripped.replace(labelPattern, '').trim();
+  }
+
+  return stripped;
+}
+
 function cleanKeyword(keyword) {
   if (typeof keyword !== 'string') {
     return '';
   }
 
-  return String(keyword)
+  const withoutQuotes = String(keyword)
     .replace(/["'`“”‘’‚‛„‟‹›«»]/g, '')
-    .replace(/[，,]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/[，,]/g, ' ');
+
+  const withoutLabels = stripKeywordLabel(withoutQuotes);
+
+  return withoutLabels.replace(/\s+/g, ' ').trim();
+}
+
+function isTooGenericKeyword(keyword) {
+  if (!keyword) return true;
+
+  const normalized = String(keyword).trim();
+  if (!normalized) return true;
+
+  const compact = normalized.replace(/\s+/g, ' ').toLowerCase();
+  const tokens = compact.split(' ');
+
+  if (tokens.length === 1) {
+    const genericSingles = new Set([
+      '정부',
+      '비즈니스',
+      '경제',
+      '정치',
+      '사회',
+      '금융',
+      '산업',
+      '시장',
+      'business',
+      'government',
+      'economy',
+      'politics',
+      'society',
+      'finance',
+      'industry',
+      'market',
+    ]);
+    if (genericSingles.has(compact)) {
+      return true;
+    }
+  }
+
+  if (tokens.length <= 2) {
+    const genericPairPrefixes = new Set([
+      '정부',
+      '비즈니스',
+      '경제',
+      '정치',
+      '사회',
+      '금융',
+      '산업',
+      '시장',
+      '기술',
+      'business',
+      'government',
+      'economy',
+      'politics',
+      'society',
+      'finance',
+      'industry',
+      'market',
+      'technology',
+    ]);
+
+    const suffix = tokens[tokens.length - 1];
+    if (suffix === '관련' && genericPairPrefixes.has(tokens[0])) {
+      return true;
+    }
+
+    const compactNoSpace = compact.replace(/\s+/g, '');
+    const genericCompacts = [
+      '정부관련',
+      '비즈니스관련',
+      '경제동향',
+      '경제이슈',
+      '정치동향',
+      '정치이슈',
+      '사회이슈',
+      '시장동향',
+      'markettrends',
+      'businessissues',
+      'governmentpolicy',
+    ];
+    if (genericCompacts.includes(compactNoSpace)) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 function sanitizeKeywordList(keywords) {
@@ -282,6 +379,7 @@ function sanitizeKeywordList(keywords) {
   const cleaned = keywords
     .map((kw) => cleanKeyword(kw))
     .filter((kw) => kw.length > 0)
+    .filter((kw) => !isTooGenericKeyword(kw))
     .filter((kw) => kw.split(/\s+/).filter(Boolean).length <= 5);
 
   return dedupeKeywords(cleaned);
@@ -336,12 +434,10 @@ function extractKeywordsFromLLMResponse(rawText) {
 function buildKeywordPrompt(desiredCount) {
   const count = Number.isFinite(desiredCount) && desiredCount > 0 ? Math.floor(desiredCount) : SAMPLE_SIZE;
   return [
-    `최신 한국 트렌드를 반영한 검색 키워드를 ${count}개 작성해 주세요.`,
-    '요구사항:',
-    '- 각 키워드는 2~3어절의 간결한 표현일 것',
-    '- 금융/경제 분야에 한정하지 말고 현재 화제가 되는 다양한 주제를 포함할 것',
-    '- 따옴표, 쉼표 등 불필요한 구두점은 제거할 것',
-    '- 결과는 JSON 배열만 출력 (설명, 코드 블록, 번호 매기기 금지)',
+    '다음 기사 전반에서 가장 자주 등장하거나 눈에 띄는 상위 트렌드 키워드와 핵심 구문을 추출해 나열해 주세요.',
+    `가능하면 총 ${Math.min(Math.max(count, 10), SAMPLE_SIZE)}개의 항목을 목표로 해 주세요.`,
+    '빈도 또는 중요도 순으로 정렬된 키워드와 구문만 깔끔한 목록이나 쉼표 구분 형식으로 반환해 주세요.',
+    '출력은 추가 설명, 코드 블록, 번호 매기기 없이 문자열만 담긴 JSON 배열 형식을 엄격히 지켜 주세요.',
   ].join('\n');
 }
 
