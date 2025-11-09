@@ -1,131 +1,800 @@
 {
-  "generatedAt": "2025-11-09T01:26:53.559Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-11-09",
   "window": "12_hours",
-  "total_phrases": 8,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Keywords: Government",
-      "term_ko": "키워드: 정부"
-    },
-    {
-      "term": "Keywords: Business",
-      "term_ko": "키워드: 비즈니스"
-    },
-    {
-      "term": "Keywords: Youth",
-      "term_ko": "키워드: 청소년"
-    },
-    {
-      "term": "Overview: Government",
-      "term_ko": "개요: 정부 관련"
-    },
-    {
-      "term": "Keywords: Municipal",
-      "term_ko": "키워드: 지방자치"
-    },
-    {
-      "term": "Overview: Business-related",
-      "term_ko": "개요: 비즈니스 관련"
-    },
-    {
-      "term": "Overview: Youth.",
-      "term_ko": "개요: 청소년 관련"
-    },
-    {
-      "term": "Overview: Labor Conflicts",
-      "term_ko": "개요: 노사 갈등"
-    }
-  ],
+  "total_phrases": 11,
   "discovered_keywords": [
     {
-      "term": "Keywords: Government",
-      "term_ko": "키워드: 정부"
+      "term": "Keywords: services",
+      "term_ko": "키워드: 서비스",
+      "significance_score": 152339,
+      "mentions": 251580,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "키워드: 서비스",
+        "total_results": 251580,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1191.41,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:10 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%84%9C%EB%B9%84%EC%8A%A4",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%84%9C%EB%B9%84%EC%8A%A4",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%84%9C%EB%B9%84%EC%8A%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "\"지드래곤 감성 담은 카드\"...하나카드, 성수동 팝업스토어 오픈",
+          "summary": "앞서 하나카드는 2023년 '트래블로그' 서비스 를 구현한 성수국제공항 콘셉트 팝업을 운영해 큰 호응을... '체크카드 존'은 빛에 따라 드러나는 특수 패턴과 숨겨진 키워드 를 통해 '꿈의 발견'을 상징하는...",
+          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=789475",
+          "pubDate": "Sun, 09 Nov 2025 10:12:00 +0900"
+        },
+        {
+          "title": "2026 병오년 외식업 트렌드…기술 아닌 사람의 심장이 다시 뛰게 만들어...",
+          "summary": "2026년의 외식 키워드 는 ‘가치 외식’이다. 가치 외식 시대에는 ‘가성비’가 아니라 ‘신뢰비’가 중요하다. 신뢰는 다양한 속성을 갖고 있다. 지불 가격 대비 서비스 와 품질은 가심비다. 배달, 테이크아웃, 혼밥...",
+          "link": "https://www.mk.co.kr/article/11462562",
+          "pubDate": "Sun, 09 Nov 2025 09:50:00 +0900"
+        },
+        {
+          "title": "[카드 News] 신한카드·하나카드·KB국민카드",
+          "summary": "'체크카드 존'에선 빛을 바라보면 특수한 패턴으로 표현되는 고글을 통해 숨겨진 키워드 를 찾을 수 있다.... 할부 서비스 다. 이 외에도 전월 이용 금액이 40만원, 80만원, 100만원 이상일 경우, 라이트할부 잔액이...",
+          "link": "http://www.metroseoul.co.kr/article/20251109500030",
+          "pubDate": "Sun, 09 Nov 2025 09:38:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Keywords: Business",
-      "term_ko": "키워드: 비즈니스"
+      "term": "Count: 1",
+      "term_ko": "개수: 1",
+      "significance_score": 118488,
+      "mentions": 195573,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "개수: 1",
+        "total_results": 195573,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 944.44,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:03 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B0%9C%EC%88%98%3A%201",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%9C%EC%88%98%3A%201",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B0%9C%EC%88%98%3A%201"
+      },
+      "top_headlines": [
+        {
+          "title": "[영상] '사람 들어간 줄'… 中샤오펑, 인간형 로봇 공개에 들썩인 이유...",
+          "summary": "샤오펑은 아이언이 인간형 척추와 근육, 피부로 이뤄졌으며 82개의 자유도(독립적으로 제어 가능한 이동축의 개수 )를 갖춰 유연한 움직임이 가능하다고 설명했다. 손도 22개의 자유도를 갖고 있다. 샤오펑은 이번...",
+          "link": "https://www.sedaily.com/NewsView/2H0DY1LQFK",
+          "pubDate": "Sun, 09 Nov 2025 10:01:00 +0900"
+        },
+        {
+          "title": "[게임 리포트] 수비도 강했던 알바노, 그래서 더 강했다",
+          "summary": "최형찬의 파울 개수 를 누적시키기는 했으나, 농구를 자유롭게(?) 하지 못했다. 2쿼터 시작 2분 53초 만에... 기록] 1 . 원주 DB - 헨리 엘런슨 : 27분 51초, 19점 8리바운드 2어시스트 1블록슛 1디플렉션 - 이선 알바노...",
+          "link": "https://basketkorea.com/news/newsview.php?ncode=1065597131284884",
+          "pubDate": "Sun, 09 Nov 2025 08:00:00 +0900"
+        },
+        {
+          "title": "턱걸이 5개 하면 나도 '상위 10%'…첫걸음은 '매달리기'",
+          "summary": "2004년 아테네 올림픽 당시 국가대표 선수들의 평균 턱걸이 개수 가 18개 정도였고, 국군 특수부대 체력... 사람이라면 1 ~2개도 쉽지 않다\"면서 \"5개를 할 수 있다면 10% 안에 충분히 들어갈 수 있을 것 같다\"고 했다. 다만 이는...",
+          "link": "https://www.news1.kr/sports/general-sport/5968582",
+          "pubDate": "Sun, 09 Nov 2025 07:00:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Keywords: Youth",
-      "term_ko": "키워드: 청소년"
+      "term": "Keywords: management",
+      "term_ko": "키워드: 관리",
+      "significance_score": 105230,
+      "mentions": 172774,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "키워드: 관리",
+        "total_results": 172774,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1365.34,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:09 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B4%80%EB%A6%AC",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B4%80%EB%A6%AC",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B4%80%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "[서지은의 보험 키워드 ] 보험설계사의 수입, 숫자가 아니라 신뢰에서 나...",
+          "summary": "보험의 관리 와 책임까지 포함한다. 때론 그 업무를 더 밀도 있게 한다. 그래서 보험설계사가 받는 수수료에는... 대법원은 수수료가 단순히 모집 대가인지, 아니면 계약의 유지 관리 대가까지 모함하는지를 먼저 따져야...",
+          "link": "https://www.inthenews.co.kr/news/article.html?no=79125",
+          "pubDate": "Sun, 09 Nov 2025 10:12:00 +0900"
+        },
+        {
+          "title": "한국형 스튜어드십 코드, 이제는 형식이 아닌 실질로[대신경제연구소 E...",
+          "summary": "있게 관리 하는 집사와 같은 적극적인 역할을 기관투자자에게 기대한다는 의미를 담고 있다. 최근... 배분, 관리 및 감독해 고객과 수익자를 위해 장기적이고 지속가능한 가치를 창출하는 것’이라고 수정함으로써...",
+          "link": "https://economist.co.kr/article/view/ecn202511050024",
+          "pubDate": "Sun, 09 Nov 2025 10:00:00 +0900"
+        },
+        {
+          "title": "경기도 감사위원회, 바닥신호등 특정감사…유지 관리 실태조사",
+          "summary": "감사위원회는 최근 2년 동안 경기도와 시군에 접수된 국민신문고 민원 키워드 데이터 분석을 통해 감사주제를 선정했다. 바닥형 보행신호등 설치 개수, 어린이보호구역 교통사고 건수, 국민신문고 민원 건수 등을 고려해...",
+          "link": "https://www.newsis.com/view/NISX20251109_0003395449",
+          "pubDate": "Sun, 09 Nov 2025 09:59:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Overview: Government",
-      "term_ko": "개요: 정부 관련"
+      "term": "Keywords: artificial intelligence",
+      "term_ko": "키워드: 인공지능",
+      "significance_score": 50720,
+      "mentions": 82069,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "키워드: 인공지능",
+        "total_results": 82069,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1278.66,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:01 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "경기도 감사위원회, 바닥신호등 특정감사…유지관리 실태조사",
+          "summary": "감사위원회는 최근 2년 동안 경기도와 시군에 접수된 국민신문고 민원 키워드 데이터 분석을 통해... 앞으로도 인공지능 (AI)을 활용한 데이터 분석을 통해 도민이 체감할 수 있는 분야에 대한 감사를 수행해 나가겠다\"고...",
+          "link": "https://www.newsis.com/view/NISX20251109_0003395449",
+          "pubDate": "Sun, 09 Nov 2025 09:59:00 +0900"
+        },
+        {
+          "title": "“AI전환 위해 기본기 다져야” 최태원 SK회장, CEO세미나서 '운영 개선...",
+          "summary": "“운영개선(O/I·Operation Improvement)을 잘해야만 그 위에 인공지능 (AI)을 더 쌓을 수 있다. 이 과정을 통해... 이번 세미나에서 최 회장이 가장 강조한 키워드 중 하나는 ‘O/I’다. SK그룹이 추진 중인 O/I는 사업의 체질을...",
+          "link": "http://www.fnnews.com/news/202511090903522137",
+          "pubDate": "Sun, 09 Nov 2025 09:54:00 +0900"
+        },
+        {
+          "title": "경기도 감사위, 보행신호등 불일치 '엉터리' 바닥 LED신호등 특정감사",
+          "summary": "도 감사위는 최근 2년간 경기도와 시군에 접수된 국민신문고 민원 키워드 데이터 분석을 통해 감사주제를... 크다\"며 \" 인공지능 (AI)을 활용한 데이터 분석을 통해 도민이 체감할 수 있는 분야에 대한 감사를 수행해 나가겠다...",
+          "link": "http://www.m-i.kr/news/articleView.html?idxno=1300805",
+          "pubDate": "Sun, 09 Nov 2025 09:54:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Keywords: Municipal",
-      "term_ko": "키워드: 지방자치"
+      "term": "Keywords: real estate",
+      "term_ko": "키워드: 부동산",
+      "significance_score": 26193,
+      "mentions": 42184,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "키워드: 부동산",
+        "total_results": 42184,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 682.67,
+        "last_build_date": "Sun, 09 Nov 2025 10:31:59 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%B6%80%EB%8F%99%EC%82%B0",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%B6%80%EB%8F%99%EC%82%B0",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%B6%80%EB%8F%99%EC%82%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "아파트값 비싼 지역일수록 전기 많이 쓴다",
+          "summary": "AI 일자리 집중될 데이터센터 입지 부동산 시장 전망에서 눈여겨볼 또 다른 에너지 키워드 는 ‘데이터센터’다. 인공지능(AI) 산업 확대에 따라 데이터센터 수요가 크게 늘고 있다. 지금까지 데이터센터는 수도권에 주로...",
+          "link": "https://weekly.donga.com/3/all/11/5947669/1",
+          "pubDate": "Sun, 09 Nov 2025 09:02:00 +0900"
+        },
+        {
+          "title": "‘꿀매물’ 다 모여있다…온비드 공매 낙찰받을 때 꿀팁은? [찐이야! 짠...",
+          "summary": "또한 원하는 물건을 찾을 때마다 매일 접속하는 불편함을 덜기 위해 관심 있는 물건과 조건을 저장하고, 지정한 키워드 나 처분 방식에 맞는 물건에 대해 알림을 받을 수도 있게 됐다. 우 차장은 “온비드는 부동산 , 동산...",
+          "link": "https://biz.heraldcorp.com/article/10611768?ref=naver",
+          "pubDate": "Sun, 09 Nov 2025 09:01:00 +0900"
+        },
+        {
+          "title": "초고령사회가 남긴 숙제...‘빈집 관리’ 키워드 는 민관 협력",
+          "summary": "민간 부동산 중개회사와 협업해 '빈집 은행'을 설치, 운영 중이다. 빈집 은행의 운영 주체는 일본의 기초지자체다. 지자체는 빈집 소유자로부터 얻은 정보를 취합해 민간 부동산 중개 사이트에 게재하는 방식으로 운영...",
+          "link": "https://www.ekn.kr/web/view.php?key=20251108025274728",
+          "pubDate": "Sat, 08 Nov 2025 15:06:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Overview: Business-related",
-      "term_ko": "개요: 비즈니스 관련"
+      "term": "Keywords: guidelines",
+      "term_ko": "키워드: 가이드라인",
+      "significance_score": 5710,
+      "mentions": 8861,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "키워드: 가이드라인",
+        "total_results": 8861,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 193.29,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:08 +0900"
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "[데스크 칼럼] '속도전'에 매몰된 AI·에너지 정책",
+          "summary": "AI 전략의 키워드 는 '속도'다. 정부보다 민간이 먼저 달리고 있다. 네이버, 카카오, 삼성전자는 이미 자체... AI 윤리 가이드라인 과 데이터 보안 체계, 인재 양성 시스템은 여전히 미완성이다. 기술은 이미 글로벌 수준으로...",
+          "link": "https://www.seoulfn.com/news/articleView.html?idxno=611701",
+          "pubDate": "Sat, 08 Nov 2025 10:00:00 +0900"
+        },
+        {
+          "title": "\"수은혈압계 사라진 것처럼…전자 혈압계 다음은 커프리스\"",
+          "summary": "다양한 연구자들이 학술논문 검색 사이트에서의 'cuffless bp' 키워드 검색 및 연구 급증 추세를 인용할... 유럽심장학회(ESC) 가이드라인 또한 현재 커프리스 기기를 고혈압 진단·관리용으로 권고하지 않고 있으며...",
+          "link": "https://www.medicaltimes.com/Main/News/NewsView.html?ID=1165969&ref=naverpc",
+          "pubDate": "Sat, 08 Nov 2025 05:30:00 +0900"
+        },
+        {
+          "title": "[칼럼] 정완 \"사이버엔트로피 근절 위한 디지털거버넌스 구축전략\"",
+          "summary": "시간ㆍ 키워드 ㆍ파일유형을 구체화하고, 피압수자 참여권과 사후통지를 실질화하는 장치가 필요하다.... 법률과 가이드라인 으로 제시하고, 정기적 투명성 보고를 의무화해야 한다. 방조책임의 인정범위는 '예견가능...",
+          "link": "http://www.lawleader.co.kr/news/articleView.html?idxno=17645",
+          "pubDate": "Fri, 07 Nov 2025 13:56:00 +0900"
+        }
+      ]
     },
     {
-      "term": "Overview: Youth.",
-      "term_ko": "개요: 청소년 관련"
+      "term": "More",
+      "term_ko": "더보기",
+      "significance_score": 0,
+      "mentions": 475,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "더보기",
+        "total_results": 2359521,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1424.68,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:15 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 62.5
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 79.16666
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 95.83333
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 70.83333
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 50
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 83.33333
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 75
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EB%8D%94%EB%B3%B4%EA%B8%B0",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%8D%94%EB%B3%B4%EA%B8%B0",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%8D%94%EB%B3%B4%EA%B8%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "[연합뉴스 이 시각 헤드라인] - 10:30",
+          "summary": "취업이 더 어려워질 것이란 우려가 나온다. 저출생 고령화 심화 속에 정년 연장을 추진하면서 청년 일자리 감소 등 부작용을 최소화하기 위한 정책 설계가 필요해 보인다. 전문 보기 : https://www.yna.co.kr/view...",
+          "link": "https://www.yna.co.kr/view/AKR20251109014400011?input=1195m",
+          "pubDate": "Sun, 09 Nov 2025 10:30:00 +0900"
+        },
+        {
+          "title": "언니 파혼 뒤 산에 갔다가... 스님이 된 예비 형부를 만났다",
+          "summary": "김수현 감독의 18분짜리 단편은 근래 보기 드문 인상적 코미디다. 농인인 동생이 싫다는 언니를 극구 끌고서... co.kr/@goldstarsky)에도 함께 실립니다. '김성호의 씨네만세'를 검색하면 더 많은 글을 만날 수 있습니다.",
+          "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003180806&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+          "pubDate": "Sun, 09 Nov 2025 10:20:00 +0900"
+        },
+        {
+          "title": "[뉴스ON] 추경호 구속영장에 여야 충돌···새벽 배송 금지? 불붙은 논...",
+          "summary": "한 번도 온화했던 적은 없지만, 정국은 더 냉각되고 있습니다. 2024년 12월 3일, 추경호 전 국민의힘... 그런데, 특검이 윤 전 대통령과의 공모에 대해 확실한 증거를 가졌다고 보기 좀 힘든 측면도 있고요. 국민의힘...",
+          "link": "https://dgmbc.com/article/PtP3WoEupDkVLkW44ZOWt",
+          "pubDate": "Sun, 09 Nov 2025 10:18:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 158.3333,
+        "weekly_search_volume": 475,
+        "weekly_average_volume": 79.1667,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.013953,
+        "time_weight": 0.028954,
+        "raw_score": -0.000067,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762527600000
+      }
     },
     {
-      "term": "Overview: Labor Conflicts",
-      "term_ko": "개요: 노사 갈등"
+      "term": "People",
+      "term_ko": "인물",
+      "significance_score": 0,
+      "mentions": 502,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "인물",
+        "total_results": 4776021,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1434.43,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:16 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 53.08641
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 61.72839
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 91.9753
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 91.35802
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 84.5679
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 93.20987
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 41.35802
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9D%B8%EB%AC%BC",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9D%B8%EB%AC%BC",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9D%B8%EB%AC%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "김혜성, ‘월드시리즈 우승 루키’ 금의환향…JTBC ‘뉴스룸’ 출연",
+          "summary": "귀국 후 첫 공식 일정으로 JTBC '뉴스룸'에 출연하는 김혜성은 현장에서의 소동까지 겪으며 '화제의 인물 '로 떠올랐다. 지난 6일 귀국 인터뷰 현장에는 한 채권자가 등장해 \"아버지에게 돈 갚으라\"는 현수막을 펼치는...",
+          "link": "https://www.sportschosun.com/entertainment/2025-11-09/202511090100054940008390",
+          "pubDate": "Sun, 09 Nov 2025 10:29:00 +0900"
+        },
+        {
+          "title": "[인터뷰] 남경민 중등교장회장 \"스승을 돌같이 보는 세상 ..악성민원, 강...",
+          "summary": "어떤 인물 이 교육감이 되어야 한다고 보나. \"초·중·고 교육에 대한 이해가 깊고 학생 성장 단계를 고려해 예산을 효율적으로 배분할 수 있는 사람이어야 한다. 눈에 보이는 전시성 시설 투자보다 학생 발달에 직접 도움이...",
+          "link": "https://www.edupress.kr/news/articleView.html?idxno=21376",
+          "pubDate": "Sun, 09 Nov 2025 10:28:00 +0900"
+        },
+        {
+          "title": "‘사당귀’ 이순실 동생 김량진, 닭발로 월 5억",
+          "summary": "이에 전현무는 “이순실은 내가 아는 사람 중 가장 자본주의적인 인물 이다”라며 돌직구를 날려 보는 이들을 폭소케 한다고. 이순실은 탈북 동생 김량진과의 성공적인 콜라보를 위해 직접 매장을 방문해 닭발...",
+          "link": "https://www.bntnews.co.kr/article/view/bnt202511090031",
+          "pubDate": "Sun, 09 Nov 2025 10:26:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 134.5679,
+        "weekly_search_volume": 502.4691,
+        "weekly_average_volume": 83.7449,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.013419,
+        "time_weight": 0.028954,
+        "raw_score": -0.000064,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762527600000
+      }
+    },
+    {
+      "term": "Domestic",
+      "term_ko": "국내",
+      "significance_score": 0,
+      "mentions": 550,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "Domestic",
+        "total_results": 205767,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 1156.87,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:17 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 70.43269
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 65.14423
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 96.39423
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 98.55769
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 97.59615
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 92.0673
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 65.38461
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=Domestic",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=Domestic",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=Domestic"
+      },
+      "top_headlines": [
+        {
+          "title": "‘Avoid using 'collapse': Why the Kospi became a political battleground",
+          "summary": "The rationale is that too much money is locked into mortgages, which could trigger speculation and distress domestic demand — an arrangement often cited by economists as the key factor...",
+          "link": "https://koreajoongangdaily.joins.com/news/2025-11-09/business/economy/Avoid-using-collapse-Why-the-Kospi-became-a-political-battleground/2439448",
+          "pubDate": "Sun, 09 Nov 2025 07:00:00 +0900"
+        },
+        {
+          "title": "SBS Documentary Exposes Crimes of Filipino Serial Kidnapper 'CEO of Murde...",
+          "summary": "After their release, they escalated their activities from domestic robberies to international crimes, culminating in a fatal armored van heist in Anyang, South Korea, where a female employee was...",
+          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=669810",
+          "pubDate": "Sun, 09 Nov 2025 06:58:00 +0900"
+        },
+        {
+          "title": "코닝, '중국 97% 독점' 태양광 웨이퍼 시장에 '도전장'...美 생산 10년 만...",
+          "summary": "이 새로운 공장의 가동으로 미국 기업들은 10년 만에 처음으로 웨이퍼를 포함한 모든 부품을 미국에서 생산한 완전한 국내산(fully domestic ) 태양광 패널을 만들 수 있는 최종적인 연결 고리를 갖추게 된다. 웬델 윅스...",
+          "link": "https://www.g-enews.com/view.php?ud=20251108155213908fbbec65dfb_1",
+          "pubDate": "Sun, 09 Nov 2025 03:16:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 157.4519,
+        "weekly_search_volume": 550,
+        "weekly_average_volume": 91.6667,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.012604,
+        "time_weight": 0.028954,
+        "raw_score": -0.000061,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762527600000
+      }
+    },
+    {
+      "term": "CHN",
+      "term_ko": "",
+      "significance_score": 0,
+      "mentions": 413,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "CHN",
+        "total_results": 1558,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 0,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:18 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-01",
+              "timestamp": 1761922800000,
+              "value": 66.66666
+            },
+            {
+              "period": "2025-11-02",
+              "timestamp": 1762009200000,
+              "value": 53.33333
+            },
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 90
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 86.66666
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 66.66666
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 40
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 30
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=CHN",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=CHN",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=CHN"
+      },
+      "top_headlines": [
+        {
+          "title": "나다니엘 라몬스-장 줄리앙 로저 서울챌린저 복식 우승",
+          "summary": "Noguchi / Wang (JPN/ CHN ) 3-6 6-0 [10-5] R16: Lammons / Rojer (USA/NED) d. (4)Nam / Yuzuki (KOR/JPN) 6-3 7-6(2) R16: (WC)Ann / Kim (KOR) d. (WC)Chung / Park (KOR) 7-5 4-6 [10-5] R16: (2)Reynolds / Watt (NZL) d. Isarow / Kaliyanda Poonacha (THA/IND) 7-5 6-3...",
+          "link": "http://www.tennispeople.kr/news/articleView.html?idxno=17700",
+          "pubDate": "Mon, 03 Nov 2025 03:34:00 +0900"
+        },
+        {
+          "title": "18명의 일본 선수 가운데 유일하게 생존한 시마부쿠로",
+          "summary": "(Q)Kokoro Isomura (JPN) 6-2 6-3 R16: Yi Zhou ( CHN ) d. (8)Taro Daniel (JPN) 6-7(8) 6-3 6-0 R16: Frederico Ferreira Silva (POR) d. (3)Yoshihito Nishioka (JPN) 6-0 5-7 7-6(5) R32: Rio Noguchi (JPN) d. (1)James Duckworth (AUS) 1-6 7-5 6-3...",
+          "link": "http://www.tennispeople.kr/news/articleView.html?idxno=17694",
+          "pubDate": "Sun, 02 Nov 2025 02:22:00 +0900"
+        },
+        {
+          "title": "유진투자증권 서울오픈챌린저 31일 경기일정",
+          "summary": "Zhou ( CHN ) vs Frederico Ferreira Silva (POR) QF: (5)Coleman Wong (HKG) vs (2)Bu Yunchaokete ( CHN ) R16: Sho Shimabukuro (JPN) d. Rio Noguchi (JPN) 6-4 6-3 R16: (Q)Kasidit Samrej (THA) d. Oliver...",
+          "link": "http://www.tennispeople.kr/news/articleView.html?idxno=17687",
+          "pubDate": "Fri, 31 Oct 2025 23:50:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 70,
+        "weekly_search_volume": 413.3333,
+        "weekly_average_volume": 68.8889,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.015365,
+        "time_weight": 0.028953,
+        "raw_score": -0.000074,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762527600000
+      }
+    },
+    {
+      "term": "Life Magazine",
+      "term_ko": "라이프 매거진",
+      "significance_score": 0,
+      "mentions": 100,
+      "evaluation": {
+        "source": "naver_search_news",
+        "query": "라이프 매거진",
+        "total_results": 23793,
+        "returned_results": 20,
+        "display_count": 20,
+        "recency_weight": 140.72,
+        "last_build_date": "Sun, 09 Nov 2025 10:32:19 +0900",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "news": "https://search.naver.com/search.naver?where=news&query=%EB%9D%BC%EC%9D%B4%ED%94%84%20%EB%A7%A4%EA%B1%B0%EC%A7%84",
+        "blog": "https://search.naver.com/search.naver?where=blog&query=%EB%9D%BC%EC%9D%B4%ED%94%84%20%EB%A7%A4%EA%B1%B0%EC%A7%84",
+        "cafe": "https://search.naver.com/search.naver?where=post&query=%EB%9D%BC%EC%9D%B4%ED%94%84%20%EB%A7%A4%EA%B1%B0%EC%A7%84"
+      },
+      "top_headlines": [
+        {
+          "title": "'맛슐랭 가이드' 속초중앙시장 감자옹심이 맛집 위치는? \"뜨끈한 추억 한...",
+          "summary": "8일 SBS Biz ' 라이프 매거진 참 좋은 하루'의 '맛슐랭 가이드' 코너에서는 \"감자 외길 인생, 뜨끈한 추억 한 그릇\"라는 주제를 다뤘다. ' 라이프 매거진 참 좋은 하루' 142회에서 '맛슐랭 가이드' 맛과 가격의 두 마리 토끼 잡은...",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15867592",
+          "pubDate": "Sat, 08 Nov 2025 10:16:00 +0900"
+        },
+        {
+          "title": "'맛슐랭 가이드' 인천 맛집, 심곡동 퓨전양식 & 구월동 소고기 식당 위...",
+          "summary": "8일 SBS Biz ' 라이프 매거진 참 좋은 하루'의 '맛슐랭 가이드' 코너에서는 \"평범한 날도 특별하게! 모두를 위한 퓨전 양식\"이라는 주제와 \"맛과 가격, 두 마리 토끼 잡은 소고기 맛집\"라는 주제를 다뤘다. ' 라이프 매거진 참...",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15867591",
+          "pubDate": "Sat, 08 Nov 2025 10:06:00 +0900"
+        },
+        {
+          "title": "“하나님의 뜻과 마음의 쉼표, 인생의 나침반 된 60년”",
+          "summary": "평범한 이들의 삶 속에서 하나님이 일하시는 순간을 포착하는 ‘크리스천 라이프 스토리 매거진 ’인 가이드포스트는 1945년 노먼 빈센트 필 박사가 미국에서 창간한 신앙 잡지로 잘 알려져 있다. 한국판은 1965년 창간 후...",
+          "link": "https://www.christiantoday.co.kr/news/371695",
+          "pubDate": "Sat, 08 Nov 2025 07:58:00 +0900"
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "past_24h_volume": 100,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.028953,
+        "raw_score": -0.000197,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762527600000
+      }
     }
   ],
-  "translations": {
-    "Keywords: Government": {
-      "en": "Keywords: Government",
-      "ko": "키워드: 정부",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
+  "metadata": {
+    "collection_method": "naver_search_window_trending",
+    "sample_size": 30,
+    "generated_at": "2025-11-09T01:32:19.722Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "NAVER 24h news/blog window 2025-11-08T01:29:44.000Z→2025-11-09T01:29:44.000Z (Cerebras llama3.1-8b)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 19,
+    "llm_model": "llama3.1-8b",
+    "llm_keywords_requested": 30,
+    "window_trending": {
+      "seeds": [
+        "월간산 11월 07일 08:41",
+        "SBS Biz 11월 08일 17:10",
+        "깊어가는 가을빛",
+        "오류신고",
+        "머니투데이 11월 08일 14:55",
+        "국정감사 뉴시스",
+        "노컷뉴스 11월 08일 21:37",
+        "서비스 약관/정책",
+        "이데일리 11월 08일 19:08",
+        "데일리안 11월 08일 15:20",
+        "MK장례 바로가기",
+        "에세이",
+        "MK MALL",
+        "여운규의 집밥혼밥",
+        "MK YouTube",
+        "공포의 캄보디아",
+        "곽용희 기자",
+        "Tesla",
+        "Special Edition",
+        "지식/칼럼"
+      ],
+      "window": {
+        "since": "2025-11-08T01:29:44.000Z",
+        "now": "2025-11-09T01:29:44.000Z"
+      },
+      "hours": 24,
+      "baseline_days": 7,
+      "candidate_count": 25
     },
-    "Keywords: Business": {
-      "en": "Keywords: Business",
-      "ko": "키워드: 비즈니스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
-    },
-    "Keywords: Youth": {
-      "en": "Keywords: Youth",
-      "ko": "키워드: 청소년",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
-    },
-    "Overview: Government": {
-      "en": "Overview: Government",
-      "ko": "개요: 정부 관련",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
-    },
-    "Keywords: Municipal": {
-      "en": "Keywords: Municipal",
-      "ko": "키워드: 지방자치",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
-    },
-    "Overview: Business-related": {
-      "en": "Overview: Business-related",
-      "ko": "개요: 비즈니스 관련",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
-    },
-    "Overview: Youth.": {
-      "en": "Overview: Youth.",
-      "ko": "개요: 청소년 관련",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
-    },
-    "Overview: Labor Conflicts": {
-      "en": "Overview: Labor Conflicts",
-      "ko": "개요: 노사 갈등",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-09T01:26:53.559Z"
+    "datalab_top_off": {
+      "added": 5,
+      "keywords": [
+        "더보기",
+        "인물",
+        "Domestic",
+        "CHN",
+        "라이프 매거진"
+      ]
     }
   }
 }
