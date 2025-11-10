@@ -23,6 +23,38 @@ const TAG_OUTPUT_FILE = process.env.MARKET_TAG_FILE || DEFAULT_TAG_FILE;
 const KEYWORD_OUTPUT_FILE = process.env.MARKET_KEYWORD_FILE || TAG_OUTPUT_FILE;
 
 const translationCache = new Map();
+const translationInFlight = new Map();
+
+const DEEPL_API_KEY = (process.env.DEEPL_API_KEY || process.env.DEEPL_AUTH_KEY || '').trim();
+const DEEPL_API_URL = (process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v2/translate').trim();
+
+async function callDeepLTranslate(text, { targetLang = 'KO', sourceLang } = {}) {
+  if (!DEEPL_API_KEY || !DEEPL_API_URL) {
+    return { text, translated: false };
+  }
+
+  const normalized = String(text || '').trim();
+  if (!normalized) {
+    return { text: '', translated: false };
+  }
+
+  const params = new URLSearchParams();
+  params.append('auth_key', DEEPL_API_KEY);
+  params.append('text', normalized);
+  if (targetLang) params.append('target_lang', targetLang);
+  if (sourceLang) params.append('source_lang', sourceLang);
+
+  const res = await fetch(DEEPL_API_URL, { method: 'POST', body: params });
+  if (!res.ok) {
+    const errText = await res.text().catch(() => '');
+    throw new Error(`DeepL error ${res.status}: ${errText}`);
+  }
+
+  const data = await res.json();
+  const translated = Array.isArray(data?.translations) ? data.translations[0]?.text : null;
+  const finalText = String(translated || normalized).trim();
+  return { text: finalText, translated: Boolean(translated && translated !== normalized) };
+}
 
 function ensureDirFor(filePath) {
   if (!filePath) return;
@@ -73,12 +105,40 @@ function setTranslationCache(term, termKo) {
   translationCache.set(formatted, normalizedKo);
 }
 
-function translateTagToKo(term) {
+async function translateTagToKo(term, { sourceLang } = {}) {
   const formatted = formatTagDisplay(term);
   if (!formatted) return '';
+
   const cached = translationCache.get(formatted);
   if (cached) return cached;
-  return formatted;
+
+  if (translationInFlight.has(formatted)) {
+    return translationInFlight.get(formatted);
+  }
+
+  if (hasHangulText(formatted) || !DEEPL_API_KEY || !DEEPL_API_URL) {
+    translationCache.set(formatted, formatted);
+    return formatted;
+  }
+
+  const job = (async () => {
+    try {
+      const { text: translated } = await callDeepLTranslate(formatted, { targetLang: 'KO', sourceLang });
+      const normalized = normalizeKoKeywordTerm(translated);
+      const finalText = normalized || formatted;
+      translationCache.set(formatted, finalText);
+      return finalText;
+    } catch (err) {
+      console.warn(`[marketKeywords] DeepL translation failed for "${formatted}": ${err?.message || err}`);
+      translationCache.set(formatted, formatted);
+      return formatted;
+    } finally {
+      translationInFlight.delete(formatted);
+    }
+  })();
+
+  translationInFlight.set(formatted, job);
+  return job;
 }
 
 function collectEntriesFromSnapshot(snapshot) {

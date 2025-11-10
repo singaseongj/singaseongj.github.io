@@ -13,6 +13,7 @@ import { computeReputation } from './reputation.js';
 // for CLI-only cache builders
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
 import { buildKeywordDict } from '../trends/keywordBuilder.js';
+import { KO_ALIASES } from '../trends/koAliases.js';
 
 // --- Detect external keyword builder ---
 const STOCK_KEYWORDS_PATH = path.resolve("stocks/stockKeywords.js");
@@ -62,6 +63,200 @@ const NAVER_KO_WEIGHT = Number(process.env.NAVER_KO_WEIGHT || 1.3);
 const NAVER_EN_WEIGHT = Number(process.env.NAVER_EN_WEIGHT || 1.0);
 
 const HANGUL_REGEX = /[\u3131-\u318E\uAC00-\uD7A3]/;
+
+const hasHangul = (str) => HANGUL_REGEX.test(String(str || ''));
+
+function uniqueStrings(arr) {
+  const out = [];
+  const seen = new Set();
+  for (const raw of arr || []) {
+    const value = String(raw || '').trim();
+    if (!value || seen.has(value)) continue;
+    seen.add(value);
+    out.push(value);
+  }
+  return out;
+}
+
+function symbolVariants(sym) {
+  const base = String(sym || '').trim().toUpperCase();
+  if (!base) return [];
+  const vars = new Set([base]);
+  if (base.includes('.')) vars.add(base.replace(/\./g, '-'));
+  if (base.includes('-')) vars.add(base.replace(/-/g, '.'));
+  return [...vars];
+}
+
+const KO_ALIAS_LOOKUP = (() => {
+  const map = new Map();
+  if (KO_ALIASES && typeof KO_ALIASES === 'object') {
+    for (const [key, value] of Object.entries(KO_ALIASES)) {
+      if (!key) continue;
+      const terms = Array.isArray(value) ? value.filter(Boolean) : [];
+      if (!terms.length) continue;
+      map.set(String(key).toUpperCase(), terms.map(String));
+    }
+  }
+  return map;
+})();
+
+function koAliasesForSymbol(sym) {
+  const variants = symbolVariants(sym);
+  const terms = new Set();
+  for (const key of variants) {
+    const arr = KO_ALIAS_LOOKUP.get(key);
+    if (!Array.isArray(arr)) continue;
+    for (const term of arr) {
+      const t = String(term || '').trim();
+      if (!t) continue;
+      terms.add(t);
+    }
+  }
+  return [...terms];
+}
+
+function keywordsForSymbol(keywordsMap, sym) {
+  if (!keywordsMap) return [];
+  if (Array.isArray(keywordsMap?.[sym])) return keywordsMap[sym];
+  if (keywordsMap instanceof Map) {
+    const arr = keywordsMap.get(sym);
+    return Array.isArray(arr) ? arr : [];
+  }
+  return [];
+}
+
+function gatherKoTerms(sym, name, keywordsMap) {
+  const terms = [];
+  const display = String(name || '').trim();
+  if (display && hasHangul(display)) terms.push(display);
+  terms.push(...koAliasesForSymbol(sym));
+  const keywords = keywordsForSymbol(keywordsMap, sym);
+  for (const kw of keywords) {
+    if (hasHangul(kw)) terms.push(kw);
+  }
+  return uniqueStrings(terms);
+}
+
+function gatherEnTerms(sym, name, keywordsMap) {
+  const terms = [];
+  const display = String(name || '').trim();
+  if (display && !hasHangul(display)) terms.push(display);
+  const baseTicker = String(sym || '').replace(/\.[A-Z]+$/i, '').trim();
+  if (baseTicker) terms.push(baseTicker);
+  const aliases = koAliasesForSymbol(sym);
+  for (const alias of aliases) {
+    if (!hasHangul(alias)) terms.push(alias);
+  }
+  const keywords = keywordsForSymbol(keywordsMap, sym);
+  for (const kw of keywords) {
+    if (!hasHangul(kw)) terms.push(kw);
+  }
+  return uniqueStrings(terms);
+}
+
+function buildNaverSearchQueries(sym, name, keywordsMap) {
+  const koTerms = gatherKoTerms(sym, name, keywordsMap);
+  const enTerms = gatherEnTerms(sym, name, keywordsMap);
+  const queries = [];
+
+  const buildClause = (terms) => terms.map(t => `"${t}"`).join(' OR ');
+
+  if (koTerms.length) {
+    const chunks = chunk(koTerms.slice(0, Number(process.env.NAVER_MAX_KO_TERMS || 9)), 3);
+    for (const terms of chunks) {
+      const clause = buildClause(terms);
+      if (!clause) continue;
+      queries.push({ query: `${clause} 증권 OR 투자`, kind: 'ko' });
+    }
+  }
+
+  if (!queries.length) {
+    const chunks = chunk(enTerms.slice(0, Number(process.env.NAVER_MAX_EN_TERMS || 6)), 3);
+    for (const terms of chunks) {
+      const clause = buildClause(terms);
+      if (!clause) continue;
+      queries.push({ query: `${clause} 주가 OR 투자`, kind: 'en' });
+      break; // avoid spamming too many english queries
+    }
+  }
+
+  if (!queries.length) {
+    const fallback = String(name || sym || '').trim();
+    if (fallback) {
+      const kind = hasHangul(fallback) ? 'ko' : 'en';
+      queries.push({ query: `"${fallback}" 주가`, kind });
+    }
+  }
+
+  const deduped = [];
+  const seen = new Set();
+  for (const entry of queries) {
+    if (!entry?.query) continue;
+    const key = `${entry.query}::${entry.kind || ''}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(entry);
+  }
+  return deduped.slice(0, Number(process.env.NAVER_MAX_QUERY_GROUPS || 4));
+}
+
+function buildNaverBlogQuery(sym, name, keywordsMap) {
+  const koTerms = gatherKoTerms(sym, name, keywordsMap);
+  if (koTerms.length) {
+    const clause = koTerms.slice(0, 3).map(t => `"${t}"`).join(' OR ');
+    if (clause) return `${clause} 블로그`;
+  }
+  const enTerms = gatherEnTerms(sym, name, keywordsMap);
+  if (enTerms.length) {
+    const clause = enTerms.slice(0, 3).map(t => `"${t}"`).join(' OR ');
+    if (clause) return `${clause} blog`;
+  }
+  const fallback = String(name || sym || '').trim();
+  if (!fallback) return '';
+  return `"${fallback}" 블로그`;
+}
+
+function loadIndexSymbols(...relPaths) {
+  const out = new Set();
+  for (const rel of relPaths) {
+    if (!rel) continue;
+    try {
+      const full = path.join(process.cwd(), rel);
+      const raw = JSON.parse(fs.readFileSync(full, 'utf8'));
+      if (Array.isArray(raw)) {
+        for (const item of raw) {
+          if (!item) continue;
+          if (typeof item === 'string') {
+            out.add(String(item).trim().toUpperCase());
+          } else if (typeof item.symbol === 'string') {
+            out.add(String(item.symbol).trim().toUpperCase());
+          }
+        }
+      }
+    } catch {}
+  }
+  return out;
+}
+
+const SP500_MEMBERS = loadIndexSymbols(
+  'data/indexes/sp500.json',
+  'data/indexes/sp500.offline.json',
+  'data/index-constituents/sp500.json'
+);
+
+const NASDAQ100_MEMBERS = loadIndexSymbols(
+  'data/indexes/nasdaq100.json',
+  'data/indexes/nasdaq100.offline.json',
+  'data/index-constituents/nasdaq100.json'
+);
+
+function isUSIndexHeavyweight(sym) {
+  const variants = symbolVariants(sym);
+  for (const key of variants) {
+    if (SP500_MEMBERS.has(key) || NASDAQ100_MEMBERS.has(key)) return true;
+  }
+  return false;
+}
 
 const POS_KR = /(호조|개선|확대|수주|계약|제휴|승인|허가|인증|증설|증대|흑자전환|사상 최대|서프라이즈|상향)/i;
 const NEG_KR = /(부진|감소|하락|급락|적자|적자전환|소송|제재|벌금|과징금|리콜|해킹|유출|파업|중단|연기|취소|하향|정지)/i;
@@ -516,7 +711,7 @@ function collectMetadataKeywords(articles) {
   return meta;
 }
 
-export function buildNewsKeywords(articlesByTicker, { tagSnapshot = null } = {}) {
+export async function buildNewsKeywords(articlesByTicker, { tagSnapshot = null } = {}) {
   const output = {
     generated_at: new Date().toISOString(),
     version: '1.0',
@@ -553,7 +748,7 @@ export function buildNewsKeywords(articlesByTicker, { tagSnapshot = null } = {})
     textKeywords.forEach(pushUnique);
 
     if (combined.length) {
-      const enriched = combined.slice(0, 12).map(item => {
+      const enriched = await Promise.all(combined.slice(0, 12).map(async item => {
         const rawTerm = String(item.term || '').trim();
         if (!rawTerm) return item;
         const hasHangul = containsHangul(rawTerm);
@@ -562,7 +757,7 @@ export function buildNewsKeywords(articlesByTicker, { tagSnapshot = null } = {})
         if (storedKo) {
           setTranslationCache(formattedTerm, storedKo);
         }
-        const koTerm = storedKo || (hasHangul ? rawTerm : translateTagToKo(formattedTerm));
+        const koTerm = storedKo || (hasHangul ? rawTerm : await translateTagToKo(formattedTerm));
         if (koTerm && containsHangul(koTerm)) {
           setTranslationCache(formattedTerm, koTerm);
         }
@@ -571,7 +766,7 @@ export function buildNewsKeywords(articlesByTicker, { tagSnapshot = null } = {})
           term: formattedTerm,
           term_ko: koTerm
         };
-      });
+      }));
       output.tickers[ticker] = { keywords: enriched };
     }
   }
@@ -1027,22 +1222,20 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
 
   const sym = String(opts.sym || '').trim();
   const name = String(symOrName || '').trim();
-  const keywords = Array.isArray(opts.keywords) ? opts.keywords : [];
-  const isKr = isKR(sym) || /[가-힣]/.test(name);
+  const keywordMap = (() => {
+    if (opts.keywordMap && typeof opts.keywordMap === 'object') return opts.keywordMap;
+    if (Array.isArray(opts.keywords)) return { [sym]: opts.keywords };
+    return {};
+  })();
 
-  const queries = keywords.length
-    ? keywords.slice(0, 8)
-    : (() => {
-        const terms = [];
-        if (name) terms.push(`"${name}"`);
-        if (sym) terms.push(sym.replace(/\.[A-Z]+$/, ''));
-        const q = isKr ? `${terms.join(' OR ')} 증권 OR 투자` : terms.join(' OR ');
-        return [q];
-      })();
+  const queries = buildNaverSearchQueries(sym, name, keywordMap);
 
   const seen = new Set();
   let posHits = 0, negHits = 0, totalW = 0, rawCount = 0;
-  for (const q of queries) {
+  let koHits = 0, enHits = 0;
+  for (const entry of queries) {
+    const q = entry.query;
+    const kind = entry.kind || (hasHangul(q) ? 'ko' : 'en');
     if (process.env.DEBUG_NAVER === '1') {
       console.log(`[naver-debug] Querying Naver with: "${q}"`);
     }
@@ -1067,6 +1260,8 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
       else if (pol < 0) negHits += w;
       totalW += w;
       rawCount++;
+      if (kind === 'ko') koHits++;
+      else enHits++;
     }
   }
 
@@ -1091,16 +1286,17 @@ async function newsFromNaver(symOrName, NAVER_ID, NAVER_SECRET, opts = {}) {
     naverSpike: Math.max(0, asvi),
     newsScore,
     naverCount: rawCount,
-    naverCountKO: 0,
-    naverCountEN: 0,
+    naverCountKO: koHits,
+    naverCountEN: enHits,
     blogMentions: 0,
   };
 }
 
-async function blogFromNaver(name, NAVER_ID, NAVER_SECRET){
+async function blogFromNaver(sym, name, NAVER_ID, NAVER_SECRET, keywordsMap){
   if (SKIP_NAVER) return 0;
   if (!NAVER_ID || !NAVER_SECRET) return 0;
-  const q = `${name} + 증권 OR 투자`;
+  const q = buildNaverBlogQuery(sym, name, keywordsMap);
+  if (!q) return 0;
   const url = `https://openapi.naver.com/v1/search/blog.json?query=${encodeURIComponent(q)}&display=10&sort=date`;
   const headers = { 'X-Naver-Client-Id': NAVER_ID, 'X-Naver-Client-Secret': NAVER_SECRET };
   const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, headers), 20*60*1000, true), {max:1, baseMs:600});
@@ -1236,13 +1432,16 @@ export async function buildNaverTrends(symbols, opts = {}) {
   // Load best-guess names (filled earlier by buildNewsFeatures)
   const knownNames = readJsonSafe(path.join(process.cwd(), 'src/news/symbolNames.json')) || {};
   const symbolToName = { ...(opts.symbolToName || {}), ...knownNames };
+  const keywordMap = (opts.keywordMap && typeof opts.keywordMap === 'object')
+    ? opts.keywordMap
+    : (opts.keywords && typeof opts.keywords === 'object' ? opts.keywords : {});
 
   // Collect raw weighted counts via name-only queries
   const rows = [];
   for (const sym of symbols) {
     const nm = symbolToName[sym] || sym;
     // newsFromNaver(name-only)
-    const nv = await newsFromNaver(nm, NAVER_ID, NAVER_SECRET, { sym });
+    const nv = await newsFromNaver(nm, NAVER_ID, NAVER_SECRET, { sym, keywordMap });
     rows.push({ sym, name: nm, nv: nv || {} });
   }
   const sumW = rows.reduce((s, r) => s + Number(r.nv?.weightedCount || 0), 0) || 1;
@@ -1370,7 +1569,7 @@ export async function buildNewsFeatures(symbols, opts={}){
           markProvider(p, true);
           if (!SKIP_NAVER && v.count > 0 && (v.blogMentions||0) === 0) {
             try {
-              const blogs = await guardedCall('naver', () => blogFromNaver(name, NAVER_ID, NAVER_SECRET));
+              const blogs = await guardedCall('naver', () => blogFromNaver(sym, name, NAVER_ID, NAVER_SECRET, keywordsMap));
               v.blogMentions = Math.max(v.blogMentions || 0, blogs || 0);
             } catch {}
           }
@@ -1436,6 +1635,27 @@ export async function buildNewsFeatures(symbols, opts={}){
         NAVER_BLOG_WEIGHT * blogs;
       feat.weightedCount = weightedCount;
       feat.newsScore = to01(Math.tanh(weightedCount / 10));
+    }
+
+    if (isUSIndexHeavyweight(sym)) {
+      const currentWeight = Number(feat.weightedCount || 0);
+      if (!Number.isFinite(currentWeight) || currentWeight <= 0) {
+        let fallbackWeight = 0;
+        if (Number.isFinite(feat.polygonTrend) && feat.polygonTrend !== 0) {
+          fallbackWeight += Math.abs(feat.polygonTrend) * 100;
+        }
+        if (Number.isFinite(feat.naverCount) && feat.naverCount > 0) {
+          fallbackWeight += feat.naverCount;
+        }
+        if (fallbackWeight <= 0) fallbackWeight = 1;
+        feat.weightedCount = fallbackWeight;
+      }
+      if (!Number.isFinite(feat.newsScore) || feat.newsScore <= 0) {
+        feat.newsScore = to01(Math.tanh((feat.weightedCount || 0) / 10));
+      }
+      if (!Number.isFinite(feat.count) || feat.count <= 0) {
+        feat.count = Math.max(1, Math.round(feat.weightedCount || 1));
+      }
     }
 
     let items = [];
@@ -1566,16 +1786,19 @@ async function fetchNaverDataLabBatch(groups, { startDate, endDate, timeUnit='da
   return out;
 }
 
-async function fetchNaverTrendsByNames(symbols, symbolToName){
+async function fetchNaverTrendsByNames(symbols, symbolToName, keywordMap = {}){
   const NAVER_ID = process.env.NAVER_CLIENT_ID || '';
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
   if (!NAVER_ID || !NAVER_SECRET || SKIP_NAVER) return {};
   const today = new Date();
   const end = today.toISOString().slice(0,10);
   const start = new Date(today.getTime() - 365*24*3600*1000).toISOString().slice(0,10);
+  const km = (keywordMap && typeof keywordMap === 'object') ? keywordMap : {};
   const groups = symbols.map(sym => {
     const nm = symbolToName[sym] || sym;
-    return { sym, name: nm, groupName: nm, keyword: nm };
+    const koTerms = gatherKoTerms(sym, nm, km);
+    const primary = koTerms[0] || nm;
+    return { sym, name: nm, groupName: primary, keyword: primary };
   });
   const perSymbol = {};
   for (const batch of chunk(groups, 5)) {
@@ -1618,7 +1841,7 @@ export async function writeNewsArtifacts(symbols, opts={}){
         Object.assign(symbolToName, JSON.parse(fs.readFileSync('symbolNames.json','utf8')));
       } catch {}
     }
-    const trends = await fetchNaverTrendsByNames(symbols, symbolToName);
+    const trends = await fetchNaverTrendsByNames(symbols, symbolToName, opts.keywords || {});
     if (Object.keys(trends).length) {
       const payload = { perSymbol: trends, lastUpdated: new Date().toISOString() };
       await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify(payload, null, 2));
@@ -2044,7 +2267,7 @@ export async function buildNewsCachesCli() {
   if (!tagSnapshotForKeywords) {
     tagSnapshotForKeywords = readJsonSafe(TAG_OUTPUT_FILE) || null;
   }
-  const keywordPayload = buildNewsKeywords(collectedArticles, { tagSnapshot: tagSnapshotForKeywords });
+  const keywordPayload = await buildNewsKeywords(collectedArticles, { tagSnapshot: tagSnapshotForKeywords });
   const tickerCount = Object.keys(keywordPayload.tickers).length;
   if (tickerCount) {
     const existing = tagSnapshotForKeywords || readJsonSafe(TAG_OUTPUT_FILE) || {};
