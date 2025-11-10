@@ -1381,7 +1381,22 @@ function parseDatalabPeriod(period) {
 function buildDatalabPayload(keyword, timeUnit) {
   const now = new Date();
   const endDate = new Date(now.getTime());
-  const startDate = new Date(now.getTime() - 8 * 24 * 60 * 60 * 1000);
+
+  const lookbackDays = (() => {
+    const normalized = String(timeUnit || '').toLowerCase();
+    switch (normalized) {
+      case 'hour':
+        return 2; // The public API rejects long hourly windows; limit to roughly 48 hours.
+      case 'week':
+        return 8 * 7; // Eight weeks of history to provide enough context for weekly buckets.
+      case 'month':
+        return 365; // Roughly one year of data for monthly aggregation.
+      default:
+        return 8; // Default to just over a week of data for daily buckets.
+    }
+  })();
+
+  const startDate = new Date(endDate.getTime() - lookbackDays * ONE_DAY_MS);
 
   return {
     startDate: formatDateForDatalab(startDate),
@@ -1446,7 +1461,7 @@ function isTimeUnitError(error) {
 }
 
 async function fetchSearchTrendData(keyword) {
-  const attemptedTimeUnits = ['hour', 'date'];
+  const attemptedTimeUnits = ['date', 'week'];
 
   for (const timeUnit of attemptedTimeUnits) {
     try {
