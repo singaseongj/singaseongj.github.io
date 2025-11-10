@@ -120,7 +120,7 @@ function limitWords(phrase, maxWords = 2) {
   return parts.slice(0, cap).join(' ');
 }
 
-function enforceKeywordWordCount(keywords, { minWords = 1, maxWords = 3 } = {}) {
+function enforceKeywordWordCount(keywords, { minWords = 1, maxWords = 5 } = {}) {
   if (!Array.isArray(keywords)) {
     return [];
   }
@@ -344,7 +344,7 @@ function calculateSpecificityScore(keyword) {
 
   if (tokens.length === 1) score -= 20;
 
-  if (tokens.length >= 2 && tokens.length <= 4) score += 20;
+  if (tokens.length >= 2 && tokens.length <= 5) score += 20;
 
   const genericWords = new Set([
     '관련', '동향', '이슈', '뉴스', '시장', '산업', '상황', '분석',
@@ -434,7 +434,7 @@ function buildKeywordPrompt(desiredCount) {
     '**중요 규칙:**',
     '- 구체적인 고유명사, 사건명, 인물명, 브랜드명 우선 (예: "롤드컵", "손흥민", "토트넘 대 맨유")',
     '- 일반적인 단어는 절대 금지 (예: "경제 뉴스", "시장 동향", "금융 이슈" 등)',
-    '- 2~4어절의 구체적 표현',
+    '- 2~5어절의 구체적 표현',
     '- 실시간 검색어처럼 화제성 있는 키워드',
     '',
     '나쁜 예시: "경제 동향", "시장 이슈", "정치 뉴스"',
@@ -515,7 +515,7 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allow
       const sanitized = sanitizeKeywordList(extracted);
 
       const specific = sanitized.filter((kw) => calculateSpecificityScore(kw) >= 60);
-      const constrained = enforceKeywordWordCount(specific, { minWords: 2, maxWords: 4 }).slice(
+      const constrained = enforceKeywordWordCount(specific, { minWords: 2, maxWords: 5 }).slice(
         0,
         desiredCount,
       );
@@ -606,7 +606,7 @@ async function requestKeywordsFromWorker({ prompt, limit } = {}) {
     const sanitized = sanitizeKeywordList(extracted);
 
     const specific = sanitized.filter((kw) => calculateSpecificityScore(kw) >= 60);
-    const constrained = enforceKeywordWordCount(specific, { minWords: 2, maxWords: 4 }).slice(
+    const constrained = enforceKeywordWordCount(specific, { minWords: 2, maxWords: 5 }).slice(
       0,
       effectiveLimit,
     );
@@ -847,7 +847,7 @@ function buildWindowExtractionPrompt(text, maxKeywords) {
     '',
     '**중요 규칙:**',
     '- 구체적인 고유명사만 추출 (인물, 팀명, 브랜드, 사건명 등)',
-    '- 2~4어절의 구체적 표현',
+    '- 2~5어절의 구체적 표현',
     '- 일반 명사는 절대 금지 (경제, 시장, 동향, 이슈 등)',
     '- 실시간 검색어나 구글 트렌드에 나올 법한 화제성 키워드',
     '- 결과는 JSON 배열 형식만 출력 (설명 금지)',
