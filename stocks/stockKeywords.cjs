@@ -283,9 +283,15 @@ function cleanKeyword(keyword) {
     .replace(/["'`""''‚‛„‟‹›«»]/g, '')
     .replace(/[，,]/g, ' ');
 
-  const withoutLabels = stripKeywordLabel(withoutQuotes);
+  let normalized = stripKeywordLabel(withoutQuotes);
 
-  return withoutLabels.replace(/\s+/g, ' ').trim();
+  const colonPattern = /[:：]/;
+  while (colonPattern.test(normalized)) {
+    const colonIndex = normalized.search(colonPattern);
+    normalized = normalized.slice(colonIndex + 1).trim();
+  }
+
+  return normalized.replace(/\s+/g, ' ').trim();
 }
 
 function isTooGenericKeyword(keyword) {
@@ -300,7 +306,7 @@ function isTooGenericKeyword(keyword) {
   const genericSingles = new Set([
     '정부', '비즈니스', '경제', '정치', '사회', '금융', '산업', '시장',
     '기술', '투자', '주식', '뉴스', '동향', '이슈', '관련', '분석',
-    '전망', '업계', '기업', '회사', '증시', '코스피', '나스닥',
+    '전망', '업계', '기업', '회사', '증시', '코스피', '나스닥', 'kospi',
     '오늘', '내일', '어제', '최근', '현재', '상황',
     'business', 'government', 'economy', 'politics', 'society',
     'finance', 'industry', 'market', 'technology', 'investment',
