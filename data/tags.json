@@ -1,1401 +1,313 @@
 {
+  "generatedAt": "2025-11-10T06:30:46.367Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-10",
   "window": "12_hours",
   "total_phrases": 21,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Topicality: 20",
-      "term_ko": "화제성: 20",
-      "significance_score": 190652,
-      "mentions": 316151,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "화제성: 20",
-        "total_results": 316151,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 761.44,
-        "last_build_date": "Mon, 10 Nov 2025 10:32:55 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%ED%99%94%EC%A0%9C%EC%84%B1%3A%2020",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%99%94%EC%A0%9C%EC%84%B1%3A%2020",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%99%94%EC%A0%9C%EC%84%B1%3A%2020"
-      },
-      "top_headlines": [
-        {
-          "title": "W컨셉, 신규 브랜드 모델로 ‘르세라핌’ 발탁…연중 최대 ‘더블유위크...",
-          "summary": "화제의 잇템은 올해의 트렌드를 돌아보는 콘셉트로, 높은 화제성 으로 단기간 빠르게 품절되거나 N차 재입고한 인기 상품을 만나볼 수 있다. 릴레이 라이브 방송도 선보인다. 11일에는 아우터, 니트 등 겨울 의류를 활용해...",
-          "link": "https://www.dailian.co.kr/news/view/1570796/?sc=Naver",
-          "pubDate": "Mon, 10 Nov 2025 08:44:00 +0900"
-        },
-        {
-          "title": "['도시형 캠퍼스' 새로운 모델 구축한다] ㈜정림건축종합건축사사무소",
-          "summary": "축구장 20 개 규모의 지하공간 개발! 사업비 4,000억원 이상이 투입되는 대규모 프로젝트의 설계를 수행하고... 등의 화제성 뿐만아니라 학교가 더 이상 교직원과 학생의 공간과 장소가 아닌 대학을 중심으로 공학, 예술, 인문...",
-          "link": "http://www.ikld.kr/news/articleView.html?idxno=323677",
-          "pubDate": "Mon, 10 Nov 2025 08:40:00 +0900"
-        },
-        {
-          "title": "W컨셉, 신규 브랜드 모델에 ‘르세라핌’ 발탁",
-          "summary": "화제의 잇템은 올해의 트렌드를 돌아보는 콘셉트로, 높은 화제성 으로 단기간 빠르게 품절되거나 N차 재입고한 인기 상품을 만나볼 수 있다. 릴레이 라이브 방송도 선보인다. 오는 11일에는 아우터, 니트 등 겨울 의류를...",
-          "link": "http://www.edaily.co.kr/news/newspath.asp?newsid=02095926642364408",
-          "pubDate": "Mon, 10 Nov 2025 08:33:00 +0900"
-        }
-      ]
+      "term_ko": "화제성: 20"
     },
     {
-      "term": "Specific keywords: Seok-Yeol Yoon",
-      "term_ko": "구체적 키워드: 윤석열",
-      "significance_score": 3554,
-      "mentions": 5399,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 윤석열",
-        "total_results": 5399,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 114.85,
-        "last_build_date": "Mon, 10 Nov 2025 10:32:59 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%9C%A4%EC%84%9D%EC%97%B4",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%9C%A4%EC%84%9D%EC%97%B4",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%9C%A4%EC%84%9D%EC%97%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "李정부 온실가스 감축 목표에 '산업경쟁력 타격' 강조하는 보수 신문",
-          "summary": "'증시 부양'과 '부동산에서 주식시장으로의 유동성 이동'이 공통된 키워드 였다. 조선일보는 <배당소득... 세율 인하 반대 이유로 그는 구체적 인 근거를 제시했다. \"주식 배당소득은 지난해 기준 상위 10%가 전체의 91.2%를...",
-          "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=330020",
-          "pubDate": "Mon, 10 Nov 2025 09:48:00 +0900"
-        },
-        {
-          "title": "한동훈, 박정훈 '대장동 항소포기 국정조사+정성호 등 관련자 전원 탄핵...",
-          "summary": "내부망에 구체적 인 경위를 폭로하며 논란이 커지는 가운데, 박정훈 국민의힘 국회의원이 \"국정조사가 필요한... \"라고 물으며 11개월 전 윤석열 전 대통령의 비상계엄 선포 당시를 비교 사례로 제시, \"12월 3일 밤 젊은...",
-          "link": "https://www.imaeil.com/page/view/2025110822130988943",
-          "pubDate": "Sat, 08 Nov 2025 22:14:00 +0900"
-        },
-        {
-          "title": "[AI픽! 오늘] 팩트시트·과학기술 R&D 예산·조태용",
-          "summary": "7일, 인공지능(AI)이 선정한 오늘의 키워드 를 통해 통해 빠르게 변하는 세상, 놓치기 쉬운 이슈를 챙겨가시길... 이용자들은 챗GPT에 \"팩트시트에 원자력추진잠수함 관련 내용이 얼마나 구체적 으로 들어갈까?\", \"미국이 문건...",
-          "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=817909",
-          "pubDate": "Fri, 07 Nov 2025 18:28:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Seok-yeol Yoon",
+      "term_ko": "구체적 키워드: 윤석열"
     },
     {
-      "term": "Specific keywords: cospi",
-      "term_ko": "구체적 키워드: 코스피",
-      "significance_score": 827,
-      "mentions": 809,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 코스피",
-        "total_results": 809,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 141.16,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:06 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%BD%94%EC%8A%A4%ED%94%BC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%BD%94%EC%8A%A4%ED%94%BC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%BD%94%EC%8A%A4%ED%94%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "李정부 온실가스 감축 목표에 '산업경쟁력 타격' 강조하는 보수 신문",
-          "summary": "'증시 부양'과 '부동산에서 주식시장으로의 유동성 이동'이 공통된 키워드 였다. 조선일보는 <배당소득 최고세율 당정, 25%로 가닥>에서 \"이재명 정부 지지율을 떠받쳐온 코스피 가 최근 흔들리자 투자 심리를 개선하기...",
-          "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=330020",
-          "pubDate": "Mon, 10 Nov 2025 09:48:00 +0900"
-        },
-        {
-          "title": "미래에셋 \"증권주 '감속' 시작…실적 없이 기대만으론 한계\"",
-          "summary": "핵심 키워드 로 '감속'을 제시했다. 올해 주가를 이끌었던 정책 기대감이 한계에 부딪혔으며 이제는 주가를 뒷받침할 실질적인 이익과 구체적 인 주주환원을 보여줄 선택의 시간이 왔다는 분석이다. 이는 지난달 \" 코스피 ...",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383021",
-          "pubDate": "Mon, 10 Nov 2025 08:28:00 +0900"
-        },
-        {
-          "title": "[투자의 창] 상법개정 기업 대응의 두 축",
-          "summary": "기업 현장에서는 구체적 으로 어떤 것을 준비해야 할지에 대한 고민이 상당하다. 기업 입장에서는 ‘절차적 정당성’과 ‘소통 강화’라는 핵심 키워드 를 중심으로 한 대응책 마련이 필요해 보인다. 특히 2020년 말에...",
-          "link": "https://www.sedaily.com/NewsView/2H0C57MIMI",
-          "pubDate": "Wed, 05 Nov 2025 17:40:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Cospi",
+      "term_ko": "구체적 키워드: 코스피"
     },
     {
-      "term": "Specific keywords: Gunhee Kim",
-      "term_ko": "구체적 키워드: 김건희",
-      "significance_score": 760,
-      "mentions": 934,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 김건희",
-        "total_results": 934,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:08 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B9%80%EA%B1%B4%ED%9D%AC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B9%80%EA%B1%B4%ED%9D%AC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B9%80%EA%B1%B4%ED%9D%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "정부 온실가스 감축목표에 \"어정쩡\" \"의지 박약\" \"자해\"",
-          "summary": "한국일보는 < 구체적 수치 대신 '50~60%' 면피성 범위 값... \"혼란만 키울 것\"> 기사에서 \"범위 값 설정 시 상한... '배치기'가 주요 키워드 로 오른 운영위 국감 6일 국회 운영위원회의 대통령실 국정감사를 전하는 주요...",
-          "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=329972",
-          "pubDate": "Fri, 07 Nov 2025 07:39:00 +0900"
-        },
-        {
-          "title": "[핫브리핑] \"YTN 등 정부자산 '헐값 매각' 전수조사\"…실태 어떻기에?",
-          "summary": "이런 것들도 구체적 으로 얘기가 돌았고 특정 몇몇 기업들이 있었는데 갑자기 유진그룹이 나왔단 말이에요. 그래서 사실 김건희 여사나 윤핵관들이 배후에 있는 거 아니냐라는 게 이미 그 당시에도 돌았고요. 기억하실지...",
-          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008321865&plink=ORI&cooper=NAVER",
-          "pubDate": "Thu, 06 Nov 2025 16:31:00 +0900"
-        },
-        {
-          "title": "배종찬 \"명태균의 정치적 소음, 국민의힘에 부담\" [한판승부]",
-          "summary": "했고 김건희 씨는 김태호 의원에게 연락을 해서 경남지사 경선에 못 나오게 했다 뭐 이렇게 말을 했다고... ◆ 장윤미> 실체가 없고 노이즈라고 말씀하셨는데 오늘 국감장에서 명태균 씨가 한 주장의 핵심 키워드 는 판을...",
-          "link": "https://www.nocutnews.co.kr/news/6419935?utm_source=naver&utm_medium=article&utm_campaign=20251029070054",
-          "pubDate": "Wed, 29 Oct 2025 07:01:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Gunhee Kim",
+      "term_ko": "구체적 키워드: 김건희"
     },
     {
-      "term": "Specific keywords: blacksmithing",
-      "term_ko": "구체적 키워드: 대장동",
-      "significance_score": 511,
-      "mentions": 459,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 대장동",
-        "total_results": 459,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 35.68,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:07 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%8C%80%EC%9E%A5%EB%8F%99",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%8C%80%EC%9E%A5%EB%8F%99",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%8C%80%EC%9E%A5%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "한동훈, 박정훈 ' 대장동 항소포기 국정조사+정성호 등 관련자 전원 탄핵...",
-          "summary": "8일 0시 이뤄진 검찰의 대장동 민간업자들에 대한 1심 항소포기를 두고 수사·공판팀이 뒤늦은 새벽 \"대검과... 내부망에 구체적 인 경위를 폭로하며 논란이 커지는 가운데, 박정훈 국민의힘 국회의원이 \"국정조사가 필요한...",
-          "link": "https://www.imaeil.com/page/view/2025110822130988943",
-          "pubDate": "Sat, 08 Nov 2025 22:14:00 +0900"
-        },
-        {
-          "title": "[전격시사] 신지호 국민의힘 전 전략기획부총장 “‘강훈식 기자회견’...",
-          "summary": "나온 대장동 5인방 1심 결과 징역 8년에서 4년 이거를 어떻게든지 무력화시키기 위한 것이다. 그러니까... 하는데 구체적 인 근거 제시를 못 해요. 그래서 이미 새벽배송이라는 걸 초심야배송 그렇게 얘기하고...",
-          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8398078&ref=A",
-          "pubDate": "Tue, 04 Nov 2025 10:19:00 +0900"
-        },
-        {
-          "title": "[시사정각] 막 내린 경주 APEC...엇갈린 정치권 평가",
-          "summary": "지금 말씀해 주신 배임죄 관련해서 대장동 판결의 핵심 쟁점이 배임죄 부분이잖아요. 이런 일련의 과정들을... 것처럼 키워드 를 갖고 가지 말자는 거죠. 대통령실은. 지금 APEC의 성과가 이만큼 많은데 굳이 여기에 시끄럽게...",
-          "link": "https://www.ytn.co.kr/_ln/0101_202511031236158945",
-          "pubDate": "Mon, 03 Nov 2025 12:36:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Blacksmithing",
+      "term_ko": "구체적 키워드: 대장동"
     },
     {
-      "term": "Specific keywords: Chung Cheong Rae",
-      "term_ko": "구체적 키워드: 정청래",
-      "significance_score": 372,
-      "mentions": 287,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 정청래",
-        "total_results": 287,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:32:56 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%A0%95%EC%B2%AD%EB%9E%98",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%A0%95%EC%B2%AD%EB%9E%98",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%A0%95%EC%B2%AD%EB%9E%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[핫브리핑] \"YTN 등 정부자산 '헐값 매각' 전수조사\"…실태 어떻기에?",
-          "summary": "핫 키워드 헐값 매각 전수조사라고 꼽아봤습니다. 정부 자산을 너무 싸게 팔거나 그 과정에 문제가 있는지... 이런 것들도 구체적 으로 얘기가 돌았고 특정 몇몇 기업들이 있었는데 갑자기 유진그룹이 나왔단 말이에요....",
-          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008321865&plink=ORI&cooper=NAVER",
-          "pubDate": "Thu, 06 Nov 2025 16:31:00 +0900"
-        },
-        {
-          "title": "[시선집중] 박수현 “재판중지법, 추진한 적도 없는데 ‘철회’ 왜곡.....",
-          "summary": "☏ 박수현 > 어제 사전 최고위원회에서 정청래 대표의 요청으로 구성하게 됐고요. 김병기 원내대표를 특위의... ☏ 박수현 > 특별법이라고 하면 말씀드린 대로 미국과 투자를 우리가 하게 되는데 구체적 인 세부적인 그런...",
-          "link": "https://n.news.naver.com/mnews/article/214/0001459943?sid=100",
-          "pubDate": "Thu, 06 Nov 2025 10:12:00 +0900"
-        },
-        {
-          "title": "[전격시사] 신지호 국민의힘 전 전략기획부총장 “‘강훈식 기자회견’...",
-          "summary": "기자회견’, 정청래 에 대한 ‘엄중 경고’…“尹 발언, 충격적이고 참담…남은 재판 주시 필요” ▷ 소현정... 하는데 구체적 인 근거 제시를 못 해요. 그래서 이미 새벽배송이라는 걸 초심야배송 그렇게 얘기하고...",
-          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8398078&ref=A",
-          "pubDate": "Tue, 04 Nov 2025 10:19:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Chung Cheong Rae",
+      "term_ko": "구체적 키워드: 정청래"
     },
     {
-      "term": "Specific keywords: Soohyun Park",
-      "term_ko": "구체적 키워드: 박수현",
-      "significance_score": 350,
-      "mentions": 132,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 박수현",
-        "total_results": 132,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 71.25,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:03 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%B0%95%EC%88%98%ED%98%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%B0%95%EC%88%98%ED%98%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%B0%95%EC%88%98%ED%98%84"
-      },
-      "top_headlines": [
-        {
-          "title": "李정부 온실가스 감축 목표에 '산업경쟁력 타격' 강조하는 보수 신문",
-          "summary": "공통된 키워드 였다. 조선일보는 <배당소득 최고세율 당정, 25%로 가닥>에서 \"이재명 정부 지지율을 떠받쳐온 코스피가 최근 흔들리자 투자 심리를 개선하기 위한 조치로 풀이된다\"고 분석했다. 박수현 더불어민주당...",
-          "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=330020",
-          "pubDate": "Mon, 10 Nov 2025 09:48:00 +0900"
-        },
-        {
-          "title": "[시선집중] 박수현 “재판중지법, 추진한 적도 없는데 ‘철회’ 왜곡.....",
-          "summary": "☏ 박수현 > 특별법이라고 하면 말씀드린 대로 미국과 투자를 우리가 하게 되는데 구체적 인 세부적인 그런... 그게 가장 중요한 키워드 고요. 그러나 지금은 어느 정부든 초기에는 개혁의 임무를 띠지 않습니까? 당연히...",
-          "link": "https://n.news.naver.com/mnews/article/214/0001459943?sid=100",
-          "pubDate": "Thu, 06 Nov 2025 10:12:00 +0900"
-        },
-        {
-          "title": "[전격시사] 신지호 국민의힘 전 전략기획부총장 “‘강훈식 기자회견’...",
-          "summary": "왜냐하면 박수현 수석대변인이 이렇게 설명을 했어요. 추진을 중단하는 게 좋겠다는 당내 논의 결과를... 하는데 구체적 인 근거 제시를 못 해요. 그래서 이미 새벽배송이라는 걸 초심야배송 그렇게 얘기하고...",
-          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8398078&ref=A",
-          "pubDate": "Tue, 04 Nov 2025 10:19:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Soohyun Park",
+      "term_ko": "구체적 키워드: 박수현"
     },
     {
-      "term": "Specific keywords: Kyung Ho Chu",
-      "term_ko": "구체적 키워드: 추경호",
-      "significance_score": 340,
-      "mentions": 233,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 추경호",
-        "total_results": 233,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:10 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%B6%94%EA%B2%BD%ED%98%B8",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%B6%94%EA%B2%BD%ED%98%B8",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%B6%94%EA%B2%BD%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "국힘 의원들, 이재명 대통령에 \"꺼져라\" \"범죄자\" 막말 퍼부어",
-          "summary": "국민의힘이 추경호 전 원내대표에 대한 구속영장 청구에 반발해 이재명 대통령 시정연설을 보이콧했다.... 이 대통령의 위기 인식도 구체적 으로 소개했다. \"이 대통령은 '불법 계엄 여파로 심화한 민생경제 한파 극복을...",
-          "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=329918",
-          "pubDate": "Wed, 05 Nov 2025 09:55:00 +0900"
-        },
-        {
-          "title": "[뉴스UP] 이 대통령 시정연설, 민주 \"A급 연설\"...국힘은 '보이콧'",
-          "summary": "특검에서 추경호 전 원내대표에 대해서 구속영장 청구를 했거든요. 그렇다면 검찰은 사실상 이재명 대통령이... 그래서 이런 AI 시대의 대통령이 되겠다는 그런 의지를 분명히 밝혔는데 이번에 시정연설을 키워드 중심으로...",
-          "link": "https://www.ytn.co.kr/_ln/0101_202511050811340800",
-          "pubDate": "Wed, 05 Nov 2025 08:11:00 +0900"
-        },
-        {
-          "title": "[뉴스공감] 민형배 \"명분 없는 보이콧…尹 첫 연설 때와는 달라\"",
-          "summary": "왜 그 사람들이 그분들이 그런가 봤더니, 이게 보니까 추경호 전 원내대표 구속영장 청구했다고? ▷야당... 대통령 시정연설에서 가장 많이 나온 단어 그리고 핵심 키워드 는 결국 AI. 인공지능이었습니다. ▶그렇습니다....",
-          "link": "https://news.cpbc.co.kr/article/1168126?division=NAVER",
-          "pubDate": "Tue, 04 Nov 2025 22:58:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Kyung Ho Chu",
+      "term_ko": "구체적 키워드: 추경호"
     },
     {
-      "term": "Specific keywords: Gadeokdo New Airport",
-      "term_ko": "구체적 키워드: 가덕도 신공항",
-      "significance_score": 275,
-      "mentions": 125,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 가덕도 신공항",
-        "total_results": 125,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:05 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B0%80%EB%8D%95%EB%8F%84%20%EC%8B%A0%EA%B3%B5%ED%95%AD",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B0%80%EB%8D%95%EB%8F%84%20%EC%8B%A0%EA%B3%B5%ED%95%AD",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EA%B0%80%EB%8D%95%EB%8F%84%20%EC%8B%A0%EA%B3%B5%ED%95%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "항공 강점 버리고 약점 쫓는 인천시, SERM 전략은 항공국 격상",
-          "summary": "검단신도시 친환경 벨트는 구체적 인 사업 내용이나 예산, 추진 일정이 공개되지 않았다. 이런... 부산은 신공항 추진본부를 본부급 독립 조직으로 운영하고 가덕도신공항 건설청도 설립했다. 인천은...",
-          "link": "https://www.incheontoday.com/news/articleView.html?idxno=310098",
-          "pubDate": "Fri, 24 Oct 2025 17:22:00 +0900"
-        },
-        {
-          "title": "[사설] “균형발전은 운명” 이젠 실천해서 결과 내야할 때다",
-          "summary": "‘균형발전’ 키워드 는 빠지지 않았다. 서울에서 멀어질수록 예산 배정에 가중치를 두거나 모든 사업에... 하지만 한편으론 부산의 최대 현안인 가덕도신공항 건설 문제가 여전히 교착 상태이고 산은 이전은 무산...",
-          "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1700&key=20250917.22019005130",
-          "pubDate": "Tue, 16 Sep 2025 18:46:00 +0900"
-        },
-        {
-          "title": "\"또 지방공항 잔혹사\" 양양공항 화물터미널 무산…\"일주일새 65% '뚝'\" 한...",
-          "summary": "가덕도신공항 은 현대건설 참여 철회로 위기를 맞았고, 새만금 신공항 은 환경영향평가서 재보완 요구를... 중국 경제 둔화 지표의 구체적 내용은? A. 7월 중국 경제지표가 전반적으로 부진했습니다. 중국 국가통계국에...",
-          "link": "https://www.sedaily.com/NewsView/2GWNBZWJBD",
-          "pubDate": "Sat, 16 Aug 2025 06:27:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Gadeokdo New Airport",
+      "term_ko": "구체적 키워드: 가덕도 신공항"
     },
     {
-      "term": "Specific keywords: staphylococcus aureus",
-      "term_ko": "구체적 키워드: 채상병",
-      "significance_score": 273,
-      "mentions": 121,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 채상병",
-        "total_results": 121,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:09 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%B1%84%EC%83%81%EB%B3%91",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%B1%84%EC%83%81%EB%B3%91",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%B1%84%EC%83%81%EB%B3%91"
-      },
-      "top_headlines": [
-        {
-          "title": "'사이버 극우' 추적 10년의 결론...\"이명박이 뿌린 씨앗, 윤석열 만들었...",
-          "summary": "\" - 윤석열이 뿌린 씨앗이 싹을 틔우고 열매를 맺을 수 있다는 말은 구체적 으로 어떤 의미인가? \"대표적인... 그렇기 때문에 이 사안은 내란 특검· 채상병 특검·김건희 특검과 맞먹는 규모와 수준의 대응이 필요하다....",
-          "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003166299&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
-          "pubDate": "Fri, 19 Sep 2025 12:08:00 +0900"
-        },
-        {
-          "title": "[연합뉴스 이 시각 헤드라인] - 10:30",
-          "summary": "조 전 실장은 채상병 사건 기록의 이첩에 개입했다는 의혹과 관련해 직권남용 권리행사방해 혐의를 받는 피의자 신분이다. 그는 \"(윤석열 전) 대통령이 기록 회수를 직접 지시했나\"는 취재진 질문에 구체적 ...",
-          "link": "https://www.yna.co.kr/view/AKR20250813057900011?input=1195m",
-          "pubDate": "Wed, 13 Aug 2025 10:30:00 +0900"
-        },
-        {
-          "title": "[맞수다] \"윤, 바닥에 누운 채 체포 거부\"‥어차피 중형이라?",
-          "summary": "대통령은 채상병 사태와 마찬가지로 이런 일로 장관까지 그만두게 한 것이 옳으냐라는 본인의 인사관이... 국민의힘의 키워드 를 보면 윤석열, 전한길, 극우 일부 종교단체 이름들 제가 구체적 으로 말씀 안 드리겠습니다만...",
-          "link": "https://imnews.imbc.com/replay/2025/nw1400/article/6741667_36776.html",
-          "pubDate": "Fri, 01 Aug 2025 14:55:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Staphylococcus Aureus",
+      "term_ko": "구체적 키워드: 채상병"
     },
     {
-      "term": "Specific keywords: three special prosecutors",
-      "term_ko": "구체적 키워드: 3대 특검",
-      "significance_score": 271,
-      "mentions": 118,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 3대 특검",
-        "total_results": 118,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:32:49 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%203%EB%8C%80%20%ED%8A%B9%EA%B2%80",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%203%EB%8C%80%20%ED%8A%B9%EA%B2%80",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%203%EB%8C%80%20%ED%8A%B9%EA%B2%80"
-      },
-      "top_headlines": [
-        {
-          "title": "국힘 의원들, 이재명 대통령에 \"꺼져라\" \"범죄자\" 막말 퍼부어",
-          "summary": "AI 투자 계획의 구체적 내용도 상세히 설명했다. \"이 대통령은 'AI 3대 강국' 도약을 위해 AI 관련 예산에... 연설문 키워드 분석으로 핵심 메시지 포착 세계일보는 <李, 728조 내년 예산 시정연설…23분 간 인공지능 28회·국민...",
-          "link": "https://www.mediatoday.co.kr/news/articleView.html?idxno=329918",
-          "pubDate": "Wed, 05 Nov 2025 09:55:00 +0900"
-        },
-        {
-          "title": "[뉴스UP] 이 대통령 시정연설, 민주 \"A급 연설\"...국힘은 '보이콧'",
-          "summary": "시정연설을 키워드 중심으로 살펴보면 AI 단어를 제일 많이 썼더라고요. 무려 28회, 그리고 두 번째 국민이 21회, 그리고 예산이라는 단어가 16회가 사용됐기 때문에 이재명 대통령이 얼마나 AI 3대 강국 코리아를 위해서...",
-          "link": "https://www.ytn.co.kr/_ln/0101_202511050811340800",
-          "pubDate": "Wed, 05 Nov 2025 08:11:00 +0900"
-        },
-        {
-          "title": "이 대통령 \"마약 수사 외압 의혹 엄정 수사...수사검사도 추가\"",
-          "summary": "그래서 국민의힘은 중국인에 대한 규제를 해야 한다고 주장하면서 구체적 으로 중국인 3대 쇼핑 방지법을... [김지호] 저는 개인적으로 사실은 3대 특검 이 잘 운영되면서 내란이라든지 윤석열 정부의 부정부패가 상당 부분...",
-          "link": "https://www.ytn.co.kr/_ln/0101_202510122337233118",
-          "pubDate": "Sun, 12 Oct 2025 23:37:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Three Special Prosecutors",
+      "term_ko": "구체적 키워드: 3대 특검"
     },
     {
-      "term": "Specific keywords: augurdon",
-      "term_ko": "구체적 키워드: 오거돈",
-      "significance_score": 270,
-      "mentions": 116,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 오거돈",
-        "total_results": 116,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:04 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%98%A4%EA%B1%B0%EB%8F%88",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%98%A4%EA%B1%B0%EB%8F%88",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EC%98%A4%EA%B1%B0%EB%8F%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[펜앤현장] \"헌법 44조 원포인트 개헌으로 불체포특권 제거해야\" 한동훈...",
-          "summary": "바로 '특권 내려놓기 정당 vs 특권 지키기 정당'이라는 주제로 하면서도 한동훈 비대위원장의 핵심 키워드 인... 그렇기 때문에 이번에 마련된 긴급좌담회에서는, 한동훈 비대위원장의 5대 정치개혁 메시지에 대한 구체적 인...",
-          "link": "https://www.pennmike.com/news/articleView.html?idxno=75597",
-          "pubDate": "Thu, 25 Jan 2024 11:10:00 +0900"
-        },
-        {
-          "title": "<국힘 최고위원 후보를 만나다> ‘끝까지 나답게’ 허은아",
-          "summary": "공천 혁명은 나에게 하나의 키워드 와 같다. -천하용인은 개혁보수임을 자처한다. 개혁보수가 뭔지 구체적 으로... 일전에 고 박원순 전 서울시장과 오거돈 전 부산시장이 보궐선거 당시 당헌·당규를 바꿔 자신들이 또...",
-          "link": "https://www.ilyosisa.co.kr/news/article.html?no=238503",
-          "pubDate": "Thu, 02 Mar 2023 16:18:00 +0900"
-        },
-        {
-          "title": "막 오른 선거전...'박완주'vs '윤재순' 악재 장군멍군",
-          "summary": "키워드 로 정리해 보면 지방선거, 성 비위 그리고 인사 이 정도로 정리할 수 있을 것 같습니다. 그 얘기를 해 볼... 구체적 으로 수치를 보면 여론조사 결과를 보면 경기도지사의 경우 김동연 후보와 김은혜 후보가 사실...",
-          "link": "https://www.ytn.co.kr/_ln/0101_202205142256126281",
-          "pubDate": "Sat, 14 May 2022 22:56:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Augurdon",
+      "term_ko": "구체적 키워드: 오거돈"
     },
     {
-      "term": "Specific keywords: clearing civil unrest",
-      "term_ko": "구체적 키워드: 내란 청산",
-      "significance_score": 234,
-      "mentions": 56,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "구체적 키워드: 내란 청산",
-        "total_results": 56,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:00 +0900"
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%82%B4%EB%9E%80%20%EC%B2%AD%EC%82%B0",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%82%B4%EB%9E%80%20%EC%B2%AD%EC%82%B0",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EA%B5%AC%EC%B2%B4%EC%A0%81%20%ED%82%A4%EC%9B%8C%EB%93%9C%3A%20%EB%82%B4%EB%9E%80%20%EC%B2%AD%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[시선집중] 박수현 “재판중지법, 추진한 적도 없는데 ‘철회’ 왜곡.....",
-          "summary": "그게 가장 중요한 키워드 고요. 그러나 지금은 어느 정부든 초기에는 개혁의 임무를 띠지 않습니까? 당연히 이재명 정부도 개혁의 과제를 안고 있는 데다 이재명 정부는 역사상 거의 초유의 내란 청산 의 임무까지 같이 띠고...",
-          "link": "https://n.news.naver.com/mnews/article/214/0001459943?sid=100",
-          "pubDate": "Thu, 06 Nov 2025 10:12:00 +0900"
-        },
-        {
-          "title": "[뉴스공감] 민형배 \"명분 없는 보이콧…尹 첫 연설 때와는 달라\"",
-          "summary": "윤석열 정권이 그 당시에 대통령 권력을 이용해서 친위 쿠데타를 하고 내란 을 일으켜서 그 내란 을 청산 하는... 대통령 시정연설에서 가장 많이 나온 단어 그리고 핵심 키워드 는 결국 AI. 인공지능이었습니다. ▶그렇습니다....",
-          "link": "https://news.cpbc.co.kr/article/1168126?division=NAVER",
-          "pubDate": "Tue, 04 Nov 2025 22:58:00 +0900"
-        },
-        {
-          "title": "이 대통령 \"마약 수사 외압 의혹 엄정 수사...수사검사도 추가\"",
-          "summary": "[김지호] 저는 개인적으로 사실은 3대 특검이 잘 운영되면서 내란 이라든지 윤석열 정부의 부정부패가 상당 부분 일소됐다고 봅니다. 다만 지난 정권 3년 내내 검찰과 경찰의 직권남용과 사건 조작 이러한 것들은 인적 청산 이...",
-          "link": "https://www.ytn.co.kr/_ln/0101_202510122337233118",
-          "pubDate": "Sun, 12 Oct 2025 23:37:00 +0900"
-        }
-      ]
+      "term": "Specific Keywords: Clearing Civil Unrest",
+      "term_ko": "구체적 키워드: 내란 청산"
     },
     {
-      "term": "CityLife",
-      "term_ko": "시티라이프",
-      "significance_score": 0,
-      "mentions": 100,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "CityLife",
-        "total_results": 21541,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 32.84,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:13 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=CityLife",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=CityLife",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=CityLife"
-      },
-      "top_headlines": [
-        {
-          "title": "[Cover Story] 영화감독들, 드라마로 가다",
-          "summary": "[글 이주영(대중문화 칼럼니스트)] [일러스트·사진 각 영화 스틸컷, 게티이미지뱅크, 넷플릭스, 쿠팡플레이, 애플티비] [본 기사는 매일경제 Citylife 제1002호(25.10.28) 기사입니다]",
-          "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00007&news_seq_no=5152938",
-          "pubDate": "Fri, 07 Nov 2025 18:54:00 +0900"
-        },
-        {
-          "title": "홀로그램 도시 꿈꾸는 익산 ‘2025 홀로그램 엑스포 HOLO WAVE’ 11월 20일...",
-          "summary": "최신 기술 동향에 관심 있는 누구나 참석이 가능하다. 더 자세한 행사 관련 내용은 공식 홈페이지에서 확인 할 수 있다. [사진 전북특별자치도 콘텐츠융합진흥원] [본 기사는 매일경제 Citylife 제1004호(25.11.11) 기사입니다]",
-          "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00013&news_seq_no=5152929",
-          "pubDate": "Fri, 07 Nov 2025 18:10:00 +0900"
-        },
-        {
-          "title": "[Overseas Trip] 튀니지 여행③ 가베스부터 마트마타까지 튀니지 남부 여...",
-          "summary": "바삭한 페이스트리로, 오스만제국에서 유래되어 터키 군인과 상인들에 의해 튀니지에 전해져 오늘날까지도 대표적인 디저트로 손꼽힌다. [글과 사진 추효정(여행작가)] [본 기사는 매일경제 Citylife 제999호(25.09.30) 기사입니다]",
-          "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00007&news_seq_no=5152911",
-          "pubDate": "Fri, 07 Nov 2025 17:35:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.028941,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term": "Citylife",
+      "term_ko": "시티라이프"
     },
     {
-      "term": "2035 NDC",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 280,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "2035 NDC",
-        "total_results": 6050,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1433.75,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:14 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 7.55287
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 26.28398
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 24.47129
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 45.31722
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 46.82779
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 21.14803
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 42.29607
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=2035%20NDC",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=2035%20NDC",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=2035%20NDC"
-      },
-      "top_headlines": [
-        {
-          "title": "온실가스 감축 목표 53∼61%...정부 예산 10년간 총 200조원 이상 투입",
-          "summary": "정부는 53% 감축을 2035 NDC 로 한다면 전력 부문 배출량을 2035년 8830만톤으로 2018년(2억8300만t) 대비 68.8%, 산업 부문 배출량을 2억910만톤으로 2018년(2억7630만톤) 대비 24.3%, 수송 부문 배출량을 3930만톤으로 2018년...",
-          "link": "https://biz.heraldcorp.com/article/10612460?ref=naver",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        },
-        {
-          "title": "정부&여당 \" 2035 NDC 목표 53~61%로 결정\"…'또' 없던 수치 나와",
-          "summary": "정부와 여당이 '2035 국가 온실가스 감축 목표( 2035 NDC )'를 2018년 대비 53~61% 감축하는 단일 범위안을 협의 도출했다. 이는 정부가 공청회에서 밝힌 2개 하한선 안(50%, 53%) 중 가장 높은 수치이자, 상한선 기준으로는...",
-          "link": "http://www.snmnews.com/news/articleView.html?idxno=560585",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        },
-        {
-          "title": "이언주 \" 2035 NDC 53~61% 감축 너무 도전적…재고해야\"",
-          "summary": "앞서 정부는 2035 NDC 와 관련해 50~60% 감축 또는 53~60% 감축 등 두 가지 안을 제시한 바 있다. 정부는 53~61%로 정한 NDC를 대통령 직속 탄소중립녹색성장위원회에 제출할 예정이다. 이후 국무회의를 거쳐 최종안이...",
-          "link": "https://www.news1.kr/politics/assembly/5970390",
-          "pubDate": "Mon, 10 Nov 2025 10:30:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 280.0604,
-        "weekly_average_volume": 46.6767,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.020123,
-        "time_weight": 0.02894,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term": "2035 Ndc",
+      "term_ko": "2035 Ndc"
     },
     {
-      "term": "CHN",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 357,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "CHN",
-        "total_results": 1558,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 0,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:15 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 53.33333
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 90
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 86.66666
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 66.66666
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 40
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 30
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 33.33333
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=CHN",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=CHN",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=CHN"
-      },
-      "top_headlines": [
-        {
-          "title": "나다니엘 라몬스-장 줄리앙 로저 서울챌린저 복식 우승",
-          "summary": "Noguchi / Wang (JPN/ CHN ) 3-6 6-0 [10-5] R16: Lammons / Rojer (USA/NED) d. (4)Nam / Yuzuki (KOR/JPN) 6-3 7-6(2) R16: (WC)Ann / Kim (KOR) d. (WC)Chung / Park (KOR) 7-5 4-6 [10-5] R16: (2)Reynolds / Watt (NZL) d. Isarow / Kaliyanda Poonacha (THA/IND) 7-5 6-3...",
-          "link": "http://www.tennispeople.kr/news/articleView.html?idxno=17700",
-          "pubDate": "Mon, 03 Nov 2025 03:34:00 +0900"
-        },
-        {
-          "title": "18명의 일본 선수 가운데 유일하게 생존한 시마부쿠로",
-          "summary": "(Q)Kokoro Isomura (JPN) 6-2 6-3 R16: Yi Zhou ( CHN ) d. (8)Taro Daniel (JPN) 6-7(8) 6-3 6-0 R16: Frederico Ferreira Silva (POR) d. (3)Yoshihito Nishioka (JPN) 6-0 5-7 7-6(5) R32: Rio Noguchi (JPN) d. (1)James Duckworth (AUS) 1-6 7-5 6-3...",
-          "link": "http://www.tennispeople.kr/news/articleView.html?idxno=17694",
-          "pubDate": "Sun, 02 Nov 2025 02:22:00 +0900"
-        },
-        {
-          "title": "유진투자증권 서울오픈챌린저 31일 경기일정",
-          "summary": "Zhou ( CHN ) vs Frederico Ferreira Silva (POR) QF: (5)Coleman Wong (HKG) vs (2)Bu Yunchaokete ( CHN ) R16: Sho Shimabukuro (JPN) d. Rio Noguchi (JPN) 6-4 6-3 R16: (Q)Kasidit Samrej (THA) d. Oliver...",
-          "link": "http://www.tennispeople.kr/news/articleView.html?idxno=17687",
-          "pubDate": "Fri, 31 Oct 2025 23:50:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 356.6666,
-        "weekly_average_volume": 59.4444,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017018,
-        "time_weight": 0.02894,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term": "Chn",
+      "term_ko": "Chn"
     },
     {
-      "term": "Local government",
-      "term_ko": "지방자치",
-      "significance_score": 0,
-      "mentions": 458,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "지방자치",
-        "total_results": 2370295,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1438.21,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:16 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 71.69811
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 81.13207
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 81.13207
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 84.90566
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 83.01886
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 58.49056
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 69.81132
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A7%80%EB%B0%A9%EC%9E%90%EC%B9%98",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A7%80%EB%B0%A9%EC%9E%90%EC%B9%98",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A7%80%EB%B0%A9%EC%9E%90%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "전북도교육청, 2026년도 예산안 4조 4437억원 편성…전년비 1295억원 감소",
-          "summary": "2026년도 세입예산은 △보통교부금 등 중앙정부 이전수입 3조 7659억원 △ 지방자치 단체 및 기타 이전수입 4062억원 △자체수입 및 기타 1170억원이며, 부족한 재원은 교육시설환경개선기금 897억원과...",
-          "link": "https://www.asiatoday.co.kr/view.php?key=20251110010004745",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        },
-        {
-          "title": "서울 중구, 정보화 교육 성과 눈부셔…76세 수강생 '국민행복 IT 경진대...",
-          "summary": "더 많은 주민이 디지털 기술을 통해 삶의 질을 높일 수 있도록 적극 지원하겠다\"고 밝혔다. 중구의 사례는 고령층을 포함한 다양한 세대의 디지털 포용을 실현하는 지방자치 단체의 성공 모델로 주목받고 있다.",
-          "link": "https://www.job-post.co.kr/news/articleView.html?idxno=188273",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        },
-        {
-          "title": "[오늘의 주요 사회 일정] 광주·전남(11월10일 월요일)",
-          "summary": "1시30분, 지방자치 30주년 전라권 감담회, 광주시청 시민홀 ▲오후 3시30분, 북구시설관리공단노조, 처우개선 요구집회, 북구청 앞 ▲오후 3시45분, 통합돌봄 업무관계자 간담회, 치평동 행정복지센터 ◇전남 ▲오전...",
-          "link": "http://www.econonews.co.kr/news/articleView.html?idxno=412928",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 458.4905,
-        "weekly_average_volume": 76.4151,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.014299,
-        "time_weight": 0.02894,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term": "Local Government",
+      "term_ko": "지방자치"
     },
     {
-      "term": "The Yun Seok-Yeol Trial",
-      "term_ko": "윤석열 재판",
-      "significance_score": 0,
-      "mentions": 369,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "윤석열 재판",
-        "total_results": 433762,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1433.88,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:17 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 42.86871
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 93.11183
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 73.74392
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 61.34521
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 75.85089
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 36.14262
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 29.09238
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%9C%A4%EC%84%9D%EC%97%B4%20%EC%9E%AC%ED%8C%90",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%9C%A4%EC%84%9D%EC%97%B4%20%EC%9E%AC%ED%8C%90",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%9C%A4%EC%84%9D%EC%97%B4%20%EC%9E%AC%ED%8C%90"
-      },
-      "top_headlines": [
-        {
-          "title": "민주, 검찰 내부 반발 조짐에 “정치검사 쿠데타적 항명”",
-          "summary": "김병기 민주당 원내대표는 이날 오전 열린 당 최고위원회의에서 “친윤(친 윤석열 계) 정치검사들의 쿠데타적... 김 원내대표는 이어 “대장동 1심 재판 에서 자신들 민낯이 그렇게 처참히 드러났는데도 무엇이 그렇게...",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1228323.html",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        },
-        {
-          "title": "오세훈 측 김병민 \"민주당, 명태균 내세워 '오세훈 죽이기'... 이준석과...",
-          "summary": "그리고 그 해에 굉장히 많은 선거들이 있게 되는데 이준석 대표를 탄생시켰던 전당대회도 있고, 윤석열 ... 봐주기 재판 이 진행되는 것 아니냐는 의구심이 커지고 누군가의 정치인을 대상으로는 특검을 최대한 활용해서 그...",
-          "link": "https://radio.ytn.co.kr/program/?f=2&id=105768&s_mcd=0214&s_hcd=01",
-          "pubDate": "Mon, 10 Nov 2025 10:30:00 +0900"
-        },
-        {
-          "title": "박지원 \"대장동 항소 포기, 李대통령 결정했나? 법적 하자없어, 이상하...",
-          "summary": "왜 윤석열 , 김건희에게 적용하는 것은 한없이 후하고, 이재명 민주당에 적용하는 것은 한없이 강하려고 해요? 법적 요건을 갖췄잖아요. 관습적으로 뭐가 잘못됐습니까? 아니 7800억 그것도 1심 판결 아니에요? 재판 장이 한...",
-          "link": "https://radio.ytn.co.kr/program/?f=2&id=105769&s_mcd=0214&s_hcd=01",
-          "pubDate": "Mon, 10 Nov 2025 10:30:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 369.2869,
-        "weekly_average_volume": 61.5478,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.016613,
-        "time_weight": 0.028939,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term": "The Yun Seok-yeol Trial",
+      "term_ko": "윤석열 재판"
     },
     {
       "term": "Dental Insurance",
-      "term_ko": "치아보험",
-      "significance_score": 0,
-      "mentions": 479,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "치아보험",
-        "total_results": 39404,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 506.89,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:19 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 44.14035
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 97.1228
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 97.47368
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 89.26315
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 86.10526
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 57.82456
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 48.35087
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%B9%98%EC%95%84%EB%B3%B4%ED%97%98",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%B9%98%EC%95%84%EB%B3%B4%ED%97%98",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%B9%98%EC%95%84%EB%B3%B4%ED%97%98"
-      },
-      "top_headlines": [
-        {
-          "title": "치주질환, 방치하면 치아 상실로 이어질 수 있다",
-          "summary": "건강한 백세 인생, 잇몸에서 시작된다스케일링은 연 1회 건강 보험 이 적용된다.1년에 한 번 정기검진을 받는 것만으로도 치주질환을 조기에 발견하고 예방할 수 있다. 치아 는 단순히 음식을 씹는 도구가 아니라, 삶의 질과...",
-          "link": "http://www.ikunkang.com/news/articleView.html?idxno=42937",
-          "pubDate": "Mon, 10 Nov 2025 09:14:00 +0900"
-        },
-        {
-          "title": "“구강 건강의 기본은 스케일링”… 정기적 치석제거 중요",
-          "summary": "건강 보험 심사평가원 자료에 따르면 치주질환자는 2018년 1,600만 명에서 2022년 1,800만 명으로 약 14% 증가했다.... 치주질환은 치아 를 지탱하는 잇몸과 치조골에 염증이 생기는 질환으로, 초기엔 피가 나거나 잇몸이 붓는 등...",
-          "link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065568936020095",
-          "pubDate": "Mon, 10 Nov 2025 08:26:00 +0900"
-        },
-        {
-          "title": "\"도내 취약계층 어르신 임플란트 시술비 지원\"",
-          "summary": "건강 보험 적용 후 남는 본인부담금을 전액 도비로 지원할 예정이다. 시.군별 수요조사를 반영해 연간 약 400여 명의 취약계층 어르신이 혜택을 받을 것으로 예상된다. 임승식 의원은 \"건강한 치아 는 오복 중 하나로, 노년기...",
-          "link": "http://www.jjn.co.kr/news/articleView.html?idxno=1022425",
-          "pubDate": "Sun, 09 Nov 2025 18:36:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 479.0175,
-        "weekly_average_volume": 79.8363,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.013871,
-        "time_weight": 0.028939,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term_ko": "치아보험"
     },
     {
-      "term": "Geological parks",
-      "term_ko": "지질 공원",
-      "significance_score": 0,
-      "mentions": 353,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "지질 공원",
-        "total_results": 66460,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1118.55,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:20 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 41.66666
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 58.33333
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 72.22222
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 33.33333
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 47.22222
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 58.33333
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 41.66666
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%EC%A7%80%EC%A7%88%20%EA%B3%B5%EC%9B%90",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%EC%A7%80%EC%A7%88%20%EA%B3%B5%EC%9B%90",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%EC%A7%80%EC%A7%88%20%EA%B3%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "화성시, 지역관광 '추천 여행코스' 시범 운영 착수",
-          "summary": "1차 시범투어 참여자들은 공룡알 화석산지에서 희소한 지질 자원을 직접 확인하며 화성의 자연사 가치를... '쉼표여행' 코스는 비봉습지 공원 과 서해안 황금해안길을 방문합니다. '감성투어' 코스는 소다미술관과...",
-          "link": "https://www.ytn.co.kr/_ln/0115_202511101029418385",
-          "pubDate": "Mon, 10 Nov 2025 10:29:00 +0900"
-        },
-        {
-          "title": "화성특례시, 지역관광 '추천 여행코스' 시범 운영 착수",
-          "summary": "1차 시범투어 참여자들은 공룡알 화석산지에서 희소한 지질 자원을 직접 확인하며 화성의 자연사 가치를... '쉼표여행' 코스는 비봉습지 공원 과 서해안 황금해안길을 방문한다. '감성투어' 코스는 소다미술관과...",
-          "link": "http://www.ttlnews.com/news/articleView.html?idxno=3047390",
-          "pubDate": "Mon, 10 Nov 2025 09:30:00 +0900"
-        },
-        {
-          "title": "'화성특례시 추천 여행코스' 시범운영 개시",
-          "summary": "1차 시범투어(팸투어) 참여자들은 공룡알 화석산지에서 희소한 지질 자원을 직접 확인하며 화성의 자연사... 오는 2차 시범투어 역시 코스별로 운영되며, '쉼표여행'은 비봉습지 공원 ·서해안 황금해안길, '감성투어'는...",
-          "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2352075",
-          "pubDate": "Mon, 10 Nov 2025 09:10:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 352.7778,
-        "weekly_average_volume": 58.7963,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017148,
-        "time_weight": 0.028939,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term": "Geological Parks",
+      "term_ko": "지질 공원"
     },
     {
       "term": "Premium",
-      "term_ko": "프리미엄",
-      "significance_score": 0,
-      "mentions": 524,
-      "evaluation": {
-        "source": "naver_search_news",
-        "query": "프리미엄",
-        "total_results": 4155149,
-        "returned_results": 20,
-        "display_count": 20,
-        "recency_weight": 1439.01,
-        "last_build_date": "Mon, 10 Nov 2025 10:33:21 +0900",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-02",
-              "timestamp": 1762009200000,
-              "value": 77.52808
-            },
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 95.69288
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 87.26591
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 94.94382
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 95.50561
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 70.41198
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 75.65543
-            }
-          ]
-        }
-      },
-      "search": {
-        "news": "https://search.naver.com/search.naver?where=news&query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84",
-        "blog": "https://search.naver.com/search.naver?where=blog&query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84",
-        "cafe": "https://search.naver.com/search.naver?where=post&query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
-      },
-      "top_headlines": [
-        {
-          "title": "대우건설, 마포구 중동 78번지 모아타운 시공사 선정",
-          "summary": "대우건설 관계자는 \"마포 푸르지오 센트럴 로열은 DMC 핵심 입지와 품격 있는 설계가 결합된 마포의 새로운 프리미엄 주거 랜드마크가 될 것\"이라며 \"대우건설만의 차별화된 기술력과 브랜드 가치를 바탕으로 지역의 주거...",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1301072",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        },
-        {
-          "title": "케어젠, 방콕 'in-cosmetics Asia 2025' 참가",
-          "summary": "PTX는 중국 국가약품감독관리국(NMPA)의 '경외 신원료(Overseas New Cosmetic Ingredient)' 등록을 완료하며, 중국 프리미엄 스킨케어 시장 진입 기반을 공식적으로 확보했다. 글로벌 보톡스 시장은 2030년 약 130억 달러의...",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=256045",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        },
-        {
-          "title": "[시경ON] 유안타증권 \"신세계, 백화점 회복세·면세 구조조정 맞물려......",
-          "summary": "그러면서 \"특히 지난달 24일 에르메스 최대 규모 매장, 31일 대전점 LVMH 오픈 등 프리미엄 브랜드 강화가 지속되고 있다\"고 덧붙였다. 면세점의 경우, 인천공항 DF2 사업권 반납으로 약 1,900억원의 손해배상금이 4분기...",
-          "link": "https://www.meconomynews.com/news/articleView.html?idxno=122966",
-          "pubDate": "Mon, 10 Nov 2025 10:32:00 +0900"
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 523.7828,
-        "weekly_average_volume": 87.2971,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.013039,
-        "time_weight": 0.028939,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
+      "term_ko": "프리미엄"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_search_window_trending",
-    "sample_size": 30,
-    "generated_at": "2025-11-10T01:33:21.870Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "NAVER 24h viral news/blog window 2025-11-09T01:30:00.000Z→2025-11-10T01:30:00.000Z (Cerebras llama3.1-8b)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 9,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 9,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Topicality: 20",
+      "term_ko": "화제성: 20"
     },
-    "llm_model": "llama3.1-8b",
-    "llm_keywords_requested": 30,
-    "window_trending": {
-      "seeds": [
-        "더팩트 11월 09일 00:04",
-        "시사IN 11월 08일 08:50",
-        "재계 인사이드 데일리안",
-        "3대 특검",
-        "매경춘추 혁신성장의 조건",
-        "KBS 11월 09일 22:13",
-        "메뉴 바로가기",
-        "SBS 11월 09일 10:21",
-        "여성신문 11월 09일 16:00",
-        "SBS Biz 11월 09일 16:58",
-        "이재명 정부 채널A",
-        "주간조선 11월 09일 15:04",
-        "강원도민일보 11월 09일 10:16",
-        "비트코인 21억 간다더니...갑자기 말 바꿨다",
-        "한겨레 11월 09일 15:26",
-        "한국일보 11월 09일 15:05",
-        "심층기획 부산일보",
-        "kbc광주방송 11월 09일 13:43",
-        "새로운기사",
-        "캄보디아 범죄 공포 동아일보"
-      ],
-      "window": {
-        "since": "2025-11-09T01:30:00.000Z",
-        "now": "2025-11-10T01:30:00.000Z"
-      },
-      "hours": 24,
-      "baseline_days": 7,
-      "candidate_count": 22
+    {
+      "term": "Specific Keywords: Seok-yeol Yoon",
+      "term_ko": "구체적 키워드: 윤석열"
     },
-    "datalab_top_off": {
-      "added": 8,
-      "keywords": [
-        "CityLife",
-        "2035 NDC",
-        "CHN",
-        "지방자치",
-        "윤석열 재판",
-        "치아보험",
-        "지질 공원",
-        "프리미엄"
-      ]
+    {
+      "term": "Specific Keywords: Cospi",
+      "term_ko": "구체적 키워드: 코스피"
+    },
+    {
+      "term": "Specific Keywords: Gunhee Kim",
+      "term_ko": "구체적 키워드: 김건희"
+    },
+    {
+      "term": "Specific Keywords: Blacksmithing",
+      "term_ko": "구체적 키워드: 대장동"
+    },
+    {
+      "term": "Specific Keywords: Chung Cheong Rae",
+      "term_ko": "구체적 키워드: 정청래"
+    },
+    {
+      "term": "Specific Keywords: Soohyun Park",
+      "term_ko": "구체적 키워드: 박수현"
+    },
+    {
+      "term": "Specific Keywords: Kyung Ho Chu",
+      "term_ko": "구체적 키워드: 추경호"
+    },
+    {
+      "term": "Specific Keywords: Gadeokdo New Airport",
+      "term_ko": "구체적 키워드: 가덕도 신공항"
+    },
+    {
+      "term": "Specific Keywords: Staphylococcus Aureus",
+      "term_ko": "구체적 키워드: 채상병"
+    },
+    {
+      "term": "Specific Keywords: Three Special Prosecutors",
+      "term_ko": "구체적 키워드: 3대 특검"
+    },
+    {
+      "term": "Specific Keywords: Augurdon",
+      "term_ko": "구체적 키워드: 오거돈"
+    },
+    {
+      "term": "Specific Keywords: Clearing Civil Unrest",
+      "term_ko": "구체적 키워드: 내란 청산"
+    },
+    {
+      "term": "Citylife",
+      "term_ko": "시티라이프"
+    },
+    {
+      "term": "2035 Ndc",
+      "term_ko": "2035 Ndc"
+    },
+    {
+      "term": "Chn",
+      "term_ko": "Chn"
+    },
+    {
+      "term": "Local Government",
+      "term_ko": "지방자치"
+    },
+    {
+      "term": "The Yun Seok-yeol Trial",
+      "term_ko": "윤석열 재판"
+    },
+    {
+      "term": "Dental Insurance",
+      "term_ko": "치아보험"
+    },
+    {
+      "term": "Geological Parks",
+      "term_ko": "지질 공원"
+    },
+    {
+      "term": "Premium",
+      "term_ko": "프리미엄"
+    }
+  ],
+  "translations": {
+    "Topicality: 20": {
+      "en": "Topicality: 20",
+      "ko": "화제성: 20",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Seok-yeol Yoon": {
+      "en": "Specific Keywords: Seok-yeol Yoon",
+      "ko": "구체적 키워드: 윤석열",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Cospi": {
+      "en": "Specific Keywords: Cospi",
+      "ko": "구체적 키워드: 코스피",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Gunhee Kim": {
+      "en": "Specific Keywords: Gunhee Kim",
+      "ko": "구체적 키워드: 김건희",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Blacksmithing": {
+      "en": "Specific Keywords: Blacksmithing",
+      "ko": "구체적 키워드: 대장동",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Chung Cheong Rae": {
+      "en": "Specific Keywords: Chung Cheong Rae",
+      "ko": "구체적 키워드: 정청래",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Soohyun Park": {
+      "en": "Specific Keywords: Soohyun Park",
+      "ko": "구체적 키워드: 박수현",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Kyung Ho Chu": {
+      "en": "Specific Keywords: Kyung Ho Chu",
+      "ko": "구체적 키워드: 추경호",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Gadeokdo New Airport": {
+      "en": "Specific Keywords: Gadeokdo New Airport",
+      "ko": "구체적 키워드: 가덕도 신공항",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Staphylococcus Aureus": {
+      "en": "Specific Keywords: Staphylococcus Aureus",
+      "ko": "구체적 키워드: 채상병",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Three Special Prosecutors": {
+      "en": "Specific Keywords: Three Special Prosecutors",
+      "ko": "구체적 키워드: 3대 특검",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Augurdon": {
+      "en": "Specific Keywords: Augurdon",
+      "ko": "구체적 키워드: 오거돈",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Specific Keywords: Clearing Civil Unrest": {
+      "en": "Specific Keywords: Clearing Civil Unrest",
+      "ko": "구체적 키워드: 내란 청산",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Citylife": {
+      "en": "Citylife",
+      "ko": "시티라이프",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "2035 Ndc": {
+      "en": "2035 Ndc",
+      "ko": "2035 Ndc",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Chn": {
+      "en": "Chn",
+      "ko": "Chn",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Local Government": {
+      "en": "Local Government",
+      "ko": "지방자치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "The Yun Seok-yeol Trial": {
+      "en": "The Yun Seok-yeol Trial",
+      "ko": "윤석열 재판",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Dental Insurance": {
+      "en": "Dental Insurance",
+      "ko": "치아보험",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Geological Parks": {
+      "en": "Geological Parks",
+      "ko": "지질 공원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
+    },
+    "Premium": {
+      "en": "Premium",
+      "ko": "프리미엄",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-10T06:30:46.367Z"
     }
   }
 }
