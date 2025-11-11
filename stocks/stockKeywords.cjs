@@ -73,6 +73,24 @@ const HANGUL_SUFFIXES = [
   '에',
 ];
 
+const KOREAN_CONTEXTUAL_SUFFIXES = [
+  '주가 모멘텀',
+  '실적 전망',
+  '시장 반응',
+  '투자 이슈',
+  '규제 동향',
+  '성장 전략',
+];
+
+const ENGLISH_CONTEXTUAL_SUFFIXES = [
+  'earnings outlook',
+  'market momentum',
+  'innovation strategy',
+  'regulatory shifts',
+  'investor focus',
+  'supply chain update',
+];
+
 const fallbackMaps = {
   EN: new Map(),
   KO: new Map(),
@@ -135,6 +153,16 @@ function enforceKeywordWordCount(keywords, { minWords = 1, maxWords = 5 } = {}) 
   });
 
   return dedupeKeywords(filtered);
+}
+
+function keywordHash(value) {
+  const str = String(value || '');
+  let hash = 0;
+  for (let i = 0; i < str.length; i += 1) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0; // eslint-disable-line no-bitwise
+  }
+  return Math.abs(hash);
 }
 
 function shrinkPromptForCerebras(prompt, targetLength = CEREBRAS_PROMPT_CHAR_LIMIT) {
@@ -367,16 +395,76 @@ function calculateSpecificityScore(keyword) {
   return Math.max(0, score);
 }
 
-function sanitizeKeywordList(keywords) {
+function lookupFallbackTranslation(keyword) {
+  if (!keyword) return '';
+
+  const directKey = String(keyword).trim();
+  const normalizedKey = normalizeForComparison(directKey);
+
+  for (const map of Object.values(fallbackMaps)) {
+    if (!map || map.size === 0) continue;
+    const direct = map.get(directKey);
+    if (direct) return String(direct).trim();
+    const normalized = map.get(normalizedKey);
+    if (normalized) return String(normalized).trim();
+  }
+
+  return '';
+}
+
+function buildContextualSuffix(keyword) {
+  const base = containsHangul(keyword)
+    ? KOREAN_CONTEXTUAL_SUFFIXES
+    : ENGLISH_CONTEXTUAL_SUFFIXES;
+  if (!base.length) {
+    return '';
+  }
+  const index = keywordHash(keyword) % base.length;
+  return base[index];
+}
+
+function upgradeKeywordSpecificity(keyword, { minWords = 2, maxWords = 5 } = {}) {
+  if (!keyword) return '';
+
+  const trimmed = String(keyword).trim();
+  if (!trimmed) return '';
+
+  const words = trimmed.split(/\s+/).filter(Boolean);
+  if (words.length >= minWords) {
+    return limitWords(trimmed, maxWords);
+  }
+
+  const translation = lookupFallbackTranslation(trimmed);
+  if (translation) {
+    const translationWords = translation.split(/\s+/).filter(Boolean);
+    if (translationWords.length >= minWords) {
+      if (containsHangul(trimmed) && /[a-z]/i.test(translation)) {
+        const bilingual = `${trimmed} ${translation}`;
+        return limitWords(bilingual, maxWords);
+      }
+      return limitWords(translation, maxWords);
+    }
+  }
+
+  const contextualSuffix = buildContextualSuffix(trimmed);
+  if (contextualSuffix) {
+    const expanded = `${trimmed} ${contextualSuffix}`;
+    return limitWords(expanded, maxWords);
+  }
+
+  return limitWords(trimmed, maxWords);
+}
+
+function sanitizeKeywordList(keywords, { minWords = 2, maxWords = 5 } = {}) {
   if (!Array.isArray(keywords)) return [];
 
   const cleaned = keywords
     .map((kw) => cleanKeyword(kw))
+    .map((kw) => upgradeKeywordSpecificity(kw, { minWords, maxWords }))
     .filter((kw) => kw.length > 0)
-    .filter((kw) => !isTooGenericKeyword(kw))
-    .filter((kw) => kw.split(/\s+/).filter(Boolean).length <= 5);
+    .filter((kw) => !isTooGenericKeyword(kw));
 
-  return dedupeKeywords(cleaned);
+  return enforceKeywordWordCount(cleaned, { minWords, maxWords });
 }
 
 function extractKeywordsFromLLMResponse(rawText) {
@@ -2007,7 +2095,8 @@ async function trimKeywordsWithCerebras(keywords, { maxWords = 2, limit } = {}) 
 
   const prompt = [
     `You will receive a JSON array of trending keywords.`,
-    `Shorten each keyword to at most ${maxWords} words while preserving its core meaning and language.`,
+    `Rewrite each keyword so it contains between 2 and ${maxWords} words, adding a vivid descriptor (event, timeframe, reaction, etc.) to keep it specific while preserving the original language.`,
+    `Avoid generic phrases like "시장 동향" or "market news" without a concrete subject.`,
     `Return ONLY a JSON array of ${effectiveLimit} trimmed keywords in the same order. No explanations, numbering, or code fences.`,
     `Keywords: ${JSON.stringify(truncated.slice(0, effectiveLimit))}`,
   ].join(' ');
