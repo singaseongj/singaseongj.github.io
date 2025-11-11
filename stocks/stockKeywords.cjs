@@ -43,6 +43,10 @@ const CEREBRAS_DYNAMIC_TEXT_CHAR_LIMIT =
 const SAMPLE_SIZE = 30;
 const OUTPUT_PATH = path.resolve(__dirname, '../data/tags.json');
 const FINANCE_KEYWORDS_PATH = path.resolve(__dirname, '../data/finance_keywords.json');
+const MARKET_NEWS_PATH = path.resolve(__dirname, '../data/market-news.json');
+const SAMPLE_MARKET_NEWS_PATH = path.resolve(__dirname, '../data/sample_market_news.json');
+const TREND_LOG_PATH = path.resolve(__dirname, '../data/trend_log.json');
+const STOPWORDS_PATH = path.resolve(__dirname, '../data/stopwords.txt');
 
 const TRENDING_WINDOW_HOURS = Number(process.env.TRENDING_WINDOW_HOURS) || 24;
 const TRENDING_BASELINE_DAYS = Number(process.env.TRENDING_BASELINE_DAYS) || 7;
@@ -95,6 +99,76 @@ const fallbackMaps = {
   EN: new Map(),
   KO: new Map(),
 };
+
+const DEFAULT_HEADLINE_FALLBACKS = [
+  '금리 인하 기대감',
+  '비트코인 ETF 기대',
+  '원달러 환율 급등',
+  '미국 정부 셧다운 위기',
+  '한국 증시 반등',
+  '반도체 투자 확대',
+  '인공지능 칩 경쟁',
+  '전기차 배터리 공급난',
+  '수출 회복 신호',
+  '부동산 규제 완화',
+  '친환경 정책 강화',
+  '노동 개혁 갈등',
+  '대통령 지지율 하락',
+  '기후 정상회의 합의',
+  '유럽 금리 동결',
+  '중국 경기 부양책',
+  'AI chip demand surge',
+  'US shutdown relief rally',
+  'Tech earnings surprise beat',
+  'Oil supply disruption risk',
+];
+
+let stopwordCache = null;
+let localHeadlineContext = {
+  map: new Map(),
+  headlines: [],
+  lastUpdated: null,
+  fallbackSources: [],
+};
+
+const HEADLINE_FILLER_TOKENS = new Set([
+  'up',
+  'down',
+  'day',
+  'days',
+  'week',
+  'weeks',
+  'month',
+  'months',
+  'year',
+  'years',
+  'for',
+  'on',
+  'over',
+  'under',
+  'amid',
+  'into',
+  'onto',
+  'toward',
+  'towards',
+  'via',
+  'after',
+  'before',
+  'with',
+  'without',
+  'against',
+  'as',
+  'and',
+  'but',
+  'yet',
+  'per',
+  'than',
+  'vs',
+  'vs.',
+  'still',
+  'again',
+  'more',
+]);
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 const KST_TIME_ZONE = 'Asia/Seoul';
@@ -268,6 +342,443 @@ function dedupeKeywords(rawKeywords) {
   }
 
   return deduped;
+}
+
+function loadJSONFileSafe(filePath) {
+  try {
+    const raw = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(raw);
+  } catch (err) {
+    return null;
+  }
+}
+
+function loadStopwords() {
+  if (stopwordCache) {
+    return stopwordCache;
+  }
+
+  const base = [
+    'govt',
+    'shares',
+    'market',
+    'markets',
+    'stocks',
+    'stock',
+    'finance',
+    'economic',
+    'economy',
+    '오늘',
+    '기자',
+    '속보',
+    '전망',
+    '관련',
+  ];
+
+  const list = new Set(
+    base.map((word) => word.toLowerCase()),
+  );
+
+  try {
+    const text = fs.readFileSync(STOPWORDS_PATH, 'utf8');
+    text
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .forEach((word) => list.add(word.toLowerCase()));
+  } catch (err) {
+    console.warn(`⚠️  Unable to load stopwords from ${STOPWORDS_PATH}: ${err.message}`);
+  }
+
+  stopwordCache = list;
+  return stopwordCache;
+}
+
+function loadMarketNewsItems() {
+  let news = loadJSONFileSafe(MARKET_NEWS_PATH);
+  let fallbackUsed = false;
+
+  if (Array.isArray(news)) {
+    news = { items: news.map((title) => ({ title })) };
+  }
+
+  if (!news || !Array.isArray(news.items) || !news.items.length) {
+    const sample = loadJSONFileSafe(SAMPLE_MARKET_NEWS_PATH) || [];
+    const items = Array.isArray(sample)
+      ? sample.map((title) => ({ title }))
+      : [];
+    fallbackUsed = true;
+    return {
+      items,
+      lastUpdated: null,
+      fallbackUsed,
+    };
+  }
+
+  const items = news.items
+    .map((item) => ({
+      title: cleanSnippet(item.title || ''),
+      link: item.link ? String(item.link).trim() : null,
+    }))
+    .filter((item) => item.title && item.title.length > 1);
+
+  return {
+    items,
+    lastUpdated: news.lastUpdated || null,
+    fallbackUsed,
+  };
+}
+
+function loadTrendLogPhrases(limit = 30) {
+  const trendLog = loadJSONFileSafe(TREND_LOG_PATH);
+  if (!Array.isArray(trendLog)) {
+    return [];
+  }
+
+  const phrases = [];
+  for (const entry of trendLog) {
+    const topTerms = Array.isArray(entry?.top_terms) ? entry.top_terms : [];
+    for (const term of topTerms) {
+      const phrase = typeof term === 'string' ? term : term?.term;
+      if (!phrase) continue;
+      phrases.push(String(phrase));
+      if (phrases.length >= limit) {
+        return phrases;
+      }
+    }
+  }
+
+  return phrases;
+}
+
+function sanitizeHeadlineToken(token) {
+  if (!token) return '';
+  let normalized = String(token)
+    .replace(/[\u201C\u201D\u2018\u2019"'`]/g, '')
+    .replace(/\.+$/u, '')
+    .replace(/^[^\p{L}\p{N}%#]+/gu, '')
+    .replace(/[^\p{L}\p{N}%#]+$/gu, '')
+    .replace(/[,;:?()\[\]{}<>]/g, '')
+    .trim();
+
+  if (/^U\.S\.$/i.test(normalized)) {
+    normalized = 'US';
+  }
+
+  return normalized;
+}
+
+function tokenizeHeadline(title) {
+  if (!title) return [];
+  const stopwords = loadStopwords();
+  const normalized = cleanSnippet(title)
+    .replace(/[\u2026]/g, ' ')
+    .replace(/[\u00B7]/g, ' ');
+
+  const rawTokens = normalized.split(/[\s\/]+/);
+  const tokens = [];
+
+  for (const raw of rawTokens) {
+    const token = sanitizeHeadlineToken(raw);
+    if (!token) continue;
+
+    const lower = token.toLowerCase();
+    if (stopwords.has(lower)) continue;
+    if (!containsHangul(token) && /^\d+(st|nd|rd|th)?$/i.test(token)) continue;
+    if (!containsHangul(token) && HEADLINE_FILLER_TOKENS.has(lower)) continue;
+
+    if (lower.length <= 1 && !containsHangul(token) && !/\d/.test(token)) {
+      continue;
+    }
+
+    tokens.push(token);
+  }
+
+  return tokens;
+}
+
+function extractHeadlineCandidates(title) {
+  const stopwords = loadStopwords();
+  const cleaned = cleanSnippet(title)
+    .replace(/[|]/g, ' ')
+    .replace(/[\u2026]/g, ' ')
+    .replace(/[\u00B7]/g, ' ');
+
+  const rawTokens = cleaned.split(/\s+/);
+  const candidates = [];
+  let current = [];
+
+  const flushCurrent = () => {
+    if (current.length) {
+      candidates.push(current);
+      current = [];
+    }
+  };
+
+  for (const raw of rawTokens) {
+    if (/[.]{3,}|…/.test(raw)) {
+      flushCurrent();
+      continue;
+    }
+
+    const token = sanitizeHeadlineToken(raw);
+    if (!token) {
+      flushCurrent();
+      continue;
+    }
+
+    const lower = token.toLowerCase();
+    const isStop =
+      stopwords.has(lower) ||
+      HEADLINE_FILLER_TOKENS.has(lower) ||
+      (!containsHangul(token) && /^\d+(st|nd|rd|th)?$/i.test(token));
+
+    if (isStop) {
+      flushCurrent();
+      continue;
+    }
+
+    current.push(token);
+  }
+
+  flushCurrent();
+
+  return candidates
+    .map((segment) => segment.filter(Boolean))
+    .filter((segment) => segment.length >= 1);
+}
+
+function computeHeadlinePhraseWeight(tokens) {
+  if (!Array.isArray(tokens) || !tokens.length) {
+    return 0;
+  }
+
+  const size = tokens.length;
+  let weight = 1;
+
+  if (size === 2) weight += 0.6;
+  if (size >= 3) weight += 0.9;
+  if (tokens.some((token) => containsHangul(token))) weight += 0.4;
+  if (tokens.some((token) => /[A-Z]{2,}/.test(token))) weight += 0.2;
+  if (tokens.some((token) => /\d/.test(token))) weight += 0.1;
+
+  const fillerCount = tokens.filter(
+    (token) => !containsHangul(token) && HEADLINE_FILLER_TOKENS.has(token.toLowerCase()),
+  ).length;
+  if (fillerCount === size) {
+    return 0;
+  }
+  weight -= fillerCount * 0.4;
+
+  return weight;
+}
+
+function buildHeadlinePhraseCandidates(items) {
+  const phraseMap = new Map();
+
+  items.forEach((item, index) => {
+    const segments = extractHeadlineCandidates(item.title);
+    if (!segments.length) return;
+
+    const uniqueWithinHeadline = new Set();
+
+    segments.forEach((segment) => {
+      const maxSize = Math.min(3, segment.length);
+      for (let size = maxSize; size >= 2; size -= 1) {
+        for (let i = 0; i <= segment.length - size; i += 1) {
+          const slice = segment.slice(i, i + size);
+          const normalizedSlice = slice.map((token) => token.toLowerCase());
+          const contentTokens = normalizedSlice.filter(
+            (token) => containsHangul(token) || !HEADLINE_FILLER_TOKENS.has(token),
+          );
+          if (contentTokens.length < Math.min(2, slice.length)) {
+            continue;
+          }
+
+          const phrase = slice.join(' ');
+          const normalized = normalizeForComparison(phrase);
+          if (!normalized) continue;
+          if (uniqueWithinHeadline.has(normalized)) continue;
+
+          const weight = computeHeadlinePhraseWeight(slice);
+          if (weight <= 0) continue;
+
+          uniqueWithinHeadline.add(normalized);
+
+          if (!phraseMap.has(normalized)) {
+            phraseMap.set(normalized, {
+              phrase,
+              score: 0,
+              count: 0,
+              indices: new Set(),
+            });
+          }
+
+          const entry = phraseMap.get(normalized);
+          entry.score += weight;
+          entry.count += 1;
+          entry.indices.add(index);
+          if (phrase.length > entry.phrase.length) {
+            entry.phrase = phrase;
+          }
+        }
+      }
+    });
+  });
+
+  return [...phraseMap.values()].sort((a, b) => b.score - a.score);
+}
+
+function formatHeadlinePhrase(phrase) {
+  if (!phrase) return '';
+  if (containsHangul(phrase)) {
+    return phrase;
+  }
+
+  return phrase
+    .split(/\s+/)
+    .map((word) => {
+      if (!word) return '';
+      if (/^[A-Z0-9]+$/.test(word)) {
+        return word.toUpperCase();
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+}
+
+function normalizeHeadlineEntries(entries, items, limit) {
+  const finalEntries = [];
+  const seen = new Set();
+
+  for (const entry of entries) {
+    const sanitized = sanitizeKeywordList([entry.phrase], { minWords: 2, maxWords: 6 })[0];
+    if (!sanitized) continue;
+    const formatted = formatHeadlinePhrase(sanitized);
+    const normalized = normalizeForComparison(formatted);
+    if (!normalized || seen.has(normalized)) continue;
+    seen.add(normalized);
+
+    finalEntries.push({
+      keyword: formatted,
+      rawScore: entry.score,
+      count: entry.count,
+      headlines: Array.from(entry.indices || []).map((idx) => items[idx]).filter(Boolean),
+    });
+
+    if (finalEntries.length >= limit * 2) {
+      break;
+    }
+  }
+
+  return finalEntries;
+}
+
+function appendFallbackPhrases(entries, existingSet, sourceLabel) {
+  const additions = [];
+  for (const phrase of entries) {
+    const sanitized = sanitizeKeywordList([phrase], { minWords: 2, maxWords: 6 })[0];
+    if (!sanitized) continue;
+    const normalized = normalizeForComparison(sanitized);
+    if (!normalized || existingSet.has(normalized)) continue;
+    existingSet.add(normalized);
+    additions.push({
+      keyword: sanitized,
+      rawScore: 0.8,
+      count: 1,
+      headlines: [],
+      source: sourceLabel,
+    });
+  }
+  return additions;
+}
+
+function buildLocalHeadlineKeywords({ limit = SAMPLE_SIZE } = {}) {
+  const { items, lastUpdated, fallbackUsed } = loadMarketNewsItems();
+  const headlines = items.slice(0, 80);
+  const baseEntries = buildHeadlinePhraseCandidates(headlines);
+  const normalizedEntries = normalizeHeadlineEntries(baseEntries, headlines, limit);
+
+  const seen = new Set(normalizedEntries.map((entry) => normalizeForComparison(entry.keyword)));
+  const fallbackSources = [];
+
+  if (normalizedEntries.length < limit) {
+    const trendPhrases = loadTrendLogPhrases(limit * 2);
+    const additions = appendFallbackPhrases(trendPhrases, seen, 'trend_log');
+    if (additions.length) {
+      fallbackSources.push('trend_log');
+      normalizedEntries.push(...additions);
+    }
+  }
+
+  if (normalizedEntries.length < limit) {
+    const additions = appendFallbackPhrases(DEFAULT_HEADLINE_FALLBACKS, seen, 'default_fallback');
+    if (additions.length) {
+      fallbackSources.push('default_fallback');
+      normalizedEntries.push(...additions);
+    }
+  }
+
+  const trimmedEntries = normalizedEntries.slice(0, limit);
+
+  const contextMap = new Map();
+  trimmedEntries.forEach((entry) => {
+    const normalized = normalizeForComparison(entry.keyword);
+    if (!normalized) return;
+    const score = Math.max(120, Math.round(entry.rawScore * 140));
+    const mentions = Math.max(80, Math.round(entry.count * 160));
+    contextMap.set(normalized, {
+      score,
+      mentions,
+      headlines: entry.headlines.slice(0, 3),
+    });
+  });
+
+  localHeadlineContext = {
+    map: contextMap,
+    headlines,
+    lastUpdated: lastUpdated || null,
+    fallbackSources: [
+      ...(fallbackUsed ? ['sample_market_news'] : []),
+      ...fallbackSources,
+    ],
+  };
+
+  return {
+    keywords: trimmedEntries.map((entry) => entry.keyword),
+    metadata: {
+      headlineCount: headlines.length,
+      lastUpdated: lastUpdated || null,
+      fallbackSources: localHeadlineContext.fallbackSources,
+    },
+  };
+}
+
+async function fetchOfflineHeadlineKeywords({ limit = SAMPLE_SIZE } = {}) {
+  try {
+    const result = buildLocalHeadlineKeywords({ limit });
+    if (result.keywords.length) {
+      console.log(
+        `📰 Derived ${result.keywords.length} headline-driven keywords from local market news (sources: ${
+          localHeadlineContext.fallbackSources.length
+            ? localHeadlineContext.fallbackSources.join(', ')
+            : 'market-news.json'
+        }).`,
+      );
+      return result;
+    }
+  } catch (err) {
+    console.warn(`⚠️  Failed to build keywords from local headlines: ${err.message}`);
+  }
+
+  localHeadlineContext = {
+    map: new Map(),
+    headlines: [],
+    lastUpdated: null,
+    fallbackSources: [],
+  };
+
+  return { keywords: [], metadata: null };
 }
 
 function stripKeywordLabel(value) {
@@ -1161,6 +1672,15 @@ async function fetchLLMKeywords({ desiredCount = SAMPLE_SIZE } = {}) {
     };
   }
 
+  const localHeadlineResult = await fetchOfflineHeadlineKeywords({ limit });
+  if (localHeadlineResult.keywords.length) {
+    return {
+      keywords: localHeadlineResult.keywords,
+      method: 'local_headline_analysis',
+      windowMetadata: localHeadlineResult.metadata,
+    };
+  }
+
   const trendingSeeds = await fetchTrendingKeywordsFromNaver({ limit });
   if (trendingSeeds.length) {
     try {
@@ -1324,15 +1844,13 @@ const REQUEST_DELAY_MS = 180;
 const WINDOW_LABEL = '12_hours';
 
 if (!NAVER_CLIENT_ID || !NAVER_CLIENT_SECRET) {
-  console.error('❌ NAVER_CLIENT_ID and NAVER_CLIENT_SECRET environment variables are required.');
-  console.error('   Please obtain credentials from https://developers.naver.com and set them before running this script.');
-  process.exit(1);
+  console.warn(
+    '⚠️  NAVER credentials are not configured. NAVER DataLab features will be skipped where possible.',
+  );
 }
 
 if (!DEEPL_API_KEY) {
-  console.error('❌ DEEPL_API_KEY (or DEEPL_AUTH_KEY) environment variable is required for DeepL translation.');
-  console.error('   Please provide a valid DeepL API key to generate translated terms.');
-  process.exit(1);
+  console.warn('⚠️  DeepL API key not provided. Falling back to local translations where available.');
 }
 
 function loadFinanceKeywords() {
@@ -1740,9 +2258,9 @@ async function evaluateKeyword(keyword) {
   }, 0);
 
   const fallbackScore = Math.round(Math.max(googleArticleScore, googleArticles.length * 80));
-  const finalScore = datalabScores?.totalScore ?? fallbackScore;
+  let finalScore = datalabScores?.totalScore ?? fallbackScore;
 
-  const topHeadlines = googleArticles.slice(0, 3).map((article) => ({
+  let topHeadlines = googleArticles.slice(0, 3).map((article) => ({
     title: article.title,
     summary: article.summary,
     link: article.link,
@@ -1753,11 +2271,7 @@ async function evaluateKeyword(keyword) {
     source: article.source || null,
   }));
 
-  console.log(
-    `🔎 ${keyword.padEnd(20, ' ')} → score ${String(finalScore).padStart(5)} (DataLab ${datalabScores?.totalScore ?? 'n/a'}, Google fallback ${fallbackScore})`
-  );
-
-  const mentions = Number.isFinite(datalabScores?.weeklySearchVolume)
+  let mentions = Number.isFinite(datalabScores?.weeklySearchVolume)
     ? Math.round(datalabScores.weeklySearchVolume)
     : Math.max(googleArticles.length * 100, fallbackScore);
 
@@ -1785,6 +2299,44 @@ async function evaluateKeyword(keyword) {
       article_sample: topHeadlines,
     };
   }
+
+  const normalizedKeyword = normalizeForComparison(keyword);
+  const localHeadlineEntry = localHeadlineContext.map.get(normalizedKeyword);
+  const localScore = localHeadlineEntry?.score ?? null;
+  if (localHeadlineEntry) {
+    finalScore = Math.max(finalScore, localHeadlineEntry.score);
+    mentions = Math.max(mentions, localHeadlineEntry.mentions || 0);
+    if (!topHeadlines.length && Array.isArray(localHeadlineEntry.headlines)) {
+      topHeadlines = localHeadlineEntry.headlines.map((item) => ({
+        title: item.title,
+        summary: '',
+        link: item.link || null,
+        timeAgo: null,
+        pubDate: null,
+        source: null,
+      }));
+    }
+
+    evaluation.local_headlines = {
+      matches: Array.isArray(localHeadlineEntry.headlines)
+        ? localHeadlineEntry.headlines.length
+        : 0,
+      last_updated: localHeadlineContext.lastUpdated,
+      fallback_sources: localHeadlineContext.fallbackSources,
+    };
+    if (localHeadlineEntry.headlines?.length) {
+      evaluation.local_headlines.sample = localHeadlineEntry.headlines
+        .slice(0, 3)
+        .map((item) => ({ title: item.title, link: item.link || null }));
+    }
+  }
+
+  const logParts = [`DataLab ${datalabScores?.totalScore ?? 'n/a'}`, `Google fallback ${fallbackScore}`];
+  if (localScore !== null) {
+    logParts.push(`Local headlines ${localScore}`);
+  }
+
+  console.log(`🔎 ${keyword.padEnd(20, ' ')} → score ${String(finalScore).padStart(5)} (${logParts.join(', ')})`);
 
   const result = {
     term: keyword,
@@ -1849,6 +2401,14 @@ async function translateText(text, { targetLang, sourceLang } = {}) {
     );
     translationCache.set(cacheKey, fallbackTranslation);
     return { text: fallbackTranslation, method: 'preTranslated' };
+  }
+
+  if (!DEEPL_API_KEY) {
+    console.warn(
+      `   ⚠️ DeepL unavailable; returning original text for "${normalized}". Consider providing DEEPL_API_KEY for translations.`,
+    );
+    translationCache.set(cacheKey, normalized);
+    return { text: normalized, method: 'failed' };
   }
 
   console.log(`   🌐 Calling DeepL API (${sourceLang || 'auto'}→${targetLang}) for: "${normalized}"`);
@@ -2122,7 +2682,27 @@ async function buildTags() {
 
   const llmSeedResult = await fetchLLMKeywords({ desiredCount: SAMPLE_SIZE });
   let sampled = sanitizeKeywordList(llmSeedResult?.keywords || []);
+  console.log(
+    `🔢 Initial sanitized keyword count: ${sampled.length} (method: ${llmSeedResult?.method || 'unknown'})`,
+  );
   let keywordCollectionMethod = llmSeedResult?.method || 'llm_seeded';
+  if (keywordCollectionMethod === 'local_headline_analysis' && sampled.length < SAMPLE_SIZE) {
+    const needed = SAMPLE_SIZE - sampled.length;
+    if (needed > 0) {
+      const existing = new Set(sampled.map((kw) => normalizeForComparison(kw)));
+      for (const fallback of DEFAULT_HEADLINE_FALLBACKS) {
+        const sanitizedFallback = sanitizeKeywordList([fallback], { minWords: 2, maxWords: 6 })[0];
+        if (!sanitizedFallback) continue;
+        const normalizedFallback = normalizeForComparison(sanitizedFallback);
+        if (!normalizedFallback || existing.has(normalizedFallback)) continue;
+        sampled.push(sanitizedFallback);
+        existing.add(normalizedFallback);
+        if (sampled.length >= SAMPLE_SIZE) {
+          break;
+        }
+      }
+    }
+  }
   const windowMetadata = llmSeedResult?.windowMetadata;
   let datalabTopOffKeywords = [];
   let financeTopOffKeywords = [];
@@ -2192,6 +2772,7 @@ async function buildTags() {
     naver_datalab_trending_seeded: 'NAVER DataLab trending feed',
     llm_seeded: 'tinyllama worker',
     finance_keywords_random_sample: 'finance_keywords.json fallback',
+    local_headline_analysis: 'Local market headlines analysis',
   };
 
   const methodDescription = methodDescriptionMap[keywordCollectionMethod] || keywordCollectionMethod;
@@ -2344,6 +2925,11 @@ async function buildTags() {
       ? `${windowMetadata.window.since}→${windowMetadata.window.now}`
       : `${trendStart}→${trendEnd}`;
     keywordSource = `Google Trends 24h viral window ${windowRange} (Cerebras ${CEREBRAS_MODEL})`;
+  } else if (keywordCollectionMethod === 'local_headline_analysis') {
+    const sourceLabel = localHeadlineContext.lastUpdated
+      ? `market news updated ${localHeadlineContext.lastUpdated}`
+      : 'local market headlines';
+    keywordSource = `${sourceLabel} (${localHeadlineContext.headlines.length} stories analysed)`;
   } else {
     keywordSource = fallbackKeywordSource;
   }
@@ -2380,6 +2966,17 @@ async function buildTags() {
         candidate_count: windowMetadata.candidateCount,
         topics: windowMetadata.topics,
       };
+    }
+  }
+
+  if (keywordCollectionMethod === 'local_headline_analysis') {
+    metadata.local_headlines = {
+      headline_count: localHeadlineContext.headlines.length,
+      last_updated: localHeadlineContext.lastUpdated,
+      fallback_sources: localHeadlineContext.fallbackSources,
+    };
+    if (windowMetadata) {
+      metadata.local_headlines.window = windowMetadata;
     }
   }
 
