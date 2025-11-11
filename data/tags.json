@@ -1,37 +1,82 @@
 {
-  "date": "2025-11-10",
+  "date": "2025-11-11",
   "window": "12_hours",
-  "total_phrases": 18,
+  "total_phrases": 28,
   "discovered_keywords": [
     {
-      "term": "Tottenham vs. Man United",
-      "term_ko": "토트넘 대 맨유",
+      "term": "staph aureus",
+      "term_ko": "황색포도상구균",
       "significance_score": 0,
-      "mentions": 147,
+      "mentions": 0,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "토트넘 대 맨유",
+        "query": "staph aureus"
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=staph%20aureus",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=staph%20aureus"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "PC version",
+      "term_ko": "PC버전",
+      "significance_score": 0,
+      "mentions": 515,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "PC버전",
         "search_trends": {
           "source": "naver_datalab_search",
           "time_unit": "date",
           "bucket_size_hours": 24,
           "rows": [
             {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 87.89954
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 90.18264
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 91.3242
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 98.17351
+            },
+            {
               "period": "2025-11-08",
               "timestamp": 1762527600000,
-              "value": 100
+              "value": 82.87671
             },
             {
               "period": "2025-11-09",
               "timestamp": 1762614000000,
-              "value": 46.66666
+              "value": 63.47031
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 89.04109
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%ED%8A%B8%EB%84%98%20%EB%8C%80%20%EB%A7%A8%EC%9C%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%ED%8A%B8%EB%84%98%20%EB%8C%80%20%EB%A7%A8%EC%9C%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=PC%EB%B2%84%EC%A0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=PC%EB%B2%84%EC%A0%84"
       },
       "top_headlines": [],
       "search_scores": {
@@ -41,24 +86,1634 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 146.6667,
-        "weekly_average_volume": 73.3333,
+        "weekly_search_volume": 515.0685,
+        "weekly_average_volume": 85.8447,
         "day_score": 0,
         "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.031507,
-        "time_weight": 0.019388,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.013191,
+        "time_weight": 0.02901,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
-        "last_observation": 1762614000000
+        "last_observation": 1762700400000
       }
     },
     {
-      "term": "엔비디아 실적",
+      "term": "Opinions",
+      "term_ko": "오피니언",
+      "significance_score": 0,
+      "mentions": 455,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "오피니언",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 89.2
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 88.8
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 76.8
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 70.4
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 56.39999
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 65.6
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 86
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%ED%94%BC%EB%8B%88%EC%96%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%ED%94%BC%EB%8B%88%EC%96%B8"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 455.2,
+        "weekly_average_volume": 75.8667,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014371,
+        "time_weight": 0.02901,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Radio",
+      "term_ko": "라디오",
+      "significance_score": 0,
+      "mentions": 527,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "라디오",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 94.50915
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 94.59234
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 97.25457
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 80.53244
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 86.43926
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 81.28119
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 81.03161
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9D%BC%EB%94%94%EC%98%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9D%BC%EB%94%94%EC%98%A4"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 526.5391,
+        "weekly_average_volume": 87.7565,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.012991,
+        "time_weight": 0.02901,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Culture Daily",
+      "term_ko": "문화일보",
+      "significance_score": 0,
+      "mentions": 522,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "문화일보",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 94.44243
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 95.30855
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 99.27823
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 92.49368
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 68.24251
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 62.43233
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 99.3865
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B8%ED%99%94%EC%9D%BC%EB%B3%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B8%ED%99%94%EC%9D%BC%EB%B3%B4"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 521.8332,
+        "weekly_average_volume": 86.9722,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.013072,
+        "time_weight": 0.029009,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Life insurance",
+      "term_ko": "생명 보험",
+      "significance_score": 0,
+      "mentions": 401,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "생명 보험",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 69.80108
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 75.40687
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 68.53526
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 72.51356
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 68.17359
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 44.84629
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 47.1971
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EB%AA%85%20%EB%B3%B4%ED%97%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EB%AA%85%20%EB%B3%B4%ED%97%98"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 401.2658,
+        "weekly_average_volume": 66.8776,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015683,
+        "time_weight": 0.029009,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Kadokdo New Airport",
+      "term_ko": "가덕도 신공항",
+      "significance_score": 0,
+      "mentions": 463,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "가덕도 신공항",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 94.46308
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 85.06711
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 86.74496
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 82.80201
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 56.45973
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 53.52348
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 97.98657
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%8D%95%EB%8F%84%20%EC%8B%A0%EA%B3%B5%ED%95%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%8D%95%EB%8F%84%20%EC%8B%A0%EA%B3%B5%ED%95%AD"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 462.5839,
+        "weekly_average_volume": 77.0973,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014211,
+        "time_weight": 0.029009,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Today's review",
+      "term_ko": "오늘의 만평",
+      "significance_score": 0,
+      "mentions": 432,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "오늘의 만평",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 96.35258
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 95.13677
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 92.70516
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 91.18541
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 29.17933
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 25.83586
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 97.56838
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%A7%8C%ED%8F%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%A7%8C%ED%8F%89"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 431.6109,
+        "weekly_average_volume": 71.9352,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014911,
+        "time_weight": 0.029009,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Kyungho Chu",
+      "term_ko": "추경호",
+      "significance_score": 0,
+      "mentions": 168,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "추경호",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 35.17569
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 71.13446
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 33.74907
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 21.63278
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 10.17142
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 13.41192
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 17.70317
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%94%EA%B2%BD%ED%98%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%94%EA%B2%BD%ED%98%B8"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 167.8028,
+        "weekly_average_volume": 27.9671,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.0287,
+        "time_weight": 0.029009,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "More",
+      "term_ko": "더보기",
+      "significance_score": 0,
+      "mentions": 472,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "더보기",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 92
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 68
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 96
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 48
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 80
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 72
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 76
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%EB%B3%B4%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%EB%B3%B4%EA%B8%B0"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 472,
+        "weekly_average_volume": 78.6667,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014014,
+        "time_weight": 0.029008,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "management",
+      "term_ko": "관리",
+      "significance_score": 0,
+      "mentions": 471,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "management",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 87.01298
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 97.72727
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 99.67532
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 95.45454
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 79.87012
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 44.80519
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 51.2987
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=management",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=management"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 471.1039,
+        "weekly_average_volume": 78.5173,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014033,
+        "time_weight": 0.029008,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Maekyung Mplus",
+      "term_ko": "매경엠플러스",
+      "significance_score": 0,
+      "mentions": 126,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "매경엠플러스",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 48.57142
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 48.57142
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 37.14285
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 22.85714
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 17.14285
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EA%B2%BD%EC%97%A0%ED%94%8C%EB%9F%AC%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EA%B2%BD%EC%97%A0%ED%94%8C%EB%9F%AC%EC%8A%A4"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 125.7143,
+        "weekly_average_volume": 31.4286,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.03506,
+        "time_weight": 0.029008,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Hyundai Marine",
+      "term_ko": "현대해상",
+      "significance_score": 0,
+      "mentions": 409,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "현대해상",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 94.0341
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 84.42828
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 82.86771
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 86.15894
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 77.70548
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 32.01939
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 30.56512
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 409.3166,
+        "weekly_average_volume": 68.2194,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015469,
+        "time_weight": 0.029008,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Premium",
+      "term_ko": "프리미엄",
+      "significance_score": 0,
+      "mentions": 516,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "프리미엄",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 91.08734
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 83.06595
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 95.18716
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 90.37433
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 90.90909
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 67.02317
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 72.01426
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 515.508,
+        "weekly_average_volume": 85.918,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.013183,
+        "time_weight": 0.029007,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Artificial intelligence",
+      "term_ko": "인공 지능",
+      "significance_score": 0,
+      "mentions": 421,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Artificial intelligence",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 70.55214
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 80.36809
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 75.46012
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 74.84662
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 56.44171
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 55.21472
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 79.1411
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Artificial%20intelligence",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Artificial%20intelligence"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 421.4724,
+        "weekly_average_volume": 70.2454,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015158,
+        "time_weight": 0.029007,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "youth",
+      "term_ko": "청소년",
+      "significance_score": 0,
+      "mentions": 488,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "youth",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 86.36363
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 90.15151
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 83.33333
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 66.16161
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 70.70707
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 78.53535
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 89.14141
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=youth",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=youth"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 487.8788,
+        "weekly_average_volume": 81.3131,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.013696,
+        "time_weight": 0.029007,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Auto insurance",
+      "term_ko": "자동차보험",
+      "significance_score": 0,
+      "mentions": 444,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "자동차보험",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 99.98059
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 92.53007
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 85.5452
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 81.27667
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 76.40667
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 49.63135
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 51.59099
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 444.4509,
+        "weekly_average_volume": 74.0751,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014611,
+        "time_weight": 0.029007,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Moments",
+      "term_ko": "모멘트",
+      "significance_score": 0,
+      "mentions": 460,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Moments",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 76.59574
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 61.70212
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 97.87234
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 72.34042
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 44.68085
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 80.85106
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 63.82978
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Moments",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Moments"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 459.5745,
+        "weekly_average_volume": 76.5957,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014276,
+        "time_weight": 0.029006,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Nate",
+      "term_ko": "네이트",
+      "significance_score": 0,
+      "mentions": 552,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "네이트",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 99.06538
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 99.26337
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 99.49722
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 98.94612
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 97.01375
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 79.13678
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 77.43124
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%A4%EC%9D%B4%ED%8A%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%A4%EC%9D%B4%ED%8A%B8"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 552.0251,
+        "weekly_average_volume": 92.0042,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.012572,
+        "time_weight": 0.029006,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Yoon Seok-Yeol Trial",
+      "term_ko": "윤석열 재판",
+      "significance_score": 0,
+      "mentions": 339,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "윤석열 재판",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 93.11183
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 73.74392
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 61.34521
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 75.85089
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 36.14262
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 29.09238
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 62.96596
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A4%EC%84%9D%EC%97%B4%20%EC%9E%AC%ED%8C%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A4%EC%84%9D%EC%97%B4%20%EC%9E%AC%ED%8C%90"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 339.141,
+        "weekly_average_volume": 56.5235,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.017623,
+        "time_weight": 0.029006,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Media",
+      "term_ko": "미디어",
+      "significance_score": 0,
+      "mentions": 482,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미디어",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 95.03546
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 90.78014
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 86.17021
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 80.14184
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 58.15602
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 69.85815
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 96.80851
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%94%94%EC%96%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%94%94%EC%96%B4"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 481.9149,
+        "weekly_average_volume": 80.3191,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.013814,
+        "time_weight": 0.029005,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "In Gwanghwamun",
+      "term_ko": "광화문에서",
+      "significance_score": 0,
+      "mentions": 454,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "광화문에서",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 62.96296
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 61.11111
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 66.66666
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 59.25925
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 79.62962
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 81.48148
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 66.66666
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%91%ED%99%94%EB%AC%B8%EC%97%90%EC%84%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%91%ED%99%94%EB%AC%B8%EC%97%90%EC%84%9C"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 453.7037,
+        "weekly_average_volume": 75.6173,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014403,
+        "time_weight": 0.029005,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "NVIDIA Performance",
       "term_ko": "엔비디아 실적",
       "significance_score": 0,
-      "mentions": 315,
+      "mentions": 373,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "엔비디아 실적",
@@ -101,6 +1756,11 @@
               "period": "2025-11-09",
               "timestamp": 1762614000000,
               "value": 26.00536
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 57.64075
             }
           ]
         }
@@ -117,997 +1777,24 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 315.0134,
-        "weekly_average_volume": 63.0027,
+        "weekly_search_volume": 372.6541,
+        "weekly_average_volume": 62.109,
         "day_score": 0,
         "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.018548,
-        "time_weight": 0.019388,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.016508,
+        "time_weight": 0.029004,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Bank of Korea rate hike",
-      "term_ko": "한국은행 금리 인상",
-      "significance_score": 0,
-      "mentions": 292,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국은행 금리 인상",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 41.66666
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 58.33333
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 91.66666
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 291.6667,
-        "weekly_average_volume": 72.9167,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.019565,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Samsung Semiconductor",
-      "term_ko": "삼성 반도체",
-      "significance_score": 0,
-      "mentions": 289,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼성 반도체",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 91.5547
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 81.38195
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 63.7236
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 62.76391
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 41.07485
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 39.73128
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%84%B1%20%EB%B0%98%EB%8F%84%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%84%B1%20%EB%B0%98%EB%8F%84%EC%B2%B4"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 288.6756,
-        "weekly_average_volume": 57.7351,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.019705,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Russia Ukraine War",
-      "term_ko": "러시아 우크라이나 전쟁",
-      "significance_score": 0,
-      "mentions": 436,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "러시아 우크라이나 전쟁",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 96.73704
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 95.77735
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 96.92898
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 95.39347
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 74.6641
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 73.32053
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9F%AC%EC%8B%9C%EC%95%84%20%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%20%EC%A0%84%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9F%AC%EC%8B%9C%EC%95%84%20%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%20%EC%A0%84%EC%9F%81"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 436.0844,
-        "weekly_average_volume": 87.2169,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.014804,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Unicorn companies",
-      "term_ko": "유니콘 기업",
-      "significance_score": 0,
-      "mentions": 345,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유니콘 기업",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 73.02631
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 91.44736
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 76.31578
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 75.65789
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 55.26315
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 46.71052
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EB%8B%88%EC%BD%98%20%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EB%8B%88%EC%BD%98%20%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 345.3947,
-        "weekly_average_volume": 69.0789,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017401,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Artificial intelligence",
-      "term_ko": "인공지능",
-      "significance_score": 0,
-      "mentions": 315,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인공지능",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 85.92519
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 91.0433
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 73.32677
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 66.8307
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 40.35433
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 43.79921
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 315.3543,
-        "weekly_average_volume": 63.0709,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.018534,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Bubble",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 428,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bubble",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 80
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 95.83333
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 81.66666
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 93.33333
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 66.66666
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 90
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bubble",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bubble"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 427.5,
-        "weekly_average_volume": 85.5,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.01501,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Consumer psychology",
-      "term_ko": "소비심리",
-      "significance_score": 0,
-      "mentions": 309,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "소비심리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 65.625
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 81.25
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 62.5
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 21.875
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 68.75
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 56.25
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EB%B9%84%EC%8B%AC%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EB%B9%84%EC%8B%AC%EB%A6%AC"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 309.375,
-        "weekly_average_volume": 61.875,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.018781,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Exchange Rate",
-      "term_ko": "환율",
-      "significance_score": 0,
-      "mentions": 364,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Exchange Rate",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 80
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 77.61904
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 83.33333
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 83.33333
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 52.85714
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 44.7619
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Exchange%20Rate",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Exchange%20Rate"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 364.2857,
-        "weekly_average_volume": 72.8571,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.01677,
-        "time_weight": 0.019388,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Dollars",
-      "term_ko": "달러",
-      "significance_score": 0,
-      "mentions": 356,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Dollars",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 77.77777
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 94.44444
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 61.11111
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 77.77777
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 55.55555
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 61.11111
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Dollars",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Dollars"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 355.5555,
-        "weekly_average_volume": 71.1111,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017055,
-        "time_weight": 0.019387,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Gold",
-      "term_ko": "골드",
-      "significance_score": 0,
-      "mentions": 404,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Gold",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 82.17054
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 94.57364
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 82.94573
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 78.29457
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 74.4186
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 73.64341
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Gold",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Gold"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 403.8759,
-        "weekly_average_volume": 80.7752,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.015613,
-        "time_weight": 0.019387,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Tesla",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 344,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tesla",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 70.5
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 88.75
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 75
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 76.25
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 57.5
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 35.5
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tesla",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tesla"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 344.25,
-        "weekly_average_volume": 68.85,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017441,
-        "time_weight": 0.019387,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Musk",
-      "term_ko": "머스크",
-      "significance_score": 0,
-      "mentions": 342,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Musk",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 78.125
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 53.125
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 71.875
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 54.6875
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 53.125
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 62.5
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Musk",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Musk"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 342.1875,
-        "weekly_average_volume": 68.4375,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017514,
-        "time_weight": 0.019387,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "IPO",
-      "term_ko": "",
-      "significance_score": 0,
-      "mentions": 363,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IPO",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 85.56201
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 87.3062
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 92.05426
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 90.98837
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 41.47286
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 38.27519
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IPO"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 362.7907,
-        "weekly_average_volume": 72.5581,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.016818,
-        "time_weight": 0.019387,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
+        "last_observation": 1762700400000
       }
     },
     {
       "term": "New York",
       "term_ko": "뉴욕",
       "significance_score": 0,
-      "mentions": 359,
+      "mentions": 425,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "New York",
@@ -1150,6 +1837,11 @@
               "period": "2025-11-09",
               "timestamp": 1762614000000,
               "value": 75.86206
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 66.37931
             }
           ]
         }
@@ -1166,27 +1858,27 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 358.6207,
-        "weekly_average_volume": 71.7241,
+        "weekly_search_volume": 425,
+        "weekly_average_volume": 70.8333,
         "day_score": 0,
         "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.016954,
-        "time_weight": 0.019387,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015071,
+        "time_weight": 0.029004,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
-        "last_observation": 1762614000000
+        "last_observation": 1762700400000
       }
     },
     {
-      "term": "Securities",
-      "term_ko": "증권",
+      "term": "Consumer psychology",
+      "term_ko": "소비심리",
       "significance_score": 0,
-      "mentions": 357,
+      "mentions": 409,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Securities",
+        "query": "소비심리",
         "search_trends": {
           "source": "naver_datalab_search",
           "time_unit": "date",
@@ -1195,93 +1887,17 @@
             {
               "period": "2025-11-03",
               "timestamp": 1762095600000,
-              "value": 100
+              "value": 65.625
             },
             {
               "period": "2025-11-04",
               "timestamp": 1762182000000,
-              "value": 94.59459
+              "value": 81.25
             },
             {
               "period": "2025-11-05",
               "timestamp": 1762268400000,
-              "value": 64.86486
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 83.78378
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 91.89189
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 59.45945
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 56.75675
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Securities",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Securities"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 356.7567,
-        "weekly_average_volume": 71.3513,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017015,
-        "time_weight": 0.019387,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762614000000
-      }
-    },
-    {
-      "term": "Domestic",
-      "term_ko": "국내",
-      "significance_score": 0,
-      "mentions": 435,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Domestic",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 96.39423
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 98.55769
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 97.59615
+              "value": 62.5
             },
             {
               "period": "2025-11-06",
@@ -1291,24 +1907,29 @@
             {
               "period": "2025-11-07",
               "timestamp": 1762441200000,
-              "value": 92.0673
+              "value": 21.875
             },
             {
               "period": "2025-11-08",
               "timestamp": 1762527600000,
-              "value": 65.38461
+              "value": 68.75
             },
             {
               "period": "2025-11-09",
               "timestamp": 1762614000000,
-              "value": 79.80769
+              "value": 56.25
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Domestic",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Domestic"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EB%B9%84%EC%8B%AC%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EB%B9%84%EC%8B%AC%EB%A6%AC"
       },
       "top_headlines": [],
       "search_scores": {
@@ -1318,63 +1939,289 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 434.8558,
-        "weekly_average_volume": 86.9711,
+        "weekly_search_volume": 409.375,
+        "weekly_average_volume": 68.2292,
         "day_score": 0,
         "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.014833,
-        "time_weight": 0.019387,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.015467,
+        "time_weight": 0.029004,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
-        "last_observation": 1762614000000
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Today's readings",
+      "term_ko": "오늘의 매경",
+      "significance_score": 0,
+      "mentions": 286,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "오늘의 매경",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 85.71428
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 85.71428
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%A7%A4%EA%B2%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%A7%A4%EA%B2%BD"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 285.7143,
+        "weekly_average_volume": 95.2381,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.019846,
+        "time_weight": 0.029004,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Exchange Rate",
+      "term_ko": "환율",
+      "significance_score": 0,
+      "mentions": 457,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Exchange Rate",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 80
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 77.61904
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 83.33333
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 83.33333
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 52.85714
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 44.7619
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 92.38095
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Exchange%20Rate",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Exchange%20Rate"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 456.6667,
+        "weekly_average_volume": 76.1111,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014339,
+        "time_weight": 0.029004,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
+      }
+    },
+    {
+      "term": "Numbers",
+      "term_ko": "넘버스",
+      "significance_score": 0,
+      "mentions": 449,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "넘버스",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-03",
+              "timestamp": 1762095600000,
+              "value": 73.73737
+            },
+            {
+              "period": "2025-11-04",
+              "timestamp": 1762182000000,
+              "value": 83.83838
+            },
+            {
+              "period": "2025-11-05",
+              "timestamp": 1762268400000,
+              "value": 85.85858
+            },
+            {
+              "period": "2025-11-06",
+              "timestamp": 1762354800000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-07",
+              "timestamp": 1762441200000,
+              "value": 71.71717
+            },
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 68.68686
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 66.66666
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 56.56565
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%98%EB%B2%84%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%98%EB%B2%84%EC%8A%A4"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 449.4949,
+        "weekly_average_volume": 74.9158,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014497,
+        "time_weight": 0.029003,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762700400000
       }
     }
   ],
   "metadata": {
-    "collection_method": "llm_seeded",
+    "collection_method": "naver_datalab_trending_seeded",
     "sample_size": 30,
-    "generated_at": "2025-11-10T18:34:56.666Z",
+    "generated_at": "2025-11-11T01:28:44.348Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "https://tight-cloud-0f5e.seongj1589.workers.dev/api/generate",
+    "keyword_source": "NAVER DataLab 2025-11-10→2025-11-11",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 2,
     "removal_breakdown": {
-      "exact_match": 1,
-      "similar": 1,
+      "exact_match": 2,
+      "similar": 0,
       "too_generic": 0
     },
-    "llm_model": "tinyllama",
-    "llm_keywords_requested": 30,
-    "finance_fallback_top_off": {
-      "added": 24,
+    "datalab_top_off": {
+      "added": 29,
       "keywords": [
-        "AI",
-        "Stock Market",
-        "증시",
-        "인공지능",
-        "Bubble",
-        "버블",
-        "소비심리",
-        "Exchange Rate",
-        "환율",
-        "Dollars",
-        "달러",
-        "Gold",
-        "Tesla",
-        "테슬라",
-        "Musk",
-        "머스크",
-        "IPO",
-        "Business",
-        "비즈니스",
+        "PC버전",
+        "오피니언",
+        "라디오",
+        "문화일보",
+        "생명 보험",
+        "가덕도 신공항",
+        "오늘의 만평",
+        "추경호",
+        "더보기",
+        "management",
+        "매경엠플러스",
+        "현대해상",
+        "프리미엄",
+        "Artificial intelligence",
+        "youth",
+        "자동차보험",
+        "Moments",
+        "네이트",
+        "윤석열 재판",
+        "미디어",
+        "모멘트",
+        "Media",
+        "광화문에서",
+        "엔비디아 실적",
         "New York",
-        "뉴욕",
-        "Securities",
-        "증권",
-        "Domestic"
+        "소비심리",
+        "오늘의 매경",
+        "Exchange Rate",
+        "넘버스"
       ]
     }
   }
