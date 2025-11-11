@@ -1,544 +1,439 @@
 {
+  "generatedAt": "2025-11-11T12:38:39.889Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-11",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Government regulations",
-      "term_ko": "정부 규제",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Government regulations"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Government%20regulations",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Government%20regulations"
-      },
-      "top_headlines": []
+      "term": "Government Regulations",
+      "term_ko": "정부 규제"
     },
     {
-      "term": "Korean market",
-      "term_ko": "한국 시장",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Korean market"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korean%20market",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korean%20market"
-      },
-      "top_headlines": []
+      "term": "Korean Market",
+      "term_ko": "한국 시장"
     },
     {
-      "term": "Investor meeting",
-      "term_ko": "투자자 회의",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investor meeting"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investor%20meeting",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investor%20meeting"
-      },
-      "top_headlines": []
+      "term": "Investor Meeting",
+      "term_ko": "투자자 회의"
     },
     {
-      "term": "Current exchange",
-      "term_ko": "현재 교환",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Current exchange"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Current%20exchange",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Current%20exchange"
-      },
-      "top_headlines": []
+      "term": "Current Exchange",
+      "term_ko": "현재 교환"
     },
     {
-      "term": "Tesla regulatory",
-      "term_ko": "테슬라 규정",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tesla regulatory"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tesla%20regulatory",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tesla%20regulatory"
-      },
-      "top_headlines": []
+      "term": "Tesla Regulatory",
+      "term_ko": "테슬라 규정"
     },
     {
-      "term": "New supply",
-      "term_ko": "신규 공급",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "New supply"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=New%20supply",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=New%20supply"
-      },
-      "top_headlines": []
+      "term": "New Supply",
+      "term_ko": "신규 공급"
     },
     {
-      "term": "38th supply",
-      "term_ko": "38번째 공급",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "38th supply"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=38th%20supply",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=38th%20supply"
-      },
-      "top_headlines": []
+      "term": "38th Supply",
+      "term_ko": "38번째 공급"
     },
     {
-      "term": "ESG business",
-      "term_ko": "ESG 비즈니스",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ESG business"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ESG%20business",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ESG%20business"
-      },
-      "top_headlines": []
+      "term": "Esg Business",
+      "term_ko": "ESG 비즈니스"
     },
     {
-      "term": "Nate regulatory",
-      "term_ko": "네이트 규정",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nate regulatory"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nate%20regulatory",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nate%20regulatory"
-      },
-      "top_headlines": []
+      "term": "Nate Regulatory",
+      "term_ko": "네이트 규정"
     },
     {
-      "term": "Gold price",
-      "term_ko": "금 가격",
-      "significance_score": 0,
-      "mentions": 410,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Gold price",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-03",
-              "timestamp": 1762095600000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 87.82287
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 92.25092
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 84.50184
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 84.50184
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 43.91143
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 14.76014
-            },
-            {
-              "period": "2025-11-10",
-              "timestamp": 1762700400000,
-              "value": 90.4059
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Gold%20price",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Gold%20price"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 410.3321,
-        "weekly_average_volume": 68.3887,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.015442,
-        "time_weight": 0.025286,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762700400000
-      }
+      "term": "Gold Price",
+      "term_ko": "금 가격"
     },
     {
-      "term": "Updated supply",
-      "term_ko": "업데이트된 공급",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Updated supply"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Updated%20supply",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Updated%20supply"
-      },
-      "top_headlines": []
+      "term": "Updated Supply",
+      "term_ko": "업데이트된 공급"
     },
     {
-      "term": "28th investor",
-      "term_ko": "28번째 투자자",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "28th investor"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=28th%20investor",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=28th%20investor"
-      },
-      "top_headlines": []
+      "term": "28th Investor",
+      "term_ko": "28번째 투자자"
     },
     {
-      "term": "Celebrity regulatory",
-      "term_ko": "유명인 규제",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Celebrity regulatory"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Celebrity%20regulatory",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Celebrity%20regulatory"
-      },
-      "top_headlines": []
+      "term": "Celebrity Regulatory",
+      "term_ko": "유명인 규제"
     },
     {
-      "term": "Coupang investment",
-      "term_ko": "쿠팡 투자",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Coupang investment"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Coupang%20investment",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Coupang%20investment"
-      },
-      "top_headlines": []
+      "term": "Coupang Investment",
+      "term_ko": "쿠팡 투자"
     },
     {
-      "term": "RSS innovation",
-      "term_ko": "RSS 혁신",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "RSS innovation"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=RSS%20innovation",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=RSS%20innovation"
-      },
-      "top_headlines": []
+      "term": "Rss Innovation",
+      "term_ko": "RSS 혁신"
     },
     {
-      "term": "Life insurance",
-      "term_ko": "생명 보험",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Life insurance"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Life%20insurance",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Life%20insurance"
-      },
-      "top_headlines": []
+      "term": "Life Insurance",
+      "term_ko": "생명 보험"
     },
     {
-      "term": "Entertainment stock",
-      "term_ko": "엔터테인먼트 주식",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Entertainment stock"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Entertainment%20stock",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Entertainment%20stock"
-      },
-      "top_headlines": []
+      "term": "Entertainment Stock",
+      "term_ko": "엔터테인먼트 주식"
     },
     {
-      "term": "57th earnings",
-      "term_ko": "57번째 수익",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "57th earnings"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=57th%20earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=57th%20earnings"
-      },
-      "top_headlines": []
+      "term": "57th Earnings",
+      "term_ko": "57번째 수익"
     },
     {
-      "term": "Third special",
-      "term_ko": "세 번째 스페셜",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Third special"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Third%20special",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Third%20special"
-      },
-      "top_headlines": []
+      "term": "Third Special",
+      "term_ko": "세 번째 스페셜"
     },
     {
       "term": "Maeil Business",
-      "term_ko": "매일경제",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Maeil Business"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Maeil%20Business",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Maeil%20Business"
-      },
-      "top_headlines": []
+      "term_ko": "매일경제"
     },
     {
-      "term": "Sports market",
-      "term_ko": "스포츠 시장",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sports market"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sports%20market",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sports%20market"
-      },
-      "top_headlines": []
+      "term": "Sports Market",
+      "term_ko": "스포츠 시장"
     },
     {
-      "term": "Japanese investor",
-      "term_ko": "일본 투자자",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Japanese investor"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Japanese%20investor",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Japanese%20investor"
-      },
-      "top_headlines": []
+      "term": "Japanese Investor",
+      "term_ko": "일본 투자자"
     },
     {
       "term": "Digital Times",
-      "term_ko": "디지털 타임즈",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Digital Times"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Digital%20Times",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Digital%20Times"
-      },
-      "top_headlines": []
+      "term_ko": "디지털 타임즈"
     },
     {
-      "term": "Chinese market",
-      "term_ko": "중국 시장",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Chinese market"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Chinese%20market",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Chinese%20market"
-      },
-      "top_headlines": []
+      "term": "Chinese Market",
+      "term_ko": "중국 시장"
     },
     {
       "term": "Todays Maeil",
-      "term_ko": "오늘 매일",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Todays Maeil"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Todays%20Maeil",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Todays%20Maeil"
-      },
-      "top_headlines": []
+      "term_ko": "오늘 매일"
     },
     {
-      "term": "Bubble earnings",
-      "term_ko": "버블 수익",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bubble earnings"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bubble%20earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bubble%20earnings"
-      },
-      "top_headlines": []
+      "term": "Bubble Earnings",
+      "term_ko": "버블 수익"
     },
     {
-      "term": "Composite stock",
-      "term_ko": "복합 주식",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Composite stock"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Composite%20stock",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Composite%20stock"
-      },
-      "top_headlines": []
+      "term": "Composite Stock",
+      "term_ko": "복합 주식"
     },
     {
-      "term": "Dollar supply",
-      "term_ko": "달러 공급",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Dollar supply"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Dollar%20supply",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Dollar%20supply"
-      },
-      "top_headlines": []
+      "term": "Dollar Supply",
+      "term_ko": "달러 공급"
     },
     {
-      "term": "Korea JoongAng",
-      "term_ko": "한국 중앙",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Korea JoongAng"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korea%20JoongAng",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korea%20JoongAng"
-      },
-      "top_headlines": []
+      "term": "Korea Joongang",
+      "term_ko": "한국 중앙"
     },
     {
-      "term": "10 market momentum",
-      "term_ko": "10 시장 모멘텀",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "10 market momentum"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=10%20market%20momentum",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=10%20market%20momentum"
-      },
-      "top_headlines": []
+      "term": "10 Market Momentum",
+      "term_ko": "10 시장 모멘텀"
     }
   ],
-  "metadata": {
-    "collection_method": "naver_datalab_trending_seeded",
-    "sample_size": 30,
-    "generated_at": "2025-11-11T06:33:13.323Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "NAVER DataLab 2025-11-10→2025-11-11",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Government Regulations",
+      "term_ko": "정부 규제"
     },
-    "datalab_top_off": {
-      "added": 1,
-      "keywords": [
-        "10 market momentum"
-      ]
+    {
+      "term": "Korean Market",
+      "term_ko": "한국 시장"
+    },
+    {
+      "term": "Investor Meeting",
+      "term_ko": "투자자 회의"
+    },
+    {
+      "term": "Current Exchange",
+      "term_ko": "현재 교환"
+    },
+    {
+      "term": "Tesla Regulatory",
+      "term_ko": "테슬라 규정"
+    },
+    {
+      "term": "New Supply",
+      "term_ko": "신규 공급"
+    },
+    {
+      "term": "38th Supply",
+      "term_ko": "38번째 공급"
+    },
+    {
+      "term": "Esg Business",
+      "term_ko": "ESG 비즈니스"
+    },
+    {
+      "term": "Nate Regulatory",
+      "term_ko": "네이트 규정"
+    },
+    {
+      "term": "Gold Price",
+      "term_ko": "금 가격"
+    },
+    {
+      "term": "Updated Supply",
+      "term_ko": "업데이트된 공급"
+    },
+    {
+      "term": "28th Investor",
+      "term_ko": "28번째 투자자"
+    },
+    {
+      "term": "Celebrity Regulatory",
+      "term_ko": "유명인 규제"
+    },
+    {
+      "term": "Coupang Investment",
+      "term_ko": "쿠팡 투자"
+    },
+    {
+      "term": "Rss Innovation",
+      "term_ko": "RSS 혁신"
+    },
+    {
+      "term": "Life Insurance",
+      "term_ko": "생명 보험"
+    },
+    {
+      "term": "Entertainment Stock",
+      "term_ko": "엔터테인먼트 주식"
+    },
+    {
+      "term": "57th Earnings",
+      "term_ko": "57번째 수익"
+    },
+    {
+      "term": "Third Special",
+      "term_ko": "세 번째 스페셜"
+    },
+    {
+      "term": "Maeil Business",
+      "term_ko": "매일경제"
+    },
+    {
+      "term": "Sports Market",
+      "term_ko": "스포츠 시장"
+    },
+    {
+      "term": "Japanese Investor",
+      "term_ko": "일본 투자자"
+    },
+    {
+      "term": "Digital Times",
+      "term_ko": "디지털 타임즈"
+    },
+    {
+      "term": "Chinese Market",
+      "term_ko": "중국 시장"
+    },
+    {
+      "term": "Todays Maeil",
+      "term_ko": "오늘 매일"
+    },
+    {
+      "term": "Bubble Earnings",
+      "term_ko": "버블 수익"
+    },
+    {
+      "term": "Composite Stock",
+      "term_ko": "복합 주식"
+    },
+    {
+      "term": "Dollar Supply",
+      "term_ko": "달러 공급"
+    },
+    {
+      "term": "Korea Joongang",
+      "term_ko": "한국 중앙"
+    },
+    {
+      "term": "10 Market Momentum",
+      "term_ko": "10 시장 모멘텀"
+    }
+  ],
+  "translations": {
+    "Government Regulations": {
+      "en": "Government Regulations",
+      "ko": "정부 규제",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Korean Market": {
+      "en": "Korean Market",
+      "ko": "한국 시장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Investor Meeting": {
+      "en": "Investor Meeting",
+      "ko": "투자자 회의",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Current Exchange": {
+      "en": "Current Exchange",
+      "ko": "현재 교환",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Tesla Regulatory": {
+      "en": "Tesla Regulatory",
+      "ko": "테슬라 규정",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "New Supply": {
+      "en": "New Supply",
+      "ko": "신규 공급",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "38th Supply": {
+      "en": "38th Supply",
+      "ko": "38번째 공급",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Esg Business": {
+      "en": "Esg Business",
+      "ko": "ESG 비즈니스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Nate Regulatory": {
+      "en": "Nate Regulatory",
+      "ko": "네이트 규정",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Gold Price": {
+      "en": "Gold Price",
+      "ko": "금 가격",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Updated Supply": {
+      "en": "Updated Supply",
+      "ko": "업데이트된 공급",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "28th Investor": {
+      "en": "28th Investor",
+      "ko": "28번째 투자자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Celebrity Regulatory": {
+      "en": "Celebrity Regulatory",
+      "ko": "유명인 규제",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Coupang Investment": {
+      "en": "Coupang Investment",
+      "ko": "쿠팡 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Rss Innovation": {
+      "en": "Rss Innovation",
+      "ko": "RSS 혁신",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.889Z"
+    },
+    "Life Insurance": {
+      "en": "Life Insurance",
+      "ko": "생명 보험",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Entertainment Stock": {
+      "en": "Entertainment Stock",
+      "ko": "엔터테인먼트 주식",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "57th Earnings": {
+      "en": "57th Earnings",
+      "ko": "57번째 수익",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Third Special": {
+      "en": "Third Special",
+      "ko": "세 번째 스페셜",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Maeil Business": {
+      "en": "Maeil Business",
+      "ko": "매일경제",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Sports Market": {
+      "en": "Sports Market",
+      "ko": "스포츠 시장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Japanese Investor": {
+      "en": "Japanese Investor",
+      "ko": "일본 투자자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Digital Times": {
+      "en": "Digital Times",
+      "ko": "디지털 타임즈",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Chinese Market": {
+      "en": "Chinese Market",
+      "ko": "중국 시장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Todays Maeil": {
+      "en": "Todays Maeil",
+      "ko": "오늘 매일",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Bubble Earnings": {
+      "en": "Bubble Earnings",
+      "ko": "버블 수익",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Composite Stock": {
+      "en": "Composite Stock",
+      "ko": "복합 주식",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Dollar Supply": {
+      "en": "Dollar Supply",
+      "ko": "달러 공급",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "Korea Joongang": {
+      "en": "Korea Joongang",
+      "ko": "한국 중앙",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
+    },
+    "10 Market Momentum": {
+      "en": "10 Market Momentum",
+      "ko": "10 시장 모멘텀",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-11T12:38:39.890Z"
     }
   }
 }
