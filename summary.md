@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-12T10:26:21+09:00 (KST)**
+- Generated: **2025-11-12T15:31:30+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -49,13 +49,13 @@
 
 ### AGGRESSIVE (5)
 
-**미래생명자원** (100790.KQ)
+**데브시스터즈** (194480.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.8%**, 20d **-5.3%**; volatility (20d): **unknown**
+- Returns: 5d **-5.6%**, 20d **-20.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%83%9D%EB%AA%85%EC%9E%90%EC%9B%90
+- Sector: **커뮤니케이션서비스**
+- News search: https://www.google.com/search?q=%EB%8D%B0%EB%B8%8C%EC%8B%9C%EC%8A%A4%ED%84%B0%EC%A6%88
 
 **오로스테크놀로지** (322310.KQ)
 
@@ -93,41 +93,41 @@
 
 ### SAFE (5)
 
-**NH투자증권** (005940.KS)
-
-- News (7d): **280** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **10.6%**, 20d **13.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://www.google.com/search?q=NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C
-
 **두산** (000150.KS)
 
-- News (7d): **219** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **7.8%**, 20d **67.4%**; volatility (20d): **unknown**
+- News (7d): **231** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- Returns: 5d **8.8%**, 20d **68.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1184** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.6%**, 20d **7.6%**; volatility (20d): **unknown**
+- News (7d): **1213** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.5%**, 20d **8.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 **삼성증권** (016360.KS)
 
-- News (7d): **104** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **13.4%**, 20d **11.1%**; volatility (20d): **unknown**
+- News (7d): **114** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- Returns: 5d **13.1%**, 20d **10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C
 
+**한국금융지주** (071050.KS)
+
+- News (7d): **29** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **3.8%**, 20d **18.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **금융**
+- News search: https://www.google.com/search?q=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
+
 **한국전력** (015760.KS)
 
-- News (7d): **239** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **245** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **2.8%**, 20d **29.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **유틸리티**
@@ -149,18 +149,18 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=GKL
 
-**SK네트웍스** (001740.KS)
+**대웅** (003090.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.8%**, 20d **-3.7%**; volatility (20d): **unknown**
+- Returns: 5d **11.9%**, 20d **0.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=SK%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%8A%A4
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85
 
 **더블유게임즈** (192080.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.6%**, 20d **2.6%**; volatility (20d): **unknown**
+- Returns: 5d **4.8%**, 20d **2.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EB%8D%94%EB%B8%94%EC%9C%A0%EA%B2%8C%EC%9E%84%EC%A6%88
@@ -275,7 +275,7 @@
 **Berkshire Hathaway** (BRK.B)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.5%**, 20d **1.0%**; volatility (20d): **unknown**
+- Returns: 5d **1.9%**, 20d **0.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Berkshire%20Hathaway
@@ -306,13 +306,13 @@
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Church%20%26%20Dwight
 
-**Edison International** (EIX)
+**Dayforce** (DAY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.0%**, 20d **7.1%**; volatility (20d): **unknown**
+- Returns: 5d **3.2%**, 20d **17.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Edison%20International
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Dayforce
 
 **NiSource** (NI)
 
