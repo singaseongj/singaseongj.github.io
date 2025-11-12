@@ -1,1105 +1,425 @@
 {
+  "generatedAt": "2025-11-12T12:39:51.627Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-12",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Reduced interest rates",
-      "term_ko": "금리 인하",
-      "significance_score": 560,
-      "mentions": 352,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-04",
-              "timestamp": 1762182000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 93.07291
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 62.76041
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 75.57291
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 41.61458
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 36.25
-            },
-            {
-              "period": "2025-11-10",
-              "timestamp": 1762700400000,
-              "value": 57.34375
-            },
-            {
-              "period": "2025-11-11",
-              "timestamp": 1762786800000,
-              "value": 77.96875
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "이창용 \"금리 인하 시기나 방향 전환은 새 데이터에 따라 결정\"(종합)",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383551"
-            },
-            {
-              "title": "'금리 인하 기대감 꺾이자…' 외국인 순매수 급감, 10월 장외채권시장 ...",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=274388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 \"금리 인하 시기나 방향 전환은 새 데이터에 따라 결정\"(종합)",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383551",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "'금리 인하 기대감 꺾이자…' 외국인 순매수 급감, 10월 장외채권시장 ...",
-          "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=274388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 351.5104,
-        "weekly_average_volume": 58.5851,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.017191,
-        "time_weight": 0.025288,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762786800000
-      }
+      "term": "Reduced Interest Rates",
+      "term_ko": "금리 인하"
     },
     {
-      "term": "CyberArk AI Agent",
-      "term_ko": "사이버아크 AI 에이전트",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사이버아크 AI 에이전트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%9D%B4%EB%B2%84%EC%95%84%ED%81%AC%20AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%9D%B4%EB%B2%84%EC%95%84%ED%81%AC%20AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cyberark Ai Agent",
+      "term_ko": "사이버아크 AI 에이전트"
     },
     {
-      "term": "Targeting AI agents",
-      "term_ko": "AI 에이전트 겨냥",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 에이전트 겨냥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EA%B2%A8%EB%83%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EA%B2%A8%EB%83%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Targeting Ai Agents",
+      "term_ko": "AI 에이전트 겨냥"
     },
     {
-      "term": "AI Technology Global",
-      "term_ko": "AI 기술 글로벌",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 기술 글로벌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, '네비우스'와 협력...추론 AI 기술 글로벌 확장",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604144"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EA%B8%B0%EC%88%A0%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EA%B8%B0%EC%88%A0%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, '네비우스'와 협력...추론 AI 기술 글로벌 확장",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604144",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Technology Global",
+      "term_ko": "AI 기술 글로벌"
     },
     {
-      "term": "FriendlyAI MS Cloud",
-      "term_ko": "프렌들리AI MS 클라우드",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "프렌들리AI MS 클라우드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-              "link": "https://platum.kr/archives/274774"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%84%EB%A0%8C%EB%93%A4%EB%A6%ACAI%20MS%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%84%EB%A0%8C%EB%93%A4%EB%A6%ACAI%20MS%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-          "summary": "",
-          "link": "https://platum.kr/archives/274774",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Friendlyai Ms Cloud",
+      "term_ko": "프렌들리AI MS 클라우드"
     },
     {
-      "term": "MS Cloud Partners",
-      "term_ko": "MS 클라우드 파트너",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "MS 클라우드 파트너",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-              "link": "https://platum.kr/archives/274774"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MS%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20%ED%8C%8C%ED%8A%B8%EB%84%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MS%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20%ED%8C%8C%ED%8A%B8%EB%84%88"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-          "summary": "",
-          "link": "https://platum.kr/archives/274774",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ms Cloud Partners",
+      "term_ko": "MS 클라우드 파트너"
     },
     {
-      "term": "GPUs working with Nebius",
-      "term_ko": "네비우스와 협력 GPU",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "네비우스와 협력 GPU",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-              "link": "https://platum.kr/archives/274774"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%EC%99%80%20%ED%98%91%EB%A0%A5%20GPU",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%EC%99%80%20%ED%98%91%EB%A0%A5%20GPU"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-          "summary": "",
-          "link": "https://platum.kr/archives/274774",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gpus Working with Nebius",
+      "term_ko": "네비우스와 협력 GPU"
     },
     {
-      "term": "Cooperating GPU Cost",
-      "term_ko": "협력 GPU 비용",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "협력 GPU 비용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-              "link": "https://platum.kr/archives/274774"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%91%EB%A0%A5%20GPU%20%EB%B9%84%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%91%EB%A0%A5%20GPU%20%EB%B9%84%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-          "summary": "",
-          "link": "https://platum.kr/archives/274774",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cooperating Gpu Cost",
+      "term_ko": "협력 GPU 비용"
     },
     {
-      "term": "GPU cost up to",
-      "term_ko": "GPU 비용 최대",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "GPU 비용 최대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-              "link": "https://platum.kr/archives/274774"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=GPU%20%EB%B9%84%EC%9A%A9%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=GPU%20%EB%B9%84%EC%9A%A9%20%EC%B5%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-          "summary": "",
-          "link": "https://platum.kr/archives/274774",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gpu Cost Up to",
+      "term_ko": "GPU 비용 최대"
     },
     {
-      "term": "Net longs plummet in October",
-      "term_ko": "순매수 급감 10월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순매수 급감 10월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'금리 인하 기대감 꺾이자…' 외국인 순매수 급감, 10월 장외채권시장 ...",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=274388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EB%A7%A4%EC%88%98%20%EA%B8%89%EA%B0%90%2010%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EB%A7%A4%EC%88%98%20%EA%B8%89%EA%B0%90%2010%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "'금리 인하 기대감 꺾이자…' 외국인 순매수 급감, 10월 장외채권시장 ...",
-          "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=274388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Net Longs Plummet in October",
+      "term_ko": "순매수 급감 10월"
     },
     {
-      "term": "OTC bond market plunges in October",
-      "term_ko": "급감 10월 장외채권시장",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급감 10월 장외채권시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'금리 인하 기대감 꺾이자…' 외국인 순매수 급감, 10월 장외채권시장 ...",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=274388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EA%B0%90%2010%EC%9B%94%20%EC%9E%A5%EC%99%B8%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EA%B0%90%2010%EC%9B%94%20%EC%9E%A5%EC%99%B8%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "'금리 인하 기대감 꺾이자…' 외국인 순매수 급감, 10월 장외채권시장 ...",
-          "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=274388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Otc Bond Market Plunges in October",
+      "term_ko": "급감 10월 장외채권시장"
     },
     {
-      "term": "Equity weighting 18 years",
-      "term_ko": "주식 비중 18년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주식 비중 18년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "스테이트 스트리트 \"기관투자자들, 위험선호 하락에도 주식 비중 18년 만...",
-              "link": "https://www.tokenpost.kr/news/economy/302810"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%20%EB%B9%84%EC%A4%91%2018%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%20%EB%B9%84%EC%A4%91%2018%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "스테이트 스트리트 \"기관투자자들, 위험선호 하락에도 주식 비중 18년 만...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/302810",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Equity Weighting 18 Years",
+      "term_ko": "주식 비중 18년"
     },
     {
       "term": "Column Stock Debt to Equity",
-      "term_ko": "칼럼 주식 빚투",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "칼럼 주식 빚투",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%BC%EB%9F%BC%20%EC%A3%BC%EC%8B%9D%20%EB%B9%9A%ED%88%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%BC%EB%9F%BC%20%EC%A3%BC%EC%8B%9D%20%EB%B9%9A%ED%88%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "칼럼 주식 빚투"
     },
     {
-      "term": "Stock Debt-to-Equity History",
-      "term_ko": "주식 빚투 사상",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주식 빚투 사상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%20%EB%B9%9A%ED%88%AC%20%EC%82%AC%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%20%EB%B9%9A%ED%88%AC%20%EC%82%AC%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Debt-to-equity History",
+      "term_ko": "주식 빚투 사상"
     },
     {
-      "term": "Debt2 is at an all-time high",
-      "term_ko": "빚투 사상 최대치",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚투 사상 최대치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EB%8C%80%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EB%8C%80%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Debt2 Is at an All-time High",
+      "term_ko": "빚투 사상 최대치"
     },
     {
-      "term": "Reaching an all-time high",
-      "term_ko": "사상 최대치 돌파",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사상 최대치 돌파",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%83%81%20%EC%B5%9C%EB%8C%80%EC%B9%98%20%EB%8F%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%83%81%20%EC%B5%9C%EB%8C%80%EC%B9%98%20%EB%8F%8C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reaching an All-time High",
+      "term_ko": "사상 최대치 돌파"
     },
     {
       "term": "Maxed Out Credit Loans",
-      "term_ko": "최대치 돌파 신용융자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최대치 돌파 신용융자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%EC%B9%98%20%EB%8F%8C%ED%8C%8C%20%EC%8B%A0%EC%9A%A9%EC%9C%B5%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%EC%B9%98%20%EB%8F%8C%ED%8C%8C%20%EC%8B%A0%EC%9A%A9%EC%9C%B5%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "최대치 돌파 신용융자"
     },
     {
-      "term": "Manage breakthrough loans and",
-      "term_ko": "돌파 신용융자 관리와",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 신용융자 관리와",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EC%8B%A0%EC%9A%A9%EC%9C%B5%EC%9E%90%20%EA%B4%80%EB%A6%AC%EC%99%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EC%8B%A0%EC%9A%A9%EC%9C%B5%EC%9E%90%20%EA%B4%80%EB%A6%AC%EC%99%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Manage Breakthrough Loans and",
+      "term_ko": "돌파 신용융자 관리와"
     },
     {
-      "term": "Loan administration and investors",
-      "term_ko": "신용융자 관리와 투자자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신용융자 관리와 투자자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%9A%A9%EC%9C%B5%EC%9E%90%20%EA%B4%80%EB%A6%AC%EC%99%80%20%ED%88%AC%EC%9E%90%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%9A%A9%EC%9C%B5%EC%9E%90%20%EA%B4%80%EB%A6%AC%EC%99%80%20%ED%88%AC%EC%9E%90%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Loan Administration and Investors",
+      "term_ko": "신용융자 관리와 투자자"
     },
     {
-      "term": "Governance and investor protection",
-      "term_ko": "관리와 투자자 보호",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "관리와 투자자 보호",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%80%EB%A6%AC%EC%99%80%20%ED%88%AC%EC%9E%90%EC%9E%90%20%EB%B3%B4%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%80%EB%A6%AC%EC%99%80%20%ED%88%AC%EC%9E%90%EC%9E%90%20%EB%B3%B4%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[칼럼] 주식 '빚투' 사상 최대치 돌파, 신용융자 관리와 투자자 보호 대...",
-          "summary": "",
-          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1201806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Governance and Investor Protection",
+      "term_ko": "관리와 투자자 보호"
     },
     {
-      "term": "Agent-targeted identities",
-      "term_ko": "에이전트 겨냥 아이덴티티",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "에이전트 겨냥 아이덴티티",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EA%B2%A8%EB%83%A5%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EA%B2%A8%EB%83%A5%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Agent-targeted Identities",
+      "term_ko": "에이전트 겨냥 아이덴티티"
     },
     {
-      "term": "Target identity security",
-      "term_ko": "겨냥 아이덴티티 보안",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "겨냥 아이덴티티 보안",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%A8%EB%83%A5%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%A8%EB%83%A5%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88"
-      },
-      "top_headlines": [
-        {
-          "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Target Identity Security",
+      "term_ko": "겨냥 아이덴티티 보안"
     },
     {
-      "term": "Identity security solutions",
-      "term_ko": "아이덴티티 보안 솔루션",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아이덴티티 보안 솔루션",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88%20%EC%86%94%EB%A3%A8%EC%85%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88%20%EC%86%94%EB%A3%A8%EC%85%98"
-      },
-      "top_headlines": [
-        {
-          "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Identity Security Solutions",
+      "term_ko": "아이덴티티 보안 솔루션"
     },
     {
-      "term": "Launching security solutions",
-      "term_ko": "보안 솔루션 출시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보안 솔루션 출시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%95%88%20%EC%86%94%EB%A3%A8%EC%85%98%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%95%88%20%EC%86%94%EB%A3%A8%EC%85%98%20%EC%B6%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "사이버아크, AI 에이전트 겨냥 아이덴티티 보안 솔루션 출시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Launching Security Solutions",
+      "term_ko": "보안 솔루션 출시"
     },
     {
-      "term": "Scaling technology globally",
-      "term_ko": "기술 글로벌 확장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기술 글로벌 확장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, '네비우스'와 협력...추론 AI 기술 글로벌 확장",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604144"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%88%A0%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%99%95%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%88%A0%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%99%95%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, '네비우스'와 협력...추론 AI 기술 글로벌 확장",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=604144",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Scaling Technology Globally",
+      "term_ko": "기술 글로벌 확장"
     },
     {
-      "term": "Cloud partners Nevius and",
-      "term_ko": "클라우드 파트너 네비우스와",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "클라우드 파트너 네비우스와",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-              "link": "https://platum.kr/archives/274774"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20%ED%8C%8C%ED%8A%B8%EB%84%88%20%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%EC%99%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20%ED%8C%8C%ED%8A%B8%EB%84%88%20%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%EC%99%80"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-          "summary": "",
-          "link": "https://platum.kr/archives/274774",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cloud Partners Nevius and",
+      "term_ko": "클라우드 파트너 네비우스와"
     },
     {
-      "term": "Working with our partner Nevius",
-      "term_ko": "파트너 네비우스와 협력",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "파트너 네비우스와 협력",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-              "link": "https://platum.kr/archives/274774"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%8C%ED%8A%B8%EB%84%88%20%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%EC%99%80%20%ED%98%91%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%8C%ED%8A%B8%EB%84%88%20%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%EC%99%80%20%ED%98%91%EB%A0%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "프렌들리AI, MS 클라우드 파트너 ‘네비우스’와 협력… \"GPU 비용 최대 ...",
-          "summary": "",
-          "link": "https://platum.kr/archives/274774",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Working with Our Partner Nevius",
+      "term_ko": "파트너 네비우스와 협력"
     },
     {
-      "term": "Timing and direction of cuts",
-      "term_ko": "인하 시기나 방향",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인하 시기나 방향",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-12T15:31:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "이창용 \"금리 인하 시기나 방향 전환은 새 데이터에 따라 결정\"(종합)",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383551"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%95%98%20%EC%8B%9C%EA%B8%B0%EB%82%98%20%EB%B0%A9%ED%96%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%95%98%20%EC%8B%9C%EA%B8%B0%EB%82%98%20%EB%B0%A9%ED%96%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 \"금리 인하 시기나 방향 전환은 새 데이터에 따라 결정\"(종합)",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383551",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Timing and Direction of Cuts",
+      "term_ko": "인하 시기나 방향"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-12T06:33:07.935Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-12T15:31:41+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Reduced Interest Rates",
+      "term_ko": "금리 인하"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-12T15:31:41+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-12T15:31:41+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Cyberark Ai Agent",
+      "term_ko": "사이버아크 AI 에이전트"
+    },
+    {
+      "term": "Targeting Ai Agents",
+      "term_ko": "AI 에이전트 겨냥"
+    },
+    {
+      "term": "Ai Technology Global",
+      "term_ko": "AI 기술 글로벌"
+    },
+    {
+      "term": "Friendlyai Ms Cloud",
+      "term_ko": "프렌들리AI MS 클라우드"
+    },
+    {
+      "term": "Ms Cloud Partners",
+      "term_ko": "MS 클라우드 파트너"
+    },
+    {
+      "term": "Gpus Working with Nebius",
+      "term_ko": "네비우스와 협력 GPU"
+    },
+    {
+      "term": "Cooperating Gpu Cost",
+      "term_ko": "협력 GPU 비용"
+    },
+    {
+      "term": "Gpu Cost Up to",
+      "term_ko": "GPU 비용 최대"
+    },
+    {
+      "term": "Net Longs Plummet in October",
+      "term_ko": "순매수 급감 10월"
+    },
+    {
+      "term": "Otc Bond Market Plunges in October",
+      "term_ko": "급감 10월 장외채권시장"
+    },
+    {
+      "term": "Equity Weighting 18 Years",
+      "term_ko": "주식 비중 18년"
+    },
+    {
+      "term": "Column Stock Debt to Equity",
+      "term_ko": "칼럼 주식 빚투"
+    },
+    {
+      "term": "Stock Debt-to-equity History",
+      "term_ko": "주식 빚투 사상"
+    },
+    {
+      "term": "Debt2 Is at an All-time High",
+      "term_ko": "빚투 사상 최대치"
+    },
+    {
+      "term": "Reaching an All-time High",
+      "term_ko": "사상 최대치 돌파"
+    },
+    {
+      "term": "Maxed Out Credit Loans",
+      "term_ko": "최대치 돌파 신용융자"
+    },
+    {
+      "term": "Manage Breakthrough Loans and",
+      "term_ko": "돌파 신용융자 관리와"
+    },
+    {
+      "term": "Loan Administration and Investors",
+      "term_ko": "신용융자 관리와 투자자"
+    },
+    {
+      "term": "Governance and Investor Protection",
+      "term_ko": "관리와 투자자 보호"
+    },
+    {
+      "term": "Agent-targeted Identities",
+      "term_ko": "에이전트 겨냥 아이덴티티"
+    },
+    {
+      "term": "Target Identity Security",
+      "term_ko": "겨냥 아이덴티티 보안"
+    },
+    {
+      "term": "Identity Security Solutions",
+      "term_ko": "아이덴티티 보안 솔루션"
+    },
+    {
+      "term": "Launching Security Solutions",
+      "term_ko": "보안 솔루션 출시"
+    },
+    {
+      "term": "Scaling Technology Globally",
+      "term_ko": "기술 글로벌 확장"
+    },
+    {
+      "term": "Cloud Partners Nevius and",
+      "term_ko": "클라우드 파트너 네비우스와"
+    },
+    {
+      "term": "Working with Our Partner Nevius",
+      "term_ko": "파트너 네비우스와 협력"
+    },
+    {
+      "term": "Timing and Direction of Cuts",
+      "term_ko": "인하 시기나 방향"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Reduced Interest Rates": {
+      "en": "Reduced Interest Rates",
+      "ko": "금리 인하",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Cyberark Ai Agent": {
+      "en": "Cyberark Ai Agent",
+      "ko": "사이버아크 AI 에이전트",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Targeting Ai Agents": {
+      "en": "Targeting Ai Agents",
+      "ko": "AI 에이전트 겨냥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Ai Technology Global": {
+      "en": "Ai Technology Global",
+      "ko": "AI 기술 글로벌",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Friendlyai Ms Cloud": {
+      "en": "Friendlyai Ms Cloud",
+      "ko": "프렌들리AI MS 클라우드",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Ms Cloud Partners": {
+      "en": "Ms Cloud Partners",
+      "ko": "MS 클라우드 파트너",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Gpus Working with Nebius": {
+      "en": "Gpus Working with Nebius",
+      "ko": "네비우스와 협력 GPU",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Cooperating Gpu Cost": {
+      "en": "Cooperating Gpu Cost",
+      "ko": "협력 GPU 비용",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Gpu Cost Up to": {
+      "en": "Gpu Cost Up to",
+      "ko": "GPU 비용 최대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Net Longs Plummet in October": {
+      "en": "Net Longs Plummet in October",
+      "ko": "순매수 급감 10월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Otc Bond Market Plunges in October": {
+      "en": "Otc Bond Market Plunges in October",
+      "ko": "급감 10월 장외채권시장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Equity Weighting 18 Years": {
+      "en": "Equity Weighting 18 Years",
+      "ko": "주식 비중 18년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Column Stock Debt to Equity": {
+      "en": "Column Stock Debt to Equity",
+      "ko": "칼럼 주식 빚투",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Stock Debt-to-equity History": {
+      "en": "Stock Debt-to-equity History",
+      "ko": "주식 빚투 사상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Debt2 Is at an All-time High": {
+      "en": "Debt2 Is at an All-time High",
+      "ko": "빚투 사상 최대치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Reaching an All-time High": {
+      "en": "Reaching an All-time High",
+      "ko": "사상 최대치 돌파",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Maxed Out Credit Loans": {
+      "en": "Maxed Out Credit Loans",
+      "ko": "최대치 돌파 신용융자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Manage Breakthrough Loans and": {
+      "en": "Manage Breakthrough Loans and",
+      "ko": "돌파 신용융자 관리와",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Loan Administration and Investors": {
+      "en": "Loan Administration and Investors",
+      "ko": "신용융자 관리와 투자자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Governance and Investor Protection": {
+      "en": "Governance and Investor Protection",
+      "ko": "관리와 투자자 보호",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Agent-targeted Identities": {
+      "en": "Agent-targeted Identities",
+      "ko": "에이전트 겨냥 아이덴티티",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Target Identity Security": {
+      "en": "Target Identity Security",
+      "ko": "겨냥 아이덴티티 보안",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Identity Security Solutions": {
+      "en": "Identity Security Solutions",
+      "ko": "아이덴티티 보안 솔루션",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Launching Security Solutions": {
+      "en": "Launching Security Solutions",
+      "ko": "보안 솔루션 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Scaling Technology Globally": {
+      "en": "Scaling Technology Globally",
+      "ko": "기술 글로벌 확장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.627Z"
+    },
+    "Cloud Partners Nevius and": {
+      "en": "Cloud Partners Nevius and",
+      "ko": "클라우드 파트너 네비우스와",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.628Z"
+    },
+    "Working with Our Partner Nevius": {
+      "en": "Working with Our Partner Nevius",
+      "ko": "파트너 네비우스와 협력",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.628Z"
+    },
+    "Timing and Direction of Cuts": {
+      "en": "Timing and Direction of Cuts",
+      "ko": "인하 시기나 방향",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.628Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-12T12:39:51.628Z"
     }
   }
 }
