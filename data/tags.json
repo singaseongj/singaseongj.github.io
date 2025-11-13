@@ -4,105 +4,109 @@
   "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "CD 91-day rate",
-      "term_ko": "CD 91일물 금리",
-      "significance_score": 364,
-      "mentions": 386,
+      "term": "NYSE Intraday AI",
+      "term_ko": "뉴욕증시 장초반 AI",
+      "significance_score": 350,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "CD 91일물 금리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 91.37931
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 67.24137
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 79.31034
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 13.7931
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 12.06896
-            },
-            {
-              "period": "2025-11-10",
-              "timestamp": 1762700400000,
-              "value": 89.65517
-            },
-            {
-              "period": "2025-11-11",
-              "timestamp": 1762786800000,
-              "value": 91.37931
-            },
-            {
-              "period": "2025-11-12",
-              "timestamp": 1762873200000,
-              "value": 100
-            }
-          ]
-        },
+        "query": "뉴욕증시 장초반 AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CD%2091%EC%9D%BC%EB%AC%BC%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CD%2091%EC%9D%BC%EB%AC%BC%20%EA%B8%88%EB%A6%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98%20AI"
       },
       "top_headlines": [
         {
-          "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 386.2069,
-        "weekly_average_volume": 64.3678,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.016105,
-        "time_weight": 0.021867,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762873200000
-      }
+      ]
+    },
+    {
+      "term": "Investing in early-stage AI",
+      "term_ko": "장초반 AI 투자",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "장초반 AI 투자",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%B4%88%EB%B0%98%20AI%20%ED%88%AC%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%B4%88%EB%B0%98%20AI%20%ED%88%AC%EC%9E%90"
+      },
+      "top_headlines": [
+        {
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+          "summary": "",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "AI investment burden",
+      "term_ko": "AI 투자 부담",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI 투자 부담",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%ED%88%AC%EC%9E%90%20%EB%B6%80%EB%8B%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%ED%88%AC%EC%9E%90%20%EB%B6%80%EB%8B%B4"
+      },
+      "top_headlines": [
+        {
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+          "summary": "",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Spot ETFs in the US",
@@ -114,7 +118,7 @@
         "query": "미국서 현물 ETF",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -149,7 +153,7 @@
         "query": "현물 ETF 첫",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -184,7 +188,7 @@
         "query": "ETF 첫 상장하며",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -210,6 +214,41 @@
       ]
     },
     {
+      "term": "KDI in the spotlight with reports",
+      "term_ko": "보고서로 주목받는 KDI",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "보고서로 주목받는 KDI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "연일 ‘뼈 때리는’ 보고서로 주목받는 KDI",
+              "link": "https://n.news.naver.com/mnews/article/023/0003940860?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EA%B3%A0%EC%84%9C%EB%A1%9C%20%EC%A3%BC%EB%AA%A9%EB%B0%9B%EB%8A%94%20KDI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EA%B3%A0%EC%84%9C%EB%A1%9C%20%EC%A3%BC%EB%AA%A9%EB%B0%9B%EB%8A%94%20KDI"
+      },
+      "top_headlines": [
+        {
+          "title": "연일 ‘뼈 때리는’ 보고서로 주목받는 KDI",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003940860?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "25 days of deregistration",
       "term_ko": "등록 말소 25일",
       "significance_score": 336,
@@ -219,7 +258,7 @@
         "query": "등록 말소 25일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -254,7 +293,7 @@
         "query": "말소 25일 중대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -289,7 +328,7 @@
         "query": "25일 중대 발표",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -324,7 +363,7 @@
         "query": "비트디어 4억 달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -359,7 +398,7 @@
         "query": "4억 달러 전환사채",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -385,34 +424,34 @@
       ]
     },
     {
-      "term": "but 14 trillion for startups",
-      "term_ko": "되나 스타트업에 14조",
+      "term": "1475 won during martial law",
+      "term_ko": "장중 1475원 계엄때",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "되나 스타트업에 14조",
+        "query": "장중 1475원 계엄때",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "비만 치료, 다음 테슬라 되나… 스타트업에 14조 몰렸다",
-              "link": "https://www.tokenpost.kr/news/insights/303295"
+              "title": "장중 1475원… 계엄때 수준 치솟은 원-달러 환율",
+              "link": "https://n.news.naver.com/mnews/article/020/0003674323?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%90%98%EB%82%98%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EC%97%90%2014%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%90%98%EB%82%98%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EC%97%90%2014%EC%A1%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%A4%91%201475%EC%9B%90%20%EA%B3%84%EC%97%84%EB%95%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%A4%91%201475%EC%9B%90%20%EA%B3%84%EC%97%84%EB%95%8C"
       },
       "top_headlines": [
         {
-          "title": "비만 치료, 다음 테슬라 되나… 스타트업에 14조 몰렸다",
+          "title": "장중 1475원… 계엄때 수준 치솟은 원-달러 환율",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/303295",
+          "link": "https://n.news.naver.com/mnews/article/020/0003674323?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -420,34 +459,34 @@
       ]
     },
     {
-      "term": "14 trillion in startups",
-      "term_ko": "스타트업에 14조 몰렸다",
+      "term": "1475 KRW Martial Law Level",
+      "term_ko": "1475원 계엄때 수준",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "스타트업에 14조 몰렸다",
+        "query": "1475원 계엄때 수준",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "비만 치료, 다음 테슬라 되나… 스타트업에 14조 몰렸다",
-              "link": "https://www.tokenpost.kr/news/insights/303295"
+              "title": "장중 1475원… 계엄때 수준 치솟은 원-달러 환율",
+              "link": "https://n.news.naver.com/mnews/article/020/0003674323?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EC%97%90%2014%EC%A1%B0%20%EB%AA%B0%EB%A0%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EC%97%90%2014%EC%A1%B0%20%EB%AA%B0%EB%A0%B8%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1475%EC%9B%90%20%EA%B3%84%EC%97%84%EB%95%8C%20%EC%88%98%EC%A4%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1475%EC%9B%90%20%EA%B3%84%EC%97%84%EB%95%8C%20%EC%88%98%EC%A4%80"
       },
       "top_headlines": [
         {
-          "title": "비만 치료, 다음 테슬라 되나… 스타트업에 14조 몰렸다",
+          "title": "장중 1475원… 계엄때 수준 치솟은 원-달러 환율",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/303295",
+          "link": "https://n.news.naver.com/mnews/article/020/0003674323?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -455,34 +494,34 @@
       ]
     },
     {
-      "term": "91-day rate per day",
-      "term_ko": "91일물 금리 하루에",
-      "significance_score": 336,
+      "term": "Market Analysis US",
+      "term_ko": "시황 분석 미국",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "91일물 금리 하루에",
+        "query": "시황 분석 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=91%EC%9D%BC%EB%AC%BC%20%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%A3%A8%EC%97%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=91%EC%9D%BC%EB%AC%BC%20%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%A3%A8%EC%97%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD"
       },
       "top_headlines": [
         {
-          "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -490,34 +529,34 @@
       ]
     },
     {
-      "term": "Rate 9 basis points per day",
-      "term_ko": "금리 하루에 9bp",
-      "significance_score": 336,
+      "term": "Analysis US New York Stock Exchange",
+      "term_ko": "분석 미국 뉴욕증시",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 하루에 9bp",
+        "query": "분석 미국 뉴욕증시",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%A3%A8%EC%97%90%209bp",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%A3%A8%EC%97%90%209bp"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C"
       },
       "top_headlines": [
         {
-          "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -525,34 +564,34 @@
       ]
     },
     {
-      "term": "9 basis point spike in one day",
-      "term_ko": "하루에 9bp 급등",
-      "significance_score": 336,
+      "term": "Early trading in the New York Stock Exchange",
+      "term_ko": "미국 뉴욕증시 장초반",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "하루에 9bp 급등",
+        "query": "미국 뉴욕증시 장초반",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%A3%A8%EC%97%90%209bp%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%A3%A8%EC%97%90%209bp%20%EA%B8%89%EB%93%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98"
       },
       "top_headlines": [
         {
-          "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -560,34 +599,34 @@
       ]
     },
     {
-      "term": "9bp Spike Notice",
-      "term_ko": "9bp 급등 고시",
-      "significance_score": 336,
+      "term": "Investment burden metrics",
+      "term_ko": "투자 부담 지표",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "9bp 급등 고시",
+        "query": "투자 부담 지표",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9bp%20%EA%B8%89%EB%93%B1%20%EA%B3%A0%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9bp%20%EA%B8%89%EB%93%B1%20%EA%B3%A0%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EB%B6%80%EB%8B%B4%20%EC%A7%80%ED%91%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EB%B6%80%EB%8B%B4%20%EC%A7%80%ED%91%9C"
       },
       "top_headlines": [
         {
-          "title": "CD 91일물 금리, 하루에 9bp 급등 고시…이창용 쇼크 여파",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383839",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -595,349 +634,34 @@
       ]
     },
     {
-      "term": "ITSEN Global Q3 Operating Profit",
-      "term_ko": "아이티센글로벌 3분기 영업이익",
-      "significance_score": 336,
+      "term": "In the burden metric space",
+      "term_ko": "부담 지표 공백에",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "아이티센글로벌 3분기 영업이익",
+        "query": "부담 지표 공백에",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
-              "link": "https://byline.network/?p=9004111222583887"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%9D%B4%ED%8B%B0%EC%84%BC%EA%B8%80%EB%A1%9C%EB%B2%8C%203%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%9D%B4%ED%8B%B0%EC%84%BC%EA%B8%80%EB%A1%9C%EB%B2%8C%203%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8B%B4%20%EC%A7%80%ED%91%9C%20%EA%B3%B5%EB%B0%B1%EC%97%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8B%B4%20%EC%A7%80%ED%91%9C%20%EA%B3%B5%EB%B0%B1%EC%97%90"
       },
       "top_headlines": [
         {
-          "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반, AI 투자 부담·지표 공백에 빅테크...",
           "summary": "",
-          "link": "https://byline.network/?p=9004111222583887",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Q3 operating income of $119.9 billion",
-      "term_ko": "3분기 영업이익 1199억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3분기 영업이익 1199억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
-              "link": "https://byline.network/?p=9004111222583887"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5%201199%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5%201199%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
-          "summary": "",
-          "link": "https://byline.network/?p=9004111222583887",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "11.99 billion in operating income",
-      "term_ko": "영업이익 1199억 사상",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "영업이익 1199억 사상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
-              "link": "https://byline.network/?p=9004111222583887"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5%201199%EC%96%B5%20%EC%82%AC%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5%201199%EC%96%B5%20%EC%82%AC%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
-          "summary": "",
-          "link": "https://byline.network/?p=9004111222583887",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "11.99 billion All-time high",
-      "term_ko": "1199억 사상 최대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1199억 사상 최대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
-              "link": "https://byline.network/?p=9004111222583887"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1199%EC%96%B5%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1199%EC%96%B5%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "아이티센글로벌, 3분기 영업이익 1199억…사상 최대 실적 달성",
-          "summary": "",
-          "link": "https://byline.network/?p=9004111222583887",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "October was a hot month for real estate",
-      "term_ko": "부동산 뜨거웠던 10월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 뜨거웠던 10월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“증시·부동산 뜨거웠던 10월…현상 보도 넘어 다각적 분석 아쉬워”",
-              "link": "https://n.news.naver.com/mnews/article/032/0003408631?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%9C%A8%EA%B1%B0%EC%9B%A0%EB%8D%98%2010%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%9C%A8%EA%B1%B0%EC%9B%A0%EB%8D%98%2010%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "“증시·부동산 뜨거웠던 10월…현상 보도 넘어 다각적 분석 아쉬워”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003408631?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Hot October phenomenon",
-      "term_ko": "뜨거웠던 10월 현상",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뜨거웠던 10월 현상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“증시·부동산 뜨거웠던 10월…현상 보도 넘어 다각적 분석 아쉬워”",
-              "link": "https://n.news.naver.com/mnews/article/032/0003408631?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9C%A8%EA%B1%B0%EC%9B%A0%EB%8D%98%2010%EC%9B%94%20%ED%98%84%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9C%A8%EA%B1%B0%EC%9B%A0%EB%8D%98%2010%EC%9B%94%20%ED%98%84%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "“증시·부동산 뜨거웠던 10월…현상 보도 넘어 다각적 분석 아쉬워”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003408631?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "October Developments",
-      "term_ko": "10월 현상 보도",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "10월 현상 보도",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“증시·부동산 뜨거웠던 10월…현상 보도 넘어 다각적 분석 아쉬워”",
-              "link": "https://n.news.naver.com/mnews/article/032/0003408631?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=10%EC%9B%94%20%ED%98%84%EC%83%81%20%EB%B3%B4%EB%8F%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=10%EC%9B%94%20%ED%98%84%EC%83%81%20%EB%B3%B4%EB%8F%84"
-      },
-      "top_headlines": [
-        {
-          "title": "“증시·부동산 뜨거웠던 10월…현상 보도 넘어 다각적 분석 아쉬워”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003408631?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Bonds-Closing Treasury 3-Year",
-      "term_ko": "채권-마감 국고 3년물",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "채권-마감 국고 3년물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[채권-마감] 국고 3년물 또 연고점…이창용 발언 여파·투심 위축",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383838"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B1%84%EA%B6%8C-%EB%A7%88%EA%B0%90%20%EA%B5%AD%EA%B3%A0%203%EB%85%84%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B1%84%EA%B6%8C-%EB%A7%88%EA%B0%90%20%EA%B5%AD%EA%B3%A0%203%EB%85%84%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[채권-마감] 국고 3년물 또 연고점…이창용 발언 여파·투심 위축",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383838",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Another 3-year Treasury bill",
-      "term_ko": "국고 3년물 또",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국고 3년물 또",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[채권-마감] 국고 3년물 또 연고점…이창용 발언 여파·투심 위축",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383838"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EA%B3%A0%203%EB%85%84%EB%AC%BC%20%EB%98%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EA%B3%A0%203%EB%85%84%EB%AC%BC%20%EB%98%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[채권-마감] 국고 3년물 또 연고점…이창용 발언 여파·투심 위축",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383838",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "3-year dot plot",
-      "term_ko": "3년물 또 연고점",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3년물 또 연고점",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[채권-마감] 국고 3년물 또 연고점…이창용 발언 여파·투심 위축",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383838"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%85%84%EB%AC%BC%20%EB%98%90%20%EC%97%B0%EA%B3%A0%EC%A0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%85%84%EB%AC%BC%20%EB%98%90%20%EC%97%B0%EA%B3%A0%EC%A0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[채권-마감] 국고 3년물 또 연고점…이창용 발언 여파·투심 위축",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4383838",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15874236",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -948,7 +672,7 @@
       "term": "Big Short Michael Berry",
       "term_ko": "빅쇼트 마이클 버리",
       "significance_score": 322,
-      "mentions": 233,
+      "mentions": 222,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "빅쇼트 마이클 버리",
@@ -958,50 +682,45 @@
           "bucket_size_hours": 24,
           "rows": [
             {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
               "period": "2025-11-06",
               "timestamp": 1762354800000,
-              "value": 83.47826
+              "value": 100
             },
             {
               "period": "2025-11-07",
               "timestamp": 1762441200000,
-              "value": 47.82608
+              "value": 57.29166
             },
             {
               "period": "2025-11-08",
               "timestamp": 1762527600000,
-              "value": 37.3913
+              "value": 44.79166
             },
             {
               "period": "2025-11-09",
               "timestamp": 1762614000000,
-              "value": 17.3913
+              "value": 20.83333
             },
             {
               "period": "2025-11-10",
               "timestamp": 1762700400000,
-              "value": 20
+              "value": 23.95833
             },
             {
               "period": "2025-11-11",
               "timestamp": 1762786800000,
-              "value": 68.69565
+              "value": 82.29166
             },
             {
               "period": "2025-11-12",
               "timestamp": 1762873200000,
-              "value": 41.73913
+              "value": 50
             }
           ]
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -1032,13 +751,13 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 233.0435,
-        "weekly_average_volume": 38.8406,
+        "weekly_search_volume": 221.875,
+        "weekly_average_volume": 44.375,
         "day_score": 0,
         "week_score": 0,
         "correction_factor": 0.115911,
-        "decay_factor": 0.022857,
-        "time_weight": 0.021863,
+        "decay_factor": 0.023648,
+        "time_weight": 0.01941,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -1055,7 +774,7 @@
         "query": "마이클 버리 헤지펀드",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -1090,7 +809,7 @@
         "query": "버리 헤지펀드 등록",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -1125,7 +844,7 @@
         "query": "헤지펀드 등록 말소",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-13T21:42:49+09:00",
+          "last_updated": "2025-11-14T03:30:00+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -1151,28 +870,258 @@
       ]
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
+      "term": "Hinting at a major announcement",
+      "term_ko": "중대 발표 암시",
+      "significance_score": 322,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
+        "query": "중대 발표 암시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "'빅쇼트' 마이클 버리, 헤지펀드 등록 말소…25일 '중대 발표' 암시",
+              "link": "http://coinreaders.com/198469"
+            }
+          ]
+        }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8C%80%20%EB%B0%9C%ED%91%9C%20%EC%95%94%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8C%80%20%EB%B0%9C%ED%91%9C%20%EC%95%94%EC%8B%9C"
       },
-      "top_headlines": []
+      "top_headlines": [
+        {
+          "title": "'빅쇼트' 마이클 버리, 헤지펀드 등록 말소…25일 '중대 발표' 암시",
+          "summary": "",
+          "link": "http://coinreaders.com/198469",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "CryptocurrenciesCoinCoin RippleUSA",
+      "term_ko": "암호화폐코인 리플 미국서",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "암호화폐코인 리플 미국서",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "암호화폐(코인) 리플, 미국서 현물 ETF 첫 상장하며 가격 급등... 연말 목...",
+              "link": "https://www.wikitree.co.kr/articles/1094787"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%EC%BD%94%EC%9D%B8%20%EB%A6%AC%ED%94%8C%20%EB%AF%B8%EA%B5%AD%EC%84%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%EC%BD%94%EC%9D%B8%20%EB%A6%AC%ED%94%8C%20%EB%AF%B8%EA%B5%AD%EC%84%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "암호화폐(코인) 리플, 미국서 현물 ETF 첫 상장하며 가격 급등... 연말 목...",
+          "summary": "",
+          "link": "https://www.wikitree.co.kr/articles/1094787",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Ripple Spot in the US",
+      "term_ko": "리플 미국서 현물",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "리플 미국서 현물",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "암호화폐(코인) 리플, 미국서 현물 ETF 첫 상장하며 가격 급등... 연말 목...",
+              "link": "https://www.wikitree.co.kr/articles/1094787"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%ED%94%8C%20%EB%AF%B8%EA%B5%AD%EC%84%9C%20%ED%98%84%EB%AC%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%ED%94%8C%20%EB%AF%B8%EA%B5%AD%EC%84%9C%20%ED%98%84%EB%AC%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "암호화폐(코인) 리플, 미국서 현물 ETF 첫 상장하며 가격 급등... 연말 목...",
+          "summary": "",
+          "link": "https://www.wikitree.co.kr/articles/1094787",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "First time listing and pricing",
+      "term_ko": "첫 상장하며 가격",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "첫 상장하며 가격",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "암호화폐(코인) 리플, 미국서 현물 ETF 첫 상장하며 가격 급등... 연말 목...",
+              "link": "https://www.wikitree.co.kr/articles/1094787"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AB%20%EC%83%81%EC%9E%A5%ED%95%98%EB%A9%B0%20%EA%B0%80%EA%B2%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AB%20%EC%83%81%EC%9E%A5%ED%95%98%EB%A9%B0%20%EA%B0%80%EA%B2%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "암호화폐(코인) 리플, 미국서 현물 ETF 첫 상장하며 가격 급등... 연말 목...",
+          "summary": "",
+          "link": "https://www.wikitree.co.kr/articles/1094787",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Issuing dollar convertible bonds",
+      "term_ko": "달러 전환사채 발행",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "달러 전환사채 발행",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "비트디어, 4억 달러 전환사채 발행…기존 채권 재매수 계획도",
+              "link": "https://www.tokenpost.kr/news/breaking/303400"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EC%A0%84%ED%99%98%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EC%A0%84%ED%99%98%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89"
+      },
+      "top_headlines": [
+        {
+          "title": "비트디어, 4억 달러 전환사채 발행…기존 채권 재매수 계획도",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/303400",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Convertible Debt Issuance Existing",
+      "term_ko": "전환사채 발행 기존",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "전환사채 발행 기존",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "비트디어, 4억 달러 전환사채 발행…기존 채권 재매수 계획도",
+              "link": "https://www.tokenpost.kr/news/breaking/303400"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%ED%99%98%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89%20%EA%B8%B0%EC%A1%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%ED%99%98%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89%20%EA%B8%B0%EC%A1%B4"
+      },
+      "top_headlines": [
+        {
+          "title": "비트디어, 4억 달러 전환사채 발행…기존 채권 재매수 계획도",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/303400",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Existing bonds issued",
+      "term_ko": "발행 기존 채권",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "발행 기존 채권",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-14T03:30:00+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "비트디어, 4억 달러 전환사채 발행…기존 채권 재매수 계획도",
+              "link": "https://www.tokenpost.kr/news/breaking/303400"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%96%89%20%EA%B8%B0%EC%A1%B4%20%EC%B1%84%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%96%89%20%EA%B8%B0%EC%A1%B4%20%EC%B1%84%EA%B6%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "비트디어, 4억 달러 전환사채 발행…기존 채권 재매수 계획도",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/303400",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-11-13T12:44:23.240Z",
+    "generated_at": "2025-11-13T18:31:23.486Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-13T21:42:49+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-11-14T03:30:00+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1182,11 +1131,11 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-11-13T21:42:49+09:00",
+      "last_updated": "2025-11-14T03:30:00+09:00",
       "fallback_sources": [],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-11-13T21:42:49+09:00",
+        "lastUpdated": "2025-11-14T03:30:00+09:00",
         "fallbackSources": []
       }
     }
