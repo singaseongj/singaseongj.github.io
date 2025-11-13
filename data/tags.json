@@ -1,1204 +1,439 @@
 {
-  "date": "2025-11-12",
+  "generatedAt": "2025-11-13T01:24:50.556Z",
+  "timezone": "Asia/Seoul",
+  "date": "2025-11-13",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Ripple Solana ETF",
-      "term_ko": "리플 솔라나 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리플 솔라나 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-              "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%ED%94%8C%20%EC%86%94%EB%9D%BC%EB%82%98%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%ED%94%8C%20%EC%86%94%EB%9D%BC%EB%82%98%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ripple Solana Etf",
+      "term_ko": "리플 솔라나 ETF"
     },
     {
-      "term": "Solana ETF Approval",
-      "term_ko": "솔라나 ETF 승인",
-      "significance_score": 350,
-      "mentions": 340,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "솔라나 ETF 승인",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 87.5
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 76.92307
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 60.57692
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 30.76923
-            },
-            {
-              "period": "2025-11-10",
-              "timestamp": 1762700400000,
-              "value": 86.53846
-            },
-            {
-              "period": "2025-11-11",
-              "timestamp": 1762786800000,
-              "value": 85.57692
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-              "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%94%EB%9D%BC%EB%82%98%20ETF%20%EC%8A%B9%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%94%EB%9D%BC%EB%82%98%20ETF%20%EC%8A%B9%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 340.3846,
-        "weekly_average_volume": 68.0769,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.017578,
-        "time_weight": 0.01941,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762786800000
-      }
+      "term": "Solana Etf Approval",
+      "term_ko": "솔라나 ETF 승인"
     },
     {
-      "term": "Large ETF eve",
-      "term_ko": "ETF 전날 대규모",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 전날 대규모",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"고래들이 움직였다\"...XRP ETF 전날 대규모 매도 포착",
-              "link": "http://coinreaders.com/198241"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%A0%84%EB%82%A0%20%EB%8C%80%EA%B7%9C%EB%AA%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%A0%84%EB%82%A0%20%EB%8C%80%EA%B7%9C%EB%AA%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "\"고래들이 움직였다\"...XRP ETF 전날 대규모 매도 포착",
-          "summary": "",
-          "link": "http://coinreaders.com/198241",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Large Etf Eve",
+      "term_ko": "ETF 전날 대규모"
     },
     {
-      "term": "Korean AI in Europe",
-      "term_ko": "유럽에 韓 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유럽에 韓 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-              "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EB%9F%BD%EC%97%90%20%E9%9F%93%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EB%9F%BD%EC%97%90%20%E9%9F%93%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Korean Ai in Europe",
+      "term_ko": "유럽에 韓 AI"
     },
     {
-      "term": "Korean AI Inference Technology",
-      "term_ko": "韓 AI 추론기술",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "韓 AI 추론기술",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-              "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%20AI%20%EC%B6%94%EB%A1%A0%EA%B8%B0%EC%88%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%20AI%20%EC%B6%94%EB%A1%A0%EA%B8%B0%EC%88%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Korean Ai Inference Technology",
+      "term_ko": "韓 AI 추론기술"
     },
     {
-      "term": "Spreading AI inference",
-      "term_ko": "AI 추론기술 확산",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 추론기술 확산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-              "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EC%B6%94%EB%A1%A0%EA%B8%B0%EC%88%A0%20%ED%99%95%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EC%B6%94%EB%A1%A0%EA%B8%B0%EC%88%A0%20%ED%99%95%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spreading Ai Inference",
+      "term_ko": "AI 추론기술 확산"
     },
     {
-      "term": "Spreading Inference Friendly AI - Nebius",
-      "term_ko": "추론기술 확산 프렌들리AI-네비우스",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "추론기술 확산 프렌들리AI-네비우스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-              "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%94%EB%A1%A0%EA%B8%B0%EC%88%A0%20%ED%99%95%EC%82%B0%20%ED%94%84%EB%A0%8C%EB%93%A4%EB%A6%ACAI-%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%94%EB%A1%A0%EA%B8%B0%EC%88%A0%20%ED%99%95%EC%82%B0%20%ED%94%84%EB%A0%8C%EB%93%A4%EB%A6%ACAI-%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spreading Inference Friendly Ai - Nebius",
+      "term_ko": "추론기술 확산 프렌들리AI-네비우스"
     },
     {
-      "term": "Diffusion Friendly AI - Nebius Chassis",
-      "term_ko": "확산 프렌들리AI-네비우스 맞손",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확산 프렌들리AI-네비우스 맞손",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-              "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EC%82%B0%20%ED%94%84%EB%A0%8C%EB%93%A4%EB%A6%ACAI-%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%20%EB%A7%9E%EC%86%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EC%82%B0%20%ED%94%84%EB%A0%8C%EB%93%A4%EB%A6%ACAI-%EB%84%A4%EB%B9%84%EC%9A%B0%EC%8A%A4%20%EB%A7%9E%EC%86%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"북미·유럽에 韓 AI 추론기술 확산\"…프렌들리AI-네비우스 맞손",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005277368?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Diffusion Friendly Ai - Nebius Chassis",
+      "term_ko": "확산 프렌들리AI-네비우스 맞손"
     },
     {
-      "term": "Creating a Physical AI Enterprise",
-      "term_ko": "피지컬AI 기업을 만드는",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "피지컬AI 기업을 만드는",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "피지컬AI 기업을 만드는 컴퍼니빌더 ‘카본블랙’, 전 루닛 공동창업자...",
-              "link": "https://www.venturesquare.net/1013867"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%BC%EC%A7%80%EC%BB%ACAI%20%EA%B8%B0%EC%97%85%EC%9D%84%20%EB%A7%8C%EB%93%9C%EB%8A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%BC%EC%A7%80%EC%BB%ACAI%20%EA%B8%B0%EC%97%85%EC%9D%84%20%EB%A7%8C%EB%93%9C%EB%8A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "피지컬AI 기업을 만드는 컴퍼니빌더 ‘카본블랙’, 전 루닛 공동창업자...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1013867",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Creating a Physical Ai Enterprise",
+      "term_ko": "피지컬AI 기업을 만드는"
     },
     {
-      "term": "WeeklyStartupTrends StellarVision CES",
-      "term_ko": "주간스타트업동향 스텔라비전 CES",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주간스타트업동향 스텔라비전 CES",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[주간스타트업동향] 스텔라비전, CES 2026 혁신상 수상 外",
-              "link": "https://it.donga.com/107864/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%84%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EB%8F%99%ED%96%A5%20%EC%8A%A4%ED%85%94%EB%9D%BC%EB%B9%84%EC%A0%84%20CES",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%84%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EB%8F%99%ED%96%A5%20%EC%8A%A4%ED%85%94%EB%9D%BC%EB%B9%84%EC%A0%84%20CES"
-      },
-      "top_headlines": [
-        {
-          "title": "[주간스타트업동향] 스텔라비전, CES 2026 혁신상 수상 外",
-          "summary": "",
-          "link": "https://it.donga.com/107864/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Weeklystartuptrends Stellarvision Ces",
+      "term_ko": "주간스타트업동향 스텔라비전 CES"
     },
     {
-      "term": "First XRP in the US",
-      "term_ko": "미국 첫 XRP",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 첫 XRP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-              "link": "http://coinreaders.com/198211"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%B2%AB%20XRP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%B2%AB%20XRP"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-          "summary": "",
-          "link": "http://coinreaders.com/198211",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "First Xrp in the Us",
+      "term_ko": "미국 첫 XRP"
     },
     {
-      "term": "First XRP Spot",
-      "term_ko": "첫 XRP 현물",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "첫 XRP 현물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-              "link": "http://coinreaders.com/198211"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AB%20XRP%20%ED%98%84%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AB%20XRP%20%ED%98%84%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-          "summary": "",
-          "link": "http://coinreaders.com/198211",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "First Xrp Spot",
+      "term_ko": "첫 XRP 현물"
     },
     {
-      "term": "XRP Spot ETF",
-      "term_ko": "XRP 현물 ETF",
-      "significance_score": 350,
-      "mentions": 388,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "XRP 현물 ETF",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-05",
-              "timestamp": 1762268400000,
-              "value": 52.94117
-            },
-            {
-              "period": "2025-11-06",
-              "timestamp": 1762354800000,
-              "value": 29.41176
-            },
-            {
-              "period": "2025-11-07",
-              "timestamp": 1762441200000,
-              "value": 94.11764
-            },
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 52.94117
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 41.17647
-            },
-            {
-              "period": "2025-11-10",
-              "timestamp": 1762700400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-11",
-              "timestamp": 1762786800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-              "link": "http://coinreaders.com/198211"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=XRP%20%ED%98%84%EB%AC%BC%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=XRP%20%ED%98%84%EB%AC%BC%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-          "summary": "",
-          "link": "http://coinreaders.com/198211",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 388.2353,
-        "weekly_average_volume": 77.6471,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.016046,
-        "time_weight": 0.019408,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762786800000
-      }
+      "term": "Xrp Spot Etf",
+      "term_ko": "XRP 현물 ETF"
     },
     {
-      "term": "Spot ETFs on the horizon",
-      "term_ko": "현물 ETF 눈앞",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현물 ETF 눈앞",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-              "link": "http://coinreaders.com/198211"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EB%AC%BC%20ETF%20%EB%88%88%EC%95%9E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EB%AC%BC%20ETF%20%EB%88%88%EC%95%9E"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-          "summary": "",
-          "link": "http://coinreaders.com/198211",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spot Etfs on the Horizon",
+      "term_ko": "현물 ETF 눈앞"
     },
     {
-      "term": "Nasdaq in front of ETFs",
-      "term_ko": "ETF 눈앞 나스닥",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 눈앞 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-              "link": "http://coinreaders.com/198211"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EB%88%88%EC%95%9E%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EB%88%88%EC%95%9E%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 첫 XRP 현물 ETF 눈앞! 나스닥 상장 초읽기",
-          "summary": "",
-          "link": "http://coinreaders.com/198211",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nasdaq in Front of Etfs",
+      "term_ko": "ETF 눈앞 나스닥"
     },
     {
       "term": "The November Magic of Cryptocurrency",
-      "term_ko": "암호화폐 11월의 마법",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "암호화폐 11월의 마법",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-              "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%2011%EC%9B%94%EC%9D%98%20%EB%A7%88%EB%B2%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%2011%EC%9B%94%EC%9D%98%20%EB%A7%88%EB%B2%95"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "암호화폐 11월의 마법"
     },
     {
-      "term": "In 7 months, the won-dollar exchange rate",
-      "term_ko": "원-달러 환율 7개월만에",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원-달러 환율 7개월만에",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-              "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90-%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%207%EA%B0%9C%EC%9B%94%EB%A7%8C%EC%97%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90-%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%207%EA%B0%9C%EC%9B%94%EB%A7%8C%EC%97%90"
-      },
-      "top_headlines": [
-        {
-          "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "In 7 Months, the Won-dollar Exchange Rate",
+      "term_ko": "원-달러 환율 7개월만에"
     },
     {
-      "term": "Exchange rates intraday after 7 months",
-      "term_ko": "환율 7개월만에 장중",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 7개월만에 장중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-              "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%207%EA%B0%9C%EC%9B%94%EB%A7%8C%EC%97%90%20%EC%9E%A5%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%207%EA%B0%9C%EC%9B%94%EB%A7%8C%EC%97%90%20%EC%9E%A5%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rates Intraday After 7 Months",
+      "term_ko": "환율 7개월만에 장중"
     },
     {
-      "term": "1470 won intraday in 7 months",
-      "term_ko": "7개월만에 장중 1470원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "7개월만에 장중 1470원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-              "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=7%EA%B0%9C%EC%9B%94%EB%A7%8C%EC%97%90%20%EC%9E%A5%EC%A4%91%201470%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=7%EA%B0%9C%EC%9B%94%EB%A7%8C%EC%97%90%20%EC%9E%A5%EC%A4%91%201470%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1470 Won Intraday in 7 Months",
+      "term_ko": "7개월만에 장중 1470원"
     },
     {
-      "term": "Touch 1470 won intraday",
-      "term_ko": "장중 1470원 터치",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "장중 1470원 터치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-              "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%A4%91%201470%EC%9B%90%20%ED%84%B0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%A4%91%201470%EC%9B%90%20%ED%84%B0%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "원-달러 환율, 7개월만에 장중 1470원 터치",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003673998?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Touch 1470 Won Intraday",
+      "term_ko": "장중 1470원 터치"
     },
     {
-      "term": "Value increased 1500 won",
-      "term_ko": "가치 올랐다 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가치 올랐다 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "달러 가치 올랐다… 1500원 턱밑 다가선 환율",
-              "link": "https://n.news.naver.com/mnews/article/005/0001814133?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EC%B9%98%20%EC%98%AC%EB%9E%90%EB%8B%A4%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EC%B9%98%20%EC%98%AC%EB%9E%90%EB%8B%A4%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "달러 가치 올랐다… 1500원 턱밑 다가선 환율",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001814133?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Value Increased 1500 Won",
+      "term_ko": "가치 올랐다 1500원"
     },
     {
-      "term": "Raised 1500 won",
-      "term_ko": "올랐다 1500원 턱밑",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "올랐다 1500원 턱밑",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "달러 가치 올랐다… 1500원 턱밑 다가선 환율",
-              "link": "https://n.news.naver.com/mnews/article/005/0001814133?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%EB%9E%90%EB%8B%A4%201500%EC%9B%90%20%ED%84%B1%EB%B0%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%EB%9E%90%EB%8B%A4%201500%EC%9B%90%20%ED%84%B1%EB%B0%91"
-      },
-      "top_headlines": [
-        {
-          "title": "달러 가치 올랐다… 1500원 턱밑 다가선 환율",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001814133?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Raised 1500 Won",
+      "term_ko": "올랐다 1500원 턱밑"
     },
     {
-      "term": "1500 won chin up",
-      "term_ko": "1500원 턱밑 다가선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1500원 턱밑 다가선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "달러 가치 올랐다… 1500원 턱밑 다가선 환율",
-              "link": "https://n.news.naver.com/mnews/article/005/0001814133?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1500%EC%9B%90%20%ED%84%B1%EB%B0%91%20%EB%8B%A4%EA%B0%80%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1500%EC%9B%90%20%ED%84%B1%EB%B0%91%20%EB%8B%A4%EA%B0%80%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "달러 가치 올랐다… 1500원 턱밑 다가선 환율",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001814133?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1500 Won Chin Up",
+      "term_ko": "1500원 턱밑 다가선"
     },
     {
       "term": "Gold Price Quotes for Today, November 13th",
-      "term_ko": "오늘의 금값시세11월 13일자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세11월 13일자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(11월 13일자) \"금값 안정세, 올해 연말전망은\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3426520"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B811%EC%9B%94%2013%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B811%EC%9B%94%2013%EC%9D%BC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(11월 13일자) \"금값 안정세, 올해 연말전망은\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3426520",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 금값시세11월 13일자"
     },
     {
-      "term": "Gold Price QuotesGold Price as of November 13th",
-      "term_ko": "금값시세11월 13일자 금값",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값시세11월 13일자 금값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(11월 13일자) \"금값 안정세, 올해 연말전망은\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3426520"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B811%EC%9B%94%2013%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B811%EC%9B%94%2013%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(11월 13일자) \"금값 안정세, 올해 연말전망은\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3426520",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Price Quotesgold Price As of November 13th",
+      "term_ko": "금값시세11월 13일자 금값"
     },
     {
-      "term": "Gold prices stabilized on the 13th",
-      "term_ko": "13일자 금값 안정세",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "13일자 금값 안정세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(11월 13일자) \"금값 안정세, 올해 연말전망은\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3426520"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=13%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92%20%EC%95%88%EC%A0%95%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=13%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92%20%EC%95%88%EC%A0%95%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(11월 13일자) \"금값 안정세, 올해 연말전망은\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3426520",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Prices Stabilized on the 13th",
+      "term_ko": "13일자 금값 안정세"
     },
     {
       "term": "Gangwon 3+3 Strategy",
-      "term_ko": "강원 3+3 전략",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강원 3+3 전략",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"강원 3+3 전략 기반 글로벌 바이오헬스 선도도시 도약\"",
-              "link": "https://n.news.naver.com/mnews/article/654/0000151082?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%9B%90%203%2B3%20%EC%A0%84%EB%9E%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%9B%90%203%2B3%20%EC%A0%84%EB%9E%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "\"강원 3+3 전략 기반 글로벌 바이오헬스 선도도시 도약\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/654/0000151082?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "강원 3+3 전략"
     },
     {
-      "term": "Based on a 3+3 strategy",
-      "term_ko": "3+3 전략 기반",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3+3 전략 기반",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"강원 3+3 전략 기반 글로벌 바이오헬스 선도도시 도약\"",
-              "link": "https://n.news.naver.com/mnews/article/654/0000151082?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%2B3%20%EC%A0%84%EB%9E%B5%20%EA%B8%B0%EB%B0%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%2B3%20%EC%A0%84%EB%9E%B5%20%EA%B8%B0%EB%B0%98"
-      },
-      "top_headlines": [
-        {
-          "title": "\"강원 3+3 전략 기반 글로벌 바이오헬스 선도도시 도약\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/654/0000151082?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Based on a 3+3 Strategy",
+      "term_ko": "3+3 전략 기반"
     },
     {
-      "term": "Shutdown exit ripple",
-      "term_ko": "셧다운 종료 리플",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "셧다운 종료 리플",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-              "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%A2%85%EB%A3%8C%20%EB%A6%AC%ED%94%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%A2%85%EB%A3%8C%20%EB%A6%AC%ED%94%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Shutdown Exit Ripple",
+      "term_ko": "셧다운 종료 리플"
     },
     {
       "term": "Exit Ripple Solana",
-      "term_ko": "종료 리플 솔라나",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "종료 리플 솔라나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-13T03:30:21+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-              "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A2%85%EB%A3%8C%20%EB%A6%AC%ED%94%8C%20%EC%86%94%EB%9D%BC%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A2%85%EB%A3%8C%20%EB%A6%AC%ED%94%8C%20%EC%86%94%EB%9D%BC%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐 \"11월의 마법\" ... 셧다운 종료+ 리플· 솔라나 ETF 승인+ 비트...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511102001024817906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "종료 리플 솔라나"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-12T18:31:43.664Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-13T03:30:21+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ripple Solana Etf",
+      "term_ko": "리플 솔라나 ETF"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-13T03:30:21+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-13T03:30:21+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Solana Etf Approval",
+      "term_ko": "솔라나 ETF 승인"
+    },
+    {
+      "term": "Large Etf Eve",
+      "term_ko": "ETF 전날 대규모"
+    },
+    {
+      "term": "Korean Ai in Europe",
+      "term_ko": "유럽에 韓 AI"
+    },
+    {
+      "term": "Korean Ai Inference Technology",
+      "term_ko": "韓 AI 추론기술"
+    },
+    {
+      "term": "Spreading Ai Inference",
+      "term_ko": "AI 추론기술 확산"
+    },
+    {
+      "term": "Spreading Inference Friendly Ai - Nebius",
+      "term_ko": "추론기술 확산 프렌들리AI-네비우스"
+    },
+    {
+      "term": "Diffusion Friendly Ai - Nebius Chassis",
+      "term_ko": "확산 프렌들리AI-네비우스 맞손"
+    },
+    {
+      "term": "Creating a Physical Ai Enterprise",
+      "term_ko": "피지컬AI 기업을 만드는"
+    },
+    {
+      "term": "Weeklystartuptrends Stellarvision Ces",
+      "term_ko": "주간스타트업동향 스텔라비전 CES"
+    },
+    {
+      "term": "First Xrp in the Us",
+      "term_ko": "미국 첫 XRP"
+    },
+    {
+      "term": "First Xrp Spot",
+      "term_ko": "첫 XRP 현물"
+    },
+    {
+      "term": "Xrp Spot Etf",
+      "term_ko": "XRP 현물 ETF"
+    },
+    {
+      "term": "Spot Etfs on the Horizon",
+      "term_ko": "현물 ETF 눈앞"
+    },
+    {
+      "term": "Nasdaq in Front of Etfs",
+      "term_ko": "ETF 눈앞 나스닥"
+    },
+    {
+      "term": "The November Magic of Cryptocurrency",
+      "term_ko": "암호화폐 11월의 마법"
+    },
+    {
+      "term": "In 7 Months, the Won-dollar Exchange Rate",
+      "term_ko": "원-달러 환율 7개월만에"
+    },
+    {
+      "term": "Exchange Rates Intraday After 7 Months",
+      "term_ko": "환율 7개월만에 장중"
+    },
+    {
+      "term": "1470 Won Intraday in 7 Months",
+      "term_ko": "7개월만에 장중 1470원"
+    },
+    {
+      "term": "Touch 1470 Won Intraday",
+      "term_ko": "장중 1470원 터치"
+    },
+    {
+      "term": "Value Increased 1500 Won",
+      "term_ko": "가치 올랐다 1500원"
+    },
+    {
+      "term": "Raised 1500 Won",
+      "term_ko": "올랐다 1500원 턱밑"
+    },
+    {
+      "term": "1500 Won Chin Up",
+      "term_ko": "1500원 턱밑 다가선"
+    },
+    {
+      "term": "Gold Price Quotes for Today, November 13th",
+      "term_ko": "오늘의 금값시세11월 13일자"
+    },
+    {
+      "term": "Gold Price Quotesgold Price As of November 13th",
+      "term_ko": "금값시세11월 13일자 금값"
+    },
+    {
+      "term": "Gold Prices Stabilized on the 13th",
+      "term_ko": "13일자 금값 안정세"
+    },
+    {
+      "term": "Gangwon 3+3 Strategy",
+      "term_ko": "강원 3+3 전략"
+    },
+    {
+      "term": "Based on a 3+3 Strategy",
+      "term_ko": "3+3 전략 기반"
+    },
+    {
+      "term": "Shutdown Exit Ripple",
+      "term_ko": "셧다운 종료 리플"
+    },
+    {
+      "term": "Exit Ripple Solana",
+      "term_ko": "종료 리플 솔라나"
+    }
+  ],
+  "translations": {
+    "Ripple Solana Etf": {
+      "en": "Ripple Solana Etf",
+      "ko": "리플 솔라나 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Solana Etf Approval": {
+      "en": "Solana Etf Approval",
+      "ko": "솔라나 ETF 승인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Large Etf Eve": {
+      "en": "Large Etf Eve",
+      "ko": "ETF 전날 대규모",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Korean Ai in Europe": {
+      "en": "Korean Ai in Europe",
+      "ko": "유럽에 韓 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Korean Ai Inference Technology": {
+      "en": "Korean Ai Inference Technology",
+      "ko": "韓 AI 추론기술",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Spreading Ai Inference": {
+      "en": "Spreading Ai Inference",
+      "ko": "AI 추론기술 확산",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Spreading Inference Friendly Ai - Nebius": {
+      "en": "Spreading Inference Friendly Ai - Nebius",
+      "ko": "추론기술 확산 프렌들리AI-네비우스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Diffusion Friendly Ai - Nebius Chassis": {
+      "en": "Diffusion Friendly Ai - Nebius Chassis",
+      "ko": "확산 프렌들리AI-네비우스 맞손",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Creating a Physical Ai Enterprise": {
+      "en": "Creating a Physical Ai Enterprise",
+      "ko": "피지컬AI 기업을 만드는",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Weeklystartuptrends Stellarvision Ces": {
+      "en": "Weeklystartuptrends Stellarvision Ces",
+      "ko": "주간스타트업동향 스텔라비전 CES",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "First Xrp in the Us": {
+      "en": "First Xrp in the Us",
+      "ko": "미국 첫 XRP",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "First Xrp Spot": {
+      "en": "First Xrp Spot",
+      "ko": "첫 XRP 현물",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Xrp Spot Etf": {
+      "en": "Xrp Spot Etf",
+      "ko": "XRP 현물 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Spot Etfs on the Horizon": {
+      "en": "Spot Etfs on the Horizon",
+      "ko": "현물 ETF 눈앞",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Nasdaq in Front of Etfs": {
+      "en": "Nasdaq in Front of Etfs",
+      "ko": "ETF 눈앞 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "The November Magic of Cryptocurrency": {
+      "en": "The November Magic of Cryptocurrency",
+      "ko": "암호화폐 11월의 마법",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "In 7 Months, the Won-dollar Exchange Rate": {
+      "en": "In 7 Months, the Won-dollar Exchange Rate",
+      "ko": "원-달러 환율 7개월만에",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Exchange Rates Intraday After 7 Months": {
+      "en": "Exchange Rates Intraday After 7 Months",
+      "ko": "환율 7개월만에 장중",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "1470 Won Intraday in 7 Months": {
+      "en": "1470 Won Intraday in 7 Months",
+      "ko": "7개월만에 장중 1470원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Touch 1470 Won Intraday": {
+      "en": "Touch 1470 Won Intraday",
+      "ko": "장중 1470원 터치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Value Increased 1500 Won": {
+      "en": "Value Increased 1500 Won",
+      "ko": "가치 올랐다 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Raised 1500 Won": {
+      "en": "Raised 1500 Won",
+      "ko": "올랐다 1500원 턱밑",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "1500 Won Chin Up": {
+      "en": "1500 Won Chin Up",
+      "ko": "1500원 턱밑 다가선",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Gold Price Quotes for Today, November 13th": {
+      "en": "Gold Price Quotes for Today, November 13th",
+      "ko": "오늘의 금값시세11월 13일자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Gold Price Quotesgold Price As of November 13th": {
+      "en": "Gold Price Quotesgold Price As of November 13th",
+      "ko": "금값시세11월 13일자 금값",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Gold Prices Stabilized on the 13th": {
+      "en": "Gold Prices Stabilized on the 13th",
+      "ko": "13일자 금값 안정세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Gangwon 3+3 Strategy": {
+      "en": "Gangwon 3+3 Strategy",
+      "ko": "강원 3+3 전략",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Based on a 3+3 Strategy": {
+      "en": "Based on a 3+3 Strategy",
+      "ko": "3+3 전략 기반",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Shutdown Exit Ripple": {
+      "en": "Shutdown Exit Ripple",
+      "ko": "셧다운 종료 리플",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
+    },
+    "Exit Ripple Solana": {
+      "en": "Exit Ripple Solana",
+      "ko": "종료 리플 솔라나",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-13T01:24:50.556Z"
     }
   }
 }
