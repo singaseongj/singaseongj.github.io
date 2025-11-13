@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-13T21:42:41+09:00 (KST)**
+- Generated: **2025-11-14T03:29:46+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -101,13 +101,13 @@
 - Sector: **금융**
 - News search: https://www.google.com/search?q=NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C
 
-**삼성생명** (032830.KS)
+**삼성전자** (005930.KS)
 
-- News (7d): **243** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.4%**, 20d **1.1%**; volatility (20d): **unknown**
+- News (7d): **1247** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.6%**, 20d **5.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 **삼성증권** (016360.KS)
 
@@ -278,7 +278,7 @@
 **Lilly (Eli)** (LLY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **9.9%**, 20d **23.1%**; volatility (20d): **unknown**
+- Returns: 5d **8.7%**, 20d **24.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Lilly%20(Eli)
@@ -328,7 +328,7 @@
 **NetApp** (NTAP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.6%**, 20d **-8.2%**; volatility (20d): **unknown**
+- Returns: 5d **-3.5%**, 20d **-8.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=NetApp
