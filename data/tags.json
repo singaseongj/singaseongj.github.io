@@ -1,1045 +1,439 @@
 {
+  "generatedAt": "2025-11-14T18:27:39.188Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-14",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Q3 Cumulative",
-      "term_ko": "3분기 누적",
-      "significance_score": 588,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3분기 누적",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181"
-            },
-            {
-              "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%B6%84%EA%B8%B0%20%EB%88%84%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%B6%84%EA%B8%B0%20%EB%88%84%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "3분기 누적"
     },
     {
-      "term": "I have an IPO on the Korea Exchange",
-      "term_ko": "생겼는데 한국거래소 IPO",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "생겼는데 한국거래소 IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EA%B2%BC%EB%8A%94%EB%8D%B0%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EA%B2%BC%EB%8A%94%EB%8D%B0%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-          "summary": "",
-          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Have an Ipo on the Korea Exchange",
+      "term_ko": "생겼는데 한국거래소 IPO"
     },
     {
-      "term": "KOSDAQ IPO Open Closure",
-      "term_ko": "한국거래소 IPO 개점휴업인",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국거래소 IPO 개점휴업인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20IPO%20%EA%B0%9C%EC%A0%90%ED%9C%B4%EC%97%85%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20IPO%20%EA%B0%9C%EC%A0%90%ED%9C%B4%EC%97%85%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-          "summary": "",
-          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kosdaq Ipo Open Closure",
+      "term_ko": "한국거래소 IPO 개점휴업인"
     },
     {
-      "term": "Why IPO is closed",
-      "term_ko": "IPO 개점휴업인 까닭",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IPO 개점휴업인 까닭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IPO%20%EA%B0%9C%EC%A0%90%ED%9C%B4%EC%97%85%EC%9D%B8%20%EA%B9%8C%EB%8B%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IPO%20%EA%B0%9C%EC%A0%90%ED%9C%B4%EC%97%85%EC%9D%B8%20%EA%B9%8C%EB%8B%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-          "summary": "",
-          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Why Ipo Is Closed",
+      "term_ko": "IPO 개점휴업인 까닭"
     },
     {
       "term": "American Bitcoin Q3",
-      "term_ko": "American Bitcoin 3분기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "American Bitcoin 3분기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "American Bitcoin, 3분기 매출 6,422만 달러...비트코인 보유량 3,418개로 ...",
-              "link": "https://www.tokenpost.kr/news/breaking/303956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=American%20Bitcoin%203%EB%B6%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=American%20Bitcoin%203%EB%B6%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "American Bitcoin, 3분기 매출 6,422만 달러...비트코인 보유량 3,418개로 ...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/303956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "American Bitcoin 3분기"
     },
     {
-      "term": "Bitcoin Q3 revenue",
-      "term_ko": "Bitcoin 3분기 매출",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bitcoin 3분기 매출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "American Bitcoin, 3분기 매출 6,422만 달러...비트코인 보유량 3,418개로 ...",
-              "link": "https://www.tokenpost.kr/news/breaking/303956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bitcoin%203%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bitcoin%203%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "American Bitcoin, 3분기 매출 6,422만 달러...비트코인 보유량 3,418개로 ...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/303956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bitcoin Q3 Revenue",
+      "term_ko": "Bitcoin 3분기 매출"
     },
     {
-      "term": "Q3 revenue of $64.22 million",
-      "term_ko": "3분기 매출 6422만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3분기 매출 6422만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "American Bitcoin, 3분기 매출 6,422만 달러...비트코인 보유량 3,418개로 ...",
-              "link": "https://www.tokenpost.kr/news/breaking/303956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C%206422%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C%206422%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "American Bitcoin, 3분기 매출 6,422만 달러...비트코인 보유량 3,418개로 ...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/303956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Q3 Revenue of $64.22 Million",
+      "term_ko": "3분기 매출 6422만"
     },
     {
       "term": "Valley Vineyards 2025",
-      "term_ko": "밸리 바인야드 2025년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "밸리 바인야드 2025년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美 나스닥 상장 와이너리 '윌래메트 밸리 바인야드', 2025년 3분기 실적...",
-              "link": "https://www.sommeliertimes.com/news/articleView.html?idxno=129943"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%B8%EB%A6%AC%20%EB%B0%94%EC%9D%B8%EC%95%BC%EB%93%9C%202025%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%B8%EB%A6%AC%20%EB%B0%94%EC%9D%B8%EC%95%BC%EB%93%9C%202025%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "美 나스닥 상장 와이너리 '윌래메트 밸리 바인야드', 2025년 3분기 실적...",
-          "summary": "",
-          "link": "https://www.sommeliertimes.com/news/articleView.html?idxno=129943",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "밸리 바인야드 2025년"
     },
     {
       "term": "Vineyard Q3 2025",
-      "term_ko": "바인야드 2025년 3분기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "바인야드 2025년 3분기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美 나스닥 상장 와이너리 '윌래메트 밸리 바인야드', 2025년 3분기 실적...",
-              "link": "https://www.sommeliertimes.com/news/articleView.html?idxno=129943"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%94%EC%9D%B8%EC%95%BC%EB%93%9C%202025%EB%85%84%203%EB%B6%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%94%EC%9D%B8%EC%95%BC%EB%93%9C%202025%EB%85%84%203%EB%B6%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "美 나스닥 상장 와이너리 '윌래메트 밸리 바인야드', 2025년 3분기 실적...",
-          "summary": "",
-          "link": "https://www.sommeliertimes.com/news/articleView.html?idxno=129943",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "바인야드 2025년 3분기"
     },
     {
       "term": "Stock Market Briefing November",
-      "term_ko": "증시 브리핑 11월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 11월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 11월"
     },
     {
       "term": "Briefing November 13",
-      "term_ko": "브리핑 11월 13일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "브리핑 11월 13일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94%2013%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94%2013%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "브리핑 11월 13일"
     },
     {
       "term": "Nov. 13 Dow Jones",
-      "term_ko": "11월 13일 다우존스",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "11월 13일 다우존스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EC%9B%94%2013%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EC%9B%94%2013%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "11월 13일 다우존스"
     },
     {
-      "term": "13 days Dow Jones Nasdaq",
-      "term_ko": "13일 다우존스 나스닥",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "13일 다우존스 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=13%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=13%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 11월 13일] 다우존스, 나스닥, S&P 500 모두 하락",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194617",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "13 Days Dow Jones Nasdaq",
+      "term_ko": "13일 다우존스 나스닥"
     },
     {
-      "term": "Merck & Co. third-quarter operating income",
-      "term_ko": "메리츠지주 3분기 영업익",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "메리츠지주 3분기 영업익",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "메리츠지주, 3분기 영업익 전년비 4.4%↓...증권은 4.16%↑",
-              "link": "https://www.asiatime.co.kr/article/20251114500409"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%EB%A6%AC%EC%B8%A0%EC%A7%80%EC%A3%BC%203%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%94%EB%A6%AC%EC%B8%A0%EC%A7%80%EC%A3%BC%203%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "메리츠지주, 3분기 영업익 전년비 4.4%↓...증권은 4.16%↑",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20251114500409",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Merck & Co. Third-quarter Operating Income",
+      "term_ko": "메리츠지주 3분기 영업익"
     },
     {
-      "term": "Q3 operating income year-over-year",
-      "term_ko": "3분기 영업익 전년비",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3분기 영업익 전년비",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "메리츠지주, 3분기 영업익 전년비 4.4%↓...증권은 4.16%↑",
-              "link": "https://www.asiatime.co.kr/article/20251114500409"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B5%20%EC%A0%84%EB%85%84%EB%B9%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%B6%84%EA%B8%B0%20%EC%98%81%EC%97%85%EC%9D%B5%20%EC%A0%84%EB%85%84%EB%B9%84"
-      },
-      "top_headlines": [
-        {
-          "title": "메리츠지주, 3분기 영업익 전년비 4.4%↓...증권은 4.16%↑",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20251114500409",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Q3 Operating Income Year-over-year",
+      "term_ko": "3분기 영업익 전년비"
     },
     {
-      "term": "KOSPI plunges 3.8 percent",
-      "term_ko": "코스피 3.8% 급락",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 3.8% 급락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 3.8% 급락…구두개입·팩트시트에 환율 '뚝'",
-              "link": "https://n.news.naver.com/mnews/article/422/0000801782?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%203.8%25%20%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%203.8%25%20%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 3.8% 급락…구두개입·팩트시트에 환율 '뚝'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000801782?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Plunges 3.8 Percent",
+      "term_ko": "코스피 3.8% 급락"
     },
     {
-      "term": "3.8% plunge verbal intervention",
-      "term_ko": "3.8% 급락 구두개입",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3.8% 급락 구두개입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 3.8% 급락…구두개입·팩트시트에 환율 '뚝'",
-              "link": "https://n.news.naver.com/mnews/article/422/0000801782?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3.8%25%20%EA%B8%89%EB%9D%BD%20%EA%B5%AC%EB%91%90%EA%B0%9C%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3.8%25%20%EA%B8%89%EB%9D%BD%20%EA%B5%AC%EB%91%90%EA%B0%9C%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 3.8% 급락…구두개입·팩트시트에 환율 '뚝'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000801782?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3.8% Plunge Verbal Intervention",
+      "term_ko": "3.8% 급락 구두개입"
     },
     {
-      "term": "Cumulative net profit 844 billion won",
-      "term_ko": "누적 순익 8844억원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "누적 순익 8844억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%88%84%EC%A0%81%20%EC%88%9C%EC%9D%B5%208844%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%88%84%EC%A0%81%20%EC%88%9C%EC%9D%B5%208844%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cumulative Net Profit 844 Billion Won",
+      "term_ko": "누적 순익 8844억원"
     },
     {
-      "term": "Guaranteed net income of $884 million",
-      "term_ko": "순익 8844억원 보장성",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순익 8844억원 보장성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9D%B5%208844%EC%96%B5%EC%9B%90%20%EB%B3%B4%EC%9E%A5%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9D%B5%208844%EC%96%B5%EC%9B%90%20%EB%B3%B4%EC%9E%A5%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Guaranteed Net Income of $884 Million",
+      "term_ko": "순익 8844억원 보장성"
     },
     {
-      "term": "88.44 billion in guaranteed products",
-      "term_ko": "8844억원 보장성 상품",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "8844억원 보장성 상품",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8844%EC%96%B5%EC%9B%90%20%EB%B3%B4%EC%9E%A5%EC%84%B1%20%EC%83%81%ED%92%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8844%EC%96%B5%EC%9B%90%20%EB%B3%B4%EC%9E%A5%EC%84%B1%20%EC%83%81%ED%92%88"
-      },
-      "top_headlines": [
-        {
-          "title": "교보생명, 3분기 누적 순익 8844억원…보장성 상품 판매 호조",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=649181",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "88.44 Billion in Guaranteed Products",
+      "term_ko": "8844억원 보장성 상품"
     },
     {
-      "term": "Cumulative net income of KRW 248.6 billion",
-      "term_ko": "누적 순이익 2486억원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "누적 순이익 2486억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%88%84%EC%A0%81%20%EC%88%9C%EC%9D%B4%EC%9D%B5%202486%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%88%84%EC%A0%81%20%EC%88%9C%EC%9D%B4%EC%9D%B5%202486%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cumulative Net Income of Krw 248.6 Billion",
+      "term_ko": "누적 순이익 2486억원"
     },
     {
-      "term": "Net profit KRW 248.6 billion year-on-year",
-      "term_ko": "순이익 2486억원 전년比",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순이익 2486억원 전년比",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9D%B4%EC%9D%B5%202486%EC%96%B5%EC%9B%90%20%EC%A0%84%EB%85%84%E6%AF%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9D%B4%EC%9D%B5%202486%EC%96%B5%EC%9B%90%20%EC%A0%84%EB%85%84%E6%AF%94"
-      },
-      "top_headlines": [
-        {
-          "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Net Profit Krw 248.6 Billion Year-on-year",
+      "term_ko": "순이익 2486억원 전년比"
     },
     {
-      "term": "248.6 billion KRW 7.2% YoY",
-      "term_ko": "2486억원 전년比 7.2%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2486억원 전년比 7.2%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2486%EC%96%B5%EC%9B%90%20%EC%A0%84%EB%85%84%E6%AF%94%207.2%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2486%EC%96%B5%EC%9B%90%20%EC%A0%84%EB%85%84%E6%AF%94%207.2%25"
-      },
-      "top_headlines": [
-        {
-          "title": "한국씨티은행, 3분기 누적 순이익 2486억원 … 전년比 7.2%↓",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/11/14/2025111400380.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "248.6 Billion Krw 7.2% Yoy",
+      "term_ko": "2486억원 전년比 7.2%"
     },
     {
-      "term": "The monopoly broken rationale is",
-      "term_ko": "독점 깨져 명분은",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "독점 깨져 명분은",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%85%EC%A0%90%20%EA%B9%A8%EC%A0%B8%20%EB%AA%85%EB%B6%84%EC%9D%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%85%EC%A0%90%20%EA%B9%A8%EC%A0%B8%20%EB%AA%85%EB%B6%84%EC%9D%80"
-      },
-      "top_headlines": [
-        {
-          "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-          "summary": "",
-          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Monopoly Broken Rationale Is",
+      "term_ko": "독점 깨져 명분은"
     },
     {
-      "term": "It's broken, and I have a reason for it.",
-      "term_ko": "깨져 명분은 생겼는데",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "깨져 명분은 생겼는데",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%A8%EC%A0%B8%20%EB%AA%85%EB%B6%84%EC%9D%80%20%EC%83%9D%EA%B2%BC%EB%8A%94%EB%8D%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%A8%EC%A0%B8%20%EB%AA%85%EB%B6%84%EC%9D%80%20%EC%83%9D%EA%B2%BC%EB%8A%94%EB%8D%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-          "summary": "",
-          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It's Broken, and I Have a Reason for It.",
+      "term_ko": "깨져 명분은 생겼는데"
     },
     {
-      "term": "I've got a good excuse, but I can't find the",
-      "term_ko": "명분은 생겼는데 한국거래소",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "명분은 생겼는데 한국거래소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-14T21:40:45+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%85%EB%B6%84%EC%9D%80%20%EC%83%9D%EA%B2%BC%EB%8A%94%EB%8D%B0%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%85%EB%B6%84%EC%9D%80%20%EC%83%9D%EA%B2%BC%EB%8A%94%EB%8D%B0%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "독점 깨져 명분은 생겼는데…‘한국거래소 IPO’ 개점휴업인 까닭",
-          "summary": "",
-          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=503156",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I've Got a Good Excuse, But I Can't Find the",
+      "term_ko": "명분은 생겼는데 한국거래소"
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 100,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-12",
-              "timestamp": 1762873200000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.014346,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762873200000
-      }
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-14T12:42:26.031Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-14T21:40:45+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Q3 Cumulative",
+      "term_ko": "3분기 누적"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-14T21:40:45+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-14T21:40:45+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "I Have an Ipo on the Korea Exchange",
+      "term_ko": "생겼는데 한국거래소 IPO"
+    },
+    {
+      "term": "Kosdaq Ipo Open Closure",
+      "term_ko": "한국거래소 IPO 개점휴업인"
+    },
+    {
+      "term": "Why Ipo Is Closed",
+      "term_ko": "IPO 개점휴업인 까닭"
+    },
+    {
+      "term": "American Bitcoin Q3",
+      "term_ko": "American Bitcoin 3분기"
+    },
+    {
+      "term": "Bitcoin Q3 Revenue",
+      "term_ko": "Bitcoin 3분기 매출"
+    },
+    {
+      "term": "Q3 Revenue of $64.22 Million",
+      "term_ko": "3분기 매출 6422만"
+    },
+    {
+      "term": "Valley Vineyards 2025",
+      "term_ko": "밸리 바인야드 2025년"
+    },
+    {
+      "term": "Vineyard Q3 2025",
+      "term_ko": "바인야드 2025년 3분기"
+    },
+    {
+      "term": "Stock Market Briefing November",
+      "term_ko": "증시 브리핑 11월"
+    },
+    {
+      "term": "Briefing November 13",
+      "term_ko": "브리핑 11월 13일"
+    },
+    {
+      "term": "Nov. 13 Dow Jones",
+      "term_ko": "11월 13일 다우존스"
+    },
+    {
+      "term": "13 Days Dow Jones Nasdaq",
+      "term_ko": "13일 다우존스 나스닥"
+    },
+    {
+      "term": "Merck & Co. Third-quarter Operating Income",
+      "term_ko": "메리츠지주 3분기 영업익"
+    },
+    {
+      "term": "Q3 Operating Income Year-over-year",
+      "term_ko": "3분기 영업익 전년비"
+    },
+    {
+      "term": "Kospi Plunges 3.8 Percent",
+      "term_ko": "코스피 3.8% 급락"
+    },
+    {
+      "term": "3.8% Plunge Verbal Intervention",
+      "term_ko": "3.8% 급락 구두개입"
+    },
+    {
+      "term": "Cumulative Net Profit 844 Billion Won",
+      "term_ko": "누적 순익 8844억원"
+    },
+    {
+      "term": "Guaranteed Net Income of $884 Million",
+      "term_ko": "순익 8844억원 보장성"
+    },
+    {
+      "term": "88.44 Billion in Guaranteed Products",
+      "term_ko": "8844억원 보장성 상품"
+    },
+    {
+      "term": "Cumulative Net Income of Krw 248.6 Billion",
+      "term_ko": "누적 순이익 2486억원"
+    },
+    {
+      "term": "Net Profit Krw 248.6 Billion Year-on-year",
+      "term_ko": "순이익 2486억원 전년比"
+    },
+    {
+      "term": "248.6 Billion Krw 7.2% Yoy",
+      "term_ko": "2486억원 전년比 7.2%"
+    },
+    {
+      "term": "The Monopoly Broken Rationale Is",
+      "term_ko": "독점 깨져 명분은"
+    },
+    {
+      "term": "It's Broken, and I Have a Reason for It.",
+      "term_ko": "깨져 명분은 생겼는데"
+    },
+    {
+      "term": "I've Got a Good Excuse, But I Can't Find the",
+      "term_ko": "명분은 생겼는데 한국거래소"
+    },
+    {
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
+    }
+  ],
+  "translations": {
+    "Q3 Cumulative": {
+      "en": "Q3 Cumulative",
+      "ko": "3분기 누적",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "I Have an Ipo on the Korea Exchange": {
+      "en": "I Have an Ipo on the Korea Exchange",
+      "ko": "생겼는데 한국거래소 IPO",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Kosdaq Ipo Open Closure": {
+      "en": "Kosdaq Ipo Open Closure",
+      "ko": "한국거래소 IPO 개점휴업인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Why Ipo Is Closed": {
+      "en": "Why Ipo Is Closed",
+      "ko": "IPO 개점휴업인 까닭",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "American Bitcoin Q3": {
+      "en": "American Bitcoin Q3",
+      "ko": "American Bitcoin 3분기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Bitcoin Q3 Revenue": {
+      "en": "Bitcoin Q3 Revenue",
+      "ko": "Bitcoin 3분기 매출",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Q3 Revenue of $64.22 Million": {
+      "en": "Q3 Revenue of $64.22 Million",
+      "ko": "3분기 매출 6422만",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Valley Vineyards 2025": {
+      "en": "Valley Vineyards 2025",
+      "ko": "밸리 바인야드 2025년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Vineyard Q3 2025": {
+      "en": "Vineyard Q3 2025",
+      "ko": "바인야드 2025년 3분기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Stock Market Briefing November": {
+      "en": "Stock Market Briefing November",
+      "ko": "증시 브리핑 11월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Briefing November 13": {
+      "en": "Briefing November 13",
+      "ko": "브리핑 11월 13일",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Nov. 13 Dow Jones": {
+      "en": "Nov. 13 Dow Jones",
+      "ko": "11월 13일 다우존스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "13 Days Dow Jones Nasdaq": {
+      "en": "13 Days Dow Jones Nasdaq",
+      "ko": "13일 다우존스 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Merck & Co. Third-quarter Operating Income": {
+      "en": "Merck & Co. Third-quarter Operating Income",
+      "ko": "메리츠지주 3분기 영업익",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Q3 Operating Income Year-over-year": {
+      "en": "Q3 Operating Income Year-over-year",
+      "ko": "3분기 영업익 전년비",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.188Z"
+    },
+    "Kospi Plunges 3.8 Percent": {
+      "en": "Kospi Plunges 3.8 Percent",
+      "ko": "코스피 3.8% 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "3.8% Plunge Verbal Intervention": {
+      "en": "3.8% Plunge Verbal Intervention",
+      "ko": "3.8% 급락 구두개입",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "Cumulative Net Profit 844 Billion Won": {
+      "en": "Cumulative Net Profit 844 Billion Won",
+      "ko": "누적 순익 8844억원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "Guaranteed Net Income of $884 Million": {
+      "en": "Guaranteed Net Income of $884 Million",
+      "ko": "순익 8844억원 보장성",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "88.44 Billion in Guaranteed Products": {
+      "en": "88.44 Billion in Guaranteed Products",
+      "ko": "8844억원 보장성 상품",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "Cumulative Net Income of Krw 248.6 Billion": {
+      "en": "Cumulative Net Income of Krw 248.6 Billion",
+      "ko": "누적 순이익 2486억원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "Net Profit Krw 248.6 Billion Year-on-year": {
+      "en": "Net Profit Krw 248.6 Billion Year-on-year",
+      "ko": "순이익 2486억원 전년比",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "248.6 Billion Krw 7.2% Yoy": {
+      "en": "248.6 Billion Krw 7.2% Yoy",
+      "ko": "2486억원 전년比 7.2%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "The Monopoly Broken Rationale Is": {
+      "en": "The Monopoly Broken Rationale Is",
+      "ko": "독점 깨져 명분은",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "It's Broken, and I Have a Reason for It.": {
+      "en": "It's Broken, and I Have a Reason for It.",
+      "ko": "깨져 명분은 생겼는데",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "I've Got a Good Excuse, But I Can't Find the": {
+      "en": "I've Got a Good Excuse, But I Can't Find the",
+      "ko": "명분은 생겼는데 한국거래소",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "Rate Cut Expectations": {
+      "en": "Rate Cut Expectations",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
+    },
+    "U.s. Government Shutdown Crisis": {
+      "en": "U.s. Government Shutdown Crisis",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-14T18:27:39.189Z"
     }
   }
 }
