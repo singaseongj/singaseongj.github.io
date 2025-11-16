@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-16T15:28:59+09:00 (KST)**
+- Generated: **2025-11-16T21:36:27+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,25 +93,25 @@
 
 ### SAFE (5)
 
-**LG화학** (051910.KS)
-
-- News (7d): **104** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.7%**, 20d **20.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
-
 **NH투자증권** (005940.KS)
 
-- News (7d): **212** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- News (7d): **229** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
 - Returns: 5d **7.4%**, 20d **7.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C
 
+**대한항공** (003490.KS)
+
+- News (7d): **400** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.9%**, 20d **-1.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
+
 **두산** (000150.KS)
 
-- News (7d): **298** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- News (7d): **305** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
 - Returns: 5d **-1.3%**, 20d **30.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -119,7 +119,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **839** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **922** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-0.7%**, 20d **-0.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -127,7 +127,7 @@
 
 **한화** (000880.KS)
 
-- News (7d): **876** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- News (7d): **901** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
 - Returns: 5d **2.3%**, 20d **7.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -167,13 +167,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90
 
-**코스모신소재** (005070.KS)
+**에스엘** (005850.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.4%**, 20d **12.5%**; volatility (20d): **unknown**
+- Returns: 5d **0.4%**, 20d **-6.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8B%A0%EC%86%8C%EC%9E%AC
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%97%98
 
 ## NASDAQ 100
 
