@@ -1,274 +1,8 @@
 {
   "date": "2025-11-16",
   "window": "12_hours",
-  "total_phrases": 28,
+  "total_phrases": 30,
   "discovered_keywords": [
-    {
-      "term": "Lending rates",
-      "term_ko": "주담대 금리",
-      "significance_score": 840,
-      "mentions": 503,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 금리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-08",
-              "timestamp": 1762527600000,
-              "value": 53.20356
-            },
-            {
-              "period": "2025-11-09",
-              "timestamp": 1762614000000,
-              "value": 54.0957
-            },
-            {
-              "period": "2025-11-10",
-              "timestamp": 1762700400000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-11",
-              "timestamp": 1762786800000,
-              "value": 98.62124
-            },
-            {
-              "period": "2025-11-12",
-              "timestamp": 1762873200000,
-              "value": 86.37469
-            },
-            {
-              "period": "2025-11-13",
-              "timestamp": 1762959600000,
-              "value": 86.45579
-            },
-            {
-              "period": "2025-11-14",
-              "timestamp": 1763046000000,
-              "value": 84.75263
-            },
-            {
-              "period": "2025-11-15",
-              "timestamp": 1763132400000,
-              "value": 46.87753
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 3,
-          "last_updated": "2025-11-16T10:31:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
-              "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004"
-            },
-            {
-              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
-            },
-            {
-              "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
-              "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-          "summary": "",
-          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 503.0819,
-        "weekly_average_volume": 83.847,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.013408,
-        "time_weight": 0.028957,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1763132400000
-      }
-    },
-    {
-      "term": "6% in 2 years",
-      "term_ko": "2년 만에 6%대",
-      "significance_score": 672,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2년 만에 6%대",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-16T10:31:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
-            },
-            {
-              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
-              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EB%85%84%20%EB%A7%8C%EC%97%90%206%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EB%85%84%20%EB%A7%8C%EC%97%90%206%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-          "summary": "",
-          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "More loan thresholds",
-      "term_ko": "대출 문턱 더",
-      "significance_score": 644,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대출 문턱 더",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-16T10:31:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
-            },
-            {
-              "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
-              "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EB%AC%B8%ED%84%B1%20%EB%8D%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EB%AC%B8%ED%84%B1%20%EB%8D%94"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-          "summary": "",
-          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "In the midst of controversy",
-      "term_ko": "논란 속",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "논란 속",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-16T10:31:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
-              "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1"
-            },
-            {
-              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
-              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%BC%EB%9E%80%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%BC%EB%9E%80%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
     {
       "term": "XRP $2.50 barrier",
       "term_ko": "XRP 2.50달러 장벽",
@@ -279,7 +13,7 @@
         "query": "XRP 2.50달러 장벽",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -305,34 +39,34 @@
       ]
     },
     {
-      "term": "4000SeonDaeDaeTuk AI",
-      "term_ko": "4000선대로 뚝 AI",
+      "term": "Market ING COSPI 4100 line",
+      "term_ko": "마켓 ING코스피 4100선",
       "significance_score": 364,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "4000선대로 뚝 AI",
+        "query": "마켓 ING코스피 4100선",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
-              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+              "title": "[마켓 ING]코스피 4100선 수성 실패, 엔비디아 실적에 주목",
+              "link": "https://n.news.naver.com/mnews/article/277/0005679925?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4000%EC%84%A0%EB%8C%80%EB%A1%9C%20%EB%9A%9D%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4000%EC%84%A0%EB%8C%80%EB%A1%9C%20%EB%9A%9D%20AI"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%BC%93%20ING%EC%BD%94%EC%8A%A4%ED%94%BC%204100%EC%84%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%BC%93%20ING%EC%BD%94%EC%8A%A4%ED%94%BC%204100%EC%84%A0"
       },
       "top_headlines": [
         {
-          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "title": "[마켓 ING]코스피 4100선 수성 실패, 엔비디아 실적에 주목",
           "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "link": "https://n.news.naver.com/mnews/article/277/0005679925?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -340,69 +74,34 @@
       ]
     },
     {
-      "term": "Tuk AI Bubble",
-      "term_ko": "뚝 AI 거품",
-      "significance_score": 350,
+      "term": "ING Cospi 4100 Wire Mercury",
+      "term_ko": "ING코스피 4100선 수성",
+      "significance_score": 364,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뚝 AI 거품",
+        "query": "ING코스피 4100선 수성",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
-              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+              "title": "[마켓 ING]코스피 4100선 수성 실패, 엔비디아 실적에 주목",
+              "link": "https://n.news.naver.com/mnews/article/277/0005679925?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9A%9D%20AI%20%EA%B1%B0%ED%92%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9A%9D%20AI%20%EA%B1%B0%ED%92%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ING%EC%BD%94%EC%8A%A4%ED%94%BC%204100%EC%84%A0%20%EC%88%98%EC%84%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ING%EC%BD%94%EC%8A%A4%ED%94%BC%204100%EC%84%A0%20%EC%88%98%EC%84%B1"
       },
       "top_headlines": [
         {
-          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "title": "[마켓 ING]코스피 4100선 수성 실패, 엔비디아 실적에 주목",
           "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "AI bubble controversy",
-      "term_ko": "AI 거품 논란",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 거품 논란",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
-              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EA%B1%B0%ED%92%88%20%EB%85%BC%EB%9E%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EA%B1%B0%ED%92%88%20%EB%85%BC%EB%9E%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "link": "https://n.news.naver.com/mnews/article/277/0005679925?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -419,7 +118,7 @@
         "query": "2.50달러 장벽 앞두고",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -454,7 +153,7 @@
         "query": "증시 브리핑 11월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -489,7 +188,7 @@
         "query": "브리핑 11월 14일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -524,7 +223,7 @@
         "query": "11월 14일 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -571,7 +270,7 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
@@ -608,7 +307,7 @@
         "week_score": 0,
         "correction_factor": 0.115911,
         "decay_factor": 0.041087,
-        "time_weight": 0.017083,
+        "time_weight": 0.015748,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -616,34 +315,244 @@
       }
     },
     {
-      "term": "6%대로 뛴 주담대",
-      "term_ko": "6%대로 뛴 주담대",
+      "term": "4100 line aqueous failure",
+      "term_ko": "4100선 수성 실패",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "6%대로 뛴 주담대",
+        "query": "4100선 수성 실패",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
-              "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004"
+              "title": "[마켓 ING]코스피 4100선 수성 실패, 엔비디아 실적에 주목",
+              "link": "https://n.news.naver.com/mnews/article/277/0005679925?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%25%EB%8C%80%EB%A1%9C%20%EB%9B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%25%EB%8C%80%EB%A1%9C%20%EB%9B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4100%EC%84%A0%20%EC%88%98%EC%84%B1%20%EC%8B%A4%ED%8C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4100%EC%84%A0%20%EC%88%98%EC%84%B1%20%EC%8B%A4%ED%8C%A8"
       },
       "top_headlines": [
         {
-          "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
+          "title": "[마켓 ING]코스피 4100선 수성 실패, 엔비디아 실적에 주목",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004",
+          "link": "https://n.news.naver.com/mnews/article/277/0005679925?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "KRW Dollar Index 3",
+      "term_ko": "원화 달러인덱스 3%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원화 달러인덱스 3%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+              "link": "https://www.kukinews.com/article/view/kuk202511160035"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%ED%99%94%20%EB%8B%AC%EB%9F%AC%EC%9D%B8%EB%8D%B1%EC%8A%A4%203%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%ED%99%94%20%EB%8B%AC%EB%9F%AC%EC%9D%B8%EB%8D%B1%EC%8A%A4%203%25"
+      },
+      "top_headlines": [
+        {
+          "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+          "summary": "",
+          "link": "https://www.kukinews.com/article/view/kuk202511160035",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "3% increase in the Dollar Index",
+      "term_ko": "달러인덱스 3% 오를",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "달러인덱스 3% 오를",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+              "link": "https://www.kukinews.com/article/view/kuk202511160035"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%EC%9D%B8%EB%8D%B1%EC%8A%A4%203%25%20%EC%98%A4%EB%A5%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%EC%9D%B8%EB%8D%B1%EC%8A%A4%203%25%20%EC%98%A4%EB%A5%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+          "summary": "",
+          "link": "https://www.kukinews.com/article/view/kuk202511160035",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "For a 3% increase",
+      "term_ko": "3% 오를 때",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "3% 오를 때",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+              "link": "https://www.kukinews.com/article/view/kuk202511160035"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%25%20%EC%98%A4%EB%A5%BC%20%EB%95%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%25%20%EC%98%A4%EB%A5%BC%20%EB%95%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+          "summary": "",
+          "link": "https://www.kukinews.com/article/view/kuk202511160035",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "6% on the way up",
+      "term_ko": "오를 때 6%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "오를 때 6%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+              "link": "https://www.kukinews.com/article/view/kuk202511160035"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%A5%BC%20%EB%95%8C%206%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%A5%BC%20%EB%95%8C%206%25"
+      },
+      "top_headlines": [
+        {
+          "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+          "summary": "",
+          "link": "https://www.kukinews.com/article/view/kuk202511160035",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "6% increase when",
+      "term_ko": "때 6% 증가",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "때 6% 증가",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+              "link": "https://www.kukinews.com/article/view/kuk202511160035"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%95%8C%206%25%20%EC%A6%9D%EA%B0%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%95%8C%206%25%20%EC%A6%9D%EA%B0%80"
+      },
+      "top_headlines": [
+        {
+          "title": "힘 못쓰는 원화…달러인덱스 3% 오를 때 6% 증가",
+          "summary": "",
+          "link": "https://www.kukinews.com/article/view/kuk202511160035",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "2-year loan rate",
+      "term_ko": "대출 금리 2년",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "대출 금리 2년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
+              "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%202%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%202%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -660,12 +569,12 @@
         "query": "금리 2년 만에",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+              "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
+              "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101"
             }
           ]
         }
@@ -676,9 +585,9 @@
       },
       "top_headlines": [
         {
-          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
           "summary": "",
-          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -686,34 +595,34 @@
       ]
     },
     {
-      "term": "Reentry in 6% of cases",
-      "term_ko": "만에 6%대 재진입",
+      "term": "Two Years Later",
+      "term_ko": "2년 만에 다시",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만에 6%대 재진입",
+        "query": "2년 만에 다시",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+              "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
+              "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%206%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%206%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EB%85%84%20%EB%A7%8C%EC%97%90%20%EB%8B%A4%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EB%85%84%20%EB%A7%8C%EC%97%90%20%EB%8B%A4%EC%8B%9C"
       },
       "top_headlines": [
         {
-          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
           "summary": "",
-          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -721,34 +630,34 @@
       ]
     },
     {
-      "term": "Reentry loans in the 6% range",
-      "term_ko": "6%대 재진입 대출",
+      "term": "back to 6% in a matter of days",
+      "term_ko": "만에 다시 6%대로",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "6%대 재진입 대출",
+        "query": "만에 다시 6%대로",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
-              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+              "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
+              "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85%20%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85%20%EB%8C%80%EC%B6%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EB%8B%A4%EC%8B%9C%206%25%EB%8C%80%EB%A1%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EB%8B%A4%EC%8B%9C%206%25%EB%8C%80%EB%A1%9C"
       },
       "top_headlines": [
         {
-          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
           "summary": "",
-          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -756,34 +665,34 @@
       ]
     },
     {
-      "term": "2 years of high interest rates",
-      "term_ko": "대출금리 고공행진 2년",
+      "term": "Back in the 6% range",
+      "term_ko": "다시 6%대로 상승",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대출금리 고공행진 2년",
+        "query": "다시 6%대로 상승",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
-              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
+              "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
+              "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%20%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%20%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%8B%9C%206%25%EB%8C%80%EB%A1%9C%20%EC%83%81%EC%8A%B9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%8B%9C%206%25%EB%8C%80%EB%A1%9C%20%EC%83%81%EC%8A%B9"
       },
       "top_headlines": [
         {
-          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+          "title": "은행 대출 금리 2년 만에 다시 6%대로 상승",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/241/0003478353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -791,34 +700,34 @@
       ]
     },
     {
-      "term": "After two years on a high",
-      "term_ko": "고공행진 2년 만에",
-      "significance_score": 336,
+      "term": "Inspecting apartments with data",
+      "term_ko": "데이터로 아파트 점검",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고공행진 2년 만에",
+        "query": "데이터로 아파트 점검",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
-              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
+              "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+              "link": "https://www.venturesquare.net/1013784"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84%20%EB%A7%8C%EC%97%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84%20%EB%A7%8C%EC%97%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A1%9C%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%90%EA%B2%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A1%9C%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%90%EA%B2%80"
       },
       "top_headlines": [
         {
-          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+          "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
+          "link": "https://www.venturesquare.net/1013784",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -826,34 +735,34 @@
       ]
     },
     {
-      "term": "6% vs.",
-      "term_ko": "6%대 더 높아진",
-      "significance_score": 336,
+      "term": "The age of apartment inspections",
+      "term_ko": "아파트 점검 시대",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "6%대 더 높아진",
+        "query": "아파트 점검 시대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
-              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
+              "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+              "link": "https://www.venturesquare.net/1013784"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%25%EB%8C%80%20%EB%8D%94%20%EB%86%92%EC%95%84%EC%A7%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%25%EB%8C%80%20%EB%8D%94%20%EB%86%92%EC%95%84%EC%A7%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%90%EA%B2%80%20%EC%8B%9C%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%90%EA%B2%80%20%EC%8B%9C%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+          "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
+          "link": "https://www.venturesquare.net/1013784",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -861,34 +770,34 @@
       ]
     },
     {
-      "term": "Interest rate 6% again",
-      "term_ko": "금리 6% 다시",
-      "significance_score": 336,
+      "term": "Open the inspection era",
+      "term_ko": "점검 시대 연다",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 6% 다시",
+        "query": "점검 시대 연다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
-              "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101"
+              "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+              "link": "https://www.venturesquare.net/1013784"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%206%25%20%EB%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%206%25%20%EB%8B%A4%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%90%EA%B2%80%20%EC%8B%9C%EB%8C%80%20%EC%97%B0%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%90%EA%B2%80%20%EC%8B%9C%EB%8C%80%20%EC%97%B0%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
+          "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101",
+          "link": "https://www.venturesquare.net/1013784",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -896,34 +805,209 @@
       ]
     },
     {
-      "term": "Weekly Market Outlook KOSPI 4000",
-      "term_ko": "주간증시전망 코스피 4000선대로",
-      "significance_score": 336,
+      "term": "Open the era HomeCheck",
+      "term_ko": "시대 연다 홈체크",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주간증시전망 코스피 4000선대로",
+        "query": "시대 연다 홈체크",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-16T10:31:06+09:00",
+          "last_updated": "2025-11-16T15:29:06+09:00",
           "fallback_sources": [],
           "sample": [
             {
-              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
-              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+              "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+              "link": "https://www.venturesquare.net/1013784"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%84%EC%A6%9D%EC%8B%9C%EC%A0%84%EB%A7%9D%20%EC%BD%94%EC%8A%A4%ED%94%BC%204000%EC%84%A0%EB%8C%80%EB%A1%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%84%EC%A6%9D%EC%8B%9C%EC%A0%84%EB%A7%9D%20%EC%BD%94%EC%8A%A4%ED%94%BC%204000%EC%84%A0%EB%8C%80%EB%A1%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%8C%80%20%EC%97%B0%EB%8B%A4%20%ED%99%88%EC%B2%B4%ED%81%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%8C%80%20%EC%97%B0%EB%8B%A4%20%ED%99%88%EC%B2%B4%ED%81%AC"
       },
       "top_headlines": [
         {
-          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
           "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "link": "https://www.venturesquare.net/1013784",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Open HomeCheck Architecture",
+      "term_ko": "연다 홈체크 건축물",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "연다 홈체크 건축물",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+              "link": "https://www.venturesquare.net/1013784"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EB%8B%A4%20%ED%99%88%EC%B2%B4%ED%81%AC%20%EA%B1%B4%EC%B6%95%EB%AC%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EB%8B%A4%20%ED%99%88%EC%B2%B4%ED%81%AC%20%EA%B1%B4%EC%B6%95%EB%AC%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+          "summary": "",
+          "link": "https://www.venturesquare.net/1013784",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "HomeCheck Building Lifecycle",
+      "term_ko": "홈체크 건축물 생애주기",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "홈체크 건축물 생애주기",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+              "link": "https://www.venturesquare.net/1013784"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%88%EC%B2%B4%ED%81%AC%20%EA%B1%B4%EC%B6%95%EB%AC%BC%20%EC%83%9D%EC%95%A0%EC%A3%BC%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%88%EC%B2%B4%ED%81%AC%20%EA%B1%B4%EC%B6%95%EB%AC%BC%20%EC%83%9D%EC%95%A0%EC%A3%BC%EA%B8%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "‘데이터로 아파트 점검 시대 연다’, 홈체크…건축물 생애주기 전반을...",
+          "summary": "",
+          "link": "https://www.venturesquare.net/1013784",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Opportunity or bearish signal?",
+      "term_ko": "기회인가 폭락 신호인가",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "기회인가 폭락 신호인가",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "XRP, ‘2.50달러 장벽’ 앞두고 기로...매수 기회인가 폭락 신호인가",
+              "link": "https://www.g-enews.com/view.php?ud=202511160835339132e250e8e188_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%ED%9A%8C%EC%9D%B8%EA%B0%80%20%ED%8F%AD%EB%9D%BD%20%EC%8B%A0%ED%98%B8%EC%9D%B8%EA%B0%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%ED%9A%8C%EC%9D%B8%EA%B0%80%20%ED%8F%AD%EB%9D%BD%20%EC%8B%A0%ED%98%B8%EC%9D%B8%EA%B0%80"
+      },
+      "top_headlines": [
+        {
+          "title": "XRP, ‘2.50달러 장벽’ 앞두고 기로...매수 기회인가 폭락 신호인가",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=202511160835339132e250e8e188_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Silicon Decode Nvidia",
+      "term_ko": "실리콘 디코드 엔비디아",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "실리콘 디코드 엔비디아",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
+              "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EB%A6%AC%EC%BD%98%20%EB%94%94%EC%BD%94%EB%93%9C%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EB%A6%AC%EC%BD%98%20%EB%94%94%EC%BD%94%EB%93%9C%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84"
+      },
+      "top_headlines": [
+        {
+          "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Decode Nvidia Valuation's",
+      "term_ko": "디코드 엔비디아 밸류에이션의",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "디코드 엔비디아 밸류에이션의",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T15:29:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
+              "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%94%EC%BD%94%EB%93%9C%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%B0%B8%EB%A5%98%EC%97%90%EC%9D%B4%EC%85%98%EC%9D%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%94%EC%BD%94%EB%93%9C%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%B0%B8%EB%A5%98%EC%97%90%EC%9D%B4%EC%85%98%EC%9D%98"
+      },
+      "top_headlines": [
+        {
+          "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -969,7 +1053,7 @@
         "week_score": 0,
         "correction_factor": 0.115911,
         "decay_factor": 0.041087,
-        "time_weight": 0.017082,
+        "time_weight": 0.015746,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -990,120 +1074,29 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
       },
       "top_headlines": []
-    },
-    {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 100,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-12",
-              "timestamp": 1762873200000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.009386,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762873200000
-      }
-    },
-    {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "South Korean stocks rebound",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Ramping up semiconductor investments",
-      "term_ko": "반도체 투자 확대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 투자 확대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-11-16T01:32:30.252Z",
+    "generated_at": "2025-11-16T06:30:26.550Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-16T10:31:06+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-11-16T15:29:06+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
+    "similar_keywords_removed": 0,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 2,
+      "similar": 0,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-11-16T10:31:06+09:00",
+      "last_updated": "2025-11-16T15:29:06+09:00",
       "fallback_sources": [],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-11-16T10:31:06+09:00",
+        "lastUpdated": "2025-11-16T15:29:06+09:00",
         "fallbackSources": []
       }
     }
