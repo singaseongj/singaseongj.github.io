@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-16T21:36:27+09:00 (KST)**
+- Generated: **2025-11-17T03:27:07+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -95,7 +95,7 @@
 
 **NH투자증권** (005940.KS)
 
-- News (7d): **229** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- News (7d): **230** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
 - Returns: 5d **7.4%**, 20d **7.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
@@ -103,7 +103,7 @@
 
 **대한항공** (003490.KS)
 
-- News (7d): **400** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **401** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **0.9%**, 20d **-1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -111,7 +111,7 @@
 
 **두산** (000150.KS)
 
-- News (7d): **305** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- News (7d): **306** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
 - Returns: 5d **-1.3%**, 20d **30.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -119,7 +119,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **922** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **924** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-0.7%**, 20d **-0.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -127,7 +127,7 @@
 
 **한화** (000880.KS)
 
-- News (7d): **901** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- News (7d): **905** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
 - Returns: 5d **2.3%**, 20d **7.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
