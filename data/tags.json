@@ -1,439 +1,1111 @@
 {
-  "generatedAt": "2025-11-16T01:29:04.562Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-11-16",
   "window": "12_hours",
-  "total_phrases": 30,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "7.1% Apy Nh Overnight 7 Savings",
-      "term_ko": "연 7.1% NH대박7적금"
-    },
-    {
-      "term": "7.1% Nhbudget7 Savings Launched",
-      "term_ko": "7.1% NH대박7적금 출시"
-    },
-    {
-      "term": "Coordinated Ai",
-      "term_ko": "동반 조정 AI"
-    },
-    {
-      "term": "Tune Ai Overheating",
-      "term_ko": "조정 AI 과열"
-    },
-    {
-      "term": "Ai Overheating Controversy",
-      "term_ko": "AI 과열 논란에"
-    },
-    {
-      "term": "Large Ipos, Including",
-      "term_ko": "등 대형 IPO"
-    },
-    {
-      "term": "Reactivate Large Ipos",
-      "term_ko": "대형 IPO 재가동"
-    },
-    {
-      "term": "Ipo Relaunch Small and Mid-sized Companies",
-      "term_ko": "IPO 재가동 중소형사"
-    },
-    {
-      "term": "Nh Bank Highest Annual",
-      "term_ko": "NH농협은행 최고 연"
-    },
-    {
-      "term": "Stock Market Briefing November",
-      "term_ko": "증시 브리핑 11월"
-    },
-    {
-      "term": "Briefing November 14",
-      "term_ko": "브리핑 11월 14일"
-    },
-    {
-      "term": "November 14th Us",
-      "term_ko": "11월 14일 미국"
-    },
-    {
-      "term": "14-day Us Stock Market",
-      "term_ko": "14일 미국 증시"
-    },
-    {
-      "term": "Lim Hyung-do's 9th Economic Note",
-      "term_ko": "임형도의 경제노트 9회"
-    },
-    {
-      "term": "Gold Price Quotes for Today, November 16",
-      "term_ko": "오늘의 금값시세11월 16일자"
-    },
-    {
-      "term": "Gold Price Quotesgold Price on November 16th",
-      "term_ko": "금값시세11월 16일자 금값"
-    },
-    {
-      "term": "Gold Price Drop on the 16th",
-      "term_ko": "16일자 금값 하락"
-    },
-    {
-      "term": "Up to 7.1% Apy",
-      "term_ko": "최고 연 7.1%"
-    },
-    {
-      "term": "U.s. Stock Market Briefing",
-      "term_ko": "미국 증시 브리핑"
-    },
-    {
-      "term": "U.s. Equity Markets Mixed",
-      "term_ko": "미국 증시 혼조세"
-    },
-    {
-      "term": "Amidst a Mixed Stock Market",
-      "term_ko": "증시 혼조세 속"
-    },
-    {
-      "term": "Dow Jones on a Mixed Note",
-      "term_ko": "혼조세 속 다우존스"
-    },
-    {
-      "term": "Dow Jones Falls in",
-      "term_ko": "속 다우존스 하락"
-    },
-    {
-      "term": "Bitcoin Why Nasdaq",
-      "term_ko": "비트코인 왜 나스닥"
-    },
-    {
-      "term": "Why the Nasdaq Fell",
-      "term_ko": "왜 나스닥 하락"
-    },
-    {
-      "term": "Only When the Nasdaq Drops",
-      "term_ko": "나스닥 하락 때만"
-    },
-    {
-      "term": "Sensitive Only on Dips",
-      "term_ko": "하락 때만 민감하게"
-    },
-    {
-      "term": "Be Sensitive to the Right Time",
-      "term_ko": "때만 민감하게 움직일까"
-    },
-    {
-      "term": "Rate Cut Expectations",
-      "term_ko": "금리 인하 기대감"
-    },
-    {
-      "term": "Bitcoin Etf Expectations",
-      "term_ko": "비트코인 ETF 기대"
-    }
-  ],
+  "total_phrases": 28,
   "discovered_keywords": [
     {
-      "term": "7.1% Apy Nh Overnight 7 Savings",
-      "term_ko": "연 7.1% NH대박7적금"
+      "term": "Lending rates",
+      "term_ko": "주담대 금리",
+      "significance_score": 840,
+      "mentions": 503,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주담대 금리",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-08",
+              "timestamp": 1762527600000,
+              "value": 53.20356
+            },
+            {
+              "period": "2025-11-09",
+              "timestamp": 1762614000000,
+              "value": 54.0957
+            },
+            {
+              "period": "2025-11-10",
+              "timestamp": 1762700400000,
+              "value": 100
+            },
+            {
+              "period": "2025-11-11",
+              "timestamp": 1762786800000,
+              "value": 98.62124
+            },
+            {
+              "period": "2025-11-12",
+              "timestamp": 1762873200000,
+              "value": 86.37469
+            },
+            {
+              "period": "2025-11-13",
+              "timestamp": 1762959600000,
+              "value": 86.45579
+            },
+            {
+              "period": "2025-11-14",
+              "timestamp": 1763046000000,
+              "value": 84.75263
+            },
+            {
+              "period": "2025-11-15",
+              "timestamp": 1763132400000,
+              "value": 46.87753
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 3,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
+              "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004"
+            },
+            {
+              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+            },
+            {
+              "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
+              "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "summary": "",
+          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 503.0819,
+        "weekly_average_volume": 83.847,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.013408,
+        "time_weight": 0.028957,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1763132400000
+      }
     },
     {
-      "term": "7.1% Nhbudget7 Savings Launched",
-      "term_ko": "7.1% NH대박7적금 출시"
+      "term": "6% in 2 years",
+      "term_ko": "2년 만에 6%대",
+      "significance_score": 672,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "2년 만에 6%대",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+            },
+            {
+              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EB%85%84%20%EB%A7%8C%EC%97%90%206%25%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EB%85%84%20%EB%A7%8C%EC%97%90%206%25%EB%8C%80"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "summary": "",
+          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Coordinated Ai",
-      "term_ko": "동반 조정 AI"
+      "term": "More loan thresholds",
+      "term_ko": "대출 문턱 더",
+      "significance_score": 644,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "대출 문턱 더",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+            },
+            {
+              "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
+              "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EB%AC%B8%ED%84%B1%20%EB%8D%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EB%AC%B8%ED%84%B1%20%EB%8D%94"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "summary": "",
+          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Tune Ai Overheating",
-      "term_ko": "조정 AI 과열"
+      "term": "In the midst of controversy",
+      "term_ko": "논란 속",
+      "significance_score": 560,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "논란 속",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
+              "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1"
+            },
+            {
+              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%BC%EB%9E%80%20%EC%86%8D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%BC%EB%9E%80%20%EC%86%8D"
+      },
+      "top_headlines": [
+        {
+          "title": "[실리콘 디코드] 엔비디아 밸류에이션의 역설…'고평가' 논란 속 빛나는...",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=20251115102225410fbbec65dfb_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "summary": "",
+          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ai Overheating Controversy",
-      "term_ko": "AI 과열 논란에"
+      "term": "XRP $2.50 barrier",
+      "term_ko": "XRP 2.50달러 장벽",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "XRP 2.50달러 장벽",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "XRP, ‘2.50달러 장벽’ 앞두고 기로...매수 기회인가 폭락 신호인가",
+              "link": "https://www.g-enews.com/view.php?ud=202511160835339132e250e8e188_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=XRP%202.50%EB%8B%AC%EB%9F%AC%20%EC%9E%A5%EB%B2%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=XRP%202.50%EB%8B%AC%EB%9F%AC%20%EC%9E%A5%EB%B2%BD"
+      },
+      "top_headlines": [
+        {
+          "title": "XRP, ‘2.50달러 장벽’ 앞두고 기로...매수 기회인가 폭락 신호인가",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=202511160835339132e250e8e188_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Large Ipos, Including",
-      "term_ko": "등 대형 IPO"
+      "term": "4000SeonDaeDaeTuk AI",
+      "term_ko": "4000선대로 뚝 AI",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "4000선대로 뚝 AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4000%EC%84%A0%EB%8C%80%EB%A1%9C%20%EB%9A%9D%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4000%EC%84%A0%EB%8C%80%EB%A1%9C%20%EB%9A%9D%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "summary": "",
+          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Reactivate Large Ipos",
-      "term_ko": "대형 IPO 재가동"
+      "term": "Tuk AI Bubble",
+      "term_ko": "뚝 AI 거품",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "뚝 AI 거품",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9A%9D%20AI%20%EA%B1%B0%ED%92%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9A%9D%20AI%20%EA%B1%B0%ED%92%88"
+      },
+      "top_headlines": [
+        {
+          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "summary": "",
+          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ipo Relaunch Small and Mid-sized Companies",
-      "term_ko": "IPO 재가동 중소형사"
+      "term": "AI bubble controversy",
+      "term_ko": "AI 거품 논란",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI 거품 논란",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EA%B1%B0%ED%92%88%20%EB%85%BC%EB%9E%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EA%B1%B0%ED%92%88%20%EB%85%BC%EB%9E%80"
+      },
+      "top_headlines": [
+        {
+          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "summary": "",
+          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Nh Bank Highest Annual",
-      "term_ko": "NH농협은행 최고 연"
+      "term": "Ahead of the $2.50 barrier",
+      "term_ko": "2.50달러 장벽 앞두고",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "2.50달러 장벽 앞두고",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "XRP, ‘2.50달러 장벽’ 앞두고 기로...매수 기회인가 폭락 신호인가",
+              "link": "https://www.g-enews.com/view.php?ud=202511160835339132e250e8e188_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.50%EB%8B%AC%EB%9F%AC%20%EC%9E%A5%EB%B2%BD%20%EC%95%9E%EB%91%90%EA%B3%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.50%EB%8B%AC%EB%9F%AC%20%EC%9E%A5%EB%B2%BD%20%EC%95%9E%EB%91%90%EA%B3%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "XRP, ‘2.50달러 장벽’ 앞두고 기로...매수 기회인가 폭락 신호인가",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=202511160835339132e250e8e188_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Stock Market Briefing November",
-      "term_ko": "증시 브리핑 11월"
+      "term_ko": "증시 브리핑 11월",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "증시 브리핑 11월",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+          "summary": "",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Briefing November 14",
-      "term_ko": "브리핑 11월 14일"
+      "term_ko": "브리핑 11월 14일",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "브리핑 11월 14일",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94%2014%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A6%AC%ED%95%91%2011%EC%9B%94%2014%EC%9D%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+          "summary": "",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "November 14th Us",
-      "term_ko": "11월 14일 미국"
+      "term": "November 14th US",
+      "term_ko": "11월 14일 미국",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "11월 14일 미국",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EC%9B%94%2014%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EC%9B%94%2014%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
+      },
+      "top_headlines": [
+        {
+          "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+          "summary": "",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "14-day Us Stock Market",
-      "term_ko": "14일 미국 증시"
+      "term": "14-day US stock market",
+      "term_ko": "14일 미국 증시",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "14일 미국 증시",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-14",
+              "timestamp": 1763046000000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+              "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=14%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=14%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "[미국 증시 브리핑 · 11월 14일] 미국 증시 혼조세 속 다우존스 하락",
+          "summary": "",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=194646",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.017083,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1763046000000
+      }
     },
     {
-      "term": "Lim Hyung-do's 9th Economic Note",
-      "term_ko": "임형도의 경제노트 9회"
+      "term": "6%대로 뛴 주담대",
+      "term_ko": "6%대로 뛴 주담대",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "6%대로 뛴 주담대",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
+              "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%25%EB%8C%80%EB%A1%9C%20%EB%9B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%25%EB%8C%80%EB%A1%9C%20%EB%9B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
+      },
+      "top_headlines": [
+        {
+          "title": "6%대로 뛴 주담대 금리…\"연말까지 간다\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/215/0001231058?sid=004",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Gold Price Quotes for Today, November 16",
-      "term_ko": "오늘의 금값시세11월 16일자"
+      "term": "Interest Rates in 2 Years",
+      "term_ko": "금리 2년 만에",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 2년 만에",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%202%EB%85%84%20%EB%A7%8C%EC%97%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%202%EB%85%84%20%EB%A7%8C%EC%97%90"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "summary": "",
+          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Gold Price Quotesgold Price on November 16th",
-      "term_ko": "금값시세11월 16일자 금값"
+      "term": "Reentry in 6% of cases",
+      "term_ko": "만에 6%대 재진입",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "만에 6%대 재진입",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%206%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%206%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "summary": "",
+          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Gold Price Drop on the 16th",
-      "term_ko": "16일자 금값 하락"
+      "term": "Reentry loans in the 6% range",
+      "term_ko": "6%대 재진입 대출",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "6%대 재진입 대출",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+              "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85%20%EB%8C%80%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%25%EB%8C%80%20%EC%9E%AC%EC%A7%84%EC%9E%85%20%EB%8C%80%EC%B6%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 금리 2년 만에 6%대 재진입…대출 문턱 더 좁아졌다",
+          "summary": "",
+          "link": "https://www.thepowernews.co.kr/view.php?ud=202511161025479495de3f0aa1be_7",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Up to 7.1% Apy",
-      "term_ko": "최고 연 7.1%"
+      "term": "2 years of high interest rates",
+      "term_ko": "대출금리 고공행진 2년",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "대출금리 고공행진 2년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%20%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%20%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "U.s. Stock Market Briefing",
-      "term_ko": "미국 증시 브리핑"
+      "term": "After two years on a high",
+      "term_ko": "고공행진 2년 만에",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "고공행진 2년 만에",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84%20%EB%A7%8C%EC%97%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%202%EB%85%84%20%EB%A7%8C%EC%97%90"
+      },
+      "top_headlines": [
+        {
+          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "U.s. Equity Markets Mixed",
-      "term_ko": "미국 증시 혼조세"
+      "term": "6% vs.",
+      "term_ko": "6%대 더 높아진",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "6%대 더 높아진",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+              "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%25%EB%8C%80%20%EB%8D%94%20%EB%86%92%EC%95%84%EC%A7%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%25%EB%8C%80%20%EB%8D%94%20%EB%86%92%EC%95%84%EC%A7%84"
+      },
+      "top_headlines": [
+        {
+          "title": "'대출금리 고공행진' 2년 만에 6%대…더 높아진 은행 문턱",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/057/0001919147?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Amidst a Mixed Stock Market",
-      "term_ko": "증시 혼조세 속"
+      "term": "Interest rate 6% again",
+      "term_ko": "금리 6% 다시",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 6% 다시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
+              "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%206%25%20%EB%8B%A4%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%206%25%20%EB%8B%A4%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 금리 6% 다시 돌파...연내 대출 문턱 더 높아진다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/123/0002372058?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Dow Jones on a Mixed Note",
-      "term_ko": "혼조세 속 다우존스"
+      "term": "Weekly Market Outlook KOSPI 4000",
+      "term_ko": "주간증시전망 코스피 4000선대로",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주간증시전망 코스피 4000선대로",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-16T10:31:06+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+              "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%84%EC%A6%9D%EC%8B%9C%EC%A0%84%EB%A7%9D%20%EC%BD%94%EC%8A%A4%ED%94%BC%204000%EC%84%A0%EB%8C%80%EB%A1%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%84%EC%A6%9D%EC%8B%9C%EC%A0%84%EB%A7%9D%20%EC%BD%94%EC%8A%A4%ED%94%BC%204000%EC%84%A0%EB%8C%80%EB%A1%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "[주간증시전망] 코스피 4000선대로 ‘뚝’…AI 거품 논란 속 엔비디아 실...",
+          "summary": "",
+          "link": "http://www.segyebiz.com/newsView/20251116503338?OutUrl=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Dow Jones Falls in",
-      "term_ko": "속 다우존스 하락"
+      "term": "Rate cut expectations",
+      "term_ko": "금리 인하 기대감",
+      "significance_score": 0,
+      "mentions": 100,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 인하 기대감",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-14",
+              "timestamp": 1763046000000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.017082,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1763046000000
+      }
     },
     {
-      "term": "Bitcoin Why Nasdaq",
-      "term_ko": "비트코인 왜 나스닥"
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대"
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Why the Nasdaq Fell",
-      "term_ko": "왜 나스닥 하락"
+      "term": "Dollar exchange rate spikes",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 0,
+      "mentions": 100,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-12",
+              "timestamp": 1762873200000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.009386,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1762873200000
+      }
     },
     {
-      "term": "Only When the Nasdaq Drops",
-      "term_ko": "나스닥 하락 때만"
+      "term": "U.S. government shutdown crisis",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기"
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Sensitive Only on Dips",
-      "term_ko": "하락 때만 민감하게"
+      "term": "South Korean stocks rebound",
+      "term_ko": "한국 증시 반등",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국 증시 반등"
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Be Sensitive to the Right Time",
-      "term_ko": "때만 민감하게 움직일까"
-    },
-    {
-      "term": "Rate Cut Expectations",
-      "term_ko": "금리 인하 기대감"
-    },
-    {
-      "term": "Bitcoin Etf Expectations",
-      "term_ko": "비트코인 ETF 기대"
+      "term": "Ramping up semiconductor investments",
+      "term_ko": "반도체 투자 확대",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "반도체 투자 확대"
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "7.1% Apy Nh Overnight 7 Savings": {
-      "en": "7.1% Apy Nh Overnight 7 Savings",
-      "ko": "연 7.1% NH대박7적금",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2025-11-16T01:32:30.252Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2025-11-16T10:31:06+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 2,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 2,
+      "too_generic": 0
     },
-    "7.1% Nhbudget7 Savings Launched": {
-      "en": "7.1% Nhbudget7 Savings Launched",
-      "ko": "7.1% NH대박7적금 출시",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Coordinated Ai": {
-      "en": "Coordinated Ai",
-      "ko": "동반 조정 AI",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Tune Ai Overheating": {
-      "en": "Tune Ai Overheating",
-      "ko": "조정 AI 과열",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Ai Overheating Controversy": {
-      "en": "Ai Overheating Controversy",
-      "ko": "AI 과열 논란에",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Large Ipos, Including": {
-      "en": "Large Ipos, Including",
-      "ko": "등 대형 IPO",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Reactivate Large Ipos": {
-      "en": "Reactivate Large Ipos",
-      "ko": "대형 IPO 재가동",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Ipo Relaunch Small and Mid-sized Companies": {
-      "en": "Ipo Relaunch Small and Mid-sized Companies",
-      "ko": "IPO 재가동 중소형사",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Nh Bank Highest Annual": {
-      "en": "Nh Bank Highest Annual",
-      "ko": "NH농협은행 최고 연",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Stock Market Briefing November": {
-      "en": "Stock Market Briefing November",
-      "ko": "증시 브리핑 11월",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Briefing November 14": {
-      "en": "Briefing November 14",
-      "ko": "브리핑 11월 14일",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "November 14th Us": {
-      "en": "November 14th Us",
-      "ko": "11월 14일 미국",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "14-day Us Stock Market": {
-      "en": "14-day Us Stock Market",
-      "ko": "14일 미국 증시",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Lim Hyung-do's 9th Economic Note": {
-      "en": "Lim Hyung-do's 9th Economic Note",
-      "ko": "임형도의 경제노트 9회",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Gold Price Quotes for Today, November 16": {
-      "en": "Gold Price Quotes for Today, November 16",
-      "ko": "오늘의 금값시세11월 16일자",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Gold Price Quotesgold Price on November 16th": {
-      "en": "Gold Price Quotesgold Price on November 16th",
-      "ko": "금값시세11월 16일자 금값",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Gold Price Drop on the 16th": {
-      "en": "Gold Price Drop on the 16th",
-      "ko": "16일자 금값 하락",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Up to 7.1% Apy": {
-      "en": "Up to 7.1% Apy",
-      "ko": "최고 연 7.1%",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "U.s. Stock Market Briefing": {
-      "en": "U.s. Stock Market Briefing",
-      "ko": "미국 증시 브리핑",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "U.s. Equity Markets Mixed": {
-      "en": "U.s. Equity Markets Mixed",
-      "ko": "미국 증시 혼조세",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Amidst a Mixed Stock Market": {
-      "en": "Amidst a Mixed Stock Market",
-      "ko": "증시 혼조세 속",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Dow Jones on a Mixed Note": {
-      "en": "Dow Jones on a Mixed Note",
-      "ko": "혼조세 속 다우존스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Dow Jones Falls in": {
-      "en": "Dow Jones Falls in",
-      "ko": "속 다우존스 하락",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Bitcoin Why Nasdaq": {
-      "en": "Bitcoin Why Nasdaq",
-      "ko": "비트코인 왜 나스닥",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Why the Nasdaq Fell": {
-      "en": "Why the Nasdaq Fell",
-      "ko": "왜 나스닥 하락",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Only When the Nasdaq Drops": {
-      "en": "Only When the Nasdaq Drops",
-      "ko": "나스닥 하락 때만",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Sensitive Only on Dips": {
-      "en": "Sensitive Only on Dips",
-      "ko": "하락 때만 민감하게",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Be Sensitive to the Right Time": {
-      "en": "Be Sensitive to the Right Time",
-      "ko": "때만 민감하게 움직일까",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Rate Cut Expectations": {
-      "en": "Rate Cut Expectations",
-      "ko": "금리 인하 기대감",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
-    },
-    "Bitcoin Etf Expectations": {
-      "en": "Bitcoin Etf Expectations",
-      "ko": "비트코인 ETF 기대",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-16T01:29:04.562Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2025-11-16T10:31:06+09:00",
+      "fallback_sources": [],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2025-11-16T10:31:06+09:00",
+        "fallbackSources": []
+      }
     }
   }
 }
