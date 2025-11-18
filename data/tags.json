@@ -1,1076 +1,439 @@
 {
+  "generatedAt": "2025-11-18T18:29:09.776Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-18",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "AIoT-based",
-      "term_ko": "AIoT 기반",
-      "significance_score": 616,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AIoT 기반",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-              "link": "https://www.venturesquare.net/1014829"
-            },
-            {
-              "title": "엑스오소프트, 나스닥 상장사 아고라(Agora)와 AIoT 기반 실시간 대화형...",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=37259"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AIoT%20%EA%B8%B0%EB%B0%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AIoT%20%EA%B8%B0%EB%B0%98"
-      },
-      "top_headlines": [
-        {
-          "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1014829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "엑스오소프트, 나스닥 상장사 아고라(Agora)와 AIoT 기반 실시간 대화형...",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=37259",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Aiot-based",
+      "term_ko": "AIoT 기반"
     },
     {
-      "term": "XRP ETF Surge",
-      "term_ko": "XRP ETF 돌풍",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "XRP ETF 돌풍",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-              "link": "http://coinreaders.com/199381"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=XRP%20ETF%20%EB%8F%8C%ED%92%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=XRP%20ETF%20%EB%8F%8C%ED%92%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-          "summary": "",
-          "link": "http://coinreaders.com/199381",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Xrp Etf Surge",
+      "term_ko": "XRP ETF 돌풍"
     },
     {
-      "term": "Amid the ETF Surge",
-      "term_ko": "ETF 돌풍 속",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 돌풍 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-              "link": "http://coinreaders.com/199381"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EB%8F%8C%ED%92%8D%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EB%8F%8C%ED%92%8D%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-          "summary": "",
-          "link": "http://coinreaders.com/199381",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amid the Etf Surge",
+      "term_ko": "ETF 돌풍 속"
     },
     {
-      "term": "MOU with Exosoft Agora",
-      "term_ko": "엑스오소프트 아고라와 MOU",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엑스오소프트 아고라와 MOU",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-              "link": "https://www.venturesquare.net/1014829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%91%EC%8A%A4%EC%98%A4%EC%86%8C%ED%94%84%ED%8A%B8%20%EC%95%84%EA%B3%A0%EB%9D%BC%EC%99%80%20MOU",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%91%EC%8A%A4%EC%98%A4%EC%86%8C%ED%94%84%ED%8A%B8%20%EC%95%84%EA%B3%A0%EB%9D%BC%EC%99%80%20MOU"
-      },
-      "top_headlines": [
-        {
-          "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1014829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mou with Exosoft Agora",
+      "term_ko": "엑스오소프트 아고라와 MOU"
     },
     {
-      "term": "Signed an MOU with Agora",
-      "term_ko": "아고라와 MOU 체결",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아고라와 MOU 체결",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-              "link": "https://www.venturesquare.net/1014829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EA%B3%A0%EB%9D%BC%EC%99%80%20MOU%20%EC%B2%B4%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EA%B3%A0%EB%9D%BC%EC%99%80%20MOU%20%EC%B2%B4%EA%B2%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1014829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Signed an Mou with Agora",
+      "term_ko": "아고라와 MOU 체결"
     },
     {
-      "term": "MOUs AIoT",
-      "term_ko": "MOU 체결 AIoT",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "MOU 체결 AIoT",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-              "link": "https://www.venturesquare.net/1014829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MOU%20%EC%B2%B4%EA%B2%B0%20AIoT",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MOU%20%EC%B2%B4%EA%B2%B0%20AIoT"
-      },
-      "top_headlines": [
-        {
-          "title": "엑스오소프트, 아고라와 MOU 체결.. “AIoT 기반 대화형 서비스 공동 개...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1014829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mous Aiot",
+      "term_ko": "MOU 체결 AIoT"
     },
     {
-      "term": "Covered Call ETFs for Technology Stocks",
-      "term_ko": "기술주 담는 커버드콜ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기술주 담는 커버드콜ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[더벨]한화운용, 중국 기술주 담는 커버드콜ETF 내놨다",
-              "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202511121028355800104390"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%88%A0%EC%A3%BC%20%EB%8B%B4%EB%8A%94%20%EC%BB%A4%EB%B2%84%EB%93%9C%EC%BD%9CETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%88%A0%EC%A3%BC%20%EB%8B%B4%EB%8A%94%20%EC%BB%A4%EB%B2%84%EB%93%9C%EC%BD%9CETF"
-      },
-      "top_headlines": [
-        {
-          "title": "[더벨]한화운용, 중국 기술주 담는 커버드콜ETF 내놨다",
-          "summary": "",
-          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202511121028355800104390",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Covered Call Etfs for Technology Stocks",
+      "term_ko": "기술주 담는 커버드콜ETF"
     },
     {
-      "term": "Covered Call ETFs that contain",
-      "term_ko": "담는 커버드콜ETF 내놨다",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "담는 커버드콜ETF 내놨다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[더벨]한화운용, 중국 기술주 담는 커버드콜ETF 내놨다",
-              "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202511121028355800104390"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B4%EB%8A%94%20%EC%BB%A4%EB%B2%84%EB%93%9C%EC%BD%9CETF%20%EB%82%B4%EB%86%A8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B4%EB%8A%94%20%EC%BB%A4%EB%B2%84%EB%93%9C%EC%BD%9CETF%20%EB%82%B4%EB%86%A8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[더벨]한화운용, 중국 기술주 담는 커버드콜ETF 내놨다",
-          "summary": "",
-          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202511121028355800104390",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Covered Call Etfs That Contain",
+      "term_ko": "담는 커버드콜ETF 내놨다"
     },
     {
-      "term": "Publicly traded company AgoraAgora and AIoT",
-      "term_ko": "상장사 아고라Agora와 AIoT",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상장사 아고라Agora와 AIoT",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "엑스오소프트, 나스닥 상장사 아고라(Agora)와 AIoT 기반 실시간 대화형...",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=37259"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%EC%82%AC%20%EC%95%84%EA%B3%A0%EB%9D%BCAgora%EC%99%80%20AIoT",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%EC%82%AC%20%EC%95%84%EA%B3%A0%EB%9D%BCAgora%EC%99%80%20AIoT"
-      },
-      "top_headlines": [
-        {
-          "title": "엑스오소프트, 나스닥 상장사 아고라(Agora)와 AIoT 기반 실시간 대화형...",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=37259",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Publicly Traded Company Agoraagora and Aiot",
+      "term_ko": "상장사 아고라Agora와 AIoT"
     },
     {
-      "term": "Hana Bank HL Mando Mubowa",
-      "term_ko": "하나은행 HL만도 무보와",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나은행 HL만도 무보와",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "하나은행, HL만도·무보와 '자동차 산업 수출 경쟁력 강화' 위한 금융지...",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=115984"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20HL%EB%A7%8C%EB%8F%84%20%EB%AC%B4%EB%B3%B4%EC%99%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20HL%EB%A7%8C%EB%8F%84%20%EB%AC%B4%EB%B3%B4%EC%99%80"
-      },
-      "top_headlines": [
-        {
-          "title": "하나은행, HL만도·무보와 '자동차 산업 수출 경쟁력 강화' 위한 금융지...",
-          "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=115984",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hana Bank Hl Mando Mubowa",
+      "term_ko": "하나은행 HL만도 무보와"
     },
     {
-      "term": "HL Mando Mubo and Cars",
-      "term_ko": "HL만도 무보와 자동차",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "HL만도 무보와 자동차",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "하나은행, HL만도·무보와 '자동차 산업 수출 경쟁력 강화' 위한 금융지...",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=115984"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=HL%EB%A7%8C%EB%8F%84%20%EB%AC%B4%EB%B3%B4%EC%99%80%20%EC%9E%90%EB%8F%99%EC%B0%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=HL%EB%A7%8C%EB%8F%84%20%EB%AC%B4%EB%B3%B4%EC%99%80%20%EC%9E%90%EB%8F%99%EC%B0%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "하나은행, HL만도·무보와 '자동차 산업 수출 경쟁력 강화' 위한 금융지...",
-          "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=115984",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hl Mando Mubo and Cars",
+      "term_ko": "HL만도 무보와 자동차"
     },
     {
-      "term": "Rate cut opaque AI",
-      "term_ko": "금리인하 불투명 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리인하 불투명 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주식·비트코인·금 동반 하락…금리인하 불투명, AI 거품론 등 영향",
-              "link": "https://n.news.naver.com/mnews/article/082/0001354347?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%20%EB%B6%88%ED%88%AC%EB%AA%85%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%20%EB%B6%88%ED%88%AC%EB%AA%85%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "주식·비트코인·금 동반 하락…금리인하 불투명, AI 거품론 등 영향",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001354347?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rate Cut Opaque Ai",
+      "term_ko": "금리인하 불투명 AI"
     },
     {
-      "term": "Opaque AI bubbles",
-      "term_ko": "불투명 AI 거품론",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불투명 AI 거품론",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주식·비트코인·금 동반 하락…금리인하 불투명, AI 거품론 등 영향",
-              "link": "https://n.news.naver.com/mnews/article/082/0001354347?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%ED%88%AC%EB%AA%85%20AI%20%EA%B1%B0%ED%92%88%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%ED%88%AC%EB%AA%85%20AI%20%EA%B1%B0%ED%92%88%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "주식·비트코인·금 동반 하락…금리인하 불투명, AI 거품론 등 영향",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001354347?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Opaque Ai Bubbles",
+      "term_ko": "불투명 AI 거품론"
     },
     {
-      "term": "AI bubbles and more",
-      "term_ko": "AI 거품론 등",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 거품론 등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주식·비트코인·금 동반 하락…금리인하 불투명, AI 거품론 등 영향",
-              "link": "https://n.news.naver.com/mnews/article/082/0001354347?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EA%B1%B0%ED%92%88%EB%A1%A0%20%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EA%B1%B0%ED%92%88%EB%A1%A0%20%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "주식·비트코인·금 동반 하락…금리인하 불투명, AI 거품론 등 영향",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001354347?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Bubbles and More",
+      "term_ko": "AI 거품론 등"
     },
     {
       "term": "November 3rd Weekly Highlights",
-      "term_ko": "11월 3주 주요",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "11월 3주 주요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "11월 3주 주요 제조업 전망",
-              "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=36615"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EC%9B%94%203%EC%A3%BC%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EC%9B%94%203%EC%A3%BC%20%EC%A3%BC%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "11월 3주 주요 제조업 전망",
-          "summary": "",
-          "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=36615",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "11월 3주 주요"
     },
     {
-      "term": "3-State Key Manufacturing",
-      "term_ko": "3주 주요 제조업",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3주 주요 제조업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "11월 3주 주요 제조업 전망",
-              "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=36615"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%A3%BC%20%EC%A3%BC%EC%9A%94%20%EC%A0%9C%EC%A1%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%A3%BC%20%EC%A3%BC%EC%9A%94%20%EC%A0%9C%EC%A1%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "11월 3주 주요 제조업 전망",
-          "summary": "",
-          "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=36615",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3-state Key Manufacturing",
+      "term_ko": "3주 주요 제조업"
     },
     {
-      "term": "3.32% for the cold snap from the US",
-      "term_ko": "미국발 한파에 3.32%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국발 한파에 3.32%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%EB%B0%9C%20%ED%95%9C%ED%8C%8C%EC%97%90%203.32%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%EB%B0%9C%20%ED%95%9C%ED%8C%8C%EC%97%90%203.32%25"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3.32% for the Cold Snap From the Us",
+      "term_ko": "미국발 한파에 3.32%"
     },
     {
-      "term": "Plunges 3.32% in cold snap",
-      "term_ko": "한파에 3.32% 급락",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한파에 3.32% 급락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%8C%8C%EC%97%90%203.32%25%20%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%8C%8C%EC%97%90%203.32%25%20%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Plunges 3.32% in Cold Snap",
+      "term_ko": "한파에 3.32% 급락"
     },
     {
       "term": "3.32% Plunged 4,000",
-      "term_ko": "3.32% 급락 4천선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3.32% 급락 4천선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3.32%25%20%EA%B8%89%EB%9D%BD%204%EC%B2%9C%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3.32%25%20%EA%B8%89%EB%9D%BD%204%EC%B2%9C%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "3.32% 급락 4천선"
     },
     {
-      "term": "Plunging 4,000 level breakdown",
-      "term_ko": "급락 4천선 붕괴",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급락 4천선 붕괴",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%9D%BD%204%EC%B2%9C%EC%84%A0%20%EB%B6%95%EA%B4%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%9D%BD%204%EC%B2%9C%EC%84%A0%20%EB%B6%95%EA%B4%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 미국발 한파에 3.32% 급락…4천선 붕괴",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530040",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Plunging 4,000 Level Breakdown",
+      "term_ko": "급락 4천선 붕괴"
     },
     {
-      "term": "Bitcoin crashes to 90,000",
-      "term_ko": "폭락 비트코인도 9만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "폭락 비트코인도 9만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "아시아 증시 폭락, 비트코인도 9만 달러 아래로 하락",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=49241"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EB%9D%BD%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%8F%84%209%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EB%9D%BD%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%8F%84%209%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "아시아 증시 폭락, 비트코인도 9만 달러 아래로 하락",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=49241",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bitcoin Crashes to 90,000",
+      "term_ko": "폭락 비트코인도 9만"
     },
     {
       "term": "90,000 for Bitcoin",
-      "term_ko": "비트코인도 9만 달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인도 9만 달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "아시아 증시 폭락, 비트코인도 9만 달러 아래로 하락",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=49241"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%8F%84%209%EB%A7%8C%20%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%8F%84%209%EB%A7%8C%20%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "아시아 증시 폭락, 비트코인도 9만 달러 아래로 하락",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=49241",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비트코인도 9만 달러"
     },
     {
       "term": "Below $90,000",
-      "term_ko": "9만 달러 아래로",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "9만 달러 아래로",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "아시아 증시 폭락, 비트코인도 9만 달러 아래로 하락",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=49241"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9%EB%A7%8C%20%EB%8B%AC%EB%9F%AC%20%EC%95%84%EB%9E%98%EB%A1%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9%EB%A7%8C%20%EB%8B%AC%EB%9F%AC%20%EC%95%84%EB%9E%98%EB%A1%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "아시아 증시 폭락, 비트코인도 9만 달러 아래로 하락",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=49241",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "9만 달러 아래로"
     },
     {
-      "term": "The gust price is",
-      "term_ko": "돌풍 속 가격은",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌풍 속 가격은",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-              "link": "http://coinreaders.com/199381"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%92%8D%20%EC%86%8D%20%EA%B0%80%EA%B2%A9%EC%9D%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%92%8D%20%EC%86%8D%20%EA%B0%80%EA%B2%A9%EC%9D%80"
-      },
-      "top_headlines": [
-        {
-          "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-          "summary": "",
-          "link": "http://coinreaders.com/199381",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Gust Price Is",
+      "term_ko": "돌풍 속 가격은"
     },
     {
-      "term": "Inside price is retrograde",
-      "term_ko": "속 가격은 역행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속 가격은 역행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-              "link": "http://coinreaders.com/199381"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EA%B0%80%EA%B2%A9%EC%9D%80%20%EC%97%AD%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EA%B0%80%EA%B2%A9%EC%9D%80%20%EC%97%AD%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "XRP, ETF 돌풍 속 가격은 '역행'",
-          "summary": "",
-          "link": "http://coinreaders.com/199381",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Inside Price Is Retrograde",
+      "term_ko": "속 가격은 역행"
     },
     {
-      "term": "韓美日中 stock indexes lined up",
-      "term_ko": "韓美日中 주가지수 줄줄이",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "韓美日中 주가지수 줄줄이",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-18T21:41:52+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "韓美日中 주가지수 줄줄이 하락...비트코인 9만달러 붕괴",
-              "link": "https://www.banronbodo.com/news/articleView.html?idxno=31222"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%E7%BE%8E%E6%97%A5%E4%B8%AD%20%EC%A3%BC%EA%B0%80%EC%A7%80%EC%88%98%20%EC%A4%84%EC%A4%84%EC%9D%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%E7%BE%8E%E6%97%A5%E4%B8%AD%20%EC%A3%BC%EA%B0%80%EC%A7%80%EC%88%98%20%EC%A4%84%EC%A4%84%EC%9D%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "韓美日中 주가지수 줄줄이 하락...비트코인 9만달러 붕괴",
-          "summary": "",
-          "link": "https://www.banronbodo.com/news/articleView.html?idxno=31222",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "韓美日中 Stock Indexes Lined Up",
+      "term_ko": "韓美日中 주가지수 줄줄이"
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 100,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-14",
-              "timestamp": 1763046000000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.008495,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1763046000000
-      }
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 100,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-12",
-              "timestamp": 1762873200000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.006034,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762873200000
-      }
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-18T12:43:13.779Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-18T21:41:52+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Aiot-based",
+      "term_ko": "AIoT 기반"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-18T21:41:52+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-18T21:41:52+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Xrp Etf Surge",
+      "term_ko": "XRP ETF 돌풍"
+    },
+    {
+      "term": "Amid the Etf Surge",
+      "term_ko": "ETF 돌풍 속"
+    },
+    {
+      "term": "Mou with Exosoft Agora",
+      "term_ko": "엑스오소프트 아고라와 MOU"
+    },
+    {
+      "term": "Signed an Mou with Agora",
+      "term_ko": "아고라와 MOU 체결"
+    },
+    {
+      "term": "Mous Aiot",
+      "term_ko": "MOU 체결 AIoT"
+    },
+    {
+      "term": "Covered Call Etfs for Technology Stocks",
+      "term_ko": "기술주 담는 커버드콜ETF"
+    },
+    {
+      "term": "Covered Call Etfs That Contain",
+      "term_ko": "담는 커버드콜ETF 내놨다"
+    },
+    {
+      "term": "Publicly Traded Company Agoraagora and Aiot",
+      "term_ko": "상장사 아고라Agora와 AIoT"
+    },
+    {
+      "term": "Hana Bank Hl Mando Mubowa",
+      "term_ko": "하나은행 HL만도 무보와"
+    },
+    {
+      "term": "Hl Mando Mubo and Cars",
+      "term_ko": "HL만도 무보와 자동차"
+    },
+    {
+      "term": "Rate Cut Opaque Ai",
+      "term_ko": "금리인하 불투명 AI"
+    },
+    {
+      "term": "Opaque Ai Bubbles",
+      "term_ko": "불투명 AI 거품론"
+    },
+    {
+      "term": "Ai Bubbles and More",
+      "term_ko": "AI 거품론 등"
+    },
+    {
+      "term": "November 3rd Weekly Highlights",
+      "term_ko": "11월 3주 주요"
+    },
+    {
+      "term": "3-state Key Manufacturing",
+      "term_ko": "3주 주요 제조업"
+    },
+    {
+      "term": "3.32% for the Cold Snap From the Us",
+      "term_ko": "미국발 한파에 3.32%"
+    },
+    {
+      "term": "Plunges 3.32% in Cold Snap",
+      "term_ko": "한파에 3.32% 급락"
+    },
+    {
+      "term": "3.32% Plunged 4,000",
+      "term_ko": "3.32% 급락 4천선"
+    },
+    {
+      "term": "Plunging 4,000 Level Breakdown",
+      "term_ko": "급락 4천선 붕괴"
+    },
+    {
+      "term": "Bitcoin Crashes to 90,000",
+      "term_ko": "폭락 비트코인도 9만"
+    },
+    {
+      "term": "90,000 for Bitcoin",
+      "term_ko": "비트코인도 9만 달러"
+    },
+    {
+      "term": "Below $90,000",
+      "term_ko": "9만 달러 아래로"
+    },
+    {
+      "term": "The Gust Price Is",
+      "term_ko": "돌풍 속 가격은"
+    },
+    {
+      "term": "Inside Price Is Retrograde",
+      "term_ko": "속 가격은 역행"
+    },
+    {
+      "term": "韓美日中 Stock Indexes Lined Up",
+      "term_ko": "韓美日中 주가지수 줄줄이"
+    },
+    {
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
+    }
+  ],
+  "translations": {
+    "Aiot-based": {
+      "en": "Aiot-based",
+      "ko": "AIoT 기반",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Xrp Etf Surge": {
+      "en": "Xrp Etf Surge",
+      "ko": "XRP ETF 돌풍",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Amid the Etf Surge": {
+      "en": "Amid the Etf Surge",
+      "ko": "ETF 돌풍 속",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Mou with Exosoft Agora": {
+      "en": "Mou with Exosoft Agora",
+      "ko": "엑스오소프트 아고라와 MOU",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Signed an Mou with Agora": {
+      "en": "Signed an Mou with Agora",
+      "ko": "아고라와 MOU 체결",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Mous Aiot": {
+      "en": "Mous Aiot",
+      "ko": "MOU 체결 AIoT",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Covered Call Etfs for Technology Stocks": {
+      "en": "Covered Call Etfs for Technology Stocks",
+      "ko": "기술주 담는 커버드콜ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Covered Call Etfs That Contain": {
+      "en": "Covered Call Etfs That Contain",
+      "ko": "담는 커버드콜ETF 내놨다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Publicly Traded Company Agoraagora and Aiot": {
+      "en": "Publicly Traded Company Agoraagora and Aiot",
+      "ko": "상장사 아고라Agora와 AIoT",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Hana Bank Hl Mando Mubowa": {
+      "en": "Hana Bank Hl Mando Mubowa",
+      "ko": "하나은행 HL만도 무보와",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Hl Mando Mubo and Cars": {
+      "en": "Hl Mando Mubo and Cars",
+      "ko": "HL만도 무보와 자동차",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Rate Cut Opaque Ai": {
+      "en": "Rate Cut Opaque Ai",
+      "ko": "금리인하 불투명 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Opaque Ai Bubbles": {
+      "en": "Opaque Ai Bubbles",
+      "ko": "불투명 AI 거품론",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Ai Bubbles and More": {
+      "en": "Ai Bubbles and More",
+      "ko": "AI 거품론 등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "November 3rd Weekly Highlights": {
+      "en": "November 3rd Weekly Highlights",
+      "ko": "11월 3주 주요",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "3-state Key Manufacturing": {
+      "en": "3-state Key Manufacturing",
+      "ko": "3주 주요 제조업",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "3.32% for the Cold Snap From the Us": {
+      "en": "3.32% for the Cold Snap From the Us",
+      "ko": "미국발 한파에 3.32%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Plunges 3.32% in Cold Snap": {
+      "en": "Plunges 3.32% in Cold Snap",
+      "ko": "한파에 3.32% 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "3.32% Plunged 4,000": {
+      "en": "3.32% Plunged 4,000",
+      "ko": "3.32% 급락 4천선",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Plunging 4,000 Level Breakdown": {
+      "en": "Plunging 4,000 Level Breakdown",
+      "ko": "급락 4천선 붕괴",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Bitcoin Crashes to 90,000": {
+      "en": "Bitcoin Crashes to 90,000",
+      "ko": "폭락 비트코인도 9만",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "90,000 for Bitcoin": {
+      "en": "90,000 for Bitcoin",
+      "ko": "비트코인도 9만 달러",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Below $90,000": {
+      "en": "Below $90,000",
+      "ko": "9만 달러 아래로",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "The Gust Price Is": {
+      "en": "The Gust Price Is",
+      "ko": "돌풍 속 가격은",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Inside Price Is Retrograde": {
+      "en": "Inside Price Is Retrograde",
+      "ko": "속 가격은 역행",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "韓美日中 Stock Indexes Lined Up": {
+      "en": "韓美日中 Stock Indexes Lined Up",
+      "ko": "韓美日中 주가지수 줄줄이",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Rate Cut Expectations": {
+      "en": "Rate Cut Expectations",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
+    },
+    "U.s. Government Shutdown Crisis": {
+      "en": "U.s. Government Shutdown Crisis",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-18T18:29:09.777Z"
     }
   }
 }
