@@ -32,10 +32,11 @@
   <!-- ================== FIRST GRAPH: T(n) ================== -->
   <h2>T(n) Graph</h2>
   <p>
-    \( T(n) = \begin{cases}
-    \frac{n^2 + k}{48}, & n \text{ even}\\
-    \frac{(n+3)^2 + k}{48}, & n \text{ odd}
-    \end{cases}, \quad 12 \le k \le 31 \)
+    Function plotted:
+    <code>
+      T(n, k) = n % 2 === 0 ? (n * n + k) / 48 : ((n + 3) * (n + 3) + k) / 48
+      (12 &le; k &le; 31)
+    </code>
   </p>
 
   <div class="controls">
@@ -71,8 +72,11 @@
   <!-- ================== SECOND GRAPH: LINES ================== -->
   <h2>Lines in (a, b)</h2>
   <p>
-    Lines:
-    \( b = a,\quad b = \dfrac{n - a}{2},\quad b = \dfrac{n}{2} - a \)
+    Line functions:
+    <code>line1(a) = a</code>,
+    <code>line2(a) = (n - a) / 2</code>,
+    <code>line3(a) = n / 2 - a</code>
+    (n comes from the slider).
   </p>
 
   <div class="controls">
