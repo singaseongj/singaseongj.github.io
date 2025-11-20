@@ -2098,6 +2098,17 @@ async function main(){
     // debug
     names.forEach(n => { dbgAfterFeedback01[n] = scoreSafe[n]; });
 
+    // Encourage 안전주 picks to reflect fresh Naver interest (from news-features/naver-trends)
+    for (const n of names) {
+      const navp = clamp01(byName[n].naverPopularity ?? 0);
+      const navBoost = navp > 0 ? Math.min(0.25, navp * 0.3) : 0; // gentle cap to keep scores stable
+      if (navBoost > 0) {
+        scoreSafe[n] = clamp01(scoreSafe[n] + navBoost);
+        byName[n].reasons = byName[n].reasons || {};
+        byName[n].reasons.naverSafeBoost = Number(navBoost.toFixed(3));
+      }
+    }
+
     // KR start-at-(-20): subtract BEFORE boosts AND record for metrics.
     // We'll also propagate the penalty into the *floor* a bit later so floors
     // don't erase it.
