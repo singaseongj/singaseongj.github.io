@@ -52,6 +52,7 @@ const TRENDING_WINDOW_HOURS = Number(process.env.TRENDING_WINDOW_HOURS) || 24;
 const TRENDING_BASELINE_DAYS = Number(process.env.TRENDING_BASELINE_DAYS) || 7;
 const TRENDING_WINDOW_MAX_LLM_KEYWORDS = Number(process.env.TRENDING_WINDOW_MAX_LLM_KEYWORDS) || 50;
 const TRENDING_WINDOW_TEXT_SLICE = Number(process.env.TRENDING_WINDOW_TEXT_SLICE) || 18000;
+const GOOGLE_TRENDS_CACHE_PATH = path.resolve(__dirname, '../data/google_trends_cache.json');
 
 const HANGUL_SUFFIXES = [
   '으로써',
@@ -350,6 +351,15 @@ function loadJSONFileSafe(filePath) {
     return JSON.parse(raw);
   } catch (err) {
     return null;
+  }
+}
+
+function saveJSONFileSafe(filePath, value) {
+  try {
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, JSON.stringify(value, null, 2));
+  } catch (err) {
+    console.warn(`⚠️  Failed to persist cache file ${path.basename(filePath)}:`, err.message || err);
   }
 }
 
@@ -1286,6 +1296,11 @@ function stripMarkup(text) {
     .trim();
 }
 
+function loadCachedGoogleTrends() {
+  const cached = loadJSONFileSafe(GOOGLE_TRENDS_CACHE_PATH);
+  return Array.isArray(cached) ? cached : [];
+}
+
 async function fetchGoogleDailyTrends({ geo = 'KR', hl = 'ko', tz = -540, date } = {}) {
   const params = new URLSearchParams({ geo, hl, tz: String(tz) });
   if (date) {
@@ -1293,10 +1308,33 @@ async function fetchGoogleDailyTrends({ geo = 'KR', hl = 'ko', tz = -540, date }
   }
 
   const url = `https://trends.google.com/trends/api/dailytrends?${params.toString()}`;
-  const response = await fetch(url);
+  let response;
+  try {
+    response = await fetch(url, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept-Language': `${hl},en;q=0.8`,
+      },
+    });
+  } catch (err) {
+    const cached = loadCachedGoogleTrends();
+    if (cached.length) {
+      console.warn('⚠️  Google Trends fetch failed; using cached snapshot. Error:', err.message || err);
+      return cached;
+    }
+    throw err;
+  }
 
   if (!response.ok) {
     const text = await response.text();
+    const cached = loadCachedGoogleTrends();
+    if (cached.length) {
+      console.warn(
+        `⚠️  Google Trends HTTP ${response.status}; using cached snapshot (${cached.length} days). Details: ${text.slice(0, 120)}`,
+      );
+      return cached;
+    }
     throw new Error(`Google Trends error ${response.status}: ${text.slice(0, 120)}`);
   }
 
@@ -1306,6 +1344,10 @@ async function fetchGoogleDailyTrends({ geo = 'KR', hl = 'ko', tz = -540, date }
   try {
     const parsed = JSON.parse(sanitized);
     const days = parsed?.default?.trendingSearchesDays;
+    if (Array.isArray(days) && days.length) {
+      saveJSONFileSafe(GOOGLE_TRENDS_CACHE_PATH, days);
+      return days;
+    }
     return Array.isArray(days) ? days : [];
   } catch (err) {
     throw new Error(`Failed to parse Google Trends response: ${err.message}`);
