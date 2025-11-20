@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>T(n) & Lines Graphs</title>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .controls {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+    label {
+      font-size: 14px;
+    }
+    input[type="number"] {
+      width: 70px;
+    }
+    hr {
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- ================== FIRST GRAPH: T(n) ================== -->
+  <h2>T(n) Graph</h2>
+  <p>
+    Function plotted:
+    <code>
+      T(n, k) = n % 2 === 0 ? (n * n + k) / 48 : ((n + 3) * (n + 3) + k) / 48
+      (12 &le; k &le; 31)
+    </code>
+  </p>
+
+  <div class="controls">
+    <div>
+      <label for="kSlider">
+        k: <span id="kValue">12</span>
+      </label>
+      <br />
+      <input
+        type="range"
+        id="kSlider"
+        min="12"
+        max="31"
+        step="1"
+        value="12"
+      />
+    </div>
+
+    <div>
+      <label for="nMax">
+        n range: 1 to
+      </label>
+      <input type="number" id="nMax" value="50" min="1" max="500" />
+    </div>
+
+    <button id="updateBtn">Update T(n) Graph</button>
+  </div>
+
+  <canvas id="tChart" width="800" height="400"></canvas>
+
+  <hr />
+
+  <!-- ================== SECOND GRAPH: LINES ================== -->
+  <h2>Lines in (a, b)</h2>
+  <p>
+    Line functions:
+    <code>line1(a) = a</code>,
+    <code>line2(a) = (n - a) / 2</code>,
+    <code>line3(a) = n / 2 - a</code>
+    (n comes from the slider).
+  </p>
+
+  <div class="controls">
+    <div>
+      <label for="nParam">
+        n (parameter in the lines): <span id="nParamValue">10</span>
+      </label>
+      <br />
+      <input
+        type="range"
+        id="nParam"
+        min="-20"
+        max="20"
+        step="1"
+        value="10"
+      />
+    </div>
+
+    <div>
+      <label for="aMin">
+        a min:
+      </label>
+      <input type="number" id="aMin" value="-20" />
+    </div>
+
+    <div>
+      <label for="aMax">
+        a max:
+      </label>
+      <input type="number" id="aMax" value="20" />
+    </div>
+
+    <button id="updateLinesBtn">Update Lines Graph</button>
+  </div>
+
+  <canvas id="linesChart" width="800" height="400"></canvas>
+
+  <script>
+    // ================== FIRST GRAPH: T(n) ==================
+    function T(n, k) {
+      if (n % 2 === 0) {
+        // n is even
+        return (n * n + k) / 48;
+      } else {
+        // n is odd
+        return ((n + 3) * (n + 3) + k) / 48;
+      }
+    }
+
+    function generateTData(k, nMax) {
+      const labels = [];
+      const values = [];
+      for (let n = 1; n <= nMax; n++) {
+        labels.push(n);
+        values.push(T(n, k));
+      }
+      return { labels, values };
+    }
+
+    const kSlider = document.getElementById("kSlider");
+    const kValueSpan = document.getElementById("kValue");
+    const nMaxInput = document.getElementById("nMax");
+    const updateBtn = document.getElementById("updateBtn");
+    const ctx = document.getElementById("tChart").getContext("2d");
+
+    let k = parseInt(kSlider.value, 10);
+    let nMax = parseInt(nMaxInput.value, 10);
+
+    const initialTData = generateTData(k, nMax);
+    const tChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: initialTData.labels,
+        datasets: [
+          {
+            label: "T(n)",
+            data: initialTData.values,
+            fill: false,
+            borderWidth: 2,
+            pointRadius: 3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: "n (integer)"
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: "T(n)"
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: true
+          },
+          tooltip: {
+            callbacks: {
+              title: function (context) {
+                const n = context[0].label;
+                return "n = " + n;
+              },
+              label: function (context) {
+                return "T(n) = " + context.parsed.y.toFixed(4);
+              }
+            }
+          }
+        }
+      }
+    });
+
+    kSlider.addEventListener("input", function () {
+      kValueSpan.textContent = kSlider.value;
+    });
+
+    function updateTChart() {
+      k = parseInt(kSlider.value, 10);
+      nMax = parseInt(nMaxInput.value, 10);
+
+      if (isNaN(nMax) || nMax < 1) {
+        nMax = 1;
+        nMaxInput.value = 1;
+      }
+
+      const newData = generateTData(k, nMax);
+      tChart.data.labels = newData.labels;
+      tChart.data.datasets[0].data = newData.values;
+      tChart.update();
+    }
+
+    updateBtn.addEventListener("click", updateTChart);
+
+    // ================== SECOND GRAPH: LINES ==================
+    const nParamSlider = document.getElementById("nParam");
+    const nParamValueSpan = document.getElementById("nParamValue");
+    const aMinInput = document.getElementById("aMin");
+    const aMaxInput = document.getElementById("aMax");
+    const updateLinesBtn = document.getElementById("updateLinesBtn");
+    const linesCtx = document.getElementById("linesChart").getContext("2d");
+
+    let nParam = parseFloat(nParamSlider.value);
+    let aMin = parseFloat(aMinInput.value);
+    let aMax = parseFloat(aMaxInput.value);
+
+    function generateLinesData(nParam, aMin, aMax) {
+      const aValues = [];
+      const line1 = []; // b = a
+      const line2 = []; // b = (n - a) / 2
+      const line3 = []; // b = n / 2 - a
+
+      if (aMax === aMin) {
+        aMax = aMin + 1; // avoid zero range
+      }
+
+      const steps = 40;
+      const stepSize = (aMax - aMin) / steps;
+
+      for (let i = 0; i <= steps; i++) {
+        const a = aMin + i * stepSize;
+        aValues.push(a);
+        line1.push(a);
+        line2.push((nParam - a) / 2);   // <-- updated formula
+        line3.push(nParam / 2 - a);
+      }
+
+      return { aValues, line1, line2, line3 };
+    }
+
+    let initialLinesData = generateLinesData(nParam, aMin, aMax);
+
+    const linesChart = new Chart(linesCtx, {
+      type: "line",
+      data: {
+        labels: initialLinesData.aValues.map((v) => v.toFixed(2)),
+        datasets: [
+          {
+            label: "b = a",
+            data: initialLinesData.line1,
+            fill: false,
+            borderWidth: 2,
+            pointRadius: 0
+          },
+          {
+            label: "b = (n - a) / 2",   // <-- updated label
+            data: initialLinesData.line2,
+            fill: false,
+            borderWidth: 2,
+            pointRadius: 0
+          },
+          {
+            label: "b = n/2 - a",
+            data: initialLinesData.line3,
+            fill: false,
+            borderWidth: 2,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: "a"
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: "b"
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: true
+          },
+          tooltip: {
+            callbacks: {
+              title: function (context) {
+                const a = initialLinesData.aValues[context[0].dataIndex];
+                return "a = " + a.toFixed(2);
+              },
+              label: function (context) {
+                return "b = " + context.parsed.y.toFixed(4);
+              }
+            }
+          }
+        }
+      }
+    });
+
+    nParamSlider.addEventListener("input", function () {
+      nParamValueSpan.textContent = nParamSlider.value;
+    });
+
+    function updateLinesChart() {
+      nParam = parseFloat(nParamSlider.value);
+      aMin = parseFloat(aMinInput.value);
+      aMax = parseFloat(aMaxInput.value);
+
+      if (isNaN(aMin)) {
+        aMin = -20;
+        aMinInput.value = -20;
+      }
+      if (isNaN(aMax)) {
+        aMax = 20;
+        aMaxInput.value = 20;
+      }
+      if (aMax === aMin) {
+        aMax = aMin + 1;
+        aMaxInput.value = aMax;
+      }
+
+      const newData = generateLinesData(nParam, aMin, aMax);
+      initialLinesData = newData; // keep for tooltip
+
+      linesChart.data.labels = newData.aValues.map((v) => v.toFixed(2));
+      linesChart.data.datasets[0].data = newData.line1;
+      linesChart.data.datasets[1].data = newData.line2;
+      linesChart.data.datasets[2].data = newData.line3;
+
+      linesChart.update();
+    }
+
+    updateLinesBtn.addEventListener("click", updateLinesChart);
+  </script>
+</body>
+</html>
