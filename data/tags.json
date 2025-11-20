@@ -1,1129 +1,439 @@
 {
+  "generatedAt": "2025-11-20T06:28:45.902Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-20",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Static validation features",
-      "term_ko": "정적 검증 기능",
-      "significance_score": 644,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정적 검증 기능",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Qt 그룹, 신규 쿠다 정적 검증 기능 공식 발표",
-              "link": "https://www.nbntv.co.kr/news/articleView.html?idxno=4013710"
-            },
-            {
-              "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-              "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%A0%81%20%EA%B2%80%EC%A6%9D%20%EA%B8%B0%EB%8A%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%A0%81%20%EA%B2%80%EC%A6%9D%20%EA%B8%B0%EB%8A%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "Qt 그룹, 신규 쿠다 정적 검증 기능 공식 발표",
-          "summary": "",
-          "link": "https://www.nbntv.co.kr/news/articleView.html?idxno=4013710",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-          "summary": "",
-          "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Static Validation Features",
+      "term_ko": "정적 검증 기능"
     },
     {
       "term": "Qt Groups",
-      "term_ko": "Qt 그룹",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Qt 그룹",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-19",
-              "timestamp": 1763478000000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Qt 그룹, 신규 쿠다 정적 검증 기능 공식 발표",
-              "link": "https://www.nbntv.co.kr/news/articleView.html?idxno=4013710"
-            },
-            {
-              "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-              "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Qt%20%EA%B7%B8%EB%A3%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Qt%20%EA%B7%B8%EB%A3%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "Qt 그룹, 신규 쿠다 정적 검증 기능 공식 발표",
-          "summary": "",
-          "link": "https://www.nbntv.co.kr/news/articleView.html?idxno=4013710",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-          "summary": "",
-          "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.029047,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1763478000000
-      }
+      "term_ko": "Qt 그룹"
     },
     {
-      "term": "美 Saudi Arabia to UAE",
-      "term_ko": "美 사우디 UAE에",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 사우디 UAE에",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-              "link": "https://www.newspim.com/news/view/20251120000250"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%82%AC%EC%9A%B0%EB%94%94%20UAE%EC%97%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%82%AC%EC%9A%B0%EB%94%94%20UAE%EC%97%90"
-      },
-      "top_headlines": [
-        {
-          "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000250",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "美 Saudi Arabia to Uae",
+      "term_ko": "美 사우디 UAE에"
     },
     {
-      "term": "Nvidia in Saudi Arabia UAE",
-      "term_ko": "사우디 UAE에 엔비디아",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사우디 UAE에 엔비디아",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-              "link": "https://www.newspim.com/news/view/20251120000250"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%9A%B0%EB%94%94%20UAE%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%9A%B0%EB%94%94%20UAE%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84"
-      },
-      "top_headlines": [
-        {
-          "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000250",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nvidia in Saudi Arabia Uae",
+      "term_ko": "사우디 UAE에 엔비디아"
     },
     {
-      "term": "Nvidia Blackwell in UAE",
-      "term_ko": "UAE에 엔비디아 블랙웰",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "UAE에 엔비디아 블랙웰",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-              "link": "https://www.newspim.com/news/view/20251120000250"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=UAE%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%B8%94%EB%9E%99%EC%9B%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=UAE%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%B8%94%EB%9E%99%EC%9B%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000250",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nvidia Blackwell in Uae",
+      "term_ko": "UAE에 엔비디아 블랙웰"
     },
     {
-      "term": "NVIDIA Blackwell AI chips",
-      "term_ko": "엔비디아 블랙웰 AI칩",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔비디아 블랙웰 AI칩",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-              "link": "https://www.newspim.com/news/view/20251120000250"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%B8%94%EB%9E%99%EC%9B%B0%20AI%EC%B9%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%B8%94%EB%9E%99%EC%9B%B0%20AI%EC%B9%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000250",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nvidia Blackwell Ai Chips",
+      "term_ko": "엔비디아 블랙웰 AI칩"
     },
     {
-      "term": "Exporting Blackwell AI chips",
-      "term_ko": "블랙웰 AI칩 수출",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "블랙웰 AI칩 수출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-              "link": "https://www.newspim.com/news/view/20251120000250"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%94%EB%9E%99%EC%9B%B0%20AI%EC%B9%A9%20%EC%88%98%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%94%EB%9E%99%EC%9B%B0%20AI%EC%B9%A9%20%EC%88%98%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000250",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exporting Blackwell Ai Chips",
+      "term_ko": "블랙웰 AI칩 수출"
     },
     {
-      "term": "AI chip export authorization",
-      "term_ko": "AI칩 수출 승인",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI칩 수출 승인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-              "link": "https://www.newspim.com/news/view/20251120000250"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%B9%A9%20%EC%88%98%EC%B6%9C%20%EC%8A%B9%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%B9%A9%20%EC%88%98%EC%B6%9C%20%EC%8A%B9%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "美, 사우디·UAE에 엔비디아 블랙웰 AI칩 수출 승인",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000250",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Chip Export Authorization",
+      "term_ko": "AI칩 수출 승인"
     },
     {
-      "term": "Group CUDA Static",
-      "term_ko": "그룹 CUDA 정적",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "그룹 CUDA 정적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-              "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%B8%EB%A3%B9%20CUDA%20%EC%A0%95%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%B8%EB%A3%B9%20CUDA%20%EC%A0%95%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-          "summary": "",
-          "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Group Cuda Static",
+      "term_ko": "그룹 CUDA 정적"
     },
     {
-      "term": "CUDA Static Verification",
-      "term_ko": "CUDA 정적 검증",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "CUDA 정적 검증",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-              "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CUDA%20%EC%A0%95%EC%A0%81%20%EA%B2%80%EC%A6%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CUDA%20%EC%A0%95%EC%A0%81%20%EA%B2%80%EC%A6%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "Qt 그룹, CUDA 정적 검증 기능 공개",
-          "summary": "",
-          "link": "https://www.gokorea.kr/news/articleView.html?idxno=847202",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cuda Static Verification",
+      "term_ko": "CUDA 정적 검증"
     },
     {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 시간 외 급등락 美종목: 엔비디아·AMD↑ vs. 팔로알...",
-              "link": "https://www.newspim.com/news/view/20251120000057"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 시간 외 급등락 美종목: 엔비디아·AMD↑ vs. 팔로알...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000057",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
     {
       "term": "美종목 nvidia amd",
-      "term_ko": "美종목 엔비디아 AMD",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美종목 엔비디아 AMD",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 시간 외 급등락 美종목: 엔비디아·AMD↑ vs. 팔로알...",
-              "link": "https://www.newspim.com/news/view/20251120000057"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%EC%A2%85%EB%AA%A9%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20AMD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%EC%A2%85%EB%AA%A9%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20AMD"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 시간 외 급등락 美종목: 엔비디아·AMD↑ vs. 팔로알...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251120000057",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "美종목 엔비디아 AMD"
     },
     {
-      "term": "Profit + Principal Guaranteed IMA",
-      "term_ko": "수익+원금 보장 IMA",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수익+원금 보장 IMA",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9D%B5%2B%EC%9B%90%EA%B8%88%20%EB%B3%B4%EC%9E%A5%20IMA",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9D%B5%2B%EC%9B%90%EA%B8%88%20%EB%B3%B4%EC%9E%A5%20IMA"
-      },
-      "top_headlines": [
-        {
-          "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Profit + Principal Guaranteed Ima",
+      "term_ko": "수익+원금 보장 IMA"
     },
     {
-      "term": "Guaranteed IMA example",
-      "term_ko": "보장 IMA 예",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보장 IMA 예",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%9E%A5%20IMA%20%EC%98%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%9E%A5%20IMA%20%EC%98%88"
-      },
-      "top_headlines": [
-        {
-          "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Guaranteed Ima Example",
+      "term_ko": "보장 IMA 예"
     },
     {
-      "term": "IMA Savings",
-      "term_ko": "IMA 예 적금",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IMA 예 적금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IMA%20%EC%98%88%20%EC%A0%81%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IMA%20%EC%98%88%20%EC%A0%81%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ima Savings",
+      "term_ko": "IMA 예 적금"
     },
     {
-      "term": "Awning Surf AI",
-      "term_ko": "어닝 서프 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "어닝 서프 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B4%EB%8B%9D%20%EC%84%9C%ED%94%84%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B4%EB%8B%9D%20%EC%84%9C%ED%94%84%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Awning Surf Ai",
+      "term_ko": "어닝 서프 AI"
     },
     {
-      "term": "Surf AI Bubbles",
-      "term_ko": "서프 AI 버블론",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서프 AI 버블론",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%94%84%20AI%20%EB%B2%84%EB%B8%94%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%94%84%20AI%20%EB%B2%84%EB%B8%94%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Surf Ai Bubbles",
+      "term_ko": "서프 AI 버블론"
     },
     {
-      "term": "If an IMA is investing in a lower-rated corporate bond",
-      "term_ko": "IMA가 하위등급 회사채에",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IMA가 하위등급 회사채에",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IMA가 하위등급 회사채에 줄 영향은…\"공급 증가가 선결과제\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4384845"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IMA%EA%B0%80%20%ED%95%98%EC%9C%84%EB%93%B1%EA%B8%89%20%ED%9A%8C%EC%82%AC%EC%B1%84%EC%97%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IMA%EA%B0%80%20%ED%95%98%EC%9C%84%EB%93%B1%EA%B8%89%20%ED%9A%8C%EC%82%AC%EC%B1%84%EC%97%90"
-      },
-      "top_headlines": [
-        {
-          "title": "IMA가 하위등급 회사채에 줄 영향은…\"공급 증가가 선결과제\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4384845",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "If an Ima Is Investing in a Lower-rated Corporate Bond",
+      "term_ko": "IMA가 하위등급 회사채에"
     },
     {
-      "term": "年 8% return + principal",
-      "term_ko": "年 8% 수익+원금",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "年 8% 수익+원금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E5%B9%B4%208%25%20%EC%88%98%EC%9D%B5%2B%EC%9B%90%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E5%B9%B4%208%25%20%EC%88%98%EC%9D%B5%2B%EC%9B%90%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "年 8% Return + Principal",
+      "term_ko": "年 8% 수익+원금"
     },
     {
-      "term": "8% return + guaranteed principal",
-      "term_ko": "8% 수익+원금 보장",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "8% 수익+원금 보장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8%25%20%EC%88%98%EC%9D%B5%2B%EC%9B%90%EA%B8%88%20%EB%B3%B4%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8%25%20%EC%88%98%EC%9D%B5%2B%EC%9B%90%EA%B8%88%20%EB%B3%B4%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "‘年 8% 수익+원금 보장’ IMA, 예·적금 대신 고민할 수밖에…‘銀→證...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560484?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "8% Return + Guaranteed Principal",
+      "term_ko": "8% 수익+원금 보장"
     },
     {
-      "term": "1,000 feet in one fell swoop",
-      "term_ko": "단숨에 사천피 1등",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "단숨에 사천피 1등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EC%88%A8%EC%97%90%20%EC%82%AC%EC%B2%9C%ED%94%BC%201%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EC%88%A8%EC%97%90%20%EC%82%AC%EC%B2%9C%ED%94%BC%201%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1,000 Feet in One Fell Swoop",
+      "term_ko": "단숨에 사천피 1등"
     },
     {
-      "term": "The first ranked gongshin is",
-      "term_ko": "사천피 1등 공신은",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사천피 1등 공신은",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%B2%9C%ED%94%BC%201%EB%93%B1%20%EA%B3%B5%EC%8B%A0%EC%9D%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%B2%9C%ED%94%BC%201%EB%93%B1%20%EA%B3%B5%EC%8B%A0%EC%9D%80"
-      },
-      "top_headlines": [
-        {
-          "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The First Ranked Gongshin Is",
+      "term_ko": "사천피 1등 공신은"
     },
     {
-      "term": "First place goes to Nvidia",
-      "term_ko": "1등 공신은 엔비디아",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1등 공신은 엔비디아",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EB%93%B1%20%EA%B3%B5%EC%8B%A0%EC%9D%80%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EB%93%B1%20%EA%B3%B5%EC%8B%A0%EC%9D%80%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84"
-      },
-      "top_headlines": [
-        {
-          "title": "단숨에 ‘사천피’, 1등 공신은 엔비디아 ‘어닝 서프’…AI 버블론 불식...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002560482?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "First Place Goes to Nvidia",
+      "term_ko": "1등 공신은 엔비디아"
     },
     {
       "term": "Nvidia Earnings Hit 4000",
-      "term_ko": "엔비디아 호실적에 4000선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔비디아 호실적에 4000선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 엔비디아 호실적에 4,000선 회복…외국인·기관 동반 매수",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15880588"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%98%B8%EC%8B%A4%EC%A0%81%EC%97%90%204000%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%98%B8%EC%8B%A4%EC%A0%81%EC%97%90%204000%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 엔비디아 호실적에 4,000선 회복…외국인·기관 동반 매수",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15880588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "엔비디아 호실적에 4000선"
     },
     {
-      "term": "Back to 4000 on strong earnings",
-      "term_ko": "호실적에 4000선 회복",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "호실적에 4000선 회복",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 엔비디아 호실적에 4,000선 회복…외국인·기관 동반 매수",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15880588"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%B8%EC%8B%A4%EC%A0%81%EC%97%90%204000%EC%84%A0%20%ED%9A%8C%EB%B3%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%B8%EC%8B%A4%EC%A0%81%EC%97%90%204000%EC%84%A0%20%ED%9A%8C%EB%B3%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 엔비디아 호실적에 4,000선 회복…외국인·기관 동반 매수",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15880588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Back to 4000 on Strong Earnings",
+      "term_ko": "호실적에 4000선 회복"
     },
     {
-      "term": "Foreigners over 4000",
-      "term_ko": "4000선 회복 외국인",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4000선 회복 외국인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-20T10:24:38+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 엔비디아 호실적에 4,000선 회복…외국인·기관 동반 매수",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15880588"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4000%EC%84%A0%20%ED%9A%8C%EB%B3%B5%20%EC%99%B8%EA%B5%AD%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4000%EC%84%A0%20%ED%9A%8C%EB%B3%B5%20%EC%99%B8%EA%B5%AD%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 엔비디아 호실적에 4,000선 회복…외국인·기관 동반 매수",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15880588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Foreigners Over 4000",
+      "term_ko": "4000선 회복 외국인"
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 173,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-14",
-              "timestamp": 1763046000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-18",
-              "timestamp": 1763391600000,
-              "value": 33.33333
-            },
-            {
-              "period": "2025-11-19",
-              "timestamp": 1763478000000,
-              "value": 40
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 173.3333,
-        "weekly_average_volume": 57.7778,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.028062,
-        "time_weight": 0.029041,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1763478000000
-      }
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-12",
-              "timestamp": 1762873200000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.00494,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1762873200000
-      }
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-20T01:26:04.494Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-20T10:24:38+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Static Validation Features",
+      "term_ko": "정적 검증 기능"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-20T10:24:38+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-20T10:24:38+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Qt Groups",
+      "term_ko": "Qt 그룹"
+    },
+    {
+      "term": "美 Saudi Arabia to Uae",
+      "term_ko": "美 사우디 UAE에"
+    },
+    {
+      "term": "Nvidia in Saudi Arabia Uae",
+      "term_ko": "사우디 UAE에 엔비디아"
+    },
+    {
+      "term": "Nvidia Blackwell in Uae",
+      "term_ko": "UAE에 엔비디아 블랙웰"
+    },
+    {
+      "term": "Nvidia Blackwell Ai Chips",
+      "term_ko": "엔비디아 블랙웰 AI칩"
+    },
+    {
+      "term": "Exporting Blackwell Ai Chips",
+      "term_ko": "블랙웰 AI칩 수출"
+    },
+    {
+      "term": "Ai Chip Export Authorization",
+      "term_ko": "AI칩 수출 승인"
+    },
+    {
+      "term": "Group Cuda Static",
+      "term_ko": "그룹 CUDA 정적"
+    },
+    {
+      "term": "Cuda Static Verification",
+      "term_ko": "CUDA 정적 검증"
+    },
+    {
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
+    },
+    {
+      "term": "美종목 nvidia amd",
+      "term_ko": "美종목 엔비디아 AMD"
+    },
+    {
+      "term": "Profit + Principal Guaranteed Ima",
+      "term_ko": "수익+원금 보장 IMA"
+    },
+    {
+      "term": "Guaranteed Ima Example",
+      "term_ko": "보장 IMA 예"
+    },
+    {
+      "term": "Ima Savings",
+      "term_ko": "IMA 예 적금"
+    },
+    {
+      "term": "Awning Surf Ai",
+      "term_ko": "어닝 서프 AI"
+    },
+    {
+      "term": "Surf Ai Bubbles",
+      "term_ko": "서프 AI 버블론"
+    },
+    {
+      "term": "If an Ima Is Investing in a Lower-rated Corporate Bond",
+      "term_ko": "IMA가 하위등급 회사채에"
+    },
+    {
+      "term": "年 8% Return + Principal",
+      "term_ko": "年 8% 수익+원금"
+    },
+    {
+      "term": "8% Return + Guaranteed Principal",
+      "term_ko": "8% 수익+원금 보장"
+    },
+    {
+      "term": "1,000 Feet in One Fell Swoop",
+      "term_ko": "단숨에 사천피 1등"
+    },
+    {
+      "term": "The First Ranked Gongshin Is",
+      "term_ko": "사천피 1등 공신은"
+    },
+    {
+      "term": "First Place Goes to Nvidia",
+      "term_ko": "1등 공신은 엔비디아"
+    },
+    {
+      "term": "Nvidia Earnings Hit 4000",
+      "term_ko": "엔비디아 호실적에 4000선"
+    },
+    {
+      "term": "Back to 4000 on Strong Earnings",
+      "term_ko": "호실적에 4000선 회복"
+    },
+    {
+      "term": "Foreigners Over 4000",
+      "term_ko": "4000선 회복 외국인"
+    },
+    {
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
+    }
+  ],
+  "translations": {
+    "Static Validation Features": {
+      "en": "Static Validation Features",
+      "ko": "정적 검증 기능",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Qt Groups": {
+      "en": "Qt Groups",
+      "ko": "Qt 그룹",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "美 Saudi Arabia to Uae": {
+      "en": "美 Saudi Arabia to Uae",
+      "ko": "美 사우디 UAE에",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Nvidia in Saudi Arabia Uae": {
+      "en": "Nvidia in Saudi Arabia Uae",
+      "ko": "사우디 UAE에 엔비디아",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Nvidia Blackwell in Uae": {
+      "en": "Nvidia Blackwell in Uae",
+      "ko": "UAE에 엔비디아 블랙웰",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Nvidia Blackwell Ai Chips": {
+      "en": "Nvidia Blackwell Ai Chips",
+      "ko": "엔비디아 블랙웰 AI칩",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Exporting Blackwell Ai Chips": {
+      "en": "Exporting Blackwell Ai Chips",
+      "ko": "블랙웰 AI칩 수출",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Ai Chip Export Authorization": {
+      "en": "Ai Chip Export Authorization",
+      "ko": "AI칩 수출 승인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Group Cuda Static": {
+      "en": "Group Cuda Static",
+      "ko": "그룹 CUDA 정적",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Cuda Static Verification": {
+      "en": "Cuda Static Verification",
+      "ko": "CUDA 정적 검증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "The Story of Ai in Stocks": {
+      "en": "The Story of Ai in Stocks",
+      "ko": "AI의 종목 이야기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "美종목 nvidia amd": {
+      "en": "美종목 nvidia amd",
+      "ko": "美종목 엔비디아 AMD",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Profit + Principal Guaranteed Ima": {
+      "en": "Profit + Principal Guaranteed Ima",
+      "ko": "수익+원금 보장 IMA",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Guaranteed Ima Example": {
+      "en": "Guaranteed Ima Example",
+      "ko": "보장 IMA 예",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Ima Savings": {
+      "en": "Ima Savings",
+      "ko": "IMA 예 적금",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Awning Surf Ai": {
+      "en": "Awning Surf Ai",
+      "ko": "어닝 서프 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Surf Ai Bubbles": {
+      "en": "Surf Ai Bubbles",
+      "ko": "서프 AI 버블론",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "If an Ima Is Investing in a Lower-rated Corporate Bond": {
+      "en": "If an Ima Is Investing in a Lower-rated Corporate Bond",
+      "ko": "IMA가 하위등급 회사채에",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "年 8% Return + Principal": {
+      "en": "年 8% Return + Principal",
+      "ko": "年 8% 수익+원금",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "8% Return + Guaranteed Principal": {
+      "en": "8% Return + Guaranteed Principal",
+      "ko": "8% 수익+원금 보장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "1,000 Feet in One Fell Swoop": {
+      "en": "1,000 Feet in One Fell Swoop",
+      "ko": "단숨에 사천피 1등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "The First Ranked Gongshin Is": {
+      "en": "The First Ranked Gongshin Is",
+      "ko": "사천피 1등 공신은",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "First Place Goes to Nvidia": {
+      "en": "First Place Goes to Nvidia",
+      "ko": "1등 공신은 엔비디아",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Nvidia Earnings Hit 4000": {
+      "en": "Nvidia Earnings Hit 4000",
+      "ko": "엔비디아 호실적에 4000선",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Back to 4000 on Strong Earnings": {
+      "en": "Back to 4000 on Strong Earnings",
+      "ko": "호실적에 4000선 회복",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Foreigners Over 4000": {
+      "en": "Foreigners Over 4000",
+      "ko": "4000선 회복 외국인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Rate Cut Expectations": {
+      "en": "Rate Cut Expectations",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
+    },
+    "U.s. Government Shutdown Crisis": {
+      "en": "U.s. Government Shutdown Crisis",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-20T06:28:45.902Z"
     }
   }
 }
