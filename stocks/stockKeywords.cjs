@@ -590,7 +590,8 @@ function buildHeadlinePhraseCandidates(items) {
     const segments = extractHeadlineCandidates(item.title);
     if (!segments.length) return;
 
-    const uniqueWithinHeadline = new Set();
+    // Collect ALL candidates from this headline first
+    const headlineCandidates = [];
 
     segments.forEach((segment) => {
       const maxSize = Math.min(3, segment.length);
@@ -608,32 +609,54 @@ function buildHeadlinePhraseCandidates(items) {
           const phrase = slice.join(' ');
           const normalized = normalizeForComparison(phrase);
           if (!normalized) continue;
-          if (uniqueWithinHeadline.has(normalized)) continue;
 
           const weight = computeHeadlinePhraseWeight(slice);
           if (weight <= 0) continue;
 
-          uniqueWithinHeadline.add(normalized);
-
-          if (!phraseMap.has(normalized)) {
-            phraseMap.set(normalized, {
-              phrase,
-              score: 0,
-              count: 0,
-              indices: new Set(),
-            });
-          }
-
-          const entry = phraseMap.get(normalized);
-          entry.score += weight;
-          entry.count += 1;
-          entry.indices.add(index);
-          if (phrase.length > entry.phrase.length) {
-            entry.phrase = phrase;
-          }
+          headlineCandidates.push({
+            phrase,
+            normalized,
+            weight,
+            tokens: new Set(normalizedSlice),
+          });
         }
       }
     });
+
+    // ✨ NEW: Pick only non-overlapping phrases per headline
+    const selected = [];
+    headlineCandidates.sort((a, b) => b.weight - a.weight);
+
+    for (const candidate of headlineCandidates) {
+      const overlaps = selected.some((sel) => {
+        const intersection = [...candidate.tokens].filter((t) => sel.tokens.has(t));
+        return intersection.length > 0;
+      });
+
+      if (!overlaps) {
+        selected.push(candidate);
+      }
+    }
+
+    // Add only selected candidates to global map
+    for (const candidate of selected) {
+      if (!phraseMap.has(candidate.normalized)) {
+        phraseMap.set(candidate.normalized, {
+          phrase: candidate.phrase,
+          score: 0,
+          count: 0,
+          indices: new Set(),
+        });
+      }
+
+      const entry = phraseMap.get(candidate.normalized);
+      entry.score += candidate.weight;
+      entry.count += 1;
+      entry.indices.add(index);
+      if (candidate.phrase.length > entry.phrase.length) {
+        entry.phrase = candidate.phrase;
+      }
+    }
   });
 
   return [...phraseMap.values()].sort((a, b) => b.score - a.score);
@@ -955,25 +978,14 @@ function upgradeKeywordSpecificity(keyword, { minWords = 2, maxWords = 5 } = {})
     return limitWords(trimmed, maxWords);
   }
 
-  const translation = lookupFallbackTranslation(trimmed);
-  if (translation) {
-    const translationWords = translation.split(/\s+/).filter(Boolean);
-    if (translationWords.length >= minWords) {
-      if (containsHangul(trimmed) && /[a-z]/i.test(translation)) {
-        const bilingual = `${trimmed} ${translation}`;
-        return limitWords(bilingual, maxWords);
-      }
-      return limitWords(translation, maxWords);
-    }
-  }
+  // ✨ REMOVED: contextual suffix addition
+  // Just return the original if too short
+  return '';
+}
 
-  const contextualSuffix = buildContextualSuffix(trimmed);
-  if (contextualSuffix) {
-    const expanded = `${trimmed} ${contextualSuffix}`;
-    return limitWords(expanded, maxWords);
-  }
-
-  return limitWords(trimmed, maxWords);
+function isIncompletePhrase(keyword) {
+  // Remove phrases ending with incomplete particles
+  return /[는은을를이가에서의와과도로으로]$/.test(keyword);
 }
 
 function sanitizeKeywordList(keywords, { minWords = 2, maxWords = 5 } = {}) {
@@ -983,7 +995,8 @@ function sanitizeKeywordList(keywords, { minWords = 2, maxWords = 5 } = {}) {
     .map((kw) => cleanKeyword(kw))
     .map((kw) => upgradeKeywordSpecificity(kw, { minWords, maxWords }))
     .filter((kw) => kw.length > 0)
-    .filter((kw) => !isTooGenericKeyword(kw));
+    .filter((kw) => !isTooGenericKeyword(kw))
+    .filter((kw) => !isIncompletePhrase(kw));
 
   return enforceKeywordWordCount(cleaned, { minWords, maxWords });
 }
@@ -2906,7 +2919,7 @@ async function buildTags() {
     }
 
     const specificityScore = calculateSpecificityScore(item.term_ko || item.term);
-    if (specificityScore < 50) {
+    if (specificityScore < 80) {
       similarDiscarded.push({ kept: null, dropped: item, reason: 'too_generic' });
       continue;
     }
