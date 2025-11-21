@@ -530,6 +530,7 @@ const POP_CAP     = +process.env.POP_CAP     || 0.10; // hard cap of popularity 
 const ABSOLUTE_SCORING = process.env.ABSOLUTE_SCORING !== '0'; // default ON
 // Stronger size bias (absolute)
 const SIZE_ABS_WEIGHT = +process.env.SIZE_ABS_WEIGHT || 0.82;  // higher => more size
+const SIZE_ABS_WEIGHT_AGGR = +process.env.SIZE_ABS_WEIGHT_AGGR || 0.5;  // 공격주용 (신규)
 // Market-cap range for log scaling
 const MCAP_MIN = +process.env.MCAP_MIN || 2e9;
 const MCAP_MAX = +process.env.MCAP_MAX || 6e12;       // ~5–6T puts AAPL/NVDA near the top of range
@@ -2063,16 +2064,21 @@ async function main(){
 
       // Absolute base score — stronger size bias as requested
       const baseNoTags = clamp01(SIZE_ABS_WEIGHT * size01 + (1 - SIZE_ABS_WEIGHT) * pop01);
+      const baseNoTagsAggr = clamp01(SIZE_ABS_WEIGHT_AGGR * size01 + (1 - SIZE_ABS_WEIGHT_AGGR) * pop01);
       const tagAffinity = computeTagAffinity(nf.topKeywords, baseNoTags);
       const base01 = TAG_EVAL_WEIGHT > 0
         ? clamp01((1 - TAG_EVAL_WEIGHT) * baseNoTags + TAG_EVAL_WEIGHT * tagAffinity)
         : baseNoTags;
 
+      const base01Aggr = TAG_EVAL_WEIGHT > 0
+        ? clamp01((1 - TAG_EVAL_WEIGHT) * baseNoTagsAggr + TAG_EVAL_WEIGHT * tagAffinity)
+        : baseNoTagsAggr;
+
       byName[n].prevNewsScore = PREV_METRICS?.[market]?.[n]?.newsScore || 0;
       byName[n].totalScore    = Math.round(base01 * 100);
       byName[n].tagAffinity   = tagAffinity;
       scoreSafeRaw[n] = base01;
-      scoreAggrRaw[n] = base01;
+      scoreAggrRaw[n] = base01Aggr;
       // debug
       dbgBase01[n] = base01;
 
@@ -2584,11 +2590,12 @@ async function main(){
     providers: providerSummary,
     coverage: { ...marketCoverage, avg: avgCoverage },
     timingMs: { total: Date.now() - START_TS },
-    weights: {
-      SCALE_WEIGHT, // legacy
-      SIZE_ABS_WEIGHT,
-      MCAP_MIN,
-      MCAP_MAX,
+      weights: {
+        SCALE_WEIGHT, // legacy
+        SIZE_ABS_WEIGHT,
+        SIZE_ABS_WEIGHT_AGGR,
+        MCAP_MIN,
+        MCAP_MAX,
       ABS_W_NEWS,
       ABS_W_NAVPOP,
       ABS_W_BLOGS,
