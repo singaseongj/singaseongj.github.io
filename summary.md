@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-21T15:32:05+09:00 (KST)**
+- Generated: **2025-11-21T21:40:05+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -26,7 +26,7 @@
 **유진테크** (084370.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-13.9%**, 20d **-16.8%**; volatility (20d): **unknown**
+- Returns: 5d **-13.0%**, 20d **-15.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%9C%A0%EC%A7%84%ED%85%8C%ED%81%AC
@@ -34,7 +34,7 @@
 **차바이오텍** (085660.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.2%**, 20d **11.6%**; volatility (20d): **unknown**
+- Returns: 5d **-1.6%**, 20d **11.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%B0%A8%EB%B0%94%EC%9D%B4%EC%98%A4%ED%85%8D
@@ -60,7 +60,7 @@
 **아이티엠반도체** (084850.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-12.4%**, 20d **-12.8%**; volatility (20d): **unknown**
+- Returns: 5d **-11.6%**, 20d **-12.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%95%84%EC%9D%B4%ED%8B%B0%EC%97%A0%EB%B0%98%EB%8F%84%EC%B2%B4
@@ -95,32 +95,32 @@
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **207** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-6.6%**, 20d **2.5%**; volatility (20d): **unknown**
+- News (7d): **212** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-7.0%**, 20d **2.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
 **대한항공** (003490.KS)
 
-- News (7d): **223** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.8%**, 20d **-4.0%**; volatility (20d): **unknown**
+- News (7d): **296** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.3%**, 20d **-4.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
 
 **두산** (000150.KS)
 
-- News (7d): **475** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **-6.0%**, 20d **6.4%**; volatility (20d): **unknown**
+- News (7d): **483** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- Returns: 5d **-5.6%**, 20d **6.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1375** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.0%**, 20d **-3.5%**; volatility (20d): **unknown**
+- News (7d): **1410** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.5%**, 20d **-4.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
@@ -146,7 +146,7 @@
 **HL만도** (204320.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.2%**, 20d **7.0%**; volatility (20d): **unknown**
+- Returns: 5d **6.6%**, 20d **7.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=HL%EB%A7%8C%EB%8F%84
@@ -154,7 +154,7 @@
 **동원시스템즈** (014820.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.2%**, 20d **-11.7%**; volatility (20d): **unknown**
+- Returns: 5d **-4.0%**, 20d **-11.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EB%8F%99%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%A6%88
@@ -170,7 +170,7 @@
 **쿠쿠홈시스** (192400.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.0%**, 20d **1.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **0.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%EC%BF%A0%EC%BF%A0%ED%99%88%EC%8B%9C%EC%8A%A4
