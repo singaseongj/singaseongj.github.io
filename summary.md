@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-21T21:40:05+09:00 (KST)**
+- Generated: **2025-11-22T03:28:50+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -84,7 +84,7 @@
 **파라다이스** (034230.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **22.3%**, 20d **-2.4%**; volatility (20d): **unknown**
+- Returns: 5d **21.3%**, 20d **-4.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%ED%8C%8C%EB%9D%BC%EB%8B%A4%EC%9D%B4%EC%8A%A4
@@ -103,7 +103,7 @@
 
 **대한항공** (003490.KS)
 
-- News (7d): **296** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **323** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-2.3%**, 20d **-4.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -119,7 +119,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1410** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **1412** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-2.5%**, 20d **-4.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -310,13 +310,13 @@
 - Sector: **Utilities**
 - News search: https://www.google.com/search?q=Evergy
 
-**HP Inc.** (HPQ)
+**Paramount Skydance Corporation** (PSKY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-9.5%**, 20d **-18.8%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **-5.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=HP%20Inc.
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Paramount%20Skydance%20Corporation
 
 **Tyler Technologies** (TYL)
 
@@ -329,7 +329,7 @@
 **UDR, Inc.** (UDR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.5%**, 20d **-4.5%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **-1.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=UDR%2C%20Inc.
@@ -337,7 +337,7 @@
 **Williams-Sonoma, Inc.** (WSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.5%**, 20d **-8.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.5%**, 20d **-5.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc.
