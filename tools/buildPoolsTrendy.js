@@ -28,6 +28,9 @@ const KEYWORD_FILE_ENV = process.env.MARKET_KEYWORD_FILE || '';
 let TAG_FILE = TAG_FILE_ENV || KEYWORD_FILE_ENV || path.join('data', 'tags.json');
 const TAG_WEIGHT_INPUT = Number(process.env.TAG_EVAL_WEIGHT);
 const TAG_FREQ_WEIGHT_INPUT = Number(process.env.TAG_FREQ_WEIGHT);
+const NAVER_SPIKE_BOOST = +process.env.NAVER_SPIKE_BOOST || 0.15;  // spike 보너스
+const NAVER_PERSIST_BOOST = +process.env.NAVER_PERSIST_BOOST || 0.10;  // persist 보너스
+const ASVI_NEGATIVE_FLOOR = +process.env.ASVI_NEGATIVE_FLOOR || 0;  // 음수 처리
 
 const VERBOSE = process.env.VERBOSE === '1';
 const log = (...a) => VERBOSE && console.log(...a);
@@ -1572,14 +1575,26 @@ function toBooleanFlag(val) {
 function mergeNaverSignals(feature = {}, trend = {}) {
   const featurePop = toFiniteNumber(feature.naverPopularity) ?? 0;
   const trendPop = toFiniteNumber(trend.naverPopularity ?? trend.popularity ?? trend.popularity01) ?? 0;
-  const combined = clamp01(featurePop + trendPop);
+  // 중복 방지: 둘 중 큰 값 선택 (합산 X)
+  const basePop = Math.max(featurePop, trendPop);
+
+  // spike/persist 보너스 추가
+  const spikeBonus = (feature.naverSpike || trend.spike) ? NAVER_SPIKE_BOOST : 0;
+  const persistBonus = (feature.naverPersist || trend.persist) ? NAVER_PERSIST_BOOST : 0;
+
+  const combined = clamp01(basePop + spikeBonus + persistBonus);
   const asviFeature = toFiniteNumber(feature.naverAsvi);
   const asviTrend = toFiniteNumber(trend.lastAsvi ?? trend.naverAsvi);
+  let asvi = asviFeature ?? asviTrend ?? 0;
+
+  // 음수는 0으로 처리 (하락은 무시)
+  if (asvi < ASVI_NEGATIVE_FLOOR) asvi = 0;
+
   return {
     combined,
     feature: featurePop,
     trend: trendPop,
-    asvi: (asviFeature ?? asviTrend ?? 0),
+    asvi: asvi,
     spike: toBooleanFlag(feature.naverSpike) || toBooleanFlag(trend.spike),
     persist: toBooleanFlag(feature.naverPersist) || toBooleanFlag(trend.persist)
   };
@@ -1902,6 +1917,17 @@ async function main(){
         const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name] || {};
         const trend = NAVER_TRENDS[sym] || {};
         const navSignals = mergeNaverSignals(nf, trend);
+        naverPopularity = navSignals.combined;  // 이미 spike/persist 포함됨
+        naverAsvi = navSignals.asvi;
+        naverSpike = navSignals.spike ? 1 : 0;
+        naverPersist = navSignals.persist;
+        naverBreakdown = { fromFeatures: navSignals.feature, fromTrends: navSignals.trend };
+        
+        // 한국 주식 특별 처리: naver-trends 데이터 없으면 news-features 신뢰
+        const isKRStock = /\.K[QS]$/.test(sym);
+        if (isKRStock && !trend?.naverPopularity && nf?.naverPopularity) {
+          naverPopularity = Math.max(naverPopularity, nf.naverPopularity * 1.2);
+        }
         if (nf) {
           newsCount = nf.count || 0;
           weightedCount = typeof nf.weightedCount === 'number' ? nf.weightedCount : newsCount;
@@ -1910,11 +1936,6 @@ async function main(){
           naverCountEN = typeof nf.naverCountEN === 'number' ? nf.naverCountEN : 0;
           newsScore = newsScoreFromFeatures(nf);
           sentiment = typeof nf.sentiment === 'number' ? nf.sentiment : null;
-          naverPopularity = navSignals.combined;
-          naverAsvi = navSignals.asvi;
-          naverSpike = navSignals.spike ? 1 : 0;
-          naverPersist = navSignals.persist;
-          naverBreakdown = { fromFeatures: navSignals.feature, fromTrends: navSignals.trend };
           blogMentions = typeof nf.blogMentions === 'number' ? nf.blogMentions : 0;
           if (typeof nf.polygonTrend === 'number') polygonTrend = nf.polygonTrend;
           if (typeof nf.nasdaqClose === 'number') nasdaqClose = nf.nasdaqClose;
@@ -2208,9 +2229,14 @@ async function main(){
         Math.min(BURST_KICK_MAX, BURST_KICK_SCALE * (byName[n].ds_burst || 0))
       );
 
+      // spike가 있으면 hotness 추가 부스트
+      const spikeHotBoost = names.map(n =>
+        byName[n].naverSpike ? 0.05 : 0  // spike면 +5%
+      );
+
       for (let i=0; i<names.length; i++) {
         const n = names[i];
-        const bumpHot = (HOT/100) * hot01[i] + burstKick[i];
+        const bumpHot = (HOT/100) * hot01[i] + burstKick[i] + spikeHotBoost[i];
         const bumpLiq = (LIQ_W/100) * liqP[i];
         const earnSafe = byName[n].earn ? EARN_BOOST : 0;
         const earnAggr = byName[n].earn ? EARN_BOOST*0.8 : 0;
@@ -2590,12 +2616,12 @@ async function main(){
     providers: providerSummary,
     coverage: { ...marketCoverage, avg: avgCoverage },
     timingMs: { total: Date.now() - START_TS },
-      weights: {
-        SCALE_WEIGHT, // legacy
-        SIZE_ABS_WEIGHT,
-        SIZE_ABS_WEIGHT_AGGR,
-        MCAP_MIN,
-        MCAP_MAX,
+    weights: {
+      SCALE_WEIGHT, // legacy
+      SIZE_ABS_WEIGHT,
+      SIZE_ABS_WEIGHT_AGGR,
+      MCAP_MIN,
+      MCAP_MAX,
       ABS_W_NEWS,
       ABS_W_NAVPOP,
       ABS_W_BLOGS,
@@ -2613,6 +2639,9 @@ async function main(){
       HOT_W_TREND,
       HOT_W_TURN,
       HOT_W_WIKI,
+      NAVER_SPIKE_BOOST,
+      NAVER_PERSIST_BOOST,
+      ASVI_NEGATIVE_FLOOR,
       SECTOR_LIFT: +process.env.SECTOR_LIFT || 0.02,
       EARNINGS_BOOST: +process.env.EARNINGS_BOOST || 0.02,
       W_NEWS,
