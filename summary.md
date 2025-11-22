@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-22T10:22:21+09:00 (KST)**
+- Generated: **2025-11-22T15:27:51+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -101,6 +101,14 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
+**삼성생명** (032830.KS)
+
+- News (7d): **178** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **4.4%**, 20d **1.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **금융**
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85
+
 **삼성전자** (005930.KS)
 
 - News (7d): **1285** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
@@ -108,14 +116,6 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
-
-**셀트리온** (068270.KS)
-
-- News (7d): **157** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **-4.4%**, 20d **8.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
 **아모레퍼시픽** (090430.KS)
 
