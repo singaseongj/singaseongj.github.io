@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-22T15:27:51+09:00 (KST)**
+- Generated: **2025-11-22T21:35:37+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -95,7 +95,7 @@
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **191** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- News (7d): **192** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
 - Returns: 5d **-7.0%**, 20d **2.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
@@ -103,7 +103,7 @@
 
 **삼성생명** (032830.KS)
 
-- News (7d): **178** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **229** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **4.4%**, 20d **1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
@@ -111,7 +111,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1285** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **1289** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-2.5%**, 20d **-4.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
