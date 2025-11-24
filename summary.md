@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-24T03:27:30+09:00 (KST)**
+- Generated: **2025-11-24T10:31:09+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,25 +93,25 @@
 
 ### SAFE (5)
 
-**LG전자** (066570.KS)
-
-- News (7d): **260** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-4.2%**, 20d **-1.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
-
 **LG화학** (051910.KS)
 
-- News (7d): **17** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-9.9%**, 20d **-8.5%**; volatility (20d): **unknown**
+- News (7d): **28** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-10.6%**, 20d **-11.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
+**두산** (000150.KS)
+
+- News (7d): **617** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- Returns: 5d **-10.4%**, 20d **0.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
+
 **삼성생명** (032830.KS)
 
-- News (7d): **272** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **291** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **4.4%**, 20d **1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
@@ -119,16 +119,16 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **1354** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.5%**, 20d **-4.0%**; volatility (20d): **unknown**
+- News (7d): **1233** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.8%**, 20d **-3.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 **이마트** (139480.KS)
 
-- News (7d): **231** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **1.4%**, 20d **8.1%**; volatility (20d): **unknown**
+- News (7d): **235** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- Returns: 5d **-0.8%**, 20d **6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=%EC%9D%B4%EB%A7%88%ED%8A%B8
@@ -143,13 +143,13 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=DL%EC%9D%B4%EC%95%A4%EC%94%A8
 
-**GS건설** (006360.KS)
+**GS리테일** (007070.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.1%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **-1.6%**, 20d **0.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=GS%EB%A6%AC%ED%85%8C%EC%9D%BC
 
 **HD현대건설기계** (267270.KS)
 
@@ -275,22 +275,6 @@
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Charles%20Schwab%20Corporation
 
-**CME Group** (CME)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.6%**, 20d **-2.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=CME%20Group
-
-**Microsoft** (MSFT)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **-1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Microsoft
-
 **Nvidia** (NVDA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -298,6 +282,22 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
+
+**Walmart** (WMT)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.2%**, 20d **-1.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Walmart
+
+**Williams Companies** (WMB)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.3%**, 20d **3.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Energy**
+- News search: https://www.google.com/search?q=Williams%20Companies
 
 ### AGGRESSIVE (5)
 
