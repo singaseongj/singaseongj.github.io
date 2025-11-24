@@ -1,1116 +1,439 @@
 {
+  "generatedAt": "2025-11-24T18:29:29.206Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-24",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Fast Rebound ETFs",
-      "term_ko": "속 반등 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속 반등 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황]비트코인 '3중 역풍' 속 반등…ETF·옵션·스테이블코인 동반...",
-              "link": "https://www.newspim.com/news/view/20251124001206"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EB%B0%98%EB%93%B1%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EB%B0%98%EB%93%B1%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황]비트코인 '3중 역풍' 속 반등…ETF·옵션·스테이블코인 동반...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251124001206",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Fast Rebound Etfs",
+      "term_ko": "속 반등 ETF"
     },
     {
-      "term": "Ripple ETF Finally",
-      "term_ko": "리플 ETF 마침내",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리플 ETF 마침내",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 리플 ETF 마침내 뉴욕증시 상장 \"SEC 암호화폐 자동승인 적용\" .....",
-              "link": "https://www.g-enews.com/view.php?ud=202511240459572509906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%ED%94%8C%20ETF%20%EB%A7%88%EC%B9%A8%EB%82%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%ED%94%8C%20ETF%20%EB%A7%88%EC%B9%A8%EB%82%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 리플 ETF 마침내 뉴욕증시 상장 \"SEC 암호화폐 자동승인 적용\" .....",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511240459572509906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ripple Etf Finally",
+      "term_ko": "리플 ETF 마침내"
     },
     {
-      "term": "NYSE-listed SEC",
-      "term_ko": "뉴욕증시 상장 SEC",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 상장 SEC",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 리플 ETF 마침내 뉴욕증시 상장 \"SEC 암호화폐 자동승인 적용\" .....",
-              "link": "https://www.g-enews.com/view.php?ud=202511240459572509906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%9E%A5%20SEC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%9E%A5%20SEC"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 리플 ETF 마침내 뉴욕증시 상장 \"SEC 암호화폐 자동승인 적용\" .....",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511240459572509906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse-listed Sec",
+      "term_ko": "뉴욕증시 상장 SEC"
     },
     {
-      "term": "Coin QuotesBitcoin Triplex",
-      "term_ko": "코인 시황비트코인 3중",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코인 시황비트코인 3중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황]비트코인 '3중 역풍' 속 반등…ETF·옵션·스테이블코인 동반...",
-              "link": "https://www.newspim.com/news/view/20251124001206"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%203%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%203%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황]비트코인 '3중 역풍' 속 반등…ETF·옵션·스테이블코인 동반...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251124001206",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Coin Quotesbitcoin Triplex",
+      "term_ko": "코인 시황비트코인 3중"
     },
     {
-      "term": "458 incomplete sales of Belgian funds",
-      "term_ko": "벨기에펀드 불완전판매 458건",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "벨기에펀드 불완전판매 458건",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한투증권, 벨기에펀드 불완전판매 458건 자율배상...현장검사 결과 따라...",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=284752"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B2%A8%EA%B8%B0%EC%97%90%ED%8E%80%EB%93%9C%20%EB%B6%88%EC%99%84%EC%A0%84%ED%8C%90%EB%A7%A4%20458%EA%B1%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B2%A8%EA%B8%B0%EC%97%90%ED%8E%80%EB%93%9C%20%EB%B6%88%EC%99%84%EC%A0%84%ED%8C%90%EB%A7%A4%20458%EA%B1%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권, 벨기에펀드 불완전판매 458건 자율배상...현장검사 결과 따라...",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=284752",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "458 Incomplete Sales of Belgian Funds",
+      "term_ko": "벨기에펀드 불완전판매 458건"
     },
     {
-      "term": "The rent limit is 4 consecutive",
-      "term_ko": "집값 한은 4연속",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집값 한은 4연속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "잡히지 않는 환율·수도권 집값…한은, 4연속 금리 동결 가닥",
-              "link": "https://n.news.naver.com/mnews/article/032/0003410853?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%ED%95%9C%EC%9D%80%204%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%ED%95%9C%EC%9D%80%204%EC%97%B0%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "잡히지 않는 환율·수도권 집값…한은, 4연속 금리 동결 가닥",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003410853?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Rent Limit Is 4 Consecutive",
+      "term_ko": "집값 한은 4연속"
     },
     {
-      "term": "Apply cryptocurrency auto-authorization",
-      "term_ko": "암호화폐 자동승인 적용",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "암호화폐 자동승인 적용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 리플 ETF 마침내 뉴욕증시 상장 \"SEC 암호화폐 자동승인 적용\" .....",
-              "link": "https://www.g-enews.com/view.php?ud=202511240459572509906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EC%9E%90%EB%8F%99%EC%8A%B9%EC%9D%B8%20%EC%A0%81%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EC%9E%90%EB%8F%99%EC%8A%B9%EC%9D%B8%20%EC%A0%81%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 리플 ETF 마침내 뉴욕증시 상장 \"SEC 암호화폐 자동승인 적용\" .....",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511240459572509906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Apply Cryptocurrency Auto-authorization",
+      "term_ko": "암호화폐 자동승인 적용"
     },
     {
-      "term": "Preview eDaily NewspaperRice Prices",
-      "term_ko": "미리보는 이데일리 신문쌀값",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미리보는 이데일리 신문쌀값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문]쌀값 하락 막다…재배 감축 공염불 될 판",
-              "link": "https://n.news.naver.com/mnews/article/018/0006170784?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8%EC%8C%80%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8%EC%8C%80%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문]쌀값 하락 막다…재배 감축 공염불 될 판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006170784?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Preview Edaily Newspaperrice Prices",
+      "term_ko": "미리보는 이데일리 신문쌀값"
     },
     {
-      "term": "Stopping the drop Cultivate",
-      "term_ko": "하락 막다 재배",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락 막다 재배",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문]쌀값 하락 막다…재배 감축 공염불 될 판",
-              "link": "https://n.news.naver.com/mnews/article/018/0006170784?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EB%A7%89%EB%8B%A4%20%EC%9E%AC%EB%B0%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EB%A7%89%EB%8B%A4%20%EC%9E%AC%EB%B0%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문]쌀값 하락 막다…재배 감축 공염불 될 판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006170784?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stopping the Drop Cultivate",
+      "term_ko": "하락 막다 재배"
     },
     {
-      "term": "Reduced to be public",
-      "term_ko": "감축 공염불 될",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "감축 공염불 될",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문]쌀값 하락 막다…재배 감축 공염불 될 판",
-              "link": "https://n.news.naver.com/mnews/article/018/0006170784?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%90%EC%B6%95%20%EA%B3%B5%EC%97%BC%EB%B6%88%20%EB%90%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%90%EC%B6%95%20%EA%B3%B5%EC%97%BC%EB%B6%88%20%EB%90%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문]쌀값 하락 막다…재배 감축 공염불 될 판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006170784?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reduced to Be Public",
+      "term_ko": "감축 공염불 될"
     },
     {
-      "term": "Current account inflation rate",
-      "term_ko": "경상수지 물가 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경상수지 물가 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "경상수지·물가·금리·외환시장…국가경제 곳곳에 경고등 [환율, 1500원...",
-              "link": "https://www.etoday.co.kr/news/view/2528641"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%83%81%EC%88%98%EC%A7%80%20%EB%AC%BC%EA%B0%80%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%83%81%EC%88%98%EC%A7%80%20%EB%AC%BC%EA%B0%80%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "경상수지·물가·금리·외환시장…국가경제 곳곳에 경고등 [환율, 1500원...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2528641",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Current Account Inflation Rate",
+      "term_ko": "경상수지 물가 금리"
     },
     {
-      "term": "Exchange rates not caught",
-      "term_ko": "잡히지 않는 환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "잡히지 않는 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "잡히지 않는 환율·수도권 집값…한은, 4연속 금리 동결 가닥",
-              "link": "https://n.news.naver.com/mnews/article/032/0003410853?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A1%ED%9E%88%EC%A7%80%20%EC%95%8A%EB%8A%94%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A1%ED%9E%88%EC%A7%80%20%EC%95%8A%EB%8A%94%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "잡히지 않는 환율·수도권 집값…한은, 4연속 금리 동결 가닥",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003410853?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rates Not Caught",
+      "term_ko": "잡히지 않는 환율"
     },
     {
-      "term": "Rate freeze strand",
-      "term_ko": "금리 동결 가닥",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 동결 가닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "잡히지 않는 환율·수도권 집값…한은, 4연속 금리 동결 가닥",
-              "link": "https://n.news.naver.com/mnews/article/032/0003410853?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%20%EA%B0%80%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%20%EA%B0%80%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "잡히지 않는 환율·수도권 집값…한은, 4연속 금리 동결 가닥",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003410853?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rate Freeze Strand",
+      "term_ko": "금리 동결 가닥"
     },
     {
-      "term": "NewsHighKick Hosaka Retention",
-      "term_ko": "뉴스하이킥 호사카 유지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴스하이킥 호사카 유지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[뉴스하이킥] 호사카 유지 교수 \"중·일 갈등 유발한 다카이치, 일본 헌...",
-              "link": "https://n.news.naver.com/mnews/article/214/0001463796?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%8A%A4%ED%95%98%EC%9D%B4%ED%82%A5%20%ED%98%B8%EC%82%AC%EC%B9%B4%20%EC%9C%A0%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%8A%A4%ED%95%98%EC%9D%B4%ED%82%A5%20%ED%98%B8%EC%82%AC%EC%B9%B4%20%EC%9C%A0%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[뉴스하이킥] 호사카 유지 교수 \"중·일 갈등 유발한 다카이치, 일본 헌...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001463796?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Newshighkick Hosaka Retention",
+      "term_ko": "뉴스하이킥 호사카 유지"
     },
     {
-      "term": "Work while teaching",
-      "term_ko": "교수 중 일",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "교수 중 일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[뉴스하이킥] 호사카 유지 교수 \"중·일 갈등 유발한 다카이치, 일본 헌...",
-              "link": "https://n.news.naver.com/mnews/article/214/0001463796?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%90%EC%88%98%20%EC%A4%91%20%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%90%EC%88%98%20%EC%A4%91%20%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[뉴스하이킥] 호사카 유지 교수 \"중·일 갈등 유발한 다카이치, 일본 헌...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001463796?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Work While Teaching",
+      "term_ko": "교수 중 일"
     },
     {
-      "term": "Conflicted takaichi",
-      "term_ko": "갈등 유발한 다카이치",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "갈등 유발한 다카이치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[뉴스하이킥] 호사카 유지 교수 \"중·일 갈등 유발한 다카이치, 일본 헌...",
-              "link": "https://n.news.naver.com/mnews/article/214/0001463796?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%88%EB%93%B1%20%EC%9C%A0%EB%B0%9C%ED%95%9C%20%EB%8B%A4%EC%B9%B4%EC%9D%B4%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%88%EB%93%B1%20%EC%9C%A0%EB%B0%9C%ED%95%9C%20%EB%8B%A4%EC%B9%B4%EC%9D%B4%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[뉴스하이킥] 호사카 유지 교수 \"중·일 갈등 유발한 다카이치, 일본 헌...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001463796?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Conflicted Takaichi",
+      "term_ko": "갈등 유발한 다카이치"
     },
     {
-      "term": "Say hello to your wallet",
-      "term_ko": "당신의 지갑은 안녕하신가요",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "당신의 지갑은 안녕하신가요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "1달러 1500원 시대로?…당신의 지갑은 안녕하신가요",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101549?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B9%EC%8B%A0%EC%9D%98%20%EC%A7%80%EA%B0%91%EC%9D%80%20%EC%95%88%EB%85%95%ED%95%98%EC%8B%A0%EA%B0%80%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B9%EC%8B%A0%EC%9D%98%20%EC%A7%80%EA%B0%91%EC%9D%80%20%EC%95%88%EB%85%95%ED%95%98%EC%8B%A0%EA%B0%80%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "1달러 1500원 시대로?…당신의 지갑은 안녕하신가요",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101549?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Say Hello to Your Wallet",
+      "term_ko": "당신의 지갑은 안녕하신가요"
     },
     {
-      "term": "Samsung Elec SK",
-      "term_ko": "삼성 일렉 SK",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Elec SK",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix rebound on eased U.S.-bound concerns",
-              "link": "https://n.news.naver.com/mnews/article/009/0005595006?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Elec%20SK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Elec%20SK"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix rebound on eased U.S.-bound concerns",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005595006?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Elec Sk",
+      "term_ko": "삼성 일렉 SK"
     },
     {
-      "term": "Are Back APR",
-      "term_ko": "다시 돌아온 APR",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Are Back APR",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Institutional investors and foreign investors are back! 'APR, LG Househol...",
-              "link": "https://www.thebk.co.kr/news/articleView.html?idxno=304211"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Are%20Back%20APR",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Are%20Back%20APR"
-      },
-      "top_headlines": [
-        {
-          "title": "Institutional investors and foreign investors are back! 'APR, LG Househol...",
-          "summary": "",
-          "link": "https://www.thebk.co.kr/news/articleView.html?idxno=304211",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Are Back Apr",
+      "term_ko": "다시 돌아온 APR"
     },
     {
       "term": "Options Stablecoins",
-      "term_ko": "옵션 스테이블코인",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "옵션 스테이블코인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황]비트코인 '3중 역풍' 속 반등…ETF·옵션·스테이블코인 동반...",
-              "link": "https://www.newspim.com/news/view/20251124001206"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%B5%EC%85%98%20%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94%EC%BD%94%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%B5%EC%85%98%20%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94%EC%BD%94%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황]비트코인 '3중 역풍' 속 반등…ETF·옵션·스테이블코인 동반...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251124001206",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "옵션 스테이블코인"
     },
     {
       "term": "Warning Light Exchange Rate",
-      "term_ko": "경고등 환율",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경고등 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "경상수지·물가·금리·외환시장…국가경제 곳곳에 경고등 [환율, 1500원...",
-              "link": "https://www.etoday.co.kr/news/view/2528641"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B3%A0%EB%93%B1%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B3%A0%EB%93%B1%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "경상수지·물가·금리·외환시장…국가경제 곳곳에 경고등 [환율, 1500원...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2528641",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경고등 환율"
     },
     {
       "term": "Late Mon Morning",
-      "term_ko": "월요일 늦은 아침",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Late Mon Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares up late Mon. morning on tech gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0015758754?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Late%20Mon%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Late%20Mon%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares up late Mon. morning on tech gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015758754?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월요일 늦은 아침"
     },
     {
-      "term": "Eased U.S.-bound Concerns",
-      "term_ko": "미국행 우려 완화",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Eased U.S.-bound Concerns",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix rebound on eased U.S.-bound concerns",
-              "link": "https://n.news.naver.com/mnews/article/009/0005595006?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Eased%20U.S.-bound%20Concerns",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Eased%20U.S.-bound%20Concerns"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix rebound on eased U.S.-bound concerns",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005595006?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Eased U.s.-bound Concerns",
+      "term_ko": "미국행 우려 완화"
     },
     {
       "term": "Wall Street Futures",
-      "term_ko": "월스트리트 선물",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Climb as Rate Cut Hopes Boost Market Sentiment",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Climb-as-Rate-Cut-Hopes-Boost-Market-Sentiment-1726731"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Climb as Rate Cut Hopes Boost Market Sentiment",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Climb-as-Rate-Cut-Hopes-Boost-Market-Sentiment-1726731",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 선물"
     },
     {
       "term": "Rate Cut Hopes",
-      "term_ko": "금리 인하 희망",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rate Cut Hopes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Climb as Rate Cut Hopes Boost Market Sentiment",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Climb-as-Rate-Cut-Hopes-Boost-Market-Sentiment-1726731"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate%20Cut%20Hopes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate%20Cut%20Hopes"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Climb as Rate Cut Hopes Boost Market Sentiment",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Climb-as-Rate-Cut-Hopes-Boost-Market-Sentiment-1726731",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리 인하 희망"
     },
     {
       "term": "Tech Gains",
-      "term_ko": "기술적 이득",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Gains",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares up late Mon. morning on tech gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0015758754?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Gains",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Gains"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares up late Mon. morning on tech gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015758754?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기술적 이득"
     },
     {
       "term": "Hynix Rebound",
-      "term_ko": "하이닉스 반등",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hynix Rebound",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix rebound on eased U.S.-bound concerns",
-              "link": "https://n.news.naver.com/mnews/article/009/0005595006?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hynix%20Rebound",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hynix%20Rebound"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix rebound on eased U.S.-bound concerns",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005595006?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하이닉스 반등"
     },
     {
       "term": "Institutional Investors",
-      "term_ko": "기관 투자자",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Institutional Investors",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Institutional investors and foreign investors are back! 'APR, LG Househol...",
-              "link": "https://www.thebk.co.kr/news/articleView.html?idxno=304211"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Institutional%20Investors",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Institutional%20Investors"
-      },
-      "top_headlines": [
-        {
-          "title": "Institutional investors and foreign investors are back! 'APR, LG Househol...",
-          "summary": "",
-          "link": "https://www.thebk.co.kr/news/articleView.html?idxno=304211",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기관 투자자"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-24T21:41:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-24T12:43:22.556Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-24T21:41:48+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Fast Rebound Etfs",
+      "term_ko": "속 반등 ETF"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-24T21:41:48+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-24T21:41:48+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Ripple Etf Finally",
+      "term_ko": "리플 ETF 마침내"
+    },
+    {
+      "term": "Nyse-listed Sec",
+      "term_ko": "뉴욕증시 상장 SEC"
+    },
+    {
+      "term": "Coin Quotesbitcoin Triplex",
+      "term_ko": "코인 시황비트코인 3중"
+    },
+    {
+      "term": "458 Incomplete Sales of Belgian Funds",
+      "term_ko": "벨기에펀드 불완전판매 458건"
+    },
+    {
+      "term": "The Rent Limit Is 4 Consecutive",
+      "term_ko": "집값 한은 4연속"
+    },
+    {
+      "term": "Apply Cryptocurrency Auto-authorization",
+      "term_ko": "암호화폐 자동승인 적용"
+    },
+    {
+      "term": "Preview Edaily Newspaperrice Prices",
+      "term_ko": "미리보는 이데일리 신문쌀값"
+    },
+    {
+      "term": "Stopping the Drop Cultivate",
+      "term_ko": "하락 막다 재배"
+    },
+    {
+      "term": "Reduced to Be Public",
+      "term_ko": "감축 공염불 될"
+    },
+    {
+      "term": "Current Account Inflation Rate",
+      "term_ko": "경상수지 물가 금리"
+    },
+    {
+      "term": "Exchange Rates Not Caught",
+      "term_ko": "잡히지 않는 환율"
+    },
+    {
+      "term": "Rate Freeze Strand",
+      "term_ko": "금리 동결 가닥"
+    },
+    {
+      "term": "Newshighkick Hosaka Retention",
+      "term_ko": "뉴스하이킥 호사카 유지"
+    },
+    {
+      "term": "Work While Teaching",
+      "term_ko": "교수 중 일"
+    },
+    {
+      "term": "Conflicted Takaichi",
+      "term_ko": "갈등 유발한 다카이치"
+    },
+    {
+      "term": "Say Hello to Your Wallet",
+      "term_ko": "당신의 지갑은 안녕하신가요"
+    },
+    {
+      "term": "Samsung Elec Sk",
+      "term_ko": "삼성 일렉 SK"
+    },
+    {
+      "term": "Are Back Apr",
+      "term_ko": "다시 돌아온 APR"
+    },
+    {
+      "term": "Options Stablecoins",
+      "term_ko": "옵션 스테이블코인"
+    },
+    {
+      "term": "Warning Light Exchange Rate",
+      "term_ko": "경고등 환율"
+    },
+    {
+      "term": "Late Mon Morning",
+      "term_ko": "월요일 늦은 아침"
+    },
+    {
+      "term": "Eased U.s.-bound Concerns",
+      "term_ko": "미국행 우려 완화"
+    },
+    {
+      "term": "Wall Street Futures",
+      "term_ko": "월스트리트 선물"
+    },
+    {
+      "term": "Rate Cut Hopes",
+      "term_ko": "금리 인하 희망"
+    },
+    {
+      "term": "Tech Gains",
+      "term_ko": "기술적 이득"
+    },
+    {
+      "term": "Hynix Rebound",
+      "term_ko": "하이닉스 반등"
+    },
+    {
+      "term": "Institutional Investors",
+      "term_ko": "기관 투자자"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    }
+  ],
+  "translations": {
+    "Fast Rebound Etfs": {
+      "en": "Fast Rebound Etfs",
+      "ko": "속 반등 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Ripple Etf Finally": {
+      "en": "Ripple Etf Finally",
+      "ko": "리플 ETF 마침내",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Nyse-listed Sec": {
+      "en": "Nyse-listed Sec",
+      "ko": "뉴욕증시 상장 SEC",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Coin Quotesbitcoin Triplex": {
+      "en": "Coin Quotesbitcoin Triplex",
+      "ko": "코인 시황비트코인 3중",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "458 Incomplete Sales of Belgian Funds": {
+      "en": "458 Incomplete Sales of Belgian Funds",
+      "ko": "벨기에펀드 불완전판매 458건",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "The Rent Limit Is 4 Consecutive": {
+      "en": "The Rent Limit Is 4 Consecutive",
+      "ko": "집값 한은 4연속",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Apply Cryptocurrency Auto-authorization": {
+      "en": "Apply Cryptocurrency Auto-authorization",
+      "ko": "암호화폐 자동승인 적용",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Preview Edaily Newspaperrice Prices": {
+      "en": "Preview Edaily Newspaperrice Prices",
+      "ko": "미리보는 이데일리 신문쌀값",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Stopping the Drop Cultivate": {
+      "en": "Stopping the Drop Cultivate",
+      "ko": "하락 막다 재배",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Reduced to Be Public": {
+      "en": "Reduced to Be Public",
+      "ko": "감축 공염불 될",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Current Account Inflation Rate": {
+      "en": "Current Account Inflation Rate",
+      "ko": "경상수지 물가 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Exchange Rates Not Caught": {
+      "en": "Exchange Rates Not Caught",
+      "ko": "잡히지 않는 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Rate Freeze Strand": {
+      "en": "Rate Freeze Strand",
+      "ko": "금리 동결 가닥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Newshighkick Hosaka Retention": {
+      "en": "Newshighkick Hosaka Retention",
+      "ko": "뉴스하이킥 호사카 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Work While Teaching": {
+      "en": "Work While Teaching",
+      "ko": "교수 중 일",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Conflicted Takaichi": {
+      "en": "Conflicted Takaichi",
+      "ko": "갈등 유발한 다카이치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Say Hello to Your Wallet": {
+      "en": "Say Hello to Your Wallet",
+      "ko": "당신의 지갑은 안녕하신가요",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Samsung Elec Sk": {
+      "en": "Samsung Elec Sk",
+      "ko": "삼성 일렉 SK",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Are Back Apr": {
+      "en": "Are Back Apr",
+      "ko": "다시 돌아온 APR",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Options Stablecoins": {
+      "en": "Options Stablecoins",
+      "ko": "옵션 스테이블코인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Warning Light Exchange Rate": {
+      "en": "Warning Light Exchange Rate",
+      "ko": "경고등 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Late Mon Morning": {
+      "en": "Late Mon Morning",
+      "ko": "월요일 늦은 아침",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Eased U.s.-bound Concerns": {
+      "en": "Eased U.s.-bound Concerns",
+      "ko": "미국행 우려 완화",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Wall Street Futures": {
+      "en": "Wall Street Futures",
+      "ko": "월스트리트 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Rate Cut Hopes": {
+      "en": "Rate Cut Hopes",
+      "ko": "금리 인하 희망",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Tech Gains": {
+      "en": "Tech Gains",
+      "ko": "기술적 이득",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Hynix Rebound": {
+      "en": "Hynix Rebound",
+      "ko": "하이닉스 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Institutional Investors": {
+      "en": "Institutional Investors",
+      "ko": "기관 투자자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-24T18:29:29.206Z"
     }
   }
 }
