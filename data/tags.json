@@ -1,1228 +1,439 @@
 {
+  "generatedAt": "2025-11-25T06:30:54.117Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-25",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Up to $34 trillion in enterprise value",
-      "term_ko": "기업가치 최대 34조원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기업가치 최대 34조원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "업비트·네이버, 합병 후 나스닥 상장 추진…기업가치 최대 34조원",
-              "link": "https://www.abcn.kr/news/articleView.html?idxno=84897"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%EA%B0%80%EC%B9%98%20%EC%B5%9C%EB%8C%80%2034%EC%A1%B0%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%EA%B0%80%EC%B9%98%20%EC%B5%9C%EB%8C%80%2034%EC%A1%B0%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "업비트·네이버, 합병 후 나스닥 상장 추진…기업가치 최대 34조원",
-          "summary": "",
-          "link": "https://www.abcn.kr/news/articleView.html?idxno=84897",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to $34 Trillion in Enterprise Value",
+      "term_ko": "기업가치 최대 34조원"
     },
     {
       "term": "Interview Barclays November",
-      "term_ko": "인터뷰 바클레이즈 11월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인터뷰 바클레이즈 11월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[금통위 인터뷰] 바클레이즈 \"11월 인하…환율·부동산보다 대출금리\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4385494"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%84%B0%EB%B7%B0%20%EB%B0%94%ED%81%B4%EB%A0%88%EC%9D%B4%EC%A6%88%2011%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%84%B0%EB%B7%B0%20%EB%B0%94%ED%81%B4%EB%A0%88%EC%9D%B4%EC%A6%88%2011%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[금통위 인터뷰] 바클레이즈 \"11월 인하…환율·부동산보다 대출금리\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4385494",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인터뷰 바클레이즈 11월"
     },
     {
-      "term": "850,000 solid gold coins",
-      "term_ko": "순금 한돈 85만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순금 한돈 85만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오늘의 금값시세] 순금 한돈 85만 9천 원...은·백금 동반 상승",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=276049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EA%B8%88%20%ED%95%9C%EB%8F%88%2085%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EA%B8%88%20%ED%95%9C%EB%8F%88%2085%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 금값시세] 순금 한돈 85만 9천 원...은·백금 동반 상승",
-          "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=276049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "850,000 Solid Gold Coins",
+      "term_ko": "순금 한돈 85만"
     },
     {
-      "term": "1.60% on strength in tech stocks",
-      "term_ko": "기술주 강세에 1.60%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기술주 강세에 1.60%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 美 기술주 강세에 1.60% 상승…3,900선 회복",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15885649"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%88%A0%EC%A3%BC%20%EA%B0%95%EC%84%B8%EC%97%90%201.60%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%88%A0%EC%A3%BC%20%EA%B0%95%EC%84%B8%EC%97%90%201.60%25"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 美 기술주 강세에 1.60% 상승…3,900선 회복",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15885649",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1.60% on Strength in Tech Stocks",
+      "term_ko": "기술주 강세에 1.60%"
     },
     {
-      "term": "Rally back to 3900",
-      "term_ko": "상승 3900선 회복",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 3900선 회복",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 美 기술주 강세에 1.60% 상승…3,900선 회복",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15885649"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%203900%EC%84%A0%20%ED%9A%8C%EB%B3%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%203900%EC%84%A0%20%ED%9A%8C%EB%B3%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 美 기술주 강세에 1.60% 상승…3,900선 회복",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15885649",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rally Back to 3900",
+      "term_ko": "상승 3900선 회복"
     },
     {
       "term": "Negotiations and Q3",
-      "term_ko": "협상 타결과 3분기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "협상 타결과 3분기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "소비심리 8년 만에 최고치… “관세 협상 타결과 3분기 성장률 영향”",
-              "link": "https://n.news.naver.com/mnews/article/025/0003485140?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%91%EC%83%81%20%ED%83%80%EA%B2%B0%EA%B3%BC%203%EB%B6%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%91%EC%83%81%20%ED%83%80%EA%B2%B0%EA%B3%BC%203%EB%B6%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "소비심리 8년 만에 최고치… “관세 협상 타결과 3분기 성장률 영향”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003485140?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "협상 타결과 3분기"
     },
     {
       "term": "Max Kaiser Bitcoin",
-      "term_ko": "맥스 카이저 비트코인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "맥스 카이저 비트코인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "맥스 카이저 \"비트코인 폭락은 가짜 경보\"...8만 달러 지지선 확신",
-              "link": "http://coinreaders.com/200612"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A5%EC%8A%A4%20%EC%B9%B4%EC%9D%B4%EC%A0%80%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A5%EC%8A%A4%20%EC%B9%B4%EC%9D%B4%EC%A0%80%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "맥스 카이저 \"비트코인 폭락은 가짜 경보\"...8만 달러 지지선 확신",
-          "summary": "",
-          "link": "http://coinreaders.com/200612",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "맥스 카이저 비트코인"
     },
     {
       "term": "Confidence in Dollar Support",
-      "term_ko": "달러 지지선 확신",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 지지선 확신",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "맥스 카이저 \"비트코인 폭락은 가짜 경보\"...8만 달러 지지선 확신",
-              "link": "http://coinreaders.com/200612"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EC%A7%80%EC%A7%80%EC%84%A0%20%ED%99%95%EC%8B%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EC%A7%80%EC%A7%80%EC%84%A0%20%ED%99%95%EC%8B%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "맥스 카이저 \"비트코인 폭락은 가짜 경보\"...8만 달러 지지선 확신",
-          "summary": "",
-          "link": "http://coinreaders.com/200612",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달러 지지선 확신"
     },
     {
-      "term": "Seoul Data Lab U.S. Stock Indices",
-      "term_ko": "서울데이터랩미국 증시 지수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울데이터랩미국 증시 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서울데이터랩]미국 증시 지수 종합",
-              "link": "https://n.news.naver.com/mnews/article/081/0003595048?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[서울데이터랩]미국 증시 지수 종합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003595048?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Seoul Data Lab U.s. Stock Indices",
+      "term_ko": "서울데이터랩미국 증시 지수"
     },
     {
-      "term": "Upbit NAVER Merger",
-      "term_ko": "업비트 네이버 합병",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "업비트 네이버 합병",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-21",
-              "timestamp": 1763650800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "업비트·네이버, 합병 후 나스닥 상장 추진…기업가치 최대 34조원",
-              "link": "https://www.abcn.kr/news/articleView.html?idxno=84897"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%85%EB%B9%84%ED%8A%B8%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%ED%95%A9%EB%B3%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%85%EB%B9%84%ED%8A%B8%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%ED%95%A9%EB%B3%91"
-      },
-      "top_headlines": [
-        {
-          "title": "업비트·네이버, 합병 후 나스닥 상장 추진…기업가치 최대 34조원",
-          "summary": "",
-          "link": "https://www.abcn.kr/news/articleView.html?idxno=84897",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.009393,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1763650800000
-      }
+      "term": "Upbit Naver Merger",
+      "term_ko": "업비트 네이버 합병"
     },
     {
-      "term": "After listing on Nasdaq",
-      "term_ko": "후 나스닥 상장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "후 나스닥 상장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "업비트·네이버, 합병 후 나스닥 상장 추진…기업가치 최대 34조원",
-              "link": "https://www.abcn.kr/news/articleView.html?idxno=84897"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%84%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%84%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "업비트·네이버, 합병 후 나스닥 상장 추진…기업가치 최대 34조원",
-          "summary": "",
-          "link": "https://www.abcn.kr/news/articleView.html?idxno=84897",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "After Listing on Nasdaq",
+      "term_ko": "후 나스닥 상장"
     },
     {
-      "term": "Xi Jinping call 外",
-      "term_ko": "시진핑 통화 外",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시진핑 통화 外",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "배우 이순재, 91세로 별세...트럼프·시진핑 통화 外 [오늘의 주요뉴스...",
-              "link": "https://www.etoday.co.kr/news/view/2529113"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%A7%84%ED%95%91%20%ED%86%B5%ED%99%94%20%E5%A4%96",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%A7%84%ED%95%91%20%ED%86%B5%ED%99%94%20%E5%A4%96"
-      },
-      "top_headlines": [
-        {
-          "title": "배우 이순재, 91세로 별세...트럼프·시진핑 통화 外 [오늘의 주요뉴스...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2529113",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Xi Jinping Call 外",
+      "term_ko": "시진핑 통화 外"
     },
     {
-      "term": "Lower exchange rate than real estate",
-      "term_ko": "인하 환율 부동산보다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인하 환율 부동산보다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[금통위 인터뷰] 바클레이즈 \"11월 인하…환율·부동산보다 대출금리\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4385494"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%95%98%20%ED%99%98%EC%9C%A8%20%EB%B6%80%EB%8F%99%EC%82%B0%EB%B3%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%95%98%20%ED%99%98%EC%9C%A8%20%EB%B6%80%EB%8F%99%EC%82%B0%EB%B3%B4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[금통위 인터뷰] 바클레이즈 \"11월 인하…환율·부동산보다 대출금리\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4385494",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lower Exchange Rate Than Real Estate",
+      "term_ko": "인하 환율 부동산보다"
     },
     {
       "term": "Platinum Rises Together",
-      "term_ko": "백금 동반 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "백금 동반 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오늘의 금값시세] 순금 한돈 85만 9천 원...은·백금 동반 상승",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=276049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%B1%EA%B8%88%20%EB%8F%99%EB%B0%98%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%B1%EA%B8%88%20%EB%8F%99%EB%B0%98%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 금값시세] 순금 한돈 85만 9천 원...은·백금 동반 상승",
-          "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=276049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "백금 동반 상승"
     },
     {
-      "term": "Power of the People Exchange rate surge",
-      "term_ko": "국민의힘 환율 급등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국민의힘 환율 급등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국민의힘, 환율 급등 사태에 국민연금 동원 비판…기재위 긴급현안질의...",
-              "link": "http://www.metroseoul.co.kr/article/20251125500137"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%AF%BC%EC%9D%98%ED%9E%98%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%AF%BC%EC%9D%98%ED%9E%98%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "국민의힘, 환율 급등 사태에 국민연금 동원 비판…기재위 긴급현안질의...",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20251125500137",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Power of the People Exchange Rate Surge",
+      "term_ko": "국민의힘 환율 급등"
     },
     {
-      "term": "Mobilizing Social Security for emergencies",
-      "term_ko": "사태에 국민연금 동원",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사태에 국민연금 동원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국민의힘, 환율 급등 사태에 국민연금 동원 비판…기재위 긴급현안질의...",
-              "link": "http://www.metroseoul.co.kr/article/20251125500137"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%ED%83%9C%EC%97%90%20%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EB%8F%99%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%ED%83%9C%EC%97%90%20%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EB%8F%99%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "국민의힘, 환율 급등 사태에 국민연금 동원 비판…기재위 긴급현안질의...",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20251125500137",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mobilizing Social Security for Emergencies",
+      "term_ko": "사태에 국민연금 동원"
     },
     {
-      "term": "Crash is fake",
-      "term_ko": "폭락은 가짜",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "폭락은 가짜",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "맥스 카이저 \"비트코인 폭락은 가짜 경보\"...8만 달러 지지선 확신",
-              "link": "http://coinreaders.com/200612"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EB%9D%BD%EC%9D%80%20%EA%B0%80%EC%A7%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EB%9D%BD%EC%9D%80%20%EA%B0%80%EC%A7%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "맥스 카이저 \"비트코인 폭락은 가짜 경보\"...8만 달러 지지선 확신",
-          "summary": "",
-          "link": "http://coinreaders.com/200612",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Crash Is Fake",
+      "term_ko": "폭락은 가짜"
     },
     {
-      "term": "Today's gold price quotes",
-      "term_ko": "오늘의 금값시세",
-      "significance_score": 280,
-      "mentions": 424,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-17",
-              "timestamp": 1763305200000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-18",
-              "timestamp": 1763391600000,
-              "value": 98.77833
-            },
-            {
-              "period": "2025-11-19",
-              "timestamp": 1763478000000,
-              "value": 96.11782
-            },
-            {
-              "period": "2025-11-20",
-              "timestamp": 1763564400000,
-              "value": 89.23578
-            },
-            {
-              "period": "2025-11-21",
-              "timestamp": 1763650800000,
-              "value": 98.7919
-            },
-            {
-              "period": "2025-11-22",
-              "timestamp": 1763737200000,
-              "value": 40.49138
-            },
-            {
-              "period": "2025-11-23",
-              "timestamp": 1763823600000,
-              "value": 30.1751
-            },
-            {
-              "period": "2025-11-24",
-              "timestamp": 1763910000000,
-              "value": 69.13261
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오늘의 금값시세] 순금 한돈 85만 9천 원...은·백금 동반 상승",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=276049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 금값시세] 순금 한돈 85만 9천 원...은·백금 동반 상승",
-          "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=276049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 423.9446,
-        "weekly_average_volume": 70.6574,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.015097,
-        "time_weight": 0.029017,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1763910000000
-      }
+      "term": "Today's Gold Price Quotes",
+      "term_ko": "오늘의 금값시세"
     },
     {
-      "term": "KOSPI 美",
-      "term_ko": "코스피 美",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 美 기술주 강세에 1.60% 상승…3,900선 회복",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15885649"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 美 기술주 강세에 1.60% 상승…3,900선 회복",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15885649",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi 美",
+      "term_ko": "코스피 美"
     },
     {
-      "term": "Peak tariffs",
-      "term_ko": "최고치 관세",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고치 관세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "소비심리 8년 만에 최고치… “관세 협상 타결과 3분기 성장률 영향”",
-              "link": "https://n.news.naver.com/mnews/article/025/0003485140?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B4%80%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B4%80%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "소비심리 8년 만에 최고치… “관세 협상 타결과 3분기 성장률 영향”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003485140?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Peak Tariffs",
+      "term_ko": "최고치 관세"
     },
     {
-      "term": "Growth rate impact",
-      "term_ko": "성장률 영향",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "성장률 영향",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "소비심리 8년 만에 최고치… “관세 협상 타결과 3분기 성장률 영향”",
-              "link": "https://n.news.naver.com/mnews/article/025/0003485140?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EC%9E%A5%EB%A5%A0%20%EC%98%81%ED%96%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EC%9E%A5%EB%A5%A0%20%EC%98%81%ED%96%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "소비심리 8년 만에 최고치… “관세 협상 타결과 3분기 성장률 영향”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003485140?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Growth Rate Impact",
+      "term_ko": "성장률 영향"
     },
     {
       "term": "Criticisms",
-      "term_ko": "비판 기재위",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비판 기재위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국민의힘, 환율 급등 사태에 국민연금 동원 비판…기재위 긴급현안질의...",
-              "link": "http://www.metroseoul.co.kr/article/20251125500137"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8C%90%20%EA%B8%B0%EC%9E%AC%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8C%90%20%EA%B8%B0%EC%9E%AC%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "국민의힘, 환율 급등 사태에 국민연금 동원 비판…기재위 긴급현안질의...",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20251125500137",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비판 기재위"
     },
     {
       "term": "Fed Rate Cut",
-      "term_ko": "연준 금리 인하",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Rate Cut",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open higher on revived hopes for Fed rate cut",
-              "link": "https://n.news.naver.com/mnews/article/001/0015760399?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Rate%20Cut",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Rate%20Cut"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open higher on revived hopes for Fed rate cut",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015760399?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 금리 인하"
     },
     {
       "term": "Following Strong Earnings",
-      "term_ko": "실적 호조 이후",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Following Strong Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SanDisk Surges as It Joins the S&P 500 Following Strong Earnings and Anal...",
-              "link": "https://www.econotimes.com/SanDisk-Surges-as-It-Joins-the-SP-500-Following-Strong-Earnings-and-Analyst-Upgrade-1726851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Following%20Strong%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Following%20Strong%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "SanDisk Surges as It Joins the S&P 500 Following Strong Earnings and Anal...",
-          "summary": "",
-          "link": "https://www.econotimes.com/SanDisk-Surges-as-It-Joins-the-SP-500-Following-Strong-Earnings-and-Analyst-Upgrade-1726851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "실적 호조 이후"
     },
     {
       "term": "Fuel Wall Street",
-      "term_ko": "연료 월스트리트",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fuel Wall Street",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "AI Stocks Fuel Wall Street Rebound as Rate-Cut Hopes Strengthen",
-              "link": "https://www.econotimes.com/AI-Stocks-Fuel-Wall-Street-Rebound-as-Rate-Cut-Hopes-Strengthen-1726849"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fuel%20Wall%20Street",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fuel%20Wall%20Street"
-      },
-      "top_headlines": [
-        {
-          "title": "AI Stocks Fuel Wall Street Rebound as Rate-Cut Hopes Strengthen",
-          "summary": "",
-          "link": "https://www.econotimes.com/AI-Stocks-Fuel-Wall-Street-Rebound-as-Rate-Cut-Hopes-Strengthen-1726849",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연료 월스트리트"
     },
     {
-      "term": "Rate-Cut Hopes Strengthen",
-      "term_ko": "금리 인하 기대감 강화",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rate-Cut Hopes Strengthen",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "AI Stocks Fuel Wall Street Rebound as Rate-Cut Hopes Strengthen",
-              "link": "https://www.econotimes.com/AI-Stocks-Fuel-Wall-Street-Rebound-as-Rate-Cut-Hopes-Strengthen-1726849"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate-Cut%20Hopes%20Strengthen",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate-Cut%20Hopes%20Strengthen"
-      },
-      "top_headlines": [
-        {
-          "title": "AI Stocks Fuel Wall Street Rebound as Rate-Cut Hopes Strengthen",
-          "summary": "",
-          "link": "https://www.econotimes.com/AI-Stocks-Fuel-Wall-Street-Rebound-as-Rate-Cut-Hopes-Strengthen-1726849",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rate-cut Hopes Strengthen",
+      "term_ko": "금리 인하 기대감 강화"
     },
     {
       "term": "Open Higher",
-      "term_ko": "더 높이 열기",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Higher",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open higher on revived hopes for Fed rate cut",
-              "link": "https://n.news.naver.com/mnews/article/001/0015760399?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open higher on revived hopes for Fed rate cut",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015760399?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "더 높이 열기"
     },
     {
       "term": "Revived Hopes",
-      "term_ko": "되살아난 희망",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Revived Hopes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open higher on revived hopes for Fed rate cut",
-              "link": "https://n.news.naver.com/mnews/article/001/0015760399?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Revived%20Hopes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Revived%20Hopes"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open higher on revived hopes for Fed rate cut",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015760399?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "되살아난 희망"
     },
     {
-      "term": "SanDisk Surges",
-      "term_ko": "SanDisk 급증",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SanDisk Surges",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SanDisk Surges as It Joins the S&P 500 Following Strong Earnings and Anal...",
-              "link": "https://www.econotimes.com/SanDisk-Surges-as-It-Joins-the-SP-500-Following-Strong-Earnings-and-Analyst-Upgrade-1726851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SanDisk%20Surges",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SanDisk%20Surges"
-      },
-      "top_headlines": [
-        {
-          "title": "SanDisk Surges as It Joins the S&P 500 Following Strong Earnings and Anal...",
-          "summary": "",
-          "link": "https://www.econotimes.com/SanDisk-Surges-as-It-Joins-the-SP-500-Following-Strong-Earnings-and-Analyst-Upgrade-1726851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sandisk Surges",
+      "term_ko": "SanDisk 급증"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-25T10:26:27+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-25T01:27:57.224Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-25T10:26:27+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Up to $34 Trillion in Enterprise Value",
+      "term_ko": "기업가치 최대 34조원"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-25T10:26:27+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-25T10:26:27+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Interview Barclays November",
+      "term_ko": "인터뷰 바클레이즈 11월"
+    },
+    {
+      "term": "850,000 Solid Gold Coins",
+      "term_ko": "순금 한돈 85만"
+    },
+    {
+      "term": "1.60% on Strength in Tech Stocks",
+      "term_ko": "기술주 강세에 1.60%"
+    },
+    {
+      "term": "Rally Back to 3900",
+      "term_ko": "상승 3900선 회복"
+    },
+    {
+      "term": "Negotiations and Q3",
+      "term_ko": "협상 타결과 3분기"
+    },
+    {
+      "term": "Max Kaiser Bitcoin",
+      "term_ko": "맥스 카이저 비트코인"
+    },
+    {
+      "term": "Confidence in Dollar Support",
+      "term_ko": "달러 지지선 확신"
+    },
+    {
+      "term": "Seoul Data Lab U.s. Stock Indices",
+      "term_ko": "서울데이터랩미국 증시 지수"
+    },
+    {
+      "term": "Upbit Naver Merger",
+      "term_ko": "업비트 네이버 합병"
+    },
+    {
+      "term": "After Listing on Nasdaq",
+      "term_ko": "후 나스닥 상장"
+    },
+    {
+      "term": "Xi Jinping Call 外",
+      "term_ko": "시진핑 통화 外"
+    },
+    {
+      "term": "Lower Exchange Rate Than Real Estate",
+      "term_ko": "인하 환율 부동산보다"
+    },
+    {
+      "term": "Platinum Rises Together",
+      "term_ko": "백금 동반 상승"
+    },
+    {
+      "term": "Power of the People Exchange Rate Surge",
+      "term_ko": "국민의힘 환율 급등"
+    },
+    {
+      "term": "Mobilizing Social Security for Emergencies",
+      "term_ko": "사태에 국민연금 동원"
+    },
+    {
+      "term": "Crash Is Fake",
+      "term_ko": "폭락은 가짜"
+    },
+    {
+      "term": "Today's Gold Price Quotes",
+      "term_ko": "오늘의 금값시세"
+    },
+    {
+      "term": "Kospi 美",
+      "term_ko": "코스피 美"
+    },
+    {
+      "term": "Peak Tariffs",
+      "term_ko": "최고치 관세"
+    },
+    {
+      "term": "Growth Rate Impact",
+      "term_ko": "성장률 영향"
+    },
+    {
+      "term": "Criticisms",
+      "term_ko": "비판 기재위"
+    },
+    {
+      "term": "Fed Rate Cut",
+      "term_ko": "연준 금리 인하"
+    },
+    {
+      "term": "Following Strong Earnings",
+      "term_ko": "실적 호조 이후"
+    },
+    {
+      "term": "Fuel Wall Street",
+      "term_ko": "연료 월스트리트"
+    },
+    {
+      "term": "Rate-cut Hopes Strengthen",
+      "term_ko": "금리 인하 기대감 강화"
+    },
+    {
+      "term": "Open Higher",
+      "term_ko": "더 높이 열기"
+    },
+    {
+      "term": "Revived Hopes",
+      "term_ko": "되살아난 희망"
+    },
+    {
+      "term": "Sandisk Surges",
+      "term_ko": "SanDisk 급증"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    }
+  ],
+  "translations": {
+    "Up to $34 Trillion in Enterprise Value": {
+      "en": "Up to $34 Trillion in Enterprise Value",
+      "ko": "기업가치 최대 34조원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Interview Barclays November": {
+      "en": "Interview Barclays November",
+      "ko": "인터뷰 바클레이즈 11월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "850,000 Solid Gold Coins": {
+      "en": "850,000 Solid Gold Coins",
+      "ko": "순금 한돈 85만",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "1.60% on Strength in Tech Stocks": {
+      "en": "1.60% on Strength in Tech Stocks",
+      "ko": "기술주 강세에 1.60%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Rally Back to 3900": {
+      "en": "Rally Back to 3900",
+      "ko": "상승 3900선 회복",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Negotiations and Q3": {
+      "en": "Negotiations and Q3",
+      "ko": "협상 타결과 3분기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Max Kaiser Bitcoin": {
+      "en": "Max Kaiser Bitcoin",
+      "ko": "맥스 카이저 비트코인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Confidence in Dollar Support": {
+      "en": "Confidence in Dollar Support",
+      "ko": "달러 지지선 확신",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Seoul Data Lab U.s. Stock Indices": {
+      "en": "Seoul Data Lab U.s. Stock Indices",
+      "ko": "서울데이터랩미국 증시 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Upbit Naver Merger": {
+      "en": "Upbit Naver Merger",
+      "ko": "업비트 네이버 합병",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "After Listing on Nasdaq": {
+      "en": "After Listing on Nasdaq",
+      "ko": "후 나스닥 상장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Xi Jinping Call 外": {
+      "en": "Xi Jinping Call 外",
+      "ko": "시진핑 통화 外",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Lower Exchange Rate Than Real Estate": {
+      "en": "Lower Exchange Rate Than Real Estate",
+      "ko": "인하 환율 부동산보다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Platinum Rises Together": {
+      "en": "Platinum Rises Together",
+      "ko": "백금 동반 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Power of the People Exchange Rate Surge": {
+      "en": "Power of the People Exchange Rate Surge",
+      "ko": "국민의힘 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Mobilizing Social Security for Emergencies": {
+      "en": "Mobilizing Social Security for Emergencies",
+      "ko": "사태에 국민연금 동원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Crash Is Fake": {
+      "en": "Crash Is Fake",
+      "ko": "폭락은 가짜",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Today's Gold Price Quotes": {
+      "en": "Today's Gold Price Quotes",
+      "ko": "오늘의 금값시세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Kospi 美": {
+      "en": "Kospi 美",
+      "ko": "코스피 美",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Peak Tariffs": {
+      "en": "Peak Tariffs",
+      "ko": "최고치 관세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Growth Rate Impact": {
+      "en": "Growth Rate Impact",
+      "ko": "성장률 영향",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.117Z"
+    },
+    "Criticisms": {
+      "en": "Criticisms",
+      "ko": "비판 기재위",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Fed Rate Cut": {
+      "en": "Fed Rate Cut",
+      "ko": "연준 금리 인하",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Following Strong Earnings": {
+      "en": "Following Strong Earnings",
+      "ko": "실적 호조 이후",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Fuel Wall Street": {
+      "en": "Fuel Wall Street",
+      "ko": "연료 월스트리트",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Rate-cut Hopes Strengthen": {
+      "en": "Rate-cut Hopes Strengthen",
+      "ko": "금리 인하 기대감 강화",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Open Higher": {
+      "en": "Open Higher",
+      "ko": "더 높이 열기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Revived Hopes": {
+      "en": "Revived Hopes",
+      "ko": "되살아난 희망",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Sandisk Surges": {
+      "en": "Sandisk Surges",
+      "ko": "SanDisk 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-25T06:30:54.118Z"
     }
   }
 }
