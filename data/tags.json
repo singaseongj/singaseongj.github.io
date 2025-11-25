@@ -1,425 +1,1143 @@
 {
-  "generatedAt": "2025-11-25T12:41:51.068Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-11-25",
   "window": "12_hours",
-  "total_phrases": 29,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Kyobo Securities Overseas Futures Fee",
-      "term_ko": "교보증권 해외선물 수수료"
-    },
-    {
-      "term": "Letting Ai Cool Down",
-      "term_ko": "AI 열 식히고"
-    },
-    {
-      "term": "The Story of Ai in Stocks",
-      "term_ko": "AI의 종목 이야기"
-    },
-    {
-      "term": "Congressional Patterns Only Ai",
-      "term_ko": "의원 무늬만 AI"
-    },
-    {
-      "term": "7.5% Overnight",
-      "term_ko": "하루 새 7.5%"
-    },
-    {
-      "term": "5 Things That Go Together",
-      "term_ko": "함께 간다 5대"
-    },
-    {
-      "term": "Fixed Income Professionals 96% November",
-      "term_ko": "채권전문가 96% 11월"
-    },
-    {
-      "term": "Korea Housing Finance Corporation December Home Equity Loan",
-      "term_ko": "한국주택금융공사 12월 보금자리론"
-    },
-    {
-      "term": "Financial Holding 70 Trillion Inclusive Finance",
-      "term_ko": "금융지주 70조원 포용금융"
-    },
-    {
-      "term": "Run a Discount Event",
-      "term_ko": "할인 이벤트 실시"
-    },
-    {
-      "term": "Build a Moon Base",
-      "term_ko": "달 기지 짓는다"
-    },
-    {
-      "term": "K-unicon's Dream Nasdaq",
-      "term_ko": "K-유니콘의 꿈 나스닥"
-    },
-    {
-      "term": "Us Senate Meta-fraud",
-      "term_ko": "美상원 메타 사기성"
-    },
-    {
-      "term": "Suspected Ad Revenue",
-      "term_ko": "광고 수익 의혹"
-    },
-    {
-      "term": "Bank Personalized Small Business",
-      "term_ko": "은행 맞춤형 소상공인"
-    },
-    {
-      "term": "Bank of England Rate Freeze",
-      "term_ko": "금통위 기준금리 동결"
-    },
-    {
-      "term": "Dongyang Life Woori Financial",
-      "term_ko": "동양생명 우리금융 편입"
-    },
-    {
-      "term": "Back to Health",
-      "term_ko": "후 건전성 회복세"
-    },
-    {
-      "term": "Preferred Rate Non-financial",
-      "term_ko": "총출동 금리우대 비금융"
-    },
-    {
-      "term": "Call for Investigation",
-      "term_ko": "조사 촉구"
-    },
-    {
-      "term": "Expand Help",
-      "term_ko": "돕기 확대"
-    },
-    {
-      "term": "Focus on Your Budget",
-      "term_ko": "예산 집중해야"
-    },
-    {
-      "term": "Upbit Targets Nasdaq",
-      "term_ko": "업비트, 나스닥 공략"
-    },
-    {
-      "term": "Listing Following Naver",
-      "term_ko": "네이버 팔로잉 리스팅"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
-    },
-    {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "코스피, 외국인 매수세에 반등"
-    },
-    {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "금리 인하 기대감 상승"
-    },
-    {
-      "term": "Bitcoin Etf Expectations",
-      "term_ko": "비트코인 ETF 기대"
-    },
-    {
-      "term": "Dollar Exchange Rate Spikes",
-      "term_ko": "원달러 환율 급등"
-    }
-  ],
+  "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "Kyobo Securities Overseas Futures Fee",
-      "term_ko": "교보증권 해외선물 수수료"
+      "term": "Private exchange rate 1500 won",
+      "term_ko": "사설 환율 1500원",
+      "significance_score": 672,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "사설 환율 1500원",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[사설] 환율 1,500원 위협, 고환율의 '뉴노멀'화 우려 커진다",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530770"
+            },
+            {
+              "title": "[천지일보 사설] 환율 1500원 경고등… 단기 처방 아닌 경제 체질 개선이...",
+              "link": "https://www.newscj.com/news/articleView.html?idxno=3344327"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%ED%99%98%EC%9C%A8%201500%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%ED%99%98%EC%9C%A8%201500%EC%9B%90"
+      },
+      "top_headlines": [
+        {
+          "title": "[사설] 환율 1,500원 위협, 고환율의 '뉴노멀'화 우려 커진다",
+          "summary": "",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530770",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "[천지일보 사설] 환율 1500원 경고등… 단기 처방 아닌 경제 체질 개선이...",
+          "summary": "",
+          "link": "https://www.newscj.com/news/articleView.html?idxno=3344327",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Letting Ai Cool Down",
-      "term_ko": "AI 열 식히고"
+      "term": "Riding the AI wave",
+      "term_ko": "AI 열풍 타고",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI 열풍 타고",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "AI 열풍 타고 400% 폭등한 샌디스크, S&P500 전격 편입…스트래티지는 또...",
+              "link": "https://www.newspim.com/news/view/20251125001302"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EC%97%B4%ED%92%8D%20%ED%83%80%EA%B3%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EC%97%B4%ED%92%8D%20%ED%83%80%EA%B3%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 열풍 타고 400% 폭등한 샌디스크, S&P500 전격 편입…스트래티지는 또...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251125001302",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "The Story of Ai in Stocks",
-      "term_ko": "AI의 종목 이야기"
+      "term": "Transition Declaration AI",
+      "term_ko": "전환 선언 AI",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "전환 선언 AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "세일포인트, \"적응형 아이덴티티로 보안 패러다임 전환 선언\"…AI 시대의...",
+              "link": "https://www.aitimes.kr/news/articleView.html?idxno=37386"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%ED%99%98%20%EC%84%A0%EC%96%B8%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%ED%99%98%20%EC%84%A0%EC%96%B8%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "세일포인트, \"적응형 아이덴티티로 보안 패러다임 전환 선언\"…AI 시대의...",
+          "summary": "",
+          "link": "https://www.aitimes.kr/news/articleView.html?idxno=37386",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Congressional Patterns Only Ai",
-      "term_ko": "의원 무늬만 AI"
+      "term": "Stock Price Samsung Securities KB Securities",
+      "term_ko": "증권가 삼성증권 KB증권",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "증권가 삼성증권 KB증권",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[증권가] 삼성증권 KB증권 LS증권 교보증권 코스콤",
+              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344248"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EA%B0%80%20%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C%20KB%EC%A6%9D%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EA%B0%80%20%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C%20KB%EC%A6%9D%EA%B6%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "[증권가] 삼성증권 KB증권 LS증권 교보증권 코스콤",
+          "summary": "",
+          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344248",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "7.5% Overnight",
-      "term_ko": "하루 새 7.5%"
+      "term": "LS Securities Kyobo Securities Coscom",
+      "term_ko": "LS증권 교보증권 코스콤",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "LS증권 교보증권 코스콤",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[증권가] 삼성증권 KB증권 LS증권 교보증권 코스콤",
+              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344248"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LS%EC%A6%9D%EA%B6%8C%20%EA%B5%90%EB%B3%B4%EC%A6%9D%EA%B6%8C%20%EC%BD%94%EC%8A%A4%EC%BD%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LS%EC%A6%9D%EA%B6%8C%20%EA%B5%90%EB%B3%B4%EC%A6%9D%EA%B6%8C%20%EC%BD%94%EC%8A%A4%EC%BD%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "[증권가] 삼성증권 KB증권 LS증권 교보증권 코스콤",
+          "summary": "",
+          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344248",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "5 Things That Go Together",
-      "term_ko": "함께 간다 5대"
+      "term": "E-Securities Kyobo Securities LS Securities",
+      "term_ko": "e-증권 교보증권 LS증권",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "e-증권 교보증권 LS증권",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[e-증권] 교보증권·LS증권·키움증권·삼성증권",
+              "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2360072"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=e-%EC%A6%9D%EA%B6%8C%20%EA%B5%90%EB%B3%B4%EC%A6%9D%EA%B6%8C%20LS%EC%A6%9D%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=e-%EC%A6%9D%EA%B6%8C%20%EA%B5%90%EB%B3%B4%EC%A6%9D%EA%B6%8C%20LS%EC%A6%9D%EA%B6%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "[e-증권] 교보증권·LS증권·키움증권·삼성증권",
+          "summary": "",
+          "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2360072",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Fixed Income Professionals 96% November",
-      "term_ko": "채권전문가 96% 11월"
+      "term": "AI data center surge",
+      "term_ko": "AI 데이터센터 급증",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI 데이터센터 급증",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "AI 데이터센터 급증, 전력·환경 리스크 확대…'녹색금융 솔루션' 주목",
+              "link": "https://n.news.naver.com/mnews/article/030/0003373988?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%20%EA%B8%89%EC%A6%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%20%EA%B8%89%EC%A6%9D"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 데이터센터 급증, 전력·환경 리스크 확대…'녹색금융 솔루션' 주목",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/030/0003373988?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Korea Housing Finance Corporation December Home Equity Loan",
-      "term_ko": "한국주택금융공사 12월 보금자리론"
+      "term": "Galaxy Digital 9 billion",
+      "term_ko": "갤럭시 디지털 90억",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "갤럭시 디지털 90억",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시 디지털, 90억 달러 프레딕트 마켓 진출",
+              "link": "http://coinreaders.com/200734"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%20%EB%94%94%EC%A7%80%ED%84%B8%2090%EC%96%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%A4%EB%9F%AD%EC%8B%9C%20%EB%94%94%EC%A7%80%ED%84%B8%2090%EC%96%B5"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시 디지털, 90억 달러 프레딕트 마켓 진출",
+          "summary": "",
+          "link": "http://coinreaders.com/200734",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Financial Holding 70 Trillion Inclusive Finance",
-      "term_ko": "금융지주 70조원 포용금융"
+      "term": "SanDisk's 400% surge",
+      "term_ko": "400% 폭등한 샌디스크",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "400% 폭등한 샌디스크",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "AI 열풍 타고 400% 폭등한 샌디스크, S&P500 전격 편입…스트래티지는 또...",
+              "link": "https://www.newspim.com/news/view/20251125001302"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=400%25%20%ED%8F%AD%EB%93%B1%ED%95%9C%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=400%25%20%ED%8F%AD%EB%93%B1%ED%95%9C%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 열풍 타고 400% 폭등한 샌디스크, S&P500 전격 편입…스트래티지는 또...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251125001302",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Run a Discount Event",
-      "term_ko": "할인 이벤트 실시"
+      "term": "Inclusion in the S&P500",
+      "term_ko": "S&P500 전격 편입",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "S&P500 전격 편입",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "AI 열풍 타고 400% 폭등한 샌디스크, S&P500 전격 편입…스트래티지는 또...",
+              "link": "https://www.newspim.com/news/view/20251125001302"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%A0%84%EA%B2%A9%20%ED%8E%B8%EC%9E%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%A0%84%EA%B2%A9%20%ED%8E%B8%EC%9E%85"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 열풍 타고 400% 폭등한 샌디스크, S&P500 전격 편입…스트래티지는 또...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251125001302",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Build a Moon Base",
-      "term_ko": "달 기지 짓는다"
+      "term": "Ulsan Consumer Sentiment Index for November",
+      "term_ko": "11월 울산 소비자심리지수",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "11월 울산 소비자심리지수",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "11월 울산 소비자심리지수 12년만에 최고 '110.9'",
+              "link": "https://www.ulsanpress.net/news/articleView.html?idxno=563755"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EC%9B%94%20%EC%9A%B8%EC%82%B0%20%EC%86%8C%EB%B9%84%EC%9E%90%EC%8B%AC%EB%A6%AC%EC%A7%80%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EC%9B%94%20%EC%9A%B8%EC%82%B0%20%EC%86%8C%EB%B9%84%EC%9E%90%EC%8B%AC%EB%A6%AC%EC%A7%80%EC%88%98"
+      },
+      "top_headlines": [
+        {
+          "title": "11월 울산 소비자심리지수 12년만에 최고 '110.9'",
+          "summary": "",
+          "link": "https://www.ulsanpress.net/news/articleView.html?idxno=563755",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "K-unicon's Dream Nasdaq",
-      "term_ko": "K-유니콘의 꿈 나스닥"
+      "term": "110.9 percent, the highest in 12 years",
+      "term_ko": "12년만에 최고 110.9",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "12년만에 최고 110.9",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "11월 울산 소비자심리지수 12년만에 최고 '110.9'",
+              "link": "https://www.ulsanpress.net/news/articleView.html?idxno=563755"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=12%EB%85%84%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%20110.9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=12%EB%85%84%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%20110.9"
+      },
+      "top_headlines": [
+        {
+          "title": "11월 울산 소비자심리지수 12년만에 최고 '110.9'",
+          "summary": "",
+          "link": "https://www.ulsanpress.net/news/articleView.html?idxno=563755",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Us Senate Meta-fraud",
-      "term_ko": "美상원 메타 사기성"
+      "term": "Boundary exchange rate 4.7",
+      "term_ko": "경계 환율 4.7원",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "경계 환율 4.7원",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+              "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B3%84%20%ED%99%98%EC%9C%A8%204.7%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B3%84%20%ED%99%98%EC%9C%A8%204.7%EC%9B%90"
+      },
+      "top_headlines": [
+        {
+          "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+          "summary": "",
+          "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Suspected Ad Revenue",
-      "term_ko": "광고 수익 의혹"
+      "term": "Closed at 1472.4 won",
+      "term_ko": "하락 1472.4원 마감",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "하락 1472.4원 마감",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+              "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%201472.4%EC%9B%90%20%EB%A7%88%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%201472.4%EC%9B%90%20%EB%A7%88%EA%B0%90"
+      },
+      "top_headlines": [
+        {
+          "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+          "summary": "",
+          "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Bank Personalized Small Business",
-      "term_ko": "은행 맞춤형 소상공인"
+      "term": "1% for local housing prices",
+      "term_ko": "지방 집값 1%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "지방 집값 1%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "\"내년 지방 집값 1% 하락·보합\"",
+              "link": "http://www.cctimes.kr/news/articleView.html?idxno=878077"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EB%B0%A9%20%EC%A7%91%EA%B0%92%201%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EB%B0%A9%20%EC%A7%91%EA%B0%92%201%25"
+      },
+      "top_headlines": [
+        {
+          "title": "\"내년 지방 집값 1% 하락·보합\"",
+          "summary": "",
+          "link": "http://www.cctimes.kr/news/articleView.html?idxno=878077",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Bank of England Rate Freeze",
-      "term_ko": "금통위 기준금리 동결"
+      "term": "Dollar Freddie Mac Market",
+      "term_ko": "달러 프레딕트 마켓",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "달러 프레딕트 마켓",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시 디지털, 90억 달러 프레딕트 마켓 진출",
+              "link": "http://coinreaders.com/200734"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%ED%94%84%EB%A0%88%EB%94%95%ED%8A%B8%20%EB%A7%88%EC%BC%93",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%ED%94%84%EB%A0%88%EB%94%95%ED%8A%B8%20%EB%A7%88%EC%BC%93"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시 디지털, 90억 달러 프레딕트 마켓 진출",
+          "summary": "",
+          "link": "http://coinreaders.com/200734",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Dongyang Life Woori Financial",
-      "term_ko": "동양생명 우리금융 편입"
+      "term": "Power Environmental Risk",
+      "term_ko": "전력 환경 리스크",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "전력 환경 리스크",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "AI 데이터센터 급증, 전력·환경 리스크 확대…'녹색금융 솔루션' 주목",
+              "link": "https://n.news.naver.com/mnews/article/030/0003373988?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A0%A5%20%ED%99%98%EA%B2%BD%20%EB%A6%AC%EC%8A%A4%ED%81%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A0%A5%20%ED%99%98%EA%B2%BD%20%EB%A6%AC%EC%8A%A4%ED%81%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 데이터센터 급증, 전력·환경 리스크 확대…'녹색금융 솔루션' 주목",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/030/0003373988?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Back to Health",
-      "term_ko": "후 건전성 회복세"
+      "term": "Expanding Green Finance Solutions",
+      "term_ko": "확대 녹색금융 솔루션",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "확대 녹색금융 솔루션",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "AI 데이터센터 급증, 전력·환경 리스크 확대…'녹색금융 솔루션' 주목",
+              "link": "https://n.news.naver.com/mnews/article/030/0003373988?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EB%8C%80%20%EB%85%B9%EC%83%89%EA%B8%88%EC%9C%B5%20%EC%86%94%EB%A3%A8%EC%85%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EB%8C%80%20%EB%85%B9%EC%83%89%EA%B8%88%EC%9C%B5%20%EC%86%94%EB%A3%A8%EC%85%98"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 데이터센터 급증, 전력·환경 리스크 확대…'녹색금융 솔루션' 주목",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/030/0003373988?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Preferred Rate Non-financial",
-      "term_ko": "총출동 금리우대 비금융"
+      "term": "The new normal of threat hypervigilance",
+      "term_ko": "위협 고환율의 뉴노멀화",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "위협 고환율의 뉴노멀화",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[사설] 환율 1,500원 위협, 고환율의 '뉴노멀'화 우려 커진다",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530770"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%ED%98%91%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%98%20%EB%89%B4%EB%85%B8%EB%A9%80%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%ED%98%91%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%98%20%EB%89%B4%EB%85%B8%EB%A9%80%ED%99%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[사설] 환율 1,500원 위협, 고환율의 '뉴노멀'화 우려 커진다",
+          "summary": "",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530770",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Call for Investigation",
-      "term_ko": "조사 촉구"
+      "term": "US interest rate cuts",
+      "term_ko": "美 금리 인하",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "美 금리 인하",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+              "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98"
+      },
+      "top_headlines": [
+        {
+          "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+          "summary": "",
+          "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Expand Help",
-      "term_ko": "돕기 확대"
+      "term": "Expect authorities to intervene",
+      "term_ko": "기대 당국 개입",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "기대 당국 개입",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+              "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%20%EB%8B%B9%EA%B5%AD%20%EA%B0%9C%EC%9E%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%20%EB%8B%B9%EA%B5%AD%20%EA%B0%9C%EC%9E%85"
+      },
+      "top_headlines": [
+        {
+          "title": "美 금리 인하 기대·당국 개입 경계 환율 4.7원 하락 … 1472.4원 마감",
+          "summary": "",
+          "link": "http://www.cctimes.kr/news/articleView.html?idxno=878025",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Focus on Your Budget",
-      "term_ko": "예산 집중해야"
+      "term": "Warning light short-term prescription",
+      "term_ko": "경고등 단기 처방",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "경고등 단기 처방",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[천지일보 사설] 환율 1500원 경고등… 단기 처방 아닌 경제 체질 개선이...",
+              "link": "https://www.newscj.com/news/articleView.html?idxno=3344327"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B3%A0%EB%93%B1%20%EB%8B%A8%EA%B8%B0%20%EC%B2%98%EB%B0%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B3%A0%EB%93%B1%20%EB%8B%A8%EA%B8%B0%20%EC%B2%98%EB%B0%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "[천지일보 사설] 환율 1500원 경고등… 단기 처방 아닌 경제 체질 개선이...",
+          "summary": "",
+          "link": "https://www.newscj.com/news/articleView.html?idxno=3344327",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Upbit Targets Nasdaq",
-      "term_ko": "업비트, 나스닥 공략"
+      "term": "Not an economic system",
+      "term_ko": "아닌 경제 체질",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "아닌 경제 체질",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[천지일보 사설] 환율 1500원 경고등… 단기 처방 아닌 경제 체질 개선이...",
+              "link": "https://www.newscj.com/news/articleView.html?idxno=3344327"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%8B%8C%20%EA%B2%BD%EC%A0%9C%20%EC%B2%B4%EC%A7%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%8B%8C%20%EA%B2%BD%EC%A0%9C%20%EC%B2%B4%EC%A7%88"
+      },
+      "top_headlines": [
+        {
+          "title": "[천지일보 사설] 환율 1500원 경고등… 단기 처방 아닌 경제 체질 개선이...",
+          "summary": "",
+          "link": "https://www.newscj.com/news/articleView.html?idxno=3344327",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Listing Following Naver",
-      "term_ko": "네이버 팔로잉 리스팅"
+      "term": "Security paradigm",
+      "term_ko": "보안 패러다임",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "보안 패러다임",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "세일포인트, \"적응형 아이덴티티로 보안 패러다임 전환 선언\"…AI 시대의...",
+              "link": "https://www.aitimes.kr/news/articleView.html?idxno=37386"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%95%88%20%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%95%88%20%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84"
+      },
+      "top_headlines": [
+        {
+          "title": "세일포인트, \"적응형 아이덴티티로 보안 패러다임 전환 선언\"…AI 시대의...",
+          "summary": "",
+          "link": "https://www.aitimes.kr/news/articleView.html?idxno=37386",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
+      "term": "Kiwoom Securities Samsung Securities",
+      "term_ko": "키움증권 삼성증권",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "키움증권 삼성증권",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[e-증권] 교보증권·LS증권·키움증권·삼성증권",
+              "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2360072"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%20%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%20%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "[e-증권] 교보증권·LS증권·키움증권·삼성증권",
+          "summary": "",
+          "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2360072",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "코스피, 외국인 매수세에 반등"
+      "term": "Concerns grow",
+      "term_ko": "우려 커진다",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "우려 커진다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[사설] 환율 1,500원 위협, 고환율의 '뉴노멀'화 우려 커진다",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530770"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A0%A4%20%EC%BB%A4%EC%A7%84%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A0%A4%20%EC%BB%A4%EC%A7%84%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "[사설] 환율 1,500원 위협, 고환율의 '뉴노멀'화 우려 커진다",
+          "summary": "",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530770",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "금리 인하 기대감 상승"
+      "term": "Down and flat",
+      "term_ko": "하락 보합",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "하락 보합",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "\"내년 지방 집값 1% 하락·보합\"",
+              "link": "http://www.cctimes.kr/news/articleView.html?idxno=878077"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EB%B3%B4%ED%95%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EB%B3%B4%ED%95%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "\"내년 지방 집값 1% 하락·보합\"",
+          "summary": "",
+          "link": "http://www.cctimes.kr/news/articleView.html?idxno=878077",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Bitcoin Etf Expectations",
-      "term_ko": "비트코인 ETF 기대"
+      "term": "Big Tech Lift",
+      "term_ko": "빅 테크 리프트",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Big Tech Lift",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "The Fed and Big Tech Lift Investors’ Spirits",
+              "link": "https://www.nytimes.com/2025/11/25/business/dealbook/fed-big-tech-market-rally.html?partner=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Big%20Tech%20Lift",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Big%20Tech%20Lift"
+      },
+      "top_headlines": [
+        {
+          "title": "The Fed and Big Tech Lift Investors’ Spirits",
+          "summary": "",
+          "link": "https://www.nytimes.com/2025/11/25/business/dealbook/fed-big-tech-market-rally.html?partner=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Dollar Exchange Rate Spikes",
-      "term_ko": "원달러 환율 급등"
+      "term": "Investors Spirits",
+      "term_ko": "투자자 정신",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Investors Spirits",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "The Fed and Big Tech Lift Investors’ Spirits",
+              "link": "https://www.nytimes.com/2025/11/25/business/dealbook/fed-big-tech-market-rally.html?partner=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Spirits",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Spirits"
+      },
+      "top_headlines": [
+        {
+          "title": "The Fed and Big Tech Lift Investors’ Spirits",
+          "summary": "",
+          "link": "https://www.nytimes.com/2025/11/25/business/dealbook/fed-big-tech-market-rally.html?partner=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-11-25T21:43:51+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "Kyobo Securities Overseas Futures Fee": {
-      "en": "Kyobo Securities Overseas Futures Fee",
-      "ko": "교보증권 해외선물 수수료",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2025-11-25T12:45:22.099Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2025-11-25T21:43:51+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 0,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 0,
+      "too_generic": 0
     },
-    "Letting Ai Cool Down": {
-      "en": "Letting Ai Cool Down",
-      "ko": "AI 열 식히고",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "The Story of Ai in Stocks": {
-      "en": "The Story of Ai in Stocks",
-      "ko": "AI의 종목 이야기",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "Congressional Patterns Only Ai": {
-      "en": "Congressional Patterns Only Ai",
-      "ko": "의원 무늬만 AI",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "7.5% Overnight": {
-      "en": "7.5% Overnight",
-      "ko": "하루 새 7.5%",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "5 Things That Go Together": {
-      "en": "5 Things That Go Together",
-      "ko": "함께 간다 5대",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "Fixed Income Professionals 96% November": {
-      "en": "Fixed Income Professionals 96% November",
-      "ko": "채권전문가 96% 11월",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "Korea Housing Finance Corporation December Home Equity Loan": {
-      "en": "Korea Housing Finance Corporation December Home Equity Loan",
-      "ko": "한국주택금융공사 12월 보금자리론",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "Financial Holding 70 Trillion Inclusive Finance": {
-      "en": "Financial Holding 70 Trillion Inclusive Finance",
-      "ko": "금융지주 70조원 포용금융",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "Run a Discount Event": {
-      "en": "Run a Discount Event",
-      "ko": "할인 이벤트 실시",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.068Z"
-    },
-    "Build a Moon Base": {
-      "en": "Build a Moon Base",
-      "ko": "달 기지 짓는다",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "K-unicon's Dream Nasdaq": {
-      "en": "K-unicon's Dream Nasdaq",
-      "ko": "K-유니콘의 꿈 나스닥",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Us Senate Meta-fraud": {
-      "en": "Us Senate Meta-fraud",
-      "ko": "美상원 메타 사기성",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Suspected Ad Revenue": {
-      "en": "Suspected Ad Revenue",
-      "ko": "광고 수익 의혹",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Bank Personalized Small Business": {
-      "en": "Bank Personalized Small Business",
-      "ko": "은행 맞춤형 소상공인",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Bank of England Rate Freeze": {
-      "en": "Bank of England Rate Freeze",
-      "ko": "금통위 기준금리 동결",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Dongyang Life Woori Financial": {
-      "en": "Dongyang Life Woori Financial",
-      "ko": "동양생명 우리금융 편입",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Back to Health": {
-      "en": "Back to Health",
-      "ko": "후 건전성 회복세",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Preferred Rate Non-financial": {
-      "en": "Preferred Rate Non-financial",
-      "ko": "총출동 금리우대 비금융",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Call for Investigation": {
-      "en": "Call for Investigation",
-      "ko": "조사 촉구",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Expand Help": {
-      "en": "Expand Help",
-      "ko": "돕기 확대",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Focus on Your Budget": {
-      "en": "Focus on Your Budget",
-      "ko": "예산 집중해야",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Upbit Targets Nasdaq": {
-      "en": "Upbit Targets Nasdaq",
-      "ko": "업비트, 나스닥 공략",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Listing Following Naver": {
-      "en": "Listing Following Naver",
-      "ko": "네이버 팔로잉 리스팅",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Ai Chip Demand Surge": {
-      "en": "Ai Chip Demand Surge",
-      "ko": "AI 칩 수요 급증",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Kospi Rebounds on Foreign Buying": {
-      "en": "Kospi Rebounds on Foreign Buying",
-      "ko": "코스피, 외국인 매수세에 반등",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Interest Rate Cut Expectations Rise": {
-      "en": "Interest Rate Cut Expectations Rise",
-      "ko": "금리 인하 기대감 상승",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Bitcoin Etf Expectations": {
-      "en": "Bitcoin Etf Expectations",
-      "ko": "비트코인 ETF 기대",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
-    },
-    "Dollar Exchange Rate Spikes": {
-      "en": "Dollar Exchange Rate Spikes",
-      "ko": "원달러 환율 급등",
-      "translator": "pre-collected",
-      "cachedAt": "2025-11-25T12:41:51.069Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2025-11-25T21:43:51+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2025-11-25T21:43:51+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
+      }
     }
   }
 }
