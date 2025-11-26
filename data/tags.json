@@ -1,1107 +1,425 @@
 {
+  "generatedAt": "2025-11-26T18:25:00.514Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-11-26",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Rate Cut Hopes",
-      "term_ko": "금리 인하 희망",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rate Cut Hopes",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104"
-            },
-            {
-              "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
-              "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate%20Cut%20Hopes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate%20Cut%20Hopes"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리 인하 희망"
     },
     {
-      "term": "Broadcom AI chips",
-      "term_ko": "브로드컴 AI 칩",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "브로드컴 AI 칩",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-25",
-              "timestamp": 1763996400000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
-              "link": "https://www.newspim.com/news/view/20251126001371"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4%20AI%20%EC%B9%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4%20AI%20%EC%B9%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251126001371",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.021862,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1763996400000
-      }
+      "term": "Broadcom Ai Chips",
+      "term_ko": "브로드컴 AI 칩"
     },
     {
-      "term": "Goldman Sachs price target of $435",
-      "term_ko": "골드만삭스 목표가 435달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "골드만삭스 목표가 435달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
-              "link": "https://www.newspim.com/news/view/20251126001371"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A8%EB%93%9C%EB%A7%8C%EC%82%AD%EC%8A%A4%20%EB%AA%A9%ED%91%9C%EA%B0%80%20435%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A8%EB%93%9C%EB%A7%8C%EC%82%AD%EC%8A%A4%20%EB%AA%A9%ED%91%9C%EA%B0%80%20435%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251126001371",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Goldman Sachs Price Target of $435",
+      "term_ko": "골드만삭스 목표가 435달러"
     },
     {
       "term": "Small Business Loan Rates Month 5",
-      "term_ko": "중소기업 대출금리 5개월째",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중소기업 대출금리 5개월째",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%205%EA%B0%9C%EC%9B%94%EC%A7%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%205%EA%B0%9C%EC%9B%94%EC%A7%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중소기업 대출금리 5개월째"
     },
     {
-      "term": "Down 3% per year",
-      "term_ko": "하락 연 3%대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락 연 3%대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EC%97%B0%203%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EC%97%B0%203%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Down 3% Per Year",
+      "term_ko": "하락 연 3%대"
     },
     {
-      "term": "27% of large exporters",
-      "term_ko": "수출 대기업 27%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수출 대기업 27%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국내 수출 대기업 27% \"자금사정 악화\"",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%2027%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%2027%25"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 수출 대기업 27% \"자금사정 악화\"",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "27% of Large Exporters",
+      "term_ko": "수출 대기업 27%"
     },
     {
-      "term": "Defense limit 1400s",
-      "term_ko": "방어 한계 1400원대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "방어 한계 1400원대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
-              "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%A9%EC%96%B4%20%ED%95%9C%EA%B3%84%201400%EC%9B%90%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%A9%EC%96%B4%20%ED%95%9C%EA%B3%84%201400%EC%9B%90%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Defense Limit 1400s",
+      "term_ko": "방어 한계 1400원대"
     },
     {
-      "term": "Beyond financial catfishing",
-      "term_ko": "금융권 메기 넘어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융권 메기 넘어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=719925"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%EB%A9%94%EA%B8%B0%20%EB%84%98%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%EB%A9%94%EA%B8%B0%20%EB%84%98%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=719925",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Beyond Financial Catfishing",
+      "term_ko": "금융권 메기 넘어"
     },
     {
-      "term": "KakaoToss Emergency",
-      "term_ko": "카카오 토스 비상",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "카카오 토스 비상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=719925"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%86%A0%EC%8A%A4%20%EB%B9%84%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%86%A0%EC%8A%A4%20%EB%B9%84%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=719925",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kakaotoss Emergency",
+      "term_ko": "카카오 토스 비상"
     },
     {
-      "term": "Productive financial competition",
-      "term_ko": "생산적 금융 경쟁",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "생산적 금융 경쟁",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5%20%EA%B2%BD%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5%20%EA%B2%BD%EC%9F%81"
-      },
-      "top_headlines": [
-        {
-          "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Productive Financial Competition",
+      "term_ko": "생산적 금융 경쟁"
     },
     {
       "term": "Ho Ho Financial Stocks Smile",
-      "term_ko": "호호 금융주가 웃는다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "호호 금융주가 웃는다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "잇따른 정책 호재에 ‘호호’…금융주가 웃는다",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101617?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%B8%ED%98%B8%20%EA%B8%88%EC%9C%B5%EC%A3%BC%EA%B0%80%20%EC%9B%83%EB%8A%94%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%B8%ED%98%B8%20%EA%B8%88%EC%9C%B5%EC%A3%BC%EA%B0%80%20%EC%9B%83%EB%8A%94%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "잇따른 정책 호재에 ‘호호’…금융주가 웃는다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101617?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "호호 금융주가 웃는다"
     },
     {
-      "term": "Tariffs on trade surpluses",
-      "term_ko": "무역 흑자에 관세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "무역 흑자에 관세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B4%EC%97%AD%20%ED%9D%91%EC%9E%90%EC%97%90%20%EA%B4%80%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B4%EC%97%AD%20%ED%9D%91%EC%9E%90%EC%97%90%20%EA%B4%80%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tariffs on Trade Surpluses",
+      "term_ko": "무역 흑자에 관세"
     },
     {
-      "term": "The deal is done, martial law",
-      "term_ko": "협상도 마무리됐는데 계엄",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "협상도 마무리됐는데 계엄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%91%EC%83%81%EB%8F%84%20%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%90%90%EB%8A%94%EB%8D%B0%20%EA%B3%84%EC%97%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%91%EC%83%81%EB%8F%84%20%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%90%90%EB%8A%94%EB%8D%B0%20%EA%B3%84%EC%97%84"
-      },
-      "top_headlines": [
-        {
-          "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Deal Is Done, Martial Law",
+      "term_ko": "협상도 마무리됐는데 계엄"
     },
     {
-      "term": "Why exchange rates are tight",
-      "term_ko": "환율 바짝 왜",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 바짝 왜",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EB%B0%94%EC%A7%9D%20%EC%99%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EB%B0%94%EC%A7%9D%20%EC%99%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Why Exchange Rates Are Tight",
+      "term_ko": "환율 바짝 왜"
     },
     {
-      "term": "The value of the cod set went up, but the",
-      "term_ko": "대구 전셋값 올랐지만",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대구 전셋값 올랐지만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
-              "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B5%AC%20%EC%A0%84%EC%85%8B%EA%B0%92%20%EC%98%AC%EB%9E%90%EC%A7%80%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B5%AC%20%EC%A0%84%EC%85%8B%EA%B0%92%20%EC%98%AC%EB%9E%90%EC%A7%80%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Value of the Cod Set Went Up, But the",
+      "term_ko": "대구 전셋값 올랐지만"
     },
     {
-      "term": "Home price decline anxiety",
-      "term_ko": "집값 하락 불안감",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집값 하락 불안감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
-              "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%ED%95%98%EB%9D%BD%20%EB%B6%88%EC%95%88%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%ED%95%98%EB%9D%BD%20%EB%B6%88%EC%95%88%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Home Price Decline Anxiety",
+      "term_ko": "집값 하락 불안감"
     },
     {
-      "term": "Authorities are under the microscope",
-      "term_ko": "당국은 현미경",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "당국은 현미경",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=719925"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B9%EA%B5%AD%EC%9D%80%20%ED%98%84%EB%AF%B8%EA%B2%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B9%EA%B5%AD%EC%9D%80%20%ED%98%84%EB%AF%B8%EA%B2%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=719925",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Authorities Are Under the Microscope",
+      "term_ko": "당국은 현미경"
     },
     {
-      "term": "Deteriorating funding situation",
-      "term_ko": "자금사정 악화",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자금사정 악화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국내 수출 대기업 27% \"자금사정 악화\"",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%EC%82%AC%EC%A0%95%20%EC%95%85%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%EC%82%AC%EC%A0%95%20%EC%95%85%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 수출 대기업 27% \"자금사정 악화\"",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Deteriorating Funding Situation",
+      "term_ko": "자금사정 악화"
     },
     {
-      "term": "Exchange rates for National Insurance alone",
-      "term_ko": "국민연금만으론 환율",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국민연금만으론 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
-              "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%EB%A7%8C%EC%9C%BC%EB%A1%A0%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%EB%A7%8C%EC%9C%BC%EB%A1%A0%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rates for National Insurance Alone",
+      "term_ko": "국민연금만으론 환율"
     },
     {
-      "term": "Anything less is difficult",
-      "term_ko": "이하는 어려워",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이하는 어려워",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
-              "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%95%98%EB%8A%94%20%EC%96%B4%EB%A0%A4%EC%9B%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%95%98%EB%8A%94%20%EC%96%B4%EB%A0%A4%EC%9B%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Anything Less Is Difficult",
+      "term_ko": "이하는 어려워"
     },
     {
       "term": "Upbit Operator Pushes",
-      "term_ko": "업비트 운영자 푸시",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Upbit Operator Pushes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Upbit%20Operator%20Pushes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Upbit%20Operator%20Pushes"
-      },
-      "top_headlines": [
-        {
-          "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "업비트 운영자 푸시"
     },
     {
       "term": "Won Sharply Rises",
-      "term_ko": "원화 급등",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Won Sharply Rises",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
-              "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Won%20Sharply%20Rises",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Won%20Sharply%20Rises"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "원화 급등"
     },
     {
       "term": "Amazon Prime Air",
-      "term_ko": "아마존 프라임 에어",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Amazon Prime Air",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Amazon Prime Air Drone Under Federal Investigation After Cable-Severing I...",
-              "link": "https://www.econotimes.com/Amazon-Prime-Air-Drone-Under-Federal-Investigation-After-Cable-Severing-Incident-in-Texas-1727003"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Amazon%20Prime%20Air",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Amazon%20Prime%20Air"
-      },
-      "top_headlines": [
-        {
-          "title": "Amazon Prime Air Drone Under Federal Investigation After Cable-Severing I...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Amazon-Prime-Air-Drone-Under-Federal-Investigation-After-Cable-Severing-Incident-in-Texas-1727003",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "아마존 프라임 에어"
     },
     {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
     },
     {
       "term": "Heavy Penalties",
-      "term_ko": "무거운 처벌",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Heavy Penalties",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Heavy%20Penalties",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Heavy%20Penalties"
-      },
-      "top_headlines": [
-        {
-          "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "무거운 처벌"
     },
     {
       "term": "Federal Investigation",
-      "term_ko": "연방 조사",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Federal Investigation",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Amazon Prime Air Drone Under Federal Investigation After Cable-Severing I...",
-              "link": "https://www.econotimes.com/Amazon-Prime-Air-Drone-Under-Federal-Investigation-After-Cable-Severing-Incident-in-Texas-1727003"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Federal%20Investigation",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Federal%20Investigation"
-      },
-      "top_headlines": [
-        {
-          "title": "Amazon Prime Air Drone Under Federal Investigation After Cable-Severing I...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Amazon-Prime-Air-Drone-Under-Federal-Investigation-After-Cable-Severing-Incident-in-Texas-1727003",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연방 조사"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-26T21:43:23+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-26T12:44:58.820Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-26T21:43:23+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Rate Cut Hopes",
+      "term_ko": "금리 인하 희망"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-26T21:43:23+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-26T21:43:23+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Broadcom Ai Chips",
+      "term_ko": "브로드컴 AI 칩"
+    },
+    {
+      "term": "Goldman Sachs Price Target of $435",
+      "term_ko": "골드만삭스 목표가 435달러"
+    },
+    {
+      "term": "Small Business Loan Rates Month 5",
+      "term_ko": "중소기업 대출금리 5개월째"
+    },
+    {
+      "term": "Down 3% Per Year",
+      "term_ko": "하락 연 3%대"
+    },
+    {
+      "term": "27% of Large Exporters",
+      "term_ko": "수출 대기업 27%"
+    },
+    {
+      "term": "Defense Limit 1400s",
+      "term_ko": "방어 한계 1400원대"
+    },
+    {
+      "term": "Beyond Financial Catfishing",
+      "term_ko": "금융권 메기 넘어"
+    },
+    {
+      "term": "Kakaotoss Emergency",
+      "term_ko": "카카오 토스 비상"
+    },
+    {
+      "term": "Productive Financial Competition",
+      "term_ko": "생산적 금융 경쟁"
+    },
+    {
+      "term": "Ho Ho Financial Stocks Smile",
+      "term_ko": "호호 금융주가 웃는다"
+    },
+    {
+      "term": "Tariffs on Trade Surpluses",
+      "term_ko": "무역 흑자에 관세"
+    },
+    {
+      "term": "The Deal Is Done, Martial Law",
+      "term_ko": "협상도 마무리됐는데 계엄"
+    },
+    {
+      "term": "Why Exchange Rates Are Tight",
+      "term_ko": "환율 바짝 왜"
+    },
+    {
+      "term": "The Value of the Cod Set Went Up, But the",
+      "term_ko": "대구 전셋값 올랐지만"
+    },
+    {
+      "term": "Home Price Decline Anxiety",
+      "term_ko": "집값 하락 불안감"
+    },
+    {
+      "term": "Authorities Are Under the Microscope",
+      "term_ko": "당국은 현미경"
+    },
+    {
+      "term": "Deteriorating Funding Situation",
+      "term_ko": "자금사정 악화"
+    },
+    {
+      "term": "Exchange Rates for National Insurance Alone",
+      "term_ko": "국민연금만으론 환율"
+    },
+    {
+      "term": "Anything Less Is Difficult",
+      "term_ko": "이하는 어려워"
+    },
+    {
+      "term": "Upbit Operator Pushes",
+      "term_ko": "업비트 운영자 푸시"
+    },
+    {
+      "term": "Won Sharply Rises",
+      "term_ko": "원화 급등"
+    },
+    {
+      "term": "Amazon Prime Air",
+      "term_ko": "아마존 프라임 에어"
+    },
+    {
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
+    },
+    {
+      "term": "Heavy Penalties",
+      "term_ko": "무거운 처벌"
+    },
+    {
+      "term": "Federal Investigation",
+      "term_ko": "연방 조사"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Rate Cut Hopes": {
+      "en": "Rate Cut Hopes",
+      "ko": "금리 인하 희망",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Broadcom Ai Chips": {
+      "en": "Broadcom Ai Chips",
+      "ko": "브로드컴 AI 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Goldman Sachs Price Target of $435": {
+      "en": "Goldman Sachs Price Target of $435",
+      "ko": "골드만삭스 목표가 435달러",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Small Business Loan Rates Month 5": {
+      "en": "Small Business Loan Rates Month 5",
+      "ko": "중소기업 대출금리 5개월째",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Down 3% Per Year": {
+      "en": "Down 3% Per Year",
+      "ko": "하락 연 3%대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "27% of Large Exporters": {
+      "en": "27% of Large Exporters",
+      "ko": "수출 대기업 27%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Defense Limit 1400s": {
+      "en": "Defense Limit 1400s",
+      "ko": "방어 한계 1400원대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Beyond Financial Catfishing": {
+      "en": "Beyond Financial Catfishing",
+      "ko": "금융권 메기 넘어",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Kakaotoss Emergency": {
+      "en": "Kakaotoss Emergency",
+      "ko": "카카오 토스 비상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Productive Financial Competition": {
+      "en": "Productive Financial Competition",
+      "ko": "생산적 금융 경쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Ho Ho Financial Stocks Smile": {
+      "en": "Ho Ho Financial Stocks Smile",
+      "ko": "호호 금융주가 웃는다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Tariffs on Trade Surpluses": {
+      "en": "Tariffs on Trade Surpluses",
+      "ko": "무역 흑자에 관세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "The Deal Is Done, Martial Law": {
+      "en": "The Deal Is Done, Martial Law",
+      "ko": "협상도 마무리됐는데 계엄",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Why Exchange Rates Are Tight": {
+      "en": "Why Exchange Rates Are Tight",
+      "ko": "환율 바짝 왜",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "The Value of the Cod Set Went Up, But the": {
+      "en": "The Value of the Cod Set Went Up, But the",
+      "ko": "대구 전셋값 올랐지만",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Home Price Decline Anxiety": {
+      "en": "Home Price Decline Anxiety",
+      "ko": "집값 하락 불안감",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.514Z"
+    },
+    "Authorities Are Under the Microscope": {
+      "en": "Authorities Are Under the Microscope",
+      "ko": "당국은 현미경",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Deteriorating Funding Situation": {
+      "en": "Deteriorating Funding Situation",
+      "ko": "자금사정 악화",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Exchange Rates for National Insurance Alone": {
+      "en": "Exchange Rates for National Insurance Alone",
+      "ko": "국민연금만으론 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Anything Less Is Difficult": {
+      "en": "Anything Less Is Difficult",
+      "ko": "이하는 어려워",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Upbit Operator Pushes": {
+      "en": "Upbit Operator Pushes",
+      "ko": "업비트 운영자 푸시",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Won Sharply Rises": {
+      "en": "Won Sharply Rises",
+      "ko": "원화 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Amazon Prime Air": {
+      "en": "Amazon Prime Air",
+      "ko": "아마존 프라임 에어",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Lead Seoul": {
+      "en": "Lead Seoul",
+      "ko": "LEAD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Heavy Penalties": {
+      "en": "Heavy Penalties",
+      "ko": "무거운 처벌",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Federal Investigation": {
+      "en": "Federal Investigation",
+      "ko": "연방 조사",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-26T18:25:00.515Z"
     }
   }
 }
