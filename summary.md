@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-11-26T21:43:15+09:00 (KST)**
+- Generated: **2025-11-27T03:27:19+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -110,7 +110,7 @@
 
 **두산** (000150.KS)
 
-- News (7d): **729** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- News (7d): **734** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
 - Returns: 5d **-5.8%**, 20d **-12.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -277,7 +277,7 @@
 **Lilly (Eli)** (LLY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.8%**, 20d **35.3%**; volatility (20d): **unknown**
+- Returns: 5d **5.4%**, 20d **35.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Lilly%20(Eli)
@@ -311,7 +311,7 @@
 **Gartner** (IT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.0%**, 20d **-6.9%**; volatility (20d): **unknown**
+- Returns: 5d **3.1%**, 20d **-6.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Gartner
@@ -319,7 +319,7 @@
 **NetApp** (NTAP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.8%**, 20d **-3.8%**; volatility (20d): **unknown**
+- Returns: 5d **4.4%**, 20d **-2.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=NetApp
@@ -335,7 +335,7 @@
 **Universal Health Services** (UHS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.5%**, 20d **11.1%**; volatility (20d): **unknown**
+- Returns: 5d **7.3%**, 20d **8.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Universal%20Health%20Services
