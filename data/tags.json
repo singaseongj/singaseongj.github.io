@@ -1,107 +1,156 @@
 {
   "date": "2025-11-26",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "ACM Research Industry",
-      "term_ko": "ACM 리서치 업계",
+      "term": "Rate Cut Hopes",
+      "term_ko": "금리 인하 희망",
+      "significance_score": 532,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Rate Cut Hopes",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
+              "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104"
+            },
+            {
+              "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
+              "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate%20Cut%20Hopes",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate%20Cut%20Hopes"
+      },
+      "top_headlines": [
+        {
+          "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Broadcom AI chips",
+      "term_ko": "브로드컴 AI 칩",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "ACM 리서치 업계",
+        "query": "브로드컴 AI 칩",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-11-25",
+              "timestamp": 1763996400000,
+              "value": 100
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "ACM 리서치, 업계 선도적인 UV 경화 및 온도 균일성을 제공하는 첨단 Ul...",
-              "link": "https://kbench.com/?q=node/273687"
+              "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
+              "link": "https://www.newspim.com/news/view/20251126001371"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ACM%20%EB%A6%AC%EC%84%9C%EC%B9%98%20%EC%97%85%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ACM%20%EB%A6%AC%EC%84%9C%EC%B9%98%20%EC%97%85%EA%B3%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4%20AI%20%EC%B9%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4%20AI%20%EC%B9%A9"
       },
       "top_headlines": [
         {
-          "title": "ACM 리서치, 업계 선도적인 UV 경화 및 온도 균일성을 제공하는 첨단 Ul...",
+          "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
           "summary": "",
-          "link": "https://kbench.com/?q=node/273687",
+          "link": "https://www.newspim.com/news/view/20251126001371",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ]
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.021862,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1763996400000
+      }
     },
     {
-      "term": "Leading UV curing",
-      "term_ko": "선도적인 UV 경화",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "선도적인 UV 경화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "ACM 리서치, 업계 선도적인 UV 경화 및 온도 균일성을 제공하는 첨단 Ul...",
-              "link": "https://kbench.com/?q=node/273687"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EB%8F%84%EC%A0%81%EC%9D%B8%20UV%20%EA%B2%BD%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EB%8F%84%EC%A0%81%EC%9D%B8%20UV%20%EA%B2%BD%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "ACM 리서치, 업계 선도적인 UV 경화 및 온도 균일성을 제공하는 첨단 Ul...",
-          "summary": "",
-          "link": "https://kbench.com/?q=node/273687",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Anatomy ② Alternative investments 30%",
-      "term_ko": "해부② 대체투자 30%",
+      "term": "Goldman Sachs price target of $435",
+      "term_ko": "골드만삭스 목표가 435달러",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "해부② 대체투자 30%",
+        "query": "골드만삭스 목표가 435달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[노란우산 해부]② 대체투자 30% 확대에도 공정가치 외부 검증 '1건' 불과",
-              "link": "https://n.news.naver.com/mnews/article/293/0000075579?sid=101"
+              "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
+              "link": "https://www.newspim.com/news/view/20251126001371"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%B4%EB%B6%80%E2%91%A1%20%EB%8C%80%EC%B2%B4%ED%88%AC%EC%9E%90%2030%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%B4%EB%B6%80%E2%91%A1%20%EB%8C%80%EC%B2%B4%ED%88%AC%EC%9E%90%2030%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A8%EB%93%9C%EB%A7%8C%EC%82%AD%EC%8A%A4%20%EB%AA%A9%ED%91%9C%EA%B0%80%20435%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A8%EB%93%9C%EB%A7%8C%EC%82%AD%EC%8A%A4%20%EB%AA%A9%ED%91%9C%EA%B0%80%20435%EB%8B%AC%EB%9F%AC"
       },
       "top_headlines": [
         {
-          "title": "[노란우산 해부]② 대체투자 30% 확대에도 공정가치 외부 검증 '1건' 불과",
+          "title": "브로드컴, AI 칩 성장세 업고 주가 급등... 골드만삭스 목표가 435달러 상...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/293/0000075579?sid=101",
+          "link": "https://www.newspim.com/news/view/20251126001371",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -109,34 +158,36 @@
       ]
     },
     {
-      "term": "1 external verification",
-      "term_ko": "외부 검증 1건",
+      "term": "Small Business Loan Rates Month 5",
+      "term_ko": "중소기업 대출금리 5개월째",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "외부 검증 1건",
+        "query": "중소기업 대출금리 5개월째",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[노란우산 해부]② 대체투자 30% 확대에도 공정가치 외부 검증 '1건' 불과",
-              "link": "https://n.news.naver.com/mnews/article/293/0000075579?sid=101"
+              "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
+              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EB%B6%80%20%EA%B2%80%EC%A6%9D%201%EA%B1%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EB%B6%80%20%EA%B2%80%EC%A6%9D%201%EA%B1%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%205%EA%B0%9C%EC%9B%94%EC%A7%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%205%EA%B0%9C%EC%9B%94%EC%A7%B8"
       },
       "top_headlines": [
         {
-          "title": "[노란우산 해부]② 대체투자 30% 확대에도 공정가치 외부 검증 '1건' 불과",
+          "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/293/0000075579?sid=101",
+          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -144,34 +195,36 @@
       ]
     },
     {
-      "term": "Funded by large corporations 27",
-      "term_ko": "자금줄 대기업 27%",
+      "term": "Down 3% per year",
+      "term_ko": "하락 연 3%대",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "자금줄 대기업 27%",
+        "query": "하락 연 3%대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "고환율·관세로 메마른 자금줄…대기업 27% \"작년보다 사정 악화\"",
-              "link": "https://n.news.naver.com/mnews/article/011/0004560374?sid=101"
+              "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
+              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%EC%A4%84%20%EB%8C%80%EA%B8%B0%EC%97%85%2027%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%EC%A4%84%20%EB%8C%80%EA%B8%B0%EC%97%85%2027%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EC%97%B0%203%25%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EC%97%B0%203%25%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "고환율·관세로 메마른 자금줄…대기업 27% \"작년보다 사정 악화\"",
+          "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004560374?sid=101",
+          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -179,34 +232,36 @@
       ]
     },
     {
-      "term": "4.24% for household loans",
-      "term_ko": "가계대출 금리 4.24%",
+      "term": "27% of large exporters",
+      "term_ko": "수출 대기업 27%",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "가계대출 금리 4.24%",
+        "query": "수출 대기업 27%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "은행 가계대출 금리 4.24%, 11개월 만에 상승 전환…주담대 3.98%",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=850849"
+              "title": "국내 수출 대기업 27% \"자금사정 악화\"",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%204.24%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%204.24%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%2027%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%2027%25"
       },
       "top_headlines": [
         {
-          "title": "은행 가계대출 금리 4.24%, 11개월 만에 상승 전환…주담대 3.98%",
+          "title": "국내 수출 대기업 27% \"자금사정 악화\"",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=850849",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -214,34 +269,36 @@
       ]
     },
     {
-      "term": "Up in 11 months",
-      "term_ko": "11개월 만에 상승",
+      "term": "Defense limit 1400s",
+      "term_ko": "방어 한계 1400원대",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "11개월 만에 상승",
+        "query": "방어 한계 1400원대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "은행 가계대출 금리 4.24%, 11개월 만에 상승 전환…주담대 3.98%",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=850849"
+              "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
+              "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EA%B0%9C%EC%9B%94%20%EB%A7%8C%EC%97%90%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EA%B0%9C%EC%9B%94%20%EB%A7%8C%EC%97%90%20%EC%83%81%EC%8A%B9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%A9%EC%96%B4%20%ED%95%9C%EA%B3%84%201400%EC%9B%90%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%A9%EC%96%B4%20%ED%95%9C%EA%B3%84%201400%EC%9B%90%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "은행 가계대출 금리 4.24%, 11개월 만에 상승 전환…주담대 3.98%",
+          "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=850849",
+          "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -249,69 +306,36 @@
       ]
     },
     {
-      "term": "3.98% of conversions",
-      "term_ko": "전환 주담대 3.98%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전환 주담대 3.98%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "은행 가계대출 금리 4.24%, 11개월 만에 상승 전환…주담대 3.98%",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=850849"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%ED%99%98%20%EC%A3%BC%EB%8B%B4%EB%8C%80%203.98%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%ED%99%98%20%EC%A3%BC%EB%8B%B4%EB%8C%80%203.98%25"
-      },
-      "top_headlines": [
-        {
-          "title": "은행 가계대출 금리 4.24%, 11개월 만에 상승 전환…주담대 3.98%",
-          "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=850849",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Novogratz Next-Generation Cryptocurrency",
-      "term_ko": "노보그라츠 차세대 암호화폐",
+      "term": "Beyond financial catfishing",
+      "term_ko": "금융권 메기 넘어",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "노보그라츠 차세대 암호화폐",
+        "query": "금융권 메기 넘어",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "노보그라츠, 차세대 암호화폐 빅웨이브로 '무기한 주식 선물' 지목",
-              "link": "http://coinreaders.com/200881"
+              "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
+              "link": "https://www.econovill.com/news/articleView.html?idxno=719925"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%B8%EB%B3%B4%EA%B7%B8%EB%9D%BC%EC%B8%A0%20%EC%B0%A8%EC%84%B8%EB%8C%80%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%B8%EB%B3%B4%EA%B7%B8%EB%9D%BC%EC%B8%A0%20%EC%B0%A8%EC%84%B8%EB%8C%80%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%EB%A9%94%EA%B8%B0%20%EB%84%98%EC%96%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%EB%A9%94%EA%B8%B0%20%EB%84%98%EC%96%B4"
       },
       "top_headlines": [
         {
-          "title": "노보그라츠, 차세대 암호화폐 빅웨이브로 '무기한 주식 선물' 지목",
+          "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
           "summary": "",
-          "link": "http://coinreaders.com/200881",
+          "link": "https://www.econovill.com/news/articleView.html?idxno=719925",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -319,34 +343,36 @@
       ]
     },
     {
-      "term": "Perpetual Stock with Big Wave",
-      "term_ko": "빅웨이브로 무기한 주식",
+      "term": "KakaoToss Emergency",
+      "term_ko": "카카오 토스 비상",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "빅웨이브로 무기한 주식",
+        "query": "카카오 토스 비상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "노보그라츠, 차세대 암호화폐 빅웨이브로 '무기한 주식 선물' 지목",
-              "link": "http://coinreaders.com/200881"
+              "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
+              "link": "https://www.econovill.com/news/articleView.html?idxno=719925"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%85%EC%9B%A8%EC%9D%B4%EB%B8%8C%EB%A1%9C%20%EB%AC%B4%EA%B8%B0%ED%95%9C%20%EC%A3%BC%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%85%EC%9B%A8%EC%9D%B4%EB%B8%8C%EB%A1%9C%20%EB%AC%B4%EA%B8%B0%ED%95%9C%20%EC%A3%BC%EC%8B%9D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%86%A0%EC%8A%A4%20%EB%B9%84%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%B4%EC%B9%B4%EC%98%A4%20%ED%86%A0%EC%8A%A4%20%EB%B9%84%EC%83%81"
       },
       "top_headlines": [
         {
-          "title": "노보그라츠, 차세대 암호화폐 빅웨이브로 '무기한 주식 선물' 지목",
+          "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
           "summary": "",
-          "link": "http://coinreaders.com/200881",
+          "link": "https://www.econovill.com/news/articleView.html?idxno=719925",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -354,34 +380,36 @@
       ]
     },
     {
-      "term": "Exporting Large Enterprises High Exchange Rates - Tariffs",
-      "term_ko": "수출 대기업 고환율•관세",
+      "term": "Productive financial competition",
+      "term_ko": "생산적 금융 경쟁",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "수출 대기업 고환율•관세",
+        "query": "생산적 금융 경쟁",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "“수출 대기업, 고환율•관세 장벽에 자금 사정 경고등”",
-              "link": "https://www.viva100.com/article/20251126500552"
+              "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
+              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%20%EA%B3%A0%ED%99%98%EC%9C%A8%E2%80%A2%EA%B4%80%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%20%EA%B3%A0%ED%99%98%EC%9C%A8%E2%80%A2%EA%B4%80%EC%84%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5%20%EA%B2%BD%EC%9F%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5%20%EA%B2%BD%EC%9F%81"
       },
       "top_headlines": [
         {
-          "title": "“수출 대기업, 고환율•관세 장벽에 자금 사정 경고등”",
+          "title": "중소기업 대출금리 5개월째 하락 연 3%대…'생산적 금융' 경쟁 영향",
           "summary": "",
-          "link": "https://www.viva100.com/article/20251126500552",
+          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285112",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -389,34 +417,36 @@
       ]
     },
     {
-      "term": "Funding barriers",
-      "term_ko": "장벽에 자금 사정",
+      "term": "Ho Ho Financial Stocks Smile",
+      "term_ko": "호호 금융주가 웃는다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "장벽에 자금 사정",
+        "query": "호호 금융주가 웃는다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "“수출 대기업, 고환율•관세 장벽에 자금 사정 경고등”",
-              "link": "https://www.viva100.com/article/20251126500552"
+              "title": "잇따른 정책 호재에 ‘호호’…금융주가 웃는다",
+              "link": "https://n.news.naver.com/mnews/article/024/0000101617?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EB%B2%BD%EC%97%90%20%EC%9E%90%EA%B8%88%20%EC%82%AC%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EB%B2%BD%EC%97%90%20%EC%9E%90%EA%B8%88%20%EC%82%AC%EC%A0%95"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%B8%ED%98%B8%20%EA%B8%88%EC%9C%B5%EC%A3%BC%EA%B0%80%20%EC%9B%83%EB%8A%94%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%B8%ED%98%B8%20%EA%B8%88%EC%9C%B5%EC%A3%BC%EA%B0%80%20%EC%9B%83%EB%8A%94%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "“수출 대기업, 고환율•관세 장벽에 자금 사정 경고등”",
+          "title": "잇따른 정책 호재에 ‘호호’…금융주가 웃는다",
           "summary": "",
-          "link": "https://www.viva100.com/article/20251126500552",
+          "link": "https://n.news.naver.com/mnews/article/024/0000101617?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -424,34 +454,36 @@
       ]
     },
     {
-      "term": "Half of large exporters",
-      "term_ko": "수출 대기업 절반",
+      "term": "Tariffs on trade surpluses",
+      "term_ko": "무역 흑자에 관세",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "수출 대기업 절반",
+        "query": "무역 흑자에 관세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "수출 대기업 절반 “올해 자금사정 작년과 비슷”⋯악화 응답이 개선보...",
-              "link": "https://www.kbmaeil.com/article/20251126500400"
+              "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
+              "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%20%EC%A0%88%EB%B0%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%B6%9C%20%EB%8C%80%EA%B8%B0%EC%97%85%20%EC%A0%88%EB%B0%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B4%EC%97%AD%20%ED%9D%91%EC%9E%90%EC%97%90%20%EA%B4%80%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B4%EC%97%AD%20%ED%9D%91%EC%9E%90%EC%97%90%20%EA%B4%80%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "수출 대기업 절반 “올해 자금사정 작년과 비슷”⋯악화 응답이 개선보...",
+          "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
           "summary": "",
-          "link": "https://www.kbmaeil.com/article/20251126500400",
+          "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -459,34 +491,36 @@
       ]
     },
     {
-      "term": "Drying up with high exchange rate tariffs",
-      "term_ko": "고환율 관세로 메마른",
+      "term": "The deal is done, martial law",
+      "term_ko": "협상도 마무리됐는데 계엄",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고환율 관세로 메마른",
+        "query": "협상도 마무리됐는데 계엄",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "고환율·관세로 메마른 자금줄…대기업 27% \"작년보다 사정 악화\"",
-              "link": "https://n.news.naver.com/mnews/article/011/0004560374?sid=101"
+              "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
+              "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EA%B4%80%EC%84%B8%EB%A1%9C%20%EB%A9%94%EB%A7%88%EB%A5%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EA%B4%80%EC%84%B8%EB%A1%9C%20%EB%A9%94%EB%A7%88%EB%A5%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%91%EC%83%81%EB%8F%84%20%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%90%90%EB%8A%94%EB%8D%B0%20%EA%B3%84%EC%97%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%91%EC%83%81%EB%8F%84%20%EB%A7%88%EB%AC%B4%EB%A6%AC%EB%90%90%EB%8A%94%EB%8D%B0%20%EA%B3%84%EC%97%84"
       },
       "top_headlines": [
         {
-          "title": "고환율·관세로 메마른 자금줄…대기업 27% \"작년보다 사정 악화\"",
+          "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004560374?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -494,34 +528,36 @@
       ]
     },
     {
-      "term": "Things are worse than last year",
-      "term_ko": "작년보다 사정 악화",
+      "term": "Why exchange rates are tight",
+      "term_ko": "환율 바짝 왜",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "작년보다 사정 악화",
+        "query": "환율 바짝 왜",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "고환율·관세로 메마른 자금줄…대기업 27% \"작년보다 사정 악화\"",
-              "link": "https://n.news.naver.com/mnews/article/011/0004560374?sid=101"
+              "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
+              "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%91%EB%85%84%EB%B3%B4%EB%8B%A4%20%EC%82%AC%EC%A0%95%20%EC%95%85%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%91%EB%85%84%EB%B3%B4%EB%8B%A4%20%EC%82%AC%EC%A0%95%20%EC%95%85%ED%99%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EB%B0%94%EC%A7%9D%20%EC%99%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EB%B0%94%EC%A7%9D%20%EC%99%9C"
       },
       "top_headlines": [
         {
-          "title": "고환율·관세로 메마른 자금줄…대기업 27% \"작년보다 사정 악화\"",
+          "title": "무역 흑자에 관세 협상도 마무리됐는데…‘계엄 환율’ 바짝 왜?",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004560374?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/024/0000101618?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -529,34 +565,36 @@
       ]
     },
     {
-      "term": "Standard Chartered looks good on the outside, but the",
-      "term_ko": "스탠다드차타드 겉은 멀쩡하지만",
+      "term": "The value of the cod set went up, but the",
+      "term_ko": "대구 전셋값 올랐지만",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "스탠다드차타드 겉은 멀쩡하지만",
+        "query": "대구 전셋값 올랐지만",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "스탠다드차타드, 겉은 멀쩡하지만 속은 불안…구조적 리스크, SC제일은...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=333538"
+              "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
+              "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C%EC%B0%A8%ED%83%80%EB%93%9C%20%EA%B2%89%EC%9D%80%20%EB%A9%80%EC%A9%A1%ED%95%98%EC%A7%80%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C%EC%B0%A8%ED%83%80%EB%93%9C%20%EA%B2%89%EC%9D%80%20%EB%A9%80%EC%A9%A1%ED%95%98%EC%A7%80%EB%A7%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B5%AC%20%EC%A0%84%EC%85%8B%EA%B0%92%20%EC%98%AC%EB%9E%90%EC%A7%80%EB%A7%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B5%AC%20%EC%A0%84%EC%85%8B%EA%B0%92%20%EC%98%AC%EB%9E%90%EC%A7%80%EB%A7%8C"
       },
       "top_headlines": [
         {
-          "title": "스탠다드차타드, 겉은 멀쩡하지만 속은 불안…구조적 리스크, SC제일은...",
+          "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
           "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=333538",
+          "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -564,34 +602,36 @@
       ]
     },
     {
-      "term": "Deceived Anxiety Structural",
-      "term_ko": "속은 불안 구조적",
+      "term": "Home price decline anxiety",
+      "term_ko": "집값 하락 불안감",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "속은 불안 구조적",
+        "query": "집값 하락 불안감",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "스탠다드차타드, 겉은 멀쩡하지만 속은 불안…구조적 리스크, SC제일은...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=333538"
+              "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
+              "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%EC%9D%80%20%EB%B6%88%EC%95%88%20%EA%B5%AC%EC%A1%B0%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%EC%9D%80%20%EB%B6%88%EC%95%88%20%EA%B5%AC%EC%A1%B0%EC%A0%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%ED%95%98%EB%9D%BD%20%EB%B6%88%EC%95%88%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%ED%95%98%EB%9D%BD%20%EB%B6%88%EC%95%88%EA%B0%90"
       },
       "top_headlines": [
         {
-          "title": "스탠다드차타드, 겉은 멀쩡하지만 속은 불안…구조적 리스크, SC제일은...",
+          "title": "대구 전셋값 올랐지만···\"집값 하락 불안감 여전\"",
           "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=333538",
+          "link": "https://n.news.naver.com/mnews/article/657/0000045450?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -599,69 +639,36 @@
       ]
     },
     {
-      "term": "Await Key PCE",
-      "term_ko": "대기 키 PCE",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Await Key PCE",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as Investors Await Key PCE Inflation Data",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Investors-Await-Key-PCE-Inflation-Data-1726991"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Await%20Key%20PCE",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Await%20Key%20PCE"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as Investors Await Key PCE Inflation Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Investors-Await-Key-PCE-Inflation-Data-1726991",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Advanced",
-      "term_ko": "제공하는 첨단",
+      "term": "Authorities are under the microscope",
+      "term_ko": "당국은 현미경",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "제공하는 첨단",
+        "query": "당국은 현미경",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "ACM 리서치, 업계 선도적인 UV 경화 및 온도 균일성을 제공하는 첨단 Ul...",
-              "link": "https://kbench.com/?q=node/273687"
+              "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
+              "link": "https://www.econovill.com/news/articleView.html?idxno=719925"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94%20%EC%B2%A8%EB%8B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94%20%EC%B2%A8%EB%8B%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B9%EA%B5%AD%EC%9D%80%20%ED%98%84%EB%AF%B8%EA%B2%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B9%EA%B5%AD%EC%9D%80%20%ED%98%84%EB%AF%B8%EA%B2%BD"
       },
       "top_headlines": [
         {
-          "title": "ACM 리서치, 업계 선도적인 UV 경화 및 온도 균일성을 제공하는 첨단 Ul...",
+          "title": "\"금융권 메기 넘어 고래 등장\"... 카카오·토스 비상, 당국은 현미경 검...",
           "summary": "",
-          "link": "https://kbench.com/?q=node/273687",
+          "link": "https://www.econovill.com/news/articleView.html?idxno=719925",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -669,34 +676,36 @@
       ]
     },
     {
-      "term": "Nominate a gift",
-      "term_ko": "선물 지목",
+      "term": "Deteriorating funding situation",
+      "term_ko": "자금사정 악화",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "선물 지목",
+        "query": "자금사정 악화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "노보그라츠, 차세대 암호화폐 빅웨이브로 '무기한 주식 선물' 지목",
-              "link": "http://coinreaders.com/200881"
+              "title": "국내 수출 대기업 27% \"자금사정 악화\"",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EB%AC%BC%20%EC%A7%80%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EB%AC%BC%20%EC%A7%80%EB%AA%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%EC%82%AC%EC%A0%95%20%EC%95%85%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%EC%82%AC%EC%A0%95%20%EC%95%85%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "노보그라츠, 차세대 암호화폐 빅웨이브로 '무기한 주식 선물' 지목",
+          "title": "국내 수출 대기업 27% \"자금사정 악화\"",
           "summary": "",
-          "link": "http://coinreaders.com/200881",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=530957",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -704,34 +713,147 @@
       ]
     },
     {
-      "term": "Fair value at scale",
-      "term_ko": "확대에도 공정가치",
+      "term": "Exchange rates for National Insurance alone",
+      "term_ko": "국민연금만으론 환율",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "확대에도 공정가치",
+        "query": "국민연금만으론 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[노란우산 해부]② 대체투자 30% 확대에도 공정가치 외부 검증 '1건' 불과",
-              "link": "https://n.news.naver.com/mnews/article/293/0000075579?sid=101"
+              "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
+              "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EB%8C%80%EC%97%90%EB%8F%84%20%EA%B3%B5%EC%A0%95%EA%B0%80%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EB%8C%80%EC%97%90%EB%8F%84%20%EA%B3%B5%EC%A0%95%EA%B0%80%EC%B9%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%EB%A7%8C%EC%9C%BC%EB%A1%A0%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%EB%A7%8C%EC%9C%BC%EB%A1%A0%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "[노란우산 해부]② 대체투자 30% 확대에도 공정가치 외부 검증 '1건' 불과",
+          "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/293/0000075579?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Anything less is difficult",
+      "term_ko": "이하는 어려워",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "이하는 어려워",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
+              "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%95%98%EB%8A%94%20%EC%96%B4%EB%A0%A4%EC%9B%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%95%98%EB%8A%94%20%EC%96%B4%EB%A0%A4%EC%9B%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "국민연금만으론 ‘환율 방어’ 한계…“1400원대 이하는 어려워”",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/032/0003411414?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Upbit Operator Pushes",
+      "term_ko": "업비트 운영자 푸시",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Upbit Operator Pushes",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
+              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Upbit%20Operator%20Pushes",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Upbit%20Operator%20Pushes"
+      },
+      "top_headlines": [
+        {
+          "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
+          "summary": "",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Won Sharply Rises",
+      "term_ko": "원화 급등",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Won Sharply Rises",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
+              "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Won%20Sharply%20Rises",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Won%20Sharply%20Rises"
+      },
+      "top_headlines": [
+        {
+          "title": "Seoul shares rise over 2 pct amid rate cut hopes; won sharply rises",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015763790?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -748,8 +870,10 @@
         "query": "Amazon Prime Air",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Amazon Prime Air Drone Under Federal Investigation After Cable-Severing I...",
@@ -774,34 +898,36 @@
       ]
     },
     {
-      "term": "Bain-Backed Entity Prepares",
-      "term_ko": "베인 지원 법인, 준비 완료",
-      "significance_score": 266,
+      "term": "LEAD Seoul",
+      "term_ko": "LEAD 서울",
+      "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Bain-Backed Entity Prepares",
+        "query": "LEAD Seoul",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Kioxia Shares Slide as Bain-Backed Entity Prepares $2 Billion Block Sale",
-              "link": "https://www.econotimes.com/Kioxia-Shares-Slide-as-Bain-Backed-Entity-Prepares-2-Billion-Block-Sale-1727001"
+              "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
+              "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bain-Backed%20Entity%20Prepares",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bain-Backed%20Entity%20Prepares"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
       },
       "top_headlines": [
         {
-          "title": "Kioxia Shares Slide as Bain-Backed Entity Prepares $2 Billion Block Sale",
+          "title": "(LEAD) Seoul shares rise over 2 pct amid rate cut hopes; won sharply rise...",
           "summary": "",
-          "link": "https://www.econotimes.com/Kioxia-Shares-Slide-as-Bain-Backed-Entity-Prepares-2-Billion-Block-Sale-1727001",
+          "link": "https://n.news.naver.com/mnews/article/001/0015763922?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -809,139 +935,36 @@
       ]
     },
     {
-      "term": "Billion Block Sale",
-      "term_ko": "10억 블록 판매",
-      "significance_score": 266,
+      "term": "Heavy Penalties",
+      "term_ko": "무거운 처벌",
+      "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Billion Block Sale",
+        "query": "Heavy Penalties",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Kioxia Shares Slide as Bain-Backed Entity Prepares $2 Billion Block Sale",
-              "link": "https://www.econotimes.com/Kioxia-Shares-Slide-as-Bain-Backed-Entity-Prepares-2-Billion-Block-Sale-1727001"
+              "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
+              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Billion%20Block%20Sale",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Billion%20Block%20Sale"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Heavy%20Penalties",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Heavy%20Penalties"
       },
       "top_headlines": [
         {
-          "title": "Kioxia Shares Slide as Bain-Backed Entity Prepares $2 Billion Block Sale",
+          "title": "Upbit Operator Pushes Back Against Heavy Penalties in Regulatory Crackdow...",
           "summary": "",
-          "link": "https://www.econotimes.com/Kioxia-Shares-Slide-as-Bain-Backed-Entity-Prepares-2-Billion-Block-Sale-1727001",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Weak U.S Data",
-      "term_ko": "약한 미국 데이터",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Weak U.S Data",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Asian Stocks Climb as Weak U.S. Data Fuels Fed Rate Cut Expectations",
-              "link": "https://www.econotimes.com/Asian-Stocks-Climb-as-Weak-US-Data-Fuels-Fed-Rate-Cut-Expectations-1726996"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Weak%20U.S%20Data",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Weak%20U.S%20Data"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Stocks Climb as Weak U.S. Data Fuels Fed Rate Cut Expectations",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stocks-Climb-as-Weak-US-Data-Fuels-Fed-Rate-Cut-Expectations-1726996",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Fuels Fed Rate",
-      "term_ko": "연료 공급 금리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fuels Fed Rate",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Asian Stocks Climb as Weak U.S. Data Fuels Fed Rate Cut Expectations",
-              "link": "https://www.econotimes.com/Asian-Stocks-Climb-as-Weak-US-Data-Fuels-Fed-Rate-Cut-Expectations-1726996"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fuels%20Fed%20Rate",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fuels%20Fed%20Rate"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Stocks Climb as Weak U.S. Data Fuels Fed Rate Cut Expectations",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stocks-Climb-as-Weak-US-Data-Fuels-Fed-Rate-Cut-Expectations-1726996",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Wall Street Futures",
-      "term_ko": "월스트리트 선물",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as Investors Await Key PCE Inflation Data",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Investors-Await-Key-PCE-Inflation-Data-1726991"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as Investors Await Key PCE Inflation Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Investors-Await-Key-PCE-Inflation-Data-1726991",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=40151",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -958,8 +981,10 @@
         "query": "Federal Investigation",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Amazon Prime Air Drone Under Federal Investigation After Cable-Severing I...",
@@ -984,98 +1009,98 @@
       ]
     },
     {
-      "term": "Cut Expectations",
-      "term_ko": "기대치 낮추기",
-      "significance_score": 224,
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Cut Expectations",
+        "query": "AI chip demand surge",
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Asian Stocks Climb as Weak U.S. Data Fuels Fed Rate Cut Expectations",
-              "link": "https://www.econotimes.com/Asian-Stocks-Climb-as-Weak-US-Data-Fuels-Fed-Rate-Cut-Expectations-1726996"
-            }
+          "matches": 0,
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Cut%20Expectations",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Cut%20Expectations"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
-      "top_headlines": [
-        {
-          "title": "Asian Stocks Climb as Weak U.S. Data Fuels Fed Rate Cut Expectations",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stocks-Climb-as-Weak-US-Data-Fuels-Fed-Rate-Cut-Expectations-1726996",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "top_headlines": []
     },
     {
-      "term": "Inflation Data",
-      "term_ko": "인플레이션 데이터",
-      "significance_score": 224,
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Inflation Data",
+        "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-26T15:32:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as Investors Await Key PCE Inflation Data",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Investors-Await-Key-PCE-Inflation-Data-1726991"
-            }
+          "matches": 0,
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20Data",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20Data"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
       },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as Investors Await Key PCE Inflation Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Investors-Await-Key-PCE-Inflation-Data-1726991",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 상승",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-11-26T21:43:23+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
         }
-      ]
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-11-26T06:34:13.338Z",
+    "generated_at": "2025-11-26T12:44:58.820Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-26T15:32:41+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-11-26T21:43:23+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-11-26T15:32:41+09:00",
-      "fallback_sources": [],
+      "last_updated": "2025-11-26T21:43:23+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-11-26T15:32:41+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2025-11-26T21:43:23+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
       }
     }
   }
