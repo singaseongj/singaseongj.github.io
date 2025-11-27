@@ -13,6 +13,11 @@
 const fs = require('fs');
 const path = require('path');
 
+/* --- NEW: Dependencies for Google Trends --- */
+const axios = require('axios');
+const xml2js = require('xml2js');
+/* ------------------------------------------- */
+
 const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID;
 const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET;
 const DEEPL_API_KEY = process.env.DEEPL_API_KEY || process.env.DEEPL_AUTH_KEY;
@@ -1001,6 +1006,38 @@ function sanitizeKeywordList(keywords, { minWords = 2, maxWords = 5 } = {}) {
   return enforceKeywordWordCount(cleaned, { minWords, maxWords });
 }
 
+/* -------------------- NEW: Google Trends Logic -------------------- */
+
+/**
+ * Fetches real-time trends from Google Trends (Korea)
+ * Returns a simplified list of high-priority keywords to "fortify" the stock list.
+ */
+async function fetchGoogleTrendsKeywords() {
+  console.log('📈 Fetching Real-time Google Trends...');
+  try {
+    const url = 'https://trends.google.co.kr/trends/trendingsearches/daily/rss?geo=KR';
+    const response = await axios.get(url, { timeout: 10000 });
+
+    const parser = new xml2js.Parser();
+    const result = await parser.parseStringPromise(response.data);
+    const items = result.rss.channel[0].item;
+
+    const trends = items.map((item) => {
+      const keyword = item.title[0];
+      return keyword;
+    });
+
+    console.log(`✅ Retrieved ${trends.length} raw trending keywords.`);
+
+    const cleanTrends = sanitizeKeywordList(trends, { minWords: 1, maxWords: 5 });
+
+    return cleanTrends;
+  } catch (error) {
+    console.warn(`⚠️ Failed to fetch Google Trends: ${error.message}`);
+    return [];
+  }
+}
+
 function extractKeywordsFromLLMResponse(rawText) {
   if (!rawText) return [];
 
@@ -1154,27 +1191,15 @@ async function fetchCerebrasKeywords({ desiredCount = SAMPLE_SIZE, prompt, allow
         return [];
       }
 
-      if (
-        allowAutoTruncate &&
-        attempt < maxAttempts &&
-        isContextLengthError(err) &&
-        promptToUse.length > CEREBRAS_MIN_DYNAMIC_TEXT
-      ) {
-        const nextLimit = Math.max(
-          CEREBRAS_MIN_DYNAMIC_TEXT,
-          Math.min(CEREBRAS_PROMPT_CHAR_LIMIT, Math.floor(promptToUse.length * 0.8)),
-        );
-        const trimmedPrompt = shrinkPromptForCerebras(promptToUse, nextLimit);
-        if (trimmedPrompt.length < promptToUse.length) {
-          console.warn(
-            `⚠️  Cerebras prompt too long (len=${promptToUse.length}). Retrying with ${trimmedPrompt.length} characters.`,
-          );
-          promptToUse = trimmedPrompt;
-          continue;
-        }
+      const isLengthError = isContextLengthError(err);
+
+      if (allowAutoTruncate && attempt < maxAttempts && isLengthError) {
+        console.warn('⚠️ Context length exceeded. Trimming prompt and retrying...');
+        promptToUse = shrinkPromptForCerebras(promptToUse);
+        continue;
       }
 
-      console.warn(`⚠️  Failed to retrieve keywords from Cerebras: ${err.message}`);
+      console.warn(`⚠️ Cerebras Error: ${err.message}`);
       return [];
     } finally {
       clearTimeout(timeoutId);
@@ -3067,12 +3092,71 @@ async function buildTags() {
   });
 }
 
-if (require.main === module) {
-  buildTags().catch((err) => {
-    console.error('❌ Generation failed:', err);
-    process.exitCode = 1;
-  });
+/**
+ * Aggregates keywords from LLM, Local Headlines, and Google Trends.
+ */
+async function gatherAllCandidates() {
+  const headlineData = await fetchOfflineHeadlineKeywords({ limit: 40 });
+  const headlineKeywords = headlineData.keywords || [];
+
+  const googleTrendsKeywords = await fetchGoogleTrendsKeywords();
+
+  let llmKeywords = [];
+  if (CEREBRAS_API_KEY) {
+    const promptText =
+      buildKeywordPrompt(30) +
+      '\n\nCONTEXT:\n' +
+      (localHeadlineContext.headlines || [])
+        .map((h) => h.title)
+        .join('\n')
+        .slice(0, 3000);
+
+    llmKeywords = await fetchCerebrasKeywords({
+      prompt: promptText,
+      desiredCount: 30,
+    });
+  }
+
+  const merged = [...googleTrendsKeywords, ...llmKeywords, ...headlineKeywords];
+
+  const deduped = dedupeKeywords(merged);
+
+  console.log(`\n🔥 Final Candidate Pool: ${deduped.length} keywords`);
+
+  console.log(`   - Google Trends: ${googleTrendsKeywords.length}`);
+  console.log(`   - LLM: ${llmKeywords.length}`);
+  console.log(`   - Local Headlines: ${headlineKeywords.length}`);
+
+  return deduped;
 }
 
-module.exports = { buildTags };
+async function main() {
+  console.log('🚀 Starting Keyword Extraction Pipeline...');
+
+  loadStopwords();
+
+  const candidates = await gatherAllCandidates();
+
+  const output = {
+    updateTime: new Date().toISOString(),
+    count: candidates.length,
+    keywords: candidates,
+  };
+
+  fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
+
+  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));
+  console.log(`✅ Saved results to ${OUTPUT_PATH}`);
+}
+
+if (require.main === module) {
+  main().catch((err) => console.error('Fatal Error:', err));
+}
+
+module.exports = {
+  buildTags,
+  fetchGoogleTrendsKeywords,
+  fetchCerebrasKeywords,
+  gatherAllCandidates,
+};
 
