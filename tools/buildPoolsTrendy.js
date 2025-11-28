@@ -609,6 +609,30 @@ for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
   }
 }
 
+function persistNameToSymbolBaseline() {
+  // Always re-seed the on-disk cache with authoritative mappings so it never
+  // regresses to "SYMBOL":"SYMBOL" style entries that lose the company name.
+  const merged = {};
+  const add = (k, v) => {
+    const nk = normalizeKey(k);
+    if (!nk || !v) return;
+    if (!merged[nk]) merged[nk] = v;
+  };
+
+  // 1) Index constituents (S&P 500 / Nasdaq-100 / KRX)
+  for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
+    add(sym, sym);
+    for (const nm of names) add(nm, sym);
+  }
+
+  // 2) Existing learned mappings + static TICKER_MAP
+  for (const [k, v] of Object.entries(NAME_TO_SYMBOL)) add(k, v);
+  for (const [k, v] of Object.entries(TICKER_MAP)) add(k, v);
+
+  Object.assign(NAME_TO_SYMBOL, merged);
+  saveNameToSymbol(merged);
+}
+
 function keyVariants(k) {
   const t = normalizeKey(k);
   const v = new Set([t]);
@@ -980,6 +1004,11 @@ Object.assign(NAME_TO_SYMBOL, {
     if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
   }
 })();
+
+// Refresh the persisted cache immediately so downstream mapping for S&P 500
+// and Nasdaq-100 always has real name→symbol pairs, even if a previous run
+// saved broken "SYMBOL":"SYMBOL" rows.
+persistNameToSymbolBaseline();
 
 // Build reverse lookup to convert tickers back to display names
 for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP })) {
