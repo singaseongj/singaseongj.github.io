@@ -183,10 +183,19 @@ async function main() {
   if (kospi200.length < 150) { console.log('[indexes] keep current KOSPI200 (parsed=', kospi200.length, ')'); kospi200 = current.kospi200; }
   if (kosdaq100.length < 80) { console.log('[indexes] keep current KOSDAQ100 (parsed=', kosdaq100.length, ')'); kosdaq100 = current.kosdaq100; }
 
-  sp500     = uniqBySymbol(sp500);
-  nasdaq100 = uniqBySymbol(nasdaq100);
-  kospi200  = uniqBySymbol(kospi200);
-  kosdaq100 = uniqBySymbol(kosdaq100);
+  const NAME_OVERRIDES = {
+    LULU: { nameShort: 'Lululemon' },
+    ODFL: { nameShort: 'Old Dominion Freight Line' },
+    ON: { nameShort: 'Onsemi' },
+    ORLY: { nameShort: "O'Reilly Automotive" }
+  };
+
+  const applyOverrides = list => list.map(r => ({ ...r, ...(NAME_OVERRIDES[r.symbol] || {}) }));
+
+  sp500     = uniqBySymbol(applyOverrides(sp500));
+  nasdaq100 = uniqBySymbol(applyOverrides(nasdaq100));
+  kospi200  = uniqBySymbol(applyOverrides(kospi200));
+  kosdaq100 = uniqBySymbol(applyOverrides(kosdaq100));
 
   const allSymbols = Array.from(new Set([
     ...sp500,
