@@ -609,6 +609,30 @@ for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
   }
 }
 
+function persistNameToSymbolBaseline() {
+  // Always re-seed the on-disk cache with authoritative mappings so it never
+  // regresses to "SYMBOL":"SYMBOL" style entries that lose the company name.
+  const merged = {};
+  const add = (k, v) => {
+    const nk = normalizeKey(k);
+    if (!nk || !v) return;
+    if (!merged[nk]) merged[nk] = v;
+  };
+
+  // 1) Index constituents (S&P 500 / Nasdaq-100 / KRX)
+  for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
+    add(sym, sym);
+    for (const nm of names) add(nm, sym);
+  }
+
+  // 2) Existing learned mappings + static TICKER_MAP
+  for (const [k, v] of Object.entries(NAME_TO_SYMBOL)) add(k, v);
+  for (const [k, v] of Object.entries(TICKER_MAP)) add(k, v);
+
+  Object.assign(NAME_TO_SYMBOL, merged);
+  saveNameToSymbol(merged);
+}
+
 function keyVariants(k) {
   const t = normalizeKey(k);
   const v = new Set([t]);
@@ -980,6 +1004,11 @@ Object.assign(NAME_TO_SYMBOL, {
     if (!(nk in NAME_TO_SYMBOL)) NAME_TO_SYMBOL[nk] = v;
   }
 })();
+
+// Refresh the persisted cache immediately so downstream mapping for S&P 500
+// and Nasdaq-100 always has real name→symbol pairs, even if a previous run
+// saved broken "SYMBOL":"SYMBOL" rows.
+persistNameToSymbolBaseline();
 
 // Build reverse lookup to convert tickers back to display names
 for (const [name, symbol] of Object.entries({ ...NAME_TO_SYMBOL, ...TICKER_MAP })) {
@@ -1863,8 +1892,58 @@ async function main(){
     const byName = {};
     const processed = new Set();
     await mapLimit(names, Math.max(1, Math.min(MAX_CONCURRENCY, DEMO_MODE ? 2 : MAX_CONCURRENCY)), async (name) => {
-      if (timeLeft() < GLOBAL_BUDGET_MS * FINAL_FRAC) return; // leave final budget
-      if (!budgetOk(800)) return; // skip if no time left
+      const budgetTight = timeLeft() < GLOBAL_BUDGET_MS * FINAL_FRAC || !budgetOk(800);
+      if (budgetTight) {
+        // When we are nearly out of time, still map tickers and hydrate lightweight
+        // fields from existing news features so US indices don't get skipped entirely.
+        const mappedOne = mapOne(name);
+        const sym = mappedOne?.sym;
+        const normSym = normIndexKey(sym || '');
+        const sectorGuess = INDEX_SECTOR[normSym] || byName[name]?.sector || null;
+        const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name];
+        const base = {
+          ret5:null, ret20:null, vol20:null, turnover:null, adv20:null, close:null,
+          newsCount:0, weightedCount:0, newsScore:0, sentiment:null,
+          naverPopularity:0, naverAsvi:null, naverSpike:null, naverPersist:false,
+          naverBreakdown:{ fromFeatures:0, fromTrends:0 }, naverCount:0, naverCountKO:0, naverCountEN:0,
+          blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false,
+          offHi:0, offLo:0, sym: sym || null, source:null, attempts:[], fetchMs:0,
+          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0,
+          posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0,
+          wikiViews:0, wikiScore:0, sector: sectorGuess, marketCap:null,
+          reputationScore:null, topKeywords:[], reputationHitIds:[],
+        };
+        if (nf) {
+          base.newsCount       = nf.count ?? base.newsCount;
+          base.weightedCount   = nf.weightedCount ?? base.weightedCount;
+          base.newsScore       = newsScoreFromFeatures(nf) ?? base.newsScore;
+          base.sentiment       = (typeof nf.sentiment === 'number' ? nf.sentiment : base.sentiment);
+          base.naverPopularity = nf.naverPopularity ?? base.naverPopularity;
+          base.naverAsvi       = nf.naverAsvi ?? base.naverAsvi;
+          base.naverSpike      = nf.naverSpike ?? base.naverSpike;
+          base.naverCount      = nf.naverCount ?? base.naverCount;
+          base.naverCountKO    = nf.naverCountKO ?? base.naverCountKO;
+          base.naverCountEN    = nf.naverCountEN ?? base.naverCountEN;
+          base.blogMentions    = nf.blogMentions ?? base.blogMentions;
+          base.polygonTrend    = nf.polygonTrend ?? base.polygonTrend;
+          base.nasdaqClose     = nf.nasdaqClose ?? base.nasdaqClose;
+          base.reputationScore = nf.reputationScore ?? base.reputationScore;
+          base.topKeywords     = nf.topKeywords ?? base.topKeywords;
+          base.reputationHitIds = nf.reputationHitIds ?? base.reputationHitIds;
+          base.posHits         = nf.posHits ?? base.posHits;
+          base.negHits         = nf.negHits ?? base.negHits;
+          base.yahooNewsCount  = nf.yahooNewsCount ?? base.yahooNewsCount;
+          base.investingNewsCount = nf.investingNewsCount ?? base.investingNewsCount;
+          base.hanwhaNewsCount = nf.hanwhaNewsCount ?? base.hanwhaNewsCount;
+          if (typeof nf.marketCap === 'number') base.marketCap = nf.marketCap;
+        }
+        sanitizeSignals(base);
+        byName[name] = base;
+        processed.add(name);
+        return;
+      }
+
+      // Normal path
       const mappedOne = OFFLINE ? null : mapOne(name);
       if (!mappedOne || !mappedOne.sym) {
         console.warn('[map] skip (no symbol):', name);
