@@ -582,18 +582,31 @@ function structuralPrior(sym){
 }
 
 const INDEX_SYMBOL_TO_NAME = {};
+const INDEX_SYMBOL_NAMES = {};
 const INDEX_MARKETCAP = {};
 for (const r of INDEX_ROWS) {
   const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
   if (!sym) continue;
-  if (r.name) INDEX_SYMBOL_TO_NAME[sym] = r.name;
+  const names = new Set();
+  if (r.name) names.add(r.name);
+  if (r.nameShort) names.add(r.nameShort);
+  if (Array.isArray(r.aliases)) {
+    for (const a of r.aliases) if (a) names.add(a);
+  }
+  if (names.size) {
+    if (!INDEX_SYMBOL_TO_NAME[sym]) INDEX_SYMBOL_TO_NAME[sym] = names.values().next().value;
+    INDEX_SYMBOL_NAMES[sym] ||= new Set();
+    for (const n of names) INDEX_SYMBOL_NAMES[sym].add(n);
+  }
   if (r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
 }
 
-for (const [sym, nm] of Object.entries(INDEX_SYMBOL_TO_NAME)) {
-  SYMBOL_TO_NAME[sym] = SYMBOL_TO_NAME[sym] || nm;
-  const nk = normalizeKey(nm);
-  if (!NAME_TO_SYMBOL[nk]) NAME_TO_SYMBOL[nk] = sym;
+for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
+  for (const nm of names) {
+    SYMBOL_TO_NAME[sym] = SYMBOL_TO_NAME[sym] || nm;
+    const nk = normalizeKey(nm);
+    if (!NAME_TO_SYMBOL[nk]) NAME_TO_SYMBOL[nk] = sym;
+  }
 }
 
 function keyVariants(k) {
