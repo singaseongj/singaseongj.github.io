@@ -1,13 +1,62 @@
 {
   "date": "2025-11-28",
   "window": "12_hours",
-  "total_phrases": 28,
+  "total_phrases": 29,
   "discovered_keywords": [
+    {
+      "term": "KB Securities BYD Value Chain",
+      "term_ko": "KB증권 BYD 밸류체인",
+      "significance_score": 700,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KB증권 BYD 밸류체인",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "KB증권, 'BYD 밸류체인 ETN'·'KB 레버리지 미국 나스닥 100 TR ETN B' 등 4...",
+              "link": "http://www.press9.kr/news/articleView.html?idxno=69388"
+            },
+            {
+              "title": "KB증권, ‘BYD 밸류체인 ETN’, ‘미국 나스닥 100 인버스형 ETN’ 4종 동...",
+              "link": "https://www.seoultimes.news/news/article.html?no=2000086411"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KB%EC%A6%9D%EA%B6%8C%20BYD%20%EB%B0%B8%EB%A5%98%EC%B2%B4%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KB%EC%A6%9D%EA%B6%8C%20BYD%20%EB%B0%B8%EB%A5%98%EC%B2%B4%EC%9D%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "KB증권, 'BYD 밸류체인 ETN'·'KB 레버리지 미국 나스닥 100 TR ETN B' 등 4...",
+          "summary": "",
+          "link": "http://www.press9.kr/news/articleView.html?idxno=69388",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "KB증권, ‘BYD 밸류체인 ETN’, ‘미국 나스닥 100 인버스형 ETN’ 4종 동...",
+          "summary": "",
+          "link": "https://www.seoultimes.news/news/article.html?no=2000086411",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
     {
       "term": "US Nasdaq",
       "term_ko": "미국 나스닥",
-      "significance_score": 1120,
-      "mentions": 640,
+      "significance_score": 560,
+      "mentions": 320,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "미국 나스닥",
@@ -16,11 +65,6 @@
           "time_unit": "date",
           "bucket_size_hours": 24,
           "rows": [
-            {
-              "period": "2025-11-20",
-              "timestamp": 1763564400000,
-              "value": 52.73865
-            },
             {
               "period": "2025-11-21",
               "timestamp": 1763650800000,
@@ -59,9 +103,11 @@
           ]
         },
         "local_headlines": {
-          "matches": 3,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "matches": 2,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "KB증권, 'BYD 밸류체인 ETN'·'KB 레버리지 미국 나스닥 100 TR ETN B' 등 4...",
@@ -70,10 +116,6 @@
             {
               "title": "KB증권, ‘BYD 밸류체인 ETN’, ‘미국 나스닥 100 인버스형 ETN’ 4종 동...",
               "link": "https://www.seoultimes.news/news/article.html?no=2000086411"
-            },
-            {
-              "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
-              "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101"
             }
           ]
         }
@@ -98,14 +140,6 @@
           "timeAgo": null,
           "pubDate": null,
           "source": null
-        },
-        {
-          "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
         }
       ],
       "search_scores": {
@@ -115,77 +149,18 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 204.3818,
-        "weekly_average_volume": 34.0636,
+        "weekly_search_volume": 170.7355,
+        "weekly_average_volume": 34.1471,
         "day_score": 0,
         "week_score": 0,
         "correction_factor": 0.115911,
-        "decay_factor": 0.025034,
-        "time_weight": 0.021883,
+        "decay_factor": 0.028358,
+        "time_weight": 0.019414,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
         "last_observation": 1764169200000
       }
-    },
-    {
-      "term": "KB Securities BYD Value Chain",
-      "term_ko": "KB증권 BYD 밸류체인",
-      "significance_score": 1050,
-      "mentions": 480,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KB증권 BYD 밸류체인",
-        "local_headlines": {
-          "matches": 3,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KB증권, 'BYD 밸류체인 ETN'·'KB 레버리지 미국 나스닥 100 TR ETN B' 등 4...",
-              "link": "http://www.press9.kr/news/articleView.html?idxno=69388"
-            },
-            {
-              "title": "KB증권, ‘BYD 밸류체인 ETN’, ‘미국 나스닥 100 인버스형 ETN’ 4종 동...",
-              "link": "https://www.seoultimes.news/news/article.html?no=2000086411"
-            },
-            {
-              "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
-              "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KB%EC%A6%9D%EA%B6%8C%20BYD%20%EB%B0%B8%EB%A5%98%EC%B2%B4%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KB%EC%A6%9D%EA%B6%8C%20BYD%20%EB%B0%B8%EB%A5%98%EC%B2%B4%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "KB증권, 'BYD 밸류체인 ETN'·'KB 레버리지 미국 나스닥 100 TR ETN B' 등 4...",
-          "summary": "",
-          "link": "http://www.press9.kr/news/articleView.html?idxno=69388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "KB증권, ‘BYD 밸류체인 ETN’, ‘미국 나스닥 100 인버스형 ETN’ 4종 동...",
-          "summary": "",
-          "link": "https://www.seoultimes.news/news/article.html?no=2000086411",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
     },
     {
       "term": "BYD Value Chain Nasdaq100",
@@ -197,8 +172,10 @@
         "query": "BYD 밸류체인 나스닥100",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "KB증권, BYD 밸류체인·나스닥100 레버리지·인버스 ETN 4종 신규 상장外",
@@ -232,8 +209,10 @@
         "query": "인버스 ETN 4종",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "KB증권, BYD 밸류체인·나스닥100 레버리지·인버스 ETN 4종 신규 상장外",
@@ -258,34 +237,36 @@
       ]
     },
     {
-      "term": "4 ETNs, including",
-      "term_ko": "등 ETN 4종",
-      "significance_score": 364,
+      "term": "New York Stock Exchange Early-Morning CME",
+      "term_ko": "뉴욕증시 장초반 CME",
+      "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "등 ETN 4종",
+        "query": "뉴욕증시 장초반 CME",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
-              "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%93%B1%20ETN%204%EC%A2%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%93%B1%20ETN%204%EC%A2%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98%20CME",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98%20CME"
       },
       "top_headlines": [
         {
-          "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -293,34 +274,36 @@
       ]
     },
     {
-      "term": "4 ETNs simultaneously",
-      "term_ko": "ETN 4종 동시",
-      "significance_score": 364,
+      "term": "CEA Industry Credentials",
+      "term_ko": "CEA 인더스트리 신임",
+      "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "ETN 4종 동시",
+        "query": "CEA 인더스트리 신임",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "KB증권, BYD 및 미국 나스닥 100 지수 관련 ETN 4종 동시 상장",
-              "link": "http://www.seoulwire.com/news/articleView.html?idxno=682985"
+              "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
+              "link": "https://www.tokenpost.kr/news/breaking/309258"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETN%204%EC%A2%85%20%EB%8F%99%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETN%204%EC%A2%85%20%EB%8F%99%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CEA%20%EC%9D%B8%EB%8D%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%20%EC%8B%A0%EC%9E%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CEA%20%EC%9D%B8%EB%8D%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%20%EC%8B%A0%EC%9E%84"
       },
       "top_headlines": [
         {
-          "title": "KB증권, BYD 및 미국 나스닥 100 지수 관련 ETN 4종 동시 상장",
+          "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
           "summary": "",
-          "link": "http://www.seoulwire.com/news/articleView.html?idxno=682985",
+          "link": "https://www.tokenpost.kr/news/breaking/309258",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,8 +320,10 @@
         "query": "ETN KB 레버리지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "KB증권, 'BYD 밸류체인 ETN'·'KB 레버리지 미국 나스닥 100 TR ETN B' 등 4...",
@@ -363,34 +348,36 @@
       ]
     },
     {
-      "term": "Economic Focus Bank of Korea 4 years in a row",
-      "term_ko": "경제포커스 한국은행 4연속",
-      "significance_score": 336,
+      "term": "Massive Scaling RippleXRP",
+      "term_ko": "대규모 확대 리플XRP",
+      "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "경제포커스 한국은행 4연속",
+        "query": "대규모 확대 리플XRP",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[경제포커스] 한국은행, 4연속 기준금리 동결...금통위원 인하·동결 의...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87041"
+              "title": "바이낸스, 인도네시아 루피아 기반 현물거래 대규모 확대…리플(XRP) 전...",
+              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542282"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%ED%8F%AC%EC%BB%A4%EC%8A%A4%20%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%204%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%ED%8F%AC%EC%BB%A4%EC%8A%A4%20%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%204%EC%97%B0%EC%86%8D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B7%9C%EB%AA%A8%20%ED%99%95%EB%8C%80%20%EB%A6%AC%ED%94%8CXRP",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B7%9C%EB%AA%A8%20%ED%99%95%EB%8C%80%20%EB%A6%AC%ED%94%8CXRP"
       },
       "top_headlines": [
         {
-          "title": "[경제포커스] 한국은행, 4연속 기준금리 동결...금통위원 인하·동결 의...",
+          "title": "바이낸스, 인도네시아 루피아 기반 현물거래 대규모 확대…리플(XRP) 전...",
           "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87041",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542282",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -398,34 +385,36 @@
       ]
     },
     {
-      "term": "1400 won't break out",
-      "term_ko": "1400원대 못 벗어나",
+      "term": "10 hours of stock futures forex trading",
+      "term_ko": "주식선물 외환거래 10시간",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "1400원대 못 벗어나",
+        "query": "주식선물 외환거래 10시간",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "“1400원대 못 벗어나”…고환율 고착화 vs 완만한 하락",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101673?sid=101"
+              "title": "시카고상품거래소 먹통…주식선물·외환거래 10시간 넘게 중단",
+              "link": "https://n.news.naver.com/mnews/article/008/0005284831?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1400%EC%9B%90%EB%8C%80%20%EB%AA%BB%20%EB%B2%97%EC%96%B4%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1400%EC%9B%90%EB%8C%80%20%EB%AA%BB%20%EB%B2%97%EC%96%B4%EB%82%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%EC%84%A0%EB%AC%BC%20%EC%99%B8%ED%99%98%EA%B1%B0%EB%9E%98%2010%EC%8B%9C%EA%B0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%EC%84%A0%EB%AC%BC%20%EC%99%B8%ED%99%98%EA%B1%B0%EB%9E%98%2010%EC%8B%9C%EA%B0%84"
       },
       "top_headlines": [
         {
-          "title": "“1400원대 못 벗어나”…고환율 고착화 vs 완만한 하락",
+          "title": "시카고상품거래소 먹통…주식선물·외환거래 10시간 넘게 중단",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101673?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/008/0005284831?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -433,34 +422,36 @@
       ]
     },
     {
-      "term": "Wrap-up Hanwha Ritsu 770 billion",
-      "term_ko": "마무리 한화리츠 7700억",
+      "term": "44.5 billion in hacking damage",
+      "term_ko": "해킹 피해 445억",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "마무리 한화리츠 7700억",
+        "query": "해킹 피해 445억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "“올해 재무구조 개선 마무리” 한화리츠, 7700억 리파이낸싱",
-              "link": "https://n.news.naver.com/mnews/article/011/0004561486?sid=101"
+              "title": "[자정 뉴스브리핑] 업비트 '해킹 피해 445억 원...월렛 시스템 전면 개편...",
+              "link": "https://www.tokenpost.kr/news/briefing/309299"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EB%AC%B4%EB%A6%AC%20%ED%95%9C%ED%99%94%EB%A6%AC%EC%B8%A0%207700%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EB%AC%B4%EB%A6%AC%20%ED%95%9C%ED%99%94%EB%A6%AC%EC%B8%A0%207700%EC%96%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%B4%ED%82%B9%20%ED%94%BC%ED%95%B4%20445%EC%96%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%B4%ED%82%B9%20%ED%94%BC%ED%95%B4%20445%EC%96%B5"
       },
       "top_headlines": [
         {
-          "title": "“올해 재무구조 개선 마무리” 한화리츠, 7700억 리파이낸싱",
+          "title": "[자정 뉴스브리핑] 업비트 '해킹 피해 445억 원...월렛 시스템 전면 개편...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004561486?sid=101",
+          "link": "https://www.tokenpost.kr/news/briefing/309299",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -468,139 +459,36 @@
       ]
     },
     {
-      "term": "ContributedNovember Volatility Buying",
-      "term_ko": "기고11월 변동장 매수",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기고11월 변동장 매수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[기고]11월 변동장, 매수 기회의 창이 열렸다",
-              "link": "https://n.news.naver.com/mnews/article/243/0000088800?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EA%B3%A011%EC%9B%94%20%EB%B3%80%EB%8F%99%EC%9E%A5%20%EB%A7%A4%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EA%B3%A011%EC%9B%94%20%EB%B3%80%EB%8F%99%EC%9E%A5%20%EB%A7%A4%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[기고]11월 변동장, 매수 기회의 창이 열렸다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/243/0000088800?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "National Insurance at the end of September",
-      "term_ko": "국민연금 9월 말",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국민연금 9월 말",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국민연금, 9월 말 기금 운용수익률 11.31%…국내주식 수익률 호조 [국민...",
-              "link": "http://www.fntimes.com/html/view.php?ud=202511282020377991179ad43907_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%209%EC%9B%94%20%EB%A7%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%209%EC%9B%94%20%EB%A7%90"
-      },
-      "top_headlines": [
-        {
-          "title": "국민연금, 9월 말 기금 운용수익률 11.31%…국내주식 수익률 호조 [국민...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202511282020377991179ad43907_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "11.31% fund of funds return",
-      "term_ko": "기금 운용수익률 11.31%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기금 운용수익률 11.31%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국민연금, 9월 말 기금 운용수익률 11.31%…국내주식 수익률 호조 [국민...",
-              "link": "http://www.fntimes.com/html/view.php?ud=202511282020377991179ad43907_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EA%B8%88%20%EC%9A%B4%EC%9A%A9%EC%88%98%EC%9D%B5%EB%A5%A0%2011.31%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EA%B8%88%20%EC%9A%B4%EC%9A%A9%EC%88%98%EC%9D%B5%EB%A5%A0%2011.31%25"
-      },
-      "top_headlines": [
-        {
-          "title": "국민연금, 9월 말 기금 운용수익률 11.31%…국내주식 수익률 호조 [국민...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202511282020377991179ad43907_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Improve your financials this year",
-      "term_ko": "올해 재무구조 개선",
+      "term": "Market Analysis US",
+      "term_ko": "시황 분석 미국",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "올해 재무구조 개선",
+        "query": "시황 분석 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "“올해 재무구조 개선 마무리” 한화리츠, 7700억 리파이낸싱",
-              "link": "https://n.news.naver.com/mnews/article/011/0004561486?sid=101"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%EC%9E%AC%EB%AC%B4%EA%B5%AC%EC%A1%B0%20%EA%B0%9C%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%EC%9E%AC%EB%AC%B4%EA%B5%AC%EC%A1%B0%20%EA%B0%9C%EC%84%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD"
       },
       "top_headlines": [
         {
-          "title": "“올해 재무구조 개선 마무리” 한화리츠, 7700억 리파이낸싱",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004561486?sid=101",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -608,34 +496,36 @@
       ]
     },
     {
-      "term": "A window of opportunity has opened",
-      "term_ko": "기회의 창이 열렸다",
+      "term": "Inside Failure Black Friday",
+      "term_ko": "장애 블랙프라이데이 속",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기회의 창이 열렸다",
+        "query": "장애 블랙프라이데이 속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[기고]11월 변동장, 매수 기회의 창이 열렸다",
-              "link": "https://n.news.naver.com/mnews/article/243/0000088800?sid=101"
+              "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%ED%9A%8C%EC%9D%98%20%EC%B0%BD%EC%9D%B4%20%EC%97%B4%EB%A0%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%ED%9A%8C%EC%9D%98%20%EC%B0%BD%EC%9D%B4%20%EC%97%B4%EB%A0%B8%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%95%A0%20%EB%B8%94%EB%9E%99%ED%94%84%EB%9D%BC%EC%9D%B4%EB%8D%B0%EC%9D%B4%20%EC%86%8D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%95%A0%20%EB%B8%94%EB%9E%99%ED%94%84%EB%9D%BC%EC%9D%B4%EB%8D%B0%EC%9D%B4%20%EC%86%8D"
       },
       "top_headlines": [
         {
-          "title": "[기고]11월 변동장, 매수 기회의 창이 열렸다",
+          "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/243/0000088800?sid=101",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -643,34 +533,36 @@
       ]
     },
     {
-      "term": "Crane Ants Alive Testicles",
-      "term_ko": "서학개미 살려 고환율",
+      "term": "NYSE preview cooling",
+      "term_ko": "뉴욕증시 프리뷰 냉각",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서학개미 살려 고환율",
+        "query": "뉴욕증시 프리뷰 냉각",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "\"서학개미 살려\" 고환율 국면에 책임론·허위정보까지 시장 혼선",
-              "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=304800"
+              "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
+              "link": "https://www.newspim.com/news/view/20251128001185"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%82%B4%EB%A0%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%82%B4%EB%A0%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%83%89%EA%B0%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%83%89%EA%B0%81"
       },
       "top_headlines": [
         {
-          "title": "\"서학개미 살려\" 고환율 국면에 책임론·허위정보까지 시장 혼선",
+          "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
           "summary": "",
-          "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=304800",
+          "link": "https://www.newspim.com/news/view/20251128001185",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -678,34 +570,36 @@
       ]
     },
     {
-      "term": "From liability to misinformation",
-      "term_ko": "국면에 책임론 허위정보까지",
+      "term": "Before a gift opens",
+      "term_ko": "선물 개장 전",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "국면에 책임론 허위정보까지",
+        "query": "선물 개장 전",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "\"서학개미 살려\" 고환율 국면에 책임론·허위정보까지 시장 혼선",
-              "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=304800"
+              "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
+              "link": "https://www.newspim.com/news/view/20251128001185"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%A9%B4%EC%97%90%20%EC%B1%85%EC%9E%84%EB%A1%A0%20%ED%97%88%EC%9C%84%EC%A0%95%EB%B3%B4%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%A9%B4%EC%97%90%20%EC%B1%85%EC%9E%84%EB%A1%A0%20%ED%97%88%EC%9C%84%EC%A0%95%EB%B3%B4%EA%B9%8C%EC%A7%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EB%AC%BC%20%EA%B0%9C%EC%9E%A5%20%EC%A0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EB%AC%BC%20%EA%B0%9C%EC%9E%A5%20%EC%A0%84"
       },
       "top_headlines": [
         {
-          "title": "\"서학개미 살려\" 고환율 국면에 책임론·허위정보까지 시장 혼선",
+          "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
           "summary": "",
-          "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=304800",
+          "link": "https://www.newspim.com/news/view/20251128001185",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -713,34 +607,295 @@
       ]
     },
     {
-      "term": "Strong domestic equity returns",
-      "term_ko": "국내주식 수익률 호조",
+      "term": "For interest rates, go to Finance",
+      "term_ko": "금리를 보면 금융",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "국내주식 수익률 호조",
+        "query": "금리를 보면 금융",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "국민연금, 9월 말 기금 운용수익률 11.31%…국내주식 수익률 호조 [국민...",
-              "link": "http://www.fntimes.com/html/view.php?ud=202511282020377991179ad43907_18"
+              "title": "금리를 보면 ‘금융 버블’ 고점 보인다",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053857?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%EC%A3%BC%EC%8B%9D%20%EC%88%98%EC%9D%B5%EB%A5%A0%20%ED%98%B8%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%EC%A3%BC%EC%8B%9D%20%EC%88%98%EC%9D%B5%EB%A5%A0%20%ED%98%B8%EC%A1%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EB%A5%BC%20%EB%B3%B4%EB%A9%B4%20%EA%B8%88%EC%9C%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EB%A5%BC%20%EB%B3%B4%EB%A9%B4%20%EA%B8%88%EC%9C%B5"
       },
       "top_headlines": [
         {
-          "title": "국민연금, 9월 말 기금 운용수익률 11.31%…국내주식 수익률 호조 [국민...",
+          "title": "금리를 보면 ‘금융 버블’ 고점 보인다",
           "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202511282020377991179ad43907_18",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053857?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Bubble tops are visible",
+      "term_ko": "버블 고점 보인다",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "버블 고점 보인다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "금리를 보면 ‘금융 버블’ 고점 보인다",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053857?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B2%84%EB%B8%94%20%EA%B3%A0%EC%A0%90%20%EB%B3%B4%EC%9D%B8%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B2%84%EB%B8%94%20%EA%B3%A0%EC%A0%90%20%EB%B3%B4%EC%9D%B8%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "금리를 보면 ‘금융 버블’ 고점 보인다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053857?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Binance Indonesia Rupiah",
+      "term_ko": "바이낸스 인도네시아 루피아",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "바이낸스 인도네시아 루피아",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "바이낸스, 인도네시아 루피아 기반 현물거래 대규모 확대…리플(XRP) 전...",
+              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542282"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%94%EC%9D%B4%EB%82%B8%EC%8A%A4%20%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84%20%EB%A3%A8%ED%94%BC%EC%95%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%94%EC%9D%B4%EB%82%B8%EC%8A%A4%20%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84%20%EB%A3%A8%ED%94%BC%EC%95%84"
+      },
+      "top_headlines": [
+        {
+          "title": "바이낸스, 인도네시아 루피아 기반 현물거래 대규모 확대…리플(XRP) 전...",
+          "summary": "",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542282",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Editor Prism Again",
+      "term_ko": "에디터 프리즘 다시",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "에디터 프리즘 다시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[에디터 프리즘] 다시 등장한 주택시장 치트키",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053831?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%90%EB%94%94%ED%84%B0%20%ED%94%84%EB%A6%AC%EC%A6%98%20%EB%8B%A4%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%90%EB%94%94%ED%84%B0%20%ED%94%84%EB%A6%AC%EC%A6%98%20%EB%8B%A4%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "[에디터 프리즘] 다시 등장한 주택시장 치트키",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053831?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "New housing market cheat sheet",
+      "term_ko": "등장한 주택시장 치트키",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "등장한 주택시장 치트키",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[에디터 프리즘] 다시 등장한 주택시장 치트키",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053831?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%93%B1%EC%9E%A5%ED%95%9C%20%EC%A3%BC%ED%83%9D%EC%8B%9C%EC%9E%A5%20%EC%B9%98%ED%8A%B8%ED%82%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%93%B1%EC%9E%A5%ED%95%9C%20%EC%A3%BC%ED%83%9D%EC%8B%9C%EC%9E%A5%20%EC%B9%98%ED%8A%B8%ED%82%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "[에디터 프리즘] 다시 등장한 주택시장 치트키",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053831?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Saturday Column Good Money",
+      "term_ko": "토요칼럼 좋은 돈",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "토요칼럼 좋은 돈",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[토요칼럼] 좋은 돈, 나쁜 돈",
+              "link": "https://n.news.naver.com/mnews/article/015/0005217757?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%EC%9A%94%EC%B9%BC%EB%9F%BC%20%EC%A2%8B%EC%9D%80%20%EB%8F%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%EC%9A%94%EC%B9%BC%EB%9F%BC%20%EC%A2%8B%EC%9D%80%20%EB%8F%88"
+      },
+      "top_headlines": [
+        {
+          "title": "[토요칼럼] 좋은 돈, 나쁜 돈",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/015/0005217757?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Midnight News Briefing Upbeat",
+      "term_ko": "자정 뉴스브리핑 업비트",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "자정 뉴스브리핑 업비트",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[자정 뉴스브리핑] 업비트 '해킹 피해 445억 원...월렛 시스템 전면 개편...",
+              "link": "https://www.tokenpost.kr/news/briefing/309299"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%A0%95%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EC%97%85%EB%B9%84%ED%8A%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%A0%95%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EC%97%85%EB%B9%84%ED%8A%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "[자정 뉴스브리핑] 업비트 '해킹 피해 445억 원...월렛 시스템 전면 개편...",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/briefing/309299",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Senior Tierney",
+      "term_ko": "티어니 선임",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "티어니 선임",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
+              "link": "https://www.tokenpost.kr/news/breaking/309258"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8B%B0%EC%96%B4%EB%8B%88%20%EC%84%A0%EC%9E%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8B%B0%EC%96%B4%EB%8B%88%20%EC%84%A0%EC%9E%84"
+      },
+      "top_headlines": [
+        {
+          "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/309258",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -757,8 +912,10 @@
         "query": "B 등",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "KB증권, 'BYD 밸류체인 ETN'·'KB 레버리지 미국 나스닥 100 TR ETN B' 등 4...",
@@ -792,8 +949,10 @@
         "query": "신규 상장外",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "KB증권, BYD 밸류체인·나스닥100 레버리지·인버스 ETN 4종 신규 상장外",
@@ -818,34 +977,36 @@
       ]
     },
     {
-      "term": "Concurrent Listings",
-      "term_ko": "동시 상장",
+      "term": "Chicago Mercantile Exchange crashes",
+      "term_ko": "시카고상품거래소 먹통",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "동시 상장",
+        "query": "시카고상품거래소 먹통",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
-              "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101"
+              "title": "시카고상품거래소 먹통…주식선물·외환거래 10시간 넘게 중단",
+              "link": "https://n.news.naver.com/mnews/article/008/0005284831?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EC%8B%9C%20%EC%83%81%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EC%8B%9C%20%EC%83%81%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%B9%B4%EA%B3%A0%EC%83%81%ED%92%88%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%A8%B9%ED%86%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%B9%B4%EA%B3%A0%EC%83%81%ED%92%88%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%A8%B9%ED%86%B5"
       },
       "top_headlines": [
         {
-          "title": "KB증권, BYD 밸류체인·미국 나스닥 100 등 ETN 4종 동시 상장",
+          "title": "시카고상품거래소 먹통…주식선물·외환거래 10시간 넘게 중단",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005441563?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/008/0005284831?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -853,34 +1014,36 @@
       ]
     },
     {
-      "term": "Freeze markdowns",
-      "term_ko": "인하 동결",
+      "term": "Abort over",
+      "term_ko": "넘게 중단",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "인하 동결",
+        "query": "넘게 중단",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[경제포커스] 한국은행, 4연속 기준금리 동결...금통위원 인하·동결 의...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87041"
+              "title": "시카고상품거래소 먹통…주식선물·외환거래 10시간 넘게 중단",
+              "link": "https://n.news.naver.com/mnews/article/008/0005284831?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%95%98%20%EB%8F%99%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%95%98%20%EB%8F%99%EA%B2%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%98%EA%B2%8C%20%EC%A4%91%EB%8B%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%98%EA%B2%8C%20%EC%A4%91%EB%8B%A8"
       },
       "top_headlines": [
         {
-          "title": "[경제포커스] 한국은행, 4연속 기준금리 동결...금통위원 인하·동결 의...",
+          "title": "시카고상품거래소 먹통…주식선물·외환거래 10시간 넘게 중단",
           "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87041",
+          "link": "https://n.news.naver.com/mnews/article/008/0005284831?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -888,100 +1051,73 @@
       ]
     },
     {
-      "term": "High rate stickiness",
-      "term_ko": "고환율 고착화",
+      "term": "Based spot trading",
+      "term_ko": "기반 현물거래",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고환율 고착화",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-27",
-              "timestamp": 1764169200000,
-              "value": 100
-            }
-          ]
-        },
+        "query": "기반 현물거래",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "“1400원대 못 벗어나”…고환율 고착화 vs 완만한 하락",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101673?sid=101"
+              "title": "바이낸스, 인도네시아 루피아 기반 현물거래 대규모 확대…리플(XRP) 전...",
+              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542282"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EA%B3%A0%EC%B0%A9%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EA%B3%A0%EC%B0%A9%ED%99%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%B0%98%20%ED%98%84%EB%AC%BC%EA%B1%B0%EB%9E%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%B0%98%20%ED%98%84%EB%AC%BC%EA%B1%B0%EB%9E%98"
       },
       "top_headlines": [
         {
-          "title": "“1400원대 못 벗어나”…고환율 고착화 vs 완만한 하락",
+          "title": "바이낸스, 인도네시아 루피아 기반 현물거래 대규모 확대…리플(XRP) 전...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101673?sid=101",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542282",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.02188,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764169200000
-      }
+      ]
     },
     {
-      "term": "Slow decline",
-      "term_ko": "완만한 하락",
+      "term": "System Front",
+      "term_ko": "시스템 전면",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "완만한 하락",
+        "query": "시스템 전면",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "“1400원대 못 벗어나”…고환율 고착화 vs 완만한 하락",
-              "link": "https://n.news.naver.com/mnews/article/024/0000101673?sid=101"
+              "title": "[자정 뉴스브리핑] 업비트 '해킹 피해 445억 원...월렛 시스템 전면 개편...",
+              "link": "https://www.tokenpost.kr/news/briefing/309299"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%84%EB%A7%8C%ED%95%9C%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%84%EB%A7%8C%ED%95%9C%20%ED%95%98%EB%9D%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%A0%84%EB%A9%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%A0%84%EB%A9%B4"
       },
       "top_headlines": [
         {
-          "title": "“1400원대 못 벗어나”…고환율 고착화 vs 완만한 하락",
+          "title": "[자정 뉴스브리핑] 업비트 '해킹 피해 445억 원...월렛 시스템 전면 개편...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/024/0000101673?sid=101",
+          "link": "https://www.tokenpost.kr/news/briefing/309299",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -989,168 +1125,54 @@
       ]
     },
     {
-      "term": "Market disruption",
-      "term_ko": "시장 혼선",
-      "significance_score": 280,
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "시장 혼선",
+        "query": "AI chip demand surge",
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"서학개미 살려\" 고환율 국면에 책임론·허위정보까지 시장 혼선",
-              "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=304800"
-            }
+          "matches": 0,
+          "last_updated": "2025-11-29T03:29:35+09:00",
+          "fallback_sources": [
+            "trend_log"
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%ED%98%BC%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%ED%98%BC%EC%84%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
-      "top_headlines": [
-        {
-          "title": "\"서학개미 살려\" 고환율 국면에 책임론·허위정보까지 시장 혼선",
-          "summary": "",
-          "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=304800",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Apple Leads Singles",
-      "term_ko": "애플이 싱글을 선도하다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Apple Leads Singles",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Apple Leads Singles’ Day Smartphone Sales as iPhone 17 Demand Surges",
-              "link": "https://www.econotimes.com/Apple-Leads-Singles-Day-Smartphone-Sales-as-iPhone-17-Demand-Surges-1727232"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Apple%20Leads%20Singles",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Apple%20Leads%20Singles"
-      },
-      "top_headlines": [
-        {
-          "title": "Apple Leads Singles’ Day Smartphone Sales as iPhone 17 Demand Surges",
-          "summary": "",
-          "link": "https://www.econotimes.com/Apple-Leads-Singles-Day-Smartphone-Sales-as-iPhone-17-Demand-Surges-1727232",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Smartphone Sales",
-      "term_ko": "스마트폰 판매",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Smartphone Sales",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Apple Leads Singles’ Day Smartphone Sales as iPhone 17 Demand Surges",
-              "link": "https://www.econotimes.com/Apple-Leads-Singles-Day-Smartphone-Sales-as-iPhone-17-Demand-Surges-1727232"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Smartphone%20Sales",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Smartphone%20Sales"
-      },
-      "top_headlines": [
-        {
-          "title": "Apple Leads Singles’ Day Smartphone Sales as iPhone 17 Demand Surges",
-          "summary": "",
-          "link": "https://www.econotimes.com/Apple-Leads-Singles-Day-Smartphone-Sales-as-iPhone-17-Demand-Surges-1727232",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Demand Surges",
-      "term_ko": "수요 급증",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Demand Surges",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-28T21:40:48+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Apple Leads Singles’ Day Smartphone Sales as iPhone 17 Demand Surges",
-              "link": "https://www.econotimes.com/Apple-Leads-Singles-Day-Smartphone-Sales-as-iPhone-17-Demand-Surges-1727232"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Demand%20Surges",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Demand%20Surges"
-      },
-      "top_headlines": [
-        {
-          "title": "Apple Leads Singles’ Day Smartphone Sales as iPhone 17 Demand Surges",
-          "summary": "",
-          "link": "https://www.econotimes.com/Apple-Leads-Singles-Day-Smartphone-Sales-as-iPhone-17-Demand-Surges-1727232",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-11-28T12:42:21.733Z",
+    "generated_at": "2025-11-28T18:31:00.253Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-28T21:40:48+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-11-29T03:29:35+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 2,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-11-28T21:40:48+09:00",
-      "fallback_sources": [],
+      "last_updated": "2025-11-29T03:29:35+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-11-28T21:40:48+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2025-11-29T03:29:35+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
       }
     }
   }
