@@ -1013,29 +1013,8 @@ function sanitizeKeywordList(keywords, { minWords = 2, maxWords = 5 } = {}) {
  * Returns a simplified list of high-priority keywords to "fortify" the stock list.
  */
 async function fetchGoogleTrendsKeywords() {
-  console.log('📈 Fetching Real-time Google Trends...');
-  try {
-    const url = 'https://trends.google.co.kr/trends/trendingsearches/daily/rss?geo=KR';
-    const response = await axios.get(url, { timeout: 10000 });
-
-    const parser = new xml2js.Parser();
-    const result = await parser.parseStringPromise(response.data);
-    const items = result.rss.channel[0].item;
-
-    const trends = items.map((item) => {
-      const keyword = item.title[0];
-      return keyword;
-    });
-
-    console.log(`✅ Retrieved ${trends.length} raw trending keywords.`);
-
-    const cleanTrends = sanitizeKeywordList(trends, { minWords: 1, maxWords: 5 });
-
-    return cleanTrends;
-  } catch (error) {
-    console.warn(`⚠️ Failed to fetch Google Trends: ${error.message}`);
-    return [];
-  }
+  console.log('📈 Skipping Google Trends (using Naver DataLab instead)');
+  return [];
 }
 
 function extractKeywordsFromLLMResponse(rawText) {
@@ -3135,18 +3114,7 @@ async function main() {
 
   loadStopwords();
 
-  const candidates = await gatherAllCandidates();
-
-  const output = {
-    updateTime: new Date().toISOString(),
-    count: candidates.length,
-    keywords: candidates,
-  };
-
-  fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
-
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));
-  console.log(`✅ Saved results to ${OUTPUT_PATH}`);
+  await buildTags();
 }
 
 if (require.main === module) {
