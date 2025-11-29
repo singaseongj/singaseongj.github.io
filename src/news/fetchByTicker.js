@@ -2244,12 +2244,20 @@ export async function buildNewsCachesCli() {
   const baskets = buildBasketsFromUniverse({ universe, nameToSymbol, keywordDict: KEYWORDS });
   const now = new Date(), end = now.toISOString().slice(0,10);
   const start = new Date(now.getTime() - 365*24*3600*1000).toISOString().slice(0,10);
-  const { perSymbol, raw } = await fetchNaverTrends({
+  const naverResult = await fetchNaverTrends({
     baskets, startDate: start, endDate: end, timeUnit: 'date',
     cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
     budgetLeftMs: Number(process.env.GLOBAL_BUDGET_MS || 90000)
+  }).catch(err => {
+    console.warn('[news-caches] Naver trends fetch failed:', err?.message || err);
+    return null;
   });
-  await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta: Object.keys(raw) }, null, 2));
+  if (!naverResult) {
+    console.warn('[news-caches] skipping Naver trends write due to missing results');
+  }
+  const perSymbol = naverResult?.perSymbol || {};
+  const rawMeta = naverResult?.raw ? Object.keys(naverResult.raw) : [];
+  await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta }, null, 2));
   console.log(`[news-caches] wrote ${NEWS_FEATURES_FILE} and ${NAVER_TRENDS_FILE}`);
 
   // 3) Ticker keyword snapshot merged into tags.json
