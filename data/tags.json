@@ -1,7 +1,7 @@
 {
   "date": "2025-11-30",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "Market Analysis US",
@@ -13,9 +13,10 @@
         "query": "시황 분석 미국",
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -53,6 +54,44 @@
       ]
     },
     {
+      "term": "Dollar GDP 0.9% this year",
+      "term_ko": "올해 달러GDP 0.9%",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "올해 달러GDP 0.9%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-01T03:28:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "고환율에, 올해 ‘달러GDP’ 0.9% 역성장할 듯",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678319?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%EB%8B%AC%EB%9F%ACGDP%200.9%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%EB%8B%AC%EB%9F%ACGDP%200.9%25"
+      },
+      "top_headlines": [
+        {
+          "title": "고환율에, 올해 ‘달러GDP’ 0.9% 역성장할 듯",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678319?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "New York Stock Exchange Early-Morning CME",
       "term_ko": "뉴욕증시 장초반 CME",
       "significance_score": 350,
@@ -62,9 +101,10 @@
         "query": "뉴욕증시 장초반 CME",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -90,110 +130,37 @@
       ]
     },
     {
-      "term": "Hanser University Special Lecture 2026",
-      "term_ko": "한서대 특강 2026년",
+      "term": "15 Measures are temporary measures",
+      "term_ko": "15대책은 임시조치 토허제",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한서대 특강 2026년",
+        "query": "15대책은 임시조치 토허제",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "세종대 김대종 교수 한서대 특강, 2026년 환율·부동산·금 시장 전망 제...",
-              "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=282514"
+              "title": "[단독]김용범 정책실장 “10·15대책은 임시조치… 토허제 길게 갈수 없...",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678318?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%84%9C%EB%8C%80%20%ED%8A%B9%EA%B0%95%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%84%9C%EB%8C%80%20%ED%8A%B9%EA%B0%95%202026%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=15%EB%8C%80%EC%B1%85%EC%9D%80%20%EC%9E%84%EC%8B%9C%EC%A1%B0%EC%B9%98%20%ED%86%A0%ED%97%88%EC%A0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=15%EB%8C%80%EC%B1%85%EC%9D%80%20%EC%9E%84%EC%8B%9C%EC%A1%B0%EC%B9%98%20%ED%86%A0%ED%97%88%EC%A0%9C"
       },
       "top_headlines": [
         {
-          "title": "세종대 김대종 교수 한서대 특강, 2026년 환율·부동산·금 시장 전망 제...",
+          "title": "[단독]김용범 정책실장 “10·15대책은 임시조치… 토허제 길게 갈수 없...",
           "summary": "",
-          "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=282514",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Ant Incident November",
-      "term_ko": "개미 사고 11월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개미 사고 11월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "외인 팔고 개미 사고…11월 코스피 '동상이몽'",
-              "link": "https://n.news.naver.com/mnews/article/088/0000984206?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EB%AF%B8%20%EC%82%AC%EA%B3%A0%2011%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EB%AF%B8%20%EC%82%AC%EA%B3%A0%2011%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "외인 팔고 개미 사고…11월 코스피 '동상이몽'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000984206?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Clogged Credit Loan 4 years 4 months",
-      "term_ko": "막히자 신용대출 4년4개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "막히자 신용대출 4년4개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 막히자 신용대출 4년4개월 새 최대 ↑",
-              "link": "https://n.news.naver.com/mnews/article/022/0004086476?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%89%ED%9E%88%EC%9E%90%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%204%EB%85%844%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%89%ED%9E%88%EC%9E%90%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%204%EB%85%844%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 막히자 신용대출 4년4개월 새 최대 ↑",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004086476?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678318?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -210,9 +177,10 @@
         "query": "뉴욕증시 나스닥 테슬라",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -247,9 +215,10 @@
         "query": "장애 블랙프라이데이 속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -284,9 +253,10 @@
         "query": "뉴욕증시 프리뷰 냉각",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -321,9 +291,10 @@
         "query": "선물 개장 전",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -349,36 +320,37 @@
       ]
     },
     {
-      "term": "Professor Kim Daejong of Sejong University",
-      "term_ko": "세종대 김대종 교수",
+      "term": "Can't sell if the exchange rate goes up",
+      "term_ko": "환율 올라도 못팔아",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "세종대 김대종 교수",
+        "query": "환율 올라도 못팔아",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "세종대 김대종 교수 한서대 특강, 2026년 환율·부동산·금 시장 전망 제...",
-              "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=282514"
+              "title": "“환율 올라도 못팔아” 달러 쥐고 안 푸는 기업들",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678275?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%EC%A2%85%EB%8C%80%20%EA%B9%80%EB%8C%80%EC%A2%85%20%EA%B5%90%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%EC%A2%85%EB%8C%80%20%EA%B9%80%EB%8C%80%EC%A2%85%20%EA%B5%90%EC%88%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%98%AC%EB%9D%BC%EB%8F%84%20%EB%AA%BB%ED%8C%94%EC%95%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%98%AC%EB%9D%BC%EB%8F%84%20%EB%AA%BB%ED%8C%94%EC%95%84"
       },
       "top_headlines": [
         {
-          "title": "세종대 김대종 교수 한서대 특강, 2026년 환율·부동산·금 시장 전망 제...",
+          "title": "“환율 올라도 못팔아” 달러 쥐고 안 푸는 기업들",
           "summary": "",
-          "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=282514",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678275?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -386,36 +358,37 @@
       ]
     },
     {
-      "term": "Exchange Rate Real Estate Gold",
-      "term_ko": "환율 부동산 금",
+      "term": "Dollar Grasp",
+      "term_ko": "달러 쥐고 안",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "환율 부동산 금",
+        "query": "달러 쥐고 안",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "세종대 김대종 교수 한서대 특강, 2026년 환율·부동산·금 시장 전망 제...",
-              "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=282514"
+              "title": "“환율 올라도 못팔아” 달러 쥐고 안 푸는 기업들",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678275?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EA%B8%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EC%A5%90%EA%B3%A0%20%EC%95%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EC%A5%90%EA%B3%A0%20%EC%95%88"
       },
       "top_headlines": [
         {
-          "title": "세종대 김대종 교수 한서대 특강, 2026년 환율·부동산·금 시장 전망 제...",
+          "title": "“환율 올라도 못팔아” 달러 쥐고 안 푸는 기업들",
           "summary": "",
-          "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=282514",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678275?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -423,36 +396,37 @@
       ]
     },
     {
-      "term": "Trump tariffs unconstitutional",
-      "term_ko": "트럼프 관세 위헌",
+      "term": "National Pension More than a book ant",
+      "term_ko": "국민연금 서학개미보다 더",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "트럼프 관세 위헌",
+        "query": "국민연금 서학개미보다 더",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
-              "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101"
+              "title": "국민연금, 서학개미보다 더 공격적… 올해 해외주식 더 샀다",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678276?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%20%EA%B4%80%EC%84%B8%20%EC%9C%84%ED%97%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%20%EA%B4%80%EC%84%B8%20%EC%9C%84%ED%97%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%B3%B4%EB%8B%A4%20%EB%8D%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%B3%B4%EB%8B%A4%20%EB%8D%94"
       },
       "top_headlines": [
         {
-          "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
+          "title": "국민연금, 서학개미보다 더 공격적… 올해 해외주식 더 샀다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678276?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -460,36 +434,37 @@
       ]
     },
     {
-      "term": "Sometimes it's even worse",
-      "term_ko": "땐 더 난리칠",
+      "term": "Aggressive foreign stocks this year",
+      "term_ko": "공격적 올해 해외주식",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "땐 더 난리칠",
+        "query": "공격적 올해 해외주식",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
-              "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101"
+              "title": "국민연금, 서학개미보다 더 공격적… 올해 해외주식 더 샀다",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678276?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%95%90%20%EB%8D%94%20%EB%82%9C%EB%A6%AC%EC%B9%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%95%90%20%EB%8D%94%20%EB%82%9C%EB%A6%AC%EC%B9%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EA%B2%A9%EC%A0%81%20%EC%98%AC%ED%95%B4%20%ED%95%B4%EC%99%B8%EC%A3%BC%EC%8B%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EA%B2%A9%EC%A0%81%20%EC%98%AC%ED%95%B4%20%ED%95%B4%EC%99%B8%EC%A3%BC%EC%8B%9D"
       },
       "top_headlines": [
         {
-          "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
+          "title": "국민연금, 서학개미보다 더 공격적… 올해 해외주식 더 샀다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678276?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -497,36 +472,37 @@
       ]
     },
     {
-      "term": "Economic uncertainty",
-      "term_ko": "것 경제 불확실성",
+      "term": "Desk column steady",
+      "term_ko": "데스크 칼럼 꾸준한",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "것 경제 불확실성",
+        "query": "데스크 칼럼 꾸준한",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
-              "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101"
+              "title": "[데스크 칼럼] '꾸준한 공급 시그널'이 답이다",
+              "link": "https://n.news.naver.com/mnews/article/015/0005218085?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%83%20%EA%B2%BD%EC%A0%9C%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%83%20%EA%B2%BD%EC%A0%9C%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%B0%EC%8A%A4%ED%81%AC%20%EC%B9%BC%EB%9F%BC%20%EA%BE%B8%EC%A4%80%ED%95%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%B0%EC%8A%A4%ED%81%AC%20%EC%B9%BC%EB%9F%BC%20%EA%BE%B8%EC%A4%80%ED%95%9C"
       },
       "top_headlines": [
         {
-          "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
+          "title": "[데스크 칼럼] '꾸준한 공급 시그널'이 답이다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/015/0005218085?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -534,36 +510,37 @@
       ]
     },
     {
-      "term": "The man who warned me",
-      "term_ko": "경고한 이 남자",
+      "term": "Supply signals are the answer",
+      "term_ko": "공급 시그널이 답이다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "경고한 이 남자",
+        "query": "공급 시그널이 답이다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
-              "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101"
+              "title": "[데스크 칼럼] '꾸준한 공급 시그널'이 답이다",
+              "link": "https://n.news.naver.com/mnews/article/015/0005218085?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B3%A0%ED%95%9C%20%EC%9D%B4%20%EB%82%A8%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B3%A0%ED%95%9C%20%EC%9D%B4%20%EB%82%A8%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EA%B8%89%20%EC%8B%9C%EA%B7%B8%EB%84%90%EC%9D%B4%20%EB%8B%B5%EC%9D%B4%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EA%B8%89%20%EC%8B%9C%EA%B7%B8%EB%84%90%EC%9D%B4%20%EB%8B%B5%EC%9D%B4%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "“트럼프, 관세 위헌 땐 더 난리칠 것”…경제 불확실성 경고한 이 남자",
+          "title": "[데스크 칼럼] '꾸준한 공급 시그널'이 답이다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005598602?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/015/0005218085?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -571,147 +548,37 @@
       ]
     },
     {
-      "term": "Economic Outlook High Rate Accountability",
-      "term_ko": "경제돋보기 고환율 책임",
+      "term": "Happily married",
+      "term_ko": "부부 관계 행복하게",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "경제돋보기 고환율 책임",
+        "query": "부부 관계 행복하게",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[경제돋보기] 고환율 책임 공방, 한국 경제 미래 위협하는 이유",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87065"
+              "title": "은퇴 이후 부부 관계 행복하게 유지하는 비결",
+              "link": "https://n.news.naver.com/mnews/article/023/0003944072?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%EB%8F%8B%EB%B3%B4%EA%B8%B0%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%B1%85%EC%9E%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%EB%8F%8B%EB%B3%B4%EA%B8%B0%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%B1%85%EC%9E%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%B6%80%20%EA%B4%80%EA%B3%84%20%ED%96%89%EB%B3%B5%ED%95%98%EA%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%B6%80%20%EA%B4%80%EA%B3%84%20%ED%96%89%EB%B3%B5%ED%95%98%EA%B2%8C"
       },
       "top_headlines": [
         {
-          "title": "[경제돋보기] 고환율 책임 공방, 한국 경제 미래 위협하는 이유",
+          "title": "은퇴 이후 부부 관계 행복하게 유지하는 비결",
           "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87065",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Gongbang Korean Economy",
-      "term_ko": "공방 한국 경제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "공방 한국 경제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[경제돋보기] 고환율 책임 공방, 한국 경제 미래 위협하는 이유",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87065"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EB%B0%A9%20%ED%95%9C%EA%B5%AD%20%EA%B2%BD%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EB%B0%A9%20%ED%95%9C%EA%B5%AD%20%EA%B2%BD%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[경제돋보기] 고환율 책임 공방, 한국 경제 미래 위협하는 이유",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87065",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Why it's a future threat",
-      "term_ko": "미래 위협하는 이유",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래 위협하는 이유",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[경제돋보기] 고환율 책임 공방, 한국 경제 미래 위협하는 이유",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87065"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%20%EC%9C%84%ED%98%91%ED%95%98%EB%8A%94%20%EC%9D%B4%EC%9C%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%20%EC%9C%84%ED%98%91%ED%95%98%EB%8A%94%20%EC%9D%B4%EC%9C%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[경제돋보기] 고환율 책임 공방, 한국 경제 미래 위협하는 이유",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87065",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Eavesdropper testicular crane ant",
-      "term_ko": "도청도설 고환율 서학개미",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "도청도설 고환율 서학개미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[도청도설] 고환율, 서학개미 탓?",
-              "link": "https://n.news.naver.com/mnews/article/658/0000127629?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EC%B2%AD%EB%8F%84%EC%84%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EC%B2%AD%EB%8F%84%EC%84%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[도청도설] 고환율, 서학개미 탓?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/658/0000127629?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/023/0003944072?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -728,9 +595,10 @@
         "query": "오후 늦게",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -756,36 +624,37 @@
       ]
     },
     {
-      "term": "Sell to foreigners",
-      "term_ko": "외인 팔고",
+      "term": "Yongbeom Kim, Chief of Policy",
+      "term_ko": "단독김용범 정책실장",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "외인 팔고",
+        "query": "단독김용범 정책실장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "외인 팔고 개미 사고…11월 코스피 '동상이몽'",
-              "link": "https://n.news.naver.com/mnews/article/088/0000984206?sid=101"
+              "title": "[단독]김용범 정책실장 “10·15대책은 임시조치… 토허제 길게 갈수 없...",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678318?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EC%9D%B8%20%ED%8C%94%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EC%9D%B8%20%ED%8C%94%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EB%8F%85%EA%B9%80%EC%9A%A9%EB%B2%94%20%EC%A0%95%EC%B1%85%EC%8B%A4%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EB%8F%85%EA%B9%80%EC%9A%A9%EB%B2%94%20%EC%A0%95%EC%B1%85%EC%8B%A4%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "외인 팔고 개미 사고…11월 코스피 '동상이몽'",
+          "title": "[단독]김용범 정책실장 “10·15대책은 임시조치… 토허제 길게 갈수 없...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000984206?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678318?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -793,36 +662,37 @@
       ]
     },
     {
-      "term": "Kospi statue dream",
-      "term_ko": "코스피 동상이몽",
+      "term": "Lengthen",
+      "term_ko": "길게 갈수",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스피 동상이몽",
+        "query": "길게 갈수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "외인 팔고 개미 사고…11월 코스피 '동상이몽'",
-              "link": "https://n.news.naver.com/mnews/article/088/0000984206?sid=101"
+              "title": "[단독]김용범 정책실장 “10·15대책은 임시조치… 토허제 길게 갈수 없...",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678318?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%8F%99%EC%83%81%EC%9D%B4%EB%AA%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%8F%99%EC%83%81%EC%9D%B4%EB%AA%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B8%EA%B2%8C%20%EA%B0%88%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B8%EA%B2%8C%20%EA%B0%88%EC%88%98"
       },
       "top_headlines": [
         {
-          "title": "외인 팔고 개미 사고…11월 코스피 '동상이몽'",
+          "title": "[단독]김용범 정책실장 “10·15대책은 임시조치… 토허제 길게 갈수 없...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000984206?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678318?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -830,36 +700,113 @@
       ]
     },
     {
-      "term": "New Max",
-      "term_ko": "새 최대",
+      "term": "It's almost like it's growing backwards",
+      "term_ko": "역성장할 듯",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "새 최대",
+        "query": "역성장할 듯",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "주담대 막히자 신용대출 4년4개월 새 최대 ↑",
-              "link": "https://n.news.naver.com/mnews/article/022/0004086476?sid=101"
+              "title": "고환율에, 올해 ‘달러GDP’ 0.9% 역성장할 듯",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678319?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%88%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%88%20%EC%B5%9C%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EC%84%B1%EC%9E%A5%ED%95%A0%20%EB%93%AF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EC%84%B1%EC%9E%A5%ED%95%A0%20%EB%93%AF"
       },
       "top_headlines": [
         {
-          "title": "주담대 막히자 신용대출 4년4개월 새 최대 ↑",
+          "title": "고환율에, 올해 ‘달러GDP’ 0.9% 역성장할 듯",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004086476?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678319?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Companies solving",
+      "term_ko": "푸는 기업들",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "푸는 기업들",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-01T03:28:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "“환율 올라도 못팔아” 달러 쥐고 안 푸는 기업들",
+              "link": "https://n.news.naver.com/mnews/article/020/0003678275?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%91%B8%EB%8A%94%20%EA%B8%B0%EC%97%85%EB%93%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%91%B8%EB%8A%94%20%EA%B8%B0%EC%97%85%EB%93%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "“환율 올라도 못팔아” 달러 쥐고 안 푸는 기업들",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003678275?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "How to keep it going",
+      "term_ko": "유지하는 비결",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "유지하는 비결",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-01T03:28:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "은퇴 이후 부부 관계 행복하게 유지하는 비결",
+              "link": "https://n.news.naver.com/mnews/article/023/0003944072?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EC%A7%80%ED%95%98%EB%8A%94%20%EB%B9%84%EA%B2%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EC%A7%80%ED%95%98%EB%8A%94%20%EB%B9%84%EA%B2%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "은퇴 이후 부부 관계 행복하게 유지하는 비결",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003944072?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -876,9 +823,10 @@
         "query": "Rate-Cut Hopes Lift",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -913,9 +861,10 @@
         "query": "What Challenges Lie",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -950,9 +899,10 @@
         "query": "Post-Holiday Session",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -987,9 +937,10 @@
         "query": "Navers Acquisition",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1024,9 +975,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1046,9 +998,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1068,9 +1021,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-11-30T21:37:45+09:00",
+          "last_updated": "2025-12-01T03:28:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1079,33 +1033,58 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-01T03:28:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-11-30T12:39:08.701Z",
+    "generated_at": "2025-11-30T18:29:47.676Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-30T21:37:45+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-01T03:28:13+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-11-30T21:37:45+09:00",
+      "last_updated": "2025-12-01T03:28:13+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-11-30T21:37:45+09:00",
+        "lastUpdated": "2025-12-01T03:28:13+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
