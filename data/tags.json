@@ -1,7 +1,7 @@
 {
   "date": "2025-11-30",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "Market Analysis US",
@@ -13,8 +13,11 @@
         "query": "시황 분석 미국",
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "[시황 분석] 미국 뉴욕증시 나스닥·테슬라↑ 엔비디아↓ 블랙프라이데...",
@@ -51,6 +54,82 @@
       ]
     },
     {
+      "term": "South Korea GDP Year 2",
+      "term_ko": "한국 GDP 2년째",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국 GDP 2년째",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "한국 GDP, 2년째 제자리…고환율에 외형마저 뒷걸음",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1688931"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20GDP%202%EB%85%84%EC%A7%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20GDP%202%EB%85%84%EC%A7%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "한국 GDP, 2년째 제자리…고환율에 외형마저 뒷걸음",
+          "summary": "",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1688931",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "GDP 0.9% this year",
+      "term_ko": "GDP 올해 0.9%",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "GDP 올해 0.9%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "韓 '달러 GDP' 올해 0.9%↓···고환율에 2년 간 '제자리'",
+              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=417466"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=GDP%20%EC%98%AC%ED%95%B4%200.9%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=GDP%20%EC%98%AC%ED%95%B4%200.9%25"
+      },
+      "top_headlines": [
+        {
+          "title": "韓 '달러 GDP' 올해 0.9%↓···고환율에 2년 간 '제자리'",
+          "summary": "",
+          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=417466",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "New York Stock Exchange Early-Morning CME",
       "term_ko": "뉴욕증시 장초반 CME",
       "significance_score": 350,
@@ -60,8 +139,11 @@
         "query": "뉴욕증시 장초반 CME",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
@@ -95,8 +177,11 @@
         "query": "CEA 인더스트리 신임",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
@@ -121,34 +206,37 @@
       ]
     },
     {
-      "term": "Foreigners November KOSPI",
-      "term_ko": "외국인 11월 코스피",
+      "term": "Alien 14 Article 8",
+      "term_ko": "외국인 14조 팔",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "외국인 11월 코스피",
+        "query": "외국인 14조 팔",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "외국인, 11월 코스피 14.4조 역대 최대 순매도…개인은 9.2조 ‘줍줍’",
-              "link": "https://n.news.naver.com/mnews/article/022/0004086389?sid=101"
+              "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
+              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%2011%EC%9B%94%20%EC%BD%94%EC%8A%A4%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%2011%EC%9B%94%20%EC%BD%94%EC%8A%A4%ED%94%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%2014%EC%A1%B0%20%ED%8C%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%2014%EC%A1%B0%20%ED%8C%94"
       },
       "top_headlines": [
         {
-          "title": "외국인, 11월 코스피 14.4조 역대 최대 순매도…개인은 9.2조 ‘줍줍’",
+          "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004086389?sid=101",
+          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -156,34 +244,37 @@
       ]
     },
     {
-      "term": "14.4 trillion The largest ever",
-      "term_ko": "14.4조 역대 최대",
+      "term": "When an individual is subject to Article 9",
+      "term_ko": "때 개인은 9조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "14.4조 역대 최대",
+        "query": "때 개인은 9조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "외국인, 11월 코스피 14.4조 역대 최대 순매도…개인은 9.2조 ‘줍줍’",
-              "link": "https://n.news.naver.com/mnews/article/022/0004086389?sid=101"
+              "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
+              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=14.4%EC%A1%B0%20%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=14.4%EC%A1%B0%20%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%95%8C%20%EA%B0%9C%EC%9D%B8%EC%9D%80%209%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%95%8C%20%EA%B0%9C%EC%9D%B8%EC%9D%80%209%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "외국인, 11월 코스피 14.4조 역대 최대 순매도…개인은 9.2조 ‘줍줍’",
+          "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004086389?sid=101",
+          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -191,34 +282,37 @@
       ]
     },
     {
-      "term": "Net short individuals were 9.2 trillion",
-      "term_ko": "순매도 개인은 9.2조",
+      "term": "Picked up November KOSPI",
+      "term_ko": "주웠다 11월 코스피",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "순매도 개인은 9.2조",
+        "query": "주웠다 11월 코스피",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "외국인, 11월 코스피 14.4조 역대 최대 순매도…개인은 9.2조 ‘줍줍’",
-              "link": "https://n.news.naver.com/mnews/article/022/0004086389?sid=101"
+              "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
+              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EB%A7%A4%EB%8F%84%20%EA%B0%9C%EC%9D%B8%EC%9D%80%209.2%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EB%A7%A4%EB%8F%84%20%EA%B0%9C%EC%9D%B8%EC%9D%80%209.2%EC%A1%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%9B%A0%EB%8B%A4%2011%EC%9B%94%20%EC%BD%94%EC%8A%A4%ED%94%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%9B%A0%EB%8B%A4%2011%EC%9B%94%20%EC%BD%94%EC%8A%A4%ED%94%BC"
       },
       "top_headlines": [
         {
-          "title": "외국인, 11월 코스피 14.4조 역대 최대 순매도…개인은 9.2조 ‘줍줍’",
+          "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004086389?sid=101",
+          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,34 +320,37 @@
       ]
     },
     {
-      "term": "Real Estate...Contract Cancellation Rate 2020",
-      "term_ko": "부동산..계약 해제율 2020년",
+      "term": "Personal Credit Loan 4 years",
+      "term_ko": "개인 신용대출 4년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "부동산..계약 해제율 2020년",
+        "query": "개인 신용대출 4년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
-              "link": "http://kpenews.com/View.aspx?No=3873976"
+              "title": "증시 '롤러코스터'에... 개인 신용대출 4년 4개월 만 최대폭 증가",
+              "link": "https://n.news.naver.com/mnews/article/469/0000900370?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0..%EA%B3%84%EC%95%BD%20%ED%95%B4%EC%A0%9C%EC%9C%A8%202020%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0..%EA%B3%84%EC%95%BD%20%ED%95%B4%EC%A0%9C%EC%9C%A8%202020%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%9D%B8%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%204%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%9D%B8%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%204%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
+          "title": "증시 '롤러코스터'에... 개인 신용대출 4년 4개월 만 최대폭 증가",
           "summary": "",
-          "link": "http://kpenews.com/View.aspx?No=3873976",
+          "link": "https://n.news.naver.com/mnews/article/469/0000900370?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -261,34 +358,37 @@
       ]
     },
     {
-      "term": "Exchange rate to 1500 KRW",
-      "term_ko": "환율 1500원대 대비",
+      "term": "Largest in 4 months",
+      "term_ko": "4개월 만 최대폭",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "환율 1500원대 대비",
+        "query": "4개월 만 최대폭",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "\"환율 1500원대 대비 필요\"...고환율에 물가 불안, 가계·기업엔 '비수'",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=851356"
+              "title": "증시 '롤러코스터'에... 개인 신용대출 4년 4개월 만 최대폭 증가",
+              "link": "https://n.news.naver.com/mnews/article/469/0000900370?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%201500%EC%9B%90%EB%8C%80%20%EB%8C%80%EB%B9%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%201500%EC%9B%90%EB%8C%80%20%EB%8C%80%EB%B9%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4%EA%B0%9C%EC%9B%94%20%EB%A7%8C%20%EC%B5%9C%EB%8C%80%ED%8F%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4%EA%B0%9C%EC%9B%94%20%EB%A7%8C%20%EC%B5%9C%EB%8C%80%ED%8F%AD"
       },
       "top_headlines": [
         {
-          "title": "\"환율 1500원대 대비 필요\"...고환율에 물가 불안, 가계·기업엔 '비수'",
+          "title": "증시 '롤러코스터'에... 개인 신용대출 4년 4개월 만 최대폭 증가",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=851356",
+          "link": "https://n.news.naver.com/mnews/article/469/0000900370?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -296,34 +396,37 @@
       ]
     },
     {
-      "term": "10 million won for childbirth",
-      "term_ko": "출산 시 1000만원",
+      "term": "Money spent 10 years of vein sclerosis",
+      "term_ko": "소비 돈맥경화 10년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "출산 시 1000만원",
+        "query": "소비 돈맥경화 10년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "자녀 출산 시 1000만원…유한양행, ‘일·생활 균형 우수기업’ 선정",
-              "link": "https://n.news.naver.com/mnews/article/029/0002996387?sid=105"
+              "title": "부동산발 가계빚에 소비 ‘돈맥경화’…10년 누적 소비 5% 깎았다",
+              "link": "https://n.news.naver.com/mnews/article/025/0003486397?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EC%82%B0%20%EC%8B%9C%201000%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EC%82%B0%20%EC%8B%9C%201000%EB%A7%8C%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EB%B9%84%20%EB%8F%88%EB%A7%A5%EA%B2%BD%ED%99%94%2010%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EB%B9%84%20%EB%8F%88%EB%A7%A5%EA%B2%BD%ED%99%94%2010%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "자녀 출산 시 1000만원…유한양행, ‘일·생활 균형 우수기업’ 선정",
+          "title": "부동산발 가계빚에 소비 ‘돈맥경화’…10년 누적 소비 5% 깎았다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/029/0002996387?sid=105",
+          "link": "https://n.news.naver.com/mnews/article/025/0003486397?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -331,69 +434,37 @@
       ]
     },
     {
-      "term": "Foreigners in November",
-      "term_ko": "11월 외국인 역대",
+      "term": "2 years on testosterone",
+      "term_ko": "고환율에 2년 간",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "11월 외국인 역대",
+        "query": "고환율에 2년 간",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "11월 외국인 역대 제일 많이 팔았는데…개미가 쓸어담았다",
-              "link": "https://n.news.naver.com/mnews/article/374/0000477814?sid=101"
+              "title": "韓 '달러 GDP' 올해 0.9%↓···고환율에 2년 간 '제자리'",
+              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=417466"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EC%9B%94%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EC%97%AD%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EC%9B%94%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EC%97%AD%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%97%90%202%EB%85%84%20%EA%B0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%97%90%202%EB%85%84%20%EA%B0%84"
       },
       "top_headlines": [
         {
-          "title": "11월 외국인 역대 제일 많이 팔았는데…개미가 쓸어담았다",
+          "title": "韓 '달러 GDP' 올해 0.9%↓···고환율에 2년 간 '제자리'",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000477814?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Domestic Stock Market December",
-      "term_ko": "국내 증시 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국내 증시 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국내 증시, 12월 산타랠리 맞을까?…외국인 역대 최대로 팔고 개미는 샀...",
-              "link": "http://www.segyebiz.com/newsView/20251130503570?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EC%A6%9D%EC%8B%9C%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EC%A6%9D%EC%8B%9C%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 증시, 12월 산타랠리 맞을까?…외국인 역대 최대로 팔고 개미는 샀...",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251130503570?OutUrl=naver",
+          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=417466",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -410,8 +481,11 @@
         "query": "뉴욕증시 나스닥 테슬라",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "[시황 분석] 미국 뉴욕증시 나스닥·테슬라↑ 엔비디아↓ 블랙프라이데...",
@@ -445,8 +519,11 @@
         "query": "장애 블랙프라이데이 속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
@@ -480,8 +557,11 @@
         "query": "뉴욕증시 프리뷰 냉각",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
@@ -515,8 +595,11 @@
         "query": "선물 개장 전",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
@@ -541,34 +624,37 @@
       ]
     },
     {
-      "term": "Regulatory volatility",
-      "term_ko": "각종 규제로 변동성",
+      "term": "KOSPI statue dream this month",
+      "term_ko": "코스피 동상이몽 이달",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "각종 규제로 변동성",
+        "query": "코스피 동상이몽 이달",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
-              "link": "http://kpenews.com/View.aspx?No=3873976"
+              "title": "'코스피 동상이몽'…이달 외국인 역대 최대로 팔고 개미는 샀다",
+              "link": "https://www.kbsm.net/news/view.php?idx=499222"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%81%EC%A2%85%20%EA%B7%9C%EC%A0%9C%EB%A1%9C%20%EB%B3%80%EB%8F%99%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%81%EC%A2%85%20%EA%B7%9C%EC%A0%9C%EB%A1%9C%20%EB%B3%80%EB%8F%99%EC%84%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%8F%99%EC%83%81%EC%9D%B4%EB%AA%BD%20%EC%9D%B4%EB%8B%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%8F%99%EC%83%81%EC%9D%B4%EB%AA%BD%20%EC%9D%B4%EB%8B%AC"
       },
       "top_headlines": [
         {
-          "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
+          "title": "'코스피 동상이몽'…이달 외국인 역대 최대로 팔고 개미는 샀다",
           "summary": "",
-          "link": "http://kpenews.com/View.aspx?No=3873976",
+          "link": "https://www.kbsm.net/news/view.php?idx=499222",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -576,34 +662,37 @@
       ]
     },
     {
-      "term": "Price anxiety households",
-      "term_ko": "물가 불안 가계",
+      "term": "Sold, ants bought",
+      "term_ko": "팔고 개미는 샀다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "물가 불안 가계",
+        "query": "팔고 개미는 샀다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "\"환율 1500원대 대비 필요\"...고환율에 물가 불안, 가계·기업엔 '비수'",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=851356"
+              "title": "'코스피 동상이몽'…이달 외국인 역대 최대로 팔고 개미는 샀다",
+              "link": "https://www.kbsm.net/news/view.php?idx=499222"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%BC%EA%B0%80%20%EB%B6%88%EC%95%88%20%EA%B0%80%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%BC%EA%B0%80%20%EB%B6%88%EC%95%88%20%EA%B0%80%EA%B3%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%94%EA%B3%A0%20%EA%B0%9C%EB%AF%B8%EB%8A%94%20%EC%83%80%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%94%EA%B3%A0%20%EA%B0%9C%EB%AF%B8%EB%8A%94%20%EC%83%80%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "\"환율 1500원대 대비 필요\"...고환율에 물가 불안, 가계·기업엔 '비수'",
+          "title": "'코스피 동상이몽'…이달 외국인 역대 최대로 팔고 개미는 샀다",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=851356",
+          "link": "https://www.kbsm.net/news/view.php?idx=499222",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -611,34 +700,37 @@
       ]
     },
     {
-      "term": "Working life at Hanwha",
-      "term_ko": "유한양행 일 생활",
+      "term": "In-place testicles and even looks",
+      "term_ko": "제자리 고환율에 외형마저",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "유한양행 일 생활",
+        "query": "제자리 고환율에 외형마저",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "자녀 출산 시 1000만원…유한양행, ‘일·생활 균형 우수기업’ 선정",
-              "link": "https://n.news.naver.com/mnews/article/029/0002996387?sid=105"
+              "title": "한국 GDP, 2년째 제자리…고환율에 외형마저 뒷걸음",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1688931"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89%20%EC%9D%BC%20%EC%83%9D%ED%99%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89%20%EC%9D%BC%20%EC%83%9D%ED%99%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%9E%90%EB%A6%AC%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%97%90%20%EC%99%B8%ED%98%95%EB%A7%88%EC%A0%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%9E%90%EB%A6%AC%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%97%90%20%EC%99%B8%ED%98%95%EB%A7%88%EC%A0%80"
       },
       "top_headlines": [
         {
-          "title": "자녀 출산 시 1000만원…유한양행, ‘일·생활 균형 우수기업’ 선정",
+          "title": "한국 GDP, 2년째 제자리…고환율에 외형마저 뒷걸음",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/029/0002996387?sid=105",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1688931",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -646,139 +738,37 @@
       ]
     },
     {
-      "term": "Best in Balance",
-      "term_ko": "균형 우수기업 선정",
-      "significance_score": 322,
+      "term": "5% off",
+      "term_ko": "5% 깎았다",
+      "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "균형 우수기업 선정",
+        "query": "5% 깎았다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "자녀 출산 시 1000만원…유한양행, ‘일·생활 균형 우수기업’ 선정",
-              "link": "https://n.news.naver.com/mnews/article/029/0002996387?sid=105"
+              "title": "부동산발 가계빚에 소비 ‘돈맥경화’…10년 누적 소비 5% 깎았다",
+              "link": "https://n.news.naver.com/mnews/article/025/0003486397?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%A0%ED%98%95%20%EC%9A%B0%EC%88%98%EA%B8%B0%EC%97%85%20%EC%84%A0%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%A0%ED%98%95%20%EC%9A%B0%EC%88%98%EA%B8%B0%EC%97%85%20%EC%84%A0%EC%A0%95"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%25%20%EA%B9%8E%EC%95%98%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%25%20%EA%B9%8E%EC%95%98%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "자녀 출산 시 1000만원…유한양행, ‘일·생활 균형 우수기업’ 선정",
+          "title": "부동산발 가계빚에 소비 ‘돈맥경화’…10년 누적 소비 5% 깎았다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/029/0002996387?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "I sold the most",
-      "term_ko": "제일 많이 팔았는데",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제일 많이 팔았는데",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "11월 외국인 역대 제일 많이 팔았는데…개미가 쓸어담았다",
-              "link": "https://n.news.naver.com/mnews/article/374/0000477814?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%9D%BC%20%EB%A7%8E%EC%9D%B4%20%ED%8C%94%EC%95%98%EB%8A%94%EB%8D%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%9D%BC%20%EB%A7%8E%EC%9D%B4%20%ED%8C%94%EC%95%98%EB%8A%94%EB%8D%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "11월 외국인 역대 제일 많이 팔았는데…개미가 쓸어담았다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000477814?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Santa Rally or Foreigner",
-      "term_ko": "산타랠리 맞을까 외국인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "산타랠리 맞을까 외국인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국내 증시, 12월 산타랠리 맞을까?…외국인 역대 최대로 팔고 개미는 샀...",
-              "link": "http://www.segyebiz.com/newsView/20251130503570?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%ED%83%80%EB%9E%A0%EB%A6%AC%20%EB%A7%9E%EC%9D%84%EA%B9%8C%20%EC%99%B8%EA%B5%AD%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%ED%83%80%EB%9E%A0%EB%A6%AC%20%EB%A7%9E%EC%9D%84%EA%B9%8C%20%EC%99%B8%EA%B5%AD%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 증시, 12월 산타랠리 맞을까?…외국인 역대 최대로 팔고 개미는 샀...",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251130503570?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Sell more than ever before",
-      "term_ko": "역대 최대로 팔고",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "역대 최대로 팔고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국내 증시, 12월 산타랠리 맞을까?…외국인 역대 최대로 팔고 개미는 샀...",
-              "link": "http://www.segyebiz.com/newsView/20251130503570?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80%EB%A1%9C%20%ED%8C%94%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80%EB%A1%9C%20%ED%8C%94%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 증시, 12월 산타랠리 맞을까?…외국인 역대 최대로 팔고 개미는 샀...",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20251130503570?OutUrl=naver",
+          "link": "https://n.news.naver.com/mnews/article/025/0003486397?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -795,8 +785,11 @@
         "query": "오후 늦게",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "암호화폐(코인) 리플이 오늘 꾸준히 하락세 보이다가 오후 늦게 반등에...",
@@ -830,8 +823,11 @@
         "query": "티어니 선임",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
@@ -856,34 +852,37 @@
       ]
     },
     {
-      "term": "Enlarged Seoul",
-      "term_ko": "커진 서울",
+      "term": "Stark temperature differences",
+      "term_ko": "극명한 온도차",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "커진 서울",
+        "query": "극명한 온도차",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
-              "link": "http://kpenews.com/View.aspx?No=3873976"
+              "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
+              "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BB%A4%EC%A7%84%20%EC%84%9C%EC%9A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BB%A4%EC%A7%84%20%EC%84%9C%EC%9A%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%B9%EB%AA%85%ED%95%9C%20%EC%98%A8%EB%8F%84%EC%B0%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%B9%EB%AA%85%ED%95%9C%20%EC%98%A8%EB%8F%84%EC%B0%A8"
       },
       "top_headlines": [
         {
-          "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
+          "title": "외국인 14조 팔 때 개인은 9조 주웠다…11월 코스피 극명한 온도차",
           "summary": "",
-          "link": "http://kpenews.com/View.aspx?No=3873976",
+          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1207299",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -891,104 +890,37 @@
       ]
     },
     {
-      "term": "Since the maximum",
-      "term_ko": "이래 최대",
+      "term": "South Korean won",
+      "term_ko": "韓 달러",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "이래 최대",
+        "query": "韓 달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
-              "link": "http://kpenews.com/View.aspx?No=3873976"
+              "title": "韓 '달러 GDP' 올해 0.9%↓···고환율에 2년 간 '제자리'",
+              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=417466"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%98%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%98%20%EC%B5%9C%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%20%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%20%EB%8B%AC%EB%9F%AC"
       },
       "top_headlines": [
         {
-          "title": "각종 규제로 변동성 커진 '서울 부동산'..계약 해제율 2020년 이래 최대",
+          "title": "韓 '달러 GDP' 올해 0.9%↓···고환율에 2년 간 '제자리'",
           "summary": "",
-          "link": "http://kpenews.com/View.aspx?No=3873976",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Non-numeric for enterprises",
-      "term_ko": "기업엔 비수",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기업엔 비수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"환율 1500원대 대비 필요\"...고환율에 물가 불안, 가계·기업엔 '비수'",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=851356"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%EC%97%94%20%EB%B9%84%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%EC%97%94%20%EB%B9%84%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "\"환율 1500원대 대비 필요\"...고환율에 물가 불안, 가계·기업엔 '비수'",
-          "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=851356",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Ants swarmed",
-      "term_ko": "개미가 쓸어담았다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개미가 쓸어담았다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "11월 외국인 역대 제일 많이 팔았는데…개미가 쓸어담았다",
-              "link": "https://n.news.naver.com/mnews/article/374/0000477814?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EB%AF%B8%EA%B0%80%20%EC%93%B8%EC%96%B4%EB%8B%B4%EC%95%98%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EB%AF%B8%EA%B0%80%20%EC%93%B8%EC%96%B4%EB%8B%B4%EC%95%98%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "11월 외국인 역대 제일 많이 팔았는데…개미가 쓸어담았다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000477814?sid=101",
+          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=417466",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1005,8 +937,11 @@
         "query": "Rate-Cut Hopes Lift",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "U.S. Stocks Rise in Post-Holiday Session as Rate-Cut Hopes Lift Markets",
@@ -1040,8 +975,11 @@
         "query": "Post-Holiday Session",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-11-30T10:43:50+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "U.S. Stocks Rise in Post-Holiday Session as Rate-Cut Hopes Lift Markets",
@@ -1064,30 +1002,105 @@
           "source": null
         }
       ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 상승",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-11-30T15:30:44+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-11-30T01:45:15.399Z",
+    "generated_at": "2025-11-30T06:32:10.122Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-30T10:43:50+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-11-30T15:30:44+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-11-30T10:43:50+09:00",
-      "fallback_sources": [],
+      "last_updated": "2025-11-30T15:30:44+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-11-30T10:43:50+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2025-11-30T15:30:44+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
       }
     }
   }
