@@ -1,1108 +1,425 @@
 {
-  "date": "2025-11-29",
+  "generatedAt": "2025-11-30T01:41:48.372Z",
+  "timezone": "Asia/Seoul",
+  "date": "2025-11-30",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Market Analysis US",
-      "term_ko": "시황 분석 미국",
-      "significance_score": 644,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시황 분석 미국",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시황 분석] 미국 뉴욕증시 나스닥·테슬라↑ 엔비디아↓ 블랙프라이데...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890175"
-            },
-            {
-              "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[시황 분석] 미국 뉴욕증시 나스닥·테슬라↑ 엔비디아↓ 블랙프라이데...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Market Analysis Us",
+      "term_ko": "시황 분석 미국"
     },
     {
-      "term": "New York Stock Exchange Early-Morning CME",
-      "term_ko": "뉴욕증시 장초반 CME",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 장초반 CME",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98%20CME",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%B4%88%EB%B0%98%20CME"
-      },
-      "top_headlines": [
-        {
-          "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "New York Stock Exchange Early-morning Cme",
+      "term_ko": "뉴욕증시 장초반 CME"
     },
     {
-      "term": "CEA Industry Credentials",
-      "term_ko": "CEA 인더스트리 신임",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "CEA 인더스트리 신임",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
-              "link": "https://www.tokenpost.kr/news/breaking/309258"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CEA%20%EC%9D%B8%EB%8D%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%20%EC%8B%A0%EC%9E%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CEA%20%EC%9D%B8%EB%8D%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%20%EC%8B%A0%EC%9E%84"
-      },
-      "top_headlines": [
-        {
-          "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/309258",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cea Industry Credentials",
+      "term_ko": "CEA 인더스트리 신임"
     },
     {
-      "term": "Oil price of $30 in 2025",
-      "term_ko": "2025년 유가 30불",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2025년 유가 30불",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"드릴, 베이비, 드릴\"의 강풍... 2025년 유가, '30불 시나리오'의 공포 직...",
-              "link": "https://www.g-enews.com/view.php?ud=202511291003518437fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2025%EB%85%84%20%EC%9C%A0%EA%B0%80%2030%EB%B6%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2025%EB%85%84%20%EC%9C%A0%EA%B0%80%2030%EB%B6%88"
-      },
-      "top_headlines": [
-        {
-          "title": "\"드릴, 베이비, 드릴\"의 강풍... 2025년 유가, '30불 시나리오'의 공포 직...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511291003518437fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Oil Price of $30 in 2025",
+      "term_ko": "2025년 유가 30불"
     },
     {
-      "term": "Gold price quotes for today, November 30th",
-      "term_ko": "오늘의 금값시세11월 30일자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세11월 30일자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(11월 30일자) \"금값, 2주만에 최고치\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3442461"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B811%EC%9B%94%2030%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B811%EC%9B%94%2030%EC%9D%BC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(11월 30일자) \"금값, 2주만에 최고치\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3442461",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Price Quotes for Today, November 30th",
+      "term_ko": "오늘의 금값시세11월 30일자"
     },
     {
-      "term": "Gold Price Hits 2-Week High",
-      "term_ko": "금값 2주만에 최고치",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값 2주만에 최고치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(11월 30일자) \"금값, 2주만에 최고치\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3442461"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%202%EC%A3%BC%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%202%EC%A3%BC%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(11월 30일자) \"금값, 2주만에 최고치\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3442461",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Price Hits 2-week High",
+      "term_ko": "금값 2주만에 최고치"
     },
     {
-      "term": "Weekly gold price 3.8",
-      "term_ko": "주간 금시세 3.8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주간 금시세 3.8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "주간 금시세 3.8% 상승...12월 연준 금리 인하 기대감",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=61769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%84%20%EA%B8%88%EC%8B%9C%EC%84%B8%203.8%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%84%20%EA%B8%88%EC%8B%9C%EC%84%B8%203.8%25"
-      },
-      "top_headlines": [
-        {
-          "title": "주간 금시세 3.8% 상승...12월 연준 금리 인하 기대감",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=61769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Weekly Gold Price 3.8",
+      "term_ko": "주간 금시세 3.8%"
     },
     {
-      "term": "Gold market value of 1 dollar 8",
-      "term_ko": "금시세금값 1돈 팔",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금시세금값 1돈 팔",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘 금시세(금값) 1돈 '팔 때' 얼마…가격이 쉽게 흔들리지 않은 데에...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542293"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%8B%9C%EC%84%B8%EA%B8%88%EA%B0%92%201%EB%8F%88%20%ED%8C%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%8B%9C%EC%84%B8%EA%B8%88%EA%B0%92%201%EB%8F%88%20%ED%8C%94"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘 금시세(금값) 1돈 '팔 때' 얼마…가격이 쉽게 흔들리지 않은 데에...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=542293",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Market Value of 1 Dollar 8",
+      "term_ko": "금시세금값 1돈 팔"
     },
     {
-      "term": "Silver price up 94% this year",
-      "term_ko": "올해 은값 94%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "올해 은값 94%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "올해 은값 94% 폭등 '사상 최고가'…금보다 더 뛰었다",
-              "link": "https://n.news.naver.com/mnews/article/057/0001921926?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%EC%9D%80%EA%B0%92%2094%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%EC%9D%80%EA%B0%92%2094%25"
-      },
-      "top_headlines": [
-        {
-          "title": "올해 은값 94% 폭등 '사상 최고가'…금보다 더 뛰었다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/057/0001921926?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Silver Price Up 94% This Year",
+      "term_ko": "올해 은값 94%"
     },
     {
-      "term": "NYSE Nasdaq Tesla",
-      "term_ko": "뉴욕증시 나스닥 테슬라",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 나스닥 테슬라",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시황 분석] 미국 뉴욕증시 나스닥·테슬라↑ 엔비디아↓ 블랙프라이데...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%ED%85%8C%EC%8A%AC%EB%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%ED%85%8C%EC%8A%AC%EB%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[시황 분석] 미국 뉴욕증시 나스닥·테슬라↑ 엔비디아↓ 블랙프라이데...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Nasdaq Tesla",
+      "term_ko": "뉴욕증시 나스닥 테슬라"
     },
     {
       "term": "Inside Failure Black Friday",
-      "term_ko": "장애 블랙프라이데이 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "장애 블랙프라이데이 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%95%A0%20%EB%B8%94%EB%9E%99%ED%94%84%EB%9D%BC%EC%9D%B4%EB%8D%B0%EC%9D%B4%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%95%A0%20%EB%B8%94%EB%9E%99%ED%94%84%EB%9D%BC%EC%9D%B4%EB%8D%B0%EC%9D%B4%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "[시황 분석] 미국 뉴욕증시 장초반 CME 장애·블랙프라이데이 속 빅테크...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15890006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "장애 블랙프라이데이 속"
     },
     {
-      "term": "NYSE preview cooling",
-      "term_ko": "뉴욕증시 프리뷰 냉각",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 냉각",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
-              "link": "https://www.newspim.com/news/view/20251128001185"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%83%89%EA%B0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%83%89%EA%B0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251128001185",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview Cooling",
+      "term_ko": "뉴욕증시 프리뷰 냉각"
     },
     {
-      "term": "Before a gift opens",
-      "term_ko": "선물 개장 전",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "선물 개장 전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
-              "link": "https://www.newspim.com/news/view/20251128001185"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EB%AC%BC%20%EA%B0%9C%EC%9E%A5%20%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EB%AC%BC%20%EA%B0%9C%EC%9E%A5%20%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, '냉각 쇼크' 딛고 주가 선물 개장 전 상승...샌디스크...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251128001185",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Before a Gift Opens",
+      "term_ko": "선물 개장 전"
     },
     {
-      "term": "Fed rate cuts",
-      "term_ko": "연준 금리 인하",
-      "significance_score": 322,
-      "mentions": 375,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연준 금리 인하",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-22",
-              "timestamp": 1763737200000,
-              "value": 99.66942
-            },
-            {
-              "period": "2025-11-23",
-              "timestamp": 1763823600000,
-              "value": 72.06611
-            },
-            {
-              "period": "2025-11-24",
-              "timestamp": 1763910000000,
-              "value": 100
-            },
-            {
-              "period": "2025-11-25",
-              "timestamp": 1763996400000,
-              "value": 91.90082
-            },
-            {
-              "period": "2025-11-26",
-              "timestamp": 1764082800000,
-              "value": 76.8595
-            },
-            {
-              "period": "2025-11-27",
-              "timestamp": 1764169200000,
-              "value": 67.93388
-            },
-            {
-              "period": "2025-11-28",
-              "timestamp": 1764255600000,
-              "value": 38.67768
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "주간 금시세 3.8% 상승...12월 연준 금리 인하 기대감",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=61769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%A4%80%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%A4%80%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98"
-      },
-      "top_headlines": [
-        {
-          "title": "주간 금시세 3.8% 상승...12월 연준 금리 인하 기대감",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=61769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 375.3719,
-        "weekly_average_volume": 75.0744,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.016426,
-        "time_weight": 0.019416,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764255600000
-      }
+      "term": "Fed Rate Cuts",
+      "term_ko": "연준 금리 인하"
     },
     {
-      "term": "Deposits in a volatile stock market",
-      "term_ko": "요동치는 코스피에 예탁금",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "요동치는 코스피에 예탁금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "요동치는 코스피에 예탁금 '뚝'...미 증시는 '사자'",
-              "link": "https://n.news.naver.com/mnews/article/052/0002280200?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%94%EB%8F%99%EC%B9%98%EB%8A%94%20%EC%BD%94%EC%8A%A4%ED%94%BC%EC%97%90%20%EC%98%88%ED%83%81%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%94%EB%8F%99%EC%B9%98%EB%8A%94%20%EC%BD%94%EC%8A%A4%ED%94%BC%EC%97%90%20%EC%98%88%ED%83%81%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "요동치는 코스피에 예탁금 '뚝'...미 증시는 '사자'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002280200?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Deposits in a Volatile Stock Market",
+      "term_ko": "요동치는 코스피에 예탁금"
     },
     {
-      "term": "Harder than gold",
-      "term_ko": "금보다 더 뛰었다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금보다 더 뛰었다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "올해 은값 94% 폭등 '사상 최고가'…금보다 더 뛰었다",
-              "link": "https://n.news.naver.com/mnews/article/057/0001921926?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%B3%B4%EB%8B%A4%20%EB%8D%94%20%EB%9B%B0%EC%97%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%B3%B4%EB%8B%A4%20%EB%8D%94%20%EB%9B%B0%EC%97%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "올해 은값 94% 폭등 '사상 최고가'…금보다 더 뛰었다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/057/0001921926?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Harder Than Gold",
+      "term_ko": "금보다 더 뛰었다"
     },
     {
-      "term": "Late afternoon",
-      "term_ko": "오후 늦게",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오후 늦게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "암호화폐(코인) 리플이 오늘 꾸준히 하락세 보이다가 오후 늦게 반등에...",
-              "link": "https://www.wikitree.co.kr/articles/1098549"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%ED%9B%84%20%EB%8A%A6%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%ED%9B%84%20%EB%8A%A6%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐(코인) 리플이 오늘 꾸준히 하락세 보이다가 오후 늦게 반등에...",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1098549",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Late Afternoon",
+      "term_ko": "오후 늦게"
     },
     {
       "term": "Senior Tierney",
-      "term_ko": "티어니 선임",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "티어니 선임",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
-              "link": "https://www.tokenpost.kr/news/breaking/309258"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8B%B0%EC%96%B4%EB%8B%88%20%EC%84%A0%EC%9E%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8B%B0%EC%96%B4%EB%8B%88%20%EC%84%A0%EC%9E%84"
-      },
-      "top_headlines": [
-        {
-          "title": "CEA 인더스트리, 신임 이사에 암호화폐 전문가 티어니 선임",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/309258",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "티어니 선임"
     },
     {
-      "term": "Scenario horror",
-      "term_ko": "시나리오의 공포",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시나리오의 공포",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"드릴, 베이비, 드릴\"의 강풍... 2025년 유가, '30불 시나리오'의 공포 직...",
-              "link": "https://www.g-enews.com/view.php?ud=202511291003518437fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%9D%98%20%EA%B3%B5%ED%8F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%EC%9D%98%20%EA%B3%B5%ED%8F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "\"드릴, 베이비, 드릴\"의 강풍... 2025년 유가, '30불 시나리오'의 공포 직...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202511291003518437fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Scenario Horror",
+      "term_ko": "시나리오의 공포"
     },
     {
-      "term": "The stock market is a lion",
-      "term_ko": "증시는 사자",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시는 사자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "요동치는 코스피에 예탁금 '뚝'...미 증시는 '사자'",
-              "link": "https://n.news.naver.com/mnews/article/052/0002280200?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%EB%8A%94%20%EC%82%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%EB%8A%94%20%EC%82%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "요동치는 코스피에 예탁금 '뚝'...미 증시는 '사자'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002280200?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Stock Market Is a Lion",
+      "term_ko": "증시는 사자"
     },
     {
-      "term": "Rate-Cut Hopes Lift",
-      "term_ko": "요금 인하 희망 상승",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rate-Cut Hopes Lift",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Rise in Post-Holiday Session as Rate-Cut Hopes Lift Markets",
-              "link": "https://www.econotimes.com/US-Stocks-Rise-in-Post-Holiday-Session-as-Rate-Cut-Hopes-Lift-Markets-1727290"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate-Cut%20Hopes%20Lift",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate-Cut%20Hopes%20Lift"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Rise in Post-Holiday Session as Rate-Cut Hopes Lift Markets",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rise-in-Post-Holiday-Session-as-Rate-Cut-Hopes-Lift-Markets-1727290",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rate-cut Hopes Lift",
+      "term_ko": "요금 인하 희망 상승"
     },
     {
-      "term": "Post-Holiday Session",
-      "term_ko": "휴가 후 세션",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Post-Holiday Session",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Rise in Post-Holiday Session as Rate-Cut Hopes Lift Markets",
-              "link": "https://www.econotimes.com/US-Stocks-Rise-in-Post-Holiday-Session-as-Rate-Cut-Hopes-Lift-Markets-1727290"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Post-Holiday%20Session",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Post-Holiday%20Session"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Rise in Post-Holiday Session as Rate-Cut Hopes Lift Markets",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rise-in-Post-Holiday-Session-as-Rate-Cut-Hopes-Lift-Markets-1727290",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Post-holiday Session",
+      "term_ko": "휴가 후 세션"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
-      "term": "South Korean stocks rebound",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-11-30T03:29:07+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "South Korean Stocks Rebound",
+      "term_ko": "한국 증시 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-11-29T18:30:32.712Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-11-30T03:29:07+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Market Analysis Us",
+      "term_ko": "시황 분석 미국"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-11-30T03:29:07+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-11-30T03:29:07+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "New York Stock Exchange Early-morning Cme",
+      "term_ko": "뉴욕증시 장초반 CME"
+    },
+    {
+      "term": "Cea Industry Credentials",
+      "term_ko": "CEA 인더스트리 신임"
+    },
+    {
+      "term": "Oil Price of $30 in 2025",
+      "term_ko": "2025년 유가 30불"
+    },
+    {
+      "term": "Gold Price Quotes for Today, November 30th",
+      "term_ko": "오늘의 금값시세11월 30일자"
+    },
+    {
+      "term": "Gold Price Hits 2-week High",
+      "term_ko": "금값 2주만에 최고치"
+    },
+    {
+      "term": "Weekly Gold Price 3.8",
+      "term_ko": "주간 금시세 3.8%"
+    },
+    {
+      "term": "Gold Market Value of 1 Dollar 8",
+      "term_ko": "금시세금값 1돈 팔"
+    },
+    {
+      "term": "Silver Price Up 94% This Year",
+      "term_ko": "올해 은값 94%"
+    },
+    {
+      "term": "Nyse Nasdaq Tesla",
+      "term_ko": "뉴욕증시 나스닥 테슬라"
+    },
+    {
+      "term": "Inside Failure Black Friday",
+      "term_ko": "장애 블랙프라이데이 속"
+    },
+    {
+      "term": "Nyse Preview Cooling",
+      "term_ko": "뉴욕증시 프리뷰 냉각"
+    },
+    {
+      "term": "Before a Gift Opens",
+      "term_ko": "선물 개장 전"
+    },
+    {
+      "term": "Fed Rate Cuts",
+      "term_ko": "연준 금리 인하"
+    },
+    {
+      "term": "Deposits in a Volatile Stock Market",
+      "term_ko": "요동치는 코스피에 예탁금"
+    },
+    {
+      "term": "Harder Than Gold",
+      "term_ko": "금보다 더 뛰었다"
+    },
+    {
+      "term": "Late Afternoon",
+      "term_ko": "오후 늦게"
+    },
+    {
+      "term": "Senior Tierney",
+      "term_ko": "티어니 선임"
+    },
+    {
+      "term": "Scenario Horror",
+      "term_ko": "시나리오의 공포"
+    },
+    {
+      "term": "The Stock Market Is a Lion",
+      "term_ko": "증시는 사자"
+    },
+    {
+      "term": "Rate-cut Hopes Lift",
+      "term_ko": "요금 인하 희망 상승"
+    },
+    {
+      "term": "Post-holiday Session",
+      "term_ko": "휴가 후 세션"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "South Korean Stocks Rebound",
+      "term_ko": "한국 증시 반등"
+    }
+  ],
+  "translations": {
+    "Market Analysis Us": {
+      "en": "Market Analysis Us",
+      "ko": "시황 분석 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "New York Stock Exchange Early-morning Cme": {
+      "en": "New York Stock Exchange Early-morning Cme",
+      "ko": "뉴욕증시 장초반 CME",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "Cea Industry Credentials": {
+      "en": "Cea Industry Credentials",
+      "ko": "CEA 인더스트리 신임",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "Oil Price of $30 in 2025": {
+      "en": "Oil Price of $30 in 2025",
+      "ko": "2025년 유가 30불",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "Gold Price Quotes for Today, November 30th": {
+      "en": "Gold Price Quotes for Today, November 30th",
+      "ko": "오늘의 금값시세11월 30일자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "Gold Price Hits 2-week High": {
+      "en": "Gold Price Hits 2-week High",
+      "ko": "금값 2주만에 최고치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "Weekly Gold Price 3.8": {
+      "en": "Weekly Gold Price 3.8",
+      "ko": "주간 금시세 3.8%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "Gold Market Value of 1 Dollar 8": {
+      "en": "Gold Market Value of 1 Dollar 8",
+      "ko": "금시세금값 1돈 팔",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.372Z"
+    },
+    "Silver Price Up 94% This Year": {
+      "en": "Silver Price Up 94% This Year",
+      "ko": "올해 은값 94%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Nyse Nasdaq Tesla": {
+      "en": "Nyse Nasdaq Tesla",
+      "ko": "뉴욕증시 나스닥 테슬라",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Inside Failure Black Friday": {
+      "en": "Inside Failure Black Friday",
+      "ko": "장애 블랙프라이데이 속",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Nyse Preview Cooling": {
+      "en": "Nyse Preview Cooling",
+      "ko": "뉴욕증시 프리뷰 냉각",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Before a Gift Opens": {
+      "en": "Before a Gift Opens",
+      "ko": "선물 개장 전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Fed Rate Cuts": {
+      "en": "Fed Rate Cuts",
+      "ko": "연준 금리 인하",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Deposits in a Volatile Stock Market": {
+      "en": "Deposits in a Volatile Stock Market",
+      "ko": "요동치는 코스피에 예탁금",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Harder Than Gold": {
+      "en": "Harder Than Gold",
+      "ko": "금보다 더 뛰었다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Late Afternoon": {
+      "en": "Late Afternoon",
+      "ko": "오후 늦게",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Senior Tierney": {
+      "en": "Senior Tierney",
+      "ko": "티어니 선임",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Scenario Horror": {
+      "en": "Scenario Horror",
+      "ko": "시나리오의 공포",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "The Stock Market Is a Lion": {
+      "en": "The Stock Market Is a Lion",
+      "ko": "증시는 사자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Rate-cut Hopes Lift": {
+      "en": "Rate-cut Hopes Lift",
+      "ko": "요금 인하 희망 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Post-holiday Session": {
+      "en": "Post-holiday Session",
+      "ko": "휴가 후 세션",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "U.s. Government Shutdown Crisis": {
+      "en": "U.s. Government Shutdown Crisis",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
+    },
+    "South Korean Stocks Rebound": {
+      "en": "South Korean Stocks Rebound",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-11-30T01:41:48.373Z"
     }
   }
 }
