@@ -8,6 +8,9 @@ let animationId;
 let leaderboard = [];
 let bubblesPopped = 0;
 let totalBubbles = 16;
+let nameInput, nameError;
+
+const NAME_PATTERN = /^[A-Za-z\u3131-\u318E\uAC00-\uD7A3\s]+$/;
 
 // Google Apps Script URL for leaderboard
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRJMG0rDfPDanjStSPjbMyOIAjXV0l2pUuquGM9SzxaFafYDBFTT04d6U1NGsYa6U/exec';
@@ -16,6 +19,8 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRJMG0rDfPDa
 window.onload = function() {
     canvas = document.getElementById('gameCanvas');
     ctx = canvas.getContext('2d');
+    nameInput = document.getElementById('playerName');
+    nameError = document.getElementById('nameError');
 
     // Set canvas size dynamically
     resizeCanvas();
@@ -23,6 +28,7 @@ window.onload = function() {
 
     fetchLeaderboard();
     setupEventListeners();
+    setupNameValidation();
 };
 
 function resizeCanvas() {
@@ -53,6 +59,41 @@ function setupEventListeners() {
 
     // Mouse events for desktop
     canvas.addEventListener('click', handleClick);
+}
+
+function setupNameValidation() {
+    if (!nameInput) return;
+    nameInput.addEventListener('input', handleNameInput);
+}
+
+function sanitizeNameInput(value) {
+    const matches = value.match(/[A-Za-z\u3131-\u318E\uAC00-\uD7A3\s]+/g);
+    return matches ? matches.join('') : '';
+}
+
+function handleNameInput() {
+    const sanitized = sanitizeNameInput(nameInput.value);
+
+    if (nameInput.value !== sanitized) {
+        nameInput.value = sanitized;
+        showNameError('Please use alphabets or 한글 only.');
+    } else if (sanitized) {
+        hideNameError();
+    } else {
+        hideNameError();
+    }
+}
+
+function showNameError(message) {
+    if (!nameError) return;
+    nameError.textContent = message;
+    nameError.style.display = 'block';
+}
+
+function hideNameError() {
+    if (!nameError) return;
+    nameError.textContent = '';
+    nameError.style.display = 'none';
 }
 
 function preventScroll(e) { e.preventDefault(); }
@@ -271,32 +312,43 @@ function gameOver() {
 }
 
 function saveScore() {
-    const name = document.getElementById('playerName').value.trim();
-    if (name) {
-        const finalScore = score + Math.max(0, 1000 - Math.floor(elapsedTime * 10));
-        const newScore = {
-            name,
-            score: finalScore,
-            time: parseFloat(elapsedTime),
-            date: new Date().toISOString()
-        };
+    const nameValue = nameInput ? nameInput.value.trim() : '';
 
-        fetch(GOOGLE_SCRIPT_URL, {
-            method: 'POST', mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newScore)
-        }).then(() => {
-            const localScores = JSON.parse(localStorage.getItem('bubblePopLeaderboard') || '[]');
-            localScores.push(newScore);
-            localScores.sort((a, b) => b.score - a.score);
-            localStorage.setItem('bubblePopLeaderboard', JSON.stringify(localScores.slice(0, 10)));
-            fetchLeaderboard();
-        }).catch(error => {
-            console.error('Failed to save score:', error);
-        });
-
-        restartGame();
+    if (!nameValue) {
+        showNameError('Please enter your name.');
+        return;
     }
+
+    if (!NAME_PATTERN.test(nameValue)) {
+        showNameError('Please use alphabets or 한글 only.');
+        return;
+    }
+
+    hideNameError();
+
+    const finalScore = score + Math.max(0, 1000 - Math.floor(elapsedTime * 10));
+    const newScore = {
+        name: nameValue,
+        score: finalScore,
+        time: parseFloat(elapsedTime),
+        date: new Date().toISOString()
+    };
+
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newScore)
+    }).then(() => {
+        const localScores = JSON.parse(localStorage.getItem('bubblePopLeaderboard') || '[]');
+        localScores.push(newScore);
+        localScores.sort((a, b) => b.score - a.score);
+        localStorage.setItem('bubblePopLeaderboard', JSON.stringify(localScores.slice(0, 10)));
+        fetchLeaderboard();
+    }).catch(error => {
+        console.error('Failed to save score:', error);
+    });
+
+    restartGame();
 }
 
 function showLeaderboard() {
@@ -311,7 +363,8 @@ function restartGame() {
     document.getElementById('gameStats').style.display = 'none';
     document.getElementById('gameBackBtn').style.display = 'none';
     document.getElementById('gameMenu').style.display = 'block';
-    document.getElementById('playerName').value = '';
+    if (nameInput) nameInput.value = '';
+    hideNameError();
     hideLeaderboard();
 }
 
