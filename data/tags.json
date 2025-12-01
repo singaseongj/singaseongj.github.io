@@ -1,1128 +1,439 @@
 {
+  "generatedAt": "2025-12-01T18:32:14.933Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-01",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "End Almost Flat",
-      "term_ko": "거의 평평하게 끝내기",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "End Almost Flat",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares end almost flat on profit-taking amid uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0015772091?sid=104"
-            },
-            {
-              "title": "Seoul shares end almost flat on profit-taking amid uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0015771999?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=End%20Almost%20Flat",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=End%20Almost%20Flat"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares end almost flat on profit-taking amid uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015772091?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Seoul shares end almost flat on profit-taking amid uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015771999?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "거의 평평하게 끝내기"
     },
     {
-      "term": "Yanfinance Hack BOJ",
-      "term_ko": "연파이낸스 해킹 BOJ",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연파이낸스 해킹 BOJ",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인 6억달러 청산 '폭탄'…연파이낸스 해킹·BOJ 금리 ...",
-              "link": "https://www.newspim.com/news/view/20251201001214"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%ED%8C%8C%EC%9D%B4%EB%82%B8%EC%8A%A4%20%ED%95%B4%ED%82%B9%20BOJ",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%ED%8C%8C%EC%9D%B4%EB%82%B8%EC%8A%A4%20%ED%95%B4%ED%82%B9%20BOJ"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인 6억달러 청산 '폭탄'…연파이낸스 해킹·BOJ 금리 ...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251201001214",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Yanfinance Hack Boj",
+      "term_ko": "연파이낸스 해킹 BOJ"
     },
     {
-      "term": "獨 1 year to the chin",
-      "term_ko": "獨 턱밑까지 1년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "獨 턱밑까지 1년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "韓 증시 시총, 사우디·스위스 넘어 獨 턱밑까지…1년 만에 ‘16→12위’...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002565512?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%8D%A8%20%ED%84%B1%EB%B0%91%EA%B9%8C%EC%A7%80%201%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%8D%A8%20%ED%84%B1%EB%B0%91%EA%B9%8C%EC%A7%80%201%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "韓 증시 시총, 사우디·스위스 넘어 獨 턱밑까지…1년 만에 ‘16→12위’...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002565512?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "獨 1 Year to the Chin",
+      "term_ko": "獨 턱밑까지 1년"
     },
     {
-      "term": "Market capitalization Bitcoin $6 billion",
-      "term_ko": "시황 비트코인 6억달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시황 비트코인 6억달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인 6억달러 청산 '폭탄'…연파이낸스 해킹·BOJ 금리 ...",
-              "link": "https://www.newspim.com/news/view/20251201001214"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%206%EC%96%B5%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%206%EC%96%B5%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인 6억달러 청산 '폭탄'…연파이낸스 해킹·BOJ 금리 ...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251201001214",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Market Capitalization Bitcoin $6 Billion",
+      "term_ko": "시황 비트코인 6억달러"
     },
     {
-      "term": "7 participating companies",
-      "term_ko": "참여 기업 7개사",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "참여 기업 7개사",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "경기북부광역새일센터, 가족친화인증 컨설팅 참여 기업 7개사 인증 획득",
-              "link": "http://www.globalepic.co.kr/view.php?ud=2025120118562339095f69d33b22_29"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B0%B8%EC%97%AC%20%EA%B8%B0%EC%97%85%207%EA%B0%9C%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B0%B8%EC%97%AC%20%EA%B8%B0%EC%97%85%207%EA%B0%9C%EC%82%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "경기북부광역새일센터, 가족친화인증 컨설팅 참여 기업 7개사 인증 획득",
-          "summary": "",
-          "link": "http://www.globalepic.co.kr/view.php?ud=2025120118562339095f69d33b22_29",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "7 Participating Companies",
+      "term_ko": "참여 기업 7개사"
     },
     {
-      "term": "Even at record highs, until next June",
-      "term_ko": "신고가에도 내년 6월까지",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신고가에도 내년 6월까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "사두길 잘했네…신고가에도 \"내년 6월까지 여유\"",
-              "link": "https://n.news.naver.com/mnews/article/215/0001232988?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EA%B3%A0%EA%B0%80%EC%97%90%EB%8F%84%20%EB%82%B4%EB%85%84%206%EC%9B%94%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EA%B3%A0%EA%B0%80%EC%97%90%EB%8F%84%20%EB%82%B4%EB%85%84%206%EC%9B%94%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "사두길 잘했네…신고가에도 \"내년 6월까지 여유\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001232988?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Even at Record Highs, Until Next June",
+      "term_ko": "신고가에도 내년 6월까지"
     },
     {
-      "term": "Dividend stocks float KOSPI High Dividend 50",
-      "term_ko": "배당주 뜬다 코스피고배당50",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "배당주 뜬다 코스피고배당50",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'증시 부양' 정책 기대감에 배당주 뜬다…코스피고배당50, 한달 새 4% '껑...",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285659"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%B0%EB%8B%B9%EC%A3%BC%20%EB%9C%AC%EB%8B%A4%20%EC%BD%94%EC%8A%A4%ED%94%BC%EA%B3%A0%EB%B0%B0%EB%8B%B950",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%B0%EB%8B%B9%EC%A3%BC%20%EB%9C%AC%EB%8B%A4%20%EC%BD%94%EC%8A%A4%ED%94%BC%EA%B3%A0%EB%B0%B0%EB%8B%B950"
-      },
-      "top_headlines": [
-        {
-          "title": "'증시 부양' 정책 기대감에 배당주 뜬다…코스피고배당50, 한달 새 4% '껑...",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285659",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dividend Stocks Float Kospi High Dividend 50",
+      "term_ko": "배당주 뜬다 코스피고배당50"
     },
     {
-      "term": "4% new in 1 month",
-      "term_ko": "한달 새 4%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한달 새 4%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'증시 부양' 정책 기대감에 배당주 뜬다…코스피고배당50, 한달 새 4% '껑...",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285659"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EB%8B%AC%20%EC%83%88%204%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EB%8B%AC%20%EC%83%88%204%25"
-      },
-      "top_headlines": [
-        {
-          "title": "'증시 부양' 정책 기대감에 배당주 뜬다…코스피고배당50, 한달 새 4% '껑...",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285659",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4% New in 1 Month",
+      "term_ko": "한달 새 4%"
     },
     {
-      "term": "Institutional investors invested $490 billion overseas",
-      "term_ko": "기관투자자 해외투자액 4900억弗",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기관투자자 해외투자액 4900억弗",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "기관투자자 해외투자액 4900억弗 역대 최대",
-              "link": "https://n.news.naver.com/mnews/article/022/0004086800?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EA%B4%80%ED%88%AC%EC%9E%90%EC%9E%90%20%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%EC%95%A1%204900%EC%96%B5%E5%BC%97",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EA%B4%80%ED%88%AC%EC%9E%90%EC%9E%90%20%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%EC%95%A1%204900%EC%96%B5%E5%BC%97"
-      },
-      "top_headlines": [
-        {
-          "title": "기관투자자 해외투자액 4900억弗 역대 최대",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004086800?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Institutional Investors Invested $490 Billion Overseas",
+      "term_ko": "기관투자자 해외투자액 4900억弗"
     },
     {
-      "term": "Korean stock market capitalization",
-      "term_ko": "韓 증시 시총",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "韓 증시 시총",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "韓 증시 시총, 사우디·스위스 넘어 獨 턱밑까지…1년 만에 ‘16→12위’...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002565512?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%20%EC%A6%9D%EC%8B%9C%20%EC%8B%9C%EC%B4%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%20%EC%A6%9D%EC%8B%9C%20%EC%8B%9C%EC%B4%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "韓 증시 시총, 사우디·스위스 넘어 獨 턱밑까지…1년 만에 ‘16→12위’...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002565512?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Korean Stock Market Capitalization",
+      "term_ko": "韓 증시 시총"
     },
     {
       "term": "Beyond Saudi Arabia",
-      "term_ko": "사우디 스위스 넘어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사우디 스위스 넘어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "韓 증시 시총, 사우디·스위스 넘어 獨 턱밑까지…1년 만에 ‘16→12위’...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002565512?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%9A%B0%EB%94%94%20%EC%8A%A4%EC%9C%84%EC%8A%A4%20%EB%84%98%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%9A%B0%EB%94%94%20%EC%8A%A4%EC%9C%84%EC%8A%A4%20%EB%84%98%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "韓 증시 시총, 사우디·스위스 넘어 獨 턱밑까지…1년 만에 ‘16→12위’...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002565512?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사우디 스위스 넘어"
     },
     {
-      "term": "Discontinued life insurance company deviation accounting",
-      "term_ko": "생명보험사 일탈회계 중단",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "생명보험사 일탈회계 중단",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "생명보험사 '일탈회계' 중단… 올해 결산부터 전진 적용",
-              "link": "https://www.insnews.co.kr/news/articleView.html?idxno=87631"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EB%AA%85%EB%B3%B4%ED%97%98%EC%82%AC%20%EC%9D%BC%ED%83%88%ED%9A%8C%EA%B3%84%20%EC%A4%91%EB%8B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EB%AA%85%EB%B3%B4%ED%97%98%EC%82%AC%20%EC%9D%BC%ED%83%88%ED%9A%8C%EA%B3%84%20%EC%A4%91%EB%8B%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "생명보험사 '일탈회계' 중단… 올해 결산부터 전진 적용",
-          "summary": "",
-          "link": "https://www.insnews.co.kr/news/articleView.html?idxno=87631",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Discontinued Life Insurance Company Deviation Accounting",
+      "term_ko": "생명보험사 일탈회계 중단"
     },
     {
-      "term": "Moving forward from the end of the year",
-      "term_ko": "올해 결산부터 전진",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "올해 결산부터 전진",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "생명보험사 '일탈회계' 중단… 올해 결산부터 전진 적용",
-              "link": "https://www.insnews.co.kr/news/articleView.html?idxno=87631"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%EA%B2%B0%EC%82%B0%EB%B6%80%ED%84%B0%20%EC%A0%84%EC%A7%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%EA%B2%B0%EC%82%B0%EB%B6%80%ED%84%B0%20%EC%A0%84%EC%A7%84"
-      },
-      "top_headlines": [
-        {
-          "title": "생명보험사 '일탈회계' 중단… 올해 결산부터 전진 적용",
-          "summary": "",
-          "link": "https://www.insnews.co.kr/news/articleView.html?idxno=87631",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Moving Forward From the End of the Year",
+      "term_ko": "올해 결산부터 전진"
     },
     {
       "term": "Gyeonggi North Metropolitan New Job Center Family Friendly Certification Consulting",
-      "term_ko": "경기북부광역새일센터 가족친화인증 컨설팅",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경기북부광역새일센터 가족친화인증 컨설팅",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "경기북부광역새일센터, 가족친화인증 컨설팅 참여 기업 7개사 인증 획득",
-              "link": "http://www.globalepic.co.kr/view.php?ud=2025120118562339095f69d33b22_29"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B8%B0%EB%B6%81%EB%B6%80%EA%B4%91%EC%97%AD%EC%83%88%EC%9D%BC%EC%84%BC%ED%84%B0%20%EA%B0%80%EC%A1%B1%EC%B9%9C%ED%99%94%EC%9D%B8%EC%A6%9D%20%EC%BB%A8%EC%84%A4%ED%8C%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B8%B0%EB%B6%81%EB%B6%80%EA%B4%91%EC%97%AD%EC%83%88%EC%9D%BC%EC%84%BC%ED%84%B0%20%EA%B0%80%EC%A1%B1%EC%B9%9C%ED%99%94%EC%9D%B8%EC%A6%9D%20%EC%BB%A8%EC%84%A4%ED%8C%85"
-      },
-      "top_headlines": [
-        {
-          "title": "경기북부광역새일센터, 가족친화인증 컨설팅 참여 기업 7개사 인증 획득",
-          "summary": "",
-          "link": "http://www.globalepic.co.kr/view.php?ud=2025120118562339095f69d33b22_29",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경기북부광역새일센터 가족친화인증 컨설팅"
     },
     {
-      "term": "Stock market stimulus policies",
-      "term_ko": "증시 부양 정책",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 부양 정책",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'증시 부양' 정책 기대감에 배당주 뜬다…코스피고배당50, 한달 새 4% '껑...",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=285659"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B6%80%EC%96%91%20%EC%A0%95%EC%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B6%80%EC%96%91%20%EC%A0%95%EC%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "'증시 부양' 정책 기대감에 배당주 뜬다…코스피고배당50, 한달 새 4% '껑...",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=285659",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Market Stimulus Policies",
+      "term_ko": "증시 부양 정책"
     },
     {
-      "term": "Liquidation bombs",
-      "term_ko": "청산 폭탄",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청산 폭탄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인 6억달러 청산 '폭탄'…연파이낸스 해킹·BOJ 금리 ...",
-              "link": "https://www.newspim.com/news/view/20251201001214"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EC%82%B0%20%ED%8F%AD%ED%83%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EC%82%B0%20%ED%8F%AD%ED%83%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인 6억달러 청산 '폭탄'…연파이낸스 해킹·BOJ 금리 ...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251201001214",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Liquidation Bombs",
+      "term_ko": "청산 폭탄"
     },
     {
-      "term": "Get certified",
-      "term_ko": "인증 획득",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인증 획득",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "경기북부광역새일센터, 가족친화인증 컨설팅 참여 기업 7개사 인증 획득",
-              "link": "http://www.globalepic.co.kr/view.php?ud=2025120118562339095f69d33b22_29"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%A6%9D%20%ED%9A%8D%EB%93%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%A6%9D%20%ED%9A%8D%EB%93%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "경기북부광역새일센터, 가족친화인증 컨설팅 참여 기업 7개사 인증 획득",
-          "summary": "",
-          "link": "http://www.globalepic.co.kr/view.php?ud=2025120118562339095f69d33b22_29",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Get Certified",
+      "term_ko": "인증 획득"
     },
     {
-      "term": "I'm glad I bought it.",
-      "term_ko": "사두길 잘했네",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사두길 잘했네",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "사두길 잘했네…신고가에도 \"내년 6월까지 여유\"",
-              "link": "https://n.news.naver.com/mnews/article/215/0001232988?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EB%91%90%EA%B8%B8%20%EC%9E%98%ED%96%88%EB%84%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EB%91%90%EA%B8%B8%20%EC%9E%98%ED%96%88%EB%84%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "사두길 잘했네…신고가에도 \"내년 6월까지 여유\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001232988?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I'm Glad I Bought It.",
+      "term_ko": "사두길 잘했네"
     },
     {
-      "term": "The largest",
-      "term_ko": "역대 최대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "역대 최대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "기관투자자 해외투자액 4900억弗 역대 최대",
-              "link": "https://n.news.naver.com/mnews/article/022/0004086800?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "기관투자자 해외투자액 4900억弗 역대 최대",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004086800?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Largest",
+      "term_ko": "역대 최대"
     },
     {
       "term": "Institutions Alike Head",
-      "term_ko": "기관장",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Institutions Alike Head",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Retail Investors and Institutions Alike Head Overseas",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=257738"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Institutions%20Alike%20Head",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Institutions%20Alike%20Head"
-      },
-      "top_headlines": [
-        {
-          "title": "Retail Investors and Institutions Alike Head Overseas",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=257738",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기관장"
     },
     {
       "term": "Get Ready America",
-      "term_ko": "준비된 미국",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Get Ready America",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Get Ready, America: Here Come China’s Food and Drink Chains",
-              "link": "https://www.nytimes.com/2025/12/01/business/china-restaurants-america.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Get%20Ready%20America",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Get%20Ready%20America"
-      },
-      "top_headlines": [
-        {
-          "title": "Get Ready, America: Here Come China’s Food and Drink Chains",
-          "summary": "",
-          "link": "https://www.nytimes.com/2025/12/01/business/china-restaurants-america.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "준비된 미국"
     },
     {
       "term": "Here Come Chinas",
-      "term_ko": "히어 컴 차이나",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Here Come Chinas",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Get Ready, America: Here Come China’s Food and Drink Chains",
-              "link": "https://www.nytimes.com/2025/12/01/business/china-restaurants-america.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Here%20Come%20Chinas",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Here%20Come%20Chinas"
-      },
-      "top_headlines": [
-        {
-          "title": "Get Ready, America: Here Come China’s Food and Drink Chains",
-          "summary": "",
-          "link": "https://www.nytimes.com/2025/12/01/business/china-restaurants-america.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "히어 컴 차이나"
     },
     {
       "term": "Coupang Faces Potential",
-      "term_ko": "쿠팡, 잠재력에 직면하다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Coupang Faces Potential",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Coupang faces potential $770 mil. fine after data breach",
-              "link": "https://www.koreatimes.co.kr/path/A2025120114240003912"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Coupang%20Faces%20Potential",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Coupang%20Faces%20Potential"
-      },
-      "top_headlines": [
-        {
-          "title": "Coupang faces potential $770 mil. fine after data breach",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025120114240003912",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쿠팡, 잠재력에 직면하다"
     },
     {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares end almost flat on profit-taking amid uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0015772091?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares end almost flat on profit-taking amid uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015772091?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
     },
     {
       "term": "Retail Investors",
-      "term_ko": "소매 투자자",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Retail Investors",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Retail Investors and Institutions Alike Head Overseas",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=257738"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Retail%20Investors",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Retail%20Investors"
-      },
-      "top_headlines": [
-        {
-          "title": "Retail Investors and Institutions Alike Head Overseas",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=257738",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소매 투자자"
     },
     {
       "term": "Drink Chains",
-      "term_ko": "음료 체인",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Drink Chains",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Get Ready, America: Here Come China’s Food and Drink Chains",
-              "link": "https://www.nytimes.com/2025/12/01/business/china-restaurants-america.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Drink%20Chains",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Drink%20Chains"
-      },
-      "top_headlines": [
-        {
-          "title": "Get Ready, America: Here Come China’s Food and Drink Chains",
-          "summary": "",
-          "link": "https://www.nytimes.com/2025/12/01/business/china-restaurants-america.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "음료 체인"
     },
     {
       "term": "Mil Fine",
-      "term_ko": "밀 파인",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Mil Fine",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Coupang faces potential $770 mil. fine after data breach",
-              "link": "https://www.koreatimes.co.kr/path/A2025120114240003912"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mil%20Fine",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mil%20Fine"
-      },
-      "top_headlines": [
-        {
-          "title": "Coupang faces potential $770 mil. fine after data breach",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025120114240003912",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "밀 파인"
     },
     {
       "term": "Data Breach",
-      "term_ko": "데이터 유출",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Data Breach",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Coupang faces potential $770 mil. fine after data breach",
-              "link": "https://www.koreatimes.co.kr/path/A2025120114240003912"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Data%20Breach",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Data%20Breach"
-      },
-      "top_headlines": [
-        {
-          "title": "Coupang faces potential $770 mil. fine after data breach",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025120114240003912",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "데이터 유출"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-01T21:43:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-01T12:44:47.631Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-01T21:43:22+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "End Almost Flat",
+      "term_ko": "거의 평평하게 끝내기"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-01T21:43:22+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-01T21:43:22+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Yanfinance Hack Boj",
+      "term_ko": "연파이낸스 해킹 BOJ"
+    },
+    {
+      "term": "獨 1 Year to the Chin",
+      "term_ko": "獨 턱밑까지 1년"
+    },
+    {
+      "term": "Market Capitalization Bitcoin $6 Billion",
+      "term_ko": "시황 비트코인 6억달러"
+    },
+    {
+      "term": "7 Participating Companies",
+      "term_ko": "참여 기업 7개사"
+    },
+    {
+      "term": "Even at Record Highs, Until Next June",
+      "term_ko": "신고가에도 내년 6월까지"
+    },
+    {
+      "term": "Dividend Stocks Float Kospi High Dividend 50",
+      "term_ko": "배당주 뜬다 코스피고배당50"
+    },
+    {
+      "term": "4% New in 1 Month",
+      "term_ko": "한달 새 4%"
+    },
+    {
+      "term": "Institutional Investors Invested $490 Billion Overseas",
+      "term_ko": "기관투자자 해외투자액 4900억弗"
+    },
+    {
+      "term": "Korean Stock Market Capitalization",
+      "term_ko": "韓 증시 시총"
+    },
+    {
+      "term": "Beyond Saudi Arabia",
+      "term_ko": "사우디 스위스 넘어"
+    },
+    {
+      "term": "Discontinued Life Insurance Company Deviation Accounting",
+      "term_ko": "생명보험사 일탈회계 중단"
+    },
+    {
+      "term": "Moving Forward From the End of the Year",
+      "term_ko": "올해 결산부터 전진"
+    },
+    {
+      "term": "Gyeonggi North Metropolitan New Job Center Family Friendly Certification Consulting",
+      "term_ko": "경기북부광역새일센터 가족친화인증 컨설팅"
+    },
+    {
+      "term": "Stock Market Stimulus Policies",
+      "term_ko": "증시 부양 정책"
+    },
+    {
+      "term": "Liquidation Bombs",
+      "term_ko": "청산 폭탄"
+    },
+    {
+      "term": "Get Certified",
+      "term_ko": "인증 획득"
+    },
+    {
+      "term": "I'm Glad I Bought It.",
+      "term_ko": "사두길 잘했네"
+    },
+    {
+      "term": "The Largest",
+      "term_ko": "역대 최대"
+    },
+    {
+      "term": "Institutions Alike Head",
+      "term_ko": "기관장"
+    },
+    {
+      "term": "Get Ready America",
+      "term_ko": "준비된 미국"
+    },
+    {
+      "term": "Here Come Chinas",
+      "term_ko": "히어 컴 차이나"
+    },
+    {
+      "term": "Coupang Faces Potential",
+      "term_ko": "쿠팡, 잠재력에 직면하다"
+    },
+    {
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
+    },
+    {
+      "term": "Retail Investors",
+      "term_ko": "소매 투자자"
+    },
+    {
+      "term": "Drink Chains",
+      "term_ko": "음료 체인"
+    },
+    {
+      "term": "Mil Fine",
+      "term_ko": "밀 파인"
+    },
+    {
+      "term": "Data Breach",
+      "term_ko": "데이터 유출"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    }
+  ],
+  "translations": {
+    "End Almost Flat": {
+      "en": "End Almost Flat",
+      "ko": "거의 평평하게 끝내기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Yanfinance Hack Boj": {
+      "en": "Yanfinance Hack Boj",
+      "ko": "연파이낸스 해킹 BOJ",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "獨 1 Year to the Chin": {
+      "en": "獨 1 Year to the Chin",
+      "ko": "獨 턱밑까지 1년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Market Capitalization Bitcoin $6 Billion": {
+      "en": "Market Capitalization Bitcoin $6 Billion",
+      "ko": "시황 비트코인 6억달러",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "7 Participating Companies": {
+      "en": "7 Participating Companies",
+      "ko": "참여 기업 7개사",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Even at Record Highs, Until Next June": {
+      "en": "Even at Record Highs, Until Next June",
+      "ko": "신고가에도 내년 6월까지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Dividend Stocks Float Kospi High Dividend 50": {
+      "en": "Dividend Stocks Float Kospi High Dividend 50",
+      "ko": "배당주 뜬다 코스피고배당50",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "4% New in 1 Month": {
+      "en": "4% New in 1 Month",
+      "ko": "한달 새 4%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Institutional Investors Invested $490 Billion Overseas": {
+      "en": "Institutional Investors Invested $490 Billion Overseas",
+      "ko": "기관투자자 해외투자액 4900억弗",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Korean Stock Market Capitalization": {
+      "en": "Korean Stock Market Capitalization",
+      "ko": "韓 증시 시총",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Beyond Saudi Arabia": {
+      "en": "Beyond Saudi Arabia",
+      "ko": "사우디 스위스 넘어",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Discontinued Life Insurance Company Deviation Accounting": {
+      "en": "Discontinued Life Insurance Company Deviation Accounting",
+      "ko": "생명보험사 일탈회계 중단",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Moving Forward From the End of the Year": {
+      "en": "Moving Forward From the End of the Year",
+      "ko": "올해 결산부터 전진",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Gyeonggi North Metropolitan New Job Center Family Friendly Certification Consulting": {
+      "en": "Gyeonggi North Metropolitan New Job Center Family Friendly Certification Consulting",
+      "ko": "경기북부광역새일센터 가족친화인증 컨설팅",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Stock Market Stimulus Policies": {
+      "en": "Stock Market Stimulus Policies",
+      "ko": "증시 부양 정책",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Liquidation Bombs": {
+      "en": "Liquidation Bombs",
+      "ko": "청산 폭탄",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Get Certified": {
+      "en": "Get Certified",
+      "ko": "인증 획득",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "I'm Glad I Bought It.": {
+      "en": "I'm Glad I Bought It.",
+      "ko": "사두길 잘했네",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "The Largest": {
+      "en": "The Largest",
+      "ko": "역대 최대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Institutions Alike Head": {
+      "en": "Institutions Alike Head",
+      "ko": "기관장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Get Ready America": {
+      "en": "Get Ready America",
+      "ko": "준비된 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Here Come Chinas": {
+      "en": "Here Come Chinas",
+      "ko": "히어 컴 차이나",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Coupang Faces Potential": {
+      "en": "Coupang Faces Potential",
+      "ko": "쿠팡, 잠재력에 직면하다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Lead Seoul": {
+      "en": "Lead Seoul",
+      "ko": "LEAD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Retail Investors": {
+      "en": "Retail Investors",
+      "ko": "소매 투자자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Drink Chains": {
+      "en": "Drink Chains",
+      "ko": "음료 체인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Mil Fine": {
+      "en": "Mil Fine",
+      "ko": "밀 파인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Data Breach": {
+      "en": "Data Breach",
+      "ko": "데이터 유출",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-01T18:32:14.934Z"
     }
   }
 }
