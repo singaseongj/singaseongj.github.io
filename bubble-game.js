@@ -13,7 +13,7 @@ let nameInput, nameError;
 const NAME_PATTERN = /^[A-Za-z\u3131-\u318E\uAC00-\uD7A3\s]+$/;
 
 // Google Apps Script URL for leaderboard
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRJMG0rDfPDanjStSPjbMyOIAjXV0l2pUuquGM9SzxaFafYDBFTT04d6U1NGsYa6U/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIcVsfDX3bOZzWf9FjsYLx7oIS3HKVshr-EbmtdIBM67GdcXhoc7JFZ8MpXSIogz4p/exec';
 
 // Initialize game elements
 window.onload = function() {
