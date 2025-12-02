@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2025-12-02T21:43:56+09:00",
+  "generatedAtKST": "2025-12-03T03:34:08+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -294,35 +294,6 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "SK하이닉스",
-      "ticker": "000660.KS",
-      "sector": "정보기술",
-      "metrics": {
-        "ret5": 7.514450867052023,
-        "ret20": -4.778156996587031,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 286,
-        "blogs": 10,
-        "sentiment": 0.050000000000000024,
-        "momentum": "very high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4"
-      },
-      "bullets": [
-        "News (7d): **286** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
-        "Returns: 5d **7.5%**, 20d **-4.8%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **정보기술**",
-        "News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
       "name": "두산",
       "ticker": "000150.KS",
       "sector": "산업재",
@@ -333,7 +304,7 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 612,
+        "count": 613,
         "blogs": 10,
         "sentiment": 0.15000000000000002,
         "momentum": "very high"
@@ -342,11 +313,40 @@
         "searchUrl": "https://www.google.com/search?q=%EB%91%90%EC%82%B0"
       },
       "bullets": [
-        "News (7d): **612** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**",
+        "News (7d): **613** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**",
         "Returns: 5d **2.7%**, 20d **-14.2%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **산업재**",
         "News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
+      "name": "삼성물산",
+      "ticker": "028260.KS",
+      "sector": "산업재",
+      "metrics": {
+        "ret5": 3.3482142857142856,
+        "ret20": 1.9823788546255507,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 181,
+        "blogs": 10,
+        "sentiment": 0,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0"
+      },
+      "bullets": [
+        "News (7d): **181** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **3.3%**, 20d **2.0%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **산업재**",
+        "News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0"
       ]
     },
     {
@@ -613,34 +613,6 @@
     {
       "market": "NASDAQ 100",
       "bucket": "safe",
-      "name": "ASML Holding",
-      "ticker": "ASML",
-      "sector": null,
-      "metrics": {
-        "ret5": 2.736528843995803,
-        "ret20": 6.729501278189261,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=ASML%20Holding"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.7%**, 20d **6.7%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=ASML%20Holding"
-      ]
-    },
-    {
-      "market": "NASDAQ 100",
-      "bucket": "safe",
       "name": "AstraZeneca",
       "ticker": "AZN",
       "sector": null,
@@ -664,6 +636,34 @@
         "Returns: 5d **-0.7%**, 20d **4.4%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=AstraZeneca"
+      ]
+    },
+    {
+      "market": "NASDAQ 100",
+      "bucket": "safe",
+      "name": "MicroStrategy",
+      "ticker": "MSTR",
+      "sector": null,
+      "metrics": {
+        "ret5": -0.670789439076325,
+        "ret20": -13.411302612480455,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=MicroStrategy"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=MicroStrategy"
       ]
     },
     {
@@ -804,34 +804,6 @@
         "Returns: 5d **2.9%**, 20d **-13.9%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=GlobalFoundries"
-      ]
-    },
-    {
-      "market": "NASDAQ 100",
-      "bucket": "aggressive",
-      "name": "MicroStrategy",
-      "ticker": "MSTR",
-      "sector": null,
-      "metrics": {
-        "ret5": -0.670789439076325,
-        "ret20": -13.411302612480455,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=MicroStrategy"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=MicroStrategy"
       ]
     },
     {
@@ -985,8 +957,8 @@
       "ticker": "TMO",
       "sector": "Healthcare",
       "metrics": {
-        "ret5": -0.3966017791497217,
-        "ret20": null,
+        "ret5": -0.9657607638939152,
+        "ret20": 2.749250836899516,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1001,7 +973,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.4%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.0%**, 20d **2.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Healthcare**",
         "News search: https://www.google.com/search?q=Thermo%20Fisher%20Scientific"
@@ -1014,8 +986,8 @@
       "ticker": "GPN",
       "sector": "Financial Services",
       "metrics": {
-        "ret5": 3.742005823837078,
-        "ret20": null,
+        "ret5": 6.620878424136049,
+        "ret20": 0.6744543226359192,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1030,7 +1002,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **3.7%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **6.6%**, 20d **0.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Financial Services**",
         "News search: https://www.google.com/search?q=Global%20Payments"
@@ -1043,8 +1015,8 @@
       "ticker": "IP",
       "sector": "Materials",
       "metrics": {
-        "ret5": 4.035042558129833,
-        "ret20": null,
+        "ret5": -0.21282742944915833,
+        "ret20": 1.5705334729610994,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1059,7 +1031,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **4.0%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-0.2%**, 20d **1.6%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Materials**",
         "News search: https://www.google.com/search?q=International%20Paper"
@@ -1068,12 +1040,12 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "NetApp",
-      "ticker": "NTAP",
-      "sector": "Technology",
+      "name": "NVR, Inc.",
+      "ticker": "NVR",
+      "sector": "Consumer Discretionary",
       "metrics": {
-        "ret5": 2.8041812845281804,
-        "ret20": -4.267440088830432,
+        "ret5": 4.498366428607105,
+        "ret20": 7.323480191500879,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1084,14 +1056,14 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=NetApp"
+        "searchUrl": "https://www.google.com/search?q=NVR%2C%20Inc."
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.8%**, 20d **-4.3%**; volatility (20d): **unknown**",
+        "Returns: 5d **4.5%**, 20d **7.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Technology**",
-        "News search: https://www.google.com/search?q=NetApp"
+        "Sector: **Consumer Discretionary**",
+        "News search: https://www.google.com/search?q=NVR%2C%20Inc."
       ]
     },
     {
@@ -1130,8 +1102,8 @@
       "ticker": "WSM",
       "sector": "Consumer Discretionary",
       "metrics": {
-        "ret5": 2.5347102519376854,
-        "ret20": null,
+        "ret5": 2.3599874542941155,
+        "ret20": -7.678327100535317,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1146,7 +1118,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.5%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **2.4%**, 20d **-7.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Consumer Discretionary**",
         "News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc."
