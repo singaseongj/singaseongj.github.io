@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-03T21:43:12+09:00 (KST)**
+- Generated: **2025-12-04T03:33:45+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -103,27 +103,19 @@
 
 **기아** (000270.KS)
 
-- News (7d): **538** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- News (7d): **540** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
 - Returns: 5d **4.8%**, 20d **6.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%EA%B8%B0%EC%95%84
 
-**삼성물산** (028260.KS)
+**신한지주** (055550.KS)
 
-- News (7d): **208** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **2.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0
-
-**삼성증권** (016360.KS)
-
-- News (7d): **91** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.11)**
-- Returns: 5d **1.6%**, 20d **11.3%**; volatility (20d): **unknown**
+- News (7d): **7** (blogs: 10) — momentum: **medium**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.1%**, 20d **6.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C
+- News search: https://www.google.com/search?q=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC
 
 **키움증권** (039490.KS)
 
@@ -132,6 +124,14 @@
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C
+
+**현대차** (005380.KS)
+
+- News (7d): **650** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.9%**, 20d **-0.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%B0%A8
 
 ### AGGRESSIVE (5)
 
@@ -194,12 +194,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Marvell%20Technology
 
-**PDD Holdings** (PDD)
+**MicroStrategy** (MSTR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.6%**, 20d **8.2%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=PDD%20Holdings
+- News search: https://www.google.com/search?q=MicroStrategy
 
 **Shopify** (SHOP)
 
@@ -215,7 +215,7 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Thomson%20Reuters
 
-### AGGRESSIVE (5)
+### AGGRESSIVE (4)
 
 **Atlassian** (TEAM)
 
@@ -237,13 +237,6 @@
 - Returns: 5d **2.9%**, 20d **-13.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=GlobalFoundries
-
-**MicroStrategy** (MSTR)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=MicroStrategy
 
 **Zscaler** (ZS)
 
@@ -298,18 +291,18 @@
 
 ### AGGRESSIVE (5)
 
-**Global Payments** (GPN)
+**NetApp** (NTAP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.1%**, 20d **2.1%**; volatility (20d): **unknown**
+- Returns: 5d **2.8%**, 20d **-4.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=Global%20Payments
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=NetApp
 
 **NVR, Inc.** (NVR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.6%**, 20d **7.5%**; volatility (20d): **unknown**
+- Returns: 5d **3.9%**, 20d **8.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=NVR%2C%20Inc.
@@ -317,7 +310,7 @@
 **Snap-on** (SNA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.3%**, 20d **0.8%**; volatility (20d): **unknown**
+- Returns: 5d **1.3%**, 20d **1.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Snap-on
@@ -333,7 +326,7 @@
 **Williams-Sonoma, Inc.** (WSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.5%**, 20d **-7.6%**; volatility (20d): **unknown**
+- Returns: 5d **0.5%**, 20d **-7.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc.
