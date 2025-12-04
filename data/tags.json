@@ -1,1113 +1,439 @@
 {
-  "date": "2025-12-03",
+  "generatedAt": "2025-12-04T01:26:38.144Z",
+  "timezone": "Asia/Seoul",
+  "date": "2025-12-04",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "NYSE Preview ADP",
-      "term_ko": "뉴욕증시 프리뷰 ADP",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 ADP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-              "link": "https://www.newspim.com/news/view/20251203001360"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20ADP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20ADP"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251203001360",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview Adp",
+      "term_ko": "뉴욕증시 프리뷰 ADP"
     },
     {
-      "term": "BlackRock Bitcoin ETF",
-      "term_ko": "블랙록 비트코인 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "블랙록 비트코인 ETF",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-27",
-              "timestamp": 1764169200000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "블랙록 비트코인 ETF, 옵션 상장 전쟁 폭발...SEC 승인 싸움 시작",
-              "link": "http://coinreaders.com/202208"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%94%EB%9E%99%EB%A1%9D%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%94%EB%9E%99%EB%A1%9D%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "블랙록 비트코인 ETF, 옵션 상장 전쟁 폭발...SEC 승인 싸움 시작",
-          "summary": "",
-          "link": "http://coinreaders.com/202208",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.005828,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764169200000
-      }
+      "term": "Blackrock Bitcoin Etf",
+      "term_ko": "블랙록 비트코인 ETF"
     },
     {
-      "term": "Strategy MSCI Indices",
-      "term_ko": "Strategy MSCI 지수",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strategy MSCI 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-              "link": "https://www.tokenpost.kr/news/breaking/310963"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strategy%20MSCI%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strategy%20MSCI%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/310963",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Strategy Msci Indices",
+      "term_ko": "Strategy MSCI 지수"
     },
     {
-      "term": "Securities News BDCs Going Private",
-      "term_ko": "증권소식 BDC 비상장",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증권소식 BDC 비상장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권소식] BDC, 비상장·벤처 60% 의무 투자/3분기 증권사 순이익 2.5조...",
-              "link": "https://www.asiatime.co.kr/article/20251203500462"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D%20BDC%20%EB%B9%84%EC%83%81%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D%20BDC%20%EB%B9%84%EC%83%81%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권소식] BDC, 비상장·벤처 60% 의무 투자/3분기 증권사 순이익 2.5조...",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20251203500462",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Securities News Bdcs Going Private",
+      "term_ko": "증권소식 BDC 비상장"
     },
     {
-      "term": "Review up to 8.8 billion",
-      "term_ko": "검토 최대 88억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "검토 최대 88억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-              "link": "https://www.tokenpost.kr/news/breaking/310963"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%80%ED%86%A0%20%EC%B5%9C%EB%8C%80%2088%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%80%ED%86%A0%20%EC%B5%9C%EB%8C%80%2088%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/310963",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Review Up to 8.8 Billion",
+      "term_ko": "검토 최대 88억"
     },
     {
       "term": "84,000 Bitcoin",
-      "term_ko": "비트코인 8만 4000달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 8만 4000달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-              "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%208%EB%A7%8C%204000%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%208%EB%A7%8C%204000%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비트코인 8만 4000달러"
     },
     {
-      "term": "US equities December on liquidation",
-      "term_ko": "청산에 美증시 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청산에 美증시 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-              "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EC%82%B0%EC%97%90%20%E7%BE%8E%EC%A6%9D%EC%8B%9C%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EC%82%B0%EC%97%90%20%E7%BE%8E%EC%A6%9D%EC%8B%9C%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Equities December on Liquidation",
+      "term_ko": "청산에 美증시 12월"
     },
     {
-      "term": "Venture 60% obligation",
-      "term_ko": "벤처 60% 의무",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "벤처 60% 의무",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권소식] BDC, 비상장·벤처 60% 의무 투자/3분기 증권사 순이익 2.5조...",
-              "link": "https://www.asiatime.co.kr/article/20251203500462"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B2%A4%EC%B2%98%2060%25%20%EC%9D%98%EB%AC%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B2%A4%EC%B2%98%2060%25%20%EC%9D%98%EB%AC%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권소식] BDC, 비상장·벤처 60% 의무 투자/3분기 증권사 순이익 2.5조...",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20251203500462",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Venture 60% Obligation",
+      "term_ko": "벤처 60% 의무"
     },
     {
       "term": "Investments/3rd Quarter Brokerage Firm Net Income",
-      "term_ko": "투자/3분기 증권사 순이익",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자/3분기 증권사 순이익",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권소식] BDC, 비상장·벤처 60% 의무 투자/3분기 증권사 순이익 2.5조...",
-              "link": "https://www.asiatime.co.kr/article/20251203500462"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%2F3%EB%B6%84%EA%B8%B0%20%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EC%88%9C%EC%9D%B4%EC%9D%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%2F3%EB%B6%84%EA%B8%B0%20%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EC%88%9C%EC%9D%B4%EC%9D%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권소식] BDC, 비상장·벤처 60% 의무 투자/3분기 증권사 순이익 2.5조...",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20251203500462",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자/3분기 증권사 순이익"
     },
     {
-      "term": "Today's Gold Price QuoteDecember 4, 2026",
-      "term_ko": "오늘의 금값시세12월4일자 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세12월4일자 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(12월4일자) \"2026년 전망은\" 최고치 가능성 이어지나",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3446829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%944%EC%9D%BC%EC%9E%90%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%944%EC%9D%BC%EC%9E%90%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(12월4일자) \"2026년 전망은\" 최고치 가능성 이어지나",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3446829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Today's Gold Price Quotedecember 4, 2026",
+      "term_ko": "오늘의 금값시세12월4일자 2026년"
     },
     {
-      "term": "Interest rates on slowing employment",
-      "term_ko": "고용 둔화에 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고용 둔화에 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-              "link": "https://www.newspim.com/news/view/20251203001360"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%9A%A9%20%EB%91%94%ED%99%94%EC%97%90%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%9A%A9%20%EB%91%94%ED%99%94%EC%97%90%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251203001360",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Rates on Slowing Employment",
+      "term_ko": "고용 둔화에 금리"
     },
     {
-      "term": "Expectations for cuts grow",
-      "term_ko": "인하 기대 커지며",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인하 기대 커지며",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-              "link": "https://www.newspim.com/news/view/20251203001360"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%20%EC%BB%A4%EC%A7%80%EB%A9%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%20%EC%BB%A4%EC%A7%80%EB%A9%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251203001360",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Expectations for Cuts Grow",
+      "term_ko": "인하 기대 커지며"
     },
     {
       "term": "Options Listing Wars",
-      "term_ko": "옵션 상장 전쟁",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "옵션 상장 전쟁",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "블랙록 비트코인 ETF, 옵션 상장 전쟁 폭발...SEC 승인 싸움 시작",
-              "link": "http://coinreaders.com/202208"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%B5%EC%85%98%20%EC%83%81%EC%9E%A5%20%EC%A0%84%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%B5%EC%85%98%20%EC%83%81%EC%9E%A5%20%EC%A0%84%EC%9F%81"
-      },
-      "top_headlines": [
-        {
-          "title": "블랙록 비트코인 ETF, 옵션 상장 전쟁 폭발...SEC 승인 싸움 시작",
-          "summary": "",
-          "link": "http://coinreaders.com/202208",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "옵션 상장 전쟁"
     },
     {
-      "term": "Start an approval fight",
-      "term_ko": "승인 싸움 시작",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "승인 싸움 시작",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "블랙록 비트코인 ETF, 옵션 상장 전쟁 폭발...SEC 승인 싸움 시작",
-              "link": "http://coinreaders.com/202208"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%B9%EC%9D%B8%20%EC%8B%B8%EC%9B%80%20%EC%8B%9C%EC%9E%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%B9%EC%9D%B8%20%EC%8B%B8%EC%9B%80%20%EC%8B%9C%EC%9E%91"
-      },
-      "top_headlines": [
-        {
-          "title": "블랙록 비트코인 ETF, 옵션 상장 전쟁 폭발...SEC 승인 싸움 시작",
-          "summary": "",
-          "link": "http://coinreaders.com/202208",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Start an Approval Fight",
+      "term_ko": "승인 싸움 시작"
     },
     {
-      "term": "Dollar outflow concerns",
-      "term_ko": "달러 유출 우려",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 유출 우려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-              "link": "https://www.tokenpost.kr/news/breaking/310963"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EC%9C%A0%EC%B6%9C%20%EC%9A%B0%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EC%9C%A0%EC%B6%9C%20%EC%9A%B0%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/310963",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar Outflow Concerns",
+      "term_ko": "달러 유출 우려"
     },
     {
-      "term": "Treasury rates throughout the year",
-      "term_ko": "국고채 금리 연중",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국고채 금리 연중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국고채 금리 연중 최고… “비용 부담” 회사채 발행 줄줄이 연기",
-              "link": "https://n.news.naver.com/mnews/article/020/0003679178?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EA%B3%A0%EC%B1%84%20%EA%B8%88%EB%A6%AC%20%EC%97%B0%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EA%B3%A0%EC%B1%84%20%EA%B8%88%EB%A6%AC%20%EC%97%B0%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "국고채 금리 연중 최고… “비용 부담” 회사채 발행 줄줄이 연기",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003679178?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Treasury Rates Throughout the Year",
+      "term_ko": "국고채 금리 연중"
     },
     {
-      "term": "Most expensive",
-      "term_ko": "최고 비용 부담",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고 비용 부담",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국고채 금리 연중 최고… “비용 부담” 회사채 발행 줄줄이 연기",
-              "link": "https://n.news.naver.com/mnews/article/020/0003679178?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%20%EB%B9%84%EC%9A%A9%20%EB%B6%80%EB%8B%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%20%EB%B9%84%EC%9A%A9%20%EB%B6%80%EB%8B%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "국고채 금리 연중 최고… “비용 부담” 회사채 발행 줄줄이 연기",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003679178?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Most Expensive",
+      "term_ko": "최고 비용 부담"
     },
     {
-      "term": "Outlook is likely to peak",
-      "term_ko": "전망은 최고치 가능성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전망은 최고치 가능성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(12월4일자) \"2026년 전망은\" 최고치 가능성 이어지나",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3446829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A7%9D%EC%9D%80%20%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B0%80%EB%8A%A5%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A7%9D%EC%9D%80%20%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B0%80%EB%8A%A5%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(12월4일자) \"2026년 전망은\" 최고치 가능성 이어지나",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3446829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Outlook Is Likely to Peak",
+      "term_ko": "전망은 최고치 가능성"
     },
     {
-      "term": "Get ahead of currency risk",
-      "term_ko": "환율 리스크에 선제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 리스크에 선제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "환율 리스크에 선제 대응…시스템알앤디·와이씨, '환위험관리 우수기업...",
-              "link": "https://www.tokenpost.kr/news/economy/311079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EC%97%90%20%EC%84%A0%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EC%97%90%20%EC%84%A0%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 리스크에 선제 대응…시스템알앤디·와이씨, '환위험관리 우수기업...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/311079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Get Ahead of Currency Risk",
+      "term_ko": "환율 리스크에 선제"
     },
     {
-      "term": "Response SystemsAndy W.",
-      "term_ko": "대응 시스템알앤디 와이씨",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대응 시스템알앤디 와이씨",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "환율 리스크에 선제 대응…시스템알앤디·와이씨, '환위험관리 우수기업...",
-              "link": "https://www.tokenpost.kr/news/economy/311079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%9D%91%20%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%95%8C%EC%95%A4%EB%94%94%20%EC%99%80%EC%9D%B4%EC%94%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%9D%91%20%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%95%8C%EC%95%A4%EB%94%94%20%EC%99%80%EC%9D%B4%EC%94%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 리스크에 선제 대응…시스템알앤디·와이씨, '환위험관리 우수기업...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/311079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Response Systemsandy W.",
+      "term_ko": "대응 시스템알앤디 와이씨"
     },
     {
-      "term": "Reduce rising rates",
-      "term_ko": "상승 금리 인하",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 금리 인하",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "3분기 성장률도 물가도 상승…금리 인하 이유 줄어든다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003487357?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98"
-      },
-      "top_headlines": [
-        {
-          "title": "3분기 성장률도 물가도 상승…금리 인하 이유 줄어든다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003487357?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reduce Rising Rates",
+      "term_ko": "상승 금리 인하"
     },
     {
-      "term": "Stock futures",
-      "term_ko": "주가 선물",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주가 선물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-              "link": "https://www.newspim.com/news/view/20251203001360"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, ADP 고용 둔화에 금리 인하 기대 커지며 주가 선물 강...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251203001360",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Futures",
+      "term_ko": "주가 선물"
     },
     {
       "term": "Excludability",
-      "term_ko": "제외 가능성",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제외 가능성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-              "link": "https://www.tokenpost.kr/news/breaking/310963"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%99%B8%20%EA%B0%80%EB%8A%A5%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%99%B8%20%EA%B0%80%EB%8A%A5%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "Strategy, MSCI 지수 제외 가능성 검토…최대 88억 달러 유출 우려",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/310963",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "제외 가능성"
     },
     {
       "term": "Collapse Encryption",
-      "term_ko": "붕괴 엔캐리",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "붕괴 엔캐리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-              "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%95%EA%B4%B4%20%EC%97%94%EC%BA%90%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%95%EA%B4%B4%20%EC%97%94%EC%BA%90%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "붕괴 엔캐리"
     },
     {
-      "term": "Rally red light",
-      "term_ko": "랠리 빨간불",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "랠리 빨간불",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-              "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9E%A0%EB%A6%AC%20%EB%B9%A8%EA%B0%84%EB%B6%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9E%A0%EB%A6%AC%20%EB%B9%A8%EA%B0%84%EB%B6%88"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 8만 4000달러 붕괴…\"엔캐리 청산에 美증시 12월 랠리 빨간불\"",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202512031738234069fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rally Red Light",
+      "term_ko": "랠리 빨간불"
     },
     {
-      "term": "Fewer reasons",
-      "term_ko": "이유 줄어든다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이유 줄어든다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "3분기 성장률도 물가도 상승…금리 인하 이유 줄어든다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003487357?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9C%A0%20%EC%A4%84%EC%96%B4%EB%93%A0%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9C%A0%20%EC%A4%84%EC%96%B4%EB%93%A0%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "3분기 성장률도 물가도 상승…금리 인하 이유 줄어든다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003487357?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Fewer Reasons",
+      "term_ko": "이유 줄어든다"
     },
     {
       "term": "Coupang May Be",
-      "term_ko": "쿠팡이 될 수 있습니다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Coupang May Be",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Coupang may be penalized by US SEC over inadequate disclosure",
-              "link": "https://www.koreatimes.co.kr/path/A2025120314480002602"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Coupang%20May%20Be",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Coupang%20May%20Be"
-      },
-      "top_headlines": [
-        {
-          "title": "Coupang may be penalized by US SEC over inadequate disclosure",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025120314480002602",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쿠팡이 될 수 있습니다"
     },
     {
       "term": "Dominance Remains Unshaken",
-      "term_ko": "흔들리지 않는 지배력",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Dominance Remains Unshaken",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Coupang's market dominance remains unshaken after data breach: analysts",
-              "link": "https://www.koreatimes.co.kr/path/A2025120310350000377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Dominance%20Remains%20Unshaken",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Dominance%20Remains%20Unshaken"
-      },
-      "top_headlines": [
-        {
-          "title": "Coupang's market dominance remains unshaken after data breach: analysts",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025120310350000377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "흔들리지 않는 지배력"
     },
     {
       "term": "Data Breach Analysts",
-      "term_ko": "데이터 유출 분석가",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Data Breach Analysts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Coupang's market dominance remains unshaken after data breach: analysts",
-              "link": "https://www.koreatimes.co.kr/path/A2025120310350000377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Data%20Breach%20Analysts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Data%20Breach%20Analysts"
-      },
-      "top_headlines": [
-        {
-          "title": "Coupang's market dominance remains unshaken after data breach: analysts",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025120310350000377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "데이터 유출 분석가"
     },
     {
-      "term": "US SEC",
-      "term_ko": "미국 SEC",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "US SEC",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T03:33:55+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Coupang may be penalized by US SEC over inadequate disclosure",
-              "link": "https://www.koreatimes.co.kr/path/A2025120314480002602"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=US%20SEC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=US%20SEC"
-      },
-      "top_headlines": [
-        {
-          "title": "Coupang may be penalized by US SEC over inadequate disclosure",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025120314480002602",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Sec",
+      "term_ko": "미국 SEC"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-03T18:35:13.995Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-04T03:33:55+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Nyse Preview Adp",
+      "term_ko": "뉴욕증시 프리뷰 ADP"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-04T03:33:55+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-04T03:33:55+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Blackrock Bitcoin Etf",
+      "term_ko": "블랙록 비트코인 ETF"
+    },
+    {
+      "term": "Strategy Msci Indices",
+      "term_ko": "Strategy MSCI 지수"
+    },
+    {
+      "term": "Securities News Bdcs Going Private",
+      "term_ko": "증권소식 BDC 비상장"
+    },
+    {
+      "term": "Review Up to 8.8 Billion",
+      "term_ko": "검토 최대 88억"
+    },
+    {
+      "term": "84,000 Bitcoin",
+      "term_ko": "비트코인 8만 4000달러"
+    },
+    {
+      "term": "Us Equities December on Liquidation",
+      "term_ko": "청산에 美증시 12월"
+    },
+    {
+      "term": "Venture 60% Obligation",
+      "term_ko": "벤처 60% 의무"
+    },
+    {
+      "term": "Investments/3rd Quarter Brokerage Firm Net Income",
+      "term_ko": "투자/3분기 증권사 순이익"
+    },
+    {
+      "term": "Today's Gold Price Quotedecember 4, 2026",
+      "term_ko": "오늘의 금값시세12월4일자 2026년"
+    },
+    {
+      "term": "Interest Rates on Slowing Employment",
+      "term_ko": "고용 둔화에 금리"
+    },
+    {
+      "term": "Expectations for Cuts Grow",
+      "term_ko": "인하 기대 커지며"
+    },
+    {
+      "term": "Options Listing Wars",
+      "term_ko": "옵션 상장 전쟁"
+    },
+    {
+      "term": "Start an Approval Fight",
+      "term_ko": "승인 싸움 시작"
+    },
+    {
+      "term": "Dollar Outflow Concerns",
+      "term_ko": "달러 유출 우려"
+    },
+    {
+      "term": "Treasury Rates Throughout the Year",
+      "term_ko": "국고채 금리 연중"
+    },
+    {
+      "term": "Most Expensive",
+      "term_ko": "최고 비용 부담"
+    },
+    {
+      "term": "Outlook Is Likely to Peak",
+      "term_ko": "전망은 최고치 가능성"
+    },
+    {
+      "term": "Get Ahead of Currency Risk",
+      "term_ko": "환율 리스크에 선제"
+    },
+    {
+      "term": "Response Systemsandy W.",
+      "term_ko": "대응 시스템알앤디 와이씨"
+    },
+    {
+      "term": "Reduce Rising Rates",
+      "term_ko": "상승 금리 인하"
+    },
+    {
+      "term": "Stock Futures",
+      "term_ko": "주가 선물"
+    },
+    {
+      "term": "Excludability",
+      "term_ko": "제외 가능성"
+    },
+    {
+      "term": "Collapse Encryption",
+      "term_ko": "붕괴 엔캐리"
+    },
+    {
+      "term": "Rally Red Light",
+      "term_ko": "랠리 빨간불"
+    },
+    {
+      "term": "Fewer Reasons",
+      "term_ko": "이유 줄어든다"
+    },
+    {
+      "term": "Coupang May Be",
+      "term_ko": "쿠팡이 될 수 있습니다"
+    },
+    {
+      "term": "Dominance Remains Unshaken",
+      "term_ko": "흔들리지 않는 지배력"
+    },
+    {
+      "term": "Data Breach Analysts",
+      "term_ko": "데이터 유출 분석가"
+    },
+    {
+      "term": "Us Sec",
+      "term_ko": "미국 SEC"
+    }
+  ],
+  "translations": {
+    "Nyse Preview Adp": {
+      "en": "Nyse Preview Adp",
+      "ko": "뉴욕증시 프리뷰 ADP",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Blackrock Bitcoin Etf": {
+      "en": "Blackrock Bitcoin Etf",
+      "ko": "블랙록 비트코인 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Strategy Msci Indices": {
+      "en": "Strategy Msci Indices",
+      "ko": "Strategy MSCI 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Securities News Bdcs Going Private": {
+      "en": "Securities News Bdcs Going Private",
+      "ko": "증권소식 BDC 비상장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Review Up to 8.8 Billion": {
+      "en": "Review Up to 8.8 Billion",
+      "ko": "검토 최대 88억",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "84,000 Bitcoin": {
+      "en": "84,000 Bitcoin",
+      "ko": "비트코인 8만 4000달러",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Us Equities December on Liquidation": {
+      "en": "Us Equities December on Liquidation",
+      "ko": "청산에 美증시 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Venture 60% Obligation": {
+      "en": "Venture 60% Obligation",
+      "ko": "벤처 60% 의무",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Investments/3rd Quarter Brokerage Firm Net Income": {
+      "en": "Investments/3rd Quarter Brokerage Firm Net Income",
+      "ko": "투자/3분기 증권사 순이익",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Today's Gold Price Quotedecember 4, 2026": {
+      "en": "Today's Gold Price Quotedecember 4, 2026",
+      "ko": "오늘의 금값시세12월4일자 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Interest Rates on Slowing Employment": {
+      "en": "Interest Rates on Slowing Employment",
+      "ko": "고용 둔화에 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Expectations for Cuts Grow": {
+      "en": "Expectations for Cuts Grow",
+      "ko": "인하 기대 커지며",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Options Listing Wars": {
+      "en": "Options Listing Wars",
+      "ko": "옵션 상장 전쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.144Z"
+    },
+    "Start an Approval Fight": {
+      "en": "Start an Approval Fight",
+      "ko": "승인 싸움 시작",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Dollar Outflow Concerns": {
+      "en": "Dollar Outflow Concerns",
+      "ko": "달러 유출 우려",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Treasury Rates Throughout the Year": {
+      "en": "Treasury Rates Throughout the Year",
+      "ko": "국고채 금리 연중",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Most Expensive": {
+      "en": "Most Expensive",
+      "ko": "최고 비용 부담",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Outlook Is Likely to Peak": {
+      "en": "Outlook Is Likely to Peak",
+      "ko": "전망은 최고치 가능성",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Get Ahead of Currency Risk": {
+      "en": "Get Ahead of Currency Risk",
+      "ko": "환율 리스크에 선제",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Response Systemsandy W.": {
+      "en": "Response Systemsandy W.",
+      "ko": "대응 시스템알앤디 와이씨",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Reduce Rising Rates": {
+      "en": "Reduce Rising Rates",
+      "ko": "상승 금리 인하",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Stock Futures": {
+      "en": "Stock Futures",
+      "ko": "주가 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Excludability": {
+      "en": "Excludability",
+      "ko": "제외 가능성",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Collapse Encryption": {
+      "en": "Collapse Encryption",
+      "ko": "붕괴 엔캐리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Rally Red Light": {
+      "en": "Rally Red Light",
+      "ko": "랠리 빨간불",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Fewer Reasons": {
+      "en": "Fewer Reasons",
+      "ko": "이유 줄어든다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Coupang May Be": {
+      "en": "Coupang May Be",
+      "ko": "쿠팡이 될 수 있습니다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Dominance Remains Unshaken": {
+      "en": "Dominance Remains Unshaken",
+      "ko": "흔들리지 않는 지배력",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Data Breach Analysts": {
+      "en": "Data Breach Analysts",
+      "ko": "데이터 유출 분석가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
+    },
+    "Us Sec": {
+      "en": "Us Sec",
+      "ko": "미국 SEC",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T01:26:38.145Z"
     }
   }
 }
