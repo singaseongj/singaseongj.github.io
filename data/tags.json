@@ -1,1080 +1,425 @@
 {
+  "generatedAt": "2025-12-04T12:41:58.466Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-04",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Meta Apple UI",
-      "term_ko": "메타 애플 UI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "메타 애플 UI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"메타, 애플 UI 디자인 수장 앨런 다이 영입\"",
-              "link": "https://www.newspim.com/news/view/20251204000090"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%ED%83%80%20%EC%95%A0%ED%94%8C%20UI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%94%ED%83%80%20%EC%95%A0%ED%94%8C%20UI"
-      },
-      "top_headlines": [
-        {
-          "title": "\"메타, 애플 UI 디자인 수장 앨런 다이 영입\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251204000090",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Meta Apple Ui",
+      "term_ko": "메타 애플 UI"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 3일] 미국 주식시장, 주요 지수 전반적 상승...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195139"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 3일] 미국 주식시장, 주요 지수 전반적 상승...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195139",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "3-day US stock market",
-      "term_ko": "3일 미국 주식시장",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3일 미국 주식시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 3일] 미국 주식시장, 주요 지수 전반적 상승...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195139"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 3일] 미국 주식시장, 주요 지수 전반적 상승...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195139",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3-day Us Stock Market",
+      "term_ko": "3일 미국 주식시장"
     },
     {
-      "term": "Average debt per household is KRW 954,000",
-      "term_ko": "가구당 평균부채 9543만원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가구당 평균부채 9543만원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "가구당 평균부채 9543만원, 다시 늘었다",
-              "link": "http://www.m-i.kr/news/articleView.html?idxno=1311336"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B5%AC%EB%8B%B9%20%ED%8F%89%EA%B7%A0%EB%B6%80%EC%B1%84%209543%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B5%AC%EB%8B%B9%20%ED%8F%89%EA%B7%A0%EB%B6%80%EC%B1%84%209543%EB%A7%8C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "가구당 평균부채 9543만원, 다시 늘었다",
-          "summary": "",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1311336",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Average Debt Per Household Is Krw 954,000",
+      "term_ko": "가구당 평균부채 9543만원"
     },
     {
-      "term": "15 million won for stability",
-      "term_ko": "안정 위해 1500만원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안정 위해 1500만원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "신협, ‘K-문화 예술인’ 창작 안정 위해 1500만원 후원",
-              "link": "https://www.ekn.kr/web/view.php?key=20251204026594738"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EC%A0%95%20%EC%9C%84%ED%95%B4%201500%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EC%A0%95%20%EC%9C%84%ED%95%B4%201500%EB%A7%8C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "신협, ‘K-문화 예술인’ 창작 안정 위해 1500만원 후원",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20251204026594738",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "15 Million Won for Stability",
+      "term_ko": "안정 위해 1500만원"
     },
     {
-      "term": "48% of stock market investors",
-      "term_ko": "증시 투자자 48%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 투자자 48%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "연말 증시, 투자자 48% '상승 전망'···미국 집중도 82% '최고조'",
-              "link": "https://www.smartfn.co.kr/news/articleView.html?idxno=128295"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%ED%88%AC%EC%9E%90%EC%9E%90%2048%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%ED%88%AC%EC%9E%90%EC%9E%90%2048%25"
-      },
-      "top_headlines": [
-        {
-          "title": "연말 증시, 투자자 48% '상승 전망'···미국 집중도 82% '최고조'",
-          "summary": "",
-          "link": "https://www.smartfn.co.kr/news/articleView.html?idxno=128295",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "48% of Stock Market Investors",
+      "term_ko": "증시 투자자 48%"
     },
     {
-      "term": "82% US concentration",
-      "term_ko": "미국 집중도 82%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 집중도 82%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "연말 증시, 투자자 48% '상승 전망'···미국 집중도 82% '최고조'",
-              "link": "https://www.smartfn.co.kr/news/articleView.html?idxno=128295"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A7%91%EC%A4%91%EB%8F%84%2082%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A7%91%EC%A4%91%EB%8F%84%2082%25"
-      },
-      "top_headlines": [
-        {
-          "title": "연말 증시, 투자자 48% '상승 전망'···미국 집중도 82% '최고조'",
-          "summary": "",
-          "link": "https://www.smartfn.co.kr/news/articleView.html?idxno=128295",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "82% Us Concentration",
+      "term_ko": "미국 집중도 82%"
     },
     {
-      "term": "2025 Capital Investment Target 430 trillion KRW in assets under management",
-      "term_ko": "2025자본투자대상삼성운용 관리자산 430조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2025자본투자대상삼성운용 관리자산 430조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[2025자본투자대상]삼성운용, 관리자산 430조 돌파",
-              "link": "https://n.news.naver.com/mnews/article/277/0005689087?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2025%EC%9E%90%EB%B3%B8%ED%88%AC%EC%9E%90%EB%8C%80%EC%83%81%EC%82%BC%EC%84%B1%EC%9A%B4%EC%9A%A9%20%EA%B4%80%EB%A6%AC%EC%9E%90%EC%82%B0%20430%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2025%EC%9E%90%EB%B3%B8%ED%88%AC%EC%9E%90%EB%8C%80%EC%83%81%EC%82%BC%EC%84%B1%EC%9A%B4%EC%9A%A9%20%EA%B4%80%EB%A6%AC%EC%9E%90%EC%82%B0%20430%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[2025자본투자대상]삼성운용, 관리자산 430조 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005689087?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "2025 Capital Investment Target 430 Trillion Krw in Assets Under Management",
+      "term_ko": "2025자본투자대상삼성운용 관리자산 430조"
     },
     {
-      "term": "Across major indices",
-      "term_ko": "주요 지수 전반적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주요 지수 전반적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 3일] 미국 주식시장, 주요 지수 전반적 상승...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195139"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%A0%84%EB%B0%98%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%A0%84%EB%B0%98%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 3일] 미국 주식시장, 주요 지수 전반적 상승...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195139",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Across Major Indices",
+      "term_ko": "주요 지수 전반적"
     },
     {
       "term": "Alan, Head of Design",
-      "term_ko": "디자인 수장 앨런",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "디자인 수장 앨런",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"메타, 애플 UI 디자인 수장 앨런 다이 영입\"",
-              "link": "https://www.newspim.com/news/view/20251204000090"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%94%EC%9E%90%EC%9D%B8%20%EC%88%98%EC%9E%A5%20%EC%95%A8%EB%9F%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%94%EC%9E%90%EC%9D%B8%20%EC%88%98%EC%9E%A5%20%EC%95%A8%EB%9F%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "\"메타, 애플 UI 디자인 수장 앨런 다이 영입\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251204000090",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "디자인 수장 앨런"
     },
     {
-      "term": "Publishing language reports",
-      "term_ko": "언어 보고서 공개",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "언어 보고서 공개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "듀오링고, '2025 언어 보고서' 공개…한국어 글로벌 인기 상승 두드러져",
-              "link": "https://n.news.naver.com/mnews/article/030/0003377103?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B8%EC%96%B4%20%EB%B3%B4%EA%B3%A0%EC%84%9C%20%EA%B3%B5%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B8%EC%96%B4%20%EB%B3%B4%EA%B3%A0%EC%84%9C%20%EA%B3%B5%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "듀오링고, '2025 언어 보고서' 공개…한국어 글로벌 인기 상승 두드러져",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003377103?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Publishing Language Reports",
+      "term_ko": "언어 보고서 공개"
     },
     {
       "term": "Korean Global Popularity",
-      "term_ko": "한국어 글로벌 인기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국어 글로벌 인기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "듀오링고, '2025 언어 보고서' 공개…한국어 글로벌 인기 상승 두드러져",
-              "link": "https://n.news.naver.com/mnews/article/030/0003377103?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EC%96%B4%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%9D%B8%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EC%96%B4%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%9D%B8%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "듀오링고, '2025 언어 보고서' 공개…한국어 글로벌 인기 상승 두드러져",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003377103?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국어 글로벌 인기"
     },
     {
-      "term": "Both for sale and charter",
-      "term_ko": "매매 전세 모두",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매매 전세 모두",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[주간아파트동향] 수도권 중심으로 매매·전세 모두 소폭 상승",
-              "link": "https://daily.hankooki.com/news/articleView.html?idxno=1305423"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%A7%A4%20%EC%A0%84%EC%84%B8%20%EB%AA%A8%EB%91%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%A7%A4%20%EC%A0%84%EC%84%B8%20%EB%AA%A8%EB%91%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[주간아파트동향] 수도권 중심으로 매매·전세 모두 소폭 상승",
-          "summary": "",
-          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1305423",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Both for Sale and Charter",
+      "term_ko": "매매 전세 모두"
     },
     {
-      "term": "Credit Union K-Culture Artists",
-      "term_ko": "신협 K-문화 예술인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신협 K-문화 예술인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "신협, ‘K-문화 예술인’ 창작 안정 위해 1500만원 후원",
-              "link": "https://www.ekn.kr/web/view.php?key=20251204026594738"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%98%91%20K-%EB%AC%B8%ED%99%94%20%EC%98%88%EC%88%A0%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%98%91%20K-%EB%AC%B8%ED%99%94%20%EC%98%88%EC%88%A0%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "신협, ‘K-문화 예술인’ 창작 안정 위해 1500만원 후원",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20251204026594738",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Credit Union K-culture Artists",
+      "term_ko": "신협 K-문화 예술인"
     },
     {
       "term": "Recruiting Dies",
-      "term_ko": "다이 영입",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "다이 영입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"메타, 애플 UI 디자인 수장 앨런 다이 영입\"",
-              "link": "https://www.newspim.com/news/view/20251204000090"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%9D%B4%20%EC%98%81%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%9D%B4%20%EC%98%81%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "\"메타, 애플 UI 디자인 수장 앨런 다이 영입\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251204000090",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "다이 영입"
     },
     {
-      "term": "Rising prominence",
-      "term_ko": "상승 두드러져",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 두드러져",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "듀오링고, '2025 언어 보고서' 공개…한국어 글로벌 인기 상승 두드러져",
-              "link": "https://n.news.naver.com/mnews/article/030/0003377103?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EB%91%90%EB%93%9C%EB%9F%AC%EC%A0%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EB%91%90%EB%93%9C%EB%9F%AC%EC%A0%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "듀오링고, '2025 언어 보고서' 공개…한국어 글로벌 인기 상승 두드러져",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003377103?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Prominence",
+      "term_ko": "상승 두드러져"
     },
     {
-      "term": "Slightly up",
-      "term_ko": "소폭 상승",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "소폭 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[주간아파트동향] 수도권 중심으로 매매·전세 모두 소폭 상승",
-              "link": "https://daily.hankooki.com/news/articleView.html?idxno=1305423"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%ED%8F%AD%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%ED%8F%AD%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "[주간아파트동향] 수도권 중심으로 매매·전세 모두 소폭 상승",
-          "summary": "",
-          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1305423",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Slightly Up",
+      "term_ko": "소폭 상승"
     },
     {
-      "term": "Stretched again",
-      "term_ko": "다시 늘었다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "다시 늘었다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "가구당 평균부채 9543만원, 다시 늘었다",
-              "link": "http://www.m-i.kr/news/articleView.html?idxno=1311336"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%8B%9C%20%EB%8A%98%EC%97%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%8B%9C%20%EB%8A%98%EC%97%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "가구당 평균부채 9543만원, 다시 늘었다",
-          "summary": "",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1311336",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stretched Again",
+      "term_ko": "다시 늘었다"
     },
     {
-      "term": "U.S Futures Steady",
-      "term_ko": "미국 선물 안정적",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Futures Steady",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Futures Steady as Rate-Cut Bets Rise on Soft Labor Data",
-              "link": "https://www.econotimes.com/US-Futures-Steady-as-Rate-Cut-Bets-Rise-on-Soft-Labor-Data-1727730"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Futures%20Steady",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Futures%20Steady"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Futures Steady as Rate-Cut Bets Rise on Soft Labor Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Futures-Steady-as-Rate-Cut-Bets-Rise-on-Soft-Labor-Data-1727730",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Futures Steady",
+      "term_ko": "미국 선물 안정적"
     },
     {
-      "term": "Rate-Cut Bets Rise",
-      "term_ko": "요금 인하 베팅 증가",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rate-Cut Bets Rise",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Futures Steady as Rate-Cut Bets Rise on Soft Labor Data",
-              "link": "https://www.econotimes.com/US-Futures-Steady-as-Rate-Cut-Bets-Rise-on-Soft-Labor-Data-1727730"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate-Cut%20Bets%20Rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate-Cut%20Bets%20Rise"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Futures Steady as Rate-Cut Bets Rise on Soft Labor Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Futures-Steady-as-Rate-Cut-Bets-Rise-on-Soft-Labor-Data-1727730",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rate-cut Bets Rise",
+      "term_ko": "요금 인하 베팅 증가"
     },
     {
       "term": "Soft Labor Data",
-      "term_ko": "소프트 노동 데이터",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Soft Labor Data",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Futures Steady as Rate-Cut Bets Rise on Soft Labor Data",
-              "link": "https://www.econotimes.com/US-Futures-Steady-as-Rate-Cut-Bets-Rise-on-Soft-Labor-Data-1727730"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Soft%20Labor%20Data",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Soft%20Labor%20Data"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Futures Steady as Rate-Cut Bets Rise on Soft Labor Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Futures-Steady-as-Rate-Cut-Bets-Rise-on-Soft-Labor-Data-1727730",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소프트 노동 데이터"
     },
     {
       "term": "Open Lower Despite",
-      "term_ko": "그럼에도 불구하고 더 낮은 개방",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Lower Despite",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open lower despite overnight U.S. gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0015777881?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Lower%20Despite",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Lower%20Despite"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open lower despite overnight U.S. gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015777881?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "그럼에도 불구하고 더 낮은 개방"
     },
     {
-      "term": "Overnight U.S Gains",
-      "term_ko": "하룻밤 사이 미국 수익",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Overnight U.S Gains",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open lower despite overnight U.S. gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0015777881?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Overnight%20U.S%20Gains",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Overnight%20U.S%20Gains"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open lower despite overnight U.S. gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015777881?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Overnight U.s Gains",
+      "term_ko": "하룻밤 사이 미국 수익"
     },
     {
       "term": "Korea Plans",
-      "term_ko": "한국 요금제",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Korea Plans",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Korea Plans Stock Market Overhaul Next Year",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=258029"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korea%20Plans",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korea%20Plans"
-      },
-      "top_headlines": [
-        {
-          "title": "Korea Plans Stock Market Overhaul Next Year",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=258029",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 요금제"
     },
     {
       "term": "Overhaul Next",
-      "term_ko": "다음 점검",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Overhaul Next",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Korea Plans Stock Market Overhaul Next Year",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=258029"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Overhaul%20Next",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Overhaul%20Next"
-      },
-      "top_headlines": [
-        {
-          "title": "Korea Plans Stock Market Overhaul Next Year",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=258029",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "다음 점검"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-04T15:33:53+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-04T06:35:19.559Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-04T15:33:53+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Meta Apple Ui",
+      "term_ko": "메타 애플 UI"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-04T15:33:53+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-04T15:33:53+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "3-day Us Stock Market",
+      "term_ko": "3일 미국 주식시장"
+    },
+    {
+      "term": "Average Debt Per Household Is Krw 954,000",
+      "term_ko": "가구당 평균부채 9543만원"
+    },
+    {
+      "term": "15 Million Won for Stability",
+      "term_ko": "안정 위해 1500만원"
+    },
+    {
+      "term": "48% of Stock Market Investors",
+      "term_ko": "증시 투자자 48%"
+    },
+    {
+      "term": "82% Us Concentration",
+      "term_ko": "미국 집중도 82%"
+    },
+    {
+      "term": "2025 Capital Investment Target 430 Trillion Krw in Assets Under Management",
+      "term_ko": "2025자본투자대상삼성운용 관리자산 430조"
+    },
+    {
+      "term": "Across Major Indices",
+      "term_ko": "주요 지수 전반적"
+    },
+    {
+      "term": "Alan, Head of Design",
+      "term_ko": "디자인 수장 앨런"
+    },
+    {
+      "term": "Publishing Language Reports",
+      "term_ko": "언어 보고서 공개"
+    },
+    {
+      "term": "Korean Global Popularity",
+      "term_ko": "한국어 글로벌 인기"
+    },
+    {
+      "term": "Both for Sale and Charter",
+      "term_ko": "매매 전세 모두"
+    },
+    {
+      "term": "Credit Union K-culture Artists",
+      "term_ko": "신협 K-문화 예술인"
+    },
+    {
+      "term": "Recruiting Dies",
+      "term_ko": "다이 영입"
+    },
+    {
+      "term": "Rising Prominence",
+      "term_ko": "상승 두드러져"
+    },
+    {
+      "term": "Slightly Up",
+      "term_ko": "소폭 상승"
+    },
+    {
+      "term": "Stretched Again",
+      "term_ko": "다시 늘었다"
+    },
+    {
+      "term": "U.s Futures Steady",
+      "term_ko": "미국 선물 안정적"
+    },
+    {
+      "term": "Rate-cut Bets Rise",
+      "term_ko": "요금 인하 베팅 증가"
+    },
+    {
+      "term": "Soft Labor Data",
+      "term_ko": "소프트 노동 데이터"
+    },
+    {
+      "term": "Open Lower Despite",
+      "term_ko": "그럼에도 불구하고 더 낮은 개방"
+    },
+    {
+      "term": "Overnight U.s Gains",
+      "term_ko": "하룻밤 사이 미국 수익"
+    },
+    {
+      "term": "Korea Plans",
+      "term_ko": "한국 요금제"
+    },
+    {
+      "term": "Overhaul Next",
+      "term_ko": "다음 점검"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Meta Apple Ui": {
+      "en": "Meta Apple Ui",
+      "ko": "메타 애플 UI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "3-day Us Stock Market": {
+      "en": "3-day Us Stock Market",
+      "ko": "3일 미국 주식시장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Average Debt Per Household Is Krw 954,000": {
+      "en": "Average Debt Per Household Is Krw 954,000",
+      "ko": "가구당 평균부채 9543만원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "15 Million Won for Stability": {
+      "en": "15 Million Won for Stability",
+      "ko": "안정 위해 1500만원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "48% of Stock Market Investors": {
+      "en": "48% of Stock Market Investors",
+      "ko": "증시 투자자 48%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "82% Us Concentration": {
+      "en": "82% Us Concentration",
+      "ko": "미국 집중도 82%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "2025 Capital Investment Target 430 Trillion Krw in Assets Under Management": {
+      "en": "2025 Capital Investment Target 430 Trillion Krw in Assets Under Management",
+      "ko": "2025자본투자대상삼성운용 관리자산 430조",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Across Major Indices": {
+      "en": "Across Major Indices",
+      "ko": "주요 지수 전반적",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Alan, Head of Design": {
+      "en": "Alan, Head of Design",
+      "ko": "디자인 수장 앨런",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Publishing Language Reports": {
+      "en": "Publishing Language Reports",
+      "ko": "언어 보고서 공개",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Korean Global Popularity": {
+      "en": "Korean Global Popularity",
+      "ko": "한국어 글로벌 인기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Both for Sale and Charter": {
+      "en": "Both for Sale and Charter",
+      "ko": "매매 전세 모두",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Credit Union K-culture Artists": {
+      "en": "Credit Union K-culture Artists",
+      "ko": "신협 K-문화 예술인",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Recruiting Dies": {
+      "en": "Recruiting Dies",
+      "ko": "다이 영입",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Rising Prominence": {
+      "en": "Rising Prominence",
+      "ko": "상승 두드러져",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Slightly Up": {
+      "en": "Slightly Up",
+      "ko": "소폭 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Stretched Again": {
+      "en": "Stretched Again",
+      "ko": "다시 늘었다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "U.s Futures Steady": {
+      "en": "U.s Futures Steady",
+      "ko": "미국 선물 안정적",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Rate-cut Bets Rise": {
+      "en": "Rate-cut Bets Rise",
+      "ko": "요금 인하 베팅 증가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Soft Labor Data": {
+      "en": "Soft Labor Data",
+      "ko": "소프트 노동 데이터",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Open Lower Despite": {
+      "en": "Open Lower Despite",
+      "ko": "그럼에도 불구하고 더 낮은 개방",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Overnight U.s Gains": {
+      "en": "Overnight U.s Gains",
+      "ko": "하룻밤 사이 미국 수익",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Korea Plans": {
+      "en": "Korea Plans",
+      "ko": "한국 요금제",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Overhaul Next": {
+      "en": "Overhaul Next",
+      "ko": "다음 점검",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-04T12:41:58.467Z"
     }
   }
 }
