@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-04T21:44:12+09:00 (KST)**
+- Generated: **2025-12-05T03:34:19+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -103,7 +103,7 @@
 
 **두산** (000150.KS)
 
-- News (7d): **471** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- News (7d): **474** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
 - Returns: 5d **-0.1%**, 20d **-10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
@@ -291,7 +291,7 @@
 **Procter & Gamble** (PG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.2%**, 20d **-0.3%**; volatility (20d): **unknown**
+- Returns: 5d **-2.1%**, 20d **-0.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Procter%20%26%20Gamble
@@ -301,18 +301,10 @@
 **Global Payments** (GPN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.0%**, 20d **0.0%**; volatility (20d): **unknown**
+- Returns: 5d **7.2%**, 20d **1.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Global%20Payments
-
-**Hubbell Incorporated** (HUBB)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.1%**, 20d **-6.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Hubbell%20Incorporated
 
 **NetApp** (NTAP)
 
@@ -321,6 +313,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=NetApp
+
+**PTC Inc.** (PTC)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.1%**, 20d **-5.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=PTC%20Inc.
 
 **Tyler Technologies** (TYL)
 
@@ -333,7 +333,7 @@
 **Williams-Sonoma, Inc.** (WSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-8.1%**; volatility (20d): **unknown**
+- Returns: 5d **-1.7%**, 20d **-10.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc.
