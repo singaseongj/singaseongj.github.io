@@ -1,1027 +1,411 @@
 {
+  "generatedAt": "2025-12-05T06:31:43.767Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-05",
   "window": "12_hours",
   "total_phrases": 28,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Mirae Asset Management TIGER US NASDAQ100",
-      "term_ko": "미래에셋자산운용 TIGER 미국나스닥100",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래에셋자산운용 TIGER 미국나스닥100",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋자산운용, 'TIGER 미국나스닥100 ETF' 순자산 7조원 돌파",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344928"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%20TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%20TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋자산운용, 'TIGER 미국나스닥100 ETF' 순자산 7조원 돌파",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344928",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mirae Asset Management Tiger Us Nasdaq100",
+      "term_ko": "미래에셋자산운용 TIGER 미국나스닥100"
     },
     {
-      "term": "7 trillion in ETF net assets",
-      "term_ko": "ETF 순자산 7조원",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 순자산 7조원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋자산운용, 'TIGER 미국나스닥100 ETF' 순자산 7조원 돌파",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344928"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋자산운용, 'TIGER 미국나스닥100 ETF' 순자산 7조원 돌파",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344928",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "7 Trillion in Etf Net Assets",
+      "term_ko": "ETF 순자산 7조원"
     },
     {
-      "term": "Nvidia's advanced AI chips",
-      "term_ko": "엔비디아의 첨단 AI칩",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔비디아의 첨단 AI칩",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美상원, 엔비디아의 첨단 AI칩 중국 수출 30개월 차단 추진",
-              "link": "https://www.newspim.com/news/view/20251205000052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%EC%9D%98%20%EC%B2%A8%EB%8B%A8%20AI%EC%B9%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%EC%9D%98%20%EC%B2%A8%EB%8B%A8%20AI%EC%B9%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "美상원, 엔비디아의 첨단 AI칩 중국 수출 30개월 차단 추진",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000052",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nvidia's Advanced Ai Chips",
+      "term_ko": "엔비디아의 첨단 AI칩"
     },
     {
-      "term": "Etibus - PTC Korea Aerospace",
-      "term_ko": "에티버스-PTC 코리아 항공우주",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "에티버스-PTC 코리아 항공우주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "에티버스-PTC 코리아, 항공우주·방위·의료기술 시장 확대 위한 업무협...",
-              "link": "https://www.public25.com/news/articleView.html?idxno=34484"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%90%ED%8B%B0%EB%B2%84%EC%8A%A4-PTC%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%90%ED%8B%B0%EB%B2%84%EC%8A%A4-PTC%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "에티버스-PTC 코리아, 항공우주·방위·의료기술 시장 확대 위한 업무협...",
-          "summary": "",
-          "link": "https://www.public25.com/news/articleView.html?idxno=34484",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Etibus - Ptc Korea Aerospace",
+      "term_ko": "에티버스-PTC 코리아 항공우주"
     },
     {
-      "term": "30 months of exporting to China",
-      "term_ko": "중국 수출 30개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중국 수출 30개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美상원, 엔비디아의 첨단 AI칩 중국 수출 30개월 차단 추진",
-              "link": "https://www.newspim.com/news/view/20251205000052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EA%B5%AD%20%EC%88%98%EC%B6%9C%2030%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EA%B5%AD%20%EC%88%98%EC%B6%9C%2030%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "美상원, 엔비디아의 첨단 AI칩 중국 수출 30개월 차단 추진",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000052",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "30 Months of Exporting to China",
+      "term_ko": "중국 수출 30개월"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 4일] 미국 증시 보합세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195161"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 4일] 미국 증시 보합세 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195161",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "Nvidia $26.5 trillion this year alone",
-      "term_ko": "엔비디아 올해만 26.5조원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔비디아 올해만 26.5조원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "엔비디아, 올해만 26.5조원 투자 약속…\"현금이 너무 많다\"",
-              "link": "https://www.newspim.com/news/view/20251204001193"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EC%98%AC%ED%95%B4%EB%A7%8C%2026.5%EC%A1%B0%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EC%98%AC%ED%95%B4%EB%A7%8C%2026.5%EC%A1%B0%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "엔비디아, 올해만 26.5조원 투자 약속…\"현금이 너무 많다\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251204001193",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nvidia $26.5 Trillion This Year Alone",
+      "term_ko": "엔비디아 올해만 26.5조원"
     },
     {
-      "term": "50 million for blockchain companies",
-      "term_ko": "블록체인 기업에 5000만달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "블록체인 기업에 5000만달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕멜론은행·나스닥, 블록체인 기업에 5,000만달러 투자",
-              "link": "https://www.tokenpost.kr/news/breaking/311420"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EA%B8%B0%EC%97%85%EC%97%90%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EA%B8%B0%EC%97%85%EC%97%90%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕멜론은행·나스닥, 블록체인 기업에 5,000만달러 투자",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/311420",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "50 Million for Blockchain Companies",
+      "term_ko": "블록체인 기업에 5000만달러"
     },
     {
-      "term": "KRW 1470",
-      "term_ko": "원 달러 1470원대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원 달러 1470원대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "외국인 '셀코리아'에 원·달러 1470원대…연준 통화정책 경로 따라 1500원...",
-              "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=99835"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%20%EB%8B%AC%EB%9F%AC%201470%EC%9B%90%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%20%EB%8B%AC%EB%9F%AC%201470%EC%9B%90%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "외국인 '셀코리아'에 원·달러 1470원대…연준 통화정책 경로 따라 1500원...",
-          "summary": "",
-          "link": "https://www.mstoday.co.kr/news/articleView.html?idxno=99835",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Krw 1470",
+      "term_ko": "원 달러 1470원대"
     },
     {
-      "term": "Net worth exceeds $7 trillion",
-      "term_ko": "순자산 7조원 돌파",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순자산 7조원 돌파",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋, ‘TIGER 미국나스닥100’ 순자산 7조원 돌파",
-              "link": "http://thetracker.co.kr/View.aspx?No=3881758"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%EC%9B%90%20%EB%8F%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%EC%9B%90%20%EB%8F%8C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋, ‘TIGER 미국나스닥100’ 순자산 7조원 돌파",
-          "summary": "",
-          "link": "http://thetracker.co.kr/View.aspx?No=3881758",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Net Worth Exceeds $7 Trillion",
+      "term_ko": "순자산 7조원 돌파"
     },
     {
       "term": "Defense Medical Technology Market",
-      "term_ko": "방위 의료기술 시장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "방위 의료기술 시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "에티버스-PTC 코리아, 항공우주·방위·의료기술 시장 확대 위한 업무협...",
-              "link": "https://www.public25.com/news/articleView.html?idxno=34484"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%A9%EC%9C%84%20%EC%9D%98%EB%A3%8C%EA%B8%B0%EC%88%A0%20%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%A9%EC%9C%84%20%EC%9D%98%EB%A3%8C%EA%B8%B0%EC%88%A0%20%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "에티버스-PTC 코리아, 항공우주·방위·의료기술 시장 확대 위한 업무협...",
-          "summary": "",
-          "link": "https://www.public25.com/news/articleView.html?idxno=34484",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "방위 의료기술 시장"
     },
     {
       "term": "Hanwha Total Investment Grade Credit Rating",
-      "term_ko": "한화토탈 투자부적격 신용등급",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한화토탈 투자부적격 신용등급",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한화토탈, '투자부적격' 신용등급 강등 영향은",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4387418"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%99%94%ED%86%A0%ED%83%88%20%ED%88%AC%EC%9E%90%EB%B6%80%EC%A0%81%EA%B2%A9%20%EC%8B%A0%EC%9A%A9%EB%93%B1%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%99%94%ED%86%A0%ED%83%88%20%ED%88%AC%EC%9E%90%EB%B6%80%EC%A0%81%EA%B2%A9%20%EC%8B%A0%EC%9A%A9%EB%93%B1%EA%B8%89"
-      },
-      "top_headlines": [
-        {
-          "title": "한화토탈, '투자부적격' 신용등급 강등 영향은",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4387418",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한화토탈 투자부적격 신용등급"
     },
     {
       "term": "Professor Kim Daejong of Sejong University",
-      "term_ko": "세종대 김대종 교수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "세종대 김대종 교수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "세종대 김대종 교수, 서울마포구상공회 초청 특강",
-              "link": "http://www.veritas-a.com/news/articleView.html?idxno=587581"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%EC%A2%85%EB%8C%80%20%EA%B9%80%EB%8C%80%EC%A2%85%20%EA%B5%90%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%EC%A2%85%EB%8C%80%20%EA%B9%80%EB%8C%80%EC%A2%85%20%EA%B5%90%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "세종대 김대종 교수, 서울마포구상공회 초청 특강",
-          "summary": "",
-          "link": "http://www.veritas-a.com/news/articleView.html?idxno=587581",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "세종대 김대종 교수"
     },
     {
       "term": "Lecture by the Seoul Mapo-gu Chamber of Commerce",
-      "term_ko": "서울마포구상공회 초청 특강",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울마포구상공회 초청 특강",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "세종대 김대종 교수, 서울마포구상공회 초청 특강",
-              "link": "http://www.veritas-a.com/news/articleView.html?idxno=587581"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%A7%88%ED%8F%AC%EA%B5%AC%EC%83%81%EA%B3%B5%ED%9A%8C%20%EC%B4%88%EC%B2%AD%20%ED%8A%B9%EA%B0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%A7%88%ED%8F%AC%EA%B5%AC%EC%83%81%EA%B3%B5%ED%9A%8C%20%EC%B4%88%EC%B2%AD%20%ED%8A%B9%EA%B0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "세종대 김대종 교수, 서울마포구상공회 초청 특강",
-          "summary": "",
-          "link": "http://www.veritas-a.com/news/articleView.html?idxno=587581",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서울마포구상공회 초청 특강"
     },
     {
       "term": "From Sango to Finance Group",
-      "term_ko": "상고 출신에서 금융그룹",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상고 출신에서 금융그룹",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"상고 출신에서 금융그룹 수장까지\"...진옥동 회장의 모든 것",
-              "link": "http://www.globalepic.co.kr/view.php?ud=2025120510160618805ebfd494dd_29"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EA%B3%A0%20%EC%B6%9C%EC%8B%A0%EC%97%90%EC%84%9C%20%EA%B8%88%EC%9C%B5%EA%B7%B8%EB%A3%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EA%B3%A0%20%EC%B6%9C%EC%8B%A0%EC%97%90%EC%84%9C%20%EA%B8%88%EC%9C%B5%EA%B7%B8%EB%A3%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "\"상고 출신에서 금융그룹 수장까지\"...진옥동 회장의 모든 것",
-          "summary": "",
-          "link": "http://www.globalepic.co.kr/view.php?ud=2025120510160618805ebfd494dd_29",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상고 출신에서 금융그룹"
     },
     {
-      "term": "All about the venue",
-      "term_ko": "회장의 모든 것",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회장의 모든 것",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"상고 출신에서 금융그룹 수장까지\"...진옥동 회장의 모든 것",
-              "link": "http://www.globalepic.co.kr/view.php?ud=2025120510160618805ebfd494dd_29"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%9E%A5%EC%9D%98%20%EB%AA%A8%EB%93%A0%20%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%9E%A5%EC%9D%98%20%EB%AA%A8%EB%93%A0%20%EA%B2%83"
-      },
-      "top_headlines": [
-        {
-          "title": "\"상고 출신에서 금융그룹 수장까지\"...진옥동 회장의 모든 것",
-          "summary": "",
-          "link": "http://www.globalepic.co.kr/view.php?ud=2025120510160618805ebfd494dd_29",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "All About the Venue",
+      "term_ko": "회장의 모든 것"
     },
     {
-      "term": "4 days US",
-      "term_ko": "4일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 4일] 미국 증시 보합세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195161"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 4일] 미국 증시 보합세 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195161",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4 Days Us",
+      "term_ko": "4일 미국"
     },
     {
-      "term": "Promote blocking",
-      "term_ko": "차단 추진",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "차단 추진",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美상원, 엔비디아의 첨단 AI칩 중국 수출 30개월 차단 추진",
-              "link": "https://www.newspim.com/news/view/20251205000052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B0%A8%EB%8B%A8%20%EC%B6%94%EC%A7%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B0%A8%EB%8B%A8%20%EC%B6%94%EC%A7%84"
-      },
-      "top_headlines": [
-        {
-          "title": "美상원, 엔비디아의 첨단 AI칩 중국 수출 30개월 차단 추진",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000052",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Promote Blocking",
+      "term_ko": "차단 추진"
     },
     {
-      "term": "Close flat",
-      "term_ko": "보합세 마감",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보합세 마감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 4일] 미국 증시 보합세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195161"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EB%A7%88%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EB%A7%88%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 4일] 미국 증시 보합세 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195161",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Close Flat",
+      "term_ko": "보합세 마감"
     },
     {
-      "term": "for zooming in",
-      "term_ko": "확대 위한",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확대 위한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "에티버스-PTC 코리아, 항공우주·방위·의료기술 시장 확대 위한 업무협...",
-              "link": "https://www.public25.com/news/articleView.html?idxno=34484"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EB%8C%80%20%EC%9C%84%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EB%8C%80%20%EC%9C%84%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "에티버스-PTC 코리아, 항공우주·방위·의료기술 시장 확대 위한 업무협...",
-          "summary": "",
-          "link": "https://www.public25.com/news/articleView.html?idxno=34484",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "For Zooming in",
+      "term_ko": "확대 위한"
     },
     {
-      "term": "Too many",
-      "term_ko": "너무 많다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "너무 많다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "엔비디아, 올해만 26.5조원 투자 약속…\"현금이 너무 많다\"",
-              "link": "https://www.newspim.com/news/view/20251204001193"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%88%EB%AC%B4%20%EB%A7%8E%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%88%EB%AC%B4%20%EB%A7%8E%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "엔비디아, 올해만 26.5조원 투자 약속…\"현금이 너무 많다\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251204001193",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Too Many",
+      "term_ko": "너무 많다"
     },
     {
       "term": "The Bank of New York Mellon Nasdaq",
-      "term_ko": "뉴욕멜론은행 나스닥",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕멜론은행 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕멜론은행·나스닥, 블록체인 기업에 5,000만달러 투자",
-              "link": "https://www.tokenpost.kr/news/breaking/311420"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EB%A9%9C%EB%A1%A0%EC%9D%80%ED%96%89%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EB%A9%9C%EB%A1%A0%EC%9D%80%ED%96%89%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕멜론은행·나스닥, 블록체인 기업에 5,000만달러 투자",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/311420",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕멜론은행 나스닥"
     },
     {
       "term": "Open Tad Lower",
-      "term_ko": "조금 더 낮게 열기",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Tad Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open tad lower on profit-taking",
-              "link": "https://n.news.naver.com/mnews/article/001/0015780413?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Tad%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Tad%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open tad lower on profit-taking",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015780413?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "조금 더 낮게 열기"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T10:27:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-05T01:29:14.539Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-05T10:27:52+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 2,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Mirae Asset Management Tiger Us Nasdaq100",
+      "term_ko": "미래에셋자산운용 TIGER 미국나스닥100"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-05T10:27:52+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-05T10:27:52+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "7 Trillion in Etf Net Assets",
+      "term_ko": "ETF 순자산 7조원"
+    },
+    {
+      "term": "Nvidia's Advanced Ai Chips",
+      "term_ko": "엔비디아의 첨단 AI칩"
+    },
+    {
+      "term": "Etibus - Ptc Korea Aerospace",
+      "term_ko": "에티버스-PTC 코리아 항공우주"
+    },
+    {
+      "term": "30 Months of Exporting to China",
+      "term_ko": "중국 수출 30개월"
+    },
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Nvidia $26.5 Trillion This Year Alone",
+      "term_ko": "엔비디아 올해만 26.5조원"
+    },
+    {
+      "term": "50 Million for Blockchain Companies",
+      "term_ko": "블록체인 기업에 5000만달러"
+    },
+    {
+      "term": "Krw 1470",
+      "term_ko": "원 달러 1470원대"
+    },
+    {
+      "term": "Net Worth Exceeds $7 Trillion",
+      "term_ko": "순자산 7조원 돌파"
+    },
+    {
+      "term": "Defense Medical Technology Market",
+      "term_ko": "방위 의료기술 시장"
+    },
+    {
+      "term": "Hanwha Total Investment Grade Credit Rating",
+      "term_ko": "한화토탈 투자부적격 신용등급"
+    },
+    {
+      "term": "Professor Kim Daejong of Sejong University",
+      "term_ko": "세종대 김대종 교수"
+    },
+    {
+      "term": "Lecture by the Seoul Mapo-gu Chamber of Commerce",
+      "term_ko": "서울마포구상공회 초청 특강"
+    },
+    {
+      "term": "From Sango to Finance Group",
+      "term_ko": "상고 출신에서 금융그룹"
+    },
+    {
+      "term": "All About the Venue",
+      "term_ko": "회장의 모든 것"
+    },
+    {
+      "term": "4 Days Us",
+      "term_ko": "4일 미국"
+    },
+    {
+      "term": "Promote Blocking",
+      "term_ko": "차단 추진"
+    },
+    {
+      "term": "Close Flat",
+      "term_ko": "보합세 마감"
+    },
+    {
+      "term": "For Zooming in",
+      "term_ko": "확대 위한"
+    },
+    {
+      "term": "Too Many",
+      "term_ko": "너무 많다"
+    },
+    {
+      "term": "The Bank of New York Mellon Nasdaq",
+      "term_ko": "뉴욕멜론은행 나스닥"
+    },
+    {
+      "term": "Open Tad Lower",
+      "term_ko": "조금 더 낮게 열기"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "Mirae Asset Management Tiger Us Nasdaq100": {
+      "en": "Mirae Asset Management Tiger Us Nasdaq100",
+      "ko": "미래에셋자산운용 TIGER 미국나스닥100",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "7 Trillion in Etf Net Assets": {
+      "en": "7 Trillion in Etf Net Assets",
+      "ko": "ETF 순자산 7조원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Nvidia's Advanced Ai Chips": {
+      "en": "Nvidia's Advanced Ai Chips",
+      "ko": "엔비디아의 첨단 AI칩",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Etibus - Ptc Korea Aerospace": {
+      "en": "Etibus - Ptc Korea Aerospace",
+      "ko": "에티버스-PTC 코리아 항공우주",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "30 Months of Exporting to China": {
+      "en": "30 Months of Exporting to China",
+      "ko": "중국 수출 30개월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Nvidia $26.5 Trillion This Year Alone": {
+      "en": "Nvidia $26.5 Trillion This Year Alone",
+      "ko": "엔비디아 올해만 26.5조원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "50 Million for Blockchain Companies": {
+      "en": "50 Million for Blockchain Companies",
+      "ko": "블록체인 기업에 5000만달러",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Krw 1470": {
+      "en": "Krw 1470",
+      "ko": "원 달러 1470원대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Net Worth Exceeds $7 Trillion": {
+      "en": "Net Worth Exceeds $7 Trillion",
+      "ko": "순자산 7조원 돌파",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Defense Medical Technology Market": {
+      "en": "Defense Medical Technology Market",
+      "ko": "방위 의료기술 시장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Hanwha Total Investment Grade Credit Rating": {
+      "en": "Hanwha Total Investment Grade Credit Rating",
+      "ko": "한화토탈 투자부적격 신용등급",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Professor Kim Daejong of Sejong University": {
+      "en": "Professor Kim Daejong of Sejong University",
+      "ko": "세종대 김대종 교수",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Lecture by the Seoul Mapo-gu Chamber of Commerce": {
+      "en": "Lecture by the Seoul Mapo-gu Chamber of Commerce",
+      "ko": "서울마포구상공회 초청 특강",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "From Sango to Finance Group": {
+      "en": "From Sango to Finance Group",
+      "ko": "상고 출신에서 금융그룹",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "All About the Venue": {
+      "en": "All About the Venue",
+      "ko": "회장의 모든 것",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "4 Days Us": {
+      "en": "4 Days Us",
+      "ko": "4일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Promote Blocking": {
+      "en": "Promote Blocking",
+      "ko": "차단 추진",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Close Flat": {
+      "en": "Close Flat",
+      "ko": "보합세 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "For Zooming in": {
+      "en": "For Zooming in",
+      "ko": "확대 위한",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Too Many": {
+      "en": "Too Many",
+      "ko": "너무 많다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "The Bank of New York Mellon Nasdaq": {
+      "en": "The Bank of New York Mellon Nasdaq",
+      "ko": "뉴욕멜론은행 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Open Tad Lower": {
+      "en": "Open Tad Lower",
+      "ko": "조금 더 낮게 열기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-05T06:31:43.767Z"
     }
   }
 }
