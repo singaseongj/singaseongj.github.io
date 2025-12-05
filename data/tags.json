@@ -4,185 +4,36 @@
   "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "Mirae Asset TIGER Nasdaq100",
-      "term_ko": "미래에셋 TIGER 나스닥100",
-      "significance_score": 364,
-      "mentions": 194,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래에셋 TIGER 나스닥100",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-28",
-              "timestamp": 1764255600000,
-              "value": 50
-            },
-            {
-              "period": "2025-12-01",
-              "timestamp": 1764514800000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-03",
-              "timestamp": 1764687600000,
-              "value": 31.25
-            },
-            {
-              "period": "2025-12-04",
-              "timestamp": 1764774000000,
-              "value": 62.5
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
-              "link": "https://www.inthenews.co.kr/news/article.html?no=80377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20TIGER%20%EB%82%98%EC%8A%A4%EB%8B%A5100",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20TIGER%20%EB%82%98%EC%8A%A4%EB%8B%A5100"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
-          "summary": "",
-          "link": "https://www.inthenews.co.kr/news/article.html?no=80377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 193.75,
-        "weekly_average_volume": 64.5833,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.025978,
-        "time_weight": 0.02187,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764774000000
-      }
-    },
-    {
-      "term": "7 trillion in ETF net assets",
-      "term_ko": "ETF 순자산 7조",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 순자산 7조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
-              "link": "https://www.inthenews.co.kr/news/article.html?no=80377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
-          "summary": "",
-          "link": "https://www.inthenews.co.kr/news/article.html?no=80377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Mirae Asset Management US Nasdaq 100 ETF",
-      "term_ko": "미래에셋자산운용 미국나스닥100 ETF",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래에셋자산운용 미국나스닥100 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
-              "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
-          "summary": "",
-          "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Shinsegae Department Store Asung Daiso CJ Onstyle",
-      "term_ko": "신세계백화점 아성다이소 CJ온스타일",
+      "term": "YZi Labs Suggestions",
+      "term_ko": "YZi Labs 제안",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "신세계백화점 아성다이소 CJ온스타일",
+        "query": "YZi Labs 제안",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[브리프]롯데백화점 신세계백화점 아성다이소 CJ온스타일 경방 우아한형...",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344979"
+              "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
+              "link": "https://www.tokenpost.kr/news/breaking/311776"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%95%84%EC%84%B1%EB%8B%A4%EC%9D%B4%EC%86%8C%20CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%95%84%EC%84%B1%EB%8B%A4%EC%9D%B4%EC%86%8C%20CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=YZi%20Labs%20%EC%A0%9C%EC%95%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=YZi%20Labs%20%EC%A0%9C%EC%95%88"
       },
       "top_headlines": [
         {
-          "title": "[브리프]롯데백화점 신세계백화점 아성다이소 CJ온스타일 경방 우아한형...",
+          "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
           "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344979",
+          "link": "https://www.tokenpost.kr/news/breaking/311776",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -190,34 +41,36 @@
       ]
     },
     {
-      "term": "Nonghyup Life Insurance Samsung Fire & Marine KB Insurance",
-      "term_ko": "농협생명 삼성화재 KB손보",
+      "term": "Rebuttal BNB Strategy",
+      "term_ko": "반박 BNB 전략",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "농협생명 삼성화재 KB손보",
+        "query": "반박 BNB 전략",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974"
+              "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
+              "link": "https://www.tokenpost.kr/news/breaking/311776"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%8D%ED%98%91%EC%83%9D%EB%AA%85%20%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC%20KB%EC%86%90%EB%B3%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%8D%ED%98%91%EC%83%9D%EB%AA%85%20%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC%20KB%EC%86%90%EB%B3%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%B0%95%20BNB%20%EC%A0%84%EB%9E%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%B0%95%20BNB%20%EC%A0%84%EB%9E%B5"
       },
       "top_headlines": [
         {
-          "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
+          "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
           "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974",
+          "link": "https://www.tokenpost.kr/news/breaking/311776",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -225,34 +78,36 @@
       ]
     },
     {
-      "term": "Trapped Bitcoin ETFs",
-      "term_ko": "갇힌 비트코인 ETF",
+      "term": "IMF foreign exchange crisis is a national",
+      "term_ko": "IMF 외환위기는 국민",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "갇힌 비트코인 ETF",
+        "query": "IMF 외환위기는 국민",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
-              "link": "https://www.newspim.com/news/view/20251205000962"
+              "title": "“IMF 외환위기는 국민 사치 탓하더니, 고환율은 서학개미 때문?”",
+              "link": "https://n.news.naver.com/mnews/article/020/0003679759?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%87%ED%9E%8C%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%87%ED%9E%8C%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IMF%20%EC%99%B8%ED%99%98%EC%9C%84%EA%B8%B0%EB%8A%94%20%EA%B5%AD%EB%AF%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IMF%20%EC%99%B8%ED%99%98%EC%9C%84%EA%B8%B0%EB%8A%94%20%EA%B5%AD%EB%AF%BC"
       },
       "top_headlines": [
         {
-          "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+          "title": "“IMF 외환위기는 국민 사치 탓하더니, 고환율은 서학개미 때문?”",
           "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000962",
+          "link": "https://n.news.naver.com/mnews/article/020/0003679759?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -260,34 +115,36 @@
       ]
     },
     {
-      "term": "KAMA Domestic Exports",
-      "term_ko": "KAMA 내수 수출",
+      "term": "New York Stock Exchange PCE",
+      "term_ko": "미국 뉴욕증시 PCE",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "KAMA 내수 수출",
+        "query": "미국 뉴욕증시 PCE",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301"
+              "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KAMA%20%EB%82%B4%EC%88%98%20%EC%88%98%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KAMA%20%EB%82%B4%EC%88%98%20%EC%88%98%EC%B6%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20PCE",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20PCE"
       },
       "top_headlines": [
         {
-          "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+          "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -295,34 +152,36 @@
       ]
     },
     {
-      "term": "1.4 billion in Ethereum",
-      "term_ko": "자금은 이더리움에 1.4억달러",
+      "term": "Gold price quotes for todayGold price on December 6th",
+      "term_ko": "오늘의 금값시세12월6일자 금값",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "자금은 이더리움에 1.4억달러",
+        "query": "오늘의 금값시세12월6일자 금값",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
-              "link": "https://www.newspim.com/news/view/20251205000962"
+              "title": "오늘의 금값시세(12월6일자) \"금값 보합세, 2026년 전망은\"",
+              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3449174"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%EC%9D%80%20%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%EC%97%90%201.4%EC%96%B5%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%EC%9D%80%20%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%EC%97%90%201.4%EC%96%B5%EB%8B%AC%EB%9F%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%946%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%946%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92"
       },
       "top_headlines": [
         {
-          "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+          "title": "오늘의 금값시세(12월6일자) \"금값 보합세, 2026년 전망은\"",
           "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000962",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3449174",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -330,34 +189,147 @@
       ]
     },
     {
-      "term": "Net worth tops $7 trillion",
-      "term_ko": "순자산 7조 돌파",
-      "significance_score": 336,
+      "term": "NYSE Preview Inflation",
+      "term_ko": "뉴욕증시 프리뷰 인플레",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "순자산 7조 돌파",
+        "query": "뉴욕증시 프리뷰 인플레",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
-              "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004"
+              "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
+              "link": "https://www.newspim.com/news/view/20251205000996"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%20%EB%8F%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%20%EB%8F%8C%ED%8C%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%9D%B8%ED%94%8C%EB%A0%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%9D%B8%ED%94%8C%EB%A0%88"
       },
       "top_headlines": [
         {
-          "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
+          "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
           "summary": "",
-          "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004",
+          "link": "https://www.newspim.com/news/view/20251205000996",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Bitcoin Financial Enterprise Strategy",
+      "term_ko": "비트코인 재무기업 Strategy",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 재무기업 Strategy",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
+              "link": "https://www.tokenpost.kr/news/breaking/311793"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%9E%AC%EB%AC%B4%EA%B8%B0%EC%97%85%20Strategy",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%9E%AC%EB%AC%B4%EA%B8%B0%EC%97%85%20Strategy"
+      },
+      "top_headlines": [
+        {
+          "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/311793",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "A large",
+      "term_ko": "뉴욕 타임스스퀘어에 대형",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "뉴욕 타임스스퀘어에 대형",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
+              "link": "https://www.tokenpost.kr/news/breaking/311793"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%20%ED%83%80%EC%9E%84%EC%8A%A4%EC%8A%A4%ED%80%98%EC%96%B4%EC%97%90%20%EB%8C%80%ED%98%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%20%ED%83%80%EC%9E%84%EC%8A%A4%EC%8A%A4%ED%80%98%EC%96%B4%EC%97%90%20%EB%8C%80%ED%98%95"
+      },
+      "top_headlines": [
+        {
+          "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/311793",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Take a stand",
+      "term_ko": "고수 입장 밝혀",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "고수 입장 밝혀",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
+              "link": "https://www.tokenpost.kr/news/breaking/311776"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%88%98%20%EC%9E%85%EC%9E%A5%20%EB%B0%9D%ED%98%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%88%98%20%EC%9E%85%EC%9E%A5%20%EB%B0%9D%ED%98%80"
+      },
+      "top_headlines": [
+        {
+          "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/311776",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,8 +346,10 @@
         "query": "매트 호건 스트래티지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "매트 호건 \"스트래티지, 주가 떨어져도 비트코인 안 판다\"",
@@ -409,8 +383,10 @@
         "query": "주가 떨어져도 비트코인",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "매트 호건 \"스트래티지, 주가 떨어져도 비트코인 안 판다\"",
@@ -435,34 +411,36 @@
       ]
     },
     {
-      "term": "TrumpMedia-Crypto.com Cryptocurrency Stockpiling",
-      "term_ko": "트럼프미디어-크립토닷컴 가상화폐 비축",
+      "term": "Squid of the rough crane ant",
+      "term_ko": "거친 서학개미의 오징어",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "트럼프미디어-크립토닷컴 가상화폐 비축",
+        "query": "거친 서학개미의 오징어",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "트럼프미디어-크립토닷컴, 가상화폐 비축 전략 조직 출범",
-              "link": "https://www.khgames.co.kr/news/articleView.html?idxno=247328"
+              "title": "거친 서학개미의 ‘오징어 게임’",
+              "link": "https://n.news.naver.com/mnews/article/020/0003679758?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%EB%AF%B8%EB%94%94%EC%96%B4-%ED%81%AC%EB%A6%BD%ED%86%A0%EB%8B%B7%EC%BB%B4%20%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90%20%EB%B9%84%EC%B6%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%EB%AF%B8%EB%94%94%EC%96%B4-%ED%81%AC%EB%A6%BD%ED%86%A0%EB%8B%B7%EC%BB%B4%20%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90%20%EB%B9%84%EC%B6%95"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EC%B9%9C%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EC%9D%98%20%EC%98%A4%EC%A7%95%EC%96%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EC%B9%9C%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EC%9D%98%20%EC%98%A4%EC%A7%95%EC%96%B4"
       },
       "top_headlines": [
         {
-          "title": "트럼프미디어-크립토닷컴, 가상화폐 비축 전략 조직 출범",
+          "title": "거친 서학개미의 ‘오징어 게임’",
           "summary": "",
-          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=247328",
+          "link": "https://n.news.naver.com/mnews/article/020/0003679758?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -470,34 +448,36 @@
       ]
     },
     {
-      "term": "Launching a strategic organization",
-      "term_ko": "전략 조직 출범",
+      "term": "Perpetuation endings are monetary sovereignty",
+      "term_ko": "퍼주기 결말은 통화주권",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "전략 조직 출범",
+        "query": "퍼주기 결말은 통화주권",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "트럼프미디어-크립토닷컴, 가상화폐 비축 전략 조직 출범",
-              "link": "https://www.khgames.co.kr/news/articleView.html?idxno=247328"
+              "title": "‘퍼주기’ 결말은 통화주권 타격…경제 반면교사 아르헨티나",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053895?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%9E%B5%20%EC%A1%B0%EC%A7%81%20%EC%B6%9C%EB%B2%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%9E%B5%20%EC%A1%B0%EC%A7%81%20%EC%B6%9C%EB%B2%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8D%BC%EC%A3%BC%EA%B8%B0%20%EA%B2%B0%EB%A7%90%EC%9D%80%20%ED%86%B5%ED%99%94%EC%A3%BC%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8D%BC%EC%A3%BC%EA%B8%B0%20%EA%B2%B0%EB%A7%90%EC%9D%80%20%ED%86%B5%ED%99%94%EC%A3%BC%EA%B6%8C"
       },
       "top_headlines": [
         {
-          "title": "트럼프미디어-크립토닷컴, 가상화폐 비축 전략 조직 출범",
+          "title": "‘퍼주기’ 결말은 통화주권 타격…경제 반면교사 아르헨티나",
           "summary": "",
-          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=247328",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053895?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -505,34 +485,36 @@
       ]
     },
     {
-      "term": "Canton Network Developers",
-      "term_ko": "칸톤 네트워크 개발사",
+      "term": "Strike economy tutor",
+      "term_ko": "타격 경제 반면교사",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "칸톤 네트워크 개발사",
+        "query": "타격 경제 반면교사",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=610546"
+              "title": "‘퍼주기’ 결말은 통화주권 타격…경제 반면교사 아르헨티나",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053895?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%B8%ED%86%A4%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%EA%B0%9C%EB%B0%9C%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%B8%ED%86%A4%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%EA%B0%9C%EB%B0%9C%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%83%80%EA%B2%A9%20%EA%B2%BD%EC%A0%9C%20%EB%B0%98%EB%A9%B4%EA%B5%90%EC%82%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%83%80%EA%B2%A9%20%EA%B2%BD%EC%A0%9C%20%EB%B0%98%EB%A9%B4%EA%B5%90%EC%82%AC"
       },
       "top_headlines": [
         {
-          "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
+          "title": "‘퍼주기’ 결말은 통화주권 타격…경제 반면교사 아르헨티나",
           "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=610546",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053895?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -540,34 +522,36 @@
       ]
     },
     {
-      "term": "Strategic",
-      "term_ko": "유력 금융사들로부터 전략적",
+      "term": "Policy Fengfeng Foreigners",
+      "term_ko": "정책 훈풍 외국인",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "유력 금융사들로부터 전략적",
+        "query": "정책 훈풍 외국인",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=610546"
+              "title": "정책 훈풍, 외국인 매수에 ‘천스닥’ 기대감…“올해 산타 코스닥 먼저...",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053884?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EB%A0%A5%20%EA%B8%88%EC%9C%B5%EC%82%AC%EB%93%A4%EB%A1%9C%EB%B6%80%ED%84%B0%20%EC%A0%84%EB%9E%B5%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EB%A0%A5%20%EA%B8%88%EC%9C%B5%EC%82%AC%EB%93%A4%EB%A1%9C%EB%B6%80%ED%84%B0%20%EC%A0%84%EB%9E%B5%EC%A0%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%B1%85%20%ED%9B%88%ED%92%8D%20%EC%99%B8%EA%B5%AD%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%B1%85%20%ED%9B%88%ED%92%8D%20%EC%99%B8%EA%B5%AD%EC%9D%B8"
       },
       "top_headlines": [
         {
-          "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
+          "title": "정책 훈풍, 외국인 매수에 ‘천스닥’ 기대감…“올해 산타 코스닥 먼저...",
           "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=610546",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053884?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -575,34 +559,36 @@
       ]
     },
     {
-      "term": "Criteo Korea Partners",
-      "term_ko": "크리테오 코리아 파트너사",
+      "term": "Nasdaq Expectations on the Long Side",
+      "term_ko": "매수에 천스닥 기대감",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "크리테오 코리아 파트너사",
+        "query": "매수에 천스닥 기대감",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
-              "link": "https://www.wikitree.co.kr/articles/1100158"
+              "title": "정책 훈풍, 외국인 매수에 ‘천스닥’ 기대감…“올해 산타 코스닥 먼저...",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053884?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EC%88%98%EC%97%90%20%EC%B2%9C%EC%8A%A4%EB%8B%A5%20%EA%B8%B0%EB%8C%80%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EC%88%98%EC%97%90%20%EC%B2%9C%EC%8A%A4%EB%8B%A5%20%EA%B8%B0%EB%8C%80%EA%B0%90"
       },
       "top_headlines": [
         {
-          "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
+          "title": "정책 훈풍, 외국인 매수에 ‘천스닥’ 기대감…“올해 산타 코스닥 먼저...",
           "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1100158",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053884?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -610,34 +596,36 @@
       ]
     },
     {
-      "term": "Agencies honoring achievement",
-      "term_ko": "성과 기리는 에이전시",
+      "term": "This year's Santa Kosta",
+      "term_ko": "올해 산타 코스닥",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "성과 기리는 에이전시",
+        "query": "올해 산타 코스닥",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
-              "link": "https://www.wikitree.co.kr/articles/1100158"
+              "title": "정책 훈풍, 외국인 매수에 ‘천스닥’ 기대감…“올해 산타 코스닥 먼저...",
+              "link": "https://n.news.naver.com/mnews/article/353/0000053884?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EA%B3%BC%20%EA%B8%B0%EB%A6%AC%EB%8A%94%20%EC%97%90%EC%9D%B4%EC%A0%84%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EA%B3%BC%20%EA%B8%B0%EB%A6%AC%EB%8A%94%20%EC%97%90%EC%9D%B4%EC%A0%84%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%EC%82%B0%ED%83%80%20%EC%BD%94%EC%8A%A4%EB%8B%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%EC%82%B0%ED%83%80%20%EC%BD%94%EC%8A%A4%EB%8B%A5"
       },
       "top_headlines": [
         {
-          "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
+          "title": "정책 훈풍, 외국인 매수에 ‘천스닥’ 기대감…“올해 산타 코스닥 먼저...",
           "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1100158",
+          "link": "https://n.news.naver.com/mnews/article/353/0000053884?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -645,34 +633,36 @@
       ]
     },
     {
-      "term": "Briefs Shinhan Life Kyobo Life",
-      "term_ko": "브리프 신한라이프 교보생명",
+      "term": "Standby and Netflix",
+      "term_ko": "대기 및 넷플릭스",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "브리프 신한라이프 교보생명",
+        "query": "대기 및 넷플릭스",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974"
+              "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A6%AC%ED%94%84%20%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A6%AC%ED%94%84%20%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B8%B0%20%EB%B0%8F%20%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B8%B0%20%EB%B0%8F%20%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4"
       },
       "top_headlines": [
         {
-          "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
+          "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
           "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -680,34 +670,36 @@
       ]
     },
     {
-      "term": "Coin Market Ticker Box Ticket",
-      "term_ko": "코인 시황 박스권",
+      "term": "Getting started in mergers and acquisitions",
+      "term_ko": "인수합병 속 장초반",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코인 시황 박스권",
+        "query": "인수합병 속 장초반",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
-              "link": "https://www.newspim.com/news/view/20251205000962"
+              "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%20%EB%B0%95%EC%8A%A4%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%20%EB%B0%95%EC%8A%A4%EA%B6%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%88%98%ED%95%A9%EB%B3%91%20%EC%86%8D%20%EC%9E%A5%EC%B4%88%EB%B0%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%88%98%ED%95%A9%EB%B3%91%20%EC%86%8D%20%EC%9E%A5%EC%B4%88%EB%B0%98"
       },
       "top_headlines": [
         {
-          "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+          "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
           "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000962",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -715,34 +707,36 @@
       ]
     },
     {
-      "term": "Next year's domestic automotive industry",
-      "term_ko": "내년 국내 車산업",
-      "significance_score": 322,
+      "term": "Waiting for indicators",
+      "term_ko": "지표 기다리며",
+      "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "내년 국내 車산업",
+        "query": "지표 기다리며",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301"
+              "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
+              "link": "https://www.newspim.com/news/view/20251205000996"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%85%84%20%EA%B5%AD%EB%82%B4%20%E8%BB%8A%EC%82%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%85%84%20%EA%B5%AD%EB%82%B4%20%E8%BB%8A%EC%82%B0%EC%97%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%ED%91%9C%20%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%A9%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%ED%91%9C%20%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%A9%B0"
       },
       "top_headlines": [
         {
-          "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+          "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301",
+          "link": "https://www.newspim.com/news/view/20251205000996",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -750,74 +744,72 @@
       ]
     },
     {
-      "term": "Mirae Assets TIGER",
-      "term_ko": "미래에셋 타이거",
-      "significance_score": 294,
+      "term": "Ad execution",
+      "term_ko": "광고 집행",
+      "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Mirae Assets TIGER",
+        "query": "광고 집행",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-12-03",
+              "timestamp": 1764687600000,
+              "value": 100
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657"
+              "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
+              "link": "https://www.tokenpost.kr/news/breaking/311793"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mirae%20Assets%20TIGER",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mirae%20Assets%20TIGER"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%91%EA%B3%A0%20%EC%A7%91%ED%96%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%91%EA%B3%A0%20%EC%A7%91%ED%96%89"
       },
       "top_headlines": [
         {
-          "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
+          "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
           "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657",
+          "link": "https://www.tokenpost.kr/news/breaking/311793",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ]
-    },
-    {
-      "term": "1500% cumulative return",
-      "term_ko": "누적수익률 1500%",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "누적수익률 1500%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
-              "link": "https://www.inthenews.co.kr/news/article.html?no=80377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%88%84%EC%A0%81%EC%88%98%EC%9D%B5%EB%A5%A0%201500%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%88%84%EC%A0%81%EC%88%98%EC%9D%B5%EB%A5%A0%201500%25"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
-          "summary": "",
-          "link": "https://www.inthenews.co.kr/news/article.html?no=80377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.013243,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1764687600000
+      }
     },
     {
       "term": "Not selling",
@@ -829,8 +821,10 @@
         "query": "안 판다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "매트 호건 \"스트래티지, 주가 떨어져도 비트코인 안 판다\"",
@@ -855,135 +849,73 @@
       ]
     },
     {
-      "term": "Attracting investment",
-      "term_ko": "투자 유치",
-      "significance_score": 280,
-      "mentions": 335,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자 유치",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-27",
-              "timestamp": 1764169200000,
-              "value": 77.41935
-            },
-            {
-              "period": "2025-11-28",
-              "timestamp": 1764255600000,
-              "value": 51.6129
-            },
-            {
-              "period": "2025-11-29",
-              "timestamp": 1764342000000,
-              "value": 12.90322
-            },
-            {
-              "period": "2025-11-30",
-              "timestamp": 1764428400000,
-              "value": 25.80645
-            },
-            {
-              "period": "2025-12-01",
-              "timestamp": 1764514800000,
-              "value": 58.06451
-            },
-            {
-              "period": "2025-12-02",
-              "timestamp": 1764601200000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-03",
-              "timestamp": 1764687600000,
-              "value": 64.51612
-            },
-            {
-              "period": "2025-12-04",
-              "timestamp": 1764774000000,
-              "value": 74.19354
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=610546"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EC%9C%A0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EC%9C%A0%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=610546",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 335.4838,
-        "weekly_average_volume": 55.914,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.017756,
-        "time_weight": 0.021867,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764774000000
-      }
-    },
-    {
-      "term": "Production All",
-      "term_ko": "생산 모두",
+      "term": "Because of the crane ants",
+      "term_ko": "서학개미 때문",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "생산 모두",
+        "query": "서학개미 때문",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301"
+              "title": "“IMF 외환위기는 국민 사치 탓하더니, 고환율은 서학개미 때문?”",
+              "link": "https://n.news.naver.com/mnews/article/020/0003679759?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EC%82%B0%20%EB%AA%A8%EB%91%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EC%82%B0%20%EB%AA%A8%EB%91%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%95%8C%EB%AC%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%95%8C%EB%AC%B8"
       },
       "top_headlines": [
         {
-          "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+          "title": "“IMF 외환위기는 국민 사치 탓하더니, 고환율은 서학개미 때문?”",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301",
+          "link": "https://n.news.naver.com/mnews/article/020/0003679759?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Market analysis",
+      "term_ko": "시황 분석",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "시황 분석",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B6%84%EC%84%9D"
+      },
+      "top_headlines": [
+        {
+          "title": "[시황 분석] 미국 뉴욕증시, PCE 대기 및 넷플릭스 인수합병 속 장초반 ...",
+          "summary": "",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15897026",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1000,8 +932,10 @@
         "query": "Japans Nikkei Drops",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
@@ -1035,8 +969,10 @@
         "query": "Await Key U.S",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
@@ -1061,69 +997,36 @@
       ]
     },
     {
-      "term": "ETF Surpasses",
-      "term_ko": "ETF 초과 수익률",
+      "term": "CEA Industries",
+      "term_ko": "CEA 산업",
       "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "ETF Surpasses",
+        "query": "CEA Industries",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657"
+              "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
+              "link": "https://www.tokenpost.kr/news/breaking/311776"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20Surpasses",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20Surpasses"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CEA%20Industries",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CEA%20Industries"
       },
       "top_headlines": [
         {
-          "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
+          "title": "CEA Industries, YZi Labs 제안 반박…BNB 전략 고수 입장 밝혀",
           "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Trillion KRW",
-      "term_ko": "조 원",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trillion KRW",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trillion%20KRW",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trillion%20KRW"
-      },
-      "top_headlines": [
-        {
-          "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657",
+          "link": "https://www.tokenpost.kr/news/breaking/311776",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1140,8 +1043,10 @@
         "query": "Inflation Data",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T21:42:33+09:00",
-          "fallback_sources": [],
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
@@ -1164,15 +1069,59 @@
           "source": null
         }
       ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-06T03:29:33+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-05T12:43:54.966Z",
+    "generated_at": "2025-12-05T18:30:56.384Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-05T21:42:33+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-06T03:29:33+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1182,12 +1131,16 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-05T21:42:33+09:00",
-      "fallback_sources": [],
+      "last_updated": "2025-12-06T03:29:33+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-05T21:42:33+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2025-12-06T03:29:33+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
       }
     }
   }
