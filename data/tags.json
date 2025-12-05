@@ -1,64 +1,64 @@
 {
   "date": "2025-12-05",
   "window": "12_hours",
-  "total_phrases": 26,
+  "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "Mirae Asset TIGER US NASDAQ100",
-      "term_ko": "미래에셋 TIGER 미국나스닥100",
-      "significance_score": 728,
-      "mentions": 320,
+      "term": "Mirae Asset TIGER Nasdaq100",
+      "term_ko": "미래에셋 TIGER 나스닥100",
+      "significance_score": 364,
+      "mentions": 194,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "미래에셋 TIGER 미국나스닥100",
+        "query": "미래에셋 TIGER 나스닥100",
         "search_trends": {
           "source": "naver_datalab_search",
           "time_unit": "date",
           "bucket_size_hours": 24,
           "rows": [
             {
+              "period": "2025-11-28",
+              "timestamp": 1764255600000,
+              "value": 50
+            },
+            {
+              "period": "2025-12-01",
+              "timestamp": 1764514800000,
+              "value": 100
+            },
+            {
               "period": "2025-12-03",
               "timestamp": 1764687600000,
-              "value": 100
+              "value": 31.25
+            },
+            {
+              "period": "2025-12-04",
+              "timestamp": 1764774000000,
+              "value": 62.5
             }
           ]
         },
         "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "미래에셋, 'TIGER 미국나스닥100' 순자산 7조 돌파",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=117485"
-            },
-            {
-              "title": "미래에셋, 'TIGER 미국나스닥100' 순자산 7조원 돌파",
-              "link": "http://www.paxetv.com/news/articleView.html?idxno=254591"
+              "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
+              "link": "https://www.inthenews.co.kr/news/article.html?no=80377"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20TIGER%20%EB%82%98%EC%8A%A4%EB%8B%A5100",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20TIGER%20%EB%82%98%EC%8A%A4%EB%8B%A5100"
       },
       "top_headlines": [
         {
-          "title": "미래에셋, 'TIGER 미국나스닥100' 순자산 7조 돌파",
+          "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
           "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=117485",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "미래에셋, 'TIGER 미국나스닥100' 순자산 7조원 돌파",
-          "summary": "",
-          "link": "http://www.paxetv.com/news/articleView.html?idxno=254591",
+          "link": "https://www.inthenews.co.kr/news/article.html?no=80377",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -71,101 +71,48 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
+        "weekly_search_volume": 193.75,
+        "weekly_average_volume": 64.5833,
         "day_score": 0,
         "week_score": 0,
         "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.015728,
+        "decay_factor": 0.025978,
+        "time_weight": 0.02187,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
-        "last_observation": 1764687600000
+        "last_observation": 1764774000000
       }
     },
     {
-      "term": "Net worth exceeds $7 trillion",
-      "term_ko": "순자산 7조원 돌파",
-      "significance_score": 672,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순자산 7조원 돌파",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋, 'TIGER 미국나스닥100' 순자산 7조원 돌파",
-              "link": "http://www.paxetv.com/news/articleView.html?idxno=254591"
-            },
-            {
-              "title": "미래에셋자산운용, 'TIGER 미국나스닥100' 순자산 7조원 돌파",
-              "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=188123"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%EC%9B%90%20%EB%8F%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%EC%9B%90%20%EB%8F%8C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋, 'TIGER 미국나스닥100' 순자산 7조원 돌파",
-          "summary": "",
-          "link": "http://www.paxetv.com/news/articleView.html?idxno=254591",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "미래에셋자산운용, 'TIGER 미국나스닥100' 순자산 7조원 돌파",
-          "summary": "",
-          "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=188123",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The largest Nasdaq100 ETF, the",
-      "term_ko": "최대 나스닥100 ETF인",
+      "term": "7 trillion in ETF net assets",
+      "term_ko": "ETF 순자산 7조",
       "significance_score": 364,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "최대 나스닥100 ETF인",
+        "query": "ETF 순자산 7조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "아시아 최대 나스닥100 ETF인 'TIGER 미국나스닥100', 순자산 7조 원 넘어...",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=50896"
+              "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
+              "link": "https://www.inthenews.co.kr/news/article.html?no=80377"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%20%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%20%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF%EC%9D%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "아시아 최대 나스닥100 ETF인 'TIGER 미국나스닥100', 순자산 7조 원 넘어...",
+          "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
           "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=50896",
+          "link": "https://www.inthenews.co.kr/news/article.html?no=80377",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -173,37 +120,34 @@
       ]
     },
     {
-      "term": "TIGER US NASDAQ100 Net worth",
-      "term_ko": "TIGER 미국나스닥100 순자산",
+      "term": "Mirae Asset Management US Nasdaq 100 ETF",
+      "term_ko": "미래에셋자산운용 미국나스닥100 ETF",
       "significance_score": 364,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "TIGER 미국나스닥100 순자산",
+        "query": "미래에셋자산운용 미국나스닥100 ETF",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "아시아 최대 나스닥100 ETF인 'TIGER 미국나스닥100', 순자산 7조 원 넘어...",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=50896"
+              "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
+              "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20%EC%88%9C%EC%9E%90%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20%EC%88%9C%EC%9E%90%EC%82%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF"
       },
       "top_headlines": [
         {
-          "title": "아시아 최대 나스닥100 ETF인 'TIGER 미국나스닥100', 순자산 7조 원 넘어...",
+          "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
           "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=50896",
+          "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -211,37 +155,34 @@
       ]
     },
     {
-      "term": "26 years in the automotive industry",
-      "term_ko": "26년 車 산업",
-      "significance_score": 336,
+      "term": "Shinsegae Department Store Asung Daiso CJ Onstyle",
+      "term_ko": "신세계백화점 아성다이소 CJ온스타일",
+      "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "26년 車 산업",
+        "query": "신세계백화점 아성다이소 CJ온스타일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "’26년 車 산업, 내수·수출·생산 플러스 전망",
-              "link": "http://amenews.kr/news/view.php?idx=65005"
+              "title": "[브리프]롯데백화점 신세계백화점 아성다이소 CJ온스타일 경방 우아한형...",
+              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344979"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=26%EB%85%84%20%E8%BB%8A%20%EC%82%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=26%EB%85%84%20%E8%BB%8A%20%EC%82%B0%EC%97%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%95%84%EC%84%B1%EB%8B%A4%EC%9D%B4%EC%86%8C%20CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%95%84%EC%84%B1%EB%8B%A4%EC%9D%B4%EC%86%8C%20CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC"
       },
       "top_headlines": [
         {
-          "title": "’26년 車 산업, 내수·수출·생산 플러스 전망",
+          "title": "[브리프]롯데백화점 신세계백화점 아성다이소 CJ온스타일 경방 우아한형...",
           "summary": "",
-          "link": "http://amenews.kr/news/view.php?idx=65005",
+          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344979",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -249,37 +190,174 @@
       ]
     },
     {
-      "term": "The car of 2025",
-      "term_ko": "2025년 기사회생 자동차",
-      "significance_score": 336,
+      "term": "Nonghyup Life Insurance Samsung Fire & Marine KB Insurance",
+      "term_ko": "농협생명 삼성화재 KB손보",
+      "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "2025년 기사회생 자동차",
+        "query": "농협생명 삼성화재 KB손보",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "2025년 '기사회생' 자동차 업계 \"내년 반등 전망하지만...\"",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=721065"
+              "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
+              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2025%EB%85%84%20%EA%B8%B0%EC%82%AC%ED%9A%8C%EC%83%9D%20%EC%9E%90%EB%8F%99%EC%B0%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2025%EB%85%84%20%EA%B8%B0%EC%82%AC%ED%9A%8C%EC%83%9D%20%EC%9E%90%EB%8F%99%EC%B0%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%8D%ED%98%91%EC%83%9D%EB%AA%85%20%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC%20KB%EC%86%90%EB%B3%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%8D%ED%98%91%EC%83%9D%EB%AA%85%20%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC%20KB%EC%86%90%EB%B3%B4"
       },
       "top_headlines": [
         {
-          "title": "2025년 '기사회생' 자동차 업계 \"내년 반등 전망하지만...\"",
+          "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
           "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=721065",
+          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Trapped Bitcoin ETFs",
+      "term_ko": "갇힌 비트코인 ETF",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "갇힌 비트코인 ETF",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+              "link": "https://www.newspim.com/news/view/20251205000962"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%87%ED%9E%8C%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%87%ED%9E%8C%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF"
+      },
+      "top_headlines": [
+        {
+          "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251205000962",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "KAMA Domestic Exports",
+      "term_ko": "KAMA 내수 수출",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KAMA 내수 수출",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KAMA%20%EB%82%B4%EC%88%98%20%EC%88%98%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KAMA%20%EB%82%B4%EC%88%98%20%EC%88%98%EC%B6%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+          "summary": "",
+          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "1.4 billion in Ethereum",
+      "term_ko": "자금은 이더리움에 1.4억달러",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "자금은 이더리움에 1.4억달러",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+              "link": "https://www.newspim.com/news/view/20251205000962"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%EC%9D%80%20%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%EC%97%90%201.4%EC%96%B5%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%EC%9D%80%20%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%EC%97%90%201.4%EC%96%B5%EB%8B%AC%EB%9F%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251205000962",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Net worth tops $7 trillion",
+      "term_ko": "순자산 7조 돌파",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "순자산 7조 돌파",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
+              "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%20%EB%8F%8C%ED%8C%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9E%90%EC%82%B0%207%EC%A1%B0%20%EB%8F%8C%ED%8C%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "미래에셋자산운용 '미국나스닥100 ETF' 순자산 7조 돌파",
+          "summary": "",
+          "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=346004",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -296,11 +374,8 @@
         "query": "매트 호건 스트래티지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "매트 호건 \"스트래티지, 주가 떨어져도 비트코인 안 판다\"",
@@ -334,11 +409,8 @@
         "query": "주가 떨어져도 비트코인",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "매트 호건 \"스트래티지, 주가 떨어져도 비트코인 안 판다\"",
@@ -372,11 +444,8 @@
         "query": "트럼프미디어-크립토닷컴 가상화폐 비축",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "트럼프미디어-크립토닷컴, 가상화폐 비축 전략 조직 출범",
@@ -410,11 +479,8 @@
         "query": "전략 조직 출범",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "트럼프미디어-크립토닷컴, 가상화폐 비축 전략 조직 출범",
@@ -439,82 +505,6 @@
       ]
     },
     {
-      "term": "Criteo Korea Partners",
-      "term_ko": "크리테오 코리아 파트너사",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "크리테오 코리아 파트너사",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
-              "link": "https://www.wikitree.co.kr/articles/1100158"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%82%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1100158",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Agencies honoring achievement",
-      "term_ko": "성과 기리는 에이전시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "성과 기리는 에이전시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
-              "link": "https://www.wikitree.co.kr/articles/1100158"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EA%B3%BC%20%EA%B8%B0%EB%A6%AC%EB%8A%94%20%EC%97%90%EC%9D%B4%EC%A0%84%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EA%B3%BC%20%EA%B8%B0%EB%A6%AC%EB%8A%94%20%EC%97%90%EC%9D%B4%EC%A0%84%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1100158",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Canton Network Developers",
       "term_ko": "칸톤 네트워크 개발사",
       "significance_score": 322,
@@ -524,11 +514,8 @@
         "query": "칸톤 네트워크 개발사",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
@@ -562,11 +549,8 @@
         "query": "유력 금융사들로부터 전략적",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
@@ -591,37 +575,34 @@
       ]
     },
     {
-      "term": "Seoul Data Lab U.S. Stock Indices",
-      "term_ko": "서울데이터랩미국 증시 지수",
+      "term": "Criteo Korea Partners",
+      "term_ko": "크리테오 코리아 파트너사",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서울데이터랩미국 증시 지수",
+        "query": "크리테오 코리아 파트너사",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "[서울데이터랩]미국 증시 지수 종합",
-              "link": "https://n.news.naver.com/mnews/article/081/0003598396?sid=101"
+              "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
+              "link": "https://www.wikitree.co.kr/articles/1100158"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%82%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20%EC%BD%94%EB%A6%AC%EC%95%84%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%82%AC"
       },
       "top_headlines": [
         {
-          "title": "[서울데이터랩]미국 증시 지수 종합",
+          "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003598396?sid=101",
+          "link": "https://www.wikitree.co.kr/articles/1100158",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -629,37 +610,34 @@
       ]
     },
     {
-      "term": "Domestic Export Production",
-      "term_ko": "내수 수출 생산",
+      "term": "Agencies honoring achievement",
+      "term_ko": "성과 기리는 에이전시",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "내수 수출 생산",
+        "query": "성과 기리는 에이전시",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "’26년 車 산업, 내수·수출·생산 플러스 전망",
-              "link": "http://amenews.kr/news/view.php?idx=65005"
+              "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
+              "link": "https://www.wikitree.co.kr/articles/1100158"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EC%88%98%20%EC%88%98%EC%B6%9C%20%EC%83%9D%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EC%88%98%20%EC%88%98%EC%B6%9C%20%EC%83%9D%EC%82%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EA%B3%BC%20%EA%B8%B0%EB%A6%AC%EB%8A%94%20%EC%97%90%EC%9D%B4%EC%A0%84%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EA%B3%BC%20%EA%B8%B0%EB%A6%AC%EB%8A%94%20%EC%97%90%EC%9D%B4%EC%A0%84%EC%8B%9C"
       },
       "top_headlines": [
         {
-          "title": "’26년 車 산업, 내수·수출·생산 플러스 전망",
+          "title": "크리테오 코리아, 파트너사 성과 기리는 ‘에이전시 어워즈 2025’ 개최",
           "summary": "",
-          "link": "http://amenews.kr/news/view.php?idx=65005",
+          "link": "https://www.wikitree.co.kr/articles/1100158",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -667,37 +645,104 @@
       ]
     },
     {
-      "term": "Industry Rebounds Next Year",
-      "term_ko": "업계 내년 반등",
+      "term": "Briefs Shinhan Life Kyobo Life",
+      "term_ko": "브리프 신한라이프 교보생명",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "업계 내년 반등",
+        "query": "브리프 신한라이프 교보생명",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
-              "title": "2025년 '기사회생' 자동차 업계 \"내년 반등 전망하지만...\"",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=721065"
+              "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
+              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%85%EA%B3%84%20%EB%82%B4%EB%85%84%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%85%EA%B3%84%20%EB%82%B4%EB%85%84%20%EB%B0%98%EB%93%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A6%AC%ED%94%84%20%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A6%AC%ED%94%84%20%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85"
       },
       "top_headlines": [
         {
-          "title": "2025년 '기사회생' 자동차 업계 \"내년 반등 전망하지만...\"",
+          "title": "[브리프] 신한라이프 교보생명 동양생명 농협생명 삼성화재 KB손보 한화...",
           "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=721065",
+          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=344974",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Coin Market Ticker Box Ticket",
+      "term_ko": "코인 시황 박스권",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "코인 시황 박스권",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+              "link": "https://www.newspim.com/news/view/20251205000962"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%20%EB%B0%95%EC%8A%A4%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%20%EB%B0%95%EC%8A%A4%EA%B6%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "[코인 시황] 박스권 갇힌 비트코인… ETF 자금은 이더리움에 1.4억달러 ...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251205000962",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Next year's domestic automotive industry",
+      "term_ko": "내년 국내 車산업",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "내년 국내 車산업",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%85%84%20%EA%B5%AD%EB%82%B4%20%E8%BB%8A%EC%82%B0%EC%97%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%85%84%20%EA%B5%AD%EB%82%B4%20%E8%BB%8A%EC%82%B0%EC%97%85"
+      },
+      "top_headlines": [
+        {
+          "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+          "summary": "",
+          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -714,11 +759,8 @@
         "query": "Mirae Assets TIGER",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
@@ -743,6 +785,41 @@
       ]
     },
     {
+      "term": "1500% cumulative return",
+      "term_ko": "누적수익률 1500%",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "누적수익률 1500%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
+              "link": "https://www.inthenews.co.kr/news/article.html?no=80377"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%88%84%EC%A0%81%EC%88%98%EC%9D%B5%EB%A5%A0%201500%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%88%84%EC%A0%81%EC%88%98%EC%9D%B5%EB%A5%A0%201500%25"
+      },
+      "top_headlines": [
+        {
+          "title": "미래에셋 ‘TIGER 나스닥100 ETF’ 순자산 7조…누적수익률 1500%↑",
+          "summary": "",
+          "link": "https://www.inthenews.co.kr/news/article.html?no=80377",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "Not selling",
       "term_ko": "안 판다",
       "significance_score": 280,
@@ -752,11 +829,8 @@
         "query": "안 판다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "매트 호건 \"스트래티지, 주가 떨어져도 비트코인 안 판다\"",
@@ -837,11 +911,8 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "칸톤 네트워크 개발사, 유력 금융사들로부터 전략적 투자 유치",
@@ -877,12 +948,117 @@
         "week_score": 0,
         "correction_factor": 0.115911,
         "decay_factor": 0.017756,
-        "time_weight": 0.025261,
+        "time_weight": 0.021867,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
         "last_observation": 1764774000000
       }
+    },
+    {
+      "term": "Production All",
+      "term_ko": "생산 모두",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "생산 모두",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EC%82%B0%20%EB%AA%A8%EB%91%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EC%82%B0%20%EB%AA%A8%EB%91%90"
+      },
+      "top_headlines": [
+        {
+          "title": "\"내년 국내 車산업 도약 전환점\"... KAMA, 내수·수출·생산 모두 플러스...",
+          "summary": "",
+          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=852301",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Japans Nikkei Drops",
+      "term_ko": "일본 닛케이 지수 하락",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Japans Nikkei Drops",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
+              "link": "https://www.econotimes.com/Japans-Nikkei-Drops-as-Markets-Await-Key-US-Inflation-Data-1727858"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Japans%20Nikkei%20Drops",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Japans%20Nikkei%20Drops"
+      },
+      "top_headlines": [
+        {
+          "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
+          "summary": "",
+          "link": "https://www.econotimes.com/Japans-Nikkei-Drops-as-Markets-Await-Key-US-Inflation-Data-1727858",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Await Key U.S",
+      "term_ko": "키 미국 대기",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Await Key U.S",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
+              "link": "https://www.econotimes.com/Japans-Nikkei-Drops-as-Markets-Await-Key-US-Inflation-Data-1727858"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Await%20Key%20U.S",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Await%20Key%20U.S"
+      },
+      "top_headlines": [
+        {
+          "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
+          "summary": "",
+          "link": "https://www.econotimes.com/Japans-Nikkei-Drops-as-Markets-Await-Key-US-Inflation-Data-1727858",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "ETF Surpasses",
@@ -894,11 +1070,8 @@
         "query": "ETF Surpasses",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
           "sample": [
             {
               "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
@@ -923,141 +1096,98 @@
       ]
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
+      "term": "Trillion KRW",
+      "term_ko": "조 원",
+      "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
+        "query": "Trillion KRW",
         "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
+              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657"
+            }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trillion%20KRW",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trillion%20KRW"
       },
-      "top_headlines": []
+      "top_headlines": [
+        {
+          "title": "Mirae Asset's TIGER Nasdaq 100 ETF Surpasses 7 Trillion KRW in AUM",
+          "summary": "",
+          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=148657",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
+      "term": "Inflation Data",
+      "term_ko": "인플레이션 데이터",
+      "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
+        "query": "Inflation Data",
         "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+          "matches": 1,
+          "last_updated": "2025-12-05T21:42:33+09:00",
+          "fallback_sources": [],
+          "sample": [
+            {
+              "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
+              "link": "https://www.econotimes.com/Japans-Nikkei-Drops-as-Markets-Await-Key-US-Inflation-Data-1727858"
+            }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20Data",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20Data"
       },
-      "top_headlines": []
-    },
-    {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
+      "top_headlines": [
+        {
+          "title": "Japan’s Nikkei Drops as Markets Await Key U.S. Inflation Data",
+          "summary": "",
+          "link": "https://www.econotimes.com/Japans-Nikkei-Drops-as-Markets-Await-Key-US-Inflation-Data-1727858",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
         }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-05T15:33:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      ]
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-05T06:35:18.964Z",
+    "generated_at": "2025-12-05T12:43:54.966Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-05T15:33:56+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-05T21:42:33+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 4,
+    "similar_keywords_removed": 0,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 4,
+      "similar": 0,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-05T15:33:56+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
+      "last_updated": "2025-12-05T21:42:33+09:00",
+      "fallback_sources": [],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-05T15:33:56+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
+        "lastUpdated": "2025-12-05T21:42:33+09:00",
+        "fallbackSources": []
       }
     }
   }
