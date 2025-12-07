@@ -1,1126 +1,425 @@
 {
+  "generatedAt": "2025-12-07T18:26:14.818Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-07",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "You missed it, AI",
-      "term_ko": "다 놓쳤네 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "다 놓쳤네 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“야근하다가 공모주 청약 다 놓쳤네”…AI 금융비서로 판 바꾸겠다는데",
-              "link": "https://n.news.naver.com/mnews/article/009/0005602263?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%20%EB%86%93%EC%B3%A4%EB%84%A4%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%20%EB%86%93%EC%B3%A4%EB%84%A4%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "“야근하다가 공모주 청약 다 놓쳤네”…AI 금융비서로 판 바꾸겠다는데",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005602263?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "You Missed It, Ai",
+      "term_ko": "다 놓쳤네 AI"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "Loans from the big four commercial banks",
-      "term_ko": "4대 시중은행 대출",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4대 시중은행 대출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "4대 시중은행 대출 금리 오름세",
-              "link": "https://n.news.naver.com/mnews/article/032/0003413686?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4%EB%8C%80%20%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4%EB%8C%80%20%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EB%8C%80%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "4대 시중은행 대출 금리 오름세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003413686?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Loans From the Big Four Commercial Banks",
+      "term_ko": "4대 시중은행 대출"
     },
     {
       "term": "Loan Delinquency Rate in Distressed 4th Quarter",
-      "term_ko": "경영난에 대출연체율 4분기째",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경영난에 대출연체율 4분기째",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "中企 경영난에 대출연체율 4분기째 상승세",
-              "link": "http://www.ujeil.com/news/articleView.html?idxno=377805"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%98%81%EB%82%9C%EC%97%90%20%EB%8C%80%EC%B6%9C%EC%97%B0%EC%B2%B4%EC%9C%A8%204%EB%B6%84%EA%B8%B0%EC%A7%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%98%81%EB%82%9C%EC%97%90%20%EB%8C%80%EC%B6%9C%EC%97%B0%EC%B2%B4%EC%9C%A8%204%EB%B6%84%EA%B8%B0%EC%A7%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "中企 경영난에 대출연체율 4분기째 상승세",
-          "summary": "",
-          "link": "http://www.ujeil.com/news/articleView.html?idxno=377805",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경영난에 대출연체율 4분기째"
     },
     {
       "term": "4 Financial Interest Income 5 Years",
-      "term_ko": "4대금융 이자수익 5년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4대금융 이자수익 5년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "4대금융 이자수익 5년 만에 감소 전망…순익은 또 '역대급'",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=721165"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4%EB%8C%80%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EC%9E%90%EC%88%98%EC%9D%B5%205%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4%EB%8C%80%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EC%9E%90%EC%88%98%EC%9D%B5%205%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "4대금융 이자수익 5년 만에 감소 전망…순익은 또 '역대급'",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=721165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "4대금융 이자수익 5년"
     },
     {
-      "term": "2x per month",
-      "term_ko": "달 새 2배",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달 새 2배",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-              "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%20%EC%83%88%202%EB%B0%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%20%EC%83%88%202%EB%B0%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "2x Per Month",
+      "term_ko": "달 새 2배"
     },
     {
-      "term": "Major indices moderate",
-      "term_ko": "주요 지수 소폭",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주요 지수 소폭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%86%8C%ED%8F%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%86%8C%ED%8F%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Major Indices Moderate",
+      "term_ko": "주요 지수 소폭"
     },
     {
-      "term": "Catching the signal to change",
-      "term_ko": "대전환 신호 포착",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대전환 신호 포착",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "월가, 스텔라에 시선집중...블록체인 대전환 신호 포착",
-              "link": "http://coinreaders.com/202771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%8B%A0%ED%98%B8%20%ED%8F%AC%EC%B0%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%8B%A0%ED%98%B8%20%ED%8F%AC%EC%B0%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "월가, 스텔라에 시선집중...블록체인 대전환 신호 포착",
-          "summary": "",
-          "link": "http://coinreaders.com/202771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Catching the Signal to Change",
+      "term_ko": "대전환 신호 포착"
     },
     {
-      "term": "NYSE Preview Inflation",
-      "term_ko": "뉴욕증시 프리뷰 인플레",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 인플레",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-              "link": "https://www.newspim.com/news/view/20251205000996"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%9D%B8%ED%94%8C%EB%A0%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%9D%B8%ED%94%8C%EB%A0%88"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000996",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview Inflation",
+      "term_ko": "뉴욕증시 프리뷰 인플레"
     },
     {
       "term": "Bitcoin Financial Enterprise Strategy",
-      "term_ko": "비트코인 재무기업 Strategy",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 재무기업 Strategy",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
-              "link": "https://www.tokenpost.kr/news/breaking/311793"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%9E%AC%EB%AC%B4%EA%B8%B0%EC%97%85%20Strategy",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%9E%AC%EB%AC%B4%EA%B8%B0%EC%97%85%20Strategy"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/311793",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비트코인 재무기업 Strategy"
     },
     {
-      "term": "A large",
-      "term_ko": "뉴욕 타임스스퀘어에 대형",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕 타임스스퀘어에 대형",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
-              "link": "https://www.tokenpost.kr/news/breaking/311793"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%20%ED%83%80%EC%9E%84%EC%8A%A4%EC%8A%A4%ED%80%98%EC%96%B4%EC%97%90%20%EB%8C%80%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%20%ED%83%80%EC%9E%84%EC%8A%A4%EC%8A%A4%ED%80%98%EC%96%B4%EC%97%90%20%EB%8C%80%ED%98%95"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/311793",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Large",
+      "term_ko": "뉴욕 타임스스퀘어에 대형"
     },
     {
-      "term": "Subscribing to a public offering while working late",
-      "term_ko": "야근하다가 공모주 청약",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "야근하다가 공모주 청약",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“야근하다가 공모주 청약 다 놓쳤네”…AI 금융비서로 판 바꾸겠다는데",
-              "link": "https://n.news.naver.com/mnews/article/009/0005602263?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%BC%EA%B7%BC%ED%95%98%EB%8B%A4%EA%B0%80%20%EA%B3%B5%EB%AA%A8%EC%A3%BC%20%EC%B2%AD%EC%95%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%BC%EA%B7%BC%ED%95%98%EB%8B%A4%EA%B0%80%20%EA%B3%B5%EB%AA%A8%EC%A3%BC%20%EC%B2%AD%EC%95%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "“야근하다가 공모주 청약 다 놓쳤네”…AI 금융비서로 판 바꾸겠다는데",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005602263?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Subscribing to a Public Offering While Working Late",
+      "term_ko": "야근하다가 공모주 청약"
     },
     {
-      "term": "He wants to turn it into a financial assistant.",
-      "term_ko": "금융비서로 판 바꾸겠다는데",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융비서로 판 바꾸겠다는데",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“야근하다가 공모주 청약 다 놓쳤네”…AI 금융비서로 판 바꾸겠다는데",
-              "link": "https://n.news.naver.com/mnews/article/009/0005602263?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EB%B9%84%EC%84%9C%EB%A1%9C%20%ED%8C%90%20%EB%B0%94%EA%BE%B8%EA%B2%A0%EB%8B%A4%EB%8A%94%EB%8D%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EB%B9%84%EC%84%9C%EB%A1%9C%20%ED%8C%90%20%EB%B0%94%EA%BE%B8%EA%B2%A0%EB%8B%A4%EB%8A%94%EB%8D%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "“야근하다가 공모주 청약 다 놓쳤네”…AI 금융비서로 판 바꾸겠다는데",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005602263?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "He Wants to Turn It Into a Financial Assistant.",
+      "term_ko": "금융비서로 판 바꾸겠다는데"
     },
     {
-      "term": "Net income was also a record-breaking",
-      "term_ko": "순익은 또 역대급",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순익은 또 역대급",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "4대금융 이자수익 5년 만에 감소 전망…순익은 또 '역대급'",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=721165"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9D%B5%EC%9D%80%20%EB%98%90%20%EC%97%AD%EB%8C%80%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9D%B5%EC%9D%80%20%EB%98%90%20%EC%97%AD%EB%8C%80%EA%B8%89"
-      },
-      "top_headlines": [
-        {
-          "title": "4대금융 이자수익 5년 만에 감소 전망…순익은 또 '역대급'",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=721165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Net Income Was Also a Record-breaking",
+      "term_ko": "순익은 또 역대급"
     },
     {
-      "term": "Buying and selling in the face of regulation",
-      "term_ko": "잇단 규제로 매매",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "잇단 규제로 매매",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-              "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%87%EB%8B%A8%20%EA%B7%9C%EC%A0%9C%EB%A1%9C%20%EB%A7%A4%EB%A7%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%87%EB%8B%A8%20%EA%B7%9C%EC%A0%9C%EB%A1%9C%20%EB%A7%A4%EB%A7%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Buying and Selling in the Face of Regulation",
+      "term_ko": "잇단 규제로 매매"
     },
     {
       "term": "Bindja Seoul Apartment",
-      "term_ko": "묶이자 서울 아파트",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "묶이자 서울 아파트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-              "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B6%EC%9D%B4%EC%9E%90%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B6%EC%9D%B4%EC%9E%90%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "묶이자 서울 아파트"
     },
     {
-      "term": "5 days in New York",
-      "term_ko": "5일 뉴욕",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5일 뉴욕",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9D%BC%20%EB%89%B4%EC%9A%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9D%BC%20%EB%89%B4%EC%9A%95"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "5 Days in New York",
+      "term_ko": "5일 뉴욕"
     },
     {
-      "term": "Rise history",
-      "term_ko": "상승 기록",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 기록",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%A1%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%A1%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rise History",
+      "term_ko": "상승 기록"
     },
     {
-      "term": "Waiting for indicators",
-      "term_ko": "지표 기다리며",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지표 기다리며",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-              "link": "https://www.newspim.com/news/view/20251205000996"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%ED%91%9C%20%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%A9%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%ED%91%9C%20%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%A9%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000996",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Waiting for Indicators",
+      "term_ko": "지표 기다리며"
     },
     {
-      "term": "Ad execution",
-      "term_ko": "광고 집행",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "광고 집행",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-03",
-              "timestamp": 1764687600000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
-              "link": "https://www.tokenpost.kr/news/breaking/311793"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%91%EA%B3%A0%20%EC%A7%91%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%91%EA%B3%A0%20%EC%A7%91%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 재무기업 Strategy, 뉴욕 타임스스퀘어에 대형 광고 집행",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/311793",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.0085,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764687600000
-      }
+      "term": "Ad Execution",
+      "term_ko": "광고 집행"
     },
     {
-      "term": "Rising interest rates",
-      "term_ko": "금리 오름세",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 오름세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "4대 시중은행 대출 금리 오름세",
-              "link": "https://n.news.naver.com/mnews/article/032/0003413686?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%98%A4%EB%A6%84%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%98%A4%EB%A6%84%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "4대 시중은행 대출 금리 오름세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003413686?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Interest Rates",
+      "term_ko": "금리 오름세"
     },
     {
-      "term": "Reduced to only",
-      "term_ko": "만에 감소",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 감소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "4대금융 이자수익 5년 만에 감소 전망…순익은 또 '역대급'",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=721165"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "4대금융 이자수익 5년 만에 감소 전망…순익은 또 '역대급'",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=721165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reduced to Only",
+      "term_ko": "만에 감소"
     },
     {
       "term": "Auctioned",
-      "term_ko": "경매 한",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경매 한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-              "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EB%A7%A4%20%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EB%A7%A4%20%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "잇단 규제로 매매 묶이자…서울 아파트 '경매' 한 달 새 2배 '쑥'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000575525?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경매 한"
     },
     {
       "term": "Cooler Inflation Boosts",
-      "term_ko": "냉각기 인플레이션 부스트",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Cooler Inflation Boosts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-              "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Cooler%20Inflation%20Boosts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Cooler%20Inflation%20Boosts"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "냉각기 인플레이션 부스트"
     },
     {
       "term": "Fed Rate Cut",
-      "term_ko": "연준 금리 인하",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Rate Cut",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-              "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Rate%20Cut",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Rate%20Cut"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 금리 인하"
     },
     {
       "term": "Anticipate Fed Rate",
-      "term_ko": "연준 금리 예상",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Anticipate Fed Rate",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks End Week Higher as Markets Anticipate Fed Rate Cut",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Markets-Anticipate-Fed-Rate-Cut-1727940"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Anticipate%20Fed%20Rate",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Anticipate%20Fed%20Rate"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks End Week Higher as Markets Anticipate Fed Rate Cut",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Markets-Anticipate-Fed-Rate-Cut-1727940",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 금리 예상"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-07T21:37:29+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-07T12:38:51.612Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-07T21:37:29+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "You Missed It, Ai",
+      "term_ko": "다 놓쳤네 AI"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-07T21:37:29+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-07T21:37:29+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Loans From the Big Four Commercial Banks",
+      "term_ko": "4대 시중은행 대출"
+    },
+    {
+      "term": "Loan Delinquency Rate in Distressed 4th Quarter",
+      "term_ko": "경영난에 대출연체율 4분기째"
+    },
+    {
+      "term": "4 Financial Interest Income 5 Years",
+      "term_ko": "4대금융 이자수익 5년"
+    },
+    {
+      "term": "2x Per Month",
+      "term_ko": "달 새 2배"
+    },
+    {
+      "term": "Major Indices Moderate",
+      "term_ko": "주요 지수 소폭"
+    },
+    {
+      "term": "Catching the Signal to Change",
+      "term_ko": "대전환 신호 포착"
+    },
+    {
+      "term": "Nyse Preview Inflation",
+      "term_ko": "뉴욕증시 프리뷰 인플레"
+    },
+    {
+      "term": "Bitcoin Financial Enterprise Strategy",
+      "term_ko": "비트코인 재무기업 Strategy"
+    },
+    {
+      "term": "A Large",
+      "term_ko": "뉴욕 타임스스퀘어에 대형"
+    },
+    {
+      "term": "Subscribing to a Public Offering While Working Late",
+      "term_ko": "야근하다가 공모주 청약"
+    },
+    {
+      "term": "He Wants to Turn It Into a Financial Assistant.",
+      "term_ko": "금융비서로 판 바꾸겠다는데"
+    },
+    {
+      "term": "Net Income Was Also a Record-breaking",
+      "term_ko": "순익은 또 역대급"
+    },
+    {
+      "term": "Buying and Selling in the Face of Regulation",
+      "term_ko": "잇단 규제로 매매"
+    },
+    {
+      "term": "Bindja Seoul Apartment",
+      "term_ko": "묶이자 서울 아파트"
+    },
+    {
+      "term": "5 Days in New York",
+      "term_ko": "5일 뉴욕"
+    },
+    {
+      "term": "Rise History",
+      "term_ko": "상승 기록"
+    },
+    {
+      "term": "Waiting for Indicators",
+      "term_ko": "지표 기다리며"
+    },
+    {
+      "term": "Ad Execution",
+      "term_ko": "광고 집행"
+    },
+    {
+      "term": "Rising Interest Rates",
+      "term_ko": "금리 오름세"
+    },
+    {
+      "term": "Reduced to Only",
+      "term_ko": "만에 감소"
+    },
+    {
+      "term": "Auctioned",
+      "term_ko": "경매 한"
+    },
+    {
+      "term": "Cooler Inflation Boosts",
+      "term_ko": "냉각기 인플레이션 부스트"
+    },
+    {
+      "term": "Fed Rate Cut",
+      "term_ko": "연준 금리 인하"
+    },
+    {
+      "term": "Anticipate Fed Rate",
+      "term_ko": "연준 금리 예상"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "You Missed It, Ai": {
+      "en": "You Missed It, Ai",
+      "ko": "다 놓쳤네 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Loans From the Big Four Commercial Banks": {
+      "en": "Loans From the Big Four Commercial Banks",
+      "ko": "4대 시중은행 대출",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Loan Delinquency Rate in Distressed 4th Quarter": {
+      "en": "Loan Delinquency Rate in Distressed 4th Quarter",
+      "ko": "경영난에 대출연체율 4분기째",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "4 Financial Interest Income 5 Years": {
+      "en": "4 Financial Interest Income 5 Years",
+      "ko": "4대금융 이자수익 5년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "2x Per Month": {
+      "en": "2x Per Month",
+      "ko": "달 새 2배",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Major Indices Moderate": {
+      "en": "Major Indices Moderate",
+      "ko": "주요 지수 소폭",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Catching the Signal to Change": {
+      "en": "Catching the Signal to Change",
+      "ko": "대전환 신호 포착",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Nyse Preview Inflation": {
+      "en": "Nyse Preview Inflation",
+      "ko": "뉴욕증시 프리뷰 인플레",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Bitcoin Financial Enterprise Strategy": {
+      "en": "Bitcoin Financial Enterprise Strategy",
+      "ko": "비트코인 재무기업 Strategy",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "A Large": {
+      "en": "A Large",
+      "ko": "뉴욕 타임스스퀘어에 대형",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Subscribing to a Public Offering While Working Late": {
+      "en": "Subscribing to a Public Offering While Working Late",
+      "ko": "야근하다가 공모주 청약",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "He Wants to Turn It Into a Financial Assistant.": {
+      "en": "He Wants to Turn It Into a Financial Assistant.",
+      "ko": "금융비서로 판 바꾸겠다는데",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Net Income Was Also a Record-breaking": {
+      "en": "Net Income Was Also a Record-breaking",
+      "ko": "순익은 또 역대급",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Buying and Selling in the Face of Regulation": {
+      "en": "Buying and Selling in the Face of Regulation",
+      "ko": "잇단 규제로 매매",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Bindja Seoul Apartment": {
+      "en": "Bindja Seoul Apartment",
+      "ko": "묶이자 서울 아파트",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "5 Days in New York": {
+      "en": "5 Days in New York",
+      "ko": "5일 뉴욕",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Rise History": {
+      "en": "Rise History",
+      "ko": "상승 기록",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Waiting for Indicators": {
+      "en": "Waiting for Indicators",
+      "ko": "지표 기다리며",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Ad Execution": {
+      "en": "Ad Execution",
+      "ko": "광고 집행",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Rising Interest Rates": {
+      "en": "Rising Interest Rates",
+      "ko": "금리 오름세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Reduced to Only": {
+      "en": "Reduced to Only",
+      "ko": "만에 감소",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Auctioned": {
+      "en": "Auctioned",
+      "ko": "경매 한",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Cooler Inflation Boosts": {
+      "en": "Cooler Inflation Boosts",
+      "ko": "냉각기 인플레이션 부스트",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Fed Rate Cut": {
+      "en": "Fed Rate Cut",
+      "ko": "연준 금리 인하",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Anticipate Fed Rate": {
+      "en": "Anticipate Fed Rate",
+      "ko": "연준 금리 예상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-07T18:26:14.819Z"
     }
   }
 }
