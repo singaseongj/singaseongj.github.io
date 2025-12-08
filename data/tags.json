@@ -1,1148 +1,439 @@
 {
+  "generatedAt": "2025-12-08T18:32:02.443Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-08",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Unrepresentative Index AI",
-      "term_ko": "미 대표지수 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미 대표지수 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권투자업계동향]금투업계 ‘미 대표지수·AI’ ETF 순자산 상승세…...",
-              "link": "https://www.nspna.com/news/?mode=view&newsid=791411"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EB%8C%80%ED%91%9C%EC%A7%80%EC%88%98%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EB%8C%80%ED%91%9C%EC%A7%80%EC%88%98%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권투자업계동향]금투업계 ‘미 대표지수·AI’ ETF 순자산 상승세…...",
-          "summary": "",
-          "link": "https://www.nspna.com/news/?mode=view&newsid=791411",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Unrepresentative Index Ai",
+      "term_ko": "미 대표지수 AI"
     },
     {
-      "term": "ETF net asset appreciation",
-      "term_ko": "ETF 순자산 상승세",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 순자산 상승세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권투자업계동향]금투업계 ‘미 대표지수·AI’ ETF 순자산 상승세…...",
-              "link": "https://www.nspna.com/news/?mode=view&newsid=791411"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%20%EC%83%81%EC%8A%B9%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%20%EC%83%81%EC%8A%B9%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권투자업계동향]금투업계 ‘미 대표지수·AI’ ETF 순자산 상승세…...",
-          "summary": "",
-          "link": "https://www.nspna.com/news/?mode=view&newsid=791411",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Etf Net Asset Appreciation",
+      "term_ko": "ETF 순자산 상승세"
     },
     {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-              "link": "https://www.newspim.com/news/view/20251208000023"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251208000023",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
     {
-      "term": "US FOMC two days",
-      "term_ko": "美 FOMC 이틀",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 FOMC 이틀",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美 FOMC 이틀 앞두고 소폭 하락...원·달러 환율, 1460원대 마감",
-              "link": "https://www.betanews.net/article/view/beta202512080076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20FOMC%20%EC%9D%B4%ED%8B%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20FOMC%20%EC%9D%B4%ED%8B%80"
-      },
-      "top_headlines": [
-        {
-          "title": "美 FOMC 이틀 앞두고 소폭 하락...원·달러 환율, 1460원대 마감",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202512080076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Fomc Two Days",
+      "term_ko": "美 FOMC 이틀"
     },
     {
-      "term": "Realized AI feet",
-      "term_ko": "현실 된 AI발",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현실 된 AI발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-              "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EC%8B%A4%20%EB%90%9C%20AI%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EC%8B%A4%20%EB%90%9C%20AI%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Realized Ai Feet",
+      "term_ko": "현실 된 AI발"
     },
     {
-      "term": "Dollar exchange rate 1460 won",
-      "term_ko": "달러 환율 1460원대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 환율 1460원대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美 FOMC 이틀 앞두고 소폭 하락...원·달러 환율, 1460원대 마감",
-              "link": "https://www.betanews.net/article/view/beta202512080076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%201460%EC%9B%90%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%201460%EC%9B%90%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "美 FOMC 이틀 앞두고 소폭 하락...원·달러 환율, 1460원대 마감",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202512080076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar Exchange Rate 1460 Won",
+      "term_ko": "달러 환율 1460원대"
     },
     {
-      "term": "1.5 trillion in Treasuries tomorrow",
-      "term_ko": "내일 국고채 1.5조원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "내일 국고채 1.5조원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 내일 국고채 1.5조원 매입…코로나 이후 3년여만",
-              "link": "https://n.news.naver.com/mnews/article/025/0003488316?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EC%9D%BC%20%EA%B5%AD%EA%B3%A0%EC%B1%84%201.5%EC%A1%B0%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EC%9D%BC%20%EA%B5%AD%EA%B3%A0%EC%B1%84%201.5%EC%A1%B0%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 내일 국고채 1.5조원 매입…코로나 이후 3년여만",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003488316?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1.5 Trillion in Treasuries Tomorrow",
+      "term_ko": "내일 국고채 1.5조원"
     },
     {
-      "term": "Wormwood 3 adults",
-      "term_ko": "쑥 성인 3명",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "쑥 성인 3명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[오늘의 생활경제] 흡연율 줄어도 전자담배는 '쑥'…성인 3명 중 1명 비...",
-              "link": "https://n.news.naver.com/mnews/article/422/0000809948?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%91%A5%20%EC%84%B1%EC%9D%B8%203%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%91%A5%20%EC%84%B1%EC%9D%B8%203%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 생활경제] 흡연율 줄어도 전자담배는 '쑥'…성인 3명 중 1명 비...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000809948?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Wormwood 3 Adults",
+      "term_ko": "쑥 성인 3명"
     },
     {
-      "term": "Up to 1 trillion in Treasuries",
-      "term_ko": "국고채 최대 1조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국고채 최대 1조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 국고채 최대 1조 5천억 원 매입‥채권 시장 안정 기대",
-              "link": "https://n.news.naver.com/mnews/article/214/0001466691?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EA%B3%A0%EC%B1%84%20%EC%B5%9C%EB%8C%80%201%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EA%B3%A0%EC%B1%84%20%EC%B5%9C%EB%8C%80%201%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 국고채 최대 1조 5천억 원 매입‥채권 시장 안정 기대",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001466691?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to 1 Trillion in Treasuries",
+      "term_ko": "국고채 최대 1조"
     },
     {
-      "term": "Purchased 500 billion won in bonds",
-      "term_ko": "5천억 원 매입‥채권",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5천억 원 매입‥채권",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 국고채 최대 1조 5천억 원 매입‥채권 시장 안정 기대",
-              "link": "https://n.news.naver.com/mnews/article/214/0001466691?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%B2%9C%EC%96%B5%20%EC%9B%90%20%EB%A7%A4%EC%9E%85%E2%80%A5%EC%B1%84%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%B2%9C%EC%96%B5%20%EC%9B%90%20%EB%A7%A4%EC%9E%85%E2%80%A5%EC%B1%84%EA%B6%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 국고채 최대 1조 5천억 원 매입‥채권 시장 안정 기대",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001466691?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Purchased 500 Billion Won in Bonds",
+      "term_ko": "5천억 원 매입‥채권"
     },
     {
-      "term": "Spreading executive churn",
-      "term_ko": "임원 이탈 확산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "임원 이탈 확산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-              "link": "https://www.newspim.com/news/view/20251208000023"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%84%EC%9B%90%20%EC%9D%B4%ED%83%88%20%ED%99%95%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%84%EC%9B%90%20%EC%9D%B4%ED%83%88%20%ED%99%95%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251208000023",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spreading Executive Churn",
+      "term_ko": "임원 이탈 확산"
     },
     {
-      "term": "Reader column constraints",
-      "term_ko": "독자위원 칼럼 제약",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "독자위원 칼럼 제약",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[독자위원 칼럼] 제약·바이오산업의 전망",
-              "link": "http://www.ujeil.com/news/articleView.html?idxno=377845"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%85%EC%9E%90%EC%9C%84%EC%9B%90%20%EC%B9%BC%EB%9F%BC%20%EC%A0%9C%EC%95%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%85%EC%9E%90%EC%9C%84%EC%9B%90%20%EC%B9%BC%EB%9F%BC%20%EC%A0%9C%EC%95%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "[독자위원 칼럼] 제약·바이오산업의 전망",
-          "summary": "",
-          "link": "http://www.ujeil.com/news/articleView.html?idxno=377845",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reader Column Constraints",
+      "term_ko": "독자위원 칼럼 제약"
     },
     {
-      "term": "Preview eDaily Newspaper",
-      "term_ko": "미리보는 이데일리 신문",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미리보는 이데일리 신문",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-              "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Preview Edaily Newspaper",
+      "term_ko": "미리보는 이데일리 신문"
     },
     {
-      "term": "Today's Living Economy Smoking rates",
-      "term_ko": "오늘의 생활경제 흡연율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 생활경제 흡연율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[오늘의 생활경제] 흡연율 줄어도 전자담배는 '쑥'…성인 3명 중 1명 비...",
-              "link": "https://n.news.naver.com/mnews/article/422/0000809948?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C%20%ED%9D%A1%EC%97%B0%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%83%9D%ED%99%9C%EA%B2%BD%EC%A0%9C%20%ED%9D%A1%EC%97%B0%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 생활경제] 흡연율 줄어도 전자담배는 '쑥'…성인 3명 중 1명 비...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000809948?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Today's Living Economy Smoking Rates",
+      "term_ko": "오늘의 생활경제 흡연율"
     },
     {
-      "term": "Expecting market stability",
-      "term_ko": "시장 안정 기대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장 안정 기대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 국고채 최대 1조 5천억 원 매입‥채권 시장 안정 기대",
-              "link": "https://n.news.naver.com/mnews/article/214/0001466691?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%EC%95%88%EC%A0%95%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%EC%95%88%EC%A0%95%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 국고채 최대 1조 5천억 원 매입‥채권 시장 안정 기대",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001466691?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Expecting Market Stability",
+      "term_ko": "시장 안정 기대"
     },
     {
-      "term": "AI Growth Expectations",
-      "term_ko": "AI 성장 기대치",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Growth Expectations",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Morgan Stanley Downgrades Tesla as AI Growth Expectations Rise",
-              "link": "https://www.econotimes.com/Morgan-Stanley-Downgrades-Tesla-as-AI-Growth-Expectations-Rise-1728040"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Growth%20Expectations",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Growth%20Expectations"
-      },
-      "top_headlines": [
-        {
-          "title": "Morgan Stanley Downgrades Tesla as AI Growth Expectations Rise",
-          "summary": "",
-          "link": "https://www.econotimes.com/Morgan-Stanley-Downgrades-Tesla-as-AI-Growth-Expectations-Rise-1728040",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Growth Expectations",
+      "term_ko": "AI 성장 기대치"
     },
     {
-      "term": "Upcoming ADR Issuance",
-      "term_ko": "예정된 ADR 발행",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Upcoming ADR Issuance",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "SK Hynix Shares Surge on Hopes for Upcoming ADR Issuance",
-              "link": "https://www.econotimes.com/SK-Hynix-Shares-Surge-on-Hopes-for-Upcoming-ADR-Issuance-1728038"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Upcoming%20ADR%20Issuance",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Upcoming%20ADR%20Issuance"
-      },
-      "top_headlines": [
-        {
-          "title": "SK Hynix Shares Surge on Hopes for Upcoming ADR Issuance",
-          "summary": "",
-          "link": "https://www.econotimes.com/SK-Hynix-Shares-Surge-on-Hopes-for-Upcoming-ADR-Issuance-1728038",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Upcoming Adr Issuance",
+      "term_ko": "예정된 ADR 발행"
     },
     {
-      "term": "of 1",
-      "term_ko": "중 1명",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중 1명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[오늘의 생활경제] 흡연율 줄어도 전자담배는 '쑥'…성인 3명 중 1명 비...",
-              "link": "https://n.news.naver.com/mnews/article/422/0000809948?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%201%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%201%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 생활경제] 흡연율 줄어도 전자담배는 '쑥'…성인 3명 중 1명 비...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000809948?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Of 1",
+      "term_ko": "중 1명"
     },
     {
-      "term": "Exit review",
-      "term_ko": "퇴사 검토",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "퇴사 검토",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-              "link": "https://www.newspim.com/news/view/20251208000023"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%87%B4%EC%82%AC%20%EA%B2%80%ED%86%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%87%B4%EC%82%AC%20%EA%B2%80%ED%86%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251208000023",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exit Review",
+      "term_ko": "퇴사 검토"
     },
     {
-      "term": "Ahead and slightly",
-      "term_ko": "앞두고 소폭",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "앞두고 소폭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美 FOMC 이틀 앞두고 소폭 하락...원·달러 환율, 1460원대 마감",
-              "link": "https://www.betanews.net/article/view/beta202512080076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%9E%EB%91%90%EA%B3%A0%20%EC%86%8C%ED%8F%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%9E%EB%91%90%EA%B3%A0%20%EC%86%8C%ED%8F%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "美 FOMC 이틀 앞두고 소폭 하락...원·달러 환율, 1460원대 마감",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202512080076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ahead and Slightly",
+      "term_ko": "앞두고 소폭"
     },
     {
-      "term": "Valet parking recycling",
-      "term_ko": "발레파킹 분리수거",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "발레파킹 분리수거",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-              "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%EB%A0%88%ED%8C%8C%ED%82%B9%20%EB%B6%84%EB%A6%AC%EC%88%98%EA%B1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%EB%A0%88%ED%8C%8C%ED%82%B9%20%EB%B6%84%EB%A6%AC%EC%88%98%EA%B1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Valet Parking Recycling",
+      "term_ko": "발레파킹 분리수거"
     },
     {
-      "term": "Residential transformation",
-      "term_ko": "주거 혁신",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주거 혁신",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-              "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B1%B0%20%ED%98%81%EC%8B%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B1%B0%20%ED%98%81%EC%8B%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] 발레파킹·분리수거…현실 된 AI발 주거 혁신",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006179812?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Residential Transformation",
+      "term_ko": "주거 혁신"
     },
     {
       "term": "Buy Corona",
-      "term_ko": "매입 코로나",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매입 코로나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 내일 국고채 1.5조원 매입…코로나 이후 3년여만",
-              "link": "https://n.news.naver.com/mnews/article/025/0003488316?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EC%9E%85%20%EC%BD%94%EB%A1%9C%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EC%9E%85%20%EC%BD%94%EB%A1%9C%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 내일 국고채 1.5조원 매입…코로나 이후 3년여만",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003488316?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "매입 코로나"
     },
     {
       "term": "Morgan Stanley Downgrades",
-      "term_ko": "모건 스탠리, 신용등급 하향 조정",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Morgan Stanley Downgrades",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Morgan Stanley Downgrades Tesla as AI Growth Expectations Rise",
-              "link": "https://www.econotimes.com/Morgan-Stanley-Downgrades-Tesla-as-AI-Growth-Expectations-Rise-1728040"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Morgan%20Stanley%20Downgrades",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Morgan%20Stanley%20Downgrades"
-      },
-      "top_headlines": [
-        {
-          "title": "Morgan Stanley Downgrades Tesla as AI Growth Expectations Rise",
-          "summary": "",
-          "link": "https://www.econotimes.com/Morgan-Stanley-Downgrades-Tesla-as-AI-Growth-Expectations-Rise-1728040",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "모건 스탠리, 신용등급 하향 조정"
     },
     {
-      "term": "IBM Nears",
-      "term_ko": "가까운 IBM",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IBM Nears",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-              "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IBM%20Nears",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IBM%20Nears"
-      },
-      "top_headlines": [
-        {
-          "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-          "summary": "",
-          "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ibm Nears",
+      "term_ko": "가까운 IBM"
     },
     {
-      "term": "Major AI",
-      "term_ko": "주요 AI",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Major AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-              "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Major%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Major%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-          "summary": "",
-          "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Major Ai",
+      "term_ko": "주요 AI"
     },
     {
-      "term": "SK Hynix",
-      "term_ko": "SK하이닉스",
-      "significance_score": 252,
-      "mentions": 381,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-30",
-              "timestamp": 1764428400000,
-              "value": 28.125
-            },
-            {
-              "period": "2025-12-01",
-              "timestamp": 1764514800000,
-              "value": 86.45833
-            },
-            {
-              "period": "2025-12-02",
-              "timestamp": 1764601200000,
-              "value": 88.54166
-            },
-            {
-              "period": "2025-12-03",
-              "timestamp": 1764687600000,
-              "value": 78.125
-            },
-            {
-              "period": "2025-12-04",
-              "timestamp": 1764774000000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-05",
-              "timestamp": 1764860400000,
-              "value": 71.875
-            },
-            {
-              "period": "2025-12-06",
-              "timestamp": 1764946800000,
-              "value": 19.79166
-            },
-            {
-              "period": "2025-12-07",
-              "timestamp": 1765033200000,
-              "value": 22.91666
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "SK Hynix Shares Surge on Hopes for Upcoming ADR Issuance",
-              "link": "https://www.econotimes.com/SK-Hynix-Shares-Surge-on-Hopes-for-Upcoming-ADR-Issuance-1728038"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix"
-      },
-      "top_headlines": [
-        {
-          "title": "SK Hynix Shares Surge on Hopes for Upcoming ADR Issuance",
-          "summary": "",
-          "link": "https://www.econotimes.com/SK-Hynix-Shares-Surge-on-Hopes-for-Upcoming-ADR-Issuance-1728038",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 381.25,
-        "weekly_average_volume": 63.5417,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.01625,
-        "time_weight": 0.021866,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1765033200000
-      }
+      "term": "Sk Hynix",
+      "term_ko": "SK하이닉스"
     },
     {
       "term": "Billion Deal",
-      "term_ko": "10억 거래",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Billion Deal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-              "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Billion%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Billion%20Deal"
-      },
-      "top_headlines": [
-        {
-          "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-          "summary": "",
-          "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "10억 거래"
     },
     {
       "term": "Acquire Confluent",
-      "term_ko": "Confluent 인수",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Acquire Confluent",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-              "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Acquire%20Confluent",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Acquire%20Confluent"
-      },
-      "top_headlines": [
-        {
-          "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-          "summary": "",
-          "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Confluent 인수"
     },
     {
       "term": "Data Push",
-      "term_ko": "데이터 푸시",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Data Push",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T21:42:59+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-              "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Data%20Push",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Data%20Push"
-      },
-      "top_headlines": [
-        {
-          "title": "IBM Nears $11 Billion Deal to Acquire Confluent in Major AI and Data Push",
-          "summary": "",
-          "link": "https://www.econotimes.com/IBM--Nears-11-Billion-Deal-to-Acquire-Confluent-in-Major-AI-and-Data-Push-1728049",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "데이터 푸시"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-08T12:44:06.184Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-08T21:42:59+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Unrepresentative Index Ai",
+      "term_ko": "미 대표지수 AI"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-08T21:42:59+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-08T21:42:59+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Etf Net Asset Appreciation",
+      "term_ko": "ETF 순자산 상승세"
+    },
+    {
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
+    },
+    {
+      "term": "Us Fomc Two Days",
+      "term_ko": "美 FOMC 이틀"
+    },
+    {
+      "term": "Realized Ai Feet",
+      "term_ko": "현실 된 AI발"
+    },
+    {
+      "term": "Dollar Exchange Rate 1460 Won",
+      "term_ko": "달러 환율 1460원대"
+    },
+    {
+      "term": "1.5 Trillion in Treasuries Tomorrow",
+      "term_ko": "내일 국고채 1.5조원"
+    },
+    {
+      "term": "Wormwood 3 Adults",
+      "term_ko": "쑥 성인 3명"
+    },
+    {
+      "term": "Up to 1 Trillion in Treasuries",
+      "term_ko": "국고채 최대 1조"
+    },
+    {
+      "term": "Purchased 500 Billion Won in Bonds",
+      "term_ko": "5천억 원 매입‥채권"
+    },
+    {
+      "term": "Spreading Executive Churn",
+      "term_ko": "임원 이탈 확산"
+    },
+    {
+      "term": "Reader Column Constraints",
+      "term_ko": "독자위원 칼럼 제약"
+    },
+    {
+      "term": "Preview Edaily Newspaper",
+      "term_ko": "미리보는 이데일리 신문"
+    },
+    {
+      "term": "Today's Living Economy Smoking Rates",
+      "term_ko": "오늘의 생활경제 흡연율"
+    },
+    {
+      "term": "Expecting Market Stability",
+      "term_ko": "시장 안정 기대"
+    },
+    {
+      "term": "Ai Growth Expectations",
+      "term_ko": "AI 성장 기대치"
+    },
+    {
+      "term": "Upcoming Adr Issuance",
+      "term_ko": "예정된 ADR 발행"
+    },
+    {
+      "term": "Of 1",
+      "term_ko": "중 1명"
+    },
+    {
+      "term": "Exit Review",
+      "term_ko": "퇴사 검토"
+    },
+    {
+      "term": "Ahead and Slightly",
+      "term_ko": "앞두고 소폭"
+    },
+    {
+      "term": "Valet Parking Recycling",
+      "term_ko": "발레파킹 분리수거"
+    },
+    {
+      "term": "Residential Transformation",
+      "term_ko": "주거 혁신"
+    },
+    {
+      "term": "Buy Corona",
+      "term_ko": "매입 코로나"
+    },
+    {
+      "term": "Morgan Stanley Downgrades",
+      "term_ko": "모건 스탠리, 신용등급 하향 조정"
+    },
+    {
+      "term": "Ibm Nears",
+      "term_ko": "가까운 IBM"
+    },
+    {
+      "term": "Major Ai",
+      "term_ko": "주요 AI"
+    },
+    {
+      "term": "Sk Hynix",
+      "term_ko": "SK하이닉스"
+    },
+    {
+      "term": "Billion Deal",
+      "term_ko": "10억 거래"
+    },
+    {
+      "term": "Acquire Confluent",
+      "term_ko": "Confluent 인수"
+    },
+    {
+      "term": "Data Push",
+      "term_ko": "데이터 푸시"
+    }
+  ],
+  "translations": {
+    "Unrepresentative Index Ai": {
+      "en": "Unrepresentative Index Ai",
+      "ko": "미 대표지수 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Etf Net Asset Appreciation": {
+      "en": "Etf Net Asset Appreciation",
+      "ko": "ETF 순자산 상승세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "The Story of Ai in Stocks": {
+      "en": "The Story of Ai in Stocks",
+      "ko": "AI의 종목 이야기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Us Fomc Two Days": {
+      "en": "Us Fomc Two Days",
+      "ko": "美 FOMC 이틀",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Realized Ai Feet": {
+      "en": "Realized Ai Feet",
+      "ko": "현실 된 AI발",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Dollar Exchange Rate 1460 Won": {
+      "en": "Dollar Exchange Rate 1460 Won",
+      "ko": "달러 환율 1460원대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "1.5 Trillion in Treasuries Tomorrow": {
+      "en": "1.5 Trillion in Treasuries Tomorrow",
+      "ko": "내일 국고채 1.5조원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Wormwood 3 Adults": {
+      "en": "Wormwood 3 Adults",
+      "ko": "쑥 성인 3명",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Up to 1 Trillion in Treasuries": {
+      "en": "Up to 1 Trillion in Treasuries",
+      "ko": "국고채 최대 1조",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Purchased 500 Billion Won in Bonds": {
+      "en": "Purchased 500 Billion Won in Bonds",
+      "ko": "5천억 원 매입‥채권",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Spreading Executive Churn": {
+      "en": "Spreading Executive Churn",
+      "ko": "임원 이탈 확산",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Reader Column Constraints": {
+      "en": "Reader Column Constraints",
+      "ko": "독자위원 칼럼 제약",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Preview Edaily Newspaper": {
+      "en": "Preview Edaily Newspaper",
+      "ko": "미리보는 이데일리 신문",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Today's Living Economy Smoking Rates": {
+      "en": "Today's Living Economy Smoking Rates",
+      "ko": "오늘의 생활경제 흡연율",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Expecting Market Stability": {
+      "en": "Expecting Market Stability",
+      "ko": "시장 안정 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Ai Growth Expectations": {
+      "en": "Ai Growth Expectations",
+      "ko": "AI 성장 기대치",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Upcoming Adr Issuance": {
+      "en": "Upcoming Adr Issuance",
+      "ko": "예정된 ADR 발행",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Of 1": {
+      "en": "Of 1",
+      "ko": "중 1명",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Exit Review": {
+      "en": "Exit Review",
+      "ko": "퇴사 검토",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Ahead and Slightly": {
+      "en": "Ahead and Slightly",
+      "ko": "앞두고 소폭",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Valet Parking Recycling": {
+      "en": "Valet Parking Recycling",
+      "ko": "발레파킹 분리수거",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Residential Transformation": {
+      "en": "Residential Transformation",
+      "ko": "주거 혁신",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Buy Corona": {
+      "en": "Buy Corona",
+      "ko": "매입 코로나",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Morgan Stanley Downgrades": {
+      "en": "Morgan Stanley Downgrades",
+      "ko": "모건 스탠리, 신용등급 하향 조정",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Ibm Nears": {
+      "en": "Ibm Nears",
+      "ko": "가까운 IBM",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Major Ai": {
+      "en": "Major Ai",
+      "ko": "주요 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Sk Hynix": {
+      "en": "Sk Hynix",
+      "ko": "SK하이닉스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Billion Deal": {
+      "en": "Billion Deal",
+      "ko": "10억 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Acquire Confluent": {
+      "en": "Acquire Confluent",
+      "ko": "Confluent 인수",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
+    },
+    "Data Push": {
+      "en": "Data Push",
+      "ko": "데이터 푸시",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T18:32:02.443Z"
     }
   }
 }
