@@ -1,1095 +1,425 @@
 {
+  "generatedAt": "2025-12-08T06:34:07.779Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-08",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "AI Rate Elections",
-      "term_ko": "AI 금리 선거",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 금리 선거",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AI·금리·선거 불확실성은 걷히겠지만 [2026 대전망①]",
-              "link": "https://n.news.naver.com/mnews/article/050/0000099327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EA%B8%88%EB%A6%AC%20%EC%84%A0%EA%B1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EA%B8%88%EB%A6%AC%20%EC%84%A0%EA%B1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "AI·금리·선거 불확실성은 걷히겠지만 [2026 대전망①]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000099327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Rate Elections",
+      "term_ko": "AI 금리 선거"
     },
     {
-      "term": "Bare-bones ETFs",
-      "term_ko": "민낯 드러난 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "민낯 드러난 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "강세장의 민낯 드러난 ETF 시장…반도체, 레버리지, 그리고 파킹자금까...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005602381?sid=004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%BC%EB%82%AF%20%EB%93%9C%EB%9F%AC%EB%82%9C%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%BC%EB%82%AF%20%EB%93%9C%EB%9F%AC%EB%82%9C%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "강세장의 민낯 드러난 ETF 시장…반도체, 레버리지, 그리고 파킹자금까...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005602381?sid=004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bare-bones Etfs",
+      "term_ko": "민낯 드러난 ETF"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "KOSPI below 4100",
-      "term_ko": "코스피 4100선 아래",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 4100선 아래",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 4,100선 아래 약보합…코스닥 0.4%대 상승 마감",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15898863"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%204100%EC%84%A0%20%EC%95%84%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%204100%EC%84%A0%20%EC%95%84%EB%9E%98"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 4,100선 아래 약보합…코스닥 0.4%대 상승 마감",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15898863",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Below 4100",
+      "term_ko": "코스피 4100선 아래"
     },
     {
-      "term": "Slightly flat KOSDAQ in the 0.4% range",
-      "term_ko": "약보합 코스닥 0.4%대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "약보합 코스닥 0.4%대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 4,100선 아래 약보합…코스닥 0.4%대 상승 마감",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15898863"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%BD%EB%B3%B4%ED%95%A9%20%EC%BD%94%EC%8A%A4%EB%8B%A5%200.4%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%BD%EB%B3%B4%ED%95%A9%20%EC%BD%94%EC%8A%A4%EB%8B%A5%200.4%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 4,100선 아래 약보합…코스닥 0.4%대 상승 마감",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15898863",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Slightly Flat Kosdaq in the 0.4% Range",
+      "term_ko": "약보합 코스닥 0.4%대"
     },
     {
       "term": "China November Trade Balance",
-      "term_ko": "中 11월 무역수지",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "中 11월 무역수지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "中 11월 무역수지 '촉각'...장중 아시아 6國 증시 '혼조'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=157812"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E4%B8%AD%2011%EC%9B%94%20%EB%AC%B4%EC%97%AD%EC%88%98%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E4%B8%AD%2011%EC%9B%94%20%EB%AC%B4%EC%97%AD%EC%88%98%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "中 11월 무역수지 '촉각'...장중 아시아 6國 증시 '혼조'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=157812",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "中 11월 무역수지"
     },
     {
-      "term": "6 Asian stock markets",
-      "term_ko": "아시아 6國 증시",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아시아 6國 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "中 11월 무역수지 '촉각'...장중 아시아 6國 증시 '혼조'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=157812"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%8B%9C%EC%95%84%206%E5%9C%8B%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%8B%9C%EC%95%84%206%E5%9C%8B%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "中 11월 무역수지 '촉각'...장중 아시아 6國 증시 '혼조'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=157812",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "6 Asian Stock Markets",
+      "term_ko": "아시아 6國 증시"
     },
     {
-      "term": "US Stocks Buffett Abandoned",
-      "term_ko": "미국주식 버핏이 버린",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국주식 버핏이 버린",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-              "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%20%EB%B2%84%ED%95%8F%EC%9D%B4%20%EB%B2%84%EB%A6%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%20%EB%B2%84%ED%95%8F%EC%9D%B4%20%EB%B2%84%EB%A6%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-          "summary": "",
-          "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Stocks Buffett Abandoned",
+      "term_ko": "미국주식 버핏이 버린"
     },
     {
       "term": "The Upside of Ulta Beauty",
-      "term_ko": "울타 뷰티의 반전",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "울타 뷰티의 반전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-              "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B8%ED%83%80%20%EB%B7%B0%ED%8B%B0%EC%9D%98%20%EB%B0%98%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B8%ED%83%80%20%EB%B7%B0%ED%8B%B0%EC%9D%98%20%EB%B0%98%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-          "summary": "",
-          "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "울타 뷰티의 반전"
     },
     {
-      "term": "Major indices moderate",
-      "term_ko": "주요 지수 소폭",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주요 지수 소폭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%86%8C%ED%8F%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%86%8C%ED%8F%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Major Indices Moderate",
+      "term_ko": "주요 지수 소폭"
     },
     {
-      "term": "Catching the signal to change",
-      "term_ko": "대전환 신호 포착",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대전환 신호 포착",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "월가, 스텔라에 시선집중...블록체인 대전환 신호 포착",
-              "link": "http://coinreaders.com/202771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%8B%A0%ED%98%B8%20%ED%8F%AC%EC%B0%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%8B%A0%ED%98%B8%20%ED%8F%AC%EC%B0%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "월가, 스텔라에 시선집중...블록체인 대전환 신호 포착",
-          "summary": "",
-          "link": "http://coinreaders.com/202771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Catching the Signal to Change",
+      "term_ko": "대전환 신호 포착"
     },
     {
-      "term": "NYSE Preview Inflation",
-      "term_ko": "뉴욕증시 프리뷰 인플레",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 인플레",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-              "link": "https://www.newspim.com/news/view/20251205000996"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%9D%B8%ED%94%8C%EB%A0%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%9D%B8%ED%94%8C%EB%A0%88"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000996",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview Inflation",
+      "term_ko": "뉴욕증시 프리뷰 인플레"
     },
     {
-      "term": "To pay off interest",
-      "term_ko": "이자 갚기 위해",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이자 갚기 위해",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"이자 갚기 위해 다시 빚낸다\"… 세계은행, '이자부채 악순환' 경고",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=50409"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9E%90%20%EA%B0%9A%EA%B8%B0%20%EC%9C%84%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9E%90%20%EA%B0%9A%EA%B8%B0%20%EC%9C%84%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"이자 갚기 위해 다시 빚낸다\"… 세계은행, '이자부채 악순환' 경고",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=50409",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "To Pay Off Interest",
+      "term_ko": "이자 갚기 위해"
     },
     {
       "term": "Rebuilding the World Bank",
-      "term_ko": "다시 빚낸다 세계은행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "다시 빚낸다 세계은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"이자 갚기 위해 다시 빚낸다\"… 세계은행, '이자부채 악순환' 경고",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=50409"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%8B%9C%20%EB%B9%9A%EB%82%B8%EB%8B%A4%20%EC%84%B8%EA%B3%84%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%8B%9C%20%EB%B9%9A%EB%82%B8%EB%8B%A4%20%EC%84%B8%EA%B3%84%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "\"이자 갚기 위해 다시 빚낸다\"… 세계은행, '이자부채 악순환' 경고",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=50409",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "다시 빚낸다 세계은행"
     },
     {
-      "term": "Interest-debt cycle warning",
-      "term_ko": "이자부채 악순환 경고",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이자부채 악순환 경고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"이자 갚기 위해 다시 빚낸다\"… 세계은행, '이자부채 악순환' 경고",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=50409"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9E%90%EB%B6%80%EC%B1%84%20%EC%95%85%EC%88%9C%ED%99%98%20%EA%B2%BD%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9E%90%EB%B6%80%EC%B1%84%20%EC%95%85%EC%88%9C%ED%99%98%20%EA%B2%BD%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "\"이자 갚기 위해 다시 빚낸다\"… 세계은행, '이자부채 악순환' 경고",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=50409",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest-debt Cycle Warning",
+      "term_ko": "이자부채 악순환 경고"
     },
     {
-      "term": "Direction changes Bis Seoul",
-      "term_ko": "방향이 바뀐다 비서울",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "방향이 바뀐다 비서울",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 인사이트] 돈의 방향이 바뀐다…비서울 재발견의 해 2026",
-              "link": "https://www.bizhankook.com/bk/article/30897"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%A9%ED%96%A5%EC%9D%B4%20%EB%B0%94%EB%80%90%EB%8B%A4%20%EB%B9%84%EC%84%9C%EC%9A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%A9%ED%96%A5%EC%9D%B4%20%EB%B0%94%EB%80%90%EB%8B%A4%20%EB%B9%84%EC%84%9C%EC%9A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 인사이트] 돈의 방향이 바뀐다…비서울 재발견의 해 2026",
-          "summary": "",
-          "link": "https://www.bizhankook.com/bk/article/30897",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Direction Changes Bis Seoul",
+      "term_ko": "방향이 바뀐다 비서울"
     },
     {
       "term": "Market Semiconductor Leverage",
-      "term_ko": "시장 반도체 레버리지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장 반도체 레버리지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "강세장의 민낯 드러난 ETF 시장…반도체, 레버리지, 그리고 파킹자금까...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005602381?sid=004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "강세장의 민낯 드러난 ETF 시장…반도체, 레버리지, 그리고 파킹자금까...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005602381?sid=004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시장 반도체 레버리지"
     },
     {
-      "term": "5 days in New York",
-      "term_ko": "5일 뉴욕",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5일 뉴욕",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9D%BC%20%EB%89%B4%EC%9A%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9D%BC%20%EB%89%B4%EC%9A%95"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "5 Days in New York",
+      "term_ko": "5일 뉴욕"
     },
     {
-      "term": "Rise history",
-      "term_ko": "상승 기록",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 기록",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%A1%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%A1%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rise History",
+      "term_ko": "상승 기록"
     },
     {
-      "term": "Waiting for indicators",
-      "term_ko": "지표 기다리며",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지표 기다리며",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-              "link": "https://www.newspim.com/news/view/20251205000996"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%ED%91%9C%20%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%A9%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%ED%91%9C%20%EA%B8%B0%EB%8B%A4%EB%A6%AC%EB%A9%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 인플레 지표 기다리며 강보합...넷플릭스 720억달러 '...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251205000996",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Waiting for Indicators",
+      "term_ko": "지표 기다리며"
     },
     {
-      "term": "Rising closing",
-      "term_ko": "상승 마감",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 마감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 4,100선 아래 약보합…코스닥 0.4%대 상승 마감",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15898863"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EB%A7%88%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EB%A7%88%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 4,100선 아래 약보합…코스닥 0.4%대 상승 마감",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15898863",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Closing",
+      "term_ko": "상승 마감"
     },
     {
-      "term": "A year of discovery",
-      "term_ko": "재발견의 해",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재발견의 해",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 인사이트] 돈의 방향이 바뀐다…비서울 재발견의 해 2026",
-              "link": "https://www.bizhankook.com/bk/article/30897"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EB%B0%9C%EA%B2%AC%EC%9D%98%20%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EB%B0%9C%EA%B2%AC%EC%9D%98%20%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 인사이트] 돈의 방향이 바뀐다…비서울 재발견의 해 2026",
-          "summary": "",
-          "link": "https://www.bizhankook.com/bk/article/30897",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Year of Discovery",
+      "term_ko": "재발견의 해"
     },
     {
-      "term": "While the uncertainty will pass",
-      "term_ko": "불확실성은 걷히겠지만",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불확실성은 걷히겠지만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AI·금리·선거 불확실성은 걷히겠지만 [2026 대전망①]",
-              "link": "https://n.news.naver.com/mnews/article/050/0000099327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%9D%80%20%EA%B1%B7%ED%9E%88%EA%B2%A0%EC%A7%80%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%9D%80%20%EA%B1%B7%ED%9E%88%EA%B2%A0%EC%A7%80%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "AI·금리·선거 불확실성은 걷히겠지만 [2026 대전망①]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000099327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "While the Uncertainty Will Pass",
+      "term_ko": "불확실성은 걷히겠지만"
     },
     {
       "term": "Cooler Inflation Boosts",
-      "term_ko": "냉각기 인플레이션 부스트",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Cooler Inflation Boosts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-              "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Cooler%20Inflation%20Boosts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Cooler%20Inflation%20Boosts"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "냉각기 인플레이션 부스트"
     },
     {
       "term": "Fed Rate Cut",
-      "term_ko": "연준 금리 인하",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Rate Cut",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-              "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Rate%20Cut",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Rate%20Cut"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Rise as Cooler Inflation Boosts Hopes for Fed Rate Cut",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rise-as-Cooler-Inflation-Boosts-Hopes-for-Fed-Rate-Cut-1727944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 금리 인하"
     },
     {
       "term": "Anticipate Fed Rate",
-      "term_ko": "연준 금리 예상",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Anticipate Fed Rate",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks End Week Higher as Markets Anticipate Fed Rate Cut",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Markets-Anticipate-Fed-Rate-Cut-1727940"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Anticipate%20Fed%20Rate",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Anticipate%20Fed%20Rate"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks End Week Higher as Markets Anticipate Fed Rate Cut",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Markets-Anticipate-Fed-Rate-Cut-1727940",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 금리 예상"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-08T10:29:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-08T01:30:34.928Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-08T10:29:10+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ai Rate Elections",
+      "term_ko": "AI 금리 선거"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-08T10:29:10+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-08T10:29:10+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Bare-bones Etfs",
+      "term_ko": "민낯 드러난 ETF"
+    },
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Kospi Below 4100",
+      "term_ko": "코스피 4100선 아래"
+    },
+    {
+      "term": "Slightly Flat Kosdaq in the 0.4% Range",
+      "term_ko": "약보합 코스닥 0.4%대"
+    },
+    {
+      "term": "China November Trade Balance",
+      "term_ko": "中 11월 무역수지"
+    },
+    {
+      "term": "6 Asian Stock Markets",
+      "term_ko": "아시아 6國 증시"
+    },
+    {
+      "term": "Us Stocks Buffett Abandoned",
+      "term_ko": "미국주식 버핏이 버린"
+    },
+    {
+      "term": "The Upside of Ulta Beauty",
+      "term_ko": "울타 뷰티의 반전"
+    },
+    {
+      "term": "Major Indices Moderate",
+      "term_ko": "주요 지수 소폭"
+    },
+    {
+      "term": "Catching the Signal to Change",
+      "term_ko": "대전환 신호 포착"
+    },
+    {
+      "term": "Nyse Preview Inflation",
+      "term_ko": "뉴욕증시 프리뷰 인플레"
+    },
+    {
+      "term": "To Pay Off Interest",
+      "term_ko": "이자 갚기 위해"
+    },
+    {
+      "term": "Rebuilding the World Bank",
+      "term_ko": "다시 빚낸다 세계은행"
+    },
+    {
+      "term": "Interest-debt Cycle Warning",
+      "term_ko": "이자부채 악순환 경고"
+    },
+    {
+      "term": "Direction Changes Bis Seoul",
+      "term_ko": "방향이 바뀐다 비서울"
+    },
+    {
+      "term": "Market Semiconductor Leverage",
+      "term_ko": "시장 반도체 레버리지"
+    },
+    {
+      "term": "5 Days in New York",
+      "term_ko": "5일 뉴욕"
+    },
+    {
+      "term": "Rise History",
+      "term_ko": "상승 기록"
+    },
+    {
+      "term": "Waiting for Indicators",
+      "term_ko": "지표 기다리며"
+    },
+    {
+      "term": "Rising Closing",
+      "term_ko": "상승 마감"
+    },
+    {
+      "term": "A Year of Discovery",
+      "term_ko": "재발견의 해"
+    },
+    {
+      "term": "While the Uncertainty Will Pass",
+      "term_ko": "불확실성은 걷히겠지만"
+    },
+    {
+      "term": "Cooler Inflation Boosts",
+      "term_ko": "냉각기 인플레이션 부스트"
+    },
+    {
+      "term": "Fed Rate Cut",
+      "term_ko": "연준 금리 인하"
+    },
+    {
+      "term": "Anticipate Fed Rate",
+      "term_ko": "연준 금리 예상"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Ai Rate Elections": {
+      "en": "Ai Rate Elections",
+      "ko": "AI 금리 선거",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Bare-bones Etfs": {
+      "en": "Bare-bones Etfs",
+      "ko": "민낯 드러난 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Kospi Below 4100": {
+      "en": "Kospi Below 4100",
+      "ko": "코스피 4100선 아래",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Slightly Flat Kosdaq in the 0.4% Range": {
+      "en": "Slightly Flat Kosdaq in the 0.4% Range",
+      "ko": "약보합 코스닥 0.4%대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "China November Trade Balance": {
+      "en": "China November Trade Balance",
+      "ko": "中 11월 무역수지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "6 Asian Stock Markets": {
+      "en": "6 Asian Stock Markets",
+      "ko": "아시아 6國 증시",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Us Stocks Buffett Abandoned": {
+      "en": "Us Stocks Buffett Abandoned",
+      "ko": "미국주식 버핏이 버린",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "The Upside of Ulta Beauty": {
+      "en": "The Upside of Ulta Beauty",
+      "ko": "울타 뷰티의 반전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Major Indices Moderate": {
+      "en": "Major Indices Moderate",
+      "ko": "주요 지수 소폭",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Catching the Signal to Change": {
+      "en": "Catching the Signal to Change",
+      "ko": "대전환 신호 포착",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Nyse Preview Inflation": {
+      "en": "Nyse Preview Inflation",
+      "ko": "뉴욕증시 프리뷰 인플레",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "To Pay Off Interest": {
+      "en": "To Pay Off Interest",
+      "ko": "이자 갚기 위해",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Rebuilding the World Bank": {
+      "en": "Rebuilding the World Bank",
+      "ko": "다시 빚낸다 세계은행",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Interest-debt Cycle Warning": {
+      "en": "Interest-debt Cycle Warning",
+      "ko": "이자부채 악순환 경고",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Direction Changes Bis Seoul": {
+      "en": "Direction Changes Bis Seoul",
+      "ko": "방향이 바뀐다 비서울",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Market Semiconductor Leverage": {
+      "en": "Market Semiconductor Leverage",
+      "ko": "시장 반도체 레버리지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "5 Days in New York": {
+      "en": "5 Days in New York",
+      "ko": "5일 뉴욕",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Rise History": {
+      "en": "Rise History",
+      "ko": "상승 기록",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Waiting for Indicators": {
+      "en": "Waiting for Indicators",
+      "ko": "지표 기다리며",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Rising Closing": {
+      "en": "Rising Closing",
+      "ko": "상승 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "A Year of Discovery": {
+      "en": "A Year of Discovery",
+      "ko": "재발견의 해",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "While the Uncertainty Will Pass": {
+      "en": "While the Uncertainty Will Pass",
+      "ko": "불확실성은 걷히겠지만",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Cooler Inflation Boosts": {
+      "en": "Cooler Inflation Boosts",
+      "ko": "냉각기 인플레이션 부스트",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Fed Rate Cut": {
+      "en": "Fed Rate Cut",
+      "ko": "연준 금리 인하",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Anticipate Fed Rate": {
+      "en": "Anticipate Fed Rate",
+      "ko": "연준 금리 예상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T06:34:07.779Z"
     }
   }
 }
