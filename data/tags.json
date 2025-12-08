@@ -1,1164 +1,439 @@
 {
+  "generatedAt": "2025-12-08T12:40:57.895Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-08",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "KDI for 2 consecutive months",
-      "term_ko": "KDI 2개월 연속",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KDI 2개월 연속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KDI, 2개월 연속 '경기 개선' 진단···건설업 부진은 장기화",
-              "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=337545"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KDI%202%EA%B0%9C%EC%9B%94%20%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KDI%202%EA%B0%9C%EC%9B%94%20%EC%97%B0%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "KDI, 2개월 연속 '경기 개선' 진단···건설업 부진은 장기화",
-          "summary": "",
-          "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=337545",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kdi for 2 Consecutive Months",
+      "term_ko": "KDI 2개월 연속"
     },
     {
-      "term": "TIGER US NASDAQ100 Net worth",
-      "term_ko": "TIGER 미국나스닥100 순자산",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "TIGER 미국나스닥100 순자산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "TIGER 미국나스닥100, 순자산 7조 돌파로 아시아 최대 입증",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=473279"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20%EC%88%9C%EC%9E%90%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=TIGER%20%EB%AF%B8%EA%B5%AD%EB%82%98%EC%8A%A4%EB%8B%A5100%20%EC%88%9C%EC%9E%90%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "TIGER 미국나스닥100, 순자산 7조 돌파로 아시아 최대 입증",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=473279",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tiger Us Nasdaq100 Net Worth",
+      "term_ko": "TIGER 미국나스닥100 순자산"
     },
     {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-              "link": "https://www.newspim.com/news/view/20251208000023"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251208000023",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
     {
-      "term": "US ahead of FOMC",
-      "term_ko": "FOMC 앞두고 美",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "FOMC 앞두고 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "FOMC 앞두고 美 금리 인하 기대 ↑...원·달러 고환율 진정되나",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=286476"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FOMC%20%EC%95%9E%EB%91%90%EA%B3%A0%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FOMC%20%EC%95%9E%EB%91%90%EA%B3%A0%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "FOMC 앞두고 美 금리 인하 기대 ↑...원·달러 고환율 진정되나",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=286476",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Ahead of Fomc",
+      "term_ko": "FOMC 앞두고 美"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "Asia tops 7 trillion",
-      "term_ko": "7조 돌파로 아시아",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "7조 돌파로 아시아",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "TIGER 미국나스닥100, 순자산 7조 돌파로 아시아 최대 입증",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=473279"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=7%EC%A1%B0%20%EB%8F%8C%ED%8C%8C%EB%A1%9C%20%EC%95%84%EC%8B%9C%EC%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=7%EC%A1%B0%20%EB%8F%8C%ED%8C%8C%EB%A1%9C%20%EC%95%84%EC%8B%9C%EC%95%84"
-      },
-      "top_headlines": [
-        {
-          "title": "TIGER 미국나스닥100, 순자산 7조 돌파로 아시아 최대 입증",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=473279",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Asia Tops 7 Trillion",
+      "term_ko": "7조 돌파로 아시아"
     },
     {
-      "term": "Spreading executive churn",
-      "term_ko": "임원 이탈 확산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "임원 이탈 확산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-              "link": "https://www.newspim.com/news/view/20251208000023"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%84%EC%9B%90%20%EC%9D%B4%ED%83%88%20%ED%99%95%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%84%EC%9B%90%20%EC%9D%B4%ED%83%88%20%ED%99%95%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251208000023",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spreading Executive Churn",
+      "term_ko": "임원 이탈 확산"
     },
     {
-      "term": "US Stocks Buffett Abandoned",
-      "term_ko": "미국주식 버핏이 버린",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국주식 버핏이 버린",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-              "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%20%EB%B2%84%ED%95%8F%EC%9D%B4%20%EB%B2%84%EB%A6%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%20%EB%B2%84%ED%95%8F%EC%9D%B4%20%EB%B2%84%EB%A6%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-          "summary": "",
-          "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Stocks Buffett Abandoned",
+      "term_ko": "미국주식 버핏이 버린"
     },
     {
       "term": "The Upside of Ulta Beauty",
-      "term_ko": "울타 뷰티의 반전",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "울타 뷰티의 반전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-              "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B8%ED%83%80%20%EB%B7%B0%ED%8B%B0%EC%9D%98%20%EB%B0%98%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B8%ED%83%80%20%EB%B7%B0%ED%8B%B0%EC%9D%98%20%EB%B0%98%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국주식] 버핏이 버린 울타 뷰티의 반전",
-          "summary": "",
-          "link": "https://www.itooza.com/common/iview.php?no=2025120808460052148",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "울타 뷰티의 반전"
     },
     {
-      "term": "Major indices moderate",
-      "term_ko": "주요 지수 소폭",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주요 지수 소폭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%86%8C%ED%8F%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EC%86%8C%ED%8F%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Major Indices Moderate",
+      "term_ko": "주요 지수 소폭"
     },
     {
-      "term": "Catching the signal to change",
-      "term_ko": "대전환 신호 포착",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대전환 신호 포착",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "월가, 스텔라에 시선집중...블록체인 대전환 신호 포착",
-              "link": "http://coinreaders.com/202771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%8B%A0%ED%98%B8%20%ED%8F%AC%EC%B0%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%8B%A0%ED%98%B8%20%ED%8F%AC%EC%B0%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "월가, 스텔라에 시선집중...블록체인 대전환 신호 포착",
-          "summary": "",
-          "link": "http://coinreaders.com/202771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Catching the Signal to Change",
+      "term_ko": "대전환 신호 포착"
     },
     {
-      "term": "Watch the dot plot, not the rate cut",
-      "term_ko": "금리인하보다 점도표 주목",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리인하보다 점도표 주목",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금리인하보다 점도표 주목…증권가 \"매출증가율 높은 종목 선점해야\"",
-              "link": "https://n.news.naver.com/mnews/article/008/0005288840?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%EB%B3%B4%EB%8B%A4%20%EC%A0%90%EB%8F%84%ED%91%9C%20%EC%A3%BC%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%EB%B3%B4%EB%8B%A4%20%EC%A0%90%EB%8F%84%ED%91%9C%20%EC%A3%BC%EB%AA%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "금리인하보다 점도표 주목…증권가 \"매출증가율 높은 종목 선점해야\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005288840?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Watch the Dot Plot, Not the Rate Cut",
+      "term_ko": "금리인하보다 점도표 주목"
     },
     {
-      "term": "Implement dividend income separation taxation",
-      "term_ko": "배당소득 분리과세 시행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "배당소득 분리과세 시행",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-11-30",
-              "timestamp": 1764428400000,
-              "value": 40
-            },
-            {
-              "period": "2025-12-01",
-              "timestamp": 1764514800000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-02",
-              "timestamp": 1764601200000,
-              "value": 60
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'배당소득 분리과세' 시행 임박…예금이자에서 배당주 투자로 자금 이동...",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=286480"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%B0%EB%8B%B9%EC%86%8C%EB%93%9D%20%EB%B6%84%EB%A6%AC%EA%B3%BC%EC%84%B8%20%EC%8B%9C%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%B0%EB%8B%B9%EC%86%8C%EB%93%9D%20%EB%B6%84%EB%A6%AC%EA%B3%BC%EC%84%B8%20%EC%8B%9C%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "'배당소득 분리과세' 시행 임박…예금이자에서 배당주 투자로 자금 이동...",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=286480",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 60,
-        "weekly_average_volume": 60,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.058544,
-        "time_weight": 0.006265,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764601200000
-      }
+      "term": "Implement Dividend Income Separation Taxation",
+      "term_ko": "배당소득 분리과세 시행"
     },
     {
-      "term": "Dividend shares from impending deposit interest",
-      "term_ko": "임박 예금이자에서 배당주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "임박 예금이자에서 배당주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'배당소득 분리과세' 시행 임박…예금이자에서 배당주 투자로 자금 이동...",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=286480"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%84%EB%B0%95%20%EC%98%88%EA%B8%88%EC%9D%B4%EC%9E%90%EC%97%90%EC%84%9C%20%EB%B0%B0%EB%8B%B9%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%84%EB%B0%95%20%EC%98%88%EA%B8%88%EC%9D%B4%EC%9E%90%EC%97%90%EC%84%9C%20%EB%B0%B0%EB%8B%B9%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "'배당소득 분리과세' 시행 임박…예금이자에서 배당주 투자로 자금 이동...",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=286480",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dividend Shares From Impending Deposit Interest",
+      "term_ko": "임박 예금이자에서 배당주"
     },
     {
-      "term": "Diagnosing game improvement",
-      "term_ko": "경기 개선 진단",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경기 개선 진단",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KDI, 2개월 연속 '경기 개선' 진단···건설업 부진은 장기화",
-              "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=337545"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B8%B0%20%EA%B0%9C%EC%84%A0%20%EC%A7%84%EB%8B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B8%B0%20%EA%B0%9C%EC%84%A0%20%EC%A7%84%EB%8B%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "KDI, 2개월 연속 '경기 개선' 진단···건설업 부진은 장기화",
-          "summary": "",
-          "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=337545",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Diagnosing Game Improvement",
+      "term_ko": "경기 개선 진단"
     },
     {
-      "term": "The construction slump is prolonged",
-      "term_ko": "건설업 부진은 장기화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "건설업 부진은 장기화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KDI, 2개월 연속 '경기 개선' 진단···건설업 부진은 장기화",
-              "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=337545"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B4%EC%84%A4%EC%97%85%20%EB%B6%80%EC%A7%84%EC%9D%80%20%EC%9E%A5%EA%B8%B0%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B4%EC%84%A4%EC%97%85%20%EB%B6%80%EC%A7%84%EC%9D%80%20%EC%9E%A5%EA%B8%B0%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "KDI, 2개월 연속 '경기 개선' 진단···건설업 부진은 장기화",
-          "summary": "",
-          "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=337545",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Construction Slump Is Prolonged",
+      "term_ko": "건설업 부진은 장기화"
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대",
-      "significance_score": 322,
-      "mentions": 200,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-03",
-              "timestamp": 1764687600000,
-              "value": 58.33333
-            },
-            {
-              "period": "2025-12-04",
-              "timestamp": 1764774000000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-05",
-              "timestamp": 1764860400000,
-              "value": 41.66666
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "FOMC 앞두고 美 금리 인하 기대 ↑...원·달러 고환율 진정되나",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=286476"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "FOMC 앞두고 美 금리 인하 기대 ↑...원·달러 고환율 진정되나",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=286476",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 200,
-        "weekly_average_volume": 66.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.025413,
-        "time_weight": 0.011412,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764860400000
-      }
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대"
     },
     {
-      "term": "The dollar's high exchange rate calms down",
-      "term_ko": "달러 고환율 진정되나",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 고환율 진정되나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "FOMC 앞두고 美 금리 인하 기대 ↑...원·달러 고환율 진정되나",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=286476"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%84%EC%A0%95%EB%90%98%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%84%EC%A0%95%EB%90%98%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "FOMC 앞두고 美 금리 인하 기대 ↑...원·달러 고환율 진정되나",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=286476",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Dollar's High Exchange Rate Calms Down",
+      "term_ko": "달러 고환율 진정되나"
     },
     {
-      "term": "Loan rates even when the base rate is frozen",
-      "term_ko": "기준금리 동결에도 대출금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기준금리 동결에도 대출금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "기준금리 동결에도 대출금리 '훌쩍'…대출 한파 내년까지 이어질까",
-              "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=129087"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%EC%97%90%EB%8F%84%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%EC%97%90%EB%8F%84%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 동결에도 대출금리 '훌쩍'…대출 한파 내년까지 이어질까",
-          "summary": "",
-          "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=129087",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Loan Rates Even When the Base Rate Is Frozen",
+      "term_ko": "기준금리 동결에도 대출금리"
     },
     {
       "term": "Lend a Hand Cold Wave",
-      "term_ko": "훌쩍 대출 한파",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "훌쩍 대출 한파",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "기준금리 동결에도 대출금리 '훌쩍'…대출 한파 내년까지 이어질까",
-              "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=129087"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%8C%EC%A9%8D%20%EB%8C%80%EC%B6%9C%20%ED%95%9C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%8C%EC%A9%8D%20%EB%8C%80%EC%B6%9C%20%ED%95%9C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 동결에도 대출금리 '훌쩍'…대출 한파 내년까지 이어질까",
-          "summary": "",
-          "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=129087",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "훌쩍 대출 한파"
     },
     {
-      "term": "U.S FOMC Meeting",
-      "term_ko": "미국 FOMC 회의",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S FOMC Meeting",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Kospi slips below 4,100 as investors caution ahead of U.S. FOMC meeting",
-              "link": "https://n.news.naver.com/mnews/article/009/0005602449?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20FOMC%20Meeting",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20FOMC%20Meeting"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi slips below 4,100 as investors caution ahead of U.S. FOMC meeting",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005602449?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Fomc Meeting",
+      "term_ko": "미국 FOMC 회의"
     },
     {
-      "term": "5 days in New York",
-      "term_ko": "5일 뉴욕",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5일 뉴욕",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9D%BC%20%EB%89%B4%EC%9A%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9D%BC%20%EB%89%B4%EC%9A%95"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "5 Days in New York",
+      "term_ko": "5일 뉴욕"
     },
     {
-      "term": "Exit review",
-      "term_ko": "퇴사 검토",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "퇴사 검토",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-              "link": "https://www.newspim.com/news/view/20251208000023"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%87%B4%EC%82%AC%20%EA%B2%80%ED%86%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%87%B4%EC%82%AC%20%EA%B2%80%ED%86%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] '임원 이탈 확산' 애플, 칩 총괄도 퇴사 검토",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251208000023",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exit Review",
+      "term_ko": "퇴사 검토"
     },
     {
-      "term": "Rise history",
-      "term_ko": "상승 기록",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 기록",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%A1%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%A1%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 5일] 뉴욕 증시, 주요 지수 소폭 상승 기록",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195175",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rise History",
+      "term_ko": "상승 기록"
     },
     {
-      "term": "You need to preempt",
-      "term_ko": "종목 선점해야",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "종목 선점해야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금리인하보다 점도표 주목…증권가 \"매출증가율 높은 종목 선점해야\"",
-              "link": "https://n.news.naver.com/mnews/article/008/0005288840?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A2%85%EB%AA%A9%20%EC%84%A0%EC%A0%90%ED%95%B4%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A2%85%EB%AA%A9%20%EC%84%A0%EC%A0%90%ED%95%B4%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "금리인하보다 점도표 주목…증권가 \"매출증가율 높은 종목 선점해야\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005288840?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "You Need to Preempt",
+      "term_ko": "종목 선점해야"
     },
     {
-      "term": "Funding with investments",
-      "term_ko": "투자로 자금",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자로 자금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'배당소득 분리과세' 시행 임박…예금이자에서 배당주 투자로 자금 이동...",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=286480"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%EB%A1%9C%20%EC%9E%90%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%EB%A1%9C%20%EC%9E%90%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "'배당소득 분리과세' 시행 임박…예금이자에서 배당주 투자로 자금 이동...",
-          "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=286480",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Funding with Investments",
+      "term_ko": "투자로 자금"
     },
     {
-      "term": "Will it last until next year",
-      "term_ko": "내년까지 이어질까",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "내년까지 이어질까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "기준금리 동결에도 대출금리 '훌쩍'…대출 한파 내년까지 이어질까",
-              "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=129087"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%85%84%EA%B9%8C%EC%A7%80%20%EC%9D%B4%EC%96%B4%EC%A7%88%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%85%84%EA%B9%8C%EC%A7%80%20%EC%9D%B4%EC%96%B4%EC%A7%88%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 동결에도 대출금리 '훌쩍'…대출 한파 내년까지 이어질까",
-          "summary": "",
-          "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=129087",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Will It Last Until Next Year",
+      "term_ko": "내년까지 이어질까"
     },
     {
-      "term": "Maximum attestation",
-      "term_ko": "최대 입증",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최대 입증",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "TIGER 미국나스닥100, 순자산 7조 돌파로 아시아 최대 입증",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=473279"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%20%EC%9E%85%EC%A6%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%20%EC%9E%85%EC%A6%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "TIGER 미국나스닥100, 순자산 7조 돌파로 아시아 최대 입증",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=473279",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Maximum Attestation",
+      "term_ko": "최대 입증"
     },
     {
       "term": "Futures Hold Steady",
-      "term_ko": "선물은 안정적으로 유지",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Hold Steady",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Hold Steady Ahead of Key Fed Decision",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Hold-Steady-Ahead-of-Key-Fed-Decision-1728004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Hold%20Steady",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Hold%20Steady"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Hold Steady Ahead of Key Fed Decision",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Hold-Steady-Ahead-of-Key-Fed-Decision-1728004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물은 안정적으로 유지"
     },
     {
       "term": "Key Fed Decision",
-      "term_ko": "연준의 주요 결정",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Key Fed Decision",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-08T15:36:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Hold Steady Ahead of Key Fed Decision",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Hold-Steady-Ahead-of-Key-Fed-Decision-1728004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Key%20Fed%20Decision",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Key%20Fed%20Decision"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Hold Steady Ahead of Key Fed Decision",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Hold-Steady-Ahead-of-Key-Fed-Decision-1728004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준의 주요 결정"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-08T06:37:41.321Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-08T15:36:12+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Kdi for 2 Consecutive Months",
+      "term_ko": "KDI 2개월 연속"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-08T15:36:12+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-08T15:36:12+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Tiger Us Nasdaq100 Net Worth",
+      "term_ko": "TIGER 미국나스닥100 순자산"
+    },
+    {
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
+    },
+    {
+      "term": "Us Ahead of Fomc",
+      "term_ko": "FOMC 앞두고 美"
+    },
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Asia Tops 7 Trillion",
+      "term_ko": "7조 돌파로 아시아"
+    },
+    {
+      "term": "Spreading Executive Churn",
+      "term_ko": "임원 이탈 확산"
+    },
+    {
+      "term": "Us Stocks Buffett Abandoned",
+      "term_ko": "미국주식 버핏이 버린"
+    },
+    {
+      "term": "The Upside of Ulta Beauty",
+      "term_ko": "울타 뷰티의 반전"
+    },
+    {
+      "term": "Major Indices Moderate",
+      "term_ko": "주요 지수 소폭"
+    },
+    {
+      "term": "Catching the Signal to Change",
+      "term_ko": "대전환 신호 포착"
+    },
+    {
+      "term": "Watch the Dot Plot, Not the Rate Cut",
+      "term_ko": "금리인하보다 점도표 주목"
+    },
+    {
+      "term": "Implement Dividend Income Separation Taxation",
+      "term_ko": "배당소득 분리과세 시행"
+    },
+    {
+      "term": "Dividend Shares From Impending Deposit Interest",
+      "term_ko": "임박 예금이자에서 배당주"
+    },
+    {
+      "term": "Diagnosing Game Improvement",
+      "term_ko": "경기 개선 진단"
+    },
+    {
+      "term": "The Construction Slump Is Prolonged",
+      "term_ko": "건설업 부진은 장기화"
+    },
+    {
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대"
+    },
+    {
+      "term": "The Dollar's High Exchange Rate Calms Down",
+      "term_ko": "달러 고환율 진정되나"
+    },
+    {
+      "term": "Loan Rates Even When the Base Rate Is Frozen",
+      "term_ko": "기준금리 동결에도 대출금리"
+    },
+    {
+      "term": "Lend a Hand Cold Wave",
+      "term_ko": "훌쩍 대출 한파"
+    },
+    {
+      "term": "U.s Fomc Meeting",
+      "term_ko": "미국 FOMC 회의"
+    },
+    {
+      "term": "5 Days in New York",
+      "term_ko": "5일 뉴욕"
+    },
+    {
+      "term": "Exit Review",
+      "term_ko": "퇴사 검토"
+    },
+    {
+      "term": "Rise History",
+      "term_ko": "상승 기록"
+    },
+    {
+      "term": "You Need to Preempt",
+      "term_ko": "종목 선점해야"
+    },
+    {
+      "term": "Funding with Investments",
+      "term_ko": "투자로 자금"
+    },
+    {
+      "term": "Will It Last Until Next Year",
+      "term_ko": "내년까지 이어질까"
+    },
+    {
+      "term": "Maximum Attestation",
+      "term_ko": "최대 입증"
+    },
+    {
+      "term": "Futures Hold Steady",
+      "term_ko": "선물은 안정적으로 유지"
+    },
+    {
+      "term": "Key Fed Decision",
+      "term_ko": "연준의 주요 결정"
+    }
+  ],
+  "translations": {
+    "Kdi for 2 Consecutive Months": {
+      "en": "Kdi for 2 Consecutive Months",
+      "ko": "KDI 2개월 연속",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Tiger Us Nasdaq100 Net Worth": {
+      "en": "Tiger Us Nasdaq100 Net Worth",
+      "ko": "TIGER 미국나스닥100 순자산",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "The Story of Ai in Stocks": {
+      "en": "The Story of Ai in Stocks",
+      "ko": "AI의 종목 이야기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Us Ahead of Fomc": {
+      "en": "Us Ahead of Fomc",
+      "ko": "FOMC 앞두고 美",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Asia Tops 7 Trillion": {
+      "en": "Asia Tops 7 Trillion",
+      "ko": "7조 돌파로 아시아",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Spreading Executive Churn": {
+      "en": "Spreading Executive Churn",
+      "ko": "임원 이탈 확산",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Us Stocks Buffett Abandoned": {
+      "en": "Us Stocks Buffett Abandoned",
+      "ko": "미국주식 버핏이 버린",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "The Upside of Ulta Beauty": {
+      "en": "The Upside of Ulta Beauty",
+      "ko": "울타 뷰티의 반전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Major Indices Moderate": {
+      "en": "Major Indices Moderate",
+      "ko": "주요 지수 소폭",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Catching the Signal to Change": {
+      "en": "Catching the Signal to Change",
+      "ko": "대전환 신호 포착",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Watch the Dot Plot, Not the Rate Cut": {
+      "en": "Watch the Dot Plot, Not the Rate Cut",
+      "ko": "금리인하보다 점도표 주목",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Implement Dividend Income Separation Taxation": {
+      "en": "Implement Dividend Income Separation Taxation",
+      "ko": "배당소득 분리과세 시행",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Dividend Shares From Impending Deposit Interest": {
+      "en": "Dividend Shares From Impending Deposit Interest",
+      "ko": "임박 예금이자에서 배당주",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "Diagnosing Game Improvement": {
+      "en": "Diagnosing Game Improvement",
+      "ko": "경기 개선 진단",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.895Z"
+    },
+    "The Construction Slump Is Prolonged": {
+      "en": "The Construction Slump Is Prolonged",
+      "ko": "건설업 부진은 장기화",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Rate Cut Expectations": {
+      "en": "Rate Cut Expectations",
+      "ko": "금리 인하 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "The Dollar's High Exchange Rate Calms Down": {
+      "en": "The Dollar's High Exchange Rate Calms Down",
+      "ko": "달러 고환율 진정되나",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Loan Rates Even When the Base Rate Is Frozen": {
+      "en": "Loan Rates Even When the Base Rate Is Frozen",
+      "ko": "기준금리 동결에도 대출금리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Lend a Hand Cold Wave": {
+      "en": "Lend a Hand Cold Wave",
+      "ko": "훌쩍 대출 한파",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "U.s Fomc Meeting": {
+      "en": "U.s Fomc Meeting",
+      "ko": "미국 FOMC 회의",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "5 Days in New York": {
+      "en": "5 Days in New York",
+      "ko": "5일 뉴욕",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Exit Review": {
+      "en": "Exit Review",
+      "ko": "퇴사 검토",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Rise History": {
+      "en": "Rise History",
+      "ko": "상승 기록",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "You Need to Preempt": {
+      "en": "You Need to Preempt",
+      "ko": "종목 선점해야",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Funding with Investments": {
+      "en": "Funding with Investments",
+      "ko": "투자로 자금",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Will It Last Until Next Year": {
+      "en": "Will It Last Until Next Year",
+      "ko": "내년까지 이어질까",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Maximum Attestation": {
+      "en": "Maximum Attestation",
+      "ko": "최대 입증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Futures Hold Steady": {
+      "en": "Futures Hold Steady",
+      "ko": "선물은 안정적으로 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
+    },
+    "Key Fed Decision": {
+      "en": "Key Fed Decision",
+      "ko": "연준의 주요 결정",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-08T12:40:57.896Z"
     }
   }
 }
