@@ -1,1162 +1,439 @@
 {
+  "generatedAt": "2025-12-09T12:42:15.642Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-09",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "MOU worth $10 billion",
-      "term_ko": "100억원 규모 MOU",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "100억원 규모 MOU",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모 MOU 체결",
-              "link": "https://www.bntnews.co.kr/article/view/bnt202512090155"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=100%EC%96%B5%EC%9B%90%20%EA%B7%9C%EB%AA%A8%20MOU",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=100%EC%96%B5%EC%9B%90%20%EA%B7%9C%EB%AA%A8%20MOU"
-      },
-      "top_headlines": [
-        {
-          "title": "숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모 MOU 체결",
-          "summary": "",
-          "link": "https://www.bntnews.co.kr/article/view/bnt202512090155",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mou Worth $10 Billion",
+      "term_ko": "100억원 규모 MOU"
     },
     {
-      "term": "VIX in flat territory",
-      "term_ko": "보합세 속 VIX",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보합세 속 VIX",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EC%86%8D%20VIX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EC%86%8D%20VIX"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Vix in Flat Territory",
+      "term_ko": "보합세 속 VIX"
     },
     {
-      "term": "CryptocurrenciesCoinRipple ETF",
-      "term_ko": "암호화폐코인 리플 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "암호화폐코인 리플 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-              "link": "https://www.wikitree.co.kr/articles/1101073"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%EC%BD%94%EC%9D%B8%20%EB%A6%AC%ED%94%8C%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%EC%BD%94%EC%9D%B8%20%EB%A6%AC%ED%94%8C%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1101073",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cryptocurrenciescoinripple Etf",
+      "term_ko": "암호화폐코인 리플 ETF"
     },
     {
-      "term": "Leader KB Financial Robust",
-      "term_ko": "리더 KB금융 견고한",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리더 KB금융 견고한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EB%8D%94%20KB%EA%B8%88%EC%9C%B5%20%EA%B2%AC%EA%B3%A0%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EB%8D%94%20KB%EA%B8%88%EC%9C%B5%20%EA%B2%AC%EA%B3%A0%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Leader Kb Financial Robust",
+      "term_ko": "리더 KB금융 견고한"
     },
     {
-      "term": "KOSDAQ is no longer Part 2",
-      "term_ko": "코스닥은 더이상 2부",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스닥은 더이상 2부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-              "link": "http://www.breaknews.com/1167769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%EB%8B%A5%EC%9D%80%20%EB%8D%94%EC%9D%B4%EC%83%81%202%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%EB%8B%A5%EC%9D%80%20%EB%8D%94%EC%9D%B4%EC%83%81%202%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-          "summary": "",
-          "link": "http://www.breaknews.com/1167769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kosdaq Is No Longer Part 2",
+      "term_ko": "코스닥은 더이상 2부"
     },
     {
-      "term": "Ecosystem opens 10 billion won",
-      "term_ko": "생태계 연다 100억원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "생태계 연다 100억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-              "link": "https://www.nc.press/news/articleView.html?idxno=601011"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%ED%83%9C%EA%B3%84%20%EC%97%B0%EB%8B%A4%20100%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%ED%83%9C%EA%B3%84%20%EC%97%B0%EB%8B%A4%20100%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-          "summary": "",
-          "link": "https://www.nc.press/news/articleView.html?idxno=601011",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ecosystem Opens 10 Billion Won",
+      "term_ko": "생태계 연다 100억원"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "8 Days US Major",
-      "term_ko": "8일 미국 주요",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "8일 미국 주요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "8 Days Us Major",
+      "term_ko": "8일 미국 주요"
     },
     {
-      "term": "flocked to 481 billion last month",
-      "term_ko": "몰려간다 지난달 4801억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "몰려간다 지난달 4801억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
-              "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%A0%A4%EA%B0%84%EB%8B%A4%20%EC%A7%80%EB%82%9C%EB%8B%AC%204801%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%A0%A4%EA%B0%84%EB%8B%A4%20%EC%A7%80%EB%82%9C%EB%8B%AC%204801%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Flocked to 481 Billion Last Month",
+      "term_ko": "몰려간다 지난달 4801억"
     },
     {
       "term": "Top International Financial News of the Day09",
-      "term_ko": "오전 주요 국제금융뉴스09일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오전 주요 국제금융뉴스09일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오전 주요 국제금융뉴스](09일)",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4387955"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A409%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A409%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[오전 주요 국제금융뉴스](09일)",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4387955",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오전 주요 국제금융뉴스09일"
     },
     {
-      "term": "New Universe, a short drama production company",
-      "term_ko": "숏드라마 제작사 뉴유니버스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "숏드라마 제작사 뉴유니버스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모 MOU 체결",
-              "link": "https://www.bntnews.co.kr/article/view/bnt202512090155"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%8F%EB%93%9C%EB%9D%BC%EB%A7%88%20%EC%A0%9C%EC%9E%91%EC%82%AC%20%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%8F%EB%93%9C%EB%9D%BC%EB%A7%88%20%EC%A0%9C%EC%9E%91%EC%82%AC%20%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모 MOU 체결",
-          "summary": "",
-          "link": "https://www.bntnews.co.kr/article/view/bnt202512090155",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "New Universe, a Short Drama Production Company",
+      "term_ko": "숏드라마 제작사 뉴유니버스"
     },
     {
-      "term": "Not a league, standalone",
-      "term_ko": "리그 아냐 독립운영",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리그 아냐 독립운영",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-              "link": "http://www.breaknews.com/1167769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EA%B7%B8%20%EC%95%84%EB%83%90%20%EB%8F%85%EB%A6%BD%EC%9A%B4%EC%98%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EA%B7%B8%20%EC%95%84%EB%83%90%20%EB%8F%85%EB%A6%BD%EC%9A%B4%EC%98%81"
-      },
-      "top_headlines": [
-        {
-          "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-          "summary": "",
-          "link": "http://www.breaknews.com/1167769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Not a League, Standalone",
+      "term_ko": "리그 아냐 독립운영"
     },
     {
-      "term": "NewUniverse US Nasdaq",
-      "term_ko": "뉴유니버스 美 나스닥",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴유니버스 美 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-              "link": "https://www.nc.press/news/articleView.html?idxno=601011"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4%20%E7%BE%8E%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4%20%E7%BE%8E%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-          "summary": "",
-          "link": "https://www.nc.press/news/articleView.html?idxno=601011",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Newuniverse Us Nasdaq",
+      "term_ko": "뉴유니버스 美 나스닥"
     },
     {
-      "term": "K-Short with a public company",
-      "term_ko": "상장사 손잡고 K-숏드",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상장사 손잡고 K-숏드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-              "link": "https://www.nc.press/news/articleView.html?idxno=601011"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%EC%82%AC%20%EC%86%90%EC%9E%A1%EA%B3%A0%20K-%EC%88%8F%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%EC%82%AC%20%EC%86%90%EC%9E%A1%EA%B3%A0%20K-%EC%88%8F%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-          "summary": "",
-          "link": "https://www.nc.press/news/articleView.html?idxno=601011",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "K-short with a Public Company",
+      "term_ko": "상장사 손잡고 K-숏드"
     },
     {
-      "term": "Large inflows of funds",
-      "term_ko": "대규모 자금 유입",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대규모 자금 유입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-              "link": "https://www.wikitree.co.kr/articles/1101073"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%9E%90%EA%B8%88%20%EC%9C%A0%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%9E%90%EA%B8%88%20%EC%9C%A0%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1101073",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Large Inflows of Funds",
+      "term_ko": "대규모 자금 유입"
     },
     {
-      "term": "Drops that offset effects",
-      "term_ko": "효과마저 상쇄한 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "효과마저 상쇄한 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-              "link": "https://www.wikitree.co.kr/articles/1101073"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%A8%EA%B3%BC%EB%A7%88%EC%A0%80%20%EC%83%81%EC%87%84%ED%95%9C%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%A8%EA%B3%BC%EB%A7%88%EC%A0%80%20%EC%83%81%EC%87%84%ED%95%9C%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1101073",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Drops That Offset Effects",
+      "term_ko": "효과마저 상쇄한 하락"
     },
     {
       "term": "Ineligible Hanwha Total Energies",
-      "term_ko": "투자 부적격 한화토탈에너지스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자 부적격 한화토탈에너지스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'투자 부적격' 한화토탈에너지스, 신종자본증권 유동화...증권사 '신용도...",
-              "link": "https://n.news.naver.com/mnews/article/014/0005446398?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EB%B6%80%EC%A0%81%EA%B2%A9%20%ED%95%9C%ED%99%94%ED%86%A0%ED%83%88%EC%97%90%EB%84%88%EC%A7%80%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EB%B6%80%EC%A0%81%EA%B2%A9%20%ED%95%9C%ED%99%94%ED%86%A0%ED%83%88%EC%97%90%EB%84%88%EC%A7%80%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'투자 부적격' 한화토탈에너지스, 신종자본증권 유동화...증권사 '신용도...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005446398?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자 부적격 한화토탈에너지스"
     },
     {
-      "term": "Earnings plus future growth",
-      "term_ko": "실적에 미래 성장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "실적에 미래 성장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%A0%81%EC%97%90%20%EB%AF%B8%EB%9E%98%20%EC%84%B1%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%A0%81%EC%97%90%20%EB%AF%B8%EB%9E%98%20%EC%84%B1%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Earnings Plus Future Growth",
+      "term_ko": "실적에 미래 성장"
     },
     {
-      "term": "Brokerage firm alternative investment strategies",
-      "term_ko": "증권사 대체투자 전략",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증권사 대체투자 전략",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
-              "link": "https://www.viva100.com/article/20251209500926"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EB%8C%80%EC%B2%B4%ED%88%AC%EC%9E%90%20%EC%A0%84%EB%9E%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EB%8C%80%EC%B2%B4%ED%88%AC%EC%9E%90%20%EC%A0%84%EB%9E%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20251209500926",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Brokerage Firm Alternative Investment Strategies",
+      "term_ko": "증권사 대체투자 전략"
     },
     {
-      "term": "Focus on infrastructure energy",
-      "term_ko": "인프라 에너지로 중심",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인프라 에너지로 중심",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
-              "link": "https://www.viva100.com/article/20251209500926"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%94%84%EB%9D%BC%20%EC%97%90%EB%84%88%EC%A7%80%EB%A1%9C%20%EC%A4%91%EC%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%94%84%EB%9D%BC%20%EC%97%90%EB%84%88%EC%A7%80%EB%A1%9C%20%EC%A4%91%EC%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20251209500926",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Focus on Infrastructure Energy",
+      "term_ko": "인프라 에너지로 중심"
     },
     {
-      "term": "Adobe Strengthens AI",
-      "term_ko": "Adobe, AI 강화",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Adobe Strengthens AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-              "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Adobe%20Strengthens%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Adobe%20Strengthens%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-          "summary": "",
-          "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Adobe Strengthens Ai",
+      "term_ko": "Adobe, AI 강화"
     },
     {
-      "term": "Net Short → 66.2 billion this month",
-      "term_ko": "순매도→이달 662억",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순매도→이달 662억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
-              "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EB%A7%A4%EB%8F%84%E2%86%92%EC%9D%B4%EB%8B%AC%20662%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EB%A7%A4%EB%8F%84%E2%86%92%EC%9D%B4%EB%8B%AC%20662%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Net Short → 66.2 Billion This Month",
+      "term_ko": "순매도→이달 662억"
     },
     {
       "term": "Q4 Earnings Says",
-      "term_ko": "4분기 실적 발표",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Q4 Earnings Says",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-              "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Q4%20Earnings%20Says",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Q4%20Earnings%20Says"
-      },
-      "top_headlines": [
-        {
-          "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-          "summary": "",
-          "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "4분기 실적 발표"
     },
     {
-      "term": "Rep. Kim Tae-Nyeon",
-      "term_ko": "김태년 의원",
-      "significance_score": 280,
-      "mentions": 460,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김태년 의원",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-02",
-              "timestamp": 1764601200000,
-              "value": 50
-            },
-            {
-              "period": "2025-12-03",
-              "timestamp": 1764687600000,
-              "value": 90
-            },
-            {
-              "period": "2025-12-04",
-              "timestamp": 1764774000000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-05",
-              "timestamp": 1764860400000,
-              "value": 50
-            },
-            {
-              "period": "2025-12-06",
-              "timestamp": 1764946800000,
-              "value": 80
-            },
-            {
-              "period": "2025-12-07",
-              "timestamp": 1765033200000,
-              "value": 60
-            },
-            {
-              "period": "2025-12-08",
-              "timestamp": 1765119600000,
-              "value": 80
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-              "link": "http://www.breaknews.com/1167769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%ED%83%9C%EB%85%84%20%EC%9D%98%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%ED%83%9C%EB%85%84%20%EC%9D%98%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-          "summary": "",
-          "link": "http://www.breaknews.com/1167769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 460,
-        "weekly_average_volume": 76.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014266,
-        "time_weight": 0.025248,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1765119600000
-      }
+      "term": "Rep. Kim Tae-nyeon",
+      "term_ko": "김태년 의원"
     },
     {
       "term": "Late Tues Morning",
-      "term_ko": "화요일 늦은 오전",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Late Tues Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
-              "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Late%20Tues%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Late%20Tues%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "화요일 늦은 오전"
     },
     {
       "term": "Strategy Ahead",
-      "term_ko": "앞으로의 전략",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strategy Ahead",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-              "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strategy%20Ahead",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strategy%20Ahead"
-      },
-      "top_headlines": [
-        {
-          "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-          "summary": "",
-          "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "앞으로의 전략"
     },
     {
       "term": "Fed Meeting",
-      "term_ko": "연준 회의",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Meeting",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
-              "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Meeting",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Meeting"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 회의"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-09T06:36:33.120Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-09T15:35:22+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Mou Worth $10 Billion",
+      "term_ko": "100억원 규모 MOU"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-09T15:35:22+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-09T15:35:22+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Vix in Flat Territory",
+      "term_ko": "보합세 속 VIX"
+    },
+    {
+      "term": "Cryptocurrenciescoinripple Etf",
+      "term_ko": "암호화폐코인 리플 ETF"
+    },
+    {
+      "term": "Leader Kb Financial Robust",
+      "term_ko": "리더 KB금융 견고한"
+    },
+    {
+      "term": "Kosdaq Is No Longer Part 2",
+      "term_ko": "코스닥은 더이상 2부"
+    },
+    {
+      "term": "Ecosystem Opens 10 Billion Won",
+      "term_ko": "생태계 연다 100억원"
+    },
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "8 Days Us Major",
+      "term_ko": "8일 미국 주요"
+    },
+    {
+      "term": "Flocked to 481 Billion Last Month",
+      "term_ko": "몰려간다 지난달 4801억"
+    },
+    {
+      "term": "Top International Financial News of the Day09",
+      "term_ko": "오전 주요 국제금융뉴스09일"
+    },
+    {
+      "term": "New Universe, a Short Drama Production Company",
+      "term_ko": "숏드라마 제작사 뉴유니버스"
+    },
+    {
+      "term": "Not a League, Standalone",
+      "term_ko": "리그 아냐 독립운영"
+    },
+    {
+      "term": "Newuniverse Us Nasdaq",
+      "term_ko": "뉴유니버스 美 나스닥"
+    },
+    {
+      "term": "K-short with a Public Company",
+      "term_ko": "상장사 손잡고 K-숏드"
+    },
+    {
+      "term": "Large Inflows of Funds",
+      "term_ko": "대규모 자금 유입"
+    },
+    {
+      "term": "Drops That Offset Effects",
+      "term_ko": "효과마저 상쇄한 하락"
+    },
+    {
+      "term": "Ineligible Hanwha Total Energies",
+      "term_ko": "투자 부적격 한화토탈에너지스"
+    },
+    {
+      "term": "Earnings Plus Future Growth",
+      "term_ko": "실적에 미래 성장"
+    },
+    {
+      "term": "Brokerage Firm Alternative Investment Strategies",
+      "term_ko": "증권사 대체투자 전략"
+    },
+    {
+      "term": "Focus on Infrastructure Energy",
+      "term_ko": "인프라 에너지로 중심"
+    },
+    {
+      "term": "Adobe Strengthens Ai",
+      "term_ko": "Adobe, AI 강화"
+    },
+    {
+      "term": "Net Short → 66.2 Billion This Month",
+      "term_ko": "순매도→이달 662억"
+    },
+    {
+      "term": "Q4 Earnings Says",
+      "term_ko": "4분기 실적 발표"
+    },
+    {
+      "term": "Rep. Kim Tae-nyeon",
+      "term_ko": "김태년 의원"
+    },
+    {
+      "term": "Late Tues Morning",
+      "term_ko": "화요일 늦은 오전"
+    },
+    {
+      "term": "Strategy Ahead",
+      "term_ko": "앞으로의 전략"
+    },
+    {
+      "term": "Fed Meeting",
+      "term_ko": "연준 회의"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Mou Worth $10 Billion": {
+      "en": "Mou Worth $10 Billion",
+      "ko": "100억원 규모 MOU",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Vix in Flat Territory": {
+      "en": "Vix in Flat Territory",
+      "ko": "보합세 속 VIX",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Cryptocurrenciescoinripple Etf": {
+      "en": "Cryptocurrenciescoinripple Etf",
+      "ko": "암호화폐코인 리플 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Leader Kb Financial Robust": {
+      "en": "Leader Kb Financial Robust",
+      "ko": "리더 KB금융 견고한",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Kosdaq Is No Longer Part 2": {
+      "en": "Kosdaq Is No Longer Part 2",
+      "ko": "코스닥은 더이상 2부",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Ecosystem Opens 10 Billion Won": {
+      "en": "Ecosystem Opens 10 Billion Won",
+      "ko": "생태계 연다 100억원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "8 Days Us Major": {
+      "en": "8 Days Us Major",
+      "ko": "8일 미국 주요",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Flocked to 481 Billion Last Month": {
+      "en": "Flocked to 481 Billion Last Month",
+      "ko": "몰려간다 지난달 4801억",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Top International Financial News of the Day09": {
+      "en": "Top International Financial News of the Day09",
+      "ko": "오전 주요 국제금융뉴스09일",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "New Universe, a Short Drama Production Company": {
+      "en": "New Universe, a Short Drama Production Company",
+      "ko": "숏드라마 제작사 뉴유니버스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Not a League, Standalone": {
+      "en": "Not a League, Standalone",
+      "ko": "리그 아냐 독립운영",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Newuniverse Us Nasdaq": {
+      "en": "Newuniverse Us Nasdaq",
+      "ko": "뉴유니버스 美 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "K-short with a Public Company": {
+      "en": "K-short with a Public Company",
+      "ko": "상장사 손잡고 K-숏드",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Large Inflows of Funds": {
+      "en": "Large Inflows of Funds",
+      "ko": "대규모 자금 유입",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Drops That Offset Effects": {
+      "en": "Drops That Offset Effects",
+      "ko": "효과마저 상쇄한 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Ineligible Hanwha Total Energies": {
+      "en": "Ineligible Hanwha Total Energies",
+      "ko": "투자 부적격 한화토탈에너지스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Earnings Plus Future Growth": {
+      "en": "Earnings Plus Future Growth",
+      "ko": "실적에 미래 성장",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Brokerage Firm Alternative Investment Strategies": {
+      "en": "Brokerage Firm Alternative Investment Strategies",
+      "ko": "증권사 대체투자 전략",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Focus on Infrastructure Energy": {
+      "en": "Focus on Infrastructure Energy",
+      "ko": "인프라 에너지로 중심",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Adobe Strengthens Ai": {
+      "en": "Adobe Strengthens Ai",
+      "ko": "Adobe, AI 강화",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Net Short → 66.2 Billion This Month": {
+      "en": "Net Short → 66.2 Billion This Month",
+      "ko": "순매도→이달 662억",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Q4 Earnings Says": {
+      "en": "Q4 Earnings Says",
+      "ko": "4분기 실적 발표",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Rep. Kim Tae-nyeon": {
+      "en": "Rep. Kim Tae-nyeon",
+      "ko": "김태년 의원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Late Tues Morning": {
+      "en": "Late Tues Morning",
+      "ko": "화요일 늦은 오전",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Strategy Ahead": {
+      "en": "Strategy Ahead",
+      "ko": "앞으로의 전략",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Fed Meeting": {
+      "en": "Fed Meeting",
+      "ko": "연준 회의",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-09T12:42:15.642Z"
     }
   }
 }
