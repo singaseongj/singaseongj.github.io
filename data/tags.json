@@ -1,8 +1,46 @@
 {
   "date": "2025-12-09",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
+    {
+      "term": "10 billion won MOU with listed company",
+      "term_ko": "상장사와 100억원 MOU",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "상장사와 100억원 MOU",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-09T21:44:22+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[스톡 브리핑] 뉴유니버스, 나스닥 상장사와 100억원 MOU 체결",
+              "link": "https://enter.etoday.co.kr/news/view/289344"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%EC%82%AC%EC%99%80%20100%EC%96%B5%EC%9B%90%20MOU",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%EC%82%AC%EC%99%80%20100%EC%96%B5%EC%9B%90%20MOU"
+      },
+      "top_headlines": [
+        {
+          "title": "[스톡 브리핑] 뉴유니버스, 나스닥 상장사와 100억원 MOU 체결",
+          "summary": "",
+          "link": "https://enter.etoday.co.kr/news/view/289344",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
     {
       "term": "MOU worth $10 billion",
       "term_ko": "100억원 규모 MOU",
@@ -13,9 +51,10 @@
         "query": "100억원 규모 MOU",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -41,36 +80,37 @@
       ]
     },
     {
-      "term": "VIX in flat territory",
-      "term_ko": "보합세 속 VIX",
+      "term": "Enhanced Foreign Exchange Receipts TF",
+      "term_ko": "강화 외환수급 TF",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "보합세 속 VIX",
+        "query": "강화 외환수급 TF",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198"
+              "title": "기재부, 고환율 대응 강화…외환수급 TF 가동",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=532285"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EC%86%8D%20VIX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EC%86%8D%20VIX"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%ED%99%94%20%EC%99%B8%ED%99%98%EC%88%98%EA%B8%89%20TF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%ED%99%94%20%EC%99%B8%ED%99%98%EC%88%98%EA%B8%89%20TF"
       },
       "top_headlines": [
         {
-          "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
+          "title": "기재부, 고환율 대응 강화…외환수급 TF 가동",
           "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=532285",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -78,110 +118,37 @@
       ]
     },
     {
-      "term": "CryptocurrenciesCoinRipple ETF",
-      "term_ko": "암호화폐코인 리플 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "암호화폐코인 리플 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-              "link": "https://www.wikitree.co.kr/articles/1101073"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%EC%BD%94%EC%9D%B8%20%EB%A6%AC%ED%94%8C%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%EC%BD%94%EC%9D%B8%20%EB%A6%AC%ED%94%8C%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1101073",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Leader KB Financial Robust",
-      "term_ko": "리더 KB금융 견고한",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리더 KB금융 견고한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EB%8D%94%20KB%EA%B8%88%EC%9C%B5%20%EA%B2%AC%EA%B3%A0%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EB%8D%94%20KB%EA%B8%88%EC%9C%B5%20%EA%B2%AC%EA%B3%A0%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "KOSDAQ is no longer Part 2",
-      "term_ko": "코스닥은 더이상 2부",
+      "term": "Global #1 Short Drama",
+      "term_ko": "글로벌 1위 숏드라마",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스닥은 더이상 2부",
+        "query": "글로벌 1위 숏드라마",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-              "link": "http://www.breaknews.com/1167769"
+              "title": "글로벌 1위 숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모...",
+              "link": "https://m.entertain.naver.com/article/144/0001085169"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%EB%8B%A5%EC%9D%80%20%EB%8D%94%EC%9D%B4%EC%83%81%202%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%EB%8B%A5%EC%9D%80%20%EB%8D%94%EC%9D%B4%EC%83%81%202%EB%B6%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%80%EB%A1%9C%EB%B2%8C%201%EC%9C%84%20%EC%88%8F%EB%93%9C%EB%9D%BC%EB%A7%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%80%EB%A1%9C%EB%B2%8C%201%EC%9C%84%20%EC%88%8F%EB%93%9C%EB%9D%BC%EB%A7%88"
       },
       "top_headlines": [
         {
-          "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
+          "title": "글로벌 1위 숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모...",
           "summary": "",
-          "link": "http://www.breaknews.com/1167769",
+          "link": "https://m.entertain.naver.com/article/144/0001085169",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -189,36 +156,37 @@
       ]
     },
     {
-      "term": "Ecosystem opens 10 billion won",
-      "term_ko": "생태계 연다 100억원",
+      "term": "Nasdaq-listed company and $100 million",
+      "term_ko": "나스닥 상장사와 100억원",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "생태계 연다 100억원",
+        "query": "나스닥 상장사와 100억원",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-              "link": "https://www.nc.press/news/articleView.html?idxno=601011"
+              "title": "글로벌 1위 숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모...",
+              "link": "https://m.entertain.naver.com/article/144/0001085169"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%ED%83%9C%EA%B3%84%20%EC%97%B0%EB%8B%A4%20100%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%ED%83%9C%EA%B3%84%20%EC%97%B0%EB%8B%A4%20100%EC%96%B5%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EC%82%AC%EC%99%80%20100%EC%96%B5%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EC%82%AC%EC%99%80%20100%EC%96%B5%EC%9B%90"
       },
       "top_headlines": [
         {
-          "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
+          "title": "글로벌 1위 숏드라마 제작사 뉴유니버스, 나스닥 상장사와 100억원 규모...",
           "summary": "",
-          "link": "https://www.nc.press/news/articleView.html?idxno=601011",
+          "link": "https://m.entertain.naver.com/article/144/0001085169",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,36 +194,37 @@
       ]
     },
     {
-      "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
+      "term": "Market price Bitcoin $90,000",
+      "term_ko": "시황 비트코인 9만달러",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
+        "query": "시황 비트코인 9만달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198"
+              "title": "[코인 시황] 비트코인 9만달러 턱걸이… 연준 회의 앞두고 '얇은 장세'에...",
+              "link": "https://www.newspim.com/news/view/20251209001074"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%209%EB%A7%8C%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%209%EB%A7%8C%EB%8B%AC%EB%9F%AC"
       },
       "top_headlines": [
         {
-          "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
+          "title": "[코인 시황] 비트코인 9만달러 턱걸이… 연준 회의 앞두고 '얇은 장세'에...",
           "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198",
+          "link": "https://www.newspim.com/news/view/20251209001074",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -263,36 +232,37 @@
       ]
     },
     {
-      "term": "8 Days US Major",
-      "term_ko": "8일 미국 주요",
-      "significance_score": 336,
+      "term": "Square Digital Globalization",
+      "term_ko": "사각 디지털 글로벌화",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "8일 미국 주요",
+        "query": "사각 디지털 글로벌화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198"
+              "title": "사각, '디지털 글로벌화 유공' 과기부장관 표창 수상",
+              "link": "https://n.news.naver.com/mnews/article/030/0003378848?sid=105"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EA%B0%81%20%EB%94%94%EC%A7%80%ED%84%B8%20%EA%B8%80%EB%A1%9C%EB%B2%8C%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EA%B0%81%20%EB%94%94%EC%A7%80%ED%84%B8%20%EA%B8%80%EB%A1%9C%EB%B2%8C%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "[미국 증시 브리핑 · 12월 8일] 미국 주요 지수 보합세 속 VIX 급등, 시장...",
+          "title": "사각, '디지털 글로벌화 유공' 과기부장관 표창 수상",
           "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195198",
+          "link": "https://n.news.naver.com/mnews/article/030/0003378848?sid=105",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -300,36 +270,37 @@
       ]
     },
     {
-      "term": "flocked to 481 billion last month",
-      "term_ko": "몰려간다 지난달 4801억",
-      "significance_score": 336,
+      "term": "Minister of Science and Technology Recognition",
+      "term_ko": "유공 과기부장관 표창",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "몰려간다 지난달 4801억",
+        "query": "유공 과기부장관 표창",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
-              "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101"
+              "title": "사각, '디지털 글로벌화 유공' 과기부장관 표창 수상",
+              "link": "https://n.news.naver.com/mnews/article/030/0003378848?sid=105"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%A0%A4%EA%B0%84%EB%8B%A4%20%EC%A7%80%EB%82%9C%EB%8B%AC%204801%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%A0%A4%EA%B0%84%EB%8B%A4%20%EC%A7%80%EB%82%9C%EB%8B%AC%204801%EC%96%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EA%B3%B5%20%EA%B3%BC%EA%B8%B0%EB%B6%80%EC%9E%A5%EA%B4%80%20%ED%91%9C%EC%B0%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EA%B3%B5%20%EA%B3%BC%EA%B8%B0%EB%B6%80%EC%9E%A5%EA%B4%80%20%ED%91%9C%EC%B0%BD"
       },
       "top_headlines": [
         {
-          "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
+          "title": "사각, '디지털 글로벌화 유공' 과기부장관 표창 수상",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/030/0003378848?sid=105",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +308,113 @@
       ]
     },
     {
-      "term": "Top International Financial News of the Day09",
-      "term_ko": "오전 주요 국제금융뉴스09일",
-      "significance_score": 336,
+      "term": "Stock Briefing New Universe",
+      "term_ko": "스톡 브리핑 뉴유니버스",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "오전 주요 국제금융뉴스09일",
+        "query": "스톡 브리핑 뉴유니버스",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[오전 주요 국제금융뉴스](09일)",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4387955"
+              "title": "[스톡 브리핑] 뉴유니버스, 나스닥 상장사와 100억원 MOU 체결",
+              "link": "https://enter.etoday.co.kr/news/view/289344"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A409%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A409%EC%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%86%A1%20%EB%B8%8C%EB%A6%AC%ED%95%91%20%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%86%A1%20%EB%B8%8C%EB%A6%AC%ED%95%91%20%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4"
       },
       "top_headlines": [
         {
-          "title": "[오전 주요 국제금융뉴스](09일)",
+          "title": "[스톡 브리핑] 뉴유니버스, 나스닥 상장사와 100억원 MOU 체결",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4387955",
+          "link": "https://enter.etoday.co.kr/news/view/289344",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "UK tech companies",
+      "term_ko": "영국 기술 기업",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "영국 기술 기업",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-09T21:44:22+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "영국 기술 기업, 한국 '코스닥'에 사상 최초 상장",
+              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=678460"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EA%B5%AD%20%EA%B8%B0%EC%88%A0%20%EA%B8%B0%EC%97%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EA%B5%AD%20%EA%B8%B0%EC%88%A0%20%EA%B8%B0%EC%97%85"
+      },
+      "top_headlines": [
+        {
+          "title": "영국 기술 기업, 한국 '코스닥'에 사상 최초 상장",
+          "summary": "",
+          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=678460",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Listed on South Korea's KOSDAQ",
+      "term_ko": "한국 코스닥에 사상",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국 코스닥에 사상",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-09T21:44:22+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "영국 기술 기업, 한국 '코스닥'에 사상 최초 상장",
+              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=678460"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%BD%94%EC%8A%A4%EB%8B%A5%EC%97%90%20%EC%82%AC%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%BD%94%EC%8A%A4%EB%8B%A5%EC%97%90%20%EC%82%AC%EC%83%81"
+      },
+      "top_headlines": [
+        {
+          "title": "영국 기술 기업, 한국 '코스닥'에 사상 최초 상장",
+          "summary": "",
+          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=678460",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -383,9 +431,10 @@
         "query": "숏드라마 제작사 뉴유니버스",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -411,36 +460,37 @@
       ]
     },
     {
-      "term": "Not a league, standalone",
-      "term_ko": "리그 아냐 독립운영",
+      "term": "Ulsan Apartment Market Outlook Index Nationwide",
+      "term_ko": "울산 아파트분양전망지수 전국",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "리그 아냐 독립운영",
+        "query": "울산 아파트분양전망지수 전국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-              "link": "http://www.breaknews.com/1167769"
+              "title": "울산 아파트분양전망지수, 전국 유일 두자릿수 상승",
+              "link": "https://www.ulsanpress.net/news/articleView.html?idxno=564814"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EA%B7%B8%20%EC%95%84%EB%83%90%20%EB%8F%85%EB%A6%BD%EC%9A%B4%EC%98%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EA%B7%B8%20%EC%95%84%EB%83%90%20%EB%8F%85%EB%A6%BD%EC%9A%B4%EC%98%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B8%EC%82%B0%20%EC%95%84%ED%8C%8C%ED%8A%B8%EB%B6%84%EC%96%91%EC%A0%84%EB%A7%9D%EC%A7%80%EC%88%98%20%EC%A0%84%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B8%EC%82%B0%20%EC%95%84%ED%8C%8C%ED%8A%B8%EB%B6%84%EC%96%91%EC%A0%84%EB%A7%9D%EC%A7%80%EC%88%98%20%EC%A0%84%EA%B5%AD"
       },
       "top_headlines": [
         {
-          "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
+          "title": "울산 아파트분양전망지수, 전국 유일 두자릿수 상승",
           "summary": "",
-          "link": "http://www.breaknews.com/1167769",
+          "link": "https://www.ulsanpress.net/news/articleView.html?idxno=564814",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +498,37 @@
       ]
     },
     {
-      "term": "NewUniverse US Nasdaq",
-      "term_ko": "뉴유니버스 美 나스닥",
+      "term": "Only double-digit gain",
+      "term_ko": "유일 두자릿수 상승",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뉴유니버스 美 나스닥",
+        "query": "유일 두자릿수 상승",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-              "link": "https://www.nc.press/news/articleView.html?idxno=601011"
+              "title": "울산 아파트분양전망지수, 전국 유일 두자릿수 상승",
+              "link": "https://www.ulsanpress.net/news/articleView.html?idxno=564814"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4%20%E7%BE%8E%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9C%A0%EB%8B%88%EB%B2%84%EC%8A%A4%20%E7%BE%8E%20%EB%82%98%EC%8A%A4%EB%8B%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EC%9D%BC%20%EB%91%90%EC%9E%90%EB%A6%BF%EC%88%98%20%EC%83%81%EC%8A%B9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EC%9D%BC%20%EB%91%90%EC%9E%90%EB%A6%BF%EC%88%98%20%EC%83%81%EC%8A%B9"
       },
       "top_headlines": [
         {
-          "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
+          "title": "울산 아파트분양전망지수, 전국 유일 두자릿수 상승",
           "summary": "",
-          "link": "https://www.nc.press/news/articleView.html?idxno=601011",
+          "link": "https://www.ulsanpress.net/news/articleView.html?idxno=564814",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +536,37 @@
       ]
     },
     {
-      "term": "K-Short with a public company",
-      "term_ko": "상장사 손잡고 K-숏드",
+      "term": "Dealing with high exchange rates",
+      "term_ko": "기재부 고환율 대응",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "상장사 손잡고 K-숏드",
+        "query": "기재부 고환율 대응",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
-              "link": "https://www.nc.press/news/articleView.html?idxno=601011"
+              "title": "기재부, 고환율 대응 강화…외환수급 TF 가동",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=532285"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%EC%82%AC%20%EC%86%90%EC%9E%A1%EA%B3%A0%20K-%EC%88%8F%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%EC%82%AC%20%EC%86%90%EC%9E%A1%EA%B3%A0%20K-%EC%88%8F%EB%93%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%9E%AC%EB%B6%80%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EB%8C%80%EC%9D%91",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%9E%AC%EB%B6%80%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EB%8C%80%EC%9D%91"
       },
       "top_headlines": [
         {
-          "title": "뉴유니버스, 美 나스닥 상장사 손잡고 'K-숏드' 생태계 연다…100억원 규...",
+          "title": "기재부, 고환율 대응 강화…외환수급 TF 가동",
           "summary": "",
-          "link": "https://www.nc.press/news/articleView.html?idxno=601011",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=532285",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +574,37 @@
       ]
     },
     {
-      "term": "Large inflows of funds",
-      "term_ko": "대규모 자금 유입",
+      "term": "I can't talk to Trump.",
+      "term_ko": "트럼프한테 말 못하고",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대규모 자금 유입",
+        "query": "트럼프한테 말 못하고",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-              "link": "https://www.wikitree.co.kr/articles/1101073"
+              "title": "트럼프한테 말 못하고 애먼 서학개미만…제대로 스텝 꼬인 환율 정책",
+              "link": "https://n.news.naver.com/mnews/article/024/0000101920?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%9E%90%EA%B8%88%20%EC%9C%A0%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%9E%90%EA%B8%88%20%EC%9C%A0%EC%9E%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%ED%95%9C%ED%85%8C%20%EB%A7%90%20%EB%AA%BB%ED%95%98%EA%B3%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%ED%95%9C%ED%85%8C%20%EB%A7%90%20%EB%AA%BB%ED%95%98%EA%B3%A0"
       },
       "top_headlines": [
         {
-          "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
+          "title": "트럼프한테 말 못하고 애먼 서학개미만…제대로 스텝 꼬인 환율 정책",
           "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1101073",
+          "link": "https://n.news.naver.com/mnews/article/024/0000101920?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,36 +612,37 @@
       ]
     },
     {
-      "term": "Drops that offset effects",
-      "term_ko": "효과마저 상쇄한 하락",
+      "term": "Step-kinked exchange rates",
+      "term_ko": "스텝 꼬인 환율",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "효과마저 상쇄한 하락",
+        "query": "스텝 꼬인 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
-              "link": "https://www.wikitree.co.kr/articles/1101073"
+              "title": "트럼프한테 말 못하고 애먼 서학개미만…제대로 스텝 꼬인 환율 정책",
+              "link": "https://n.news.naver.com/mnews/article/024/0000101920?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%A8%EA%B3%BC%EB%A7%88%EC%A0%80%20%EC%83%81%EC%87%84%ED%95%9C%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%A8%EA%B3%BC%EB%A7%88%EC%A0%80%20%EC%83%81%EC%87%84%ED%95%9C%20%ED%95%98%EB%9D%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%85%9D%20%EA%BC%AC%EC%9D%B8%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%85%9D%20%EA%BC%AC%EC%9D%B8%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "암호화폐(코인) 리플 ETF 대규모 자금 유입 효과마저 상쇄한 하락 압박...",
+          "title": "트럼프한테 말 못하고 애먼 서학개미만…제대로 스텝 꼬인 환율 정책",
           "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1101073",
+          "link": "https://n.news.naver.com/mnews/article/024/0000101920?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -596,36 +650,37 @@
       ]
     },
     {
-      "term": "Ineligible Hanwha Total Energies",
-      "term_ko": "투자 부적격 한화토탈에너지스",
+      "term": "Can't cut rates",
+      "term_ko": "금리 인하도 못",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "투자 부적격 한화토탈에너지스",
+        "query": "금리 인하도 못",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "'투자 부적격' 한화토탈에너지스, 신종자본증권 유동화...증권사 '신용도...",
-              "link": "https://n.news.naver.com/mnews/article/014/0005446398?sid=101"
+              "title": "“금리 인하도 못 살린다?” 가상자산 시장 ‘긴장 모드’",
+              "link": "https://n.news.naver.com/mnews/article/123/0002373525?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EB%B6%80%EC%A0%81%EA%B2%A9%20%ED%95%9C%ED%99%94%ED%86%A0%ED%83%88%EC%97%90%EB%84%88%EC%A7%80%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EB%B6%80%EC%A0%81%EA%B2%A9%20%ED%95%9C%ED%99%94%ED%86%A0%ED%83%88%EC%97%90%EB%84%88%EC%A7%80%EC%8A%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%EB%8F%84%20%EB%AA%BB",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%EB%8F%84%20%EB%AA%BB"
       },
       "top_headlines": [
         {
-          "title": "'투자 부적격' 한화토탈에너지스, 신종자본증권 유동화...증권사 '신용도...",
+          "title": "“금리 인하도 못 살린다?” 가상자산 시장 ‘긴장 모드’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005446398?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/123/0002373525?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -633,36 +688,37 @@
       ]
     },
     {
-      "term": "Earnings plus future growth",
-      "term_ko": "실적에 미래 성장",
+      "term": "Salinda Cryptocurrency Market",
+      "term_ko": "살린다 가상자산 시장",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "실적에 미래 성장",
+        "query": "살린다 가상자산 시장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764"
+              "title": "“금리 인하도 못 살린다?” 가상자산 시장 ‘긴장 모드’",
+              "link": "https://n.news.naver.com/mnews/article/123/0002373525?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%A0%81%EC%97%90%20%EB%AF%B8%EB%9E%98%20%EC%84%B1%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%A0%81%EC%97%90%20%EB%AF%B8%EB%9E%98%20%EC%84%B1%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B4%EB%A6%B0%EB%8B%A4%20%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0%20%EC%8B%9C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B4%EB%A6%B0%EB%8B%A4%20%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0%20%EC%8B%9C%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "[生기업TALK] 국내 금융산업의 리더 KB금융, 견고한 실적에 미래 성장 동...",
+          "title": "“금리 인하도 못 살린다?” 가상자산 시장 ‘긴장 모드’",
           "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=87764",
+          "link": "https://n.news.naver.com/mnews/article/123/0002373525?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -670,36 +726,37 @@
       ]
     },
     {
-      "term": "Brokerage firm alternative investment strategies",
-      "term_ko": "증권사 대체투자 전략",
+      "term": "Missing K-Fashion Hong Kong",
+      "term_ko": "빠진 K패션 홍콩",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증권사 대체투자 전략",
+        "query": "빠진 K패션 홍콩",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
-              "link": "https://www.viva100.com/article/20251209500926"
+              "title": "[미리보는 이데일리 신문]세계가 빠진 K패션… 홍콩 쇼핑성지 휩쓸다",
+              "link": "https://n.news.naver.com/mnews/article/018/0006180570?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EB%8C%80%EC%B2%B4%ED%88%AC%EC%9E%90%20%EC%A0%84%EB%9E%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EB%8C%80%EC%B2%B4%ED%88%AC%EC%9E%90%20%EC%A0%84%EB%9E%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%A0%EC%A7%84%20K%ED%8C%A8%EC%85%98%20%ED%99%8D%EC%BD%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%A0%EC%A7%84%20K%ED%8C%A8%EC%85%98%20%ED%99%8D%EC%BD%A9"
       },
       "top_headlines": [
         {
-          "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
+          "title": "[미리보는 이데일리 신문]세계가 빠진 K패션… 홍콩 쇼핑성지 휩쓸다",
           "summary": "",
-          "link": "https://www.viva100.com/article/20251209500926",
+          "link": "https://n.news.naver.com/mnews/article/018/0006180570?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -707,147 +764,37 @@
       ]
     },
     {
-      "term": "Focus on infrastructure energy",
-      "term_ko": "인프라 에너지로 중심",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인프라 에너지로 중심",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
-              "link": "https://www.viva100.com/article/20251209500926"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%94%84%EB%9D%BC%20%EC%97%90%EB%84%88%EC%A7%80%EB%A1%9C%20%EC%A4%91%EC%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%94%84%EB%9D%BC%20%EC%97%90%EB%84%88%EC%A7%80%EB%A1%9C%20%EC%A4%91%EC%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "증권사, 대체투자 전략 ‘인프라·에너지’로 중심 이동",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20251209500926",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Adobe Strengthens AI",
-      "term_ko": "Adobe, AI 강화",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Adobe Strengthens AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-              "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Adobe%20Strengthens%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Adobe%20Strengthens%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-          "summary": "",
-          "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Net Short → 66.2 billion this month",
-      "term_ko": "순매도→이달 662억",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순매도→이달 662억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
-              "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EB%A7%A4%EB%8F%84%E2%86%92%EC%9D%B4%EB%8B%AC%20662%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EB%A7%A4%EB%8F%84%E2%86%92%EC%9D%B4%EB%8B%AC%20662%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "개미들, 12월 코스닥으로 몰려간다…지난달 4801억 순매도→이달 662억 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001129012?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Q4 Earnings Says",
-      "term_ko": "4분기 실적 발표",
+      "term": "Initial Listing",
+      "term_ko": "최초 상장",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Q4 Earnings Says",
+        "query": "최초 상장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-              "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146"
+              "title": "영국 기술 기업, 한국 '코스닥'에 사상 최초 상장",
+              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=678460"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Q4%20Earnings%20Says",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Q4%20Earnings%20Says"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EC%B4%88%20%EC%83%81%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EC%B4%88%20%EC%83%81%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
+          "title": "영국 기술 기업, 한국 '코스닥'에 사상 최초 상장",
           "summary": "",
-          "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146",
+          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=678460",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -855,134 +802,37 @@
       ]
     },
     {
-      "term": "Rep. Kim Tae-Nyeon",
-      "term_ko": "김태년 의원",
+      "term": "Tension Mode",
+      "term_ko": "긴장 모드",
       "significance_score": 280,
-      "mentions": 460,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김태년 의원",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-02",
-              "timestamp": 1764601200000,
-              "value": 50
-            },
-            {
-              "period": "2025-12-03",
-              "timestamp": 1764687600000,
-              "value": 90
-            },
-            {
-              "period": "2025-12-04",
-              "timestamp": 1764774000000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-05",
-              "timestamp": 1764860400000,
-              "value": 50
-            },
-            {
-              "period": "2025-12-06",
-              "timestamp": 1764946800000,
-              "value": 80
-            },
-            {
-              "period": "2025-12-07",
-              "timestamp": 1765033200000,
-              "value": 60
-            },
-            {
-              "period": "2025-12-08",
-              "timestamp": 1765119600000,
-              "value": 80
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-              "link": "http://www.breaknews.com/1167769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%ED%83%9C%EB%85%84%20%EC%9D%98%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%ED%83%9C%EB%85%84%20%EC%9D%98%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "김태년 의원 “코스닥은 더이상 2부 리그 아냐…독립운영 논의 시작해야...",
-          "summary": "",
-          "link": "http://www.breaknews.com/1167769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 460,
-        "weekly_average_volume": 76.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014266,
-        "time_weight": 0.025248,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1765119600000
-      }
-    },
-    {
-      "term": "Late Tues Morning",
-      "term_ko": "화요일 늦은 오전",
-      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Late Tues Morning",
+        "query": "긴장 모드",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
-              "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104"
+              "title": "“금리 인하도 못 살린다?” 가상자산 시장 ‘긴장 모드’",
+              "link": "https://n.news.naver.com/mnews/article/123/0002373525?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Late%20Tues%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Late%20Tues%20Morning"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B4%EC%9E%A5%20%EB%AA%A8%EB%93%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B4%EC%9E%A5%20%EB%AA%A8%EB%93%9C"
       },
       "top_headlines": [
         {
-          "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
+          "title": "“금리 인하도 못 살린다?” 가상자산 시장 ‘긴장 모드’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104",
+          "link": "https://n.news.naver.com/mnews/article/123/0002373525?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -990,73 +840,37 @@
       ]
     },
     {
-      "term": "Strategy Ahead",
-      "term_ko": "앞으로의 전략",
-      "significance_score": 224,
+      "term": "Sweep the shopping mecca",
+      "term_ko": "쇼핑성지 휩쓸다",
+      "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Strategy Ahead",
+        "query": "쇼핑성지 휩쓸다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
-              "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146"
+              "title": "[미리보는 이데일리 신문]세계가 빠진 K패션… 홍콩 쇼핑성지 휩쓸다",
+              "link": "https://n.news.naver.com/mnews/article/018/0006180570?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strategy%20Ahead",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strategy%20Ahead"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%87%BC%ED%95%91%EC%84%B1%EC%A7%80%20%ED%9C%A9%EC%93%B8%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%87%BC%ED%95%91%EC%84%B1%EC%A7%80%20%ED%9C%A9%EC%93%B8%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "Adobe Strengthens AI Strategy Ahead of Q4 Earnings, Says Stifel",
+          "title": "[미리보는 이데일리 신문]세계가 빠진 K패션… 홍콩 쇼핑성지 휩쓸다",
           "summary": "",
-          "link": "https://www.econotimes.com/Adobe-Strengthens-AI-Strategy-Ahead-of-Q4-Earnings-Says-Stifel-1728146",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Fed Meeting",
-      "term_ko": "연준 회의",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Meeting",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-09T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
-              "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Meeting",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Meeting"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares down late Tues. morning ahead of Fed meeting",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015786036?sid=104",
+          "link": "https://n.news.naver.com/mnews/article/018/0006180570?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1073,9 +887,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1095,9 +910,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1117,9 +933,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-09T15:35:22+09:00",
+          "last_updated": "2025-12-09T21:44:22+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1128,33 +945,96 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-09T21:44:22+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Dollar exchange rate spikes",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-09T21:44:22+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "U.S. government shutdown crisis",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기"
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-09T06:36:33.120Z",
+    "generated_at": "2025-12-09T12:45:33.591Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-09T15:35:22+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-09T21:44:22+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-09T15:35:22+09:00",
+      "last_updated": "2025-12-09T21:44:22+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-09T15:35:22+09:00",
+        "lastUpdated": "2025-12-09T21:44:22+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
