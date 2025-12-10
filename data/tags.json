@@ -1,1147 +1,439 @@
 {
+  "generatedAt": "2025-12-10T06:33:19.157Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-10",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Netscout AI Operations",
-      "term_ko": "넷스카우트 AI 운영",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "넷스카우트 AI 운영",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "넷스카우트, AI 운영 보안 인텔리전스 플랫폼 '옴니스 AI 인사이트' 발표",
-              "link": "https://kbench.com/?q=node/274163"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%B7%EC%8A%A4%EC%B9%B4%EC%9A%B0%ED%8A%B8%20AI%20%EC%9A%B4%EC%98%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%B7%EC%8A%A4%EC%B9%B4%EC%9A%B0%ED%8A%B8%20AI%20%EC%9A%B4%EC%98%81"
-      },
-      "top_headlines": [
-        {
-          "title": "넷스카우트, AI 운영 보안 인텔리전스 플랫폼 '옴니스 AI 인사이트' 발표",
-          "summary": "",
-          "link": "https://kbench.com/?q=node/274163",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Netscout Ai Operations",
+      "term_ko": "넷스카우트 AI 운영"
     },
     {
-      "term": "Market Open KOSPI FOMC",
-      "term_ko": "개장시황 코스피 FOMC",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개장시황 코스피 FOMC",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[개장시황] 코스피, FOMC 금리 결정 앞두고 4159.05로 출발",
-              "link": "http://www.finomy.com/news/articleView.html?idxno=245054"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%9E%A5%EC%8B%9C%ED%99%A9%20%EC%BD%94%EC%8A%A4%ED%94%BC%20FOMC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%9E%A5%EC%8B%9C%ED%99%A9%20%EC%BD%94%EC%8A%A4%ED%94%BC%20FOMC"
-      },
-      "top_headlines": [
-        {
-          "title": "[개장시황] 코스피, FOMC 금리 결정 앞두고 4159.05로 출발",
-          "summary": "",
-          "link": "http://www.finomy.com/news/articleView.html?idxno=245054",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Market Open Kospi Fomc",
+      "term_ko": "개장시황 코스피 FOMC"
     },
     {
-      "term": "Authorities alert FOMC",
-      "term_ko": "당국 경계 FOMC",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "당국 경계 FOMC",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "당국 경계·FOMC 관망…환율 1460원대로 소폭 하락",
-              "link": "https://www.ajunews.com/view/20251210101314620"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B9%EA%B5%AD%20%EA%B2%BD%EA%B3%84%20FOMC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B9%EA%B5%AD%20%EA%B2%BD%EA%B3%84%20FOMC"
-      },
-      "top_headlines": [
-        {
-          "title": "당국 경계·FOMC 관망…환율 1460원대로 소폭 하락",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20251210101314620",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Authorities Alert Fomc",
+      "term_ko": "당국 경계 FOMC"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 9일] 미국 증시 보합세, 다우존스 하락 속 나...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195218"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 9일] 미국 증시 보합세, 다우존스 하락 속 나...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195218",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
       "term": "Nvidia H200 Chip 美",
-      "term_ko": "엔비디아 H200칩 美",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔비디아 H200칩 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"엔비디아 H200칩, 美 특별 심사 거쳐 중국에 수출\"",
-              "link": "https://www.newspim.com/news/view/20251210000066"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20H200%EC%B9%A9%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20H200%EC%B9%A9%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "\"엔비디아 H200칩, 美 특별 심사 거쳐 중국에 수출\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251210000066",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "엔비디아 H200칩 美"
     },
     {
-      "term": "Best case scenario 6700 lines",
-      "term_ko": "최선의 시나리오 6700선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최선의 시나리오 6700선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“내년 코스피, 최선의 시나리오 6700선…강세장 이어갈 것”",
-              "link": "https://www.kukinews.com/article/view/kuk202512100065"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EC%84%A0%EC%9D%98%20%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%206700%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EC%84%A0%EC%9D%98%20%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%206700%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "“내년 코스피, 최선의 시나리오 6700선…강세장 이어갈 것”",
-          "summary": "",
-          "link": "https://www.kukinews.com/article/view/kuk202512100065",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Best Case Scenario 6700 Lines",
+      "term_ko": "최선의 시나리오 6700선"
     },
     {
-      "term": "225,000 people added to the labor force in November",
-      "term_ko": "11월 취업자 22만5천명",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "11월 취업자 22만5천명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "11월 취업자 22만5천명 늘어...뉴욕증시, 혼조 마감 外 [오늘의 주요뉴스...",
-              "link": "https://www.etoday.co.kr/news/view/2534512"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EC%9B%94%20%EC%B7%A8%EC%97%85%EC%9E%90%2022%EB%A7%8C5%EC%B2%9C%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EC%9B%94%20%EC%B7%A8%EC%97%85%EC%9E%90%2022%EB%A7%8C5%EC%B2%9C%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "11월 취업자 22만5천명 늘어...뉴욕증시, 혼조 마감 外 [오늘의 주요뉴스...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2534512",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "225,000 People Added to the Labor Force in November",
+      "term_ko": "11월 취업자 22만5천명"
     },
     {
       "term": "Security Intelligence Platform",
-      "term_ko": "보안 인텔리전스 플랫폼",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보안 인텔리전스 플랫폼",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "넷스카우트, AI 운영 보안 인텔리전스 플랫폼 '옴니스 AI 인사이트' 발표",
-              "link": "https://kbench.com/?q=node/274163"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%95%88%20%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%84%EC%8A%A4%20%ED%94%8C%EB%9E%AB%ED%8F%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%95%88%20%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%84%EC%8A%A4%20%ED%94%8C%EB%9E%AB%ED%8F%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "넷스카우트, AI 운영 보안 인텔리전스 플랫폼 '옴니스 AI 인사이트' 발표",
-          "summary": "",
-          "link": "https://kbench.com/?q=node/274163",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "보안 인텔리전스 플랫폼"
     },
     {
-      "term": "Dow Jones down on a flat day",
-      "term_ko": "보합세 다우존스 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보합세 다우존스 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 9일] 미국 증시 보합세, 다우존스 하락 속 나...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195218"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%ED%95%A9%EC%84%B8%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 9일] 미국 증시 보합세, 다우존스 하락 속 나...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195218",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dow Jones Down on a Flat Day",
+      "term_ko": "보합세 다우존스 하락"
     },
     {
-      "term": "You will need the TigerSearch Index",
-      "term_ko": "필요하다 타이거리서치 인덱스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "필요하다 타이거리서치 인덱스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“암호화폐 시장에도 MSCI가 필요하다”…타이거리서치, 인덱스 기준 마...",
-              "link": "https://www.tokenpost.kr/news/insights/313039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%84%EC%9A%94%ED%95%98%EB%8B%A4%20%ED%83%80%EC%9D%B4%EA%B1%B0%EB%A6%AC%EC%84%9C%EC%B9%98%20%EC%9D%B8%EB%8D%B1%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%84%EC%9A%94%ED%95%98%EB%8B%A4%20%ED%83%80%EC%9D%B4%EA%B1%B0%EB%A6%AC%EC%84%9C%EC%B9%98%20%EC%9D%B8%EB%8D%B1%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "“암호화폐 시장에도 MSCI가 필요하다”…타이거리서치, 인덱스 기준 마...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/313039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "You Will Need the Tigersearch Index",
+      "term_ko": "필요하다 타이거리서치 인덱스"
     },
     {
-      "term": "Specially vetted",
-      "term_ko": "특별 심사 거쳐",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "특별 심사 거쳐",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"엔비디아 H200칩, 美 특별 심사 거쳐 중국에 수출\"",
-              "link": "https://www.newspim.com/news/view/20251210000066"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B9%EB%B3%84%20%EC%8B%AC%EC%82%AC%20%EA%B1%B0%EC%B3%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B9%EB%B3%84%20%EC%8B%AC%EC%82%AC%20%EA%B1%B0%EC%B3%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"엔비디아 H200칩, 美 특별 심사 거쳐 중국에 수출\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251210000066",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Specially Vetted",
+      "term_ko": "특별 심사 거쳐"
     },
     {
-      "term": "Seoul Data Lab U.S. Stock Indices",
-      "term_ko": "서울데이터랩미국 증시 지수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울데이터랩미국 증시 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서울데이터랩]미국 증시 지수 종합",
-              "link": "https://n.news.naver.com/mnews/article/081/0003599569?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[서울데이터랩]미국 증시 지수 종합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003599569?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Seoul Data Lab U.s. Stock Indices",
+      "term_ko": "서울데이터랩미국 증시 지수"
     },
     {
-      "term": "Year-End YeTech Festivities",
-      "term_ko": "연말 예테크족 꽉",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연말 예테크족 꽉",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "연말 예테크족 '꽉 잡자'…은행권, 예금금리 추가 인상?",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1690408"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EB%A7%90%20%EC%98%88%ED%85%8C%ED%81%AC%EC%A1%B1%20%EA%BD%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EB%A7%90%20%EC%98%88%ED%85%8C%ED%81%AC%EC%A1%B1%20%EA%BD%89"
-      },
-      "top_headlines": [
-        {
-          "title": "연말 예테크족 '꽉 잡자'…은행권, 예금금리 추가 인상?",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1690408",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Year-end Yetech Festivities",
+      "term_ko": "연말 예테크족 꽉"
     },
     {
       "term": "Savings Rate",
-      "term_ko": "잡자 은행권 예금금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "잡자 은행권 예금금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "연말 예테크족 '꽉 잡자'…은행권, 예금금리 추가 인상?",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1690408"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A1%EC%9E%90%20%EC%9D%80%ED%96%89%EA%B6%8C%20%EC%98%88%EA%B8%88%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A1%EC%9E%90%20%EC%9D%80%ED%96%89%EA%B6%8C%20%EC%98%88%EA%B8%88%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "연말 예테크족 '꽉 잡자'…은행권, 예금금리 추가 인상?",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1690408",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "잡자 은행권 예금금리"
     },
     {
       "term": "Sacheon City General Fund Public Deposit",
-      "term_ko": "사천시 일반회계 공공예금",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사천시 일반회계 공공예금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "사천시, 일반회계 공공예금 이자 수입 ‘역대 최고액’ 달성",
-              "link": "https://www.viva100.com/article/20251210500440"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%B2%9C%EC%8B%9C%20%EC%9D%BC%EB%B0%98%ED%9A%8C%EA%B3%84%20%EA%B3%B5%EA%B3%B5%EC%98%88%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%B2%9C%EC%8B%9C%20%EC%9D%BC%EB%B0%98%ED%9A%8C%EA%B3%84%20%EA%B3%B5%EA%B3%B5%EC%98%88%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "사천시, 일반회계 공공예금 이자 수입 ‘역대 최고액’ 달성",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20251210500440",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사천시 일반회계 공공예금"
     },
     {
-      "term": "Interest income history",
-      "term_ko": "이자 수입 역대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이자 수입 역대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "사천시, 일반회계 공공예금 이자 수입 ‘역대 최고액’ 달성",
-              "link": "https://www.viva100.com/article/20251210500440"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9E%90%20%EC%88%98%EC%9E%85%20%EC%97%AD%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9E%90%20%EC%88%98%EC%9E%85%20%EC%97%AD%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "사천시, 일반회계 공공예금 이자 수입 ‘역대 최고액’ 달성",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20251210500440",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Income History",
+      "term_ko": "이자 수입 역대"
     },
     {
-      "term": "The bull market continues",
-      "term_ko": "강세장 이어갈 것",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강세장 이어갈 것",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“내년 코스피, 최선의 시나리오 6700선…강세장 이어갈 것”",
-              "link": "https://www.kukinews.com/article/view/kuk202512100065"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%84%B8%EC%9E%A5%20%EC%9D%B4%EC%96%B4%EA%B0%88%20%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%84%B8%EC%9E%A5%20%EC%9D%B4%EC%96%B4%EA%B0%88%20%EA%B2%83"
-      },
-      "top_headlines": [
-        {
-          "title": "“내년 코스피, 최선의 시나리오 6700선…강세장 이어갈 것”",
-          "summary": "",
-          "link": "https://www.kukinews.com/article/view/kuk202512100065",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Bull Market Continues",
+      "term_ko": "강세장 이어갈 것"
     },
     {
       "term": "Blend Finish 外",
-      "term_ko": "혼조 마감 外",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "혼조 마감 外",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "11월 취업자 22만5천명 늘어...뉴욕증시, 혼조 마감 外 [오늘의 주요뉴스...",
-              "link": "https://www.etoday.co.kr/news/view/2534512"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%BC%EC%A1%B0%20%EB%A7%88%EA%B0%90%20%E5%A4%96",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%BC%EC%A1%B0%20%EB%A7%88%EA%B0%90%20%E5%A4%96"
-      },
-      "top_headlines": [
-        {
-          "title": "11월 취업자 22만5천명 늘어...뉴욕증시, 혼조 마감 外 [오늘의 주요뉴스...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2534512",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "혼조 마감 外"
     },
     {
-      "term": "9 days US",
-      "term_ko": "9일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "9일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 9일] 미국 증시 보합세, 다우존스 하락 속 나...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195218"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 9일] 미국 증시 보합세, 다우존스 하락 속 나...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195218",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "9 Days Us",
+      "term_ko": "9일 미국"
     },
     {
-      "term": "Presenting insights",
-      "term_ko": "인사이트 발표",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인사이트 발표",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "넷스카우트, AI 운영 보안 인텔리전스 플랫폼 '옴니스 AI 인사이트' 발표",
-              "link": "https://kbench.com/?q=node/274163"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%B0%9C%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%B0%9C%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "넷스카우트, AI 운영 보안 인텔리전스 플랫폼 '옴니스 AI 인사이트' 발표",
-          "summary": "",
-          "link": "https://kbench.com/?q=node/274163",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Presenting Insights",
+      "term_ko": "인사이트 발표"
     },
     {
       "term": "Exporting to China",
-      "term_ko": "중국에 수출",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중국에 수출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"엔비디아 H200칩, 美 특별 심사 거쳐 중국에 수출\"",
-              "link": "https://www.newspim.com/news/view/20251210000066"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EA%B5%AD%EC%97%90%20%EC%88%98%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EA%B5%AD%EC%97%90%20%EC%88%98%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"엔비디아 H200칩, 美 특별 심사 거쳐 중국에 수출\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251210000066",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중국에 수출"
     },
     {
-      "term": "Additional raises",
-      "term_ko": "추가 인상",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "추가 인상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "연말 예테크족 '꽉 잡자'…은행권, 예금금리 추가 인상?",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1690408"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%94%EA%B0%80%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%94%EA%B0%80%20%EC%9D%B8%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "연말 예테크족 '꽉 잡자'…은행권, 예금금리 추가 인상?",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1690408",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Additional Raises",
+      "term_ko": "추가 인상"
     },
     {
-      "term": "Achieving the highest amount",
-      "term_ko": "최고액 달성",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고액 달성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "사천시, 일반회계 공공예금 이자 수입 ‘역대 최고액’ 달성",
-              "link": "https://www.viva100.com/article/20251210500440"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%EC%95%A1%20%EB%8B%AC%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%EC%95%A1%20%EB%8B%AC%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "사천시, 일반회계 공공예금 이자 수입 ‘역대 최고액’ 달성",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20251210500440",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Achieving the Highest Amount",
+      "term_ko": "최고액 달성"
     },
     {
-      "term": "Next year's KOSPI",
-      "term_ko": "내년 코스피",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "내년 코스피",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-04",
-              "timestamp": 1764774000000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“내년 코스피, 최선의 시나리오 6700선…강세장 이어갈 것”",
-              "link": "https://www.kukinews.com/article/view/kuk202512100065"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%85%84%20%EC%BD%94%EC%8A%A4%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%85%84%20%EC%BD%94%EC%8A%A4%ED%94%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "“내년 코스피, 최선의 시나리오 6700선…강세장 이어갈 것”",
-          "summary": "",
-          "link": "https://www.kukinews.com/article/view/kuk202512100065",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.006472,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1764774000000
-      }
+      "term": "Next Year's Kospi",
+      "term_ko": "내년 코스피"
     },
     {
-      "term": "Slightly down",
-      "term_ko": "소폭 하락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "소폭 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "당국 경계·FOMC 관망…환율 1460원대로 소폭 하락",
-              "link": "https://www.ajunews.com/view/20251210101314620"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%ED%8F%AD%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%ED%8F%AD%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "당국 경계·FOMC 관망…환율 1460원대로 소폭 하락",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20251210101314620",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Slightly Down",
+      "term_ko": "소폭 하락"
     },
     {
-      "term": "JPMorgan Warning",
-      "term_ko": "JP모건 경고",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "JPMorgan Warning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Stocks Slip as Investors Brace for Fed Decision and JPMorgan Warning Weig...",
-              "link": "https://www.econotimes.com/Stocks-Slip-as-Investors-Brace-for-Fed-Decision-and-JPMorgan-Warning-Weighs-on-Markets-1728229"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=JPMorgan%20Warning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=JPMorgan%20Warning"
-      },
-      "top_headlines": [
-        {
-          "title": "Stocks Slip as Investors Brace for Fed Decision and JPMorgan Warning Weig...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Stocks-Slip-as-Investors-Brace-for-Fed-Decision-and-JPMorgan-Warning-Weighs-on-Markets-1728229",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Jpmorgan Warning",
+      "term_ko": "JP모건 경고"
     },
     {
       "term": "Investors Brace",
-      "term_ko": "투자자 준비",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investors Brace",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Stocks Slip as Investors Brace for Fed Decision and JPMorgan Warning Weig...",
-              "link": "https://www.econotimes.com/Stocks-Slip-as-Investors-Brace-for-Fed-Decision-and-JPMorgan-Warning-Weighs-on-Markets-1728229"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Brace",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Brace"
-      },
-      "top_headlines": [
-        {
-          "title": "Stocks Slip as Investors Brace for Fed Decision and JPMorgan Warning Weig...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Stocks-Slip-as-Investors-Brace-for-Fed-Decision-and-JPMorgan-Warning-Weighs-on-Markets-1728229",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자자 준비"
     },
     {
       "term": "Fed Decision",
-      "term_ko": "연준 결정",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Decision",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Stocks Slip as Investors Brace for Fed Decision and JPMorgan Warning Weig...",
-              "link": "https://www.econotimes.com/Stocks-Slip-as-Investors-Brace-for-Fed-Decision-and-JPMorgan-Warning-Weighs-on-Markets-1728229"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Decision",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Decision"
-      },
-      "top_headlines": [
-        {
-          "title": "Stocks Slip as Investors Brace for Fed Decision and JPMorgan Warning Weig...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Stocks-Slip-as-Investors-Brace-for-Fed-Decision-and-JPMorgan-Warning-Weighs-on-Markets-1728229",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 결정"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-10T10:30:03+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-10T01:31:09.303Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-10T10:30:03+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Netscout Ai Operations",
+      "term_ko": "넷스카우트 AI 운영"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-10T10:30:03+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-10T10:30:03+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Market Open Kospi Fomc",
+      "term_ko": "개장시황 코스피 FOMC"
+    },
+    {
+      "term": "Authorities Alert Fomc",
+      "term_ko": "당국 경계 FOMC"
+    },
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Nvidia H200 Chip 美",
+      "term_ko": "엔비디아 H200칩 美"
+    },
+    {
+      "term": "Best Case Scenario 6700 Lines",
+      "term_ko": "최선의 시나리오 6700선"
+    },
+    {
+      "term": "225,000 People Added to the Labor Force in November",
+      "term_ko": "11월 취업자 22만5천명"
+    },
+    {
+      "term": "Security Intelligence Platform",
+      "term_ko": "보안 인텔리전스 플랫폼"
+    },
+    {
+      "term": "Dow Jones Down on a Flat Day",
+      "term_ko": "보합세 다우존스 하락"
+    },
+    {
+      "term": "You Will Need the Tigersearch Index",
+      "term_ko": "필요하다 타이거리서치 인덱스"
+    },
+    {
+      "term": "Specially Vetted",
+      "term_ko": "특별 심사 거쳐"
+    },
+    {
+      "term": "Seoul Data Lab U.s. Stock Indices",
+      "term_ko": "서울데이터랩미국 증시 지수"
+    },
+    {
+      "term": "Year-end Yetech Festivities",
+      "term_ko": "연말 예테크족 꽉"
+    },
+    {
+      "term": "Savings Rate",
+      "term_ko": "잡자 은행권 예금금리"
+    },
+    {
+      "term": "Sacheon City General Fund Public Deposit",
+      "term_ko": "사천시 일반회계 공공예금"
+    },
+    {
+      "term": "Interest Income History",
+      "term_ko": "이자 수입 역대"
+    },
+    {
+      "term": "The Bull Market Continues",
+      "term_ko": "강세장 이어갈 것"
+    },
+    {
+      "term": "Blend Finish 外",
+      "term_ko": "혼조 마감 外"
+    },
+    {
+      "term": "9 Days Us",
+      "term_ko": "9일 미국"
+    },
+    {
+      "term": "Presenting Insights",
+      "term_ko": "인사이트 발표"
+    },
+    {
+      "term": "Exporting to China",
+      "term_ko": "중국에 수출"
+    },
+    {
+      "term": "Additional Raises",
+      "term_ko": "추가 인상"
+    },
+    {
+      "term": "Achieving the Highest Amount",
+      "term_ko": "최고액 달성"
+    },
+    {
+      "term": "Next Year's Kospi",
+      "term_ko": "내년 코스피"
+    },
+    {
+      "term": "Slightly Down",
+      "term_ko": "소폭 하락"
+    },
+    {
+      "term": "Jpmorgan Warning",
+      "term_ko": "JP모건 경고"
+    },
+    {
+      "term": "Investors Brace",
+      "term_ko": "투자자 준비"
+    },
+    {
+      "term": "Fed Decision",
+      "term_ko": "연준 결정"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    }
+  ],
+  "translations": {
+    "Netscout Ai Operations": {
+      "en": "Netscout Ai Operations",
+      "ko": "넷스카우트 AI 운영",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.157Z"
+    },
+    "Market Open Kospi Fomc": {
+      "en": "Market Open Kospi Fomc",
+      "ko": "개장시황 코스피 FOMC",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.157Z"
+    },
+    "Authorities Alert Fomc": {
+      "en": "Authorities Alert Fomc",
+      "ko": "당국 경계 FOMC",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.157Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Nvidia H200 Chip 美": {
+      "en": "Nvidia H200 Chip 美",
+      "ko": "엔비디아 H200칩 美",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Best Case Scenario 6700 Lines": {
+      "en": "Best Case Scenario 6700 Lines",
+      "ko": "최선의 시나리오 6700선",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "225,000 People Added to the Labor Force in November": {
+      "en": "225,000 People Added to the Labor Force in November",
+      "ko": "11월 취업자 22만5천명",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Security Intelligence Platform": {
+      "en": "Security Intelligence Platform",
+      "ko": "보안 인텔리전스 플랫폼",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Dow Jones Down on a Flat Day": {
+      "en": "Dow Jones Down on a Flat Day",
+      "ko": "보합세 다우존스 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "You Will Need the Tigersearch Index": {
+      "en": "You Will Need the Tigersearch Index",
+      "ko": "필요하다 타이거리서치 인덱스",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Specially Vetted": {
+      "en": "Specially Vetted",
+      "ko": "특별 심사 거쳐",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Seoul Data Lab U.s. Stock Indices": {
+      "en": "Seoul Data Lab U.s. Stock Indices",
+      "ko": "서울데이터랩미국 증시 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Year-end Yetech Festivities": {
+      "en": "Year-end Yetech Festivities",
+      "ko": "연말 예테크족 꽉",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Savings Rate": {
+      "en": "Savings Rate",
+      "ko": "잡자 은행권 예금금리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Sacheon City General Fund Public Deposit": {
+      "en": "Sacheon City General Fund Public Deposit",
+      "ko": "사천시 일반회계 공공예금",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Interest Income History": {
+      "en": "Interest Income History",
+      "ko": "이자 수입 역대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "The Bull Market Continues": {
+      "en": "The Bull Market Continues",
+      "ko": "강세장 이어갈 것",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Blend Finish 外": {
+      "en": "Blend Finish 外",
+      "ko": "혼조 마감 外",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "9 Days Us": {
+      "en": "9 Days Us",
+      "ko": "9일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Presenting Insights": {
+      "en": "Presenting Insights",
+      "ko": "인사이트 발표",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Exporting to China": {
+      "en": "Exporting to China",
+      "ko": "중국에 수출",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Additional Raises": {
+      "en": "Additional Raises",
+      "ko": "추가 인상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Achieving the Highest Amount": {
+      "en": "Achieving the Highest Amount",
+      "ko": "최고액 달성",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Next Year's Kospi": {
+      "en": "Next Year's Kospi",
+      "ko": "내년 코스피",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Slightly Down": {
+      "en": "Slightly Down",
+      "ko": "소폭 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Jpmorgan Warning": {
+      "en": "Jpmorgan Warning",
+      "ko": "JP모건 경고",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Investors Brace": {
+      "en": "Investors Brace",
+      "ko": "투자자 준비",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Fed Decision": {
+      "en": "Fed Decision",
+      "ko": "연준 결정",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-10T06:33:19.158Z"
     }
   }
 }
