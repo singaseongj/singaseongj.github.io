@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-11T21:46:04+09:00 (KST)**
+- Generated: **2025-12-12T03:32:42+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -135,6 +135,14 @@
 
 ### AGGRESSIVE (5)
 
+**DL이앤씨** (375500.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **7.5%**, 20d **1.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=DL%EC%9D%B4%EC%95%A4%EC%94%A8
+
 **TKG휴켐스** (069260.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -158,14 +166,6 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC
-
-**아이에스동서** (010780.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.1%**, 20d **-3.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4%EB%8F%99%EC%84%9C
 
 **코오롱인더** (120110.KS)
 
@@ -268,7 +268,7 @@
 **GE Vernova** (GEV)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **20.1%**, 20d **25.5%**; volatility (20d): **unknown**
+- Returns: 5d **9.6%**, 20d **19.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=GE%20Vernova
@@ -276,7 +276,7 @@
 **JPMorgan Chase** (JPM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.6%**, 20d **-1.7%**; volatility (20d): **unknown**
+- Returns: 5d **0.1%**, 20d **-1.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=JPMorgan%20Chase
@@ -302,7 +302,7 @@
 **KeyCorp** (KEY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **9.4%**, 20d **13.5%**; volatility (20d): **unknown**
+- Returns: 5d **8.1%**, 20d **16.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=KeyCorp
@@ -326,7 +326,7 @@
 **Williams-Sonoma, Inc.** (WSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.9%**, 20d **-2.3%**; volatility (20d): **unknown**
+- Returns: 5d **7.2%**, 20d **-1.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc.
