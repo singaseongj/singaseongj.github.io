@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-11T15:35:20+09:00 (KST)**
+- Generated: **2025-12-11T21:46:04+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -18,7 +18,7 @@
 **레이크머티리얼즈** (281740.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.0%**, 20d **4.9%**; volatility (20d): **unknown**
+- Returns: 5d **12.9%**, 20d **4.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%A0%88%EC%9D%B4%ED%81%AC%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88
@@ -84,7 +84,7 @@
 **휴메딕스** (200670.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **-11.9%**; volatility (20d): **unknown**
+- Returns: 5d **-1.9%**, 20d **-11.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
@@ -104,7 +104,7 @@
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **4.8%**, 20d **-7.2%**; volatility (20d): **unknown**
+- Returns: 5d **4.2%**, 20d **-7.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
@@ -120,7 +120,7 @@
 **삼성증권** (016360.KS)
 
 - News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.11)**
-- Returns: 5d **-3.4%**, 20d **-4.5%**; volatility (20d): **unknown**
+- Returns: 5d **-3.9%**, 20d **-5.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C
@@ -128,25 +128,17 @@
 **삼성화재** (000810.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **-2.2%**, 20d **-2.8%**; volatility (20d): **unknown**
+- Returns: 5d **26.8%**, 20d **26.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC
 
 ### AGGRESSIVE (5)
 
-**DL이앤씨** (375500.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.2%**, 20d **2.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=DL%EC%9D%B4%EC%95%A4%EC%94%A8
-
 **TKG휴켐스** (069260.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.5%**, 20d **6.2%**; volatility (20d): **unknown**
+- Returns: 5d **3.7%**, 20d **6.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=TKG%ED%9C%B4%EC%BC%90%EC%8A%A4
@@ -154,7 +146,7 @@
 **대한유화** (006650.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **-6.2%**; volatility (20d): **unknown**
+- Returns: 5d **0.1%**, 20d **-5.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%EC%9C%A0%ED%99%94
@@ -167,10 +159,18 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC
 
+**아이에스동서** (010780.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.1%**, 20d **-3.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4%EB%8F%99%EC%84%9C
+
 **코오롱인더** (120110.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.2%**, 20d **6.8%**; volatility (20d): **unknown**
+- Returns: 5d **-1.5%**, 20d **6.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%BD%94%EC%98%A4%EB%A1%B1%EC%9D%B8%EB%8D%94
