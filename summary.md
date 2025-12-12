@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-12T21:43:40+09:00 (KST)**
+- Generated: **2025-12-13T03:33:59+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -135,45 +135,45 @@
 
 ### AGGRESSIVE (5)
 
-**DL이앤씨** (375500.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **9.1%**, 20d **10.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=DL%EC%9D%B4%EC%95%A4%EC%94%A8
-
 **GS건설** (006360.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **10.6%**; volatility (20d): **unknown**
+- Returns: 5d **0.1%**, 20d **-3.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
 
-**대웅** (003090.KS)
+**금호타이어** (073240.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.6%**, 20d **-2.6%**; volatility (20d): **unknown**
+- Returns: 5d **-2.6%**, 20d **9.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EB%8C%80%EC%9B%85
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%EA%B8%88%ED%98%B8%ED%83%80%EC%9D%B4%EC%96%B4
 
 **세아베스틸지주** (001430.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **59.3%**, 20d **58.7%**; volatility (20d): **unknown**
+- Returns: 5d **2.4%**, 20d **-11.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC
 
-**코스맥스** (192820.KS)
+**아모레퍼시픽** (090430.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.0%**, 20d **4.7%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-7.2%**, 20d **2.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **필수소비재**
-- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%A7%A5%EC%8A%A4
+- News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD
+
+**코스모신소재** (005070.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-7.4%**, 20d **12.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8B%A0%EC%86%8C%EC%9E%AC
 
 ## NASDAQ 100
 
@@ -215,7 +215,7 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Shopify
 
-### AGGRESSIVE (5)
+### AGGRESSIVE (4)
 
 **Atlassian** (TEAM)
 
@@ -237,13 +237,6 @@
 - Returns: 5d **2.9%**, 20d **-13.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=GlobalFoundries
-
-**MicroStrategy** (MSTR)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=MicroStrategy
 
 **Zscaler** (ZS)
 
@@ -306,14 +299,6 @@
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Corpay
 
-**Devon Energy** (DVN)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.3%**, 20d **5.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Energy**
-- News search: https://www.google.com/search?q=Devon%20Energy
-
 **Equity Residential** (EQR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -322,19 +307,27 @@
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Equity%20Residential
 
+**Ralph Lauren Corporation** (RL)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.9%**, 20d **1.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Ralph%20Lauren%20Corporation
+
 **T. Rowe Price** (TROW)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.8%**, 20d **0.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.7%**, 20d **1.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=T.%20Rowe%20Price
 
-**Waters Corporation** (WAT)
+**Willis Towers Watson** (WTW)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.0%**, 20d **1.2%**; volatility (20d): **unknown**
+- Returns: 5d **-3.7%**, 20d **3.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Waters%20Corporation
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Willis%20Towers%20Watson
 
