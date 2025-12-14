@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-14T21:40:11+09:00 (KST)**
+- Generated: **2025-12-15T03:29:11+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -101,14 +101,6 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
-**대한항공** (003490.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.6%**, 20d **3.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
-
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
@@ -124,6 +116,14 @@
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC
+
+**이마트** (139480.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
+- Returns: 5d **-0.1%**, 20d **4.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=%EC%9D%B4%EB%A7%88%ED%8A%B8
 
 **한진칼** (180640.KS)
 
@@ -159,6 +159,14 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC
 
+**코스맥스** (192820.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.0%**, 20d **4.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%A7%A5%EC%8A%A4
+
 **코스모신소재** (005070.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -166,14 +174,6 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8B%A0%EC%86%8C%EC%9E%AC
-
-**한샘** (009240.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-10.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
 
 ## NASDAQ 100
 
