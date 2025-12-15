@@ -1,1251 +1,425 @@
 {
+  "generatedAt": "2025-12-15T12:43:56.012Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-15",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Alpha-Dart Radiation for Brain Tumors",
-      "term_ko": "뇌종양에 알파다트 방사선",
-      "significance_score": 644,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뇌종양에 알파다트 방사선",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "알파타우, 세계 최초로 뇌종양에 알파다트 방사선 임상 성공",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1691117"
-            },
-            {
-              "title": "알파타우, 세계 최초 뇌종양에 알파다트 방사선 임상 성공",
-              "link": "https://n.news.naver.com/mnews/article/468/0001202464?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%87%8C%EC%A2%85%EC%96%91%EC%97%90%20%EC%95%8C%ED%8C%8C%EB%8B%A4%ED%8A%B8%20%EB%B0%A9%EC%82%AC%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%87%8C%EC%A2%85%EC%96%91%EC%97%90%20%EC%95%8C%ED%8C%8C%EB%8B%A4%ED%8A%B8%20%EB%B0%A9%EC%82%AC%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "알파타우, 세계 최초로 뇌종양에 알파다트 방사선 임상 성공",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1691117",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "알파타우, 세계 최초 뇌종양에 알파다트 방사선 임상 성공",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/468/0001202464?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Alpha-dart Radiation for Brain Tumors",
+      "term_ko": "뇌종양에 알파다트 방사선"
     },
     {
-      "term": "Clinical success",
-      "term_ko": "임상 성공",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "임상 성공",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-08",
-              "timestamp": 1765119600000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "알파타우, 세계 최초로 뇌종양에 알파다트 방사선 임상 성공",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1691117"
-            },
-            {
-              "title": "알파타우, 세계 최초 뇌종양에 알파다트 방사선 임상 성공",
-              "link": "https://n.news.naver.com/mnews/article/468/0001202464?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%84%EC%83%81%20%EC%84%B1%EA%B3%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%84%EC%83%81%20%EC%84%B1%EA%B3%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "알파타우, 세계 최초로 뇌종양에 알파다트 방사선 임상 성공",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1691117",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "알파타우, 세계 최초 뇌종양에 알파다트 방사선 임상 성공",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/468/0001202464?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.005446,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1765119600000
-      }
+      "term": "Clinical Success",
+      "term_ko": "임상 성공"
     },
     {
-      "term": "Real Estate One SC First Bank and Energy",
-      "term_ko": "부동산원 SC제일은행과 에너지",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산원 SC제일은행과 에너지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "부동산원, SC제일은행과 에너지 절약 적금 3차 출시",
-              "link": "https://n.news.naver.com/mnews/article/014/0005449117?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%EC%9B%90%20SC%EC%A0%9C%EC%9D%BC%EC%9D%80%ED%96%89%EA%B3%BC%20%EC%97%90%EB%84%88%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%EC%9B%90%20SC%EC%A0%9C%EC%9D%BC%EC%9D%80%ED%96%89%EA%B3%BC%20%EC%97%90%EB%84%88%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산원, SC제일은행과 에너지 절약 적금 3차 출시",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005449117?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Real Estate One Sc First Bank and Energy",
+      "term_ko": "부동산원 SC제일은행과 에너지"
     },
     {
-      "term": "SC First Bank Electricity Reduction",
-      "term_ko": "SC제일은행 전기에너지 줄이면",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SC제일은행 전기에너지 줄이면",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SC제일은행, 전기에너지 줄이면 적금 금리 최고 연 8.8%",
-              "link": "https://n.news.naver.com/mnews/article/003/0013658669?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SC%EC%A0%9C%EC%9D%BC%EC%9D%80%ED%96%89%20%EC%A0%84%EA%B8%B0%EC%97%90%EB%84%88%EC%A7%80%20%EC%A4%84%EC%9D%B4%EB%A9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SC%EC%A0%9C%EC%9D%BC%EC%9D%80%ED%96%89%20%EC%A0%84%EA%B8%B0%EC%97%90%EB%84%88%EC%A7%80%20%EC%A4%84%EC%9D%B4%EB%A9%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "SC제일은행, 전기에너지 줄이면 적금 금리 최고 연 8.8%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013658669?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sc First Bank Electricity Reduction",
+      "term_ko": "SC제일은행 전기에너지 줄이면"
     },
     {
       "term": "Rising Again November",
-      "term_ko": "또 오른다 11월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "또 오른다 11월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 변동금리 또 오른다…11월 코픽스 0.24%P 상승",
-              "link": "https://n.news.naver.com/mnews/article/119/0003037109?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%98%90%20%EC%98%A4%EB%A5%B8%EB%8B%A4%2011%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%98%90%20%EC%98%A4%EB%A5%B8%EB%8B%A4%2011%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 변동금리 또 오른다…11월 코픽스 0.24%P 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003037109?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "또 오른다 11월"
     },
     {
-      "term": "Copex up 0.24 percentage points",
-      "term_ko": "코픽스 0.24%P 상승",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코픽스 0.24%P 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 변동금리 또 오른다…11월 코픽스 0.24%P 상승",
-              "link": "https://n.news.naver.com/mnews/article/119/0003037109?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%ED%94%BD%EC%8A%A4%200.24%25P%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%ED%94%BD%EC%8A%A4%200.24%25P%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 변동금리 또 오른다…11월 코픽스 0.24%P 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003037109?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Copex Up 0.24 Percentage Points",
+      "term_ko": "코픽스 0.24%P 상승"
     },
     {
       "term": "Savings 3rd",
-      "term_ko": "절약 적금 3차",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "절약 적금 3차",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "부동산원, SC제일은행과 에너지 절약 적금 3차 출시",
-              "link": "https://n.news.naver.com/mnews/article/014/0005449117?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%88%EC%95%BD%20%EC%A0%81%EA%B8%88%203%EC%B0%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%88%EC%95%BD%20%EC%A0%81%EA%B8%88%203%EC%B0%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산원, SC제일은행과 에너지 절약 적금 3차 출시",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005449117?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "절약 적금 3차"
     },
     {
-      "term": "Up to 8.8% APY",
-      "term_ko": "최고 연 8.8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고 연 8.8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SC제일은행, 전기에너지 줄이면 적금 금리 최고 연 8.8%",
-              "link": "https://n.news.naver.com/mnews/article/003/0013658669?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%208.8%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%208.8%25"
-      },
-      "top_headlines": [
-        {
-          "title": "SC제일은행, 전기에너지 줄이면 적금 금리 최고 연 8.8%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013658669?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to 8.8% Apy",
+      "term_ko": "최고 연 8.8%"
     },
     {
-      "term": "8.8% per year if you save",
-      "term_ko": "아끼면 年 8.8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아끼면 年 8.8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "부동산원, SC제일은행과 손잡고 적금 출시… 전기 아끼면 年 8.8% 금리",
-              "link": "https://n.news.naver.com/mnews/article/366/0001130216?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%81%BC%EB%A9%B4%20%EF%A6%8E%208.8%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%81%BC%EB%A9%B4%20%EF%A6%8E%208.8%25"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산원, SC제일은행과 손잡고 적금 출시… 전기 아끼면 年 8.8% 금리",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001130216?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "8.8% Per Year If You Save",
+      "term_ko": "아끼면 年 8.8%"
     },
     {
-      "term": "Mainstream mortgage rates are also in the 4% range",
-      "term_ko": "주담대 금리도 4%대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 금리도 4%대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "변동형 주담대 금리도 4%대 진입…코픽스 3개월 연속 상승",
-              "link": "https://n.news.naver.com/mnews/article/008/0005292052?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%EB%8F%84%204%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%EB%8F%84%204%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "변동형 주담대 금리도 4%대 진입…코픽스 3개월 연속 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005292052?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mainstream Mortgage Rates Are Also in the 4% Range",
+      "term_ko": "주담대 금리도 4%대"
     },
     {
-      "term": "3 months entry corpus",
-      "term_ko": "진입 코픽스 3개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "진입 코픽스 3개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "변동형 주담대 금리도 4%대 진입…코픽스 3개월 연속 상승",
-              "link": "https://n.news.naver.com/mnews/article/008/0005292052?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%84%EC%9E%85%20%EC%BD%94%ED%94%BD%EC%8A%A4%203%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%84%EC%9E%85%20%EC%BD%94%ED%94%BD%EC%8A%A4%203%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "변동형 주담대 금리도 4%대 진입…코픽스 3개월 연속 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005292052?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3 Months Entry Corpus",
+      "term_ko": "진입 코픽스 3개월"
     },
     {
       "term": "Alpha Tau World Firsts",
-      "term_ko": "알파타우 세계 최초",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "알파타우 세계 최초",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "알파타우, 세계 최초 뇌종양에 알파다트 방사선 임상 성공",
-              "link": "https://n.news.naver.com/mnews/article/468/0001202464?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%8C%ED%8C%8C%ED%83%80%EC%9A%B0%20%EC%84%B8%EA%B3%84%20%EC%B5%9C%EC%B4%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%8C%ED%8C%8C%ED%83%80%EC%9A%B0%20%EC%84%B8%EA%B3%84%20%EC%B5%9C%EC%B4%88"
-      },
-      "top_headlines": [
-        {
-          "title": "알파타우, 세계 최초 뇌종양에 알파다트 방사선 임상 성공",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/468/0001202464?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "알파타우 세계 최초"
     },
     {
-      "term": "Where does the market go from here?",
-      "term_ko": "시장 한은은 어디까지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장 한은은 어디까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "기준금리 더 말해달라는 시장…한은은 '어디까지 설명할지' 시험 중",
-              "link": "http://www.m-i.kr/news/articleView.html?idxno=1315237"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%ED%95%9C%EC%9D%80%EC%9D%80%20%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%ED%95%9C%EC%9D%80%EC%9D%80%20%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 더 말해달라는 시장…한은은 '어디까지 설명할지' 시험 중",
-          "summary": "",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1315237",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Where Does the Market Go From Here?",
+      "term_ko": "시장 한은은 어디까지"
     },
     {
-      "term": "Testing whether to explain",
-      "term_ko": "설명할지 시험 중",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "설명할지 시험 중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "기준금리 더 말해달라는 시장…한은은 '어디까지 설명할지' 시험 중",
-              "link": "http://www.m-i.kr/news/articleView.html?idxno=1315237"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A4%EB%AA%85%ED%95%A0%EC%A7%80%20%EC%8B%9C%ED%97%98%20%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A4%EB%AA%85%ED%95%A0%EC%A7%80%20%EC%8B%9C%ED%97%98%20%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 더 말해달라는 시장…한은은 '어디까지 설명할지' 시험 중",
-          "summary": "",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1315237",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Testing Whether to Explain",
+      "term_ko": "설명할지 시험 중"
     },
     {
-      "term": "Savings launch biography",
-      "term_ko": "적금 출시 전기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "적금 출시 전기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "부동산원, SC제일은행과 손잡고 적금 출시… 전기 아끼면 年 8.8% 금리",
-              "link": "https://n.news.naver.com/mnews/article/366/0001130216?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%81%EA%B8%88%20%EC%B6%9C%EC%8B%9C%20%EC%A0%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%81%EA%B8%88%20%EC%B6%9C%EC%8B%9C%20%EC%A0%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산원, SC제일은행과 손잡고 적금 출시… 전기 아끼면 年 8.8% 금리",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001130216?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Savings Launch Biography",
+      "term_ko": "적금 출시 전기"
     },
     {
-      "term": "AI Spending Concerns",
-      "term_ko": "AI 지출에 대한 우려",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Spending Concerns",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Asian Technology and Chipmaking Stocks Slide as AI Spending Concerns Shak...",
-              "link": "https://www.econotimes.com/Asian-Technology-and-Chipmaking-Stocks-Slide-as-AI-Spending-Concerns-Shake-Markets-1728670"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Spending%20Concerns",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Spending%20Concerns"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Technology and Chipmaking Stocks Slide as AI Spending Concerns Shak...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Technology-and-Chipmaking-Stocks-Slide-as-AI-Spending-Concerns-Shake-Markets-1728670",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Spending Concerns",
+      "term_ko": "AI 지출에 대한 우려"
     },
     {
-      "term": "Floating interest rate on the main loan",
-      "term_ko": "주담대 변동금리",
-      "significance_score": 280,
-      "mentions": 317,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 변동금리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-07",
-              "timestamp": 1765033200000,
-              "value": 20.68965
-            },
-            {
-              "period": "2025-12-08",
-              "timestamp": 1765119600000,
-              "value": 58.62068
-            },
-            {
-              "period": "2025-12-09",
-              "timestamp": 1765206000000,
-              "value": 58.62068
-            },
-            {
-              "period": "2025-12-10",
-              "timestamp": 1765292400000,
-              "value": 48.27586
-            },
-            {
-              "period": "2025-12-11",
-              "timestamp": 1765378800000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-12",
-              "timestamp": 1765465200000,
-              "value": 48.27586
-            },
-            {
-              "period": "2025-12-13",
-              "timestamp": 1765551600000,
-              "value": 31.03448
-            },
-            {
-              "period": "2025-12-14",
-              "timestamp": 1765638000000,
-              "value": 31.03448
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 변동금리 또 오른다…11월 코픽스 0.24%P 상승",
-              "link": "https://n.news.naver.com/mnews/article/119/0003037109?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 변동금리 또 오른다…11월 코픽스 0.24%P 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003037109?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 317.2414,
-        "weekly_average_volume": 52.8736,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.018457,
-        "time_weight": 0.025229,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1765638000000
-      }
+      "term": "Floating Interest Rate on the Main Loan",
+      "term_ko": "주담대 변동금리"
     },
     {
-      "term": "Savings rates",
-      "term_ko": "적금 금리",
-      "significance_score": 280,
-      "mentions": 458,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "적금 금리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-07",
-              "timestamp": 1765033200000,
-              "value": 55.6239
-            },
-            {
-              "period": "2025-12-08",
-              "timestamp": 1765119600000,
-              "value": 83.39191
-            },
-            {
-              "period": "2025-12-09",
-              "timestamp": 1765206000000,
-              "value": 81.89806
-            },
-            {
-              "period": "2025-12-10",
-              "timestamp": 1765292400000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-11",
-              "timestamp": 1765378800000,
-              "value": 88.22495
-            },
-            {
-              "period": "2025-12-12",
-              "timestamp": 1765465200000,
-              "value": 75.39543
-            },
-            {
-              "period": "2025-12-13",
-              "timestamp": 1765551600000,
-              "value": 55.36028
-            },
-            {
-              "period": "2025-12-14",
-              "timestamp": 1765638000000,
-              "value": 57.20562
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SC제일은행, 전기에너지 줄이면 적금 금리 최고 연 8.8%",
-              "link": "https://n.news.naver.com/mnews/article/003/0013658669?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%81%EA%B8%88%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%81%EA%B8%88%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "SC제일은행, 전기에너지 줄이면 적금 금리 최고 연 8.8%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013658669?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 458.0843,
-        "weekly_average_volume": 76.3474,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.014308,
-        "time_weight": 0.025229,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1765638000000
-      }
+      "term": "Savings Rates",
+      "term_ko": "적금 금리"
     },
     {
-      "term": "Continuous ascent",
-      "term_ko": "연속 상승",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연속 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "변동형 주담대 금리도 4%대 진입…코픽스 3개월 연속 상승",
-              "link": "https://n.news.naver.com/mnews/article/008/0005292052?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%86%8D%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%86%8D%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "변동형 주담대 금리도 4%대 진입…코픽스 3개월 연속 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005292052?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Continuous Ascent",
+      "term_ko": "연속 상승"
     },
     {
       "term": "Strategy Retains Nasdaq",
-      "term_ko": "전략, 나스닥 유지",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strategy Retains Nasdaq",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Strategy Retains Nasdaq 100 Spot Amid Growing Scrutiny of Bitcoin Treasur...",
-              "link": "https://www.econotimes.com/Strategy-Retains-Nasdaq-100-Spot-Amid-Growing-Scrutiny-of-Bitcoin-Treasury-Model-1728654"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strategy%20Retains%20Nasdaq",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strategy%20Retains%20Nasdaq"
-      },
-      "top_headlines": [
-        {
-          "title": "Strategy Retains Nasdaq 100 Spot Amid Growing Scrutiny of Bitcoin Treasur...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Strategy-Retains-Nasdaq-100-Spot-Amid-Growing-Scrutiny-of-Bitcoin-Treasury-Model-1728654",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전략, 나스닥 유지"
     },
     {
       "term": "Police Obtain Access",
-      "term_ko": "경찰이 액세스 권한 획득",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Police Obtain Access",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Police obtain access logs from Coupang security system to determine origi...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000081667?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Police%20Obtain%20Access",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Police%20Obtain%20Access"
-      },
-      "top_headlines": [
-        {
-          "title": "Police obtain access logs from Coupang security system to determine origi...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000081667?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경찰이 액세스 권한 획득"
     },
     {
       "term": "Coupang Security System",
-      "term_ko": "쿠팡 보안 시스템",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Coupang Security System",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Police obtain access logs from Coupang security system to determine origi...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000081667?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Coupang%20Security%20System",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Coupang%20Security%20System"
-      },
-      "top_headlines": [
-        {
-          "title": "Police obtain access logs from Coupang security system to determine origi...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000081667?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쿠팡 보안 시스템"
     },
     {
       "term": "Face Pressure Ahead",
-      "term_ko": "직면한 압력",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Face Pressure Ahead",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Mixed as Tech and AI Stocks Face Pressure Ahead of CPI...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Mixed-as-Tech-and-AI-Stocks-Face-Pressure-Ahead-of-CPI-Data-1728647"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Face%20Pressure%20Ahead",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Face%20Pressure%20Ahead"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Mixed as Tech and AI Stocks Face Pressure Ahead of CPI...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Mixed-as-Tech-and-AI-Stocks-Face-Pressure-Ahead-of-CPI-Data-1728647",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "직면한 압력"
     },
     {
       "term": "Asian Technology",
-      "term_ko": "아시아 기술",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Asian Technology",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Asian Technology and Chipmaking Stocks Slide as AI Spending Concerns Shak...",
-              "link": "https://www.econotimes.com/Asian-Technology-and-Chipmaking-Stocks-Slide-as-AI-Spending-Concerns-Shake-Markets-1728670"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Asian%20Technology",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Asian%20Technology"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Technology and Chipmaking Stocks Slide as AI Spending Concerns Shak...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Technology-and-Chipmaking-Stocks-Slide-as-AI-Spending-Concerns-Shake-Markets-1728670",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "아시아 기술"
     },
     {
       "term": "Growing Scrutiny",
-      "term_ko": "늘어나는 조사",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Growing Scrutiny",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Strategy Retains Nasdaq 100 Spot Amid Growing Scrutiny of Bitcoin Treasur...",
-              "link": "https://www.econotimes.com/Strategy-Retains-Nasdaq-100-Spot-Amid-Growing-Scrutiny-of-Bitcoin-Treasury-Model-1728654"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Growing%20Scrutiny",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Growing%20Scrutiny"
-      },
-      "top_headlines": [
-        {
-          "title": "Strategy Retains Nasdaq 100 Spot Amid Growing Scrutiny of Bitcoin Treasur...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Strategy-Retains-Nasdaq-100-Spot-Amid-Growing-Scrutiny-of-Bitcoin-Treasury-Model-1728654",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "늘어나는 조사"
     },
     {
       "term": "Futures Mixed",
-      "term_ko": "선물 혼합",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Mixed",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Mixed as Tech and AI Stocks Face Pressure Ahead of CPI...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Mixed-as-Tech-and-AI-Stocks-Face-Pressure-Ahead-of-CPI-Data-1728647"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Mixed",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Mixed"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Mixed as Tech and AI Stocks Face Pressure Ahead of CPI...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Mixed-as-Tech-and-AI-Stocks-Face-Pressure-Ahead-of-CPI-Data-1728647",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 혼합"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-15T15:37:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-15T06:38:25.750Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-15T15:37:14+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Alpha-dart Radiation for Brain Tumors",
+      "term_ko": "뇌종양에 알파다트 방사선"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-15T15:37:14+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-15T15:37:14+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Clinical Success",
+      "term_ko": "임상 성공"
+    },
+    {
+      "term": "Real Estate One Sc First Bank and Energy",
+      "term_ko": "부동산원 SC제일은행과 에너지"
+    },
+    {
+      "term": "Sc First Bank Electricity Reduction",
+      "term_ko": "SC제일은행 전기에너지 줄이면"
+    },
+    {
+      "term": "Rising Again November",
+      "term_ko": "또 오른다 11월"
+    },
+    {
+      "term": "Copex Up 0.24 Percentage Points",
+      "term_ko": "코픽스 0.24%P 상승"
+    },
+    {
+      "term": "Savings 3rd",
+      "term_ko": "절약 적금 3차"
+    },
+    {
+      "term": "Up to 8.8% Apy",
+      "term_ko": "최고 연 8.8%"
+    },
+    {
+      "term": "8.8% Per Year If You Save",
+      "term_ko": "아끼면 年 8.8%"
+    },
+    {
+      "term": "Mainstream Mortgage Rates Are Also in the 4% Range",
+      "term_ko": "주담대 금리도 4%대"
+    },
+    {
+      "term": "3 Months Entry Corpus",
+      "term_ko": "진입 코픽스 3개월"
+    },
+    {
+      "term": "Alpha Tau World Firsts",
+      "term_ko": "알파타우 세계 최초"
+    },
+    {
+      "term": "Where Does the Market Go From Here?",
+      "term_ko": "시장 한은은 어디까지"
+    },
+    {
+      "term": "Testing Whether to Explain",
+      "term_ko": "설명할지 시험 중"
+    },
+    {
+      "term": "Savings Launch Biography",
+      "term_ko": "적금 출시 전기"
+    },
+    {
+      "term": "Ai Spending Concerns",
+      "term_ko": "AI 지출에 대한 우려"
+    },
+    {
+      "term": "Floating Interest Rate on the Main Loan",
+      "term_ko": "주담대 변동금리"
+    },
+    {
+      "term": "Savings Rates",
+      "term_ko": "적금 금리"
+    },
+    {
+      "term": "Continuous Ascent",
+      "term_ko": "연속 상승"
+    },
+    {
+      "term": "Strategy Retains Nasdaq",
+      "term_ko": "전략, 나스닥 유지"
+    },
+    {
+      "term": "Police Obtain Access",
+      "term_ko": "경찰이 액세스 권한 획득"
+    },
+    {
+      "term": "Coupang Security System",
+      "term_ko": "쿠팡 보안 시스템"
+    },
+    {
+      "term": "Face Pressure Ahead",
+      "term_ko": "직면한 압력"
+    },
+    {
+      "term": "Asian Technology",
+      "term_ko": "아시아 기술"
+    },
+    {
+      "term": "Growing Scrutiny",
+      "term_ko": "늘어나는 조사"
+    },
+    {
+      "term": "Futures Mixed",
+      "term_ko": "선물 혼합"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Alpha-dart Radiation for Brain Tumors": {
+      "en": "Alpha-dart Radiation for Brain Tumors",
+      "ko": "뇌종양에 알파다트 방사선",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Clinical Success": {
+      "en": "Clinical Success",
+      "ko": "임상 성공",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Real Estate One Sc First Bank and Energy": {
+      "en": "Real Estate One Sc First Bank and Energy",
+      "ko": "부동산원 SC제일은행과 에너지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Sc First Bank Electricity Reduction": {
+      "en": "Sc First Bank Electricity Reduction",
+      "ko": "SC제일은행 전기에너지 줄이면",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Rising Again November": {
+      "en": "Rising Again November",
+      "ko": "또 오른다 11월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Copex Up 0.24 Percentage Points": {
+      "en": "Copex Up 0.24 Percentage Points",
+      "ko": "코픽스 0.24%P 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Savings 3rd": {
+      "en": "Savings 3rd",
+      "ko": "절약 적금 3차",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Up to 8.8% Apy": {
+      "en": "Up to 8.8% Apy",
+      "ko": "최고 연 8.8%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "8.8% Per Year If You Save": {
+      "en": "8.8% Per Year If You Save",
+      "ko": "아끼면 年 8.8%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Mainstream Mortgage Rates Are Also in the 4% Range": {
+      "en": "Mainstream Mortgage Rates Are Also in the 4% Range",
+      "ko": "주담대 금리도 4%대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "3 Months Entry Corpus": {
+      "en": "3 Months Entry Corpus",
+      "ko": "진입 코픽스 3개월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Alpha Tau World Firsts": {
+      "en": "Alpha Tau World Firsts",
+      "ko": "알파타우 세계 최초",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Where Does the Market Go From Here?": {
+      "en": "Where Does the Market Go From Here?",
+      "ko": "시장 한은은 어디까지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Testing Whether to Explain": {
+      "en": "Testing Whether to Explain",
+      "ko": "설명할지 시험 중",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Savings Launch Biography": {
+      "en": "Savings Launch Biography",
+      "ko": "적금 출시 전기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Ai Spending Concerns": {
+      "en": "Ai Spending Concerns",
+      "ko": "AI 지출에 대한 우려",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Floating Interest Rate on the Main Loan": {
+      "en": "Floating Interest Rate on the Main Loan",
+      "ko": "주담대 변동금리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Savings Rates": {
+      "en": "Savings Rates",
+      "ko": "적금 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Continuous Ascent": {
+      "en": "Continuous Ascent",
+      "ko": "연속 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Strategy Retains Nasdaq": {
+      "en": "Strategy Retains Nasdaq",
+      "ko": "전략, 나스닥 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Police Obtain Access": {
+      "en": "Police Obtain Access",
+      "ko": "경찰이 액세스 권한 획득",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Coupang Security System": {
+      "en": "Coupang Security System",
+      "ko": "쿠팡 보안 시스템",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Face Pressure Ahead": {
+      "en": "Face Pressure Ahead",
+      "ko": "직면한 압력",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Asian Technology": {
+      "en": "Asian Technology",
+      "ko": "아시아 기술",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Growing Scrutiny": {
+      "en": "Growing Scrutiny",
+      "ko": "늘어나는 조사",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Futures Mixed": {
+      "en": "Futures Mixed",
+      "ko": "선물 혼합",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-15T12:43:56.013Z"
     }
   }
 }
