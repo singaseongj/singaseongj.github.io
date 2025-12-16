@@ -1,1155 +1,439 @@
 {
+  "generatedAt": "2025-12-16T12:42:18.725Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-16",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "AI Awards Foundation",
-      "term_ko": "AI Awards 파운데이션",
-      "significance_score": 700,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Awards 파운데이션",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "리얼월드, 'Nebius Robotics & Physical AI Awards' 파운데이션 모델 부문...",
-              "link": "https://kr.aving.net/news/articleView.html?idxno=1807165"
-            },
-            {
-              "title": "리얼월드, ‘Nebius Robotics & Physical AI Awards’ 파운데이션 모델 부...",
-              "link": "https://www.venturesquare.net/1019964"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Awards%20%ED%8C%8C%EC%9A%B4%EB%8D%B0%EC%9D%B4%EC%85%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Awards%20%ED%8C%8C%EC%9A%B4%EB%8D%B0%EC%9D%B4%EC%85%98"
-      },
-      "top_headlines": [
-        {
-          "title": "리얼월드, 'Nebius Robotics & Physical AI Awards' 파운데이션 모델 부문...",
-          "summary": "",
-          "link": "https://kr.aving.net/news/articleView.html?idxno=1807165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "리얼월드, ‘Nebius Robotics & Physical AI Awards’ 파운데이션 모델 부...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1019964",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Awards Foundation",
+      "term_ko": "AI Awards 파운데이션"
     },
     {
       "term": "Real-world Nebius Robotics",
-      "term_ko": "리얼월드 Nebius Robotics",
-      "significance_score": 644,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리얼월드 Nebius Robotics",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "리얼월드, 'Nebius Robotics & Physical AI Awards' 파운데이션 모델 부문...",
-              "link": "https://kr.aving.net/news/articleView.html?idxno=1807165"
-            },
-            {
-              "title": "리얼월드, ‘Nebius Robotics & Physical AI Awards’ 파운데이션 모델 부...",
-              "link": "https://www.venturesquare.net/1019964"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EC%96%BC%EC%9B%94%EB%93%9C%20Nebius%20Robotics",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EC%96%BC%EC%9B%94%EB%93%9C%20Nebius%20Robotics"
-      },
-      "top_headlines": [
-        {
-          "title": "리얼월드, 'Nebius Robotics & Physical AI Awards' 파운데이션 모델 부문...",
-          "summary": "",
-          "link": "https://kr.aving.net/news/articleView.html?idxno=1807165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "리얼월드, ‘Nebius Robotics & Physical AI Awards’ 파운데이션 모델 부...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1019964",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "리얼월드 Nebius Robotics"
     },
     {
-      "term": "3.5 trillion in ETF net assets",
-      "term_ko": "ETF 순자산액 3조5000억원",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 순자산액 3조5000억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한투운용 ACE KRX금현물 ETF, 순자산액 3조5000억원 돌파",
-              "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=75764"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%EC%95%A1%203%EC%A1%B05000%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%88%9C%EC%9E%90%EC%82%B0%EC%95%A1%203%EC%A1%B05000%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "한투운용 ACE KRX금현물 ETF, 순자산액 3조5000억원 돌파",
-          "summary": "",
-          "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=75764",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3.5 Trillion in Etf Net Assets",
+      "term_ko": "ETF 순자산액 3조5000억원"
     },
     {
-      "term": "Hantu Management ACE KRXGold Spot",
-      "term_ko": "한투운용 ACE KRX금현물",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한투운용 ACE KRX금현물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한투운용 ACE KRX금현물 ETF, 순자산액 3조5000억원 돌파",
-              "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=75764"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%88%AC%EC%9A%B4%EC%9A%A9%20ACE%20KRX%EA%B8%88%ED%98%84%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%88%AC%EC%9A%B4%EC%9A%A9%20ACE%20KRX%EA%B8%88%ED%98%84%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "한투운용 ACE KRX금현물 ETF, 순자산액 3조5000억원 돌파",
-          "summary": "",
-          "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=75764",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hantu Management Ace Krxgold Spot",
+      "term_ko": "한투운용 ACE KRX금현물"
     },
     {
-      "term": "Rate Rise Worry AI",
-      "term_ko": "금리인상 고민 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리인상 고민 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "노무라 “한은 내년 하반기 금리인상 고민…AI 슈퍼사이클 지속”",
-              "link": "https://n.news.naver.com/mnews/article/018/0006184548?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EA%B3%A0%EB%AF%BC%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EA%B3%A0%EB%AF%BC%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "노무라 “한은 내년 하반기 금리인상 고민…AI 슈퍼사이클 지속”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006184548?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rate Rise Worry Ai",
+      "term_ko": "금리인상 고민 AI"
     },
     {
-      "term": "No IPO",
-      "term_ko": "안 된다 IPO",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안 된다 IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "신약만으로는 안 된다…IPO 시장이 바꾼 'K-바이오' 생존 공식",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=228265"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%20%EB%90%9C%EB%8B%A4%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%20%EB%90%9C%EB%8B%A4%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "신약만으로는 안 된다…IPO 시장이 바꾼 'K-바이오' 생존 공식",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=228265",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "No Ipo",
+      "term_ko": "안 된다 IPO"
     },
     {
-      "term": "24-hour stock trading",
-      "term_ko": "24시간 주식 거래",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "24시간 주식 거래",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'24시간 주식 거래' 추진하는 미 나스닥…\"서류 제출 계획\"",
-              "link": "https://n.news.naver.com/mnews/article/422/0000812805?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=24%EC%8B%9C%EA%B0%84%20%EC%A3%BC%EC%8B%9D%20%EA%B1%B0%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=24%EC%8B%9C%EA%B0%84%20%EC%A3%BC%EC%8B%9D%20%EA%B1%B0%EB%9E%98"
-      },
-      "top_headlines": [
-        {
-          "title": "'24시간 주식 거래' 추진하는 미 나스닥…\"서류 제출 계획\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000812805?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "24-hour Stock Trading",
+      "term_ko": "24시간 주식 거래"
     },
     {
-      "term": "24 hours on Wall Street",
-      "term_ko": "미 증시 24시간",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미 증시 24시간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "나스닥, 미 증시 24시간 거래 추진… \"글로벌 투자 수요 대응\"",
-              "link": "https://www.newstopkorea.com/news/articleView.html?idxno=41815"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EC%A6%9D%EC%8B%9C%2024%EC%8B%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EC%A6%9D%EC%8B%9C%2024%EC%8B%9C%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥, 미 증시 24시간 거래 추진… \"글로벌 투자 수요 대응\"",
-          "summary": "",
-          "link": "https://www.newstopkorea.com/news/articleView.html?idxno=41815",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "24 Hours on Wall Street",
+      "term_ko": "미 증시 24시간"
     },
     {
       "term": "Pushing Nasdaq",
-      "term_ko": "추진하는 미 나스닥",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "추진하는 미 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'24시간 주식 거래' 추진하는 미 나스닥…\"서류 제출 계획\"",
-              "link": "https://n.news.naver.com/mnews/article/422/0000812805?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%94%EC%A7%84%ED%95%98%EB%8A%94%20%EB%AF%B8%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%94%EC%A7%84%ED%95%98%EB%8A%94%20%EB%AF%B8%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "'24시간 주식 거래' 추진하는 미 나스닥…\"서류 제출 계획\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000812805?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "추진하는 미 나스닥"
     },
     {
-      "term": "Plan your filing",
-      "term_ko": "서류 제출 계획",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서류 제출 계획",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'24시간 주식 거래' 추진하는 미 나스닥…\"서류 제출 계획\"",
-              "link": "https://n.news.naver.com/mnews/article/422/0000812805?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%A5%98%20%EC%A0%9C%EC%B6%9C%20%EA%B3%84%ED%9A%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%A5%98%20%EC%A0%9C%EC%B6%9C%20%EA%B3%84%ED%9A%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "'24시간 주식 거래' 추진하는 미 나스닥…\"서류 제출 계획\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000812805?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Plan Your Filing",
+      "term_ko": "서류 제출 계획"
     },
     {
       "term": "Trade Promotion Global",
-      "term_ko": "거래 추진 글로벌",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래 추진 글로벌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "나스닥, 미 증시 24시간 거래 추진… \"글로벌 투자 수요 대응\"",
-              "link": "https://www.newstopkorea.com/news/articleView.html?idxno=41815"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%20%EC%B6%94%EC%A7%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%20%EC%B6%94%EC%A7%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥, 미 증시 24시간 거래 추진… \"글로벌 투자 수요 대응\"",
-          "summary": "",
-          "link": "https://www.newstopkorea.com/news/articleView.html?idxno=41815",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "거래 추진 글로벌"
     },
     {
-      "term": "Responding to investment demand",
-      "term_ko": "투자 수요 대응",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자 수요 대응",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "나스닥, 미 증시 24시간 거래 추진… \"글로벌 투자 수요 대응\"",
-              "link": "https://www.newstopkorea.com/news/articleView.html?idxno=41815"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EC%88%98%EC%9A%94%20%EB%8C%80%EC%9D%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EC%88%98%EC%9A%94%20%EB%8C%80%EC%9D%91"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥, 미 증시 24시간 거래 추진… \"글로벌 투자 수요 대응\"",
-          "summary": "",
-          "link": "https://www.newstopkorea.com/news/articleView.html?idxno=41815",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Responding to Investment Demand",
+      "term_ko": "투자 수요 대응"
     },
     {
-      "term": "Rising house prices",
-      "term_ko": "집값 환율 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집값 환율 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"유동성 증가만으로 집값·환율 상승 일어난 것 아냐\"",
-              "link": "https://www.delighti.co.kr/news/articleView.html?idxno=107934"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%ED%99%98%EC%9C%A8%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%ED%99%98%EC%9C%A8%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"유동성 증가만으로 집값·환율 상승 일어난 것 아냐\"",
-          "summary": "",
-          "link": "https://www.delighti.co.kr/news/articleView.html?idxno=107934",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising House Prices",
+      "term_ko": "집값 환율 상승"
     },
     {
-      "term": "It didn't happen",
-      "term_ko": "일어난 것 아냐",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "일어난 것 아냐",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"유동성 증가만으로 집값·환율 상승 일어난 것 아냐\"",
-              "link": "https://www.delighti.co.kr/news/articleView.html?idxno=107934"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EC%96%B4%EB%82%9C%20%EA%B2%83%20%EC%95%84%EB%83%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EC%96%B4%EB%82%9C%20%EA%B2%83%20%EC%95%84%EB%83%90"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"유동성 증가만으로 집값·환율 상승 일어난 것 아냐\"",
-          "summary": "",
-          "link": "https://www.delighti.co.kr/news/articleView.html?idxno=107934",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It Didn't Happen",
+      "term_ko": "일어난 것 아냐"
     },
     {
-      "term": "Korean won exchange rate house prices",
-      "term_ko": "한은 환율 집값",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 환율 집값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"환율·집값, 유동성 탓만 하긴 무리\" … 해외투자·달러보유 수급...",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2025/12/16/2025121600245.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%ED%99%98%EC%9C%A8%20%EC%A7%91%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%ED%99%98%EC%9C%A8%20%EC%A7%91%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"환율·집값, 유동성 탓만 하긴 무리\" … 해외투자·달러보유 수급...",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/12/16/2025121600245.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Korean Won Exchange Rate House Prices",
+      "term_ko": "한은 환율 집값"
     },
     {
-      "term": "Don't just blame liquidity",
-      "term_ko": "유동성 탓만 하긴",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유동성 탓만 하긴",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"환율·집값, 유동성 탓만 하긴 무리\" … 해외투자·달러보유 수급...",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2025/12/16/2025121600245.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EB%8F%99%EC%84%B1%20%ED%83%93%EB%A7%8C%20%ED%95%98%EA%B8%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EB%8F%99%EC%84%B1%20%ED%83%93%EB%A7%8C%20%ED%95%98%EA%B8%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"환율·집값, 유동성 탓만 하긴 무리\" … 해외투자·달러보유 수급...",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/12/16/2025121600245.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Don't Just Blame Liquidity",
+      "term_ko": "유동성 탓만 하긴"
     },
     {
-      "term": "Hold a bunch of foreign investment dollars",
-      "term_ko": "무리 해외투자 달러보유",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "무리 해외투자 달러보유",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"환율·집값, 유동성 탓만 하긴 무리\" … 해외투자·달러보유 수급...",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2025/12/16/2025121600245.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B4%EB%A6%AC%20%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%20%EB%8B%AC%EB%9F%AC%EB%B3%B4%EC%9C%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B4%EB%A6%AC%20%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%20%EB%8B%AC%EB%9F%AC%EB%B3%B4%EC%9C%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"환율·집값, 유동성 탓만 하긴 무리\" … 해외투자·달러보유 수급...",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2025/12/16/2025121600245.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hold a Bunch of Foreign Investment Dollars",
+      "term_ko": "무리 해외투자 달러보유"
     },
     {
-      "term": "Testosterone diagnosis is a fluid",
-      "term_ko": "고환율 진단은 유동성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고환율 진단은 유동성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "M2 증가세에도...한은의 고환율 진단은 '유동성 과잉론'보다 '달러 수급...",
-              "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=315456"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%84%EB%8B%A8%EC%9D%80%20%EC%9C%A0%EB%8F%99%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%84%EB%8B%A8%EC%9D%80%20%EC%9C%A0%EB%8F%99%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "M2 증가세에도...한은의 고환율 진단은 '유동성 과잉론'보다 '달러 수급...",
-          "summary": "",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=315456",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Testosterone Diagnosis Is a Fluid",
+      "term_ko": "고환율 진단은 유동성"
     },
     {
-      "term": "Nomura Han said that next year",
-      "term_ko": "노무라 한은 내년",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "노무라 한은 내년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "노무라 “한은 내년 하반기 금리인상 고민…AI 슈퍼사이클 지속”",
-              "link": "https://n.news.naver.com/mnews/article/018/0006184548?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%B8%EB%AC%B4%EB%9D%BC%20%ED%95%9C%EC%9D%80%20%EB%82%B4%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%B8%EB%AC%B4%EB%9D%BC%20%ED%95%9C%EC%9D%80%20%EB%82%B4%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "노무라 “한은 내년 하반기 금리인상 고민…AI 슈퍼사이클 지속”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006184548?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nomura Han Said That Next Year",
+      "term_ko": "노무라 한은 내년"
     },
     {
-      "term": "K-Bio changed the market",
-      "term_ko": "시장이 바꾼 K-바이오",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장이 바꾼 K-바이오",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "신약만으로는 안 된다…IPO 시장이 바꾼 'K-바이오' 생존 공식",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=228265"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%EC%9D%B4%20%EB%B0%94%EA%BE%BC%20K-%EB%B0%94%EC%9D%B4%EC%98%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%EC%9D%B4%20%EB%B0%94%EA%BE%BC%20K-%EB%B0%94%EC%9D%B4%EC%98%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "신약만으로는 안 된다…IPO 시장이 바꾼 'K-바이오' 생존 공식",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=228265",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "K-bio Changed the Market",
+      "term_ko": "시장이 바꾼 K-바이오"
     },
     {
-      "term": "Global AI Infrastructure",
-      "term_ko": "글로벌 AI 인프라",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Global AI Infrastructure",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Rebellions bets on non-Nvidia future for global AI infrastructure",
-              "link": "https://n.news.naver.com/mnews/article/044/0000277830?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Global%20AI%20Infrastructure",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Global%20AI%20Infrastructure"
-      },
-      "top_headlines": [
-        {
-          "title": "Rebellions bets on non-Nvidia future for global AI infrastructure",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000277830?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Global Ai Infrastructure",
+      "term_ko": "글로벌 AI 인프라"
     },
     {
-      "term": "Dollars over excess loans",
-      "term_ko": "과잉론보다 달러",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "과잉론보다 달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "M2 증가세에도...한은의 고환율 진단은 '유동성 과잉론'보다 '달러 수급...",
-              "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=315456"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%BC%EC%9E%89%EB%A1%A0%EB%B3%B4%EB%8B%A4%20%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%BC%EC%9E%89%EB%A1%A0%EB%B3%B4%EB%8B%A4%20%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "M2 증가세에도...한은의 고환율 진단은 '유동성 과잉론'보다 '달러 수급...",
-          "summary": "",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=315456",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollars Over Excess Loans",
+      "term_ko": "과잉론보다 달러"
     },
     {
-      "term": "Supercycle persistence",
-      "term_ko": "슈퍼사이클 지속",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "슈퍼사이클 지속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "노무라 “한은 내년 하반기 금리인상 고민…AI 슈퍼사이클 지속”",
-              "link": "https://n.news.naver.com/mnews/article/018/0006184548?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%88%ED%8D%BC%EC%82%AC%EC%9D%B4%ED%81%B4%20%EC%A7%80%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%88%ED%8D%BC%EC%82%AC%EC%9D%B4%ED%81%B4%20%EC%A7%80%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "노무라 “한은 내년 하반기 금리인상 고민…AI 슈퍼사이클 지속”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006184548?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Supercycle Persistence",
+      "term_ko": "슈퍼사이클 지속"
     },
     {
-      "term": "Survival formula",
-      "term_ko": "생존 공식",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "생존 공식",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "신약만으로는 안 된다…IPO 시장이 바꾼 'K-바이오' 생존 공식",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=228265"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EC%A1%B4%20%EA%B3%B5%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EC%A1%B4%20%EA%B3%B5%EC%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "신약만으로는 안 된다…IPO 시장이 바꾼 'K-바이오' 생존 공식",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=228265",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Survival Formula",
+      "term_ko": "생존 공식"
     },
     {
       "term": "Wall Street Futures",
-      "term_ko": "월스트리트 선물",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Slip as Tech Stocks Struggle Ahead of Key US Economic...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Tech-Stocks-Struggle-Ahead-of-Key-US-Economic-Data-1728787"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Slip as Tech Stocks Struggle Ahead of Key US Economic...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Tech-Stocks-Struggle-Ahead-of-Key-US-Economic-Data-1728787",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 선물"
     },
     {
-      "term": "Key US",
-      "term_ko": "주요 미국",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Key US",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Slip as Tech Stocks Struggle Ahead of Key US Economic...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Tech-Stocks-Struggle-Ahead-of-Key-US-Economic-Data-1728787"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Key%20US",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Key%20US"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Slip as Tech Stocks Struggle Ahead of Key US Economic...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Tech-Stocks-Struggle-Ahead-of-Key-US-Economic-Data-1728787",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Key Us",
+      "term_ko": "주요 미국"
     },
     {
       "term": "Rebellions Bets",
-      "term_ko": "반란 베팅",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rebellions Bets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Rebellions bets on non-Nvidia future for global AI infrastructure",
-              "link": "https://n.news.naver.com/mnews/article/044/0000277830?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rebellions%20Bets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rebellions%20Bets"
-      },
-      "top_headlines": [
-        {
-          "title": "Rebellions bets on non-Nvidia future for global AI infrastructure",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000277830?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반란 베팅"
     },
     {
-      "term": "Non-Nvidia Future",
-      "term_ko": "엔비디아가 아닌 미래",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Non-Nvidia Future",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Rebellions bets on non-Nvidia future for global AI infrastructure",
-              "link": "https://n.news.naver.com/mnews/article/044/0000277830?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Non-Nvidia%20Future",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Non-Nvidia%20Future"
-      },
-      "top_headlines": [
-        {
-          "title": "Rebellions bets on non-Nvidia future for global AI infrastructure",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000277830?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Non-nvidia Future",
+      "term_ko": "엔비디아가 아닌 미래"
     },
     {
       "term": "Struggle Ahead",
-      "term_ko": "앞으로의 투쟁",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Struggle Ahead",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Slip as Tech Stocks Struggle Ahead of Key US Economic...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Tech-Stocks-Struggle-Ahead-of-Key-US-Economic-Data-1728787"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Struggle%20Ahead",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Struggle%20Ahead"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Slip as Tech Stocks Struggle Ahead of Key US Economic...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Tech-Stocks-Struggle-Ahead-of-Key-US-Economic-Data-1728787",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "앞으로의 투쟁"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-16T15:36:00+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-16T06:37:12.029Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-16T15:36:00+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ai Awards Foundation",
+      "term_ko": "AI Awards 파운데이션"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-16T15:36:00+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-16T15:36:00+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Real-world Nebius Robotics",
+      "term_ko": "리얼월드 Nebius Robotics"
+    },
+    {
+      "term": "3.5 Trillion in Etf Net Assets",
+      "term_ko": "ETF 순자산액 3조5000억원"
+    },
+    {
+      "term": "Hantu Management Ace Krxgold Spot",
+      "term_ko": "한투운용 ACE KRX금현물"
+    },
+    {
+      "term": "Rate Rise Worry Ai",
+      "term_ko": "금리인상 고민 AI"
+    },
+    {
+      "term": "No Ipo",
+      "term_ko": "안 된다 IPO"
+    },
+    {
+      "term": "24-hour Stock Trading",
+      "term_ko": "24시간 주식 거래"
+    },
+    {
+      "term": "24 Hours on Wall Street",
+      "term_ko": "미 증시 24시간"
+    },
+    {
+      "term": "Pushing Nasdaq",
+      "term_ko": "추진하는 미 나스닥"
+    },
+    {
+      "term": "Plan Your Filing",
+      "term_ko": "서류 제출 계획"
+    },
+    {
+      "term": "Trade Promotion Global",
+      "term_ko": "거래 추진 글로벌"
+    },
+    {
+      "term": "Responding to Investment Demand",
+      "term_ko": "투자 수요 대응"
+    },
+    {
+      "term": "Rising House Prices",
+      "term_ko": "집값 환율 상승"
+    },
+    {
+      "term": "It Didn't Happen",
+      "term_ko": "일어난 것 아냐"
+    },
+    {
+      "term": "Korean Won Exchange Rate House Prices",
+      "term_ko": "한은 환율 집값"
+    },
+    {
+      "term": "Don't Just Blame Liquidity",
+      "term_ko": "유동성 탓만 하긴"
+    },
+    {
+      "term": "Hold a Bunch of Foreign Investment Dollars",
+      "term_ko": "무리 해외투자 달러보유"
+    },
+    {
+      "term": "Testosterone Diagnosis Is a Fluid",
+      "term_ko": "고환율 진단은 유동성"
+    },
+    {
+      "term": "Nomura Han Said That Next Year",
+      "term_ko": "노무라 한은 내년"
+    },
+    {
+      "term": "K-bio Changed the Market",
+      "term_ko": "시장이 바꾼 K-바이오"
+    },
+    {
+      "term": "Global Ai Infrastructure",
+      "term_ko": "글로벌 AI 인프라"
+    },
+    {
+      "term": "Dollars Over Excess Loans",
+      "term_ko": "과잉론보다 달러"
+    },
+    {
+      "term": "Supercycle Persistence",
+      "term_ko": "슈퍼사이클 지속"
+    },
+    {
+      "term": "Survival Formula",
+      "term_ko": "생존 공식"
+    },
+    {
+      "term": "Wall Street Futures",
+      "term_ko": "월스트리트 선물"
+    },
+    {
+      "term": "Key Us",
+      "term_ko": "주요 미국"
+    },
+    {
+      "term": "Rebellions Bets",
+      "term_ko": "반란 베팅"
+    },
+    {
+      "term": "Non-nvidia Future",
+      "term_ko": "엔비디아가 아닌 미래"
+    },
+    {
+      "term": "Struggle Ahead",
+      "term_ko": "앞으로의 투쟁"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    }
+  ],
+  "translations": {
+    "Ai Awards Foundation": {
+      "en": "Ai Awards Foundation",
+      "ko": "AI Awards 파운데이션",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Real-world Nebius Robotics": {
+      "en": "Real-world Nebius Robotics",
+      "ko": "리얼월드 Nebius Robotics",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "3.5 Trillion in Etf Net Assets": {
+      "en": "3.5 Trillion in Etf Net Assets",
+      "ko": "ETF 순자산액 3조5000억원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Hantu Management Ace Krxgold Spot": {
+      "en": "Hantu Management Ace Krxgold Spot",
+      "ko": "한투운용 ACE KRX금현물",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Rate Rise Worry Ai": {
+      "en": "Rate Rise Worry Ai",
+      "ko": "금리인상 고민 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "No Ipo": {
+      "en": "No Ipo",
+      "ko": "안 된다 IPO",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "24-hour Stock Trading": {
+      "en": "24-hour Stock Trading",
+      "ko": "24시간 주식 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "24 Hours on Wall Street": {
+      "en": "24 Hours on Wall Street",
+      "ko": "미 증시 24시간",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Pushing Nasdaq": {
+      "en": "Pushing Nasdaq",
+      "ko": "추진하는 미 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Plan Your Filing": {
+      "en": "Plan Your Filing",
+      "ko": "서류 제출 계획",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Trade Promotion Global": {
+      "en": "Trade Promotion Global",
+      "ko": "거래 추진 글로벌",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Responding to Investment Demand": {
+      "en": "Responding to Investment Demand",
+      "ko": "투자 수요 대응",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Rising House Prices": {
+      "en": "Rising House Prices",
+      "ko": "집값 환율 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "It Didn't Happen": {
+      "en": "It Didn't Happen",
+      "ko": "일어난 것 아냐",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Korean Won Exchange Rate House Prices": {
+      "en": "Korean Won Exchange Rate House Prices",
+      "ko": "한은 환율 집값",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Don't Just Blame Liquidity": {
+      "en": "Don't Just Blame Liquidity",
+      "ko": "유동성 탓만 하긴",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Hold a Bunch of Foreign Investment Dollars": {
+      "en": "Hold a Bunch of Foreign Investment Dollars",
+      "ko": "무리 해외투자 달러보유",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Testosterone Diagnosis Is a Fluid": {
+      "en": "Testosterone Diagnosis Is a Fluid",
+      "ko": "고환율 진단은 유동성",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.725Z"
+    },
+    "Nomura Han Said That Next Year": {
+      "en": "Nomura Han Said That Next Year",
+      "ko": "노무라 한은 내년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "K-bio Changed the Market": {
+      "en": "K-bio Changed the Market",
+      "ko": "시장이 바꾼 K-바이오",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Global Ai Infrastructure": {
+      "en": "Global Ai Infrastructure",
+      "ko": "글로벌 AI 인프라",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Dollars Over Excess Loans": {
+      "en": "Dollars Over Excess Loans",
+      "ko": "과잉론보다 달러",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Supercycle Persistence": {
+      "en": "Supercycle Persistence",
+      "ko": "슈퍼사이클 지속",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Survival Formula": {
+      "en": "Survival Formula",
+      "ko": "생존 공식",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Wall Street Futures": {
+      "en": "Wall Street Futures",
+      "ko": "월스트리트 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Key Us": {
+      "en": "Key Us",
+      "ko": "주요 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Rebellions Bets": {
+      "en": "Rebellions Bets",
+      "ko": "반란 베팅",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Non-nvidia Future": {
+      "en": "Non-nvidia Future",
+      "ko": "엔비디아가 아닌 미래",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Struggle Ahead": {
+      "en": "Struggle Ahead",
+      "ko": "앞으로의 투쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-16T12:42:18.726Z"
     }
   }
 }
