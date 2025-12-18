@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-18T21:43:18+09:00 (KST)**
+- Generated: **2025-12-19T03:34:12+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -68,7 +68,7 @@
 **파라다이스** (034230.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.1%**, 20d **0.4%**; volatility (20d): **unknown**
+- Returns: 5d **-7.7%**, 20d **-10.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%ED%8C%8C%EB%9D%BC%EB%8B%A4%EC%9D%B4%EC%8A%A4
@@ -145,34 +145,34 @@
 **대한유화** (006650.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **18.8%**, 20d **22.3%**; volatility (20d): **unknown**
+- Returns: 5d **-0.5%**, 20d **-1.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%EC%9C%A0%ED%99%94
 
-**아이에스동서** (010780.KS)
+**명신산업** (009900.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.1%**, 20d **-3.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.0%**, 20d **5.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **경기소비재**
+- News search: https://www.google.com/search?q=%EB%AA%85%EC%8B%A0%EC%82%B0%EC%97%85
+
+**부광약품** (003000.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.4%**, 20d **1.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EB%B6%80%EA%B4%91%EC%95%BD%ED%92%88
+
+**코오롱인더** (120110.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.0%**, 20d **6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4%EB%8F%99%EC%84%9C
-
-**한샘** (009240.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-10.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
-
-**한섬** (020000.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.2%**, 20d **-7.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%ED%95%9C%EC%84%AC
+- News search: https://www.google.com/search?q=%EC%BD%94%EC%98%A4%EB%A1%B1%EC%9D%B8%EB%8D%94
 
 ## NASDAQ 100
 
@@ -317,7 +317,7 @@
 **Hubbell Incorporated** (HUBB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **3.0%**; volatility (20d): **unknown**
+- Returns: 5d **-6.0%**, 20d **3.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Hubbell%20Incorporated
