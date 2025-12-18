@@ -1,439 +1,1100 @@
 {
-  "generatedAt": "2025-12-18T01:25:37.518Z",
-  "timezone": "Asia/Seoul",
   "date": "2025-12-18",
   "window": "12_hours",
-  "total_phrases": 30,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Md Stock Price 98",
-      "term_ko": "MD 주가 98%"
-    },
-    {
-      "term": "Btc in Dollars",
-      "term_ko": "달러 규모 BTC"
-    },
-    {
-      "term": "Eth Bulk Coinbase",
-      "term_ko": "ETH 대량 코인베이스"
-    },
-    {
-      "term": "Etfs Instead of Deposits",
-      "term_ko": "예금 대신 ETF"
-    },
-    {
-      "term": "Cannon $30 Million",
-      "term_ko": "캐넌 3천만 달러"
-    },
-    {
-      "term": "12 Months of Share Repurchases",
-      "term_ko": "자사주 매입 12개월"
-    },
-    {
-      "term": "Economic Forecast Gold Price $4700",
-      "term_ko": "경제전망 금값 4700불"
-    },
-    {
-      "term": "Krw Value 1480 Won Intraday",
-      "term_ko": "원화값 장중 1480원"
-    },
-    {
-      "term": "News Briefing Blackrock 400 Million",
-      "term_ko": "뉴스브리핑 블랙록 4억"
-    },
-    {
-      "term": "Gold Price Todaysilver Price on December 18th",
-      "term_ko": "오늘의 금값시세12월18일자 은값"
-    },
-    {
-      "term": "Buy Deutsche Bank Coinbase",
-      "term_ko": "도이체방크 코인베이스 매수"
-    },
-    {
-      "term": "Proposed Product Service",
-      "term_ko": "제시 상품 서비스"
-    },
-    {
-      "term": "Controversy Adds Another Boost",
-      "term_ko": "논란에도 추가 상승"
-    },
-    {
-      "term": "Bitcoin Strategy Touted",
-      "term_ko": "비트코인 전략 내세운"
-    },
-    {
-      "term": "Delisting From Nasdaq in a Crash",
-      "term_ko": "폭락에 나스닥 상장폐지"
-    },
-    {
-      "term": "Netapp Asia Pacific Partners",
-      "term_ko": "넷앱 아태지역 파트너"
-    },
-    {
-      "term": "Center Channel Leadership",
-      "term_ko": "중심 채널 리더십"
-    },
-    {
-      "term": "Relieved by Collapsing Lee Chang-yong",
-      "term_ko": "무너져 이창용 안심"
-    },
-    {
-      "term": "Keep an Eye on Dividend Cash Flow",
-      "term_ko": "배당 현금흐름에 눈"
-    },
-    {
-      "term": "Market Analysis New York Stock Exchange",
-      "term_ko": "시황 분석 뉴욕증시"
-    },
-    {
-      "term": "Early-stage M&a Issues",
-      "term_ko": "장초반 M&A 이슈"
-    },
-    {
-      "term": "Fed Chairman Nomination",
-      "term_ko": "연준 의장 인선"
-    },
-    {
-      "term": "Diversification Is Key",
-      "term_ko": "다각화가 관건"
-    },
-    {
-      "term": "Enough to Spare",
-      "term_ko": "여력 충분"
-    },
-    {
-      "term": "The Most",
-      "term_ko": "역사상 가장"
-    },
-    {
-      "term": "Not Good Enough",
-      "term_ko": "못할 수준"
-    },
-    {
-      "term": "Turned Investor",
-      "term_ko": "돌린 투자자"
-    },
-    {
-      "term": "Genus Mixed Tax",
-      "term_ko": "속 혼조세"
-    },
-    {
-      "term": "Nasdaq Medline",
-      "term_ko": "나스닥 메드라인"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
-    }
-  ],
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "Md Stock Price 98",
-      "term_ko": "MD 주가 98%"
+      "term": "The story of AI in stocks",
+      "term_ko": "AI의 종목 이야기",
+      "significance_score": 700,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI의 종목 이야기",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
+              "link": "https://www.newspim.com/news/view/20251218000144"
+            },
+            {
+              "title": "[AI의 종목 이야기] 인스메드, 임상시험 실패에 시간 외서 주가 24% 폭락",
+              "link": "https://www.newspim.com/news/view/20251218000084"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251218000144",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "[AI의 종목 이야기] 인스메드, 임상시험 실패에 시간 외서 주가 24% 폭락",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251218000084",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Btc in Dollars",
-      "term_ko": "달러 규모 BTC"
+      "term": "Grocery shopping with DoorDash ChatGPT",
+      "term_ko": "도어대시 챗GPT로 장보기",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "도어대시 챗GPT로 장보기",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
+              "link": "https://www.newspim.com/news/view/20251218000144"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EC%96%B4%EB%8C%80%EC%8B%9C%20%EC%B1%97GPT%EB%A1%9C%20%EC%9E%A5%EB%B3%B4%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EC%96%B4%EB%8C%80%EC%8B%9C%20%EC%B1%97GPT%EB%A1%9C%20%EC%9E%A5%EB%B3%B4%EA%B8%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251218000144",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Eth Bulk Coinbase",
-      "term_ko": "ETH 대량 코인베이스"
+      "term": "First IMA in Korea",
+      "term_ko": "국내 최초 IMA",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "국내 최초 IMA",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "\"시장 기준 만들 것\"…한국투자증권, 국내 최초 IMA 상품 출시",
+              "link": "https://n.news.naver.com/mnews/article/119/0003038450?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EC%B5%9C%EC%B4%88%20IMA",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EC%B5%9C%EC%B4%88%20IMA"
+      },
+      "top_headlines": [
+        {
+          "title": "\"시장 기준 만들 것\"…한국투자증권, 국내 최초 IMA 상품 출시",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/119/0003038450?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Etfs Instead of Deposits",
-      "term_ko": "예금 대신 ETF"
+      "term": "First Principal Guarantee IMA",
+      "term_ko": "첫 원금보장 IMA",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "첫 원금보장 IMA",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "한투증권 첫 원금보장 ‘IMA’ 출시, '머니무브' 본격화 하나(종합)",
+              "link": "http://www.metroseoul.co.kr/article/20251218500114"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AB%20%EC%9B%90%EA%B8%88%EB%B3%B4%EC%9E%A5%20IMA",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AB%20%EC%9B%90%EA%B8%88%EB%B3%B4%EC%9E%A5%20IMA"
+      },
+      "top_headlines": [
+        {
+          "title": "한투증권 첫 원금보장 ‘IMA’ 출시, '머니무브' 본격화 하나(종합)",
+          "summary": "",
+          "link": "http://www.metroseoul.co.kr/article/20251218500114",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Cannon $30 Million",
-      "term_ko": "캐넌 3천만 달러"
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "증시 브리핑 12월",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+          "summary": "",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "12 Months of Share Repurchases",
-      "term_ko": "자사주 매입 12개월"
+      "term": "17th US Major",
+      "term_ko": "17일 미국 주요",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "17일 미국 주요",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=17%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=17%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+          "summary": "",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Economic Forecast Gold Price $4700",
-      "term_ko": "경제전망 금값 4700불"
+      "term": "Outside share price 24",
+      "term_ko": "외서 주가 24%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "외서 주가 24%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[AI의 종목 이야기] 인스메드, 임상시험 실패에 시간 외서 주가 24% 폭락",
+              "link": "https://www.newspim.com/news/view/20251218000084"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EC%84%9C%20%EC%A3%BC%EA%B0%80%2024%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EC%84%9C%20%EC%A3%BC%EA%B0%80%2024%25"
+      },
+      "top_headlines": [
+        {
+          "title": "[AI의 종목 이야기] 인스메드, 임상시험 실패에 시간 외서 주가 24% 폭락",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251218000084",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Krw Value 1480 Won Intraday",
-      "term_ko": "원화값 장중 1480원"
+      "term": "6 major Asian stock markets",
+      "term_ko": "아시아 주요 6개국증시",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "아시아 주요 6개국증시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "미국발 호-악재 속...장중, 아시아 주요 6개국증시 '대부분 하락'",
+              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158281"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%8B%9C%EC%95%84%20%EC%A3%BC%EC%9A%94%206%EA%B0%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%8B%9C%EC%95%84%20%EC%A3%BC%EC%9A%94%206%EA%B0%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "미국발 호-악재 속...장중, 아시아 주요 6개국증시 '대부분 하락'",
+          "summary": "",
+          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158281",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "News Briefing Blackrock 400 Million",
-      "term_ko": "뉴스브리핑 블랙록 4억"
+      "term": "23 days before product launch",
+      "term_ko": "상품 출시 23일까지",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "상품 출시 23일까지",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "한국투자증권, 국내 첫 IMA 상품 출시…23일까지 모집",
+              "link": "http://www.popcornnews.net/news/articleView.html?idxno=105992"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C%2023%EC%9D%BC%EA%B9%8C%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C%2023%EC%9D%BC%EA%B9%8C%EC%A7%80"
+      },
+      "top_headlines": [
+        {
+          "title": "한국투자증권, 국내 첫 IMA 상품 출시…23일까지 모집",
+          "summary": "",
+          "link": "http://www.popcornnews.net/news/articleView.html?idxno=105992",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Gold Price Todaysilver Price on December 18th",
-      "term_ko": "오늘의 금값시세12월18일자 은값"
+      "term": "Forex Market Concerns 24/7",
+      "term_ko": "우려 외환시장 24시",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "우려 외환시장 24시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "구윤철 \"외환시장 변동성 확대 우려…외환시장 24시 모니터링\"",
+              "link": "https://n.news.naver.com/mnews/article/469/0000903790?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A0%A4%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5%2024%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A0%A4%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5%2024%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "구윤철 \"외환시장 변동성 확대 우려…외환시장 24시 모니터링\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/469/0000903790?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Buy Deutsche Bank Coinbase",
-      "term_ko": "도이체방크 코인베이스 매수"
+      "term": "24 hours of volatility concerns",
+      "term_ko": "변동성 우려 24시간",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "변동성 우려 24시간",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "구윤철 \"외환시장 변동성 우려… 24시간 모니터링하며 적기 대응\"",
+              "link": "https://n.news.naver.com/mnews/article/417/0001119991?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EB%8F%99%EC%84%B1%20%EC%9A%B0%EB%A0%A4%2024%EC%8B%9C%EA%B0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EB%8F%99%EC%84%B1%20%EC%9A%B0%EB%A0%A4%2024%EC%8B%9C%EA%B0%84"
+      },
+      "top_headlines": [
+        {
+          "title": "구윤철 \"외환시장 변동성 우려… 24시간 모니터링하며 적기 대응\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/417/0001119991?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Proposed Product Service",
-      "term_ko": "제시 상품 서비스"
+      "term": "Close an index downtrend",
+      "term_ko": "지수 하락세 마감",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "지수 하락세 마감",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%88%98%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EB%A7%88%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%88%98%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EB%A7%88%EA%B0%90"
+      },
+      "top_headlines": [
+        {
+          "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+          "summary": "",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Controversy Adds Another Boost",
-      "term_ko": "논란에도 추가 상승"
+      "term": "Create a market reference",
+      "term_ko": "시장 기준 만들",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "시장 기준 만들",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "\"시장 기준 만들 것\"…한국투자증권, 국내 최초 IMA 상품 출시",
+              "link": "https://n.news.naver.com/mnews/article/119/0003038450?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%EA%B8%B0%EC%A4%80%20%EB%A7%8C%EB%93%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%EA%B8%B0%EC%A4%80%20%EB%A7%8C%EB%93%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "\"시장 기준 만들 것\"…한국투자증권, 국내 최초 IMA 상품 출시",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/119/0003038450?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Bitcoin Strategy Touted",
-      "term_ko": "비트코인 전략 내세운"
+      "term": "Launching MoneyMove in earnest",
+      "term_ko": "출시 머니무브 본격화",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "출시 머니무브 본격화",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "한투증권 첫 원금보장 ‘IMA’ 출시, '머니무브' 본격화 하나(종합)",
+              "link": "http://www.metroseoul.co.kr/article/20251218500114"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EC%8B%9C%20%EB%A8%B8%EB%8B%88%EB%AC%B4%EB%B8%8C%20%EB%B3%B8%EA%B2%A9%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EC%8B%9C%20%EB%A8%B8%EB%8B%88%EB%AC%B4%EB%B8%8C%20%EB%B3%B8%EA%B2%A9%ED%99%94"
+      },
+      "top_headlines": [
+        {
+          "title": "한투증권 첫 원금보장 ‘IMA’ 출시, '머니무브' 본격화 하나(종합)",
+          "summary": "",
+          "link": "http://www.metroseoul.co.kr/article/20251218500114",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Delisting From Nasdaq in a Crash",
-      "term_ko": "폭락에 나스닥 상장폐지"
+      "term": "Monitor and respond in a timely manner",
+      "term_ko": "모니터링하며 적기 대응",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "모니터링하며 적기 대응",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "구윤철 \"외환시장 변동성 우려… 24시간 모니터링하며 적기 대응\"",
+              "link": "https://n.news.naver.com/mnews/article/417/0001119991?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%ED%95%98%EB%A9%B0%20%EC%A0%81%EA%B8%B0%20%EB%8C%80%EC%9D%91",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%ED%95%98%EB%A9%B0%20%EC%A0%81%EA%B8%B0%20%EB%8C%80%EC%9D%91"
+      },
+      "top_headlines": [
+        {
+          "title": "구윤철 \"외환시장 변동성 우려… 24시간 모니터링하며 적기 대응\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/417/0001119991?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Netapp Asia Pacific Partners",
-      "term_ko": "넷앱 아태지역 파트너"
+      "term": "FTC Probes AI-Based",
+      "term_ko": "FTC, AI 기반 조사",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "FTC Probes AI-Based",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
+              "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FTC%20Probes%20AI-Based",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FTC%20Probes%20AI-Based"
+      },
+      "top_headlines": [
+        {
+          "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
+          "summary": "",
+          "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Center Channel Leadership",
-      "term_ko": "중심 채널 리더십"
+      "term": "Earnings Boost AI",
+      "term_ko": "수익 증대 AI",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Earnings Boost AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Earnings%20Boost%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Earnings%20Boost%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
+          "summary": "",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Relieved by Collapsing Lee Chang-yong",
-      "term_ko": "무너져 이창용 안심"
+      "term": "Renewed AI Valuation",
+      "term_ko": "새로워진 AI 평가",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Renewed AI Valuation",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Seoul stocks open sharply lower on renewed AI valuation concerns",
+              "link": "https://n.news.naver.com/mnews/article/001/0015802140?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Renewed%20AI%20Valuation",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Renewed%20AI%20Valuation"
+      },
+      "top_headlines": [
+        {
+          "title": "Seoul stocks open sharply lower on renewed AI valuation concerns",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015802140?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Keep an Eye on Dividend Cash Flow",
-      "term_ko": "배당 현금흐름에 눈"
+      "term": "Thing Korea Investment & Securities",
+      "term_ko": "것 한국투자증권",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "것 한국투자증권",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "\"시장 기준 만들 것\"…한국투자증권, 국내 최초 IMA 상품 출시",
+              "link": "https://n.news.naver.com/mnews/article/119/0003038450?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%83%20%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%83%20%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "\"시장 기준 만들 것\"…한국투자증권, 국내 최초 IMA 상품 출시",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/119/0003038450?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Market Analysis New York Stock Exchange",
-      "term_ko": "시황 분석 뉴욕증시"
+      "term": "Good news-bad news from the U.S.",
+      "term_ko": "미국발 호-악재",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국발 호-악재",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "미국발 호-악재 속...장중, 아시아 주요 6개국증시 '대부분 하락'",
+              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158281"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%EB%B0%9C%20%ED%98%B8-%EC%95%85%EC%9E%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%EB%B0%9C%20%ED%98%B8-%EC%95%85%EC%9E%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "미국발 호-악재 속...장중, 아시아 주요 6개국증시 '대부분 하락'",
+          "summary": "",
+          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158281",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Early-stage M&a Issues",
-      "term_ko": "장초반 M&A 이슈"
+      "term": "Mostly down",
+      "term_ko": "대부분 하락",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "대부분 하락",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "미국발 호-악재 속...장중, 아시아 주요 6개국증시 '대부분 하락'",
+              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158281"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EB%B6%80%EB%B6%84%20%ED%95%98%EB%9D%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EB%B6%80%EB%B6%84%20%ED%95%98%EB%9D%BD"
+      },
+      "top_headlines": [
+        {
+          "title": "미국발 호-악재 속...장중, 아시아 주요 6개국증시 '대부분 하락'",
+          "summary": "",
+          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158281",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Fed Chairman Nomination",
-      "term_ko": "연준 의장 인선"
+      "term": "Scaling volatility",
+      "term_ko": "변동성 확대",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "변동성 확대",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "구윤철 \"외환시장 변동성 확대 우려…외환시장 24시 모니터링\"",
+              "link": "https://n.news.naver.com/mnews/article/469/0000903790?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EB%8F%99%EC%84%B1%20%ED%99%95%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EB%8F%99%EC%84%B1%20%ED%99%95%EB%8C%80"
+      },
+      "top_headlines": [
+        {
+          "title": "구윤철 \"외환시장 변동성 확대 우려…외환시장 24시 모니터링\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/469/0000903790?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Diversification Is Key",
-      "term_ko": "다각화가 관건"
+      "term": "Yoonchul Koo Forex Market",
+      "term_ko": "구윤철 외환시장",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "구윤철 외환시장",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "구윤철 \"외환시장 변동성 우려… 24시간 모니터링하며 적기 대응\"",
+              "link": "https://n.news.naver.com/mnews/article/417/0001119991?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "구윤철 \"외환시장 변동성 우려… 24시간 모니터링하며 적기 대응\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/417/0001119991?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Enough to Spare",
-      "term_ko": "여력 충분"
+      "term": "Futures Edge Higher",
+      "term_ko": "선물 에지 더 높이",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Futures Edge Higher",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Edge%20Higher",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Edge%20Higher"
+      },
+      "top_headlines": [
+        {
+          "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
+          "summary": "",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "The Most",
-      "term_ko": "역사상 가장"
+      "term": "Open Sharply Lower",
+      "term_ko": "급격히 낮게 열기",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Open Sharply Lower",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Seoul stocks open sharply lower on renewed AI valuation concerns",
+              "link": "https://n.news.naver.com/mnews/article/001/0015802140?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Sharply%20Lower",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Sharply%20Lower"
+      },
+      "top_headlines": [
+        {
+          "title": "Seoul stocks open sharply lower on renewed AI valuation concerns",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015802140?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Not Good Enough",
-      "term_ko": "못할 수준"
+      "term": "Price Discrimination",
+      "term_ko": "가격 차별",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Price Discrimination",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
+              "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Price%20Discrimination",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Price%20Discrimination"
+      },
+      "top_headlines": [
+        {
+          "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
+          "summary": "",
+          "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Turned Investor",
-      "term_ko": "돌린 투자자"
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Genus Mixed Tax",
-      "term_ko": "속 혼조세"
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-18T10:27:40+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Nasdaq Medline",
-      "term_ko": "나스닥 메드라인"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
+      "term": "Rate cut expectations",
+      "term_ko": "금리 인하 기대감",
+      "significance_score": 0,
+      "mentions": 0,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 인하 기대감",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-12-10",
+              "timestamp": 1765292400000,
+              "value": 100
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+      },
+      "top_headlines": [],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 0,
+        "weekly_average_volume": 0,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 1,
+        "time_weight": 0.004939,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1765292400000
+      }
     }
   ],
-  "translations": {
-    "Md Stock Price 98": {
-      "en": "Md Stock Price 98",
-      "ko": "MD 주가 98%",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2025-12-18T01:28:51.134Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2025-12-18T10:27:40+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 1,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 1,
+      "too_generic": 0
     },
-    "Btc in Dollars": {
-      "en": "Btc in Dollars",
-      "ko": "달러 규모 BTC",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Eth Bulk Coinbase": {
-      "en": "Eth Bulk Coinbase",
-      "ko": "ETH 대량 코인베이스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Etfs Instead of Deposits": {
-      "en": "Etfs Instead of Deposits",
-      "ko": "예금 대신 ETF",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Cannon $30 Million": {
-      "en": "Cannon $30 Million",
-      "ko": "캐넌 3천만 달러",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "12 Months of Share Repurchases": {
-      "en": "12 Months of Share Repurchases",
-      "ko": "자사주 매입 12개월",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Economic Forecast Gold Price $4700": {
-      "en": "Economic Forecast Gold Price $4700",
-      "ko": "경제전망 금값 4700불",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Krw Value 1480 Won Intraday": {
-      "en": "Krw Value 1480 Won Intraday",
-      "ko": "원화값 장중 1480원",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "News Briefing Blackrock 400 Million": {
-      "en": "News Briefing Blackrock 400 Million",
-      "ko": "뉴스브리핑 블랙록 4억",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Gold Price Todaysilver Price on December 18th": {
-      "en": "Gold Price Todaysilver Price on December 18th",
-      "ko": "오늘의 금값시세12월18일자 은값",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Buy Deutsche Bank Coinbase": {
-      "en": "Buy Deutsche Bank Coinbase",
-      "ko": "도이체방크 코인베이스 매수",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Proposed Product Service": {
-      "en": "Proposed Product Service",
-      "ko": "제시 상품 서비스",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Controversy Adds Another Boost": {
-      "en": "Controversy Adds Another Boost",
-      "ko": "논란에도 추가 상승",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Bitcoin Strategy Touted": {
-      "en": "Bitcoin Strategy Touted",
-      "ko": "비트코인 전략 내세운",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Delisting From Nasdaq in a Crash": {
-      "en": "Delisting From Nasdaq in a Crash",
-      "ko": "폭락에 나스닥 상장폐지",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Netapp Asia Pacific Partners": {
-      "en": "Netapp Asia Pacific Partners",
-      "ko": "넷앱 아태지역 파트너",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Center Channel Leadership": {
-      "en": "Center Channel Leadership",
-      "ko": "중심 채널 리더십",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Relieved by Collapsing Lee Chang-yong": {
-      "en": "Relieved by Collapsing Lee Chang-yong",
-      "ko": "무너져 이창용 안심",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Keep an Eye on Dividend Cash Flow": {
-      "en": "Keep an Eye on Dividend Cash Flow",
-      "ko": "배당 현금흐름에 눈",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Market Analysis New York Stock Exchange": {
-      "en": "Market Analysis New York Stock Exchange",
-      "ko": "시황 분석 뉴욕증시",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Early-stage M&a Issues": {
-      "en": "Early-stage M&a Issues",
-      "ko": "장초반 M&A 이슈",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.518Z"
-    },
-    "Fed Chairman Nomination": {
-      "en": "Fed Chairman Nomination",
-      "ko": "연준 의장 인선",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "Diversification Is Key": {
-      "en": "Diversification Is Key",
-      "ko": "다각화가 관건",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "Enough to Spare": {
-      "en": "Enough to Spare",
-      "ko": "여력 충분",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "The Most": {
-      "en": "The Most",
-      "ko": "역사상 가장",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "Not Good Enough": {
-      "en": "Not Good Enough",
-      "ko": "못할 수준",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "Turned Investor": {
-      "en": "Turned Investor",
-      "ko": "돌린 투자자",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "Genus Mixed Tax": {
-      "en": "Genus Mixed Tax",
-      "ko": "속 혼조세",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "Nasdaq Medline": {
-      "en": "Nasdaq Medline",
-      "ko": "나스닥 메드라인",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
-    },
-    "Ai Chip Demand Surge": {
-      "en": "Ai Chip Demand Surge",
-      "ko": "AI 칩 수요 급증",
-      "translator": "pre-collected",
-      "cachedAt": "2025-12-18T01:25:37.519Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2025-12-18T10:27:40+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2025-12-18T10:27:40+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
+      }
     }
   }
 }
