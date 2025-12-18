@@ -1,119 +1,8 @@
 {
   "date": "2025-12-18",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
-    {
-      "term": "Hantu Securities IMA No. 1",
-      "term_ko": "한투증권 IMA 1호",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한투증권 IMA 1호",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한투증권, IMA 1호 상품 출시…23일까지 모집",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733068"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20IMA%201%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20IMA%201%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권, IMA 1호 상품 출시…23일까지 모집",
-          "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733068",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
-              "link": "https://www.newspim.com/news/view/20251218000144"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251218000144",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Grocery shopping with DoorDash ChatGPT",
-      "term_ko": "도어대시 챗GPT로 장보기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "도어대시 챗GPT로 장보기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
-              "link": "https://www.newspim.com/news/view/20251218000144"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EC%96%B4%EB%8C%80%EC%8B%9C%20%EC%B1%97GPT%EB%A1%9C%20%EC%9E%A5%EB%B3%B4%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EC%96%B4%EB%8C%80%EC%8B%9C%20%EC%B1%97GPT%EB%A1%9C%20%EC%9E%A5%EB%B3%B4%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 도어대시, 챗GPT로 장보기 기능 출시...인스타카트와...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251218000144",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
     {
       "term": "Stock Market Briefing December",
       "term_ko": "증시 브리핑 12월",
@@ -124,9 +13,10 @@
         "query": "증시 브리핑 12월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -161,9 +51,10 @@
         "query": "17일 미국 주요",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -189,36 +80,37 @@
       ]
     },
     {
-      "term": "23 days before product launch",
-      "term_ko": "상품 출시 23일까지",
+      "term": "Top 10 Gyeongnam Economy",
+      "term_ko": "경남 경제 10대",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "상품 출시 23일까지",
+        "query": "경남 경제 10대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "한투증권, IMA 1호 상품 출시…23일까지 모집",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733068"
+              "title": "2025 경남 경제 10대 뉴스",
+              "link": "http://www.knnews.co.kr/news/articleView.php?idxno=1477749"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C%2023%EC%9D%BC%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C%2023%EC%9D%BC%EA%B9%8C%EC%A7%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EB%82%A8%20%EA%B2%BD%EC%A0%9C%2010%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EB%82%A8%20%EA%B2%BD%EC%A0%9C%2010%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "한투증권, IMA 1호 상품 출시…23일까지 모집",
+          "title": "2025 경남 경제 10대 뉴스",
           "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733068",
+          "link": "http://www.knnews.co.kr/news/articleView.php?idxno=1477749",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,36 +118,37 @@
       ]
     },
     {
-      "term": "Japanese bond yields at 18-year high",
-      "term_ko": "日국채금리 18년만에 최고",
+      "term": "Coming in a close second",
+      "term_ko": "귀환 아쉬운 2위",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "日국채금리 18년만에 최고",
+        "query": "귀환 아쉬운 2위",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "日국채금리 18년만에 최고…글로벌 금융시장 긴장하는 이유 [Deep Spot]",
-              "link": "https://n.news.naver.com/mnews/article/016/0002574174?sid=104"
+              "title": "‘리서치 명가’ 신한의 귀환…아쉬운 2위 하나증권",
+              "link": "https://n.news.naver.com/mnews/article/024/0000102160?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%97%A5%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC%2018%EB%85%84%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%97%A5%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC%2018%EB%85%84%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%80%ED%99%98%20%EC%95%84%EC%89%AC%EC%9A%B4%202%EC%9C%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%80%ED%99%98%20%EC%95%84%EC%89%AC%EC%9A%B4%202%EC%9C%84"
       },
       "top_headlines": [
         {
-          "title": "日국채금리 18년만에 최고…글로벌 금융시장 긴장하는 이유 [Deep Spot]",
+          "title": "‘리서치 명가’ 신한의 귀환…아쉬운 2위 하나증권",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002574174?sid=104",
+          "link": "https://n.news.naver.com/mnews/article/024/0000102160?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -272,9 +165,10 @@
         "query": "지수 하락세 마감",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -300,36 +194,37 @@
       ]
     },
     {
-      "term": "Stop attracting crane ants",
-      "term_ko": "서학개미 유인 그만",
+      "term": "Decarbonization Braking Korea Government Only",
+      "term_ko": "탈탄소 급제동 韓정부만",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서학개미 유인 그만",
+        "query": "탈탄소 급제동 韓정부만",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“서학개미 유인 그만”…증권사 해외투자 신규 마케팅 중단",
-              "link": "https://www.etoday.co.kr/news/view/2537542"
+              "title": "[미리보는 이데일리 신문]미국도 EU도 탈탄소 급제동···韓정부만 액셀",
+              "link": "https://n.news.naver.com/mnews/article/018/0006186328?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%9C%A0%EC%9D%B8%20%EA%B7%B8%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%9C%A0%EC%9D%B8%20%EA%B7%B8%EB%A7%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%83%88%ED%83%84%EC%86%8C%20%EA%B8%89%EC%A0%9C%EB%8F%99%20%E9%9F%93%EC%A0%95%EB%B6%80%EB%A7%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%83%88%ED%83%84%EC%86%8C%20%EA%B8%89%EC%A0%9C%EB%8F%99%20%E9%9F%93%EC%A0%95%EB%B6%80%EB%A7%8C"
       },
       "top_headlines": [
         {
-          "title": "“서학개미 유인 그만”…증권사 해외투자 신규 마케팅 중단",
+          "title": "[미리보는 이데일리 신문]미국도 EU도 탈탄소 급제동···韓정부만 액셀",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2537542",
+          "link": "https://n.news.naver.com/mnews/article/018/0006186328?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +232,37 @@
       ]
     },
     {
-      "term": "Securities Firm Foreign Investment New",
-      "term_ko": "증권사 해외투자 신규",
+      "term": "Controversy over the effectiveness of the ban",
+      "term_ko": "금지 실효성 논란",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증권사 해외투자 신규",
+        "query": "금지 실효성 논란",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“서학개미 유인 그만”…증권사 해외투자 신규 마케팅 중단",
-              "link": "https://www.etoday.co.kr/news/view/2537542"
+              "title": "대출금리 법적비용 전가 금지 실효성 논란",
+              "link": "https://n.news.naver.com/mnews/article/022/0004091361?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%20%EC%8B%A0%EA%B7%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%20%EC%8B%A0%EA%B7%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%A7%80%20%EC%8B%A4%ED%9A%A8%EC%84%B1%20%EB%85%BC%EB%9E%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%A7%80%20%EC%8B%A4%ED%9A%A8%EC%84%B1%20%EB%85%BC%EB%9E%80"
       },
       "top_headlines": [
         {
-          "title": "“서학개미 유인 그만”…증권사 해외투자 신규 마케팅 중단",
+          "title": "대출금리 법적비용 전가 금지 실효성 논란",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2537542",
+          "link": "https://n.news.naver.com/mnews/article/022/0004091361?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,36 +270,37 @@
       ]
     },
     {
-      "term": "Why Deep Spot",
-      "term_ko": "이유 Deep Spot",
+      "term": "Securities firm prudential regulation",
+      "term_ko": "증권사 건전성 규제",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "이유 Deep Spot",
+        "query": "증권사 건전성 규제",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "日국채금리 18년만에 최고…글로벌 금융시장 긴장하는 이유 [Deep Spot]",
-              "link": "https://n.news.naver.com/mnews/article/016/0002574174?sid=104"
+              "title": "증권사 건전성 규제 개선 방향",
+              "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55438"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9C%A0%20Deep%20Spot",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9C%A0%20Deep%20Spot"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EA%B1%B4%EC%A0%84%EC%84%B1%20%EA%B7%9C%EC%A0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EA%B1%B4%EC%A0%84%EC%84%B1%20%EA%B7%9C%EC%A0%9C"
       },
       "top_headlines": [
         {
-          "title": "日국채금리 18년만에 최고…글로벌 금융시장 긴장하는 이유 [Deep Spot]",
+          "title": "증권사 건전성 규제 개선 방향",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002574174?sid=104",
+          "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55438",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -411,221 +308,37 @@
       ]
     },
     {
-      "term": "Changyong Lee Emerging Crisis",
-      "term_ko": "이창용 신종 위기",
+      "term": "Ministry Reporting - Defense and Veterans Affairs 李",
+      "term_ko": "부처보고-국방 보훈 李",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "이창용 신종 위기",
+        "query": "부처보고-국방 보훈 李",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "이창용 '신종 위기' 규정… 곳간 넘쳐도 민생·기업은 '비명'",
-              "link": "https://www.etoday.co.kr/news/view/2537522"
+              "title": "[부처보고-국방·보훈] 李 대통령 \"국민의 군대로 본연의 임무수행 기대...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717300"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%EC%8B%A0%EC%A2%85%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%EC%8B%A0%EC%A2%85%20%EC%9C%84%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EC%B2%98%EB%B3%B4%EA%B3%A0-%EA%B5%AD%EB%B0%A9%20%EB%B3%B4%ED%9B%88%20%EF%A7%A1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EC%B2%98%EB%B3%B4%EA%B3%A0-%EA%B5%AD%EB%B0%A9%20%EB%B3%B4%ED%9B%88%20%EF%A7%A1"
       },
       "top_headlines": [
         {
-          "title": "이창용 '신종 위기' 규정… 곳간 넘쳐도 민생·기업은 '비명'",
+          "title": "[부처보고-국방·보훈] 李 대통령 \"국민의 군대로 본연의 임무수행 기대...",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2537522",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Private companies scream",
-      "term_ko": "민생 기업은 비명",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "민생 기업은 비명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "이창용 '신종 위기' 규정… 곳간 넘쳐도 민생·기업은 '비명'",
-              "link": "https://www.etoday.co.kr/news/view/2537522"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%BC%EC%83%9D%20%EA%B8%B0%EC%97%85%EC%9D%80%20%EB%B9%84%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%BC%EC%83%9D%20%EA%B8%B0%EC%97%85%EC%9D%80%20%EB%B9%84%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 '신종 위기' 규정… 곳간 넘쳐도 민생·기업은 '비명'",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2537522",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Buldak Stir-fried Samyang No",
-      "term_ko": "불닭볶음 삼양 아니야",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불닭볶음 삼양 아니야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'불닭볶음 삼양 아니야' 삼양사, 공모 회사채 발행 도전 [fn마켓워치]",
-              "link": "https://n.news.naver.com/mnews/article/014/0005451116?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EB%8B%AD%EB%B3%B6%EC%9D%8C%20%EC%82%BC%EC%96%91%20%EC%95%84%EB%8B%88%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EB%8B%AD%EB%B3%B6%EC%9D%8C%20%EC%82%BC%EC%96%91%20%EC%95%84%EB%8B%88%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "'불닭볶음 삼양 아니야' 삼양사, 공모 회사채 발행 도전 [fn마켓워치]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005451116?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Samyang Public Corporate Bonds",
-      "term_ko": "삼양사 공모 회사채",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼양사 공모 회사채",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'불닭볶음 삼양 아니야' 삼양사, 공모 회사채 발행 도전 [fn마켓워치]",
-              "link": "https://n.news.naver.com/mnews/article/014/0005451116?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%96%91%EC%82%AC%20%EA%B3%B5%EB%AA%A8%20%ED%9A%8C%EC%82%AC%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%96%91%EC%82%AC%20%EA%B3%B5%EB%AA%A8%20%ED%9A%8C%EC%82%AC%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "'불닭볶음 삼양 아니야' 삼양사, 공모 회사채 발행 도전 [fn마켓워치]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005451116?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Issue Challenge fnMarketWatch",
-      "term_ko": "발행 도전 fn마켓워치",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "발행 도전 fn마켓워치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'불닭볶음 삼양 아니야' 삼양사, 공모 회사채 발행 도전 [fn마켓워치]",
-              "link": "https://n.news.naver.com/mnews/article/014/0005451116?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%96%89%20%EB%8F%84%EC%A0%84%20fn%EB%A7%88%EC%BC%93%EC%9B%8C%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%96%89%20%EB%8F%84%EC%A0%84%20fn%EB%A7%88%EC%BC%93%EC%9B%8C%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "'불닭볶음 삼양 아니야' 삼양사, 공모 회사채 발행 도전 [fn마켓워치]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005451116?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Yoonchul Koo Forex Market Volatility",
-      "term_ko": "구윤철 외환시장 변동성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "구윤철 외환시장 변동성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "구윤철 \"외환시장 변동성 우려...필요시 적기 대응\"",
-              "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=285341"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EB%8F%99%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EB%8F%99%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "구윤철 \"외환시장 변동성 우려...필요시 적기 대응\"",
-          "summary": "",
-          "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=285341",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717300",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -634,7 +347,7 @@
     },
     {
       "term": "AI Spending Fears",
-      "term_ko": "AI 지출에 대한 두려움",
+      "term_ko": "",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
@@ -642,9 +355,10 @@
         "query": "AI Spending Fears",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -679,9 +393,10 @@
         "query": "FTC Probes AI-Based",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -716,9 +431,10 @@
         "query": "Earnings Boost AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -753,9 +469,10 @@
         "query": "Renewed AI Valuation",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -781,36 +498,37 @@
       ]
     },
     {
-      "term": "Stop marketing",
-      "term_ko": "마케팅 중단",
+      "term": "How we can improve",
+      "term_ko": "개선 방향",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "마케팅 중단",
+        "query": "개선 방향",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“서학개미 유인 그만”…증권사 해외투자 신규 마케팅 중단",
-              "link": "https://www.etoday.co.kr/news/view/2537542"
+              "title": "증권사 건전성 규제 개선 방향",
+              "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55438"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%BC%80%ED%8C%85%20%EC%A4%91%EB%8B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%BC%80%ED%8C%85%20%EC%A4%91%EB%8B%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%84%A0%20%EB%B0%A9%ED%96%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%84%A0%20%EB%B0%A9%ED%96%A5"
       },
       "top_headlines": [
         {
-          "title": "“서학개미 유인 그만”…증권사 해외투자 신규 마케팅 중단",
+          "title": "증권사 건전성 규제 개선 방향",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2537542",
+          "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55438",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -818,36 +536,75 @@
       ]
     },
     {
-      "term": "Timely response",
-      "term_ko": "적기 대응",
+      "term": "Do your job",
+      "term_ko": "본연의 임무수행",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "적기 대응",
+        "query": "본연의 임무수행",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "구윤철 \"외환시장 변동성 우려...필요시 적기 대응\"",
-              "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=285341"
+              "title": "[부처보고-국방·보훈] 李 대통령 \"국민의 군대로 본연의 임무수행 기대...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717300"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%81%EA%B8%B0%20%EB%8C%80%EC%9D%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%81%EA%B8%B0%20%EB%8C%80%EC%9D%91"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B8%EC%97%B0%EC%9D%98%20%EC%9E%84%EB%AC%B4%EC%88%98%ED%96%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B8%EC%97%B0%EC%9D%98%20%EC%9E%84%EB%AC%B4%EC%88%98%ED%96%89"
       },
       "top_headlines": [
         {
-          "title": "구윤철 \"외환시장 변동성 우려...필요시 적기 대응\"",
+          "title": "[부처보고-국방·보훈] 李 대통령 \"국민의 군대로 본연의 임무수행 기대...",
           "summary": "",
-          "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=285341",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717300",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "D&D Pharmatech Launches",
+      "term_ko": "D&D 파마텍 출시",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "D&D Pharmatech Launches",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T21:43:26+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=D%26D%20Pharmatech%20Launches",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=D%26D%20Pharmatech%20Launches"
+      },
+      "top_headlines": [
+        {
+          "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -864,9 +621,10 @@
         "query": "Global Central Bank",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -901,9 +659,10 @@
         "query": "Futures Edge Higher",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -938,9 +697,10 @@
         "query": "Open Sharply Lower",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -966,6 +726,44 @@
       ]
     },
     {
+      "term": "Radiotherapeutics Affiliate",
+      "term_ko": "방사선 치료 제휴사",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Radiotherapeutics Affiliate",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-18T21:43:26+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Radiotherapeutics%20Affiliate",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Radiotherapeutics%20Affiliate"
+      },
+      "top_headlines": [
+        {
+          "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "Price Discrimination",
       "term_ko": "가격 차별",
       "significance_score": 224,
@@ -975,9 +773,10 @@
         "query": "Price Discrimination",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1012,9 +811,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1034,9 +834,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1056,9 +857,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-18T15:35:22+09:00",
+          "last_updated": "2025-12-18T21:43:26+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1067,33 +869,150 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-18T21:43:26+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Dollar exchange rate spikes",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-18T21:43:26+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "U.S. government shutdown crisis",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-18T21:43:26+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "South Korean stocks rebound",
+      "term_ko": "한국 증시 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국 증시 반등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-18T21:43:26+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Ramping up semiconductor investments",
+      "term_ko": "반도체 투자 확대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "반도체 투자 확대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-18T21:43:26+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-18T06:36:29.603Z",
+    "generated_at": "2025-12-18T12:44:33.987Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-18T15:35:22+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-18T21:43:26+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-18T15:35:22+09:00",
+      "last_updated": "2025-12-18T21:43:26+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-18T15:35:22+09:00",
+        "lastUpdated": "2025-12-18T21:43:26+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
