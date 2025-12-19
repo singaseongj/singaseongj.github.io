@@ -1,39 +1,52 @@
 {
-  "date": "2025-12-18",
+  "date": "2025-12-19",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "Guaranteed IMA 1",
-      "term_ko": "보장되는 IMA 1호",
-      "significance_score": 364,
-      "mentions": 160,
+      "term": "The story of AI in stocks",
+      "term_ko": "AI의 종목 이야기",
+      "significance_score": 700,
+      "mentions": 320,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "보장되는 IMA 1호",
+        "query": "AI의 종목 이야기",
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "matches": 2,
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "은행 예금보다 수익률 높고 원금 보장되는 ‘IMA 1호’ 등장",
-              "link": "https://n.news.naver.com/mnews/article/023/0003947827?sid=101"
+              "title": "[AI의 종목 이야기] 메타, '망고'로 '소라' 잡는다...이미지·동영상 모...",
+              "link": "https://www.newspim.com/news/view/20251219000049"
+            },
+            {
+              "title": "[AI의 종목 이야기] \"워너브러더스 주요 주주, 뉴욕 헤지펀드에 CNN 인수...",
+              "link": "https://www.newspim.com/news/view/20251219000043"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%9E%A5%EB%90%98%EB%8A%94%20IMA%201%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%9E%A5%EB%90%98%EB%8A%94%20IMA%201%ED%98%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
       },
       "top_headlines": [
         {
-          "title": "은행 예금보다 수익률 높고 원금 보장되는 ‘IMA 1호’ 등장",
+          "title": "[AI의 종목 이야기] 메타, '망고'로 '소라' 잡는다...이미지·동영상 모...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003947827?sid=101",
+          "link": "https://www.newspim.com/news/view/20251219000049",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "[AI의 종목 이야기] \"워너브러더스 주요 주주, 뉴욕 헤지펀드에 CNN 인수...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251219000043",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -41,36 +54,37 @@
       ]
     },
     {
-      "term": "KindlyMD Stock Buyback",
-      "term_ko": "KindlyMD 자사주 매입",
+      "term": "CNN to New York hedge fund",
+      "term_ko": "뉴욕 헤지펀드에 CNN",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "KindlyMD 자사주 매입",
+        "query": "뉴욕 헤지펀드에 CNN",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "KindlyMD, 자사주 매입 계획 승인…“비트코인 사업 자신”",
-              "link": "https://www.tokenpost.kr/news/breaking/316272"
+              "title": "[AI의 종목 이야기] \"워너브러더스 주요 주주, 뉴욕 헤지펀드에 CNN 인수...",
+              "link": "https://www.newspim.com/news/view/20251219000043"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KindlyMD%20%EC%9E%90%EC%82%AC%EC%A3%BC%20%EB%A7%A4%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KindlyMD%20%EC%9E%90%EC%82%AC%EC%A3%BC%20%EB%A7%A4%EC%9E%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%20%ED%97%A4%EC%A7%80%ED%8E%80%EB%93%9C%EC%97%90%20CNN",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%20%ED%97%A4%EC%A7%80%ED%8E%80%EB%93%9C%EC%97%90%20CNN"
       },
       "top_headlines": [
         {
-          "title": "KindlyMD, 자사주 매입 계획 승인…“비트코인 사업 자신”",
+          "title": "[AI의 종목 이야기] \"워너브러더스 주요 주주, 뉴욕 헤지펀드에 CNN 인수...",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/316272",
+          "link": "https://www.newspim.com/news/view/20251219000043",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -78,36 +92,75 @@
       ]
     },
     {
-      "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
+      "term": "KIC New York City Interest Rates",
+      "term_ko": "KIC 뉴욕서 금리",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KIC 뉴욕서 금리",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-19T10:31:07+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KIC, 뉴욕서 금리 논의...\"내년 미 국채 금리 하락·금리차 확대\"",
+              "link": "https://www.etoday.co.kr/news/view/2537815"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KIC%20%EB%89%B4%EC%9A%95%EC%84%9C%20%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KIC%20%EB%89%B4%EC%9A%95%EC%84%9C%20%EA%B8%88%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "KIC, 뉴욕서 금리 논의...\"내년 미 국채 금리 하락·금리차 확대\"",
+          "summary": "",
+          "link": "https://www.etoday.co.kr/news/view/2537815",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Stock markets in 6 Asian countries",
+      "term_ko": "아시아 6개국 증시",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
+        "query": "아시아 6개국 증시",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379"
+              "title": "AI거품공포 '완화'...장중 아시아 6개국 증시 '일제히 상승'",
+              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158331"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%8B%9C%EC%95%84%206%EA%B0%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%8B%9C%EC%95%84%206%EA%B0%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C"
       },
       "top_headlines": [
         {
-          "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+          "title": "AI거품공포 '완화'...장중 아시아 6개국 증시 '일제히 상승'",
           "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379",
+          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158331",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -115,110 +168,37 @@
       ]
     },
     {
-      "term": "17th US Major",
-      "term_ko": "17일 미국 주요",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "17일 미국 주요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=17%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=17%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Gold price quotes for todayGold price on December 19th",
-      "term_ko": "오늘의 금값시세12월19일자 금값",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세12월19일자 금값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(12월19일자) \"금값 2026년 전망... 상승흐름 이어가나\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3461168"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%9419%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%9419%EC%9D%BC%EC%9E%90%20%EA%B8%88%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(12월19일자) \"금값 2026년 전망... 상승흐름 이어가나\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3461168",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Plan approval Bitcoin",
-      "term_ko": "계획 승인 비트코인",
+      "term": "Metamangolosora",
+      "term_ko": "메타 망고로 소라",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "계획 승인 비트코인",
+        "query": "메타 망고로 소라",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "KindlyMD, 자사주 매입 계획 승인…“비트코인 사업 자신”",
-              "link": "https://www.tokenpost.kr/news/breaking/316272"
+              "title": "[AI의 종목 이야기] 메타, '망고'로 '소라' 잡는다...이미지·동영상 모...",
+              "link": "https://www.newspim.com/news/view/20251219000049"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%84%ED%9A%8D%20%EC%8A%B9%EC%9D%B8%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%84%ED%9A%8D%20%EC%8A%B9%EC%9D%B8%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%ED%83%80%20%EB%A7%9D%EA%B3%A0%EB%A1%9C%20%EC%86%8C%EB%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%94%ED%83%80%20%EB%A7%9D%EA%B3%A0%EB%A1%9C%20%EC%86%8C%EB%9D%BC"
       },
       "top_headlines": [
         {
-          "title": "KindlyMD, 자사주 매입 계획 승인…“비트코인 사업 자신”",
+          "title": "[AI의 종목 이야기] 메타, '망고'로 '소라' 잡는다...이미지·동영상 모...",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/316272",
+          "link": "https://www.newspim.com/news/view/20251219000049",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,36 +206,37 @@
       ]
     },
     {
-      "term": "Close an index downtrend",
-      "term_ko": "지수 하락세 마감",
+      "term": "Solana Altcoin Market",
+      "term_ko": "솔라나 알트코인 시장",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "지수 하락세 마감",
+        "query": "솔라나 알트코인 시장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379"
+              "title": "솔라나, 알트코인 시장 대비 부진 계속…전성기 끝났나",
+              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=614401"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%88%98%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EB%A7%88%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%88%98%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EB%A7%88%EA%B0%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%94%EB%9D%BC%EB%82%98%20%EC%95%8C%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%8B%9C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%94%EB%9D%BC%EB%82%98%20%EC%95%8C%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%8B%9C%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "[미국 증시 브리핑 · 12월 17일] 미국 주요 지수 하락세 마감",
+          "title": "솔라나, 알트코인 시장 대비 부진 계속…전성기 끝났나",
           "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195379",
+          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=614401",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -263,36 +244,75 @@
       ]
     },
     {
-      "term": "Yields better than bank deposits",
-      "term_ko": "은행 예금보다 수익률",
+      "term": "Continued lack of contrast",
+      "term_ko": "대비 부진 계속",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "은행 예금보다 수익률",
+        "query": "대비 부진 계속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "은행 예금보다 수익률 높고 원금 보장되는 ‘IMA 1호’ 등장",
-              "link": "https://n.news.naver.com/mnews/article/023/0003947827?sid=101"
+              "title": "솔라나, 알트코인 시장 대비 부진 계속…전성기 끝났나",
+              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=614401"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%ED%96%89%20%EC%98%88%EA%B8%88%EB%B3%B4%EB%8B%A4%20%EC%88%98%EC%9D%B5%EB%A5%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%ED%96%89%20%EC%98%88%EA%B8%88%EB%B3%B4%EB%8B%A4%20%EC%88%98%EC%9D%B5%EB%A5%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EB%B9%84%20%EB%B6%80%EC%A7%84%20%EA%B3%84%EC%86%8D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EB%B9%84%20%EB%B6%80%EC%A7%84%20%EA%B3%84%EC%86%8D"
       },
       "top_headlines": [
         {
-          "title": "은행 예금보다 수익률 높고 원금 보장되는 ‘IMA 1호’ 등장",
+          "title": "솔라나, 알트코인 시장 대비 부진 계속…전성기 끝났나",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003947827?sid=101",
+          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=614401",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Warner Bros. major shareholders",
+      "term_ko": "워너브러더스 주요 주주",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "워너브러더스 주요 주주",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-19T10:31:07+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[AI의 종목 이야기] \"워너브러더스 주요 주주, 뉴욕 헤지펀드에 CNN 인수...",
+              "link": "https://www.newspim.com/news/view/20251219000043"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%8C%EB%84%88%EB%B8%8C%EB%9F%AC%EB%8D%94%EC%8A%A4%20%EC%A3%BC%EC%9A%94%20%EC%A3%BC%EC%A3%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%8C%EB%84%88%EB%B8%8C%EB%9F%AC%EB%8D%94%EC%8A%A4%20%EC%A3%BC%EC%9A%94%20%EC%A3%BC%EC%A3%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "[AI의 종목 이야기] \"워너브러더스 주요 주주, 뉴욕 헤지펀드에 CNN 인수...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20251219000043",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -301,35 +321,140 @@
     },
     {
       "term": "Japanese interest rate hike",
-      "term_ko": "日 금리 인상",
+      "term_ko": "일본 기준금리 인상",
+      "significance_score": 322,
+      "mentions": 221,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "일본 기준금리 인상",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-12-11",
+              "timestamp": 1765378800000,
+              "value": 18.43137
+            },
+            {
+              "period": "2025-12-12",
+              "timestamp": 1765465200000,
+              "value": 10.98039
+            },
+            {
+              "period": "2025-12-13",
+              "timestamp": 1765551600000,
+              "value": 7.05882
+            },
+            {
+              "period": "2025-12-14",
+              "timestamp": 1765638000000,
+              "value": 7.84313
+            },
+            {
+              "period": "2025-12-15",
+              "timestamp": 1765724400000,
+              "value": 25.49019
+            },
+            {
+              "period": "2025-12-16",
+              "timestamp": 1765810800000,
+              "value": 47.84313
+            },
+            {
+              "period": "2025-12-17",
+              "timestamp": 1765897200000,
+              "value": 32.54901
+            },
+            {
+              "period": "2025-12-18",
+              "timestamp": 1765983600000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-19T10:31:07+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "한은, 임시금통위 개최... 일본 기준금리 인상 앞두고 환율 점검",
+              "link": "https://n.news.naver.com/mnews/article/366/0001131188?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EB%B3%B8%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EB%B3%B8%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
+      },
+      "top_headlines": [
+        {
+          "title": "한은, 임시금통위 개최... 일본 기준금리 인상 앞두고 환율 점검",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/366/0001131188?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 220.7843,
+        "weekly_average_volume": 36.7974,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.023729,
+        "time_weight": 0.028959,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1765983600000
+      }
+    },
+    {
+      "term": "Check exchange rates ahead",
+      "term_ko": "앞두고 환율 점검",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "日 금리 인상",
+        "query": "앞두고 환율 점검",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "日, 금리 인상 가능성… 숨죽이는 글로벌 금융 시장",
-              "link": "https://n.news.naver.com/mnews/article/023/0003947826?sid=101"
+              "title": "한은, 임시금통위 개최... 일본 기준금리 인상 앞두고 환율 점검",
+              "link": "https://n.news.naver.com/mnews/article/366/0001131188?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%97%A5%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%97%A5%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%9E%EB%91%90%EA%B3%A0%20%ED%99%98%EC%9C%A8%20%EC%A0%90%EA%B2%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%9E%EB%91%90%EA%B3%A0%20%ED%99%98%EC%9C%A8%20%EC%A0%90%EA%B2%80"
       },
       "top_headlines": [
         {
-          "title": "日, 금리 인상 가능성… 숨죽이는 글로벌 금융 시장",
+          "title": "한은, 임시금통위 개최... 일본 기준금리 인상 앞두고 환율 점검",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003947826?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/366/0001131188?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +462,37 @@
       ]
     },
     {
-      "term": "Possibilities Breathtaking Global",
-      "term_ko": "가능성 숨죽이는 글로벌",
+      "term": "New Gong Archives - The Salon",
+      "term_ko": "뉴공 아카이브The 살롱",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "가능성 숨죽이는 글로벌",
+        "query": "뉴공 아카이브The 살롱",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "日, 금리 인상 가능성… 숨죽이는 글로벌 금융 시장",
-              "link": "https://n.news.naver.com/mnews/article/023/0003947826?sid=101"
+              "title": "[뉴공 아카이브]The 살롱: 李 대통령의 생중계 업무보고가 갖는 의미는...",
+              "link": "http://www.ddanzi.com/866830973"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%8A%A5%EC%84%B1%20%EC%88%A8%EC%A3%BD%EC%9D%B4%EB%8A%94%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%8A%A5%EC%84%B1%20%EC%88%A8%EC%A3%BD%EC%9D%B4%EB%8A%94%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EA%B3%B5%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8CThe%20%EC%82%B4%EB%A1%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EA%B3%B5%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8CThe%20%EC%82%B4%EB%A1%B1"
       },
       "top_headlines": [
         {
-          "title": "日, 금리 인상 가능성… 숨죽이는 글로벌 금융 시장",
+          "title": "[뉴공 아카이브]The 살롱: 李 대통령의 생중계 업무보고가 갖는 의미는...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003947826?sid=101",
+          "link": "http://www.ddanzi.com/866830973",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,36 +500,37 @@
       ]
     },
     {
-      "term": "More than a median market recovery",
-      "term_ko": "중앙시평 경기회복보다 더",
+      "term": "President Lee's live broadcast",
+      "term_ko": "李 대통령의 생중계",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "중앙시평 경기회복보다 더",
+        "query": "李 대통령의 생중계",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[중앙시평] 경기회복보다 더 큰 그림을 그려야 할 때다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003490892?sid=110"
+              "title": "[뉴공 아카이브]The 살롱: 李 대통령의 생중계 업무보고가 갖는 의미는...",
+              "link": "http://www.ddanzi.com/866830973"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EC%95%99%EC%8B%9C%ED%8F%89%20%EA%B2%BD%EA%B8%B0%ED%9A%8C%EB%B3%B5%EB%B3%B4%EB%8B%A4%20%EB%8D%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EC%95%99%EC%8B%9C%ED%8F%89%20%EA%B2%BD%EA%B8%B0%ED%9A%8C%EB%B3%B5%EB%B3%B4%EB%8B%A4%20%EB%8D%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EF%A7%A1%20%EB%8C%80%ED%86%B5%EB%A0%B9%EC%9D%98%20%EC%83%9D%EC%A4%91%EA%B3%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EF%A7%A1%20%EB%8C%80%ED%86%B5%EB%A0%B9%EC%9D%98%20%EC%83%9D%EC%A4%91%EA%B3%84"
       },
       "top_headlines": [
         {
-          "title": "[중앙시평] 경기회복보다 더 큰 그림을 그려야 할 때다",
+          "title": "[뉴공 아카이브]The 살롱: 李 대통령의 생중계 업무보고가 갖는 의미는...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003490892?sid=110",
+          "link": "http://www.ddanzi.com/866830973",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -411,36 +538,37 @@
       ]
     },
     {
-      "term": "Think big",
-      "term_ko": "큰 그림을 그려야",
+      "term": "A New York financier sees",
+      "term_ko": "뉴욕 금융인이 본",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "큰 그림을 그려야",
+        "query": "뉴욕 금융인이 본",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[중앙시평] 경기회복보다 더 큰 그림을 그려야 할 때다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003490892?sid=110"
+              "title": "뉴욕 금융인이 본 美국채시장 \"금리 인하 지속, 장단기 금리차 확대\"",
+              "link": "https://n.news.naver.com/mnews/article/277/0005696027?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%B0%20%EA%B7%B8%EB%A6%BC%EC%9D%84%20%EA%B7%B8%EB%A0%A4%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%B0%20%EA%B7%B8%EB%A6%BC%EC%9D%84%20%EA%B7%B8%EB%A0%A4%EC%95%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%20%EA%B8%88%EC%9C%B5%EC%9D%B8%EC%9D%B4%20%EB%B3%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%20%EA%B8%88%EC%9C%B5%EC%9D%B8%EC%9D%B4%20%EB%B3%B8"
       },
       "top_headlines": [
         {
-          "title": "[중앙시평] 경기회복보다 더 큰 그림을 그려야 할 때다",
+          "title": "뉴욕 금융인이 본 美국채시장 \"금리 인하 지속, 장단기 금리차 확대\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003490892?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/277/0005696027?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +576,37 @@
       ]
     },
     {
-      "term": "Perspective Multifamily by Byungchun Choi",
-      "term_ko": "최병천의 퍼스펙티브 다주택자",
+      "term": "US Treasury market rate cuts",
+      "term_ko": "美국채시장 금리 인하",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "최병천의 퍼스펙티브 다주택자",
+        "query": "美국채시장 금리 인하",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[최병천의 퍼스펙티브] 다주택자 규제 완화하고 ‘부자도 혜택’ 기초연...",
-              "link": "https://n.news.naver.com/mnews/article/025/0003490891?sid=110"
+              "title": "뉴욕 금융인이 본 美국채시장 \"금리 인하 지속, 장단기 금리차 확대\"",
+              "link": "https://n.news.naver.com/mnews/article/277/0005696027?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%B3%91%EC%B2%9C%EC%9D%98%20%ED%8D%BC%EC%8A%A4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EB%8B%A4%EC%A3%BC%ED%83%9D%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%B3%91%EC%B2%9C%EC%9D%98%20%ED%8D%BC%EC%8A%A4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EB%8B%A4%EC%A3%BC%ED%83%9D%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%EA%B5%AD%EC%B1%84%EC%8B%9C%EC%9E%A5%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%EA%B5%AD%EC%B1%84%EC%8B%9C%EC%9E%A5%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98"
       },
       "top_headlines": [
         {
-          "title": "[최병천의 퍼스펙티브] 다주택자 규제 완화하고 ‘부자도 혜택’ 기초연...",
+          "title": "뉴욕 금융인이 본 美국채시장 \"금리 인하 지속, 장단기 금리차 확대\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003490891?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/277/0005696027?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +614,37 @@
       ]
     },
     {
-      "term": "Reset Korea Europe",
-      "term_ko": "리셋 코리아 유럽",
+      "term": "Persistent long- and short-term interest rate differentials",
+      "term_ko": "지속 장단기 금리차",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "리셋 코리아 유럽",
+        "query": "지속 장단기 금리차",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[리셋 코리아] 유럽 따라하다 ‘규제 갈라파고스’에 갇힌 한국",
-              "link": "https://n.news.naver.com/mnews/article/025/0003490887?sid=110"
+              "title": "뉴욕 금융인이 본 美국채시장 \"금리 인하 지속, 장단기 금리차 확대\"",
+              "link": "https://n.news.naver.com/mnews/article/277/0005696027?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EC%85%8B%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EC%9C%A0%EB%9F%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EC%85%8B%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EC%9C%A0%EB%9F%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%86%8D%20%EC%9E%A5%EB%8B%A8%EA%B8%B0%20%EA%B8%88%EB%A6%AC%EC%B0%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%86%8D%20%EC%9E%A5%EB%8B%A8%EA%B8%B0%20%EA%B8%88%EB%A6%AC%EC%B0%A8"
       },
       "top_headlines": [
         {
-          "title": "[리셋 코리아] 유럽 따라하다 ‘규제 갈라파고스’에 갇힌 한국",
+          "title": "뉴욕 금융인이 본 美국채시장 \"금리 인하 지속, 장단기 금리차 확대\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003490887?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/277/0005696027?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +652,37 @@
       ]
     },
     {
-      "term": "AI Spending Fears",
-      "term_ko": "AI 지출에 대한 두려움",
-      "significance_score": 294,
+      "term": "Widening the downward rate differential",
+      "term_ko": "하락 금리차 확대",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "AI Spending Fears",
+        "query": "하락 금리차 확대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Asian Stocks Slide as AI Spending Fears and Global Central Bank Decisions...",
-              "link": "https://www.econotimes.com/Asian-Stocks-Slide-as-AI-Spending-Fears-and-Global-Central-Bank-Decisions-Weigh-on-Markets-1729024"
+              "title": "KIC, 뉴욕서 금리 논의...\"내년 미 국채 금리 하락·금리차 확대\"",
+              "link": "https://www.etoday.co.kr/news/view/2537815"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Spending%20Fears",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Spending%20Fears"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EA%B8%88%EB%A6%AC%EC%B0%A8%20%ED%99%95%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EA%B8%88%EB%A6%AC%EC%B0%A8%20%ED%99%95%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "Asian Stocks Slide as AI Spending Fears and Global Central Bank Decisions...",
+          "title": "KIC, 뉴욕서 금리 논의...\"내년 미 국채 금리 하락·금리차 확대\"",
           "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stocks-Slide-as-AI-Spending-Fears-and-Global-Central-Bank-Decisions-Weigh-on-Markets-1729024",
+          "link": "https://www.etoday.co.kr/news/view/2537815",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,36 +690,37 @@
       ]
     },
     {
-      "term": "FTC Probes AI-Based",
-      "term_ko": "FTC, AI 기반 조사",
-      "significance_score": 294,
+      "term": "The U.S. Treasury Market Next Year",
+      "term_ko": "내년 미국 국채시장",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "FTC Probes AI-Based",
+        "query": "내년 미국 국채시장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
-              "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016"
+              "title": "한국투자공사, 뉴욕 금융인과 내년 미국 국채시장 전망 논의",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259262"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FTC%20Probes%20AI-Based",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FTC%20Probes%20AI-Based"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%85%84%20%EB%AF%B8%EA%B5%AD%20%EA%B5%AD%EC%B1%84%EC%8B%9C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%85%84%20%EB%AF%B8%EA%B5%AD%20%EA%B5%AD%EC%B1%84%EC%8B%9C%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
+          "title": "한국투자공사, 뉴욕 금융인과 내년 미국 국채시장 전망 논의",
           "summary": "",
-          "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259262",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -596,73 +728,37 @@
       ]
     },
     {
-      "term": "Earnings Boost AI",
-      "term_ko": "수익 증대 AI",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Earnings Boost AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Earnings%20Boost%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Earnings%20Boost%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Business yourself",
-      "term_ko": "사업 자신",
+      "term": "Past its prime",
+      "term_ko": "전성기 끝났나",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "사업 자신",
+        "query": "전성기 끝났나",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "KindlyMD, 자사주 매입 계획 승인…“비트코인 사업 자신”",
-              "link": "https://www.tokenpost.kr/news/breaking/316272"
+              "title": "솔라나, 알트코인 시장 대비 부진 계속…전성기 끝났나",
+              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=614401"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%97%85%20%EC%9E%90%EC%8B%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%97%85%20%EC%9E%90%EC%8B%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%84%B1%EA%B8%B0%20%EB%81%9D%EB%82%AC%EB%82%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%84%B1%EA%B8%B0%20%EB%81%9D%EB%82%AC%EB%82%98"
       },
       "top_headlines": [
         {
-          "title": "KindlyMD, 자사주 매입 계획 승인…“비트코인 사업 자신”",
+          "title": "솔라나, 알트코인 시장 대비 부진 계속…전성기 끝났나",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/316272",
+          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=614401",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -670,36 +766,37 @@
       ]
     },
     {
-      "term": "High and principal",
-      "term_ko": "높고 원금",
+      "term": "Korean Interim Monetary Authority",
+      "term_ko": "한은 임시금통위",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "높고 원금",
+        "query": "한은 임시금통위",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "은행 예금보다 수익률 높고 원금 보장되는 ‘IMA 1호’ 등장",
-              "link": "https://n.news.naver.com/mnews/article/023/0003947827?sid=101"
+              "title": "한은, 임시금통위 개최... 일본 기준금리 인상 앞두고 환율 점검",
+              "link": "https://n.news.naver.com/mnews/article/366/0001131188?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%92%EA%B3%A0%20%EC%9B%90%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%92%EA%B3%A0%20%EC%9B%90%EA%B8%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EC%9E%84%EC%8B%9C%EA%B8%88%ED%86%B5%EC%9C%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EC%9E%84%EC%8B%9C%EA%B8%88%ED%86%B5%EC%9C%84"
       },
       "top_headlines": [
         {
-          "title": "은행 예금보다 수익률 높고 원금 보장되는 ‘IMA 1호’ 등장",
+          "title": "한은, 임시금통위 개최... 일본 기준금리 인상 앞두고 환율 점검",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003947827?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/366/0001131188?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -707,36 +804,141 @@
       ]
     },
     {
-      "term": "It's time to",
-      "term_ko": "할 때다",
+      "term": "U.S. Treasuries",
+      "term_ko": "미 국채",
+      "significance_score": 280,
+      "mentions": 332,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미 국채",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-12-11",
+              "timestamp": 1765378800000,
+              "value": 100
+            },
+            {
+              "period": "2025-12-12",
+              "timestamp": 1765465200000,
+              "value": 74.6122
+            },
+            {
+              "period": "2025-12-13",
+              "timestamp": 1765551600000,
+              "value": 39.86556
+            },
+            {
+              "period": "2025-12-14",
+              "timestamp": 1765638000000,
+              "value": 13.1334
+            },
+            {
+              "period": "2025-12-15",
+              "timestamp": 1765724400000,
+              "value": 57.29058
+            },
+            {
+              "period": "2025-12-16",
+              "timestamp": 1765810800000,
+              "value": 76.00827
+            },
+            {
+              "period": "2025-12-17",
+              "timestamp": 1765897200000,
+              "value": 73.52637
+            },
+            {
+              "period": "2025-12-18",
+              "timestamp": 1765983600000,
+              "value": 71.87176
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-19T10:31:07+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KIC, 뉴욕서 금리 논의...\"내년 미 국채 금리 하락·금리차 확대\"",
+              "link": "https://www.etoday.co.kr/news/view/2537815"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EA%B5%AD%EC%B1%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EA%B5%AD%EC%B1%84"
+      },
+      "top_headlines": [
+        {
+          "title": "KIC, 뉴욕서 금리 논의...\"내년 미 국채 금리 하락·금리차 확대\"",
+          "summary": "",
+          "link": "https://www.etoday.co.kr/news/view/2537815",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 331.6959,
+        "weekly_average_volume": 55.2827,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.017896,
+        "time_weight": 0.028956,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1765983600000
+      }
+    },
+    {
+      "term": "Rising in unison",
+      "term_ko": "일제히 상승",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "할 때다",
+        "query": "일제히 상승",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[중앙시평] 경기회복보다 더 큰 그림을 그려야 할 때다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003490892?sid=110"
+              "title": "AI거품공포 '완화'...장중 아시아 6개국 증시 '일제히 상승'",
+              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158331"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A0%20%EB%95%8C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A0%20%EB%95%8C%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%83%81%EC%8A%B9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%83%81%EC%8A%B9"
       },
       "top_headlines": [
         {
-          "title": "[중앙시평] 경기회복보다 더 큰 그림을 그려야 할 때다",
+          "title": "AI거품공포 '완화'...장중 아시아 6개국 증시 '일제히 상승'",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003490892?sid=110",
+          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=158331",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -744,110 +946,37 @@
       ]
     },
     {
-      "term": "Trapped Korea",
-      "term_ko": "갇힌 한국",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "갇힌 한국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[리셋 코리아] 유럽 따라하다 ‘규제 갈라파고스’에 갇힌 한국",
-              "link": "https://n.news.naver.com/mnews/article/025/0003490887?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%87%ED%9E%8C%20%ED%95%9C%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%87%ED%9E%8C%20%ED%95%9C%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[리셋 코리아] 유럽 따라하다 ‘규제 갈라파고스’에 갇힌 한국",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003490887?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Keep the momentum going",
-      "term_ko": "상승흐름 이어가나",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승흐름 이어가나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(12월19일자) \"금값 2026년 전망... 상승흐름 이어가나\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3461168"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%ED%9D%90%EB%A6%84%20%EC%9D%B4%EC%96%B4%EA%B0%80%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%ED%9D%90%EB%A6%84%20%EC%9D%B4%EC%96%B4%EA%B0%80%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(12월19일자) \"금값 2026년 전망... 상승흐름 이어가나\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3461168",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "D&D Pharmatech Launches",
-      "term_ko": "D&D 파마텍 출시",
+      "term": "TikTok Deal Optimism",
+      "term_ko": "틱톡 거래 낙관론",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "D&D Pharmatech Launches",
+        "query": "TikTok Deal Optimism",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220"
+              "title": "Oracle Stock Surges After Hours on TikTok Deal Optimism and OpenAI Fundra...",
+              "link": "https://www.econotimes.com/Oracle-Stock-Surges-After-Hours-on-TikTok-Deal-Optimism-and-OpenAI-Fundraising-Buzz-1729131"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=D%26D%20Pharmatech%20Launches",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=D%26D%20Pharmatech%20Launches"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=TikTok%20Deal%20Optimism",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=TikTok%20Deal%20Optimism"
       },
       "top_headlines": [
         {
-          "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
+          "title": "Oracle Stock Surges After Hours on TikTok Deal Optimism and OpenAI Fundra...",
           "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220",
+          "link": "https://www.econotimes.com/Oracle-Stock-Surges-After-Hours-on-TikTok-Deal-Optimism-and-OpenAI-Fundraising-Buzz-1729131",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -855,36 +984,37 @@
       ]
     },
     {
-      "term": "Global Central Bank",
-      "term_ko": "글로벌 중앙 은행",
+      "term": "Investors Hunt Bargains",
+      "term_ko": "투자자, 특가 상품 찾기",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Global Central Bank",
+        "query": "Investors Hunt Bargains",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Asian Stocks Slide as AI Spending Fears and Global Central Bank Decisions...",
-              "link": "https://www.econotimes.com/Asian-Stocks-Slide-as-AI-Spending-Fears-and-Global-Central-Bank-Decisions-Weigh-on-Markets-1729024"
+              "title": "Seoul stocks open higher as investors hunt bargains",
+              "link": "https://n.news.naver.com/mnews/article/001/0015804450?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Global%20Central%20Bank",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Global%20Central%20Bank"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Hunt%20Bargains",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Hunt%20Bargains"
       },
       "top_headlines": [
         {
-          "title": "Asian Stocks Slide as AI Spending Fears and Global Central Bank Decisions...",
+          "title": "Seoul stocks open higher as investors hunt bargains",
           "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stocks-Slide-as-AI-Spending-Fears-and-Global-Central-Bank-Decisions-Weigh-on-Markets-1729024",
+          "link": "https://n.news.naver.com/mnews/article/001/0015804450?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -892,36 +1022,37 @@
       ]
     },
     {
-      "term": "Futures Edge Higher",
-      "term_ko": "선물 에지 더 높이",
-      "significance_score": 266,
+      "term": "CPI-Fueled Rally",
+      "term_ko": "CPI 기반 랠리",
+      "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Futures Edge Higher",
+        "query": "CPI-Fueled Rally",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012"
+              "title": "U.S. Stock Futures Slip After CPI-Fueled Rally as Markets Weigh Economic ...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-After-CPI-Fueled-Rally-as-Markets-Weigh-Economic-Uncertainty-1729126"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Edge%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Edge%20Higher"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CPI-Fueled%20Rally",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CPI-Fueled%20Rally"
       },
       "top_headlines": [
         {
-          "title": "U.S. Stock Futures Edge Higher as Micron Earnings Boost AI Sentiment Ahea...",
+          "title": "U.S. Stock Futures Slip After CPI-Fueled Rally as Markets Weigh Economic ...",
           "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Higher-as-Micron-Earnings-Boost-AI-Sentiment-Ahead-of-CPI-Data-1729012",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-After-CPI-Fueled-Rally-as-Markets-Weigh-Economic-Uncertainty-1729126",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -929,36 +1060,37 @@
       ]
     },
     {
-      "term": "Radiotherapeutics Affiliate",
-      "term_ko": "방사선 치료 제휴사",
+      "term": "Futures Slip",
+      "term_ko": "선물 전표",
       "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Radiotherapeutics Affiliate",
+        "query": "Futures Slip",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220"
+              "title": "U.S. Stock Futures Slip After CPI-Fueled Rally as Markets Weigh Economic ...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-After-CPI-Fueled-Rally-as-Markets-Weigh-Economic-Uncertainty-1729126"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Radiotherapeutics%20Affiliate",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Radiotherapeutics%20Affiliate"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Slip",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Slip"
       },
       "top_headlines": [
         {
-          "title": "D&D Pharmatech Launches Radiotherapeutics Affiliate in the U.S.",
+          "title": "U.S. Stock Futures Slip After CPI-Fueled Rally as Markets Weigh Economic ...",
           "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=259220",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-After-CPI-Fueled-Rally-as-Markets-Weigh-Economic-Uncertainty-1729126",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -966,36 +1098,37 @@
       ]
     },
     {
-      "term": "Price Discrimination",
-      "term_ko": "가격 차별",
+      "term": "Open Higher",
+      "term_ko": "더 높이 열기",
       "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Price Discrimination",
+        "query": "Open Higher",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
-              "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016"
+              "title": "Seoul stocks open higher as investors hunt bargains",
+              "link": "https://n.news.naver.com/mnews/article/001/0015804450?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Price%20Discrimination",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Price%20Discrimination"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Higher",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Higher"
       },
       "top_headlines": [
         {
-          "title": "Instacart Stock Drops After FTC Probes AI-Based Price Discrimination Clai...",
+          "title": "Seoul stocks open higher as investors hunt bargains",
           "summary": "",
-          "link": "https://www.econotimes.com/Instacart-Stock-Drops-After-FTC-Probes-AI-Based-Price-Discrimination-Claims-1729016",
+          "link": "https://n.news.naver.com/mnews/article/001/0015804450?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1012,9 +1145,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1034,9 +1168,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1056,9 +1191,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-19T03:34:26+09:00",
+          "last_updated": "2025-12-19T10:31:07+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1072,28 +1208,30 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-18T18:35:35.333Z",
+    "generated_at": "2025-12-19T01:32:16.397Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-19T03:34:26+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-19T10:31:07+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-19T03:34:26+09:00",
+      "last_updated": "2025-12-19T10:31:07+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-19T03:34:26+09:00",
+        "lastUpdated": "2025-12-19T10:31:07+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
