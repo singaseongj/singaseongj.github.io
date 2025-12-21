@@ -1,1161 +1,425 @@
 {
+  "generatedAt": "2025-12-21T18:28:22.996Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-21",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "VIX closing higher",
-      "term_ko": "상승 마감 VIX",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 마감 VIX",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EB%A7%88%EA%B0%90%20VIX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EB%A7%88%EA%B0%90%20VIX"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Vix Closing Higher",
+      "term_ko": "상승 마감 VIX"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "Over $300 million",
-      "term_ko": "3억 달러 이상",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3억 달러 이상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9D%B4%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9D%B4%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-          "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Over $300 Million",
+      "term_ko": "3억 달러 이상"
     },
     {
-      "term": "I didn't realize that 300 million crane ants",
-      "term_ko": "몰랐네 서학개미들이 3억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "몰랐네 서학개미들이 3억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-              "link": "https://www.wikitree.co.kr/articles/1103696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%9E%90%EB%84%A4%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%93%A4%EC%9D%B4%203%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%9E%90%EB%84%A4%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%93%A4%EC%9D%B4%203%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1103696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Didn't Realize That 300 Million Crane Ants",
+      "term_ko": "몰랐네 서학개미들이 3억"
     },
     {
       "term": "Kim Inman Column 2026",
-      "term_ko": "김인만 칼럼 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김인만 칼럼 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
-              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%9D%B8%EB%A7%8C%20%EC%B9%BC%EB%9F%BC%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%9D%B8%EB%A7%8C%20%EC%B9%BC%EB%9F%BC%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
-          "summary": "",
-          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "김인만 칼럼 2026년"
     },
     {
-      "term": "First 3% of upside",
-      "term_ko": "상승률 첫 3%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승률 첫 3%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
-              "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%EB%A5%A0%20%EC%B2%AB%203%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%EB%A5%A0%20%EC%B2%AB%203%25"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "First 3% of Upside",
+      "term_ko": "상승률 첫 3%"
     },
     {
       "term": "Project Ritz 1",
-      "term_ko": "프로젝트 리츠 1호",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "프로젝트 리츠 1호",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
-              "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%A6%AC%EC%B8%A0%201%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%A6%AC%EC%B8%A0%201%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "프로젝트 리츠 1호"
     },
     {
-      "term": "Crane Ant US Semiconductor",
-      "term_ko": "서학개미 미국 반도체",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서학개미 미국 반도체",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%AF%B8%EA%B5%AD%20%EB%B0%98%EB%8F%84%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%AF%B8%EA%B5%AD%20%EB%B0%98%EB%8F%84%EC%B2%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-          "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Crane Ant Us Semiconductor",
+      "term_ko": "서학개미 미국 반도체"
     },
     {
       "term": "Corporate Bond Maturity History",
-      "term_ko": "회사채 만기 사상",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회사채 만기 사상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
-              "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%A7%8C%EA%B8%B0%20%EC%82%AC%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%A7%8C%EA%B8%B0%20%EC%82%AC%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "회사채 만기 사상"
     },
     {
-      "term": "Maximum and the bonds are funded",
-      "term_ko": "최대인데 공사채가 자금",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최대인데 공사채가 자금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
-              "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%EC%9D%B8%EB%8D%B0%20%EA%B3%B5%EC%82%AC%EC%B1%84%EA%B0%80%20%EC%9E%90%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%EC%9D%B8%EB%8D%B0%20%EA%B3%B5%EC%82%AC%EC%B1%84%EA%B0%80%20%EC%9E%90%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Maximum and the Bonds Are Funded",
+      "term_ko": "최대인데 공사채가 자금"
     },
     {
-      "term": "Rising or falling house prices",
-      "term_ko": "집값 오를까 내릴까",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집값 오를까 내릴까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
-              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%EC%98%A4%EB%A5%BC%EA%B9%8C%20%EB%82%B4%EB%A6%B4%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%EC%98%A4%EB%A5%BC%EA%B9%8C%20%EB%82%B4%EB%A6%B4%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
-          "summary": "",
-          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising or Falling House Prices",
+      "term_ko": "집값 오를까 내릴까"
     },
     {
       "term": "Seoul Apartment Rent",
-      "term_ko": "서울 아파트 월세",
-      "significance_score": 322,
-      "mentions": 483,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울 아파트 월세",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-13",
-              "timestamp": 1765551600000,
-              "value": 69.04761
-            },
-            {
-              "period": "2025-12-14",
-              "timestamp": 1765638000000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-15",
-              "timestamp": 1765724400000,
-              "value": 88.88888
-            },
-            {
-              "period": "2025-12-16",
-              "timestamp": 1765810800000,
-              "value": 79.36507
-            },
-            {
-              "period": "2025-12-17",
-              "timestamp": 1765897200000,
-              "value": 91.26984
-            },
-            {
-              "period": "2025-12-18",
-              "timestamp": 1765983600000,
-              "value": 76.19047
-            },
-            {
-              "period": "2025-12-19",
-              "timestamp": 1766070000000,
-              "value": 65.87301
-            },
-            {
-              "period": "2025-12-20",
-              "timestamp": 1766156400000,
-              "value": 80.95238
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
-              "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%9B%94%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%9B%94%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 482.5396,
-        "weekly_average_volume": 80.4233,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.013801,
-        "time_weight": 0.021891,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1766156400000
-      }
+      "term_ko": "서울 아파트 월세"
     },
     {
-      "term": "From real estate investment development",
-      "term_ko": "부동산 투자 개발부터",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 투자 개발부터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
-              "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EA%B0%9C%EB%B0%9C%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EA%B0%9C%EB%B0%9C%EB%B6%80%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "From Real Estate Investment Development",
+      "term_ko": "부동산 투자 개발부터"
     },
     {
-      "term": "Soaring cart screams",
-      "term_ko": "치솟아 장바구니 비명",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "치솟아 장바구니 비명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "고환율에 수입 물가도 치솟아… 장바구니 ‘비명’",
-              "link": "https://n.news.naver.com/mnews/article/022/0004091895?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%98%EC%86%9F%EC%95%84%20%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88%20%EB%B9%84%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%98%EC%86%9F%EC%95%84%20%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88%20%EB%B9%84%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "고환율에 수입 물가도 치솟아… 장바구니 ‘비명’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004091895?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Soaring Cart Screams",
+      "term_ko": "치솟아 장바구니 비명"
     },
     {
-      "term": "Property and casualty industry sophisticated risks",
-      "term_ko": "손해보험업계 정교한 위험",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "손해보험업계 정교한 위험",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
-              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%90%ED%95%B4%EB%B3%B4%ED%97%98%EC%97%85%EA%B3%84%20%EC%A0%95%EA%B5%90%ED%95%9C%20%EC%9C%84%ED%97%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%90%ED%95%B4%EB%B3%B4%ED%97%98%EC%97%85%EA%B3%84%20%EC%A0%95%EA%B5%90%ED%95%9C%20%EC%9C%84%ED%97%98"
-      },
-      "top_headlines": [
-        {
-          "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
-          "summary": "",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Property and Casualty Industry Sophisticated Risks",
+      "term_ko": "손해보험업계 정교한 위험"
     },
     {
-      "term": "Calculating analytics premiums",
-      "term_ko": "분석 보험료 산출",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "분석 보험료 산출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
-              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%84%EC%84%9D%20%EB%B3%B4%ED%97%98%EB%A3%8C%20%EC%82%B0%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%84%EC%84%9D%20%EB%B3%B4%ED%97%98%EB%A3%8C%20%EC%82%B0%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
-          "summary": "",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Calculating Analytics Premiums",
+      "term_ko": "분석 보험료 산출"
     },
     {
-      "term": "Cost-effectiveness of capabilities",
-      "term_ko": "능력 비용 효율화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "능력 비용 효율화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
-              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8A%A5%EB%A0%A5%20%EB%B9%84%EC%9A%A9%20%ED%9A%A8%EC%9C%A8%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8A%A5%EB%A0%A5%20%EB%B9%84%EC%9A%A9%20%ED%9A%A8%EC%9C%A8%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
-          "summary": "",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cost-effectiveness of Capabilities",
+      "term_ko": "능력 비용 효율화"
     },
     {
-      "term": "19th US",
-      "term_ko": "19일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "19일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=19%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=19%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "19th Us",
+      "term_ko": "19일 미국"
     },
     {
-      "term": "Reduce volatility",
-      "term_ko": "변동성 감소",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "변동성 감소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EB%8F%99%EC%84%B1%20%EA%B0%90%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EB%8F%99%EC%84%B1%20%EA%B0%90%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reduce Volatility",
+      "term_ko": "변동성 감소"
     },
     {
-      "term": "Mass influx",
-      "term_ko": "대거 유입",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대거 유입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B1%B0%20%EC%9C%A0%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B1%B0%20%EC%9C%A0%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-          "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mass Influx",
+      "term_ko": "대거 유입"
     },
     {
-      "term": "Samo is this",
-      "term_ko": "사모은 이것",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사모은 이것",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-              "link": "https://www.wikitree.co.kr/articles/1103696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EB%AA%A8%EC%9D%80%20%EC%9D%B4%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EB%AA%A8%EC%9D%80%20%EC%9D%B4%EA%B2%83"
-      },
-      "top_headlines": [
-        {
-          "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1103696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samo Is This",
+      "term_ko": "사모은 이것"
     },
     {
-      "term": "Plates to sweep",
-      "term_ko": "쓸어갈 판",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "쓸어갈 판",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
-              "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%93%B8%EC%96%B4%EA%B0%88%20%ED%8C%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%93%B8%EC%96%B4%EA%B0%88%20%ED%8C%90"
-      },
-      "top_headlines": [
-        {
-          "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Plates to Sweep",
+      "term_ko": "쓸어갈 판"
     },
     {
       "term": "Elon Musk Wins",
-      "term_ko": "엘론 머스크의 승리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Elon Musk Wins",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-              "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Elon%20Musk%20Wins",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Elon%20Musk%20Wins"
-      },
-      "top_headlines": [
-        {
-          "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "엘론 머스크의 승리"
     },
     {
       "term": "Historic Tesla Pay",
-      "term_ko": "역사 테슬라 페이",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Historic Tesla Pay",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-              "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Historic%20Tesla%20Pay",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Historic%20Tesla%20Pay"
-      },
-      "top_headlines": [
-        {
-          "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "역사 테슬라 페이"
     },
     {
       "term": "Tech Rally Offsets",
-      "term_ko": "기술 랠리 상쇄",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Rally Offsets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Rally%20Offsets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Rally%20Offsets"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기술 랠리 상쇄"
     },
     {
       "term": "Consumer Weakness",
-      "term_ko": "소비자 약점",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Consumer Weakness",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Consumer%20Weakness",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Consumer%20Weakness"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소비자 약점"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-21T21:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-21T12:41:12.279Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-21T21:40:02+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Vix Closing Higher",
+      "term_ko": "상승 마감 VIX"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-21T21:40:02+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-21T21:40:02+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Over $300 Million",
+      "term_ko": "3억 달러 이상"
+    },
+    {
+      "term": "I Didn't Realize That 300 Million Crane Ants",
+      "term_ko": "몰랐네 서학개미들이 3억"
+    },
+    {
+      "term": "Kim Inman Column 2026",
+      "term_ko": "김인만 칼럼 2026년"
+    },
+    {
+      "term": "First 3% of Upside",
+      "term_ko": "상승률 첫 3%"
+    },
+    {
+      "term": "Project Ritz 1",
+      "term_ko": "프로젝트 리츠 1호"
+    },
+    {
+      "term": "Crane Ant Us Semiconductor",
+      "term_ko": "서학개미 미국 반도체"
+    },
+    {
+      "term": "Corporate Bond Maturity History",
+      "term_ko": "회사채 만기 사상"
+    },
+    {
+      "term": "Maximum and the Bonds Are Funded",
+      "term_ko": "최대인데 공사채가 자금"
+    },
+    {
+      "term": "Rising or Falling House Prices",
+      "term_ko": "집값 오를까 내릴까"
+    },
+    {
+      "term": "Seoul Apartment Rent",
+      "term_ko": "서울 아파트 월세"
+    },
+    {
+      "term": "From Real Estate Investment Development",
+      "term_ko": "부동산 투자 개발부터"
+    },
+    {
+      "term": "Soaring Cart Screams",
+      "term_ko": "치솟아 장바구니 비명"
+    },
+    {
+      "term": "Property and Casualty Industry Sophisticated Risks",
+      "term_ko": "손해보험업계 정교한 위험"
+    },
+    {
+      "term": "Calculating Analytics Premiums",
+      "term_ko": "분석 보험료 산출"
+    },
+    {
+      "term": "Cost-effectiveness of Capabilities",
+      "term_ko": "능력 비용 효율화"
+    },
+    {
+      "term": "19th Us",
+      "term_ko": "19일 미국"
+    },
+    {
+      "term": "Reduce Volatility",
+      "term_ko": "변동성 감소"
+    },
+    {
+      "term": "Mass Influx",
+      "term_ko": "대거 유입"
+    },
+    {
+      "term": "Samo Is This",
+      "term_ko": "사모은 이것"
+    },
+    {
+      "term": "Plates to Sweep",
+      "term_ko": "쓸어갈 판"
+    },
+    {
+      "term": "Elon Musk Wins",
+      "term_ko": "엘론 머스크의 승리"
+    },
+    {
+      "term": "Historic Tesla Pay",
+      "term_ko": "역사 테슬라 페이"
+    },
+    {
+      "term": "Tech Rally Offsets",
+      "term_ko": "기술 랠리 상쇄"
+    },
+    {
+      "term": "Consumer Weakness",
+      "term_ko": "소비자 약점"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Vix Closing Higher": {
+      "en": "Vix Closing Higher",
+      "ko": "상승 마감 VIX",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Over $300 Million": {
+      "en": "Over $300 Million",
+      "ko": "3억 달러 이상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "I Didn't Realize That 300 Million Crane Ants": {
+      "en": "I Didn't Realize That 300 Million Crane Ants",
+      "ko": "몰랐네 서학개미들이 3억",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Kim Inman Column 2026": {
+      "en": "Kim Inman Column 2026",
+      "ko": "김인만 칼럼 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "First 3% of Upside": {
+      "en": "First 3% of Upside",
+      "ko": "상승률 첫 3%",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Project Ritz 1": {
+      "en": "Project Ritz 1",
+      "ko": "프로젝트 리츠 1호",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Crane Ant Us Semiconductor": {
+      "en": "Crane Ant Us Semiconductor",
+      "ko": "서학개미 미국 반도체",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Corporate Bond Maturity History": {
+      "en": "Corporate Bond Maturity History",
+      "ko": "회사채 만기 사상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Maximum and the Bonds Are Funded": {
+      "en": "Maximum and the Bonds Are Funded",
+      "ko": "최대인데 공사채가 자금",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Rising or Falling House Prices": {
+      "en": "Rising or Falling House Prices",
+      "ko": "집값 오를까 내릴까",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Seoul Apartment Rent": {
+      "en": "Seoul Apartment Rent",
+      "ko": "서울 아파트 월세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "From Real Estate Investment Development": {
+      "en": "From Real Estate Investment Development",
+      "ko": "부동산 투자 개발부터",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Soaring Cart Screams": {
+      "en": "Soaring Cart Screams",
+      "ko": "치솟아 장바구니 비명",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Property and Casualty Industry Sophisticated Risks": {
+      "en": "Property and Casualty Industry Sophisticated Risks",
+      "ko": "손해보험업계 정교한 위험",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Calculating Analytics Premiums": {
+      "en": "Calculating Analytics Premiums",
+      "ko": "분석 보험료 산출",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Cost-effectiveness of Capabilities": {
+      "en": "Cost-effectiveness of Capabilities",
+      "ko": "능력 비용 효율화",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "19th Us": {
+      "en": "19th Us",
+      "ko": "19일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Reduce Volatility": {
+      "en": "Reduce Volatility",
+      "ko": "변동성 감소",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Mass Influx": {
+      "en": "Mass Influx",
+      "ko": "대거 유입",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Samo Is This": {
+      "en": "Samo Is This",
+      "ko": "사모은 이것",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Plates to Sweep": {
+      "en": "Plates to Sweep",
+      "ko": "쓸어갈 판",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Elon Musk Wins": {
+      "en": "Elon Musk Wins",
+      "ko": "엘론 머스크의 승리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Historic Tesla Pay": {
+      "en": "Historic Tesla Pay",
+      "ko": "역사 테슬라 페이",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Tech Rally Offsets": {
+      "en": "Tech Rally Offsets",
+      "ko": "기술 랠리 상쇄",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Consumer Weakness": {
+      "en": "Consumer Weakness",
+      "ko": "소비자 약점",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T18:28:22.996Z"
     }
   }
 }
