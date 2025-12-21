@@ -13,7 +13,7 @@
         "query": "상승 마감 VIX",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -51,7 +51,7 @@
         "query": "증시 브리핑 12월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -89,7 +89,7 @@
         "query": "3억 달러 이상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -127,7 +127,7 @@
         "query": "몰랐네 서학개미들이 3억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -156,37 +156,113 @@
       ]
     },
     {
-      "term": "Observatory KOSPI 4200 Challenge",
-      "term_ko": "전망대 코스피 4200도전",
+      "term": "Kim Inman Column 2026",
+      "term_ko": "김인만 칼럼 2026년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "전망대 코스피 4200도전",
+        "query": "김인만 칼럼 2026년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[증시 주간 전망대] 코스피 4200도전 계속...바이오 주목 속 \"밸류에이션...",
-              "link": "http://www.seoulwire.com/news/articleView.html?idxno=686754"
+              "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A7%9D%EB%8C%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%204200%EB%8F%84%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A7%9D%EB%8C%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%204200%EB%8F%84%EC%A0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%9D%B8%EB%A7%8C%20%EC%B9%BC%EB%9F%BC%202026%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%9D%B8%EB%A7%8C%20%EC%B9%BC%EB%9F%BC%202026%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "[증시 주간 전망대] 코스피 4200도전 계속...바이오 주목 속 \"밸류에이션...",
+          "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
           "summary": "",
-          "link": "http://www.seoulwire.com/news/articleView.html?idxno=686754",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "First 3% of upside",
+      "term_ko": "상승률 첫 3%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "상승률 첫 3%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-21T21:40:02+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
+              "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%EB%A5%A0%20%EC%B2%AB%203%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%EB%A5%A0%20%EC%B2%AB%203%25"
+      },
+      "top_headlines": [
+        {
+          "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Project Ritz 1",
+      "term_ko": "프로젝트 리츠 1호",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "프로젝트 리츠 1호",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-21T21:40:02+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
+              "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%A6%AC%EC%B8%A0%201%ED%98%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%A6%AC%EC%B8%A0%201%ED%98%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -203,7 +279,7 @@
         "query": "서학개미 미국 반도체",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -232,37 +308,37 @@
       ]
     },
     {
-      "term": "Household Debt Management Keynote",
-      "term_ko": "가계부채 관리 기조",
+      "term": "Corporate Bond Maturity History",
+      "term_ko": "회사채 만기 사상",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "가계부채 관리 기조",
+        "query": "회사채 만기 사상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "이억원 금융위원장 \"내년에도 가계부채 관리 기조 지속..대출 쏠림은 보...",
-              "link": "http://kpenews.com/View.aspx?No=3900414"
+              "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
+              "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84%20%EA%B4%80%EB%A6%AC%20%EA%B8%B0%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84%20%EA%B4%80%EB%A6%AC%20%EA%B8%B0%EC%A1%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%A7%8C%EA%B8%B0%20%EC%82%AC%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%A7%8C%EA%B8%B0%20%EC%82%AC%EC%83%81"
       },
       "top_headlines": [
         {
-          "title": "이억원 금융위원장 \"내년에도 가계부채 관리 기조 지속..대출 쏠림은 보...",
+          "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
           "summary": "",
-          "link": "http://kpenews.com/View.aspx?No=3900414",
+          "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -270,37 +346,37 @@
       ]
     },
     {
-      "term": "Post Office Banks starting next year",
-      "term_ko": "내년부터 우체국서 은행",
+      "term": "Maximum and the bonds are funded",
+      "term_ko": "최대인데 공사채가 자금",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "내년부터 우체국서 은행",
+        "query": "최대인데 공사채가 자금",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "'영업점 줄이는' 시중은행들... \"내년부터 우체국서 '은행 업무' 본다\"",
-              "link": "https://www.insight.co.kr/news/534528"
+              "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
+              "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%85%84%EB%B6%80%ED%84%B0%20%EC%9A%B0%EC%B2%B4%EA%B5%AD%EC%84%9C%20%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%85%84%EB%B6%80%ED%84%B0%20%EC%9A%B0%EC%B2%B4%EA%B5%AD%EC%84%9C%20%EC%9D%80%ED%96%89"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%EC%9D%B8%EB%8D%B0%20%EA%B3%B5%EC%82%AC%EC%B1%84%EA%B0%80%20%EC%9E%90%EA%B8%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%EC%9D%B8%EB%8D%B0%20%EA%B3%B5%EC%82%AC%EC%B1%84%EA%B0%80%20%EC%9E%90%EA%B8%88"
       },
       "top_headlines": [
         {
-          "title": "'영업점 줄이는' 시중은행들... \"내년부터 우체국서 '은행 업무' 본다\"",
+          "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
           "summary": "",
-          "link": "https://www.insight.co.kr/news/534528",
+          "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -308,37 +384,37 @@
       ]
     },
     {
-      "term": "Stock Market Santa Rally",
-      "term_ko": "증시 산타 랠리",
+      "term": "Rising or falling house prices",
+      "term_ko": "집값 오를까 내릴까",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증시 산타 랠리",
+        "query": "집값 오를까 내릴까",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "증시 '산타 랠리' 가능할까… 결국 원·달러 환율에 달렸다 [증시 레이더...",
-              "link": "https://n.news.naver.com/mnews/article/138/0002213209?sid=101"
+              "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%82%B0%ED%83%80%20%EB%9E%A0%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%82%B0%ED%83%80%20%EB%9E%A0%EB%A6%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%EC%98%A4%EB%A5%BC%EA%B9%8C%20%EB%82%B4%EB%A6%B4%EA%B9%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%EC%98%A4%EB%A5%BC%EA%B9%8C%20%EB%82%B4%EB%A6%B4%EA%B9%8C"
       },
       "top_headlines": [
         {
-          "title": "증시 '산타 랠리' 가능할까… 결국 원·달러 환율에 달렸다 [증시 레이더...",
+          "title": "[김인만 칼럼] 2026년 집값 오를까? 내릴까?",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002213209?sid=101",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=717471",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -346,37 +422,141 @@
       ]
     },
     {
-      "term": "Could it be possible that eventually the circle",
-      "term_ko": "가능할까 결국 원",
+      "term": "Seoul Apartment Rent",
+      "term_ko": "서울 아파트 월세",
       "significance_score": 322,
-      "mentions": 160,
+      "mentions": 483,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "가능할까 결국 원",
+        "query": "서울 아파트 월세",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2025-12-13",
+              "timestamp": 1765551600000,
+              "value": 69.04761
+            },
+            {
+              "period": "2025-12-14",
+              "timestamp": 1765638000000,
+              "value": 100
+            },
+            {
+              "period": "2025-12-15",
+              "timestamp": 1765724400000,
+              "value": 88.88888
+            },
+            {
+              "period": "2025-12-16",
+              "timestamp": 1765810800000,
+              "value": 79.36507
+            },
+            {
+              "period": "2025-12-17",
+              "timestamp": 1765897200000,
+              "value": 91.26984
+            },
+            {
+              "period": "2025-12-18",
+              "timestamp": 1765983600000,
+              "value": 76.19047
+            },
+            {
+              "period": "2025-12-19",
+              "timestamp": 1766070000000,
+              "value": 65.87301
+            },
+            {
+              "period": "2025-12-20",
+              "timestamp": 1766156400000,
+              "value": 80.95238
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "증시 '산타 랠리' 가능할까… 결국 원·달러 환율에 달렸다 [증시 레이더...",
-              "link": "https://n.news.naver.com/mnews/article/138/0002213209?sid=101"
+              "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
+              "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C%20%EA%B2%B0%EA%B5%AD%20%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C%20%EA%B2%B0%EA%B5%AD%20%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%9B%94%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%9B%94%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "증시 '산타 랠리' 가능할까… 결국 원·달러 환율에 달렸다 [증시 레이더...",
+          "title": "서울 아파트 월세 상승률, 첫 3% 돌파",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002213209?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/032/0003416595?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 482.5396,
+        "weekly_average_volume": 80.4233,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.013801,
+        "time_weight": 0.021891,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1766156400000
+      }
+    },
+    {
+      "term": "From real estate investment development",
+      "term_ko": "부동산 투자 개발부터",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "부동산 투자 개발부터",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-21T21:40:02+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
+              "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EA%B0%9C%EB%B0%9C%EB%B6%80%ED%84%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EA%B0%9C%EB%B0%9C%EB%B6%80%ED%84%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "부동산 투자·개발부터 운영까지…'프로젝트 리츠' 1호 탄생",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/082/0001359283?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -384,37 +564,37 @@
       ]
     },
     {
-      "term": "Depends on the dollar exchange rate",
-      "term_ko": "달러 환율에 달렸다",
+      "term": "Soaring cart screams",
+      "term_ko": "치솟아 장바구니 비명",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "달러 환율에 달렸다",
+        "query": "치솟아 장바구니 비명",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "증시 '산타 랠리' 가능할까… 결국 원·달러 환율에 달렸다 [증시 레이더...",
-              "link": "https://n.news.naver.com/mnews/article/138/0002213209?sid=101"
+              "title": "고환율에 수입 물가도 치솟아… 장바구니 ‘비명’",
+              "link": "https://n.news.naver.com/mnews/article/022/0004091895?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%EC%97%90%20%EB%8B%AC%EB%A0%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%EC%97%90%20%EB%8B%AC%EB%A0%B8%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%98%EC%86%9F%EC%95%84%20%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88%20%EB%B9%84%EB%AA%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%98%EC%86%9F%EC%95%84%20%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88%20%EB%B9%84%EB%AA%85"
       },
       "top_headlines": [
         {
-          "title": "증시 '산타 랠리' 가능할까… 결국 원·달러 환율에 달렸다 [증시 레이더...",
+          "title": "고환율에 수입 물가도 치솟아… 장바구니 ‘비명’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002213209?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/022/0004091895?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -422,37 +602,37 @@
       ]
     },
     {
-      "term": "Global Economics Private Debt Service",
-      "term_ko": "글로벌이코노믹 사설 채무상환용",
+      "term": "Property and casualty industry sophisticated risks",
+      "term_ko": "손해보험업계 정교한 위험",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "글로벌이코노믹 사설 채무상환용",
+        "query": "손해보험업계 정교한 위험",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[글로벌이코노믹 사설] 채무상환용 회사채 발행 급증 이유",
-              "link": "https://www.g-enews.com/view.php?ud=20251219105929842335e857d010_1"
+              "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
+              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%80%EB%A1%9C%EB%B2%8C%EC%9D%B4%EC%BD%94%EB%85%B8%EB%AF%B9%20%EC%82%AC%EC%84%A4%20%EC%B1%84%EB%AC%B4%EC%83%81%ED%99%98%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%80%EB%A1%9C%EB%B2%8C%EC%9D%B4%EC%BD%94%EB%85%B8%EB%AF%B9%20%EC%82%AC%EC%84%A4%20%EC%B1%84%EB%AC%B4%EC%83%81%ED%99%98%EC%9A%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%90%ED%95%B4%EB%B3%B4%ED%97%98%EC%97%85%EA%B3%84%20%EC%A0%95%EA%B5%90%ED%95%9C%20%EC%9C%84%ED%97%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%90%ED%95%B4%EB%B3%B4%ED%97%98%EC%97%85%EA%B3%84%20%EC%A0%95%EA%B5%90%ED%95%9C%20%EC%9C%84%ED%97%98"
       },
       "top_headlines": [
         {
-          "title": "[글로벌이코노믹 사설] 채무상환용 회사채 발행 급증 이유",
+          "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20251219105929842335e857d010_1",
+          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -460,37 +640,75 @@
       ]
     },
     {
-      "term": "Corporate bond issuance surges",
-      "term_ko": "회사채 발행 급증",
+      "term": "Calculating analytics premiums",
+      "term_ko": "분석 보험료 산출",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "회사채 발행 급증",
+        "query": "분석 보험료 산출",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[글로벌이코노믹 사설] 채무상환용 회사채 발행 급증 이유",
-              "link": "https://www.g-enews.com/view.php?ud=20251219105929842335e857d010_1"
+              "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
+              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89%20%EA%B8%89%EC%A6%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89%20%EA%B8%89%EC%A6%9D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%84%EC%84%9D%20%EB%B3%B4%ED%97%98%EB%A3%8C%20%EC%82%B0%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%84%EC%84%9D%20%EB%B3%B4%ED%97%98%EB%A3%8C%20%EC%82%B0%EC%B6%9C"
       },
       "top_headlines": [
         {
-          "title": "[글로벌이코노믹 사설] 채무상환용 회사채 발행 급증 이유",
+          "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20251219105929842335e857d010_1",
+          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Cost-effectiveness of capabilities",
+      "term_ko": "능력 비용 효율화",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "능력 비용 효율화",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-21T21:40:02+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
+              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8A%A5%EB%A0%A5%20%EB%B9%84%EC%9A%A9%20%ED%9A%A8%EC%9C%A8%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8A%A5%EB%A0%A5%20%EB%B9%84%EC%9A%A9%20%ED%9A%A8%EC%9C%A8%ED%99%94"
+      },
+      "top_headlines": [
+        {
+          "title": "손해보험업계, 정교한 위험 분석·보험료 산출 능력·비용 효율화 역량...",
+          "summary": "",
+          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=802227",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -507,7 +725,7 @@
         "query": "19일 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -545,7 +763,7 @@
         "query": "변동성 감소",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -583,7 +801,7 @@
         "query": "대거 유입",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -621,7 +839,7 @@
         "query": "사모은 이것",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -650,151 +868,37 @@
       ]
     },
     {
-      "term": "Stock Market Week",
-      "term_ko": "증시 주간",
+      "term": "Plates to sweep",
+      "term_ko": "쓸어갈 판",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증시 주간",
+        "query": "쓸어갈 판",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[증시 주간 전망대] 코스피 4200도전 계속...바이오 주목 속 \"밸류에이션...",
-              "link": "http://www.seoulwire.com/news/articleView.html?idxno=686754"
+              "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
+              "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%A3%BC%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%A3%BC%EA%B0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%93%B8%EC%96%B4%EA%B0%88%20%ED%8C%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%93%B8%EC%96%B4%EA%B0%88%20%ED%8C%90"
       },
       "top_headlines": [
         {
-          "title": "[증시 주간 전망대] 코스피 4200도전 계속...바이오 주목 속 \"밸류에이션...",
+          "title": "회사채 만기 사상 최대인데…공사채가 자금 쓸어갈 판",
           "summary": "",
-          "link": "http://www.seoulwire.com/news/articleView.html?idxno=686754",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "In the spotlight",
-      "term_ko": "주목 속",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주목 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[증시 주간 전망대] 코스피 4200도전 계속...바이오 주목 속 \"밸류에이션...",
-              "link": "http://www.seoulwire.com/news/articleView.html?idxno=686754"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%AA%A9%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%AA%A9%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "[증시 주간 전망대] 코스피 4200도전 계속...바이오 주목 속 \"밸류에이션...",
-          "summary": "",
-          "link": "http://www.seoulwire.com/news/articleView.html?idxno=686754",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "View work",
-      "term_ko": "업무 본다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "업무 본다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'영업점 줄이는' 시중은행들... \"내년부터 우체국서 '은행 업무' 본다\"",
-              "link": "https://www.insight.co.kr/news/534528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%85%EB%AC%B4%20%EB%B3%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%85%EB%AC%B4%20%EB%B3%B8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'영업점 줄이는' 시중은행들... \"내년부터 우체국서 '은행 업무' 본다\"",
-          "summary": "",
-          "link": "https://www.insight.co.kr/news/534528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Beyond Morning Glory",
-      "term_ko": "넘어 아침햇발",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "넘어 아침햇발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "고환율 ‘주범’ 찾기를 넘어 [아침햇발]",
-              "link": "https://n.news.naver.com/mnews/article/028/0002782576?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%98%EC%96%B4%20%EC%95%84%EC%B9%A8%ED%96%87%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%98%EC%96%B4%20%EC%95%84%EC%B9%A8%ED%96%87%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "고환율 ‘주범’ 찾기를 넘어 [아침햇발]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002782576?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/018/0006187514?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -811,7 +915,7 @@
         "query": "Elon Musk Wins",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -849,7 +953,7 @@
         "query": "Historic Tesla Pay",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -887,7 +991,7 @@
         "query": "Tech Rally Offsets",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -925,7 +1029,7 @@
         "query": "Consumer Weakness",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -963,7 +1067,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -986,7 +1090,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1009,7 +1113,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-21T15:32:05+09:00",
+          "last_updated": "2025-12-21T21:40:02+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1021,38 +1125,15 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
-    },
-    {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-21T15:32:05+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-21T06:33:15.675Z",
+    "generated_at": "2025-12-21T12:41:12.279Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-21T15:32:05+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-21T21:40:02+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 1,
     "removal_breakdown": {
@@ -1062,14 +1143,14 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-21T15:32:05+09:00",
+      "last_updated": "2025-12-21T21:40:02+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-21T15:32:05+09:00",
+        "lastUpdated": "2025-12-21T21:40:02+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
