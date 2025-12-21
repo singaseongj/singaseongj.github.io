@@ -1,1059 +1,425 @@
 {
+  "generatedAt": "2025-12-21T06:30:06.177Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-21",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Project Ritz 1",
-      "term_ko": "프로젝트 리츠 1호",
-      "significance_score": 672,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "프로젝트 리츠 1호",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-              "link": "https://www.tokenpost.kr/news/economy/317097"
-            },
-            {
-              "title": "부동산 투자·개발·운영…'프로젝트 리츠' 1호 탄생",
-              "link": "https://n.news.naver.com/mnews/article/422/0000814435?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%A6%AC%EC%B8%A0%201%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%A6%AC%EC%B8%A0%201%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/317097",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "부동산 투자·개발·운영…'프로젝트 리츠' 1호 탄생",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000814435?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "프로젝트 리츠 1호"
     },
     {
-      "term": "VIX closing higher",
-      "term_ko": "상승 마감 VIX",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 마감 VIX",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EB%A7%88%EA%B0%90%20VIX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EB%A7%88%EA%B0%90%20VIX"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Vix Closing Higher",
+      "term_ko": "상승 마감 VIX"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "Over $300 million",
-      "term_ko": "3억 달러 이상",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3억 달러 이상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9D%B4%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9D%B4%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-          "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Over $300 Million",
+      "term_ko": "3억 달러 이상"
     },
     {
-      "term": "I didn't realize that 300 million crane ants",
-      "term_ko": "몰랐네 서학개미들이 3억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "몰랐네 서학개미들이 3억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-              "link": "https://www.wikitree.co.kr/articles/1103696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%9E%90%EB%84%A4%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%93%A4%EC%9D%B4%203%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%9E%90%EB%84%A4%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%93%A4%EC%9D%B4%203%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1103696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Didn't Realize That 300 Million Crane Ants",
+      "term_ko": "몰랐네 서학개미들이 3억"
     },
     {
-      "term": "Crane Ant US Semiconductor",
-      "term_ko": "서학개미 미국 반도체",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서학개미 미국 반도체",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%AF%B8%EA%B5%AD%20%EB%B0%98%EB%8F%84%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%AF%B8%EA%B5%AD%20%EB%B0%98%EB%8F%84%EC%B2%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-          "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Crane Ant Us Semiconductor",
+      "term_ko": "서학개미 미국 반도체"
     },
     {
-      "term": "Stories featuring real estate",
-      "term_ko": "사례 등장 부동산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사례 등장 부동산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'프로젝트 리츠' 첫 사례 등장… 부동산 투자 외 개발·운영 허용",
-              "link": "http://www.m-i.kr/news/articleView.html?idxno=1317492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EB%A1%80%20%EB%93%B1%EC%9E%A5%20%EB%B6%80%EB%8F%99%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EB%A1%80%20%EB%93%B1%EC%9E%A5%20%EB%B6%80%EB%8F%99%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "'프로젝트 리츠' 첫 사례 등장… 부동산 투자 외 개발·운영 허용",
-          "summary": "",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1317492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stories Featuring Real Estate",
+      "term_ko": "사례 등장 부동산"
     },
     {
-      "term": "Non-investment development",
-      "term_ko": "투자 외 개발",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자 외 개발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'프로젝트 리츠' 첫 사례 등장… 부동산 투자 외 개발·운영 허용",
-              "link": "http://www.m-i.kr/news/articleView.html?idxno=1317492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EC%99%B8%20%EA%B0%9C%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EC%99%B8%20%EA%B0%9C%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "'프로젝트 리츠' 첫 사례 등장… 부동산 투자 외 개발·운영 허용",
-          "summary": "",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1317492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Non-investment Development",
+      "term_ko": "투자 외 개발"
     },
     {
-      "term": "After private road development",
-      "term_ko": "민간도 개발 후",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "민간도 개발 후",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-              "link": "https://www.tokenpost.kr/news/economy/317097"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%BC%EA%B0%84%EB%8F%84%20%EA%B0%9C%EB%B0%9C%20%ED%9B%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%BC%EA%B0%84%EB%8F%84%20%EA%B0%9C%EB%B0%9C%20%ED%9B%84"
-      },
-      "top_headlines": [
-        {
-          "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/317097",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "After Private Road Development",
+      "term_ko": "민간도 개발 후"
     },
     {
-      "term": "Operational era government",
-      "term_ko": "운영 시대 정부",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "운영 시대 정부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-              "link": "https://www.tokenpost.kr/news/economy/317097"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B4%EC%98%81%20%EC%8B%9C%EB%8C%80%20%EC%A0%95%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B4%EC%98%81%20%EC%8B%9C%EB%8C%80%20%EC%A0%95%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/317097",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Operational Era Government",
+      "term_ko": "운영 시대 정부"
     },
     {
       "term": "Finance Chairman: Household Debt Next Year",
-      "term_ko": "금융위원장 내년에도 가계부채",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융위원장 내년에도 가계부채",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금융위원장 \"내년에도 가계부채 관리 일관…특정 시기 쏠림은 해결\"",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733261"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%EC%9E%A5%20%EB%82%B4%EB%85%84%EC%97%90%EB%8F%84%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%EC%9E%A5%20%EB%82%B4%EB%85%84%EC%97%90%EB%8F%84%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위원장 \"내년에도 가계부채 관리 일관…특정 시기 쏠림은 해결\"",
-          "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733261",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융위원장 내년에도 가계부채"
     },
     {
       "term": "Management Consistent Specific",
-      "term_ko": "관리 일관 특정",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "관리 일관 특정",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금융위원장 \"내년에도 가계부채 관리 일관…특정 시기 쏠림은 해결\"",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733261"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%80%EB%A6%AC%20%EC%9D%BC%EA%B4%80%20%ED%8A%B9%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%80%EB%A6%AC%20%EC%9D%BC%EA%B4%80%20%ED%8A%B9%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위원장 \"내년에도 가계부채 관리 일관…특정 시기 쏠림은 해결\"",
-          "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733261",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "관리 일관 특정"
     },
     {
-      "term": "Resolve timing skew",
-      "term_ko": "시기 쏠림은 해결",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시기 쏠림은 해결",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금융위원장 \"내년에도 가계부채 관리 일관…특정 시기 쏠림은 해결\"",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733261"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EA%B8%B0%20%EC%8F%A0%EB%A6%BC%EC%9D%80%20%ED%95%B4%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EA%B8%B0%20%EC%8F%A0%EB%A6%BC%EC%9D%80%20%ED%95%B4%EA%B2%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위원장 \"내년에도 가계부채 관리 일관…특정 시기 쏠림은 해결\"",
-          "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005733261",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Resolve Timing Skew",
+      "term_ko": "시기 쏠림은 해결"
     },
     {
-      "term": "Finance Chairman Lee Myung-bak's household debt",
-      "term_ko": "이억원 금융위원장 가계부채",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이억원 금융위원장 가계부채",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "이억원 금융위원장 \"가계부채 관리, 내년에도 지속...대출 쏠림 문제 보...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=546367"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%96%B5%EC%9B%90%20%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%EC%9E%A5%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%96%B5%EC%9B%90%20%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%EC%9E%A5%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "이억원 금융위원장 \"가계부채 관리, 내년에도 지속...대출 쏠림 문제 보...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=546367",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Finance Chairman Lee Myung-bak's Household Debt",
+      "term_ko": "이억원 금융위원장 가계부채"
     },
     {
       "term": "Highlighting and Materials",
-      "term_ko": "고점 찍고 재료",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고점 찍고 재료",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "고점 찍고 재료 소화한 국고채 향방 주목…외인 선물 '팔자'",
-              "link": "https://www.sentv.co.kr/article/view/sentv202512210016"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%A0%90%20%EC%B0%8D%EA%B3%A0%20%EC%9E%AC%EB%A3%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%A0%90%20%EC%B0%8D%EA%B3%A0%20%EC%9E%AC%EB%A3%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "고점 찍고 재료 소화한 국고채 향방 주목…외인 선물 '팔자'",
-          "summary": "",
-          "link": "https://www.sentv.co.kr/article/view/sentv202512210016",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "고점 찍고 재료"
     },
     {
       "term": "Digested Treasury Bonds Heading",
-      "term_ko": "소화한 국고채 향방",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "소화한 국고채 향방",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "고점 찍고 재료 소화한 국고채 향방 주목…외인 선물 '팔자'",
-              "link": "https://www.sentv.co.kr/article/view/sentv202512210016"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%ED%99%94%ED%95%9C%20%EA%B5%AD%EA%B3%A0%EC%B1%84%20%ED%96%A5%EB%B0%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%ED%99%94%ED%95%9C%20%EA%B5%AD%EA%B3%A0%EC%B1%84%20%ED%96%A5%EB%B0%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "고점 찍고 재료 소화한 국고채 향방 주목…외인 선물 '팔자'",
-          "summary": "",
-          "link": "https://www.sentv.co.kr/article/view/sentv202512210016",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소화한 국고채 향방"
     },
     {
-      "term": "Attention out-of-field futures",
-      "term_ko": "주목 외인 선물",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주목 외인 선물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "고점 찍고 재료 소화한 국고채 향방 주목…외인 선물 '팔자'",
-              "link": "https://www.sentv.co.kr/article/view/sentv202512210016"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%AA%A9%20%EC%99%B8%EC%9D%B8%20%EC%84%A0%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%AA%A9%20%EC%99%B8%EC%9D%B8%20%EC%84%A0%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "고점 찍고 재료 소화한 국고채 향방 주목…외인 선물 '팔자'",
-          "summary": "",
-          "link": "https://www.sentv.co.kr/article/view/sentv202512210016",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Attention Out-of-field Futures",
+      "term_ko": "주목 외인 선물"
     },
     {
-      "term": "Real estate investment development",
-      "term_ko": "부동산 투자 개발",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 투자 개발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "부동산 투자·개발·운영…'프로젝트 리츠' 1호 탄생",
-              "link": "https://n.news.naver.com/mnews/article/422/0000814435?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EA%B0%9C%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EA%B0%9C%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산 투자·개발·운영…'프로젝트 리츠' 1호 탄생",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000814435?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Real Estate Investment Development",
+      "term_ko": "부동산 투자 개발"
     },
     {
-      "term": "19th US",
-      "term_ko": "19일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "19일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=19%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=19%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "19th Us",
+      "term_ko": "19일 미국"
     },
     {
-      "term": "Reduce volatility",
-      "term_ko": "변동성 감소",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "변동성 감소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EB%8F%99%EC%84%B1%20%EA%B0%90%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EB%8F%99%EC%84%B1%20%EA%B0%90%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 19일] 미국 증시 상승 마감, VIX 변동성 감소",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reduce Volatility",
+      "term_ko": "변동성 감소"
     },
     {
-      "term": "Mass influx",
-      "term_ko": "대거 유입",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대거 유입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B1%B0%20%EC%9C%A0%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B1%B0%20%EC%9C%A0%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-          "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mass Influx",
+      "term_ko": "대거 유입"
     },
     {
-      "term": "Samo is this",
-      "term_ko": "사모은 이것",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사모은 이것",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-              "link": "https://www.wikitree.co.kr/articles/1103696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EB%AA%A8%EC%9D%80%20%EC%9D%B4%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EB%AA%A8%EC%9D%80%20%EC%9D%B4%EA%B2%83"
-      },
-      "top_headlines": [
-        {
-          "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1103696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samo Is This",
+      "term_ko": "사모은 이것"
     },
     {
-      "term": "Allow operations",
-      "term_ko": "운영 허용",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "운영 허용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'프로젝트 리츠' 첫 사례 등장… 부동산 투자 외 개발·운영 허용",
-              "link": "http://www.m-i.kr/news/articleView.html?idxno=1317492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B4%EC%98%81%20%ED%97%88%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B4%EC%98%81%20%ED%97%88%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "'프로젝트 리츠' 첫 사례 등장… 부동산 투자 외 개발·운영 허용",
-          "summary": "",
-          "link": "http://www.m-i.kr/news/articleView.html?idxno=1317492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Allow Operations",
+      "term_ko": "운영 허용"
     },
     {
-      "term": "Start in earnest",
-      "term_ko": "본격 시동",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "본격 시동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-              "link": "https://www.tokenpost.kr/news/economy/317097"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B8%EA%B2%A9%20%EC%8B%9C%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B8%EA%B2%A9%20%EC%8B%9C%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "민간도 '개발 후 운영' 시대… 정부, 프로젝트 리츠 1호 본격 시동",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/317097",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Start in Earnest",
+      "term_ko": "본격 시동"
     },
     {
-      "term": "Skew issues",
-      "term_ko": "쏠림 문제",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "쏠림 문제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "이억원 금융위원장 \"가계부채 관리, 내년에도 지속...대출 쏠림 문제 보...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=546367"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8F%A0%EB%A6%BC%20%EB%AC%B8%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8F%A0%EB%A6%BC%20%EB%AC%B8%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "이억원 금융위원장 \"가계부채 관리, 내년에도 지속...대출 쏠림 문제 보...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=546367",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Skew Issues",
+      "term_ko": "쏠림 문제"
     },
     {
       "term": "Elon Musk Wins",
-      "term_ko": "엘론 머스크의 승리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Elon Musk Wins",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-              "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Elon%20Musk%20Wins",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Elon%20Musk%20Wins"
-      },
-      "top_headlines": [
-        {
-          "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "엘론 머스크의 승리"
     },
     {
       "term": "Historic Tesla Pay",
-      "term_ko": "역사 테슬라 페이",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Historic Tesla Pay",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-              "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Historic%20Tesla%20Pay",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Historic%20Tesla%20Pay"
-      },
-      "top_headlines": [
-        {
-          "title": "Elon Musk Wins Reinstatement of Historic Tesla Pay Package After Delaware...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Elon-Musk-Wins-Reinstatement-of-Historic-Tesla-Pay-Package-After-Delaware-Supreme-Court-Ruling-1729219",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "역사 테슬라 페이"
     },
     {
       "term": "Tech Rally Offsets",
-      "term_ko": "기술 랠리 상쇄",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Rally Offsets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Rally%20Offsets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Rally%20Offsets"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기술 랠리 상쇄"
     },
     {
       "term": "Consumer Weakness",
-      "term_ko": "소비자 약점",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Consumer Weakness",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-21T10:45:12+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Consumer%20Weakness",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Consumer%20Weakness"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소비자 약점"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-21T01:46:25.423Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-21T10:45:12+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Project Ritz 1",
+      "term_ko": "프로젝트 리츠 1호"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-21T10:45:12+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-21T10:45:12+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Vix Closing Higher",
+      "term_ko": "상승 마감 VIX"
+    },
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Over $300 Million",
+      "term_ko": "3억 달러 이상"
+    },
+    {
+      "term": "I Didn't Realize That 300 Million Crane Ants",
+      "term_ko": "몰랐네 서학개미들이 3억"
+    },
+    {
+      "term": "Crane Ant Us Semiconductor",
+      "term_ko": "서학개미 미국 반도체"
+    },
+    {
+      "term": "Stories Featuring Real Estate",
+      "term_ko": "사례 등장 부동산"
+    },
+    {
+      "term": "Non-investment Development",
+      "term_ko": "투자 외 개발"
+    },
+    {
+      "term": "After Private Road Development",
+      "term_ko": "민간도 개발 후"
+    },
+    {
+      "term": "Operational Era Government",
+      "term_ko": "운영 시대 정부"
+    },
+    {
+      "term": "Finance Chairman: Household Debt Next Year",
+      "term_ko": "금융위원장 내년에도 가계부채"
+    },
+    {
+      "term": "Management Consistent Specific",
+      "term_ko": "관리 일관 특정"
+    },
+    {
+      "term": "Resolve Timing Skew",
+      "term_ko": "시기 쏠림은 해결"
+    },
+    {
+      "term": "Finance Chairman Lee Myung-bak's Household Debt",
+      "term_ko": "이억원 금융위원장 가계부채"
+    },
+    {
+      "term": "Highlighting and Materials",
+      "term_ko": "고점 찍고 재료"
+    },
+    {
+      "term": "Digested Treasury Bonds Heading",
+      "term_ko": "소화한 국고채 향방"
+    },
+    {
+      "term": "Attention Out-of-field Futures",
+      "term_ko": "주목 외인 선물"
+    },
+    {
+      "term": "Real Estate Investment Development",
+      "term_ko": "부동산 투자 개발"
+    },
+    {
+      "term": "19th Us",
+      "term_ko": "19일 미국"
+    },
+    {
+      "term": "Reduce Volatility",
+      "term_ko": "변동성 감소"
+    },
+    {
+      "term": "Mass Influx",
+      "term_ko": "대거 유입"
+    },
+    {
+      "term": "Samo Is This",
+      "term_ko": "사모은 이것"
+    },
+    {
+      "term": "Allow Operations",
+      "term_ko": "운영 허용"
+    },
+    {
+      "term": "Start in Earnest",
+      "term_ko": "본격 시동"
+    },
+    {
+      "term": "Skew Issues",
+      "term_ko": "쏠림 문제"
+    },
+    {
+      "term": "Elon Musk Wins",
+      "term_ko": "엘론 머스크의 승리"
+    },
+    {
+      "term": "Historic Tesla Pay",
+      "term_ko": "역사 테슬라 페이"
+    },
+    {
+      "term": "Tech Rally Offsets",
+      "term_ko": "기술 랠리 상쇄"
+    },
+    {
+      "term": "Consumer Weakness",
+      "term_ko": "소비자 약점"
+    }
+  ],
+  "translations": {
+    "Project Ritz 1": {
+      "en": "Project Ritz 1",
+      "ko": "프로젝트 리츠 1호",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Vix Closing Higher": {
+      "en": "Vix Closing Higher",
+      "ko": "상승 마감 VIX",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Over $300 Million": {
+      "en": "Over $300 Million",
+      "ko": "3억 달러 이상",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "I Didn't Realize That 300 Million Crane Ants": {
+      "en": "I Didn't Realize That 300 Million Crane Ants",
+      "ko": "몰랐네 서학개미들이 3억",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Crane Ant Us Semiconductor": {
+      "en": "Crane Ant Us Semiconductor",
+      "ko": "서학개미 미국 반도체",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Stories Featuring Real Estate": {
+      "en": "Stories Featuring Real Estate",
+      "ko": "사례 등장 부동산",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Non-investment Development": {
+      "en": "Non-investment Development",
+      "ko": "투자 외 개발",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "After Private Road Development": {
+      "en": "After Private Road Development",
+      "ko": "민간도 개발 후",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Operational Era Government": {
+      "en": "Operational Era Government",
+      "ko": "운영 시대 정부",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Finance Chairman: Household Debt Next Year": {
+      "en": "Finance Chairman: Household Debt Next Year",
+      "ko": "금융위원장 내년에도 가계부채",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Management Consistent Specific": {
+      "en": "Management Consistent Specific",
+      "ko": "관리 일관 특정",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Resolve Timing Skew": {
+      "en": "Resolve Timing Skew",
+      "ko": "시기 쏠림은 해결",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Finance Chairman Lee Myung-bak's Household Debt": {
+      "en": "Finance Chairman Lee Myung-bak's Household Debt",
+      "ko": "이억원 금융위원장 가계부채",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Highlighting and Materials": {
+      "en": "Highlighting and Materials",
+      "ko": "고점 찍고 재료",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Digested Treasury Bonds Heading": {
+      "en": "Digested Treasury Bonds Heading",
+      "ko": "소화한 국고채 향방",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Attention Out-of-field Futures": {
+      "en": "Attention Out-of-field Futures",
+      "ko": "주목 외인 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Real Estate Investment Development": {
+      "en": "Real Estate Investment Development",
+      "ko": "부동산 투자 개발",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "19th Us": {
+      "en": "19th Us",
+      "ko": "19일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Reduce Volatility": {
+      "en": "Reduce Volatility",
+      "ko": "변동성 감소",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Mass Influx": {
+      "en": "Mass Influx",
+      "ko": "대거 유입",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Samo Is This": {
+      "en": "Samo Is This",
+      "ko": "사모은 이것",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Allow Operations": {
+      "en": "Allow Operations",
+      "ko": "운영 허용",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Start in Earnest": {
+      "en": "Start in Earnest",
+      "ko": "본격 시동",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Skew Issues": {
+      "en": "Skew Issues",
+      "ko": "쏠림 문제",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Elon Musk Wins": {
+      "en": "Elon Musk Wins",
+      "ko": "엘론 머스크의 승리",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Historic Tesla Pay": {
+      "en": "Historic Tesla Pay",
+      "ko": "역사 테슬라 페이",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Tech Rally Offsets": {
+      "en": "Tech Rally Offsets",
+      "ko": "기술 랠리 상쇄",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
+    },
+    "Consumer Weakness": {
+      "en": "Consumer Weakness",
+      "ko": "소비자 약점",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-21T06:30:06.177Z"
     }
   }
 }
