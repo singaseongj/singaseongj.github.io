@@ -1,8 +1,57 @@
 {
-  "date": "2025-12-21",
+  "date": "2025-12-22",
   "window": "12_hours",
-  "total_phrases": 29,
+  "total_phrases": 30,
   "discovered_keywords": [
+    {
+      "term": "Difficult",
+      "term_ko": "어려울 것",
+      "significance_score": 560,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "어려울 것",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2025-12-22T10:34:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "기업들 52% '고환율·내수부진'에 \"내년 경영환경 어려울 것\"",
+              "link": "https://n.news.naver.com/mnews/article/011/0004570069?sid=101"
+            },
+            {
+              "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
+              "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B4%EB%A0%A4%EC%9A%B8%20%EA%B2%83",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B4%EB%A0%A4%EC%9A%B8%20%EA%B2%83"
+      },
+      "top_headlines": [
+        {
+          "title": "기업들 52% '고환율·내수부진'에 \"내년 경영환경 어려울 것\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/011/0004570069?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
+          "summary": "",
+          "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
     {
       "term": "VIX closing higher",
       "term_ko": "상승 마감 VIX",
@@ -13,10 +62,9 @@
         "query": "상승 마감 VIX",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -42,37 +90,36 @@
       ]
     },
     {
-      "term": "MTFailure policies can no longer be set to",
-      "term_ko": "MT시평실패할 정책은 더이상",
-      "significance_score": 350,
+      "term": "December 22 Stock Market",
+      "term_ko": "12월 22일 증시",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "MT시평실패할 정책은 더이상",
+        "query": "12월 22일 증시",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[MT시평]실패할 정책은 더이상 필요없다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005294876?sid=110"
+              "title": "12월 22일 증시 주요 특징주는?",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=64147"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MT%EC%8B%9C%ED%8F%89%EC%8B%A4%ED%8C%A8%ED%95%A0%20%EC%A0%95%EC%B1%85%EC%9D%80%20%EB%8D%94%EC%9D%B4%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MT%EC%8B%9C%ED%8F%89%EC%8B%A4%ED%8C%A8%ED%95%A0%20%EC%A0%95%EC%B1%85%EC%9D%80%20%EB%8D%94%EC%9D%B4%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=12%EC%9B%94%2022%EC%9D%BC%20%EC%A6%9D%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=12%EC%9B%94%2022%EC%9D%BC%20%EC%A6%9D%EC%8B%9C"
       },
       "top_headlines": [
         {
-          "title": "[MT시평]실패할 정책은 더이상 필요없다",
+          "title": "12월 22일 증시 주요 특징주는?",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005294876?sid=110",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=64147",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -89,10 +136,9 @@
         "query": "증시 브리핑 12월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -118,37 +164,36 @@
       ]
     },
     {
-      "term": "Over $300 million",
-      "term_ko": "3억 달러 이상",
+      "term": "52% of companies",
+      "term_ko": "기업들 52% 고환율",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "3억 달러 이상",
+        "query": "기업들 52% 고환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
+              "title": "기업들 52% '고환율·내수부진'에 \"내년 경영환경 어려울 것\"",
+              "link": "https://n.news.naver.com/mnews/article/011/0004570069?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9D%B4%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9D%B4%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%EB%93%A4%2052%25%20%EA%B3%A0%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%EB%93%A4%2052%25%20%EA%B3%A0%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
+          "title": "기업들 52% '고환율·내수부진'에 \"내년 경영환경 어려울 것\"",
           "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
+          "link": "https://n.news.naver.com/mnews/article/011/0004570069?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -156,37 +201,36 @@
       ]
     },
     {
-      "term": "I didn't realize that 300 million crane ants",
-      "term_ko": "몰랐네 서학개미들이 3억",
+      "term": "Enterprise 52% New Year",
+      "term_ko": "기업 52% 새해",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "몰랐네 서학개미들이 3억",
+        "query": "기업 52% 새해",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-              "link": "https://www.wikitree.co.kr/articles/1103696"
+              "title": "기업 52% “새해 경영 여건 어려울 것”",
+              "link": "https://n.news.naver.com/mnews/article/030/0003382918?sid=105"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%9E%90%EB%84%A4%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%93%A4%EC%9D%B4%203%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%9E%90%EB%84%A4%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%EB%93%A4%EC%9D%B4%203%EC%96%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%2052%25%20%EC%83%88%ED%95%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%2052%25%20%EC%83%88%ED%95%B4"
       },
       "top_headlines": [
         {
-          "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
+          "title": "기업 52% “새해 경영 여건 어려울 것”",
           "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1103696",
+          "link": "https://n.news.naver.com/mnews/article/030/0003382918?sid=105",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -194,151 +238,36 @@
       ]
     },
     {
-      "term": "First 3% of the rise",
-      "term_ko": "상승률 첫 3%대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승률 첫 3%대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울만 달리는 불장… 월세 상승률 첫 3%대 ‘역대 최고’",
-              "link": "https://n.news.naver.com/mnews/article/005/0001821642?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%EB%A5%A0%20%EC%B2%AB%203%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%EB%A5%A0%20%EC%B2%AB%203%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "서울만 달리는 불장… 월세 상승률 첫 3%대 ‘역대 최고’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001821642?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "A mixed bag for 2025",
-      "term_ko": "강약이 엇갈린 2025년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강약이 엇갈린 2025년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[루이즈 루의 마켓 나우] 강약이 엇갈린 2025년 한국의 2박자 경제",
-              "link": "https://n.news.naver.com/mnews/article/025/0003491324?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%95%BD%EC%9D%B4%20%EC%97%87%EA%B0%88%EB%A6%B0%202025%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%95%BD%EC%9D%B4%20%EC%97%87%EA%B0%88%EB%A6%B0%202025%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[루이즈 루의 마켓 나우] 강약이 엇갈린 2025년 한국의 2박자 경제",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003491324?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "South Korea's two-beat economy",
-      "term_ko": "한국의 2박자 경제",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국의 2박자 경제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[루이즈 루의 마켓 나우] 강약이 엇갈린 2025년 한국의 2박자 경제",
-              "link": "https://n.news.naver.com/mnews/article/025/0003491324?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EC%9D%98%202%EB%B0%95%EC%9E%90%20%EA%B2%BD%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EC%9D%98%202%EB%B0%95%EC%9E%90%20%EA%B2%BD%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[루이즈 루의 마켓 나우] 강약이 엇갈린 2025년 한국의 2박자 경제",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003491324?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Crane Ant US Semiconductor",
-      "term_ko": "서학개미 미국 반도체",
+      "term": "Next year's business environment in the face of weak domestic demand",
+      "term_ko": "내수부진에 내년 경영환경",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서학개미 미국 반도체",
+        "query": "내수부진에 내년 경영환경",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
+              "title": "기업들 52% '고환율·내수부진'에 \"내년 경영환경 어려울 것\"",
+              "link": "https://n.news.naver.com/mnews/article/011/0004570069?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%AF%B8%EA%B5%AD%20%EB%B0%98%EB%8F%84%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EB%AF%B8%EA%B5%AD%20%EB%B0%98%EB%8F%84%EC%B2%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EC%88%98%EB%B6%80%EC%A7%84%EC%97%90%20%EB%82%B4%EB%85%84%20%EA%B2%BD%EC%98%81%ED%99%98%EA%B2%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EC%88%98%EB%B6%80%EC%A7%84%EC%97%90%20%EB%82%B4%EB%85%84%20%EA%B2%BD%EC%98%81%ED%99%98%EA%B2%BD"
       },
       "top_headlines": [
         {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
+          "title": "기업들 52% '고환율·내수부진'에 \"내년 경영환경 어려울 것\"",
           "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
+          "link": "https://n.news.naver.com/mnews/article/011/0004570069?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -346,37 +275,36 @@
       ]
     },
     {
-      "term": "Senior Laughing Loans",
-      "term_ko": "노년층 웃고 대출",
+      "term": "Large Enterprises Next Year Global",
+      "term_ko": "대기업들 내년 글로벌",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "노년층 웃고 대출",
+        "query": "대기업들 내년 글로벌",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "日, 예금 많은 노년층 웃고 대출 많은 젊은층 울상",
-              "link": "https://n.news.naver.com/mnews/article/023/0003948276?sid=101"
+              "title": "대기업들 \"내년 글로벌 리스크는 환율과 보호무역\"",
+              "link": "https://weeklytrade.co.kr/news/view.html?section=1&category=3&item=&no=97876"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%B8%EB%85%84%EC%B8%B5%20%EC%9B%83%EA%B3%A0%20%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%B8%EB%85%84%EC%B8%B5%20%EC%9B%83%EA%B3%A0%20%EB%8C%80%EC%B6%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B8%B0%EC%97%85%EB%93%A4%20%EB%82%B4%EB%85%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B8%B0%EC%97%85%EB%93%A4%20%EB%82%B4%EB%85%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
       },
       "top_headlines": [
         {
-          "title": "日, 예금 많은 노년층 웃고 대출 많은 젊은층 울상",
+          "title": "대기업들 \"내년 글로벌 리스크는 환율과 보호무역\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003948276?sid=101",
+          "link": "https://weeklytrade.co.kr/news/view.html?section=1&category=3&item=&no=97876",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -384,37 +312,36 @@
       ]
     },
     {
-      "term": "The timeless populism of Jung's iron bars",
-      "term_ko": "정철근의 시시각각 포퓰리즘",
+      "term": "Risk is currency and protectionism",
+      "term_ko": "리스크는 환율과 보호무역",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "정철근의 시시각각 포퓰리즘",
+        "query": "리스크는 환율과 보호무역",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[정철근의 시시각각] 포퓰리즘, 그 달콤한 독배의 최후",
-              "link": "https://n.news.naver.com/mnews/article/025/0003491334?sid=110"
+              "title": "대기업들 \"내년 글로벌 리스크는 환율과 보호무역\"",
+              "link": "https://weeklytrade.co.kr/news/view.html?section=1&category=3&item=&no=97876"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%B2%A0%EA%B7%BC%EC%9D%98%20%EC%8B%9C%EC%8B%9C%EA%B0%81%EA%B0%81%20%ED%8F%AC%ED%93%B0%EB%A6%AC%EC%A6%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%B2%A0%EA%B7%BC%EC%9D%98%20%EC%8B%9C%EC%8B%9C%EA%B0%81%EA%B0%81%20%ED%8F%AC%ED%93%B0%EB%A6%AC%EC%A6%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EC%8A%A4%ED%81%AC%EB%8A%94%20%ED%99%98%EC%9C%A8%EA%B3%BC%20%EB%B3%B4%ED%98%B8%EB%AC%B4%EC%97%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EC%8A%A4%ED%81%AC%EB%8A%94%20%ED%99%98%EC%9C%A8%EA%B3%BC%20%EB%B3%B4%ED%98%B8%EB%AC%B4%EC%97%AD"
       },
       "top_headlines": [
         {
-          "title": "[정철근의 시시각각] 포퓰리즘, 그 달콤한 독배의 최후",
+          "title": "대기업들 \"내년 글로벌 리스크는 환율과 보호무역\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003491334?sid=110",
+          "link": "https://weeklytrade.co.kr/news/view.html?section=1&category=3&item=&no=97876",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -422,37 +349,36 @@
       ]
     },
     {
-      "term": "The Economy Dollar by Young Ik Kim",
-      "term_ko": "김영익의 이코노믹스 달러",
+      "term": "High Interest Rates Untenable",
+      "term_ko": "고금리 버티지 못한",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "김영익의 이코노믹스 달러",
+        "query": "고금리 버티지 못한",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[김영익의 이코노믹스] 달러 약세, 엔·위안 강세…원화값 내년 1400원대...",
-              "link": "https://n.news.naver.com/mnews/article/025/0003491331?sid=110"
+              "title": "임창정 사옥도 경매로…고금리 버티지 못한 '영끌'의 민낯",
+              "link": "https://n.news.naver.com/mnews/article/243/0000089945?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%98%81%EC%9D%B5%EC%9D%98%20%EC%9D%B4%EC%BD%94%EB%85%B8%EB%AF%B9%EC%8A%A4%20%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%98%81%EC%9D%B5%EC%9D%98%20%EC%9D%B4%EC%BD%94%EB%85%B8%EB%AF%B9%EC%8A%A4%20%EB%8B%AC%EB%9F%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EB%B2%84%ED%8B%B0%EC%A7%80%20%EB%AA%BB%ED%95%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EB%B2%84%ED%8B%B0%EC%A7%80%20%EB%AA%BB%ED%95%9C"
       },
       "top_headlines": [
         {
-          "title": "[김영익의 이코노믹스] 달러 약세, 엔·위안 강세…원화값 내년 1400원대...",
+          "title": "임창정 사옥도 경매로…고금리 버티지 못한 '영끌'의 민낯",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003491331?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/243/0000089945?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -460,37 +386,36 @@
       ]
     },
     {
-      "term": "Weak Yuan",
-      "term_ko": "약세 엔 위안",
+      "term": "Business conditions are tough",
+      "term_ko": "경영 여건 어려울",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "약세 엔 위안",
+        "query": "경영 여건 어려울",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[김영익의 이코노믹스] 달러 약세, 엔·위안 강세…원화값 내년 1400원대...",
-              "link": "https://n.news.naver.com/mnews/article/025/0003491331?sid=110"
+              "title": "기업 52% “새해 경영 여건 어려울 것”",
+              "link": "https://n.news.naver.com/mnews/article/030/0003382918?sid=105"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%BD%EC%84%B8%20%EC%97%94%20%EC%9C%84%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%BD%EC%84%B8%20%EC%97%94%20%EC%9C%84%EC%95%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%98%81%20%EC%97%AC%EA%B1%B4%20%EC%96%B4%EB%A0%A4%EC%9A%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%98%81%20%EC%97%AC%EA%B1%B4%20%EC%96%B4%EB%A0%A4%EC%9A%B8"
       },
       "top_headlines": [
         {
-          "title": "[김영익의 이코노믹스] 달러 약세, 엔·위안 강세…원화값 내년 1400원대...",
+          "title": "기업 52% “새해 경영 여건 어려울 것”",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003491331?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/030/0003382918?sid=105",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -498,37 +423,36 @@
       ]
     },
     {
-      "term": "Stronger KRW next year",
-      "term_ko": "강세 원화값 내년",
+      "term": "Weak domestic demand High exchange rate",
+      "term_ko": "내수 침체 高환율",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "강세 원화값 내년",
+        "query": "내수 침체 高환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[김영익의 이코노믹스] 달러 약세, 엔·위안 강세…원화값 내년 1400원대...",
-              "link": "https://n.news.naver.com/mnews/article/025/0003491331?sid=110"
+              "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
+              "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%84%B8%20%EC%9B%90%ED%99%94%EA%B0%92%20%EB%82%B4%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%84%B8%20%EC%9B%90%ED%99%94%EA%B0%92%20%EB%82%B4%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EC%88%98%20%EC%B9%A8%EC%B2%B4%20%E9%AB%98%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EC%88%98%20%EC%B9%A8%EC%B2%B4%20%E9%AB%98%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "[김영익의 이코노믹스] 달러 약세, 엔·위안 강세…원화값 내년 1400원대...",
+          "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003491331?sid=110",
+          "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -536,37 +460,36 @@
       ]
     },
     {
-      "term": "A Buljang that only runs in Seoul",
-      "term_ko": "서울만 달리는 불장",
+      "term": "Corporate majority, etc.",
+      "term_ko": "등에 기업 과반",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서울만 달리는 불장",
+        "query": "등에 기업 과반",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "서울만 달리는 불장… 월세 상승률 첫 3%대 ‘역대 최고’",
-              "link": "https://n.news.naver.com/mnews/article/005/0001821642?sid=101"
+              "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
+              "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%A7%8C%20%EB%8B%AC%EB%A6%AC%EB%8A%94%20%EB%B6%88%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%A7%8C%20%EB%8B%AC%EB%A6%AC%EB%8A%94%20%EB%B6%88%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%93%B1%EC%97%90%20%EA%B8%B0%EC%97%85%20%EA%B3%BC%EB%B0%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%93%B1%EC%97%90%20%EA%B8%B0%EC%97%85%20%EA%B3%BC%EB%B0%98"
       },
       "top_headlines": [
         {
-          "title": "서울만 달리는 불장… 월세 상승률 첫 3%대 ‘역대 최고’",
+          "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001821642?sid=101",
+          "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -574,37 +497,36 @@
       ]
     },
     {
-      "term": "Louise Lou's Market",
-      "term_ko": "루이즈 루의 마켓",
+      "term": "Business conditions for the coming year",
+      "term_ko": "내년 경영 여건",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "루이즈 루의 마켓",
+        "query": "내년 경영 여건",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[루이즈 루의 마켓 나우] 강약이 엇갈린 2025년 한국의 2박자 경제",
-              "link": "https://n.news.naver.com/mnews/article/025/0003491324?sid=110"
+              "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
+              "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A3%A8%EC%9D%B4%EC%A6%88%20%EB%A3%A8%EC%9D%98%20%EB%A7%88%EC%BC%93",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A3%A8%EC%9D%B4%EC%A6%88%20%EB%A3%A8%EC%9D%98%20%EB%A7%88%EC%BC%93"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%85%84%20%EA%B2%BD%EC%98%81%20%EC%97%AC%EA%B1%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%85%84%20%EA%B2%BD%EC%98%81%20%EC%97%AC%EA%B1%B4"
       },
       "top_headlines": [
         {
-          "title": "[루이즈 루의 마켓 나우] 강약이 엇갈린 2025년 한국의 2박자 경제",
+          "title": "내수 침체·高환율 등에 기업 과반 \"내년 경영 여건 어려울 것\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003491324?sid=110",
+          "link": "http://www.efnews.co.kr/news/articleView.html?idxno=126011",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -621,10 +543,9 @@
         "query": "19일 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -659,10 +580,9 @@
         "query": "변동성 감소",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -688,37 +608,36 @@
       ]
     },
     {
-      "term": "Mass influx",
-      "term_ko": "대거 유입",
+      "term": "Instead of dollars",
+      "term_ko": "원화 대신",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대거 유입",
+        "query": "원화 대신",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
-              "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179"
+              "title": "\"원화 대신 달러\" 파킹형 ETF에 돈 몰린다",
+              "link": "https://n.news.naver.com/mnews/article/003/0013670430?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B1%B0%20%EC%9C%A0%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B1%B0%20%EC%9C%A0%EC%9E%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%ED%99%94%20%EB%8C%80%EC%8B%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%ED%99%94%20%EB%8C%80%EC%8B%A0"
       },
       "top_headlines": [
         {
-          "title": "서학개미, 미국 반도체 3배 레버리지 ETF에 3억 달러 이상 대거 유입",
+          "title": "\"원화 대신 달러\" 파킹형 ETF에 돈 몰린다",
           "summary": "",
-          "link": "http://www.newstown.co.kr/news/articleView.html?idxno=682179",
+          "link": "https://n.news.naver.com/mnews/article/003/0013670430?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -726,37 +645,36 @@
       ]
     },
     {
-      "term": "Samo is this",
-      "term_ko": "사모은 이것",
+      "term": "Money runs away",
+      "term_ko": "돈 몰린다",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "사모은 이것",
+        "query": "돈 몰린다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
-              "link": "https://www.wikitree.co.kr/articles/1103696"
+              "title": "\"원화 대신 달러\" 파킹형 ETF에 돈 몰린다",
+              "link": "https://n.news.naver.com/mnews/article/003/0013670430?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EB%AA%A8%EC%9D%80%20%EC%9D%B4%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EB%AA%A8%EC%9D%80%20%EC%9D%B4%EA%B2%83"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%88%20%EB%AA%B0%EB%A6%B0%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%88%20%EB%AA%B0%EB%A6%B0%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "이건 몰랐네… 서학개미들이 3억 달러 미친 듯이 사모은 '이것'",
+          "title": "\"원화 대신 달러\" 파킹형 ETF에 돈 몰린다",
           "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1103696",
+          "link": "https://n.news.naver.com/mnews/article/003/0013670430?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -764,37 +682,36 @@
       ]
     },
     {
-      "term": "Youth tantrums",
-      "term_ko": "젊은층 울상",
+      "term": "The nakedness of inspiration",
+      "term_ko": "영끌의 민낯",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "젊은층 울상",
+        "query": "영끌의 민낯",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "日, 예금 많은 노년층 웃고 대출 많은 젊은층 울상",
-              "link": "https://n.news.naver.com/mnews/article/023/0003948276?sid=101"
+              "title": "임창정 사옥도 경매로…고금리 버티지 못한 '영끌'의 민낯",
+              "link": "https://n.news.naver.com/mnews/article/243/0000089945?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%8A%EC%9D%80%EC%B8%B5%20%EC%9A%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%8A%EC%9D%80%EC%B8%B5%20%EC%9A%B8%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EB%81%8C%EC%9D%98%20%EB%AF%BC%EB%82%AF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EB%81%8C%EC%9D%98%20%EB%AF%BC%EB%82%AF"
       },
       "top_headlines": [
         {
-          "title": "日, 예금 많은 노년층 웃고 대출 많은 젊은층 울상",
+          "title": "임창정 사옥도 경매로…고금리 버티지 못한 '영끌'의 민낯",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003948276?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/243/0000089945?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -802,98 +719,152 @@
       ]
     },
     {
-      "term": "Best of all time",
-      "term_ko": "역대 최고",
-      "significance_score": 280,
-      "mentions": 220,
+      "term": "Wall Street Tech",
+      "term_ko": "월스트리트 테크",
+      "significance_score": 266,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "역대 최고",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-14",
-              "timestamp": 1765638000000,
-              "value": 33.33333
-            },
-            {
-              "period": "2025-12-15",
-              "timestamp": 1765724400000,
-              "value": 33.33333
-            },
-            {
-              "period": "2025-12-16",
-              "timestamp": 1765810800000,
-              "value": 46.66666
-            },
-            {
-              "period": "2025-12-17",
-              "timestamp": 1765897200000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-18",
-              "timestamp": 1765983600000,
-              "value": 33.33333
-            },
-            {
-              "period": "2025-12-19",
-              "timestamp": 1766070000000,
-              "value": 40
-            }
-          ]
-        },
+        "query": "Wall Street Tech",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "서울만 달리는 불장… 월세 상승률 첫 3%대 ‘역대 최고’",
-              "link": "https://n.news.naver.com/mnews/article/005/0001821642?sid=101"
+              "title": "Asian Stocks Rise as Wall Street Tech Rally Lifts Markets, Yen Slumps Des...",
+              "link": "https://www.econotimes.com/Asian-Stocks-Rise-as-Wall-Street-Tech-Rally-Lifts-Markets-Yen-Slumps-Despite-BOJ-Rate-Hike-1729271"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Tech",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Tech"
       },
       "top_headlines": [
         {
-          "title": "서울만 달리는 불장… 월세 상승률 첫 3%대 ‘역대 최고’",
+          "title": "Asian Stocks Rise as Wall Street Tech Rally Lifts Markets, Yen Slumps Des...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001821642?sid=101",
+          "link": "https://www.econotimes.com/Asian-Stocks-Rise-as-Wall-Street-Tech-Rally-Lifts-Markets-Yen-Slumps-Despite-BOJ-Rate-Hike-1729271",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 220,
-        "weekly_average_volume": 55,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.023788,
-        "time_weight": 0.013241,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1766070000000
-      }
+      ]
+    },
+    {
+      "term": "Futures Rise Ahead",
+      "term_ko": "앞서가는 선물",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Futures Rise Ahead",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-22T10:34:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "U.S. Stock Futures Rise Ahead of Holiday-Shortened Week as AI Optimism Li...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Ahead-of-Holiday-Shortened-Week-as-AI-Optimism-Lifts-Tech-1729263"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Rise%20Ahead",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Rise%20Ahead"
+      },
+      "top_headlines": [
+        {
+          "title": "U.S. Stock Futures Rise Ahead of Holiday-Shortened Week as AI Optimism Li...",
+          "summary": "",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Ahead-of-Holiday-Shortened-Week-as-AI-Optimism-Lifts-Tech-1729263",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Open Sharply Higher",
+      "term_ko": "급격히 더 높게 열기",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Open Sharply Higher",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-22T10:34:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Seoul stocks open sharply higher tracking U.S. tech gains",
+              "link": "https://n.news.naver.com/mnews/article/001/0015807742?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Sharply%20Higher",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Sharply%20Higher"
+      },
+      "top_headlines": [
+        {
+          "title": "Seoul stocks open sharply higher tracking U.S. tech gains",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015807742?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Tracking U.S Tech",
+      "term_ko": "미국 기술 추적",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Tracking U.S Tech",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-22T10:34:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Seoul stocks open sharply higher tracking U.S. tech gains",
+              "link": "https://n.news.naver.com/mnews/article/001/0015807742?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tracking%20U.S%20Tech",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tracking%20U.S%20Tech"
+      },
+      "top_headlines": [
+        {
+          "title": "Seoul stocks open sharply higher tracking U.S. tech gains",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015807742?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Elon Musk Wins",
@@ -905,10 +876,9 @@
         "query": "Elon Musk Wins",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -943,10 +913,9 @@
         "query": "Historic Tesla Pay",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -972,37 +941,36 @@
       ]
     },
     {
-      "term": "Tech Rally Offsets",
-      "term_ko": "기술 랠리 상쇄",
-      "significance_score": 266,
+      "term": "AI Optimism",
+      "term_ko": "AI 낙관론",
+      "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Tech Rally Offsets",
+        "query": "AI Optimism",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214"
+              "title": "U.S. Stock Futures Rise Ahead of Holiday-Shortened Week as AI Optimism Li...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Ahead-of-Holiday-Shortened-Week-as-AI-Optimism-Lifts-Tech-1729263"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Rally%20Offsets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Rally%20Offsets"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Optimism",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Optimism"
       },
       "top_headlines": [
         {
-          "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
+          "title": "U.S. Stock Futures Rise Ahead of Holiday-Shortened Week as AI Optimism Li...",
           "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Ahead-of-Holiday-Shortened-Week-as-AI-Optimism-Lifts-Tech-1729263",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1010,37 +978,73 @@
       ]
     },
     {
-      "term": "Consumer Weakness",
-      "term_ko": "소비자 약점",
+      "term": "Rally Lifts",
+      "term_ko": "랠리 리프트",
       "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Consumer Weakness",
+        "query": "Rally Lifts",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
-              "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214"
+              "title": "Asian Stocks Rise as Wall Street Tech Rally Lifts Markets, Yen Slumps Des...",
+              "link": "https://www.econotimes.com/Asian-Stocks-Rise-as-Wall-Street-Tech-Rally-Lifts-Markets-Yen-Slumps-Despite-BOJ-Rate-Hike-1729271"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Consumer%20Weakness",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Consumer%20Weakness"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rally%20Lifts",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rally%20Lifts"
       },
       "top_headlines": [
         {
-          "title": "U.S. Stocks End Week Higher as Tech Rally Offsets Consumer Weakness",
+          "title": "Asian Stocks Rise as Wall Street Tech Rally Lifts Markets, Yen Slumps Des...",
           "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-End-Week-Higher-as-Tech-Rally-Offsets-Consumer-Weakness-1729214",
+          "link": "https://www.econotimes.com/Asian-Stocks-Rise-as-Wall-Street-Tech-Rally-Lifts-Markets-Yen-Slumps-Despite-BOJ-Rate-Hike-1729271",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Yen Slumps",
+      "term_ko": "엔화 슬럼프",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Yen Slumps",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-22T10:34:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Asian Stocks Rise as Wall Street Tech Rally Lifts Markets, Yen Slumps Des...",
+              "link": "https://www.econotimes.com/Asian-Stocks-Rise-as-Wall-Street-Tech-Rally-Lifts-Markets-Yen-Slumps-Despite-BOJ-Rate-Hike-1729271"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Yen%20Slumps",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Yen%20Slumps"
+      },
+      "top_headlines": [
+        {
+          "title": "Asian Stocks Rise as Wall Street Tech Rally Lifts Markets, Yen Slumps Des...",
+          "summary": "",
+          "link": "https://www.econotimes.com/Asian-Stocks-Rise-as-Wall-Street-Tech-Rally-Lifts-Markets-Yen-Slumps-Despite-BOJ-Rate-Hike-1729271",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1057,10 +1061,9 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ]
         }
       },
@@ -1080,10 +1083,9 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-22T03:30:22+09:00",
+          "last_updated": "2025-12-22T10:34:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ]
         }
       },
@@ -1092,58 +1094,33 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
       },
       "top_headlines": []
-    },
-    {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-22T03:30:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-21T18:31:25.865Z",
+    "generated_at": "2025-12-22T01:35:38.475Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-22T03:30:22+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-22T10:34:25+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
+    "similar_keywords_removed": 0,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 1,
+      "similar": 0,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-22T03:30:22+09:00",
+      "last_updated": "2025-12-22T10:34:25+09:00",
       "fallback_sources": [
-        "trend_log",
-        "default_fallback"
+        "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-22T03:30:22+09:00",
+        "lastUpdated": "2025-12-22T10:34:25+09:00",
         "fallbackSources": [
-          "trend_log",
-          "default_fallback"
+          "trend_log"
         ]
       }
     }
