@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-24T21:43:13+09:00 (KST)**
+- Generated: **2025-12-25T03:32:04+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -143,6 +143,14 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EA%B1%B4%EC%84%A4%EA%B8%B0%EA%B3%84
 
+**SK네트웍스** (001740.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.2%**, 20d **1.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=SK%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%8A%A4
+
 **대웅** (003090.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -167,14 +175,6 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%BD%94%EC%98%A4%EB%A1%B1%EC%9D%B8%EB%8D%94
 
-**한샘** (009240.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-10.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **경기소비재**
-- News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
-
 ## NASDAQ 100
 
 ### SAFE (5)
@@ -182,7 +182,7 @@
 **Alnylam Pharmaceuticals** (ALNY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.9%**, 20d **-8.2%**; volatility (20d): **unknown**
+- Returns: 5d **2.2%**, 20d **-6.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Alnylam%20Pharmaceuticals
 
@@ -234,23 +234,23 @@
 **Ferrovial** (FER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.8%**, 20d **0.9%**; volatility (20d): **unknown**
+- Returns: 5d **-1.8%**, 20d **-0.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Ferrovial
 
 **Insmed Incorporated** (INSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-11.9%**, 20d **-14.6%**; volatility (20d): **unknown**
+- Returns: 5d **-10.6%**, 20d **-15.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Insmed%20Incorporated
 
-**MicroStrategy** (MSTR)
+**Zscaler** (ZS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=MicroStrategy
+- News search: https://www.google.com/search?q=Zscaler
 
 ## S&P 500
 
@@ -317,7 +317,7 @@
 **Huntington Ingalls Industries** (HII)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.5%**, 20d **14.4%**; volatility (20d): **unknown**
+- Returns: 5d **10.8%**, 20d **13.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Huntington%20Ingalls%20Industries
@@ -333,7 +333,7 @@
 **Wynn Resorts** (WYNN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.9%**, 20d **1.4%**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **-1.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Wynn%20Resorts
