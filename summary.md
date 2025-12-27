@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-27T21:40:43+09:00 (KST)**
+- Generated: **2025-12-28T03:30:22+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -10,7 +10,7 @@
 **가온칩스** (399720.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.6%**, 20d **-3.0%**; volatility (20d): **unknown**
+- Returns: 5d **20.2%**, 20d **18.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EA%B0%80%EC%98%A8%EC%B9%A9%EC%8A%A4
@@ -26,7 +26,7 @@
 **알테오젠** (196170.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.9%**, 20d **-6.6%**; volatility (20d): **unknown**
+- Returns: 5d **1.9%**, 20d **-15.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0
@@ -34,7 +34,7 @@
 **에코프로** (086520.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **3.7%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **18.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
@@ -93,14 +93,6 @@
 
 ### SAFE (5)
 
-**DB손해보험** (005830.KS)
-
-- News (7d): **14** (blogs: 10) — momentum: **high**, sentiment: **slightly negative (-0.14)**
-- Returns: 5d **4.5%**, 20d **2.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://www.google.com/search?q=DB%EC%86%90%ED%95%B4%EB%B3%B4%ED%97%98
-
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
@@ -132,6 +124,14 @@
 - Earnings window (±10d): **No**
 - Sector: **금융**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC
+
+**제일기획** (030000.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.15)**
+- Returns: 5d **-2.8%**, 20d **-1.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **커뮤니케이션서비스**
+- News search: https://www.google.com/search?q=%EC%A0%9C%EC%9D%BC%EA%B8%B0%ED%9A%8D
 
 ### AGGRESSIVE (5)
 
