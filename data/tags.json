@@ -1,28 +1,176 @@
 {
-  "date": "2025-12-26",
+  "date": "2025-12-27",
   "window": "12_hours",
   "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "NYSE Preview Me",
-      "term_ko": "뉴욕증시 프리뷰 미",
-      "significance_score": 644,
-      "mentions": 320,
+      "term": "NYSE for non-public stocks",
+      "term_ko": "비상장 주식의 NYSE",
+      "significance_score": 350,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 미",
+        "query": "비상장 주식의 NYSE",
         "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
-              "link": "https://www.newspim.com/news/view/20251226000691"
-            },
+              "title": "비상장 주식의 NYSE ‘포지 글로벌’…스페이스X도 살 수 있어요 [마켓 ...",
+              "link": "https://www.smarttoday.co.kr/ko-kr/articles/99825"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%EC%83%81%EC%9E%A5%20%EC%A3%BC%EC%8B%9D%EC%9D%98%20NYSE",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%EC%83%81%EC%9E%A5%20%EC%A3%BC%EC%8B%9D%EC%9D%98%20NYSE"
+      },
+      "top_headlines": [
+        {
+          "title": "비상장 주식의 NYSE ‘포지 글로벌’…스페이스X도 살 수 있어요 [마켓 ...",
+          "summary": "",
+          "link": "https://www.smarttoday.co.kr/ko-kr/articles/99825",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Ants US Dollar Index ETF",
+      "term_ko": "개미들 美지수 ETF",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "개미들 美지수 ETF",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "뉴욕증시 ‘산타랠리’ 기대감에…개미들 美지수 ETF 쓸어담았다, 순매...",
+              "link": "https://n.news.naver.com/mnews/article/016/0002577764?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EB%AF%B8%EB%93%A4%20%E7%BE%8E%EC%A7%80%EC%88%98%20ETF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EB%AF%B8%EB%93%A4%20%E7%BE%8E%EC%A7%80%EC%88%98%20ETF"
+      },
+      "top_headlines": [
+        {
+          "title": "뉴욕증시 ‘산타랠리’ 기대감에…개미들 美지수 ETF 쓸어담았다, 순매...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/016/0002577764?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Over 45 years of silver",
+      "term_ko": "넘었다 은값 45년",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "넘었다 은값 45년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"금값 상승률 두 배 넘었다\"···은값 45년 만에 최고치 경신",
+              "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=338264"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%98%EC%97%88%EB%8B%A4%20%EC%9D%80%EA%B0%92%2045%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%98%EC%97%88%EB%8B%A4%20%EC%9D%80%EA%B0%92%2045%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "\"금값 상승률 두 배 넘었다\"···은값 45년 만에 최고치 경신",
+          "summary": "",
+          "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=338264",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "I can live with it",
+      "term_ko": "살 수 있어요",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "살 수 있어요",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "비상장 주식의 NYSE ‘포지 글로벌’…스페이스X도 살 수 있어요 [마켓 ...",
+              "link": "https://www.smarttoday.co.kr/ko-kr/articles/99825"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B4%20%EC%88%98%20%EC%9E%88%EC%96%B4%EC%9A%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B4%20%EC%88%98%20%EC%9E%88%EC%96%B4%EC%9A%94"
+      },
+      "top_headlines": [
+        {
+          "title": "비상장 주식의 NYSE ‘포지 글로벌’…스페이스X도 살 수 있어요 [마켓 ...",
+          "summary": "",
+          "link": "https://www.smarttoday.co.kr/ko-kr/articles/99825",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "NYSE Preview Me",
+      "term_ko": "뉴욕증시 프리뷰 미",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "뉴욕증시 프리뷰 미",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
             {
               "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
               "link": "https://www.newspim.com/news/view/20251226000691"
@@ -42,37 +190,25 @@
           "timeAgo": null,
           "pubDate": null,
           "source": null
-        },
-        {
-          "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251226000691",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
         }
       ]
     },
     {
       "term": "Stock Index Futures Lull",
       "term_ko": "주가지수 선물 한산한",
-      "significance_score": 644,
-      "mentions": 320,
+      "significance_score": 322,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "주가지수 선물 한산한",
         "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
-              "link": "https://www.newspim.com/news/view/20251226000691"
-            },
             {
               "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
               "link": "https://www.newspim.com/news/view/20251226000691"
@@ -92,37 +228,25 @@
           "timeAgo": null,
           "pubDate": null,
           "source": null
-        },
-        {
-          "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251226000691",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
         }
       ]
     },
     {
       "term": "In-Transaction Waiting Tax",
       "term_ko": "거래 속 관망세",
-      "significance_score": 644,
-      "mentions": 320,
+      "significance_score": 322,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "거래 속 관망세",
         "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
-              "link": "https://www.newspim.com/news/view/20251226000691"
-            },
             {
               "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
               "link": "https://www.newspim.com/news/view/20251226000691"
@@ -142,163 +266,41 @@
           "timeAgo": null,
           "pubDate": null,
           "source": null
-        },
-        {
-          "title": "뉴욕증시 프리뷰, 미 주가지수 선물 한산한 거래 속 관망세… 엔비디아...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251226000691",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
         }
       ]
     },
     {
-      "term": "Exchange rate stabilized around 1440 KRW",
-      "term_ko": "환율 1440원대 안착",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 1440원대 안착",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "환율 1440원대 안착… 외환당국 개입-국민연금 환헤지 통한듯",
-              "link": "https://n.news.naver.com/mnews/article/020/0003685006?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%201440%EC%9B%90%EB%8C%80%20%EC%95%88%EC%B0%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%201440%EC%9B%90%EB%8C%80%20%EC%95%88%EC%B0%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 1440원대 안착… 외환당국 개입-국민연금 환헤지 통한듯",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003685006?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Gold price quotes for todayDec 27th, 2018",
-      "term_ko": "오늘의 금값시세12월27일자 금",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세12월27일자 금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(12월27일자) \"금 한돈 100만원 눈앞\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3467679"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%9427%EC%9D%BC%EC%9E%90%20%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B812%EC%9B%9427%EC%9D%BC%EC%9E%90%20%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(12월27일자) \"금 한돈 100만원 눈앞\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3467679",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "One million dollars in the bank",
-      "term_ko": "한돈 100만원 눈앞",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한돈 100만원 눈앞",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(12월27일자) \"금 한돈 100만원 눈앞\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3467679"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EB%8F%88%20100%EB%A7%8C%EC%9B%90%20%EB%88%88%EC%95%9E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EB%8F%88%20100%EB%A7%8C%EC%9B%90%20%EB%88%88%EC%95%9E"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(12월27일자) \"금 한돈 100만원 눈앞\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3467679",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Foreign Exchange Authority Intervention - National Pension Exchange Hedge",
-      "term_ko": "외환당국 개입-국민연금 환헤지",
+      "term": "Gold price growth rate two",
+      "term_ko": "금값 상승률 두",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "외환당국 개입-국민연금 환헤지",
+        "query": "금값 상승률 두",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "환율 1440원대 안착… 외환당국 개입-국민연금 환헤지 통한듯",
-              "link": "https://n.news.naver.com/mnews/article/020/0003685006?sid=101"
+              "title": "\"금값 상승률 두 배 넘었다\"···은값 45년 만에 최고치 경신",
+              "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=338264"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%ED%99%98%EB%8B%B9%EA%B5%AD%20%EA%B0%9C%EC%9E%85-%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%ED%99%98%ED%97%A4%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%ED%99%98%EB%8B%B9%EA%B5%AD%20%EA%B0%9C%EC%9E%85-%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%ED%99%98%ED%97%A4%EC%A7%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%EC%83%81%EC%8A%B9%EB%A5%A0%20%EB%91%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%EC%83%81%EC%8A%B9%EB%A5%A0%20%EB%91%90"
       },
       "top_headlines": [
         {
-          "title": "환율 1440원대 안착… 외환당국 개입-국민연금 환헤지 통한듯",
+          "title": "\"금값 상승률 두 배 넘었다\"···은값 45년 만에 최고치 경신",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003685006?sid=101",
+          "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=338264",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -306,37 +308,37 @@
       ]
     },
     {
-      "term": "The all-pervasive interest rate",
-      "term_ko": "내내 이어졌던 기준금리",
+      "term": "All-time high",
+      "term_ko": "만에 최고치 경신",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "내내 이어졌던 기준금리",
+        "query": "만에 최고치 경신",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "트럼프 vs 파월...1년 내내 이어졌던 기준금리 갈등",
-              "link": "https://n.news.naver.com/mnews/article/052/0002292749?sid=104"
+              "title": "\"금값 상승률 두 배 넘었다\"···은값 45년 만에 최고치 경신",
+              "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=338264"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%82%B4%20%EC%9D%B4%EC%96%B4%EC%A1%8C%EB%8D%98%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%82%B4%20%EC%9D%B4%EC%96%B4%EC%A1%8C%EB%8D%98%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B2%BD%EC%8B%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B2%BD%EC%8B%A0"
       },
       "top_headlines": [
         {
-          "title": "트럼프 vs 파월...1년 내내 이어졌던 기준금리 갈등",
+          "title": "\"금값 상승률 두 배 넘었다\"···은값 45년 만에 최고치 경신",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002292749?sid=104",
+          "link": "http://www.todaykorea.co.kr/news/articleView.html?idxno=338264",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -344,37 +346,37 @@
       ]
     },
     {
-      "term": "Has the exchange rate stopped rising?",
-      "term_ko": "환율 상승세 멈췄나",
+      "term": "Change Aftermath Ongoing",
+      "term_ko": "변경 여파 진행형",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "환율 상승세 멈췄나",
+        "query": "변경 여파 진행형",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "환율, 상승세 멈췄나… 이틀 연속 급락",
-              "link": "https://n.news.naver.com/mnews/article/023/0003949368?sid=101"
+              "title": "[2025 보험 결산] 제도 변경 여파 '진행형' ···수익성·건전성 '이중고...",
+              "link": "https://www.seoulfn.com/news/articleView.html?idxno=616799"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%83%81%EC%8A%B9%EC%84%B8%20%EB%A9%88%EC%B7%84%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%83%81%EC%8A%B9%EC%84%B8%20%EB%A9%88%EC%B7%84%EB%82%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EA%B2%BD%20%EC%97%AC%ED%8C%8C%20%EC%A7%84%ED%96%89%ED%98%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EA%B2%BD%20%EC%97%AC%ED%8C%8C%20%EC%A7%84%ED%96%89%ED%98%95"
       },
       "top_headlines": [
         {
-          "title": "환율, 상승세 멈췄나… 이틀 연속 급락",
+          "title": "[2025 보험 결산] 제도 변경 여파 '진행형' ···수익성·건전성 '이중고...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003949368?sid=101",
+          "link": "https://www.seoulfn.com/news/articleView.html?idxno=616799",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -382,37 +384,37 @@
       ]
     },
     {
-      "term": "Plummeting two days in a row",
-      "term_ko": "이틀 연속 급락",
+      "term": "US currency Dollar Yen",
+      "term_ko": "미국환율 달러 엔화",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "이틀 연속 급락",
+        "query": "미국환율 달러 엔화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "환율, 상승세 멈췄나… 이틀 연속 급락",
-              "link": "https://n.news.naver.com/mnews/article/023/0003949368?sid=101"
+              "title": "미국환율 달러 엔화 등",
+              "link": "https://www.bntnews.co.kr/article/view/bnt202512270058"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%8B%80%20%EC%97%B0%EC%86%8D%20%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%8B%80%20%EC%97%B0%EC%86%8D%20%EA%B8%89%EB%9D%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%ED%99%98%EC%9C%A8%20%EB%8B%AC%EB%9F%AC%20%EC%97%94%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%ED%99%98%EC%9C%A8%20%EB%8B%AC%EB%9F%AC%20%EC%97%94%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "환율, 상승세 멈췄나… 이틀 연속 급락",
+          "title": "미국환율 달러 엔화 등",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003949368?sid=101",
+          "link": "https://www.bntnews.co.kr/article/view/bnt202512270058",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -420,103 +422,80 @@
       ]
     },
     {
-      "term": "Surrendering an older driver's license",
-      "term_ko": "고령운전자 면허 반납",
+      "term": "Going Dollar Exchange Rate",
+      "term_ko": "가는 달러 환율",
       "significance_score": 322,
-      "mentions": 443,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고령운전자 면허 반납",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-19",
-              "timestamp": 1766070000000,
-              "value": 65
-            },
-            {
-              "period": "2025-12-20",
-              "timestamp": 1766156400000,
-              "value": 20
-            },
-            {
-              "period": "2025-12-21",
-              "timestamp": 1766242800000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-22",
-              "timestamp": 1766329200000,
-              "value": 95
-            },
-            {
-              "period": "2025-12-23",
-              "timestamp": 1766415600000,
-              "value": 92.5
-            },
-            {
-              "period": "2025-12-24",
-              "timestamp": 1766502000000,
-              "value": 82.5
-            },
-            {
-              "period": "2025-12-25",
-              "timestamp": 1766588400000,
-              "value": 72.5
-            }
-          ]
-        },
+        "query": "가는 달러 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "고령운전자 면허 반납 혜택 강화..실효성은?",
-              "link": "https://busanmbc.co.kr/01_new/new01_view.asp?idx=281405"
+              "title": "버는 족족 해외로 가는 달러… 환율 안정 열쇠는 ‘달러가 머무는’ 첨...",
+              "link": "https://n.news.naver.com/mnews/article/469/0000905428?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EB%A0%B9%EC%9A%B4%EC%A0%84%EC%9E%90%20%EB%A9%B4%ED%97%88%20%EB%B0%98%EB%82%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EB%A0%B9%EC%9A%B4%EC%A0%84%EC%9E%90%20%EB%A9%B4%ED%97%88%20%EB%B0%98%EB%82%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%8A%94%20%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%8A%94%20%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "고령운전자 면허 반납 혜택 강화..실효성은?",
+          "title": "버는 족족 해외로 가는 달러… 환율 안정 열쇠는 ‘달러가 머무는’ 첨...",
           "summary": "",
-          "link": "https://busanmbc.co.kr/01_new/new01_view.asp?idx=281405",
+          "link": "https://n.news.naver.com/mnews/article/469/0000905428?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 442.5,
-        "weekly_average_volume": 88.5,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014655,
-        "time_weight": 0.019402,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1766588400000
-      }
+      ]
+    },
+    {
+      "term": "Bulwark Tuition Reduction",
+      "term_ko": "보루 학원비 줄인",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "보루 학원비 줄인",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[박근종 칼럼] '최후의 보루' 학원비 줄인 중산층, 물가 잡는 데 정책의...",
+              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=734673"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EB%A3%A8%20%ED%95%99%EC%9B%90%EB%B9%84%20%EC%A4%84%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EB%A3%A8%20%ED%95%99%EC%9B%90%EB%B9%84%20%EC%A4%84%EC%9D%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "[박근종 칼럼] '최후의 보루' 학원비 줄인 중산층, 물가 잡는 데 정책의...",
+          "summary": "",
+          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=734673",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Strike Strategic AI",
@@ -528,7 +507,7 @@
         "query": "Strike Strategic AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -557,37 +536,113 @@
       ]
     },
     {
-      "term": "Buying Drives KOSPI",
-      "term_ko": "코스피를 이끄는 매수",
-      "significance_score": 294,
+      "term": "Hot New Releases",
+      "term_ko": "따끈따끈 신간",
+      "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Buying Drives KOSPI",
+        "query": "따끈따끈 신간",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "Foreign Buying Drives KOSPI Higher as Samsung Electronics Sets New Record",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=174317"
+              "title": "[따끈따끈 신간] 2026 세계대전망 外",
+              "link": "https://www.ajunews.com/view/20251226090511436"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Buying%20Drives%20KOSPI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Buying%20Drives%20KOSPI"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%B0%EB%81%88%EB%94%B0%EB%81%88%20%EC%8B%A0%EA%B0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%B0%EB%81%88%EB%94%B0%EB%81%88%20%EC%8B%A0%EA%B0%84"
       },
       "top_headlines": [
         {
-          "title": "Foreign Buying Drives KOSPI Higher as Samsung Electronics Sets New Record",
+          "title": "[따끈따끈 신간] 2026 세계대전망 外",
           "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=174317",
+          "link": "https://www.ajunews.com/view/20251226090511436",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "World Wide Web 外",
+      "term_ko": "세계대전망 外",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "세계대전망 外",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[따끈따끈 신간] 2026 세계대전망 外",
+              "link": "https://www.ajunews.com/view/20251226090511436"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%EA%B3%84%EB%8C%80%EC%A0%84%EB%A7%9D%20%E5%A4%96",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%EA%B3%84%EB%8C%80%EC%A0%84%EB%A7%9D%20%E5%A4%96"
+      },
+      "top_headlines": [
+        {
+          "title": "[따끈따끈 신간] 2026 세계대전망 外",
+          "summary": "",
+          "link": "https://www.ajunews.com/view/20251226090511436",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Profitability health",
+      "term_ko": "수익성 건전성",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "수익성 건전성",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[2025 보험 결산] 제도 변경 여파 '진행형' ···수익성·건전성 '이중고...",
+              "link": "https://www.seoulfn.com/news/articleView.html?idxno=616799"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9D%B5%EC%84%B1%20%EA%B1%B4%EC%A0%84%EC%84%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9D%B5%EC%84%B1%20%EA%B1%B4%EC%A0%84%EC%84%B1"
+      },
+      "top_headlines": [
+        {
+          "title": "[2025 보험 결산] 제도 변경 여파 '진행형' ···수익성·건전성 '이중고...",
+          "summary": "",
+          "link": "https://www.seoulfn.com/news/articleView.html?idxno=616799",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -604,7 +659,7 @@
         "query": "Trading Volumes Stay",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -642,7 +697,7 @@
         "query": "Inference Licensing Deal",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -671,120 +726,6 @@
       ]
     },
     {
-      "term": "Chip Rally Won",
-      "term_ko": "칩 랠리 원",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Chip Rally Won",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul stocks end higher on chip rally; won sharply up",
-              "link": "https://n.news.naver.com/mnews/article/001/0015815911?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Chip%20Rally%20Won",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Chip%20Rally%20Won"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul stocks end higher on chip rally; won sharply up",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015815911?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Samsung Electronics Sets",
-      "term_ko": "삼성전자 세트",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Electronics Sets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Foreign Buying Drives KOSPI Higher as Samsung Electronics Sets New Record",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=174317"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Electronics%20Sets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Electronics%20Sets"
-      },
-      "top_headlines": [
-        {
-          "title": "Foreign Buying Drives KOSPI Higher as Samsung Electronics Sets New Record",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=174317",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul stocks end higher on chip rally; won sharply up",
-              "link": "https://n.news.naver.com/mnews/article/001/0015815911?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul stocks end higher on chip rally; won sharply up",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015815911?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Hold Steady",
       "term_ko": "안정 유지",
       "significance_score": 224,
@@ -794,7 +735,7 @@
         "query": "Hold Steady",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -823,113 +764,6 @@
       ]
     },
     {
-      "term": "End Higher",
-      "term_ko": "더 높게 끝내기",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "End Higher",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul stocks end higher on chip rally; won sharply up",
-              "link": "https://n.news.naver.com/mnews/article/001/0015815911?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=End%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=End%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul stocks end higher on chip rally; won sharply up",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015815911?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "New Record",
-      "term_ko": "새로운 기록",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "New Record",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-25",
-              "timestamp": 1766588400000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-27T03:31:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Foreign Buying Drives KOSPI Higher as Samsung Electronics Sets New Record",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=174317"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=New%20Record",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=New%20Record"
-      },
-      "top_headlines": [
-        {
-          "title": "Foreign Buying Drives KOSPI Higher as Samsung Electronics Sets New Record",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=174317",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.019401,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1766588400000
-      }
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -939,7 +773,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -962,7 +796,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -985,7 +819,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1008,7 +842,7 @@
         "query": "비트코인 ETF 기대",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1031,7 +865,7 @@
         "query": "원달러 환율 급등",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1054,7 +888,7 @@
         "query": "미국 정부 셧다운 위기",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1077,7 +911,7 @@
         "query": "한국 증시 반등",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1100,7 +934,7 @@
         "query": "반도체 투자 확대",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2025-12-27T03:31:41+09:00",
+          "last_updated": "2025-12-27T10:28:51+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1112,15 +946,38 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
       },
       "top_headlines": []
+    },
+    {
+      "term": "AI chip race",
+      "term_ko": "인공지능 칩 경쟁",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "인공지능 칩 경쟁",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2025-12-27T10:28:51+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2025-12-26T18:32:46.985Z",
+    "generated_at": "2025-12-27T01:29:59.722Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-27T03:31:41+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2025-12-27T10:28:51+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 1,
     "removal_breakdown": {
@@ -1130,14 +987,14 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2025-12-27T03:31:41+09:00",
+      "last_updated": "2025-12-27T10:28:51+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2025-12-27T03:31:41+09:00",
+        "lastUpdated": "2025-12-27T10:28:51+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
