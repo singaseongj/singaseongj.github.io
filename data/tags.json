@@ -1,1184 +1,439 @@
 {
+  "generatedAt": "2025-12-28T18:29:23.522Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-28",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Cashless society",
-      "term_ko": "현금없는 사회",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현금없는 사회",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-21",
-              "timestamp": 1766242800000,
-              "value": 45.45454
-            },
-            {
-              "period": "2025-12-22",
-              "timestamp": 1766329200000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-23",
-              "timestamp": 1766415600000,
-              "value": 54.54545
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "‘현금없는 사회’ 가속화…月평균 32만원만 사용",
-              "link": "https://n.news.naver.com/mnews/article/020/0003685130?sid=101"
-            },
-            {
-              "title": "현금없는 사회 … 지갑엔 평균 10만원",
-              "link": "http://www.cctimes.kr/news/articleView.html?idxno=883917"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EA%B8%88%EC%97%86%EB%8A%94%20%EC%82%AC%ED%9A%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EA%B8%88%EC%97%86%EB%8A%94%20%EC%82%AC%ED%9A%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "‘현금없는 사회’ 가속화…月평균 32만원만 사용",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003685130?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "현금없는 사회 … 지갑엔 평균 10만원",
-          "summary": "",
-          "link": "http://www.cctimes.kr/news/articleView.html?idxno=883917",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 154.5455,
-        "weekly_average_volume": 77.2727,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.030385,
-        "time_weight": 0.007058,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1766415600000
-      }
+      "term": "Cashless Society",
+      "term_ko": "현금없는 사회"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 26일] 미국 주요 지수 보합세 유지",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195545"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 26일] 미국 주요 지수 보합세 유지",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195545",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
-      "term": "26th US Major",
-      "term_ko": "26일 미국 주요",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "26일 미국 주요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 26일] 미국 주요 지수 보합세 유지",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195545"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=26%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=26%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 26일] 미국 주요 지수 보합세 유지",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195545",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "26th Us Major",
+      "term_ko": "26일 미국 주요"
     },
     {
       "term": "Acceleration 每个月的平均只需320万元",
-      "term_ko": "가속화 月평균 32만원만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가속화 月평균 32만원만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "‘현금없는 사회’ 가속화…月평균 32만원만 사용",
-              "link": "https://n.news.naver.com/mnews/article/020/0003685130?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EC%86%8D%ED%99%94%20%E6%9C%88%ED%8F%89%EA%B7%A0%2032%EB%A7%8C%EC%9B%90%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EC%86%8D%ED%99%94%20%E6%9C%88%ED%8F%89%EA%B7%A0%2032%EB%A7%8C%EC%9B%90%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "‘현금없는 사회’ 가속화…月평균 32만원만 사용",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003685130?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "가속화 月평균 32만원만"
     },
     {
-      "term": "4 years of cash use",
-      "term_ko": "현금 사용 4년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현금 사용 4년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "개인 현금 사용 4년 새 36% 줄었지만…응답자 절반 “현금 없는 사회는...",
-              "link": "https://n.news.naver.com/mnews/article/032/0003417962?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EA%B8%88%20%EC%82%AC%EC%9A%A9%204%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EA%B8%88%20%EC%82%AC%EC%9A%A9%204%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "개인 현금 사용 4년 새 36% 줄었지만…응답자 절반 “현금 없는 사회는...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003417962?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4 Years of Cash Use",
+      "term_ko": "현금 사용 4년"
     },
     {
-      "term": "New 36% less",
-      "term_ko": "새 36% 줄었지만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "새 36% 줄었지만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "개인 현금 사용 4년 새 36% 줄었지만…응답자 절반 “현금 없는 사회는...",
-              "link": "https://n.news.naver.com/mnews/article/032/0003417962?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%88%2036%25%20%EC%A4%84%EC%97%88%EC%A7%80%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%88%2036%25%20%EC%A4%84%EC%97%88%EC%A7%80%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "개인 현금 사용 4년 새 36% 줄었지만…응답자 절반 “현금 없는 사회는...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003417962?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "New 36% Less",
+      "term_ko": "새 36% 줄었지만"
     },
     {
-      "term": "Looking back at Gyeongnam Siron 2025",
-      "term_ko": "경남시론 2025년을 돌아보며",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경남시론 2025년을 돌아보며",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[경남시론] 2025년을 돌아보며, 2026년 경남경제를 보다 - 김보성(한국은...",
-              "link": "https://www.knnews.co.kr/news/articleView.php?idxno=1478345"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EB%82%A8%EC%8B%9C%EB%A1%A0%202025%EB%85%84%EC%9D%84%20%EB%8F%8C%EC%95%84%EB%B3%B4%EB%A9%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EB%82%A8%EC%8B%9C%EB%A1%A0%202025%EB%85%84%EC%9D%84%20%EB%8F%8C%EC%95%84%EB%B3%B4%EB%A9%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[경남시론] 2025년을 돌아보며, 2026년 경남경제를 보다 - 김보성(한국은...",
-          "summary": "",
-          "link": "https://www.knnews.co.kr/news/articleView.php?idxno=1478345",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Looking Back at Gyeongnam Siron 2025",
+      "term_ko": "경남시론 2025년을 돌아보며"
     },
     {
-      "term": "See the Gyeongnam economy in 2026",
-      "term_ko": "2026년 경남경제를 보다",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2026년 경남경제를 보다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[경남시론] 2025년을 돌아보며, 2026년 경남경제를 보다 - 김보성(한국은...",
-              "link": "https://www.knnews.co.kr/news/articleView.php?idxno=1478345"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2026%EB%85%84%20%EA%B2%BD%EB%82%A8%EA%B2%BD%EC%A0%9C%EB%A5%BC%20%EB%B3%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2026%EB%85%84%20%EA%B2%BD%EB%82%A8%EA%B2%BD%EC%A0%9C%EB%A5%BC%20%EB%B3%B4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[경남시론] 2025년을 돌아보며, 2026년 경남경제를 보다 - 김보성(한국은...",
-          "summary": "",
-          "link": "https://www.knnews.co.kr/news/articleView.php?idxno=1478345",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "See the Gyeongnam Economy in 2026",
+      "term_ko": "2026년 경남경제를 보다"
     },
     {
-      "term": "8 trillion year-over-year",
-      "term_ko": "전년 대비 8조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전년 대비 8조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-              "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%85%84%20%EB%8C%80%EB%B9%84%208%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%85%84%20%EB%8C%80%EB%B9%84%208%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "8 Trillion Year-over-year",
+      "term_ko": "전년 대비 8조"
     },
     {
-      "term": "An average of $100,000 in your wallet",
-      "term_ko": "지갑엔 평균 10만원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지갑엔 평균 10만원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "현금없는 사회 … 지갑엔 평균 10만원",
-              "link": "http://www.cctimes.kr/news/articleView.html?idxno=883917"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EA%B0%91%EC%97%94%20%ED%8F%89%EA%B7%A0%2010%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EA%B0%91%EC%97%94%20%ED%8F%89%EA%B7%A0%2010%EB%A7%8C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "현금없는 사회 … 지갑엔 평균 10만원",
-          "summary": "",
-          "link": "http://www.cctimes.kr/news/articleView.html?idxno=883917",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "An Average of $100,000 in Your Wallet",
+      "term_ko": "지갑엔 평균 10만원"
     },
     {
-      "term": "Keep the index flat",
-      "term_ko": "지수 보합세 유지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지수 보합세 유지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 26일] 미국 주요 지수 보합세 유지",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195545"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%88%98%20%EB%B3%B4%ED%95%A9%EC%84%B8%20%EC%9C%A0%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%88%98%20%EB%B3%B4%ED%95%A9%EC%84%B8%20%EC%9C%A0%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 26일] 미국 주요 지수 보합세 유지",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195545",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Keep the Index Flat",
+      "term_ko": "지수 보합세 유지"
     },
     {
-      "term": "Seoul Data Lab U.S. Stock Indices",
-      "term_ko": "서울데이터랩미국 증시 지수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울데이터랩미국 증시 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서울데이터랩]미국 증시 지수 종합",
-              "link": "https://n.news.naver.com/mnews/article/081/0003604381?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[서울데이터랩]미국 증시 지수 종합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003604381?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Seoul Data Lab U.s. Stock Indices",
+      "term_ko": "서울데이터랩미국 증시 지수"
     },
     {
-      "term": "KOSDAQ Hot Stocks",
-      "term_ko": "코스닥 똘똘한 종목",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스닥 똘똘한 종목",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스닥, 똘똘한 종목 늘고 상폐 빨라졌다",
-              "link": "https://n.news.naver.com/mnews/article/032/0003417958?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%EB%8B%A5%20%EB%98%98%EB%98%98%ED%95%9C%20%EC%A2%85%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%EB%8B%A5%20%EB%98%98%EB%98%98%ED%95%9C%20%EC%A2%85%EB%AA%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "코스닥, 똘똘한 종목 늘고 상폐 빨라졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003417958?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kosdaq Hot Stocks",
+      "term_ko": "코스닥 똘똘한 종목"
     },
     {
-      "term": "Stretched and lunged faster",
-      "term_ko": "늘고 상폐 빨라졌다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "늘고 상폐 빨라졌다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스닥, 똘똘한 종목 늘고 상폐 빨라졌다",
-              "link": "https://n.news.naver.com/mnews/article/032/0003417958?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8A%98%EA%B3%A0%20%EC%83%81%ED%8F%90%20%EB%B9%A8%EB%9D%BC%EC%A1%8C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8A%98%EA%B3%A0%20%EC%83%81%ED%8F%90%20%EB%B9%A8%EB%9D%BC%EC%A1%8C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "코스닥, 똘똘한 종목 늘고 상폐 빨라졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003417958?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stretched and Lunged Faster",
+      "term_ko": "늘고 상폐 빨라졌다"
     },
     {
-      "term": "Debt to debt",
-      "term_ko": "빚 내서 빚",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚 내서 빚",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-              "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%20%EB%82%B4%EC%84%9C%20%EB%B9%9A",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%20%EB%82%B4%EC%84%9C%20%EB%B9%9A"
-      },
-      "top_headlines": [
-        {
-          "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Debt to Debt",
+      "term_ko": "빚 내서 빚"
     },
     {
-      "term": "Companies paying off corporate bonds",
-      "term_ko": "갚는 기업들 회사채",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "갚는 기업들 회사채",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-              "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9A%EB%8A%94%20%EA%B8%B0%EC%97%85%EB%93%A4%20%ED%9A%8C%EC%82%AC%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9A%EB%8A%94%20%EA%B8%B0%EC%97%85%EB%93%A4%20%ED%9A%8C%EC%82%AC%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Companies Paying Off Corporate Bonds",
+      "term_ko": "갚는 기업들 회사채"
     },
     {
-      "term": "Overseas Equity ETFs",
-      "term_ko": "해외 주식 ETF",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Overseas Equity ETFs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Overseas Equity ETFs Grow to ₩100 Trillion as Weak Won Adds to Market B...",
-              "link": "https://it.chosun.com/news/articleView.html?idxno=2023092153691"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Overseas%20Equity%20ETFs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Overseas%20Equity%20ETFs"
-      },
-      "top_headlines": [
-        {
-          "title": "Overseas Equity ETFs Grow to ₩100 Trillion as Weak Won Adds to Market B...",
-          "summary": "",
-          "link": "https://it.chosun.com/news/articleView.html?idxno=2023092153691",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Overseas Equity Etfs",
+      "term_ko": "해외 주식 ETF"
     },
     {
-      "term": "Half of respondents",
-      "term_ko": "응답자 절반",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "응답자 절반",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "개인 현금 사용 4년 새 36% 줄었지만…응답자 절반 “현금 없는 사회는...",
-              "link": "https://n.news.naver.com/mnews/article/032/0003417962?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%91%EB%8B%B5%EC%9E%90%20%EC%A0%88%EB%B0%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%91%EB%8B%B5%EC%9E%90%20%EC%A0%88%EB%B0%98"
-      },
-      "top_headlines": [
-        {
-          "title": "개인 현금 사용 4년 새 36% 줄었지만…응답자 절반 “현금 없는 사회는...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003417962?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Half of Respondents",
+      "term_ko": "응답자 절반"
     },
     {
-      "term": "Increased signal",
-      "term_ko": "늘었다 시그널",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "늘었다 시그널",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-              "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8A%98%EC%97%88%EB%8B%A4%20%EC%8B%9C%EA%B7%B8%EB%84%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8A%98%EC%97%88%EB%8B%A4%20%EC%8B%9C%EA%B7%B8%EB%84%90"
-      },
-      "top_headlines": [
-        {
-          "title": "빚 내서 빚 갚는 기업들…회사채 발행 전년 대비 8조 늘었다 [시그널]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004572217?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Increased Signal",
+      "term_ko": "늘었다 시그널"
     },
     {
-      "term": "Why U.S Republicans",
-      "term_ko": "왜 미국 공화당인가",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Why U.S Republicans",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Why U.S. Republicans suddenly weighed in on Coupang’s data scandal",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082276?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Why%20U.S%20Republicans",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Why%20U.S%20Republicans"
-      },
-      "top_headlines": [
-        {
-          "title": "Why U.S. Republicans suddenly weighed in on Coupang’s data scandal",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082276?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Why U.s Republicans",
+      "term_ko": "왜 미국 공화당인가"
     },
     {
       "term": "Coupangs Data Scandal",
-      "term_ko": "쿠팡 데이터 스캔들",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Coupangs Data Scandal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Why U.S. Republicans suddenly weighed in on Coupang’s data scandal",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082276?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Coupangs%20Data%20Scandal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Coupangs%20Data%20Scandal"
-      },
-      "top_headlines": [
-        {
-          "title": "Why U.S. Republicans suddenly weighed in on Coupang’s data scandal",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082276?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쿠팡 데이터 스캔들"
     },
     {
       "term": "Wall Street Ends",
-      "term_ko": "월스트리트 끝",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Ends",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Ends Post-Christmas Session Flat as Investors Eye Santa Claus...",
-              "link": "https://www.econotimes.com/Wall-Street-Ends-Post-Christmas-Session-Flat-as-Investors-Eye-Santa-Claus-Rally-1729622"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Ends",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Ends"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Ends Post-Christmas Session Flat as Investors Eye Santa Claus...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Ends-Post-Christmas-Session-Flat-as-Investors-Eye-Santa-Claus-Rally-1729622",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 끝"
     },
     {
-      "term": "Post-Christmas Session Flat",
-      "term_ko": "크리스마스 이후 세션 플랫",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Post-Christmas Session Flat",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Ends Post-Christmas Session Flat as Investors Eye Santa Claus...",
-              "link": "https://www.econotimes.com/Wall-Street-Ends-Post-Christmas-Session-Flat-as-Investors-Eye-Santa-Claus-Rally-1729622"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Post-Christmas%20Session%20Flat",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Post-Christmas%20Session%20Flat"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Ends Post-Christmas Session Flat as Investors Eye Santa Claus...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Ends-Post-Christmas-Session-Flat-as-Investors-Eye-Santa-Claus-Rally-1729622",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Post-christmas Session Flat",
+      "term_ko": "크리스마스 이후 세션 플랫"
     },
     {
       "term": "Investors Eye Santa",
-      "term_ko": "투자자의 눈 산타",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investors Eye Santa",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Ends Post-Christmas Session Flat as Investors Eye Santa Claus...",
-              "link": "https://www.econotimes.com/Wall-Street-Ends-Post-Christmas-Session-Flat-as-Investors-Eye-Santa-Claus-Rally-1729622"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Eye%20Santa",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Eye%20Santa"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Ends Post-Christmas Session Flat as Investors Eye Santa Claus...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Ends-Post-Christmas-Session-Flat-as-Investors-Eye-Santa-Claus-Rally-1729622",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자자의 눈 산타"
     },
     {
       "term": "Weak Won Adds",
-      "term_ko": "약원 추가",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Weak Won Adds",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Overseas Equity ETFs Grow to ₩100 Trillion as Weak Won Adds to Market B...",
-              "link": "https://it.chosun.com/news/articleView.html?idxno=2023092153691"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Weak%20Won%20Adds",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Weak%20Won%20Adds"
-      },
-      "top_headlines": [
-        {
-          "title": "Overseas Equity ETFs Grow to ₩100 Trillion as Weak Won Adds to Market B...",
-          "summary": "",
-          "link": "https://it.chosun.com/news/articleView.html?idxno=2023092153691",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "약원 추가"
     },
     {
       "term": "Retail Investors Bristle",
-      "term_ko": "소매 투자자 브리틀",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Retail Investors Bristle",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Retail investors bristle as gov't shifts blame for won's slide onto overs...",
-              "link": "https://www.koreatimes.co.kr/path/A2025122812270000930"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Retail%20Investors%20Bristle",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Retail%20Investors%20Bristle"
-      },
-      "top_headlines": [
-        {
-          "title": "Retail investors bristle as gov't shifts blame for won's slide onto overs...",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025122812270000930",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소매 투자자 브리틀"
     },
     {
       "term": "Suddenly Weighed",
-      "term_ko": "갑작스러운 체중 증가",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Suddenly Weighed",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Why U.S. Republicans suddenly weighed in on Coupang’s data scandal",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082276?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Suddenly%20Weighed",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Suddenly%20Weighed"
-      },
-      "top_headlines": [
-        {
-          "title": "Why U.S. Republicans suddenly weighed in on Coupang’s data scandal",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082276?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "갑작스러운 체중 증가"
     },
     {
       "term": "Shifts Blame",
-      "term_ko": "책임 전환",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Shifts Blame",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Retail investors bristle as gov't shifts blame for won's slide onto overs...",
-              "link": "https://www.koreatimes.co.kr/path/A2025122812270000930"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Shifts%20Blame",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Shifts%20Blame"
-      },
-      "top_headlines": [
-        {
-          "title": "Retail investors bristle as gov't shifts blame for won's slide onto overs...",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025122812270000930",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "책임 전환"
     },
     {
       "term": "Wons Slide",
-      "term_ko": "원 슬라이드",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wons Slide",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Retail investors bristle as gov't shifts blame for won's slide onto overs...",
-              "link": "https://www.koreatimes.co.kr/path/A2025122812270000930"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wons%20Slide",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wons%20Slide"
-      },
-      "top_headlines": [
-        {
-          "title": "Retail investors bristle as gov't shifts blame for won's slide onto overs...",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025122812270000930",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "원 슬라이드"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-28T21:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-28T12:41:55.946Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-28T21:40:46+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Cashless Society",
+      "term_ko": "현금없는 사회"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-28T21:40:46+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-28T21:40:46+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "26th Us Major",
+      "term_ko": "26일 미국 주요"
+    },
+    {
+      "term": "Acceleration 每个月的平均只需320万元",
+      "term_ko": "가속화 月평균 32만원만"
+    },
+    {
+      "term": "4 Years of Cash Use",
+      "term_ko": "현금 사용 4년"
+    },
+    {
+      "term": "New 36% Less",
+      "term_ko": "새 36% 줄었지만"
+    },
+    {
+      "term": "Looking Back at Gyeongnam Siron 2025",
+      "term_ko": "경남시론 2025년을 돌아보며"
+    },
+    {
+      "term": "See the Gyeongnam Economy in 2026",
+      "term_ko": "2026년 경남경제를 보다"
+    },
+    {
+      "term": "8 Trillion Year-over-year",
+      "term_ko": "전년 대비 8조"
+    },
+    {
+      "term": "An Average of $100,000 in Your Wallet",
+      "term_ko": "지갑엔 평균 10만원"
+    },
+    {
+      "term": "Keep the Index Flat",
+      "term_ko": "지수 보합세 유지"
+    },
+    {
+      "term": "Seoul Data Lab U.s. Stock Indices",
+      "term_ko": "서울데이터랩미국 증시 지수"
+    },
+    {
+      "term": "Kosdaq Hot Stocks",
+      "term_ko": "코스닥 똘똘한 종목"
+    },
+    {
+      "term": "Stretched and Lunged Faster",
+      "term_ko": "늘고 상폐 빨라졌다"
+    },
+    {
+      "term": "Debt to Debt",
+      "term_ko": "빚 내서 빚"
+    },
+    {
+      "term": "Companies Paying Off Corporate Bonds",
+      "term_ko": "갚는 기업들 회사채"
+    },
+    {
+      "term": "Overseas Equity Etfs",
+      "term_ko": "해외 주식 ETF"
+    },
+    {
+      "term": "Half of Respondents",
+      "term_ko": "응답자 절반"
+    },
+    {
+      "term": "Increased Signal",
+      "term_ko": "늘었다 시그널"
+    },
+    {
+      "term": "Why U.s Republicans",
+      "term_ko": "왜 미국 공화당인가"
+    },
+    {
+      "term": "Coupangs Data Scandal",
+      "term_ko": "쿠팡 데이터 스캔들"
+    },
+    {
+      "term": "Wall Street Ends",
+      "term_ko": "월스트리트 끝"
+    },
+    {
+      "term": "Post-christmas Session Flat",
+      "term_ko": "크리스마스 이후 세션 플랫"
+    },
+    {
+      "term": "Investors Eye Santa",
+      "term_ko": "투자자의 눈 산타"
+    },
+    {
+      "term": "Weak Won Adds",
+      "term_ko": "약원 추가"
+    },
+    {
+      "term": "Retail Investors Bristle",
+      "term_ko": "소매 투자자 브리틀"
+    },
+    {
+      "term": "Suddenly Weighed",
+      "term_ko": "갑작스러운 체중 증가"
+    },
+    {
+      "term": "Shifts Blame",
+      "term_ko": "책임 전환"
+    },
+    {
+      "term": "Wons Slide",
+      "term_ko": "원 슬라이드"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    }
+  ],
+  "translations": {
+    "Cashless Society": {
+      "en": "Cashless Society",
+      "ko": "현금없는 사회",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "26th Us Major": {
+      "en": "26th Us Major",
+      "ko": "26일 미국 주요",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Acceleration 每个月的平均只需320万元": {
+      "en": "Acceleration 每个月的平均只需320万元",
+      "ko": "가속화 月평균 32만원만",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "4 Years of Cash Use": {
+      "en": "4 Years of Cash Use",
+      "ko": "현금 사용 4년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "New 36% Less": {
+      "en": "New 36% Less",
+      "ko": "새 36% 줄었지만",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Looking Back at Gyeongnam Siron 2025": {
+      "en": "Looking Back at Gyeongnam Siron 2025",
+      "ko": "경남시론 2025년을 돌아보며",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "See the Gyeongnam Economy in 2026": {
+      "en": "See the Gyeongnam Economy in 2026",
+      "ko": "2026년 경남경제를 보다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "8 Trillion Year-over-year": {
+      "en": "8 Trillion Year-over-year",
+      "ko": "전년 대비 8조",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "An Average of $100,000 in Your Wallet": {
+      "en": "An Average of $100,000 in Your Wallet",
+      "ko": "지갑엔 평균 10만원",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Keep the Index Flat": {
+      "en": "Keep the Index Flat",
+      "ko": "지수 보합세 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Seoul Data Lab U.s. Stock Indices": {
+      "en": "Seoul Data Lab U.s. Stock Indices",
+      "ko": "서울데이터랩미국 증시 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Kosdaq Hot Stocks": {
+      "en": "Kosdaq Hot Stocks",
+      "ko": "코스닥 똘똘한 종목",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Stretched and Lunged Faster": {
+      "en": "Stretched and Lunged Faster",
+      "ko": "늘고 상폐 빨라졌다",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Debt to Debt": {
+      "en": "Debt to Debt",
+      "ko": "빚 내서 빚",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Companies Paying Off Corporate Bonds": {
+      "en": "Companies Paying Off Corporate Bonds",
+      "ko": "갚는 기업들 회사채",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Overseas Equity Etfs": {
+      "en": "Overseas Equity Etfs",
+      "ko": "해외 주식 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Half of Respondents": {
+      "en": "Half of Respondents",
+      "ko": "응답자 절반",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Increased Signal": {
+      "en": "Increased Signal",
+      "ko": "늘었다 시그널",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Why U.s Republicans": {
+      "en": "Why U.s Republicans",
+      "ko": "왜 미국 공화당인가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Coupangs Data Scandal": {
+      "en": "Coupangs Data Scandal",
+      "ko": "쿠팡 데이터 스캔들",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Wall Street Ends": {
+      "en": "Wall Street Ends",
+      "ko": "월스트리트 끝",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Post-christmas Session Flat": {
+      "en": "Post-christmas Session Flat",
+      "ko": "크리스마스 이후 세션 플랫",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Investors Eye Santa": {
+      "en": "Investors Eye Santa",
+      "ko": "투자자의 눈 산타",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Weak Won Adds": {
+      "en": "Weak Won Adds",
+      "ko": "약원 추가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Retail Investors Bristle": {
+      "en": "Retail Investors Bristle",
+      "ko": "소매 투자자 브리틀",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Suddenly Weighed": {
+      "en": "Suddenly Weighed",
+      "ko": "갑작스러운 체중 증가",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Shifts Blame": {
+      "en": "Shifts Blame",
+      "ko": "책임 전환",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Wons Slide": {
+      "en": "Wons Slide",
+      "ko": "원 슬라이드",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-28T18:29:23.522Z"
     }
   }
 }
