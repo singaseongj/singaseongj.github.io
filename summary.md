@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2025-12-29T10:47:48+09:00 (KST)**
+- Generated: **2025-12-29T15:36:25+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -10,7 +10,7 @@
 **레고켐바이오** (141080.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.2%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **1.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4
@@ -22,6 +22,14 @@
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4TV
+
+**알테오젠** (196170.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.9%**, 20d **-6.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0
 
 **에코프로** (086520.KQ)
 
@@ -39,31 +47,31 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0
 
-**헬스케어** (028300.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.8%**, 20d **-22.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4
-
 ### AGGRESSIVE (5)
 
 **HLB생명과학** (067630.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.8%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **6.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
 
-**HLB제약** (047920.KQ)
+**NHN KCP** (060250.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.4%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-4.3%**, 20d **-9.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=HLB%EC%A0%9C%EC%95%BD
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=NHN%20KCP
+
+**상아프론테크** (089980.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **6.2%**, 20d **3.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%83%81%EC%95%84%ED%94%84%EB%A1%A0%ED%85%8C%ED%81%AC
 
 **오로스테크놀로지** (322310.KQ)
 
@@ -73,18 +81,10 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%98%A4%EB%A1%9C%EC%8A%A4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
 
-**이녹스첨단소재** (272290.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.9%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%9D%B4%EB%85%B9%EC%8A%A4%EC%B2%A8%EB%8B%A8%EC%86%8C%EC%9E%AC
-
 **휴메딕스** (200670.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
@@ -96,31 +96,31 @@
 **LG화학** (051910.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-0.6%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
-**대한항공** (003490.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.7%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
-
-**미래에셋증권** (006800.KS)
+**삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **2.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **12.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **금융**
-- News search: https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%A6%9D%EA%B6%8C
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
+
+**오리온** (271560.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- Returns: 5d **-0.6%**, 20d **4.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **필수소비재**
+- News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8
 
 **이마트** (139480.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **-5.5%**, 20d **-19.9%**; volatility (20d): **unknown**
+- Returns: 5d **-3.6%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=%EC%9D%B4%EB%A7%88%ED%8A%B8
@@ -128,7 +128,7 @@
 **코웨이** (021240.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.25)**
-- Returns: 5d **-2.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-2.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=%EC%BD%94%EC%9B%A8%EC%9D%B4
@@ -138,18 +138,18 @@
 **DL이앤씨** (375500.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=DL%EC%9D%B4%EC%95%A4%EC%94%A8
 
-**GS건설** (006360.KS)
+**녹십자** (006280.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.1%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **1.2%**, 20d **-9.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90
 
 **롯데에너지머티리얼즈** (020150.KS)
 
