@@ -1,1027 +1,411 @@
 {
+  "generatedAt": "2025-12-30T06:32:01.863Z",
+  "timezone": "Asia/Seoul",
   "date": "2025-12-30",
   "window": "12_hours",
   "total_phrases": 28,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 메타, 싱가포르 AI 스타트업 마누스 인수 합의",
-              "link": "https://www.newspim.com/news/view/20251230000120"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 메타, 싱가포르 AI 스타트업 마누스 인수 합의",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251230000120",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
     {
-      "term": "Meta Singapore AI",
-      "term_ko": "메타 싱가포르 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "메타 싱가포르 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 메타, 싱가포르 AI 스타트업 마누스 인수 합의",
-              "link": "https://www.newspim.com/news/view/20251230000120"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%ED%83%80%20%EC%8B%B1%EA%B0%80%ED%8F%AC%EB%A5%B4%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%94%ED%83%80%20%EC%8B%B1%EA%B0%80%ED%8F%AC%EB%A5%B4%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 메타, 싱가포르 AI 스타트업 마누스 인수 합의",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251230000120",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Meta Singapore Ai",
+      "term_ko": "메타 싱가포르 AI"
     },
     {
-      "term": "UBOSE ETF Tax Discrimination",
-      "term_ko": "우보세ETF 세금 차별",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우보세ETF 세금 차별",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[우보세]ETF 세금 차별 없애야",
-              "link": "https://n.news.naver.com/mnews/article/008/0005298066?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%B3%B4%EC%84%B8ETF%20%EC%84%B8%EA%B8%88%20%EC%B0%A8%EB%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%B3%B4%EC%84%B8ETF%20%EC%84%B8%EA%B8%88%20%EC%B0%A8%EB%B3%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[우보세]ETF 세금 차별 없애야",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005298066?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ubose Etf Tax Discrimination",
+      "term_ko": "우보세ETF 세금 차별"
     },
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 29일] 미국 증시, 주요 지수 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195581"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 29일] 미국 증시, 주요 지수 보합세",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195581",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
       "term": "Mirae Asset Management 2026 Investment",
-      "term_ko": "미래에셋자산운용 2026년 투자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래에셋자산운용 2026년 투자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋자산운용, 2026년 투자 키워드 '달리는 말에 올라타라, H.O.R.S.E...",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41182"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%202026%EB%85%84%20%ED%88%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9%202026%EB%85%84%20%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋자산운용, 2026년 투자 키워드 '달리는 말에 올라타라, H.O.R.S.E...",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41182",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미래에셋자산운용 2026년 투자"
     },
     {
       "term": "Investing in Future Assets 2026",
-      "term_ko": "미래에셋 2026년 투자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래에셋 2026년 투자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"달리는 말에 올라타라, H.O.R.S.E\"... 미래에셋, 2026년 투자 키워드 제...",
-              "link": "https://www.pressman.kr/news/articleView.html?idxno=97956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%202026%EB%85%84%20%ED%88%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%202026%EB%85%84%20%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"달리는 말에 올라타라, H.O.R.S.E\"... 미래에셋, 2026년 투자 키워드 제...",
-          "summary": "",
-          "link": "https://www.pressman.kr/news/articleView.html?idxno=97956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미래에셋 2026년 투자"
     },
     {
       "term": "Regulation Only 2026",
-      "term_ko": "규제만 남았다 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "규제만 남았다 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 돋보기] 공급 없고 규제만 남았다… 2026년 집값 불안한 이유",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=89056"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%9C%EC%A0%9C%EB%A7%8C%20%EB%82%A8%EC%95%98%EB%8B%A4%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%9C%EC%A0%9C%EB%A7%8C%20%EB%82%A8%EC%95%98%EB%8B%A4%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 돋보기] 공급 없고 규제만 남았다… 2026년 집값 불안한 이유",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=89056",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "규제만 남았다 2026년"
     },
     {
-      "term": "Major indices are flat",
-      "term_ko": "주요 지수 보합세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주요 지수 보합세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 29일] 미국 증시, 주요 지수 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195581"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EB%B3%B4%ED%95%A9%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%9A%94%20%EC%A7%80%EC%88%98%20%EB%B3%B4%ED%95%A9%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 29일] 미국 증시, 주요 지수 보합세",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195581",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Major Indices Are Flat",
+      "term_ko": "주요 지수 보합세"
     },
     {
-      "term": "Acquired startup Manus",
-      "term_ko": "스타트업 마누스 인수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스타트업 마누스 인수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 메타, 싱가포르 AI 스타트업 마누스 인수 합의",
-              "link": "https://www.newspim.com/news/view/20251230000120"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EB%A7%88%EB%88%84%EC%8A%A4%20%EC%9D%B8%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EB%A7%88%EB%88%84%EC%8A%A4%20%EC%9D%B8%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 메타, 싱가포르 AI 스타트업 마누스 인수 합의",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20251230000120",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Acquired Startup Manus",
+      "term_ko": "스타트업 마누스 인수"
     },
     {
-      "term": "BriefHuonsen Meditox Sigibio",
-      "term_ko": "브리프휴온스엔 메디톡스 시지바이오",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "브리프휴온스엔 메디톡스 시지바이오",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[브리프]휴온스엔 메디톡스 시지바이오 알파타우",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=346348"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A6%AC%ED%94%84%ED%9C%B4%EC%98%A8%EC%8A%A4%EC%97%94%20%EB%A9%94%EB%94%94%ED%86%A1%EC%8A%A4%20%EC%8B%9C%EC%A7%80%EB%B0%94%EC%9D%B4%EC%98%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A6%AC%ED%94%84%ED%9C%B4%EC%98%A8%EC%8A%A4%EC%97%94%20%EB%A9%94%EB%94%94%ED%86%A1%EC%8A%A4%20%EC%8B%9C%EC%A7%80%EB%B0%94%EC%9D%B4%EC%98%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[브리프]휴온스엔 메디톡스 시지바이오 알파타우",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=346348",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Briefhuonsen Meditox Sigibio",
+      "term_ko": "브리프휴온스엔 메디톡스 시지바이오"
     },
     {
-      "term": "Gold and silver prices surge",
-      "term_ko": "금 은값 급등세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금 은값 급등세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금·은값, 급등세 뒤 급락…차익실현·증거금 인상 여파",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=373245"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%20%EC%9D%80%EA%B0%92%20%EA%B8%89%EB%93%B1%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%20%EC%9D%80%EA%B0%92%20%EA%B8%89%EB%93%B1%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "금·은값, 급등세 뒤 급락…차익실현·증거금 인상 여파",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=373245",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold and Silver Prices Surge",
+      "term_ko": "금 은값 급등세"
     },
     {
       "term": "Backward Plunge Arbitrage",
-      "term_ko": "뒤 급락 차익실현",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뒤 급락 차익실현",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금·은값, 급등세 뒤 급락…차익실현·증거금 인상 여파",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=373245"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%92%A4%20%EA%B8%89%EB%9D%BD%20%EC%B0%A8%EC%9D%B5%EC%8B%A4%ED%98%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%92%A4%20%EA%B8%89%EB%9D%BD%20%EC%B0%A8%EC%9D%B5%EC%8B%A4%ED%98%84"
-      },
-      "top_headlines": [
-        {
-          "title": "금·은값, 급등세 뒤 급락…차익실현·증거금 인상 여파",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=373245",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뒤 급락 차익실현"
     },
     {
-      "term": "Margin hike aftermath",
-      "term_ko": "증거금 인상 여파",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증거금 인상 여파",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금·은값, 급등세 뒤 급락…차익실현·증거금 인상 여파",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=373245"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B1%B0%EA%B8%88%20%EC%9D%B8%EC%83%81%20%EC%97%AC%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B1%B0%EA%B8%88%20%EC%9D%B8%EC%83%81%20%EC%97%AC%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "금·은값, 급등세 뒤 급락…차익실현·증거금 인상 여파",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=373245",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Margin Hike Aftermath",
+      "term_ko": "증거금 인상 여파"
     },
     {
-      "term": "Get on the horse",
-      "term_ko": "달리는 말에 올라타라",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달리는 말에 올라타라",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"달리는 말에 올라타라, H.O.R.S.E\"... 미래에셋, 2026년 투자 키워드 제...",
-              "link": "https://www.pressman.kr/news/articleView.html?idxno=97956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%A6%AC%EB%8A%94%20%EB%A7%90%EC%97%90%20%EC%98%AC%EB%9D%BC%ED%83%80%EB%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%A6%AC%EB%8A%94%20%EB%A7%90%EC%97%90%20%EC%98%AC%EB%9D%BC%ED%83%80%EB%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "\"달리는 말에 올라타라, H.O.R.S.E\"... 미래에셋, 2026년 투자 키워드 제...",
-          "summary": "",
-          "link": "https://www.pressman.kr/news/articleView.html?idxno=97956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Get on the Horse",
+      "term_ko": "달리는 말에 올라타라"
     },
     {
-      "term": "International gold and silver prices",
-      "term_ko": "국제 금 은값",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국제 금 은값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "국제 금·은값 급락세 전환…차익실현 수요 여파",
-              "link": "https://n.news.naver.com/mnews/article/005/0001823179?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%20%EC%9D%80%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%20%EC%9D%80%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "국제 금·은값 급락세 전환…차익실현 수요 여파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001823179?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "International Gold and Silver Prices",
+      "term_ko": "국제 금 은값"
     },
     {
       "term": "Take Profit on Dips",
-      "term_ko": "급락세 전환 차익실현",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급락세 전환 차익실현",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "국제 금·은값 급락세 전환…차익실현 수요 여파",
-              "link": "https://n.news.naver.com/mnews/article/005/0001823179?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%9D%BD%EC%84%B8%20%EC%A0%84%ED%99%98%20%EC%B0%A8%EC%9D%B5%EC%8B%A4%ED%98%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%9D%BD%EC%84%B8%20%EC%A0%84%ED%99%98%20%EC%B0%A8%EC%9D%B5%EC%8B%A4%ED%98%84"
-      },
-      "top_headlines": [
-        {
-          "title": "국제 금·은값 급락세 전환…차익실현 수요 여파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001823179?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "급락세 전환 차익실현"
     },
     {
-      "term": "Supplying real estate magnifiers",
-      "term_ko": "부동산 돋보기 공급",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 돋보기 공급",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 돋보기] 공급 없고 규제만 남았다… 2026년 집값 불안한 이유",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=89056"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%8F%8B%EB%B3%B4%EA%B8%B0%20%EA%B3%B5%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%8F%8B%EB%B3%B4%EA%B8%B0%20%EA%B3%B5%EA%B8%89"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 돋보기] 공급 없고 규제만 남았다… 2026년 집값 불안한 이유",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=89056",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Supplying Real Estate Magnifiers",
+      "term_ko": "부동산 돋보기 공급"
     },
     {
-      "term": "Reasons for housing affordability anxiety",
-      "term_ko": "집값 불안한 이유",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집값 불안한 이유",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 돋보기] 공급 없고 규제만 남았다… 2026년 집값 불안한 이유",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=89056"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%EB%B6%88%EC%95%88%ED%95%9C%20%EC%9D%B4%EC%9C%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%EB%B6%88%EC%95%88%ED%95%9C%20%EC%9D%B4%EC%9C%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 돋보기] 공급 없고 규제만 남았다… 2026년 집값 불안한 이유",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=89056",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reasons for Housing Affordability Anxiety",
+      "term_ko": "집값 불안한 이유"
     },
     {
-      "term": "Presenting H.O.R.S.E.",
-      "term_ko": "H.O.R.S.E 제시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "H.O.R.S.E 제시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋운용, 2026년 투자 키워드 'H.O.R.S.E' 제시",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=481286"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=H.O.R.S.E%20%EC%A0%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=H.O.R.S.E%20%EC%A0%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋운용, 2026년 투자 키워드 'H.O.R.S.E' 제시",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=481286",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Presenting H.o.r.s.e.",
+      "term_ko": "H.O.R.S.E 제시"
     },
     {
-      "term": "29th US",
-      "term_ko": "29일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "29일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 29일] 미국 증시, 주요 지수 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195581"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=29%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=29%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 29일] 미국 증시, 주요 지수 보합세",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195581",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "29th Us",
+      "term_ko": "29일 미국"
     },
     {
-      "term": "Demand aftermath",
-      "term_ko": "수요 여파",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수요 여파",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "국제 금·은값 급락세 전환…차익실현 수요 여파",
-              "link": "https://n.news.naver.com/mnews/article/005/0001823179?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9A%94%20%EC%97%AC%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9A%94%20%EC%97%AC%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "국제 금·은값 급락세 전환…차익실현 수요 여파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001823179?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Demand Aftermath",
+      "term_ko": "수요 여파"
     },
     {
       "term": "Final Trading Session",
-      "term_ko": "최종 거래 세션",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Final Trading Session",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open lower in final trading session of 2025",
-              "link": "https://n.news.naver.com/mnews/article/001/0015819769?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Final%20Trading%20Session",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Final%20Trading%20Session"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open lower in final trading session of 2025",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015819769?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "최종 거래 세션"
     },
     {
       "term": "Open Lower",
-      "term_ko": "더 낮게 열기",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open lower in final trading session of 2025",
-              "link": "https://n.news.naver.com/mnews/article/001/0015819769?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open lower in final trading session of 2025",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015819769?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "더 낮게 열기"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2025-12-30T10:31:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2025-12-30T01:32:53.104Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2025-12-30T10:31:43+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 2,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2025-12-30T10:31:43+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2025-12-30T10:31:43+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Meta Singapore Ai",
+      "term_ko": "메타 싱가포르 AI"
+    },
+    {
+      "term": "Ubose Etf Tax Discrimination",
+      "term_ko": "우보세ETF 세금 차별"
+    },
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
+    },
+    {
+      "term": "Mirae Asset Management 2026 Investment",
+      "term_ko": "미래에셋자산운용 2026년 투자"
+    },
+    {
+      "term": "Investing in Future Assets 2026",
+      "term_ko": "미래에셋 2026년 투자"
+    },
+    {
+      "term": "Regulation Only 2026",
+      "term_ko": "규제만 남았다 2026년"
+    },
+    {
+      "term": "Major Indices Are Flat",
+      "term_ko": "주요 지수 보합세"
+    },
+    {
+      "term": "Acquired Startup Manus",
+      "term_ko": "스타트업 마누스 인수"
+    },
+    {
+      "term": "Briefhuonsen Meditox Sigibio",
+      "term_ko": "브리프휴온스엔 메디톡스 시지바이오"
+    },
+    {
+      "term": "Gold and Silver Prices Surge",
+      "term_ko": "금 은값 급등세"
+    },
+    {
+      "term": "Backward Plunge Arbitrage",
+      "term_ko": "뒤 급락 차익실현"
+    },
+    {
+      "term": "Margin Hike Aftermath",
+      "term_ko": "증거금 인상 여파"
+    },
+    {
+      "term": "Get on the Horse",
+      "term_ko": "달리는 말에 올라타라"
+    },
+    {
+      "term": "International Gold and Silver Prices",
+      "term_ko": "국제 금 은값"
+    },
+    {
+      "term": "Take Profit on Dips",
+      "term_ko": "급락세 전환 차익실현"
+    },
+    {
+      "term": "Supplying Real Estate Magnifiers",
+      "term_ko": "부동산 돋보기 공급"
+    },
+    {
+      "term": "Reasons for Housing Affordability Anxiety",
+      "term_ko": "집값 불안한 이유"
+    },
+    {
+      "term": "Presenting H.o.r.s.e.",
+      "term_ko": "H.O.R.S.E 제시"
+    },
+    {
+      "term": "29th Us",
+      "term_ko": "29일 미국"
+    },
+    {
+      "term": "Demand Aftermath",
+      "term_ko": "수요 여파"
+    },
+    {
+      "term": "Final Trading Session",
+      "term_ko": "최종 거래 세션"
+    },
+    {
+      "term": "Open Lower",
+      "term_ko": "더 낮게 열기"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "The Story of Ai in Stocks": {
+      "en": "The Story of Ai in Stocks",
+      "ko": "AI의 종목 이야기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Meta Singapore Ai": {
+      "en": "Meta Singapore Ai",
+      "ko": "메타 싱가포르 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Ubose Etf Tax Discrimination": {
+      "en": "Ubose Etf Tax Discrimination",
+      "ko": "우보세ETF 세금 차별",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Mirae Asset Management 2026 Investment": {
+      "en": "Mirae Asset Management 2026 Investment",
+      "ko": "미래에셋자산운용 2026년 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Investing in Future Assets 2026": {
+      "en": "Investing in Future Assets 2026",
+      "ko": "미래에셋 2026년 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Regulation Only 2026": {
+      "en": "Regulation Only 2026",
+      "ko": "규제만 남았다 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Major Indices Are Flat": {
+      "en": "Major Indices Are Flat",
+      "ko": "주요 지수 보합세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Acquired Startup Manus": {
+      "en": "Acquired Startup Manus",
+      "ko": "스타트업 마누스 인수",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Briefhuonsen Meditox Sigibio": {
+      "en": "Briefhuonsen Meditox Sigibio",
+      "ko": "브리프휴온스엔 메디톡스 시지바이오",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Gold and Silver Prices Surge": {
+      "en": "Gold and Silver Prices Surge",
+      "ko": "금 은값 급등세",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Backward Plunge Arbitrage": {
+      "en": "Backward Plunge Arbitrage",
+      "ko": "뒤 급락 차익실현",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Margin Hike Aftermath": {
+      "en": "Margin Hike Aftermath",
+      "ko": "증거금 인상 여파",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Get on the Horse": {
+      "en": "Get on the Horse",
+      "ko": "달리는 말에 올라타라",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "International Gold and Silver Prices": {
+      "en": "International Gold and Silver Prices",
+      "ko": "국제 금 은값",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.863Z"
+    },
+    "Take Profit on Dips": {
+      "en": "Take Profit on Dips",
+      "ko": "급락세 전환 차익실현",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Supplying Real Estate Magnifiers": {
+      "en": "Supplying Real Estate Magnifiers",
+      "ko": "부동산 돋보기 공급",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Reasons for Housing Affordability Anxiety": {
+      "en": "Reasons for Housing Affordability Anxiety",
+      "ko": "집값 불안한 이유",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Presenting H.o.r.s.e.": {
+      "en": "Presenting H.o.r.s.e.",
+      "ko": "H.O.R.S.E 제시",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "29th Us": {
+      "en": "29th Us",
+      "ko": "29일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Demand Aftermath": {
+      "en": "Demand Aftermath",
+      "ko": "수요 여파",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Final Trading Session": {
+      "en": "Final Trading Session",
+      "ko": "최종 거래 세션",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Open Lower": {
+      "en": "Open Lower",
+      "ko": "더 낮게 열기",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2025-12-30T06:32:01.864Z"
     }
   }
 }
