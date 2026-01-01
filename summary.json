@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-01-01T03:31:34+09:00",
+  "generatedAtKST": "2026-01-01T10:49:00+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -352,6 +352,35 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
+      "name": "LIG넥스원",
+      "ticker": "079550.KS",
+      "sector": "산업재",
+      "metrics": {
+        "ret5": 0.7177033492822966,
+        "ret20": 14.402173913043478,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.5000000000000001,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=LIG%EB%84%A5%EC%8A%A4%EC%9B%90"
+      },
+      "bullets": [
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.50)**",
+        "Returns: 5d **0.7%**, 20d **14.4%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **산업재**",
+        "News search: https://www.google.com/search?q=LIG%EB%84%A5%EC%8A%A4%EC%9B%90"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
       "name": "SK하이닉스",
       "ticker": "000660.KS",
       "sector": "정보기술",
@@ -376,35 +405,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **정보기술**",
         "News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
-      "name": "삼성전기",
-      "ticker": "009150.KS",
-      "sector": "정보기술",
-      "metrics": {
-        "ret5": 16.704805491990847,
-        "ret20": 13.333333333333334,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 20,
-        "blogs": 10,
-        "sentiment": 0.10000000000000002,
-        "momentum": "very high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0"
-      },
-      "bullets": [
-        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**",
-        "Returns: 5d **16.7%**, 20d **13.3%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **정보기술**",
-        "News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0"
       ]
     },
     {
@@ -785,8 +785,8 @@
       "ticker": "FER",
       "sector": null,
       "metrics": {
-        "ret5": -1.097562861967386,
-        "ret20": -0.68881764124306,
+        "ret5": -1.5091431201177252,
+        "ret20": -1.1020988833967424,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -801,7 +801,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-1.1%**, 20d **-0.7%**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.5%**, 20d **-1.1%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=Ferrovial"
       ]
@@ -809,12 +809,12 @@
     {
       "market": "NASDAQ 100",
       "bucket": "aggressive",
-      "name": "MicroStrategy",
-      "ticker": "MSTR",
+      "name": "Insmed Incorporated",
+      "ticker": "INSM",
       "sector": null,
       "metrics": {
-        "ret5": -0.670789439076325,
-        "ret20": -13.411302612480455,
+        "ret5": -1.5443858801520856,
+        "ret20": -15.75992829403346,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -825,13 +825,13 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=MicroStrategy"
+        "searchUrl": "https://www.google.com/search?q=Insmed%20Incorporated"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.5%**, 20d **-15.8%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=MicroStrategy"
+        "News search: https://www.google.com/search?q=Insmed%20Incorporated"
       ]
     },
     {
@@ -869,8 +869,8 @@
       "ticker": "GOOGL",
       "sector": "Communication Services",
       "metrics": {
-        "ret5": -0.09544084769258086,
-        "ret20": -0.5573002055764422,
+        "ret5": -0.42945954423524557,
+        "ret20": -0.8897747317427459,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -885,7 +885,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.1%**, 20d **-0.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **-0.4%**, 20d **-0.9%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Communication Services**",
         "News search: https://www.google.com/search?q=Alphabet%20Inc."
@@ -1072,8 +1072,8 @@
       "ticker": "PHM",
       "sector": "Consumer Discretionary",
       "metrics": {
-        "ret5": 0.2981820682445392,
-        "ret20": -6.969576832974803,
+        "ret5": -0.10222790935020735,
+        "ret20": -7.340972494269966,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1088,7 +1088,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.3%**, 20d **-7.0%**; volatility (20d): **unknown**",
+        "Returns: 5d **-0.1%**, 20d **-7.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Consumer Discretionary**",
         "News search: https://www.google.com/search?q=PulteGroup"
@@ -1101,8 +1101,8 @@
       "ticker": "TROW",
       "sector": "Financial Services",
       "metrics": {
-        "ret5": -0.8699401998618305,
-        "ret20": 0.6392102776363962,
+        "ret5": -1.5860824235703779,
+        "ret20": -0.08783445517025307,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1117,7 +1117,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.9%**, 20d **0.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.6%**, 20d **-0.1%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Financial Services**",
         "News search: https://www.google.com/search?q=T.%20Rowe%20Price"
