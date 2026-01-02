@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-02T21:41:57+09:00 (KST)**
+- Generated: **2026-01-03T03:32:33+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -18,7 +18,7 @@
 **아프리카TV** (067160.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.4%**, 20d **-2.0%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **-3.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4TV
@@ -26,7 +26,7 @@
 **에코프로** (086520.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **3.7%**; volatility (20d): **unknown**
+- Returns: 5d **-9.2%**, 20d **-6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
@@ -65,6 +65,14 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=NHN%20KCP
 
+**상아프론테크** (089980.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **6.2%**, 20d **3.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%83%81%EC%95%84%ED%94%84%EB%A1%A0%ED%85%8C%ED%81%AC
+
 **오로스테크놀로지** (322310.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -73,21 +81,13 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%98%A4%EB%A1%9C%EC%8A%A4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
 
-**현대바이오** (048410.KQ)
+**이녹스** (088390.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **40.8%**, 20d **11.9%**; volatility (20d): **unknown**
+- Returns: 5d **-2.1%**, 20d **-16.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%94%EC%9D%B4%EC%98%A4
-
-**휴메딕스** (200670.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **-8.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EC%9D%B4%EB%85%B9%EC%8A%A4
 
 ## KOSPI
 
@@ -235,23 +235,23 @@
 **Ferrovial** (FER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.5%**, 20d **-1.1%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **-3.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Ferrovial
 
 **Insmed Incorporated** (INSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.5%**, 20d **-15.8%**; volatility (20d): **unknown**
+- Returns: 5d **-1.9%**, 20d **-15.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Insmed%20Incorporated
 
-**Zscaler** (ZS)
+**MicroStrategy** (MSTR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Zscaler
+- News search: https://www.google.com/search?q=MicroStrategy
 
 ## S&P 500
 
@@ -281,14 +281,6 @@
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=McKesson%20Corporation
 
-**Microsoft** (MSFT)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **-1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Microsoft
-
 **NextEra Energy** (NEE)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -297,7 +289,23 @@
 - Sector: **Utilities**
 - News search: https://www.google.com/search?q=NextEra%20Energy
 
+**Nvidia** (NVDA)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.5%**, 20d **1.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Nvidia
+
 ### AGGRESSIVE (5)
+
+**C.H. Robinson** (CHRW)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **5.8%**, 20d **31.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=C.H.%20Robinson
 
 **Campbell's Company (The)** (CPB)
 
@@ -315,14 +323,6 @@
 - Sector: **Energy**
 - News search: https://www.google.com/search?q=Devon%20Energy
 
-**Hubbell Incorporated** (HUBB)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **3.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Hubbell%20Incorporated
-
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -334,7 +334,7 @@
 **Universal Health Services** (UHS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **-8.7%**; volatility (20d): **unknown**
+- Returns: 5d **-3.9%**, 20d **-5.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Universal%20Health%20Services
