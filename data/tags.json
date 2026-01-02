@@ -1,1149 +1,439 @@
 {
+  "generatedAt": "2026-01-02T06:33:54.383Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-02",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Stock Market Briefing December",
-      "term_ko": "증시 브리핑 12월",
-      "significance_score": 672,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 12월",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 30일] 미국 주요 주식 지수 대체로 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195600"
-            },
-            {
-              "title": "[미국 증시 브리핑 · 12월 31일] 미국 주요 지수 보합세로 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195619"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%2012%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 30일] 미국 주요 주식 지수 대체로 보합세",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195600",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "[미국 증시 브리핑 · 12월 31일] 미국 주요 지수 보합세로 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195619",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 12월"
     },
     {
       "term": "Cryptocurrency Industry Round 2",
-      "term_ko": "암호화폐 산업 2차전",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "암호화폐 산업 2차전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "월가 거물 vs 암호화폐 산업, 2차전 돌입?...\"소송 피할 수 없어\"",
-              "link": "http://coinreaders.com/206965"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EC%82%B0%EC%97%85%202%EC%B0%A8%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EC%82%B0%EC%97%85%202%EC%B0%A8%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 거물 vs 암호화폐 산업, 2차전 돌입?...\"소송 피할 수 없어\"",
-          "summary": "",
-          "link": "http://coinreaders.com/206965",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "암호화폐 산업 2차전"
     },
     {
-      "term": "30 Day US Major",
-      "term_ko": "30일 미국 주요",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "30일 미국 주요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 30일] 미국 주요 주식 지수 대체로 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195600"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=30%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=30%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 30일] 미국 주요 주식 지수 대체로 보합세",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195600",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "30 Day Us Major",
+      "term_ko": "30일 미국 주요"
     },
     {
-      "term": "31 Days US Major",
-      "term_ko": "31일 미국 주요",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "31일 미국 주요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 31일] 미국 주요 지수 보합세로 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195619"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=31%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=31%EC%9D%BC%20%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 31일] 미국 주요 지수 보합세로 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195619",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "31 Days Us Major",
+      "term_ko": "31일 미국 주요"
     },
     {
-      "term": "Domestic gold price in the 770,000s",
-      "term_ko": "국내 금값 77만원대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국내 금값 77만원대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오늘의 금시세] 환율 하락과 차익실현 매물…국내 금값 77만원대 '숨고...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15923457"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%2077%EB%A7%8C%EC%9B%90%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%2077%EB%A7%8C%EC%9B%90%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 금시세] 환율 하락과 차익실현 매물…국내 금값 77만원대 '숨고...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15923457",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Domestic Gold Price in the 770,000s",
+      "term_ko": "국내 금값 77만원대"
     },
     {
-      "term": "Apartment prices increased 8.71% in the last year",
-      "term_ko": "아파트값 작년 8.71%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아파트값 작년 8.71%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "서울 아파트값 작년 8.71% 폭등... 2006년 이후 19년 만에 '최고치'",
-              "link": "https://www.insight.co.kr/news/536032"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%ED%8C%8C%ED%8A%B8%EA%B0%92%20%EC%9E%91%EB%85%84%208.71%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%ED%8C%8C%ED%8A%B8%EA%B0%92%20%EC%9E%91%EB%85%84%208.71%25"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 아파트값 작년 8.71% 폭등... 2006년 이후 19년 만에 '최고치'",
-          "summary": "",
-          "link": "https://www.insight.co.kr/news/536032",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Apartment Prices Increased 8.71% in the Last Year",
+      "term_ko": "아파트값 작년 8.71%"
     },
     {
-      "term": "19-year high",
-      "term_ko": "19년 만에 최고치",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "19년 만에 최고치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "서울 아파트값 작년 8.71% 폭등... 2006년 이후 19년 만에 '최고치'",
-              "link": "https://www.insight.co.kr/news/536032"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=19%EB%85%84%20%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=19%EB%85%84%20%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 아파트값 작년 8.71% 폭등... 2006년 이후 19년 만에 '최고치'",
-          "summary": "",
-          "link": "https://www.insight.co.kr/news/536032",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "19-year High",
+      "term_ko": "19년 만에 최고치"
     },
     {
-      "term": "Electric car Senic 800,000 won",
-      "term_ko": "전기차 세닉 800만원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전기차 세닉 800만원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "르노코리아, 전기차 세닉 800만원·그랑 콜레오스 420만원 할인 혜택..소...",
-              "link": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=60284"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EA%B8%B0%EC%B0%A8%20%EC%84%B8%EB%8B%89%20800%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EA%B8%B0%EC%B0%A8%20%EC%84%B8%EB%8B%89%20800%EB%A7%8C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "르노코리아, 전기차 세닉 800만원·그랑 콜레오스 420만원 할인 혜택..소...",
-          "summary": "",
-          "link": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=60284",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Electric Car Senic 800,000 Won",
+      "term_ko": "전기차 세닉 800만원"
     },
     {
-      "term": "Gran Corleos 420,000 won",
-      "term_ko": "그랑 콜레오스 420만원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "그랑 콜레오스 420만원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "르노코리아, 전기차 세닉 800만원·그랑 콜레오스 420만원 할인 혜택..소...",
-              "link": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=60284"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%B8%EB%9E%91%20%EC%BD%9C%EB%A0%88%EC%98%A4%EC%8A%A4%20420%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%B8%EB%9E%91%20%EC%BD%9C%EB%A0%88%EC%98%A4%EC%8A%A4%20420%EB%A7%8C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "르노코리아, 전기차 세닉 800만원·그랑 콜레오스 420만원 할인 혜택..소...",
-          "summary": "",
-          "link": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=60284",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gran Corleos 420,000 Won",
+      "term_ko": "그랑 콜레오스 420만원"
     },
     {
-      "term": "Changyong Lee 1.8% this year",
-      "term_ko": "이창용 올해 1.8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이창용 올해 1.8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "이창용 \"올해 1.8% 성장할듯. IT 빼면 1.4%\"",
-              "link": "https://www.viewsnnews.com/article?q=232631"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%EC%98%AC%ED%95%B4%201.8%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%EC%98%AC%ED%95%B4%201.8%25"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 \"올해 1.8% 성장할듯. IT 빼면 1.4%\"",
-          "summary": "",
-          "link": "https://www.viewsnnews.com/article?q=232631",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Changyong Lee 1.8% This Year",
+      "term_ko": "이창용 올해 1.8%"
     },
     {
-      "term": "First trading day in 2026",
-      "term_ko": "2026년 첫 거래일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2026년 첫 거래일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "2026년 첫 거래일 코스피 사상 최고치",
-              "link": "https://sateconomy.co.kr/news/view/1065575474206798"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2026%EB%85%84%20%EC%B2%AB%20%EA%B1%B0%EB%9E%98%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2026%EB%85%84%20%EC%B2%AB%20%EA%B1%B0%EB%9E%98%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "2026년 첫 거래일 코스피 사상 최고치",
-          "summary": "",
-          "link": "https://sateconomy.co.kr/news/view/1065575474206798",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "First Trading Day in 2026",
+      "term_ko": "2026년 첫 거래일"
     },
     {
-      "term": "Week 47 of the bull rally",
-      "term_ko": "상승 랠리 47주째",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 랠리 47주째",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[위클리오늘] 서울 아파트값 상승 랠리 47주째…연간 상승률 '통계 이래...",
-              "link": "http://www.weeklytoday.com/news/articleView.html?idxno=749338"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EB%9E%A0%EB%A6%AC%2047%EC%A3%BC%EC%A7%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EB%9E%A0%EB%A6%AC%2047%EC%A3%BC%EC%A7%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[위클리오늘] 서울 아파트값 상승 랠리 47주째…연간 상승률 '통계 이래...",
-          "summary": "",
-          "link": "http://www.weeklytoday.com/news/articleView.html?idxno=749338",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Week 47 of the Bull Rally",
+      "term_ko": "상승 랠리 47주째"
     },
     {
       "term": "Unavoidable",
-      "term_ko": "피할 수 없어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "피할 수 없어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "월가 거물 vs 암호화폐 산업, 2차전 돌입?...\"소송 피할 수 없어\"",
-              "link": "http://coinreaders.com/206965"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%BC%ED%95%A0%20%EC%88%98%20%EC%97%86%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%BC%ED%95%A0%20%EC%88%98%20%EC%97%86%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 거물 vs 암호화폐 산업, 2차전 돌입?...\"소송 피할 수 없어\"",
-          "summary": "",
-          "link": "http://coinreaders.com/206965",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "피할 수 없어"
     },
     {
-      "term": "Index closes flat",
-      "term_ko": "지수 보합세로 마감",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지수 보합세로 마감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 12월 31일] 미국 주요 지수 보합세로 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195619"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%88%98%20%EB%B3%B4%ED%95%A9%EC%84%B8%EB%A1%9C%20%EB%A7%88%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%88%98%20%EB%B3%B4%ED%95%A9%EC%84%B8%EB%A1%9C%20%EB%A7%88%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 12월 31일] 미국 주요 지수 보합세로 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195619",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Index Closes Flat",
+      "term_ko": "지수 보합세로 마감"
     },
     {
       "term": "Today's Gold Market Rates",
-      "term_ko": "오늘의 금시세 환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금시세 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오늘의 금시세] 환율 하락과 차익실현 매물…국내 금값 77만원대 '숨고...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15923457"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 금시세] 환율 하락과 차익실현 매물…국내 금값 77만원대 '숨고...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15923457",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 금시세 환율"
     },
     {
-      "term": "Dips and take-profit sales",
-      "term_ko": "하락과 차익실현 매물",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락과 차익실현 매물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오늘의 금시세] 환율 하락과 차익실현 매물…국내 금값 77만원대 '숨고...",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=15923457"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%EA%B3%BC%20%EC%B0%A8%EC%9D%B5%EC%8B%A4%ED%98%84%20%EB%A7%A4%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%EA%B3%BC%20%EC%B0%A8%EC%9D%B5%EC%8B%A4%ED%98%84%20%EB%A7%A4%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[오늘의 금시세] 환율 하락과 차익실현 매물…국내 금값 77만원대 '숨고...",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=15923457",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dips and Take-profit Sales",
+      "term_ko": "하락과 차익실현 매물"
     },
     {
-      "term": "KOSPI all-time high",
-      "term_ko": "코스피 사상 최고치",
-      "significance_score": 322,
-      "mentions": 184,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 사상 최고치",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-29",
-              "timestamp": 1766934000000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-30",
-              "timestamp": 1767020400000,
-              "value": 84.21052
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "2026년 첫 거래일 코스피 사상 최고치",
-              "link": "https://sateconomy.co.kr/news/view/1065575474206798"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EA%B3%A0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EA%B3%A0%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "2026년 첫 거래일 코스피 사상 최고치",
-          "summary": "",
-          "link": "https://sateconomy.co.kr/news/view/1065575474206798",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 184.2105,
-        "weekly_average_volume": 92.1053,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.026903,
-        "time_weight": 0.012112,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1767020400000
-      }
+      "term": "Kospi All-time High",
+      "term_ko": "코스피 사상 최고치"
     },
     {
-      "term": "WeeklyToday Seoul Apartment Prices",
-      "term_ko": "위클리오늘 서울 아파트값",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "위클리오늘 서울 아파트값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[위클리오늘] 서울 아파트값 상승 랠리 47주째…연간 상승률 '통계 이래...",
-              "link": "http://www.weeklytoday.com/news/articleView.html?idxno=749338"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%ED%81%B4%EB%A6%AC%EC%98%A4%EB%8A%98%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%ED%81%B4%EB%A6%AC%EC%98%A4%EB%8A%98%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "[위클리오늘] 서울 아파트값 상승 랠리 47주째…연간 상승률 '통계 이래...",
-          "summary": "",
-          "link": "http://www.weeklytoday.com/news/articleView.html?idxno=749338",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Weeklytoday Seoul Apartment Prices",
+      "term_ko": "위클리오늘 서울 아파트값"
     },
     {
-      "term": "Annualized growth statistics",
-      "term_ko": "연간 상승률 통계",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연간 상승률 통계",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[위클리오늘] 서울 아파트값 상승 랠리 47주째…연간 상승률 '통계 이래...",
-              "link": "http://www.weeklytoday.com/news/articleView.html?idxno=749338"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EA%B0%84%20%EC%83%81%EC%8A%B9%EB%A5%A0%20%ED%86%B5%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EA%B0%84%20%EC%83%81%EC%8A%B9%EB%A5%A0%20%ED%86%B5%EA%B3%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[위클리오늘] 서울 아파트값 상승 랠리 47주째…연간 상승률 '통계 이래...",
-          "summary": "",
-          "link": "http://www.weeklytoday.com/news/articleView.html?idxno=749338",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Annualized Growth Statistics",
+      "term_ko": "연간 상승률 통계"
     },
     {
-      "term": "Google Accelerates AI",
-      "term_ko": "Google, AI 가속화",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Google Accelerates AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Google Accelerates AI Infrastructure With Ironwood TPU Expansion in 2026",
-              "link": "https://www.econotimes.com/Google-Accelerates-AI-Infrastructure-With-Ironwood-TPU-Expansion-in-2026-1729916"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Google%20Accelerates%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Google%20Accelerates%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Google Accelerates AI Infrastructure With Ironwood TPU Expansion in 2026",
-          "summary": "",
-          "link": "https://www.econotimes.com/Google-Accelerates-AI-Infrastructure-With-Ironwood-TPU-Expansion-in-2026-1729916",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Google Accelerates Ai",
+      "term_ko": "Google, AI 가속화"
     },
     {
-      "term": "Ironwood TPU Expansion",
-      "term_ko": "아이언우드 TPU 확장",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Ironwood TPU Expansion",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Google Accelerates AI Infrastructure With Ironwood TPU Expansion in 2026",
-              "link": "https://www.econotimes.com/Google-Accelerates-AI-Infrastructure-With-Ironwood-TPU-Expansion-in-2026-1729916"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Ironwood%20TPU%20Expansion",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Ironwood%20TPU%20Expansion"
-      },
-      "top_headlines": [
-        {
-          "title": "Google Accelerates AI Infrastructure With Ironwood TPU Expansion in 2026",
-          "summary": "",
-          "link": "https://www.econotimes.com/Google-Accelerates-AI-Infrastructure-With-Ironwood-TPU-Expansion-in-2026-1729916",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ironwood Tpu Expansion",
+      "term_ko": "아이언우드 TPU 확장"
     },
     {
       "term": "Subtract 1.4",
-      "term_ko": "빼면 1.4%",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빼면 1.4%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "이창용 \"올해 1.8% 성장할듯. IT 빼면 1.4%\"",
-              "link": "https://www.viewsnnews.com/article?q=232631"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%BC%EB%A9%B4%201.4%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%BC%EB%A9%B4%201.4%25"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 \"올해 1.8% 성장할듯. IT 빼면 1.4%\"",
-          "summary": "",
-          "link": "https://www.viewsnnews.com/article?q=232631",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "빼면 1.4%"
     },
     {
-      "term": "Wall Street tycoons",
-      "term_ko": "월가 거물",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "월가 거물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "월가 거물 vs 암호화폐 산업, 2차전 돌입?...\"소송 피할 수 없어\"",
-              "link": "http://coinreaders.com/206965"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EA%B0%80%20%EA%B1%B0%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EA%B0%80%20%EA%B1%B0%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 거물 vs 암호화폐 산업, 2차전 돌입?...\"소송 피할 수 없어\"",
-          "summary": "",
-          "link": "http://coinreaders.com/206965",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Wall Street Tycoons",
+      "term_ko": "월가 거물"
     },
     {
       "term": "Delivery Hours Respecting",
-      "term_ko": "배송 시간 준수",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Delivery Hours Respecting",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Delivery hours: Respecting the right to work and public convenience",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082474?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Delivery%20Hours%20Respecting",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Delivery%20Hours%20Respecting"
-      },
-      "top_headlines": [
-        {
-          "title": "Delivery hours: Respecting the right to work and public convenience",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082474?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "배송 시간 준수"
     },
     {
       "term": "Public Convenience",
-      "term_ko": "대중의 편의성",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Public Convenience",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Delivery hours: Respecting the right to work and public convenience",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082474?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Public%20Convenience",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Public%20Convenience"
-      },
-      "top_headlines": [
-        {
-          "title": "Delivery hours: Respecting the right to work and public convenience",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082474?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대중의 편의성"
     },
     {
       "term": "Must Adapt",
-      "term_ko": "적응해야 함",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Must Adapt",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "The Global Economy Must Adapt to Avoid Tumult This Year",
-              "link": "https://www.nytimes.com/2026/01/01/opinion/global-economy-public-private-sectors.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Must%20Adapt",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Must%20Adapt"
-      },
-      "top_headlines": [
-        {
-          "title": "The Global Economy Must Adapt to Avoid Tumult This Year",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/01/opinion/global-economy-public-private-sectors.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "적응해야 함"
     },
     {
       "term": "Avoid Tumult",
-      "term_ko": "소란 피하기",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Avoid Tumult",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "The Global Economy Must Adapt to Avoid Tumult This Year",
-              "link": "https://www.nytimes.com/2026/01/01/opinion/global-economy-public-private-sectors.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Avoid%20Tumult",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Avoid%20Tumult"
-      },
-      "top_headlines": [
-        {
-          "title": "The Global Economy Must Adapt to Avoid Tumult This Year",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/01/opinion/global-economy-public-private-sectors.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소란 피하기"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-02T10:32:59+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-02T01:34:10.031Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-02T10:32:59+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Stock Market Briefing December",
+      "term_ko": "증시 브리핑 12월"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-02T10:32:59+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-02T10:32:59+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Cryptocurrency Industry Round 2",
+      "term_ko": "암호화폐 산업 2차전"
+    },
+    {
+      "term": "30 Day Us Major",
+      "term_ko": "30일 미국 주요"
+    },
+    {
+      "term": "31 Days Us Major",
+      "term_ko": "31일 미국 주요"
+    },
+    {
+      "term": "Domestic Gold Price in the 770,000s",
+      "term_ko": "국내 금값 77만원대"
+    },
+    {
+      "term": "Apartment Prices Increased 8.71% in the Last Year",
+      "term_ko": "아파트값 작년 8.71%"
+    },
+    {
+      "term": "19-year High",
+      "term_ko": "19년 만에 최고치"
+    },
+    {
+      "term": "Electric Car Senic 800,000 Won",
+      "term_ko": "전기차 세닉 800만원"
+    },
+    {
+      "term": "Gran Corleos 420,000 Won",
+      "term_ko": "그랑 콜레오스 420만원"
+    },
+    {
+      "term": "Changyong Lee 1.8% This Year",
+      "term_ko": "이창용 올해 1.8%"
+    },
+    {
+      "term": "First Trading Day in 2026",
+      "term_ko": "2026년 첫 거래일"
+    },
+    {
+      "term": "Week 47 of the Bull Rally",
+      "term_ko": "상승 랠리 47주째"
+    },
+    {
+      "term": "Unavoidable",
+      "term_ko": "피할 수 없어"
+    },
+    {
+      "term": "Index Closes Flat",
+      "term_ko": "지수 보합세로 마감"
+    },
+    {
+      "term": "Today's Gold Market Rates",
+      "term_ko": "오늘의 금시세 환율"
+    },
+    {
+      "term": "Dips and Take-profit Sales",
+      "term_ko": "하락과 차익실현 매물"
+    },
+    {
+      "term": "Kospi All-time High",
+      "term_ko": "코스피 사상 최고치"
+    },
+    {
+      "term": "Weeklytoday Seoul Apartment Prices",
+      "term_ko": "위클리오늘 서울 아파트값"
+    },
+    {
+      "term": "Annualized Growth Statistics",
+      "term_ko": "연간 상승률 통계"
+    },
+    {
+      "term": "Google Accelerates Ai",
+      "term_ko": "Google, AI 가속화"
+    },
+    {
+      "term": "Ironwood Tpu Expansion",
+      "term_ko": "아이언우드 TPU 확장"
+    },
+    {
+      "term": "Subtract 1.4",
+      "term_ko": "빼면 1.4%"
+    },
+    {
+      "term": "Wall Street Tycoons",
+      "term_ko": "월가 거물"
+    },
+    {
+      "term": "Delivery Hours Respecting",
+      "term_ko": "배송 시간 준수"
+    },
+    {
+      "term": "Public Convenience",
+      "term_ko": "대중의 편의성"
+    },
+    {
+      "term": "Must Adapt",
+      "term_ko": "적응해야 함"
+    },
+    {
+      "term": "Avoid Tumult",
+      "term_ko": "소란 피하기"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Stock Market Briefing December": {
+      "en": "Stock Market Briefing December",
+      "ko": "증시 브리핑 12월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Cryptocurrency Industry Round 2": {
+      "en": "Cryptocurrency Industry Round 2",
+      "ko": "암호화폐 산업 2차전",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "30 Day Us Major": {
+      "en": "30 Day Us Major",
+      "ko": "30일 미국 주요",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "31 Days Us Major": {
+      "en": "31 Days Us Major",
+      "ko": "31일 미국 주요",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Domestic Gold Price in the 770,000s": {
+      "en": "Domestic Gold Price in the 770,000s",
+      "ko": "국내 금값 77만원대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Apartment Prices Increased 8.71% in the Last Year": {
+      "en": "Apartment Prices Increased 8.71% in the Last Year",
+      "ko": "아파트값 작년 8.71%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "19-year High": {
+      "en": "19-year High",
+      "ko": "19년 만에 최고치",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Electric Car Senic 800,000 Won": {
+      "en": "Electric Car Senic 800,000 Won",
+      "ko": "전기차 세닉 800만원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Gran Corleos 420,000 Won": {
+      "en": "Gran Corleos 420,000 Won",
+      "ko": "그랑 콜레오스 420만원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Changyong Lee 1.8% This Year": {
+      "en": "Changyong Lee 1.8% This Year",
+      "ko": "이창용 올해 1.8%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "First Trading Day in 2026": {
+      "en": "First Trading Day in 2026",
+      "ko": "2026년 첫 거래일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Week 47 of the Bull Rally": {
+      "en": "Week 47 of the Bull Rally",
+      "ko": "상승 랠리 47주째",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Unavoidable": {
+      "en": "Unavoidable",
+      "ko": "피할 수 없어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Index Closes Flat": {
+      "en": "Index Closes Flat",
+      "ko": "지수 보합세로 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Today's Gold Market Rates": {
+      "en": "Today's Gold Market Rates",
+      "ko": "오늘의 금시세 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Dips and Take-profit Sales": {
+      "en": "Dips and Take-profit Sales",
+      "ko": "하락과 차익실현 매물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Kospi All-time High": {
+      "en": "Kospi All-time High",
+      "ko": "코스피 사상 최고치",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Weeklytoday Seoul Apartment Prices": {
+      "en": "Weeklytoday Seoul Apartment Prices",
+      "ko": "위클리오늘 서울 아파트값",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Annualized Growth Statistics": {
+      "en": "Annualized Growth Statistics",
+      "ko": "연간 상승률 통계",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Google Accelerates Ai": {
+      "en": "Google Accelerates Ai",
+      "ko": "Google, AI 가속화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Ironwood Tpu Expansion": {
+      "en": "Ironwood Tpu Expansion",
+      "ko": "아이언우드 TPU 확장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Subtract 1.4": {
+      "en": "Subtract 1.4",
+      "ko": "빼면 1.4%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Wall Street Tycoons": {
+      "en": "Wall Street Tycoons",
+      "ko": "월가 거물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Delivery Hours Respecting": {
+      "en": "Delivery Hours Respecting",
+      "ko": "배송 시간 준수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Public Convenience": {
+      "en": "Public Convenience",
+      "ko": "대중의 편의성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Must Adapt": {
+      "en": "Must Adapt",
+      "ko": "적응해야 함",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Avoid Tumult": {
+      "en": "Avoid Tumult",
+      "ko": "소란 피하기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-02T06:33:54.383Z"
     }
   }
 }
