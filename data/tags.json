@@ -1,1104 +1,425 @@
 {
-  "date": "2026-01-02",
+  "generatedAt": "2026-01-03T01:26:05.316Z",
+  "timezone": "Asia/Seoul",
+  "date": "2026-01-03",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Hit Record High",
-      "term_ko": "사상 최고치 달성",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hit Record High",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104"
-            },
-            {
-              "title": "(LEAD) S. Korea's KOSPI surges over 2 pct to hit record high on chip rall...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826298?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hit%20Record%20High",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hit%20Record%20High"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) S. Korea's KOSPI surges over 2 pct to hit record high on chip rall...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826298?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사상 최고치 달성"
     },
     {
-      "term": "KOSPI Surges",
-      "term_ko": "코스피 지수 급등",
-      "significance_score": 504,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Surges",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104"
-            },
-            {
-              "title": "(LEAD) S. Korea's KOSPI surges over 2 pct to hit record high on chip rall...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826298?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Surges",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Surges"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) S. Korea's KOSPI surges over 2 pct to hit record high on chip rall...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826298?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Surges",
+      "term_ko": "코스피 지수 급등"
     },
     {
-      "term": "NYSE Preview 2026",
-      "term_ko": "뉴욕증시 프리뷰 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 2026년 첫 거래일 주가 선물 강세...엔비디아·팔란티...",
-              "link": "https://www.newspim.com/news/view/20260102001038"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 2026년 첫 거래일 주가 선물 강세...엔비디아·팔란티...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260102001038",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview 2026",
+      "term_ko": "뉴욕증시 프리뷰 2026년"
     },
     {
-      "term": "Dollar to Korean won exchange rate 1445 won",
-      "term_ko": "달러-원 환율 1445원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러-원 환율 1445원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "달러-원 환율, 1,445원 부근 보합…유럽 경기 둔화가 변수",
-              "link": "https://www.tokenpost.kr/news/economy/320436"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%ED%99%98%EC%9C%A8%201445%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%ED%99%98%EC%9C%A8%201445%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "달러-원 환율, 1,445원 부근 보합…유럽 경기 둔화가 변수",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/320436",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar to Korean Won Exchange Rate 1445 Won",
+      "term_ko": "달러-원 환율 1445원"
     },
     {
       "term": "속 게걸음 1444.70원",
-      "term_ko": "속 게걸음 1444.70원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속 게걸음 1444.70원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "달러-원, 거래량 빈곤 속 '게걸음'…1,444.70원 마감",
-              "link": "https://www.tfmedia.co.kr/news/article.html?no=199839"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EA%B2%8C%EA%B1%B8%EC%9D%8C%201444.70%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EA%B2%8C%EA%B1%B8%EC%9D%8C%201444.70%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "달러-원, 거래량 빈곤 속 '게걸음'…1,444.70원 마감",
-          "summary": "",
-          "link": "https://www.tfmedia.co.kr/news/article.html?no=199839",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "속 게걸음 1444.70원"
     },
     {
-      "term": "Japaneseization of capital 1500 yen",
-      "term_ko": "자본의 일본화 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자본의 일본화 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“자본의 일본화, 1500원 터치” “반도체 호황, 1300원대로”",
-              "link": "https://n.news.naver.com/mnews/article/353/0000054183?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%B3%B8%EC%9D%98%20%EC%9D%BC%EB%B3%B8%ED%99%94%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%B3%B8%EC%9D%98%20%EC%9D%BC%EB%B3%B8%ED%99%94%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "“자본의 일본화, 1500원 터치” “반도체 호황, 1300원대로”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/353/0000054183?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Japaneseization of Capital 1500 Yen",
+      "term_ko": "자본의 일본화 1500원"
     },
     {
-      "term": "0.1 percentage points on home equity loans",
-      "term_ko": "보금자리론 금리 0.1%p",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보금자리론 금리 0.1%p",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "제로에너지건축물, 보금자리론 금리 0.1%p 우대 적용",
-              "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2045318"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%20%EA%B8%88%EB%A6%AC%200.1%25p",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%20%EA%B8%88%EB%A6%AC%200.1%25p"
-      },
-      "top_headlines": [
-        {
-          "title": "제로에너지건축물, 보금자리론 금리 0.1%p 우대 적용",
-          "summary": "",
-          "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2045318",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "0.1 Percentage Points on Home Equity Loans",
+      "term_ko": "보금자리론 금리 0.1%p"
     },
     {
-      "term": "Today's Gold Price QuotesJanuary 3, 2019",
-      "term_ko": "오늘의 금값시세1월 3일자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세1월 3일자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(1월 3일자) \"금값 상승세, 2026년 전망은\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3472402"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B81%EC%9B%94%203%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B81%EC%9B%94%203%EC%9D%BC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(1월 3일자) \"금값 상승세, 2026년 전망은\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3472402",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Today's Gold Price Quotesjanuary 3, 2019",
+      "term_ko": "오늘의 금값시세1월 3일자"
     },
     {
       "term": "Gold Price Rally 2026",
-      "term_ko": "금값 상승세 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값 상승세 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(1월 3일자) \"금값 상승세, 2026년 전망은\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3472402"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%EC%83%81%EC%8A%B9%EC%84%B8%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%EC%83%81%EC%8A%B9%EC%84%B8%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(1월 3일자) \"금값 상승세, 2026년 전망은\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3472402",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금값 상승세 2026년"
     },
     {
-      "term": "US Cryptocurrency Regulation",
-      "term_ko": "美 암호화폐 규제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 암호화폐 규제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-              "link": "https://www.tokenpost.kr/news/policy/320434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EA%B7%9C%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EA%B7%9C%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/policy/320434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Cryptocurrency Regulation",
+      "term_ko": "美 암호화폐 규제"
     },
     {
-      "term": "Trump administration policies",
-      "term_ko": "트럼프 행정부 정책",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "트럼프 행정부 정책",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-              "link": "https://www.tokenpost.kr/news/policy/320434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%96%89%EC%A0%95%EB%B6%80%20%EC%A0%95%EC%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%96%89%EC%A0%95%EB%B6%80%20%EC%A0%95%EC%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/policy/320434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump Administration Policies",
+      "term_ko": "트럼프 행정부 정책"
     },
     {
       "term": "Neutral Europe",
-      "term_ko": "부근 보합 유럽",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부근 보합 유럽",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "달러-원 환율, 1,445원 부근 보합…유럽 경기 둔화가 변수",
-              "link": "https://www.tokenpost.kr/news/economy/320436"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EA%B7%BC%20%EB%B3%B4%ED%95%A9%20%EC%9C%A0%EB%9F%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EA%B7%BC%20%EB%B3%B4%ED%95%A9%20%EC%9C%A0%EB%9F%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "달러-원 환율, 1,445원 부근 보합…유럽 경기 둔화가 변수",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/320436",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부근 보합 유럽"
     },
     {
-      "term": "Slowdown is a variable",
-      "term_ko": "경기 둔화가 변수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경기 둔화가 변수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "달러-원 환율, 1,445원 부근 보합…유럽 경기 둔화가 변수",
-              "link": "https://www.tokenpost.kr/news/economy/320436"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B8%B0%20%EB%91%94%ED%99%94%EA%B0%80%20%EB%B3%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B8%B0%20%EB%91%94%ED%99%94%EA%B0%80%20%EB%B3%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "달러-원 환율, 1,445원 부근 보합…유럽 경기 둔화가 변수",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/320436",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Slowdown Is a Variable",
+      "term_ko": "경기 둔화가 변수"
     },
     {
-      "term": "Dollar-Yuan Volume Poverty",
-      "term_ko": "달러-원 거래량 빈곤",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러-원 거래량 빈곤",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "달러-원, 거래량 빈곤 속 '게걸음'…1,444.70원 마감",
-              "link": "https://www.tfmedia.co.kr/news/article.html?no=199839"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%EA%B1%B0%EB%9E%98%EB%9F%89%20%EB%B9%88%EA%B3%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%EA%B1%B0%EB%9E%98%EB%9F%89%20%EB%B9%88%EA%B3%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "달러-원, 거래량 빈곤 속 '게걸음'…1,444.70원 마감",
-          "summary": "",
-          "link": "https://www.tfmedia.co.kr/news/article.html?no=199839",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar-yuan Volume Poverty",
+      "term_ko": "달러-원 거래량 빈곤"
     },
     {
-      "term": "Lee Chang-yong The Korea Economic Daily K-shaped",
-      "term_ko": "이창용 한국경제 K자형",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이창용 한국경제 K자형",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이창용 “한국경제 ‘K자형 회복’ 우려… 원화 휴지조각 된다는건 유튜...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003686485?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%20K%EC%9E%90%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%20K%EC%9E%90%ED%98%95"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 “한국경제 ‘K자형 회복’ 우려… 원화 휴지조각 된다는건 유튜...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003686485?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lee Chang-yong the Korea Economic Daily K-shaped",
+      "term_ko": "이창용 한국경제 K자형"
     },
     {
-      "term": "KRW recovery concerns",
-      "term_ko": "회복 우려 원화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회복 우려 원화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이창용 “한국경제 ‘K자형 회복’ 우려… 원화 휴지조각 된다는건 유튜...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003686485?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EB%B3%B5%20%EC%9A%B0%EB%A0%A4%20%EC%9B%90%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EB%B3%B5%20%EC%9A%B0%EB%A0%A4%20%EC%9B%90%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 “한국경제 ‘K자형 회복’ 우려… 원화 휴지조각 된다는건 유튜...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003686485?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Krw Recovery Concerns",
+      "term_ko": "회복 우려 원화"
     },
     {
-      "term": "LD S Koreas",
-      "term_ko": "LD S 코리아",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LD S Koreas",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20S%20Koreas",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20S%20Koreas"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ld S Koreas",
+      "term_ko": "LD S 코리아"
     },
     {
-      "term": "LEAD S Koreas",
-      "term_ko": "한국 리드",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD S Koreas",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) S. Korea's KOSPI surges over 2 pct to hit record high on chip rall...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826298?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20S%20Koreas",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20S%20Koreas"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) S. Korea's KOSPI surges over 2 pct to hit record high on chip rall...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826298?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead S Koreas",
+      "term_ko": "한국 리드"
     },
     {
-      "term": "KOSPI Reaches New",
-      "term_ko": "코스피 신기록 달성",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Reaches New",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Reaches New High on First Trading Day on Twin Rally of Samsung Elec...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Reaches%20New",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Reaches%20New"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Reaches New High on First Trading Day on Twin Rally of Samsung Elec...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Reaches New",
+      "term_ko": "코스피 신기록 달성"
     },
     {
-      "term": "Being trashed means",
-      "term_ko": "휴지조각 된다는건",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "휴지조각 된다는건",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이창용 “한국경제 ‘K자형 회복’ 우려… 원화 휴지조각 된다는건 유튜...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003686485?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9C%B4%EC%A7%80%EC%A1%B0%EA%B0%81%20%EB%90%9C%EB%8B%A4%EB%8A%94%EA%B1%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9C%B4%EC%A7%80%EC%A1%B0%EA%B0%81%20%EB%90%9C%EB%8B%A4%EB%8A%94%EA%B1%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 “한국경제 ‘K자형 회복’ 우려… 원화 휴지조각 된다는건 유튜...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003686485?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Being Trashed Means",
+      "term_ko": "휴지조각 된다는건"
     },
     {
-      "term": "Apply preferential treatment",
-      "term_ko": "우대 적용",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우대 적용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "제로에너지건축물, 보금자리론 금리 0.1%p 우대 적용",
-              "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2045318"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%8C%80%20%EC%A0%81%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%8C%80%20%EC%A0%81%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "제로에너지건축물, 보금자리론 금리 0.1%p 우대 적용",
-          "summary": "",
-          "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2045318",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Apply Preferential Treatment",
+      "term_ko": "우대 적용"
     },
     {
       "term": "2.27% Climb",
-      "term_ko": "2.27% 상승",
-      "significance_score": 238,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2.27% Climb",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.27%25%20Climb",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.27%25%20Climb"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "2.27% 상승"
     },
     {
       "term": "Kospi Starts",
-      "term_ko": "코스피 시작",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Starts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Starts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Starts"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 시작"
     },
     {
       "term": "First Trading",
-      "term_ko": "첫 거래",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "First Trading",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Reaches New High on First Trading Day on Twin Rally of Samsung Elec...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=First%20Trading",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=First%20Trading"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Reaches New High on First Trading Day on Twin Rally of Samsung Elec...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "첫 거래"
     },
     {
       "term": "Twin Rally",
-      "term_ko": "트윈 랠리",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Twin Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Reaches New High on First Trading Day on Twin Rally of Samsung Elec...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Twin%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Twin%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Reaches New High on First Trading Day on Twin Rally of Samsung Elec...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "트윈 랠리"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T03:32:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-02T18:33:59.635Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-03T03:32:47+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Hit Record High",
+      "term_ko": "사상 최고치 달성"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-03T03:32:47+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-03T03:32:47+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Kospi Surges",
+      "term_ko": "코스피 지수 급등"
+    },
+    {
+      "term": "Nyse Preview 2026",
+      "term_ko": "뉴욕증시 프리뷰 2026년"
+    },
+    {
+      "term": "Dollar to Korean Won Exchange Rate 1445 Won",
+      "term_ko": "달러-원 환율 1445원"
+    },
+    {
+      "term": "속 게걸음 1444.70원",
+      "term_ko": "속 게걸음 1444.70원"
+    },
+    {
+      "term": "Japaneseization of Capital 1500 Yen",
+      "term_ko": "자본의 일본화 1500원"
+    },
+    {
+      "term": "0.1 Percentage Points on Home Equity Loans",
+      "term_ko": "보금자리론 금리 0.1%p"
+    },
+    {
+      "term": "Today's Gold Price Quotesjanuary 3, 2019",
+      "term_ko": "오늘의 금값시세1월 3일자"
+    },
+    {
+      "term": "Gold Price Rally 2026",
+      "term_ko": "금값 상승세 2026년"
+    },
+    {
+      "term": "Us Cryptocurrency Regulation",
+      "term_ko": "美 암호화폐 규제"
+    },
+    {
+      "term": "Trump Administration Policies",
+      "term_ko": "트럼프 행정부 정책"
+    },
+    {
+      "term": "Neutral Europe",
+      "term_ko": "부근 보합 유럽"
+    },
+    {
+      "term": "Slowdown Is a Variable",
+      "term_ko": "경기 둔화가 변수"
+    },
+    {
+      "term": "Dollar-yuan Volume Poverty",
+      "term_ko": "달러-원 거래량 빈곤"
+    },
+    {
+      "term": "Lee Chang-yong the Korea Economic Daily K-shaped",
+      "term_ko": "이창용 한국경제 K자형"
+    },
+    {
+      "term": "Krw Recovery Concerns",
+      "term_ko": "회복 우려 원화"
+    },
+    {
+      "term": "Ld S Koreas",
+      "term_ko": "LD S 코리아"
+    },
+    {
+      "term": "Lead S Koreas",
+      "term_ko": "한국 리드"
+    },
+    {
+      "term": "Kospi Reaches New",
+      "term_ko": "코스피 신기록 달성"
+    },
+    {
+      "term": "Being Trashed Means",
+      "term_ko": "휴지조각 된다는건"
+    },
+    {
+      "term": "Apply Preferential Treatment",
+      "term_ko": "우대 적용"
+    },
+    {
+      "term": "2.27% Climb",
+      "term_ko": "2.27% 상승"
+    },
+    {
+      "term": "Kospi Starts",
+      "term_ko": "코스피 시작"
+    },
+    {
+      "term": "First Trading",
+      "term_ko": "첫 거래"
+    },
+    {
+      "term": "Twin Rally",
+      "term_ko": "트윈 랠리"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Hit Record High": {
+      "en": "Hit Record High",
+      "ko": "사상 최고치 달성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Kospi Surges": {
+      "en": "Kospi Surges",
+      "ko": "코스피 지수 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Nyse Preview 2026": {
+      "en": "Nyse Preview 2026",
+      "ko": "뉴욕증시 프리뷰 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Dollar to Korean Won Exchange Rate 1445 Won": {
+      "en": "Dollar to Korean Won Exchange Rate 1445 Won",
+      "ko": "달러-원 환율 1445원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "속 게걸음 1444.70원": {
+      "en": "속 게걸음 1444.70원",
+      "ko": "속 게걸음 1444.70원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Japaneseization of Capital 1500 Yen": {
+      "en": "Japaneseization of Capital 1500 Yen",
+      "ko": "자본의 일본화 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "0.1 Percentage Points on Home Equity Loans": {
+      "en": "0.1 Percentage Points on Home Equity Loans",
+      "ko": "보금자리론 금리 0.1%p",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Today's Gold Price Quotesjanuary 3, 2019": {
+      "en": "Today's Gold Price Quotesjanuary 3, 2019",
+      "ko": "오늘의 금값시세1월 3일자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Gold Price Rally 2026": {
+      "en": "Gold Price Rally 2026",
+      "ko": "금값 상승세 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Us Cryptocurrency Regulation": {
+      "en": "Us Cryptocurrency Regulation",
+      "ko": "美 암호화폐 규제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Trump Administration Policies": {
+      "en": "Trump Administration Policies",
+      "ko": "트럼프 행정부 정책",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Neutral Europe": {
+      "en": "Neutral Europe",
+      "ko": "부근 보합 유럽",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Slowdown Is a Variable": {
+      "en": "Slowdown Is a Variable",
+      "ko": "경기 둔화가 변수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Dollar-yuan Volume Poverty": {
+      "en": "Dollar-yuan Volume Poverty",
+      "ko": "달러-원 거래량 빈곤",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Lee Chang-yong the Korea Economic Daily K-shaped": {
+      "en": "Lee Chang-yong the Korea Economic Daily K-shaped",
+      "ko": "이창용 한국경제 K자형",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Krw Recovery Concerns": {
+      "en": "Krw Recovery Concerns",
+      "ko": "회복 우려 원화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Ld S Koreas": {
+      "en": "Ld S Koreas",
+      "ko": "LD S 코리아",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Lead S Koreas": {
+      "en": "Lead S Koreas",
+      "ko": "한국 리드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Kospi Reaches New": {
+      "en": "Kospi Reaches New",
+      "ko": "코스피 신기록 달성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Being Trashed Means": {
+      "en": "Being Trashed Means",
+      "ko": "휴지조각 된다는건",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Apply Preferential Treatment": {
+      "en": "Apply Preferential Treatment",
+      "ko": "우대 적용",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "2.27% Climb": {
+      "en": "2.27% Climb",
+      "ko": "2.27% 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Kospi Starts": {
+      "en": "Kospi Starts",
+      "ko": "코스피 시작",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "First Trading": {
+      "en": "First Trading",
+      "ko": "첫 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Twin Rally": {
+      "en": "Twin Rally",
+      "ko": "트윈 랠리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T01:26:05.316Z"
     }
   }
 }
