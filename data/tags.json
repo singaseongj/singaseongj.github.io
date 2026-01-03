@@ -1,1005 +1,425 @@
 {
+  "generatedAt": "2026-01-03T06:31:33.096Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-03",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "MONEY Real Estate by Yunsup Kim",
-      "term_ko": "김윤섭의 MONEY 부동산",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김윤섭의 MONEY 부동산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[김윤섭의 MONEY! 부동산] 매매도 전세도 월세도 치솟는 시장...지금 집...",
-              "link": "https://www.ajunews.com/view/20260102095918395"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%9C%A4%EC%84%AD%EC%9D%98%20MONEY%20%EB%B6%80%EB%8F%99%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%9C%A4%EC%84%AD%EC%9D%98%20MONEY%20%EB%B6%80%EB%8F%99%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[김윤섭의 MONEY! 부동산] 매매도 전세도 월세도 치솟는 시장...지금 집...",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260102095918395",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Money Real Estate by Yunsup Kim",
+      "term_ko": "김윤섭의 MONEY 부동산"
     },
     {
-      "term": "NYSE Preview 2026",
-      "term_ko": "뉴욕증시 프리뷰 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 2026년 첫 거래일 주가 선물 강세...엔비디아·팔란티...",
-              "link": "https://www.newspim.com/news/view/20260102001038"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 2026년 첫 거래일 주가 선물 강세...엔비디아·팔란티...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260102001038",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview 2026",
+      "term_ko": "뉴욕증시 프리뷰 2026년"
     },
     {
-      "term": "Market price Bitcoin $90,000",
-      "term_ko": "시황 비트코인 9만달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시황 비트코인 9만달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시황] 비트코인 9만달러 회복...XRP 시총 4위 탈환",
-              "link": "http://coinreaders.com/207193"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%209%EB%A7%8C%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%209%EB%A7%8C%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[시황] 비트코인 9만달러 회복...XRP 시총 4위 탈환",
-          "summary": "",
-          "link": "http://coinreaders.com/207193",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Market Price Bitcoin $90,000",
+      "term_ko": "시황 비트코인 9만달러"
     },
     {
-      "term": "Reach #4 in market capitalization",
-      "term_ko": "시총 4위 탈환",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시총 4위 탈환",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시황] 비트코인 9만달러 회복...XRP 시총 4위 탈환",
-              "link": "http://coinreaders.com/207193"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%B4%9D%204%EC%9C%84%20%ED%83%88%ED%99%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%B4%9D%204%EC%9C%84%20%ED%83%88%ED%99%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[시황] 비트코인 9만달러 회복...XRP 시총 4위 탈환",
-          "summary": "",
-          "link": "http://coinreaders.com/207193",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reach #4 in Market Capitalization",
+      "term_ko": "시총 4위 탈환"
     },
     {
       "term": "King Dollar 2026",
-      "term_ko": "킹 달러론 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "킹 달러론 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "‘달러 폭망론’과 ‘킹 달러론’…2026년 원·달러 환율은[한상춘의 국...",
-              "link": "https://n.news.naver.com/mnews/article/050/0000100495?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%B9%20%EB%8B%AC%EB%9F%AC%EB%A1%A0%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%B9%20%EB%8B%AC%EB%9F%AC%EB%A1%A0%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "‘달러 폭망론’과 ‘킹 달러론’…2026년 원·달러 환율은[한상춘의 국...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000100495?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "킹 달러론 2026년"
     },
     {
       "term": "Current Iran in 2025-2026",
-      "term_ko": "2025~2026년 현 이란",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2025~2026년 현 이란",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2025~2026년 현 이란 시위의 원인, 시위를 부추기는 배경들",
-              "link": "http://www.breaknews.com/1173956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2025~2026%EB%85%84%20%ED%98%84%20%EC%9D%B4%EB%9E%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2025~2026%EB%85%84%20%ED%98%84%20%EC%9D%B4%EB%9E%80"
-      },
-      "top_headlines": [
-        {
-          "title": "2025~2026년 현 이란 시위의 원인, 시위를 부추기는 배경들",
-          "summary": "",
-          "link": "http://www.breaknews.com/1173956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "2025~2026년 현 이란"
     },
     {
-      "term": "US Cryptocurrency Regulation",
-      "term_ko": "美 암호화폐 규제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 암호화폐 규제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-              "link": "https://www.tokenpost.kr/news/policy/320434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EA%B7%9C%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90%20%EA%B7%9C%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/policy/320434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Cryptocurrency Regulation",
+      "term_ko": "美 암호화폐 규제"
     },
     {
-      "term": "Trump administration policies",
-      "term_ko": "트럼프 행정부 정책",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "트럼프 행정부 정책",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-              "link": "https://www.tokenpost.kr/news/policy/320434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%96%89%EC%A0%95%EB%B6%80%20%EC%A0%95%EC%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%96%89%EC%A0%95%EB%B6%80%20%EC%A0%95%EC%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "美 암호화폐 규제, 정치권 핵심 이슈로…트럼프 행정부 정책 변화에 업...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/policy/320434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump Administration Policies",
+      "term_ko": "트럼프 행정부 정책"
     },
     {
-      "term": "US currency Dollar Yen",
-      "term_ko": "미국환율 달러 엔화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국환율 달러 엔화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국환율 달러 엔화 등",
-              "link": "https://www.bntnews.co.kr/article/view/bnt202601030061"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%ED%99%98%EC%9C%A8%20%EB%8B%AC%EB%9F%AC%20%EC%97%94%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%ED%99%98%EC%9C%A8%20%EB%8B%AC%EB%9F%AC%20%EC%97%94%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "미국환율 달러 엔화 등",
-          "summary": "",
-          "link": "https://www.bntnews.co.kr/article/view/bnt202601030061",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Currency Dollar Yen",
+      "term_ko": "미국환율 달러 엔화"
     },
     {
-      "term": "Russian war and more",
-      "term_ko": "러시아 전쟁 등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "러시아 전쟁 등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘 금시세(금값) 1돈 가격은…러시아 전쟁 등 이슈 눈여겨봐야할 이유...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=548084"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9F%AC%EC%8B%9C%EC%95%84%20%EC%A0%84%EC%9F%81%20%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9F%AC%EC%8B%9C%EC%95%84%20%EC%A0%84%EC%9F%81%20%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘 금시세(금값) 1돈 가격은…러시아 전쟁 등 이슈 눈여겨봐야할 이유...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=548084",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Russian War and More",
+      "term_ko": "러시아 전쟁 등"
     },
     {
-      "term": "LD S Koreas",
-      "term_ko": "LD S 코리아",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LD S Koreas",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20S%20Koreas",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20S%20Koreas"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ld S Koreas",
+      "term_ko": "LD S 코리아"
     },
     {
       "term": "Inspiring Backgrounds",
-      "term_ko": "부추기는 배경들",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부추기는 배경들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2025~2026년 현 이란 시위의 원인, 시위를 부추기는 배경들",
-              "link": "http://www.breaknews.com/1173956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EC%B6%94%EA%B8%B0%EB%8A%94%20%EB%B0%B0%EA%B2%BD%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EC%B6%94%EA%B8%B0%EB%8A%94%20%EB%B0%B0%EA%B2%BD%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "2025~2026년 현 이란 시위의 원인, 시위를 부추기는 배경들",
-          "summary": "",
-          "link": "http://www.breaknews.com/1173956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부추기는 배경들"
     },
     {
-      "term": "Issues to watch for",
-      "term_ko": "이슈 눈여겨봐야할",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이슈 눈여겨봐야할",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘 금시세(금값) 1돈 가격은…러시아 전쟁 등 이슈 눈여겨봐야할 이유...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=548084"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%8A%88%20%EB%88%88%EC%97%AC%EA%B2%A8%EB%B4%90%EC%95%BC%ED%95%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%8A%88%20%EB%88%88%EC%97%AC%EA%B2%A8%EB%B4%90%EC%95%BC%ED%95%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘 금시세(금값) 1돈 가격은…러시아 전쟁 등 이슈 눈여겨봐야할 이유...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=548084",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Issues to Watch for",
+      "term_ko": "이슈 눈여겨봐야할"
     },
     {
       "term": "Bakery That Sold",
-      "term_ko": "팔린 베이커리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bakery That Sold",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-              "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bakery%20That%20Sold",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bakery%20That%20Sold"
-      },
-      "top_headlines": [
-        {
-          "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "팔린 베이커리"
     },
     {
       "term": "Vending Machines Closes",
-      "term_ko": "자동판매기 폐쇄",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Vending Machines Closes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-              "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Vending%20Machines%20Closes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Vending%20Machines%20Closes"
-      },
-      "top_headlines": [
-        {
-          "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자동판매기 폐쇄"
     },
     {
       "term": "Hit Record High",
-      "term_ko": "사상 최고치 달성",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hit Record High",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hit%20Record%20High",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hit%20Record%20High"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사상 최고치 달성"
     },
     {
-      "term": "KOSPI Surges",
-      "term_ko": "코스피 지수 급등",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Surges",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-              "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Surges",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Surges"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) S. Korea's KOSPI surges over 2 pct to hit record high on chip ra...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015826407?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Surges",
+      "term_ko": "코스피 지수 급등"
     },
     {
       "term": "2.27% Climb",
-      "term_ko": "2.27% 상승",
-      "significance_score": 238,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2.27% Climb",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.27%25%20Climb",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.27%25%20Climb"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "2.27% 상승"
     },
     {
       "term": "Sprinkles Cupcakes",
-      "term_ko": "스프링스 컵케이크",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sprinkles Cupcakes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-              "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sprinkles%20Cupcakes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sprinkles%20Cupcakes"
-      },
-      "top_headlines": [
-        {
-          "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "스프링스 컵케이크"
     },
     {
       "term": "Kospi Starts",
-      "term_ko": "코스피 시작",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Starts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Starts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Starts"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi starts 2026 bullish with 2.27% climb to surpass 4,300 mark for firs...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082520?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 시작"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
-      "term": "South Korean stocks rebound",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "South Korean Stocks Rebound",
+      "term_ko": "한국 증시 반등"
     },
     {
-      "term": "Ramping up semiconductor investments",
-      "term_ko": "반도체 투자 확대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 투자 확대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Ramping Up Semiconductor Investments",
+      "term_ko": "반도체 투자 확대"
     },
     {
-      "term": "AI chip race",
-      "term_ko": "인공지능 칩 경쟁",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인공지능 칩 경쟁",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-03T10:28:16+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Race",
+      "term_ko": "인공지능 칩 경쟁"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-03T01:29:27.047Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-03T10:28:16+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Money Real Estate by Yunsup Kim",
+      "term_ko": "김윤섭의 MONEY 부동산"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-03T10:28:16+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-03T10:28:16+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Nyse Preview 2026",
+      "term_ko": "뉴욕증시 프리뷰 2026년"
+    },
+    {
+      "term": "Market Price Bitcoin $90,000",
+      "term_ko": "시황 비트코인 9만달러"
+    },
+    {
+      "term": "Reach #4 in Market Capitalization",
+      "term_ko": "시총 4위 탈환"
+    },
+    {
+      "term": "King Dollar 2026",
+      "term_ko": "킹 달러론 2026년"
+    },
+    {
+      "term": "Current Iran in 2025-2026",
+      "term_ko": "2025~2026년 현 이란"
+    },
+    {
+      "term": "Us Cryptocurrency Regulation",
+      "term_ko": "美 암호화폐 규제"
+    },
+    {
+      "term": "Trump Administration Policies",
+      "term_ko": "트럼프 행정부 정책"
+    },
+    {
+      "term": "Us Currency Dollar Yen",
+      "term_ko": "미국환율 달러 엔화"
+    },
+    {
+      "term": "Russian War and More",
+      "term_ko": "러시아 전쟁 등"
+    },
+    {
+      "term": "Ld S Koreas",
+      "term_ko": "LD S 코리아"
+    },
+    {
+      "term": "Inspiring Backgrounds",
+      "term_ko": "부추기는 배경들"
+    },
+    {
+      "term": "Issues to Watch for",
+      "term_ko": "이슈 눈여겨봐야할"
+    },
+    {
+      "term": "Bakery That Sold",
+      "term_ko": "팔린 베이커리"
+    },
+    {
+      "term": "Vending Machines Closes",
+      "term_ko": "자동판매기 폐쇄"
+    },
+    {
+      "term": "Hit Record High",
+      "term_ko": "사상 최고치 달성"
+    },
+    {
+      "term": "Kospi Surges",
+      "term_ko": "코스피 지수 급등"
+    },
+    {
+      "term": "2.27% Climb",
+      "term_ko": "2.27% 상승"
+    },
+    {
+      "term": "Sprinkles Cupcakes",
+      "term_ko": "스프링스 컵케이크"
+    },
+    {
+      "term": "Kospi Starts",
+      "term_ko": "코스피 시작"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "South Korean Stocks Rebound",
+      "term_ko": "한국 증시 반등"
+    },
+    {
+      "term": "Ramping Up Semiconductor Investments",
+      "term_ko": "반도체 투자 확대"
+    },
+    {
+      "term": "Ai Chip Race",
+      "term_ko": "인공지능 칩 경쟁"
+    }
+  ],
+  "translations": {
+    "Money Real Estate by Yunsup Kim": {
+      "en": "Money Real Estate by Yunsup Kim",
+      "ko": "김윤섭의 MONEY 부동산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Nyse Preview 2026": {
+      "en": "Nyse Preview 2026",
+      "ko": "뉴욕증시 프리뷰 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Market Price Bitcoin $90,000": {
+      "en": "Market Price Bitcoin $90,000",
+      "ko": "시황 비트코인 9만달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Reach #4 in Market Capitalization": {
+      "en": "Reach #4 in Market Capitalization",
+      "ko": "시총 4위 탈환",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "King Dollar 2026": {
+      "en": "King Dollar 2026",
+      "ko": "킹 달러론 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Current Iran in 2025-2026": {
+      "en": "Current Iran in 2025-2026",
+      "ko": "2025~2026년 현 이란",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Us Cryptocurrency Regulation": {
+      "en": "Us Cryptocurrency Regulation",
+      "ko": "美 암호화폐 규제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Trump Administration Policies": {
+      "en": "Trump Administration Policies",
+      "ko": "트럼프 행정부 정책",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Us Currency Dollar Yen": {
+      "en": "Us Currency Dollar Yen",
+      "ko": "미국환율 달러 엔화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Russian War and More": {
+      "en": "Russian War and More",
+      "ko": "러시아 전쟁 등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Ld S Koreas": {
+      "en": "Ld S Koreas",
+      "ko": "LD S 코리아",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Inspiring Backgrounds": {
+      "en": "Inspiring Backgrounds",
+      "ko": "부추기는 배경들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Issues to Watch for": {
+      "en": "Issues to Watch for",
+      "ko": "이슈 눈여겨봐야할",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Bakery That Sold": {
+      "en": "Bakery That Sold",
+      "ko": "팔린 베이커리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Vending Machines Closes": {
+      "en": "Vending Machines Closes",
+      "ko": "자동판매기 폐쇄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Hit Record High": {
+      "en": "Hit Record High",
+      "ko": "사상 최고치 달성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Kospi Surges": {
+      "en": "Kospi Surges",
+      "ko": "코스피 지수 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "2.27% Climb": {
+      "en": "2.27% Climb",
+      "ko": "2.27% 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Sprinkles Cupcakes": {
+      "en": "Sprinkles Cupcakes",
+      "ko": "스프링스 컵케이크",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Kospi Starts": {
+      "en": "Kospi Starts",
+      "ko": "코스피 시작",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "U.s. Government Shutdown Crisis": {
+      "en": "U.s. Government Shutdown Crisis",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "South Korean Stocks Rebound": {
+      "en": "South Korean Stocks Rebound",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Ramping Up Semiconductor Investments": {
+      "en": "Ramping Up Semiconductor Investments",
+      "ko": "반도체 투자 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
+    },
+    "Ai Chip Race": {
+      "en": "Ai Chip Race",
+      "ko": "인공지능 칩 경쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-03T06:31:33.096Z"
     }
   }
 }
