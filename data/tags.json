@@ -1,7 +1,7 @@
 {
   "date": "2026-01-04",
   "window": "12_hours",
-  "total_phrases": 29,
+  "total_phrases": 28,
   "discovered_keywords": [
     {
       "term": "Stock Market Briefing January",
@@ -13,9 +13,10 @@
         "query": "증시 브리핑 1월",
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -53,43 +54,6 @@
       ]
     },
     {
-      "term": "CJ Olive Young 10 Billion Club",
-      "term_ko": "CJ올리브영 100억 클럽",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "CJ올리브영 100억 클럽",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "CJ올리브영, '100억 클럽 브랜드' 5년 만에 3배…\"글로벌 대형 브랜드로...",
-              "link": "http://www.lkp.news/news/articleView.html?idxno=74392"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20100%EC%96%B5%20%ED%81%B4%EB%9F%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20100%EC%96%B5%20%ED%81%B4%EB%9F%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "CJ올리브영, '100억 클럽 브랜드' 5년 만에 3배…\"글로벌 대형 브랜드로...",
-          "summary": "",
-          "link": "http://www.lkp.news/news/articleView.html?idxno=74392",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Robin Hood 2025 Annual",
       "term_ko": "로빈후드 2025년 연간",
       "significance_score": 336,
@@ -99,9 +63,10 @@
         "query": "로빈후드 2025년 연간",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -136,9 +101,10 @@
         "query": "실적 2월 10일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -164,36 +130,37 @@
       ]
     },
     {
-      "term": "3x Global Large",
-      "term_ko": "3배 글로벌 대형",
+      "term": "First semester 2026 student loans",
+      "term_ko": "2026학년도 1학기 학자금대출",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "3배 글로벌 대형",
+        "query": "2026학년도 1학기 학자금대출",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "CJ올리브영, '100억 클럽 브랜드' 5년 만에 3배…\"글로벌 대형 브랜드로...",
-              "link": "http://www.lkp.news/news/articleView.html?idxno=74392"
+              "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
+              "link": "https://www.kgnews.co.kr/news/article.html?no=880103"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%B0%B0%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%8C%80%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%B0%B0%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%8C%80%ED%98%95"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2026%ED%95%99%EB%85%84%EB%8F%84%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2026%ED%95%99%EB%85%84%EB%8F%84%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C"
       },
       "top_headlines": [
         {
-          "title": "CJ올리브영, '100억 클럽 브랜드' 5년 만에 3배…\"글로벌 대형 브랜드로...",
+          "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
           "summary": "",
-          "link": "http://www.lkp.news/news/articleView.html?idxno=74392",
+          "link": "https://www.kgnews.co.kr/news/article.html?no=880103",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -201,36 +168,189 @@
       ]
     },
     {
-      "term": "32.9% of holdings",
-      "term_ko": "보유 비중 32.9%",
+      "term": "Accepting applications starting January 5",
+      "term_ko": "1월 5일부터 접수",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "보유 비중 32.9%",
+        "query": "1월 5일부터 접수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "외국인 국내 주식 보유 비중 32.9%…5년 8개월 만에 최고",
-              "link": "https://www.ajunews.com/view/20260104101817090"
+              "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
+              "link": "https://www.kgnews.co.kr/news/article.html?no=880103"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%9C%A0%20%EB%B9%84%EC%A4%91%2032.9%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%9C%A0%20%EB%B9%84%EC%A4%91%2032.9%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EC%9B%94%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%A0%91%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EC%9B%94%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%A0%91%EC%88%98"
       },
       "top_headlines": [
         {
-          "title": "외국인 국내 주식 보유 비중 32.9%…5년 8개월 만에 최고",
+          "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
           "summary": "",
-          "link": "https://www.ajunews.com/view/20260104101817090",
+          "link": "https://www.kgnews.co.kr/news/article.html?no=880103",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "1.7% interest rate on student loans",
+      "term_ko": "학자금대출 금리 1.7%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "학자금대출 금리 1.7%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-04T15:33:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
+              "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%201.7%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%201.7%25"
+      },
+      "top_headlines": [
+        {
+          "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
+          "summary": "",
+          "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Apply after 5 days of retention",
+      "term_ko": "유지 5일부터 신청",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "유지 5일부터 신청",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-04T15:33:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
+              "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EC%A7%80%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%8B%A0%EC%B2%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EC%A7%80%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%8B%A0%EC%B2%AD"
+      },
+      "top_headlines": [
+        {
+          "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
+          "summary": "",
+          "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "1.7% low rate for 6 years",
+      "term_ko": "6년째 1.7% 저금리",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "6년째 1.7% 저금리",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-04T15:33:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
+              "link": "https://www.inews365.com/news/article.html?no=901375"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%EB%85%84%EC%A7%B8%201.7%25%20%EC%A0%80%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%EB%85%84%EC%A7%B8%201.7%25%20%EC%A0%80%EA%B8%88%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
+          "summary": "",
+          "link": "https://www.inews365.com/news/article.html?no=901375",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Freeze 1st semester student loans",
+      "term_ko": "동결 1학기 학자금대출",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "동결 1학기 학자금대출",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-04T15:33:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
+              "link": "https://www.inews365.com/news/article.html?no=901375"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
+          "summary": "",
+          "link": "https://www.inews365.com/news/article.html?no=901375",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -247,14 +367,15 @@
         "query": "1학기 학자금대출 5일부터",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "1학기 학자금대출, 5일부터 신청하세요",
-              "link": "https://dhnews.co.kr/news/view/1065575362024881"
+              "title": "1학기 학자금대출 5일부터 신청…금리 1.7%로 동결",
+              "link": "https://www.ajunews.com/view/20260104144217226"
             }
           ]
         }
@@ -265,9 +386,9 @@
       },
       "top_headlines": [
         {
-          "title": "1학기 학자금대출, 5일부터 신청하세요",
+          "title": "1학기 학자금대출 5일부터 신청…금리 1.7%로 동결",
           "summary": "",
-          "link": "https://dhnews.co.kr/news/view/1065575362024881",
+          "link": "https://www.ajunews.com/view/20260104144217226",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -275,36 +396,37 @@
       ]
     },
     {
-      "term": "32.8% foreign-born",
-      "term_ko": "외국인 비중 32.8%",
+      "term": "Leveraging 120,000 public housing units",
+      "term_ko": "활용해 공공임대주택 12만호",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "외국인 비중 32.8%",
+        "query": "활용해 공공임대주택 12만호",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "국내 주식 외국인 비중 32.8%, 5년 8개월 만에 최대",
-              "link": "https://n.news.naver.com/mnews/article/030/0003386399?sid=101"
+              "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
+              "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EB%B9%84%EC%A4%91%2032.8%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EB%B9%84%EC%A4%91%2032.8%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%9C%EC%9A%A9%ED%95%B4%20%EA%B3%B5%EA%B3%B5%EC%9E%84%EB%8C%80%EC%A3%BC%ED%83%9D%2012%EB%A7%8C%ED%98%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%9C%EC%9A%A9%ED%95%B4%20%EA%B3%B5%EA%B3%B5%EC%9E%84%EB%8C%80%EC%A3%BC%ED%83%9D%2012%EB%A7%8C%ED%98%B8"
       },
       "top_headlines": [
         {
-          "title": "국내 주식 외국인 비중 32.8%, 5년 8개월 만에 최대",
+          "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003386399?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -312,7 +434,7 @@
       ]
     },
     {
-      "term": "Dow Jones rises on mixed news",
+      "term": "Dow Jones rises on mixed results",
       "term_ko": "혼조세 다우존스 상승",
       "significance_score": 322,
       "mentions": 160,
@@ -321,9 +443,10 @@
         "query": "혼조세 다우존스 상승",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -349,36 +472,37 @@
       ]
     },
     {
-      "term": "Pressure to raise interest rates",
-      "term_ko": "기준금리 인상 압력",
+      "term": "Catching the energizer bunny",
+      "term_ko": "엔저 주범 잡기",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기준금리 인상 압력",
+        "query": "엔저 주범 잡기",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[2026 환율전망②] 고환율 지속에 기준금리 인상 압력↑…고심 깊어지는...",
-              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=123716"
+              "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
+              "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EC%95%95%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EC%95%95%EB%A0%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EC%A0%80%20%EC%A3%BC%EB%B2%94%20%EC%9E%A1%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EC%A0%80%20%EC%A3%BC%EB%B2%94%20%EC%9E%A1%EA%B8%B0"
       },
       "top_headlines": [
         {
-          "title": "[2026 환율전망②] 고환율 지속에 기준금리 인상 압력↑…고심 깊어지는...",
+          "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
           "summary": "",
-          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=123716",
+          "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -386,36 +510,37 @@
       ]
     },
     {
-      "term": "Foreign Domestic Stock",
-      "term_ko": "외국인 국내 주식",
+      "term": "Spiral Japan Global Site",
+      "term_ko": "나선 일본글로벌 현장",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "외국인 국내 주식",
+        "query": "나선 일본글로벌 현장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "외국인 국내 주식 보유 비중 32.9%…5년 8개월 만에 최고",
-              "link": "https://www.ajunews.com/view/20260104101817090"
+              "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
+              "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%8B%9D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%84%A0%20%EC%9D%BC%EB%B3%B8%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%98%84%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%84%A0%20%EC%9D%BC%EB%B3%B8%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%98%84%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "외국인 국내 주식 보유 비중 32.9%…5년 8개월 만에 최고",
+          "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
           "summary": "",
-          "link": "https://www.ajunews.com/view/20260104101817090",
+          "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -423,73 +548,37 @@
       ]
     },
     {
-      "term": "President, Daegun Association",
-      "term_ko": "대건협 주건협 회장",
+      "term": "Motherland Seoul Airport, etc.",
+      "term_ko": "조국 서울공항 등",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대건협 주건협 회장",
+        "query": "조국 서울공항 등",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "대건협·주건협 회장, '중소기업 경영 여건 개선' 한목소리",
-              "link": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2172519"
+              "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
+              "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B1%B4%ED%98%91%20%EC%A3%BC%EA%B1%B4%ED%98%91%20%ED%9A%8C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B1%B4%ED%98%91%20%EC%A3%BC%EA%B1%B4%ED%98%91%20%ED%9A%8C%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%EA%B5%AD%20%EC%84%9C%EC%9A%B8%EA%B3%B5%ED%95%AD%20%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%EA%B5%AD%20%EC%84%9C%EC%9A%B8%EA%B3%B5%ED%95%AD%20%EB%93%B1"
       },
       "top_headlines": [
         {
-          "title": "대건협·주건협 회장, '중소기업 경영 여건 개선' 한목소리",
+          "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
           "summary": "",
-          "link": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2172519",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Small business conditions",
-      "term_ko": "중소기업 경영 여건",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중소기업 경영 여건",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "대건협·주건협 회장, '중소기업 경영 여건 개선' 한목소리",
-              "link": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2172519"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EA%B2%BD%EC%98%81%20%EC%97%AC%EA%B1%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EA%B2%BD%EC%98%81%20%EC%97%AC%EA%B1%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "대건협·주건협 회장, '중소기업 경영 여건 개선' 한목소리",
-          "summary": "",
-          "link": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2172519",
+          "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -506,9 +595,10 @@
         "query": "1일 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -543,9 +633,10 @@
         "query": "2일 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -580,9 +671,10 @@
         "query": "Almonty Boosts US",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -608,6 +700,44 @@
       ]
     },
     {
+      "term": "than gold stocks",
+      "term_ko": "금 주식보다",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금 주식보다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-04T15:33:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "“암호화폐 비트코인, 작년에 금·주식보다 못했지만... 올해는 상당히...",
+              "link": "https://www.wikitree.co.kr/articles/1107243"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%20%EC%A3%BC%EC%8B%9D%EB%B3%B4%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%20%EC%A3%BC%EC%8B%9D%EB%B3%B4%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "“암호화폐 비트코인, 작년에 금·주식보다 못했지만... 올해는 상당히...",
+          "summary": "",
+          "link": "https://www.wikitree.co.kr/articles/1107243",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "Coming Soon",
       "term_ko": "발표 예정",
       "significance_score": 280,
@@ -617,9 +747,10 @@
         "query": "발표 예정",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -645,43 +776,6 @@
       ]
     },
     {
-      "term": "Improvement chorus",
-      "term_ko": "개선 한목소리",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개선 한목소리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "대건협·주건협 회장, '중소기업 경영 여건 개선' 한목소리",
-              "link": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2172519"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%84%A0%20%ED%95%9C%EB%AA%A9%EC%86%8C%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%84%A0%20%ED%95%9C%EB%AA%A9%EC%86%8C%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "대건협·주건협 회장, '중소기업 경영 여건 개선' 한목소리",
-          "summary": "",
-          "link": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2172519",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Mixed At Close",
       "term_ko": "마감 시 혼합",
       "significance_score": 266,
@@ -691,9 +785,10 @@
         "query": "Mixed At Close",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -719,80 +814,6 @@
       ]
     },
     {
-      "term": "Bakery That Sold",
-      "term_ko": "팔린 베이커리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bakery That Sold",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-              "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bakery%20That%20Sold",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bakery%20That%20Sold"
-      },
-      "top_headlines": [
-        {
-          "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Vending Machines Closes",
-      "term_ko": "자동판매기 폐쇄",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Vending Machines Closes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-              "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Vending%20Machines%20Closes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Vending%20Machines%20Closes"
-      },
-      "top_headlines": [
-        {
-          "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Sangdong Tungsten Mine",
       "term_ko": "상동 텅스텐 광산",
       "significance_score": 266,
@@ -802,9 +823,10 @@
         "query": "Sangdong Tungsten Mine",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -839,9 +861,10 @@
         "query": "Dow Gains",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -876,9 +899,10 @@
         "query": "Nasdaq Slips",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -904,43 +928,6 @@
       ]
     },
     {
-      "term": "Sprinkles Cupcakes",
-      "term_ko": "스프링스 컵케이크",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sprinkles Cupcakes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-              "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sprinkles%20Cupcakes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sprinkles%20Cupcakes"
-      },
-      "top_headlines": [
-        {
-          "title": "Sprinkles Cupcakes, the Bakery That Sold From Vending Machines, Closes Su...",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/01/02/business/sprinkles-cupcakes-closed.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "National Security",
       "term_ko": "국가 안보",
       "significance_score": 224,
@@ -950,9 +937,10 @@
         "query": "National Security",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -987,9 +975,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1009,9 +998,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1031,9 +1021,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-04T10:50:21+09:00",
+          "last_updated": "2026-01-04T15:33:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1047,28 +1038,30 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-01-04T01:51:30.765Z",
+    "generated_at": "2026-01-04T06:35:12.787Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-04T10:50:21+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-01-04T15:33:57+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
+    "similar_keywords_removed": 2,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 1,
+      "similar": 2,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-01-04T10:50:21+09:00",
+      "last_updated": "2026-01-04T15:33:57+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-01-04T10:50:21+09:00",
+        "lastUpdated": "2026-01-04T15:33:57+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
