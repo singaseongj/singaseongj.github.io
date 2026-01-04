@@ -1,1069 +1,411 @@
 {
+  "generatedAt": "2026-01-04T12:38:09.783Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-04",
   "window": "12_hours",
   "total_phrases": 28,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Stock Market Briefing January",
-      "term_ko": "증시 브리핑 1월",
-      "significance_score": 672,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 1월",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 1일] 미국 증시 주요 지수 보합세로 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195627"
-            },
-            {
-              "title": "[미국 증시 브리핑 · 1월 2일] 미국 증시 혼조세, 다우존스 상승",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195645"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 1일] 미국 증시 주요 지수 보합세로 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195627",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "[미국 증시 브리핑 · 1월 2일] 미국 증시 혼조세, 다우존스 상승",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195645",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 1월"
     },
     {
       "term": "Robin Hood 2025 Annual",
-      "term_ko": "로빈후드 2025년 연간",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "로빈후드 2025년 연간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "로빈후드, 2025년 연간 실적 2월 10일 발표 예정",
-              "link": "https://www.tokenpost.kr/news/breaking/320554"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A1%9C%EB%B9%88%ED%9B%84%EB%93%9C%202025%EB%85%84%20%EC%97%B0%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A1%9C%EB%B9%88%ED%9B%84%EB%93%9C%202025%EB%85%84%20%EC%97%B0%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "로빈후드, 2025년 연간 실적 2월 10일 발표 예정",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/320554",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "로빈후드 2025년 연간"
     },
     {
       "term": "Earnings February 10",
-      "term_ko": "실적 2월 10일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "실적 2월 10일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "로빈후드, 2025년 연간 실적 2월 10일 발표 예정",
-              "link": "https://www.tokenpost.kr/news/breaking/320554"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%A0%81%202%EC%9B%94%2010%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%A0%81%202%EC%9B%94%2010%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "로빈후드, 2025년 연간 실적 2월 10일 발표 예정",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/320554",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "실적 2월 10일"
     },
     {
-      "term": "First semester 2026 student loans",
-      "term_ko": "2026학년도 1학기 학자금대출",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2026학년도 1학기 학자금대출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
-              "link": "https://www.kgnews.co.kr/news/article.html?no=880103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2026%ED%95%99%EB%85%84%EB%8F%84%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2026%ED%95%99%EB%85%84%EB%8F%84%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
-          "summary": "",
-          "link": "https://www.kgnews.co.kr/news/article.html?no=880103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "First Semester 2026 Student Loans",
+      "term_ko": "2026학년도 1학기 학자금대출"
     },
     {
-      "term": "Accepting applications starting January 5",
-      "term_ko": "1월 5일부터 접수",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1월 5일부터 접수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
-              "link": "https://www.kgnews.co.kr/news/article.html?no=880103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EC%9B%94%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%A0%91%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EC%9B%94%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%A0%91%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "2026학년도 1학기 학자금대출 1월 5일부터 접수",
-          "summary": "",
-          "link": "https://www.kgnews.co.kr/news/article.html?no=880103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Accepting Applications Starting January 5",
+      "term_ko": "1월 5일부터 접수"
     },
     {
-      "term": "1.7% interest rate on student loans",
-      "term_ko": "학자금대출 금리 1.7%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "학자금대출 금리 1.7%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
-              "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%201.7%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%201.7%25"
-      },
-      "top_headlines": [
-        {
-          "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
-          "summary": "",
-          "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1.7% Interest Rate on Student Loans",
+      "term_ko": "학자금대출 금리 1.7%"
     },
     {
-      "term": "Apply after 5 days of retention",
-      "term_ko": "유지 5일부터 신청",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유지 5일부터 신청",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
-              "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EC%A7%80%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%8B%A0%EC%B2%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EC%A7%80%205%EC%9D%BC%EB%B6%80%ED%84%B0%20%EC%8B%A0%EC%B2%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "학자금대출 금리 1.7% 유지…5일부터 신청",
-          "summary": "",
-          "link": "https://www.ggilbo.com/news/articleView.html?idxno=1133597",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Apply After 5 Days of Retention",
+      "term_ko": "유지 5일부터 신청"
     },
     {
-      "term": "1.7% low rate for 6 years",
-      "term_ko": "6년째 1.7% 저금리",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "6년째 1.7% 저금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
-              "link": "https://www.inews365.com/news/article.html?no=901375"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%EB%85%84%EC%A7%B8%201.7%25%20%EC%A0%80%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%EB%85%84%EC%A7%B8%201.7%25%20%EC%A0%80%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
-          "summary": "",
-          "link": "https://www.inews365.com/news/article.html?no=901375",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1.7% Low Rate for 6 Years",
+      "term_ko": "6년째 1.7% 저금리"
     },
     {
-      "term": "Freeze 1st semester student loans",
-      "term_ko": "동결 1학기 학자금대출",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동결 1학기 학자금대출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
-              "link": "https://www.inews365.com/news/article.html?no=901375"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%201%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "6년째 1.7% 저금리 동결…1학기 학자금대출 신청 접수",
-          "summary": "",
-          "link": "https://www.inews365.com/news/article.html?no=901375",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Freeze 1st Semester Student Loans",
+      "term_ko": "동결 1학기 학자금대출"
     },
     {
-      "term": "1st semester student loans from 5 days",
-      "term_ko": "1학기 학자금대출 5일부터",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1학기 학자금대출 5일부터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "1학기 학자금대출 5일부터 신청…금리 1.7%로 동결",
-              "link": "https://www.ajunews.com/view/20260104144217226"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C%205%EC%9D%BC%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%ED%95%99%EA%B8%B0%20%ED%95%99%EC%9E%90%EA%B8%88%EB%8C%80%EC%B6%9C%205%EC%9D%BC%EB%B6%80%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "1학기 학자금대출 5일부터 신청…금리 1.7%로 동결",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260104144217226",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1st Semester Student Loans From 5 Days",
+      "term_ko": "1학기 학자금대출 5일부터"
     },
     {
-      "term": "Leveraging 120,000 public housing units",
-      "term_ko": "활용해 공공임대주택 12만호",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "활용해 공공임대주택 12만호",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
-              "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%9C%EC%9A%A9%ED%95%B4%20%EA%B3%B5%EA%B3%B5%EC%9E%84%EB%8C%80%EC%A3%BC%ED%83%9D%2012%EB%A7%8C%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%9C%EC%9A%A9%ED%95%B4%20%EA%B3%B5%EA%B3%B5%EC%9E%84%EB%8C%80%EC%A3%BC%ED%83%9D%2012%EB%A7%8C%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Leveraging 120,000 Public Housing Units",
+      "term_ko": "활용해 공공임대주택 12만호"
     },
     {
-      "term": "Dow Jones rises on mixed results",
-      "term_ko": "혼조세 다우존스 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "혼조세 다우존스 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 2일] 미국 증시 혼조세, 다우존스 상승",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195645"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%BC%EC%A1%B0%EC%84%B8%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%BC%EC%A1%B0%EC%84%B8%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 2일] 미국 증시 혼조세, 다우존스 상승",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195645",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dow Jones Rises on Mixed Results",
+      "term_ko": "혼조세 다우존스 상승"
     },
     {
-      "term": "Catching the energizer bunny",
-      "term_ko": "엔저 주범 잡기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔저 주범 잡기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
-              "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EC%A0%80%20%EC%A3%BC%EB%B2%94%20%EC%9E%A1%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EC%A0%80%20%EC%A3%BC%EB%B2%94%20%EC%9E%A1%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Catching the Energizer Bunny",
+      "term_ko": "엔저 주범 잡기"
     },
     {
       "term": "Spiral Japan Global Site",
-      "term_ko": "나선 일본글로벌 현장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나선 일본글로벌 현장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
-              "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%84%A0%20%EC%9D%BC%EB%B3%B8%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%98%84%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%84%A0%20%EC%9D%BC%EB%B3%B8%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%98%84%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "엔저 ‘주범 잡기’ 나선 일본[글로벌 현장]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000100528?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나선 일본글로벌 현장"
     },
     {
-      "term": "Motherland Seoul Airport, etc.",
-      "term_ko": "조국 서울공항 등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "조국 서울공항 등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
-              "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%EA%B5%AD%20%EC%84%9C%EC%9A%B8%EA%B3%B5%ED%95%AD%20%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%EA%B5%AD%20%EC%84%9C%EC%9A%B8%EA%B3%B5%ED%95%AD%20%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "조국 \"서울공항 등 공공부지 활용해 공공임대주택 12만호 공급해야\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004574466?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Motherland Seoul Airport, Etc.",
+      "term_ko": "조국 서울공항 등"
     },
     {
-      "term": "1 day US",
-      "term_ko": "1일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 1일] 미국 증시 주요 지수 보합세로 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195627"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 1일] 미국 증시 주요 지수 보합세로 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195627",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1 Day Us",
+      "term_ko": "1일 미국"
     },
     {
-      "term": "2 days US",
-      "term_ko": "2일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 2일] 미국 증시 혼조세, 다우존스 상승",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195645"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 2일] 미국 증시 혼조세, 다우존스 상승",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195645",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "2 Days Us",
+      "term_ko": "2일 미국"
     },
     {
-      "term": "Almonty Boosts US",
-      "term_ko": "알몬티가 미국을 강화하다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Almonty Boosts US",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Almonty boosts US national security with Sangdong tungsten mine",
-              "link": "https://www.koreatimes.co.kr/path/A2025121015590002050"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Almonty%20Boosts%20US",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Almonty%20Boosts%20US"
-      },
-      "top_headlines": [
-        {
-          "title": "Almonty boosts US national security with Sangdong tungsten mine",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025121015590002050",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Almonty Boosts Us",
+      "term_ko": "알몬티가 미국을 강화하다"
     },
     {
-      "term": "than gold stocks",
-      "term_ko": "금 주식보다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금 주식보다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“암호화폐 비트코인, 작년에 금·주식보다 못했지만... 올해는 상당히...",
-              "link": "https://www.wikitree.co.kr/articles/1107243"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%20%EC%A3%BC%EC%8B%9D%EB%B3%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%20%EC%A3%BC%EC%8B%9D%EB%B3%B4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "“암호화폐 비트코인, 작년에 금·주식보다 못했지만... 올해는 상당히...",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1107243",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Than Gold Stocks",
+      "term_ko": "금 주식보다"
     },
     {
       "term": "Coming Soon",
-      "term_ko": "발표 예정",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "발표 예정",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "로빈후드, 2025년 연간 실적 2월 10일 발표 예정",
-              "link": "https://www.tokenpost.kr/news/breaking/320554"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%91%9C%20%EC%98%88%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%91%9C%20%EC%98%88%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "로빈후드, 2025년 연간 실적 2월 10일 발표 예정",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/320554",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "발표 예정"
     },
     {
-      "term": "Mixed At Close",
-      "term_ko": "마감 시 혼합",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Mixed At Close",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Market Mixed at Close as Dow Gains and Nasdaq Slips",
-              "link": "https://www.econotimes.com/US-Stock-Market-Mixed-at-Close-as-Dow-Gains-and-Nasdaq-Slips-1730004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mixed%20At%20Close",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mixed%20At%20Close"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Market Mixed at Close as Dow Gains and Nasdaq Slips",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Market-Mixed-at-Close-as-Dow-Gains-and-Nasdaq-Slips-1730004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mixed at Close",
+      "term_ko": "마감 시 혼합"
     },
     {
       "term": "Sangdong Tungsten Mine",
-      "term_ko": "상동 텅스텐 광산",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sangdong Tungsten Mine",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Almonty boosts US national security with Sangdong tungsten mine",
-              "link": "https://www.koreatimes.co.kr/path/A2025121015590002050"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sangdong%20Tungsten%20Mine",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sangdong%20Tungsten%20Mine"
-      },
-      "top_headlines": [
-        {
-          "title": "Almonty boosts US national security with Sangdong tungsten mine",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025121015590002050",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상동 텅스텐 광산"
     },
     {
       "term": "Dow Gains",
-      "term_ko": "다우지수 상승",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Dow Gains",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Market Mixed at Close as Dow Gains and Nasdaq Slips",
-              "link": "https://www.econotimes.com/US-Stock-Market-Mixed-at-Close-as-Dow-Gains-and-Nasdaq-Slips-1730004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Dow%20Gains",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Dow%20Gains"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Market Mixed at Close as Dow Gains and Nasdaq Slips",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Market-Mixed-at-Close-as-Dow-Gains-and-Nasdaq-Slips-1730004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "다우지수 상승"
     },
     {
       "term": "Nasdaq Slips",
-      "term_ko": "나스닥 전표",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nasdaq Slips",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Market Mixed at Close as Dow Gains and Nasdaq Slips",
-              "link": "https://www.econotimes.com/US-Stock-Market-Mixed-at-Close-as-Dow-Gains-and-Nasdaq-Slips-1730004"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nasdaq%20Slips",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nasdaq%20Slips"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Market Mixed at Close as Dow Gains and Nasdaq Slips",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Market-Mixed-at-Close-as-Dow-Gains-and-Nasdaq-Slips-1730004",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 전표"
     },
     {
       "term": "National Security",
-      "term_ko": "국가 안보",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "National Security",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Almonty boosts US national security with Sangdong tungsten mine",
-              "link": "https://www.koreatimes.co.kr/path/A2025121015590002050"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=National%20Security",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=National%20Security"
-      },
-      "top_headlines": [
-        {
-          "title": "Almonty boosts US national security with Sangdong tungsten mine",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025121015590002050",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "국가 안보"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-04T15:33:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-04T06:35:12.787Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-04T15:33:57+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 2,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Stock Market Briefing January",
+      "term_ko": "증시 브리핑 1월"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-04T15:33:57+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-04T15:33:57+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Robin Hood 2025 Annual",
+      "term_ko": "로빈후드 2025년 연간"
+    },
+    {
+      "term": "Earnings February 10",
+      "term_ko": "실적 2월 10일"
+    },
+    {
+      "term": "First Semester 2026 Student Loans",
+      "term_ko": "2026학년도 1학기 학자금대출"
+    },
+    {
+      "term": "Accepting Applications Starting January 5",
+      "term_ko": "1월 5일부터 접수"
+    },
+    {
+      "term": "1.7% Interest Rate on Student Loans",
+      "term_ko": "학자금대출 금리 1.7%"
+    },
+    {
+      "term": "Apply After 5 Days of Retention",
+      "term_ko": "유지 5일부터 신청"
+    },
+    {
+      "term": "1.7% Low Rate for 6 Years",
+      "term_ko": "6년째 1.7% 저금리"
+    },
+    {
+      "term": "Freeze 1st Semester Student Loans",
+      "term_ko": "동결 1학기 학자금대출"
+    },
+    {
+      "term": "1st Semester Student Loans From 5 Days",
+      "term_ko": "1학기 학자금대출 5일부터"
+    },
+    {
+      "term": "Leveraging 120,000 Public Housing Units",
+      "term_ko": "활용해 공공임대주택 12만호"
+    },
+    {
+      "term": "Dow Jones Rises on Mixed Results",
+      "term_ko": "혼조세 다우존스 상승"
+    },
+    {
+      "term": "Catching the Energizer Bunny",
+      "term_ko": "엔저 주범 잡기"
+    },
+    {
+      "term": "Spiral Japan Global Site",
+      "term_ko": "나선 일본글로벌 현장"
+    },
+    {
+      "term": "Motherland Seoul Airport, Etc.",
+      "term_ko": "조국 서울공항 등"
+    },
+    {
+      "term": "1 Day Us",
+      "term_ko": "1일 미국"
+    },
+    {
+      "term": "2 Days Us",
+      "term_ko": "2일 미국"
+    },
+    {
+      "term": "Almonty Boosts Us",
+      "term_ko": "알몬티가 미국을 강화하다"
+    },
+    {
+      "term": "Than Gold Stocks",
+      "term_ko": "금 주식보다"
+    },
+    {
+      "term": "Coming Soon",
+      "term_ko": "발표 예정"
+    },
+    {
+      "term": "Mixed at Close",
+      "term_ko": "마감 시 혼합"
+    },
+    {
+      "term": "Sangdong Tungsten Mine",
+      "term_ko": "상동 텅스텐 광산"
+    },
+    {
+      "term": "Dow Gains",
+      "term_ko": "다우지수 상승"
+    },
+    {
+      "term": "Nasdaq Slips",
+      "term_ko": "나스닥 전표"
+    },
+    {
+      "term": "National Security",
+      "term_ko": "국가 안보"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Stock Market Briefing January": {
+      "en": "Stock Market Briefing January",
+      "ko": "증시 브리핑 1월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Robin Hood 2025 Annual": {
+      "en": "Robin Hood 2025 Annual",
+      "ko": "로빈후드 2025년 연간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Earnings February 10": {
+      "en": "Earnings February 10",
+      "ko": "실적 2월 10일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "First Semester 2026 Student Loans": {
+      "en": "First Semester 2026 Student Loans",
+      "ko": "2026학년도 1학기 학자금대출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Accepting Applications Starting January 5": {
+      "en": "Accepting Applications Starting January 5",
+      "ko": "1월 5일부터 접수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "1.7% Interest Rate on Student Loans": {
+      "en": "1.7% Interest Rate on Student Loans",
+      "ko": "학자금대출 금리 1.7%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Apply After 5 Days of Retention": {
+      "en": "Apply After 5 Days of Retention",
+      "ko": "유지 5일부터 신청",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "1.7% Low Rate for 6 Years": {
+      "en": "1.7% Low Rate for 6 Years",
+      "ko": "6년째 1.7% 저금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Freeze 1st Semester Student Loans": {
+      "en": "Freeze 1st Semester Student Loans",
+      "ko": "동결 1학기 학자금대출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "1st Semester Student Loans From 5 Days": {
+      "en": "1st Semester Student Loans From 5 Days",
+      "ko": "1학기 학자금대출 5일부터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Leveraging 120,000 Public Housing Units": {
+      "en": "Leveraging 120,000 Public Housing Units",
+      "ko": "활용해 공공임대주택 12만호",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Dow Jones Rises on Mixed Results": {
+      "en": "Dow Jones Rises on Mixed Results",
+      "ko": "혼조세 다우존스 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Catching the Energizer Bunny": {
+      "en": "Catching the Energizer Bunny",
+      "ko": "엔저 주범 잡기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Spiral Japan Global Site": {
+      "en": "Spiral Japan Global Site",
+      "ko": "나선 일본글로벌 현장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Motherland Seoul Airport, Etc.": {
+      "en": "Motherland Seoul Airport, Etc.",
+      "ko": "조국 서울공항 등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "1 Day Us": {
+      "en": "1 Day Us",
+      "ko": "1일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "2 Days Us": {
+      "en": "2 Days Us",
+      "ko": "2일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Almonty Boosts Us": {
+      "en": "Almonty Boosts Us",
+      "ko": "알몬티가 미국을 강화하다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Than Gold Stocks": {
+      "en": "Than Gold Stocks",
+      "ko": "금 주식보다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Coming Soon": {
+      "en": "Coming Soon",
+      "ko": "발표 예정",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Mixed at Close": {
+      "en": "Mixed at Close",
+      "ko": "마감 시 혼합",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Sangdong Tungsten Mine": {
+      "en": "Sangdong Tungsten Mine",
+      "ko": "상동 텅스텐 광산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Dow Gains": {
+      "en": "Dow Gains",
+      "ko": "다우지수 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Nasdaq Slips": {
+      "en": "Nasdaq Slips",
+      "ko": "나스닥 전표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "National Security": {
+      "en": "National Security",
+      "ko": "국가 안보",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-04T12:38:09.783Z"
     }
   }
 }
