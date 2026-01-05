@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-05T15:40:37+09:00 (KST)**
+- Generated: **2026-01-05T21:47:05+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -104,18 +104,10 @@
 **LG전자** (066570.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **0.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **0.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **경기소비재**
 - News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
-
-**삼성전기** (009150.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **16.7%**, 20d **13.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0
 
 **아모레퍼시픽** (090430.KS)
 
@@ -128,10 +120,18 @@
 **이마트** (139480.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **-5.5%**, 20d **-19.9%**; volatility (20d): **unknown**
+- Returns: 5d **-3.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=%EC%9D%B4%EB%A7%88%ED%8A%B8
+
+**한솔케미칼** (014680.KS)
+
+- News (7d): **16** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.19)**
+- Returns: 5d **6.5%**, 20d **3.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%86%94%EC%BC%80%EB%AF%B8%EC%B9%BC
 
 ### AGGRESSIVE (5)
 
@@ -142,14 +142,6 @@
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
-
-**HD현대건설기계** (267270.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.4%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EA%B1%B4%EC%84%A4%EA%B8%B0%EA%B3%84
 
 **롯데에너지머티리얼즈** (020150.KS)
 
@@ -166,6 +158,14 @@
 - Earnings window (±10d): **No**
 - Sector: **필수소비재**
 - News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%B9%A0%EC%84%B1
+
+**종근당** (185750.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.4%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
 
 **한샘** (009240.KS)
 
