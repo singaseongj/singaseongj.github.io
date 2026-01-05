@@ -1,1080 +1,425 @@
 {
+  "generatedAt": "2026-01-05T12:44:59.765Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-05",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Excluded altcoins 7.86",
-      "term_ko": "제외 알트코인 7.86%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제외 알트코인 7.86%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "업비트 종합 지수, 비트코인 제외 알트코인 7.86% 상승",
-              "link": "http://www.ttlnews.com/news/articleView.html?idxno=3066438"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%99%B8%20%EC%95%8C%ED%8A%B8%EC%BD%94%EC%9D%B8%207.86%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%99%B8%20%EC%95%8C%ED%8A%B8%EC%BD%94%EC%9D%B8%207.86%25"
-      },
-      "top_headlines": [
-        {
-          "title": "업비트 종합 지수, 비트코인 제외 알트코인 7.86% 상승",
-          "summary": "",
-          "link": "http://www.ttlnews.com/news/articleView.html?idxno=3066438",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Excluded Altcoins 7.86",
+      "term_ko": "제외 알트코인 7.86%"
     },
     {
-      "term": "KOSPI 1.9 trillion per day",
-      "term_ko": "코스피 하루 1.9조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 하루 1.9조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "원화 약세에 팔아치우던 외국인이 돌아왔다…코스피 하루 1.9조 순매수",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4391920"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%ED%95%98%EB%A3%A8%201.9%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%ED%95%98%EB%A3%A8%201.9%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "원화 약세에 팔아치우던 외국인이 돌아왔다…코스피 하루 1.9조 순매수",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4391920",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi 1.9 Trillion Per Day",
+      "term_ko": "코스피 하루 1.9조"
     },
     {
       "term": "Exchange Rate 1500 O'clock Ona④",
-      "term_ko": "환율 1500시대 오나④",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 1500시대 오나④",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[환율 1500시대 오나④] 중후장대, 고환율에 발목…“원가 상승 심각”",
-              "link": "https://www.mediapen.com/news/view/1071646"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%201500%EC%8B%9C%EB%8C%80%20%EC%98%A4%EB%82%98%E2%91%A3",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%201500%EC%8B%9C%EB%8C%80%20%EC%98%A4%EB%82%98%E2%91%A3"
-      },
-      "top_headlines": [
-        {
-          "title": "[환율 1500시대 오나④] 중후장대, 고환율에 발목…“원가 상승 심각”",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1071646",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "환율 1500시대 오나④"
     },
     {
-      "term": "UBIT Composite Index",
-      "term_ko": "업비트 종합 지수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "업비트 종합 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "업비트 종합 지수, 비트코인 제외 알트코인 7.86% 상승",
-              "link": "http://www.ttlnews.com/news/articleView.html?idxno=3066438"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%85%EB%B9%84%ED%8A%B8%20%EC%A2%85%ED%95%A9%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%85%EB%B9%84%ED%8A%B8%20%EC%A2%85%ED%95%A9%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "업비트 종합 지수, 비트코인 제외 알트코인 7.86% 상승",
-          "summary": "",
-          "link": "http://www.ttlnews.com/news/articleView.html?idxno=3066438",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ubit Composite Index",
+      "term_ko": "업비트 종합 지수"
     },
     {
-      "term": "We've been selling on the weakness of the",
-      "term_ko": "원화 약세에 팔아치우던",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원화 약세에 팔아치우던",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "원화 약세에 팔아치우던 외국인이 돌아왔다…코스피 하루 1.9조 순매수",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4391920"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%ED%99%94%20%EC%95%BD%EC%84%B8%EC%97%90%20%ED%8C%94%EC%95%84%EC%B9%98%EC%9A%B0%EB%8D%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%ED%99%94%20%EC%95%BD%EC%84%B8%EC%97%90%20%ED%8C%94%EC%95%84%EC%B9%98%EC%9A%B0%EB%8D%98"
-      },
-      "top_headlines": [
-        {
-          "title": "원화 약세에 팔아치우던 외국인이 돌아왔다…코스피 하루 1.9조 순매수",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4391920",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "We've Been Selling on the Weakness of the",
+      "term_ko": "원화 약세에 팔아치우던"
     },
     {
-      "term": "Changyong exchange rate is structural",
-      "term_ko": "이창용 환율은 구조적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이창용 환율은 구조적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이창용 \"환율은 구조적 문제\"…해외투자 논란에 정책 일관성 재확인",
-              "link": "https://sports.hankooki.com/news/articleView.html?idxno=6921108"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%ED%99%98%EC%9C%A8%EC%9D%80%20%EA%B5%AC%EC%A1%B0%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%B0%BD%EC%9A%A9%20%ED%99%98%EC%9C%A8%EC%9D%80%20%EA%B5%AC%EC%A1%B0%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 \"환율은 구조적 문제\"…해외투자 논란에 정책 일관성 재확인",
-          "summary": "",
-          "link": "https://sports.hankooki.com/news/articleView.html?idxno=6921108",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Changyong Exchange Rate Is Structural",
+      "term_ko": "이창용 환율은 구조적"
     },
     {
-      "term": "Double-check policy consistency",
-      "term_ko": "정책 일관성 재확인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정책 일관성 재확인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이창용 \"환율은 구조적 문제\"…해외투자 논란에 정책 일관성 재확인",
-              "link": "https://sports.hankooki.com/news/articleView.html?idxno=6921108"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%B1%85%20%EC%9D%BC%EA%B4%80%EC%84%B1%20%EC%9E%AC%ED%99%95%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%B1%85%20%EC%9D%BC%EA%B4%80%EC%84%B1%20%EC%9E%AC%ED%99%95%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "이창용 \"환율은 구조적 문제\"…해외투자 논란에 정책 일관성 재확인",
-          "summary": "",
-          "link": "https://sports.hankooki.com/news/articleView.html?idxno=6921108",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Double-check Policy Consistency",
+      "term_ko": "정책 일관성 재확인"
     },
     {
       "term": "Beyond Bullish Semiconductors",
-      "term_ko": "강세 반도체 넘어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강세 반도체 넘어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"'5000피' 생각보다 빠를수도\"...증시 강세, 반도체 넘어 업종 전반으로...",
-              "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=130670"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%84%B8%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%84%98%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%84%B8%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%84%98%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"'5000피' 생각보다 빠를수도\"...증시 강세, 반도체 넘어 업종 전반으로...",
-          "summary": "",
-          "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=130670",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "강세 반도체 넘어"
     },
     {
-      "term": "Ankle to mid-to-long testicular rate",
-      "term_ko": "중후장대 고환율에 발목",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중후장대 고환율에 발목",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[환율 1500시대 오나④] 중후장대, 고환율에 발목…“원가 상승 심각”",
-              "link": "https://www.mediapen.com/news/view/1071646"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%ED%9B%84%EC%9E%A5%EB%8C%80%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%97%90%20%EB%B0%9C%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%ED%9B%84%EC%9E%A5%EB%8C%80%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%97%90%20%EB%B0%9C%EB%AA%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "[환율 1500시대 오나④] 중후장대, 고환율에 발목…“원가 상승 심각”",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1071646",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ankle to Mid-to-long Testicular Rate",
+      "term_ko": "중후장대 고환율에 발목"
     },
     {
-      "term": "Significant cost increases",
-      "term_ko": "원가 상승 심각",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원가 상승 심각",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[환율 1500시대 오나④] 중후장대, 고환율에 발목…“원가 상승 심각”",
-              "link": "https://www.mediapen.com/news/view/1071646"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EC%8B%AC%EA%B0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EC%8B%AC%EA%B0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[환율 1500시대 오나④] 중후장대, 고환율에 발목…“원가 상승 심각”",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1071646",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Significant Cost Increases",
+      "term_ko": "원가 상승 심각"
     },
     {
       "term": "Oil Price Financial Market Plotted",
-      "term_ko": "그려본 유가 금융시장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "그려본 유가 금융시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "마두로 체포, AI가 그려본 유가·금융시장 시나리오는",
-              "link": "https://www.newspim.com/news/view/20260105000835"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%B8%EB%A0%A4%EB%B3%B8%20%EC%9C%A0%EA%B0%80%20%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%B8%EB%A0%A4%EB%B3%B8%20%EC%9C%A0%EA%B0%80%20%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "마두로 체포, AI가 그려본 유가·금융시장 시나리오는",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260105000835",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "그려본 유가 금융시장"
     },
     {
       "term": "Financial Overview Hana Bank",
-      "term_ko": "금융 이모저모 하나은행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융 이모저모 하나은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[금융 이모저모] 하나은행, 기획재정부 주관 '연기금투자풀 수탁은행' ...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=335127"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8%20%ED%95%98%EB%82%98%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8%20%ED%95%98%EB%82%98%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 이모저모] 하나은행, 기획재정부 주관 '연기금투자풀 수탁은행' ...",
-          "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=335127",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융 이모저모 하나은행"
     },
     {
-      "term": "Pension fund investment pool organized by the Ministry of Strategy and Finance",
-      "term_ko": "기획재정부 주관 연기금투자풀",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기획재정부 주관 연기금투자풀",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[금융 이모저모] 하나은행, 기획재정부 주관 '연기금투자풀 수탁은행' ...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=335127"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%ED%9A%8D%EC%9E%AC%EC%A0%95%EB%B6%80%20%EC%A3%BC%EA%B4%80%20%EC%97%B0%EA%B8%B0%EA%B8%88%ED%88%AC%EC%9E%90%ED%92%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%ED%9A%8D%EC%9E%AC%EC%A0%95%EB%B6%80%20%EC%A3%BC%EA%B4%80%20%EC%97%B0%EA%B8%B0%EA%B8%88%ED%88%AC%EC%9E%90%ED%92%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 이모저모] 하나은행, 기획재정부 주관 '연기금투자풀 수탁은행' ...",
-          "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=335127",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Pension Fund Investment Pool Organized by the Ministry of Strategy and Finance",
+      "term_ko": "기획재정부 주관 연기금투자풀"
     },
     {
-      "term": "Investors Top ETF",
-      "term_ko": "투자자 상위 ETF",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investors Top ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Retail Investors' Top ETF Choice: TIGER US S&P 500",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260184"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Top%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Top%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "Retail Investors' Top ETF Choice: TIGER US S&P 500",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260184",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Investors Top Etf",
+      "term_ko": "투자자 상위 ETF"
     },
     {
-      "term": "Choice TIGER US",
-      "term_ko": "선택 TIGER 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Choice TIGER US",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Retail Investors' Top ETF Choice: TIGER US S&P 500",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260184"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Choice%20TIGER%20US",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Choice%20TIGER%20US"
-      },
-      "top_headlines": [
-        {
-          "title": "Retail Investors' Top ETF Choice: TIGER US S&P 500",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=260184",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Choice Tiger Us",
+      "term_ko": "선택 TIGER 미국"
     },
     {
-      "term": "AI Momentum Fuels",
-      "term_ko": "AI 모멘텀 연료",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Momentum Fuels",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Electronics Hits Record High as AI Momentum Fuels Investor Optimi...",
-              "link": "https://www.econotimes.com/Samsung-Electronics-Hits-Record-High-as-AI-Momentum-Fuels-Investor-Optimism-1730078"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Momentum%20Fuels",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Momentum%20Fuels"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Electronics Hits Record High as AI Momentum Fuels Investor Optimi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Samsung-Electronics-Hits-Record-High-as-AI-Momentum-Fuels-Investor-Optimism-1730078",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Momentum Fuels",
+      "term_ko": "AI 모멘텀 연료"
     },
     {
-      "term": "5000 feet more than you think",
-      "term_ko": "5000피 생각보다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5000피 생각보다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"'5000피' 생각보다 빠를수도\"...증시 강세, 반도체 넘어 업종 전반으로...",
-              "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=130670"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5000%ED%94%BC%20%EC%83%9D%EA%B0%81%EB%B3%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5000%ED%94%BC%20%EC%83%9D%EA%B0%81%EB%B3%B4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"'5000피' 생각보다 빠를수도\"...증시 강세, 반도체 넘어 업종 전반으로...",
-          "summary": "",
-          "link": "http://www.opinionnews.co.kr/news/articleView.html?idxno=130670",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "5000 Feet More Than You Think",
+      "term_ko": "5000피 생각보다"
     },
     {
-      "term": "The foreigner is back",
-      "term_ko": "외국인이 돌아왔다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외국인이 돌아왔다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "원화 약세에 팔아치우던 외국인이 돌아왔다…코스피 하루 1.9조 순매수",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4391920"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%EC%9D%B4%20%EB%8F%8C%EC%95%84%EC%99%94%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%EC%9D%B4%20%EB%8F%8C%EC%95%84%EC%99%94%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "원화 약세에 팔아치우던 외국인이 돌아왔다…코스피 하루 1.9조 순매수",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4391920",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Foreigner Is Back",
+      "term_ko": "외국인이 돌아왔다"
     },
     {
       "term": "Extend Gains Late",
-      "term_ko": "늦은 이득 연장",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Extend Gains Late",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares extend gains late Mon. morning on tech gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0015829048?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Extend%20Gains%20Late",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Extend%20Gains%20Late"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares extend gains late Mon. morning on tech gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015829048?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "늦은 이득 연장"
     },
     {
       "term": "Samsung Electronics Hits",
-      "term_ko": "삼성전자 히트작",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Electronics Hits",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Electronics Hits Record High as AI Momentum Fuels Investor Optimi...",
-              "link": "https://www.econotimes.com/Samsung-Electronics-Hits-Record-High-as-AI-Momentum-Fuels-Investor-Optimism-1730078"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Electronics%20Hits",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Electronics%20Hits"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Electronics Hits Record High as AI Momentum Fuels Investor Optimi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Samsung-Electronics-Hits-Record-High-as-AI-Momentum-Fuels-Investor-Optimism-1730078",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "삼성전자 히트작"
     },
     {
       "term": "What Is Wrong",
-      "term_ko": "무엇이 잘못되었는가",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "What Is Wrong",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "What is wrong with the world?",
-              "link": "https://www.koreatimes.co.kr/path/A2025122416260004171"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=What%20Is%20Wrong",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=What%20Is%20Wrong"
-      },
-      "top_headlines": [
-        {
-          "title": "What is wrong with the world?",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2025122416260004171",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "무엇이 잘못되었는가"
     },
     {
       "term": "Futures Steady",
-      "term_ko": "선물 안정적",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Steady",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Steady as Markets React to Venezuela Crisis and Jobs D...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Markets-React-to-Venezuela-Crisis-and-Jobs-Data-Outlook-1730092"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Steady",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Steady"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Steady as Markets React to Venezuela Crisis and Jobs D...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Markets-React-to-Venezuela-Crisis-and-Jobs-Data-Outlook-1730092",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 안정적"
     },
     {
       "term": "Venezuela Crisis",
-      "term_ko": "베네수엘라 위기",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Venezuela Crisis",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Steady as Markets React to Venezuela Crisis and Jobs D...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Markets-React-to-Venezuela-Crisis-and-Jobs-Data-Outlook-1730092"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Venezuela%20Crisis",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Venezuela%20Crisis"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Steady as Markets React to Venezuela Crisis and Jobs D...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Markets-React-to-Venezuela-Crisis-and-Jobs-Data-Outlook-1730092",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "베네수엘라 위기"
     },
     {
       "term": "Mon Morning",
-      "term_ko": "월요일 아침",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Mon Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares extend gains late Mon. morning on tech gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0015829048?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mon%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mon%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares extend gains late Mon. morning on tech gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015829048?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월요일 아침"
     },
     {
       "term": "Record High",
-      "term_ko": "최고 기록",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Record High",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Electronics Hits Record High as AI Momentum Fuels Investor Optimi...",
-              "link": "https://www.econotimes.com/Samsung-Electronics-Hits-Record-High-as-AI-Momentum-Fuels-Investor-Optimism-1730078"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Record%20High",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Record%20High"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Electronics Hits Record High as AI Momentum Fuels Investor Optimi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Samsung-Electronics-Hits-Record-High-as-AI-Momentum-Fuels-Investor-Optimism-1730078",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "최고 기록"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-05T15:40:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-05T06:41:57.266Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-05T15:40:48+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Excluded Altcoins 7.86",
+      "term_ko": "제외 알트코인 7.86%"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-05T15:40:48+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-05T15:40:48+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Kospi 1.9 Trillion Per Day",
+      "term_ko": "코스피 하루 1.9조"
+    },
+    {
+      "term": "Exchange Rate 1500 O'clock Ona④",
+      "term_ko": "환율 1500시대 오나④"
+    },
+    {
+      "term": "Ubit Composite Index",
+      "term_ko": "업비트 종합 지수"
+    },
+    {
+      "term": "We've Been Selling on the Weakness of the",
+      "term_ko": "원화 약세에 팔아치우던"
+    },
+    {
+      "term": "Changyong Exchange Rate Is Structural",
+      "term_ko": "이창용 환율은 구조적"
+    },
+    {
+      "term": "Double-check Policy Consistency",
+      "term_ko": "정책 일관성 재확인"
+    },
+    {
+      "term": "Beyond Bullish Semiconductors",
+      "term_ko": "강세 반도체 넘어"
+    },
+    {
+      "term": "Ankle to Mid-to-long Testicular Rate",
+      "term_ko": "중후장대 고환율에 발목"
+    },
+    {
+      "term": "Significant Cost Increases",
+      "term_ko": "원가 상승 심각"
+    },
+    {
+      "term": "Oil Price Financial Market Plotted",
+      "term_ko": "그려본 유가 금융시장"
+    },
+    {
+      "term": "Financial Overview Hana Bank",
+      "term_ko": "금융 이모저모 하나은행"
+    },
+    {
+      "term": "Pension Fund Investment Pool Organized by the Ministry of Strategy and Finance",
+      "term_ko": "기획재정부 주관 연기금투자풀"
+    },
+    {
+      "term": "Investors Top Etf",
+      "term_ko": "투자자 상위 ETF"
+    },
+    {
+      "term": "Choice Tiger Us",
+      "term_ko": "선택 TIGER 미국"
+    },
+    {
+      "term": "Ai Momentum Fuels",
+      "term_ko": "AI 모멘텀 연료"
+    },
+    {
+      "term": "5000 Feet More Than You Think",
+      "term_ko": "5000피 생각보다"
+    },
+    {
+      "term": "The Foreigner Is Back",
+      "term_ko": "외국인이 돌아왔다"
+    },
+    {
+      "term": "Extend Gains Late",
+      "term_ko": "늦은 이득 연장"
+    },
+    {
+      "term": "Samsung Electronics Hits",
+      "term_ko": "삼성전자 히트작"
+    },
+    {
+      "term": "What Is Wrong",
+      "term_ko": "무엇이 잘못되었는가"
+    },
+    {
+      "term": "Futures Steady",
+      "term_ko": "선물 안정적"
+    },
+    {
+      "term": "Venezuela Crisis",
+      "term_ko": "베네수엘라 위기"
+    },
+    {
+      "term": "Mon Morning",
+      "term_ko": "월요일 아침"
+    },
+    {
+      "term": "Record High",
+      "term_ko": "최고 기록"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Excluded Altcoins 7.86": {
+      "en": "Excluded Altcoins 7.86",
+      "ko": "제외 알트코인 7.86%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Kospi 1.9 Trillion Per Day": {
+      "en": "Kospi 1.9 Trillion Per Day",
+      "ko": "코스피 하루 1.9조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Exchange Rate 1500 O'clock Ona④": {
+      "en": "Exchange Rate 1500 O'clock Ona④",
+      "ko": "환율 1500시대 오나④",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Ubit Composite Index": {
+      "en": "Ubit Composite Index",
+      "ko": "업비트 종합 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "We've Been Selling on the Weakness of the": {
+      "en": "We've Been Selling on the Weakness of the",
+      "ko": "원화 약세에 팔아치우던",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Changyong Exchange Rate Is Structural": {
+      "en": "Changyong Exchange Rate Is Structural",
+      "ko": "이창용 환율은 구조적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Double-check Policy Consistency": {
+      "en": "Double-check Policy Consistency",
+      "ko": "정책 일관성 재확인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Beyond Bullish Semiconductors": {
+      "en": "Beyond Bullish Semiconductors",
+      "ko": "강세 반도체 넘어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Ankle to Mid-to-long Testicular Rate": {
+      "en": "Ankle to Mid-to-long Testicular Rate",
+      "ko": "중후장대 고환율에 발목",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Significant Cost Increases": {
+      "en": "Significant Cost Increases",
+      "ko": "원가 상승 심각",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Oil Price Financial Market Plotted": {
+      "en": "Oil Price Financial Market Plotted",
+      "ko": "그려본 유가 금융시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Financial Overview Hana Bank": {
+      "en": "Financial Overview Hana Bank",
+      "ko": "금융 이모저모 하나은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Pension Fund Investment Pool Organized by the Ministry of Strategy and Finance": {
+      "en": "Pension Fund Investment Pool Organized by the Ministry of Strategy and Finance",
+      "ko": "기획재정부 주관 연기금투자풀",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Investors Top Etf": {
+      "en": "Investors Top Etf",
+      "ko": "투자자 상위 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Choice Tiger Us": {
+      "en": "Choice Tiger Us",
+      "ko": "선택 TIGER 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Ai Momentum Fuels": {
+      "en": "Ai Momentum Fuels",
+      "ko": "AI 모멘텀 연료",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "5000 Feet More Than You Think": {
+      "en": "5000 Feet More Than You Think",
+      "ko": "5000피 생각보다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "The Foreigner Is Back": {
+      "en": "The Foreigner Is Back",
+      "ko": "외국인이 돌아왔다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Extend Gains Late": {
+      "en": "Extend Gains Late",
+      "ko": "늦은 이득 연장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Samsung Electronics Hits": {
+      "en": "Samsung Electronics Hits",
+      "ko": "삼성전자 히트작",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "What Is Wrong": {
+      "en": "What Is Wrong",
+      "ko": "무엇이 잘못되었는가",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Futures Steady": {
+      "en": "Futures Steady",
+      "ko": "선물 안정적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Venezuela Crisis": {
+      "en": "Venezuela Crisis",
+      "ko": "베네수엘라 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Mon Morning": {
+      "en": "Mon Morning",
+      "ko": "월요일 아침",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Record High": {
+      "en": "Record High",
+      "ko": "최고 기록",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-05T12:44:59.766Z"
     }
   }
 }
