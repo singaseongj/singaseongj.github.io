@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-06T21:45:06+09:00 (KST)**
+- Generated: **2026-01-07T03:33:16+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -230,7 +230,7 @@
 **Ferrovial** (FER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **3.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Ferrovial
 
@@ -287,7 +287,7 @@
 **GE Aerospace** (GE)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **5.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=GE%20Aerospace
@@ -305,7 +305,7 @@
 **General Mills** (GIS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-6.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=General%20Mills
@@ -313,7 +313,7 @@
 **Global Payments** (GPN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-4.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Global%20Payments
