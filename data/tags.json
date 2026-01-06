@@ -1,1138 +1,439 @@
 {
+  "generatedAt": "2026-01-06T12:42:57.820Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-06",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] \"메타의 새 AI 수장은 '초짜'..직원 대이탈 가능성\"",
-              "link": "https://www.newspim.com/news/view/20260106000078"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] \"메타의 새 AI 수장은 '초짜'..직원 대이탈 가능성\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260106000078",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
     {
-      "term": "Meta's new AI",
-      "term_ko": "메타의 새 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "메타의 새 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] \"메타의 새 AI 수장은 '초짜'..직원 대이탈 가능성\"",
-              "link": "https://www.newspim.com/news/view/20260106000078"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%ED%83%80%EC%9D%98%20%EC%83%88%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%94%ED%83%80%EC%9D%98%20%EC%83%88%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] \"메타의 새 AI 수장은 '초짜'..직원 대이탈 가능성\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260106000078",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Meta's New Ai",
+      "term_ko": "메타의 새 AI"
     },
     {
-      "term": "Trigonometric AI",
-      "term_ko": "삼전 하닉 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼전 하닉 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 상승분, 절반은 반도체 덕…삼전·하닉, AI·메모리 훈풍받아 ‘...",
-              "link": "https://www.ekn.kr/web/view.php?key=20260106029245492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%A0%84%20%ED%95%98%EB%8B%89%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%A0%84%20%ED%95%98%EB%8B%89%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 상승분, 절반은 반도체 덕…삼전·하닉, AI·메모리 훈풍받아 ‘...",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260106029245492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trigonometric Ai",
+      "term_ko": "삼전 하닉 AI"
     },
     {
-      "term": "1 million won in rent",
-      "term_ko": "월세 100만 원",
-      "significance_score": 336,
-      "mentions": 231,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "월세 100만 원",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-29",
-              "timestamp": 1766934000000,
-              "value": 100
-            },
-            {
-              "period": "2025-12-30",
-              "timestamp": 1767020400000,
-              "value": 53.84615
-            },
-            {
-              "period": "2026-01-01",
-              "timestamp": 1767193200000,
-              "value": 38.46153
-            },
-            {
-              "period": "2026-01-02",
-              "timestamp": 1767279600000,
-              "value": 76.92307
-            },
-            {
-              "period": "2026-01-04",
-              "timestamp": 1767452400000,
-              "value": 53.84615
-            },
-            {
-              "period": "2026-01-05",
-              "timestamp": 1767538800000,
-              "value": 61.53846
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘월세 100만 원 시대’… 청년의 집 된 교회 학사관",
-              "link": "https://n.news.naver.com/mnews/article/005/0001824477?sid=103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EC%84%B8%20100%EB%A7%8C%20%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EC%84%B8%20100%EB%A7%8C%20%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "‘월세 100만 원 시대’… 청년의 집 된 교회 학사관",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001824477?sid=103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 230.7692,
-        "weekly_average_volume": 57.6923,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.023013,
-        "time_weight": 0.025246,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1767538800000
-      }
+      "term": "1 Million Won in Rent",
+      "term_ko": "월세 100만 원"
     },
     {
-      "term": "Interest rate freeze since July",
-      "term_ko": "기준금리 동결 7월부터",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기준금리 동결 7월부터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한투증권 “상반기까지 기준금리 동결…7월부터 인하”",
-              "link": "https://www.kukinews.com/article/view/kuk202601060097"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%207%EC%9B%94%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%207%EC%9B%94%EB%B6%80%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권 “상반기까지 기준금리 동결…7월부터 인하”",
-          "summary": "",
-          "link": "https://www.kukinews.com/article/view/kuk202601060097",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Rate Freeze Since July",
+      "term_ko": "기준금리 동결 7월부터"
     },
     {
-      "term": "Top international financial news of the morning06th",
-      "term_ko": "오전 주요 국제금융뉴스06일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오전 주요 국제금융뉴스06일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[오전 주요 국제금융뉴스](06일)",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4392134"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A406%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A406%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[오전 주요 국제금융뉴스](06일)",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4392134",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Top International Financial News of the Morning06th",
+      "term_ko": "오전 주요 국제금융뉴스06일"
     },
     {
-      "term": "Newbie at the helm...employee turnover",
-      "term_ko": "수장은 초짜..직원 대이탈",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수장은 초짜..직원 대이탈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] \"메타의 새 AI 수장은 '초짜'..직원 대이탈 가능성\"",
-              "link": "https://www.newspim.com/news/view/20260106000078"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9E%A5%EC%9D%80%20%EC%B4%88%EC%A7%9C..%EC%A7%81%EC%9B%90%20%EB%8C%80%EC%9D%B4%ED%83%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9E%A5%EC%9D%80%20%EC%B4%88%EC%A7%9C..%EC%A7%81%EC%9B%90%20%EB%8C%80%EC%9D%B4%ED%83%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] \"메타의 새 AI 수장은 '초짜'..직원 대이탈 가능성\"",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260106000078",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Newbie at the Helm...employee Turnover",
+      "term_ko": "수장은 초짜..직원 대이탈"
     },
     {
       "term": "Year of the Ox丙午年 Red Horse",
-      "term_ko": "병오년丙午年 붉은 말",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "병오년丙午年 붉은 말",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "병오년(丙午年) 붉은 말, 새해에 바란다",
-              "link": "https://www.ccdailynews.com/news/articleView.html?idxno=2390110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%91%EC%98%A4%EB%85%84%E4%B8%99%E5%8D%88%E5%B9%B4%20%EB%B6%89%EC%9D%80%20%EB%A7%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%91%EC%98%A4%EB%85%84%E4%B8%99%E5%8D%88%E5%B9%B4%20%EB%B6%89%EC%9D%80%20%EB%A7%90"
-      },
-      "top_headlines": [
-        {
-          "title": "병오년(丙午年) 붉은 말, 새해에 바란다",
-          "summary": "",
-          "link": "https://www.ccdailynews.com/news/articleView.html?idxno=2390110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "병오년丙午年 붉은 말"
     },
     {
-      "term": "From deposits to loan blockages",
-      "term_ko": "대출 막히자 예금부터",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대출 막히자 예금부터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "대출 막히자 예금부터 깼다…연말 은행권 ‘머니무브’ ↑",
-              "link": "https://n.news.naver.com/mnews/article/029/0003003305?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EB%A7%89%ED%9E%88%EC%9E%90%20%EC%98%88%EA%B8%88%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EB%A7%89%ED%9E%88%EC%9E%90%20%EC%98%88%EA%B8%88%EB%B6%80%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "대출 막히자 예금부터 깼다…연말 은행권 ‘머니무브’ ↑",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/029/0003003305?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "From Deposits to Loan Blockages",
+      "term_ko": "대출 막히자 예금부터"
     },
     {
-      "term": "Woke up year-end bank vouchers",
-      "term_ko": "깼다 연말 은행권",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "깼다 연말 은행권",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "대출 막히자 예금부터 깼다…연말 은행권 ‘머니무브’ ↑",
-              "link": "https://n.news.naver.com/mnews/article/029/0003003305?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%BC%EB%8B%A4%20%EC%97%B0%EB%A7%90%20%EC%9D%80%ED%96%89%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%BC%EB%8B%A4%20%EC%97%B0%EB%A7%90%20%EC%9D%80%ED%96%89%EA%B6%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "대출 막히자 예금부터 깼다…연말 은행권 ‘머니무브’ ↑",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/029/0003003305?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Woke Up Year-end Bank Vouchers",
+      "term_ko": "깼다 연말 은행권"
     },
     {
       "term": "Period Young Men's House",
-      "term_ko": "시대 청년의 집",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시대 청년의 집",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘월세 100만 원 시대’… 청년의 집 된 교회 학사관",
-              "link": "https://n.news.naver.com/mnews/article/005/0001824477?sid=103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%8C%80%20%EC%B2%AD%EB%85%84%EC%9D%98%20%EC%A7%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%8C%80%20%EC%B2%AD%EB%85%84%EC%9D%98%20%EC%A7%91"
-      },
-      "top_headlines": [
-        {
-          "title": "‘월세 100만 원 시대’… 청년의 집 된 교회 학사관",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001824477?sid=103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시대 청년의 집"
     },
     {
       "term": "Church Baccalaureate",
-      "term_ko": "된 교회 학사관",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "된 교회 학사관",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘월세 100만 원 시대’… 청년의 집 된 교회 학사관",
-              "link": "https://n.news.naver.com/mnews/article/005/0001824477?sid=103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%90%9C%20%EA%B5%90%ED%9A%8C%20%ED%95%99%EC%82%AC%EA%B4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%90%9C%20%EA%B5%90%ED%9A%8C%20%ED%95%99%EC%82%AC%EA%B4%80"
-      },
-      "top_headlines": [
-        {
-          "title": "‘월세 100만 원 시대’… 청년의 집 된 교회 학사관",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001824477?sid=103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "된 교회 학사관"
     },
     {
-      "term": "AMD Unveils Next-Generation",
-      "term_ko": "AMD, 차세대",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AMD Unveils Next-Generation",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AMD Unveils Next-Generation AI and PC Chips at CES, Highlights Major Open...",
-              "link": "https://www.econotimes.com/AMD-Unveils-Next-Generation-AI-and-PC-Chips-at-CES-Highlights-Major-OpenAI-Partnership-1730210"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AMD%20Unveils%20Next-Generation",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AMD%20Unveils%20Next-Generation"
-      },
-      "top_headlines": [
-        {
-          "title": "AMD Unveils Next-Generation AI and PC Chips at CES, Highlights Major Open...",
-          "summary": "",
-          "link": "https://www.econotimes.com/AMD-Unveils-Next-Generation-AI-and-PC-Chips-at-CES-Highlights-Major-OpenAI-Partnership-1730210",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amd Unveils Next-generation",
+      "term_ko": "AMD, 차세대"
     },
     {
-      "term": "PC Chips At",
-      "term_ko": "PC 칩",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "PC Chips At",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AMD Unveils Next-Generation AI and PC Chips at CES, Highlights Major Open...",
-              "link": "https://www.econotimes.com/AMD-Unveils-Next-Generation-AI-and-PC-Chips-at-CES-Highlights-Major-OpenAI-Partnership-1730210"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=PC%20Chips%20At",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=PC%20Chips%20At"
-      },
-      "top_headlines": [
-        {
-          "title": "AMD Unveils Next-Generation AI and PC Chips at CES, Highlights Major Open...",
-          "summary": "",
-          "link": "https://www.econotimes.com/AMD-Unveils-Next-Generation-AI-and-PC-Chips-at-CES-Highlights-Major-OpenAI-Partnership-1730210",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Pc Chips at",
+      "term_ko": "PC 칩"
     },
     {
-      "term": "CES Highlights Major",
-      "term_ko": "CES 하이라이트 주요 내용",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "CES Highlights Major",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AMD Unveils Next-Generation AI and PC Chips at CES, Highlights Major Open...",
-              "link": "https://www.econotimes.com/AMD-Unveils-Next-Generation-AI-and-PC-Chips-at-CES-Highlights-Major-OpenAI-Partnership-1730210"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CES%20Highlights%20Major",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CES%20Highlights%20Major"
-      },
-      "top_headlines": [
-        {
-          "title": "AMD Unveils Next-Generation AI and PC Chips at CES, Highlights Major Open...",
-          "summary": "",
-          "link": "https://www.econotimes.com/AMD-Unveils-Next-Generation-AI-and-PC-Chips-at-CES-Highlights-Major-OpenAI-Partnership-1730210",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ces Highlights Major",
+      "term_ko": "CES 하이라이트 주요 내용"
     },
     {
       "term": "Wishes for the New Year",
-      "term_ko": "새해에 바란다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "새해에 바란다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "병오년(丙午年) 붉은 말, 새해에 바란다",
-              "link": "https://www.ccdailynews.com/news/articleView.html?idxno=2390110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%88%ED%95%B4%EC%97%90%20%EB%B0%94%EB%9E%80%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%88%ED%95%B4%EC%97%90%20%EB%B0%94%EB%9E%80%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "병오년(丙午年) 붉은 말, 새해에 바란다",
-          "summary": "",
-          "link": "https://www.ccdailynews.com/news/articleView.html?idxno=2390110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "새해에 바란다"
     },
     {
-      "term": "Hantu Securities through the first half of the year",
-      "term_ko": "한투증권 상반기까지",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한투증권 상반기까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한투증권 “상반기까지 기준금리 동결…7월부터 인하”",
-              "link": "https://www.kukinews.com/article/view/kuk202601060097"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20%EC%83%81%EB%B0%98%EA%B8%B0%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20%EC%83%81%EB%B0%98%EA%B8%B0%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권 “상반기까지 기준금리 동결…7월부터 인하”",
-          "summary": "",
-          "link": "https://www.kukinews.com/article/view/kuk202601060097",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hantu Securities Through the First Half of the Year",
+      "term_ko": "한투증권 상반기까지"
     },
     {
       "term": "Semiconductor Ducks",
-      "term_ko": "반도체 덕",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 덕",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 상승분, 절반은 반도체 덕…삼전·하닉, AI·메모리 훈풍받아 ‘...",
-              "link": "https://www.ekn.kr/web/view.php?key=20260106029245492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%8D%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%8D%95"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 상승분, 절반은 반도체 덕…삼전·하닉, AI·메모리 훈풍받아 ‘...",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260106029245492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반도체 덕"
     },
     {
-      "term": "Get a memory boost",
-      "term_ko": "메모리 훈풍받아",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "메모리 훈풍받아",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 상승분, 절반은 반도체 덕…삼전·하닉, AI·메모리 훈풍받아 ‘...",
-              "link": "https://www.ekn.kr/web/view.php?key=20260106029245492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%EB%AA%A8%EB%A6%AC%20%ED%9B%88%ED%92%8D%EB%B0%9B%EC%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%94%EB%AA%A8%EB%A6%AC%20%ED%9B%88%ED%92%8D%EB%B0%9B%EC%95%84"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 상승분, 절반은 반도체 덕…삼전·하닉, AI·메모리 훈풍받아 ‘...",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260106029245492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Get a Memory Boost",
+      "term_ko": "메모리 훈풍받아"
     },
     {
       "term": "Narrow Losses Late",
-      "term_ko": "늦은 손실 축소",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Narrow Losses Late",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares narrow losses late Tue. morning on retail buying",
-              "link": "https://n.news.naver.com/mnews/article/001/0015831531?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Narrow%20Losses%20Late",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Narrow%20Losses%20Late"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares narrow losses late Tue. morning on retail buying",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015831531?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "늦은 손실 축소"
     },
     {
       "term": "Nvidia Unveils Rubin",
-      "term_ko": "엔비디아, 루빈 공개",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nvidia Unveils Rubin",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Nvidia Unveils Rubin Platform to Power Next Wave of AI Infrastructure",
-              "link": "https://www.econotimes.com/Nvidia-Unveils-Rubin-Platform-to-Power-Next-Wave-of-AI-Infrastructure-1730185"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nvidia%20Unveils%20Rubin",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nvidia%20Unveils%20Rubin"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Unveils Rubin Platform to Power Next Wave of AI Infrastructure",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Unveils-Rubin-Platform-to-Power-Next-Wave-of-AI-Infrastructure-1730185",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "엔비디아, 루빈 공개"
     },
     {
       "term": "Power Next Wave",
-      "term_ko": "파워 넥스트 웨이브",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Power Next Wave",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Nvidia Unveils Rubin Platform to Power Next Wave of AI Infrastructure",
-              "link": "https://www.econotimes.com/Nvidia-Unveils-Rubin-Platform-to-Power-Next-Wave-of-AI-Infrastructure-1730185"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Power%20Next%20Wave",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Power%20Next%20Wave"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Unveils Rubin Platform to Power Next Wave of AI Infrastructure",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Unveils-Rubin-Platform-to-Power-Next-Wave-of-AI-Infrastructure-1730185",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "파워 넥스트 웨이브"
     },
     {
-      "term": "AI Infrastructure",
-      "term_ko": "AI 인프라",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Infrastructure",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Nvidia Unveils Rubin Platform to Power Next Wave of AI Infrastructure",
-              "link": "https://www.econotimes.com/Nvidia-Unveils-Rubin-Platform-to-Power-Next-Wave-of-AI-Infrastructure-1730185"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Infrastructure",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Infrastructure"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Unveils Rubin Platform to Power Next Wave of AI Infrastructure",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Unveils-Rubin-Platform-to-Power-Next-Wave-of-AI-Infrastructure-1730185",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Infrastructure",
+      "term_ko": "AI 인프라"
     },
     {
       "term": "Tue Morning",
-      "term_ko": "화요일 오전",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tue Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares narrow losses late Tue. morning on retail buying",
-              "link": "https://n.news.naver.com/mnews/article/001/0015831531?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tue%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tue%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares narrow losses late Tue. morning on retail buying",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015831531?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "화요일 오전"
     },
     {
       "term": "Retail Buying",
-      "term_ko": "소매 구매",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Retail Buying",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares narrow losses late Tue. morning on retail buying",
-              "link": "https://n.news.naver.com/mnews/article/001/0015831531?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Retail%20Buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Retail%20Buying"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares narrow losses late Tue. morning on retail buying",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015831531?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소매 구매"
     },
     {
       "term": "Futures Flat",
-      "term_ko": "선물 플랫",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Flat",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Flat as Energy Stocks Rally on Venezuela Developments",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Flat-as-Energy-Stocks-Rally-on-Venezuela-Developments-1730186"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Flat",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Flat"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Flat as Energy Stocks Rally on Venezuela Developments",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Flat-as-Energy-Stocks-Rally-on-Venezuela-Developments-1730186",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 플랫"
     },
     {
       "term": "Venezuela Developments",
-      "term_ko": "베네수엘라 개발",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Venezuela Developments",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Flat as Energy Stocks Rally on Venezuela Developments",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Flat-as-Energy-Stocks-Rally-on-Venezuela-Developments-1730186"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Venezuela%20Developments",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Venezuela%20Developments"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Flat as Energy Stocks Rally on Venezuela Developments",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Flat-as-Energy-Stocks-Rally-on-Venezuela-Developments-1730186",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "베네수엘라 개발"
     },
     {
       "term": "Open Lower",
-      "term_ko": "더 낮게 열기",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares open lower on profit taking after record high",
-              "link": "https://n.news.naver.com/mnews/article/001/0015831029?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open lower on profit taking after record high",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015831029?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "더 낮게 열기"
     },
     {
       "term": "Profit Taking",
-      "term_ko": "수익 창출",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Profit Taking",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares open lower on profit taking after record high",
-              "link": "https://n.news.naver.com/mnews/article/001/0015831029?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Profit%20Taking",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Profit%20Taking"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open lower on profit taking after record high",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015831029?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수익 창출"
     },
     {
       "term": "Record High",
-      "term_ko": "최고 기록",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Record High",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-06T15:35:49+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares open lower on profit taking after record high",
-              "link": "https://n.news.naver.com/mnews/article/001/0015831029?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Record%20High",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Record%20High"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open lower on profit taking after record high",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015831029?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "최고 기록"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-06T06:37:01.389Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-06T15:35:49+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-06T15:35:49+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-06T15:35:49+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Meta's New Ai",
+      "term_ko": "메타의 새 AI"
+    },
+    {
+      "term": "Trigonometric Ai",
+      "term_ko": "삼전 하닉 AI"
+    },
+    {
+      "term": "1 Million Won in Rent",
+      "term_ko": "월세 100만 원"
+    },
+    {
+      "term": "Interest Rate Freeze Since July",
+      "term_ko": "기준금리 동결 7월부터"
+    },
+    {
+      "term": "Top International Financial News of the Morning06th",
+      "term_ko": "오전 주요 국제금융뉴스06일"
+    },
+    {
+      "term": "Newbie at the Helm...employee Turnover",
+      "term_ko": "수장은 초짜..직원 대이탈"
+    },
+    {
+      "term": "Year of the Ox丙午年 Red Horse",
+      "term_ko": "병오년丙午年 붉은 말"
+    },
+    {
+      "term": "From Deposits to Loan Blockages",
+      "term_ko": "대출 막히자 예금부터"
+    },
+    {
+      "term": "Woke Up Year-end Bank Vouchers",
+      "term_ko": "깼다 연말 은행권"
+    },
+    {
+      "term": "Period Young Men's House",
+      "term_ko": "시대 청년의 집"
+    },
+    {
+      "term": "Church Baccalaureate",
+      "term_ko": "된 교회 학사관"
+    },
+    {
+      "term": "Amd Unveils Next-generation",
+      "term_ko": "AMD, 차세대"
+    },
+    {
+      "term": "Pc Chips at",
+      "term_ko": "PC 칩"
+    },
+    {
+      "term": "Ces Highlights Major",
+      "term_ko": "CES 하이라이트 주요 내용"
+    },
+    {
+      "term": "Wishes for the New Year",
+      "term_ko": "새해에 바란다"
+    },
+    {
+      "term": "Hantu Securities Through the First Half of the Year",
+      "term_ko": "한투증권 상반기까지"
+    },
+    {
+      "term": "Semiconductor Ducks",
+      "term_ko": "반도체 덕"
+    },
+    {
+      "term": "Get a Memory Boost",
+      "term_ko": "메모리 훈풍받아"
+    },
+    {
+      "term": "Narrow Losses Late",
+      "term_ko": "늦은 손실 축소"
+    },
+    {
+      "term": "Nvidia Unveils Rubin",
+      "term_ko": "엔비디아, 루빈 공개"
+    },
+    {
+      "term": "Power Next Wave",
+      "term_ko": "파워 넥스트 웨이브"
+    },
+    {
+      "term": "Ai Infrastructure",
+      "term_ko": "AI 인프라"
+    },
+    {
+      "term": "Tue Morning",
+      "term_ko": "화요일 오전"
+    },
+    {
+      "term": "Retail Buying",
+      "term_ko": "소매 구매"
+    },
+    {
+      "term": "Futures Flat",
+      "term_ko": "선물 플랫"
+    },
+    {
+      "term": "Venezuela Developments",
+      "term_ko": "베네수엘라 개발"
+    },
+    {
+      "term": "Open Lower",
+      "term_ko": "더 낮게 열기"
+    },
+    {
+      "term": "Profit Taking",
+      "term_ko": "수익 창출"
+    },
+    {
+      "term": "Record High",
+      "term_ko": "최고 기록"
+    }
+  ],
+  "translations": {
+    "The Story of Ai in Stocks": {
+      "en": "The Story of Ai in Stocks",
+      "ko": "AI의 종목 이야기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Meta's New Ai": {
+      "en": "Meta's New Ai",
+      "ko": "메타의 새 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Trigonometric Ai": {
+      "en": "Trigonometric Ai",
+      "ko": "삼전 하닉 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "1 Million Won in Rent": {
+      "en": "1 Million Won in Rent",
+      "ko": "월세 100만 원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Interest Rate Freeze Since July": {
+      "en": "Interest Rate Freeze Since July",
+      "ko": "기준금리 동결 7월부터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Top International Financial News of the Morning06th": {
+      "en": "Top International Financial News of the Morning06th",
+      "ko": "오전 주요 국제금융뉴스06일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Newbie at the Helm...employee Turnover": {
+      "en": "Newbie at the Helm...employee Turnover",
+      "ko": "수장은 초짜..직원 대이탈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Year of the Ox丙午年 Red Horse": {
+      "en": "Year of the Ox丙午年 Red Horse",
+      "ko": "병오년丙午年 붉은 말",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "From Deposits to Loan Blockages": {
+      "en": "From Deposits to Loan Blockages",
+      "ko": "대출 막히자 예금부터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Woke Up Year-end Bank Vouchers": {
+      "en": "Woke Up Year-end Bank Vouchers",
+      "ko": "깼다 연말 은행권",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Period Young Men's House": {
+      "en": "Period Young Men's House",
+      "ko": "시대 청년의 집",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Church Baccalaureate": {
+      "en": "Church Baccalaureate",
+      "ko": "된 교회 학사관",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Amd Unveils Next-generation": {
+      "en": "Amd Unveils Next-generation",
+      "ko": "AMD, 차세대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Pc Chips at": {
+      "en": "Pc Chips at",
+      "ko": "PC 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Ces Highlights Major": {
+      "en": "Ces Highlights Major",
+      "ko": "CES 하이라이트 주요 내용",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Wishes for the New Year": {
+      "en": "Wishes for the New Year",
+      "ko": "새해에 바란다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Hantu Securities Through the First Half of the Year": {
+      "en": "Hantu Securities Through the First Half of the Year",
+      "ko": "한투증권 상반기까지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Semiconductor Ducks": {
+      "en": "Semiconductor Ducks",
+      "ko": "반도체 덕",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Get a Memory Boost": {
+      "en": "Get a Memory Boost",
+      "ko": "메모리 훈풍받아",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Narrow Losses Late": {
+      "en": "Narrow Losses Late",
+      "ko": "늦은 손실 축소",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Nvidia Unveils Rubin": {
+      "en": "Nvidia Unveils Rubin",
+      "ko": "엔비디아, 루빈 공개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Power Next Wave": {
+      "en": "Power Next Wave",
+      "ko": "파워 넥스트 웨이브",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Ai Infrastructure": {
+      "en": "Ai Infrastructure",
+      "ko": "AI 인프라",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Tue Morning": {
+      "en": "Tue Morning",
+      "ko": "화요일 오전",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Retail Buying": {
+      "en": "Retail Buying",
+      "ko": "소매 구매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Futures Flat": {
+      "en": "Futures Flat",
+      "ko": "선물 플랫",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Venezuela Developments": {
+      "en": "Venezuela Developments",
+      "ko": "베네수엘라 개발",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Open Lower": {
+      "en": "Open Lower",
+      "ko": "더 낮게 열기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.820Z"
+    },
+    "Profit Taking": {
+      "en": "Profit Taking",
+      "ko": "수익 창출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.821Z"
+    },
+    "Record High": {
+      "en": "Record High",
+      "ko": "최고 기록",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-06T12:42:57.821Z"
     }
   }
 }
