@@ -1,1148 +1,439 @@
 {
+  "generatedAt": "2026-01-07T12:43:51.852Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-07",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Ripple CEO 1 billion",
-      "term_ko": "리플 CEO 10억",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리플 CEO 10억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%ED%94%8C%20CEO%2010%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%ED%94%8C%20CEO%2010%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ripple Ceo 1 Billion",
+      "term_ko": "리플 CEO 10억"
     },
     {
-      "term": "300 trillion in the ETF market",
-      "term_ko": "ETF 시장 300조원",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 시장 300조원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "속도 내는 ETF 시장 300조원 시대…7개월 만에 100조 증가",
-              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=806607"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%8B%9C%EC%9E%A5%20300%EC%A1%B0%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%8B%9C%EC%9E%A5%20300%EC%A1%B0%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "속도 내는 ETF 시장 300조원 시대…7개월 만에 100조 증가",
-          "summary": "",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=806607",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "300 Trillion in the Etf Market",
+      "term_ko": "ETF 시장 300조원"
     },
     {
-      "term": "Dollar XRP only",
-      "term_ko": "달러 XRP 전용",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 XRP 전용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20XRP%20%EC%A0%84%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20XRP%20%EC%A0%84%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar Xrp Only",
+      "term_ko": "달러 XRP 전용"
     },
     {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-              "link": "https://www.newspim.com/news/view/20260107000067"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107000067",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
     {
-      "term": "Amazon AI Agent",
-      "term_ko": "아마존 AI 에이전트",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아마존 AI 에이전트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-              "link": "https://www.newspim.com/news/view/20260107000067"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%A7%88%EC%A1%B4%20AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%A7%88%EC%A1%B4%20AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107000067",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amazon Ai Agent",
+      "term_ko": "아마존 AI 에이전트"
     },
     {
-      "term": "4 years out of the country",
-      "term_ko": "원정투자 외지인 4년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원정투자 외지인 4년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“서울 아파트 살래”…작년 서울 원정투자 외지인 4년 만에 최다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003495060?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EC%A0%95%ED%88%AC%EC%9E%90%20%EC%99%B8%EC%A7%80%EC%9D%B8%204%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EC%A0%95%ED%88%AC%EC%9E%90%20%EC%99%B8%EC%A7%80%EC%9D%B8%204%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "“서울 아파트 살래”…작년 서울 원정투자 외지인 4년 만에 최다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003495060?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4 Years Out of the Country",
+      "term_ko": "원정투자 외지인 4년"
     },
     {
       "term": "150th Anniversary",
-      "term_ko": "선생 탄생 150주년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "선생 탄생 150주년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "우리은행, 유네스코와 백범 김구 선생 탄생 150주년 기린다",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41408"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EC%83%9D%20%ED%83%84%EC%83%9D%20150%EC%A3%BC%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EC%83%9D%20%ED%83%84%EC%83%9D%20150%EC%A3%BC%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "우리은행, 유네스코와 백범 김구 선생 탄생 150주년 기린다",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41408",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선생 탄생 150주년"
     },
     {
-      "term": "Financial advisor",
-      "term_ko": "재무 운용사 고문",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재무 운용사 고문",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EB%AC%B4%20%EC%9A%B4%EC%9A%A9%EC%82%AC%20%EA%B3%A0%EB%AC%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EB%AC%B4%20%EC%9A%B4%EC%9A%A9%EC%82%AC%20%EA%B3%A0%EB%AC%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Financial Advisor",
+      "term_ko": "재무 운용사 고문"
     },
     {
-      "term": "Forcing small businesses to open",
-      "term_ko": "소상공인 강제 입점",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "소상공인 강제 입점",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-              "link": "https://www.newspim.com/news/view/20260107000067"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EA%B0%95%EC%A0%9C%20%EC%9E%85%EC%A0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EA%B0%95%EC%A0%9C%20%EC%9E%85%EC%A0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107000067",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Forcing Small Businesses to Open",
+      "term_ko": "소상공인 강제 입점"
     },
     {
-      "term": "I want to buy an apartment in Seoul",
-      "term_ko": "서울 아파트 살래",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울 아파트 살래",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“서울 아파트 살래”…작년 서울 원정투자 외지인 4년 만에 최다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003495060?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%82%B4%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%82%B4%EB%9E%98"
-      },
-      "top_headlines": [
-        {
-          "title": "“서울 아파트 살래”…작년 서울 원정투자 외지인 4년 만에 최다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003495060?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Want to Buy an Apartment in Seoul",
+      "term_ko": "서울 아파트 살래"
     },
     {
-      "term": "IsisDeal Semiconductor on break",
-      "term_ko": "이슈딜 반도체 쉴때",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이슈딜 반도체 쉴때",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[이슈딜] \"반도체 쉴때 바이오…순환매 활용하면 돈 번다\"",
-              "link": "https://news.dealsitetv.com/articles/163670"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%8A%88%EB%94%9C%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%89%B4%EB%95%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%8A%88%EB%94%9C%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%89%B4%EB%95%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[이슈딜] \"반도체 쉴때 바이오…순환매 활용하면 돈 번다\"",
-          "summary": "",
-          "link": "https://news.dealsitetv.com/articles/163670",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Isisdeal Semiconductor on Break",
+      "term_ko": "이슈딜 반도체 쉴때"
     },
     {
-      "term": "Utilizing biochar",
-      "term_ko": "바이오 순환매 활용하면",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "바이오 순환매 활용하면",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[이슈딜] \"반도체 쉴때 바이오…순환매 활용하면 돈 번다\"",
-              "link": "https://news.dealsitetv.com/articles/163670"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%94%EC%9D%B4%EC%98%A4%20%EC%88%9C%ED%99%98%EB%A7%A4%20%ED%99%9C%EC%9A%A9%ED%95%98%EB%A9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%94%EC%9D%B4%EC%98%A4%20%EC%88%9C%ED%99%98%EB%A7%A4%20%ED%99%9C%EC%9A%A9%ED%95%98%EB%A9%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[이슈딜] \"반도체 쉴때 바이오…순환매 활용하면 돈 번다\"",
-          "summary": "",
-          "link": "https://news.dealsitetv.com/articles/163670",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Utilizing Biochar",
+      "term_ko": "바이오 순환매 활용하면"
     },
     {
-      "term": "Hansuwon Mid- to long-term small businesses",
-      "term_ko": "한수원 중장기 소상공인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한수원 중장기 소상공인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한수원, 중장기 소상공인 종합 지원사업 본격 시행",
-              "link": "https://www.mediapen.com/news/view/1072307"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%88%98%EC%9B%90%20%EC%A4%91%EC%9E%A5%EA%B8%B0%20%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%88%98%EC%9B%90%20%EC%A4%91%EC%9E%A5%EA%B8%B0%20%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "한수원, 중장기 소상공인 종합 지원사업 본격 시행",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1072307",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hansuwon Mid- to Long-term Small Businesses",
+      "term_ko": "한수원 중장기 소상공인"
     },
     {
-      "term": "Comprehensive support program in full swing",
-      "term_ko": "종합 지원사업 본격",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "종합 지원사업 본격",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한수원, 중장기 소상공인 종합 지원사업 본격 시행",
-              "link": "https://www.mediapen.com/news/view/1072307"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A2%85%ED%95%A9%20%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85%20%EB%B3%B8%EA%B2%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A2%85%ED%95%A9%20%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85%20%EB%B3%B8%EA%B2%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "한수원, 중장기 소상공인 종합 지원사업 본격 시행",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1072307",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Comprehensive Support Program in Full Swing",
+      "term_ko": "종합 지원사업 본격"
     },
     {
-      "term": "Woori Bank and UNESCO",
-      "term_ko": "우리銀 유네스코와 사회공헌",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우리銀 유네스코와 사회공헌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "우리銀, 유네스코와 사회공헌 맞손…'나의 소원 예·적금' 특판",
-              "link": "https://n.news.naver.com/mnews/article/374/0000484878?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A6%AC%E9%8A%80%20%EC%9C%A0%EB%84%A4%EC%8A%A4%EC%BD%94%EC%99%80%20%EC%82%AC%ED%9A%8C%EA%B3%B5%ED%97%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A6%AC%E9%8A%80%20%EC%9C%A0%EB%84%A4%EC%8A%A4%EC%BD%94%EC%99%80%20%EC%82%AC%ED%9A%8C%EA%B3%B5%ED%97%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "우리銀, 유네스코와 사회공헌 맞손…'나의 소원 예·적금' 특판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000484878?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Woori Bank and Unesco",
+      "term_ko": "우리銀 유네스코와 사회공헌"
     },
     {
       "term": "Datsun My Wish",
-      "term_ko": "맞손 나의 소원",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "맞손 나의 소원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "우리銀, 유네스코와 사회공헌 맞손…'나의 소원 예·적금' 특판",
-              "link": "https://n.news.naver.com/mnews/article/374/0000484878?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%9E%EC%86%90%20%EB%82%98%EC%9D%98%20%EC%86%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%9E%EC%86%90%20%EB%82%98%EC%9D%98%20%EC%86%8C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "우리銀, 유네스코와 사회공헌 맞손…'나의 소원 예·적금' 특판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000484878?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "맞손 나의 소원"
     },
     {
       "term": "Savings Specials",
-      "term_ko": "예 적금 특판",
-      "significance_score": 322,
-      "mentions": 382,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "예 적금 특판",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2025-12-30",
-              "timestamp": 1767020400000,
-              "value": 54.54545
-            },
-            {
-              "period": "2025-12-31",
-              "timestamp": 1767106800000,
-              "value": 40.90909
-            },
-            {
-              "period": "2026-01-01",
-              "timestamp": 1767193200000,
-              "value": 31.81818
-            },
-            {
-              "period": "2026-01-02",
-              "timestamp": 1767279600000,
-              "value": 90.90909
-            },
-            {
-              "period": "2026-01-03",
-              "timestamp": 1767366000000,
-              "value": 36.36363
-            },
-            {
-              "period": "2026-01-04",
-              "timestamp": 1767452400000,
-              "value": 22.72727
-            },
-            {
-              "period": "2026-01-05",
-              "timestamp": 1767538800000,
-              "value": 100
-            },
-            {
-              "period": "2026-01-06",
-              "timestamp": 1767625200000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "우리銀, 유네스코와 사회공헌 맞손…'나의 소원 예·적금' 특판",
-              "link": "https://n.news.naver.com/mnews/article/374/0000484878?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%20%EC%A0%81%EA%B8%88%20%ED%8A%B9%ED%8C%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%20%EC%A0%81%EA%B8%88%20%ED%8A%B9%ED%8C%90"
-      },
-      "top_headlines": [
-        {
-          "title": "우리銀, 유네스코와 사회공헌 맞손…'나의 소원 예·적금' 특판",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000484878?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 381.8182,
-        "weekly_average_volume": 63.6364,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.016233,
-        "time_weight": 0.025252,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1767625200000
-      }
+      "term_ko": "예 적금 특판"
     },
     {
-      "term": "Woori Bank UNESCO and the White Beast",
-      "term_ko": "우리은행 유네스코와 백범",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우리은행 유네스코와 백범",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "우리은행, 유네스코와 백범 김구 선생 탄생 150주년 기린다",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41408"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89%20%EC%9C%A0%EB%84%A4%EC%8A%A4%EC%BD%94%EC%99%80%20%EB%B0%B1%EB%B2%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89%20%EC%9C%A0%EB%84%A4%EC%8A%A4%EC%BD%94%EC%99%80%20%EB%B0%B1%EB%B2%94"
-      },
-      "top_headlines": [
-        {
-          "title": "우리은행, 유네스코와 백범 김구 선생 탄생 150주년 기린다",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41408",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Woori Bank Unesco and the White Beast",
+      "term_ko": "우리은행 유네스코와 백범"
     },
     {
-      "term": "BitMEX Launches Equity",
-      "term_ko": "비트멕스, 에쿼티 출시",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "BitMEX Launches Equity",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=BitMEX%20Launches%20Equity",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=BitMEX%20Launches%20Equity"
-      },
-      "top_headlines": [
-        {
-          "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bitmex Launches Equity",
+      "term_ko": "비트멕스, 에쿼티 출시"
     },
     {
-      "term": "Has Koreas US",
-      "term_ko": "한국 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Has Koreas US",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Has Korea’s US stock frenzy peaked?",
-              "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Has%20Koreas%20US",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Has%20Koreas%20US"
-      },
-      "top_headlines": [
-        {
-          "title": "Has Korea’s US stock frenzy peaked?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Has Koreas Us",
+      "term_ko": "한국 미국"
     },
     {
-      "term": "Baidus AI Chip",
-      "term_ko": "바이두스 AI 칩",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Baidus AI Chip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-              "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Baidus%20AI%20Chip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Baidus%20AI%20Chip"
-      },
-      "top_headlines": [
-        {
-          "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Baidus Ai Chip",
+      "term_ko": "바이두스 AI 칩"
     },
     {
-      "term": "Hong Kong IPO",
-      "term_ko": "홍콩 IPO",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hong Kong IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-              "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hong%20Kong%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hong%20Kong%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hong Kong Ipo",
+      "term_ko": "홍콩 IPO"
     },
     {
       "term": "Bring 24/7 Trading",
-      "term_ko": "연중무휴 24시간 거래",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bring 24/7 Trading",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bring%2024%2F7%20Trading",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bring%2024%2F7%20Trading"
-      },
-      "top_headlines": [
-        {
-          "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연중무휴 24시간 거래"
     },
     {
-      "term": "Jump on board",
-      "term_ko": "전격 합류",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전격 합류",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EA%B2%A9%20%ED%95%A9%EB%A5%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EA%B2%A9%20%ED%95%A9%EB%A5%98"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Jump on Board",
+      "term_ko": "전격 합류"
     },
     {
-      "term": "Most in a year",
-      "term_ko": "만에 최다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 최다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“서울 아파트 살래”…작년 서울 원정투자 외지인 4년 만에 최다",
-              "link": "https://n.news.naver.com/mnews/article/025/0003495060?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "“서울 아파트 살래”…작년 서울 원정투자 외지인 4년 만에 최다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003495060?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Most in a Year",
+      "term_ko": "만에 최다"
     },
     {
-      "term": "Earn money",
-      "term_ko": "돈 번다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돈 번다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[이슈딜] \"반도체 쉴때 바이오…순환매 활용하면 돈 번다\"",
-              "link": "https://news.dealsitetv.com/articles/163670"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%88%20%EB%B2%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%88%20%EB%B2%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[이슈딜] \"반도체 쉴때 바이오…순환매 활용하면 돈 번다\"",
-          "summary": "",
-          "link": "https://news.dealsitetv.com/articles/163670",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Earn Money",
+      "term_ko": "돈 번다"
     },
     {
       "term": "Unit Kunlunxin Prepares",
-      "term_ko": "쿤룬신 유닛 준비",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Unit Kunlunxin Prepares",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-              "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Unit%20Kunlunxin%20Prepares",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Unit%20Kunlunxin%20Prepares"
-      },
-      "top_headlines": [
-        {
-          "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쿤룬신 유닛 준비"
     },
     {
       "term": "Trim Earlier Gains",
-      "term_ko": "이전 이익 다듬기",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trim Earlier Gains",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares trim earlier gains late Wed. morning on profit-taking",
-              "link": "https://n.news.naver.com/mnews/article/001/0015833843?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trim%20Earlier%20Gains",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trim%20Earlier%20Gains"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares trim earlier gains late Wed. morning on profit-taking",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015833843?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이전 이익 다듬기"
     },
     {
       "term": "Late Wed Morning",
-      "term_ko": "수요일 늦은 아침",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Late Wed Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares trim earlier gains late Wed. morning on profit-taking",
-              "link": "https://n.news.naver.com/mnews/article/001/0015833843?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Late%20Wed%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Late%20Wed%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares trim earlier gains late Wed. morning on profit-taking",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015833843?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수요일 늦은 아침"
     },
     {
       "term": "Frenzy Peaked",
-      "term_ko": "열풍 정점",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Frenzy Peaked",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T15:35:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Has Korea’s US stock frenzy peaked?",
-              "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Frenzy%20Peaked",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Frenzy%20Peaked"
-      },
-      "top_headlines": [
-        {
-          "title": "Has Korea’s US stock frenzy peaked?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "열풍 정점"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-07T06:36:16.396Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-07T15:35:06+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ripple Ceo 1 Billion",
+      "term_ko": "리플 CEO 10억"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-07T15:35:06+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-07T15:35:06+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "300 Trillion in the Etf Market",
+      "term_ko": "ETF 시장 300조원"
+    },
+    {
+      "term": "Dollar Xrp Only",
+      "term_ko": "달러 XRP 전용"
+    },
+    {
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
+    },
+    {
+      "term": "Amazon Ai Agent",
+      "term_ko": "아마존 AI 에이전트"
+    },
+    {
+      "term": "4 Years Out of the Country",
+      "term_ko": "원정투자 외지인 4년"
+    },
+    {
+      "term": "150th Anniversary",
+      "term_ko": "선생 탄생 150주년"
+    },
+    {
+      "term": "Financial Advisor",
+      "term_ko": "재무 운용사 고문"
+    },
+    {
+      "term": "Forcing Small Businesses to Open",
+      "term_ko": "소상공인 강제 입점"
+    },
+    {
+      "term": "I Want to Buy an Apartment in Seoul",
+      "term_ko": "서울 아파트 살래"
+    },
+    {
+      "term": "Isisdeal Semiconductor on Break",
+      "term_ko": "이슈딜 반도체 쉴때"
+    },
+    {
+      "term": "Utilizing Biochar",
+      "term_ko": "바이오 순환매 활용하면"
+    },
+    {
+      "term": "Hansuwon Mid- to Long-term Small Businesses",
+      "term_ko": "한수원 중장기 소상공인"
+    },
+    {
+      "term": "Comprehensive Support Program in Full Swing",
+      "term_ko": "종합 지원사업 본격"
+    },
+    {
+      "term": "Woori Bank and Unesco",
+      "term_ko": "우리銀 유네스코와 사회공헌"
+    },
+    {
+      "term": "Datsun My Wish",
+      "term_ko": "맞손 나의 소원"
+    },
+    {
+      "term": "Savings Specials",
+      "term_ko": "예 적금 특판"
+    },
+    {
+      "term": "Woori Bank Unesco and the White Beast",
+      "term_ko": "우리은행 유네스코와 백범"
+    },
+    {
+      "term": "Bitmex Launches Equity",
+      "term_ko": "비트멕스, 에쿼티 출시"
+    },
+    {
+      "term": "Has Koreas Us",
+      "term_ko": "한국 미국"
+    },
+    {
+      "term": "Baidus Ai Chip",
+      "term_ko": "바이두스 AI 칩"
+    },
+    {
+      "term": "Hong Kong Ipo",
+      "term_ko": "홍콩 IPO"
+    },
+    {
+      "term": "Bring 24/7 Trading",
+      "term_ko": "연중무휴 24시간 거래"
+    },
+    {
+      "term": "Jump on Board",
+      "term_ko": "전격 합류"
+    },
+    {
+      "term": "Most in a Year",
+      "term_ko": "만에 최다"
+    },
+    {
+      "term": "Earn Money",
+      "term_ko": "돈 번다"
+    },
+    {
+      "term": "Unit Kunlunxin Prepares",
+      "term_ko": "쿤룬신 유닛 준비"
+    },
+    {
+      "term": "Trim Earlier Gains",
+      "term_ko": "이전 이익 다듬기"
+    },
+    {
+      "term": "Late Wed Morning",
+      "term_ko": "수요일 늦은 아침"
+    },
+    {
+      "term": "Frenzy Peaked",
+      "term_ko": "열풍 정점"
+    }
+  ],
+  "translations": {
+    "Ripple Ceo 1 Billion": {
+      "en": "Ripple Ceo 1 Billion",
+      "ko": "리플 CEO 10억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "300 Trillion in the Etf Market": {
+      "en": "300 Trillion in the Etf Market",
+      "ko": "ETF 시장 300조원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Dollar Xrp Only": {
+      "en": "Dollar Xrp Only",
+      "ko": "달러 XRP 전용",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "The Story of Ai in Stocks": {
+      "en": "The Story of Ai in Stocks",
+      "ko": "AI의 종목 이야기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Amazon Ai Agent": {
+      "en": "Amazon Ai Agent",
+      "ko": "아마존 AI 에이전트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "4 Years Out of the Country": {
+      "en": "4 Years Out of the Country",
+      "ko": "원정투자 외지인 4년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "150th Anniversary": {
+      "en": "150th Anniversary",
+      "ko": "선생 탄생 150주년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Financial Advisor": {
+      "en": "Financial Advisor",
+      "ko": "재무 운용사 고문",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Forcing Small Businesses to Open": {
+      "en": "Forcing Small Businesses to Open",
+      "ko": "소상공인 강제 입점",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "I Want to Buy an Apartment in Seoul": {
+      "en": "I Want to Buy an Apartment in Seoul",
+      "ko": "서울 아파트 살래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Isisdeal Semiconductor on Break": {
+      "en": "Isisdeal Semiconductor on Break",
+      "ko": "이슈딜 반도체 쉴때",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Utilizing Biochar": {
+      "en": "Utilizing Biochar",
+      "ko": "바이오 순환매 활용하면",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Hansuwon Mid- to Long-term Small Businesses": {
+      "en": "Hansuwon Mid- to Long-term Small Businesses",
+      "ko": "한수원 중장기 소상공인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Comprehensive Support Program in Full Swing": {
+      "en": "Comprehensive Support Program in Full Swing",
+      "ko": "종합 지원사업 본격",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Woori Bank and Unesco": {
+      "en": "Woori Bank and Unesco",
+      "ko": "우리銀 유네스코와 사회공헌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Datsun My Wish": {
+      "en": "Datsun My Wish",
+      "ko": "맞손 나의 소원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Savings Specials": {
+      "en": "Savings Specials",
+      "ko": "예 적금 특판",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Woori Bank Unesco and the White Beast": {
+      "en": "Woori Bank Unesco and the White Beast",
+      "ko": "우리은행 유네스코와 백범",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Bitmex Launches Equity": {
+      "en": "Bitmex Launches Equity",
+      "ko": "비트멕스, 에쿼티 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Has Koreas Us": {
+      "en": "Has Koreas Us",
+      "ko": "한국 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Baidus Ai Chip": {
+      "en": "Baidus Ai Chip",
+      "ko": "바이두스 AI 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Hong Kong Ipo": {
+      "en": "Hong Kong Ipo",
+      "ko": "홍콩 IPO",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Bring 24/7 Trading": {
+      "en": "Bring 24/7 Trading",
+      "ko": "연중무휴 24시간 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Jump on Board": {
+      "en": "Jump on Board",
+      "ko": "전격 합류",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Most in a Year": {
+      "en": "Most in a Year",
+      "ko": "만에 최다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Earn Money": {
+      "en": "Earn Money",
+      "ko": "돈 번다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Unit Kunlunxin Prepares": {
+      "en": "Unit Kunlunxin Prepares",
+      "ko": "쿤룬신 유닛 준비",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Trim Earlier Gains": {
+      "en": "Trim Earlier Gains",
+      "ko": "이전 이익 다듬기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Late Wed Morning": {
+      "en": "Late Wed Morning",
+      "ko": "수요일 늦은 아침",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
+    },
+    "Frenzy Peaked": {
+      "en": "Frenzy Peaked",
+      "ko": "열풍 정점",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T12:43:51.852Z"
     }
   }
 }
