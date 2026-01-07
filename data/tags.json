@@ -1,1082 +1,439 @@
 {
+  "generatedAt": "2026-01-07T18:32:41.487Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-07",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Ripple CEO 1 billion",
-      "term_ko": "리플 CEO 10억",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리플 CEO 10억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%ED%94%8C%20CEO%2010%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%ED%94%8C%20CEO%2010%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ripple Ceo 1 Billion",
+      "term_ko": "리플 CEO 10억"
     },
     {
-      "term": "Exiting US ETFs",
-      "term_ko": "끝내는 미국 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "끝내는 미국 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[신간] 한 권으로 끝내는 미국 ETF 투자",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535159"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%81%9D%EB%82%B4%EB%8A%94%20%EB%AF%B8%EA%B5%AD%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%81%9D%EB%82%B4%EB%8A%94%20%EB%AF%B8%EA%B5%AD%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "[신간] 한 권으로 끝내는 미국 ETF 투자",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535159",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exiting Us Etfs",
+      "term_ko": "끝내는 미국 ETF"
     },
     {
-      "term": "Dollar XRP only",
-      "term_ko": "달러 XRP 전용",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 XRP 전용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20XRP%20%EC%A0%84%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20XRP%20%EC%A0%84%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar Xrp Only",
+      "term_ko": "달러 XRP 전용"
     },
     {
-      "term": "The story of AI in stocks",
-      "term_ko": "AI의 종목 이야기",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI의 종목 이야기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-              "link": "https://www.newspim.com/news/view/20260107000067"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107000067",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
     },
     {
-      "term": "Amazon AI Agent",
-      "term_ko": "아마존 AI 에이전트",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아마존 AI 에이전트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-              "link": "https://www.newspim.com/news/view/20260107000067"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%A7%88%EC%A1%B4%20AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%A7%88%EC%A1%B4%20AI%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107000067",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amazon Ai Agent",
+      "term_ko": "아마존 AI 에이전트"
     },
     {
-      "term": "Up to 4 net profits",
-      "term_ko": "최대 순익 4대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최대 순익 4대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'역대 최대 순익' 4대 금융, 생산적 금융 본격 이행에 수익성 관리 '비상...",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652446"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%20%EC%88%9C%EC%9D%B5%204%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%20%EC%88%9C%EC%9D%B5%204%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "'역대 최대 순익' 4대 금융, 생산적 금융 본격 이행에 수익성 관리 '비상...",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652446",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to 4 Net Profits",
+      "term_ko": "최대 순익 4대"
     },
     {
       "term": "Market Price Bitcoin $90,000",
-      "term_ko": "시황 비트코인 9만달러선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시황 비트코인 9만달러선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인 9만달러선 횡보… 연초 자금 재배치 속 '소화 국면...",
-              "link": "https://www.newspim.com/news/view/20260107001079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%209%EB%A7%8C%EB%8B%AC%EB%9F%AC%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%209%EB%A7%8C%EB%8B%AC%EB%9F%AC%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인 9만달러선 횡보… 연초 자금 재배치 속 '소화 국면...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107001079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시황 비트코인 9만달러선"
     },
     {
-      "term": "Financial advisor",
-      "term_ko": "재무 운용사 고문",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재무 운용사 고문",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EB%AC%B4%20%EC%9A%B4%EC%9A%A9%EC%82%AC%20%EA%B3%A0%EB%AC%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EB%AC%B4%20%EC%9A%B4%EC%9A%A9%EC%82%AC%20%EA%B3%A0%EB%AC%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Financial Advisor",
+      "term_ko": "재무 운용사 고문"
     },
     {
-      "term": "Forcing small businesses to open",
-      "term_ko": "소상공인 강제 입점",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "소상공인 강제 입점",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-              "link": "https://www.newspim.com/news/view/20260107000067"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EA%B0%95%EC%A0%9C%20%EC%9E%85%EC%A0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EA%B0%95%EC%A0%9C%20%EC%9E%85%EC%A0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI의 종목 이야기] 아마존 AI 에이전트, 소상공인 '강제 입점' 논란",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107000067",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Forcing Small Businesses to Open",
+      "term_ko": "소상공인 강제 입점"
     },
     {
       "term": "Launched Shinhan Life Shinhan Tontine Annuity Insurance",
-      "term_ko": "신한라이프 신한톤틴연금보험 출시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신한라이프 신한톤틴연금보험 출시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "신한라이프, '신한톤틴연금보험' 출시…연금 차별화 전략 상품 추진",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652390"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EC%8B%A0%ED%95%9C%ED%86%A4%ED%8B%B4%EC%97%B0%EA%B8%88%EB%B3%B4%ED%97%98%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EC%8B%A0%ED%95%9C%ED%86%A4%ED%8B%B4%EC%97%B0%EA%B8%88%EB%B3%B4%ED%97%98%20%EC%B6%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "신한라이프, '신한톤틴연금보험' 출시…연금 차별화 전략 상품 추진",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652390",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "신한라이프 신한톤틴연금보험 출시"
     },
     {
-      "term": "Annuity differentiation strategies",
-      "term_ko": "연금 차별화 전략",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연금 차별화 전략",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "신한라이프, '신한톤틴연금보험' 출시…연금 차별화 전략 상품 추진",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652390"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EA%B8%88%20%EC%B0%A8%EB%B3%84%ED%99%94%20%EC%A0%84%EB%9E%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EA%B8%88%20%EC%B0%A8%EB%B3%84%ED%99%94%20%EC%A0%84%EB%9E%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "신한라이프, '신한톤틴연금보험' 출시…연금 차별화 전략 상품 추진",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652390",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Annuity Differentiation Strategies",
+      "term_ko": "연금 차별화 전략"
     },
     {
-      "term": "Finance Productive finance",
-      "term_ko": "금융 생산적 금융",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융 생산적 금융",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'역대 최대 순익' 4대 금융, 생산적 금융 본격 이행에 수익성 관리 '비상...",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652446"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "'역대 최대 순익' 4대 금융, 생산적 금융 본격 이행에 수익성 관리 '비상...",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652446",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Finance Productive Finance",
+      "term_ko": "금융 생산적 금융"
     },
     {
-      "term": "Profitable to go live",
-      "term_ko": "본격 이행에 수익성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "본격 이행에 수익성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'역대 최대 순익' 4대 금융, 생산적 금융 본격 이행에 수익성 관리 '비상...",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652446"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B8%EA%B2%A9%20%EC%9D%B4%ED%96%89%EC%97%90%20%EC%88%98%EC%9D%B5%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B8%EA%B2%A9%20%EC%9D%B4%ED%96%89%EC%97%90%20%EC%88%98%EC%9D%B5%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "'역대 최대 순익' 4대 금융, 생산적 금융 본격 이행에 수익성 관리 '비상...",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652446",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Profitable to Go Live",
+      "term_ko": "본격 이행에 수익성"
     },
     {
-      "term": "Exchange Nextstrade Strands/Netple",
-      "term_ko": "거래소 넥스트레이드 가닥/넷플",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래소 넥스트레이드 가닥/넷플",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권소식] 조각투자 거래소에 '거래소·넥스트레이드' 가닥/'넷플 협업...",
-              "link": "https://www.asiatime.co.kr/article/20260107500373"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%84%A5%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%93%9C%20%EA%B0%80%EB%8B%A5%2F%EB%84%B7%ED%94%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%84%A5%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%93%9C%20%EA%B0%80%EB%8B%A5%2F%EB%84%B7%ED%94%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권소식] 조각투자 거래소에 '거래소·넥스트레이드' 가닥/'넷플 협업...",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260107500373",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Nextstrade Strands/netple",
+      "term_ko": "거래소 넥스트레이드 가닥/넷플"
     },
     {
-      "term": "Shinhan Life's first Korean version",
-      "term_ko": "신한라이프 업계최초 한국형",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신한라이프 업계최초 한국형",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "신한라이프, 업계최초 한국형 톤틴연금 '신한톤틴연금보험' 출시",
-              "link": "https://daily.hankooki.com/news/articleView.html?idxno=1319502"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EC%97%85%EA%B3%84%EC%B5%9C%EC%B4%88%20%ED%95%9C%EA%B5%AD%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%95%9C%EB%9D%BC%EC%9D%B4%ED%94%84%20%EC%97%85%EA%B3%84%EC%B5%9C%EC%B4%88%20%ED%95%9C%EA%B5%AD%ED%98%95"
-      },
-      "top_headlines": [
-        {
-          "title": "신한라이프, 업계최초 한국형 톤틴연금 '신한톤틴연금보험' 출시",
-          "summary": "",
-          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1319502",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Shinhan Life's First Korean Version",
+      "term_ko": "신한라이프 업계최초 한국형"
     },
     {
       "term": "Tontine Pension Launched Shinhan Tontine Pension Insurance",
-      "term_ko": "톤틴연금 신한톤틴연금보험 출시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "톤틴연금 신한톤틴연금보험 출시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "신한라이프, 업계최초 한국형 톤틴연금 '신한톤틴연금보험' 출시",
-              "link": "https://daily.hankooki.com/news/articleView.html?idxno=1319502"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A4%ED%8B%B4%EC%97%B0%EA%B8%88%20%EC%8B%A0%ED%95%9C%ED%86%A4%ED%8B%B4%EC%97%B0%EA%B8%88%EB%B3%B4%ED%97%98%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A4%ED%8B%B4%EC%97%B0%EA%B8%88%20%EC%8B%A0%ED%95%9C%ED%86%A4%ED%8B%B4%EC%97%B0%EA%B8%88%EB%B3%B4%ED%97%98%20%EC%B6%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "신한라이프, 업계최초 한국형 톤틴연금 '신한톤틴연금보험' 출시",
-          "summary": "",
-          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1319502",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "톤틴연금 신한톤틴연금보험 출시"
     },
     {
       "term": "Double Real Estate Exchange Rate",
-      "term_ko": "부동산 환율 이중",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 환율 이중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "부동산·환율 '이중 족쇄'…올해도 '금리 인하' 불투명",
-              "link": "https://n.news.naver.com/mnews/article/215/0001237090?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%99%98%EC%9C%A8%20%EC%9D%B4%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%99%98%EC%9C%A8%20%EC%9D%B4%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산·환율 '이중 족쇄'…올해도 '금리 인하' 불투명",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001237090?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부동산 환율 이중"
     },
     {
-      "term": "Shackles year-round interest rates",
-      "term_ko": "족쇄 올해도 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "족쇄 올해도 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "부동산·환율 '이중 족쇄'…올해도 '금리 인하' 불투명",
-              "link": "https://n.news.naver.com/mnews/article/215/0001237090?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B1%EC%87%84%20%EC%98%AC%ED%95%B4%EB%8F%84%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B1%EC%87%84%20%EC%98%AC%ED%95%B4%EB%8F%84%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산·환율 '이중 족쇄'…올해도 '금리 인하' 불투명",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001237090?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Shackles Year-round Interest Rates",
+      "term_ko": "족쇄 올해도 금리"
     },
     {
-      "term": "Sideways year-to-date funds",
-      "term_ko": "횡보 연초 자금",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "횡보 연초 자금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인 9만달러선 횡보… 연초 자금 재배치 속 '소화 국면...",
-              "link": "https://www.newspim.com/news/view/20260107001079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%A1%EB%B3%B4%20%EC%97%B0%EC%B4%88%20%EC%9E%90%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%A1%EB%B3%B4%20%EC%97%B0%EC%B4%88%20%EC%9E%90%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인 9만달러선 횡보… 연초 자금 재배치 속 '소화 국면...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107001079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sideways Year-to-date Funds",
+      "term_ko": "횡보 연초 자금"
     },
     {
-      "term": "Digestion in relocation",
-      "term_ko": "재배치 속 소화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재배치 속 소화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인 9만달러선 횡보… 연초 자금 재배치 속 '소화 국면...",
-              "link": "https://www.newspim.com/news/view/20260107001079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EB%B0%B0%EC%B9%98%20%EC%86%8D%20%EC%86%8C%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EB%B0%B0%EC%B9%98%20%EC%86%8D%20%EC%86%8C%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인 9만달러선 횡보… 연초 자금 재배치 속 '소화 국면...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260107001079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Digestion in Relocation",
+      "term_ko": "재배치 속 소화"
     },
     {
-      "term": "BitMEX Launches Equity",
-      "term_ko": "비트멕스, 에쿼티 출시",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "BitMEX Launches Equity",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=BitMEX%20Launches%20Equity",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=BitMEX%20Launches%20Equity"
-      },
-      "top_headlines": [
-        {
-          "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bitmex Launches Equity",
+      "term_ko": "비트멕스, 에쿼티 출시"
     },
     {
-      "term": "Has Koreas US",
-      "term_ko": "한국 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Has Koreas US",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Has Korea’s US stock frenzy peaked?",
-              "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Has%20Koreas%20US",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Has%20Koreas%20US"
-      },
-      "top_headlines": [
-        {
-          "title": "Has Korea’s US stock frenzy peaked?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Has Koreas Us",
+      "term_ko": "한국 미국"
     },
     {
-      "term": "Baidus AI Chip",
-      "term_ko": "바이두스 AI 칩",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Baidus AI Chip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-              "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Baidus%20AI%20Chip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Baidus%20AI%20Chip"
-      },
-      "top_headlines": [
-        {
-          "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Baidus Ai Chip",
+      "term_ko": "바이두스 AI 칩"
     },
     {
-      "term": "Hong Kong IPO",
-      "term_ko": "홍콩 IPO",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hong Kong IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-              "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hong%20Kong%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hong%20Kong%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hong Kong Ipo",
+      "term_ko": "홍콩 IPO"
     },
     {
       "term": "Bring 24/7 Trading",
-      "term_ko": "연중무휴 24시간 거래",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bring 24/7 Trading",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bring%2024%2F7%20Trading",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bring%2024%2F7%20Trading"
-      },
-      "top_headlines": [
-        {
-          "title": "BitMEX Launches Equity Perpetuals to Bring 24/7 Trading to US Stocks",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41412",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연중무휴 24시간 거래"
     },
     {
-      "term": "Jump on board",
-      "term_ko": "전격 합류",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전격 합류",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-              "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EA%B2%A9%20%ED%95%A9%EB%A5%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EA%B2%A9%20%ED%95%A9%EB%A5%98"
-      },
-      "top_headlines": [
-        {
-          "title": "리플 CEO, 10억 달러 ‘XRP 전용 재무 운용사’ 고문 전격 합류",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202601071416026867e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Jump on Board",
+      "term_ko": "전격 합류"
     },
     {
-      "term": "Product promotion",
-      "term_ko": "상품 추진",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상품 추진",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "신한라이프, '신한톤틴연금보험' 출시…연금 차별화 전략 상품 추진",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652390"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%ED%92%88%20%EC%B6%94%EC%A7%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%ED%92%88%20%EC%B6%94%EC%A7%84"
-      },
-      "top_headlines": [
-        {
-          "title": "신한라이프, '신한톤틴연금보험' 출시…연금 차별화 전략 상품 추진",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652390",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Product Promotion",
+      "term_ko": "상품 추진"
     },
     {
-      "term": "Cut opaque",
-      "term_ko": "인하 불투명",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인하 불투명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "부동산·환율 '이중 족쇄'…올해도 '금리 인하' 불투명",
-              "link": "https://n.news.naver.com/mnews/article/215/0001237090?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%95%98%20%EB%B6%88%ED%88%AC%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%95%98%20%EB%B6%88%ED%88%AC%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "부동산·환율 '이중 족쇄'…올해도 '금리 인하' 불투명",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001237090?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cut Opaque",
+      "term_ko": "인하 불투명"
     },
     {
       "term": "Unit Kunlunxin Prepares",
-      "term_ko": "쿤룬신 유닛 준비",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Unit Kunlunxin Prepares",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-              "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Unit%20Kunlunxin%20Prepares",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Unit%20Kunlunxin%20Prepares"
-      },
-      "top_headlines": [
-        {
-          "title": "Baidu’s AI Chip Unit Kunlunxin Prepares for Hong Kong IPO to Raise Up t...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Baidus-AI-Chip-Unit-Kunlunxin-Prepares-for-Hong-Kong-IPO-to-Raise-Up-to-2-Billion-1730321",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쿤룬신 유닛 준비"
     },
     {
       "term": "Frenzy Peaked",
-      "term_ko": "열풍 정점",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Frenzy Peaked",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-07T21:46:11+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Has Korea’s US stock frenzy peaked?",
-              "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Frenzy%20Peaked",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Frenzy%20Peaked"
-      },
-      "top_headlines": [
-        {
-          "title": "Has Korea’s US stock frenzy peaked?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000278635?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "열풍 정점"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-07T12:47:20.773Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-07T21:46:11+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ripple Ceo 1 Billion",
+      "term_ko": "리플 CEO 10억"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-07T21:46:11+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-07T21:46:11+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Exiting Us Etfs",
+      "term_ko": "끝내는 미국 ETF"
+    },
+    {
+      "term": "Dollar Xrp Only",
+      "term_ko": "달러 XRP 전용"
+    },
+    {
+      "term": "The Story of Ai in Stocks",
+      "term_ko": "AI의 종목 이야기"
+    },
+    {
+      "term": "Amazon Ai Agent",
+      "term_ko": "아마존 AI 에이전트"
+    },
+    {
+      "term": "Up to 4 Net Profits",
+      "term_ko": "최대 순익 4대"
+    },
+    {
+      "term": "Market Price Bitcoin $90,000",
+      "term_ko": "시황 비트코인 9만달러선"
+    },
+    {
+      "term": "Financial Advisor",
+      "term_ko": "재무 운용사 고문"
+    },
+    {
+      "term": "Forcing Small Businesses to Open",
+      "term_ko": "소상공인 강제 입점"
+    },
+    {
+      "term": "Launched Shinhan Life Shinhan Tontine Annuity Insurance",
+      "term_ko": "신한라이프 신한톤틴연금보험 출시"
+    },
+    {
+      "term": "Annuity Differentiation Strategies",
+      "term_ko": "연금 차별화 전략"
+    },
+    {
+      "term": "Finance Productive Finance",
+      "term_ko": "금융 생산적 금융"
+    },
+    {
+      "term": "Profitable to Go Live",
+      "term_ko": "본격 이행에 수익성"
+    },
+    {
+      "term": "Exchange Nextstrade Strands/netple",
+      "term_ko": "거래소 넥스트레이드 가닥/넷플"
+    },
+    {
+      "term": "Shinhan Life's First Korean Version",
+      "term_ko": "신한라이프 업계최초 한국형"
+    },
+    {
+      "term": "Tontine Pension Launched Shinhan Tontine Pension Insurance",
+      "term_ko": "톤틴연금 신한톤틴연금보험 출시"
+    },
+    {
+      "term": "Double Real Estate Exchange Rate",
+      "term_ko": "부동산 환율 이중"
+    },
+    {
+      "term": "Shackles Year-round Interest Rates",
+      "term_ko": "족쇄 올해도 금리"
+    },
+    {
+      "term": "Sideways Year-to-date Funds",
+      "term_ko": "횡보 연초 자금"
+    },
+    {
+      "term": "Digestion in Relocation",
+      "term_ko": "재배치 속 소화"
+    },
+    {
+      "term": "Bitmex Launches Equity",
+      "term_ko": "비트멕스, 에쿼티 출시"
+    },
+    {
+      "term": "Has Koreas Us",
+      "term_ko": "한국 미국"
+    },
+    {
+      "term": "Baidus Ai Chip",
+      "term_ko": "바이두스 AI 칩"
+    },
+    {
+      "term": "Hong Kong Ipo",
+      "term_ko": "홍콩 IPO"
+    },
+    {
+      "term": "Bring 24/7 Trading",
+      "term_ko": "연중무휴 24시간 거래"
+    },
+    {
+      "term": "Jump on Board",
+      "term_ko": "전격 합류"
+    },
+    {
+      "term": "Product Promotion",
+      "term_ko": "상품 추진"
+    },
+    {
+      "term": "Cut Opaque",
+      "term_ko": "인하 불투명"
+    },
+    {
+      "term": "Unit Kunlunxin Prepares",
+      "term_ko": "쿤룬신 유닛 준비"
+    },
+    {
+      "term": "Frenzy Peaked",
+      "term_ko": "열풍 정점"
+    }
+  ],
+  "translations": {
+    "Ripple Ceo 1 Billion": {
+      "en": "Ripple Ceo 1 Billion",
+      "ko": "리플 CEO 10억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Exiting Us Etfs": {
+      "en": "Exiting Us Etfs",
+      "ko": "끝내는 미국 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Dollar Xrp Only": {
+      "en": "Dollar Xrp Only",
+      "ko": "달러 XRP 전용",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "The Story of Ai in Stocks": {
+      "en": "The Story of Ai in Stocks",
+      "ko": "AI의 종목 이야기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Amazon Ai Agent": {
+      "en": "Amazon Ai Agent",
+      "ko": "아마존 AI 에이전트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Up to 4 Net Profits": {
+      "en": "Up to 4 Net Profits",
+      "ko": "최대 순익 4대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Market Price Bitcoin $90,000": {
+      "en": "Market Price Bitcoin $90,000",
+      "ko": "시황 비트코인 9만달러선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Financial Advisor": {
+      "en": "Financial Advisor",
+      "ko": "재무 운용사 고문",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Forcing Small Businesses to Open": {
+      "en": "Forcing Small Businesses to Open",
+      "ko": "소상공인 강제 입점",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.487Z"
+    },
+    "Launched Shinhan Life Shinhan Tontine Annuity Insurance": {
+      "en": "Launched Shinhan Life Shinhan Tontine Annuity Insurance",
+      "ko": "신한라이프 신한톤틴연금보험 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Annuity Differentiation Strategies": {
+      "en": "Annuity Differentiation Strategies",
+      "ko": "연금 차별화 전략",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Finance Productive Finance": {
+      "en": "Finance Productive Finance",
+      "ko": "금융 생산적 금융",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Profitable to Go Live": {
+      "en": "Profitable to Go Live",
+      "ko": "본격 이행에 수익성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Exchange Nextstrade Strands/netple": {
+      "en": "Exchange Nextstrade Strands/netple",
+      "ko": "거래소 넥스트레이드 가닥/넷플",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Shinhan Life's First Korean Version": {
+      "en": "Shinhan Life's First Korean Version",
+      "ko": "신한라이프 업계최초 한국형",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Tontine Pension Launched Shinhan Tontine Pension Insurance": {
+      "en": "Tontine Pension Launched Shinhan Tontine Pension Insurance",
+      "ko": "톤틴연금 신한톤틴연금보험 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Double Real Estate Exchange Rate": {
+      "en": "Double Real Estate Exchange Rate",
+      "ko": "부동산 환율 이중",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Shackles Year-round Interest Rates": {
+      "en": "Shackles Year-round Interest Rates",
+      "ko": "족쇄 올해도 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Sideways Year-to-date Funds": {
+      "en": "Sideways Year-to-date Funds",
+      "ko": "횡보 연초 자금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Digestion in Relocation": {
+      "en": "Digestion in Relocation",
+      "ko": "재배치 속 소화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Bitmex Launches Equity": {
+      "en": "Bitmex Launches Equity",
+      "ko": "비트멕스, 에쿼티 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Has Koreas Us": {
+      "en": "Has Koreas Us",
+      "ko": "한국 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Baidus Ai Chip": {
+      "en": "Baidus Ai Chip",
+      "ko": "바이두스 AI 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Hong Kong Ipo": {
+      "en": "Hong Kong Ipo",
+      "ko": "홍콩 IPO",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Bring 24/7 Trading": {
+      "en": "Bring 24/7 Trading",
+      "ko": "연중무휴 24시간 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Jump on Board": {
+      "en": "Jump on Board",
+      "ko": "전격 합류",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Product Promotion": {
+      "en": "Product Promotion",
+      "ko": "상품 추진",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Cut Opaque": {
+      "en": "Cut Opaque",
+      "ko": "인하 불투명",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Unit Kunlunxin Prepares": {
+      "en": "Unit Kunlunxin Prepares",
+      "ko": "쿤룬신 유닛 준비",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
+    },
+    "Frenzy Peaked": {
+      "en": "Frenzy Peaked",
+      "ko": "열풍 정점",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-07T18:32:41.488Z"
     }
   }
 }
