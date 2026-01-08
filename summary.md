@@ -1,32 +1,32 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-08T15:36:35+09:00 (KST)**
+- Generated: **2026-01-08T21:46:00+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
 
+**SFA반도체** (036540.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **25.2%**, 20d **34.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=SFA%EB%B0%98%EB%8F%84%EC%B2%B4
+
 **리노공업** (058470.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
+- Returns: 5d **6.6%**, 20d **-1.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
 
-**솔브레인** (357780.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.4%**, 20d **-8.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8
-
 **유진테크** (084370.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **15.2%**, 20d **10.9%**; volatility (20d): **unknown**
+- Returns: 5d **15.5%**, 20d **11.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%9C%A0%EC%A7%84%ED%85%8C%ED%81%AC
@@ -34,7 +34,7 @@
 **정보기술** (403870.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.8%**, 20d **-0.6%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **13.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
@@ -42,7 +42,7 @@
 **티씨케이** (064760.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.9%**, 20d **9.3%**; volatility (20d): **unknown**
+- Returns: 5d **12.2%**, 20d **7.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%8B%B0%EC%94%A8%EC%BC%80%EC%9D%B4
@@ -68,7 +68,7 @@
 **아이티엠반도체** (084850.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.6%**, 20d **-19.1%**; volatility (20d): **unknown**
+- Returns: 5d **-6.9%**, 20d **-18.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%95%84%EC%9D%B4%ED%8B%B0%EC%97%A0%EB%B0%98%EB%8F%84%EC%B2%B4
@@ -96,7 +96,7 @@
 **기아** (000270.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **1.7%**, 20d **-1.4%**; volatility (20d): **unknown**
+- Returns: 5d **2.5%**, 20d **-0.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=%EA%B8%B0%EC%95%84
@@ -111,21 +111,21 @@
 **현대모비스** (012330.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **4.7%**, 20d **7.7%**; volatility (20d): **unknown**
+- Returns: 5d **4.8%**, 20d **7.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4
 
 **현대오토에버** (307950.KS)
 
 - News (7d): **11** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **18.2%**, 20d **30.0%**; volatility (20d): **unknown**
+- Returns: 5d **19.0%**, 20d **30.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%98%A4%ED%86%A0%EC%97%90%EB%B2%84
 
 **현대차** (005380.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **14.2%**, 20d **7.3%**; volatility (20d): **unknown**
+- Returns: 5d **14.8%**, 20d **7.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%B0%A8
@@ -135,7 +135,7 @@
 **BGF리테일** (282330.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.8%**, 20d **-8.0%**; volatility (20d): **unknown**
+- Returns: 5d **-2.4%**, 20d **-7.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=BGF%EB%A6%AC%ED%85%8C%EC%9D%BC
@@ -143,28 +143,28 @@
 **세아베스틸지주** (001430.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **14.7%**, 20d **83.4%**; volatility (20d): **unknown**
+- Returns: 5d **15.5%**, 20d **84.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC
 
 **에스엘** (005850.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.9%**, 20d **-6.4%**; volatility (20d): **unknown**
+- Returns: 5d **2.0%**, 20d **-5.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%97%98
 
 **코스맥스** (192820.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.3%**, 20d **5.1%**; volatility (20d): **unknown**
+- Returns: 5d **6.3%**, 20d **6.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%A7%A5%EC%8A%A4
 
 **한국카본** (017960.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.5%**, 20d **8.1%**; volatility (20d): **unknown**
+- Returns: 5d **5.2%**, 20d **8.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%95%9C%EA%B5%AD%EC%B9%B4%EB%B3%B8
 
@@ -300,6 +300,14 @@
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Best%20Buy
 
+**Equity Residential** (EQR)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.0%**, 20d **-0.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=Equity%20Residential
+
 **Global Payments** (GPN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -307,14 +315,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Global%20Payments
-
-**Jabil** (JBL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.6%**, 20d **-6.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Jabil
 
 **NetApp** (NTAP)
 
