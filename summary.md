@@ -1,27 +1,27 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-08T21:46:00+09:00 (KST)**
+- Generated: **2026-01-09T03:30:50+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
 
-**SFA반도체** (036540.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **25.2%**, 20d **34.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=SFA%EB%B0%98%EB%8F%84%EC%B2%B4
-
 **리노공업** (058470.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.6%**, 20d **-1.4%**; volatility (20d): **unknown**
+- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
+
+**솔브레인** (357780.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.4%**, 20d **-8.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8
 
 **유진테크** (084370.KQ)
 
@@ -34,7 +34,7 @@
 **정보기술** (403870.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.7%**, 20d **13.2%**; volatility (20d): **unknown**
+- Returns: 5d **6.8%**, 20d **-0.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
@@ -228,7 +228,7 @@
 **Insmed Incorporated** (INSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **-10.5%**; volatility (20d): **unknown**
+- Returns: 5d **-1.8%**, 20d **-11.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Insmed%20Incorporated
 
@@ -300,21 +300,21 @@
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Best%20Buy
 
-**Equity Residential** (EQR)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **-0.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Real Estate**
-- News search: https://www.google.com/search?q=Equity%20Residential
-
 **Global Payments** (GPN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.3%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Returns: 5d **2.3%**, 20d **2.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Global%20Payments
+
+**Jabil** (JBL)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.6%**, 20d **-6.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Jabil
 
 **NetApp** (NTAP)
 

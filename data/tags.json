@@ -1,7 +1,7 @@
 {
   "date": "2026-01-08",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "Shipyard Defense Gains",
@@ -13,9 +13,10 @@
         "query": "Shipyard Defense Gains",
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -62,9 +63,10 @@
         "query": "Set Record",
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -102,43 +104,6 @@
       ]
     },
     {
-      "term": "1 Year New ETF",
-      "term_ko": "1년 새 ETF",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1년 새 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "1년 새 ETF 순자산 1위 교체…증시 강세에 상위권도 주식형 부상",
-              "link": "http://www.womentimes.co.kr/news/articleView.html?idxno=93848"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EB%85%84%20%EC%83%88%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EB%85%84%20%EC%83%88%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "1년 새 ETF 순자산 1위 교체…증시 강세에 상위권도 주식형 부상",
-          "summary": "",
-          "link": "http://www.womentimes.co.kr/news/articleView.html?idxno=93848",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Alpha Tau Alpha ASCO",
       "term_ko": "알파타우 미국 ASCO",
       "significance_score": 350,
@@ -148,9 +113,10 @@
         "query": "알파타우 미국 ASCO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -185,9 +151,10 @@
         "query": "GI아스코 지아이서 췌장암",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -213,110 +180,37 @@
       ]
     },
     {
-      "term": "ESG youth job creation",
-      "term_ko": "ESG 청년 일자리창출",
+      "term": "FutureSight IMA All-out War",
+      "term_ko": "미래에셋 IMA 전면전",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "ESG 청년 일자리창출",
+        "query": "미래에셋 IMA 전면전",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "대구신보·한은 대경본부 , ESG·청년·일자리창출 기업 500억 특별보증...",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535278"
+              "title": "'양강' 한투 vs 미래에셋, IMA 전면전…자금 유치 속도 '관건'",
+              "link": "https://n.news.naver.com/mnews/article/629/0000460879?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ESG%20%EC%B2%AD%EB%85%84%20%EC%9D%BC%EC%9E%90%EB%A6%AC%EC%B0%BD%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ESG%20%EC%B2%AD%EB%85%84%20%EC%9D%BC%EC%9E%90%EB%A6%AC%EC%B0%BD%EC%B6%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20IMA%20%EC%A0%84%EB%A9%B4%EC%A0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%20IMA%20%EC%A0%84%EB%A9%B4%EC%A0%84"
       },
       "top_headlines": [
         {
-          "title": "대구신보·한은 대경본부 , ESG·청년·일자리창출 기업 500억 특별보증...",
+          "title": "'양강' 한투 vs 미래에셋, IMA 전면전…자금 유치 속도 '관건'",
           "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535278",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "NH Bank Productive Finance",
-      "term_ko": "NH농협은행 생산적 금융",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "NH농협은행 생산적 금융",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "NH농협은행, 생산적 금융 대전환 위한 'NH미래성장기업대출' 출시",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652508"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NH%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89%20%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NH%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89%20%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "NH농협은행, 생산적 금융 대전환 위한 'NH미래성장기업대출' 출시",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652508",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "NH Future Growth Loan for Transformation",
-      "term_ko": "대전환 위한 NH미래성장기업대출",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대전환 위한 NH미래성장기업대출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "NH농협은행, 생산적 금융 대전환 위한 'NH미래성장기업대출' 출시",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652508"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%9C%84%ED%95%9C%20NH%EB%AF%B8%EB%9E%98%EC%84%B1%EC%9E%A5%EA%B8%B0%EC%97%85%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%A0%84%ED%99%98%20%EC%9C%84%ED%95%9C%20NH%EB%AF%B8%EB%9E%98%EC%84%B1%EC%9E%A5%EA%B8%B0%EC%97%85%EB%8C%80%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "NH농협은행, 생산적 금융 대전환 위한 'NH미래성장기업대출' 출시",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652508",
+          "link": "https://n.news.naver.com/mnews/article/629/0000460879?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -333,9 +227,10 @@
         "query": "임상연구 2건 발표",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -370,9 +265,10 @@
         "query": "증시 브리핑 1월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -398,36 +294,37 @@
       ]
     },
     {
-      "term": "Daegu Credit Guarantee Foundation 50 Billion Fund Edition",
-      "term_ko": "대구신용보증재단 500억 자금판",
+      "term": "New Personality Search 2 Lee Jae-yong, Samsung Electronics",
+      "term_ko": "신新인물탐구2 삼성전자 이재용",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대구신용보증재단 500억 자금판",
+        "query": "신新인물탐구2 삼성전자 이재용",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "대구신용보증재단, 500억 자금판 연다",
-              "link": "https://www.dkilbo.com/news/articleView.html?idxno=529569"
+              "title": "[신(新)인물탐구(2)] 삼성전자 이재용 회장② 경영 성과 -인내 경영으로...",
+              "link": "https://www.news2day.co.kr/article/20260108500253"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B5%AC%EC%8B%A0%EC%9A%A9%EB%B3%B4%EC%A6%9D%EC%9E%AC%EB%8B%A8%20500%EC%96%B5%20%EC%9E%90%EA%B8%88%ED%8C%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B5%AC%EC%8B%A0%EC%9A%A9%EB%B3%B4%EC%A6%9D%EC%9E%AC%EB%8B%A8%20500%EC%96%B5%20%EC%9E%90%EA%B8%88%ED%8C%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%E6%96%B0%EC%9D%B8%EB%AC%BC%ED%83%90%EA%B5%AC2%20%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EC%9D%B4%EC%9E%AC%EC%9A%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%E6%96%B0%EC%9D%B8%EB%AC%BC%ED%83%90%EA%B5%AC2%20%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EC%9D%B4%EC%9E%AC%EC%9A%A9"
       },
       "top_headlines": [
         {
-          "title": "대구신용보증재단, 500억 자금판 연다",
+          "title": "[신(新)인물탐구(2)] 삼성전자 이재용 회장② 경영 성과 -인내 경영으로...",
           "summary": "",
-          "link": "https://www.dkilbo.com/news/articleView.html?idxno=529569",
+          "link": "https://www.news2day.co.kr/article/20260108500253",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -435,36 +332,151 @@
       ]
     },
     {
-      "term": "Replace #1 Net Worth",
-      "term_ko": "순자산 1위 교체",
+      "term": "Gold Price Quotes for TodayJanuary 9, 2019",
+      "term_ko": "오늘의 금값시세1월 9일자",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "순자산 1위 교체",
+        "query": "오늘의 금값시세1월 9일자",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "1년 새 ETF 순자산 1위 교체…증시 강세에 상위권도 주식형 부상",
-              "link": "http://www.womentimes.co.kr/news/articleView.html?idxno=93848"
+              "title": "오늘의 금값시세(1월 9일자) \"금 한돈가격, 2026년 전망까지\"",
+              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3476451"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EC%9E%90%EC%82%B0%201%EC%9C%84%20%EA%B5%90%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EC%9E%90%EC%82%B0%201%EC%9C%84%20%EA%B5%90%EC%B2%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B81%EC%9B%94%209%EC%9D%BC%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B81%EC%9B%94%209%EC%9D%BC%EC%9E%90"
       },
       "top_headlines": [
         {
-          "title": "1년 새 ETF 순자산 1위 교체…증시 강세에 상위권도 주식형 부상",
+          "title": "오늘의 금값시세(1월 9일자) \"금 한돈가격, 2026년 전망까지\"",
           "summary": "",
-          "link": "http://www.womentimes.co.kr/news/articleView.html?idxno=93848",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3476451",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Gold price in 2026",
+      "term_ko": "금 한돈가격 2026년",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금 한돈가격 2026년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-09T03:30:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "오늘의 금값시세(1월 9일자) \"금 한돈가격, 2026년 전망까지\"",
+              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3476451"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%20%ED%95%9C%EB%8F%88%EA%B0%80%EA%B2%A9%202026%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%20%ED%95%9C%EB%8F%88%EA%B0%80%EA%B2%A9%202026%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "오늘의 금값시세(1월 9일자) \"금 한돈가격, 2026년 전망까지\"",
+          "summary": "",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3476451",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "U.S. Growth in Year 4",
+      "term_ko": "美 성장률 4년째",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "美 성장률 4년째",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-09T03:30:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[사설] 美 성장률 4년째 韓 앞서…‘친기업’ 없이는 재역전 어렵다",
+              "link": "https://n.news.naver.com/mnews/article/011/0004576572?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%84%B1%EC%9E%A5%EB%A5%A0%204%EB%85%84%EC%A7%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%84%B1%EC%9E%A5%EB%A5%A0%204%EB%85%84%EC%A7%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "[사설] 美 성장률 4년째 韓 앞서…‘친기업’ 없이는 재역전 어렵다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/011/0004576572?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Up to 3.6% per annum",
+      "term_ko": "최대 연 3.6%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "최대 연 3.6%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-09T03:30:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "하나증권, 첫 발행어음 상품 출시...약정형 최대 연 3.6% 금리",
+              "link": "https://n.news.naver.com/mnews/article/009/0005618894?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%20%EC%97%B0%203.6%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%20%EC%97%B0%203.6%25"
+      },
+      "top_headlines": [
+        {
+          "title": "하나증권, 첫 발행어음 상품 출시...약정형 최대 연 3.6% 금리",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/009/0005618894?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -481,9 +493,10 @@
         "query": "혼조세 다우존스 하락",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -509,36 +522,37 @@
       ]
     },
     {
-      "term": "Alpha Tau Pancreatic Cancer Alpha",
-      "term_ko": "알파타우 췌장암 알파",
+      "term": "Korea Pro-Business",
+      "term_ko": "韓 앞서 친기업",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "알파타우 췌장암 알파",
+        "query": "韓 앞서 친기업",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "알파타우, 췌장암 알파 방사선 임상 연구 성과 공개",
-              "link": "https://www.hinews.co.kr/view.php?ud=2026010811565095446aa9cc43d0_48"
+              "title": "[사설] 美 성장률 4년째 韓 앞서…‘친기업’ 없이는 재역전 어렵다",
+              "link": "https://n.news.naver.com/mnews/article/011/0004576572?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%8C%ED%8C%8C%ED%83%80%EC%9A%B0%20%EC%B7%8C%EC%9E%A5%EC%95%94%20%EC%95%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%8C%ED%8C%8C%ED%83%80%EC%9A%B0%20%EC%B7%8C%EC%9E%A5%EC%95%94%20%EC%95%8C%ED%8C%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%20%EC%95%9E%EC%84%9C%20%EC%B9%9C%EA%B8%B0%EC%97%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%20%EC%95%9E%EC%84%9C%20%EC%B9%9C%EA%B8%B0%EC%97%85"
       },
       "top_headlines": [
         {
-          "title": "알파타우, 췌장암 알파 방사선 임상 연구 성과 공개",
+          "title": "[사설] 美 성장률 4년째 韓 앞서…‘친기업’ 없이는 재역전 어렵다",
           "summary": "",
-          "link": "https://www.hinews.co.kr/view.php?ud=2026010811565095446aa9cc43d0_48",
+          "link": "https://n.news.naver.com/mnews/article/011/0004576572?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -546,36 +560,37 @@
       ]
     },
     {
-      "term": "Radiology Clinical Research",
-      "term_ko": "방사선 임상 연구",
+      "term": "Hard to reverse without",
+      "term_ko": "없이는 재역전 어렵다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "방사선 임상 연구",
+        "query": "없이는 재역전 어렵다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "알파타우, 췌장암 알파 방사선 임상 연구 성과 공개",
-              "link": "https://www.hinews.co.kr/view.php?ud=2026010811565095446aa9cc43d0_48"
+              "title": "[사설] 美 성장률 4년째 韓 앞서…‘친기업’ 없이는 재역전 어렵다",
+              "link": "https://n.news.naver.com/mnews/article/011/0004576572?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%A9%EC%82%AC%EC%84%A0%20%EC%9E%84%EC%83%81%20%EC%97%B0%EA%B5%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%A9%EC%82%AC%EC%84%A0%20%EC%9E%84%EC%83%81%20%EC%97%B0%EA%B5%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%86%EC%9D%B4%EB%8A%94%20%EC%9E%AC%EC%97%AD%EC%A0%84%20%EC%96%B4%EB%A0%B5%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%86%EC%9D%B4%EB%8A%94%20%EC%9E%AC%EC%97%AD%EC%A0%84%20%EC%96%B4%EB%A0%B5%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "알파타우, 췌장암 알파 방사선 임상 연구 성과 공개",
+          "title": "[사설] 美 성장률 4년째 韓 앞서…‘친기업’ 없이는 재역전 어렵다",
           "summary": "",
-          "link": "https://www.hinews.co.kr/view.php?ud=2026010811565095446aa9cc43d0_48",
+          "link": "https://n.news.naver.com/mnews/article/011/0004576572?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -583,36 +598,37 @@
       ]
     },
     {
-      "term": "Daegu Shinbo Han Eun Daekyung Headquarters",
-      "term_ko": "대구신보 한은 대경본부",
+      "term": "Hana Securities First Issue Note",
+      "term_ko": "하나증권 첫 발행어음",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대구신보 한은 대경본부",
+        "query": "하나증권 첫 발행어음",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "대구신보·한은 대경본부 , ESG·청년·일자리창출 기업 500억 특별보증...",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535278"
+              "title": "하나증권, 첫 발행어음 상품 출시...약정형 최대 연 3.6% 금리",
+              "link": "https://n.news.naver.com/mnews/article/009/0005618894?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B5%AC%EC%8B%A0%EB%B3%B4%20%ED%95%9C%EC%9D%80%20%EB%8C%80%EA%B2%BD%EB%B3%B8%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B5%AC%EC%8B%A0%EB%B3%B4%20%ED%95%9C%EC%9D%80%20%EB%8C%80%EA%B2%BD%EB%B3%B8%EB%B6%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EC%A6%9D%EA%B6%8C%20%EC%B2%AB%20%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EC%A6%9D%EA%B6%8C%20%EC%B2%AB%20%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C"
       },
       "top_headlines": [
         {
-          "title": "대구신보·한은 대경본부 , ESG·청년·일자리창출 기업 500억 특별보증...",
+          "title": "하나증권, 첫 발행어음 상품 출시...약정형 최대 연 3.6% 금리",
           "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535278",
+          "link": "https://n.news.naver.com/mnews/article/009/0005618894?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -620,147 +636,37 @@
       ]
     },
     {
-      "term": "In a week's time",
-      "term_ko": "일주일 만에 뚝딱",
+      "term": "Individuals in a time of uncertainty",
+      "term_ko": "불확실성의 시대 개인",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "일주일 만에 뚝딱",
+        "query": "불확실성의 시대 개인",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미리보는 이데일리 신문] AI로 일주일 만에 뚝딱 온 국민 출판시대 개...",
-              "link": "https://n.news.naver.com/mnews/article/018/0006197331?sid=101"
+              "title": "불확실성의 시대… 개인 투자자, 금 ETF에 '베팅'",
+              "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3053229"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EC%A3%BC%EC%9D%BC%20%EB%A7%8C%EC%97%90%20%EB%9A%9D%EB%94%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EC%A3%BC%EC%9D%BC%20%EB%A7%8C%EC%97%90%20%EB%9A%9D%EB%94%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%9D%98%20%EC%8B%9C%EB%8C%80%20%EA%B0%9C%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%9D%98%20%EC%8B%9C%EB%8C%80%20%EA%B0%9C%EC%9D%B8"
       },
       "top_headlines": [
         {
-          "title": "[미리보는 이데일리 신문] AI로 일주일 만에 뚝딱 온 국민 출판시대 개...",
+          "title": "불확실성의 시대… 개인 투자자, 금 ETF에 '베팅'",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006197331?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The Age of National Publishing",
-      "term_ko": "온 국민 출판시대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "온 국민 출판시대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] AI로 일주일 만에 뚝딱 온 국민 출판시대 개...",
-              "link": "https://n.news.naver.com/mnews/article/018/0006197331?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A8%20%EA%B5%AD%EB%AF%BC%20%EC%B6%9C%ED%8C%90%EC%8B%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A8%20%EA%B5%AD%EB%AF%BC%20%EC%B6%9C%ED%8C%90%EC%8B%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] AI로 일주일 만에 뚝딱 온 국민 출판시대 개...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006197331?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Shinhan Bank Shinhan Nara Love Card",
-      "term_ko": "신한은행 신한 나라사랑카드",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신한은행 신한 나라사랑카드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "신한은행, '신한 나라사랑카드' 전국 지방병무청 발급소 오픈",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652515"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89%20%EC%8B%A0%ED%95%9C%20%EB%82%98%EB%9D%BC%EC%82%AC%EB%9E%91%EC%B9%B4%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89%20%EC%8B%A0%ED%95%9C%20%EB%82%98%EB%9D%BC%EC%82%AC%EB%9E%91%EC%B9%B4%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "신한은행, '신한 나라사랑카드' 전국 지방병무청 발급소 오픈",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652515",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Local Selective Service Offices nationwide",
-      "term_ko": "전국 지방병무청 발급소",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전국 지방병무청 발급소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "신한은행, '신한 나라사랑카드' 전국 지방병무청 발급소 오픈",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652515"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EA%B5%AD%20%EC%A7%80%EB%B0%A9%EB%B3%91%EB%AC%B4%EC%B2%AD%20%EB%B0%9C%EA%B8%89%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EA%B5%AD%20%EC%A7%80%EB%B0%A9%EB%B3%91%EB%AC%B4%EC%B2%AD%20%EB%B0%9C%EA%B8%89%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "신한은행, '신한 나라사랑카드' 전국 지방병무청 발급소 오픈",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652515",
+          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3053229",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -777,9 +683,10 @@
         "query": "7일 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -805,110 +712,37 @@
       ]
     },
     {
-      "term": "Enterprise 50 billion",
-      "term_ko": "기업 500억",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기업 500억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "대구신보·한은 대경본부 , ESG·청년·일자리창출 기업 500억 특별보증...",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535278"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%20500%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%20500%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "대구신보·한은 대경본부 , ESG·청년·일자리창출 기업 500억 특별보증...",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=535278",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Performance disclosure",
-      "term_ko": "성과 공개",
+      "term": "Yang Kang Hantu",
+      "term_ko": "양강 한투",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "성과 공개",
+        "query": "양강 한투",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "알파타우, 췌장암 알파 방사선 임상 연구 성과 공개",
-              "link": "https://www.hinews.co.kr/view.php?ud=2026010811565095446aa9cc43d0_48"
+              "title": "'양강' 한투 vs 미래에셋, IMA 전면전…자금 유치 속도 '관건'",
+              "link": "https://n.news.naver.com/mnews/article/629/0000460879?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EA%B3%BC%20%EA%B3%B5%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EA%B3%BC%20%EA%B3%B5%EA%B0%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%91%EA%B0%95%20%ED%95%9C%ED%88%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%91%EA%B0%95%20%ED%95%9C%ED%88%AC"
       },
       "top_headlines": [
         {
-          "title": "알파타우, 췌장암 알파 방사선 임상 연구 성과 공개",
+          "title": "'양강' 한투 vs 미래에셋, IMA 전면전…자금 유치 속도 '관건'",
           "summary": "",
-          "link": "https://www.hinews.co.kr/view.php?ud=2026010811565095446aa9cc43d0_48",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Equity Rise",
-      "term_ko": "주식형 부상",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주식형 부상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "1년 새 ETF 순자산 1위 교체…증시 강세에 상위권도 주식형 부상",
-              "link": "http://www.womentimes.co.kr/news/articleView.html?idxno=93848"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%ED%98%95%20%EB%B6%80%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%ED%98%95%20%EB%B6%80%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "1년 새 ETF 순자산 1위 교체…증시 강세에 상위권도 주식형 부상",
-          "summary": "",
-          "link": "http://www.womentimes.co.kr/news/articleView.html?idxno=93848",
+          "link": "https://n.news.naver.com/mnews/article/629/0000460879?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -925,9 +759,10 @@
         "query": "Index Futures Steady",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -962,9 +797,10 @@
         "query": "Await Key Jobs",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -999,9 +835,10 @@
         "query": "LEAD Seoul",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1036,9 +873,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1058,9 +896,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1080,9 +919,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-08T21:46:14+09:00",
+          "last_updated": "2026-01-09T03:30:57+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1091,33 +931,127 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-09T03:30:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Dollar exchange rate spikes",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-09T03:30:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "U.S. government shutdown crisis",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-09T03:30:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "South Korean stocks rebound",
+      "term_ko": "한국 증시 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국 증시 반등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-09T03:30:57+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-01-08T12:47:22.151Z",
+    "generated_at": "2026-01-08T18:32:07.545Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-08T21:46:14+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-01-09T03:30:57+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-01-08T21:46:14+09:00",
+      "last_updated": "2026-01-09T03:30:57+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-01-08T21:46:14+09:00",
+        "lastUpdated": "2026-01-09T03:30:57+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
