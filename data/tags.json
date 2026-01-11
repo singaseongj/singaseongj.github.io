@@ -1,8 +1,106 @@
 {
-  "date": "2026-01-10",
+  "date": "2026-01-11",
   "window": "12_hours",
   "total_phrases": 30,
   "discovered_keywords": [
+    {
+      "term": "GDP per capita last year",
+      "term_ko": "작년 1인당 GDP",
+      "significance_score": 728,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "작년 1인당 GDP",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[속보] 대만보다 못한 한국…작년 1인당 GDP, 3년만에 줄어 3.6만달러 ‘...",
+              "link": "https://n.news.naver.com/mnews/article/029/0003004076?sid=101"
+            },
+            {
+              "title": "작년 1인당 GDP 3년 만에 감소…22년 만에 대만에 추월당해",
+              "link": "https://www.ngonews.kr/news/articleView.html?idxno=222208"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%91%EB%85%84%201%EC%9D%B8%EB%8B%B9%20GDP",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%91%EB%85%84%201%EC%9D%B8%EB%8B%B9%20GDP"
+      },
+      "top_headlines": [
+        {
+          "title": "[속보] 대만보다 못한 한국…작년 1인당 GDP, 3년만에 줄어 3.6만달러 ‘...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/029/0003004076?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "작년 1인당 GDP 3년 만에 감소…22년 만에 대만에 추월당해",
+          "summary": "",
+          "link": "https://www.ngonews.kr/news/articleView.html?idxno=222208",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Decrease in 3 years",
+      "term_ko": "3년 만에 감소",
+      "significance_score": 672,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "3년 만에 감소",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "韓 1인당 GDP, 3년 만에 감소… 3만 6000달러 '턱걸이' 전망",
+              "link": "https://www.newscj.com/news/articleView.html?idxno=3361894"
+            },
+            {
+              "title": "작년 1인당 GDP 3년 만에 감소…22년 만에 대만에 추월당해",
+              "link": "https://www.ngonews.kr/news/articleView.html?idxno=222208"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%85%84%20%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%85%84%20%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "韓 1인당 GDP, 3년 만에 감소… 3만 6000달러 '턱걸이' 전망",
+          "summary": "",
+          "link": "https://www.newscj.com/news/articleView.html?idxno=3361894",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "작년 1인당 GDP 3년 만에 감소…22년 만에 대만에 추월당해",
+          "summary": "",
+          "link": "https://www.ngonews.kr/news/articleView.html?idxno=222208",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
     {
       "term": "JEPQ 2026 Investment",
       "term_ko": "JEPQ 2026년 투자",
@@ -13,8 +111,10 @@
         "query": "JEPQ 2026년 투자",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "[ETF톺아보기] 겉은 '형제', 속은 '딴판'… JEPI vs JEPQ, 2026년 투자 승...",
@@ -39,39 +139,114 @@
       ]
     },
     {
-      "term": "KB Securities DCM 5 years",
-      "term_ko": "⑨KB증권 DCM 5년",
+      "term": "South Korea GDP per capita",
+      "term_ko": "韓 1인당 GDP",
       "significance_score": 364,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "⑨KB증권 DCM 5년",
+        "query": "韓 1인당 GDP",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[2025 리그테이블] ⑨KB증권, DCM '5년 연속 1위'... 전인미답의 길 들어...",
-              "link": "http://www.thevaluenews.co.kr/news/view.php?idx=195686"
+              "title": "韓 1인당 GDP, 3년 만에 감소… 3만 6000달러 '턱걸이' 전망",
+              "link": "https://www.newscj.com/news/articleView.html?idxno=3361894"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E2%91%A8KB%EC%A6%9D%EA%B6%8C%20DCM%205%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E2%91%A8KB%EC%A6%9D%EA%B6%8C%20DCM%205%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%201%EC%9D%B8%EB%8B%B9%20GDP",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%201%EC%9D%B8%EB%8B%B9%20GDP"
       },
       "top_headlines": [
         {
-          "title": "[2025 리그테이블] ⑨KB증권, DCM '5년 연속 1위'... 전인미답의 길 들어...",
+          "title": "韓 1인당 GDP, 3년 만에 감소… 3만 6000달러 '턱걸이' 전망",
           "summary": "",
-          "link": "http://www.thevaluenews.co.kr/news/view.php?idx=195686",
+          "link": "https://www.newscj.com/news/articleView.html?idxno=3361894",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
       ]
+    },
+    {
+      "term": "GDP per capita in 2025",
+      "term_ko": "2025년 1인당 GDP",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "2025년 1인당 GDP",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-01-03",
+              "timestamp": 1767366000000,
+              "value": 83.33333
+            },
+            {
+              "period": "2026-01-08",
+              "timestamp": 1767798000000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "2025년 1인당 GDP, 대만 〉한국 〉일본",
+              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=291691"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2025%EB%85%84%201%EC%9D%B8%EB%8B%B9%20GDP",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2025%EB%85%84%201%EC%9D%B8%EB%8B%B9%20GDP"
+      },
+      "top_headlines": [
+        {
+          "title": "2025년 1인당 GDP, 대만 〉한국 〉일본",
+          "summary": "",
+          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=291691",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.012069,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1767798000000
+      }
     },
     {
       "term": "ETFsA look at the big brother",
@@ -83,8 +258,10 @@
         "query": "ETF톺아보기 겉은 형제",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "[ETF톺아보기] 겉은 '형제', 속은 '딴판'… JEPI vs JEPQ, 2026년 투자 승...",
@@ -118,8 +295,10 @@
         "query": "속은 딴판 JEPI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "[ETF톺아보기] 겉은 '형제', 속은 '딴판'… JEPI vs JEPQ, 2026년 투자 승...",
@@ -144,69 +323,36 @@
       ]
     },
     {
-      "term": "AI bubbles and Trump",
-      "term_ko": "AI 버블과 트럼프",
-      "significance_score": 350,
+      "term": "KOSPI breaks the 4600 mark",
+      "term_ko": "코스피 4600선 돌파",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "AI 버블과 트럼프",
+        "query": "코스피 4600선 돌파",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "'AI 버블'과 '트럼프 아바타 연준'이 만나면? 2026년 한국경제 살 길은?...",
-              "link": "https://n.news.naver.com/mnews/article/002/0002422623?sid=101"
+              "title": "코스피 4,600선 돌파… 반도체주 상승세에 투자 심리 '활짝'",
+              "link": "https://www.gokorea.kr/news/articleView.html?idxno=853587"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EB%B2%84%EB%B8%94%EA%B3%BC%20%ED%8A%B8%EB%9F%BC%ED%94%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EB%B2%84%EB%B8%94%EA%B3%BC%20%ED%8A%B8%EB%9F%BC%ED%94%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%204600%EC%84%A0%20%EB%8F%8C%ED%8C%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%204600%EC%84%A0%20%EB%8F%8C%ED%8C%8C"
       },
       "top_headlines": [
         {
-          "title": "'AI 버블'과 '트럼프 아바타 연준'이 만나면? 2026년 한국경제 살 길은?...",
+          "title": "코스피 4,600선 돌파… 반도체주 상승세에 투자 심리 '활짝'",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/002/0002422623?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Hong Chun-wook AI stock bubble ticket",
-      "term_ko": "홍춘욱 AI株 버블권",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "홍춘욱 AI株 버블권",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "홍춘욱 \"AI株 버블권 진입…소수만 살아남는다\" [한경 트렌드쇼]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005235299?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%8D%EC%B6%98%EC%9A%B1%20AI%E6%A0%AA%20%EB%B2%84%EB%B8%94%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%8D%EC%B6%98%EC%9A%B1%20AI%E6%A0%AA%20%EB%B2%84%EB%B8%94%EA%B6%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "홍춘욱 \"AI株 버블권 진입…소수만 살아남는다\" [한경 트렌드쇼]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005235299?sid=101",
+          "link": "https://www.gokorea.kr/news/articleView.html?idxno=853587",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -223,8 +369,10 @@
         "query": "증시 브리핑 1월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "[미국 증시 브리핑 · 1월 9일] 미국 증시 상승세로 마감",
@@ -258,8 +406,10 @@
         "query": "브리프 기준일시 2026년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "월드 뉴스 브리프 (기준일시: 2026년 01월 10일 토요일 10:00)",
@@ -293,8 +443,10 @@
         "query": "01월 10일 토요일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "월드 뉴스 브리프 (기준일시: 2026년 01월 10일 토요일 10:00)",
@@ -319,34 +471,36 @@
       ]
     },
     {
-      "term": "Gold Market Price 1 Dollar Price",
-      "term_ko": "금시세금값 1돈 가격",
+      "term": "This year alone, 3 trillion",
+      "term_ko": "올해만 벌써 3조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금시세금값 1돈 가격",
+        "query": "올해만 벌써 3조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "오늘 금시세(금값) 1돈 가격 얼마?…'글로벌 경제지표 등 체크해야'",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549244"
+              "title": "“올해만 벌써 3조”…서학개미 폭풍 매수",
+              "link": "https://n.news.naver.com/mnews/article/009/0005619683?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%8B%9C%EC%84%B8%EA%B8%88%EA%B0%92%201%EB%8F%88%20%EA%B0%80%EA%B2%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%8B%9C%EC%84%B8%EA%B8%88%EA%B0%92%201%EB%8F%88%20%EA%B0%80%EA%B2%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%EB%A7%8C%20%EB%B2%8C%EC%8D%A8%203%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%EB%A7%8C%20%EB%B2%8C%EC%8D%A8%203%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "오늘 금시세(금값) 1돈 가격 얼마?…'글로벌 경제지표 등 체크해야'",
+          "title": "“올해만 벌써 3조”…서학개미 폭풍 매수",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549244",
+          "link": "https://n.news.naver.com/mnews/article/009/0005619683?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -354,34 +508,36 @@
       ]
     },
     {
-      "term": "When the Fed meets in 2026",
-      "term_ko": "연준이 만나면 2026년",
+      "term": "3.6 million in 3 years",
+      "term_ko": "3년만에 줄어 3.6만달러",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "연준이 만나면 2026년",
+        "query": "3년만에 줄어 3.6만달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "'AI 버블'과 '트럼프 아바타 연준'이 만나면? 2026년 한국경제 살 길은?...",
-              "link": "https://n.news.naver.com/mnews/article/002/0002422623?sid=101"
+              "title": "[속보] 대만보다 못한 한국…작년 1인당 GDP, 3년만에 줄어 3.6만달러 ‘...",
+              "link": "https://n.news.naver.com/mnews/article/029/0003004076?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%A4%80%EC%9D%B4%20%EB%A7%8C%EB%82%98%EB%A9%B4%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%A4%80%EC%9D%B4%20%EB%A7%8C%EB%82%98%EB%A9%B4%202026%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%85%84%EB%A7%8C%EC%97%90%20%EC%A4%84%EC%96%B4%203.6%EB%A7%8C%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%85%84%EB%A7%8C%EC%97%90%20%EC%A4%84%EC%96%B4%203.6%EB%A7%8C%EB%8B%AC%EB%9F%AC"
       },
       "top_headlines": [
         {
-          "title": "'AI 버블'과 '트럼프 아바타 연준'이 만나면? 2026년 한국경제 살 길은?...",
+          "title": "[속보] 대만보다 못한 한국…작년 1인당 GDP, 3년만에 줄어 3.6만달러 ‘...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/002/0002422623?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/029/0003004076?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -389,34 +545,36 @@
       ]
     },
     {
-      "term": "How Much Global Economic Indicators",
-      "term_ko": "얼마 글로벌 경제지표",
+      "term": "Investing in the Semiconductor Stock Rally",
+      "term_ko": "반도체주 상승세에 투자",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "얼마 글로벌 경제지표",
+        "query": "반도체주 상승세에 투자",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "오늘 금시세(금값) 1돈 가격 얼마?…'글로벌 경제지표 등 체크해야'",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549244"
+              "title": "코스피 4,600선 돌파… 반도체주 상승세에 투자 심리 '활짝'",
+              "link": "https://www.gokorea.kr/news/articleView.html?idxno=853587"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%BC%EB%A7%88%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EA%B2%BD%EC%A0%9C%EC%A7%80%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%BC%EB%A7%88%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EA%B2%BD%EC%A0%9C%EC%A7%80%ED%91%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EC%83%81%EC%8A%B9%EC%84%B8%EC%97%90%20%ED%88%AC%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EC%83%81%EC%8A%B9%EC%84%B8%EC%97%90%20%ED%88%AC%EC%9E%90"
       },
       "top_headlines": [
         {
-          "title": "오늘 금시세(금값) 1돈 가격 얼마?…'글로벌 경제지표 등 체크해야'",
+          "title": "코스피 4,600선 돌파… 반도체주 상승세에 투자 심리 '활짝'",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549244",
+          "link": "https://www.gokorea.kr/news/articleView.html?idxno=853587",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -424,34 +582,36 @@
       ]
     },
     {
-      "term": "Entry Few Survive",
-      "term_ko": "진입 소수만 살아남는다",
+      "term": "Buy Crane Ant Storm",
+      "term_ko": "서학개미 폭풍 매수",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "진입 소수만 살아남는다",
+        "query": "서학개미 폭풍 매수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "홍춘욱 \"AI株 버블권 진입…소수만 살아남는다\" [한경 트렌드쇼]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005235299?sid=101"
+              "title": "“올해만 벌써 3조”…서학개미 폭풍 매수",
+              "link": "https://n.news.naver.com/mnews/article/009/0005619683?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%84%EC%9E%85%20%EC%86%8C%EC%88%98%EB%A7%8C%20%EC%82%B4%EC%95%84%EB%82%A8%EB%8A%94%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%84%EC%9E%85%20%EC%86%8C%EC%88%98%EB%A7%8C%20%EC%82%B4%EC%95%84%EB%82%A8%EB%8A%94%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%ED%8F%AD%ED%92%8D%20%EB%A7%A4%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%ED%8F%AD%ED%92%8D%20%EB%A7%A4%EC%88%98"
       },
       "top_headlines": [
         {
-          "title": "홍춘욱 \"AI株 버블권 진입…소수만 살아남는다\" [한경 트렌드쇼]",
+          "title": "“올해만 벌써 3조”…서학개미 폭풍 매수",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005235299?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/009/0005619683?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -459,34 +619,36 @@
       ]
     },
     {
-      "term": "Hahn said next week",
-      "term_ko": "한은 다음 주",
+      "term": "Taiwan Korea Japan",
+      "term_ko": "대만 한국 일본",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한은 다음 주",
+        "query": "대만 한국 일본",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "한은, 다음 주 기준금리 결정…고용·가계대출 지표도 공개",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=415953"
+              "title": "2025년 1인당 GDP, 대만 〉한국 〉일본",
+              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=291691"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EB%8B%A4%EC%9D%8C%20%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EB%8B%A4%EC%9D%8C%20%EC%A3%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EB%A7%8C%20%ED%95%9C%EA%B5%AD%20%EC%9D%BC%EB%B3%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EB%A7%8C%20%ED%95%9C%EA%B5%AD%20%EC%9D%BC%EB%B3%B8"
       },
       "top_headlines": [
         {
-          "title": "한은, 다음 주 기준금리 결정…고용·가계대출 지표도 공개",
+          "title": "2025년 1인당 GDP, 대만 〉한국 〉일본",
           "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=415953",
+          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=291691",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -494,69 +656,36 @@
       ]
     },
     {
-      "term": "Hire to determine the base rate",
-      "term_ko": "기준금리 결정 고용",
+      "term": "South Korea is worse than Taiwan",
+      "term_ko": "대만보다 못한 한국",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기준금리 결정 고용",
+        "query": "대만보다 못한 한국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "한은, 다음 주 기준금리 결정…고용·가계대출 지표도 공개",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=415953"
+              "title": "[속보] 대만보다 못한 한국…작년 1인당 GDP, 3년만에 줄어 3.6만달러 ‘...",
+              "link": "https://n.news.naver.com/mnews/article/029/0003004076?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EA%B2%B0%EC%A0%95%20%EA%B3%A0%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EA%B2%B0%EC%A0%95%20%EA%B3%A0%EC%9A%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EB%A7%8C%EB%B3%B4%EB%8B%A4%20%EB%AA%BB%ED%95%9C%20%ED%95%9C%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EB%A7%8C%EB%B3%B4%EB%8B%A4%20%EB%AA%BB%ED%95%9C%20%ED%95%9C%EA%B5%AD"
       },
       "top_headlines": [
         {
-          "title": "한은, 다음 주 기준금리 결정…고용·가계대출 지표도 공개",
+          "title": "[속보] 대만보다 못한 한국…작년 1인당 GDP, 3년만에 줄어 3.6만달러 ‘...",
           "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=415953",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Household loan metrics are also publicly available",
-      "term_ko": "가계대출 지표도 공개",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가계대출 지표도 공개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 다음 주 기준금리 결정…고용·가계대출 지표도 공개",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=415953"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%20%EC%A7%80%ED%91%9C%EB%8F%84%20%EA%B3%B5%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%20%EC%A7%80%ED%91%9C%EB%8F%84%20%EA%B3%B5%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 다음 주 기준금리 결정…고용·가계대출 지표도 공개",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=415953",
+          "link": "https://n.news.naver.com/mnews/article/029/0003004076?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -573,8 +702,10 @@
         "query": "9일 미국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "[미국 증시 브리핑 · 1월 9일] 미국 증시 상승세로 마감",
@@ -608,8 +739,10 @@
         "query": "Join Nasdaq-100 Index",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Walmart to Join Nasdaq-100 Index as It Replaces AstraZeneca Following Exc...",
@@ -634,6 +767,43 @@
       ]
     },
     {
+      "term": "Mindfulness",
+      "term_ko": "심리 활짝",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "심리 활짝",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "코스피 4,600선 돌파… 반도체주 상승세에 투자 심리 '활짝'",
+              "link": "https://www.gokorea.kr/news/articleView.html?idxno=853587"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%AC%EB%A6%AC%20%ED%99%9C%EC%A7%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%AC%EB%A6%AC%20%ED%99%9C%EC%A7%9D"
+      },
+      "top_headlines": [
+        {
+          "title": "코스피 4,600선 돌파… 반도체주 상승세에 투자 심리 '활짝'",
+          "summary": "",
+          "link": "https://www.gokorea.kr/news/articleView.html?idxno=853587",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "Closing higher",
       "term_ko": "상승세로 마감",
       "significance_score": 280,
@@ -643,8 +813,10 @@
         "query": "상승세로 마감",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "[미국 증시 브리핑 · 1월 9일] 미국 증시 상승세로 마감",
@@ -690,8 +862,10 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "월드 뉴스 브리프 (기준일시: 2026년 01월 10일 토요일 10:00)",
@@ -727,7 +901,7 @@
         "week_score": 0,
         "correction_factor": 0.165911,
         "decay_factor": 1,
-        "time_weight": 0.00583,
+        "time_weight": 0.005591,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -735,151 +909,48 @@
       }
     },
     {
-      "term": "should be checked",
-      "term_ko": "등 체크해야",
+      "term": "Korean masks",
+      "term_ko": "한국 가면",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "등 체크해야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘 금시세(금값) 1돈 가격 얼마?…'글로벌 경제지표 등 체크해야'",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549244"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%93%B1%20%EC%B2%B4%ED%81%AC%ED%95%B4%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%93%B1%20%EC%B2%B4%ED%81%AC%ED%95%B4%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘 금시세(금값) 1돈 가격 얼마?…'글로벌 경제지표 등 체크해야'",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549244",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Korea Economy Sal",
-      "term_ko": "한국경제 살",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국경제 살",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'AI 버블'과 '트럼프 아바타 연준'이 만나면? 2026년 한국경제 살 길은?...",
-              "link": "https://n.news.naver.com/mnews/article/002/0002422623?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%20%EC%82%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%20%EC%82%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "'AI 버블'과 '트럼프 아바타 연준'이 만나면? 2026년 한국경제 살 길은?...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/002/0002422623?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The Path to Wholeness",
-      "term_ko": "전인미답의 길",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전인미답의 길",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[2025 리그테이블] ⑨KB증권, DCM '5년 연속 1위'... 전인미답의 길 들어...",
-              "link": "http://www.thevaluenews.co.kr/news/view.php?idx=195686"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%9D%B8%EB%AF%B8%EB%8B%B5%EC%9D%98%20%EA%B8%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%9D%B8%EB%AF%B8%EB%8B%B5%EC%9D%98%20%EA%B8%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[2025 리그테이블] ⑨KB증권, DCM '5년 연속 1위'... 전인미답의 길 들어...",
-          "summary": "",
-          "link": "http://www.thevaluenews.co.kr/news/view.php?idx=195686",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "It looks like this",
-      "term_ko": "다음과 같습니다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "다음과 같습니다",
+        "query": "한국 가면",
         "search_trends": {
           "source": "naver_datalab_search",
           "time_unit": "date",
           "bucket_size_hours": 24,
           "rows": [
             {
-              "period": "2026-01-05",
-              "timestamp": 1767538800000,
+              "period": "2026-01-10",
+              "timestamp": 1767970800000,
               "value": 100
             }
           ]
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "오늘 금시세(금값)... “금가격이 급등한 이유는 다음과 같습니다”",
-              "link": "https://www.wikitree.co.kr/articles/1108902"
+              "title": "부친 전재산 말아먹은 극장 운영자…“저도 한국 가면 빚탕감해주나요...",
+              "link": "https://n.news.naver.com/mnews/article/009/0005619679?sid=103"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%9D%8C%EA%B3%BC%20%EA%B0%99%EC%8A%B5%EB%8B%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%9D%8C%EA%B3%BC%20%EA%B0%99%EC%8A%B5%EB%8B%88%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EA%B0%80%EB%A9%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EA%B0%80%EB%A9%B4"
       },
       "top_headlines": [
         {
-          "title": "오늘 금시세(금값)... “금가격이 급등한 이유는 다음과 같습니다”",
+          "title": "부친 전재산 말아먹은 극장 운영자…“저도 한국 가면 빚탕감해주나요...",
           "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1108902",
+          "link": "https://n.news.naver.com/mnews/article/009/0005619679?sid=103",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -896,44 +967,46 @@
         "weekly_average_volume": 100,
         "day_score": 0,
         "week_score": 0,
-        "correction_factor": 0.115911,
+        "correction_factor": 0.165911,
         "decay_factor": 0.041087,
-        "time_weight": 0.006778,
+        "time_weight": 0.028686,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
-        "last_observation": 1767538800000
+        "last_observation": 1767970800000
       }
     },
     {
-      "term": "Hankyung Trendshow",
-      "term_ko": "한경 트렌드쇼",
+      "term": "Overtaken by Taiwan",
+      "term_ko": "대만에 추월당해",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한경 트렌드쇼",
+        "query": "대만에 추월당해",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "홍춘욱 \"AI株 버블권 진입…소수만 살아남는다\" [한경 트렌드쇼]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005235299?sid=101"
+              "title": "작년 1인당 GDP 3년 만에 감소…22년 만에 대만에 추월당해",
+              "link": "https://www.ngonews.kr/news/articleView.html?idxno=222208"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B2%BD%20%ED%8A%B8%EB%A0%8C%EB%93%9C%EC%87%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B2%BD%20%ED%8A%B8%EB%A0%8C%EB%93%9C%EC%87%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EB%A7%8C%EC%97%90%20%EC%B6%94%EC%9B%94%EB%8B%B9%ED%95%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EB%A7%8C%EC%97%90%20%EC%B6%94%EC%9B%94%EB%8B%B9%ED%95%B4"
       },
       "top_headlines": [
         {
-          "title": "홍춘욱 \"AI株 버블권 진입…소수만 살아남는다\" [한경 트렌드쇼]",
+          "title": "작년 1인당 GDP 3년 만에 감소…22년 만에 대만에 추월당해",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005235299?sid=101",
+          "link": "https://www.ngonews.kr/news/articleView.html?idxno=222208",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -950,8 +1023,10 @@
         "query": "Replaces AstraZeneca Following",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Walmart to Join Nasdaq-100 Index as It Replaces AstraZeneca Following Exc...",
@@ -985,8 +1060,10 @@
         "query": "Hit Record Highs",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Stocks Hit Record Highs as Jobs Data Supports Fed Rate Cut Outlook",
@@ -1020,8 +1097,10 @@
         "query": "Jobs Data Supports",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Stocks Hit Record Highs as Jobs Data Supports Fed Rate Cut Outlook",
@@ -1055,8 +1134,10 @@
         "query": "Fed Rate Cut",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Stocks Hit Record Highs as Jobs Data Supports Fed Rate Cut Outlook",
@@ -1081,48 +1162,57 @@
       ]
     },
     {
-      "term": "Wall Street Hits",
-      "term_ko": "월스트리트 히트작",
-      "significance_score": 266,
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Wall Street Hits",
+        "query": "AI chip demand surge",
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-11T03:31:10+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Hits Record Highs as Jobs Data Signals Resilient U.S. Economy",
-              "link": "https://www.econotimes.com/Wall-Street-Hits-Record-Highs-as-Jobs-Data-Signals-Resilient-US-Economy-1730606"
-            }
+          "matches": 0,
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Hits",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Hits"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
-      "top_headlines": [
-        {
-          "title": "Wall Street Hits Record Highs as Jobs Data Signals Resilient U.S. Economy",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Hits-Record-Highs-as-Jobs-Data-Signals-Resilient-US-Economy-1730606",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-11T10:50:34+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
         }
-      ]
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-01-10T18:32:21.381Z",
+    "generated_at": "2026-01-11T01:51:44.971Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-11T03:31:10+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-01-11T10:50:34+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1132,12 +1222,16 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-01-11T03:31:10+09:00",
-      "fallback_sources": [],
+      "last_updated": "2026-01-11T10:50:34+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-01-11T03:31:10+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2026-01-11T10:50:34+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
       }
     }
   }
