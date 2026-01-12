@@ -13,9 +13,10 @@
         "query": "AI의 종목 이야기",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -41,117 +42,6 @@
       ]
     },
     {
-      "term": "DS Monolithic Nano Newclear",
-      "term_ko": "DS단석 나노 뉴클리어",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "DS단석 나노 뉴클리어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "DS단석, 나노 뉴클리어 에너지와 MOU 체결",
-              "link": "https://www.venturesquare.net/1031952/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=DS%EB%8B%A8%EC%84%9D%20%EB%82%98%EB%85%B8%20%EB%89%B4%ED%81%B4%EB%A6%AC%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=DS%EB%8B%A8%EC%84%9D%20%EB%82%98%EB%85%B8%20%EB%89%B4%ED%81%B4%EB%A6%AC%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "DS단석, 나노 뉴클리어 에너지와 MOU 체결",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1031952/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "MOU with Energy",
-      "term_ko": "에너지와 MOU 체결",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "에너지와 MOU 체결",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "DS단석, 나노 뉴클리어 에너지와 MOU 체결",
-              "link": "https://www.venturesquare.net/1031952/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%90%EB%84%88%EC%A7%80%EC%99%80%20MOU%20%EC%B2%B4%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%90%EB%84%88%EC%A7%80%EC%99%80%20MOU%20%EC%B2%B4%EA%B2%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "DS단석, 나노 뉴클리어 에너지와 MOU 체결",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1031952/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Third IPO",
-      "term_ko": "세 번째 IPO",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "세 번째 IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
-              "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%20%EB%B2%88%EC%A7%B8%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%20%EB%B2%88%EC%A7%B8%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "1 smartphone market share",
       "term_ko": "스마트폰 시장점유율 1위",
       "significance_score": 336,
@@ -161,9 +51,10 @@
         "query": "스마트폰 시장점유율 1위",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -189,36 +80,37 @@
       ]
     },
     {
-      "term": "Exchange rate taken at 1470 won",
-      "term_ko": "1470원 찍은 환율",
+      "term": "January 12 Morning News",
+      "term_ko": "1월 12일 모닝뉴스",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "1470원 찍은 환율",
+        "query": "1월 12일 모닝뉴스",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
-              "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101"
+              "title": "1월 12일 모닝뉴스 헤드라인",
+              "link": "https://www.radiokorea.com/news/article.php?uid=488730"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1470%EC%9B%90%20%EC%B0%8D%EC%9D%80%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1470%EC%9B%90%20%EC%B0%8D%EC%9D%80%20%ED%99%98%EC%9C%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EC%9B%94%2012%EC%9D%BC%20%EB%AA%A8%EB%8B%9D%EB%89%B4%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EC%9B%94%2012%EC%9D%BC%20%EB%AA%A8%EB%8B%9D%EB%89%B4%EC%8A%A4"
       },
       "top_headlines": [
         {
-          "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
+          "title": "1월 12일 모닝뉴스 헤드라인",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101",
+          "link": "https://www.radiokorea.com/news/article.php?uid=488730",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,36 +118,37 @@
       ]
     },
     {
-      "term": "Supply Plan No later than January",
-      "term_ko": "공급대책 늦어도 1월",
-      "significance_score": 336,
+      "term": "Organic Forever Pyeongsoon Park",
+      "term_ko": "오가닉 포에버 박평순",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "공급대책 늦어도 1월",
+        "query": "오가닉 포에버 박평순",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
-              "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101"
+              "title": "오가닉 포에버 박평순 의장, 또 한 번의 도전 나선다",
+              "link": "https://www.meconomynews.com/news/articleView.html?idxno=126168"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EA%B8%89%EB%8C%80%EC%B1%85%20%EB%8A%A6%EC%96%B4%EB%8F%84%201%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EA%B8%89%EB%8C%80%EC%B1%85%20%EB%8A%A6%EC%96%B4%EB%8F%84%201%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EA%B0%80%EB%8B%89%20%ED%8F%AC%EC%97%90%EB%B2%84%20%EB%B0%95%ED%8F%89%EC%88%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EA%B0%80%EB%8B%89%20%ED%8F%AC%EC%97%90%EB%B2%84%20%EB%B0%95%ED%8F%89%EC%88%9C"
       },
       "top_headlines": [
         {
-          "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
+          "title": "오가닉 포에버 박평순 의장, 또 한 번의 도전 나선다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101",
+          "link": "https://www.meconomynews.com/news/articleView.html?idxno=126168",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -263,36 +156,75 @@
       ]
     },
     {
-      "term": "20 trillion in home equity loans this year",
-      "term_ko": "올해 보금자리론 20조원",
-      "significance_score": 336,
+      "term": "The chairman also has a",
+      "term_ko": "의장 또 한",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "올해 보금자리론 20조원",
+        "query": "의장 또 한",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
-              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006"
+              "title": "오가닉 포에버 박평순 의장, 또 한 번의 도전 나선다",
+              "link": "https://www.meconomynews.com/news/articleView.html?idxno=126168"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%2020%EC%A1%B0%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%2020%EC%A1%B0%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%98%EC%9E%A5%20%EB%98%90%20%ED%95%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%98%EC%9E%A5%20%EB%98%90%20%ED%95%9C"
       },
       "top_headlines": [
         {
-          "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
+          "title": "오가닉 포에버 박평순 의장, 또 한 번의 도전 나선다",
           "summary": "",
-          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006",
+          "link": "https://www.meconomynews.com/news/articleView.html?idxno=126168",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Take on a challenge",
+      "term_ko": "번의 도전 나선다",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "번의 도전 나선다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-13T03:35:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "오가닉 포에버 박평순 의장, 또 한 번의 도전 나선다",
+              "link": "https://www.meconomynews.com/news/articleView.html?idxno=126168"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B2%88%EC%9D%98%20%EB%8F%84%EC%A0%84%20%EB%82%98%EC%84%A0%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B2%88%EC%9D%98%20%EB%8F%84%EC%A0%84%20%EB%82%98%EC%84%A0%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "오가닉 포에버 박평순 의장, 또 한 번의 도전 나선다",
+          "summary": "",
+          "link": "https://www.meconomynews.com/news/articleView.html?idxno=126168",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -309,9 +241,10 @@
         "query": "애플 작년 글로벌",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -337,36 +270,37 @@
       ]
     },
     {
-      "term": "Will it go down?",
-      "term_ko": "내려갈까 경제부총리 방미",
+      "term": "Crying and laughing with KOSPI",
+      "term_ko": "같이 울고웃던 코스피",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "내려갈까 경제부총리 방미",
+        "query": "같이 울고웃던 코스피",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
-              "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101"
+              "title": "같이 울고웃던 코스피·원화, 이젠 따로 논다",
+              "link": "https://n.news.naver.com/mnews/article/025/0003496190?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%A0%A4%EA%B0%88%EA%B9%8C%20%EA%B2%BD%EC%A0%9C%EB%B6%80%EC%B4%9D%EB%A6%AC%20%EB%B0%A9%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%A0%A4%EA%B0%88%EA%B9%8C%20%EA%B2%BD%EC%A0%9C%EB%B6%80%EC%B4%9D%EB%A6%AC%20%EB%B0%A9%EB%AF%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%99%EC%9D%B4%20%EC%9A%B8%EA%B3%A0%EC%9B%83%EB%8D%98%20%EC%BD%94%EC%8A%A4%ED%94%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%99%EC%9D%B4%20%EC%9A%B8%EA%B3%A0%EC%9B%83%EB%8D%98%20%EC%BD%94%EC%8A%A4%ED%94%BC"
       },
       "top_headlines": [
         {
-          "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
+          "title": "같이 울고웃던 코스피·원화, 이젠 따로 논다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/025/0003496190?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,36 +308,37 @@
       ]
     },
     {
-      "term": "What to say",
-      "term_ko": "말 발표할 것",
+      "term": "Show of force, etc.",
+      "term_ko": "힘 과시 등",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "말 발표할 것",
+        "query": "힘 과시 등",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
-              "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101"
+              "title": "다카이치 조기총선론, 트럼프는 힘 과시…등 터지는 원화값",
+              "link": "https://n.news.naver.com/mnews/article/025/0003496189?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%90%20%EB%B0%9C%ED%91%9C%ED%95%A0%20%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%90%20%EB%B0%9C%ED%91%9C%ED%95%A0%20%EA%B2%83"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9E%98%20%EA%B3%BC%EC%8B%9C%20%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9E%98%20%EA%B3%BC%EC%8B%9C%20%EB%93%B1"
       },
       "top_headlines": [
         {
-          "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
+          "title": "다카이치 조기총선론, 트럼프는 힘 과시…등 터지는 원화값",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/025/0003496189?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -411,36 +346,37 @@
       ]
     },
     {
-      "term": "Startup H1 Listing",
-      "term_ko": "시동 상반기 상장",
+      "term": "Securities Firms KRW Deposits",
+      "term_ko": "증권사들 원화 예탁금",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "시동 상반기 상장",
+        "query": "증권사들 원화 예탁금",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
-              "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101"
+              "title": "증권사들, 원화 ‘예탁금 이자’ 낮춰",
+              "link": "https://n.news.naver.com/mnews/article/023/0003952539?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%8F%99%20%EC%83%81%EB%B0%98%EA%B8%B0%20%EC%83%81%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%8F%99%20%EC%83%81%EB%B0%98%EA%B8%B0%20%EC%83%81%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%82%AC%EB%93%A4%20%EC%9B%90%ED%99%94%20%EC%98%88%ED%83%81%EA%B8%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%82%AC%EB%93%A4%20%EC%9B%90%ED%99%94%20%EC%98%88%ED%83%81%EA%B8%88"
       },
       "top_headlines": [
         {
-          "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
+          "title": "증권사들, 원화 ‘예탁금 이자’ 낮춰",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/023/0003952539?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +384,37 @@
       ]
     },
     {
-      "term": "Rep. Jang Jin-young Rural",
-      "term_ko": "장진영 도의원 농촌",
+      "term": "Analysts' Market ViewStill Undervalued",
+      "term_ko": "애널리스트의 마켓뷰여전히 저평가된",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "장진영 도의원 농촌",
+        "query": "애널리스트의 마켓뷰여전히 저평가된",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
-              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009"
+              "title": "[애널리스트의 마켓뷰]여전히 저평가된 코스피, 올해 상승 전망",
+              "link": "https://n.news.naver.com/mnews/article/020/0003688783?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%A7%84%EC%98%81%20%EB%8F%84%EC%9D%98%EC%9B%90%20%EB%86%8D%EC%B4%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%A7%84%EC%98%81%20%EB%8F%84%EC%9D%98%EC%9B%90%20%EB%86%8D%EC%B4%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%A0%EB%84%90%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%9D%98%20%EB%A7%88%EC%BC%93%EB%B7%B0%EC%97%AC%EC%A0%84%ED%9E%88%20%EC%A0%80%ED%8F%89%EA%B0%80%EB%90%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%A0%EB%84%90%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%9D%98%20%EB%A7%88%EC%BC%93%EB%B7%B0%EC%97%AC%EC%A0%84%ED%9E%88%20%EC%A0%80%ED%8F%89%EA%B0%80%EB%90%9C"
       },
       "top_headlines": [
         {
-          "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
+          "title": "[애널리스트의 마켓뷰]여전히 저평가된 코스피, 올해 상승 전망",
           "summary": "",
-          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009",
+          "link": "https://n.news.naver.com/mnews/article/020/0003688783?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +422,37 @@
       ]
     },
     {
-      "term": "To avoid extinction, start with agricultural land regulations",
-      "term_ko": "소멸 막으려면 농지규제부터",
+      "term": "KOSPI up this year",
+      "term_ko": "코스피 올해 상승",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "소멸 막으려면 농지규제부터",
+        "query": "코스피 올해 상승",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
-              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009"
+              "title": "[애널리스트의 마켓뷰]여전히 저평가된 코스피, 올해 상승 전망",
+              "link": "https://n.news.naver.com/mnews/article/020/0003688783?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EB%A9%B8%20%EB%A7%89%EC%9C%BC%EB%A0%A4%EB%A9%B4%20%EB%86%8D%EC%A7%80%EA%B7%9C%EC%A0%9C%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EB%A9%B8%20%EB%A7%89%EC%9C%BC%EB%A0%A4%EB%A9%B4%20%EB%86%8D%EC%A7%80%EA%B7%9C%EC%A0%9C%EB%B6%80%ED%84%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%98%AC%ED%95%B4%20%EC%83%81%EC%8A%B9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%98%AC%ED%95%B4%20%EC%83%81%EC%8A%B9"
       },
       "top_headlines": [
         {
-          "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
+          "title": "[애널리스트의 마켓뷰]여전히 저평가된 코스피, 올해 상승 전망",
           "summary": "",
-          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009",
+          "link": "https://n.news.naver.com/mnews/article/020/0003688783?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +460,37 @@
       ]
     },
     {
-      "term": "Initial Public Offering Third",
-      "term_ko": "기업공개 세 번째",
+      "term": "Economy PlusEconomy Expert Exchange Rate",
+      "term_ko": "이코노미플러스경제 전문가 환율",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기업공개 세 번째",
+        "query": "이코노미플러스경제 전문가 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
-              "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583"
+              "title": "[이코노미플러스]경제 전문가 “환율·물가·집값 불안… 기준금리 2.50...",
+              "link": "https://n.news.naver.com/mnews/article/087/0001167332?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%EA%B3%B5%EA%B0%9C%20%EC%84%B8%20%EB%B2%88%EC%A7%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%EA%B3%B5%EA%B0%9C%20%EC%84%B8%20%EB%B2%88%EC%A7%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%BD%94%EB%85%B8%EB%AF%B8%ED%94%8C%EB%9F%AC%EC%8A%A4%EA%B2%BD%EC%A0%9C%20%EC%A0%84%EB%AC%B8%EA%B0%80%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%BD%94%EB%85%B8%EB%AF%B8%ED%94%8C%EB%9F%AC%EC%8A%A4%EA%B2%BD%EC%A0%9C%20%EC%A0%84%EB%AC%B8%EA%B0%80%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
+          "title": "[이코노미플러스]경제 전문가 “환율·물가·집값 불안… 기준금리 2.50...",
           "summary": "",
-          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583",
+          "link": "https://n.news.naver.com/mnews/article/087/0001167332?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,36 +498,37 @@
       ]
     },
     {
-      "term": "Challenging the K-Bank Securities Market",
-      "term_ko": "도전하는 케이뱅크 유가증권시장",
+      "term": "Cost of living anxiety",
+      "term_ko": "물가 집값 불안",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "도전하는 케이뱅크 유가증권시장",
+        "query": "물가 집값 불안",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
-              "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583"
+              "title": "[이코노미플러스]경제 전문가 “환율·물가·집값 불안… 기준금리 2.50...",
+              "link": "https://n.news.naver.com/mnews/article/087/0001167332?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EC%A0%84%ED%95%98%EB%8A%94%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EC%A0%84%ED%95%98%EB%8A%94%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%EC%8B%9C%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%BC%EA%B0%80%20%EC%A7%91%EA%B0%92%20%EB%B6%88%EC%95%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%BC%EA%B0%80%20%EC%A7%91%EA%B0%92%20%EB%B6%88%EC%95%88"
       },
       "top_headlines": [
         {
-          "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
+          "title": "[이코노미플러스]경제 전문가 “환율·물가·집값 불안… 기준금리 2.50...",
           "summary": "",
-          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583",
+          "link": "https://n.news.naver.com/mnews/article/087/0001167332?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -605,9 +545,10 @@
         "query": "ETFs Post 28%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -633,6 +574,44 @@
       ]
     },
     {
+      "term": "CME Unify Crypto",
+      "term_ko": "CME Unify 암호화",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "CME Unify Crypto",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-13T03:35:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Nasdaq and CME Unify Crypto Benchmarks Under Joint Index",
+              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41558"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CME%20Unify%20Crypto",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CME%20Unify%20Crypto"
+      },
+      "top_headlines": [
+        {
+          "title": "Nasdaq and CME Unify Crypto Benchmarks Under Joint Index",
+          "summary": "",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41558",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "GRAVITY Eyes Growth",
       "term_ko": "그래비티 아이즈 성장",
       "significance_score": 294,
@@ -642,9 +621,10 @@
         "query": "GRAVITY Eyes Growth",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -670,110 +650,75 @@
       ]
     },
     {
-      "term": "Mirae Asset ETFs",
-      "term_ko": "미래에셋 ETF",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Mirae Asset ETFs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Mirae Asset ETFs outpace S&P 500, Nasdaq in 2025",
-              "link": "https://n.news.naver.com/mnews/article/044/0000278800?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mirae%20Asset%20ETFs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mirae%20Asset%20ETFs"
-      },
-      "top_headlines": [
-        {
-          "title": "Mirae Asset ETFs outpace S&P 500, Nasdaq in 2025",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000278800?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Global ETF Portfolio",
-      "term_ko": "글로벌 ETF 포트폴리오",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Global ETF Portfolio",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Mirae Asset Global Investments' 2025 global ETF portfolio posts 27.9% ave...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082906?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Global%20ETF%20Portfolio",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Global%20ETF%20Portfolio"
-      },
-      "top_headlines": [
-        {
-          "title": "Mirae Asset Global Investments' 2025 global ETF portfolio posts 27.9% ave...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082906?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Supply goals",
-      "term_ko": "공급 목표",
+      "term": "Bursting dollar values",
+      "term_ko": "터지는 원화값",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "공급 목표",
+        "query": "터지는 원화값",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
-              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006"
+              "title": "다카이치 조기총선론, 트럼프는 힘 과시…등 터지는 원화값",
+              "link": "https://n.news.naver.com/mnews/article/025/0003496189?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EA%B8%89%20%EB%AA%A9%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EA%B8%89%20%EB%AA%A9%ED%91%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%84%B0%EC%A7%80%EB%8A%94%20%EC%9B%90%ED%99%94%EA%B0%92",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%84%B0%EC%A7%80%EB%8A%94%20%EC%9B%90%ED%99%94%EA%B0%92"
       },
       "top_headlines": [
         {
-          "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
+          "title": "다카이치 조기총선론, 트럼프는 힘 과시…등 터지는 원화값",
           "summary": "",
-          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006",
+          "link": "https://n.news.naver.com/mnews/article/025/0003496189?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Lower interest",
+      "term_ko": "이자 낮춰",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "이자 낮춰",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-13T03:35:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "증권사들, 원화 ‘예탁금 이자’ 낮춰",
+              "link": "https://n.news.naver.com/mnews/article/023/0003952539?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9E%90%20%EB%82%AE%EC%B6%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9E%90%20%EB%82%AE%EC%B6%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "증권사들, 원화 ‘예탁금 이자’ 낮춰",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003952539?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -790,9 +735,10 @@
         "query": "Mirae Assets Killer",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -818,36 +764,37 @@
       ]
     },
     {
-      "term": "Posts 27.9%",
-      "term_ko": "게시물 27.9%",
-      "significance_score": 238,
+      "term": "Joint Index",
+      "term_ko": "공동 색인",
+      "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Posts 27.9%",
+        "query": "Joint Index",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Mirae Asset Global Investments' 2025 global ETF portfolio posts 27.9% ave...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000082906?sid=101"
+              "title": "Nasdaq and CME Unify Crypto Benchmarks Under Joint Index",
+              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41558"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Posts%2027.9%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Posts%2027.9%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Joint%20Index",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Joint%20Index"
       },
       "top_headlines": [
         {
-          "title": "Mirae Asset Global Investments' 2025 global ETF portfolio posts 27.9% ave...",
+          "title": "Nasdaq and CME Unify Crypto Benchmarks Under Joint Index",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000082906?sid=101",
+          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41558",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -864,9 +811,10 @@
         "query": "Rebuilding Fundamentals",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -892,43 +840,6 @@
       ]
     },
     {
-      "term": "Outpace S&P",
-      "term_ko": "S&P를 앞지르다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Outpace S&P",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Mirae Asset ETFs outpace S&P 500, Nasdaq in 2025",
-              "link": "https://n.news.naver.com/mnews/article/044/0000278800?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Outpace%20S%26P",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Outpace%20S%26P"
-      },
-      "top_headlines": [
-        {
-          "title": "Mirae Asset ETFs outpace S&P 500, Nasdaq in 2025",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000278800?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Average Returns",
       "term_ko": "평균 수익률",
       "significance_score": 224,
@@ -938,9 +849,10 @@
         "query": "Average Returns",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -975,9 +887,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -997,9 +910,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1019,9 +933,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-01-12T21:46:46+09:00",
+          "last_updated": "2026-01-13T03:35:39+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1030,15 +945,84 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-13T03:35:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Dollar exchange rate spikes",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-13T03:35:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "U.S. government shutdown crisis",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-13T03:35:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-01-12T12:47:54.596Z",
+    "generated_at": "2026-01-12T18:36:48.262Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-12T21:46:46+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-01-13T03:35:39+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 1,
     "removal_breakdown": {
@@ -1048,15 +1032,17 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-01-12T21:46:46+09:00",
+      "last_updated": "2026-01-13T03:35:39+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-01-12T21:46:46+09:00",
+        "lastUpdated": "2026-01-13T03:35:39+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
