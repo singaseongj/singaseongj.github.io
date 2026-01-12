@@ -1,108 +1,44 @@
 {
   "date": "2026-01-12",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "Stress DSR Step 3",
-      "term_ko": "스트레스 DSR 3단계",
-      "significance_score": 364,
-      "mentions": 487,
+      "term": "The story of AI in stocks",
+      "term_ko": "AI의 종목 이야기",
+      "significance_score": 350,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "스트레스 DSR 3단계",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-01-04",
-              "timestamp": 1767452400000,
-              "value": 60.25641
-            },
-            {
-              "period": "2026-01-05",
-              "timestamp": 1767538800000,
-              "value": 100
-            },
-            {
-              "period": "2026-01-06",
-              "timestamp": 1767625200000,
-              "value": 96.15384
-            },
-            {
-              "period": "2026-01-07",
-              "timestamp": 1767711600000,
-              "value": 94.87179
-            },
-            {
-              "period": "2026-01-08",
-              "timestamp": 1767798000000,
-              "value": 84.61538
-            },
-            {
-              "period": "2026-01-09",
-              "timestamp": 1767884400000,
-              "value": 94.23076
-            },
-            {
-              "period": "2026-01-10",
-              "timestamp": 1767970800000,
-              "value": 55.76923
-            },
-            {
-              "period": "2026-01-11",
-              "timestamp": 1768057200000,
-              "value": 60.89743
-            }
-          ]
-        },
+        "query": "AI의 종목 이야기",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
-              "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851"
+              "title": "[AI의 종목 이야기] \"애플, 작년 글로벌 스마트폰 시장점유율 1위\"",
+              "link": "https://www.newspim.com/news/view/20260112000989"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4%20DSR%203%EB%8B%A8%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4%20DSR%203%EB%8B%A8%EA%B3%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
       },
       "top_headlines": [
         {
-          "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
+          "title": "[AI의 종목 이야기] \"애플, 작년 글로벌 스마트폰 시장점유율 1위\"",
           "summary": "",
-          "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851",
+          "link": "https://www.newspim.com/news/view/20260112000989",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 486.5384,
-        "weekly_average_volume": 81.0897,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.013722,
-        "time_weight": 0.025227,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1768057200000
-      }
+      ]
     },
     {
       "term": "DS Monolithic Nano Newclear",
@@ -114,8 +50,10 @@
         "query": "DS단석 나노 뉴클리어",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "DS단석, 나노 뉴클리어 에너지와 MOU 체결",
@@ -149,8 +87,10 @@
         "query": "에너지와 MOU 체결",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "DS단석, 나노 뉴클리어 에너지와 MOU 체결",
@@ -175,34 +115,36 @@
       ]
     },
     {
-      "term": "Alpha Tau JPMorgan Healthcare",
-      "term_ko": "알파타우 JP모건 헬스케어",
+      "term": "Third IPO",
+      "term_ko": "세 번째 IPO",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "알파타우 JP모건 헬스케어",
+        "query": "세 번째 IPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "알파타우, 'JP모건 헬스케어 컨퍼런스' 글로벌 투자자 만난다",
-              "link": "https://www.kpanews.co.kr/article/show.asp?idx=266935&category=D"
+              "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
+              "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%8C%ED%8C%8C%ED%83%80%EC%9A%B0%20JP%EB%AA%A8%EA%B1%B4%20%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%8C%ED%8C%8C%ED%83%80%EC%9A%B0%20JP%EB%AA%A8%EA%B1%B4%20%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%20%EB%B2%88%EC%A7%B8%20IPO",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%20%EB%B2%88%EC%A7%B8%20IPO"
       },
       "top_headlines": [
         {
-          "title": "알파타우, 'JP모건 헬스케어 컨퍼런스' 글로벌 투자자 만난다",
+          "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
           "summary": "",
-          "link": "https://www.kpanews.co.kr/article/show.asp?idx=266935&category=D",
+          "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -210,34 +152,36 @@
       ]
     },
     {
-      "term": "10 Mirae Asset Securities customers",
-      "term_ko": "미래에셋증권 고객 10명",
+      "term": "1 smartphone market share",
+      "term_ko": "스마트폰 시장점유율 1위",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "미래에셋증권 고객 10명",
+        "query": "스마트폰 시장점유율 1위",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=335463"
+              "title": "[AI의 종목 이야기] \"애플, 작년 글로벌 스마트폰 시장점유율 1위\"",
+              "link": "https://www.newspim.com/news/view/20260112000989"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%A6%9D%EA%B6%8C%20%EA%B3%A0%EA%B0%9D%2010%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%A6%9D%EA%B6%8C%20%EA%B3%A0%EA%B0%9D%2010%EB%AA%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%20%EC%8B%9C%EC%9E%A5%EC%A0%90%EC%9C%A0%EC%9C%A8%201%EC%9C%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%20%EC%8B%9C%EC%9E%A5%EC%A0%90%EC%9C%A0%EC%9C%A8%201%EC%9C%84"
       },
       "top_headlines": [
         {
-          "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
+          "title": "[AI의 종목 이야기] \"애플, 작년 글로벌 스마트폰 시장점유율 1위\"",
           "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=335463",
+          "link": "https://www.newspim.com/news/view/20260112000989",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -245,34 +189,36 @@
       ]
     },
     {
-      "term": "7 of them this year",
-      "term_ko": "중 7명 올해",
+      "term": "Exchange rate taken at 1470 won",
+      "term_ko": "1470원 찍은 환율",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "중 7명 올해",
+        "query": "1470원 찍은 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=335463"
+              "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
+              "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%207%EB%AA%85%20%EC%98%AC%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%207%EB%AA%85%20%EC%98%AC%ED%95%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1470%EC%9B%90%20%EC%B0%8D%EC%9D%80%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1470%EC%9B%90%20%EC%B0%8D%EC%9D%80%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
+          "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
           "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=335463",
+          "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -280,34 +226,36 @@
       ]
     },
     {
-      "term": "Conferences Global Investor",
-      "term_ko": "컨퍼런스 글로벌 투자자",
-      "significance_score": 322,
+      "term": "Supply Plan No later than January",
+      "term_ko": "공급대책 늦어도 1월",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "컨퍼런스 글로벌 투자자",
+        "query": "공급대책 늦어도 1월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "알파타우, 'JP모건 헬스케어 컨퍼런스' 글로벌 투자자 만난다",
-              "link": "https://www.kpanews.co.kr/article/show.asp?idx=266935&category=D"
+              "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
+              "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%88%AC%EC%9E%90%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%88%AC%EC%9E%90%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EA%B8%89%EB%8C%80%EC%B1%85%20%EB%8A%A6%EC%96%B4%EB%8F%84%201%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EA%B8%89%EB%8C%80%EC%B1%85%20%EB%8A%A6%EC%96%B4%EB%8F%84%201%EC%9B%94"
       },
       "top_headlines": [
         {
-          "title": "알파타우, 'JP모건 헬스케어 컨퍼런스' 글로벌 투자자 만난다",
+          "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
           "summary": "",
-          "link": "https://www.kpanews.co.kr/article/show.asp?idx=266935&category=D",
+          "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -315,34 +263,36 @@
       ]
     },
     {
-      "term": "Launch your first note",
-      "term_ko": "발행어음 첫 출시",
-      "significance_score": 322,
+      "term": "20 trillion in home equity loans this year",
+      "term_ko": "올해 보금자리론 20조원",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "발행어음 첫 출시",
+        "query": "올해 보금자리론 20조원",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "하나증권, '하나 THE 발행어음' 첫 출시 기념 이벤트 실시",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652655"
+              "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
+              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C%20%EC%B2%AB%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C%20%EC%B2%AB%20%EC%B6%9C%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%2020%EC%A1%B0%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%2020%EC%A1%B0%EC%9B%90"
       },
       "top_headlines": [
         {
-          "title": "하나증권, '하나 THE 발행어음' 첫 출시 기념 이벤트 실시",
+          "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
           "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652655",
+          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -350,34 +300,36 @@
       ]
     },
     {
-      "term": "Run a commemorative event",
-      "term_ko": "기념 이벤트 실시",
+      "term": "Apple Last Year Global",
+      "term_ko": "애플 작년 글로벌",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기념 이벤트 실시",
+        "query": "애플 작년 글로벌",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "하나증권, '하나 THE 발행어음' 첫 출시 기념 이벤트 실시",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652655"
+              "title": "[AI의 종목 이야기] \"애플, 작년 글로벌 스마트폰 시장점유율 1위\"",
+              "link": "https://www.newspim.com/news/view/20260112000989"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%85%90%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%85%90%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%8B%A4%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%A0%ED%94%8C%20%EC%9E%91%EB%85%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%A0%ED%94%8C%20%EC%9E%91%EB%85%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
       },
       "top_headlines": [
         {
-          "title": "하나증권, '하나 THE 발행어음' 첫 출시 기념 이벤트 실시",
+          "title": "[AI의 종목 이야기] \"애플, 작년 글로벌 스마트폰 시장점유율 1위\"",
           "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652655",
+          "link": "https://www.newspim.com/news/view/20260112000989",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -385,34 +337,36 @@
       ]
     },
     {
-      "term": "Exchange rate spikes again",
-      "term_ko": "다시 환율 급등",
+      "term": "Will it go down?",
+      "term_ko": "내려갈까 경제부총리 방미",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "다시 환율 급등",
+        "query": "내려갈까 경제부총리 방미",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "다시 환율 급등… 원가 상승에 대구 산업계 '경영 비상'",
-              "link": "https://n.news.naver.com/mnews/article/088/0000991553?sid=101"
+              "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
+              "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%8B%9C%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%8B%9C%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%A0%A4%EA%B0%88%EA%B9%8C%20%EA%B2%BD%EC%A0%9C%EB%B6%80%EC%B4%9D%EB%A6%AC%20%EB%B0%A9%EB%AF%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%A0%A4%EA%B0%88%EA%B9%8C%20%EA%B2%BD%EC%A0%9C%EB%B6%80%EC%B4%9D%EB%A6%AC%20%EB%B0%A9%EB%AF%B8"
       },
       "top_headlines": [
         {
-          "title": "다시 환율 급등… 원가 상승에 대구 산업계 '경영 비상'",
+          "title": "1470원 찍은 환율 내려갈까…경제부총리 방미 촉각",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000991553?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/018/0006199305?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -420,34 +374,36 @@
       ]
     },
     {
-      "term": "Cod to rising costs",
-      "term_ko": "원가 상승에 대구",
+      "term": "What to say",
+      "term_ko": "말 발표할 것",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "원가 상승에 대구",
+        "query": "말 발표할 것",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "다시 환율 급등… 원가 상승에 대구 산업계 '경영 비상'",
-              "link": "https://n.news.naver.com/mnews/article/088/0000991553?sid=101"
+              "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
+              "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EA%B0%80%20%EC%83%81%EC%8A%B9%EC%97%90%20%EB%8C%80%EA%B5%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EA%B0%80%20%EC%83%81%EC%8A%B9%EC%97%90%20%EB%8C%80%EA%B5%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%90%20%EB%B0%9C%ED%91%9C%ED%95%A0%20%EA%B2%83",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%90%20%EB%B0%9C%ED%91%9C%ED%95%A0%20%EA%B2%83"
       },
       "top_headlines": [
         {
-          "title": "다시 환율 급등… 원가 상승에 대구 산업계 '경영 비상'",
+          "title": "김윤덕 국토부장관 \"추가 공급대책 늦어도 1월 말 발표할 것\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000991553?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/008/0005303584?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -455,34 +411,36 @@
       ]
     },
     {
-      "term": "Industrial business emergencies",
-      "term_ko": "산업계 경영 비상",
+      "term": "Startup H1 Listing",
+      "term_ko": "시동 상반기 상장",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "산업계 경영 비상",
+        "query": "시동 상반기 상장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "다시 환율 급등… 원가 상승에 대구 산업계 '경영 비상'",
-              "link": "https://n.news.naver.com/mnews/article/088/0000991553?sid=101"
+              "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
+              "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%EC%97%85%EA%B3%84%20%EA%B2%BD%EC%98%81%20%EB%B9%84%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%EC%97%85%EA%B3%84%20%EA%B2%BD%EC%98%81%20%EB%B9%84%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%8F%99%20%EC%83%81%EB%B0%98%EA%B8%B0%20%EC%83%81%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%8F%99%20%EC%83%81%EB%B0%98%EA%B8%B0%20%EC%83%81%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "다시 환율 급등… 원가 상승에 대구 산업계 '경영 비상'",
+          "title": "케이뱅크, 세 번째 IPO 시동…\"상반기 상장 전망\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000991553?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/079/0004104263?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -490,34 +448,36 @@
       ]
     },
     {
-      "term": "Flying stocks boom",
-      "term_ko": "날았다 증권주 호황",
+      "term": "Rep. Jang Jin-young Rural",
+      "term_ko": "장진영 도의원 농촌",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "날았다 증권주 호황",
+        "query": "장진영 도의원 농촌",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "미래에셋, xAI·스페이스X로 날았다…증권주 호황 선봉",
-              "link": "https://www.thepowernews.co.kr/view.php?ud=202601121529102584de3f0aa1be_7"
+              "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
+              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%A0%EC%95%98%EB%8B%A4%20%EC%A6%9D%EA%B6%8C%EC%A3%BC%20%ED%98%B8%ED%99%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%A0%EC%95%98%EB%8B%A4%20%EC%A6%9D%EA%B6%8C%EC%A3%BC%20%ED%98%B8%ED%99%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%A7%84%EC%98%81%20%EB%8F%84%EC%9D%98%EC%9B%90%20%EB%86%8D%EC%B4%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%A7%84%EC%98%81%20%EB%8F%84%EC%9D%98%EC%9B%90%20%EB%86%8D%EC%B4%8C"
       },
       "top_headlines": [
         {
-          "title": "미래에셋, xAI·스페이스X로 날았다…증권주 호황 선봉",
+          "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
           "summary": "",
-          "link": "https://www.thepowernews.co.kr/view.php?ud=202601121529102584de3f0aa1be_7",
+          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -525,34 +485,36 @@
       ]
     },
     {
-      "term": "Deferred action regulations",
-      "term_ko": "유예 연장 규제",
+      "term": "To avoid extinction, start with agricultural land regulations",
+      "term_ko": "소멸 막으려면 농지규제부터",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "유예 연장 규제",
+        "query": "소멸 막으려면 농지규제부터",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
-              "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851"
+              "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
+              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EC%98%88%20%EC%97%B0%EC%9E%A5%20%EA%B7%9C%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EC%98%88%20%EC%97%B0%EC%9E%A5%20%EA%B7%9C%EC%A0%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EB%A9%B8%20%EB%A7%89%EC%9C%BC%EB%A0%A4%EB%A9%B4%20%EB%86%8D%EC%A7%80%EA%B7%9C%EC%A0%9C%EB%B6%80%ED%84%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EB%A9%B8%20%EB%A7%89%EC%9C%BC%EB%A0%A4%EB%A9%B4%20%EB%86%8D%EC%A7%80%EA%B7%9C%EC%A0%9C%EB%B6%80%ED%84%B0"
       },
       "top_headlines": [
         {
-          "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
+          "title": "장진영 도의원 \"농촌 소멸 막으려면 농지규제부터 바꿔야\"",
           "summary": "",
-          "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851",
+          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628009",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -560,34 +522,36 @@
       ]
     },
     {
-      "term": "Less new sales",
-      "term_ko": "덜한 신규 분양",
+      "term": "Initial Public Offering Third",
+      "term_ko": "기업공개 세 번째",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "덜한 신규 분양",
+        "query": "기업공개 세 번째",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
-              "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851"
+              "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
+              "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%9C%ED%95%9C%20%EC%8B%A0%EA%B7%9C%20%EB%B6%84%EC%96%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%9C%ED%95%9C%20%EC%8B%A0%EA%B7%9C%20%EB%B6%84%EC%96%91"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%EA%B3%B5%EA%B0%9C%20%EC%84%B8%20%EB%B2%88%EC%A7%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%EA%B3%B5%EA%B0%9C%20%EC%84%B8%20%EB%B2%88%EC%A7%B8"
       },
       "top_headlines": [
         {
-          "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
+          "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
           "summary": "",
-          "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851",
+          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -595,34 +559,36 @@
       ]
     },
     {
-      "term": "Shinhan Bank enters North America",
-      "term_ko": "신한은행 북미 진출",
+      "term": "Challenging the K-Bank Securities Market",
+      "term_ko": "도전하는 케이뱅크 유가증권시장",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "신한은행 북미 진출",
+        "query": "도전하는 케이뱅크 유가증권시장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "신한은행, 북미 진출 韓기업 금융지원 강화",
-              "link": "https://www.dongponews.net/news/articleView.html?idxno=55582"
+              "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
+              "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89%20%EB%B6%81%EB%AF%B8%20%EC%A7%84%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89%20%EB%B6%81%EB%AF%B8%20%EC%A7%84%EC%B6%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EC%A0%84%ED%95%98%EB%8A%94%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%EC%8B%9C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EC%A0%84%ED%95%98%EB%8A%94%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%EC%8B%9C%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "신한은행, 북미 진출 韓기업 금융지원 강화",
+          "title": "기업공개 세 번째 도전하는 케이뱅크, 유가증권시장 상장 예비심사 통과",
           "summary": "",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=55582",
+          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=426583",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -630,34 +596,73 @@
       ]
     },
     {
-      "term": "Strengthening financial support for Korean companies",
-      "term_ko": "韓기업 금융지원 강화",
-      "significance_score": 322,
+      "term": "ETFs Post 28%",
+      "term_ko": "ETF, 28% 포스트",
+      "significance_score": 308,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "韓기업 금융지원 강화",
+        "query": "ETFs Post 28%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "신한은행, 북미 진출 韓기업 금융지원 강화",
-              "link": "https://www.dongponews.net/news/articleView.html?idxno=55582"
+              "title": "Mirae Asset’s ‘killer’ ETFs post 28% average returns in 2025",
+              "link": "https://www.koreatimes.co.kr/path/A2026011214270002456"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%EA%B8%B0%EC%97%85%20%EA%B8%88%EC%9C%B5%EC%A7%80%EC%9B%90%20%EA%B0%95%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%EA%B8%B0%EC%97%85%20%EA%B8%88%EC%9C%B5%EC%A7%80%EC%9B%90%20%EA%B0%95%ED%99%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETFs%20Post%2028%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETFs%20Post%2028%25"
       },
       "top_headlines": [
         {
-          "title": "신한은행, 북미 진출 韓기업 금융지원 강화",
+          "title": "Mirae Asset’s ‘killer’ ETFs post 28% average returns in 2025",
           "summary": "",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=55582",
+          "link": "https://www.koreatimes.co.kr/path/A2026011214270002456",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "GRAVITY Eyes Growth",
+      "term_ko": "그래비티 아이즈 성장",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "GRAVITY Eyes Growth",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "GRAVITY Eyes Growth Resumption in 2026 After Rebuilding Fundamentals",
+              "link": "https://www.gamevu.co.kr/news/articleView.html?idxno=54963"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=GRAVITY%20Eyes%20Growth",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=GRAVITY%20Eyes%20Growth"
+      },
+      "top_headlines": [
+        {
+          "title": "GRAVITY Eyes Growth Resumption in 2026 After Rebuilding Fundamentals",
+          "summary": "",
+          "link": "https://www.gamevu.co.kr/news/articleView.html?idxno=54963",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -674,8 +679,10 @@
         "query": "Mirae Asset ETFs",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Mirae Asset ETFs outpace S&P 500, Nasdaq in 2025",
@@ -709,8 +716,10 @@
         "query": "Global ETF Portfolio",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Mirae Asset Global Investments' 2025 global ETF portfolio posts 27.9% ave...",
@@ -735,34 +744,36 @@
       ]
     },
     {
-      "term": "1.5 Billion Deal",
-      "term_ko": "15억 거래",
+      "term": "Supply goals",
+      "term_ko": "공급 목표",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "1.5 Billion Deal",
+        "query": "공급 목표",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Allegiant to Acquire Sun Country Airlines in $1.5 Billion Deal to Expand ...",
-              "link": "https://www.econotimes.com/Allegiant-to-Acquire-Sun-Country-Airlines-in-15-Billion-Deal-to-Expand-US-Leisure-Travel-Network-1730668"
+              "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
+              "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1.5%20Billion%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1.5%20Billion%20Deal"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EA%B8%89%20%EB%AA%A9%ED%91%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EA%B8%89%20%EB%AA%A9%ED%91%9C"
       },
       "top_headlines": [
         {
-          "title": "Allegiant to Acquire Sun Country Airlines in $1.5 Billion Deal to Expand ...",
+          "title": "주택금융공사 \"올해 보금자리론 20조원 공급 목표\"",
           "summary": "",
-          "link": "https://www.econotimes.com/Allegiant-to-Acquire-Sun-Country-Airlines-in-15-Billion-Deal-to-Expand-US-Leisure-Travel-Network-1730668",
+          "link": "https://www.gnnews.co.kr/news/articleView.html?idxno=628006",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -770,275 +781,36 @@
       ]
     },
     {
-      "term": "Key Q4 Earnings",
-      "term_ko": "4분기 주요 수익",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Key Q4 Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Edge Lower Ahead of Key Q4 Earnings and Inflation Data",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Lower-Ahead-of-Key-Q4-Earnings-and-Inflation-Data-1730666"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Key%20Q4%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Key%20Q4%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Edge Lower Ahead of Key Q4 Earnings and Inflation Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Lower-Ahead-of-Key-Q4-Earnings-and-Inflation-Data-1730666",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Hana Securities Hana",
-      "term_ko": "하나증권 하나",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나증권 하나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "하나증권, '하나 THE 발행어음' 첫 출시 기념 이벤트 실시",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652655"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EC%A6%9D%EA%B6%8C%20%ED%95%98%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EC%A6%9D%EA%B6%8C%20%ED%95%98%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "하나증권, '하나 THE 발행어음' 첫 출시 기념 이벤트 실시",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=652655",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Financial overview",
-      "term_ko": "금융 이모저모",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융 이모저모",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=335463"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
-          "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=335463",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Global stock markets",
-      "term_ko": "글로벌 증시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "글로벌 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
-              "link": "https://www.greened.kr/news/articleView.html?idxno=335463"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 이모저모] 미래에셋증권 고객 10명 중 7명 \"올해 글로벌 증시 낙관...",
-          "summary": "",
-          "link": "https://www.greened.kr/news/articleView.html?idxno=335463",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Fatty Pilasters",
-      "term_ko": "지방 주담대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지방 주담대",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-01-06",
-              "timestamp": 1767625200000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
-              "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EB%B0%A9%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EB%B0%A9%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "지방 주담대 '스트레스 DSR 3단계' 유예 연장… 규제 덜한 신규 분양 단...",
-          "summary": "",
-          "link": "https://www.smarttoday.co.kr/ko-kr/articles/100851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.006264,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1767625200000
-      }
-    },
-    {
-      "term": "Acquire Sun Country",
-      "term_ko": "태양의 나라 획득",
+      "term": "Mirae Assets Killer",
+      "term_ko": "미래에셋 킬러",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Acquire Sun Country",
+        "query": "Mirae Assets Killer",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Allegiant to Acquire Sun Country Airlines in $1.5 Billion Deal to Expand ...",
-              "link": "https://www.econotimes.com/Allegiant-to-Acquire-Sun-Country-Airlines-in-15-Billion-Deal-to-Expand-US-Leisure-Travel-Network-1730668"
+              "title": "Mirae Asset’s ‘killer’ ETFs post 28% average returns in 2025",
+              "link": "https://www.koreatimes.co.kr/path/A2026011214270002456"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Acquire%20Sun%20Country",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Acquire%20Sun%20Country"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mirae%20Assets%20Killer",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mirae%20Assets%20Killer"
       },
       "top_headlines": [
         {
-          "title": "Allegiant to Acquire Sun Country Airlines in $1.5 Billion Deal to Expand ...",
+          "title": "Mirae Asset’s ‘killer’ ETFs post 28% average returns in 2025",
           "summary": "",
-          "link": "https://www.econotimes.com/Allegiant-to-Acquire-Sun-Country-Airlines-in-15-Billion-Deal-to-Expand-US-Leisure-Travel-Network-1730668",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Futures Edge Lower",
-      "term_ko": "선물 에지 하단",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Edge Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Edge Lower Ahead of Key Q4 Earnings and Inflation Data",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Lower-Ahead-of-Key-Q4-Earnings-and-Inflation-Data-1730666"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Edge%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Edge%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Edge Lower Ahead of Key Q4 Earnings and Inflation Data",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Edge-Lower-Ahead-of-Key-Q4-Earnings-and-Inflation-Data-1730666",
+          "link": "https://www.koreatimes.co.kr/path/A2026011214270002456",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1055,8 +827,10 @@
         "query": "Posts 27.9%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Mirae Asset Global Investments' 2025 global ETF portfolio posts 27.9% ave...",
@@ -1081,6 +855,43 @@
       ]
     },
     {
+      "term": "Rebuilding Fundamentals",
+      "term_ko": "기초 재구축",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Rebuilding Fundamentals",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "GRAVITY Eyes Growth Resumption in 2026 After Rebuilding Fundamentals",
+              "link": "https://www.gamevu.co.kr/news/articleView.html?idxno=54963"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rebuilding%20Fundamentals",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rebuilding%20Fundamentals"
+      },
+      "top_headlines": [
+        {
+          "title": "GRAVITY Eyes Growth Resumption in 2026 After Rebuilding Fundamentals",
+          "summary": "",
+          "link": "https://www.gamevu.co.kr/news/articleView.html?idxno=54963",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "Outpace S&P",
       "term_ko": "S&P를 앞지르다",
       "significance_score": 224,
@@ -1090,8 +901,10 @@
         "query": "Outpace S&P",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-01-12T15:37:41+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "Mirae Asset ETFs outpace S&P 500, Nasdaq in 2025",
@@ -1116,17 +929,105 @@
       ]
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
+      "term": "Average Returns",
+      "term_ko": "평균 수익률",
+      "significance_score": 224,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
+        "query": "Average Returns",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Mirae Asset’s ‘killer’ ETFs post 28% average returns in 2025",
+              "link": "https://www.koreatimes.co.kr/path/A2026011214270002456"
+            }
+          ]
+        }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Average%20Returns",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Average%20Returns"
+      },
+      "top_headlines": [
+        {
+          "title": "Mirae Asset’s ‘killer’ ETFs post 28% average returns in 2025",
+          "summary": "",
+          "link": "https://www.koreatimes.co.kr/path/A2026011214270002456",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 상승",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-01-12T21:46:46+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
     }
@@ -1134,25 +1035,29 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-01-12T06:38:50.894Z",
+    "generated_at": "2026-01-12T12:47:54.596Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-12T15:37:41+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-01-12T21:46:46+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-01-12T15:37:41+09:00",
-      "fallback_sources": [],
+      "last_updated": "2026-01-12T21:46:46+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-01-12T15:37:41+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2026-01-12T21:46:46+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
       }
     }
   }
