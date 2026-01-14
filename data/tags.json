@@ -1,1164 +1,439 @@
 {
+  "generatedAt": "2026-01-14T18:34:30.469Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-14",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Korea Exchange Pre-Aftermarket",
-      "term_ko": "한국거래소 프리 애프터마켓",
-      "significance_score": 644,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국거래소 프리 애프터마켓",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 프리·애프터마켓 개설 추진한다",
-              "link": "https://www.junggi.co.kr/news/articleView.html?idxno=35204"
-            },
-            {
-              "title": "한국거래소, 프리·애프터마켓 확대 검토…2027년 24시간 거래체계 목표",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549935"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%ED%94%84%EB%A6%AC%20%EC%95%A0%ED%94%84%ED%84%B0%EB%A7%88%EC%BC%93",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%ED%94%84%EB%A6%AC%20%EC%95%A0%ED%94%84%ED%84%B0%EB%A7%88%EC%BC%93"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 프리·애프터마켓 개설 추진한다",
-          "summary": "",
-          "link": "https://www.junggi.co.kr/news/articleView.html?idxno=35204",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "한국거래소, 프리·애프터마켓 확대 검토…2027년 24시간 거래체계 목표",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549935",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Korea Exchange Pre-aftermarket",
+      "term_ko": "한국거래소 프리 애프터마켓"
     },
     {
-      "term": "Nikkei 3% on expectations",
-      "term_ko": "기대감에 닛케이 3%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기대감에 닛케이 3%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "일본, 조기 총선 기대감에 닛케이 3% 급등…아시아 증시 혼조",
-              "link": "https://www.hellot.net/news/article.html?no=109090"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%EA%B0%90%EC%97%90%20%EB%8B%9B%EC%BC%80%EC%9D%B4%203%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%EA%B0%90%EC%97%90%20%EB%8B%9B%EC%BC%80%EC%9D%B4%203%25"
-      },
-      "top_headlines": [
-        {
-          "title": "일본, 조기 총선 기대감에 닛케이 3% 급등…아시아 증시 혼조",
-          "summary": "",
-          "link": "https://www.hellot.net/news/article.html?no=109090",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nikkei 3% on Expectations",
+      "term_ko": "기대감에 닛케이 3%"
     },
     {
       "term": "Extended Review 2027",
-      "term_ko": "확대 검토 2027년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확대 검토 2027년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 프리·애프터마켓 확대 검토…2027년 24시간 거래체계 목표",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549935"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EB%8C%80%20%EA%B2%80%ED%86%A0%202027%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EB%8C%80%20%EA%B2%80%ED%86%A0%202027%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 프리·애프터마켓 확대 검토…2027년 24시간 거래체계 목표",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549935",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "확대 검토 2027년"
     },
     {
-      "term": "24-Hour Trading System Goals",
-      "term_ko": "24시간 거래체계 목표",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "24시간 거래체계 목표",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 프리·애프터마켓 확대 검토…2027년 24시간 거래체계 목표",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549935"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=24%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98%EC%B2%B4%EA%B3%84%20%EB%AA%A9%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=24%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98%EC%B2%B4%EA%B3%84%20%EB%AA%A9%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 프리·애프터마켓 확대 검토…2027년 24시간 거래체계 목표",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=549935",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "24-hour Trading System Goals",
+      "term_ko": "24시간 거래체계 목표"
     },
     {
       "term": "1500 Yuan Era Warning Light",
-      "term_ko": "1500원 시대 경고등",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1500원 시대 경고등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'1,500원 시대' 경고등…\"환율 최후 저항선\"",
-              "link": "https://n.news.naver.com/mnews/article/422/0000822726?sid=161"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1500%EC%9B%90%20%EC%8B%9C%EB%8C%80%20%EA%B2%BD%EA%B3%A0%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1500%EC%9B%90%20%EC%8B%9C%EB%8C%80%20%EA%B2%BD%EA%B3%A0%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "'1,500원 시대' 경고등…\"환율 최후 저항선\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000822726?sid=161",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "1500원 시대 경고등"
     },
     {
-      "term": "53% invest in mid-sized companies",
-      "term_ko": "중견기업 53% 투자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중견기업 53% 투자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중견기업 53% \"투자 계획 없다\"",
-              "link": "http://www.srtimes.kr/news/articleView.html?idxno=194270"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85%2053%25%20%ED%88%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85%2053%25%20%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "중견기업 53% \"투자 계획 없다\"",
-          "summary": "",
-          "link": "http://www.srtimes.kr/news/articleView.html?idxno=194270",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "53% Invest in Mid-sized Companies",
+      "term_ko": "중견기업 53% 투자"
     },
     {
-      "term": "KRW back to 1480 won",
-      "term_ko": "원화값 다시 1480원대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원화값 다시 1480원대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "초고강도 개입 약발, 한달도 못갔다…원화값 다시 1480원대 위협",
-              "link": "https://n.news.naver.com/mnews/article/009/0005621907?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%ED%99%94%EA%B0%92%20%EB%8B%A4%EC%8B%9C%201480%EC%9B%90%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%ED%99%94%EA%B0%92%20%EB%8B%A4%EC%8B%9C%201480%EC%9B%90%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "초고강도 개입 약발, 한달도 못갔다…원화값 다시 1480원대 위협",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005621907?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Krw Back to 1480 Won",
+      "term_ko": "원화값 다시 1480원대"
     },
     {
       "term": "25th Anniversary of Mantruck Bus Korea",
-      "term_ko": "만트럭버스코리아 창립 25주년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만트럭버스코리아 창립 25주년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "만트럭버스코리아, 창립 25주년 기념 특별 캠페인 실시",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=725700"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%ED%8A%B8%EB%9F%AD%EB%B2%84%EC%8A%A4%EC%BD%94%EB%A6%AC%EC%95%84%20%EC%B0%BD%EB%A6%BD%2025%EC%A3%BC%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%ED%8A%B8%EB%9F%AD%EB%B2%84%EC%8A%A4%EC%BD%94%EB%A6%AC%EC%95%84%20%EC%B0%BD%EB%A6%BD%2025%EC%A3%BC%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "만트럭버스코리아, 창립 25주년 기념 특별 캠페인 실시",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=725700",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "만트럭버스코리아 창립 25주년"
     },
     {
-      "term": "Japan's early general election",
-      "term_ko": "일본 조기 총선",
-      "significance_score": 322,
-      "mentions": 284,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "일본 조기 총선",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-01-09",
-              "timestamp": 1767884400000,
-              "value": 26.62337
-            },
-            {
-              "period": "2026-01-10",
-              "timestamp": 1767970800000,
-              "value": 40.90909
-            },
-            {
-              "period": "2026-01-11",
-              "timestamp": 1768057200000,
-              "value": 18.83116
-            },
-            {
-              "period": "2026-01-12",
-              "timestamp": 1768143600000,
-              "value": 97.40259
-            },
-            {
-              "period": "2026-01-13",
-              "timestamp": 1768230000000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "일본, 조기 총선 기대감에 닛케이 3% 급등…아시아 증시 혼조",
-              "link": "https://www.hellot.net/news/article.html?no=109090"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EB%B3%B8%20%EC%A1%B0%EA%B8%B0%20%EC%B4%9D%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EB%B3%B8%20%EC%A1%B0%EA%B8%B0%20%EC%B4%9D%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "일본, 조기 총선 기대감에 닛케이 3% 급등…아시아 증시 혼조",
-          "summary": "",
-          "link": "https://www.hellot.net/news/article.html?no=109090",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 283.7662,
-        "weekly_average_volume": 56.7532,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.019941,
-        "time_weight": 0.021846,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1768230000000
-      }
+      "term": "Japan's Early General Election",
+      "term_ko": "일본 조기 총선"
     },
     {
-      "term": "Asian stocks soar",
-      "term_ko": "급등 아시아 증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급등 아시아 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "일본, 조기 총선 기대감에 닛케이 3% 급등…아시아 증시 혼조",
-              "link": "https://www.hellot.net/news/article.html?no=109090"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%20%EC%95%84%EC%8B%9C%EC%95%84%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%20%EC%95%84%EC%8B%9C%EC%95%84%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "일본, 조기 총선 기대감에 닛케이 3% 급등…아시아 증시 혼조",
-          "summary": "",
-          "link": "https://www.hellot.net/news/article.html?no=109090",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Asian Stocks Soar",
+      "term_ko": "급등 아시아 증시"
     },
     {
-      "term": "Exchange rate last line of resistance",
-      "term_ko": "환율 최후 저항선",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 최후 저항선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'1,500원 시대' 경고등…\"환율 최후 저항선\"",
-              "link": "https://n.news.naver.com/mnews/article/422/0000822726?sid=161"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%B5%9C%ED%9B%84%20%EC%A0%80%ED%95%AD%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%B5%9C%ED%9B%84%20%EC%A0%80%ED%95%AD%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "'1,500원 시대' 경고등…\"환율 최후 저항선\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000822726?sid=161",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rate Last Line of Resistance",
+      "term_ko": "환율 최후 저항선"
     },
     {
-      "term": "Trump's Powell departure",
-      "term_ko": "트럼프 파월 퇴진",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "트럼프 파월 퇴진",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "트럼프, 파월 퇴진 압박…연준 독립성 논란 확산",
-              "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1510630"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%8C%8C%EC%9B%94%20%ED%87%B4%EC%A7%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%20%ED%8C%8C%EC%9B%94%20%ED%87%B4%EC%A7%84"
-      },
-      "top_headlines": [
-        {
-          "title": "트럼프, 파월 퇴진 압박…연준 독립성 논란 확산",
-          "summary": "",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1510630",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump's Powell Departure",
+      "term_ko": "트럼프 파월 퇴진"
     },
     {
-      "term": "Pressures on Fed independence",
-      "term_ko": "압박 연준 독립성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "압박 연준 독립성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "트럼프, 파월 퇴진 압박…연준 독립성 논란 확산",
-              "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1510630"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%95%EB%B0%95%20%EC%97%B0%EC%A4%80%20%EB%8F%85%EB%A6%BD%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%95%EB%B0%95%20%EC%97%B0%EC%A4%80%20%EB%8F%85%EB%A6%BD%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "트럼프, 파월 퇴진 압박…연준 독립성 논란 확산",
-          "summary": "",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1510630",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Pressures on Fed Independence",
+      "term_ko": "압박 연준 독립성"
     },
     {
-      "term": "You're messing with the exchange rate.",
-      "term_ko": "환율을 어이할꼬 불장인데",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율을 어이할꼬 불장인데",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"환율을 어이할꼬\"…'불장'인데 함박웃음이 사라졌다",
-              "link": "https://n.news.naver.com/mnews/article/215/0001237940?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%EC%9D%84%20%EC%96%B4%EC%9D%B4%ED%95%A0%EA%BC%AC%20%EB%B6%88%EC%9E%A5%EC%9D%B8%EB%8D%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%EC%9D%84%20%EC%96%B4%EC%9D%B4%ED%95%A0%EA%BC%AC%20%EB%B6%88%EC%9E%A5%EC%9D%B8%EB%8D%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "\"환율을 어이할꼬\"…'불장'인데 함박웃음이 사라졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001237940?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "You're Messing with the Exchange Rate.",
+      "term_ko": "환율을 어이할꼬 불장인데"
     },
     {
-      "term": "Very high intensity intervention triggers",
-      "term_ko": "초고강도 개입 약발",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "초고강도 개입 약발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "초고강도 개입 약발, 한달도 못갔다…원화값 다시 1480원대 위협",
-              "link": "https://n.news.naver.com/mnews/article/009/0005621907?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B4%88%EA%B3%A0%EA%B0%95%EB%8F%84%20%EA%B0%9C%EC%9E%85%20%EC%95%BD%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B4%88%EA%B3%A0%EA%B0%95%EB%8F%84%20%EA%B0%9C%EC%9E%85%20%EC%95%BD%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "초고강도 개입 약발, 한달도 못갔다…원화값 다시 1480원대 위협",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005621907?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Very High Intensity Intervention Triggers",
+      "term_ko": "초고강도 개입 약발"
     },
     {
-      "term": "Celebration special campaigns",
-      "term_ko": "기념 특별 캠페인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기념 특별 캠페인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "만트럭버스코리아, 창립 25주년 기념 특별 캠페인 실시",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=725700"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%85%90%20%ED%8A%B9%EB%B3%84%20%EC%BA%A0%ED%8E%98%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%85%90%20%ED%8A%B9%EB%B3%84%20%EC%BA%A0%ED%8E%98%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "만트럭버스코리아, 창립 25주년 기념 특별 캠페인 실시",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=725700",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Celebration Special Campaigns",
+      "term_ko": "기념 특별 캠페인"
     },
     {
-      "term": "250M Nasdaq IPO",
-      "term_ko": "2억 5천만 달러 나스닥 IPO",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "250M Nasdaq IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Kraken-Backed SPAC Files for $250M Nasdaq IPO",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41625"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=250M%20Nasdaq%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=250M%20Nasdaq%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "Kraken-Backed SPAC Files for $250M Nasdaq IPO",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41625",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "250m Nasdaq Ipo",
+      "term_ko": "2억 5천만 달러 나스닥 IPO"
     },
     {
-      "term": "KOSPI Closes Above",
-      "term_ko": "코스피 상한가 마감",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Closes Above",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Closes Above 4,700 Initially, Extends Winning Streak to Nine Sessio...",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=175624"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Closes%20Above",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Closes%20Above"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Closes Above 4,700 Initially, Extends Winning Streak to Nine Sessio...",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=175624",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Closes Above",
+      "term_ko": "코스피 상한가 마감"
     },
     {
-      "term": "Kraken-Backed SPAC Files",
-      "term_ko": "크라켄 지원 스팩 파일",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kraken-Backed SPAC Files",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Kraken-Backed SPAC Files for $250M Nasdaq IPO",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41625"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kraken-Backed%20SPAC%20Files",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kraken-Backed%20SPAC%20Files"
-      },
-      "top_headlines": [
-        {
-          "title": "Kraken-Backed SPAC Files for $250M Nasdaq IPO",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=41625",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kraken-backed Spac Files",
+      "term_ko": "크라켄 지원 스팩 파일"
     },
     {
-      "term": "Push to open",
-      "term_ko": "개설 추진한다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개설 추진한다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 프리·애프터마켓 개설 추진한다",
-              "link": "https://www.junggi.co.kr/news/articleView.html?idxno=35204"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%84%A4%20%EC%B6%94%EC%A7%84%ED%95%9C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%84%A4%20%EC%B6%94%EC%A7%84%ED%95%9C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 프리·애프터마켓 개설 추진한다",
-          "summary": "",
-          "link": "https://www.junggi.co.kr/news/articleView.html?idxno=35204",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Push to Open",
+      "term_ko": "개설 추진한다"
     },
     {
-      "term": "Spreading controversy",
-      "term_ko": "논란 확산",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "논란 확산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "트럼프, 파월 퇴진 압박…연준 독립성 논란 확산",
-              "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1510630"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%BC%EB%9E%80%20%ED%99%95%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%BC%EB%9E%80%20%ED%99%95%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "트럼프, 파월 퇴진 압박…연준 독립성 논란 확산",
-          "summary": "",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1510630",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spreading Controversy",
+      "term_ko": "논란 확산"
     },
     {
-      "term": "The smirk is gone",
-      "term_ko": "함박웃음이 사라졌다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "함박웃음이 사라졌다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"환율을 어이할꼬\"…'불장'인데 함박웃음이 사라졌다",
-              "link": "https://n.news.naver.com/mnews/article/215/0001237940?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A8%EB%B0%95%EC%9B%83%EC%9D%8C%EC%9D%B4%20%EC%82%AC%EB%9D%BC%EC%A1%8C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A8%EB%B0%95%EC%9B%83%EC%9D%8C%EC%9D%B4%20%EC%82%AC%EB%9D%BC%EC%A1%8C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"환율을 어이할꼬\"…'불장'인데 함박웃음이 사라졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001237940?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Smirk Is Gone",
+      "term_ko": "함박웃음이 사라졌다"
     },
     {
-      "term": "No plans",
-      "term_ko": "계획 없다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "계획 없다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중견기업 53% \"투자 계획 없다\"",
-              "link": "http://www.srtimes.kr/news/articleView.html?idxno=194270"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%84%ED%9A%8D%20%EC%97%86%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%84%ED%9A%8D%20%EC%97%86%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "중견기업 53% \"투자 계획 없다\"",
-          "summary": "",
-          "link": "http://www.srtimes.kr/news/articleView.html?idxno=194270",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "No Plans",
+      "term_ko": "계획 없다"
     },
     {
-      "term": "Less than a month",
-      "term_ko": "한달도 못갔다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한달도 못갔다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "초고강도 개입 약발, 한달도 못갔다…원화값 다시 1480원대 위협",
-              "link": "https://n.news.naver.com/mnews/article/009/0005621907?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EB%8B%AC%EB%8F%84%20%EB%AA%BB%EA%B0%94%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EB%8B%AC%EB%8F%84%20%EB%AA%BB%EA%B0%94%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "초고강도 개입 약발, 한달도 못갔다…원화값 다시 1480원대 위협",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005621907?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Less Than a Month",
+      "term_ko": "한달도 못갔다"
     },
     {
       "term": "Kospi Skyrockets Kosdaq",
-      "term_ko": "코스피 코스닥 급등",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Skyrockets Kosdaq",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "As Kospi skyrockets, Kosdaq remains stuck on the ground",
-              "link": "https://n.news.naver.com/mnews/article/640/0000083065?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Skyrockets%20Kosdaq",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Skyrockets%20Kosdaq"
-      },
-      "top_headlines": [
-        {
-          "title": "As Kospi skyrockets, Kosdaq remains stuck on the ground",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000083065?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 코스닥 급등"
     },
     {
       "term": "Initially Extends Winning",
-      "term_ko": "초기 승리 연장",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Initially Extends Winning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Closes Above 4,700 Initially, Extends Winning Streak to Nine Sessio...",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=175624"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Initially%20Extends%20Winning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Initially%20Extends%20Winning"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Closes Above 4,700 Initially, Extends Winning Streak to Nine Sessio...",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=175624",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "초기 승리 연장"
     },
     {
       "term": "Remains Stuck",
-      "term_ko": "멈춤 상태 유지",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Remains Stuck",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "As Kospi skyrockets, Kosdaq remains stuck on the ground",
-              "link": "https://n.news.naver.com/mnews/article/640/0000083065?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Remains%20Stuck",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Remains%20Stuck"
-      },
-      "top_headlines": [
-        {
-          "title": "As Kospi skyrockets, Kosdaq remains stuck on the ground",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000083065?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "멈춤 상태 유지"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-14T21:45:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-14T12:46:47.617Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-14T21:45:41+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Korea Exchange Pre-aftermarket",
+      "term_ko": "한국거래소 프리 애프터마켓"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-14T21:45:41+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-14T21:45:41+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Nikkei 3% on Expectations",
+      "term_ko": "기대감에 닛케이 3%"
+    },
+    {
+      "term": "Extended Review 2027",
+      "term_ko": "확대 검토 2027년"
+    },
+    {
+      "term": "24-hour Trading System Goals",
+      "term_ko": "24시간 거래체계 목표"
+    },
+    {
+      "term": "1500 Yuan Era Warning Light",
+      "term_ko": "1500원 시대 경고등"
+    },
+    {
+      "term": "53% Invest in Mid-sized Companies",
+      "term_ko": "중견기업 53% 투자"
+    },
+    {
+      "term": "Krw Back to 1480 Won",
+      "term_ko": "원화값 다시 1480원대"
+    },
+    {
+      "term": "25th Anniversary of Mantruck Bus Korea",
+      "term_ko": "만트럭버스코리아 창립 25주년"
+    },
+    {
+      "term": "Japan's Early General Election",
+      "term_ko": "일본 조기 총선"
+    },
+    {
+      "term": "Asian Stocks Soar",
+      "term_ko": "급등 아시아 증시"
+    },
+    {
+      "term": "Exchange Rate Last Line of Resistance",
+      "term_ko": "환율 최후 저항선"
+    },
+    {
+      "term": "Trump's Powell Departure",
+      "term_ko": "트럼프 파월 퇴진"
+    },
+    {
+      "term": "Pressures on Fed Independence",
+      "term_ko": "압박 연준 독립성"
+    },
+    {
+      "term": "You're Messing with the Exchange Rate.",
+      "term_ko": "환율을 어이할꼬 불장인데"
+    },
+    {
+      "term": "Very High Intensity Intervention Triggers",
+      "term_ko": "초고강도 개입 약발"
+    },
+    {
+      "term": "Celebration Special Campaigns",
+      "term_ko": "기념 특별 캠페인"
+    },
+    {
+      "term": "250m Nasdaq Ipo",
+      "term_ko": "2억 5천만 달러 나스닥 IPO"
+    },
+    {
+      "term": "Kospi Closes Above",
+      "term_ko": "코스피 상한가 마감"
+    },
+    {
+      "term": "Kraken-backed Spac Files",
+      "term_ko": "크라켄 지원 스팩 파일"
+    },
+    {
+      "term": "Push to Open",
+      "term_ko": "개설 추진한다"
+    },
+    {
+      "term": "Spreading Controversy",
+      "term_ko": "논란 확산"
+    },
+    {
+      "term": "The Smirk Is Gone",
+      "term_ko": "함박웃음이 사라졌다"
+    },
+    {
+      "term": "No Plans",
+      "term_ko": "계획 없다"
+    },
+    {
+      "term": "Less Than a Month",
+      "term_ko": "한달도 못갔다"
+    },
+    {
+      "term": "Kospi Skyrockets Kosdaq",
+      "term_ko": "코스피 코스닥 급등"
+    },
+    {
+      "term": "Initially Extends Winning",
+      "term_ko": "초기 승리 연장"
+    },
+    {
+      "term": "Remains Stuck",
+      "term_ko": "멈춤 상태 유지"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Korea Exchange Pre-aftermarket": {
+      "en": "Korea Exchange Pre-aftermarket",
+      "ko": "한국거래소 프리 애프터마켓",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Nikkei 3% on Expectations": {
+      "en": "Nikkei 3% on Expectations",
+      "ko": "기대감에 닛케이 3%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Extended Review 2027": {
+      "en": "Extended Review 2027",
+      "ko": "확대 검토 2027년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "24-hour Trading System Goals": {
+      "en": "24-hour Trading System Goals",
+      "ko": "24시간 거래체계 목표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "1500 Yuan Era Warning Light": {
+      "en": "1500 Yuan Era Warning Light",
+      "ko": "1500원 시대 경고등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "53% Invest in Mid-sized Companies": {
+      "en": "53% Invest in Mid-sized Companies",
+      "ko": "중견기업 53% 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Krw Back to 1480 Won": {
+      "en": "Krw Back to 1480 Won",
+      "ko": "원화값 다시 1480원대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "25th Anniversary of Mantruck Bus Korea": {
+      "en": "25th Anniversary of Mantruck Bus Korea",
+      "ko": "만트럭버스코리아 창립 25주년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Japan's Early General Election": {
+      "en": "Japan's Early General Election",
+      "ko": "일본 조기 총선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Asian Stocks Soar": {
+      "en": "Asian Stocks Soar",
+      "ko": "급등 아시아 증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Exchange Rate Last Line of Resistance": {
+      "en": "Exchange Rate Last Line of Resistance",
+      "ko": "환율 최후 저항선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Trump's Powell Departure": {
+      "en": "Trump's Powell Departure",
+      "ko": "트럼프 파월 퇴진",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Pressures on Fed Independence": {
+      "en": "Pressures on Fed Independence",
+      "ko": "압박 연준 독립성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "You're Messing with the Exchange Rate.": {
+      "en": "You're Messing with the Exchange Rate.",
+      "ko": "환율을 어이할꼬 불장인데",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Very High Intensity Intervention Triggers": {
+      "en": "Very High Intensity Intervention Triggers",
+      "ko": "초고강도 개입 약발",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Celebration Special Campaigns": {
+      "en": "Celebration Special Campaigns",
+      "ko": "기념 특별 캠페인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "250m Nasdaq Ipo": {
+      "en": "250m Nasdaq Ipo",
+      "ko": "2억 5천만 달러 나스닥 IPO",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Kospi Closes Above": {
+      "en": "Kospi Closes Above",
+      "ko": "코스피 상한가 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Kraken-backed Spac Files": {
+      "en": "Kraken-backed Spac Files",
+      "ko": "크라켄 지원 스팩 파일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Push to Open": {
+      "en": "Push to Open",
+      "ko": "개설 추진한다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Spreading Controversy": {
+      "en": "Spreading Controversy",
+      "ko": "논란 확산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "The Smirk Is Gone": {
+      "en": "The Smirk Is Gone",
+      "ko": "함박웃음이 사라졌다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "No Plans": {
+      "en": "No Plans",
+      "ko": "계획 없다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Less Than a Month": {
+      "en": "Less Than a Month",
+      "ko": "한달도 못갔다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Kospi Skyrockets Kosdaq": {
+      "en": "Kospi Skyrockets Kosdaq",
+      "ko": "코스피 코스닥 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Initially Extends Winning": {
+      "en": "Initially Extends Winning",
+      "ko": "초기 승리 연장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Remains Stuck": {
+      "en": "Remains Stuck",
+      "ko": "멈춤 상태 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T18:34:30.469Z"
     }
   }
 }
