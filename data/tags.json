@@ -1,1116 +1,439 @@
 {
+  "generatedAt": "2026-01-14T06:33:23.571Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-14",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "JPMorgan Dyman Powell",
-      "term_ko": "JP모건 다이먼 파월",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "JP모건 다이먼 파월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "JP모건 다이먼 \"파월 압박, 금리 상승 역효과\"… 한은 포함 10개국 총재...",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=175550"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=JP%EB%AA%A8%EA%B1%B4%20%EB%8B%A4%EC%9D%B4%EB%A8%BC%20%ED%8C%8C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=JP%EB%AA%A8%EA%B1%B4%20%EB%8B%A4%EC%9D%B4%EB%A8%BC%20%ED%8C%8C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "JP모건 다이먼 \"파월 압박, 금리 상승 역효과\"… 한은 포함 10개국 총재...",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=175550",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Jpmorgan Dyman Powell",
+      "term_ko": "JP모건 다이먼 파월"
     },
     {
-      "term": "Stop pressing FED",
-      "term_ko": "FED 압박 멈추지",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "FED 압박 멈추지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'FED 압박' 멈추지 않는 트럼프...월가 최고 CEO들과 충돌 [HK영상]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005236917?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FED%20%EC%95%95%EB%B0%95%20%EB%A9%88%EC%B6%94%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FED%20%EC%95%95%EB%B0%95%20%EB%A9%88%EC%B6%94%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "'FED 압박' 멈추지 않는 트럼프...월가 최고 CEO들과 충돌 [HK영상]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005236917?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stop Pressing Fed",
+      "term_ko": "FED 압박 멈추지"
     },
     {
-      "term": "Clashing with top CEOs",
-      "term_ko": "최고 CEO들과 충돌",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고 CEO들과 충돌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'FED 압박' 멈추지 않는 트럼프...월가 최고 CEO들과 충돌 [HK영상]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005236917?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%20CEO%EB%93%A4%EA%B3%BC%20%EC%B6%A9%EB%8F%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%20CEO%EB%93%A4%EA%B3%BC%20%EC%B6%A9%EB%8F%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "'FED 압박' 멈추지 않는 트럼프...월가 최고 CEO들과 충돌 [HK영상]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005236917?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Clashing with Top Ceos",
+      "term_ko": "최고 CEO들과 충돌"
     },
     {
-      "term": "Funding Strategy KB Capital",
-      "term_ko": "자금조달 전략 KB캐피탈",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자금조달 전략 KB캐피탈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[여전사 자금조달 전략] KB캐피탈, 보수적 조달로 고금리 터널 통과",
-              "link": "https://dealsite.co.kr/articles/154920"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%20%EC%A0%84%EB%9E%B5%20KB%EC%BA%90%ED%94%BC%ED%83%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%20%EC%A0%84%EB%9E%B5%20KB%EC%BA%90%ED%94%BC%ED%83%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[여전사 자금조달 전략] KB캐피탈, 보수적 조달로 고금리 터널 통과",
-          "summary": "",
-          "link": "https://dealsite.co.kr/articles/154920",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Funding Strategy Kb Capital",
+      "term_ko": "자금조달 전략 KB캐피탈"
     },
     {
       "term": "Stock Market Briefing January",
-      "term_ko": "증시 브리핑 1월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 1월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 13일] 미국 증시 혼조세 마감, 다우존스 0.80%...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 13일] 미국 증시 혼조세 마감, 다우존스 0.80%...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 1월"
     },
     {
-      "term": "Korea Exchange 24-hour trading system",
-      "term_ko": "한국거래소 24시간 거래체계",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국거래소 24시간 거래체계",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 24시간 거래체계 목표...프리·애프터마켓 도입 속도낸다",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3480224"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%2024%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98%EC%B2%B4%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%2024%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98%EC%B2%B4%EA%B3%84"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 24시간 거래체계 목표...프리·애프터마켓 도입 속도낸다",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3480224",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Korea Exchange 24-hour Trading System",
+      "term_ko": "한국거래소 24시간 거래체계"
     },
     {
-      "term": "Securities News of the DayJanuary 13",
-      "term_ko": "오늘의 증권소식1월 13일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증권소식1월 13일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 증권소식(1월 13일)",
-              "link": "https://www.radiokorea.com/news/article.php?uid=488822"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D1%EC%9B%94%2013%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D1%EC%9B%94%2013%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증권소식(1월 13일)",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=488822",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Securities News of the Dayjanuary 13",
+      "term_ko": "오늘의 증권소식1월 13일"
     },
     {
-      "term": "10 countries, including Korea",
-      "term_ko": "한은 포함 10개국",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 포함 10개국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "JP모건 다이먼 \"파월 압박, 금리 상승 역효과\"… 한은 포함 10개국 총재...",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=175550"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%ED%8F%AC%ED%95%A8%2010%EA%B0%9C%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%ED%8F%AC%ED%95%A8%2010%EA%B0%9C%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "JP모건 다이먼 \"파월 압박, 금리 상승 역효과\"… 한은 포함 10개국 총재...",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=175550",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "10 Countries, Including Korea",
+      "term_ko": "한은 포함 10개국"
     },
     {
-      "term": "Breaking 4700 for the first time",
-      "term_ko": "첫 4700선 돌파",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "첫 4700선 돌파",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"지금 사도 싸다?\" 오천피 향해 달린다...사상 첫 4700선 돌파",
-              "link": "https://n.news.naver.com/mnews/article/008/0005304427?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AB%204700%EC%84%A0%20%EB%8F%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AB%204700%EC%84%A0%20%EB%8F%8C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"지금 사도 싸다?\" 오천피 향해 달린다...사상 첫 4700선 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005304427?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Breaking 4700 for the First Time",
+      "term_ko": "첫 4700선 돌파"
     },
     {
-      "term": "Listing uncertainty is over",
-      "term_ko": "상장 불확실성은 끝났다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상장 불확실성은 끝났다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "상장 불확실성은 끝났다 Reborn Coffee, 나스닥 상장 요건 완전 충족",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=374700"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%9D%80%20%EB%81%9D%EB%82%AC%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%9D%80%20%EB%81%9D%EB%82%AC%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "상장 불확실성은 끝났다 Reborn Coffee, 나스닥 상장 요건 완전 충족",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=374700",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Listing Uncertainty Is Over",
+      "term_ko": "상장 불확실성은 끝났다"
     },
     {
       "term": "Reborn Coffee Nasdaq",
-      "term_ko": "Reborn Coffee 나스닥",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Reborn Coffee 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "상장 불확실성은 끝났다 Reborn Coffee, 나스닥 상장 요건 완전 충족",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=374700"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Reborn%20Coffee%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Reborn%20Coffee%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "상장 불확실성은 끝났다 Reborn Coffee, 나스닥 상장 요건 완전 충족",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=374700",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Reborn Coffee 나스닥"
     },
     {
-      "term": "Fully met requirements",
-      "term_ko": "요건 완전 충족",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "요건 완전 충족",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "상장 불확실성은 끝났다 Reborn Coffee, 나스닥 상장 요건 완전 충족",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=374700"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%94%EA%B1%B4%20%EC%99%84%EC%A0%84%20%EC%B6%A9%EC%A1%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%94%EA%B1%B4%20%EC%99%84%EC%A0%84%20%EC%B6%A9%EC%A1%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "상장 불확실성은 끝났다 Reborn Coffee, 나스닥 상장 요건 완전 충족",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=374700",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Fully Met Requirements",
+      "term_ko": "요건 완전 충족"
     },
     {
-      "term": "Dow Jones closes mixed",
-      "term_ko": "혼조세 마감 다우존스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "혼조세 마감 다우존스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 13일] 미국 증시 혼조세 마감, 다우존스 0.80%...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%BC%EC%A1%B0%EC%84%B8%20%EB%A7%88%EA%B0%90%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%BC%EC%A1%B0%EC%84%B8%20%EB%A7%88%EA%B0%90%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 13일] 미국 증시 혼조세 마감, 다우존스 0.80%...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dow Jones Closes Mixed",
+      "term_ko": "혼조세 마감 다우존스"
     },
     {
-      "term": "Accelerate aftermarket adoption",
-      "term_ko": "애프터마켓 도입 속도낸다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "애프터마켓 도입 속도낸다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 24시간 거래체계 목표...프리·애프터마켓 도입 속도낸다",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3480224"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%A0%ED%94%84%ED%84%B0%EB%A7%88%EC%BC%93%20%EB%8F%84%EC%9E%85%20%EC%86%8D%EB%8F%84%EB%82%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%A0%ED%94%84%ED%84%B0%EB%A7%88%EC%BC%93%20%EB%8F%84%EC%9E%85%20%EC%86%8D%EB%8F%84%EB%82%B8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 24시간 거래체계 목표...프리·애프터마켓 도입 속도낸다",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3480224",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Accelerate Aftermarket Adoption",
+      "term_ko": "애프터마켓 도입 속도낸다"
     },
     {
-      "term": "Ahn Cheol-soo 李 currency exchange rates",
-      "term_ko": "안철수 李 환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안철수 李 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "안철수 \"李, 환율 문제 침묵…환율최고책임자 신설해야\"",
-              "link": "https://n.news.naver.com/mnews/article/011/0004578526?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EC%B2%A0%EC%88%98%20%EF%A7%A1%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EC%B2%A0%EC%88%98%20%EF%A7%A1%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "안철수 \"李, 환율 문제 침묵…환율최고책임자 신설해야\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004578526?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ahn Cheol-soo 李 Currency Exchange Rates",
+      "term_ko": "안철수 李 환율"
     },
     {
-      "term": "Problem Silence Exchange RateCEO",
-      "term_ko": "문제 침묵 환율최고책임자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "문제 침묵 환율최고책임자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "안철수 \"李, 환율 문제 침묵…환율최고책임자 신설해야\"",
-              "link": "https://n.news.naver.com/mnews/article/011/0004578526?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B8%EC%A0%9C%20%EC%B9%A8%EB%AC%B5%20%ED%99%98%EC%9C%A8%EC%B5%9C%EA%B3%A0%EC%B1%85%EC%9E%84%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B8%EC%A0%9C%20%EC%B9%A8%EB%AC%B5%20%ED%99%98%EC%9C%A8%EC%B5%9C%EA%B3%A0%EC%B1%85%EC%9E%84%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "안철수 \"李, 환율 문제 침묵…환율최고책임자 신설해야\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004578526?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Problem Silence Exchange Rateceo",
+      "term_ko": "문제 침묵 환율최고책임자"
     },
     {
-      "term": "Rising compression rates",
-      "term_ko": "압박 금리 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "압박 금리 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "JP모건 다이먼 \"파월 압박, 금리 상승 역효과\"… 한은 포함 10개국 총재...",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=175550"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%95%EB%B0%95%20%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%95%EB%B0%95%20%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "JP모건 다이먼 \"파월 압박, 금리 상승 역효과\"… 한은 포함 10개국 총재...",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=175550",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Compression Rates",
+      "term_ko": "압박 금리 상승"
     },
     {
-      "term": "High interest rates with conservative procurement",
-      "term_ko": "보수적 조달로 고금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보수적 조달로 고금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[여전사 자금조달 전략] KB캐피탈, 보수적 조달로 고금리 터널 통과",
-              "link": "https://dealsite.co.kr/articles/154920"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%88%98%EC%A0%81%20%EC%A1%B0%EB%8B%AC%EB%A1%9C%20%EA%B3%A0%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%88%98%EC%A0%81%20%EC%A1%B0%EB%8B%AC%EB%A1%9C%20%EA%B3%A0%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[여전사 자금조달 전략] KB캐피탈, 보수적 조달로 고금리 터널 통과",
-          "summary": "",
-          "link": "https://dealsite.co.kr/articles/154920",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "High Interest Rates with Conservative Procurement",
+      "term_ko": "보수적 조달로 고금리"
     },
     {
       "term": "Ahn Cheol-soo Ahn Testicular Oral Intervention",
-      "term_ko": "안철수 고환율 구두개입",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안철수 고환율 구두개입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "안철수 \"'고환율' 구두개입 역시 땜질…돈 퍼부어 무작정 코스피 5000만...",
-              "link": "https://n.news.naver.com/mnews/article/119/0003048057?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EC%B2%A0%EC%88%98%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EA%B5%AC%EB%91%90%EA%B0%9C%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EC%B2%A0%EC%88%98%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EA%B5%AC%EB%91%90%EA%B0%9C%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "안철수 \"'고환율' 구두개입 역시 땜질…돈 퍼부어 무작정 코스피 5000만...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003048057?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "안철수 고환율 구두개입"
     },
     {
-      "term": "Tinkering money again",
-      "term_ko": "역시 땜질 돈",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "역시 땜질 돈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "안철수 \"'고환율' 구두개입 역시 땜질…돈 퍼부어 무작정 코스피 5000만...",
-              "link": "https://n.news.naver.com/mnews/article/119/0003048057?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EC%8B%9C%20%EB%95%9C%EC%A7%88%20%EB%8F%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EC%8B%9C%20%EB%95%9C%EC%A7%88%20%EB%8F%88"
-      },
-      "top_headlines": [
-        {
-          "title": "안철수 \"'고환율' 구두개입 역시 땜질…돈 퍼부어 무작정 코스피 5000만...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003048057?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tinkering Money Again",
+      "term_ko": "역시 땜질 돈"
     },
     {
-      "term": "Pour it on and just go for it",
-      "term_ko": "퍼부어 무작정 코스피",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "퍼부어 무작정 코스피",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "안철수 \"'고환율' 구두개입 역시 땜질…돈 퍼부어 무작정 코스피 5000만...",
-              "link": "https://n.news.naver.com/mnews/article/119/0003048057?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8D%BC%EB%B6%80%EC%96%B4%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EC%BD%94%EC%8A%A4%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8D%BC%EB%B6%80%EC%96%B4%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EC%BD%94%EC%8A%A4%ED%94%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "안철수 \"'고환율' 구두개입 역시 땜질…돈 퍼부어 무작정 코스피 5000만...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003048057?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Pour It on and Just Go for It",
+      "term_ko": "퍼부어 무작정 코스피"
     },
     {
-      "term": "Buy now, get cheap",
-      "term_ko": "지금 사도 싸다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지금 사도 싸다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"지금 사도 싸다?\" 오천피 향해 달린다...사상 첫 4700선 돌파",
-              "link": "https://n.news.naver.com/mnews/article/008/0005304427?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EA%B8%88%20%EC%82%AC%EB%8F%84%20%EC%8B%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EA%B8%88%20%EC%82%AC%EB%8F%84%20%EC%8B%B8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"지금 사도 싸다?\" 오천피 향해 달린다...사상 첫 4700선 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005304427?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Buy Now, Get Cheap",
+      "term_ko": "지금 사도 싸다"
     },
     {
-      "term": "Sees Strong AI",
-      "term_ko": "강력한 AI를 확인합니다.",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sees Strong AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Alphabet Stock Poised for Growth as Bank of America Sees Strong AI Moment...",
-              "link": "https://www.econotimes.com/Alphabet-Stock-Poised-for-Growth-as-Bank-of-America-Sees-Strong-AI-Momentum-Into-2026-1730888"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sees%20Strong%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sees%20Strong%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Alphabet Stock Poised for Growth as Bank of America Sees Strong AI Moment...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Alphabet-Stock-Poised-for-Growth-as-Bank-of-America-Sees-Strong-AI-Momentum-Into-2026-1730888",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sees Strong Ai",
+      "term_ko": "강력한 AI를 확인합니다."
     },
     {
-      "term": "13 days US",
-      "term_ko": "13일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "13일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 13일] 미국 증시 혼조세 마감, 다우존스 0.80%...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195829"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=13%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=13%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 13일] 미국 증시 혼조세 마감, 다우존스 0.80%...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195829",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "13 Days Us",
+      "term_ko": "13일 미국"
     },
     {
-      "term": "Toward the five heavens",
-      "term_ko": "오천피 향해",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오천피 향해",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"지금 사도 싸다?\" 오천피 향해 달린다...사상 첫 4700선 돌파",
-              "link": "https://n.news.naver.com/mnews/article/008/0005304427?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EC%B2%9C%ED%94%BC%20%ED%96%A5%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EC%B2%9C%ED%94%BC%20%ED%96%A5%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"지금 사도 싸다?\" 오천피 향해 달린다...사상 첫 4700선 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005304427?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Toward the Five Heavens",
+      "term_ko": "오천피 향해"
     },
     {
       "term": "Wall Street Futures",
-      "term_ko": "월스트리트 선물",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as Bank Earnings and Inflation Data Take Cente...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Bank-Earnings-and-Inflation-Data-Take-Center-Stage-1730889"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as Bank Earnings and Inflation Data Take Cente...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Bank-Earnings-and-Inflation-Data-Take-Center-Stage-1730889",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 선물"
     },
     {
       "term": "Inflation Data Take",
-      "term_ko": "인플레이션 데이터 테이크",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Inflation Data Take",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as Bank Earnings and Inflation Data Take Cente...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Bank-Earnings-and-Inflation-Data-Take-Center-Stage-1730889"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20Data%20Take",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20Data%20Take"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as Bank Earnings and Inflation Data Take Cente...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Bank-Earnings-and-Inflation-Data-Take-Center-Stage-1730889",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인플레이션 데이터 테이크"
     },
     {
       "term": "Bank Earnings",
-      "term_ko": "은행 수익",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bank Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as Bank Earnings and Inflation Data Take Cente...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Bank-Earnings-and-Inflation-Data-Take-Center-Stage-1730889"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bank%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bank%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as Bank Earnings and Inflation Data Take Cente...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-Bank-Earnings-and-Inflation-Data-Take-Center-Stage-1730889",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "은행 수익"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-14T10:46:50+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-14T01:48:00.734Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-14T10:46:50+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Jpmorgan Dyman Powell",
+      "term_ko": "JP모건 다이먼 파월"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-14T10:46:50+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-14T10:46:50+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Stop Pressing Fed",
+      "term_ko": "FED 압박 멈추지"
+    },
+    {
+      "term": "Clashing with Top Ceos",
+      "term_ko": "최고 CEO들과 충돌"
+    },
+    {
+      "term": "Funding Strategy Kb Capital",
+      "term_ko": "자금조달 전략 KB캐피탈"
+    },
+    {
+      "term": "Stock Market Briefing January",
+      "term_ko": "증시 브리핑 1월"
+    },
+    {
+      "term": "Korea Exchange 24-hour Trading System",
+      "term_ko": "한국거래소 24시간 거래체계"
+    },
+    {
+      "term": "Securities News of the Dayjanuary 13",
+      "term_ko": "오늘의 증권소식1월 13일"
+    },
+    {
+      "term": "10 Countries, Including Korea",
+      "term_ko": "한은 포함 10개국"
+    },
+    {
+      "term": "Breaking 4700 for the First Time",
+      "term_ko": "첫 4700선 돌파"
+    },
+    {
+      "term": "Listing Uncertainty Is Over",
+      "term_ko": "상장 불확실성은 끝났다"
+    },
+    {
+      "term": "Reborn Coffee Nasdaq",
+      "term_ko": "Reborn Coffee 나스닥"
+    },
+    {
+      "term": "Fully Met Requirements",
+      "term_ko": "요건 완전 충족"
+    },
+    {
+      "term": "Dow Jones Closes Mixed",
+      "term_ko": "혼조세 마감 다우존스"
+    },
+    {
+      "term": "Accelerate Aftermarket Adoption",
+      "term_ko": "애프터마켓 도입 속도낸다"
+    },
+    {
+      "term": "Ahn Cheol-soo 李 Currency Exchange Rates",
+      "term_ko": "안철수 李 환율"
+    },
+    {
+      "term": "Problem Silence Exchange Rateceo",
+      "term_ko": "문제 침묵 환율최고책임자"
+    },
+    {
+      "term": "Rising Compression Rates",
+      "term_ko": "압박 금리 상승"
+    },
+    {
+      "term": "High Interest Rates with Conservative Procurement",
+      "term_ko": "보수적 조달로 고금리"
+    },
+    {
+      "term": "Ahn Cheol-soo Ahn Testicular Oral Intervention",
+      "term_ko": "안철수 고환율 구두개입"
+    },
+    {
+      "term": "Tinkering Money Again",
+      "term_ko": "역시 땜질 돈"
+    },
+    {
+      "term": "Pour It on and Just Go for It",
+      "term_ko": "퍼부어 무작정 코스피"
+    },
+    {
+      "term": "Buy Now, Get Cheap",
+      "term_ko": "지금 사도 싸다"
+    },
+    {
+      "term": "Sees Strong Ai",
+      "term_ko": "강력한 AI를 확인합니다."
+    },
+    {
+      "term": "13 Days Us",
+      "term_ko": "13일 미국"
+    },
+    {
+      "term": "Toward the Five Heavens",
+      "term_ko": "오천피 향해"
+    },
+    {
+      "term": "Wall Street Futures",
+      "term_ko": "월스트리트 선물"
+    },
+    {
+      "term": "Inflation Data Take",
+      "term_ko": "인플레이션 데이터 테이크"
+    },
+    {
+      "term": "Bank Earnings",
+      "term_ko": "은행 수익"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    }
+  ],
+  "translations": {
+    "Jpmorgan Dyman Powell": {
+      "en": "Jpmorgan Dyman Powell",
+      "ko": "JP모건 다이먼 파월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Stop Pressing Fed": {
+      "en": "Stop Pressing Fed",
+      "ko": "FED 압박 멈추지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Clashing with Top Ceos": {
+      "en": "Clashing with Top Ceos",
+      "ko": "최고 CEO들과 충돌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Funding Strategy Kb Capital": {
+      "en": "Funding Strategy Kb Capital",
+      "ko": "자금조달 전략 KB캐피탈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Stock Market Briefing January": {
+      "en": "Stock Market Briefing January",
+      "ko": "증시 브리핑 1월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Korea Exchange 24-hour Trading System": {
+      "en": "Korea Exchange 24-hour Trading System",
+      "ko": "한국거래소 24시간 거래체계",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Securities News of the Dayjanuary 13": {
+      "en": "Securities News of the Dayjanuary 13",
+      "ko": "오늘의 증권소식1월 13일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "10 Countries, Including Korea": {
+      "en": "10 Countries, Including Korea",
+      "ko": "한은 포함 10개국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Breaking 4700 for the First Time": {
+      "en": "Breaking 4700 for the First Time",
+      "ko": "첫 4700선 돌파",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Listing Uncertainty Is Over": {
+      "en": "Listing Uncertainty Is Over",
+      "ko": "상장 불확실성은 끝났다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Reborn Coffee Nasdaq": {
+      "en": "Reborn Coffee Nasdaq",
+      "ko": "Reborn Coffee 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Fully Met Requirements": {
+      "en": "Fully Met Requirements",
+      "ko": "요건 완전 충족",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Dow Jones Closes Mixed": {
+      "en": "Dow Jones Closes Mixed",
+      "ko": "혼조세 마감 다우존스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Accelerate Aftermarket Adoption": {
+      "en": "Accelerate Aftermarket Adoption",
+      "ko": "애프터마켓 도입 속도낸다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Ahn Cheol-soo 李 Currency Exchange Rates": {
+      "en": "Ahn Cheol-soo 李 Currency Exchange Rates",
+      "ko": "안철수 李 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Problem Silence Exchange Rateceo": {
+      "en": "Problem Silence Exchange Rateceo",
+      "ko": "문제 침묵 환율최고책임자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Rising Compression Rates": {
+      "en": "Rising Compression Rates",
+      "ko": "압박 금리 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "High Interest Rates with Conservative Procurement": {
+      "en": "High Interest Rates with Conservative Procurement",
+      "ko": "보수적 조달로 고금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Ahn Cheol-soo Ahn Testicular Oral Intervention": {
+      "en": "Ahn Cheol-soo Ahn Testicular Oral Intervention",
+      "ko": "안철수 고환율 구두개입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Tinkering Money Again": {
+      "en": "Tinkering Money Again",
+      "ko": "역시 땜질 돈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Pour It on and Just Go for It": {
+      "en": "Pour It on and Just Go for It",
+      "ko": "퍼부어 무작정 코스피",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Buy Now, Get Cheap": {
+      "en": "Buy Now, Get Cheap",
+      "ko": "지금 사도 싸다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.571Z"
+    },
+    "Sees Strong Ai": {
+      "en": "Sees Strong Ai",
+      "ko": "강력한 AI를 확인합니다.",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
+    },
+    "13 Days Us": {
+      "en": "13 Days Us",
+      "ko": "13일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
+    },
+    "Toward the Five Heavens": {
+      "en": "Toward the Five Heavens",
+      "ko": "오천피 향해",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
+    },
+    "Wall Street Futures": {
+      "en": "Wall Street Futures",
+      "ko": "월스트리트 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
+    },
+    "Inflation Data Take": {
+      "en": "Inflation Data Take",
+      "ko": "인플레이션 데이터 테이크",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
+    },
+    "Bank Earnings": {
+      "en": "Bank Earnings",
+      "ko": "은행 수익",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-14T06:33:23.572Z"
     }
   }
 }
