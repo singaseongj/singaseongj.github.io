@@ -1,1080 +1,425 @@
 {
+  "generatedAt": "2026-01-16T12:42:46.128Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-16",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "ING Andong County Financial Markets Department",
-      "term_ko": "ING 안동현 금융시장부",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ING 안동현 금융시장부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "ING, 안동현 금융시장부 본부장·안대찬 기업금융부 본부장 선임",
-              "link": "https://n.news.naver.com/mnews/article/018/0006202121?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ING%20%EC%95%88%EB%8F%99%ED%98%84%20%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ING%20%EC%95%88%EB%8F%99%ED%98%84%20%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "ING, 안동현 금융시장부 본부장·안대찬 기업금융부 본부장 선임",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006202121?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ing Andong County Financial Markets Department",
+      "term_ko": "ING 안동현 금융시장부"
     },
     {
       "term": "Stock Market Briefing January",
-      "term_ko": "증시 브리핑 1월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 1월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 15일] 미국 증시 상승세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195878"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 15일] 미국 증시 상승세 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195878",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 1월"
     },
     {
-      "term": "Further Up 4 months",
-      "term_ko": "더 오른다 4개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "더 오른다 4개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"대출이자 더 오른다\"…4개월 연속 오른 코픽스에 변동금리 '압박'",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=230519"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%20%EC%98%A4%EB%A5%B8%EB%8B%A4%204%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%20%EC%98%A4%EB%A5%B8%EB%8B%A4%204%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "\"대출이자 더 오른다\"…4개월 연속 오른 코픽스에 변동금리 '압박'",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=230519",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Further Up 4 Months",
+      "term_ko": "더 오른다 4개월"
     },
     {
-      "term": "6 months of limited-time special support",
-      "term_ko": "한시 특별지원 6개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한시 특별지원 6개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국은행 전북본부, '중소기업 한시 특별지원' 6개월 연장",
-              "link": "http://www.jeonmin.co.kr/news/articleView.html?idxno=432216"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%8B%9C%20%ED%8A%B9%EB%B3%84%EC%A7%80%EC%9B%90%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%8B%9C%20%ED%8A%B9%EB%B3%84%EC%A7%80%EC%9B%90%206%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "한국은행 전북본부, '중소기업 한시 특별지원' 6개월 연장",
-          "summary": "",
-          "link": "http://www.jeonmin.co.kr/news/articleView.html?idxno=432216",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "6 Months of Limited-time Special Support",
+      "term_ko": "한시 특별지원 6개월"
     },
     {
-      "term": "World's largest Canadian pavilion",
-      "term_ko": "캐나다관 세계 최대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "캐나다관 세계 최대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 코리아빌드 - 캐나다관] '세계 최대 규모' 캐나다 목재와 매...",
-              "link": "https://www.imwood.co.kr/news/articleView.html?idxno=40297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BA%90%EB%82%98%EB%8B%A4%EA%B4%80%20%EC%84%B8%EA%B3%84%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BA%90%EB%82%98%EB%8B%A4%EA%B4%80%20%EC%84%B8%EA%B3%84%20%EC%B5%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 코리아빌드 - 캐나다관] '세계 최대 규모' 캐나다 목재와 매...",
-          "summary": "",
-          "link": "https://www.imwood.co.kr/news/articleView.html?idxno=40297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "World's Largest Canadian Pavilion",
+      "term_ko": "캐나다관 세계 최대"
     },
     {
-      "term": "Prolonged procurement cost pressures",
-      "term_ko": "조달비용 압박 장기화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "조달비용 압박 장기화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "조달비용 압박 장기화…카드업계, 확장 멈추고 ‘허리띠 졸라매기’",
-              "link": "https://www.etoday.co.kr/news/view/2546403"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%EB%8B%AC%EB%B9%84%EC%9A%A9%20%EC%95%95%EB%B0%95%20%EC%9E%A5%EA%B8%B0%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%EB%8B%AC%EB%B9%84%EC%9A%A9%20%EC%95%95%EB%B0%95%20%EC%9E%A5%EA%B8%B0%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "조달비용 압박 장기화…카드업계, 확장 멈추고 ‘허리띠 졸라매기’",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2546403",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Prolonged Procurement Cost Pressures",
+      "term_ko": "조달비용 압박 장기화"
     },
     {
-      "term": "Stop the card industry expansion",
-      "term_ko": "카드업계 확장 멈추고",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "카드업계 확장 멈추고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "조달비용 압박 장기화…카드업계, 확장 멈추고 ‘허리띠 졸라매기’",
-              "link": "https://www.etoday.co.kr/news/view/2546403"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%B4%EB%93%9C%EC%97%85%EA%B3%84%20%ED%99%95%EC%9E%A5%20%EB%A9%88%EC%B6%94%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%B4%EB%93%9C%EC%97%85%EA%B3%84%20%ED%99%95%EC%9E%A5%20%EB%A9%88%EC%B6%94%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "조달비용 압박 장기화…카드업계, 확장 멈추고 ‘허리띠 졸라매기’",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2546403",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stop the Card Industry Expansion",
+      "term_ko": "카드업계 확장 멈추고"
     },
     {
       "term": "Dae Chan Ahn, Head of Corporate Finance",
-      "term_ko": "본부장 안대찬 기업금융부",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "본부장 안대찬 기업금융부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "ING, 안동현 금융시장부 본부장·안대찬 기업금융부 본부장 선임",
-              "link": "https://n.news.naver.com/mnews/article/018/0006202121?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B8%EB%B6%80%EC%9E%A5%20%EC%95%88%EB%8C%80%EC%B0%AC%20%EA%B8%B0%EC%97%85%EA%B8%88%EC%9C%B5%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B8%EB%B6%80%EC%9E%A5%20%EC%95%88%EB%8C%80%EC%B0%AC%20%EA%B8%B0%EC%97%85%EA%B8%88%EC%9C%B5%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "ING, 안동현 금융시장부 본부장·안대찬 기업금융부 본부장 선임",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006202121?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "본부장 안대찬 기업금융부"
     },
     {
       "term": "Hanwha Investment & Securities Stock Loan Transfer",
-      "term_ko": "한화투자증권 주식대출 환승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한화투자증권 주식대출 환승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한화투자증권, '주식대출 환승 업그레이드' 이벤트 실시",
-              "link": "http://www.wikileaks-kr.org/news/articleView.html?idxno=181699"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%99%94%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20%EC%A3%BC%EC%8B%9D%EB%8C%80%EC%B6%9C%20%ED%99%98%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%99%94%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20%EC%A3%BC%EC%8B%9D%EB%8C%80%EC%B6%9C%20%ED%99%98%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "한화투자증권, '주식대출 환승 업그레이드' 이벤트 실시",
-          "summary": "",
-          "link": "http://www.wikileaks-kr.org/news/articleView.html?idxno=181699",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한화투자증권 주식대출 환승"
     },
     {
-      "term": "Run an upgrade event",
-      "term_ko": "업그레이드 이벤트 실시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "업그레이드 이벤트 실시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한화투자증권, '주식대출 환승 업그레이드' 이벤트 실시",
-              "link": "http://www.wikileaks-kr.org/news/articleView.html?idxno=181699"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%8B%A4%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한화투자증권, '주식대출 환승 업그레이드' 이벤트 실시",
-          "summary": "",
-          "link": "http://www.wikileaks-kr.org/news/articleView.html?idxno=181699",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Run an Upgrade Event",
+      "term_ko": "업그레이드 이벤트 실시"
     },
     {
-      "term": "Bank of Korea Jeonbuk Headquarters SMEs",
-      "term_ko": "한국은행 전북본부 중소기업",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국은행 전북본부 중소기업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국은행 전북본부, '중소기업 한시 특별지원' 6개월 연장",
-              "link": "http://www.jeonmin.co.kr/news/articleView.html?idxno=432216"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%20%EC%A0%84%EB%B6%81%EB%B3%B8%EB%B6%80%20%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%20%EC%A0%84%EB%B6%81%EB%B3%B8%EB%B6%80%20%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "한국은행 전북본부, '중소기업 한시 특별지원' 6개월 연장",
-          "summary": "",
-          "link": "http://www.jeonmin.co.kr/news/articleView.html?idxno=432216",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bank of Korea Jeonbuk Headquarters Smes",
+      "term_ko": "한국은행 전북본부 중소기업"
     },
     {
-      "term": "ABL Bio Shifts",
-      "term_ko": "ABL 바이오 시프트",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ABL Bio Shifts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[JPM 2026] ABL Bio shifts beyond license-outs to build clinical-stage val...",
-              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=30322"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ABL%20Bio%20Shifts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ABL%20Bio%20Shifts"
-      },
-      "top_headlines": [
-        {
-          "title": "[JPM 2026] ABL Bio shifts beyond license-outs to build clinical-stage val...",
-          "summary": "",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=30322",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Abl Bio Shifts",
+      "term_ko": "ABL 바이오 시프트"
     },
     {
-      "term": "AI Rally Reignites",
-      "term_ko": "AI 랠리 재점화",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Rally Reignites",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Asian Markets Rise as AI Rally Reignites, Dollar Stays Firm on Strong U.S...",
-              "link": "https://www.econotimes.com/Asian-Markets-Rise-as-AI-Rally-Reignites-Dollar-Stays-Firm-on-Strong-US-Data-1731107"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Rally%20Reignites",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Rally%20Reignites"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Markets Rise as AI Rally Reignites, Dollar Stays Firm on Strong U.S...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Markets-Rise-as-AI-Rally-Reignites-Dollar-Stays-Firm-on-Strong-US-Data-1731107",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Rally Reignites",
+      "term_ko": "AI 랠리 재점화"
     },
     {
-      "term": "U.S Nasdaq ETFs",
-      "term_ko": "미국 나스닥 ETF",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Nasdaq ETFs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Weakening Won Triggers Surge in Retail Buying of U.S. Nasdaq ETFs",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261089"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Nasdaq%20ETFs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Nasdaq%20ETFs"
-      },
-      "top_headlines": [
-        {
-          "title": "Weakening Won Triggers Surge in Retail Buying of U.S. Nasdaq ETFs",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261089",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Nasdaq Etfs",
+      "term_ko": "미국 나스닥 ETF"
     },
     {
-      "term": "15 days US",
-      "term_ko": "15일 미국",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "15일 미국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 15일] 미국 증시 상승세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195878"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=15%EC%9D%BC%20%EB%AF%B8%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=15%EC%9D%BC%20%EB%AF%B8%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 15일] 미국 증시 상승세 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195878",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "15 Days Us",
+      "term_ko": "15일 미국"
     },
     {
       "term": "Previewing Korea Build",
-      "term_ko": "미리보는 코리아빌드",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미리보는 코리아빌드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 코리아빌드 - 캐나다관] '세계 최대 규모' 캐나다 목재와 매...",
-              "link": "https://www.imwood.co.kr/news/articleView.html?idxno=40297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%BD%94%EB%A6%AC%EC%95%84%EB%B9%8C%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%BD%94%EB%A6%AC%EC%95%84%EB%B9%8C%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 코리아빌드 - 캐나다관] '세계 최대 규모' 캐나다 목재와 매...",
-          "summary": "",
-          "link": "https://www.imwood.co.kr/news/articleView.html?idxno=40297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미리보는 코리아빌드"
     },
     {
-      "term": "Close on the upside",
-      "term_ko": "상승세 마감",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승세 마감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 15일] 미국 증시 상승세 마감",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195878"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%EC%84%B8%20%EB%A7%88%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%EC%84%B8%20%EB%A7%88%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 15일] 미국 증시 상승세 마감",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195878",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Close on the Upside",
+      "term_ko": "상승세 마감"
     },
     {
-      "term": "Drawing the waistband",
-      "term_ko": "허리띠 졸라매기",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "허리띠 졸라매기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "조달비용 압박 장기화…카드업계, 확장 멈추고 ‘허리띠 졸라매기’",
-              "link": "https://www.etoday.co.kr/news/view/2546403"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%97%88%EB%A6%AC%EB%9D%A0%20%EC%A1%B8%EB%9D%BC%EB%A7%A4%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%97%88%EB%A6%AC%EB%9D%A0%20%EC%A1%B8%EB%9D%BC%EB%A7%A4%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "조달비용 압박 장기화…카드업계, 확장 멈추고 ‘허리띠 졸라매기’",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2546403",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Drawing the Waistband",
+      "term_ko": "허리띠 졸라매기"
     },
     {
-      "term": "Floating rate pressure",
-      "term_ko": "변동금리 압박",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "변동금리 압박",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"대출이자 더 오른다\"…4개월 연속 오른 코픽스에 변동금리 '압박'",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=230519"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC%20%EC%95%95%EB%B0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC%20%EC%95%95%EB%B0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "\"대출이자 더 오른다\"…4개월 연속 오른 코픽스에 변동금리 '압박'",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=230519",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Floating Rate Pressure",
+      "term_ko": "변동금리 압박"
     },
     {
       "term": "Dollar Stays Firm",
-      "term_ko": "달러 강세 유지",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Dollar Stays Firm",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Asian Markets Rise as AI Rally Reignites, Dollar Stays Firm on Strong U.S...",
-              "link": "https://www.econotimes.com/Asian-Markets-Rise-as-AI-Rally-Reignites-Dollar-Stays-Firm-on-Strong-US-Data-1731107"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Dollar%20Stays%20Firm",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Dollar%20Stays%20Firm"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Markets Rise as AI Rally Reignites, Dollar Stays Firm on Strong U.S...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Markets-Rise-as-AI-Rally-Reignites-Dollar-Stays-Firm-on-Strong-US-Data-1731107",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달러 강세 유지"
     },
     {
       "term": "Weakening Won Triggers",
-      "term_ko": "원화 약화 트리거",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Weakening Won Triggers",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Weakening Won Triggers Surge in Retail Buying of U.S. Nasdaq ETFs",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261089"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Weakening%20Won%20Triggers",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Weakening%20Won%20Triggers"
-      },
-      "top_headlines": [
-        {
-          "title": "Weakening Won Triggers Surge in Retail Buying of U.S. Nasdaq ETFs",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261089",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "원화 약화 트리거"
     },
     {
-      "term": "KOSPI Approaches",
-      "term_ko": "코스피 접근법",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Approaches",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI approaches 5,000 mark after 11 straight days of gains",
-              "link": "https://www.arirang.com/news/view?id=291624"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Approaches",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Approaches"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI approaches 5,000 mark after 11 straight days of gains",
-          "summary": "",
-          "link": "https://www.arirang.com/news/view?id=291624",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Approaches",
+      "term_ko": "코스피 접근법"
     },
     {
       "term": "Beyond License-outs",
-      "term_ko": "라이선스 아웃 그 이상",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Beyond License-outs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[JPM 2026] ABL Bio shifts beyond license-outs to build clinical-stage val...",
-              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=30322"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Beyond%20License-outs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Beyond%20License-outs"
-      },
-      "top_headlines": [
-        {
-          "title": "[JPM 2026] ABL Bio shifts beyond license-outs to build clinical-stage val...",
-          "summary": "",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=30322",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "라이선스 아웃 그 이상"
     },
     {
       "term": "Build Clinical-stage",
-      "term_ko": "임상 단계 구축",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Build Clinical-stage",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[JPM 2026] ABL Bio shifts beyond license-outs to build clinical-stage val...",
-              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=30322"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Build%20Clinical-stage",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Build%20Clinical-stage"
-      },
-      "top_headlines": [
-        {
-          "title": "[JPM 2026] ABL Bio shifts beyond license-outs to build clinical-stage val...",
-          "summary": "",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=30322",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "임상 단계 구축"
     },
     {
       "term": "Retail Buying",
-      "term_ko": "소매 구매",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Retail Buying",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Weakening Won Triggers Surge in Retail Buying of U.S. Nasdaq ETFs",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261089"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Retail%20Buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Retail%20Buying"
-      },
-      "top_headlines": [
-        {
-          "title": "Weakening Won Triggers Surge in Retail Buying of U.S. Nasdaq ETFs",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261089",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소매 구매"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-16T15:35:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-16T06:36:55.925Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-16T15:35:48+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ing Andong County Financial Markets Department",
+      "term_ko": "ING 안동현 금융시장부"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-16T15:35:48+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-16T15:35:48+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Stock Market Briefing January",
+      "term_ko": "증시 브리핑 1월"
+    },
+    {
+      "term": "Further Up 4 Months",
+      "term_ko": "더 오른다 4개월"
+    },
+    {
+      "term": "6 Months of Limited-time Special Support",
+      "term_ko": "한시 특별지원 6개월"
+    },
+    {
+      "term": "World's Largest Canadian Pavilion",
+      "term_ko": "캐나다관 세계 최대"
+    },
+    {
+      "term": "Prolonged Procurement Cost Pressures",
+      "term_ko": "조달비용 압박 장기화"
+    },
+    {
+      "term": "Stop the Card Industry Expansion",
+      "term_ko": "카드업계 확장 멈추고"
+    },
+    {
+      "term": "Dae Chan Ahn, Head of Corporate Finance",
+      "term_ko": "본부장 안대찬 기업금융부"
+    },
+    {
+      "term": "Hanwha Investment & Securities Stock Loan Transfer",
+      "term_ko": "한화투자증권 주식대출 환승"
+    },
+    {
+      "term": "Run an Upgrade Event",
+      "term_ko": "업그레이드 이벤트 실시"
+    },
+    {
+      "term": "Bank of Korea Jeonbuk Headquarters Smes",
+      "term_ko": "한국은행 전북본부 중소기업"
+    },
+    {
+      "term": "Abl Bio Shifts",
+      "term_ko": "ABL 바이오 시프트"
+    },
+    {
+      "term": "Ai Rally Reignites",
+      "term_ko": "AI 랠리 재점화"
+    },
+    {
+      "term": "U.s Nasdaq Etfs",
+      "term_ko": "미국 나스닥 ETF"
+    },
+    {
+      "term": "15 Days Us",
+      "term_ko": "15일 미국"
+    },
+    {
+      "term": "Previewing Korea Build",
+      "term_ko": "미리보는 코리아빌드"
+    },
+    {
+      "term": "Close on the Upside",
+      "term_ko": "상승세 마감"
+    },
+    {
+      "term": "Drawing the Waistband",
+      "term_ko": "허리띠 졸라매기"
+    },
+    {
+      "term": "Floating Rate Pressure",
+      "term_ko": "변동금리 압박"
+    },
+    {
+      "term": "Dollar Stays Firm",
+      "term_ko": "달러 강세 유지"
+    },
+    {
+      "term": "Weakening Won Triggers",
+      "term_ko": "원화 약화 트리거"
+    },
+    {
+      "term": "Kospi Approaches",
+      "term_ko": "코스피 접근법"
+    },
+    {
+      "term": "Beyond License-outs",
+      "term_ko": "라이선스 아웃 그 이상"
+    },
+    {
+      "term": "Build Clinical-stage",
+      "term_ko": "임상 단계 구축"
+    },
+    {
+      "term": "Retail Buying",
+      "term_ko": "소매 구매"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Ing Andong County Financial Markets Department": {
+      "en": "Ing Andong County Financial Markets Department",
+      "ko": "ING 안동현 금융시장부",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Stock Market Briefing January": {
+      "en": "Stock Market Briefing January",
+      "ko": "증시 브리핑 1월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Further Up 4 Months": {
+      "en": "Further Up 4 Months",
+      "ko": "더 오른다 4개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "6 Months of Limited-time Special Support": {
+      "en": "6 Months of Limited-time Special Support",
+      "ko": "한시 특별지원 6개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "World's Largest Canadian Pavilion": {
+      "en": "World's Largest Canadian Pavilion",
+      "ko": "캐나다관 세계 최대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Prolonged Procurement Cost Pressures": {
+      "en": "Prolonged Procurement Cost Pressures",
+      "ko": "조달비용 압박 장기화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Stop the Card Industry Expansion": {
+      "en": "Stop the Card Industry Expansion",
+      "ko": "카드업계 확장 멈추고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Dae Chan Ahn, Head of Corporate Finance": {
+      "en": "Dae Chan Ahn, Head of Corporate Finance",
+      "ko": "본부장 안대찬 기업금융부",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Hanwha Investment & Securities Stock Loan Transfer": {
+      "en": "Hanwha Investment & Securities Stock Loan Transfer",
+      "ko": "한화투자증권 주식대출 환승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Run an Upgrade Event": {
+      "en": "Run an Upgrade Event",
+      "ko": "업그레이드 이벤트 실시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Bank of Korea Jeonbuk Headquarters Smes": {
+      "en": "Bank of Korea Jeonbuk Headquarters Smes",
+      "ko": "한국은행 전북본부 중소기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Abl Bio Shifts": {
+      "en": "Abl Bio Shifts",
+      "ko": "ABL 바이오 시프트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Ai Rally Reignites": {
+      "en": "Ai Rally Reignites",
+      "ko": "AI 랠리 재점화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "U.s Nasdaq Etfs": {
+      "en": "U.s Nasdaq Etfs",
+      "ko": "미국 나스닥 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "15 Days Us": {
+      "en": "15 Days Us",
+      "ko": "15일 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Previewing Korea Build": {
+      "en": "Previewing Korea Build",
+      "ko": "미리보는 코리아빌드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Close on the Upside": {
+      "en": "Close on the Upside",
+      "ko": "상승세 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Drawing the Waistband": {
+      "en": "Drawing the Waistband",
+      "ko": "허리띠 졸라매기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Floating Rate Pressure": {
+      "en": "Floating Rate Pressure",
+      "ko": "변동금리 압박",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Dollar Stays Firm": {
+      "en": "Dollar Stays Firm",
+      "ko": "달러 강세 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Weakening Won Triggers": {
+      "en": "Weakening Won Triggers",
+      "ko": "원화 약화 트리거",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Kospi Approaches": {
+      "en": "Kospi Approaches",
+      "ko": "코스피 접근법",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Beyond License-outs": {
+      "en": "Beyond License-outs",
+      "ko": "라이선스 아웃 그 이상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Build Clinical-stage": {
+      "en": "Build Clinical-stage",
+      "ko": "임상 단계 구축",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Retail Buying": {
+      "en": "Retail Buying",
+      "ko": "소매 구매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-16T12:42:46.128Z"
     }
   }
 }
