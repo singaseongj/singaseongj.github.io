@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-18T10:49:20+09:00 (KST)**
+- Generated: **2026-01-18T15:32:53+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -215,13 +215,6 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Alnylam%20Pharmaceuticals
 
-**Atlassian** (TEAM)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.2%**, 20d **-12.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Atlassian
-
 **Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -243,25 +236,40 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Insmed%20Incorporated
 
+**Zscaler** (ZS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Zscaler
+
 ## S&P 500
 
 ### SAFE (5)
 
-**ConocoPhillips** (COP)
+**Alphabet Inc.** (GOOGL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.2%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **0.4%**, 20d **11.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Energy**
-- News search: https://www.google.com/search?q=ConocoPhillips
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Alphabet%20Inc.
 
-**Constellation Energy** (CEG)
+**Amazon** (AMZN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.6%**, 20d **-8.5%**; volatility (20d): **unknown**
+- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Constellation%20Energy
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Amazon
+
+**Apple Inc.** (AAPL)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Apple%20Inc.
 
 **Microsoft** (MSFT)
 
@@ -279,53 +287,45 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
 
-**Walmart** (WMT)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **-1.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://www.google.com/search?q=Walmart
-
 ### AGGRESSIVE (5)
 
-**C.H. Robinson** (CHRW)
+**Biogen** (BIIB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.8%**, 20d **31.1%**; volatility (20d): **unknown**
+- Returns: 5d **-1.9%**, 20d **7.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=C.H.%20Robinson
+- Sector: **Healthcare**
+- News search: https://www.google.com/search?q=Biogen
 
-**Evergy** (EVRG)
+**Expand Energy** (EXE)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **2.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.4%**, 20d **-8.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Evergy
+- Sector: **Energy**
+- News search: https://www.google.com/search?q=Expand%20Energy
 
-**Global Payments** (GPN)
+**International Paper** (IP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.2%**, 20d **-10.2%**; volatility (20d): **unknown**
+- Returns: 5d **0.0%**, 20d **12.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=Global%20Payments
+- Sector: **Materials**
+- News search: https://www.google.com/search?q=International%20Paper
 
-**Tyler Technologies** (TYL)
+**ON Semiconductor** (ON)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.0%**, 20d **-2.5%**; volatility (20d): **unknown**
+- Returns: 5d **3.6%**, 20d **-11.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Tyler%20Technologies
+- News search: https://www.google.com/search?q=ON%20Semiconductor
 
-**Weyerhaeuser** (WY)
+**T. Rowe Price** (TROW)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.2%**, 20d **14.0%**; volatility (20d): **unknown**
+- Returns: 5d **-0.8%**, 20d **2.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Real Estate**
-- News search: https://www.google.com/search?q=Weyerhaeuser
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=T.%20Rowe%20Price
 
