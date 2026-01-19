@@ -1,1156 +1,425 @@
 {
-  "date": "2026-01-18",
+  "generatedAt": "2026-01-19T01:45:59.284Z",
+  "timezone": "Asia/Seoul",
+  "date": "2026-01-19",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Acquisition EMAT",
-      "term_ko": "기업 인수 EMAT",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기업 인수 EMAT",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-              "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%20%EC%9D%B8%EC%88%98%20EMAT",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%20%EC%9D%B8%EC%88%98%20EMAT"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-          "summary": "",
-          "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Acquisition Emat",
+      "term_ko": "기업 인수 EMAT"
     },
     {
-      "term": "U.S. Tech Stocks ETF",
-      "term_ko": "불장에도 美테크주 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불장에도 美테크주 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 “한국은 못믿어”… 코스피 불장에도 美테크주·ETF 투자",
-              "link": "https://n.news.naver.com/mnews/article/023/0003953792?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EC%9E%A5%EC%97%90%EB%8F%84%20%E7%BE%8E%ED%85%8C%ED%81%AC%EC%A3%BC%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EC%9E%A5%EC%97%90%EB%8F%84%20%E7%BE%8E%ED%85%8C%ED%81%AC%EC%A3%BC%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 “한국은 못믿어”… 코스피 불장에도 美테크주·ETF 투자",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003953792?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Tech Stocks Etf",
+      "term_ko": "불장에도 美테크주 ETF"
     },
     {
-      "term": "24 hours a day, 7 days a week",
-      "term_ko": "말 하루 24시간",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "말 하루 24시간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%90%20%ED%95%98%EB%A3%A8%2024%EC%8B%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%90%20%ED%95%98%EB%A3%A8%2024%EC%8B%9C%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "24 Hours a Day, 7 Days a Week",
+      "term_ko": "말 하루 24시간"
     },
     {
-      "term": "Zetched Silver 1 year",
-      "term_ko": "제쳤다 은銀 1년간",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제쳤다 은銀 1년간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-              "link": "http://coinreaders.com/209605"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%B3%A4%EB%8B%A4%20%EC%9D%80%E9%8A%80%201%EB%85%84%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%B3%A4%EB%8B%A4%20%EC%9D%80%E9%8A%80%201%EB%85%84%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-          "summary": "",
-          "link": "http://coinreaders.com/209605",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Zetched Silver 1 Year",
+      "term_ko": "제쳤다 은銀 1년간"
     },
     {
-      "term": "Investment Diagnosis 1500 KRW Exchange Rate",
-      "term_ko": "투자진단 1500원 환율시대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자진단 1500원 환율시대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[투자진단] 1500원 환율시대 삼각헤지 전략, 누가 더 사줄 것인가?",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=375055"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%EC%A7%84%EB%8B%A8%201500%EC%9B%90%20%ED%99%98%EC%9C%A8%EC%8B%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%EC%A7%84%EB%8B%A8%201500%EC%9B%90%20%ED%99%98%EC%9C%A8%EC%8B%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[투자진단] 1500원 환율시대 삼각헤지 전략, 누가 더 사줄 것인가?",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=375055",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Investment Diagnosis 1500 Krw Exchange Rate",
+      "term_ko": "투자진단 1500원 환율시대"
     },
     {
-      "term": "年 3% vs.",
-      "term_ko": "年 3%대 주담대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "年 3%대 주담대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "年 3%대 주담대 자취 감춰… 오늘부터 더 오른다",
-              "link": "https://n.news.naver.com/mnews/article/020/0003690259?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EF%A6%8E%203%25%EB%8C%80%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EF%A6%8E%203%25%EB%8C%80%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "年 3%대 주담대 자취 감춰… 오늘부터 더 오른다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003690259?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "年 3% Vs.",
+      "term_ko": "年 3%대 주담대"
     },
     {
-      "term": "4 years of savings account enrollment",
-      "term_ko": "청약통장 가입 4년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청약통장 가입 4년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "분양가 상승 등 영향, 청약통장 가입 4년 연속 감소",
-              "link": "https://n.news.naver.com/mnews/article/005/0001826901?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EC%95%BD%ED%86%B5%EC%9E%A5%20%EA%B0%80%EC%9E%85%204%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EC%95%BD%ED%86%B5%EC%9E%A5%20%EA%B0%80%EC%9E%85%204%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "분양가 상승 등 영향, 청약통장 가입 4년 연속 감소",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001826901?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4 Years of Savings Account Enrollment",
+      "term_ko": "청약통장 가입 4년"
     },
     {
-      "term": "Nasdaq listing success",
-      "term_ko": "나스닥 상장 성공",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 상장 성공",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-              "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%20%EC%84%B1%EA%B3%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%20%EC%84%B1%EA%B3%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-          "summary": "",
-          "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nasdaq Listing Success",
+      "term_ko": "나스닥 상장 성공"
     },
     {
-      "term": "Activate your deal roadmap",
-      "term_ko": "거래 로드맵 가동",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래 로드맵 가동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%20%EB%A1%9C%EB%93%9C%EB%A7%B5%20%EA%B0%80%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%20%EB%A1%9C%EB%93%9C%EB%A7%B5%20%EA%B0%80%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Activate Your Deal Roadmap",
+      "term_ko": "거래 로드맵 가동"
     },
     {
       "term": "Bitcoin Nvidia Da",
-      "term_ko": "비트코인 엔비디아 다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 엔비디아 다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-              "link": "http://coinreaders.com/209605"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-          "summary": "",
-          "link": "http://coinreaders.com/209605",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비트코인 엔비디아 다"
     },
     {
       "term": "About Cheonggyecheong Square Expansion Finances",
-      "term_ko": "청계광장확장 재정에 대한",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청계광장확장 재정에 대한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[청계광장]확장 재정에 대한 오해",
-              "link": "https://n.news.naver.com/mnews/article/008/0005306045?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EA%B3%84%EA%B4%91%EC%9E%A5%ED%99%95%EC%9E%A5%20%EC%9E%AC%EC%A0%95%EC%97%90%20%EB%8C%80%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EA%B3%84%EA%B4%91%EC%9E%A5%ED%99%95%EC%9E%A5%20%EC%9E%AC%EC%A0%95%EC%97%90%20%EB%8C%80%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[청계광장]확장 재정에 대한 오해",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005306045?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "청계광장확장 재정에 대한"
     },
     {
-      "term": "Seo Hak Ant I don't trust Korea",
-      "term_ko": "서학개미 한국은 못믿어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서학개미 한국은 못믿어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 “한국은 못믿어”… 코스피 불장에도 美테크주·ETF 투자",
-              "link": "https://n.news.naver.com/mnews/article/023/0003953792?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%ED%95%9C%EA%B5%AD%EC%9D%80%20%EB%AA%BB%EB%AF%BF%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%ED%95%9C%EA%B5%AD%EC%9D%80%20%EB%AA%BB%EB%AF%BF%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 “한국은 못믿어”… 코스피 불장에도 美테크주·ETF 투자",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003953792?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Seo Hak Ant I Don't Trust Korea",
+      "term_ko": "서학개미 한국은 못믿어"
     },
     {
-      "term": "Going under the radar Starting today",
-      "term_ko": "자취 감춰 오늘부터",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자취 감춰 오늘부터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "年 3%대 주담대 자취 감춰… 오늘부터 더 오른다",
-              "link": "https://n.news.naver.com/mnews/article/020/0003690259?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%B7%A8%20%EA%B0%90%EC%B6%B0%20%EC%98%A4%EB%8A%98%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%B7%A8%20%EA%B0%90%EC%B6%B0%20%EC%98%A4%EB%8A%98%EB%B6%80%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "年 3%대 주담대 자취 감춰… 오늘부터 더 오른다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003690259?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Going Under the Radar Starting Today",
+      "term_ko": "자취 감춰 오늘부터"
     },
     {
-      "term": "Increased sales prices, etc.",
-      "term_ko": "분양가 상승 등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "분양가 상승 등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "분양가 상승 등 영향, 청약통장 가입 4년 연속 감소",
-              "link": "https://n.news.naver.com/mnews/article/005/0001826901?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%84%EC%96%91%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%84%EC%96%91%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "분양가 상승 등 영향, 청약통장 가입 4년 연속 감소",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001826901?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Increased Sales Prices, Etc.",
+      "term_ko": "분양가 상승 등"
     },
     {
-      "term": "Kim Jeong-Sik Column Growth Rate Must Increase",
-      "term_ko": "김정식칼럼 성장률 높여야",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김정식칼럼 성장률 높여야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[김정식칼럼] 성장률 높여야 환율이 안정된다",
-              "link": "https://n.news.naver.com/mnews/article/022/0004098539?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%A0%95%EC%8B%9D%EC%B9%BC%EB%9F%BC%20%EC%84%B1%EC%9E%A5%EB%A5%A0%20%EB%86%92%EC%97%AC%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%A0%95%EC%8B%9D%EC%B9%BC%EB%9F%BC%20%EC%84%B1%EC%9E%A5%EB%A5%A0%20%EB%86%92%EC%97%AC%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[김정식칼럼] 성장률 높여야 환율이 안정된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004098539?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kim Jeong-sik Column Growth Rate Must Increase",
+      "term_ko": "김정식칼럼 성장률 높여야"
     },
     {
       "term": "Korea Rare Earths",
-      "term_ko": "한국 희토류",
-      "significance_score": 280,
-      "mentions": 333,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 희토류",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-01-11",
-              "timestamp": 1768057200000,
-              "value": 88.88888
-            },
-            {
-              "period": "2026-01-12",
-              "timestamp": 1768143600000,
-              "value": 100
-            },
-            {
-              "period": "2026-01-13",
-              "timestamp": 1768230000000,
-              "value": 92.59259
-            },
-            {
-              "period": "2026-01-14",
-              "timestamp": 1768316400000,
-              "value": 59.25925
-            },
-            {
-              "period": "2026-01-15",
-              "timestamp": 1768402800000,
-              "value": 90.74074
-            },
-            {
-              "period": "2026-01-16",
-              "timestamp": 1768489200000,
-              "value": 62.96296
-            },
-            {
-              "period": "2026-01-17",
-              "timestamp": 1768575600000,
-              "value": 27.77777
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-              "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%ED%9D%AC%ED%86%A0%EB%A5%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%ED%9D%AC%ED%86%A0%EB%A5%98"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-          "summary": "",
-          "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 333.3333,
-        "weekly_average_volume": 66.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.017835,
-        "time_weight": 0.019415,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1768575600000
-      }
+      "term_ko": "한국 희토류"
     },
     {
       "term": "Exchange Next Year",
-      "term_ko": "거래소 내년",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래소 내년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%82%B4%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%82%B4%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "거래소 내년"
     },
     {
-      "term": "On-site burden",
-      "term_ko": "현장은 부담",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현장은 부담",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EC%9E%A5%EC%9D%80%20%EB%B6%80%EB%8B%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EC%9E%A5%EC%9D%80%20%EB%B6%80%EB%8B%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "On-site Burden",
+      "term_ko": "현장은 부담"
     },
     {
-      "term": "Climb higher",
-      "term_ko": "더 오른다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "더 오른다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "年 3%대 주담대 자취 감춰… 오늘부터 더 오른다",
-              "link": "https://n.news.naver.com/mnews/article/020/0003690259?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%20%EC%98%A4%EB%A5%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%20%EC%98%A4%EB%A5%B8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "年 3%대 주담대 자취 감춰… 오늘부터 더 오른다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003690259?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Climb Higher",
+      "term_ko": "더 오른다"
     },
     {
-      "term": "Continuous decrement",
-      "term_ko": "연속 감소",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연속 감소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "분양가 상승 등 영향, 청약통장 가입 4년 연속 감소",
-              "link": "https://n.news.naver.com/mnews/article/005/0001826901?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%86%8D%20%EA%B0%90%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%86%8D%20%EA%B0%90%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "분양가 상승 등 영향, 청약통장 가입 4년 연속 감소",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001826901?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Continuous Decrement",
+      "term_ko": "연속 감소"
     },
     {
-      "term": "Exchange rates stabilize",
-      "term_ko": "환율이 안정된다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율이 안정된다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[김정식칼럼] 성장률 높여야 환율이 안정된다",
-              "link": "https://n.news.naver.com/mnews/article/022/0004098539?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%EC%9D%B4%20%EC%95%88%EC%A0%95%EB%90%9C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%EC%9D%B4%20%EC%95%88%EC%A0%95%EB%90%9C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[김정식칼럼] 성장률 높여야 환율이 안정된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004098539?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rates Stabilize",
+      "term_ko": "환율이 안정된다"
     },
     {
       "term": "Finish Nearly Flat",
-      "term_ko": "거의 평평하게 마무리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Finish Nearly Flat",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Finish Nearly Flat as Earnings Season Begins and Investors Ey...",
-              "link": "https://www.econotimes.com/US-Stocks-Finish-Nearly-Flat-as-Earnings-Season-Begins-and-Investors-Eye-Volatility-1731163"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Finish%20Nearly%20Flat",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Finish%20Nearly%20Flat"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Finish Nearly Flat as Earnings Season Begins and Investors Ey...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Finish-Nearly-Flat-as-Earnings-Season-Begins-and-Investors-Eye-Volatility-1731163",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "거의 평평하게 마무리"
     },
     {
       "term": "Earnings Season Begins",
-      "term_ko": "수익 시즌 시작",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Earnings Season Begins",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Finish Nearly Flat as Earnings Season Begins and Investors Ey...",
-              "link": "https://www.econotimes.com/US-Stocks-Finish-Nearly-Flat-as-Earnings-Season-Begins-and-Investors-Eye-Volatility-1731163"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Earnings%20Season%20Begins",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Earnings%20Season%20Begins"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Finish Nearly Flat as Earnings Season Begins and Investors Ey...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Finish-Nearly-Flat-as-Earnings-Season-Begins-and-Investors-Eye-Volatility-1731163",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수익 시즌 시작"
     },
     {
       "term": "Sunchon National University",
-      "term_ko": "순천대학교",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sunchon National University",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-              "link": "https://magazine.hankyung.com/job-joy/article/202601197758d"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sunchon%20National%20University",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sunchon%20National%20University"
-      },
-      "top_headlines": [
-        {
-          "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-          "summary": "",
-          "link": "https://magazine.hankyung.com/job-joy/article/202601197758d",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "순천대학교"
     },
     {
       "term": "Selected Company",
-      "term_ko": "선택한 회사",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Selected Company",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-              "link": "https://magazine.hankyung.com/job-joy/article/202601197758d"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Selected%20Company",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Selected%20Company"
-      },
-      "top_headlines": [
-        {
-          "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-          "summary": "",
-          "link": "https://magazine.hankyung.com/job-joy/article/202601197758d",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선택한 회사"
     },
     {
-      "term": "Early-Stage Startup",
-      "term_ko": "초기 단계 스타트업",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Early-Stage Startup",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-              "link": "https://magazine.hankyung.com/job-joy/article/202601197758d"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Early-Stage%20Startup",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Early-Stage%20Startup"
-      },
-      "top_headlines": [
-        {
-          "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-          "summary": "",
-          "link": "https://magazine.hankyung.com/job-joy/article/202601197758d",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Early-stage Startup",
+      "term_ko": "초기 단계 스타트업"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-19T03:29:28+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-18T18:30:37.602Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-19T03:29:28+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Acquisition Emat",
+      "term_ko": "기업 인수 EMAT"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-19T03:29:28+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-19T03:29:28+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "U.s. Tech Stocks Etf",
+      "term_ko": "불장에도 美테크주 ETF"
+    },
+    {
+      "term": "24 Hours a Day, 7 Days a Week",
+      "term_ko": "말 하루 24시간"
+    },
+    {
+      "term": "Zetched Silver 1 Year",
+      "term_ko": "제쳤다 은銀 1년간"
+    },
+    {
+      "term": "Investment Diagnosis 1500 Krw Exchange Rate",
+      "term_ko": "투자진단 1500원 환율시대"
+    },
+    {
+      "term": "年 3% Vs.",
+      "term_ko": "年 3%대 주담대"
+    },
+    {
+      "term": "4 Years of Savings Account Enrollment",
+      "term_ko": "청약통장 가입 4년"
+    },
+    {
+      "term": "Nasdaq Listing Success",
+      "term_ko": "나스닥 상장 성공"
+    },
+    {
+      "term": "Activate Your Deal Roadmap",
+      "term_ko": "거래 로드맵 가동"
+    },
+    {
+      "term": "Bitcoin Nvidia Da",
+      "term_ko": "비트코인 엔비디아 다"
+    },
+    {
+      "term": "About Cheonggyecheong Square Expansion Finances",
+      "term_ko": "청계광장확장 재정에 대한"
+    },
+    {
+      "term": "Seo Hak Ant I Don't Trust Korea",
+      "term_ko": "서학개미 한국은 못믿어"
+    },
+    {
+      "term": "Going Under the Radar Starting Today",
+      "term_ko": "자취 감춰 오늘부터"
+    },
+    {
+      "term": "Increased Sales Prices, Etc.",
+      "term_ko": "분양가 상승 등"
+    },
+    {
+      "term": "Kim Jeong-sik Column Growth Rate Must Increase",
+      "term_ko": "김정식칼럼 성장률 높여야"
+    },
+    {
+      "term": "Korea Rare Earths",
+      "term_ko": "한국 희토류"
+    },
+    {
+      "term": "Exchange Next Year",
+      "term_ko": "거래소 내년"
+    },
+    {
+      "term": "On-site Burden",
+      "term_ko": "현장은 부담"
+    },
+    {
+      "term": "Climb Higher",
+      "term_ko": "더 오른다"
+    },
+    {
+      "term": "Continuous Decrement",
+      "term_ko": "연속 감소"
+    },
+    {
+      "term": "Exchange Rates Stabilize",
+      "term_ko": "환율이 안정된다"
+    },
+    {
+      "term": "Finish Nearly Flat",
+      "term_ko": "거의 평평하게 마무리"
+    },
+    {
+      "term": "Earnings Season Begins",
+      "term_ko": "수익 시즌 시작"
+    },
+    {
+      "term": "Sunchon National University",
+      "term_ko": "순천대학교"
+    },
+    {
+      "term": "Selected Company",
+      "term_ko": "선택한 회사"
+    },
+    {
+      "term": "Early-stage Startup",
+      "term_ko": "초기 단계 스타트업"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Acquisition Emat": {
+      "en": "Acquisition Emat",
+      "ko": "기업 인수 EMAT",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "U.s. Tech Stocks Etf": {
+      "en": "U.s. Tech Stocks Etf",
+      "ko": "불장에도 美테크주 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "24 Hours a Day, 7 Days a Week": {
+      "en": "24 Hours a Day, 7 Days a Week",
+      "ko": "말 하루 24시간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Zetched Silver 1 Year": {
+      "en": "Zetched Silver 1 Year",
+      "ko": "제쳤다 은銀 1년간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Investment Diagnosis 1500 Krw Exchange Rate": {
+      "en": "Investment Diagnosis 1500 Krw Exchange Rate",
+      "ko": "투자진단 1500원 환율시대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "年 3% Vs.": {
+      "en": "年 3% Vs.",
+      "ko": "年 3%대 주담대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "4 Years of Savings Account Enrollment": {
+      "en": "4 Years of Savings Account Enrollment",
+      "ko": "청약통장 가입 4년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Nasdaq Listing Success": {
+      "en": "Nasdaq Listing Success",
+      "ko": "나스닥 상장 성공",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Activate Your Deal Roadmap": {
+      "en": "Activate Your Deal Roadmap",
+      "ko": "거래 로드맵 가동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Bitcoin Nvidia Da": {
+      "en": "Bitcoin Nvidia Da",
+      "ko": "비트코인 엔비디아 다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "About Cheonggyecheong Square Expansion Finances": {
+      "en": "About Cheonggyecheong Square Expansion Finances",
+      "ko": "청계광장확장 재정에 대한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Seo Hak Ant I Don't Trust Korea": {
+      "en": "Seo Hak Ant I Don't Trust Korea",
+      "ko": "서학개미 한국은 못믿어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Going Under the Radar Starting Today": {
+      "en": "Going Under the Radar Starting Today",
+      "ko": "자취 감춰 오늘부터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Increased Sales Prices, Etc.": {
+      "en": "Increased Sales Prices, Etc.",
+      "ko": "분양가 상승 등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Kim Jeong-sik Column Growth Rate Must Increase": {
+      "en": "Kim Jeong-sik Column Growth Rate Must Increase",
+      "ko": "김정식칼럼 성장률 높여야",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Korea Rare Earths": {
+      "en": "Korea Rare Earths",
+      "ko": "한국 희토류",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Exchange Next Year": {
+      "en": "Exchange Next Year",
+      "ko": "거래소 내년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "On-site Burden": {
+      "en": "On-site Burden",
+      "ko": "현장은 부담",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Climb Higher": {
+      "en": "Climb Higher",
+      "ko": "더 오른다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Continuous Decrement": {
+      "en": "Continuous Decrement",
+      "ko": "연속 감소",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Exchange Rates Stabilize": {
+      "en": "Exchange Rates Stabilize",
+      "ko": "환율이 안정된다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Finish Nearly Flat": {
+      "en": "Finish Nearly Flat",
+      "ko": "거의 평평하게 마무리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Earnings Season Begins": {
+      "en": "Earnings Season Begins",
+      "ko": "수익 시즌 시작",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Sunchon National University": {
+      "en": "Sunchon National University",
+      "ko": "순천대학교",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Selected Company": {
+      "en": "Selected Company",
+      "ko": "선택한 회사",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Early-stage Startup": {
+      "en": "Early-stage Startup",
+      "ko": "초기 단계 스타트업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T01:45:59.284Z"
     }
   }
 }
