@@ -1,1108 +1,439 @@
 {
+  "generatedAt": "2026-01-19T06:37:44.103Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-19",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Acquisition EMAT",
-      "term_ko": "기업 인수 EMAT",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기업 인수 EMAT",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-              "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%20%EC%9D%B8%EC%88%98%20EMAT",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%20%EC%9D%B8%EC%88%98%20EMAT"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-          "summary": "",
-          "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Acquisition Emat",
+      "term_ko": "기업 인수 EMAT"
     },
     {
-      "term": "ING Korea Economy",
-      "term_ko": "ING 한국 경제",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ING 한국 경제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "ING \"한국 경제, 반도체 호조에도 K자형 회복 심화…환율 1500원 가능성\"",
-              "link": "http://www.queen.co.kr/news/articleView.html?idxno=449753"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ING%20%ED%95%9C%EA%B5%AD%20%EA%B2%BD%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ING%20%ED%95%9C%EA%B5%AD%20%EA%B2%BD%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "ING \"한국 경제, 반도체 호조에도 K자형 회복 심화…환율 1500원 가능성\"",
-          "summary": "",
-          "link": "http://www.queen.co.kr/news/articleView.html?idxno=449753",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ing Korea Economy",
+      "term_ko": "ING 한국 경제"
     },
     {
-      "term": "24 hours a day, 7 days a week",
-      "term_ko": "말 하루 24시간",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "말 하루 24시간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%90%20%ED%95%98%EB%A3%A8%2024%EC%8B%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%90%20%ED%95%98%EB%A3%A8%2024%EC%8B%9C%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "24 Hours a Day, 7 Days a Week",
+      "term_ko": "말 하루 24시간"
     },
     {
-      "term": "Zetched Silver 1 year",
-      "term_ko": "제쳤다 은銀 1년간",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제쳤다 은銀 1년간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-              "link": "http://coinreaders.com/209605"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%B3%A4%EB%8B%A4%20%EC%9D%80%E9%8A%80%201%EB%85%84%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%B3%A4%EB%8B%A4%20%EC%9D%80%E9%8A%80%201%EB%85%84%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-          "summary": "",
-          "link": "http://coinreaders.com/209605",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Zetched Silver 1 Year",
+      "term_ko": "제쳤다 은銀 1년간"
     },
     {
-      "term": "Deepening exchange rate 1500 KRW",
-      "term_ko": "심화 환율 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "심화 환율 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "ING \"한국 경제, 반도체 호조에도 K자형 회복 심화…환율 1500원 가능성\"",
-              "link": "http://www.queen.co.kr/news/articleView.html?idxno=449753"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%AC%ED%99%94%20%ED%99%98%EC%9C%A8%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%AC%ED%99%94%20%ED%99%98%EC%9C%A8%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "ING \"한국 경제, 반도체 호조에도 K자형 회복 심화…환율 1500원 가능성\"",
-          "summary": "",
-          "link": "http://www.queen.co.kr/news/articleView.html?idxno=449753",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Deepening Exchange Rate 1500 Krw",
+      "term_ko": "심화 환율 1500원"
     },
     {
-      "term": "Hyundai Card $20 million",
-      "term_ko": "현대카드 2000만달러 규모",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현대카드 2000만달러 규모",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "현대카드, 2000만달러 규모 '김치본드' 발행…15년 만에 재개",
-              "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=353615"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EB%8C%80%EC%B9%B4%EB%93%9C%202000%EB%A7%8C%EB%8B%AC%EB%9F%AC%20%EA%B7%9C%EB%AA%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EB%8C%80%EC%B9%B4%EB%93%9C%202000%EB%A7%8C%EB%8B%AC%EB%9F%AC%20%EA%B7%9C%EB%AA%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "현대카드, 2000만달러 규모 '김치본드' 발행…15년 만에 재개",
-          "summary": "",
-          "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=353615",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hyundai Card $20 Million",
+      "term_ko": "현대카드 2000만달러 규모"
     },
     {
-      "term": "15 years of Kimchi Bonds",
-      "term_ko": "김치본드 발행 15년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김치본드 발행 15년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "현대카드, 2000만달러 규모 '김치본드' 발행…15년 만에 재개",
-              "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=353615"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EB%B0%9C%ED%96%89%2015%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EB%B0%9C%ED%96%89%2015%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "현대카드, 2000만달러 규모 '김치본드' 발행…15년 만에 재개",
-          "summary": "",
-          "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=353615",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "15 Years of Kimchi Bonds",
+      "term_ko": "김치본드 발행 15년"
     },
     {
-      "term": "Nasdaq listing success",
-      "term_ko": "나스닥 상장 성공",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 상장 성공",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-              "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%20%EC%84%B1%EA%B3%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%20%EC%84%B1%EA%B3%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-          "summary": "",
-          "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nasdaq Listing Success",
+      "term_ko": "나스닥 상장 성공"
     },
     {
-      "term": "Activate your deal roadmap",
-      "term_ko": "거래 로드맵 가동",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래 로드맵 가동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%20%EB%A1%9C%EB%93%9C%EB%A7%B5%20%EA%B0%80%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%20%EB%A1%9C%EB%93%9C%EB%A7%B5%20%EA%B0%80%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Activate Your Deal Roadmap",
+      "term_ko": "거래 로드맵 가동"
     },
     {
       "term": "Bitcoin Nvidia Da",
-      "term_ko": "비트코인 엔비디아 다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 엔비디아 다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-              "link": "http://coinreaders.com/209605"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인·엔비디아 다 제쳤다…은(銀), 1년간 200% 폭등한 비결은?",
-          "summary": "",
-          "link": "http://coinreaders.com/209605",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비트코인 엔비디아 다"
     },
     {
-      "term": "K-shaped despite semiconductor strength",
-      "term_ko": "반도체 호조에도 K자형",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 호조에도 K자형",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "ING \"한국 경제, 반도체 호조에도 K자형 회복 심화…환율 1500원 가능성\"",
-              "link": "http://www.queen.co.kr/news/articleView.html?idxno=449753"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%98%B8%EC%A1%B0%EC%97%90%EB%8F%84%20K%EC%9E%90%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%98%B8%EC%A1%B0%EC%97%90%EB%8F%84%20K%EC%9E%90%ED%98%95"
-      },
-      "top_headlines": [
-        {
-          "title": "ING \"한국 경제, 반도체 호조에도 K자형 회복 심화…환율 1500원 가능성\"",
-          "summary": "",
-          "link": "http://www.queen.co.kr/news/articleView.html?idxno=449753",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "K-shaped Despite Semiconductor Strength",
+      "term_ko": "반도체 호조에도 K자형"
     },
     {
       "term": "Kimchi Bond Public Offering Organized by Kium Securities",
-      "term_ko": "키움증권공모 김치본드 단독주관",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "키움증권공모 김치본드 단독주관",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "키움증권,공모 김치본드 단독주관…규제완화 후 최초",
-              "link": "https://www.newsway.co.kr/news/view?ud=2026011910284267944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%EA%B3%B5%EB%AA%A8%20%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EB%8B%A8%EB%8F%85%EC%A3%BC%EA%B4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%EA%B3%B5%EB%AA%A8%20%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EB%8B%A8%EB%8F%85%EC%A3%BC%EA%B4%80"
-      },
-      "top_headlines": [
-        {
-          "title": "키움증권,공모 김치본드 단독주관…규제완화 후 최초",
-          "summary": "",
-          "link": "https://www.newsway.co.kr/news/view?ud=2026011910284267944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "키움증권공모 김치본드 단독주관"
     },
     {
-      "term": "Initial post-deregulation",
-      "term_ko": "규제완화 후 최초",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "규제완화 후 최초",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "키움증권,공모 김치본드 단독주관…규제완화 후 최초",
-              "link": "https://www.newsway.co.kr/news/view?ud=2026011910284267944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%9C%EC%A0%9C%EC%99%84%ED%99%94%20%ED%9B%84%20%EC%B5%9C%EC%B4%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%9C%EC%A0%9C%EC%99%84%ED%99%94%20%ED%9B%84%20%EC%B5%9C%EC%B4%88"
-      },
-      "top_headlines": [
-        {
-          "title": "키움증권,공모 김치본드 단독주관…규제완화 후 최초",
-          "summary": "",
-          "link": "https://www.newsway.co.kr/news/view?ud=2026011910284267944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Initial Post-deregulation",
+      "term_ko": "규제완화 후 최초"
     },
     {
-      "term": "Rising market interest rates",
-      "term_ko": "시장금리 상승 주담대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장금리 상승 주담대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은 동결 기조에 시장금리 상승…주담대·전세대출 금리 오름세",
-              "link": "https://n.news.naver.com/mnews/article/437/0000474156?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 동결 기조에 시장금리 상승…주담대·전세대출 금리 오름세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/437/0000474156?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Market Interest Rates",
+      "term_ko": "시장금리 상승 주담대"
     },
     {
-      "term": "Rising mortgage rates",
-      "term_ko": "전세대출 금리 오름세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전세대출 금리 오름세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은 동결 기조에 시장금리 상승…주담대·전세대출 금리 오름세",
-              "link": "https://n.news.naver.com/mnews/article/437/0000474156?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%84%B8%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%20%EC%98%A4%EB%A6%84%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%84%B8%EB%8C%80%EC%B6%9C%20%EA%B8%88%EB%A6%AC%20%EC%98%A4%EB%A6%84%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 동결 기조에 시장금리 상승…주담대·전세대출 금리 오름세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/437/0000474156?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Mortgage Rates",
+      "term_ko": "전세대출 금리 오름세"
     },
     {
-      "term": "After sole-source deregulation",
-      "term_ko": "단독주관 규제완화 후",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "단독주관 규제완화 후",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "키움증권, 공모 김치본드 단독주관…규제완화 후 최초",
-              "link": "https://n.news.naver.com/mnews/article/117/0004027587?sid=103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EB%8F%85%EC%A3%BC%EA%B4%80%20%EA%B7%9C%EC%A0%9C%EC%99%84%ED%99%94%20%ED%9B%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EB%8F%85%EC%A3%BC%EA%B4%80%20%EA%B7%9C%EC%A0%9C%EC%99%84%ED%99%94%20%ED%9B%84"
-      },
-      "top_headlines": [
-        {
-          "title": "키움증권, 공모 김치본드 단독주관…규제완화 후 최초",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/117/0004027587?sid=103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "After Sole-source Deregulation",
+      "term_ko": "단독주관 규제완화 후"
     },
     {
-      "term": "Deregulating Kiwi securities",
-      "term_ko": "키움증권 규제 완화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "키움증권 규제 완화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "키움증권, 규제 완화 후 첫 '공모 김치본드' 단독 주관",
-              "link": "https://www.ngetnews.com/news/articleView.html?idxno=545806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%20%EA%B7%9C%EC%A0%9C%20%EC%99%84%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%20%EA%B7%9C%EC%A0%9C%20%EC%99%84%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "키움증권, 규제 완화 후 첫 '공모 김치본드' 단독 주관",
-          "summary": "",
-          "link": "https://www.ngetnews.com/news/articleView.html?idxno=545806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Deregulating Kiwi Securities",
+      "term_ko": "키움증권 규제 완화"
     },
     {
-      "term": "First public offering after",
-      "term_ko": "후 첫 공모",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "후 첫 공모",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "키움증권, 규제 완화 후 첫 '공모 김치본드' 단독 주관",
-              "link": "https://www.ngetnews.com/news/articleView.html?idxno=545806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%84%20%EC%B2%AB%20%EA%B3%B5%EB%AA%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%84%20%EC%B2%AB%20%EA%B3%B5%EB%AA%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "키움증권, 규제 완화 후 첫 '공모 김치본드' 단독 주관",
-          "summary": "",
-          "link": "https://www.ngetnews.com/news/articleView.html?idxno=545806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "First Public Offering After",
+      "term_ko": "후 첫 공모"
     },
     {
       "term": "Korea Rare Earths",
-      "term_ko": "한국 희토류",
-      "significance_score": 280,
-      "mentions": 387,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 희토류",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-01-11",
-              "timestamp": 1768057200000,
-              "value": 88.88888
-            },
-            {
-              "period": "2026-01-12",
-              "timestamp": 1768143600000,
-              "value": 100
-            },
-            {
-              "period": "2026-01-13",
-              "timestamp": 1768230000000,
-              "value": 92.59259
-            },
-            {
-              "period": "2026-01-14",
-              "timestamp": 1768316400000,
-              "value": 59.25925
-            },
-            {
-              "period": "2026-01-15",
-              "timestamp": 1768402800000,
-              "value": 90.74074
-            },
-            {
-              "period": "2026-01-16",
-              "timestamp": 1768489200000,
-              "value": 62.96296
-            },
-            {
-              "period": "2026-01-17",
-              "timestamp": 1768575600000,
-              "value": 27.77777
-            },
-            {
-              "period": "2026-01-18",
-              "timestamp": 1768662000000,
-              "value": 53.7037
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-              "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%ED%9D%AC%ED%86%A0%EB%A5%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%ED%9D%AC%ED%86%A0%EB%A5%98"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 희토류 기업 인수 EMAT, 나스닥 상장 성공",
-          "summary": "",
-          "link": "https://www.jbnews.com/news/articleView.html?idxno=1497199",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 387.037,
-        "weekly_average_volume": 64.5062,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.016081,
-        "time_weight": 0.028721,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1768662000000
-      }
+      "term_ko": "한국 희토류"
     },
     {
       "term": "Exchange Next Year",
-      "term_ko": "거래소 내년",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래소 내년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%82%B4%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EB%82%B4%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "거래소 내년"
     },
     {
-      "term": "On-site burden",
-      "term_ko": "현장은 부담",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현장은 부담",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-              "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EC%9E%A5%EC%9D%80%20%EB%B6%80%EB%8B%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EC%9E%A5%EC%9D%80%20%EB%B6%80%EB%8B%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "거래소 내년 말 '하루 24시간 거래' 로드맵 가동…현장은 '부담'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008719786?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "On-site Burden",
+      "term_ko": "현장은 부담"
     },
     {
-      "term": "Resume in a bay",
-      "term_ko": "만에 재개",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 재개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "현대카드, 2000만달러 규모 '김치본드' 발행…15년 만에 재개",
-              "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=353615"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%9E%AC%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%9E%AC%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "현대카드, 2000만달러 규모 '김치본드' 발행…15년 만에 재개",
-          "summary": "",
-          "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=353615",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Resume in a Bay",
+      "term_ko": "만에 재개"
     },
     {
       "term": "Tesla Extend Deadline",
-      "term_ko": "테슬라 마감일 연장",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tesla Extend Deadline",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Syrah Resources and Tesla Extend Deadline on Graphite Supply Dispute to M...",
-              "link": "https://www.econotimes.com/Syrah-Resources-and-Tesla-Extend-Deadline-on-Graphite-Supply-Dispute-to-March-1731230"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tesla%20Extend%20Deadline",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tesla%20Extend%20Deadline"
-      },
-      "top_headlines": [
-        {
-          "title": "Syrah Resources and Tesla Extend Deadline on Graphite Supply Dispute to M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Syrah-Resources-and-Tesla-Extend-Deadline-on-Graphite-Supply-Dispute-to-March-1731230",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "테슬라 마감일 연장"
     },
     {
       "term": "Graphite Supply Dispute",
-      "term_ko": "흑연 공급 분쟁",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Graphite Supply Dispute",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Syrah Resources and Tesla Extend Deadline on Graphite Supply Dispute to M...",
-              "link": "https://www.econotimes.com/Syrah-Resources-and-Tesla-Extend-Deadline-on-Graphite-Supply-Dispute-to-March-1731230"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Graphite%20Supply%20Dispute",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Graphite%20Supply%20Dispute"
-      },
-      "top_headlines": [
-        {
-          "title": "Syrah Resources and Tesla Extend Deadline on Graphite Supply Dispute to M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Syrah-Resources-and-Tesla-Extend-Deadline-on-Graphite-Supply-Dispute-to-March-1731230",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "흑연 공급 분쟁"
     },
     {
       "term": "Trump Tariff Threat",
-      "term_ko": "트럼프 관세 위협",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Tariff Threat",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Trump Tariff Threat on Europe Shakes Markets",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threat-on-Europe-Shakes-Markets-1731227"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Tariff%20Threat",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Tariff%20Threat"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Trump Tariff Threat on Europe Shakes Markets",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threat-on-Europe-Shakes-Markets-1731227",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "트럼프 관세 위협"
     },
     {
       "term": "Sunchon National University",
-      "term_ko": "순천대학교",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sunchon National University",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-              "link": "https://magazine.hankyung.com/job-joy/article/202601197758d"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sunchon%20National%20University",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sunchon%20National%20University"
-      },
-      "top_headlines": [
-        {
-          "title": "[Selected Company for Sunchon National University Early-Stage Startup Pac...",
-          "summary": "",
-          "link": "https://magazine.hankyung.com/job-joy/article/202601197758d",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "순천대학교"
     },
     {
       "term": "Syrah Resources",
-      "term_ko": "시라 리소스",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Syrah Resources",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Syrah Resources and Tesla Extend Deadline on Graphite Supply Dispute to M...",
-              "link": "https://www.econotimes.com/Syrah-Resources-and-Tesla-Extend-Deadline-on-Graphite-Supply-Dispute-to-March-1731230"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Syrah%20Resources",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Syrah%20Resources"
-      },
-      "top_headlines": [
-        {
-          "title": "Syrah Resources and Tesla Extend Deadline on Graphite Supply Dispute to M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Syrah-Resources-and-Tesla-Extend-Deadline-on-Graphite-Supply-Dispute-to-March-1731230",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시라 리소스"
     },
     {
       "term": "Futures Slide",
-      "term_ko": "선물 슬라이드",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Slide",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-19T10:48:06+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Trump Tariff Threat on Europe Shakes Markets",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threat-on-Europe-Shakes-Markets-1731227"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Slide",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Slide"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Trump Tariff Threat on Europe Shakes Markets",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threat-on-Europe-Shakes-Markets-1731227",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 슬라이드"
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-19T01:49:16.004Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-19T10:48:06+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Acquisition Emat",
+      "term_ko": "기업 인수 EMAT"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-19T10:48:06+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-19T10:48:06+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Ing Korea Economy",
+      "term_ko": "ING 한국 경제"
+    },
+    {
+      "term": "24 Hours a Day, 7 Days a Week",
+      "term_ko": "말 하루 24시간"
+    },
+    {
+      "term": "Zetched Silver 1 Year",
+      "term_ko": "제쳤다 은銀 1년간"
+    },
+    {
+      "term": "Deepening Exchange Rate 1500 Krw",
+      "term_ko": "심화 환율 1500원"
+    },
+    {
+      "term": "Hyundai Card $20 Million",
+      "term_ko": "현대카드 2000만달러 규모"
+    },
+    {
+      "term": "15 Years of Kimchi Bonds",
+      "term_ko": "김치본드 발행 15년"
+    },
+    {
+      "term": "Nasdaq Listing Success",
+      "term_ko": "나스닥 상장 성공"
+    },
+    {
+      "term": "Activate Your Deal Roadmap",
+      "term_ko": "거래 로드맵 가동"
+    },
+    {
+      "term": "Bitcoin Nvidia Da",
+      "term_ko": "비트코인 엔비디아 다"
+    },
+    {
+      "term": "K-shaped Despite Semiconductor Strength",
+      "term_ko": "반도체 호조에도 K자형"
+    },
+    {
+      "term": "Kimchi Bond Public Offering Organized by Kium Securities",
+      "term_ko": "키움증권공모 김치본드 단독주관"
+    },
+    {
+      "term": "Initial Post-deregulation",
+      "term_ko": "규제완화 후 최초"
+    },
+    {
+      "term": "Rising Market Interest Rates",
+      "term_ko": "시장금리 상승 주담대"
+    },
+    {
+      "term": "Rising Mortgage Rates",
+      "term_ko": "전세대출 금리 오름세"
+    },
+    {
+      "term": "After Sole-source Deregulation",
+      "term_ko": "단독주관 규제완화 후"
+    },
+    {
+      "term": "Deregulating Kiwi Securities",
+      "term_ko": "키움증권 규제 완화"
+    },
+    {
+      "term": "First Public Offering After",
+      "term_ko": "후 첫 공모"
+    },
+    {
+      "term": "Korea Rare Earths",
+      "term_ko": "한국 희토류"
+    },
+    {
+      "term": "Exchange Next Year",
+      "term_ko": "거래소 내년"
+    },
+    {
+      "term": "On-site Burden",
+      "term_ko": "현장은 부담"
+    },
+    {
+      "term": "Resume in a Bay",
+      "term_ko": "만에 재개"
+    },
+    {
+      "term": "Tesla Extend Deadline",
+      "term_ko": "테슬라 마감일 연장"
+    },
+    {
+      "term": "Graphite Supply Dispute",
+      "term_ko": "흑연 공급 분쟁"
+    },
+    {
+      "term": "Trump Tariff Threat",
+      "term_ko": "트럼프 관세 위협"
+    },
+    {
+      "term": "Sunchon National University",
+      "term_ko": "순천대학교"
+    },
+    {
+      "term": "Syrah Resources",
+      "term_ko": "시라 리소스"
+    },
+    {
+      "term": "Futures Slide",
+      "term_ko": "선물 슬라이드"
+    },
+    {
+      "term": "Rate Cut Expectations",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Acquisition Emat": {
+      "en": "Acquisition Emat",
+      "ko": "기업 인수 EMAT",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "Ing Korea Economy": {
+      "en": "Ing Korea Economy",
+      "ko": "ING 한국 경제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "24 Hours a Day, 7 Days a Week": {
+      "en": "24 Hours a Day, 7 Days a Week",
+      "ko": "말 하루 24시간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "Zetched Silver 1 Year": {
+      "en": "Zetched Silver 1 Year",
+      "ko": "제쳤다 은銀 1년간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "Deepening Exchange Rate 1500 Krw": {
+      "en": "Deepening Exchange Rate 1500 Krw",
+      "ko": "심화 환율 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "Hyundai Card $20 Million": {
+      "en": "Hyundai Card $20 Million",
+      "ko": "현대카드 2000만달러 규모",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "15 Years of Kimchi Bonds": {
+      "en": "15 Years of Kimchi Bonds",
+      "ko": "김치본드 발행 15년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "Nasdaq Listing Success": {
+      "en": "Nasdaq Listing Success",
+      "ko": "나스닥 상장 성공",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "Activate Your Deal Roadmap": {
+      "en": "Activate Your Deal Roadmap",
+      "ko": "거래 로드맵 가동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.103Z"
+    },
+    "Bitcoin Nvidia Da": {
+      "en": "Bitcoin Nvidia Da",
+      "ko": "비트코인 엔비디아 다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "K-shaped Despite Semiconductor Strength": {
+      "en": "K-shaped Despite Semiconductor Strength",
+      "ko": "반도체 호조에도 K자형",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Kimchi Bond Public Offering Organized by Kium Securities": {
+      "en": "Kimchi Bond Public Offering Organized by Kium Securities",
+      "ko": "키움증권공모 김치본드 단독주관",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Initial Post-deregulation": {
+      "en": "Initial Post-deregulation",
+      "ko": "규제완화 후 최초",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Rising Market Interest Rates": {
+      "en": "Rising Market Interest Rates",
+      "ko": "시장금리 상승 주담대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Rising Mortgage Rates": {
+      "en": "Rising Mortgage Rates",
+      "ko": "전세대출 금리 오름세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "After Sole-source Deregulation": {
+      "en": "After Sole-source Deregulation",
+      "ko": "단독주관 규제완화 후",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Deregulating Kiwi Securities": {
+      "en": "Deregulating Kiwi Securities",
+      "ko": "키움증권 규제 완화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "First Public Offering After": {
+      "en": "First Public Offering After",
+      "ko": "후 첫 공모",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Korea Rare Earths": {
+      "en": "Korea Rare Earths",
+      "ko": "한국 희토류",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Exchange Next Year": {
+      "en": "Exchange Next Year",
+      "ko": "거래소 내년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "On-site Burden": {
+      "en": "On-site Burden",
+      "ko": "현장은 부담",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Resume in a Bay": {
+      "en": "Resume in a Bay",
+      "ko": "만에 재개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Tesla Extend Deadline": {
+      "en": "Tesla Extend Deadline",
+      "ko": "테슬라 마감일 연장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Graphite Supply Dispute": {
+      "en": "Graphite Supply Dispute",
+      "ko": "흑연 공급 분쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Trump Tariff Threat": {
+      "en": "Trump Tariff Threat",
+      "ko": "트럼프 관세 위협",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Sunchon National University": {
+      "en": "Sunchon National University",
+      "ko": "순천대학교",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Syrah Resources": {
+      "en": "Syrah Resources",
+      "ko": "시라 리소스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Futures Slide": {
+      "en": "Futures Slide",
+      "ko": "선물 슬라이드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Rate Cut Expectations": {
+      "en": "Rate Cut Expectations",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-19T06:37:44.104Z"
     }
   }
 }
