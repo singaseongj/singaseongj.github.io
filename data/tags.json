@@ -1,1101 +1,439 @@
 {
+  "generatedAt": "2026-01-20T12:47:17.332Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-01-20",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Trump shakes up NATO",
-      "term_ko": "NATO 흔드는 트럼프",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "NATO 흔드는 트럼프",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "NATO 흔드는 트럼프, TACO 믿고 버티는 월가",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=51388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NATO%20%ED%9D%94%EB%93%9C%EB%8A%94%20%ED%8A%B8%EB%9F%BC%ED%94%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NATO%20%ED%9D%94%EB%93%9C%EB%8A%94%20%ED%8A%B8%EB%9F%BC%ED%94%84"
-      },
-      "top_headlines": [
-        {
-          "title": "NATO 흔드는 트럼프, TACO 믿고 버티는 월가",
-          "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=51388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump Shakes Up Nato",
+      "term_ko": "NATO 흔드는 트럼프"
     },
     {
-      "term": "Live NYSE 24h",
-      "term_ko": "산다 뉴욕증시 24시간",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "산다 뉴욕증시 24시간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“토요일 밤 미국주식 산다”…뉴욕증시, 24시간 ‘블록체인 거래소’ ...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005624283?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%EB%8B%A4%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%2024%EC%8B%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%EB%8B%A4%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%2024%EC%8B%9C%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "“토요일 밤 미국주식 산다”…뉴욕증시, 24시간 ‘블록체인 거래소’ ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005624283?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Live Nyse 24h",
+      "term_ko": "산다 뉴욕증시 24시간"
     },
     {
       "term": "Stock Market Briefing January",
-      "term_ko": "증시 브리핑 1월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 1월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 19일] 다우존스, 나스닥, S&P 500 모두 소폭 하...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195940"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 19일] 다우존스, 나스닥, S&P 500 모두 소폭 하...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195940",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 1월"
     },
     {
       "term": "19th Dow Jones Nasdaq",
-      "term_ko": "19일 다우존스 나스닥",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "19일 다우존스 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 19일] 다우존스, 나스닥, S&P 500 모두 소폭 하...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195940"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=19%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=19%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 19일] 다우존스, 나스닥, S&P 500 모두 소폭 하...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195940",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "19일 다우존스 나스닥"
     },
     {
-      "term": "10% interest rate on the main loan",
-      "term_ko": "주담대 10% 금리",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 10% 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 10% 금리 공포 … 통화정책 애매함이 만든 파도 [신희강의 코드...",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2026/01/20/2026012000295.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%2010%25%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%2010%25%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 10% 금리 공포 … 통화정책 애매함이 만든 파도 [신희강의 코드...",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2026/01/20/2026012000295.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "10% Interest Rate on the Main Loan",
+      "term_ko": "주담대 10% 금리"
     },
     {
-      "term": "Become Card 15 years",
-      "term_ko": "된다 카드사 15년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "된다 카드사 15년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"원화 채권으론 안 된다\"…카드사, 15년 만에 '김치본드' 긴급 수혈",
-              "link": "https://www.ziksir.com/news/articleView.html?idxno=120560"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%90%9C%EB%8B%A4%20%EC%B9%B4%EB%93%9C%EC%82%AC%2015%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%90%9C%EB%8B%A4%20%EC%B9%B4%EB%93%9C%EC%82%AC%2015%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "\"원화 채권으론 안 된다\"…카드사, 15년 만에 '김치본드' 긴급 수혈",
-          "summary": "",
-          "link": "https://www.ziksir.com/news/articleView.html?idxno=120560",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Become Card 15 Years",
+      "term_ko": "된다 카드사 15년"
     },
     {
-      "term": "Interest rate 1% Gyeongnam",
-      "term_ko": "금리 1% 경남",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 1% 경남",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'금리 1%'…경남 농어촌진흥기금 350억 푼다",
-              "link": "https://n.news.naver.com/mnews/article/079/0004107087?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%201%25%20%EA%B2%BD%EB%82%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%201%25%20%EA%B2%BD%EB%82%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "'금리 1%'…경남 농어촌진흥기금 350억 푼다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/079/0004107087?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Rate 1% Gyeongnam",
+      "term_ko": "금리 1% 경남"
     },
     {
-      "term": "35 billion for the Rural Development Fund",
-      "term_ko": "농어촌진흥기금 350억 푼다",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "농어촌진흥기금 350억 푼다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'금리 1%'…경남 농어촌진흥기금 350억 푼다",
-              "link": "https://n.news.naver.com/mnews/article/079/0004107087?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%8D%EC%96%B4%EC%B4%8C%EC%A7%84%ED%9D%A5%EA%B8%B0%EA%B8%88%20350%EC%96%B5%20%ED%91%BC%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%8D%EC%96%B4%EC%B4%8C%EC%A7%84%ED%9D%A5%EA%B8%B0%EA%B8%88%20350%EC%96%B5%20%ED%91%BC%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'금리 1%'…경남 농어촌진흥기금 350억 푼다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/079/0004107087?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "35 Billion for the Rural Development Fund",
+      "term_ko": "농어촌진흥기금 350억 푼다"
     },
     {
-      "term": "Saturday Night US Stocks",
-      "term_ko": "토요일 밤 미국주식",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "토요일 밤 미국주식",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“토요일 밤 미국주식 산다”…뉴욕증시, 24시간 ‘블록체인 거래소’ ...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005624283?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%EC%9A%94%EC%9D%BC%20%EB%B0%A4%20%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%EC%9A%94%EC%9D%BC%20%EB%B0%A4%20%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "“토요일 밤 미국주식 산다”…뉴욕증시, 24시간 ‘블록체인 거래소’ ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005624283?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Saturday Night Us Stocks",
+      "term_ko": "토요일 밤 미국주식"
     },
     {
-      "term": "Private high exchange rates and high interest rates continue",
-      "term_ko": "사설 고환율‧고금리 이어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사설 고환율‧고금리 이어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 고환율‧고금리 이어 고물가 징후 갈수록 팍팍해지는 서민의 삶",
-              "link": "https://www.asiatime.co.kr/article/20260120500357"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8%E2%80%A7%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EC%9D%B4%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8%E2%80%A7%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EC%9D%B4%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 고환율‧고금리 이어 고물가 징후 갈수록 팍팍해지는 서민의 삶",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260120500357",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Private High Exchange Rates and High Interest Rates Continue",
+      "term_ko": "사설 고환율‧고금리 이어"
     },
     {
-      "term": "Signs of rising prices",
-      "term_ko": "고물가 징후 갈수록",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고물가 징후 갈수록",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 고환율‧고금리 이어 고물가 징후 갈수록 팍팍해지는 서민의 삶",
-              "link": "https://www.asiatime.co.kr/article/20260120500357"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EB%AC%BC%EA%B0%80%20%EC%A7%95%ED%9B%84%20%EA%B0%88%EC%88%98%EB%A1%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EB%AC%BC%EA%B0%80%20%EC%A7%95%ED%9B%84%20%EA%B0%88%EC%88%98%EB%A1%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 고환율‧고금리 이어 고물가 징후 갈수록 팍팍해지는 서민의 삶",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260120500357",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Signs of Rising Prices",
+      "term_ko": "고물가 징후 갈수록"
     },
     {
-      "term": "The life of the common man",
-      "term_ko": "팍팍해지는 서민의 삶",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "팍팍해지는 서민의 삶",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 고환율‧고금리 이어 고물가 징후 갈수록 팍팍해지는 서민의 삶",
-              "link": "https://www.asiatime.co.kr/article/20260120500357"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%8D%ED%8C%8D%ED%95%B4%EC%A7%80%EB%8A%94%20%EC%84%9C%EB%AF%BC%EC%9D%98%20%EC%82%B6",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%8D%ED%8C%8D%ED%95%B4%EC%A7%80%EB%8A%94%20%EC%84%9C%EB%AF%BC%EC%9D%98%20%EC%82%B6"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 고환율‧고금리 이어 고물가 징후 갈수록 팍팍해지는 서민의 삶",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260120500357",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Life of the Common Man",
+      "term_ko": "팍팍해지는 서민의 삶"
     },
     {
-      "term": "Take a long breath to respond",
-      "term_ko": "긴 호흡으로 대응할",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "긴 호흡으로 대응할",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "긴 호흡으로 대응할 필요",
-              "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3010740"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B4%20%ED%98%B8%ED%9D%A1%EC%9C%BC%EB%A1%9C%20%EB%8C%80%EC%9D%91%ED%95%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B4%20%ED%98%B8%ED%9D%A1%EC%9C%BC%EB%A1%9C%20%EB%8C%80%EC%9D%91%ED%95%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "긴 호흡으로 대응할 필요",
-          "summary": "",
-          "link": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3010740",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Take a Long Breath to Respond",
+      "term_ko": "긴 호흡으로 대응할"
     },
     {
-      "term": "Not with fiat bonds",
-      "term_ko": "원화 채권으론 안",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원화 채권으론 안",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"원화 채권으론 안 된다\"…카드사, 15년 만에 '김치본드' 긴급 수혈",
-              "link": "https://www.ziksir.com/news/articleView.html?idxno=120560"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%ED%99%94%20%EC%B1%84%EA%B6%8C%EC%9C%BC%EB%A1%A0%20%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%ED%99%94%20%EC%B1%84%EA%B6%8C%EC%9C%BC%EB%A1%A0%20%EC%95%88"
-      },
-      "top_headlines": [
-        {
-          "title": "\"원화 채권으론 안 된다\"…카드사, 15년 만에 '김치본드' 긴급 수혈",
-          "summary": "",
-          "link": "https://www.ziksir.com/news/articleView.html?idxno=120560",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Not with Fiat Bonds",
+      "term_ko": "원화 채권으론 안"
     },
     {
       "term": "Only Kimchi Bond Emergency",
-      "term_ko": "만에 김치본드 긴급",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 김치본드 긴급",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"원화 채권으론 안 된다\"…카드사, 15년 만에 '김치본드' 긴급 수혈",
-              "link": "https://www.ziksir.com/news/articleView.html?idxno=120560"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EA%B8%B4%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EA%B8%B4%EA%B8%89"
-      },
-      "top_headlines": [
-        {
-          "title": "\"원화 채권으론 안 된다\"…카드사, 15년 만에 '김치본드' 긴급 수혈",
-          "summary": "",
-          "link": "https://www.ziksir.com/news/articleView.html?idxno=120560",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "만에 김치본드 긴급"
     },
     {
       "term": "New Year's Interview Global",
-      "term_ko": "신년 인터뷰 세계적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신년 인터뷰 세계적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[신년 인터뷰] 세계적 투자가 짐 로저스회장 \"지금 주식투자할 때 아니...",
-              "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=540902"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EB%85%84%20%EC%9D%B8%ED%84%B0%EB%B7%B0%20%EC%84%B8%EA%B3%84%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EB%85%84%20%EC%9D%B8%ED%84%B0%EB%B7%B0%20%EC%84%B8%EA%B3%84%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[신년 인터뷰] 세계적 투자가 짐 로저스회장 \"지금 주식투자할 때 아니...",
-          "summary": "",
-          "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=540902",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "신년 인터뷰 세계적"
     },
     {
       "term": "Investor Jim Rogers, Chairman",
-      "term_ko": "투자가 짐 로저스회장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자가 짐 로저스회장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[신년 인터뷰] 세계적 투자가 짐 로저스회장 \"지금 주식투자할 때 아니...",
-              "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=540902"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%EA%B0%80%20%EC%A7%90%20%EB%A1%9C%EC%A0%80%EC%8A%A4%ED%9A%8C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%EA%B0%80%20%EC%A7%90%20%EB%A1%9C%EC%A0%80%EC%8A%A4%ED%9A%8C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[신년 인터뷰] 세계적 투자가 짐 로저스회장 \"지금 주식투자할 때 아니...",
-          "summary": "",
-          "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=540902",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자가 짐 로저스회장"
     },
     {
-      "term": "When to invest in stocks now",
-      "term_ko": "지금 주식투자할 때",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지금 주식투자할 때",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[신년 인터뷰] 세계적 투자가 짐 로저스회장 \"지금 주식투자할 때 아니...",
-              "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=540902"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EA%B8%88%20%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%ED%95%A0%20%EB%95%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EA%B8%88%20%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%ED%95%A0%20%EB%95%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[신년 인터뷰] 세계적 투자가 짐 로저스회장 \"지금 주식투자할 때 아니...",
-          "summary": "",
-          "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=540902",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "When to Invest in Stocks Now",
+      "term_ko": "지금 주식투자할 때"
     },
     {
-      "term": "Blockchain exchanges",
-      "term_ko": "블록체인 거래소",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "블록체인 거래소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“토요일 밤 미국주식 산다”…뉴욕증시, 24시간 ‘블록체인 거래소’ ...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005624283?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EA%B1%B0%EB%9E%98%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EA%B1%B0%EB%9E%98%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "“토요일 밤 미국주식 산다”…뉴욕증시, 24시간 ‘블록체인 거래소’ ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005624283?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Blockchain Exchanges",
+      "term_ko": "블록체인 거래소"
     },
     {
-      "term": "All slightly",
-      "term_ko": "모두 소폭",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "모두 소폭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 19일] 다우존스, 나스닥, S&P 500 모두 소폭 하...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=195940"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EB%91%90%20%EC%86%8C%ED%8F%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EB%91%90%20%EC%86%8C%ED%8F%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 19일] 다우존스, 나스닥, S&P 500 모두 소폭 하...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=195940",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "All Slightly",
+      "term_ko": "모두 소폭"
     },
     {
       "term": "Korean Investors Pile",
-      "term_ko": "한국 투자자 파일",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Korean Investors Pile",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Korean investors pile into US stocks despite weaker won",
-              "link": "https://n.news.naver.com/mnews/article/044/0000279099?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korean%20Investors%20Pile",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korean%20Investors%20Pile"
-      },
-      "top_headlines": [
-        {
-          "title": "Korean investors pile into US stocks despite weaker won",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000279099?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 투자자 파일"
     },
     {
       "term": "Despite Weaker Won",
-      "term_ko": "원화 약세에도 불구하고",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Despite Weaker Won",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Korean investors pile into US stocks despite weaker won",
-              "link": "https://n.news.naver.com/mnews/article/044/0000279099?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Despite%20Weaker%20Won",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Despite%20Weaker%20Won"
-      },
-      "top_headlines": [
-        {
-          "title": "Korean investors pile into US stocks despite weaker won",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000279099?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "원화 약세에도 불구하고"
     },
     {
       "term": "Korean Investors Boost",
-      "term_ko": "한국 투자자 증가",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Korean Investors Boost",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Korean Investors Boost U.S. Stock Holdings to 250 Trillion Won",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261264"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korean%20Investors%20Boost",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korean%20Investors%20Boost"
-      },
-      "top_headlines": [
-        {
-          "title": "Korean Investors Boost U.S. Stock Holdings to 250 Trillion Won",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261264",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 투자자 증가"
     },
     {
       "term": "Trump Tariff Threats",
-      "term_ko": "트럼프 관세 위협",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Tariff Threats",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Trump Tariff Threats and Earnings Loom",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threats-and-Earnings-Loom-1731338"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Tariff%20Threats",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Tariff%20Threats"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Trump Tariff Threats and Earnings Loom",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threats-and-Earnings-Loom-1731338",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "트럼프 관세 위협"
     },
     {
       "term": "Trillion Won",
-      "term_ko": "조 원",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trillion Won",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Korean Investors Boost U.S. Stock Holdings to 250 Trillion Won",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261264"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trillion%20Won",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trillion%20Won"
-      },
-      "top_headlines": [
-        {
-          "title": "Korean Investors Boost U.S. Stock Holdings to 250 Trillion Won",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=261264",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "조 원"
     },
     {
       "term": "Futures Slide",
-      "term_ko": "선물 슬라이드",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Slide",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Trump Tariff Threats and Earnings Loom",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threats-and-Earnings-Loom-1731338"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Slide",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Slide"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Trump Tariff Threats and Earnings Loom",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threats-and-Earnings-Loom-1731338",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 슬라이드"
     },
     {
       "term": "Earnings Loom",
-      "term_ko": "수익 창출",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Earnings Loom",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Trump Tariff Threats and Earnings Loom",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threats-and-Earnings-Loom-1731338"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Earnings%20Loom",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Earnings%20Loom"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Trump Tariff Threats and Earnings Loom",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Trump-Tariff-Threats-and-Earnings-Loom-1731338",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수익 창출"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-01-20T15:37:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-01-20T06:38:55.798Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-01-20T15:37:48+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Trump Shakes Up Nato",
+      "term_ko": "NATO 흔드는 트럼프"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-01-20T15:37:48+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-01-20T15:37:48+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Live Nyse 24h",
+      "term_ko": "산다 뉴욕증시 24시간"
+    },
+    {
+      "term": "Stock Market Briefing January",
+      "term_ko": "증시 브리핑 1월"
+    },
+    {
+      "term": "19th Dow Jones Nasdaq",
+      "term_ko": "19일 다우존스 나스닥"
+    },
+    {
+      "term": "10% Interest Rate on the Main Loan",
+      "term_ko": "주담대 10% 금리"
+    },
+    {
+      "term": "Become Card 15 Years",
+      "term_ko": "된다 카드사 15년"
+    },
+    {
+      "term": "Interest Rate 1% Gyeongnam",
+      "term_ko": "금리 1% 경남"
+    },
+    {
+      "term": "35 Billion for the Rural Development Fund",
+      "term_ko": "농어촌진흥기금 350억 푼다"
+    },
+    {
+      "term": "Saturday Night Us Stocks",
+      "term_ko": "토요일 밤 미국주식"
+    },
+    {
+      "term": "Private High Exchange Rates and High Interest Rates Continue",
+      "term_ko": "사설 고환율‧고금리 이어"
+    },
+    {
+      "term": "Signs of Rising Prices",
+      "term_ko": "고물가 징후 갈수록"
+    },
+    {
+      "term": "The Life of the Common Man",
+      "term_ko": "팍팍해지는 서민의 삶"
+    },
+    {
+      "term": "Take a Long Breath to Respond",
+      "term_ko": "긴 호흡으로 대응할"
+    },
+    {
+      "term": "Not with Fiat Bonds",
+      "term_ko": "원화 채권으론 안"
+    },
+    {
+      "term": "Only Kimchi Bond Emergency",
+      "term_ko": "만에 김치본드 긴급"
+    },
+    {
+      "term": "New Year's Interview Global",
+      "term_ko": "신년 인터뷰 세계적"
+    },
+    {
+      "term": "Investor Jim Rogers, Chairman",
+      "term_ko": "투자가 짐 로저스회장"
+    },
+    {
+      "term": "When to Invest in Stocks Now",
+      "term_ko": "지금 주식투자할 때"
+    },
+    {
+      "term": "Blockchain Exchanges",
+      "term_ko": "블록체인 거래소"
+    },
+    {
+      "term": "All Slightly",
+      "term_ko": "모두 소폭"
+    },
+    {
+      "term": "Korean Investors Pile",
+      "term_ko": "한국 투자자 파일"
+    },
+    {
+      "term": "Despite Weaker Won",
+      "term_ko": "원화 약세에도 불구하고"
+    },
+    {
+      "term": "Korean Investors Boost",
+      "term_ko": "한국 투자자 증가"
+    },
+    {
+      "term": "Trump Tariff Threats",
+      "term_ko": "트럼프 관세 위협"
+    },
+    {
+      "term": "Trillion Won",
+      "term_ko": "조 원"
+    },
+    {
+      "term": "Futures Slide",
+      "term_ko": "선물 슬라이드"
+    },
+    {
+      "term": "Earnings Loom",
+      "term_ko": "수익 창출"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Trump Shakes Up Nato": {
+      "en": "Trump Shakes Up Nato",
+      "ko": "NATO 흔드는 트럼프",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Live Nyse 24h": {
+      "en": "Live Nyse 24h",
+      "ko": "산다 뉴욕증시 24시간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Stock Market Briefing January": {
+      "en": "Stock Market Briefing January",
+      "ko": "증시 브리핑 1월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "19th Dow Jones Nasdaq": {
+      "en": "19th Dow Jones Nasdaq",
+      "ko": "19일 다우존스 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "10% Interest Rate on the Main Loan": {
+      "en": "10% Interest Rate on the Main Loan",
+      "ko": "주담대 10% 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Become Card 15 Years": {
+      "en": "Become Card 15 Years",
+      "ko": "된다 카드사 15년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Interest Rate 1% Gyeongnam": {
+      "en": "Interest Rate 1% Gyeongnam",
+      "ko": "금리 1% 경남",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "35 Billion for the Rural Development Fund": {
+      "en": "35 Billion for the Rural Development Fund",
+      "ko": "농어촌진흥기금 350억 푼다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Saturday Night Us Stocks": {
+      "en": "Saturday Night Us Stocks",
+      "ko": "토요일 밤 미국주식",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Private High Exchange Rates and High Interest Rates Continue": {
+      "en": "Private High Exchange Rates and High Interest Rates Continue",
+      "ko": "사설 고환율‧고금리 이어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Signs of Rising Prices": {
+      "en": "Signs of Rising Prices",
+      "ko": "고물가 징후 갈수록",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "The Life of the Common Man": {
+      "en": "The Life of the Common Man",
+      "ko": "팍팍해지는 서민의 삶",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Take a Long Breath to Respond": {
+      "en": "Take a Long Breath to Respond",
+      "ko": "긴 호흡으로 대응할",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Not with Fiat Bonds": {
+      "en": "Not with Fiat Bonds",
+      "ko": "원화 채권으론 안",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Only Kimchi Bond Emergency": {
+      "en": "Only Kimchi Bond Emergency",
+      "ko": "만에 김치본드 긴급",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "New Year's Interview Global": {
+      "en": "New Year's Interview Global",
+      "ko": "신년 인터뷰 세계적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Investor Jim Rogers, Chairman": {
+      "en": "Investor Jim Rogers, Chairman",
+      "ko": "투자가 짐 로저스회장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "When to Invest in Stocks Now": {
+      "en": "When to Invest in Stocks Now",
+      "ko": "지금 주식투자할 때",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Blockchain Exchanges": {
+      "en": "Blockchain Exchanges",
+      "ko": "블록체인 거래소",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "All Slightly": {
+      "en": "All Slightly",
+      "ko": "모두 소폭",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Korean Investors Pile": {
+      "en": "Korean Investors Pile",
+      "ko": "한국 투자자 파일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Despite Weaker Won": {
+      "en": "Despite Weaker Won",
+      "ko": "원화 약세에도 불구하고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Korean Investors Boost": {
+      "en": "Korean Investors Boost",
+      "ko": "한국 투자자 증가",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Trump Tariff Threats": {
+      "en": "Trump Tariff Threats",
+      "ko": "트럼프 관세 위협",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Trillion Won": {
+      "en": "Trillion Won",
+      "ko": "조 원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Futures Slide": {
+      "en": "Futures Slide",
+      "ko": "선물 슬라이드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Earnings Loom": {
+      "en": "Earnings Loom",
+      "ko": "수익 창출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-01-20T12:47:17.332Z"
     }
   }
 }
