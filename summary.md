@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-22T15:37:23+09:00 (KST)**
+- Generated: **2026-01-22T21:48:30+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -52,7 +52,7 @@
 **네오위즈** (095660.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.6%**, 20d **2.4%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **2.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EB%84%A4%EC%98%A4%EC%9C%84%EC%A6%88
@@ -103,7 +103,7 @@
 **에스엘** (005850.KS)
 
 - News (7d): **10** (blogs: 10) — momentum: **high**, sentiment: **slightly negative (-0.20)**
-- Returns: 5d **29.0%**, 20d **39.4%**; volatility (20d): **unknown**
+- Returns: 5d **31.1%**, 20d **41.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%97%98
 
@@ -124,31 +124,38 @@
 **현대차** (005380.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **24.9%**, 20d **82.4%**; volatility (20d): **unknown**
+- Returns: 5d **25.4%**, 20d **83.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%B0%A8
 
 ### AGGRESSIVE (5)
 
+**HL만도** (204320.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **8.6%**, 20d **22.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HL%EB%A7%8C%EB%8F%84
+
 **SK아이이테크놀로지** (361610.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.6%**, 20d **-3.8%**; volatility (20d): **unknown**
+- Returns: 5d **8.8%**, 20d **-3.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%EC%95%84%EC%9D%B4%EC%9D%B4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
 
 **대우건설** (047040.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **24.4%**, 20d **30.5%**; volatility (20d): **unknown**
+- Returns: 5d **25.2%**, 20d **31.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9A%B0%EA%B1%B4%EC%84%A4
 
 **동원산업** (006040.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.2%**, 20d **-6.6%**; volatility (20d): **unknown**
+- Returns: 5d **-2.0%**, 20d **-6.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8F%99%EC%9B%90%EC%82%B0%EC%97%85
 
@@ -158,13 +165,6 @@
 - Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%9D%B4%EB%A7%88%ED%8A%B8
-
-**효성티앤씨** (298020.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **46.5%**, 20d **63.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%9A%A8%EC%84%B1%ED%8B%B0%EC%95%A4%EC%94%A8
 
 ## NASDAQ 100
 
