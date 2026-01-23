@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-01-23T21:46:35+09:00",
+  "generatedAtKST": "2026-01-24T03:35:33+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -519,34 +519,6 @@
     {
       "market": "KOSPI",
       "bucket": "aggressive",
-      "name": "영원무역",
-      "ticker": "139480.KS",
-      "sector": null,
-      "metrics": {
-        "ret5": 4.431137724550898,
-        "ret20": 2.2274325908558033,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%98%81%EC%9B%90%EB%AC%B4%EC%97%AD"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **4.4%**, 20d **2.2%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=%EC%98%81%EC%9B%90%EB%AC%B4%EC%97%AD"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "aggressive",
       "name": "팬오션",
       "ticker": "028670.KS",
       "sector": null,
@@ -570,6 +542,34 @@
         "Returns: 5d **6.7%**, 20d **12.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%ED%8C%AC%EC%98%A4%EC%85%98"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "aggressive",
+      "name": "현대제철",
+      "ticker": "004020.KS",
+      "sector": null,
+      "metrics": {
+        "ret5": 13.290113452188008,
+        "ret20": 13.658536585365855,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.1,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%A0%9C%EC%B2%A0"
+      },
+      "bullets": [
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**",
+        "Returns: 5d **13.3%**, 20d **13.7%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%A0%9C%EC%B2%A0"
       ]
     },
     {
@@ -721,8 +721,8 @@
       "ticker": "ALNY",
       "sector": null,
       "metrics": {
-        "ret5": 0.8559163642304622,
-        "ret20": null,
+        "ret5": 1.1106135183200603,
+        "ret20": -8.891399829860871,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -737,9 +737,37 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.9%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **1.1%**, 20d **-8.9%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=Alnylam%20Pharmaceuticals"
+      ]
+    },
+    {
+      "market": "NASDAQ 100",
+      "bucket": "aggressive",
+      "name": "Atlassian",
+      "ticker": "TEAM",
+      "sector": null,
+      "metrics": {
+        "ret5": 3.200241208880862,
+        "ret20": -12.835335080496515,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Atlassian"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **3.2%**, 20d **-12.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=Atlassian"
       ]
     },
     {
@@ -777,8 +805,8 @@
       "ticker": "FER",
       "sector": null,
       "metrics": {
-        "ret5": -0.31055763966716343,
-        "ret20": null,
+        "ret5": -0.7870490171064313,
+        "ret20": 1.8445108424049665,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -793,7 +821,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.3%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-0.8%**, 20d **1.8%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=Ferrovial"
       ]
@@ -827,42 +855,14 @@
       ]
     },
     {
-      "market": "NASDAQ 100",
-      "bucket": "aggressive",
-      "name": "Zscaler",
-      "ticker": "ZS",
-      "sector": null,
-      "metrics": {
-        "ret5": -0.2684338749194442,
-        "ret20": -5.095055469485234,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Zscaler"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=Zscaler"
-      ]
-    },
-    {
       "market": "S&P 500",
       "bucket": "safe",
       "name": "Alphabet Inc.",
       "ticker": "GOOGL",
       "sector": "Communication Services",
       "metrics": {
-        "ret5": -1.5781288264535356,
-        "ret20": null,
+        "ret5": -1.2080019918318388,
+        "ret20": 4.5840634268555265,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -877,7 +877,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-1.6%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.2%**, 20d **4.6%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Communication Services**",
         "News search: https://www.google.com/search?q=Alphabet%20Inc."
@@ -1002,12 +1002,12 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Centene Corporation",
-      "ticker": "CNC",
-      "sector": "Healthcare",
+      "name": "Devon Energy",
+      "ticker": "DVN",
+      "sector": "Energy",
       "metrics": {
-        "ret5": -1.9047601129539662,
-        "ret20": 11.826285881301535,
+        "ret5": 5.269398041201442,
+        "ret20": 5.331762859151901,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1018,25 +1018,25 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Centene%20Corporation"
+        "searchUrl": "https://www.google.com/search?q=Devon%20Energy"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-1.9%**, 20d **11.8%**; volatility (20d): **unknown**",
+        "Returns: 5d **5.3%**, 20d **5.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Healthcare**",
-        "News search: https://www.google.com/search?q=Centene%20Corporation"
+        "Sector: **Energy**",
+        "News search: https://www.google.com/search?q=Devon%20Energy"
       ]
     },
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Cincinnati Financial",
-      "ticker": "CINF",
-      "sector": "Financial Services",
+      "name": "International Paper",
+      "ticker": "IP",
+      "sector": "Materials",
       "metrics": {
-        "ret5": 0.2342991374240462,
-        "ret20": 3.009832228837551,
+        "ret5": -2.1415514808950156,
+        "ret20": 8.27420036847695,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1047,43 +1047,14 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Cincinnati%20Financial"
+        "searchUrl": "https://www.google.com/search?q=International%20Paper"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.2%**, 20d **3.0%**; volatility (20d): **unknown**",
+        "Returns: 5d **-2.1%**, 20d **8.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Financial Services**",
-        "News search: https://www.google.com/search?q=Cincinnati%20Financial"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
-      "name": "Corpay",
-      "ticker": "CPAY",
-      "sector": "Financial Services",
-      "metrics": {
-        "ret5": 2.7874269743860487,
-        "ret20": -1.190914261794201,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Corpay"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.8%**, 20d **-1.2%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Financial Services**",
-        "News search: https://www.google.com/search?q=Corpay"
+        "Sector: **Materials**",
+        "News search: https://www.google.com/search?q=International%20Paper"
       ]
     },
     {
@@ -1093,8 +1064,8 @@
       "ticker": "TROW",
       "sector": "Financial Services",
       "metrics": {
-        "ret5": 0.9615352804111703,
-        "ret20": null,
+        "ret5": -1.2718951431709349,
+        "ret20": 1.8504307164722467,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1109,7 +1080,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.0%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.3%**, 20d **1.9%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Financial Services**",
         "News search: https://www.google.com/search?q=T.%20Rowe%20Price"
@@ -1142,6 +1113,35 @@
         "Earnings window (±10d): **No**",
         "Sector: **Energy**",
         "News search: https://www.google.com/search?q=Texas%20Pacific%20Land%20Corporation"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Williams-Sonoma, Inc.",
+      "ticker": "WSM",
+      "sector": "Consumer Discretionary",
+      "metrics": {
+        "ret5": -3.119049072265625,
+        "ret20": 8.154801067523081,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Williams-Sonoma%2C%20Inc."
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-3.1%**, 20d **8.2%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Consumer Discretionary**",
+        "News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc."
       ]
     }
   ]
