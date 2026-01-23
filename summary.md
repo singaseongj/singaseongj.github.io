@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-01-23T21:46:35+09:00 (KST)**
+- Generated: **2026-01-24T03:35:33+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -152,19 +152,19 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=OCI%ED%99%80%EB%94%A9%EC%8A%A4
 
-**영원무역** (139480.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.4%**, 20d **2.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%98%81%EC%9B%90%EB%AC%B4%EC%97%AD
-
 **팬오션** (028670.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **6.7%**, 20d **12.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%8C%AC%EC%98%A4%EC%85%98
+
+**현대제철** (004020.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- Returns: 5d **13.3%**, 20d **13.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%A0%9C%EC%B2%A0
 
 ## NASDAQ 100
 
@@ -212,9 +212,16 @@
 **Alnylam Pharmaceuticals** (ALNY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **1.1%**, 20d **-8.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Alnylam%20Pharmaceuticals
+
+**Atlassian** (TEAM)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.2%**, 20d **-12.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Atlassian
 
 **Coca-Cola Europacific Partners** (CCEP)
 
@@ -226,7 +233,7 @@
 **Ferrovial** (FER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-0.8%**, 20d **1.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Ferrovial
 
@@ -237,13 +244,6 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=MicroStrategy
 
-**Zscaler** (ZS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Zscaler
-
 ## S&P 500
 
 ### SAFE (5)
@@ -251,7 +251,7 @@
 **Alphabet Inc.** (GOOGL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.6%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.2%**, 20d **4.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Communication Services**
 - News search: https://www.google.com/search?q=Alphabet%20Inc.
@@ -290,34 +290,26 @@
 
 ### AGGRESSIVE (5)
 
-**Centene Corporation** (CNC)
+**Devon Energy** (DVN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.9%**, 20d **11.8%**; volatility (20d): **unknown**
+- Returns: 5d **5.3%**, 20d **5.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Centene%20Corporation
+- Sector: **Energy**
+- News search: https://www.google.com/search?q=Devon%20Energy
 
-**Cincinnati Financial** (CINF)
+**International Paper** (IP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **3.0%**; volatility (20d): **unknown**
+- Returns: 5d **-2.1%**, 20d **8.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=Cincinnati%20Financial
-
-**Corpay** (CPAY)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.8%**, 20d **-1.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=Corpay
+- Sector: **Materials**
+- News search: https://www.google.com/search?q=International%20Paper
 
 **T. Rowe Price** (TROW)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.3%**, 20d **1.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=T.%20Rowe%20Price
@@ -329,4 +321,12 @@
 - Earnings window (±10d): **No**
 - Sector: **Energy**
 - News search: https://www.google.com/search?q=Texas%20Pacific%20Land%20Corporation
+
+**Williams-Sonoma, Inc.** (WSM)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.1%**, 20d **8.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc.
 
