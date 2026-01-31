@@ -82,12 +82,18 @@ async function yahooQuotes(tickers) {
 async function finnhubQuotes(tickers) {
   const key = process.env.FINNHUB_API_KEY;
   if (!key || !tickers.length) return [];
+  const allowKrx = process.env.FINNHUB_ALLOW_KRX === '1';
+  const filtered = allowKrx ? tickers : tickers.filter(t => !/\.K[QS]$/i.test(t || ''));
+  if (!allowKrx && filtered.length !== tickers.length) {
+    console.warn('[finnhub] skipped KRX tickers; set FINNHUB_ALLOW_KRX=1 to include');
+  }
+  if (!filtered.length) return [];
   const out = [];
   // simple p-map with low concurrency
   let i = 0;
   async function worker() {
-    while (i < tickers.length) {
-      const t = tickers[i++]; // take next
+    while (i < filtered.length) {
+      const t = filtered[i++]; // take next
       try {
         const j = await fetchJSON(`https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(t)}&token=${key}`);
         out.push({ quote: { symbol: toTicker(t), c: j.c, pc: j.pc } });
@@ -139,4 +145,3 @@ export async function fetchByTickers(tickers, { prefer = ['yahoo', 'finnhub', 't
 }
 
 export { toTicker, mergeQuotes, normalizeQuote };
-
