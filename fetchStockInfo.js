@@ -121,6 +121,8 @@ const KIS_EXCHANGE_TTL_MS = Number(process.env.KIS_EXCHANGE_TTL_MS || 30 * DAY_M
 const KIS_DOMESTIC_WINDOW_DAYS = Number(process.env.KIS_DOMESTIC_WINDOW_DAYS || 12);
 const KIS_OVERSEAS_WINDOW_DAYS = Number(process.env.KIS_OVERSEAS_WINDOW_DAYS || 20);
 const KIS_RECENT_FALLBACK_DAYS = Number(process.env.KIS_RECENT_FALLBACK_DAYS || 3);
+const KIS_BUDGET_MS = Number(process.env.KIS_BUDGET_MS || 25000);
+const KIS_MAX_ERRORS = Number(process.env.KIS_MAX_ERRORS || 6);
 const KIS_OVERSEAS_HINTS = {
   'BRK-B': 'NYS',
   'BRK-A': 'NYS',
@@ -179,6 +181,35 @@ function noteStatus(err) {
   } else {
     consecutive429 = 0;
   }
+}
+
+function createKisGuard(label = 'KIS') {
+  const start = Date.now();
+  let errors = 0;
+  let aborted = false;
+  const budget = Number.isFinite(KIS_BUDGET_MS) ? KIS_BUDGET_MS : 0;
+  const maxErrors = Number.isFinite(KIS_MAX_ERRORS) ? KIS_MAX_ERRORS : 0;
+
+  function shouldAbort() {
+    if (aborted) return true;
+    if (maxErrors > 0 && errors >= maxErrors) {
+      aborted = true;
+      console.warn(`[${label}] aborting after ${errors} errors`);
+      return true;
+    }
+    if (budget > 0 && Date.now() - start > budget) {
+      aborted = true;
+      console.warn(`[${label}] aborting after ${Date.now() - start}ms budget`);
+      return true;
+    }
+    return false;
+  }
+
+  function recordError() {
+    errors += 1;
+  }
+
+  return { shouldAbort, recordError };
 }
 
 async function fetchHistoricalPriceYahoo(ticker, targetDate) {
@@ -305,11 +336,17 @@ async function fetchHistoricalPricesBatch(tickers, targetDate, cache) {
   const out = {};
   const fallback = [];
   const kisEnabled = hasKisCredentials();
+  const kisGuard = createKisGuard('KIS:history');
   let cacheDirty = false;
   const cacheRef = cache || {};
 
   if (kisEnabled) {
-    for (const symbol of uniqueTickers) {
+    for (let idx = 0; idx < uniqueTickers.length; idx++) {
+      const symbol = uniqueTickers[idx];
+      if (kisGuard.shouldAbort()) {
+        fallback.push(...uniqueTickers.slice(idx));
+        break;
+      }
       if (isKrxTicker(symbol)) {
         let resolved = false;
         try {
@@ -321,6 +358,7 @@ async function fetchHistoricalPricesBatch(tickers, targetDate, cache) {
         } catch (err) {
           console.warn(`[KIS:KR] ${symbol} ${err.message}`);
           noteStatus(err);
+          kisGuard.recordError();
         }
         if (!resolved && isRecentDate(targetDate, KIS_RECENT_FALLBACK_DAYS)) {
           try {
@@ -333,6 +371,7 @@ async function fetchHistoricalPricesBatch(tickers, targetDate, cache) {
           } catch (err) {
             console.warn(`[KIS:KR:snapshot] ${symbol} ${err.message}`);
             noteStatus(err);
+            kisGuard.recordError();
           }
         }
         if (!resolved) fallback.push(symbol);
@@ -353,6 +392,7 @@ async function fetchHistoricalPricesBatch(tickers, targetDate, cache) {
         let resolved = false;
         let lastError;
         for (const exchange of exchanges) {
+          if (kisGuard.shouldAbort()) break;
           try {
             const res = await fetchOverseasPriceOnDate(symbol, targetDate, {
               exchange,
@@ -371,10 +411,12 @@ async function fetchHistoricalPricesBatch(tickers, targetDate, cache) {
           } catch (err) {
             lastError = err;
             noteStatus(err);
+            kisGuard.recordError();
           }
         }
         if (!resolved && isRecentDate(targetDate, KIS_RECENT_FALLBACK_DAYS)) {
           for (const exchange of exchanges) {
+            if (kisGuard.shouldAbort()) break;
             try {
               const detail = await fetchOverseasPriceDetail(symbol, exchange, { symbolCandidates });
               const approx = pickOverseasDetailForDate(detail, targetDate);
@@ -390,6 +432,7 @@ async function fetchHistoricalPricesBatch(tickers, targetDate, cache) {
             } catch (err) {
               lastError = err;
               noteStatus(err);
+              kisGuard.recordError();
             }
           }
         }
@@ -471,7 +514,13 @@ async function attachPrices(data, cache) {
   }
 
   if (kisEnabled) {
-    for (const symbol of list) {
+    const kisGuard = createKisGuard('KIS:realtime');
+    for (let idx = 0; idx < list.length; idx++) {
+      const symbol = list[idx];
+      if (kisGuard.shouldAbort()) {
+        console.warn(`[KIS:realtime] skipping ${list.length - idx} remaining symbols`);
+        break;
+      }
       const existing = priceMap[symbol];
       const baseCurrency = existing?.currency || deriveCurrency(symbol);
 
@@ -494,6 +543,7 @@ async function attachPrices(data, cache) {
         } catch (err) {
           console.warn(`[KIS:KR:quote] ${symbol} ${err.message}`);
           noteStatus(err);
+          kisGuard.recordError();
         }
 
         if (snapshot) {
@@ -531,6 +581,7 @@ async function attachPrices(data, cache) {
           } catch (err) {
             console.warn(`[KIS:KR:recent] ${symbol} ${err.message}`);
             noteStatus(err);
+            kisGuard.recordError();
           }
         }
         continue;
@@ -555,12 +606,14 @@ async function attachPrices(data, cache) {
       let resolved = false;
 
       for (const exchange of exchanges) {
+        if (kisGuard.shouldAbort()) break;
         let detail;
         try {
           detail = await fetchOverseasPriceDetail(symbol, exchange, { symbolCandidates });
         } catch (err) {
           console.warn(`[KIS:US:detail] ${symbol}/${exchange} ${err.message}`);
           noteStatus(err);
+          kisGuard.recordError();
         }
 
         if (detail) {
@@ -598,6 +651,7 @@ async function attachPrices(data, cache) {
           } catch (err) {
             console.warn(`[KIS:US:recent] ${symbol}/${exchange} ${err.message}`);
             noteStatus(err);
+            kisGuard.recordError();
           }
         }
 
