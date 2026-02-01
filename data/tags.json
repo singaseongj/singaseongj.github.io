@@ -1,1238 +1,439 @@
 {
+  "generatedAt": "2026-02-01T06:48:10.491Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-01",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "NASDAQ REBN 중국",
-      "term_ko": "NASDAQ REBN 중국",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "NASDAQ REBN 중국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미국 나스닥 상장사 리본커피(Reborn Coffee, Inc., NASDAQ: REBN) 중국 선...",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=376198"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NASDAQ%20REBN%20%EC%A4%91%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NASDAQ%20REBN%20%EC%A4%91%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 나스닥 상장사 리본커피(Reborn Coffee, Inc., NASDAQ: REBN) 중국 선...",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=376198",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "NASDAQ REBN 중국"
     },
     {
       "term": "미디어젠 차량용 AI",
-      "term_ko": "미디어젠 차량용 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미디어젠 차량용 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"운전대 잡고 말만 하세요\"… 미디어젠, '차량용 AI' 전 세계 1위 넘본다",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=424165"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%94%94%EC%96%B4%EC%A0%A0%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%94%94%EC%96%B4%EC%A0%A0%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "\"운전대 잡고 말만 하세요\"… 미디어젠, '차량용 AI' 전 세계 1위 넘본다",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=424165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미디어젠 차량용 AI"
     },
     {
       "term": "코스피 나란히 5000시대",
-      "term_ko": "코스피 나란히 5000시대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 나란히 5000시대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'나스닥·비트코인 제친' 금·코스피, 나란히 '5000시대 진입'…\"유동성...",
-              "link": "http://www.newsprime.co.kr/news/article.html?no=722516"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%82%98%EB%9E%80%ED%9E%88%205000%EC%8B%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%82%98%EB%9E%80%ED%9E%88%205000%EC%8B%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "'나스닥·비트코인 제친' 금·코스피, 나란히 '5000시대 진입'…\"유동성...",
-          "summary": "",
-          "link": "http://www.newsprime.co.kr/news/article.html?no=722516",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 나란히 5000시대"
     },
     {
       "term": "증시 브리핑 1월",
-      "term_ko": "증시 브리핑 1월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 1월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 30일] 다우존스, 나스닥, S&P 500 모두 하락",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196176"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%201%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 30일] 다우존스, 나스닥, S&P 500 모두 하락",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196176",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 1월"
     },
     {
       "term": "30일 다우존스 나스닥",
-      "term_ko": "30일 다우존스 나스닥",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "30일 다우존스 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 30일] 다우존스, 나스닥, S&P 500 모두 하락",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196176"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=30%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=30%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 30일] 다우존스, 나스닥, S&P 500 모두 하락",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196176",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "30일 다우존스 나스닥"
     },
     {
       "term": "청약가점 평균 65.91",
-      "term_ko": "청약가점 평균 65.91",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청약가점 평균 65.91",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "지난해 서울 아파트 청약가점 평균 65.91…2020년 이래 최고",
-              "link": "https://n.news.naver.com/mnews/article/001/0015878100?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EC%95%BD%EA%B0%80%EC%A0%90%20%ED%8F%89%EA%B7%A0%2065.91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EC%95%BD%EA%B0%80%EC%A0%90%20%ED%8F%89%EA%B7%A0%2065.91"
-      },
-      "top_headlines": [
-        {
-          "title": "지난해 서울 아파트 청약가점 평균 65.91…2020년 이래 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015878100?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "청약가점 평균 65.91"
     },
     {
       "term": "2020년 이래 최고",
-      "term_ko": "2020년 이래 최고",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2020년 이래 최고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "지난해 서울 아파트 청약가점 평균 65.91…2020년 이래 최고",
-              "link": "https://n.news.naver.com/mnews/article/001/0015878100?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2020%EB%85%84%20%EC%9D%B4%EB%9E%98%20%EC%B5%9C%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2020%EB%85%84%20%EC%9D%B4%EB%9E%98%20%EC%B5%9C%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "지난해 서울 아파트 청약가점 평균 65.91…2020년 이래 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015878100?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "2020년 이래 최고"
     },
     {
       "term": "시중은행서 30년 초장기",
-      "term_ko": "시중은행서 30년 초장기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시중은행서 30년 초장기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "시중은행서 ‘30년 초장기 고정금리’ 주담대 나온다...대출금리는 연일...",
-              "link": "https://n.news.naver.com/mnews/article/023/0003956434?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%EC%84%9C%2030%EB%85%84%20%EC%B4%88%EC%9E%A5%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%EC%84%9C%2030%EB%85%84%20%EC%B4%88%EC%9E%A5%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "시중은행서 ‘30년 초장기 고정금리’ 주담대 나온다...대출금리는 연일...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003956434?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시중은행서 30년 초장기"
     },
     {
       "term": "전 세계 1위",
-      "term_ko": "전 세계 1위",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전 세계 1위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"운전대 잡고 말만 하세요\"… 미디어젠, '차량용 AI' 전 세계 1위 넘본다",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=424165"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%20%EC%84%B8%EA%B3%84%201%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%20%EC%84%B8%EA%B3%84%201%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "\"운전대 잡고 말만 하세요\"… 미디어젠, '차량용 AI' 전 세계 1위 넘본다",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=424165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전 세계 1위"
     },
     {
       "term": "나스닥 비트코인 제친",
-      "term_ko": "나스닥 비트코인 제친",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 비트코인 제친",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'나스닥·비트코인 제친' 금·코스피, 나란히 '5000시대 진입'…\"유동성...",
-              "link": "http://www.newsprime.co.kr/news/article.html?no=722516"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%A0%9C%EC%B9%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%A0%9C%EC%B9%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "'나스닥·비트코인 제친' 금·코스피, 나란히 '5000시대 진입'…\"유동성...",
-          "summary": "",
-          "link": "http://www.newsprime.co.kr/news/article.html?no=722516",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 비트코인 제친"
     },
     {
       "term": "미국 나스닥 상장사",
-      "term_ko": "미국 나스닥 상장사",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 나스닥 상장사",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미국 나스닥 상장사 리본커피(Reborn Coffee, Inc., NASDAQ: REBN) 중국 선...",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=376198"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EC%82%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 나스닥 상장사 리본커피(Reborn Coffee, Inc., NASDAQ: REBN) 중국 선...",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=376198",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미국 나스닥 상장사"
     },
     {
       "term": "리본커피Reborn Coffee Inc",
-      "term_ko": "리본커피Reborn Coffee Inc",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리본커피Reborn Coffee Inc",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미국 나스닥 상장사 리본커피(Reborn Coffee, Inc., NASDAQ: REBN) 중국 선...",
-              "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=376198"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EB%B3%B8%EC%BB%A4%ED%94%BCReborn%20Coffee%20Inc",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EB%B3%B8%EC%BB%A4%ED%94%BCReborn%20Coffee%20Inc"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 나스닥 상장사 리본커피(Reborn Coffee, Inc., NASDAQ: REBN) 중국 선...",
-          "summary": "",
-          "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=376198",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "리본커피Reborn Coffee Inc"
     },
     {
       "term": "필요하다 타이거리서치 인덱스",
-      "term_ko": "필요하다 타이거리서치 인덱스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "필요하다 타이거리서치 인덱스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“암호화폐 시장에도 MSCI가 필요하다”…타이거리서치, 인덱스 기준 마...",
-              "link": "https://www.tokenpost.kr/news/insights/313039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%84%EC%9A%94%ED%95%98%EB%8B%A4%20%ED%83%80%EC%9D%B4%EA%B1%B0%EB%A6%AC%EC%84%9C%EC%B9%98%20%EC%9D%B8%EB%8D%B1%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%84%EC%9A%94%ED%95%98%EB%8B%A4%20%ED%83%80%EC%9D%B4%EA%B1%B0%EB%A6%AC%EC%84%9C%EC%B9%98%20%EC%9D%B8%EB%8D%B1%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "“암호화폐 시장에도 MSCI가 필요하다”…타이거리서치, 인덱스 기준 마...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/313039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "필요하다 타이거리서치 인덱스"
     },
     {
       "term": "지난해 서울 아파트",
-      "term_ko": "지난해 서울 아파트",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지난해 서울 아파트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "지난해 서울 아파트 청약가점 평균 65.91…2020년 이래 최고",
-              "link": "https://n.news.naver.com/mnews/article/001/0015878100?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EB%82%9C%ED%95%B4%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EB%82%9C%ED%95%B4%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "지난해 서울 아파트 청약가점 평균 65.91…2020년 이래 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015878100?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "지난해 서울 아파트"
     },
     {
       "term": "금융硏 국민연금 개인",
-      "term_ko": "금융硏 국민연금 개인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융硏 국민연금 개인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금융硏 “국민연금·개인 해외투자가 원화값 급락 영향”",
-              "link": "https://n.news.naver.com/mnews/article/009/0005630350?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%E7%A1%8F%20%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EA%B0%9C%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%E7%A1%8F%20%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88%20%EA%B0%9C%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "금융硏 “국민연금·개인 해외투자가 원화값 급락 영향”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005630350?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융硏 국민연금 개인"
     },
     {
       "term": "해외투자가 원화값 급락",
-      "term_ko": "해외투자가 원화값 급락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "해외투자가 원화값 급락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금융硏 “국민연금·개인 해외투자가 원화값 급락 영향”",
-              "link": "https://n.news.naver.com/mnews/article/009/0005630350?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%EA%B0%80%20%EC%9B%90%ED%99%94%EA%B0%92%20%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%B4%EC%99%B8%ED%88%AC%EC%9E%90%EA%B0%80%20%EC%9B%90%ED%99%94%EA%B0%92%20%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "금융硏 “국민연금·개인 해외투자가 원화값 급락 영향”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005630350?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "해외투자가 원화값 급락"
     },
     {
       "term": "美 기준금리 정책",
-      "term_ko": "美 기준금리 정책",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 기준금리 정책",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-              "link": "https://www.etoday.co.kr/news/view/2551692"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%A0%95%EC%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%A0%95%EC%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2551692",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "美 기준금리 정책"
     },
     {
       "term": "변화 예상 한국은행",
-      "term_ko": "변화 예상 한국은행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "변화 예상 한국은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-              "link": "https://www.etoday.co.kr/news/view/2551692"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%ED%99%94%20%EC%98%88%EC%83%81%20%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%ED%99%94%20%EC%98%88%EC%83%81%20%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2551692",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "변화 예상 한국은행"
     },
     {
       "term": "고민 더 깊어지나",
-      "term_ko": "고민 더 깊어지나",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고민 더 깊어지나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-              "link": "https://www.etoday.co.kr/news/view/2551692"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EB%AF%BC%20%EB%8D%94%20%EA%B9%8A%EC%96%B4%EC%A7%80%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EB%AF%BC%20%EB%8D%94%20%EA%B9%8A%EC%96%B4%EC%A7%80%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2551692",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "고민 더 깊어지나"
     },
     {
       "term": "운전대 잡고 말만",
-      "term_ko": "운전대 잡고 말만",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "운전대 잡고 말만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"운전대 잡고 말만 하세요\"… 미디어젠, '차량용 AI' 전 세계 1위 넘본다",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=424165"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B4%EC%A0%84%EB%8C%80%20%EC%9E%A1%EA%B3%A0%20%EB%A7%90%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B4%EC%A0%84%EB%8C%80%20%EC%9E%A1%EA%B3%A0%20%EB%A7%90%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"운전대 잡고 말만 하세요\"… 미디어젠, '차량용 AI' 전 세계 1위 넘본다",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=424165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "운전대 잡고 말만"
     },
     {
       "term": "韓美시장 변동성 확대",
-      "term_ko": "韓美시장 변동성 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "韓美시장 변동성 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "韓美시장 변동성 확대 속...이번주엔 어느 이슈 주목?",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=160313"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%E7%BE%8E%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EB%8F%99%EC%84%B1%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%E7%BE%8E%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EB%8F%99%EC%84%B1%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "韓美시장 변동성 확대 속...이번주엔 어느 이슈 주목?",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=160313",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "韓美시장 변동성 확대"
     },
     {
       "term": "어느 이슈 주목",
-      "term_ko": "어느 이슈 주목",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "어느 이슈 주목",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "韓美시장 변동성 확대 속...이번주엔 어느 이슈 주목?",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=160313"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B4%EB%8A%90%20%EC%9D%B4%EC%8A%88%20%EC%A3%BC%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B4%EB%8A%90%20%EC%9D%B4%EC%8A%88%20%EC%A3%BC%EB%AA%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "韓美시장 변동성 확대 속...이번주엔 어느 이슈 주목?",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=160313",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "어느 이슈 주목"
     },
     {
       "term": "모두 하락",
-      "term_ko": "모두 하락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "모두 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 1월 30일] 다우존스, 나스닥, S&P 500 모두 하락",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196176"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EB%91%90%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EB%91%90%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 1월 30일] 다우존스, 나스닥, S&P 500 모두 하락",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196176",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "모두 하락"
     },
     {
       "term": "케빈 워시",
-      "term_ko": "케빈 워시",
-      "significance_score": 280,
-      "mentions": 181,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "케빈 워시",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-01-24",
-              "timestamp": 1769180400000,
-              "value": 0.37698
-            },
-            {
-              "period": "2026-01-25",
-              "timestamp": 1769266800000,
-              "value": 0.17241
-            },
-            {
-              "period": "2026-01-26",
-              "timestamp": 1769353200000,
-              "value": 0.33314
-            },
-            {
-              "period": "2026-01-27",
-              "timestamp": 1769439600000,
-              "value": 0.31853
-            },
-            {
-              "period": "2026-01-28",
-              "timestamp": 1769526000000,
-              "value": 0.3273
-            },
-            {
-              "period": "2026-01-29",
-              "timestamp": 1769612400000,
-              "value": 0.20748
-            },
-            {
-              "period": "2026-01-30",
-              "timestamp": 1769698800000,
-              "value": 100
-            },
-            {
-              "period": "2026-01-31",
-              "timestamp": 1769785200000,
-              "value": 80.12507
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-              "link": "https://www.etoday.co.kr/news/view/2551692"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "美 기준금리 정책 변화 예상…한국은행 고민 더 깊어지나 [케빈 워시 지...",
-          "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2551692",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 181.3115,
-        "weekly_average_volume": 30.2186,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.027201,
-        "time_weight": 0.028385,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1769785200000
-      }
+      "term_ko": "케빈 워시"
     },
     {
       "term": "고정금리 주담대",
-      "term_ko": "고정금리 주담대",
-      "significance_score": 280,
-      "mentions": 265,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고정금리 주담대",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-01-24",
-              "timestamp": 1769180400000,
-              "value": 47.05882
-            },
-            {
-              "period": "2026-01-25",
-              "timestamp": 1769266800000,
-              "value": 88.23529
-            },
-            {
-              "period": "2026-01-26",
-              "timestamp": 1769353200000,
-              "value": 82.35294
-            },
-            {
-              "period": "2026-01-28",
-              "timestamp": 1769526000000,
-              "value": 100
-            },
-            {
-              "period": "2026-01-29",
-              "timestamp": 1769612400000,
-              "value": 52.94117
-            },
-            {
-              "period": "2026-01-31",
-              "timestamp": 1769785200000,
-              "value": 29.41176
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "시중은행서 ‘30년 초장기 고정금리’ 주담대 나온다...대출금리는 연일...",
-              "link": "https://n.news.naver.com/mnews/article/023/0003956434?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "시중은행서 ‘30년 초장기 고정금리’ 주담대 나온다...대출금리는 연일...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003956434?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 264.7059,
-        "weekly_average_volume": 66.1765,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.020925,
-        "time_weight": 0.028385,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1769785200000
-      }
+      "term_ko": "고정금리 주담대"
     },
     {
       "term": "Wall Street Slides",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Slides",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Slides as Warsh Fed Nomination, Hot Inflation, and Precious M...",
-              "link": "https://www.econotimes.com/Wall-Street-Slides-as-Warsh-Fed-Nomination-Hot-Inflation-and-Precious-Metals-Rout-Shake-Markets-1732393"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Slides",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Slides"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Slides as Warsh Fed Nomination, Hot Inflation, and Precious M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Slides-as-Warsh-Fed-Nomination-Hot-Inflation-and-Precious-Metals-Rout-Shake-Markets-1732393",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Wall Street Slides"
     },
     {
       "term": "Warsh Fed Nomination",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Warsh Fed Nomination",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Slides as Warsh Fed Nomination, Hot Inflation, and Precious M...",
-              "link": "https://www.econotimes.com/Wall-Street-Slides-as-Warsh-Fed-Nomination-Hot-Inflation-and-Precious-Metals-Rout-Shake-Markets-1732393"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Warsh%20Fed%20Nomination",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Warsh%20Fed%20Nomination"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Slides as Warsh Fed Nomination, Hot Inflation, and Precious M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Slides-as-Warsh-Fed-Nomination-Hot-Inflation-and-Precious-Metals-Rout-Shake-Markets-1732393",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Warsh Fed Nomination"
     },
     {
       "term": "Hot Inflation",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hot Inflation",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Slides as Warsh Fed Nomination, Hot Inflation, and Precious M...",
-              "link": "https://www.econotimes.com/Wall-Street-Slides-as-Warsh-Fed-Nomination-Hot-Inflation-and-Precious-Metals-Rout-Shake-Markets-1732393"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hot%20Inflation",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hot%20Inflation"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Slides as Warsh Fed Nomination, Hot Inflation, and Precious M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Slides-as-Warsh-Fed-Nomination-Hot-Inflation-and-Precious-Metals-Rout-Shake-Markets-1732393",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Hot Inflation"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-01T11:12:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-01T02:13:54.163Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-01T11:12:47+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "NASDAQ REBN 중국",
+      "term_ko": "NASDAQ REBN 중국"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-01T11:12:47+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-01T11:12:47+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "미디어젠 차량용 AI",
+      "term_ko": "미디어젠 차량용 AI"
+    },
+    {
+      "term": "코스피 나란히 5000시대",
+      "term_ko": "코스피 나란히 5000시대"
+    },
+    {
+      "term": "증시 브리핑 1월",
+      "term_ko": "증시 브리핑 1월"
+    },
+    {
+      "term": "30일 다우존스 나스닥",
+      "term_ko": "30일 다우존스 나스닥"
+    },
+    {
+      "term": "청약가점 평균 65.91",
+      "term_ko": "청약가점 평균 65.91"
+    },
+    {
+      "term": "2020년 이래 최고",
+      "term_ko": "2020년 이래 최고"
+    },
+    {
+      "term": "시중은행서 30년 초장기",
+      "term_ko": "시중은행서 30년 초장기"
+    },
+    {
+      "term": "전 세계 1위",
+      "term_ko": "전 세계 1위"
+    },
+    {
+      "term": "나스닥 비트코인 제친",
+      "term_ko": "나스닥 비트코인 제친"
+    },
+    {
+      "term": "미국 나스닥 상장사",
+      "term_ko": "미국 나스닥 상장사"
+    },
+    {
+      "term": "리본커피Reborn Coffee Inc",
+      "term_ko": "리본커피Reborn Coffee Inc"
+    },
+    {
+      "term": "필요하다 타이거리서치 인덱스",
+      "term_ko": "필요하다 타이거리서치 인덱스"
+    },
+    {
+      "term": "지난해 서울 아파트",
+      "term_ko": "지난해 서울 아파트"
+    },
+    {
+      "term": "금융硏 국민연금 개인",
+      "term_ko": "금융硏 국민연금 개인"
+    },
+    {
+      "term": "해외투자가 원화값 급락",
+      "term_ko": "해외투자가 원화값 급락"
+    },
+    {
+      "term": "美 기준금리 정책",
+      "term_ko": "美 기준금리 정책"
+    },
+    {
+      "term": "변화 예상 한국은행",
+      "term_ko": "변화 예상 한국은행"
+    },
+    {
+      "term": "고민 더 깊어지나",
+      "term_ko": "고민 더 깊어지나"
+    },
+    {
+      "term": "운전대 잡고 말만",
+      "term_ko": "운전대 잡고 말만"
+    },
+    {
+      "term": "韓美시장 변동성 확대",
+      "term_ko": "韓美시장 변동성 확대"
+    },
+    {
+      "term": "어느 이슈 주목",
+      "term_ko": "어느 이슈 주목"
+    },
+    {
+      "term": "모두 하락",
+      "term_ko": "모두 하락"
+    },
+    {
+      "term": "케빈 워시",
+      "term_ko": "케빈 워시"
+    },
+    {
+      "term": "고정금리 주담대",
+      "term_ko": "고정금리 주담대"
+    },
+    {
+      "term": "Wall Street Slides",
+      "term_ko": "Wall Street Slides"
+    },
+    {
+      "term": "Warsh Fed Nomination",
+      "term_ko": "Warsh Fed Nomination"
+    },
+    {
+      "term": "Hot Inflation",
+      "term_ko": "Hot Inflation"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    }
+  ],
+  "translations": {
+    "NASDAQ REBN 중국": {
+      "en": "NASDAQ REBN 중국",
+      "ko": "NASDAQ REBN 중국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "미디어젠 차량용 AI": {
+      "en": "미디어젠 차량용 AI",
+      "ko": "미디어젠 차량용 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "코스피 나란히 5000시대": {
+      "en": "코스피 나란히 5000시대",
+      "ko": "코스피 나란히 5000시대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "증시 브리핑 1월": {
+      "en": "증시 브리핑 1월",
+      "ko": "증시 브리핑 1월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "30일 다우존스 나스닥": {
+      "en": "30일 다우존스 나스닥",
+      "ko": "30일 다우존스 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "청약가점 평균 65.91": {
+      "en": "청약가점 평균 65.91",
+      "ko": "청약가점 평균 65.91",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "2020년 이래 최고": {
+      "en": "2020년 이래 최고",
+      "ko": "2020년 이래 최고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "시중은행서 30년 초장기": {
+      "en": "시중은행서 30년 초장기",
+      "ko": "시중은행서 30년 초장기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "전 세계 1위": {
+      "en": "전 세계 1위",
+      "ko": "전 세계 1위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "나스닥 비트코인 제친": {
+      "en": "나스닥 비트코인 제친",
+      "ko": "나스닥 비트코인 제친",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "미국 나스닥 상장사": {
+      "en": "미국 나스닥 상장사",
+      "ko": "미국 나스닥 상장사",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "리본커피Reborn Coffee Inc": {
+      "en": "리본커피Reborn Coffee Inc",
+      "ko": "리본커피Reborn Coffee Inc",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "필요하다 타이거리서치 인덱스": {
+      "en": "필요하다 타이거리서치 인덱스",
+      "ko": "필요하다 타이거리서치 인덱스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "지난해 서울 아파트": {
+      "en": "지난해 서울 아파트",
+      "ko": "지난해 서울 아파트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "금융硏 국민연금 개인": {
+      "en": "금융硏 국민연금 개인",
+      "ko": "금융硏 국민연금 개인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "해외투자가 원화값 급락": {
+      "en": "해외투자가 원화값 급락",
+      "ko": "해외투자가 원화값 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "美 기준금리 정책": {
+      "en": "美 기준금리 정책",
+      "ko": "美 기준금리 정책",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "변화 예상 한국은행": {
+      "en": "변화 예상 한국은행",
+      "ko": "변화 예상 한국은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "고민 더 깊어지나": {
+      "en": "고민 더 깊어지나",
+      "ko": "고민 더 깊어지나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "운전대 잡고 말만": {
+      "en": "운전대 잡고 말만",
+      "ko": "운전대 잡고 말만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "韓美시장 변동성 확대": {
+      "en": "韓美시장 변동성 확대",
+      "ko": "韓美시장 변동성 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "어느 이슈 주목": {
+      "en": "어느 이슈 주목",
+      "ko": "어느 이슈 주목",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "모두 하락": {
+      "en": "모두 하락",
+      "ko": "모두 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "케빈 워시": {
+      "en": "케빈 워시",
+      "ko": "케빈 워시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "고정금리 주담대": {
+      "en": "고정금리 주담대",
+      "ko": "고정금리 주담대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "Wall Street Slides": {
+      "en": "Wall Street Slides",
+      "ko": "Wall Street Slides",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "Warsh Fed Nomination": {
+      "en": "Warsh Fed Nomination",
+      "ko": "Warsh Fed Nomination",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "Hot Inflation": {
+      "en": "Hot Inflation",
+      "ko": "Hot Inflation",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-01T06:48:10.492Z"
     }
   }
 }
