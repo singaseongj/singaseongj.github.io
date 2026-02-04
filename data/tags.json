@@ -1,40 +1,64 @@
 {
-  "date": "2026-02-03",
+  "date": "2026-02-04",
   "window": "12_hours",
   "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "美특징주월마트 시총 1조달러",
-      "term_ko": "美특징주월마트 시총 1조달러",
-      "significance_score": 336,
-      "mentions": 160,
+      "term": "AI의 종목 이야기",
+      "term_ko": "AI의 종목 이야기",
+      "significance_score": 1050,
+      "mentions": 480,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美특징주월마트 시총 1조달러",
+        "query": "AI의 종목 이야기",
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "matches": 3,
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[美특징주]월마트, 시총 1조달러 클럽 이름 올려…올해만 11%↑",
-              "link": "https://n.news.naver.com/mnews/article/018/0006212641?sid=101"
+              "title": "[AI의 종목 이야기] 페이팔, CEO 교체·부진한 2026년 전망에 주가 20%↓",
+              "link": "https://www.newspim.com/news/view/20260204000352"
+            },
+            {
+              "title": "[AI의 종목 이야기] \"텍사스 인스트루먼트, 실리콘랩스 인수 협상 막바...",
+              "link": "https://www.newspim.com/news/view/20260204000115"
+            },
+            {
+              "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
+              "link": "https://www.newspim.com/news/view/20260204000035"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%ED%8A%B9%EC%A7%95%EC%A3%BC%EC%9B%94%EB%A7%88%ED%8A%B8%20%EC%8B%9C%EC%B4%9D%201%EC%A1%B0%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%ED%8A%B9%EC%A7%95%EC%A3%BC%EC%9B%94%EB%A7%88%ED%8A%B8%20%EC%8B%9C%EC%B4%9D%201%EC%A1%B0%EB%8B%AC%EB%9F%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EC%9D%98%20%EC%A2%85%EB%AA%A9%20%EC%9D%B4%EC%95%BC%EA%B8%B0"
       },
       "top_headlines": [
         {
-          "title": "[美특징주]월마트, 시총 1조달러 클럽 이름 올려…올해만 11%↑",
+          "title": "[AI의 종목 이야기] 페이팔, CEO 교체·부진한 2026년 전망에 주가 20%↓",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006212641?sid=101",
+          "link": "https://www.newspim.com/news/view/20260204000352",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "[AI의 종목 이야기] \"텍사스 인스트루먼트, 실리콘랩스 인수 협상 막바...",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20260204000115",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20260204000035",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -42,37 +66,148 @@
       ]
     },
     {
-      "term": "올려 올해만 11%",
-      "term_ko": "올려 올해만 11%",
-      "significance_score": 336,
-      "mentions": 160,
+      "term": "Wall Street",
+      "term_ko": "",
+      "significance_score": 448,
+      "mentions": 320,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "올려 올해만 11%",
+        "query": "Wall Street",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-01-27",
+              "timestamp": 1769439600000,
+              "value": 43.47826
+            },
+            {
+              "period": "2026-01-28",
+              "timestamp": 1769526000000,
+              "value": 60.86956
+            },
+            {
+              "period": "2026-01-29",
+              "timestamp": 1769612400000,
+              "value": 100
+            },
+            {
+              "period": "2026-01-31",
+              "timestamp": 1769785200000,
+              "value": 21.73913
+            },
+            {
+              "period": "2026-02-01",
+              "timestamp": 1769871600000,
+              "value": 34.7826
+            },
+            {
+              "period": "2026-02-02",
+              "timestamp": 1769958000000,
+              "value": 52.17391
+            },
+            {
+              "period": "2026-02-03",
+              "timestamp": 1770044400000,
+              "value": 34.7826
+            }
+          ]
+        },
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "matches": 2,
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[美특징주]월마트, 시총 1조달러 클럽 이름 올려…올해만 11%↑",
-              "link": "https://n.news.naver.com/mnews/article/018/0006212641?sid=101"
+              "title": "Kospi reclaims 5,300 mark despite AI woes on Wall Street",
+              "link": "https://n.news.naver.com/mnews/article/640/0000083994?sid=101"
+            },
+            {
+              "title": "Seoul stocks open higher despite AI woes on Wall Street",
+              "link": "https://n.news.naver.com/mnews/article/001/0015883931?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%EB%A0%A4%20%EC%98%AC%ED%95%B4%EB%A7%8C%2011%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%EB%A0%A4%20%EC%98%AC%ED%95%B4%EB%A7%8C%2011%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street"
       },
       "top_headlines": [
         {
-          "title": "[美특징주]월마트, 시총 1조달러 클럽 이름 올려…올해만 11%↑",
+          "title": "Kospi reclaims 5,300 mark despite AI woes on Wall Street",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006212641?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/640/0000083994?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "Seoul stocks open higher despite AI woes on Wall Street",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015883931?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 243.4782,
+        "weekly_average_volume": 48.6956,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.022173,
+        "time_weight": 0.02858,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1770044400000
+      }
+    },
+    {
+      "term": "페이팔 CEO 교체",
+      "term_ko": "페이팔 CEO 교체",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "페이팔 CEO 교체",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[AI의 종목 이야기] 페이팔, CEO 교체·부진한 2026년 전망에 주가 20%↓",
+              "link": "https://www.newspim.com/news/view/20260204000352"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8E%98%EC%9D%B4%ED%8C%94%20CEO%20%EA%B5%90%EC%B2%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8E%98%EC%9D%B4%ED%8C%94%20CEO%20%EA%B5%90%EC%B2%B4"
+      },
+      "top_headlines": [
+        {
+          "title": "[AI의 종목 이야기] 페이팔, CEO 교체·부진한 2026년 전망에 주가 20%↓",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20260204000352",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -80,37 +215,37 @@
       ]
     },
     {
-      "term": "거래소 12시간 거래",
-      "term_ko": "거래소 12시간 거래",
+      "term": "20% 급락 레버리지",
+      "term_ko": "20% 급락 레버리지",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "거래소 12시간 거래",
+        "query": "20% 급락 레버리지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "거래소, 12시간 거래 속도 낸다…노사 합의점 도출(종합)",
-              "link": "https://n.news.naver.com/mnews/article/018/0006212461?sid=101"
+              "title": "\"이더리움, 너 마저도…\" 20% 급락, 레버리지 부재·금 강세가 원인",
+              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626731"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%EC%86%8C%2012%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%EC%86%8C%2012%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=20%25%20%EA%B8%89%EB%9D%BD%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=20%25%20%EA%B8%89%EB%9D%BD%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80"
       },
       "top_headlines": [
         {
-          "title": "거래소, 12시간 거래 속도 낸다…노사 합의점 도출(종합)",
+          "title": "\"이더리움, 너 마저도…\" 20% 급락, 레버리지 부재·금 강세가 원인",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006212461?sid=101",
+          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626731",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -118,37 +253,37 @@
       ]
     },
     {
-      "term": "한국거래소 6월 프리",
-      "term_ko": "한국거래소 6월 프리",
+      "term": "상승에 보금자리론 2조",
+      "term_ko": "상승에 보금자리론 2조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한국거래소 6월 프리",
+        "query": "상승에 보금자리론 2조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "한국거래소, 6월 프리·애프터 마켓 개설… \"2027년 24시간 거래 목표\"",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626475"
+              "title": "시중은행 금리 상승에 '보금자리론' 2조 돌파 …2년 만에 최대",
+              "link": "https://www.newswhoplus.com/news/articleView.html?idxno=53326"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%206%EC%9B%94%20%ED%94%84%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%206%EC%9B%94%20%ED%94%84%EB%A6%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%EC%97%90%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%202%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%EC%97%90%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%202%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "한국거래소, 6월 프리·애프터 마켓 개설… \"2027년 24시간 거래 목표\"",
+          "title": "시중은행 금리 상승에 '보금자리론' 2조 돌파 …2년 만에 최대",
           "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626475",
+          "link": "https://www.newswhoplus.com/news/articleView.html?idxno=53326",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -156,341 +291,37 @@
       ]
     },
     {
-      "term": "마켓 개설 2027년",
-      "term_ko": "마켓 개설 2027년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마켓 개설 2027년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 6월 프리·애프터 마켓 개설… \"2027년 24시간 거래 목표\"",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626475"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%BC%93%20%EA%B0%9C%EC%84%A4%202027%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%BC%93%20%EA%B0%9C%EC%84%A4%202027%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 6월 프리·애프터 마켓 개설… \"2027년 24시간 거래 목표\"",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626475",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "24시간 거래 목표",
-      "term_ko": "24시간 거래 목표",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "24시간 거래 목표",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국거래소, 6월 프리·애프터 마켓 개설… \"2027년 24시간 거래 목표\"",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626475"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=24%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98%20%EB%AA%A9%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=24%EC%8B%9C%EA%B0%84%20%EA%B1%B0%EB%9E%98%20%EB%AA%A9%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소, 6월 프리·애프터 마켓 개설… \"2027년 24시간 거래 목표\"",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=626475",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "증시 브리핑 2월",
-      "term_ko": "증시 브리핑 2월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 2월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 2월 2일] 다우존스 상승, 나스닥 및 S&P 500 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196204"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%202%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%202%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 2월 2일] 다우존스 상승, 나스닥 및 S&P 500 보합세",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196204",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "2일 다우존스 상승",
-      "term_ko": "2일 다우존스 상승",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2일 다우존스 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 2월 2일] 다우존스 상승, 나스닥 및 S&P 500 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196204"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 2월 2일] 다우존스 상승, 나스닥 및 S&P 500 보합세",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196204",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "원 환율 1446.6원",
-      "term_ko": "원 환율 1446.6원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원 환율 1446.6원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "달러·원 환율 1,446.6원 마감...워시 후폭풍 진정세",
-              "link": "https://n.news.naver.com/mnews/article/052/0002309993?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%20%ED%99%98%EC%9C%A8%201446.6%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%20%ED%99%98%EC%9C%A8%201446.6%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "달러·원 환율 1,446.6원 마감...워시 후폭풍 진정세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002309993?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "달러-원 환율 1446원",
-      "term_ko": "달러-원 환율 1446원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러-원 환율 1446원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "달러-원 환율 1446원… 워시 쇼크 진정되며 숨고르기 양상",
-              "link": "https://www.dkilbo.com/news/articleView.html?idxno=532681"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%ED%99%98%EC%9C%A8%201446%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%ED%99%98%EC%9C%A8%201446%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "달러-원 환율 1446원… 워시 쇼크 진정되며 숨고르기 양상",
-          "summary": "",
-          "link": "https://www.dkilbo.com/news/articleView.html?idxno=532681",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "청년에 집값 95%까지",
-      "term_ko": "청년에 집값 95%까지",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청년에 집값 95%까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴질랜드는 첫 집 마련 청년에 집값 95%까지 빌려줘",
-              "link": "https://n.news.naver.com/mnews/article/023/0003956999?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EB%85%84%EC%97%90%20%EC%A7%91%EA%B0%92%2095%25%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EB%85%84%EC%97%90%20%EC%A7%91%EA%B0%92%2095%25%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴질랜드는 첫 집 마련 청년에 집값 95%까지 빌려줘",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003956999?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "눈 환율 1400원대",
-      "term_ko": "눈 환율 1400원대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "눈 환율 1400원대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미네르바의 눈] 환율 1400원대 - 위기 신호인가, 뉴노멀의 시작인가? (...",
-              "link": "https://www.news2day.co.kr/article/20260203500166"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%88%88%20%ED%99%98%EC%9C%A8%201400%EC%9B%90%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%88%88%20%ED%99%98%EC%9C%A8%201400%EC%9B%90%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[미네르바의 눈] 환율 1400원대 - 위기 신호인가, 뉴노멀의 시작인가? (...",
-          "summary": "",
-          "link": "https://www.news2day.co.kr/article/20260203500166",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "천연가스 가격 하락",
-      "term_ko": "천연가스 가격 하락",
+      "term": "텍사스 인스트루먼트 실리콘랩스",
+      "term_ko": "텍사스 인스트루먼트 실리콘랩스",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "천연가스 가격 하락",
+        "query": "텍사스 인스트루먼트 실리콘랩스",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "美 공급 확대에 천연가스 가격 하락, 중장기 수요는 증가 전망",
-              "link": "http://www.e-platform.net/news/articleView.html?idxno=99851"
+              "title": "[AI의 종목 이야기] \"텍사스 인스트루먼트, 실리콘랩스 인수 협상 막바...",
+              "link": "https://www.newspim.com/news/view/20260204000115"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%9C%EC%97%B0%EA%B0%80%EC%8A%A4%20%EA%B0%80%EA%B2%A9%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%9C%EC%97%B0%EA%B0%80%EC%8A%A4%20%EA%B0%80%EA%B2%A9%20%ED%95%98%EB%9D%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%85%8D%EC%82%AC%EC%8A%A4%20%EC%9D%B8%EC%8A%A4%ED%8A%B8%EB%A3%A8%EB%A8%BC%ED%8A%B8%20%EC%8B%A4%EB%A6%AC%EC%BD%98%EB%9E%A9%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%85%8D%EC%82%AC%EC%8A%A4%20%EC%9D%B8%EC%8A%A4%ED%8A%B8%EB%A3%A8%EB%A8%BC%ED%8A%B8%20%EC%8B%A4%EB%A6%AC%EC%BD%98%EB%9E%A9%EC%8A%A4"
       },
       "top_headlines": [
         {
-          "title": "美 공급 확대에 천연가스 가격 하락, 중장기 수요는 증가 전망",
+          "title": "[AI의 종목 이야기] \"텍사스 인스트루먼트, 실리콘랩스 인수 협상 막바...",
           "summary": "",
-          "link": "http://www.e-platform.net/news/articleView.html?idxno=99851",
+          "link": "https://www.newspim.com/news/view/20260204000115",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -498,37 +329,37 @@
       ]
     },
     {
-      "term": "속도 낸다 노사",
-      "term_ko": "속도 낸다 노사",
+      "term": "뉴욕증시 시간 외",
+      "term_ko": "뉴욕증시 시간 외",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "속도 낸다 노사",
+        "query": "뉴욕증시 시간 외",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "거래소, 12시간 거래 속도 낸다…노사 합의점 도출(종합)",
-              "link": "https://n.news.naver.com/mnews/article/018/0006212461?sid=101"
+              "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
+              "link": "https://www.newspim.com/news/view/20260204000035"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%EB%8F%84%20%EB%82%B8%EB%8B%A4%20%EB%85%B8%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%EB%8F%84%20%EB%82%B8%EB%8B%A4%20%EB%85%B8%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%8B%9C%EA%B0%84%20%EC%99%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%8B%9C%EA%B0%84%20%EC%99%B8"
       },
       "top_headlines": [
         {
-          "title": "거래소, 12시간 거래 속도 낸다…노사 합의점 도출(종합)",
+          "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006212461?sid=101",
+          "link": "https://www.newspim.com/news/view/20260204000035",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -536,37 +367,37 @@
       ]
     },
     {
-      "term": "나스닥 및 S&P",
-      "term_ko": "나스닥 및 S&P",
+      "term": "기준금리 향방 동결이냐",
+      "term_ko": "기준금리 향방 동결이냐",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "나스닥 및 S&P",
+        "query": "기준금리 향방 동결이냐",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미국 증시 브리핑 · 2월 2일] 다우존스 상승, 나스닥 및 S&P 500 보합세",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196204"
+              "title": "기준금리 향방 \"동결이냐 인하냐\"···관건은 환율과 집값",
+              "link": "http://www.nongaek.com/news/articleView.html?idxno=94232"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B0%8F%20S%26P",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B0%8F%20S%26P"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%ED%96%A5%EB%B0%A9%20%EB%8F%99%EA%B2%B0%EC%9D%B4%EB%83%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%ED%96%A5%EB%B0%A9%20%EB%8F%99%EA%B2%B0%EC%9D%B4%EB%83%90"
       },
       "top_headlines": [
         {
-          "title": "[미국 증시 브리핑 · 2월 2일] 다우존스 상승, 나스닥 및 S&P 500 보합세",
+          "title": "기준금리 향방 \"동결이냐 인하냐\"···관건은 환율과 집값",
           "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196204",
+          "link": "http://www.nongaek.com/news/articleView.html?idxno=94232",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -574,37 +405,37 @@
       ]
     },
     {
-      "term": "워시 쇼크 진정되며",
-      "term_ko": "워시 쇼크 진정되며",
+      "term": "금값 급락 충격",
+      "term_ko": "금값 급락 충격",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "워시 쇼크 진정되며",
+        "query": "금값 급락 충격",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "달러-원 환율 1446원… 워시 쇼크 진정되며 숨고르기 양상",
-              "link": "https://www.dkilbo.com/news/articleView.html?idxno=532681"
+              "title": "금값, 급락 충격 딛고 이틀 연속 올라",
+              "link": "https://www.ziksir.com/news/articleView.html?idxno=122550"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%8C%EC%8B%9C%20%EC%87%BC%ED%81%AC%20%EC%A7%84%EC%A0%95%EB%90%98%EB%A9%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%8C%EC%8B%9C%20%EC%87%BC%ED%81%AC%20%EC%A7%84%EC%A0%95%EB%90%98%EB%A9%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%EA%B8%89%EB%9D%BD%20%EC%B6%A9%EA%B2%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%EA%B8%89%EB%9D%BD%20%EC%B6%A9%EA%B2%A9"
       },
       "top_headlines": [
         {
-          "title": "달러-원 환율 1446원… 워시 쇼크 진정되며 숨고르기 양상",
+          "title": "금값, 급락 충격 딛고 이틀 연속 올라",
           "summary": "",
-          "link": "https://www.dkilbo.com/news/articleView.html?idxno=532681",
+          "link": "https://www.ziksir.com/news/articleView.html?idxno=122550",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -612,37 +443,37 @@
       ]
     },
     {
-      "term": "뉴질랜드는 첫 집",
-      "term_ko": "뉴질랜드는 첫 집",
+      "term": "딛고 이틀 연속",
+      "term_ko": "딛고 이틀 연속",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뉴질랜드는 첫 집",
+        "query": "딛고 이틀 연속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴질랜드는 첫 집 마련 청년에 집값 95%까지 빌려줘",
-              "link": "https://n.news.naver.com/mnews/article/023/0003956999?sid=101"
+              "title": "금값, 급락 충격 딛고 이틀 연속 올라",
+              "link": "https://www.ziksir.com/news/articleView.html?idxno=122550"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%A7%88%EB%9E%9C%EB%93%9C%EB%8A%94%20%EC%B2%AB%20%EC%A7%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%A7%88%EB%9E%9C%EB%93%9C%EB%8A%94%20%EC%B2%AB%20%EC%A7%91"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%9B%EA%B3%A0%20%EC%9D%B4%ED%8B%80%20%EC%97%B0%EC%86%8D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%9B%EA%B3%A0%20%EC%9D%B4%ED%8B%80%20%EC%97%B0%EC%86%8D"
       },
       "top_headlines": [
         {
-          "title": "뉴질랜드는 첫 집 마련 청년에 집값 95%까지 빌려줘",
+          "title": "금값, 급락 충격 딛고 이틀 연속 올라",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003956999?sid=101",
+          "link": "https://www.ziksir.com/news/articleView.html?idxno=122550",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -650,37 +481,37 @@
       ]
     },
     {
-      "term": "선거 코앞인데 집값",
-      "term_ko": "선거 코앞인데 집값",
+      "term": "안심에서 경계로 증권가선",
+      "term_ko": "안심에서 경계로 증권가선",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "선거 코앞인데 집값",
+        "query": "안심에서 경계로 증권가선",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "선거 코앞인데 집값 안 꺾이니… 다시 등장한 ‘다주택자 적폐몰이’",
-              "link": "https://n.news.naver.com/mnews/article/023/0003957001?sid=101"
+              "title": "금통위 물가 평가 안심에서 경계로…증권가선 하반기 금리 인상 가능성...",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397183"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EA%B1%B0%20%EC%BD%94%EC%95%9E%EC%9D%B8%EB%8D%B0%20%EC%A7%91%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EA%B1%B0%20%EC%BD%94%EC%95%9E%EC%9D%B8%EB%8D%B0%20%EC%A7%91%EA%B0%92"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EC%8B%AC%EC%97%90%EC%84%9C%20%EA%B2%BD%EA%B3%84%EB%A1%9C%20%EC%A6%9D%EA%B6%8C%EA%B0%80%EC%84%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EC%8B%AC%EC%97%90%EC%84%9C%20%EA%B2%BD%EA%B3%84%EB%A1%9C%20%EC%A6%9D%EA%B6%8C%EA%B0%80%EC%84%A0"
       },
       "top_headlines": [
         {
-          "title": "선거 코앞인데 집값 안 꺾이니… 다시 등장한 ‘다주택자 적폐몰이’",
+          "title": "금통위 물가 평가 안심에서 경계로…증권가선 하반기 금리 인상 가능성...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003957001?sid=101",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397183",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -688,37 +519,37 @@
       ]
     },
     {
-      "term": "안 꺾이니 다시",
-      "term_ko": "안 꺾이니 다시",
+      "term": "하반기 금리 인상",
+      "term_ko": "하반기 금리 인상",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "안 꺾이니 다시",
+        "query": "하반기 금리 인상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "선거 코앞인데 집값 안 꺾이니… 다시 등장한 ‘다주택자 적폐몰이’",
-              "link": "https://n.news.naver.com/mnews/article/023/0003957001?sid=101"
+              "title": "금통위 물가 평가 안심에서 경계로…증권가선 하반기 금리 인상 가능성...",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397183"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%20%EA%BA%BE%EC%9D%B4%EB%8B%88%20%EB%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%20%EA%BA%BE%EC%9D%B4%EB%8B%88%20%EB%8B%A4%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%B0%98%EA%B8%B0%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%B0%98%EA%B8%B0%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
       },
       "top_headlines": [
         {
-          "title": "선거 코앞인데 집값 안 꺾이니… 다시 등장한 ‘다주택자 적폐몰이’",
+          "title": "금통위 물가 평가 안심에서 경계로…증권가선 하반기 금리 인상 가능성...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003957001?sid=101",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397183",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -726,37 +557,37 @@
       ]
     },
     {
-      "term": "대출 연체율도 양극화",
-      "term_ko": "대출 연체율도 양극화",
+      "term": "산업은행 작년 순익",
+      "term_ko": "산업은행 작년 순익",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대출 연체율도 양극화",
+        "query": "산업은행 작년 순익",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "대출 연체율도 양극화… 중소기업 다시 오르고 대기업은 하향 안정",
-              "link": "https://n.news.naver.com/mnews/article/005/0001830138?sid=101"
+              "title": "산업은행, 작년 순익 감소…석유화학 구조조정 여파",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397184"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EC%97%B0%EC%B2%B4%EC%9C%A8%EB%8F%84%20%EC%96%91%EA%B7%B9%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EC%97%B0%EC%B2%B4%EC%9C%A8%EB%8F%84%20%EC%96%91%EA%B7%B9%ED%99%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89%20%EC%9E%91%EB%85%84%20%EC%88%9C%EC%9D%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89%20%EC%9E%91%EB%85%84%20%EC%88%9C%EC%9D%B5"
       },
       "top_headlines": [
         {
-          "title": "대출 연체율도 양극화… 중소기업 다시 오르고 대기업은 하향 안정",
+          "title": "산업은행, 작년 순익 감소…석유화학 구조조정 여파",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001830138?sid=101",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397184",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -764,37 +595,37 @@
       ]
     },
     {
-      "term": "중소기업 다시 오르고",
-      "term_ko": "중소기업 다시 오르고",
+      "term": "감소 석유화학 구조조정",
+      "term_ko": "감소 석유화학 구조조정",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "중소기업 다시 오르고",
+        "query": "감소 석유화학 구조조정",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "대출 연체율도 양극화… 중소기업 다시 오르고 대기업은 하향 안정",
-              "link": "https://n.news.naver.com/mnews/article/005/0001830138?sid=101"
+              "title": "산업은행, 작년 순익 감소…석유화학 구조조정 여파",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397184"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EB%8B%A4%EC%8B%9C%20%EC%98%A4%EB%A5%B4%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EB%8B%A4%EC%8B%9C%20%EC%98%A4%EB%A5%B4%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%90%EC%86%8C%20%EC%84%9D%EC%9C%A0%ED%99%94%ED%95%99%20%EA%B5%AC%EC%A1%B0%EC%A1%B0%EC%A0%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%90%EC%86%8C%20%EC%84%9D%EC%9C%A0%ED%99%94%ED%95%99%20%EA%B5%AC%EC%A1%B0%EC%A1%B0%EC%A0%95"
       },
       "top_headlines": [
         {
-          "title": "대출 연체율도 양극화… 중소기업 다시 오르고 대기업은 하향 안정",
+          "title": "산업은행, 작년 순익 감소…석유화학 구조조정 여파",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001830138?sid=101",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4397184",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -802,37 +633,37 @@
       ]
     },
     {
-      "term": "대기업은 하향 안정",
-      "term_ko": "대기업은 하향 안정",
+      "term": "지방 분양가 치솟는데",
+      "term_ko": "지방 분양가 치솟는데",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대기업은 하향 안정",
+        "query": "지방 분양가 치솟는데",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "대출 연체율도 양극화… 중소기업 다시 오르고 대기업은 하향 안정",
-              "link": "https://n.news.naver.com/mnews/article/005/0001830138?sid=101"
+              "title": "지방 분양가 치솟는데 대출 규제는 유예…상반기 ‘막차 수요’ 몰리나",
+              "link": "http://www.fntimes.com/html/view.php?ud=202602041042372574048b718333_18"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B8%B0%EC%97%85%EC%9D%80%20%ED%95%98%ED%96%A5%20%EC%95%88%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B8%B0%EC%97%85%EC%9D%80%20%ED%95%98%ED%96%A5%20%EC%95%88%EC%A0%95"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EB%B0%A9%20%EB%B6%84%EC%96%91%EA%B0%80%20%EC%B9%98%EC%86%9F%EB%8A%94%EB%8D%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EB%B0%A9%20%EB%B6%84%EC%96%91%EA%B0%80%20%EC%B9%98%EC%86%9F%EB%8A%94%EB%8D%B0"
       },
       "top_headlines": [
         {
-          "title": "대출 연체율도 양극화… 중소기업 다시 오르고 대기업은 하향 안정",
+          "title": "지방 분양가 치솟는데 대출 규제는 유예…상반기 ‘막차 수요’ 몰리나",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001830138?sid=101",
+          "link": "http://www.fntimes.com/html/view.php?ud=202602041042372574048b718333_18",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -840,37 +671,227 @@
       ]
     },
     {
-      "term": "클럽 이름",
-      "term_ko": "클럽 이름",
+      "term": "대출 규제는 유예",
+      "term_ko": "대출 규제는 유예",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "대출 규제는 유예",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "지방 분양가 치솟는데 대출 규제는 유예…상반기 ‘막차 수요’ 몰리나",
+              "link": "http://www.fntimes.com/html/view.php?ud=202602041042372574048b718333_18"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EA%B7%9C%EC%A0%9C%EB%8A%94%20%EC%9C%A0%EC%98%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EA%B7%9C%EC%A0%9C%EB%8A%94%20%EC%9C%A0%EC%98%88"
+      },
+      "top_headlines": [
+        {
+          "title": "지방 분양가 치솟는데 대출 규제는 유예…상반기 ‘막차 수요’ 몰리나",
+          "summary": "",
+          "link": "http://www.fntimes.com/html/view.php?ud=202602041042372574048b718333_18",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "상반기 막차 수요",
+      "term_ko": "상반기 막차 수요",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "상반기 막차 수요",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "지방 분양가 치솟는데 대출 규제는 유예…상반기 ‘막차 수요’ 몰리나",
+              "link": "http://www.fntimes.com/html/view.php?ud=202602041042372574048b718333_18"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EB%B0%98%EA%B8%B0%20%EB%A7%89%EC%B0%A8%20%EC%88%98%EC%9A%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EB%B0%98%EA%B8%B0%20%EB%A7%89%EC%B0%A8%20%EC%88%98%EC%9A%94"
+      },
+      "top_headlines": [
+        {
+          "title": "지방 분양가 치솟는데 대출 규제는 유예…상반기 ‘막차 수요’ 몰리나",
+          "summary": "",
+          "link": "http://www.fntimes.com/html/view.php?ud=202602041042372574048b718333_18",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Mark Despite AI",
+      "term_ko": "",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Mark Despite AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Kospi reclaims 5,300 mark despite AI woes on Wall Street",
+              "link": "https://n.news.naver.com/mnews/article/640/0000083994?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mark%20Despite%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mark%20Despite%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "Kospi reclaims 5,300 mark despite AI woes on Wall Street",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/640/0000083994?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Higher Despite AI",
+      "term_ko": "",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Higher Despite AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Seoul stocks open higher despite AI woes on Wall Street",
+              "link": "https://n.news.naver.com/mnews/article/001/0015883931?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Higher%20Despite%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Higher%20Despite%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "Seoul stocks open higher despite AI woes on Wall Street",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0015883931?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "주가 20%",
+      "term_ko": "주가 20%",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주가 20%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[AI의 종목 이야기] 페이팔, CEO 교체·부진한 2026년 전망에 주가 20%↓",
+              "link": "https://www.newspim.com/news/view/20260204000352"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%2020%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%2020%25"
+      },
+      "top_headlines": [
+        {
+          "title": "[AI의 종목 이야기] 페이팔, CEO 교체·부진한 2026년 전망에 주가 20%↓",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20260204000352",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "인수 협상",
+      "term_ko": "인수 협상",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "클럽 이름",
+        "query": "인수 협상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[美특징주]월마트, 시총 1조달러 클럽 이름 올려…올해만 11%↑",
-              "link": "https://n.news.naver.com/mnews/article/018/0006212641?sid=101"
+              "title": "[AI의 종목 이야기] \"텍사스 인스트루먼트, 실리콘랩스 인수 협상 막바...",
+              "link": "https://www.newspim.com/news/view/20260204000115"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%B4%EB%9F%BD%20%EC%9D%B4%EB%A6%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%B4%EB%9F%BD%20%EC%9D%B4%EB%A6%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%88%98%20%ED%98%91%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%88%98%20%ED%98%91%EC%83%81"
       },
       "top_headlines": [
         {
-          "title": "[美특징주]월마트, 시총 1조달러 클럽 이름 올려…올해만 11%↑",
+          "title": "[AI의 종목 이야기] \"텍사스 인스트루먼트, 실리콘랩스 인수 협상 막바...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006212641?sid=101",
+          "link": "https://www.newspim.com/news/view/20260204000115",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -878,37 +899,37 @@
       ]
     },
     {
-      "term": "합의점 도출종합",
-      "term_ko": "합의점 도출종합",
+      "term": "거래 급등락",
+      "term_ko": "거래 급등락",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "합의점 도출종합",
+        "query": "거래 급등락",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "거래소, 12시간 거래 속도 낸다…노사 합의점 도출(종합)",
-              "link": "https://n.news.naver.com/mnews/article/018/0006212461?sid=101"
+              "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
+              "link": "https://www.newspim.com/news/view/20260204000035"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A9%EC%9D%98%EC%A0%90%20%EB%8F%84%EC%B6%9C%EC%A2%85%ED%95%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A9%EC%9D%98%EC%A0%90%20%EB%8F%84%EC%B6%9C%EC%A2%85%ED%95%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%20%EA%B8%89%EB%93%B1%EB%9D%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%20%EA%B8%89%EB%93%B1%EB%9D%BD"
       },
       "top_headlines": [
         {
-          "title": "거래소, 12시간 거래 속도 낸다…노사 합의점 도출(종합)",
+          "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006212461?sid=101",
+          "link": "https://www.newspim.com/news/view/20260204000035",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -916,37 +937,141 @@
       ]
     },
     {
-      "term": "후폭풍 진정세",
-      "term_ko": "후폭풍 진정세",
+      "term": "시중은행 금리",
+      "term_ko": "시중은행 금리",
       "significance_score": 280,
-      "mentions": 160,
+      "mentions": 440,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "후폭풍 진정세",
+        "query": "시중은행 금리",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-01-27",
+              "timestamp": 1769439600000,
+              "value": 84.25196
+            },
+            {
+              "period": "2026-01-28",
+              "timestamp": 1769526000000,
+              "value": 76.37795
+            },
+            {
+              "period": "2026-01-29",
+              "timestamp": 1769612400000,
+              "value": 89.76377
+            },
+            {
+              "period": "2026-01-30",
+              "timestamp": 1769698800000,
+              "value": 67.71653
+            },
+            {
+              "period": "2026-01-31",
+              "timestamp": 1769785200000,
+              "value": 51.1811
+            },
+            {
+              "period": "2026-02-01",
+              "timestamp": 1769871600000,
+              "value": 48.81889
+            },
+            {
+              "period": "2026-02-02",
+              "timestamp": 1769958000000,
+              "value": 100
+            },
+            {
+              "period": "2026-02-03",
+              "timestamp": 1770044400000,
+              "value": 82.67716
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "달러·원 환율 1,446.6원 마감...워시 후폭풍 진정세",
-              "link": "https://n.news.naver.com/mnews/article/052/0002309993?sid=104"
+              "title": "시중은행 금리 상승에 '보금자리론' 2조 돌파 …2년 만에 최대",
+              "link": "https://www.newswhoplus.com/news/articleView.html?idxno=53326"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%84%ED%8F%AD%ED%92%8D%20%EC%A7%84%EC%A0%95%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%84%ED%8F%AD%ED%92%8D%20%EC%A7%84%EC%A0%95%EC%84%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "달러·원 환율 1,446.6원 마감...워시 후폭풍 진정세",
+          "title": "시중은행 금리 상승에 '보금자리론' 2조 돌파 …2년 만에 최대",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002309993?sid=104",
+          "link": "https://www.newswhoplus.com/news/articleView.html?idxno=53326",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 440.1575,
+        "weekly_average_volume": 73.3596,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.014709,
+        "time_weight": 0.028575,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1770044400000
+      }
+    },
+    {
+      "term": "SLAB CMG",
+      "term_ko": "",
+      "significance_score": 252,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "SLAB CMG",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
+              "link": "https://www.newspim.com/news/view/20260204000035"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SLAB%20CMG",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SLAB%20CMG"
+      },
+      "top_headlines": [
+        {
+          "title": "[AI의 종목 이야기] 뉴욕증시 시간 외 거래 급등락 종목: SLAB↑·CMG↓",
+          "summary": "",
+          "link": "https://www.newspim.com/news/view/20260204000035",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -954,37 +1079,37 @@
       ]
     },
     {
-      "term": "숨고르기 양상",
-      "term_ko": "숨고르기 양상",
-      "significance_score": 280,
+      "term": "Kospi Reclaims",
+      "term_ko": "",
+      "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "숨고르기 양상",
+        "query": "Kospi Reclaims",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "달러-원 환율 1446원… 워시 쇼크 진정되며 숨고르기 양상",
-              "link": "https://www.dkilbo.com/news/articleView.html?idxno=532681"
+              "title": "Kospi reclaims 5,300 mark despite AI woes on Wall Street",
+              "link": "https://n.news.naver.com/mnews/article/640/0000083994?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%A8%EA%B3%A0%EB%A5%B4%EA%B8%B0%20%EC%96%91%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%A8%EA%B3%A0%EB%A5%B4%EA%B8%B0%20%EC%96%91%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Reclaims",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Reclaims"
       },
       "top_headlines": [
         {
-          "title": "달러-원 환율 1446원… 워시 쇼크 진정되며 숨고르기 양상",
+          "title": "Kospi reclaims 5,300 mark despite AI woes on Wall Street",
           "summary": "",
-          "link": "https://www.dkilbo.com/news/articleView.html?idxno=532681",
+          "link": "https://n.news.naver.com/mnews/article/640/0000083994?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1001,7 +1126,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1024,7 +1149,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1047,7 +1172,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1070,7 +1195,7 @@
         "query": "금리 인하 기대감",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-02-04T03:59:47+09:00",
+          "last_updated": "2026-02-04T10:58:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1082,15 +1207,38 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
       },
       "top_headlines": []
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-02-04T10:58:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-02-03T19:00:59.090Z",
+    "generated_at": "2026-02-04T01:59:50.604Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-04T03:59:47+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-02-04T10:58:39+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1100,14 +1248,14 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-02-04T03:59:47+09:00",
+      "last_updated": "2026-02-04T10:58:39+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-02-04T03:59:47+09:00",
+        "lastUpdated": "2026-02-04T10:58:39+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
