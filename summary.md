@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-05T16:02:04+09:00 (KST)**
+- Generated: **2026-02-05T22:02:04+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -18,34 +18,34 @@
 **리노공업** (058470.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.9%**, 20d **48.8%**; volatility (20d): **unknown**
+- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
 
+**쎄트렉아이** (099320.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.3%**, 20d **64.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=%EC%8E%84%ED%8A%B8%EB%A0%89%EC%95%84%EC%9D%B4
+
 **에코프로** (086520.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **82.9%**; volatility (20d): **unknown**
+- Returns: 5d **-2.6%**, 20d **3.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
 
-**정보기술** (403870.KQ)
+**주성엔지니어링** (036930.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.7%**, 20d **31.1%**; volatility (20d): **unknown**
+- Returns: 5d **3.4%**, 20d **0.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
-
-**케어젠** (214370.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **71.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EC%BC%80%EC%96%B4%EC%A0%A0
+- News search: https://www.google.com/search?q=%EC%A3%BC%EC%84%B1%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81
 
 ### AGGRESSIVE (5)
 
@@ -130,6 +130,14 @@
 
 ### AGGRESSIVE (5)
 
+**BGF리테일** (282330.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=BGF%EB%A6%AC%ED%85%8C%EC%9D%BC
+
 **대우건설** (047040.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -137,12 +145,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9A%B0%EA%B1%B4%EC%84%A4
 
-**롯데정밀화학** (004000.KS)
+**롯데칠성** (005300.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.4%**, 20d **16.2%**; volatility (20d): **unknown**
+- Returns: 5d **-2.8%**, 20d **-8.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%A0%95%EB%B0%80%ED%99%94%ED%95%99
+- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%B9%A0%EC%84%B1
 
 **씨에스윈드** (112610.KS)
 
@@ -151,17 +159,10 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%94%A8%EC%97%90%EC%8A%A4%EC%9C%88%EB%93%9C
 
-**오리온홀딩스** (001800.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.6%**, 20d **16.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8%ED%99%80%EB%94%A9%EC%8A%A4
-
 **현대백화점** (069960.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **10.9%**, 20d **11.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.8%**, 20d **5.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90
 
