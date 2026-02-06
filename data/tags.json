@@ -1,1100 +1,439 @@
 {
+  "generatedAt": "2026-02-06T18:49:33.309Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-06",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "김치본드 발행 주관",
-      "term_ko": "김치본드 발행 주관",
-      "significance_score": 644,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김치본드 발행 주관",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, 5000만달러 현대캐피탈 김치본드 발행 주관",
-              "link": "https://n.news.naver.com/mnews/article/366/0001141126?sid=101"
-            },
-            {
-              "title": "한투증권, 현대캐피탈 5000만달러 김치본드 발행 주관 완료",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=728876"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EB%B0%9C%ED%96%89%20%EC%A3%BC%EA%B4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EB%B0%9C%ED%96%89%20%EC%A3%BC%EA%B4%80"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, 5000만달러 현대캐피탈 김치본드 발행 주관",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001141126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "한투증권, 현대캐피탈 5000만달러 김치본드 발행 주관 완료",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=728876",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "김치본드 발행 주관"
     },
     {
       "term": "브리핑 ECB 5연속",
-      "term_ko": "브리핑 ECB 5연속",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "브리핑 ECB 5연속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-              "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A6%AC%ED%95%91%20ECB%205%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A6%AC%ED%95%91%20ECB%205%EC%97%B0%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-          "summary": "",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "브리핑 ECB 5연속"
     },
     {
       "term": "크리테오 AI 쇼핑",
-      "term_ko": "크리테오 AI 쇼핑",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "크리테오 AI 쇼핑",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20AI%20%EC%87%BC%ED%95%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20AI%20%EC%87%BC%ED%95%91"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "크리테오 AI 쇼핑"
     },
     {
       "term": "마이어의 문명 VII",
-      "term_ko": "마이어의 문명 VII",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마이어의 문명 VII",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시드 마이어의 문명 VII, 애플 아케이드 에디션 정식 출시",
-              "link": "https://www.gameshot.net/common/con_view.php?code=GA698563d986223"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%9D%B4%EC%96%B4%EC%9D%98%20%EB%AC%B8%EB%AA%85%20VII",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%9D%B4%EC%96%B4%EC%9D%98%20%EB%AC%B8%EB%AA%85%20VII"
-      },
-      "top_headlines": [
-        {
-          "title": "시드 마이어의 문명 VII, 애플 아케이드 에디션 정식 출시",
-          "summary": "",
-          "link": "https://www.gameshot.net/common/con_view.php?code=GA698563d986223",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "마이어의 문명 VII"
     },
     {
       "term": "3차 상법개정안 초읽기",
-      "term_ko": "3차 상법개정안 초읽기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3차 상법개정안 초읽기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "3차 상법개정안 초읽기… 대기업 ‘소각’ 중견기업 ‘처분’ 차이는?",
-              "link": "https://n.news.naver.com/mnews/article/016/0002597321?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%B0%A8%20%EC%83%81%EB%B2%95%EA%B0%9C%EC%A0%95%EC%95%88%20%EC%B4%88%EC%9D%BD%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%B0%A8%20%EC%83%81%EB%B2%95%EA%B0%9C%EC%A0%95%EC%95%88%20%EC%B4%88%EC%9D%BD%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "3차 상법개정안 초읽기… 대기업 ‘소각’ 중견기업 ‘처분’ 차이는?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002597321?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "3차 상법개정안 초읽기"
     },
     {
       "term": "인천 옹진농협 제65기",
-      "term_ko": "인천 옹진농협 제65기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인천 옹진농협 제65기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "인천 옹진농협, 제65기 정기총회 개최",
-              "link": "http://www.fntimes.com/html/view.php?ud=202602062038009746dd55077bc2_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%B2%9C%20%EC%98%B9%EC%A7%84%EB%86%8D%ED%98%91%20%EC%A0%9C65%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%B2%9C%20%EC%98%B9%EC%A7%84%EB%86%8D%ED%98%91%20%EC%A0%9C65%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "인천 옹진농협, 제65기 정기총회 개최",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202602062038009746dd55077bc2_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인천 옹진농협 제65기"
     },
     {
       "term": "금리 연 2%",
-      "term_ko": "금리 연 2%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 연 2%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-              "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%97%B0%202%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%97%B0%202%25"
-      },
-      "top_headlines": [
-        {
-          "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-          "summary": "",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리 연 2%"
     },
     {
       "term": "안 보인다 16개월",
-      "term_ko": "안 보인다 16개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안 보인다 16개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"바닥이 안 보인다\"…16개월 만에 1억 원 아래로",
-              "link": "https://n.news.naver.com/mnews/article/215/0001240924?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%20%EB%B3%B4%EC%9D%B8%EB%8B%A4%2016%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%20%EB%B3%B4%EC%9D%B8%EB%8B%A4%2016%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "\"바닥이 안 보인다\"…16개월 만에 1억 원 아래로",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001240924?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "안 보인다 16개월"
     },
     {
       "term": "만에 1억 원",
-      "term_ko": "만에 1억 원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 1억 원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"바닥이 안 보인다\"…16개월 만에 1억 원 아래로",
-              "link": "https://n.news.naver.com/mnews/article/215/0001240924?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%201%EC%96%B5%20%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%201%EC%96%B5%20%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"바닥이 안 보인다\"…16개월 만에 1억 원 아래로",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001240924?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "만에 1억 원"
     },
     {
       "term": "한국투자증권 5000만달러 현대캐피탈",
-      "term_ko": "한국투자증권 5000만달러 현대캐피탈",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국투자증권 5000만달러 현대캐피탈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, 5000만달러 현대캐피탈 김치본드 발행 주관",
-              "link": "https://n.news.naver.com/mnews/article/366/0001141126?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC%20%ED%98%84%EB%8C%80%EC%BA%90%ED%94%BC%ED%83%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC%20%ED%98%84%EB%8C%80%EC%BA%90%ED%94%BC%ED%83%88"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, 5000만달러 현대캐피탈 김치본드 발행 주관",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001141126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국투자증권 5000만달러 현대캐피탈"
     },
     {
       "term": "한투증권 현대캐피탈 5000만달러",
-      "term_ko": "한투증권 현대캐피탈 5000만달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한투증권 현대캐피탈 5000만달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한투증권, 현대캐피탈 5000만달러 김치본드 발행 주관 완료",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=728876"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20%ED%98%84%EB%8C%80%EC%BA%90%ED%94%BC%ED%83%88%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20%ED%98%84%EB%8C%80%EC%BA%90%ED%94%BC%ED%83%88%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권, 현대캐피탈 5000만달러 김치본드 발행 주관 완료",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=728876",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한투증권 현대캐피탈 5000만달러"
     },
     {
       "term": "어시스턴트 위한 에이전틱",
-      "term_ko": "어시스턴트 위한 에이전틱",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "어시스턴트 위한 에이전틱",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B4%EC%8B%9C%EC%8A%A4%ED%84%B4%ED%8A%B8%20%EC%9C%84%ED%95%9C%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B4%EC%8B%9C%EC%8A%A4%ED%84%B4%ED%8A%B8%20%EC%9C%84%ED%95%9C%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "어시스턴트 위한 에이전틱"
     },
     {
       "term": "커머스 추천 서비스",
-      "term_ko": "커머스 추천 서비스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "커머스 추천 서비스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EC%B6%94%EC%B2%9C%20%EC%84%9C%EB%B9%84%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EC%B6%94%EC%B2%9C%20%EC%84%9C%EB%B9%84%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "커머스 추천 서비스"
     },
     {
       "term": "애플 아케이드 에디션",
-      "term_ko": "애플 아케이드 에디션",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "애플 아케이드 에디션",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시드 마이어의 문명 VII, 애플 아케이드 에디션 정식 출시",
-              "link": "https://www.gameshot.net/common/con_view.php?code=GA698563d986223"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%A0%ED%94%8C%20%EC%95%84%EC%BC%80%EC%9D%B4%EB%93%9C%20%EC%97%90%EB%94%94%EC%85%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%A0%ED%94%8C%20%EC%95%84%EC%BC%80%EC%9D%B4%EB%93%9C%20%EC%97%90%EB%94%94%EC%85%98"
-      },
-      "top_headlines": [
-        {
-          "title": "시드 마이어의 문명 VII, 애플 아케이드 에디션 정식 출시",
-          "summary": "",
-          "link": "https://www.gameshot.net/common/con_view.php?code=GA698563d986223",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "애플 아케이드 에디션"
     },
     {
       "term": "대기업 소각 중견기업",
-      "term_ko": "대기업 소각 중견기업",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대기업 소각 중견기업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "3차 상법개정안 초읽기… 대기업 ‘소각’ 중견기업 ‘처분’ 차이는?",
-              "link": "https://n.news.naver.com/mnews/article/016/0002597321?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B8%B0%EC%97%85%20%EC%86%8C%EA%B0%81%20%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B8%B0%EC%97%85%20%EC%86%8C%EA%B0%81%20%EC%A4%91%EA%B2%AC%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "3차 상법개정안 초읽기… 대기업 ‘소각’ 중견기업 ‘처분’ 차이는?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002597321?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대기업 소각 중견기업"
     },
     {
       "term": "정식 출시",
-      "term_ko": "정식 출시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정식 출시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시드 마이어의 문명 VII, 애플 아케이드 에디션 정식 출시",
-              "link": "https://www.gameshot.net/common/con_view.php?code=GA698563d986223"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%8B%9D%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%8B%9D%20%EC%B6%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "시드 마이어의 문명 VII, 애플 아케이드 에디션 정식 출시",
-          "summary": "",
-          "link": "https://www.gameshot.net/common/con_view.php?code=GA698563d986223",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "정식 출시"
     },
     {
       "term": "정기총회 개최",
-      "term_ko": "정기총회 개최",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정기총회 개최",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "인천 옹진농협, 제65기 정기총회 개최",
-              "link": "http://www.fntimes.com/html/view.php?ud=202602062038009746dd55077bc2_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EA%B8%B0%EC%B4%9D%ED%9A%8C%20%EA%B0%9C%EC%B5%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EA%B8%B0%EC%B4%9D%ED%9A%8C%20%EA%B0%9C%EC%B5%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "인천 옹진농협, 제65기 정기총회 개최",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202602062038009746dd55077bc2_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "정기총회 개최"
     },
     {
       "term": "월드 e",
-      "term_ko": "월드 e",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "월드 e",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-              "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EB%93%9C%20e",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EB%93%9C%20e"
-      },
-      "top_headlines": [
-        {
-          "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-          "summary": "",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월드 e"
     },
     {
       "term": "동결 예금",
-      "term_ko": "동결 예금",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동결 예금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-              "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%20%EC%98%88%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%20%EC%98%88%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[월드 e 브리핑] ECB, 5연속 금리 동결…예금 금리 연 2%",
-          "summary": "",
-          "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1513388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동결 예금"
     },
     {
       "term": "Precious Metals Face",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Precious Metals Face",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Global Markets Slide as AI, Crypto, and Precious Metals Face Heightened V...",
-              "link": "https://www.econotimes.com/Global-Markets-Slide-as-AI-Crypto-and-Precious-Metals-Face-Heightened-Volatility-1732958"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Precious%20Metals%20Face",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Precious%20Metals%20Face"
-      },
-      "top_headlines": [
-        {
-          "title": "Global Markets Slide as AI, Crypto, and Precious Metals Face Heightened V...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Global-Markets-Slide-as-AI-Crypto-and-Precious-Metals-Face-Heightened-Volatility-1732958",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Precious Metals Face"
     },
     {
       "term": "Tech Rout Deepens",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Rout Deepens",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Tech Rout Deepens on Amazon Capex Shock",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Tech-Rout-Deepens-on-Amazon-Capex-Shock-1732950"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Rout%20Deepens",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Rout%20Deepens"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Tech Rout Deepens on Amazon Capex Shock",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Tech-Rout-Deepens-on-Amazon-Capex-Shock-1732950",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Tech Rout Deepens"
     },
     {
       "term": "Amazon Capex Shock",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Amazon Capex Shock",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Tech Rout Deepens on Amazon Capex Shock",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Tech-Rout-Deepens-on-Amazon-Capex-Shock-1732950"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Amazon%20Capex%20Shock",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Amazon%20Capex%20Shock"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Tech Rout Deepens on Amazon Capex Shock",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Tech-Rout-Deepens-on-Amazon-Capex-Shock-1732950",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Amazon Capex Shock"
     },
     {
-      "term": "AI Crypto",
-      "term_ko": "",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Crypto",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Global Markets Slide as AI, Crypto, and Precious Metals Face Heightened V...",
-              "link": "https://www.econotimes.com/Global-Markets-Slide-as-AI-Crypto-and-Precious-Metals-Face-Heightened-Volatility-1732958"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Crypto",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Crypto"
-      },
-      "top_headlines": [
-        {
-          "title": "Global Markets Slide as AI, Crypto, and Precious Metals Face Heightened V...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Global-Markets-Slide-as-AI-Crypto-and-Precious-Metals-Face-Heightened-Volatility-1732958",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Crypto",
+      "term_ko": "Ai Crypto"
     },
     {
       "term": "Futures Slide",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Slide",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Slide as Tech Rout Deepens on Amazon Capex Shock",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Tech-Rout-Deepens-on-Amazon-Capex-Shock-1732950"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Slide",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Slide"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Slide as Tech Rout Deepens on Amazon Capex Shock",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slide-as-Tech-Rout-Deepens-on-Amazon-Capex-Shock-1732950",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Futures Slide"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     },
     {
       "term": "원달러 환율 급등",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-06T21:59:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-06T13:01:35.313Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-06T21:59:33+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "김치본드 발행 주관",
+      "term_ko": "김치본드 발행 주관"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-06T21:59:33+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-06T21:59:33+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "브리핑 ECB 5연속",
+      "term_ko": "브리핑 ECB 5연속"
+    },
+    {
+      "term": "크리테오 AI 쇼핑",
+      "term_ko": "크리테오 AI 쇼핑"
+    },
+    {
+      "term": "마이어의 문명 VII",
+      "term_ko": "마이어의 문명 VII"
+    },
+    {
+      "term": "3차 상법개정안 초읽기",
+      "term_ko": "3차 상법개정안 초읽기"
+    },
+    {
+      "term": "인천 옹진농협 제65기",
+      "term_ko": "인천 옹진농협 제65기"
+    },
+    {
+      "term": "금리 연 2%",
+      "term_ko": "금리 연 2%"
+    },
+    {
+      "term": "안 보인다 16개월",
+      "term_ko": "안 보인다 16개월"
+    },
+    {
+      "term": "만에 1억 원",
+      "term_ko": "만에 1억 원"
+    },
+    {
+      "term": "한국투자증권 5000만달러 현대캐피탈",
+      "term_ko": "한국투자증권 5000만달러 현대캐피탈"
+    },
+    {
+      "term": "한투증권 현대캐피탈 5000만달러",
+      "term_ko": "한투증권 현대캐피탈 5000만달러"
+    },
+    {
+      "term": "어시스턴트 위한 에이전틱",
+      "term_ko": "어시스턴트 위한 에이전틱"
+    },
+    {
+      "term": "커머스 추천 서비스",
+      "term_ko": "커머스 추천 서비스"
+    },
+    {
+      "term": "애플 아케이드 에디션",
+      "term_ko": "애플 아케이드 에디션"
+    },
+    {
+      "term": "대기업 소각 중견기업",
+      "term_ko": "대기업 소각 중견기업"
+    },
+    {
+      "term": "정식 출시",
+      "term_ko": "정식 출시"
+    },
+    {
+      "term": "정기총회 개최",
+      "term_ko": "정기총회 개최"
+    },
+    {
+      "term": "월드 e",
+      "term_ko": "월드 e"
+    },
+    {
+      "term": "동결 예금",
+      "term_ko": "동결 예금"
+    },
+    {
+      "term": "Precious Metals Face",
+      "term_ko": "Precious Metals Face"
+    },
+    {
+      "term": "Tech Rout Deepens",
+      "term_ko": "Tech Rout Deepens"
+    },
+    {
+      "term": "Amazon Capex Shock",
+      "term_ko": "Amazon Capex Shock"
+    },
+    {
+      "term": "Ai Crypto",
+      "term_ko": "Ai Crypto"
+    },
+    {
+      "term": "Futures Slide",
+      "term_ko": "Futures Slide"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "원달러 환율 급등",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "김치본드 발행 주관": {
+      "en": "김치본드 발행 주관",
+      "ko": "김치본드 발행 주관",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "브리핑 ECB 5연속": {
+      "en": "브리핑 ECB 5연속",
+      "ko": "브리핑 ECB 5연속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "크리테오 AI 쇼핑": {
+      "en": "크리테오 AI 쇼핑",
+      "ko": "크리테오 AI 쇼핑",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "마이어의 문명 VII": {
+      "en": "마이어의 문명 VII",
+      "ko": "마이어의 문명 VII",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "3차 상법개정안 초읽기": {
+      "en": "3차 상법개정안 초읽기",
+      "ko": "3차 상법개정안 초읽기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "인천 옹진농협 제65기": {
+      "en": "인천 옹진농협 제65기",
+      "ko": "인천 옹진농협 제65기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "금리 연 2%": {
+      "en": "금리 연 2%",
+      "ko": "금리 연 2%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "안 보인다 16개월": {
+      "en": "안 보인다 16개월",
+      "ko": "안 보인다 16개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "만에 1억 원": {
+      "en": "만에 1억 원",
+      "ko": "만에 1억 원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "한국투자증권 5000만달러 현대캐피탈": {
+      "en": "한국투자증권 5000만달러 현대캐피탈",
+      "ko": "한국투자증권 5000만달러 현대캐피탈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "한투증권 현대캐피탈 5000만달러": {
+      "en": "한투증권 현대캐피탈 5000만달러",
+      "ko": "한투증권 현대캐피탈 5000만달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "어시스턴트 위한 에이전틱": {
+      "en": "어시스턴트 위한 에이전틱",
+      "ko": "어시스턴트 위한 에이전틱",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "커머스 추천 서비스": {
+      "en": "커머스 추천 서비스",
+      "ko": "커머스 추천 서비스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "애플 아케이드 에디션": {
+      "en": "애플 아케이드 에디션",
+      "ko": "애플 아케이드 에디션",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "대기업 소각 중견기업": {
+      "en": "대기업 소각 중견기업",
+      "ko": "대기업 소각 중견기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "정식 출시": {
+      "en": "정식 출시",
+      "ko": "정식 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "정기총회 개최": {
+      "en": "정기총회 개최",
+      "ko": "정기총회 개최",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "월드 e": {
+      "en": "월드 e",
+      "ko": "월드 e",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "동결 예금": {
+      "en": "동결 예금",
+      "ko": "동결 예금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Precious Metals Face": {
+      "en": "Precious Metals Face",
+      "ko": "Precious Metals Face",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Tech Rout Deepens": {
+      "en": "Tech Rout Deepens",
+      "ko": "Tech Rout Deepens",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Amazon Capex Shock": {
+      "en": "Amazon Capex Shock",
+      "ko": "Amazon Capex Shock",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Ai Crypto": {
+      "en": "Ai Crypto",
+      "ko": "Ai Crypto",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Futures Slide": {
+      "en": "Futures Slide",
+      "ko": "Futures Slide",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
+    },
+    "원달러 환율 급등": {
+      "en": "원달러 환율 급등",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-06T18:49:33.309Z"
     }
   }
 }
