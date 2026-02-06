@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-06T21:59:24+09:00 (KST)**
+- Generated: **2026-02-07T03:51:32+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -299,14 +299,6 @@
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=AvalonBay%20Communities
 
-**Church & Dwight** (CHD)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.0%**, 20d **-3.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://www.google.com/search?q=Church%20%26%20Dwight
-
 **Corpay** (CPAY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -315,19 +307,27 @@
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Corpay
 
+**Dow Inc.** (DOW)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.7%**, 20d **3.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Materials**
+- News search: https://www.google.com/search?q=Dow%20Inc.
+
+**Edison International** (EIX)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.0%**, 20d **7.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=Edison%20International
+
 **International Paper** (IP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.8%**, 20d **12.2%**; volatility (20d): **unknown**
+- Returns: 5d **14.8%**, 20d **10.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=International%20Paper
-
-**Texas Pacific Land Corporation** (TPL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **-0.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Energy**
-- News search: https://www.google.com/search?q=Texas%20Pacific%20Land%20Corporation
 
