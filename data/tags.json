@@ -1,1028 +1,439 @@
 {
+  "generatedAt": "2026-02-07T06:42:43.890Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-07",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "ECB 5연속 금리",
-      "term_ko": "ECB 5연속 금리",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ECB 5연속 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "ECB, 5연속 금리 동결…예금 금리 연 2%",
-              "link": "https://n.news.naver.com/mnews/article/422/0000831381?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ECB%205%EC%97%B0%EC%86%8D%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ECB%205%EC%97%B0%EC%86%8D%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "ECB, 5연속 금리 동결…예금 금리 연 2%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000831381?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "ECB 5연속 금리"
     },
     {
       "term": "크리테오 AI 쇼핑",
-      "term_ko": "크리테오 AI 쇼핑",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "크리테오 AI 쇼핑",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20AI%20%EC%87%BC%ED%95%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%AC%EB%A6%AC%ED%85%8C%EC%98%A4%20AI%20%EC%87%BC%ED%95%91"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "크리테오 AI 쇼핑"
     },
     {
       "term": "매도세에 삼전 SK하닉",
-      "term_ko": "매도세에 삼전 SK하닉",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매도세에 삼전 SK하닉",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "외인 매도세에 삼전·SK하닉 '흔들'…롤러코스터 증시 [주간 증시해설서...",
-              "link": "https://n.news.naver.com/mnews/article/665/0000006765?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%8F%84%EC%84%B8%EC%97%90%20%EC%82%BC%EC%A0%84%20SK%ED%95%98%EB%8B%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%8F%84%EC%84%B8%EC%97%90%20%EC%82%BC%EC%A0%84%20SK%ED%95%98%EB%8B%89"
-      },
-      "top_headlines": [
-        {
-          "title": "외인 매도세에 삼전·SK하닉 '흔들'…롤러코스터 증시 [주간 증시해설서...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/665/0000006765?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "매도세에 삼전 SK하닉"
     },
     {
       "term": "오늘의 증권소식2월 6일",
-      "term_ko": "오늘의 증권소식2월 6일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증권소식2월 6일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 증권소식(2월 6일)",
-              "link": "https://www.radiokorea.com/news/article.php?uid=489956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D2%EC%9B%94%206%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D2%EC%9B%94%206%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증권소식(2월 6일)",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=489956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 증권소식2월 6일"
     },
     {
       "term": "2억 달러 자사주",
-      "term_ko": "2억 달러 자사주",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2억 달러 자사주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2억 달러 자사주 매입 발표… 갤럭시디지털, -25% 약세장에 '반등 신호탄...",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/329937"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9E%90%EC%82%AC%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EC%96%B5%20%EB%8B%AC%EB%9F%AC%20%EC%9E%90%EC%82%AC%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "2억 달러 자사주 매입 발표… 갤럭시디지털, -25% 약세장에 '반등 신호탄...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/329937",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "2억 달러 자사주"
     },
     {
       "term": "발표 갤럭시디지털 25%",
-      "term_ko": "발표 갤럭시디지털 25%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "발표 갤럭시디지털 25%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2억 달러 자사주 매입 발표… 갤럭시디지털, -25% 약세장에 '반등 신호탄...",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/329937"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%91%9C%20%EA%B0%A4%EB%9F%AD%EC%8B%9C%EB%94%94%EC%A7%80%ED%84%B8%2025%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%91%9C%20%EA%B0%A4%EB%9F%AD%EC%8B%9C%EB%94%94%EC%A7%80%ED%84%B8%2025%25"
-      },
-      "top_headlines": [
-        {
-          "title": "2억 달러 자사주 매입 발표… 갤럭시디지털, -25% 약세장에 '반등 신호탄...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/329937",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "발표 갤럭시디지털 25%"
     },
     {
       "term": "7일 금시세 외",
-      "term_ko": "7일 금시세 외",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "7일 금시세 외",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "7일 금시세 외",
-              "link": "http://www.technoa.co.kr/news/articleView.html?idxno=100532"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=7%EC%9D%BC%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%EC%99%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=7%EC%9D%BC%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%EC%99%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "7일 금시세 외",
-          "summary": "",
-          "link": "http://www.technoa.co.kr/news/articleView.html?idxno=100532",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "7일 금시세 외"
     },
     {
       "term": "옵션 수익 확대",
-      "term_ko": "옵션 수익 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "옵션 수익 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "하이퍼리온, HYPE 담보로 옵션 수익 확대…디파이 전략 강화",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=628294"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%B5%EC%85%98%20%EC%88%98%EC%9D%B5%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%B5%EC%85%98%20%EC%88%98%EC%9D%B5%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "하이퍼리온, HYPE 담보로 옵션 수익 확대…디파이 전략 강화",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=628294",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "옵션 수익 확대"
     },
     {
       "term": "디파이 전략 강화",
-      "term_ko": "디파이 전략 강화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "디파이 전략 강화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "하이퍼리온, HYPE 담보로 옵션 수익 확대…디파이 전략 강화",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=628294"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%94%ED%8C%8C%EC%9D%B4%20%EC%A0%84%EB%9E%B5%20%EA%B0%95%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%94%ED%8C%8C%EC%9D%B4%20%EC%A0%84%EB%9E%B5%20%EA%B0%95%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "하이퍼리온, HYPE 담보로 옵션 수익 확대…디파이 전략 강화",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=628294",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "디파이 전략 강화"
     },
     {
       "term": "어시스턴트 위한 에이전틱",
-      "term_ko": "어시스턴트 위한 에이전틱",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "어시스턴트 위한 에이전틱",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B4%EC%8B%9C%EC%8A%A4%ED%84%B4%ED%8A%B8%20%EC%9C%84%ED%95%9C%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B4%EC%8B%9C%EC%8A%A4%ED%84%B4%ED%8A%B8%20%EC%9C%84%ED%95%9C%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "어시스턴트 위한 에이전틱"
     },
     {
       "term": "커머스 추천 서비스",
-      "term_ko": "커머스 추천 서비스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "커머스 추천 서비스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-              "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EC%B6%94%EC%B2%9C%20%EC%84%9C%EB%B9%84%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EC%B6%94%EC%B2%9C%20%EC%84%9C%EB%B9%84%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "크리테오, AI 쇼핑 어시스턴트 위한 '에이전틱 커머스 추천 서비스' 출시",
-          "summary": "",
-          "link": "https://www.aitimes.kr/news/articleView.html?idxno=38528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "커머스 추천 서비스"
     },
     {
       "term": "불확실성에 신용위험 확대",
-      "term_ko": "불확실성에 신용위험 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불확실성에 신용위험 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“불확실성에 신용위험 확대”…산은硏 “은행권 기업대출, 올해 큰 폭...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005633871?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%97%90%20%EC%8B%A0%EC%9A%A9%EC%9C%84%ED%97%98%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%97%90%20%EC%8B%A0%EC%9A%A9%EC%9C%84%ED%97%98%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "“불확실성에 신용위험 확대”…산은硏 “은행권 기업대출, 올해 큰 폭...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005633871?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "불확실성에 신용위험 확대"
     },
     {
       "term": "산은硏 은행권 기업대출",
-      "term_ko": "산은硏 은행권 기업대출",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "산은硏 은행권 기업대출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“불확실성에 신용위험 확대”…산은硏 “은행권 기업대출, 올해 큰 폭...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005633871?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%EC%9D%80%E7%A1%8F%20%EC%9D%80%ED%96%89%EA%B6%8C%20%EA%B8%B0%EC%97%85%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%EC%9D%80%E7%A1%8F%20%EC%9D%80%ED%96%89%EA%B6%8C%20%EA%B8%B0%EC%97%85%EB%8C%80%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "“불확실성에 신용위험 확대”…산은硏 “은행권 기업대출, 올해 큰 폭...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005633871?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "산은硏 은행권 기업대출"
     },
     {
       "term": "흔들 롤러코스터 증시",
-      "term_ko": "흔들 롤러코스터 증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "흔들 롤러코스터 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "외인 매도세에 삼전·SK하닉 '흔들'…롤러코스터 증시 [주간 증시해설서...",
-              "link": "https://n.news.naver.com/mnews/article/665/0000006765?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9D%94%EB%93%A4%20%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9D%94%EB%93%A4%20%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "외인 매도세에 삼전·SK하닉 '흔들'…롤러코스터 증시 [주간 증시해설서...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/665/0000006765?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "흔들 롤러코스터 증시"
     },
     {
       "term": "세율이 아니다 순화동필",
-      "term_ko": "세율이 아니다 순화동필",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "세율이 아니다 순화동필",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "상속세의 진짜 함정은 ‘세율’이 아니다 [순화동필]",
-              "link": "https://n.news.naver.com/mnews/article/243/0000092696?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%EC%9C%A8%EC%9D%B4%20%EC%95%84%EB%8B%88%EB%8B%A4%20%EC%88%9C%ED%99%94%EB%8F%99%ED%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%EC%9C%A8%EC%9D%B4%20%EC%95%84%EB%8B%88%EB%8B%A4%20%EC%88%9C%ED%99%94%EB%8F%99%ED%95%84"
-      },
-      "top_headlines": [
-        {
-          "title": "상속세의 진짜 함정은 ‘세율’이 아니다 [순화동필]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/243/0000092696?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "세율이 아니다 순화동필"
     },
     {
       "term": "미국환율 달러 엔화",
-      "term_ko": "미국환율 달러 엔화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국환율 달러 엔화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국환율 달러 엔화 등",
-              "link": "https://www.bntnews.co.kr/article/view/bnt202602070065"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%ED%99%98%EC%9C%A8%20%EB%8B%AC%EB%9F%AC%20%EC%97%94%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%ED%99%98%EC%9C%A8%20%EB%8B%AC%EB%9F%AC%20%EC%97%94%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "미국환율 달러 엔화 등",
-          "summary": "",
-          "link": "https://www.bntnews.co.kr/article/view/bnt202602070065",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미국환율 달러 엔화"
     },
     {
       "term": "연 2%",
-      "term_ko": "연 2%",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연 2%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "ECB, 5연속 금리 동결…예금 금리 연 2%",
-              "link": "https://n.news.naver.com/mnews/article/422/0000831381?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%202%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%202%25"
-      },
-      "top_headlines": [
-        {
-          "title": "ECB, 5연속 금리 동결…예금 금리 연 2%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000831381?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연 2%"
     },
     {
       "term": "약세장에 반등",
-      "term_ko": "약세장에 반등",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "약세장에 반등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2억 달러 자사주 매입 발표… 갤럭시디지털, -25% 약세장에 '반등 신호탄...",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/329937"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%BD%EC%84%B8%EC%9E%A5%EC%97%90%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%BD%EC%84%B8%EC%9E%A5%EC%97%90%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "2억 달러 자사주 매입 발표… 갤럭시디지털, -25% 약세장에 '반등 신호탄...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/329937",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "약세장에 반등"
     },
     {
       "term": "동결 예금",
-      "term_ko": "동결 예금",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동결 예금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "ECB, 5연속 금리 동결…예금 금리 연 2%",
-              "link": "https://n.news.naver.com/mnews/article/422/0000831381?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%20%EC%98%88%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%20%EC%98%88%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "ECB, 5연속 금리 동결…예금 금리 연 2%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000831381?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동결 예금"
     },
     {
       "term": "올해 큰",
-      "term_ko": "올해 큰",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "올해 큰",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“불확실성에 신용위험 확대”…산은硏 “은행권 기업대출, 올해 큰 폭...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005633871?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%ED%95%B4%20%ED%81%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%ED%95%B4%20%ED%81%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "“불확실성에 신용위험 확대”…산은硏 “은행권 기업대출, 올해 큰 폭...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005633871?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "올해 큰"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     },
     {
       "term": "원달러 환율 급등",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "원달러 환율 급등"
     },
     {
       "term": "미국 정부 셧다운 위기",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
       "term": "한국 증시 반등",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "한국 증시 반등"
     },
     {
       "term": "반도체 투자 확대",
-      "term_ko": "반도체 투자 확대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 투자 확대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "반도체 투자 확대"
     },
     {
       "term": "인공지능 칩 경쟁",
-      "term_ko": "인공지능 칩 경쟁",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인공지능 칩 경쟁",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-07T10:56:23+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81"
-      },
-      "top_headlines": []
+      "term_ko": "인공지능 칩 경쟁"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-07T01:57:31.152Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-07T10:56:23+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "ECB 5연속 금리",
+      "term_ko": "ECB 5연속 금리"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-07T10:56:23+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-07T10:56:23+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "크리테오 AI 쇼핑",
+      "term_ko": "크리테오 AI 쇼핑"
+    },
+    {
+      "term": "매도세에 삼전 SK하닉",
+      "term_ko": "매도세에 삼전 SK하닉"
+    },
+    {
+      "term": "오늘의 증권소식2월 6일",
+      "term_ko": "오늘의 증권소식2월 6일"
+    },
+    {
+      "term": "2억 달러 자사주",
+      "term_ko": "2억 달러 자사주"
+    },
+    {
+      "term": "발표 갤럭시디지털 25%",
+      "term_ko": "발표 갤럭시디지털 25%"
+    },
+    {
+      "term": "7일 금시세 외",
+      "term_ko": "7일 금시세 외"
+    },
+    {
+      "term": "옵션 수익 확대",
+      "term_ko": "옵션 수익 확대"
+    },
+    {
+      "term": "디파이 전략 강화",
+      "term_ko": "디파이 전략 강화"
+    },
+    {
+      "term": "어시스턴트 위한 에이전틱",
+      "term_ko": "어시스턴트 위한 에이전틱"
+    },
+    {
+      "term": "커머스 추천 서비스",
+      "term_ko": "커머스 추천 서비스"
+    },
+    {
+      "term": "불확실성에 신용위험 확대",
+      "term_ko": "불확실성에 신용위험 확대"
+    },
+    {
+      "term": "산은硏 은행권 기업대출",
+      "term_ko": "산은硏 은행권 기업대출"
+    },
+    {
+      "term": "흔들 롤러코스터 증시",
+      "term_ko": "흔들 롤러코스터 증시"
+    },
+    {
+      "term": "세율이 아니다 순화동필",
+      "term_ko": "세율이 아니다 순화동필"
+    },
+    {
+      "term": "미국환율 달러 엔화",
+      "term_ko": "미국환율 달러 엔화"
+    },
+    {
+      "term": "연 2%",
+      "term_ko": "연 2%"
+    },
+    {
+      "term": "약세장에 반등",
+      "term_ko": "약세장에 반등"
+    },
+    {
+      "term": "동결 예금",
+      "term_ko": "동결 예금"
+    },
+    {
+      "term": "올해 큰",
+      "term_ko": "올해 큰"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "원달러 환율 급등",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "미국 정부 셧다운 위기",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "한국 증시 반등",
+      "term_ko": "한국 증시 반등"
+    },
+    {
+      "term": "반도체 투자 확대",
+      "term_ko": "반도체 투자 확대"
+    },
+    {
+      "term": "인공지능 칩 경쟁",
+      "term_ko": "인공지능 칩 경쟁"
+    }
+  ],
+  "translations": {
+    "ECB 5연속 금리": {
+      "en": "ECB 5연속 금리",
+      "ko": "ECB 5연속 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "크리테오 AI 쇼핑": {
+      "en": "크리테오 AI 쇼핑",
+      "ko": "크리테오 AI 쇼핑",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "매도세에 삼전 SK하닉": {
+      "en": "매도세에 삼전 SK하닉",
+      "ko": "매도세에 삼전 SK하닉",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "오늘의 증권소식2월 6일": {
+      "en": "오늘의 증권소식2월 6일",
+      "ko": "오늘의 증권소식2월 6일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "2억 달러 자사주": {
+      "en": "2억 달러 자사주",
+      "ko": "2억 달러 자사주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "발표 갤럭시디지털 25%": {
+      "en": "발표 갤럭시디지털 25%",
+      "ko": "발표 갤럭시디지털 25%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "7일 금시세 외": {
+      "en": "7일 금시세 외",
+      "ko": "7일 금시세 외",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "옵션 수익 확대": {
+      "en": "옵션 수익 확대",
+      "ko": "옵션 수익 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "디파이 전략 강화": {
+      "en": "디파이 전략 강화",
+      "ko": "디파이 전략 강화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "어시스턴트 위한 에이전틱": {
+      "en": "어시스턴트 위한 에이전틱",
+      "ko": "어시스턴트 위한 에이전틱",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "커머스 추천 서비스": {
+      "en": "커머스 추천 서비스",
+      "ko": "커머스 추천 서비스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "불확실성에 신용위험 확대": {
+      "en": "불확실성에 신용위험 확대",
+      "ko": "불확실성에 신용위험 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "산은硏 은행권 기업대출": {
+      "en": "산은硏 은행권 기업대출",
+      "ko": "산은硏 은행권 기업대출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "흔들 롤러코스터 증시": {
+      "en": "흔들 롤러코스터 증시",
+      "ko": "흔들 롤러코스터 증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "세율이 아니다 순화동필": {
+      "en": "세율이 아니다 순화동필",
+      "ko": "세율이 아니다 순화동필",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "미국환율 달러 엔화": {
+      "en": "미국환율 달러 엔화",
+      "ko": "미국환율 달러 엔화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "연 2%": {
+      "en": "연 2%",
+      "ko": "연 2%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "약세장에 반등": {
+      "en": "약세장에 반등",
+      "ko": "약세장에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "동결 예금": {
+      "en": "동결 예금",
+      "ko": "동결 예금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "올해 큰": {
+      "en": "올해 큰",
+      "ko": "올해 큰",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "원달러 환율 급등": {
+      "en": "원달러 환율 급등",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "미국 정부 셧다운 위기": {
+      "en": "미국 정부 셧다운 위기",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "한국 증시 반등": {
+      "en": "한국 증시 반등",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "반도체 투자 확대": {
+      "en": "반도체 투자 확대",
+      "ko": "반도체 투자 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
+    },
+    "인공지능 칩 경쟁": {
+      "en": "인공지능 칩 경쟁",
+      "ko": "인공지능 칩 경쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-07T06:42:43.890Z"
     }
   }
 }
