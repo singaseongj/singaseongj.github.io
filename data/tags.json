@@ -1,1167 +1,439 @@
 {
+  "generatedAt": "2026-02-11T07:00:25.686Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-11",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "한국투자 IMA S3",
-      "term_ko": "한국투자 IMA S3",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국투자 IMA S3",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, '한국투자 IMA S3' 상품 출시",
-              "link": "https://www.cstimes.com/news/articleView.html?idxno=693122"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%20IMA%20S3",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%20IMA%20S3"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, '한국투자 IMA S3' 상품 출시",
-          "summary": "",
-          "link": "https://www.cstimes.com/news/articleView.html?idxno=693122",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국투자 IMA S3"
     },
     {
       "term": "한국투자증권 IMA 3호",
-      "term_ko": "한국투자증권 IMA 3호",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국투자증권 IMA 3호",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-02-04",
-              "timestamp": 1770130800000,
-              "value": 100
-            },
-            {
-              "period": "2026-02-06",
-              "timestamp": 1770303600000,
-              "value": 62.5
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, IMA 3호 출시…12일부터 3000억원 규모 모집",
-              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=125188"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%203%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%203%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, IMA 3호 출시…12일부터 3000억원 규모 모집",
-          "summary": "",
-          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=125188",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 62.5,
-        "weekly_average_volume": 62.5,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.05691,
-        "time_weight": 0.00762,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1770303600000
-      }
+      "term_ko": "한국투자증권 IMA 3호"
     },
     {
       "term": "하나은행 KOSA와 협력해",
-      "term_ko": "하나은행 KOSA와 협력해",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나은행 KOSA와 협력해",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나은행, KOSA와 협력해 'AI·SW ESG 경영 진단' 기업에 우대금리 대출",
-              "link": "https://www.delighti.co.kr/news/articleView.html?idxno=111343"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20KOSA%EC%99%80%20%ED%98%91%EB%A0%A5%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20KOSA%EC%99%80%20%ED%98%91%EB%A0%A5%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "하나은행, KOSA와 협력해 'AI·SW ESG 경영 진단' 기업에 우대금리 대출",
-          "summary": "",
-          "link": "https://www.delighti.co.kr/news/articleView.html?idxno=111343",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하나은행 KOSA와 협력해"
     },
     {
       "term": "SW ESG 경영",
-      "term_ko": "SW ESG 경영",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SW ESG 경영",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나은행, KOSA와 협력해 'AI·SW ESG 경영 진단' 기업에 우대금리 대출",
-              "link": "https://www.delighti.co.kr/news/articleView.html?idxno=111343"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SW%20ESG%20%EA%B2%BD%EC%98%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SW%20ESG%20%EA%B2%BD%EC%98%81"
-      },
-      "top_headlines": [
-        {
-          "title": "하나은행, KOSA와 협력해 'AI·SW ESG 경영 진단' 기업에 우대금리 대출",
-          "summary": "",
-          "link": "https://www.delighti.co.kr/news/articleView.html?idxno=111343",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "SW ESG 경영"
     },
     {
       "term": "하나은행 AI SW",
-      "term_ko": "하나은행 AI SW",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나은행 AI SW",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나은행, AI·SW 기업 ESG 금융지원 나선다",
-              "link": "https://www.newstree.kr/newsView/ntr202602110008"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20AI%20SW",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20AI%20SW"
-      },
-      "top_headlines": [
-        {
-          "title": "하나은행, AI·SW 기업 ESG 금융지원 나선다",
-          "summary": "",
-          "link": "https://www.newstree.kr/newsView/ntr202602110008",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하나은행 AI SW"
     },
     {
       "term": "기업 ESG 금융지원",
-      "term_ko": "기업 ESG 금융지원",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기업 ESG 금융지원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나은행, AI·SW 기업 ESG 금융지원 나선다",
-              "link": "https://www.newstree.kr/newsView/ntr202602110008"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%20ESG%20%EA%B8%88%EC%9C%B5%EC%A7%80%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%20ESG%20%EA%B8%88%EC%9C%B5%EC%A7%80%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "하나은행, AI·SW 기업 ESG 금융지원 나선다",
-          "summary": "",
-          "link": "https://www.newstree.kr/newsView/ntr202602110008",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기업 ESG 금융지원"
     },
     {
       "term": "바이오이뮨온시아 1200억 규모",
-      "term_ko": "바이오이뮨온시아 1200억 규모",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "바이오이뮨온시아 1200억 규모",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[바이오]이뮨온시아, 1,200억 규모 유상증자 결정 外 아이엠바이오로직...",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=860968"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%94%EC%9D%B4%EC%98%A4%EC%9D%B4%EB%AE%A8%EC%98%A8%EC%8B%9C%EC%95%84%201200%EC%96%B5%20%EA%B7%9C%EB%AA%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%94%EC%9D%B4%EC%98%A4%EC%9D%B4%EB%AE%A8%EC%98%A8%EC%8B%9C%EC%95%84%201200%EC%96%B5%20%EA%B7%9C%EB%AA%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[바이오]이뮨온시아, 1,200억 규모 유상증자 결정 外 아이엠바이오로직...",
-          "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=860968",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "바이오이뮨온시아 1200억 규모"
     },
     {
       "term": "7거래일째 오른 은행주",
-      "term_ko": "7거래일째 오른 은행주",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "7거래일째 오른 은행주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "7거래일째 오른 은행주, 코스피 상승폭 제쳤다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005317067?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=7%EA%B1%B0%EB%9E%98%EC%9D%BC%EC%A7%B8%20%EC%98%A4%EB%A5%B8%20%EC%9D%80%ED%96%89%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=7%EA%B1%B0%EB%9E%98%EC%9D%BC%EC%A7%B8%20%EC%98%A4%EB%A5%B8%20%EC%9D%80%ED%96%89%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "7거래일째 오른 은행주, 코스피 상승폭 제쳤다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005317067?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "7거래일째 오른 은행주"
     },
     {
       "term": "출시 12일부터 3000억원",
-      "term_ko": "출시 12일부터 3000억원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "출시 12일부터 3000억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, IMA 3호 출시…12일부터 3000억원 규모 모집",
-              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=125188"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EC%8B%9C%2012%EC%9D%BC%EB%B6%80%ED%84%B0%203000%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EC%8B%9C%2012%EC%9D%BC%EB%B6%80%ED%84%B0%203000%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, IMA 3호 출시…12일부터 3000억원 규모 모집",
-          "summary": "",
-          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=125188",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "출시 12일부터 3000억원"
     },
     {
       "term": "유상증자 결정 外",
-      "term_ko": "유상증자 결정 外",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유상증자 결정 外",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[바이오]이뮨온시아, 1,200억 규모 유상증자 결정 外 아이엠바이오로직...",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=860968"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EC%83%81%EC%A6%9D%EC%9E%90%20%EA%B2%B0%EC%A0%95%20%E5%A4%96",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EC%83%81%EC%A6%9D%EC%9E%90%20%EA%B2%B0%EC%A0%95%20%E5%A4%96"
-      },
-      "top_headlines": [
-        {
-          "title": "[바이오]이뮨온시아, 1,200억 규모 유상증자 결정 外 아이엠바이오로직...",
-          "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=860968",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "유상증자 결정 外"
     },
     {
       "term": "가상화폐 거래소 지배구조",
-      "term_ko": "가상화폐 거래소 지배구조",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가상화폐 거래소 지배구조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "가상화폐 거래소 지배구조 분산 추진에 업계 우려 확산",
-              "link": "https://www.khgames.co.kr/news/articleView.html?idxno=301297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90%20%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%A7%80%EB%B0%B0%EA%B5%AC%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90%20%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%A7%80%EB%B0%B0%EA%B5%AC%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "가상화폐 거래소 지배구조 분산 추진에 업계 우려 확산",
-          "summary": "",
-          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=301297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "가상화폐 거래소 지배구조"
     },
     {
       "term": "분산 추진에 업계",
-      "term_ko": "분산 추진에 업계",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "분산 추진에 업계",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "가상화폐 거래소 지배구조 분산 추진에 업계 우려 확산",
-              "link": "https://www.khgames.co.kr/news/articleView.html?idxno=301297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%84%EC%82%B0%20%EC%B6%94%EC%A7%84%EC%97%90%20%EC%97%85%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%84%EC%82%B0%20%EC%B6%94%EC%A7%84%EC%97%90%20%EC%97%85%EA%B3%84"
-      },
-      "top_headlines": [
-        {
-          "title": "가상화폐 거래소 지배구조 분산 추진에 업계 우려 확산",
-          "summary": "",
-          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=301297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "분산 추진에 업계"
     },
     {
       "term": "진단 기업에 우대금리",
-      "term_ko": "진단 기업에 우대금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "진단 기업에 우대금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나은행, KOSA와 협력해 'AI·SW ESG 경영 진단' 기업에 우대금리 대출",
-              "link": "https://www.delighti.co.kr/news/articleView.html?idxno=111343"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%84%EB%8B%A8%20%EA%B8%B0%EC%97%85%EC%97%90%20%EC%9A%B0%EB%8C%80%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%84%EB%8B%A8%20%EA%B8%B0%EC%97%85%EC%97%90%20%EC%9A%B0%EB%8C%80%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "하나은행, KOSA와 협력해 'AI·SW ESG 경영 진단' 기업에 우대금리 대출",
-          "summary": "",
-          "link": "https://www.delighti.co.kr/news/articleView.html?idxno=111343",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "진단 기업에 우대금리"
     },
     {
       "term": "코스피 상승폭 제쳤다",
-      "term_ko": "코스피 상승폭 제쳤다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 상승폭 제쳤다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "7거래일째 오른 은행주, 코스피 상승폭 제쳤다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005317067?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%83%81%EC%8A%B9%ED%8F%AD%20%EC%A0%9C%EC%B3%A4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%83%81%EC%8A%B9%ED%8F%AD%20%EC%A0%9C%EC%B3%A4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "7거래일째 오른 은행주, 코스피 상승폭 제쳤다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005317067?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 상승폭 제쳤다"
     },
     {
       "term": "금융 스케치 하나카드",
-      "term_ko": "금융 스케치 하나카드",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융 스케치 하나카드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[금융 스케치] 하나카드, 설 맞이 해외여행 '붉은말의 질주' 이벤트 外",
-              "link": "https://www.pressman.kr/news/articleView.html?idxno=99843"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EC%8A%A4%EC%BC%80%EC%B9%98%20%ED%95%98%EB%82%98%EC%B9%B4%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EC%8A%A4%EC%BC%80%EC%B9%98%20%ED%95%98%EB%82%98%EC%B9%B4%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 스케치] 하나카드, 설 맞이 해외여행 '붉은말의 질주' 이벤트 外",
-          "summary": "",
-          "link": "https://www.pressman.kr/news/articleView.html?idxno=99843",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융 스케치 하나카드"
     },
     {
       "term": "설 맞이 해외여행",
-      "term_ko": "설 맞이 해외여행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "설 맞이 해외여행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[금융 스케치] 하나카드, 설 맞이 해외여행 '붉은말의 질주' 이벤트 外",
-              "link": "https://www.pressman.kr/news/articleView.html?idxno=99843"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A4%20%EB%A7%9E%EC%9D%B4%20%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A4%20%EB%A7%9E%EC%9D%B4%20%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 스케치] 하나카드, 설 맞이 해외여행 '붉은말의 질주' 이벤트 外",
-          "summary": "",
-          "link": "https://www.pressman.kr/news/articleView.html?idxno=99843",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "설 맞이 해외여행"
     },
     {
       "term": "붉은말의 질주 이벤트",
-      "term_ko": "붉은말의 질주 이벤트",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "붉은말의 질주 이벤트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[금융 스케치] 하나카드, 설 맞이 해외여행 '붉은말의 질주' 이벤트 外",
-              "link": "https://www.pressman.kr/news/articleView.html?idxno=99843"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%89%EC%9D%80%EB%A7%90%EC%9D%98%20%EC%A7%88%EC%A3%BC%20%EC%9D%B4%EB%B2%A4%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%89%EC%9D%80%EB%A7%90%EC%9D%98%20%EC%A7%88%EC%A3%BC%20%EC%9D%B4%EB%B2%A4%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 스케치] 하나카드, 설 맞이 해외여행 '붉은말의 질주' 이벤트 外",
-          "summary": "",
-          "link": "https://www.pressman.kr/news/articleView.html?idxno=99843",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "붉은말의 질주 이벤트"
     },
     {
-      "term": "FDA Declines Review",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "FDA Declines Review",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Moderna Stock Drops After FDA Declines Review of mRNA Flu Vaccine",
-              "link": "https://www.econotimes.com/Moderna-Stock-Drops-After-FDA-Declines-Review-of-mRNA-Flu-Vaccine-1733352"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FDA%20Declines%20Review",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FDA%20Declines%20Review"
-      },
-      "top_headlines": [
-        {
-          "title": "Moderna Stock Drops After FDA Declines Review of mRNA Flu Vaccine",
-          "summary": "",
-          "link": "https://www.econotimes.com/Moderna-Stock-Drops-After-FDA-Declines-Review-of-mRNA-Flu-Vaccine-1733352",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Fda Declines Review",
+      "term_ko": "Fda Declines Review"
     },
     {
-      "term": "MRNA Flu Vaccine",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "MRNA Flu Vaccine",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Moderna Stock Drops After FDA Declines Review of mRNA Flu Vaccine",
-              "link": "https://www.econotimes.com/Moderna-Stock-Drops-After-FDA-Declines-Review-of-mRNA-Flu-Vaccine-1733352"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MRNA%20Flu%20Vaccine",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MRNA%20Flu%20Vaccine"
-      },
-      "top_headlines": [
-        {
-          "title": "Moderna Stock Drops After FDA Declines Review of mRNA Flu Vaccine",
-          "summary": "",
-          "link": "https://www.econotimes.com/Moderna-Stock-Drops-After-FDA-Declines-Review-of-mRNA-Flu-Vaccine-1733352",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mrna Flu Vaccine",
+      "term_ko": "Mrna Flu Vaccine"
     },
     {
-      "term": "AST SpaceMobile Joins",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AST SpaceMobile Joins",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "AST SpaceMobile Joins MSCI ACWI Index as Largest New Addition, Boosting M...",
-              "link": "https://www.econotimes.com/AST-SpaceMobile-Joins-MSCI-ACWI-Index-as-Largest-New-Addition-Boosting-Market-Visibility-1733349"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AST%20SpaceMobile%20Joins",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AST%20SpaceMobile%20Joins"
-      },
-      "top_headlines": [
-        {
-          "title": "AST SpaceMobile Joins MSCI ACWI Index as Largest New Addition, Boosting M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/AST-SpaceMobile-Joins-MSCI-ACWI-Index-as-Largest-New-Addition-Boosting-Market-Visibility-1733349",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ast Spacemobile Joins",
+      "term_ko": "Ast Spacemobile Joins"
     },
     {
-      "term": "MSCI ACWI Index",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "MSCI ACWI Index",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "AST SpaceMobile Joins MSCI ACWI Index as Largest New Addition, Boosting M...",
-              "link": "https://www.econotimes.com/AST-SpaceMobile-Joins-MSCI-ACWI-Index-as-Largest-New-Addition-Boosting-Market-Visibility-1733349"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MSCI%20ACWI%20Index",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MSCI%20ACWI%20Index"
-      },
-      "top_headlines": [
-        {
-          "title": "AST SpaceMobile Joins MSCI ACWI Index as Largest New Addition, Boosting M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/AST-SpaceMobile-Joins-MSCI-ACWI-Index-as-Largest-New-Addition-Boosting-Market-Visibility-1733349",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Msci Acwi Index",
+      "term_ko": "Msci Acwi Index"
     },
     {
       "term": "우려 확산",
-      "term_ko": "우려 확산",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우려 확산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "가상화폐 거래소 지배구조 분산 추진에 업계 우려 확산",
-              "link": "https://www.khgames.co.kr/news/articleView.html?idxno=301297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A0%A4%20%ED%99%95%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A0%A4%20%ED%99%95%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "가상화폐 거래소 지배구조 분산 추진에 업계 우려 확산",
-          "summary": "",
-          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=301297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "우려 확산"
     },
     {
       "term": "주주서한 발송",
-      "term_ko": "주주서한 발송",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주주서한 발송",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "알파타우, 2025년 성과 및 미래계획 담은 주주서한 발송",
-              "link": "https://www.kpanews.co.kr/news/articleView.html?idxno=529352"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%A3%BC%EC%84%9C%ED%95%9C%20%EB%B0%9C%EC%86%A1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%A3%BC%EC%84%9C%ED%95%9C%20%EB%B0%9C%EC%86%A1"
-      },
-      "top_headlines": [
-        {
-          "title": "알파타우, 2025년 성과 및 미래계획 담은 주주서한 발송",
-          "summary": "",
-          "link": "https://www.kpanews.co.kr/news/articleView.html?idxno=529352",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "주주서한 발송"
     },
     {
       "term": "상품 출시",
-      "term_ko": "상품 출시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상품 출시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, '한국투자 IMA S3' 상품 출시",
-              "link": "https://www.cstimes.com/news/articleView.html?idxno=693122"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, '한국투자 IMA S3' 상품 출시",
-          "summary": "",
-          "link": "https://www.cstimes.com/news/articleView.html?idxno=693122",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상품 출시"
     },
     {
       "term": "규모 모집",
-      "term_ko": "규모 모집",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "규모 모집",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, IMA 3호 출시…12일부터 3000억원 규모 모집",
-              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=125188"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%9C%EB%AA%A8%20%EB%AA%A8%EC%A7%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%9C%EB%AA%A8%20%EB%AA%A8%EC%A7%91"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, IMA 3호 출시…12일부터 3000억원 규모 모집",
-          "summary": "",
-          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=125188",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "규모 모집"
     },
     {
       "term": "Wall Street Mixed",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Mixed",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Mixed as Retail Sales Stall and Investors Await Key Jobs Repo...",
-              "link": "https://www.econotimes.com/Wall-Street-Mixed-as-Retail-Sales-Stall-and-Investors-Await-Key-Jobs-Report-1733359"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Mixed",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Mixed"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Mixed as Retail Sales Stall and Investors Await Key Jobs Repo...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Mixed-as-Retail-Sales-Stall-and-Investors-Await-Key-Jobs-Report-1733359",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Wall Street Mixed"
     },
     {
       "term": "Retail Sales Stall",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Retail Sales Stall",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Mixed as Retail Sales Stall and Investors Await Key Jobs Repo...",
-              "link": "https://www.econotimes.com/Wall-Street-Mixed-as-Retail-Sales-Stall-and-Investors-Await-Key-Jobs-Report-1733359"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Retail%20Sales%20Stall",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Retail%20Sales%20Stall"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Mixed as Retail Sales Stall and Investors Await Key Jobs Repo...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Mixed-as-Retail-Sales-Stall-and-Investors-Await-Key-Jobs-Report-1733359",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Retail Sales Stall"
     },
     {
       "term": "Investors Await Key",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investors Await Key",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Mixed as Retail Sales Stall and Investors Await Key Jobs Repo...",
-              "link": "https://www.econotimes.com/Wall-Street-Mixed-as-Retail-Sales-Stall-and-Investors-Await-Key-Jobs-Report-1733359"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Await%20Key",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Await%20Key"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Mixed as Retail Sales Stall and Investors Await Key Jobs Repo...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Mixed-as-Retail-Sales-Stall-and-Investors-Await-Key-Jobs-Report-1733359",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Investors Await Key"
     },
     {
       "term": "Largest New Addition",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Largest New Addition",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "AST SpaceMobile Joins MSCI ACWI Index as Largest New Addition, Boosting M...",
-              "link": "https://www.econotimes.com/AST-SpaceMobile-Joins-MSCI-ACWI-Index-as-Largest-New-Addition-Boosting-Market-Visibility-1733349"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Largest%20New%20Addition",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Largest%20New%20Addition"
-      },
-      "top_headlines": [
-        {
-          "title": "AST SpaceMobile Joins MSCI ACWI Index as Largest New Addition, Boosting M...",
-          "summary": "",
-          "link": "https://www.econotimes.com/AST-SpaceMobile-Joins-MSCI-ACWI-Index-as-Largest-New-Addition-Boosting-Market-Visibility-1733349",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Largest New Addition"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-11T11:13:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-11T02:14:25.780Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-11T11:13:17+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "한국투자 IMA S3",
+      "term_ko": "한국투자 IMA S3"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-11T11:13:17+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-11T11:13:17+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "한국투자증권 IMA 3호",
+      "term_ko": "한국투자증권 IMA 3호"
+    },
+    {
+      "term": "하나은행 KOSA와 협력해",
+      "term_ko": "하나은행 KOSA와 협력해"
+    },
+    {
+      "term": "SW ESG 경영",
+      "term_ko": "SW ESG 경영"
+    },
+    {
+      "term": "하나은행 AI SW",
+      "term_ko": "하나은행 AI SW"
+    },
+    {
+      "term": "기업 ESG 금융지원",
+      "term_ko": "기업 ESG 금융지원"
+    },
+    {
+      "term": "바이오이뮨온시아 1200억 규모",
+      "term_ko": "바이오이뮨온시아 1200억 규모"
+    },
+    {
+      "term": "7거래일째 오른 은행주",
+      "term_ko": "7거래일째 오른 은행주"
+    },
+    {
+      "term": "출시 12일부터 3000억원",
+      "term_ko": "출시 12일부터 3000억원"
+    },
+    {
+      "term": "유상증자 결정 外",
+      "term_ko": "유상증자 결정 外"
+    },
+    {
+      "term": "가상화폐 거래소 지배구조",
+      "term_ko": "가상화폐 거래소 지배구조"
+    },
+    {
+      "term": "분산 추진에 업계",
+      "term_ko": "분산 추진에 업계"
+    },
+    {
+      "term": "진단 기업에 우대금리",
+      "term_ko": "진단 기업에 우대금리"
+    },
+    {
+      "term": "코스피 상승폭 제쳤다",
+      "term_ko": "코스피 상승폭 제쳤다"
+    },
+    {
+      "term": "금융 스케치 하나카드",
+      "term_ko": "금융 스케치 하나카드"
+    },
+    {
+      "term": "설 맞이 해외여행",
+      "term_ko": "설 맞이 해외여행"
+    },
+    {
+      "term": "붉은말의 질주 이벤트",
+      "term_ko": "붉은말의 질주 이벤트"
+    },
+    {
+      "term": "Fda Declines Review",
+      "term_ko": "Fda Declines Review"
+    },
+    {
+      "term": "Mrna Flu Vaccine",
+      "term_ko": "Mrna Flu Vaccine"
+    },
+    {
+      "term": "Ast Spacemobile Joins",
+      "term_ko": "Ast Spacemobile Joins"
+    },
+    {
+      "term": "Msci Acwi Index",
+      "term_ko": "Msci Acwi Index"
+    },
+    {
+      "term": "우려 확산",
+      "term_ko": "우려 확산"
+    },
+    {
+      "term": "주주서한 발송",
+      "term_ko": "주주서한 발송"
+    },
+    {
+      "term": "상품 출시",
+      "term_ko": "상품 출시"
+    },
+    {
+      "term": "규모 모집",
+      "term_ko": "규모 모집"
+    },
+    {
+      "term": "Wall Street Mixed",
+      "term_ko": "Wall Street Mixed"
+    },
+    {
+      "term": "Retail Sales Stall",
+      "term_ko": "Retail Sales Stall"
+    },
+    {
+      "term": "Investors Await Key",
+      "term_ko": "Investors Await Key"
+    },
+    {
+      "term": "Largest New Addition",
+      "term_ko": "Largest New Addition"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    }
+  ],
+  "translations": {
+    "한국투자 IMA S3": {
+      "en": "한국투자 IMA S3",
+      "ko": "한국투자 IMA S3",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "한국투자증권 IMA 3호": {
+      "en": "한국투자증권 IMA 3호",
+      "ko": "한국투자증권 IMA 3호",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "하나은행 KOSA와 협력해": {
+      "en": "하나은행 KOSA와 협력해",
+      "ko": "하나은행 KOSA와 협력해",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "SW ESG 경영": {
+      "en": "SW ESG 경영",
+      "ko": "SW ESG 경영",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "하나은행 AI SW": {
+      "en": "하나은행 AI SW",
+      "ko": "하나은행 AI SW",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "기업 ESG 금융지원": {
+      "en": "기업 ESG 금융지원",
+      "ko": "기업 ESG 금융지원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "바이오이뮨온시아 1200억 규모": {
+      "en": "바이오이뮨온시아 1200억 규모",
+      "ko": "바이오이뮨온시아 1200억 규모",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "7거래일째 오른 은행주": {
+      "en": "7거래일째 오른 은행주",
+      "ko": "7거래일째 오른 은행주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "출시 12일부터 3000억원": {
+      "en": "출시 12일부터 3000억원",
+      "ko": "출시 12일부터 3000억원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "유상증자 결정 外": {
+      "en": "유상증자 결정 外",
+      "ko": "유상증자 결정 外",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "가상화폐 거래소 지배구조": {
+      "en": "가상화폐 거래소 지배구조",
+      "ko": "가상화폐 거래소 지배구조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "분산 추진에 업계": {
+      "en": "분산 추진에 업계",
+      "ko": "분산 추진에 업계",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "진단 기업에 우대금리": {
+      "en": "진단 기업에 우대금리",
+      "ko": "진단 기업에 우대금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "코스피 상승폭 제쳤다": {
+      "en": "코스피 상승폭 제쳤다",
+      "ko": "코스피 상승폭 제쳤다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "금융 스케치 하나카드": {
+      "en": "금융 스케치 하나카드",
+      "ko": "금융 스케치 하나카드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "설 맞이 해외여행": {
+      "en": "설 맞이 해외여행",
+      "ko": "설 맞이 해외여행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.686Z"
+    },
+    "붉은말의 질주 이벤트": {
+      "en": "붉은말의 질주 이벤트",
+      "ko": "붉은말의 질주 이벤트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Fda Declines Review": {
+      "en": "Fda Declines Review",
+      "ko": "Fda Declines Review",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Mrna Flu Vaccine": {
+      "en": "Mrna Flu Vaccine",
+      "ko": "Mrna Flu Vaccine",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Ast Spacemobile Joins": {
+      "en": "Ast Spacemobile Joins",
+      "ko": "Ast Spacemobile Joins",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Msci Acwi Index": {
+      "en": "Msci Acwi Index",
+      "ko": "Msci Acwi Index",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "우려 확산": {
+      "en": "우려 확산",
+      "ko": "우려 확산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "주주서한 발송": {
+      "en": "주주서한 발송",
+      "ko": "주주서한 발송",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "상품 출시": {
+      "en": "상품 출시",
+      "ko": "상품 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "규모 모집": {
+      "en": "규모 모집",
+      "ko": "규모 모집",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Wall Street Mixed": {
+      "en": "Wall Street Mixed",
+      "ko": "Wall Street Mixed",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Retail Sales Stall": {
+      "en": "Retail Sales Stall",
+      "ko": "Retail Sales Stall",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Investors Await Key": {
+      "en": "Investors Await Key",
+      "ko": "Investors Await Key",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Largest New Addition": {
+      "en": "Largest New Addition",
+      "ko": "Largest New Addition",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-11T07:00:25.687Z"
     }
   }
 }
