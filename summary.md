@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-11T22:09:52+09:00 (KST)**
+- Generated: **2026-02-12T04:04:57+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -291,6 +291,22 @@
 
 ### AGGRESSIVE (5)
 
+**Church & Dwight** (CHD)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.0%**, 20d **-3.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Church%20%26%20Dwight
+
+**Corpay** (CPAY)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.8%**, 20d **-1.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Corpay
+
 **Dollar Tree** (DLTR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -307,27 +323,11 @@
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Dow%20Inc.
 
-**Expand Energy** (EXE)
+**KeyCorp** (KEY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.4%**, 20d **-8.6%**; volatility (20d): **unknown**
+- Returns: 5d **-0.6%**, 20d **8.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Energy**
-- News search: https://www.google.com/search?q=Expand%20Energy
-
-**Smurfit Westrock** (SW)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **11.9%**, 20d **6.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Materials**
-- News search: https://www.google.com/search?q=Smurfit%20Westrock
-
-**Steris** (STE)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.5%**, 20d **-6.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Steris
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=KeyCorp
 
