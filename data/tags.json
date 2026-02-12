@@ -1,1179 +1,439 @@
 {
+  "generatedAt": "2026-02-12T13:05:24.503Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-12",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "한국투자증권 IMA 3호",
-      "term_ko": "한국투자증권 IMA 3호",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국투자증권 IMA 3호",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-02-04",
-              "timestamp": 1770130800000,
-              "value": 66.66666
-            },
-            {
-              "period": "2026-02-06",
-              "timestamp": 1770303600000,
-              "value": 41.66666
-            },
-            {
-              "period": "2026-02-11",
-              "timestamp": 1770735600000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권으로 머니무브] 한국투자증권, IMA 3호 상품 출시…3000억원 규모",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1337083"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%203%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%203%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권으로 머니무브] 한국투자증권, IMA 3호 상품 출시…3000억원 규모",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1337083",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 141.6667,
-        "weekly_average_volume": 70.8333,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.032274,
-        "time_weight": 0.024958,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1770735600000
-      }
+      "term_ko": "한국투자증권 IMA 3호"
     },
     {
       "term": "팔로알토 네트웍스 AI",
-      "term_ko": "팔로알토 네트웍스 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "팔로알토 네트웍스 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "팔로알토 네트웍스, AI 시대 아이덴티티 보안 강화 위해 사이버아크 인...",
-              "link": "https://www.dailysecu.com/news/articleView.html?idxno=205154"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%94%EB%A1%9C%EC%95%8C%ED%86%A0%20%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%8A%A4%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%94%EB%A1%9C%EC%95%8C%ED%86%A0%20%EB%84%A4%ED%8A%B8%EC%9B%8D%EC%8A%A4%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "팔로알토 네트웍스, AI 시대 아이덴티티 보안 강화 위해 사이버아크 인...",
-          "summary": "",
-          "link": "https://www.dailysecu.com/news/articleView.html?idxno=205154",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "팔로알토 네트웍스 AI"
     },
     {
       "term": "BYD SAIC 지리",
-      "term_ko": "BYD SAIC 지리",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "BYD SAIC 지리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=17944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=BYD%20SAIC%20%EC%A7%80%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=BYD%20SAIC%20%EC%A7%80%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=17944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "BYD SAIC 지리"
     },
     {
       "term": "경쟁 중국 EV",
-      "term_ko": "경쟁 중국 EV",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경쟁 중국 EV",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=17944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%9F%81%20%EC%A4%91%EA%B5%AD%20EV",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%9F%81%20%EC%A4%91%EA%B5%AD%20EV"
-      },
-      "top_headlines": [
-        {
-          "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=17944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경쟁 중국 EV"
     },
     {
       "term": "금융당국 1000원 미만",
-      "term_ko": "금융당국 1000원 미만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융당국 1000원 미만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금융당국, 1000원 미만 ‘동전주’ 퇴출 칼바람..올해 코스닥 150곳 퇴장",
-              "link": "http://www.breaknews.com/1184819"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EB%8B%B9%EA%B5%AD%201000%EC%9B%90%20%EB%AF%B8%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EB%8B%B9%EA%B5%AD%201000%EC%9B%90%20%EB%AF%B8%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "금융당국, 1000원 미만 ‘동전주’ 퇴출 칼바람..올해 코스닥 150곳 퇴장",
-          "summary": "",
-          "link": "http://www.breaknews.com/1184819",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융당국 1000원 미만"
     },
     {
       "term": "칼바람..올해 코스닥 150곳",
-      "term_ko": "칼바람..올해 코스닥 150곳",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "칼바람..올해 코스닥 150곳",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금융당국, 1000원 미만 ‘동전주’ 퇴출 칼바람..올해 코스닥 150곳 퇴장",
-              "link": "http://www.breaknews.com/1184819"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%BC%EB%B0%94%EB%9E%8C..%EC%98%AC%ED%95%B4%20%EC%BD%94%EC%8A%A4%EB%8B%A5%20150%EA%B3%B3",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%BC%EB%B0%94%EB%9E%8C..%EC%98%AC%ED%95%B4%20%EC%BD%94%EC%8A%A4%EB%8B%A5%20150%EA%B3%B3"
-      },
-      "top_headlines": [
-        {
-          "title": "금융당국, 1000원 미만 ‘동전주’ 퇴출 칼바람..올해 코스닥 150곳 퇴장",
-          "summary": "",
-          "link": "http://www.breaknews.com/1184819",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "칼바람..올해 코스닥 150곳"
     },
     {
       "term": "캐나다 4만9000대 진입",
-      "term_ko": "캐나다 4만9000대 진입",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "캐나다 4만9000대 진입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=17944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BA%90%EB%82%98%EB%8B%A4%204%EB%A7%8C9000%EB%8C%80%20%EC%A7%84%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BA%90%EB%82%98%EB%8B%A4%204%EB%A7%8C9000%EB%8C%80%20%EC%A7%84%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=17944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "캐나다 4만9000대 진입"
     },
     {
       "term": "회사채 발행 74.7조",
-      "term_ko": "회사채 발행 74.7조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회사채 발행 74.7조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "채권 시장 변동성 확대…회사채 발행 74.7조 '쑥'",
-              "link": "https://n.news.naver.com/mnews/article/215/0001241702?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89%2074.7%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%82%AC%EC%B1%84%20%EB%B0%9C%ED%96%89%2074.7%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "채권 시장 변동성 확대…회사채 발행 74.7조 '쑥'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001241702?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "회사채 발행 74.7조"
     },
     {
       "term": "89조원대 재정수지 적자",
-      "term_ko": "89조원대 재정수지 적자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "89조원대 재정수지 적자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국세수입 늘었으나 크게 불어난 지출...작년 89조원대 재정수지 적자",
-              "link": "http://www.metroseoul.co.kr/article/20260212500603"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=89%EC%A1%B0%EC%9B%90%EB%8C%80%20%EC%9E%AC%EC%A0%95%EC%88%98%EC%A7%80%20%EC%A0%81%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=89%EC%A1%B0%EC%9B%90%EB%8C%80%20%EC%9E%AC%EC%A0%95%EC%88%98%EC%A7%80%20%EC%A0%81%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "국세수입 늘었으나 크게 불어난 지출...작년 89조원대 재정수지 적자",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260212500603",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "89조원대 재정수지 적자"
     },
     {
       "term": "상품 출시 3000억원",
-      "term_ko": "상품 출시 3000억원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상품 출시 3000억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권으로 머니무브] 한국투자증권, IMA 3호 상품 출시…3000억원 규모",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1337083"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C%203000%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C%203000%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권으로 머니무브] 한국투자증권, IMA 3호 상품 출시…3000억원 규모",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1337083",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상품 출시 3000억원"
     },
     {
       "term": "시대 아이덴티티 보안",
-      "term_ko": "시대 아이덴티티 보안",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시대 아이덴티티 보안",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "팔로알토 네트웍스, AI 시대 아이덴티티 보안 강화 위해 사이버아크 인...",
-              "link": "https://www.dailysecu.com/news/articleView.html?idxno=205154"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%8C%80%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%8C%80%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88"
-      },
-      "top_headlines": [
-        {
-          "title": "팔로알토 네트웍스, AI 시대 아이덴티티 보안 강화 위해 사이버아크 인...",
-          "summary": "",
-          "link": "https://www.dailysecu.com/news/articleView.html?idxno=205154",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시대 아이덴티티 보안"
     },
     {
       "term": "강화 위해 사이버아크",
-      "term_ko": "강화 위해 사이버아크",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강화 위해 사이버아크",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "팔로알토 네트웍스, AI 시대 아이덴티티 보안 강화 위해 사이버아크 인...",
-              "link": "https://www.dailysecu.com/news/articleView.html?idxno=205154"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%ED%99%94%20%EC%9C%84%ED%95%B4%20%EC%82%AC%EC%9D%B4%EB%B2%84%EC%95%84%ED%81%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%ED%99%94%20%EC%9C%84%ED%95%B4%20%EC%82%AC%EC%9D%B4%EB%B2%84%EC%95%84%ED%81%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "팔로알토 네트웍스, AI 시대 아이덴티티 보안 강화 위해 사이버아크 인...",
-          "summary": "",
-          "link": "https://www.dailysecu.com/news/articleView.html?idxno=205154",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "강화 위해 사이버아크"
     },
     {
       "term": "동전주까지 상폐 요건",
-      "term_ko": "동전주까지 상폐 요건",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동전주까지 상폐 요건",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "동전주까지 상폐 요건 신설…정부, 코스닥 구조개혁 시동",
-              "link": "https://sports.hankooki.com/news/articleView.html?idxno=6925054"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EC%A0%84%EC%A3%BC%EA%B9%8C%EC%A7%80%20%EC%83%81%ED%8F%90%20%EC%9A%94%EA%B1%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EC%A0%84%EC%A3%BC%EA%B9%8C%EC%A7%80%20%EC%83%81%ED%8F%90%20%EC%9A%94%EA%B1%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "동전주까지 상폐 요건 신설…정부, 코스닥 구조개혁 시동",
-          "summary": "",
-          "link": "https://sports.hankooki.com/news/articleView.html?idxno=6925054",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동전주까지 상폐 요건"
     },
     {
       "term": "신설 정부 코스닥",
-      "term_ko": "신설 정부 코스닥",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신설 정부 코스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "동전주까지 상폐 요건 신설…정부, 코스닥 구조개혁 시동",
-              "link": "https://sports.hankooki.com/news/articleView.html?idxno=6925054"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%84%A4%20%EC%A0%95%EB%B6%80%20%EC%BD%94%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%84%A4%20%EC%A0%95%EB%B6%80%20%EC%BD%94%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "동전주까지 상폐 요건 신설…정부, 코스닥 구조개혁 시동",
-          "summary": "",
-          "link": "https://sports.hankooki.com/news/articleView.html?idxno=6925054",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "신설 정부 코스닥"
     },
     {
       "term": "팔로알토 사이버아크 인수",
-      "term_ko": "팔로알토 사이버아크 인수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "팔로알토 사이버아크 인수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "팔로알토, 사이버아크 인수 완료…아이덴티티 보안 강화",
-              "link": "https://www.epnc.co.kr/news/articleView.html?idxno=328669"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%94%EB%A1%9C%EC%95%8C%ED%86%A0%20%EC%82%AC%EC%9D%B4%EB%B2%84%EC%95%84%ED%81%AC%20%EC%9D%B8%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%94%EB%A1%9C%EC%95%8C%ED%86%A0%20%EC%82%AC%EC%9D%B4%EB%B2%84%EC%95%84%ED%81%AC%20%EC%9D%B8%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "팔로알토, 사이버아크 인수 완료…아이덴티티 보안 강화",
-          "summary": "",
-          "link": "https://www.epnc.co.kr/news/articleView.html?idxno=328669",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "팔로알토 사이버아크 인수"
     },
     {
       "term": "완료 아이덴티티 보안",
-      "term_ko": "완료 아이덴티티 보안",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "완료 아이덴티티 보안",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "팔로알토, 사이버아크 인수 완료…아이덴티티 보안 강화",
-              "link": "https://www.epnc.co.kr/news/articleView.html?idxno=328669"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%84%EB%A3%8C%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%84%EB%A3%8C%20%EC%95%84%EC%9D%B4%EB%8D%B4%ED%8B%B0%ED%8B%B0%20%EB%B3%B4%EC%95%88"
-      },
-      "top_headlines": [
-        {
-          "title": "팔로알토, 사이버아크 인수 완료…아이덴티티 보안 강화",
-          "summary": "",
-          "link": "https://www.epnc.co.kr/news/articleView.html?idxno=328669",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "완료 아이덴티티 보안"
     },
     {
       "term": "급등세 정책 수주",
-      "term_ko": "급등세 정책 수주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급등세 정책 수주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "건설주, 연초 이후 급등세…정책·수주 기대감에 실적 개선까지",
-              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202602121535231970892"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%EC%84%B8%20%EC%A0%95%EC%B1%85%20%EC%88%98%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%EC%84%B8%20%EC%A0%95%EC%B1%85%20%EC%88%98%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "건설주, 연초 이후 급등세…정책·수주 기대감에 실적 개선까지",
-          "summary": "",
-          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202602121535231970892",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "급등세 정책 수주"
     },
     {
       "term": "기대감에 실적 개선까지",
-      "term_ko": "기대감에 실적 개선까지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기대감에 실적 개선까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "건설주, 연초 이후 급등세…정책·수주 기대감에 실적 개선까지",
-              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202602121535231970892"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%EA%B0%90%EC%97%90%20%EC%8B%A4%EC%A0%81%20%EA%B0%9C%EC%84%A0%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%EA%B0%90%EC%97%90%20%EC%8B%A4%EC%A0%81%20%EA%B0%9C%EC%84%A0%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "건설주, 연초 이후 급등세…정책·수주 기대감에 실적 개선까지",
-          "summary": "",
-          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202602121535231970892",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기대감에 실적 개선까지"
     },
     {
       "term": "한숨 깊은 카드사",
-      "term_ko": "한숨 깊은 카드사",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한숨 깊은 카드사",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "수수료·대출 규제에 한숨 깊은 카드사…빅테크만 '웃는다'",
-              "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=247939"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%88%A8%20%EA%B9%8A%EC%9D%80%20%EC%B9%B4%EB%93%9C%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%88%A8%20%EA%B9%8A%EC%9D%80%20%EC%B9%B4%EB%93%9C%EC%82%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "수수료·대출 규제에 한숨 깊은 카드사…빅테크만 '웃는다'",
-          "summary": "",
-          "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=247939",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한숨 깊은 카드사"
     },
     {
       "term": "채권 시장 변동성",
-      "term_ko": "채권 시장 변동성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "채권 시장 변동성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "채권 시장 변동성 확대…회사채 발행 74.7조 '쑥'",
-              "link": "https://n.news.naver.com/mnews/article/215/0001241702?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B1%84%EA%B6%8C%20%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EB%8F%99%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B1%84%EA%B6%8C%20%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EB%8F%99%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "채권 시장 변동성 확대…회사채 발행 74.7조 '쑥'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001241702?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "채권 시장 변동성"
     },
     {
       "term": "李 증시 밸류업",
-      "term_ko": "李 증시 밸류업",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "李 증시 밸류업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "李 '증시 밸류업' 대표주자 부상한 금융주",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1337129"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%9D%8E%20%EC%A6%9D%EC%8B%9C%20%EB%B0%B8%EB%A5%98%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%9D%8E%20%EC%A6%9D%EC%8B%9C%20%EB%B0%B8%EB%A5%98%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "李 '증시 밸류업' 대표주자 부상한 금융주",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1337129",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "李 증시 밸류업"
     },
     {
       "term": "대표주자 부상한 금융주",
-      "term_ko": "대표주자 부상한 금융주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대표주자 부상한 금융주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "李 '증시 밸류업' 대표주자 부상한 금융주",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1337129"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%ED%91%9C%EC%A3%BC%EC%9E%90%20%EB%B6%80%EC%83%81%ED%95%9C%20%EA%B8%88%EC%9C%B5%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%ED%91%9C%EC%A3%BC%EC%9E%90%20%EB%B6%80%EC%83%81%ED%95%9C%20%EA%B8%88%EC%9C%B5%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "李 '증시 밸류업' 대표주자 부상한 금융주",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1337129",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대표주자 부상한 금융주"
     },
     {
       "term": "국세수입 늘었으나 크게",
-      "term_ko": "국세수입 늘었으나 크게",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국세수입 늘었으나 크게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국세수입 늘었으나 크게 불어난 지출...작년 89조원대 재정수지 적자",
-              "link": "http://www.metroseoul.co.kr/article/20260212500603"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EC%84%B8%EC%88%98%EC%9E%85%20%EB%8A%98%EC%97%88%EC%9C%BC%EB%82%98%20%ED%81%AC%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EC%84%B8%EC%88%98%EC%9E%85%20%EB%8A%98%EC%97%88%EC%9C%BC%EB%82%98%20%ED%81%AC%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "국세수입 늘었으나 크게 불어난 지출...작년 89조원대 재정수지 적자",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260212500603",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "국세수입 늘었으나 크게"
     },
     {
       "term": "구조개혁 시동",
-      "term_ko": "구조개혁 시동",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "구조개혁 시동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "동전주까지 상폐 요건 신설…정부, 코스닥 구조개혁 시동",
-              "link": "https://sports.hankooki.com/news/articleView.html?idxno=6925054"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%A1%B0%EA%B0%9C%ED%98%81%20%EC%8B%9C%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%A1%B0%EA%B0%9C%ED%98%81%20%EC%8B%9C%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "동전주까지 상폐 요건 신설…정부, 코스닥 구조개혁 시동",
-          "summary": "",
-          "link": "https://sports.hankooki.com/news/articleView.html?idxno=6925054",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "구조개혁 시동"
     },
     {
       "term": "동전주 퇴출",
-      "term_ko": "동전주 퇴출",
-      "significance_score": 280,
-      "mentions": 302,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동전주 퇴출",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-02-05",
-              "timestamp": 1770217200000,
-              "value": 3.59712
-            },
-            {
-              "period": "2026-02-07",
-              "timestamp": 1770390000000,
-              "value": 4.31654
-            },
-            {
-              "period": "2026-02-08",
-              "timestamp": 1770476400000,
-              "value": 74.10071
-            },
-            {
-              "period": "2026-02-09",
-              "timestamp": 1770562800000,
-              "value": 100
-            },
-            {
-              "period": "2026-02-10",
-              "timestamp": 1770649200000,
-              "value": 46.04316
-            },
-            {
-              "period": "2026-02-11",
-              "timestamp": 1770735600000,
-              "value": 77.69784
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금융당국, 1000원 미만 ‘동전주’ 퇴출 칼바람..올해 코스닥 150곳 퇴장",
-              "link": "http://www.breaknews.com/1184819"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EC%A0%84%EC%A3%BC%20%ED%87%B4%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EC%A0%84%EC%A3%BC%20%ED%87%B4%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "금융당국, 1000원 미만 ‘동전주’ 퇴출 칼바람..올해 코스닥 150곳 퇴장",
-          "summary": "",
-          "link": "http://www.breaknews.com/1184819",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 302.1583,
-        "weekly_average_volume": 60.4317,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.019091,
-        "time_weight": 0.024954,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1770735600000
-      }
+      "term_ko": "동전주 퇴출"
     },
     {
       "term": "북미 교두보",
-      "term_ko": "북미 교두보",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "북미 교두보",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=17944"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%81%EB%AF%B8%20%EA%B5%90%EB%91%90%EB%B3%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%81%EB%AF%B8%20%EA%B5%90%EB%91%90%EB%B3%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "BYD·SAIC·지리, 캐나다 4만9000대 진입 경쟁…중국 EV '북미 교두보' 시...",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=17944",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "북미 교두보"
     },
     {
       "term": "건설주 연초",
-      "term_ko": "건설주 연초",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "건설주 연초",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "건설주, 연초 이후 급등세…정책·수주 기대감에 실적 개선까지",
-              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202602121535231970892"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B4%EC%84%A4%EC%A3%BC%20%EC%97%B0%EC%B4%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B4%EC%84%A4%EC%A3%BC%20%EC%97%B0%EC%B4%88"
-      },
-      "top_headlines": [
-        {
-          "title": "건설주, 연초 이후 급등세…정책·수주 기대감에 실적 개선까지",
-          "summary": "",
-          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202602121535231970892",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "건설주 연초"
     },
     {
       "term": "빅테크만 웃는다",
-      "term_ko": "빅테크만 웃는다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빅테크만 웃는다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "수수료·대출 규제에 한숨 깊은 카드사…빅테크만 '웃는다'",
-              "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=247939"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%85%ED%85%8C%ED%81%AC%EB%A7%8C%20%EC%9B%83%EB%8A%94%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%85%ED%85%8C%ED%81%AC%EB%A7%8C%20%EC%9B%83%EB%8A%94%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "수수료·대출 규제에 한숨 깊은 카드사…빅테크만 '웃는다'",
-          "summary": "",
-          "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=247939",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "빅테크만 웃는다"
     },
     {
       "term": "증권으로 머니무브",
-      "term_ko": "증권으로 머니무브",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증권으로 머니무브",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증권으로 머니무브] 한국투자증권, IMA 3호 상품 출시…3000억원 규모",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1337083"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%9C%BC%EB%A1%9C%20%EB%A8%B8%EB%8B%88%EB%AC%B4%EB%B8%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%9C%BC%EB%A1%9C%20%EB%A8%B8%EB%8B%88%EB%AC%B4%EB%B8%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권으로 머니무브] 한국투자증권, IMA 3호 상품 출시…3000억원 규모",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1337083",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증권으로 머니무브"
     },
     {
-      "term": "U.S Firms Invested",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Firms Invested",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-12T16:03:27+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "3 more U.S. firms invested in Coupang to pursue legal action against Seou...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000084395?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Firms%20Invested",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Firms%20Invested"
-      },
-      "top_headlines": [
-        {
-          "title": "3 more U.S. firms invested in Coupang to pursue legal action against Seou...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000084395?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Firms Invested",
+      "term_ko": "U.s Firms Invested"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-12T07:04:30.445Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-12T16:03:27+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "한국투자증권 IMA 3호",
+      "term_ko": "한국투자증권 IMA 3호"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-12T16:03:27+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-12T16:03:27+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "팔로알토 네트웍스 AI",
+      "term_ko": "팔로알토 네트웍스 AI"
+    },
+    {
+      "term": "BYD SAIC 지리",
+      "term_ko": "BYD SAIC 지리"
+    },
+    {
+      "term": "경쟁 중국 EV",
+      "term_ko": "경쟁 중국 EV"
+    },
+    {
+      "term": "금융당국 1000원 미만",
+      "term_ko": "금융당국 1000원 미만"
+    },
+    {
+      "term": "칼바람..올해 코스닥 150곳",
+      "term_ko": "칼바람..올해 코스닥 150곳"
+    },
+    {
+      "term": "캐나다 4만9000대 진입",
+      "term_ko": "캐나다 4만9000대 진입"
+    },
+    {
+      "term": "회사채 발행 74.7조",
+      "term_ko": "회사채 발행 74.7조"
+    },
+    {
+      "term": "89조원대 재정수지 적자",
+      "term_ko": "89조원대 재정수지 적자"
+    },
+    {
+      "term": "상품 출시 3000억원",
+      "term_ko": "상품 출시 3000억원"
+    },
+    {
+      "term": "시대 아이덴티티 보안",
+      "term_ko": "시대 아이덴티티 보안"
+    },
+    {
+      "term": "강화 위해 사이버아크",
+      "term_ko": "강화 위해 사이버아크"
+    },
+    {
+      "term": "동전주까지 상폐 요건",
+      "term_ko": "동전주까지 상폐 요건"
+    },
+    {
+      "term": "신설 정부 코스닥",
+      "term_ko": "신설 정부 코스닥"
+    },
+    {
+      "term": "팔로알토 사이버아크 인수",
+      "term_ko": "팔로알토 사이버아크 인수"
+    },
+    {
+      "term": "완료 아이덴티티 보안",
+      "term_ko": "완료 아이덴티티 보안"
+    },
+    {
+      "term": "급등세 정책 수주",
+      "term_ko": "급등세 정책 수주"
+    },
+    {
+      "term": "기대감에 실적 개선까지",
+      "term_ko": "기대감에 실적 개선까지"
+    },
+    {
+      "term": "한숨 깊은 카드사",
+      "term_ko": "한숨 깊은 카드사"
+    },
+    {
+      "term": "채권 시장 변동성",
+      "term_ko": "채권 시장 변동성"
+    },
+    {
+      "term": "李 증시 밸류업",
+      "term_ko": "李 증시 밸류업"
+    },
+    {
+      "term": "대표주자 부상한 금융주",
+      "term_ko": "대표주자 부상한 금융주"
+    },
+    {
+      "term": "국세수입 늘었으나 크게",
+      "term_ko": "국세수입 늘었으나 크게"
+    },
+    {
+      "term": "구조개혁 시동",
+      "term_ko": "구조개혁 시동"
+    },
+    {
+      "term": "동전주 퇴출",
+      "term_ko": "동전주 퇴출"
+    },
+    {
+      "term": "북미 교두보",
+      "term_ko": "북미 교두보"
+    },
+    {
+      "term": "건설주 연초",
+      "term_ko": "건설주 연초"
+    },
+    {
+      "term": "빅테크만 웃는다",
+      "term_ko": "빅테크만 웃는다"
+    },
+    {
+      "term": "증권으로 머니무브",
+      "term_ko": "증권으로 머니무브"
+    },
+    {
+      "term": "U.s Firms Invested",
+      "term_ko": "U.s Firms Invested"
+    }
+  ],
+  "translations": {
+    "한국투자증권 IMA 3호": {
+      "en": "한국투자증권 IMA 3호",
+      "ko": "한국투자증권 IMA 3호",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "팔로알토 네트웍스 AI": {
+      "en": "팔로알토 네트웍스 AI",
+      "ko": "팔로알토 네트웍스 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "BYD SAIC 지리": {
+      "en": "BYD SAIC 지리",
+      "ko": "BYD SAIC 지리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "경쟁 중국 EV": {
+      "en": "경쟁 중국 EV",
+      "ko": "경쟁 중국 EV",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "금융당국 1000원 미만": {
+      "en": "금융당국 1000원 미만",
+      "ko": "금융당국 1000원 미만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "칼바람..올해 코스닥 150곳": {
+      "en": "칼바람..올해 코스닥 150곳",
+      "ko": "칼바람..올해 코스닥 150곳",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "캐나다 4만9000대 진입": {
+      "en": "캐나다 4만9000대 진입",
+      "ko": "캐나다 4만9000대 진입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "회사채 발행 74.7조": {
+      "en": "회사채 발행 74.7조",
+      "ko": "회사채 발행 74.7조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "89조원대 재정수지 적자": {
+      "en": "89조원대 재정수지 적자",
+      "ko": "89조원대 재정수지 적자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "상품 출시 3000억원": {
+      "en": "상품 출시 3000억원",
+      "ko": "상품 출시 3000억원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "시대 아이덴티티 보안": {
+      "en": "시대 아이덴티티 보안",
+      "ko": "시대 아이덴티티 보안",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "강화 위해 사이버아크": {
+      "en": "강화 위해 사이버아크",
+      "ko": "강화 위해 사이버아크",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "동전주까지 상폐 요건": {
+      "en": "동전주까지 상폐 요건",
+      "ko": "동전주까지 상폐 요건",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "신설 정부 코스닥": {
+      "en": "신설 정부 코스닥",
+      "ko": "신설 정부 코스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "팔로알토 사이버아크 인수": {
+      "en": "팔로알토 사이버아크 인수",
+      "ko": "팔로알토 사이버아크 인수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "완료 아이덴티티 보안": {
+      "en": "완료 아이덴티티 보안",
+      "ko": "완료 아이덴티티 보안",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "급등세 정책 수주": {
+      "en": "급등세 정책 수주",
+      "ko": "급등세 정책 수주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "기대감에 실적 개선까지": {
+      "en": "기대감에 실적 개선까지",
+      "ko": "기대감에 실적 개선까지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "한숨 깊은 카드사": {
+      "en": "한숨 깊은 카드사",
+      "ko": "한숨 깊은 카드사",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "채권 시장 변동성": {
+      "en": "채권 시장 변동성",
+      "ko": "채권 시장 변동성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "李 증시 밸류업": {
+      "en": "李 증시 밸류업",
+      "ko": "李 증시 밸류업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "대표주자 부상한 금융주": {
+      "en": "대표주자 부상한 금융주",
+      "ko": "대표주자 부상한 금융주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "국세수입 늘었으나 크게": {
+      "en": "국세수입 늘었으나 크게",
+      "ko": "국세수입 늘었으나 크게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "구조개혁 시동": {
+      "en": "구조개혁 시동",
+      "ko": "구조개혁 시동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "동전주 퇴출": {
+      "en": "동전주 퇴출",
+      "ko": "동전주 퇴출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "북미 교두보": {
+      "en": "북미 교두보",
+      "ko": "북미 교두보",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "건설주 연초": {
+      "en": "건설주 연초",
+      "ko": "건설주 연초",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "빅테크만 웃는다": {
+      "en": "빅테크만 웃는다",
+      "ko": "빅테크만 웃는다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "증권으로 머니무브": {
+      "en": "증권으로 머니무브",
+      "ko": "증권으로 머니무브",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
+    },
+    "U.s Firms Invested": {
+      "en": "U.s Firms Invested",
+      "ko": "U.s Firms Invested",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-12T13:05:24.503Z"
     }
   }
 }
