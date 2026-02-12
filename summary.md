@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-12T22:07:16+09:00 (KST)**
+- Generated: **2026-02-13T04:05:35+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -132,12 +132,13 @@
 
 ### AGGRESSIVE (5)
 
-**농심** (004370.KS)
+**HD현대일렉트릭** (267260.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.11)**
+- Returns: 5d **10.7%**, 20d **8.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%86%8D%EC%8B%AC
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD
 
 **에스엘** (005850.KS)
 
@@ -315,19 +316,19 @@
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Dow%20Inc.
 
-**Equity Residential** (EQR)
+**Fidelity National Information Services** (FIS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **-0.2%**; volatility (20d): **unknown**
+- Returns: 5d **-0.0%**, 20d **-13.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Real Estate**
-- News search: https://www.google.com/search?q=Equity%20Residential
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Fidelity%20National%20Information%20Services
 
-**Expand Energy** (EXE)
+**Steris** (STE)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.4%**, 20d **-8.6%**; volatility (20d): **unknown**
+- Returns: 5d **0.1%**, 20d **-7.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Energy**
-- News search: https://www.google.com/search?q=Expand%20Energy
+- Sector: **Healthcare**
+- News search: https://www.google.com/search?q=Steris
 
