@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-12T11:07:04+09:00 (KST)**
+- Generated: **2026-02-12T16:03:18+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -10,7 +10,7 @@
 **레고켐바이오** (141080.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.1%**, 20d **10.4%**; volatility (20d): **unknown**
+- Returns: 5d **-1.9%**, 20d **9.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4
@@ -18,7 +18,7 @@
 **셀트리온제약** (068760.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.0%**, 20d **0.8%**; volatility (20d): **unknown**
+- Returns: 5d **4.3%**, 20d **16.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8%EC%A0%9C%EC%95%BD
@@ -26,7 +26,7 @@
 **에스엠** (041510.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.9%**, 20d **4.3%**; volatility (20d): **unknown**
+- Returns: 5d **13.4%**, 20d **6.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%97%A0
@@ -42,7 +42,7 @@
 **휴젤** (145020.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.0%**, 20d **14.3%**; volatility (20d): **unknown**
+- Returns: 5d **5.4%**, 20d **15.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%9C%B4%EC%A0%A4
@@ -68,7 +68,7 @@
 **칩스앤미디어** (094360.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.0%**, 20d **15.2%**; volatility (20d): **unknown**
+- Returns: 5d **1.5%**, 20d **12.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%B9%A9%EC%8A%A4%EC%95%A4%EB%AF%B8%EB%94%94%EC%96%B4
@@ -96,35 +96,35 @@
 **CJ대한통운** (000120.KS)
 
 - News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **negative (-0.26)**
-- Returns: 5d **28.2%**, 20d **42.5%**; volatility (20d): **unknown**
+- Returns: 5d **30.5%**, 20d **45.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=CJ%EB%8C%80%ED%95%9C%ED%86%B5%EC%9A%B4
 
 **대한항공** (003490.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **3.9%**, 20d **9.1%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **7.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
 
 **메리츠금융지주** (138040.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **7.6%**, 20d **29.7%**; volatility (20d): **unknown**
+- Returns: 5d **8.8%**, 20d **31.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%A9%94%EB%A6%AC%EC%B8%A0%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
 
 **신한지주** (055550.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **17.2%**, 20d **34.1%**; volatility (20d): **unknown**
+- Returns: 5d **16.6%**, 20d **33.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC
 
 **한국금융지주** (071050.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.15)**
-- Returns: 5d **15.8%**, 20d **38.4%**; volatility (20d): **unknown**
+- Returns: 5d **16.5%**, 20d **39.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
 
@@ -141,28 +141,28 @@
 **GS건설** (006360.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.1%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **11.3%**, 20d **14.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
 
-**녹십자** (006280.KS)
+**오리온홀딩스** (001800.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **-9.4%**; volatility (20d): **unknown**
+- Returns: 5d **7.3%**, 20d **18.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%85%B9%EC%8B%AD%EC%9E%90
+- News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8%ED%99%80%EB%94%A9%EC%8A%A4
 
-**지역난방공사** (071320.KS)
+**종근당** (185750.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-15.3%**, 20d **-9.6%**; volatility (20d): **unknown**
+- Returns: 5d **7.7%**, 20d **15.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%A7%80%EC%97%AD%EB%82%9C%EB%B0%A9%EA%B3%B5%EC%82%AC
+- News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
 
 **현대백화점** (069960.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.2%**, 20d **13.8%**; volatility (20d): **unknown**
+- Returns: 5d **9.4%**, 20d **17.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90
 
@@ -266,7 +266,7 @@
 **Berkshire Hathaway** (BRK.B)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.3%**, 20d **0.3%**; volatility (20d): **unknown**
+- Returns: 5d **-0.8%**, 20d **1.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Berkshire%20Hathaway
