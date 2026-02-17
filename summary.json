@@ -1,6 +1,35 @@
 {
-  "generatedAtKST": "2026-02-17T22:03:40+09:00",
+  "generatedAtKST": "2026-02-18T04:00:05+09:00",
   "companies": [
+    {
+      "market": "KOSDAQ",
+      "bucket": "safe",
+      "name": "레고켐바이오",
+      "ticker": "141080.KQ",
+      "sector": "헬스케어",
+      "metrics": {
+        "ret5": 4.004711425206125,
+        "ret20": 5.875299760191846,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **4.0%**, 20d **5.9%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **헬스케어**",
+        "News search: https://www.google.com/search?q=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4"
+      ]
+    },
     {
       "market": "KOSDAQ",
       "bucket": "safe",
@@ -119,35 +148,6 @@
     },
     {
       "market": "KOSDAQ",
-      "bucket": "safe",
-      "name": "헬스케어",
-      "ticker": "028300.KQ",
-      "sector": "헬스케어",
-      "metrics": {
-        "ret5": -4.822335025380711,
-        "ret20": -21.956295525494276,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-4.8%**, 20d **-22.0%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **헬스케어**",
-        "News search: https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
       "bucket": "aggressive",
       "name": "HLB생명과학",
       "ticker": "067630.KQ",
@@ -178,6 +178,35 @@
     {
       "market": "KOSDAQ",
       "bucket": "aggressive",
+      "name": "HLB제약",
+      "ticker": "047920.KQ",
+      "sector": "헬스케어",
+      "metrics": {
+        "ret5": 3.915275994865212,
+        "ret20": -6.199304750869061,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=HLB%EC%A0%9C%EC%95%BD"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **3.9%**, 20d **-6.2%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **헬스케어**",
+        "News search: https://www.google.com/search?q=HLB%EC%A0%9C%EC%95%BD"
+      ]
+    },
+    {
+      "market": "KOSDAQ",
+      "bucket": "aggressive",
       "name": "네오위즈",
       "ticker": "095660.KQ",
       "sector": "커뮤니케이션서비스",
@@ -202,35 +231,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **커뮤니케이션서비스**",
         "News search: https://www.google.com/search?q=%EB%84%A4%EC%98%A4%EC%9C%84%EC%A6%88"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
-      "bucket": "aggressive",
-      "name": "데브시스터즈",
-      "ticker": "194480.KQ",
-      "sector": "커뮤니케이션서비스",
-      "metrics": {
-        "ret5": -0.9408602150537635,
-        "ret20": 13.384615384615383,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EB%8D%B0%EB%B8%8C%EC%8B%9C%EC%8A%A4%ED%84%B0%EC%A6%88"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.9%**, 20d **13.4%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **커뮤니케이션서비스**",
-        "News search: https://www.google.com/search?q=%EB%8D%B0%EB%B8%8C%EC%8B%9C%EC%8A%A4%ED%84%B0%EC%A6%88"
       ]
     },
     {
@@ -807,8 +807,8 @@
       "ticker": "INSM",
       "sector": null,
       "metrics": {
-        "ret5": -0.7406917161555713,
-        "ret20": -6.6051384380353975,
+        "ret5": 1.6684569265711813,
+        "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -823,7 +823,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.7%**, 20d **-6.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **1.7%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=Insmed%20Incorporated"
       ]
@@ -921,8 +921,8 @@
       "ticker": "CIEN",
       "sector": "Technology",
       "metrics": {
-        "ret5": 12.01533437398137,
-        "ret20": 24.66467935417998,
+        "ret5": 5.9824694587175165,
+        "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -937,7 +937,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **12.0%**, 20d **24.7%**; volatility (20d): **unknown**",
+        "Returns: 5d **6.0%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Ciena"
@@ -1004,6 +1004,35 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
+      "name": "C.H. Robinson",
+      "ticker": "CHRW",
+      "sector": "Industrials",
+      "metrics": {
+        "ret5": 5.764779998333984,
+        "ret20": 31.141828527934717,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=C.H.%20Robinson"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **5.8%**, 20d **31.1%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Industrials**",
+        "News search: https://www.google.com/search?q=C.H.%20Robinson"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
       "name": "Equifax",
       "ticker": "EFX",
       "sector": "Industrials",
@@ -1062,41 +1091,12 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Leidos",
-      "ticker": "LDOS",
-      "sector": "Industrials",
-      "metrics": {
-        "ret5": -8.648117501606801,
-        "ret20": -8.822919685944829,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Leidos"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-8.6%**, 20d **-8.8%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Industrials**",
-        "News search: https://www.google.com/search?q=Leidos"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
       "name": "Tyler Technologies",
       "ticker": "TYL",
       "sector": "Technology",
       "metrics": {
-        "ret5": -12.748673140230263,
-        "ret20": -31.874928477097246,
+        "ret5": -12.605528076791176,
+        "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1111,7 +1111,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-12.7%**, 20d **-31.9%**; volatility (20d): **unknown**",
+        "Returns: 5d **-12.6%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Tyler%20Technologies"
