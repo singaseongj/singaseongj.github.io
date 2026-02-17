@@ -1,1132 +1,439 @@
 {
+  "generatedAt": "2026-02-17T06:59:08.989Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-17",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "WGBI 4월 편입",
-      "term_ko": "WGBI 4월 편입",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "WGBI 4월 편입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "WGBI 4월 편입 앞두고 '선유입 없음' 분석…유입 규모도 기대 밑돌 듯",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005767095"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=WGBI%204%EC%9B%94%20%ED%8E%B8%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=WGBI%204%EC%9B%94%20%ED%8E%B8%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "WGBI 4월 편입 앞두고 '선유입 없음' 분석…유입 규모도 기대 밑돌 듯",
-          "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005767095",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "WGBI 4월 편입"
     },
     {
       "term": "뉴욕증시 2월 16일",
-      "term_ko": "뉴욕증시 2월 16일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 2월 16일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 2월 16일 미국 '대통령의 날'로 휴장",
-              "link": "https://www.newspim.com/news/view/20260217000013"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%202%EC%9B%94%2016%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%202%EC%9B%94%2016%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 2월 16일 미국 '대통령의 날'로 휴장",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260217000013",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕증시 2월 16일"
     },
     {
       "term": "4월 세계국채지수 편입",
-      "term_ko": "4월 세계국채지수 편입",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4월 세계국채지수 편입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"4월 세계국채지수 편입 앞두고 해외자금 선유입 신호 없어\"",
-              "link": "https://n.news.naver.com/mnews/article/055/0001333580?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4%EC%9B%94%20%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4%EC%9B%94%20%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "\"4월 세계국채지수 편입 앞두고 해외자금 선유입 신호 없어\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001333580?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "4월 세계국채지수 편입"
     },
     {
       "term": "환율 연평균 1420원",
-      "term_ko": "환율 연평균 1420원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 연평균 1420원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"달러-원 단기 원화 강세 우위\"…환율 연평균 1420원 전망-하나증권",
-              "link": "http://www.metroseoul.co.kr/article/20260214500036"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%97%B0%ED%8F%89%EA%B7%A0%201420%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%97%B0%ED%8F%89%EA%B7%A0%201420%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"달러-원 단기 원화 강세 우위\"…환율 연평균 1420원 전망-하나증권",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260214500036",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "환율 연평균 1420원"
     },
     {
       "term": "속보주담대 금리 7%",
-      "term_ko": "속보주담대 금리 7%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속보주담대 금리 7%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보]주담대 금리 7% 돌파 초읽기…한 달 새 0.29%p 급등",
-              "link": "https://n.news.naver.com/mnews/article/050/0000102465?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%EB%B3%B4%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%207%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%EB%B3%B4%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%207%25"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]주담대 금리 7% 돌파 초읽기…한 달 새 0.29%p 급등",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000102465?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "속보주담대 금리 7%"
     },
     {
       "term": "달 새 0.29%p",
-      "term_ko": "달 새 0.29%p",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달 새 0.29%p",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보]주담대 금리 7% 돌파 초읽기…한 달 새 0.29%p 급등",
-              "link": "https://n.news.naver.com/mnews/article/050/0000102465?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%20%EC%83%88%200.29%25p",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%20%EC%83%88%200.29%25p"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]주담대 금리 7% 돌파 초읽기…한 달 새 0.29%p 급등",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000102465?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달 새 0.29%p"
     },
     {
       "term": "모건스탠리 2월 금통위",
-      "term_ko": "모건스탠리 2월 금통위",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "모건스탠리 2월 금통위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "모건스탠리 \"2월 금통위 금리동결 예상…성장률 전망치 올릴 듯\"",
-              "link": "https://www.tfmedia.co.kr/news/article.html?no=201588"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EA%B1%B4%EC%8A%A4%ED%83%A0%EB%A6%AC%202%EC%9B%94%20%EA%B8%88%ED%86%B5%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EA%B1%B4%EC%8A%A4%ED%83%A0%EB%A6%AC%202%EC%9B%94%20%EA%B8%88%ED%86%B5%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "모건스탠리 \"2월 금통위 금리동결 예상…성장률 전망치 올릴 듯\"",
-          "summary": "",
-          "link": "https://www.tfmedia.co.kr/news/article.html?no=201588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "모건스탠리 2월 금통위"
     },
     {
       "term": "날 맞아 휴장",
-      "term_ko": "날 맞아 휴장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "날 맞아 휴장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[해외시황] 뉴욕증시, '대통령의 날' 맞아 휴장",
-              "link": "http://www.newsprime.co.kr/news/article.html?no=724528"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%A0%20%EB%A7%9E%EC%95%84%20%ED%9C%B4%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%A0%20%EB%A7%9E%EC%95%84%20%ED%9C%B4%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[해외시황] 뉴욕증시, '대통령의 날' 맞아 휴장",
-          "summary": "",
-          "link": "http://www.newsprime.co.kr/news/article.html?no=724528",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "날 맞아 휴장"
     },
     {
       "term": "앞두고 해외자금 선유입",
-      "term_ko": "앞두고 해외자금 선유입",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "앞두고 해외자금 선유입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"4월 세계국채지수 편입 앞두고 해외자금 선유입 신호 없어\"",
-              "link": "https://n.news.naver.com/mnews/article/055/0001333580?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%9E%EB%91%90%EA%B3%A0%20%ED%95%B4%EC%99%B8%EC%9E%90%EA%B8%88%20%EC%84%A0%EC%9C%A0%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%9E%EB%91%90%EA%B3%A0%20%ED%95%B4%EC%99%B8%EC%9E%90%EA%B8%88%20%EC%84%A0%EC%9C%A0%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "\"4월 세계국채지수 편입 앞두고 해외자금 선유입 신호 없어\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001333580?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "앞두고 해외자금 선유입"
     },
     {
       "term": "달러-원 단기 원화",
-      "term_ko": "달러-원 단기 원화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러-원 단기 원화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"달러-원 단기 원화 강세 우위\"…환율 연평균 1420원 전망-하나증권",
-              "link": "http://www.metroseoul.co.kr/article/20260214500036"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%EB%8B%A8%EA%B8%B0%20%EC%9B%90%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC-%EC%9B%90%20%EB%8B%A8%EA%B8%B0%20%EC%9B%90%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "\"달러-원 단기 원화 강세 우위\"…환율 연평균 1420원 전망-하나증권",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260214500036",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달러-원 단기 원화"
     },
     {
       "term": "앞두고 선유입 없음",
-      "term_ko": "앞두고 선유입 없음",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "앞두고 선유입 없음",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "WGBI 4월 편입 앞두고 '선유입 없음' 분석…유입 규모도 기대 밑돌 듯",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005767095"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%9E%EB%91%90%EA%B3%A0%20%EC%84%A0%EC%9C%A0%EC%9E%85%20%EC%97%86%EC%9D%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%9E%EB%91%90%EA%B3%A0%20%EC%84%A0%EC%9C%A0%EC%9E%85%20%EC%97%86%EC%9D%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "WGBI 4월 편입 앞두고 '선유입 없음' 분석…유입 규모도 기대 밑돌 듯",
-          "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005767095",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "앞두고 선유입 없음"
     },
     {
       "term": "기대 밑돌 듯",
-      "term_ko": "기대 밑돌 듯",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기대 밑돌 듯",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "WGBI 4월 편입 앞두고 '선유입 없음' 분석…유입 규모도 기대 밑돌 듯",
-              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005767095"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%20%EB%B0%91%EB%8F%8C%20%EB%93%AF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%20%EB%B0%91%EB%8F%8C%20%EB%93%AF"
-      },
-      "top_headlines": [
-        {
-          "title": "WGBI 4월 편입 앞두고 '선유입 없음' 분석…유입 규모도 기대 밑돌 듯",
-          "summary": "",
-          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005767095",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기대 밑돌 듯"
     },
     {
       "term": "개인사업자로 눈돌린 인뱅",
-      "term_ko": "개인사업자로 눈돌린 인뱅",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개인사업자로 눈돌린 인뱅",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'개인사업자'로 눈돌린 인뱅···'수익성·건전성' 두토끼 잡을까",
-              "link": "https://www.seoulfn.com/news/articleView.html?idxno=621379"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%9D%B8%EC%82%AC%EC%97%85%EC%9E%90%EB%A1%9C%20%EB%88%88%EB%8F%8C%EB%A6%B0%20%EC%9D%B8%EB%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%9D%B8%EC%82%AC%EC%97%85%EC%9E%90%EB%A1%9C%20%EB%88%88%EB%8F%8C%EB%A6%B0%20%EC%9D%B8%EB%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "'개인사업자'로 눈돌린 인뱅···'수익성·건전성' 두토끼 잡을까",
-          "summary": "",
-          "link": "https://www.seoulfn.com/news/articleView.html?idxno=621379",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "개인사업자로 눈돌린 인뱅"
     },
     {
       "term": "수익성 건전성 두토끼",
-      "term_ko": "수익성 건전성 두토끼",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수익성 건전성 두토끼",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'개인사업자'로 눈돌린 인뱅···'수익성·건전성' 두토끼 잡을까",
-              "link": "https://www.seoulfn.com/news/articleView.html?idxno=621379"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9D%B5%EC%84%B1%20%EA%B1%B4%EC%A0%84%EC%84%B1%20%EB%91%90%ED%86%A0%EB%81%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9D%B5%EC%84%B1%20%EA%B1%B4%EC%A0%84%EC%84%B1%20%EB%91%90%ED%86%A0%EB%81%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "'개인사업자'로 눈돌린 인뱅···'수익성·건전성' 두토끼 잡을까",
-          "summary": "",
-          "link": "https://www.seoulfn.com/news/articleView.html?idxno=621379",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수익성 건전성 두토끼"
     },
     {
       "term": "돌파 초읽기 한",
-      "term_ko": "돌파 초읽기 한",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 초읽기 한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보]주담대 금리 7% 돌파 초읽기…한 달 새 0.29%p 급등",
-              "link": "https://n.news.naver.com/mnews/article/050/0000102465?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EC%B4%88%EC%9D%BD%EA%B8%B0%20%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EC%B4%88%EC%9D%BD%EA%B8%B0%20%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]주담대 금리 7% 돌파 초읽기…한 달 새 0.29%p 급등",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000102465?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "돌파 초읽기 한"
     },
     {
       "term": "금리동결 예상 성장률",
-      "term_ko": "금리동결 예상 성장률",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리동결 예상 성장률",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "모건스탠리 \"2월 금통위 금리동결 예상…성장률 전망치 올릴 듯\"",
-              "link": "https://www.tfmedia.co.kr/news/article.html?no=201588"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EB%8F%99%EA%B2%B0%20%EC%98%88%EC%83%81%20%EC%84%B1%EC%9E%A5%EB%A5%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EB%8F%99%EA%B2%B0%20%EC%98%88%EC%83%81%20%EC%84%B1%EC%9E%A5%EB%A5%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "모건스탠리 \"2월 금통위 금리동결 예상…성장률 전망치 올릴 듯\"",
-          "summary": "",
-          "link": "https://www.tfmedia.co.kr/news/article.html?no=201588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리동결 예상 성장률"
     },
     {
       "term": "전망치 올릴 듯",
-      "term_ko": "전망치 올릴 듯",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전망치 올릴 듯",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "모건스탠리 \"2월 금통위 금리동결 예상…성장률 전망치 올릴 듯\"",
-              "link": "https://www.tfmedia.co.kr/news/article.html?no=201588"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A7%9D%EC%B9%98%20%EC%98%AC%EB%A6%B4%20%EB%93%AF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A7%9D%EC%B9%98%20%EC%98%AC%EB%A6%B4%20%EB%93%AF"
-      },
-      "top_headlines": [
-        {
-          "title": "모건스탠리 \"2월 금통위 금리동결 예상…성장률 전망치 올릴 듯\"",
-          "summary": "",
-          "link": "https://www.tfmedia.co.kr/news/article.html?no=201588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전망치 올릴 듯"
     },
     {
-      "term": "DeepSeeks Cheap GPT-4",
-      "term_ko": "",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "DeepSeeks Cheap GPT-4",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "DeepSeek's Cheap 'GPT-4 Rival' Knocks $589 Billion Off Nvidia",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=178135"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=DeepSeeks%20Cheap%20GPT-4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=DeepSeeks%20Cheap%20GPT-4"
-      },
-      "top_headlines": [
-        {
-          "title": "DeepSeek's Cheap 'GPT-4 Rival' Knocks $589 Billion Off Nvidia",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=178135",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Deepseeks Cheap Gpt-4",
+      "term_ko": "Deepseeks Cheap Gpt-4"
     },
     {
       "term": "자본시장 휴장",
-      "term_ko": "자본시장 휴장",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자본시장 휴장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "2월16일 미국 '대통령의 날'...美 자본시장 휴장",
-              "link": "https://www.slist.kr/news/articleView.html?idxno=717449"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%B3%B8%EC%8B%9C%EC%9E%A5%20%ED%9C%B4%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%B3%B8%EC%8B%9C%EC%9E%A5%20%ED%9C%B4%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "2월16일 미국 '대통령의 날'...美 자본시장 휴장",
-          "summary": "",
-          "link": "https://www.slist.kr/news/articleView.html?idxno=717449",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자본시장 휴장"
     },
     {
       "term": "신호 없어",
-      "term_ko": "신호 없어",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신호 없어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"4월 세계국채지수 편입 앞두고 해외자금 선유입 신호 없어\"",
-              "link": "https://n.news.naver.com/mnews/article/055/0001333580?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%98%B8%20%EC%97%86%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%98%B8%20%EC%97%86%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"4월 세계국채지수 편입 앞두고 해외자금 선유입 신호 없어\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001333580?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "신호 없어"
     },
     {
       "term": "강세 우위",
-      "term_ko": "강세 우위",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강세 우위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"달러-원 단기 원화 강세 우위\"…환율 연평균 1420원 전망-하나증권",
-              "link": "http://www.metroseoul.co.kr/article/20260214500036"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%84%B8%20%EC%9A%B0%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%84%B8%20%EC%9A%B0%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "\"달러-원 단기 원화 강세 우위\"…환율 연평균 1420원 전망-하나증권",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260214500036",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "강세 우위"
     },
     {
       "term": "Billion Off Nvidia",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Billion Off Nvidia",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "DeepSeek's Cheap 'GPT-4 Rival' Knocks $589 Billion Off Nvidia",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=178135"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Billion%20Off%20Nvidia",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Billion%20Off%20Nvidia"
-      },
-      "top_headlines": [
-        {
-          "title": "DeepSeek's Cheap 'GPT-4 Rival' Knocks $589 Billion Off Nvidia",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=178135",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Billion Off Nvidia"
     },
     {
-      "term": "All-Time High—Is Now",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "All-Time High—Is Now",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Ethereum Down 60% From All-Time High—Is Now the Right Time to Invest?",
-              "link": "http://coinreaders.com/216526"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=All-Time%20High%E2%80%94Is%20Now",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=All-Time%20High%E2%80%94Is%20Now"
-      },
-      "top_headlines": [
-        {
-          "title": "Ethereum Down 60% From All-Time High—Is Now the Right Time to Invest?",
-          "summary": "",
-          "link": "http://coinreaders.com/216526",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "All-time High—is Now",
+      "term_ko": "All-time High—is Now"
     },
     {
       "term": "Rival Knocks",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rival Knocks",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "DeepSeek's Cheap 'GPT-4 Rival' Knocks $589 Billion Off Nvidia",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=178135"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rival%20Knocks",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rival%20Knocks"
-      },
-      "top_headlines": [
-        {
-          "title": "DeepSeek's Cheap 'GPT-4 Rival' Knocks $589 Billion Off Nvidia",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=178135",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Rival Knocks"
     },
     {
       "term": "Bitcoin Bubble",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bitcoin Bubble",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Bitcoin Bubble Bursting... Could Fall to $10,000",
-              "link": "http://coinreaders.com/216538"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bitcoin%20Bubble",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bitcoin%20Bubble"
-      },
-      "top_headlines": [
-        {
-          "title": "Bitcoin Bubble Bursting... Could Fall to $10,000",
-          "summary": "",
-          "link": "http://coinreaders.com/216538",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Bitcoin Bubble"
     },
     {
       "term": "Could Fall",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Could Fall",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Bitcoin Bubble Bursting... Could Fall to $10,000",
-              "link": "http://coinreaders.com/216538"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Could%20Fall",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Could%20Fall"
-      },
-      "top_headlines": [
-        {
-          "title": "Bitcoin Bubble Bursting... Could Fall to $10,000",
-          "summary": "",
-          "link": "http://coinreaders.com/216538",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Could Fall"
     },
     {
       "term": "Right Time",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Right Time",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-02-14",
-              "timestamp": 1770994800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Ethereum Down 60% From All-Time High—Is Now the Right Time to Invest?",
-              "link": "http://coinreaders.com/216526"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Right%20Time",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Right%20Time"
-      },
-      "top_headlines": [
-        {
-          "title": "Ethereum Down 60% From All-Time High—Is Now the Right Time to Invest?",
-          "summary": "",
-          "link": "http://coinreaders.com/216526",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.012042,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1770994800000
-      }
+      "term_ko": "Right Time"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-17T11:01:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-17T02:02:34.059Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-17T11:01:24+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "WGBI 4월 편입",
+      "term_ko": "WGBI 4월 편입"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-17T11:01:24+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-17T11:01:24+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "뉴욕증시 2월 16일",
+      "term_ko": "뉴욕증시 2월 16일"
+    },
+    {
+      "term": "4월 세계국채지수 편입",
+      "term_ko": "4월 세계국채지수 편입"
+    },
+    {
+      "term": "환율 연평균 1420원",
+      "term_ko": "환율 연평균 1420원"
+    },
+    {
+      "term": "속보주담대 금리 7%",
+      "term_ko": "속보주담대 금리 7%"
+    },
+    {
+      "term": "달 새 0.29%p",
+      "term_ko": "달 새 0.29%p"
+    },
+    {
+      "term": "모건스탠리 2월 금통위",
+      "term_ko": "모건스탠리 2월 금통위"
+    },
+    {
+      "term": "날 맞아 휴장",
+      "term_ko": "날 맞아 휴장"
+    },
+    {
+      "term": "앞두고 해외자금 선유입",
+      "term_ko": "앞두고 해외자금 선유입"
+    },
+    {
+      "term": "달러-원 단기 원화",
+      "term_ko": "달러-원 단기 원화"
+    },
+    {
+      "term": "앞두고 선유입 없음",
+      "term_ko": "앞두고 선유입 없음"
+    },
+    {
+      "term": "기대 밑돌 듯",
+      "term_ko": "기대 밑돌 듯"
+    },
+    {
+      "term": "개인사업자로 눈돌린 인뱅",
+      "term_ko": "개인사업자로 눈돌린 인뱅"
+    },
+    {
+      "term": "수익성 건전성 두토끼",
+      "term_ko": "수익성 건전성 두토끼"
+    },
+    {
+      "term": "돌파 초읽기 한",
+      "term_ko": "돌파 초읽기 한"
+    },
+    {
+      "term": "금리동결 예상 성장률",
+      "term_ko": "금리동결 예상 성장률"
+    },
+    {
+      "term": "전망치 올릴 듯",
+      "term_ko": "전망치 올릴 듯"
+    },
+    {
+      "term": "Deepseeks Cheap Gpt-4",
+      "term_ko": "Deepseeks Cheap Gpt-4"
+    },
+    {
+      "term": "자본시장 휴장",
+      "term_ko": "자본시장 휴장"
+    },
+    {
+      "term": "신호 없어",
+      "term_ko": "신호 없어"
+    },
+    {
+      "term": "강세 우위",
+      "term_ko": "강세 우위"
+    },
+    {
+      "term": "Billion Off Nvidia",
+      "term_ko": "Billion Off Nvidia"
+    },
+    {
+      "term": "All-time High—is Now",
+      "term_ko": "All-time High—is Now"
+    },
+    {
+      "term": "Rival Knocks",
+      "term_ko": "Rival Knocks"
+    },
+    {
+      "term": "Bitcoin Bubble",
+      "term_ko": "Bitcoin Bubble"
+    },
+    {
+      "term": "Could Fall",
+      "term_ko": "Could Fall"
+    },
+    {
+      "term": "Right Time",
+      "term_ko": "Right Time"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    }
+  ],
+  "translations": {
+    "WGBI 4월 편입": {
+      "en": "WGBI 4월 편입",
+      "ko": "WGBI 4월 편입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "뉴욕증시 2월 16일": {
+      "en": "뉴욕증시 2월 16일",
+      "ko": "뉴욕증시 2월 16일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "4월 세계국채지수 편입": {
+      "en": "4월 세계국채지수 편입",
+      "ko": "4월 세계국채지수 편입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "환율 연평균 1420원": {
+      "en": "환율 연평균 1420원",
+      "ko": "환율 연평균 1420원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "속보주담대 금리 7%": {
+      "en": "속보주담대 금리 7%",
+      "ko": "속보주담대 금리 7%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "달 새 0.29%p": {
+      "en": "달 새 0.29%p",
+      "ko": "달 새 0.29%p",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "모건스탠리 2월 금통위": {
+      "en": "모건스탠리 2월 금통위",
+      "ko": "모건스탠리 2월 금통위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "날 맞아 휴장": {
+      "en": "날 맞아 휴장",
+      "ko": "날 맞아 휴장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "앞두고 해외자금 선유입": {
+      "en": "앞두고 해외자금 선유입",
+      "ko": "앞두고 해외자금 선유입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "달러-원 단기 원화": {
+      "en": "달러-원 단기 원화",
+      "ko": "달러-원 단기 원화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "앞두고 선유입 없음": {
+      "en": "앞두고 선유입 없음",
+      "ko": "앞두고 선유입 없음",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "기대 밑돌 듯": {
+      "en": "기대 밑돌 듯",
+      "ko": "기대 밑돌 듯",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "개인사업자로 눈돌린 인뱅": {
+      "en": "개인사업자로 눈돌린 인뱅",
+      "ko": "개인사업자로 눈돌린 인뱅",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "수익성 건전성 두토끼": {
+      "en": "수익성 건전성 두토끼",
+      "ko": "수익성 건전성 두토끼",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "돌파 초읽기 한": {
+      "en": "돌파 초읽기 한",
+      "ko": "돌파 초읽기 한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "금리동결 예상 성장률": {
+      "en": "금리동결 예상 성장률",
+      "ko": "금리동결 예상 성장률",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "전망치 올릴 듯": {
+      "en": "전망치 올릴 듯",
+      "ko": "전망치 올릴 듯",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.989Z"
+    },
+    "Deepseeks Cheap Gpt-4": {
+      "en": "Deepseeks Cheap Gpt-4",
+      "ko": "Deepseeks Cheap Gpt-4",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "자본시장 휴장": {
+      "en": "자본시장 휴장",
+      "ko": "자본시장 휴장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "신호 없어": {
+      "en": "신호 없어",
+      "ko": "신호 없어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "강세 우위": {
+      "en": "강세 우위",
+      "ko": "강세 우위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Billion Off Nvidia": {
+      "en": "Billion Off Nvidia",
+      "ko": "Billion Off Nvidia",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "All-time High—is Now": {
+      "en": "All-time High—is Now",
+      "ko": "All-time High—is Now",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Rival Knocks": {
+      "en": "Rival Knocks",
+      "ko": "Rival Knocks",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Bitcoin Bubble": {
+      "en": "Bitcoin Bubble",
+      "ko": "Bitcoin Bubble",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Could Fall": {
+      "en": "Could Fall",
+      "ko": "Could Fall",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Right Time": {
+      "en": "Right Time",
+      "ko": "Right Time",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-17T06:59:08.990Z"
     }
   }
 }
