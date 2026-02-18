@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-02-18T16:02:50+09:00",
+  "generatedAtKST": "2026-02-18T22:04:43+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -37,8 +37,8 @@
       "ticker": "058470.KQ",
       "sector": "정보기술",
       "metrics": {
-        "ret5": 1.8808777429467085,
-        "ret20": 50.695517774343124,
+        "ret5": 6.531531531531531,
+        "ret20": 0.3181336161187699,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -53,7 +53,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.9%**, 20d **50.7%**; volatility (20d): **unknown**",
+        "Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **정보기술**",
         "News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85"
@@ -91,6 +91,35 @@
     {
       "market": "KOSDAQ",
       "bucket": "safe",
+      "name": "에코프로비엠",
+      "ticker": "247540.KQ",
+      "sector": "소재",
+      "metrics": {
+        "ret5": -1.5408320493066257,
+        "ret20": 11.713286713286713,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-1.5%**, 20d **11.7%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **소재**",
+        "News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0"
+      ]
+    },
+    {
+      "market": "KOSDAQ",
+      "bucket": "safe",
       "name": "케어젠",
       "ticker": "214370.KQ",
       "sector": "헬스케어",
@@ -115,35 +144,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **헬스케어**",
         "News search: https://www.google.com/search?q=%EC%BC%80%EC%96%B4%EC%A0%A0"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
-      "bucket": "safe",
-      "name": "헬스케어",
-      "ticker": "028300.KQ",
-      "sector": "헬스케어",
-      "metrics": {
-        "ret5": 0.7889546351084813,
-        "ret20": -2.8517110266159698,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.8%**, 20d **-2.9%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **헬스케어**",
-        "News search: https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4"
       ]
     },
     {
@@ -775,34 +775,6 @@
     {
       "market": "NASDAQ 100",
       "bucket": "aggressive",
-      "name": "Ferrovial",
-      "ticker": "FER",
-      "sector": null,
-      "metrics": {
-        "ret5": 1.9654553285207705,
-        "ret20": 7.855659642426778,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Ferrovial"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.0%**, 20d **7.9%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=Ferrovial"
-      ]
-    },
-    {
-      "market": "NASDAQ 100",
-      "bucket": "aggressive",
       "name": "Insmed Incorporated",
       "ticker": "INSM",
       "sector": null,
@@ -854,6 +826,34 @@
         "Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=MicroStrategy"
+      ]
+    },
+    {
+      "market": "NASDAQ 100",
+      "bucket": "aggressive",
+      "name": "Thomson Reuters",
+      "ticker": "TRI",
+      "sector": null,
+      "metrics": {
+        "ret5": -0.50634315754402,
+        "ret20": -12.459327655468053,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Thomson%20Reuters"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-0.5%**, 20d **-12.5%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=Thomson%20Reuters"
       ]
     },
     {
