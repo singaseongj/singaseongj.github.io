@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-02-18T04:00:05+09:00",
+  "generatedAtKST": "2026-02-18T11:05:35+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -494,6 +494,34 @@
     {
       "market": "KOSPI",
       "bucket": "aggressive",
+      "name": "세아베스틸지주",
+      "ticker": "001430.KS",
+      "sector": null,
+      "metrics": {
+        "ret5": -11.575178997613365,
+        "ret20": 9.131075110456553,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-11.6%**, 20d **9.1%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "aggressive",
       "name": "제일기획",
       "ticker": "030000.KS",
       "sector": null,
@@ -517,34 +545,6 @@
         "Returns: 5d **7.0%**, 20d **6.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%EC%A0%9C%EC%9D%BC%EA%B8%B0%ED%9A%8D"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "aggressive",
-      "name": "한전KPS",
-      "ticker": "051600.KS",
-      "sector": null,
-      "metrics": {
-        "ret5": 2.1015761821366024,
-        "ret20": 5.045045045045045,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%95%9C%EC%A0%84KPS"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **2.1%**, 20d **5.0%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=%ED%95%9C%EC%A0%84KPS"
       ]
     },
     {
@@ -807,7 +807,7 @@
       "ticker": "INSM",
       "sector": null,
       "metrics": {
-        "ret5": 1.6684569265711813,
+        "ret5": 0.6553504281981292,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
@@ -823,7 +823,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.7%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **0.7%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=Insmed%20Incorporated"
       ]
@@ -831,12 +831,12 @@
     {
       "market": "NASDAQ 100",
       "bucket": "aggressive",
-      "name": "Thomson Reuters",
-      "ticker": "TRI",
+      "name": "MicroStrategy",
+      "ticker": "MSTR",
       "sector": null,
       "metrics": {
-        "ret5": -0.50634315754402,
-        "ret20": -12.459327655468053,
+        "ret5": -0.670789439076325,
+        "ret20": -13.411302612480455,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -847,13 +847,13 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Thomson%20Reuters"
+        "searchUrl": "https://www.google.com/search?q=MicroStrategy"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.5%**, 20d **-12.5%**; volatility (20d): **unknown**",
+        "Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=Thomson%20Reuters"
+        "News search: https://www.google.com/search?q=MicroStrategy"
       ]
     },
     {
@@ -888,40 +888,11 @@
     {
       "market": "S&P 500",
       "bucket": "safe",
-      "name": "AT&T",
-      "ticker": "T",
-      "sector": "Communication Services",
-      "metrics": {
-        "ret5": -0.7513702716662389,
-        "ret20": 5.672725330699574,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=AT%26T"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.8%**, 20d **5.7%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Communication Services**",
-        "News search: https://www.google.com/search?q=AT%26T"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "safe",
       "name": "Ciena",
       "ticker": "CIEN",
       "sector": "Technology",
       "metrics": {
-        "ret5": 5.9824694587175165,
+        "ret5": 4.3668856035365335,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
@@ -937,10 +908,39 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **6.0%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **4.4%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Ciena"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "safe",
+      "name": "McKesson Corporation",
+      "ticker": "MCK",
+      "sector": "Healthcare",
+      "metrics": {
+        "ret5": -0.4075708911221182,
+        "ret20": -1.7401221174797512,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=McKesson%20Corporation"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-0.4%**, 20d **-1.7%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Healthcare**",
+        "News search: https://www.google.com/search?q=McKesson%20Corporation"
       ]
     },
     {
@@ -1033,35 +1033,6 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "Equifax",
-      "ticker": "EFX",
-      "sector": "Industrials",
-      "metrics": {
-        "ret5": -0.9543025237489667,
-        "ret20": 1.6068402034337161,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Equifax"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-1.0%**, 20d **1.6%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Industrials**",
-        "News search: https://www.google.com/search?q=Equifax"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
       "name": "Expeditors International",
       "ticker": "EXPD",
       "sector": "Industrials",
@@ -1091,11 +1062,40 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
+      "name": "Leidos",
+      "ticker": "LDOS",
+      "sector": "Industrials",
+      "metrics": {
+        "ret5": -16.985303083948825,
+        "ret20": null,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Leidos"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-17.0%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Industrials**",
+        "News search: https://www.google.com/search?q=Leidos"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
       "name": "Tyler Technologies",
       "ticker": "TYL",
       "sector": "Technology",
       "metrics": {
-        "ret5": -12.605528076791176,
+        "ret5": -12.036927267066787,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
@@ -1111,7 +1111,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-12.6%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-12.0%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Tyler%20Technologies"
