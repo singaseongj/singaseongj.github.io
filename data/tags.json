@@ -1,1086 +1,439 @@
 {
+  "generatedAt": "2026-02-18T13:02:48.710Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-18",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "증시 브리핑 2월",
-      "term_ko": "증시 브리핑 2월",
-      "significance_score": 672,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 브리핑 2월",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 2월 17일] 다우존스, 나스닥, S&P 500 모두 1% 미만...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196484"
-            },
-            {
-              "title": "[미국 증시 브리핑 · 2월 13일] 다우존스, 나스닥 종합, S&P 500 모두 소...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196467"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%202%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B8%8C%EB%A6%AC%ED%95%91%202%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 2월 17일] 다우존스, 나스닥, S&P 500 모두 1% 미만...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196484",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "[미국 증시 브리핑 · 2월 13일] 다우존스, 나스닥 종합, S&P 500 모두 소...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196467",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 브리핑 2월"
     },
     {
       "term": "ER인사이드 다카이치 2기",
-      "term_ko": "ER인사이드 다카이치 2기",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ER인사이드 다카이치 2기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[ER인사이드] 다카이치 2기 내각 출범, 일본이 변한다",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=730088"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ER%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%8B%A4%EC%B9%B4%EC%9D%B4%EC%B9%98%202%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ER%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%93%9C%20%EB%8B%A4%EC%B9%B4%EC%9D%B4%EC%B9%98%202%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[ER인사이드] 다카이치 2기 내각 출범, 일본이 변한다",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=730088",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "ER인사이드 다카이치 2기"
     },
     {
       "term": "17일 다우존스 나스닥",
-      "term_ko": "17일 다우존스 나스닥",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "17일 다우존스 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 2월 17일] 다우존스, 나스닥, S&P 500 모두 1% 미만...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196484"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=17%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=17%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 2월 17일] 다우존스, 나스닥, S&P 500 모두 1% 미만...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196484",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "17일 다우존스 나스닥"
     },
     {
       "term": "13일 다우존스 나스닥",
-      "term_ko": "13일 다우존스 나스닥",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "13일 다우존스 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 2월 13일] 다우존스, 나스닥 종합, S&P 500 모두 소...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196467"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=13%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=13%EC%9D%BC%20%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 2월 13일] 다우존스, 나스닥 종합, S&P 500 모두 소...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196467",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "13일 다우존스 나스닥"
     },
     {
       "term": "0.5 피 한",
-      "term_ko": "0.5 피 한",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "0.5 피 한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "0.5㎕ 피 한 방울의 혁명… 아이센스, 5초 만에 혈당 잡는 '초정밀 기술...",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=430209"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=0.5%20%ED%94%BC%20%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=0.5%20%ED%94%BC%20%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "0.5㎕ 피 한 방울의 혁명… 아이센스, 5초 만에 혈당 잡는 '초정밀 기술...",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=430209",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "0.5 피 한"
     },
     {
       "term": "혁명 아이센스 5초",
-      "term_ko": "혁명 아이센스 5초",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "혁명 아이센스 5초",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "0.5㎕ 피 한 방울의 혁명… 아이센스, 5초 만에 혈당 잡는 '초정밀 기술...",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=430209"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%81%EB%AA%85%20%EC%95%84%EC%9D%B4%EC%84%BC%EC%8A%A4%205%EC%B4%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%81%EB%AA%85%20%EC%95%84%EC%9D%B4%EC%84%BC%EC%8A%A4%205%EC%B4%88"
-      },
-      "top_headlines": [
-        {
-          "title": "0.5㎕ 피 한 방울의 혁명… 아이센스, 5초 만에 혈당 잡는 '초정밀 기술...",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=430209",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "혁명 아이센스 5초"
     },
     {
       "term": "오전 주요 국제금융뉴스18일",
-      "term_ko": "오전 주요 국제금융뉴스18일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오전 주요 국제금융뉴스18일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[오전 주요 국제금융뉴스](18일)",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4399265"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A418%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EC%A0%84%20%EC%A3%BC%EC%9A%94%20%EA%B5%AD%EC%A0%9C%EA%B8%88%EC%9C%B5%EB%89%B4%EC%8A%A418%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[오전 주요 국제금융뉴스](18일)",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4399265",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오전 주요 국제금융뉴스18일"
     },
     {
       "term": "이모코그 조기 선별부터",
-      "term_ko": "이모코그 조기 선별부터",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이모코그 조기 선별부터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이모코그, 조기 선별부터 치료·관리까지, 전 주기 통합 인지 케어 에코...",
-              "link": "https://www.venturesquare.net/1039391/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%AA%A8%EC%BD%94%EA%B7%B8%20%EC%A1%B0%EA%B8%B0%20%EC%84%A0%EB%B3%84%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%AA%A8%EC%BD%94%EA%B7%B8%20%EC%A1%B0%EA%B8%B0%20%EC%84%A0%EB%B3%84%EB%B6%80%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "이모코그, 조기 선별부터 치료·관리까지, 전 주기 통합 인지 케어 에코...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1039391/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이모코그 조기 선별부터"
     },
     {
       "term": "치료 관리까지 전",
-      "term_ko": "치료 관리까지 전",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "치료 관리까지 전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이모코그, 조기 선별부터 치료·관리까지, 전 주기 통합 인지 케어 에코...",
-              "link": "https://www.venturesquare.net/1039391/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%98%EB%A3%8C%20%EA%B4%80%EB%A6%AC%EA%B9%8C%EC%A7%80%20%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%98%EB%A3%8C%20%EA%B4%80%EB%A6%AC%EA%B9%8C%EC%A7%80%20%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "이모코그, 조기 선별부터 치료·관리까지, 전 주기 통합 인지 케어 에코...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1039391/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "치료 관리까지 전"
     },
     {
       "term": "주기 통합 인지",
-      "term_ko": "주기 통합 인지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주기 통합 인지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이모코그, 조기 선별부터 치료·관리까지, 전 주기 통합 인지 케어 에코...",
-              "link": "https://www.venturesquare.net/1039391/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B8%B0%20%ED%86%B5%ED%95%A9%20%EC%9D%B8%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B8%B0%20%ED%86%B5%ED%95%A9%20%EC%9D%B8%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "이모코그, 조기 선별부터 치료·관리까지, 전 주기 통합 인지 케어 에코...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1039391/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "주기 통합 인지"
     },
     {
       "term": "전망속 우세론에 무게",
-      "term_ko": "전망속 우세론에 무게",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전망속 우세론에 무게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이젠 '육천피'다...엇갈리는 전망속 우세론에 무게",
-              "link": "https://daily.hankooki.com/news/articleView.html?idxno=1336508"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A7%9D%EC%86%8D%20%EC%9A%B0%EC%84%B8%EB%A1%A0%EC%97%90%20%EB%AC%B4%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A7%9D%EC%86%8D%20%EC%9A%B0%EC%84%B8%EB%A1%A0%EC%97%90%20%EB%AC%B4%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "이젠 '육천피'다...엇갈리는 전망속 우세론에 무게",
-          "summary": "",
-          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1336508",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전망속 우세론에 무게"
     },
     {
       "term": "악화된 청년고용에 벚꽃추경",
-      "term_ko": "악화된 청년고용에 벚꽃추경",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "악화된 청년고용에 벚꽃추경",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "악화된 청년고용에 ‘벚꽃추경’ 가능성 솔솔···KDI는 “반도체 호황...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005638265?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%85%ED%99%94%EB%90%9C%20%EC%B2%AD%EB%85%84%EA%B3%A0%EC%9A%A9%EC%97%90%20%EB%B2%9A%EA%BD%83%EC%B6%94%EA%B2%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%85%ED%99%94%EB%90%9C%20%EC%B2%AD%EB%85%84%EA%B3%A0%EC%9A%A9%EC%97%90%20%EB%B2%9A%EA%BD%83%EC%B6%94%EA%B2%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "악화된 청년고용에 ‘벚꽃추경’ 가능성 솔솔···KDI는 “반도체 호황...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005638265?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "악화된 청년고용에 벚꽃추경"
     },
     {
-      "term": "India AI Startups",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "India AI Startups",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Qualcomm to Invest $150 Million in India AI Startups, Strengthening Prese...",
-              "link": "https://www.econotimes.com/Qualcomm-to-Invest-150-Million-in-India-AI-Startups-Strengthening-Presence-in-Growing-Market-1734018"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=India%20AI%20Startups",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=India%20AI%20Startups"
-      },
-      "top_headlines": [
-        {
-          "title": "Qualcomm to Invest $150 Million in India AI Startups, Strengthening Prese...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Qualcomm-to-Invest-150-Million-in-India-AI-Startups-Strengthening-Presence-in-Growing-Market-1734018",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "India Ai Startups",
+      "term_ko": "India Ai Startups"
     },
     {
       "term": "모두 1%",
-      "term_ko": "모두 1%",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "모두 1%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 2월 17일] 다우존스, 나스닥, S&P 500 모두 1% 미만...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196484"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EB%91%90%201%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EB%91%90%201%25"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 2월 17일] 다우존스, 나스닥, S&P 500 모두 1% 미만...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196484",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "모두 1%"
     },
     {
       "term": "종합 S&P",
-      "term_ko": "종합 S&P",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "종합 S&P",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시 브리핑 · 2월 13일] 다우존스, 나스닥 종합, S&P 500 모두 소...",
-              "link": "http://www.newsbrite.net/news/articleView.html?idxno=196467"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A2%85%ED%95%A9%20S%26P",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A2%85%ED%95%A9%20S%26P"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시 브리핑 · 2월 13일] 다우존스, 나스닥 종합, S&P 500 모두 소...",
-          "summary": "",
-          "link": "http://www.newsbrite.net/news/articleView.html?idxno=196467",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "종합 S&P"
     },
     {
-      "term": "Geopolitical Crisis—How Far",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Geopolitical Crisis—How Far",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Bitcoin Stumbles Amid Geopolitical Crisis—How Far Will the Decline Go?",
-              "link": "http://coinreaders.com/216929"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Geopolitical%20Crisis%E2%80%94How%20Far",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Geopolitical%20Crisis%E2%80%94How%20Far"
-      },
-      "top_headlines": [
-        {
-          "title": "Bitcoin Stumbles Amid Geopolitical Crisis—How Far Will the Decline Go?",
-          "summary": "",
-          "link": "http://coinreaders.com/216929",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Geopolitical Crisis—how Far",
+      "term_ko": "Geopolitical Crisis—how Far"
     },
     {
       "term": "Waymo Clarifies Role",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Waymo Clarifies Role",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Waymo Clarifies Role of Remote Workers Amid U.S. Robotaxi Safety Scrutiny",
-              "link": "https://www.econotimes.com/Waymo-Clarifies-Role-of-Remote-Workers-Amid-US-Robotaxi-Safety-Scrutiny-1734006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Waymo%20Clarifies%20Role",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Waymo%20Clarifies%20Role"
-      },
-      "top_headlines": [
-        {
-          "title": "Waymo Clarifies Role of Remote Workers Amid U.S. Robotaxi Safety Scrutiny",
-          "summary": "",
-          "link": "https://www.econotimes.com/Waymo-Clarifies-Role-of-Remote-Workers-Amid-US-Robotaxi-Safety-Scrutiny-1734006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Waymo Clarifies Role"
     },
     {
-      "term": "U.S Robotaxi Safety",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Robotaxi Safety",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Waymo Clarifies Role of Remote Workers Amid U.S. Robotaxi Safety Scrutiny",
-              "link": "https://www.econotimes.com/Waymo-Clarifies-Role-of-Remote-Workers-Amid-US-Robotaxi-Safety-Scrutiny-1734006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Robotaxi%20Safety",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Robotaxi%20Safety"
-      },
-      "top_headlines": [
-        {
-          "title": "Waymo Clarifies Role of Remote Workers Amid U.S. Robotaxi Safety Scrutiny",
-          "summary": "",
-          "link": "https://www.econotimes.com/Waymo-Clarifies-Role-of-Remote-Workers-Amid-US-Robotaxi-Safety-Scrutiny-1734006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Robotaxi Safety",
+      "term_ko": "U.s Robotaxi Safety"
     },
     {
       "term": "Bitcoin Stumbles",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bitcoin Stumbles",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Bitcoin Stumbles Amid Geopolitical Crisis—How Far Will the Decline Go?",
-              "link": "http://coinreaders.com/216929"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bitcoin%20Stumbles",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bitcoin%20Stumbles"
-      },
-      "top_headlines": [
-        {
-          "title": "Bitcoin Stumbles Amid Geopolitical Crisis—How Far Will the Decline Go?",
-          "summary": "",
-          "link": "http://coinreaders.com/216929",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Bitcoin Stumbles"
     },
     {
       "term": "Decline Go",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Decline Go",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Bitcoin Stumbles Amid Geopolitical Crisis—How Far Will the Decline Go?",
-              "link": "http://coinreaders.com/216929"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Decline%20Go",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Decline%20Go"
-      },
-      "top_headlines": [
-        {
-          "title": "Bitcoin Stumbles Amid Geopolitical Crisis—How Far Will the Decline Go?",
-          "summary": "",
-          "link": "http://coinreaders.com/216929",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Decline Go"
     },
     {
       "term": "Remote Workers",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Remote Workers",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Waymo Clarifies Role of Remote Workers Amid U.S. Robotaxi Safety Scrutiny",
-              "link": "https://www.econotimes.com/Waymo-Clarifies-Role-of-Remote-Workers-Amid-US-Robotaxi-Safety-Scrutiny-1734006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Remote%20Workers",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Remote%20Workers"
-      },
-      "top_headlines": [
-        {
-          "title": "Waymo Clarifies Role of Remote Workers Amid U.S. Robotaxi Safety Scrutiny",
-          "summary": "",
-          "link": "https://www.econotimes.com/Waymo-Clarifies-Role-of-Remote-Workers-Amid-US-Robotaxi-Safety-Scrutiny-1734006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Remote Workers"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-02-14",
-              "timestamp": 1770994800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.008923,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1770994800000
-      }
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     },
     {
       "term": "원달러 환율 급등",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "원달러 환율 급등"
     },
     {
       "term": "미국 정부 셧다운 위기",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
       "term": "한국 증시 반등",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "한국 증시 반등"
     },
     {
       "term": "반도체 투자 확대",
-      "term_ko": "반도체 투자 확대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 투자 확대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-18T16:02:57+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "반도체 투자 확대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-18T07:04:09.260Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-18T16:02:57+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "증시 브리핑 2월",
+      "term_ko": "증시 브리핑 2월"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-18T16:02:57+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-18T16:02:57+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "ER인사이드 다카이치 2기",
+      "term_ko": "ER인사이드 다카이치 2기"
+    },
+    {
+      "term": "17일 다우존스 나스닥",
+      "term_ko": "17일 다우존스 나스닥"
+    },
+    {
+      "term": "13일 다우존스 나스닥",
+      "term_ko": "13일 다우존스 나스닥"
+    },
+    {
+      "term": "0.5 피 한",
+      "term_ko": "0.5 피 한"
+    },
+    {
+      "term": "혁명 아이센스 5초",
+      "term_ko": "혁명 아이센스 5초"
+    },
+    {
+      "term": "오전 주요 국제금융뉴스18일",
+      "term_ko": "오전 주요 국제금융뉴스18일"
+    },
+    {
+      "term": "이모코그 조기 선별부터",
+      "term_ko": "이모코그 조기 선별부터"
+    },
+    {
+      "term": "치료 관리까지 전",
+      "term_ko": "치료 관리까지 전"
+    },
+    {
+      "term": "주기 통합 인지",
+      "term_ko": "주기 통합 인지"
+    },
+    {
+      "term": "전망속 우세론에 무게",
+      "term_ko": "전망속 우세론에 무게"
+    },
+    {
+      "term": "악화된 청년고용에 벚꽃추경",
+      "term_ko": "악화된 청년고용에 벚꽃추경"
+    },
+    {
+      "term": "India Ai Startups",
+      "term_ko": "India Ai Startups"
+    },
+    {
+      "term": "모두 1%",
+      "term_ko": "모두 1%"
+    },
+    {
+      "term": "종합 S&P",
+      "term_ko": "종합 S&P"
+    },
+    {
+      "term": "Geopolitical Crisis—how Far",
+      "term_ko": "Geopolitical Crisis—how Far"
+    },
+    {
+      "term": "Waymo Clarifies Role",
+      "term_ko": "Waymo Clarifies Role"
+    },
+    {
+      "term": "U.s Robotaxi Safety",
+      "term_ko": "U.s Robotaxi Safety"
+    },
+    {
+      "term": "Bitcoin Stumbles",
+      "term_ko": "Bitcoin Stumbles"
+    },
+    {
+      "term": "Decline Go",
+      "term_ko": "Decline Go"
+    },
+    {
+      "term": "Remote Workers",
+      "term_ko": "Remote Workers"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "원달러 환율 급등",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "미국 정부 셧다운 위기",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "한국 증시 반등",
+      "term_ko": "한국 증시 반등"
+    },
+    {
+      "term": "반도체 투자 확대",
+      "term_ko": "반도체 투자 확대"
+    }
+  ],
+  "translations": {
+    "증시 브리핑 2월": {
+      "en": "증시 브리핑 2월",
+      "ko": "증시 브리핑 2월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "ER인사이드 다카이치 2기": {
+      "en": "ER인사이드 다카이치 2기",
+      "ko": "ER인사이드 다카이치 2기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "17일 다우존스 나스닥": {
+      "en": "17일 다우존스 나스닥",
+      "ko": "17일 다우존스 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "13일 다우존스 나스닥": {
+      "en": "13일 다우존스 나스닥",
+      "ko": "13일 다우존스 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "0.5 피 한": {
+      "en": "0.5 피 한",
+      "ko": "0.5 피 한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "혁명 아이센스 5초": {
+      "en": "혁명 아이센스 5초",
+      "ko": "혁명 아이센스 5초",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "오전 주요 국제금융뉴스18일": {
+      "en": "오전 주요 국제금융뉴스18일",
+      "ko": "오전 주요 국제금융뉴스18일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "이모코그 조기 선별부터": {
+      "en": "이모코그 조기 선별부터",
+      "ko": "이모코그 조기 선별부터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "치료 관리까지 전": {
+      "en": "치료 관리까지 전",
+      "ko": "치료 관리까지 전",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "주기 통합 인지": {
+      "en": "주기 통합 인지",
+      "ko": "주기 통합 인지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "전망속 우세론에 무게": {
+      "en": "전망속 우세론에 무게",
+      "ko": "전망속 우세론에 무게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "악화된 청년고용에 벚꽃추경": {
+      "en": "악화된 청년고용에 벚꽃추경",
+      "ko": "악화된 청년고용에 벚꽃추경",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.710Z"
+    },
+    "India Ai Startups": {
+      "en": "India Ai Startups",
+      "ko": "India Ai Startups",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "모두 1%": {
+      "en": "모두 1%",
+      "ko": "모두 1%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "종합 S&P": {
+      "en": "종합 S&P",
+      "ko": "종합 S&P",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Geopolitical Crisis—how Far": {
+      "en": "Geopolitical Crisis—how Far",
+      "ko": "Geopolitical Crisis—how Far",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Waymo Clarifies Role": {
+      "en": "Waymo Clarifies Role",
+      "ko": "Waymo Clarifies Role",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "U.s Robotaxi Safety": {
+      "en": "U.s Robotaxi Safety",
+      "ko": "U.s Robotaxi Safety",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Bitcoin Stumbles": {
+      "en": "Bitcoin Stumbles",
+      "ko": "Bitcoin Stumbles",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Decline Go": {
+      "en": "Decline Go",
+      "ko": "Decline Go",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Remote Workers": {
+      "en": "Remote Workers",
+      "ko": "Remote Workers",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "원달러 환율 급등": {
+      "en": "원달러 환율 급등",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "미국 정부 셧다운 위기": {
+      "en": "미국 정부 셧다운 위기",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "한국 증시 반등": {
+      "en": "한국 증시 반등",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
+    },
+    "반도체 투자 확대": {
+      "en": "반도체 투자 확대",
+      "ko": "반도체 투자 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-18T13:02:48.711Z"
     }
   }
 }
