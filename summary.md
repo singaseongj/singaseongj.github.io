@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-23T22:04:40+09:00 (KST)**
+- Generated: **2026-02-24T04:04:09+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -231,7 +231,7 @@
 **Insmed Incorporated** (INSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **12.8%**, 20d **2.8%**; volatility (20d): **unknown**
+- Returns: 5d **7.7%**, 20d **2.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Insmed%20Incorporated
 
@@ -245,6 +245,14 @@
 ## S&P 500
 
 ### SAFE (5)
+
+**Alphabet Inc.** (GOOGL)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.3%**, 20d **-4.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Alphabet%20Inc.
 
 **Apple Inc.** (AAPL)
 
@@ -270,18 +278,10 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
 
-**ServiceNow** (NOW)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.9%**, 20d **-1.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=ServiceNow
-
 **Thermo Fisher Scientific** (TMO)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **-20.1%**; volatility (20d): **unknown**
+- Returns: 5d **2.5%**, 20d **-17.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Thermo%20Fisher%20Scientific
@@ -304,18 +304,18 @@
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Expedia%20Group
 
-**Leidos** (LDOS)
+**Synchrony Financial** (SYF)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **-10.3%**; volatility (20d): **unknown**
+- Returns: 5d **4.3%**, 20d **13.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Leidos
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Synchrony%20Financial
 
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **10.4%**, 20d **-28.0%**; volatility (20d): **unknown**
+- Returns: 5d **3.8%**, 20d **-27.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
