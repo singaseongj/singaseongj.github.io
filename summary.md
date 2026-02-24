@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-24T11:01:12+09:00 (KST)**
+- Generated: **2026-02-24T16:02:22+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -103,7 +103,7 @@
 **LG화학** (051910.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **4.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
@@ -111,14 +111,14 @@
 **두산** (000150.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **11.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **13.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **10.4%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **12.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
@@ -126,7 +126,7 @@
 **포스코인터내셔널** (047050.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **5.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **6.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90
 
@@ -139,19 +139,26 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=F%26F
 
-**OCI홀딩스** (010060.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.4%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=OCI%ED%99%80%EB%94%A9%EC%8A%A4
-
 **농심** (004370.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **0.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%86%8D%EC%8B%AC
+
+**미스토홀딩스** (081660.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EB%AF%B8%EC%8A%A4%ED%86%A0%ED%99%80%EB%94%A9%EC%8A%A4
+
+**세아베스틸지주** (001430.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **-11.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC
 
 **제일기획** (030000.KS)
 
@@ -159,13 +166,6 @@
 - Returns: 5d **1.2%**, 20d **-0.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%A0%9C%EC%9D%BC%EA%B8%B0%ED%9A%8D
-
-**한전KPS** (051600.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.1%**, 20d **5.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%9C%EC%A0%84KPS
 
 ## NASDAQ 100
 
