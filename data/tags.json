@@ -1,1079 +1,439 @@
 {
+  "generatedAt": "2026-02-24T07:00:29.306Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-24",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "李대통령 SNS 야단",
-      "term_ko": "李대통령 SNS 야단",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "李대통령 SNS 야단",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "李대통령 SNS '야단' 통했네…집값 기대심리 석달 만 대폭 꺾여",
-              "link": "https://n.news.naver.com/mnews/article/088/0000998114?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%9D%8E%EB%8C%80%ED%86%B5%EB%A0%B9%20SNS%20%EC%95%BC%EB%8B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%9D%8E%EB%8C%80%ED%86%B5%EB%A0%B9%20SNS%20%EC%95%BC%EB%8B%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "李대통령 SNS '야단' 통했네…집값 기대심리 석달 만 대폭 꺾여",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000998114?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "李대통령 SNS 야단"
     },
     {
       "term": "3월 채권시장 심리",
-      "term_ko": "3월 채권시장 심리",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3월 채권시장 심리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "3월 채권시장 심리 위축 지속…종합 BMSI 96.5로 소폭 하락",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1700620"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%9B%94%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EC%8B%AC%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%9B%94%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EC%8B%AC%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "3월 채권시장 심리 위축 지속…종합 BMSI 96.5로 소폭 하락",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1700620",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "3월 채권시장 심리"
     },
     {
       "term": "모집 최대 500억원",
-      "term_ko": "모집 최대 500억원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "모집 최대 500억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "산업부, 탄소중립 선도프로젝트 융자 사업 기업 모집…최대 500억원 융자",
-              "link": "https://www.ajunews.com/view/20260224101458438"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EC%A7%91%20%EC%B5%9C%EB%8C%80%20500%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EC%A7%91%20%EC%B5%9C%EB%8C%80%20500%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "산업부, 탄소중립 선도프로젝트 융자 사업 기업 모집…최대 500억원 융자",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260224101458438",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "모집 최대 500억원"
     },
     {
       "term": "전환 투자기업 800억",
-      "term_ko": "전환 투자기업 800억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전환 투자기업 800억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "산업부, 탄소중립 전환 투자기업 800억 융자지원…금리 1.3%",
-              "link": "https://n.news.naver.com/mnews/article/629/0000475038?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%ED%99%98%20%ED%88%AC%EC%9E%90%EA%B8%B0%EC%97%85%20800%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%ED%99%98%20%ED%88%AC%EC%9E%90%EA%B8%B0%EC%97%85%20800%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "산업부, 탄소중립 전환 투자기업 800억 융자지원…금리 1.3%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000475038?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전환 투자기업 800억"
     },
     {
       "term": "융자지원 금리 1.3%",
-      "term_ko": "융자지원 금리 1.3%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "융자지원 금리 1.3%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "산업부, 탄소중립 전환 투자기업 800억 융자지원…금리 1.3%",
-              "link": "https://n.news.naver.com/mnews/article/629/0000475038?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%B5%EC%9E%90%EC%A7%80%EC%9B%90%20%EA%B8%88%EB%A6%AC%201.3%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%B5%EC%9E%90%EC%A7%80%EC%9B%90%20%EA%B8%88%EB%A6%AC%201.3%25"
-      },
-      "top_headlines": [
-        {
-          "title": "산업부, 탄소중립 전환 투자기업 800억 융자지원…금리 1.3%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000475038?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "융자지원 금리 1.3%"
     },
     {
       "term": "서울데이터랩미국 증시 지수",
-      "term_ko": "서울데이터랩미국 증시 지수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울데이터랩미국 증시 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서울데이터랩]미국 증시 지수 종합",
-              "link": "https://n.news.naver.com/mnews/article/081/0003620224?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[서울데이터랩]미국 증시 지수 종합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003620224?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서울데이터랩미국 증시 지수"
     },
     {
       "term": "신세계아이앤씨 뉴타닉스 기반",
-      "term_ko": "신세계아이앤씨 뉴타닉스 기반",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신세계아이앤씨 뉴타닉스 기반",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "신세계아이앤씨, 뉴타닉스 기반 구독형 프라이빗 클라우드 서비스 ‘스...",
-              "link": "https://n.news.naver.com/mnews/article/014/0005481645?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%84%B8%EA%B3%84%EC%95%84%EC%9D%B4%EC%95%A4%EC%94%A8%20%EB%89%B4%ED%83%80%EB%8B%89%EC%8A%A4%20%EA%B8%B0%EB%B0%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%84%B8%EA%B3%84%EC%95%84%EC%9D%B4%EC%95%A4%EC%94%A8%20%EB%89%B4%ED%83%80%EB%8B%89%EC%8A%A4%20%EA%B8%B0%EB%B0%98"
-      },
-      "top_headlines": [
-        {
-          "title": "신세계아이앤씨, 뉴타닉스 기반 구독형 프라이빗 클라우드 서비스 ‘스...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005481645?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "신세계아이앤씨 뉴타닉스 기반"
     },
     {
       "term": "구독형 프라이빗 클라우드",
-      "term_ko": "구독형 프라이빗 클라우드",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "구독형 프라이빗 클라우드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "신세계아이앤씨, 뉴타닉스 기반 구독형 프라이빗 클라우드 서비스 ‘스...",
-              "link": "https://n.news.naver.com/mnews/article/014/0005481645?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EB%8F%85%ED%98%95%20%ED%94%84%EB%9D%BC%EC%9D%B4%EB%B9%97%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EB%8F%85%ED%98%95%20%ED%94%84%EB%9D%BC%EC%9D%B4%EB%B9%97%20%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "신세계아이앤씨, 뉴타닉스 기반 구독형 프라이빗 클라우드 서비스 ‘스...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005481645?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "구독형 프라이빗 클라우드"
     },
     {
       "term": "산업부 탄소중립 선도프로젝트",
-      "term_ko": "산업부 탄소중립 선도프로젝트",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "산업부 탄소중립 선도프로젝트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "산업부, 탄소중립 선도프로젝트 융자 사업 기업 모집…최대 500억원 융자",
-              "link": "https://www.ajunews.com/view/20260224101458438"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%EC%97%85%EB%B6%80%20%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD%20%EC%84%A0%EB%8F%84%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%EC%97%85%EB%B6%80%20%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD%20%EC%84%A0%EB%8F%84%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "산업부, 탄소중립 선도프로젝트 융자 사업 기업 모집…최대 500억원 융자",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260224101458438",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "산업부 탄소중립 선도프로젝트"
     },
     {
       "term": "융자 사업 기업",
-      "term_ko": "융자 사업 기업",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "융자 사업 기업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "산업부, 탄소중립 선도프로젝트 융자 사업 기업 모집…최대 500억원 융자",
-              "link": "https://www.ajunews.com/view/20260224101458438"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%B5%EC%9E%90%20%EC%82%AC%EC%97%85%20%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%B5%EC%9E%90%20%EC%82%AC%EC%97%85%20%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "산업부, 탄소중립 선도프로젝트 융자 사업 기업 모집…최대 500억원 융자",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260224101458438",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "융자 사업 기업"
     },
     {
       "term": "통했네 집값 기대심리",
-      "term_ko": "통했네 집값 기대심리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "통했네 집값 기대심리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "李대통령 SNS '야단' 통했네…집값 기대심리 석달 만 대폭 꺾여",
-              "link": "https://n.news.naver.com/mnews/article/088/0000998114?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%B5%ED%96%88%EB%84%A4%20%EC%A7%91%EA%B0%92%20%EA%B8%B0%EB%8C%80%EC%8B%AC%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%B5%ED%96%88%EB%84%A4%20%EC%A7%91%EA%B0%92%20%EA%B8%B0%EB%8C%80%EC%8B%AC%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "李대통령 SNS '야단' 통했네…집값 기대심리 석달 만 대폭 꺾여",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000998114?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "통했네 집값 기대심리"
     },
     {
       "term": "석달 만 대폭",
-      "term_ko": "석달 만 대폭",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "석달 만 대폭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "李대통령 SNS '야단' 통했네…집값 기대심리 석달 만 대폭 꺾여",
-              "link": "https://n.news.naver.com/mnews/article/088/0000998114?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9D%EB%8B%AC%20%EB%A7%8C%20%EB%8C%80%ED%8F%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9D%EB%8B%AC%20%EB%A7%8C%20%EB%8C%80%ED%8F%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "李대통령 SNS '야단' 통했네…집값 기대심리 석달 만 대폭 꺾여",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0000998114?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "석달 만 대폭"
     },
     {
       "term": "탄소중립 선제 투자기업",
-      "term_ko": "탄소중립 선제 투자기업",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "탄소중립 선제 투자기업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "탄소중립 선제 투자기업 장기‧저리 융자 지원사업 공모",
-              "link": "http://www.e-platform.net/news/articleView.html?idxno=100228"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD%20%EC%84%A0%EC%A0%9C%20%ED%88%AC%EC%9E%90%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD%20%EC%84%A0%EC%A0%9C%20%ED%88%AC%EC%9E%90%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "탄소중립 선제 투자기업 장기‧저리 융자 지원사업 공모",
-          "summary": "",
-          "link": "http://www.e-platform.net/news/articleView.html?idxno=100228",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "탄소중립 선제 투자기업"
     },
     {
       "term": "장기‧저리 융자 지원사업",
-      "term_ko": "장기‧저리 융자 지원사업",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "장기‧저리 융자 지원사업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "탄소중립 선제 투자기업 장기‧저리 융자 지원사업 공모",
-              "link": "http://www.e-platform.net/news/articleView.html?idxno=100228"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EA%B8%B0%E2%80%A7%EC%A0%80%EB%A6%AC%20%EC%9C%B5%EC%9E%90%20%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EA%B8%B0%E2%80%A7%EC%A0%80%EB%A6%AC%20%EC%9C%B5%EC%9E%90%20%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "탄소중립 선제 투자기업 장기‧저리 융자 지원사업 공모",
-          "summary": "",
-          "link": "http://www.e-platform.net/news/articleView.html?idxno=100228",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "장기‧저리 융자 지원사업"
     },
     {
-      "term": "1.9 Billion XRP",
-      "term_ko": "",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1.9 Billion XRP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "After $1.9 Billion XRP Sell-Off, Why Are Institutions Scooping Up Spot ET...",
-              "link": "http://coinreaders.com/218657"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1.9%20Billion%20XRP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1.9%20Billion%20XRP"
-      },
-      "top_headlines": [
-        {
-          "title": "After $1.9 Billion XRP Sell-Off, Why Are Institutions Scooping Up Spot ET...",
-          "summary": "",
-          "link": "http://coinreaders.com/218657",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1.9 Billion Xrp",
+      "term_ko": "1.9 Billion Xrp"
     },
     {
       "term": "위축 지속",
-      "term_ko": "위축 지속",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "위축 지속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "3월 채권시장 심리 위축 지속…종합 BMSI 96.5로 소폭 하락",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1700620"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%EC%B6%95%20%EC%A7%80%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%EC%B6%95%20%EC%A7%80%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "3월 채권시장 심리 위축 지속…종합 BMSI 96.5로 소폭 하락",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1700620",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "위축 지속"
     },
     {
       "term": "소폭 하락",
-      "term_ko": "소폭 하락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "소폭 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "3월 채권시장 심리 위축 지속…종합 BMSI 96.5로 소폭 하락",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1700620"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%ED%8F%AD%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%ED%8F%AD%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "3월 채권시장 심리 위축 지속…종합 BMSI 96.5로 소폭 하락",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1700620",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소폭 하락"
     },
     {
-      "term": "Sell-Off Why Are",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sell-Off Why Are",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "After $1.9 Billion XRP Sell-Off, Why Are Institutions Scooping Up Spot ET...",
-              "link": "http://coinreaders.com/218657"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sell-Off%20Why%20Are",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sell-Off%20Why%20Are"
-      },
-      "top_headlines": [
-        {
-          "title": "After $1.9 Billion XRP Sell-Off, Why Are Institutions Scooping Up Spot ET...",
-          "summary": "",
-          "link": "http://coinreaders.com/218657",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sell-off Why Are",
+      "term_ko": "Sell-off Why Are"
     },
     {
       "term": "Wall Street Falls",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Falls",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Falls as Trump Tariffs Roil Markets and AI Stock Fears Deepen",
-              "link": "https://www.econotimes.com/Wall-Street-Falls-as-Trump-Tariffs-Roil-Markets-and-AI-Stock-Fears-Deepen-1734498"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Falls",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Falls"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Falls as Trump Tariffs Roil Markets and AI Stock Fears Deepen",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Falls-as-Trump-Tariffs-Roil-Markets-and-AI-Stock-Fears-Deepen-1734498",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Wall Street Falls"
     },
     {
       "term": "Trump Tariffs Roil",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Tariffs Roil",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Falls as Trump Tariffs Roil Markets and AI Stock Fears Deepen",
-              "link": "https://www.econotimes.com/Wall-Street-Falls-as-Trump-Tariffs-Roil-Markets-and-AI-Stock-Fears-Deepen-1734498"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Tariffs%20Roil",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Tariffs%20Roil"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Falls as Trump Tariffs Roil Markets and AI Stock Fears Deepen",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Falls-as-Trump-Tariffs-Roil-Markets-and-AI-Stock-Fears-Deepen-1734498",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Trump Tariffs Roil"
     },
     {
       "term": "Potential Takeover Interest",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Potential Takeover Interest",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "PayPal Stock Jumps 9% on Report of Potential Takeover Interest",
-              "link": "https://www.econotimes.com/PayPal-Stock-Jumps-9-on-Report-of-Potential-Takeover-Interest-1734492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Potential%20Takeover%20Interest",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Potential%20Takeover%20Interest"
-      },
-      "top_headlines": [
-        {
-          "title": "PayPal Stock Jumps 9% on Report of Potential Takeover Interest",
-          "summary": "",
-          "link": "https://www.econotimes.com/PayPal-Stock-Jumps-9-on-Report-of-Potential-Takeover-Interest-1734492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Potential Takeover Interest"
     },
     {
-      "term": "U.S Tariff Uncertainty",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Tariff Uncertainty",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul stocks open lower on U.S. tariff uncertainty",
-              "link": "https://n.news.naver.com/mnews/article/001/0015920309?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Tariff%20Uncertainty",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Tariff%20Uncertainty"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul stocks open lower on U.S. tariff uncertainty",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015920309?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Tariff Uncertainty",
+      "term_ko": "U.s Tariff Uncertainty"
     },
     {
       "term": "Jumps 9%",
-      "term_ko": "",
-      "significance_score": 238,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Jumps 9%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "PayPal Stock Jumps 9% on Report of Potential Takeover Interest",
-              "link": "https://www.econotimes.com/PayPal-Stock-Jumps-9-on-Report-of-Potential-Takeover-Interest-1734492"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Jumps%209%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Jumps%209%25"
-      },
-      "top_headlines": [
-        {
-          "title": "PayPal Stock Jumps 9% on Report of Potential Takeover Interest",
-          "summary": "",
-          "link": "https://www.econotimes.com/PayPal-Stock-Jumps-9-on-Report-of-Potential-Takeover-Interest-1734492",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Jumps 9%"
     },
     {
       "term": "Institutions Scooping",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Institutions Scooping",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "After $1.9 Billion XRP Sell-Off, Why Are Institutions Scooping Up Spot ET...",
-              "link": "http://coinreaders.com/218657"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Institutions%20Scooping",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Institutions%20Scooping"
-      },
-      "top_headlines": [
-        {
-          "title": "After $1.9 Billion XRP Sell-Off, Why Are Institutions Scooping Up Spot ET...",
-          "summary": "",
-          "link": "http://coinreaders.com/218657",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Institutions Scooping"
     },
     {
       "term": "Fears Deepen",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fears Deepen",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Falls as Trump Tariffs Roil Markets and AI Stock Fears Deepen",
-              "link": "https://www.econotimes.com/Wall-Street-Falls-as-Trump-Tariffs-Roil-Markets-and-AI-Stock-Fears-Deepen-1734498"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fears%20Deepen",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fears%20Deepen"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Falls as Trump Tariffs Roil Markets and AI Stock Fears Deepen",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Falls-as-Trump-Tariffs-Roil-Markets-and-AI-Stock-Fears-Deepen-1734498",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Fears Deepen"
     },
     {
       "term": "Open Lower",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul stocks open lower on U.S. tariff uncertainty",
-              "link": "https://n.news.naver.com/mnews/article/001/0015920309?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul stocks open lower on U.S. tariff uncertainty",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015920309?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Open Lower"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-24T11:03:39+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-24T02:04:47.756Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-24T11:03:39+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "李대통령 SNS 야단",
+      "term_ko": "李대통령 SNS 야단"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-24T11:03:39+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-24T11:03:39+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "3월 채권시장 심리",
+      "term_ko": "3월 채권시장 심리"
+    },
+    {
+      "term": "모집 최대 500억원",
+      "term_ko": "모집 최대 500억원"
+    },
+    {
+      "term": "전환 투자기업 800억",
+      "term_ko": "전환 투자기업 800억"
+    },
+    {
+      "term": "융자지원 금리 1.3%",
+      "term_ko": "융자지원 금리 1.3%"
+    },
+    {
+      "term": "서울데이터랩미국 증시 지수",
+      "term_ko": "서울데이터랩미국 증시 지수"
+    },
+    {
+      "term": "신세계아이앤씨 뉴타닉스 기반",
+      "term_ko": "신세계아이앤씨 뉴타닉스 기반"
+    },
+    {
+      "term": "구독형 프라이빗 클라우드",
+      "term_ko": "구독형 프라이빗 클라우드"
+    },
+    {
+      "term": "산업부 탄소중립 선도프로젝트",
+      "term_ko": "산업부 탄소중립 선도프로젝트"
+    },
+    {
+      "term": "융자 사업 기업",
+      "term_ko": "융자 사업 기업"
+    },
+    {
+      "term": "통했네 집값 기대심리",
+      "term_ko": "통했네 집값 기대심리"
+    },
+    {
+      "term": "석달 만 대폭",
+      "term_ko": "석달 만 대폭"
+    },
+    {
+      "term": "탄소중립 선제 투자기업",
+      "term_ko": "탄소중립 선제 투자기업"
+    },
+    {
+      "term": "장기‧저리 융자 지원사업",
+      "term_ko": "장기‧저리 융자 지원사업"
+    },
+    {
+      "term": "1.9 Billion Xrp",
+      "term_ko": "1.9 Billion Xrp"
+    },
+    {
+      "term": "위축 지속",
+      "term_ko": "위축 지속"
+    },
+    {
+      "term": "소폭 하락",
+      "term_ko": "소폭 하락"
+    },
+    {
+      "term": "Sell-off Why Are",
+      "term_ko": "Sell-off Why Are"
+    },
+    {
+      "term": "Wall Street Falls",
+      "term_ko": "Wall Street Falls"
+    },
+    {
+      "term": "Trump Tariffs Roil",
+      "term_ko": "Trump Tariffs Roil"
+    },
+    {
+      "term": "Potential Takeover Interest",
+      "term_ko": "Potential Takeover Interest"
+    },
+    {
+      "term": "U.s Tariff Uncertainty",
+      "term_ko": "U.s Tariff Uncertainty"
+    },
+    {
+      "term": "Jumps 9%",
+      "term_ko": "Jumps 9%"
+    },
+    {
+      "term": "Institutions Scooping",
+      "term_ko": "Institutions Scooping"
+    },
+    {
+      "term": "Fears Deepen",
+      "term_ko": "Fears Deepen"
+    },
+    {
+      "term": "Open Lower",
+      "term_ko": "Open Lower"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    }
+  ],
+  "translations": {
+    "李대통령 SNS 야단": {
+      "en": "李대통령 SNS 야단",
+      "ko": "李대통령 SNS 야단",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "3월 채권시장 심리": {
+      "en": "3월 채권시장 심리",
+      "ko": "3월 채권시장 심리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "모집 최대 500억원": {
+      "en": "모집 최대 500억원",
+      "ko": "모집 최대 500억원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "전환 투자기업 800억": {
+      "en": "전환 투자기업 800억",
+      "ko": "전환 투자기업 800억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "융자지원 금리 1.3%": {
+      "en": "융자지원 금리 1.3%",
+      "ko": "융자지원 금리 1.3%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "서울데이터랩미국 증시 지수": {
+      "en": "서울데이터랩미국 증시 지수",
+      "ko": "서울데이터랩미국 증시 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "신세계아이앤씨 뉴타닉스 기반": {
+      "en": "신세계아이앤씨 뉴타닉스 기반",
+      "ko": "신세계아이앤씨 뉴타닉스 기반",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "구독형 프라이빗 클라우드": {
+      "en": "구독형 프라이빗 클라우드",
+      "ko": "구독형 프라이빗 클라우드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "산업부 탄소중립 선도프로젝트": {
+      "en": "산업부 탄소중립 선도프로젝트",
+      "ko": "산업부 탄소중립 선도프로젝트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "융자 사업 기업": {
+      "en": "융자 사업 기업",
+      "ko": "융자 사업 기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "통했네 집값 기대심리": {
+      "en": "통했네 집값 기대심리",
+      "ko": "통했네 집값 기대심리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "석달 만 대폭": {
+      "en": "석달 만 대폭",
+      "ko": "석달 만 대폭",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "탄소중립 선제 투자기업": {
+      "en": "탄소중립 선제 투자기업",
+      "ko": "탄소중립 선제 투자기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "장기‧저리 융자 지원사업": {
+      "en": "장기‧저리 융자 지원사업",
+      "ko": "장기‧저리 융자 지원사업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "1.9 Billion Xrp": {
+      "en": "1.9 Billion Xrp",
+      "ko": "1.9 Billion Xrp",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "위축 지속": {
+      "en": "위축 지속",
+      "ko": "위축 지속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "소폭 하락": {
+      "en": "소폭 하락",
+      "ko": "소폭 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Sell-off Why Are": {
+      "en": "Sell-off Why Are",
+      "ko": "Sell-off Why Are",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Wall Street Falls": {
+      "en": "Wall Street Falls",
+      "ko": "Wall Street Falls",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Trump Tariffs Roil": {
+      "en": "Trump Tariffs Roil",
+      "ko": "Trump Tariffs Roil",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Potential Takeover Interest": {
+      "en": "Potential Takeover Interest",
+      "ko": "Potential Takeover Interest",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "U.s Tariff Uncertainty": {
+      "en": "U.s Tariff Uncertainty",
+      "ko": "U.s Tariff Uncertainty",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Jumps 9%": {
+      "en": "Jumps 9%",
+      "ko": "Jumps 9%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Institutions Scooping": {
+      "en": "Institutions Scooping",
+      "ko": "Institutions Scooping",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Fears Deepen": {
+      "en": "Fears Deepen",
+      "ko": "Fears Deepen",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Open Lower": {
+      "en": "Open Lower",
+      "ko": "Open Lower",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-24T07:00:29.306Z"
     }
   }
 }
