@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-26T16:02:04+09:00 (KST)**
+- Generated: **2026-02-26T22:05:55+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -153,12 +153,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%EC%9C%A0%ED%99%94
 
-**씨에스윈드** (112610.KS)
+**태광산업** (003240.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.6%**, 20d **30.4%**; volatility (20d): **unknown**
+- Returns: 5d **41.3%**, 20d **89.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%94%A8%EC%97%90%EC%8A%A4%EC%9C%88%EB%93%9C
+- News search: https://www.google.com/search?q=%ED%83%9C%EA%B4%91%EC%82%B0%EC%97%85
 
 **한국카본** (017960.KS)
 
