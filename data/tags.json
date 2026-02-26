@@ -1,1074 +1,425 @@
 {
+  "generatedAt": "2026-02-26T07:00:02.828Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-02-26",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "한은 기준금리 6연속",
-      "term_ko": "한은 기준금리 6연속",
-      "significance_score": 672,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 기준금리 6연속",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한은, 기준금리 6연속 동결…성장률 2.0%로 상향",
-              "link": "https://news.mtn.co.kr/news-detail/2026022610483925776"
-            },
-            {
-              "title": "한은, 기준금리 6연속 동결…연 2.50%",
-              "link": "http://www.newswatch.kr/news/articleView.html?idxno=78018"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%206%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%206%EC%97%B0%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 기준금리 6연속 동결…성장률 2.0%로 상향",
-          "summary": "",
-          "link": "https://news.mtn.co.kr/news-detail/2026022610483925776",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "한은, 기준금리 6연속 동결…연 2.50%",
-          "summary": "",
-          "link": "http://www.newswatch.kr/news/articleView.html?idxno=78018",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한은 기준금리 6연속"
     },
     {
       "term": "Strong Nvidia Earnings",
-      "term_ko": "",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strong Nvidia Earnings",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi opens higher on strong Nvidia earnings",
-              "link": "https://n.news.naver.com/mnews/article/640/0000084934?sid=101"
-            },
-            {
-              "title": "Seoul shares open higher on strong Nvidia earnings",
-              "link": "https://n.news.naver.com/mnews/article/001/0015925411?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strong%20Nvidia%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strong%20Nvidia%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi opens higher on strong Nvidia earnings",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000084934?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Seoul shares open higher on strong Nvidia earnings",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015925411?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Strong Nvidia Earnings"
     },
     {
       "term": "판결 태양광 BESS",
-      "term_ko": "판결 태양광 BESS",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "판결 태양광 BESS",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%90%EA%B2%B0%20%ED%83%9C%EC%96%91%EA%B4%91%20BESS",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%90%EA%B2%B0%20%ED%83%9C%EC%96%91%EA%B4%91%20BESS"
-      },
-      "top_headlines": [
-        {
-          "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "판결 태양광 BESS"
     },
     {
       "term": "부담 완화 EV",
-      "term_ko": "부담 완화 EV",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부담 완화 EV",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8B%B4%20%EC%99%84%ED%99%94%20EV",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8B%B4%20%EC%99%84%ED%99%94%20EV"
-      },
-      "top_headlines": [
-        {
-          "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부담 완화 EV"
     },
     {
       "term": "첫 공개 21개",
-      "term_ko": "첫 공개 21개",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "첫 공개 21개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-              "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AB%20%EA%B3%B5%EA%B0%9C%2021%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AB%20%EA%B3%B5%EA%B0%9C%2021%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "첫 공개 21개"
     },
     {
       "term": "중 16개 6개월",
-      "term_ko": "중 16개 6개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중 16개 6개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-              "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%2016%EA%B0%9C%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%2016%EA%B0%9C%206%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중 16개 6개월"
     },
     {
       "term": "2.0% 상향 전원일치",
-      "term_ko": "2.0% 상향 전원일치",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2.0% 상향 전원일치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "성장률 전망 '2.0%' 상향…전원일치 동결, 6개월 후 '동결 우세'(종합)",
-              "link": "https://n.news.naver.com/mnews/article/277/0005726441?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.0%25%20%EC%83%81%ED%96%A5%20%EC%A0%84%EC%9B%90%EC%9D%BC%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.0%25%20%EC%83%81%ED%96%A5%20%EC%A0%84%EC%9B%90%EC%9D%BC%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "성장률 전망 '2.0%' 상향…전원일치 동결, 6개월 후 '동결 우세'(종합)",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005726441?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "2.0% 상향 전원일치"
     },
     {
       "term": "동결 6개월 후",
-      "term_ko": "동결 6개월 후",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동결 6개월 후",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "성장률 전망 '2.0%' 상향…전원일치 동결, 6개월 후 '동결 우세'(종합)",
-              "link": "https://n.news.naver.com/mnews/article/277/0005726441?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%206%EA%B0%9C%EC%9B%94%20%ED%9B%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%206%EA%B0%9C%EC%9B%94%20%ED%9B%84"
-      },
-      "top_headlines": [
-        {
-          "title": "성장률 전망 '2.0%' 상향…전원일치 동결, 6개월 후 '동결 우세'(종합)",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005726441?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동결 6개월 후"
     },
     {
       "term": "동결 연 2.50%",
-      "term_ko": "동결 연 2.50%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동결 연 2.50%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한은, 기준금리 6연속 동결…연 2.50%",
-              "link": "http://www.newswatch.kr/news/articleView.html?idxno=78018"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%20%EC%97%B0%202.50%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%20%EC%97%B0%202.50%25"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 기준금리 6연속 동결…연 2.50%",
-          "summary": "",
-          "link": "http://www.newswatch.kr/news/articleView.html?idxno=78018",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동결 연 2.50%"
     },
     {
       "term": "기준금리 연 2.5%",
-      "term_ko": "기준금리 연 2.5%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기준금리 연 2.5%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[포토] 한은, 기준금리 연 2.5% 6연속 동결",
-              "link": "https://www.ajunews.com/view/20260226105327393"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%97%B0%202.5%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%97%B0%202.5%25"
-      },
-      "top_headlines": [
-        {
-          "title": "[포토] 한은, 기준금리 연 2.5% 6연속 동결",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260226105327393",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기준금리 연 2.5%"
     },
     {
       "term": "美 비상관세 무효",
-      "term_ko": "美 비상관세 무효",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 비상관세 무효",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EB%B9%84%EC%83%81%EA%B4%80%EC%84%B8%20%EB%AC%B4%ED%9A%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EB%B9%84%EC%83%81%EA%B4%80%EC%84%B8%20%EB%AC%B4%ED%9A%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "美 비상관세 무효"
     },
     {
       "term": "서울데이터랩미국 증시 지수",
-      "term_ko": "서울데이터랩미국 증시 지수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울데이터랩미국 증시 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[서울데이터랩]미국 증시 지수 종합",
-              "link": "https://n.news.naver.com/mnews/article/081/0003621024?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[서울데이터랩]미국 증시 지수 종합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003621024?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서울데이터랩미국 증시 지수"
     },
     {
       "term": "금융 스케치 롯데카드",
-      "term_ko": "금융 스케치 롯데카드",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융 스케치 롯데카드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[금융 스케치] 롯데카드, 마이데이터 활용 금리인하요구권 대행 서비스...",
-              "link": "https://www.pressman.kr/news/articleView.html?idxno=100371"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EC%8A%A4%EC%BC%80%EC%B9%98%20%EB%A1%AF%EB%8D%B0%EC%B9%B4%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EC%8A%A4%EC%BC%80%EC%B9%98%20%EB%A1%AF%EB%8D%B0%EC%B9%B4%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 스케치] 롯데카드, 마이데이터 활용 금리인하요구권 대행 서비스...",
-          "summary": "",
-          "link": "https://www.pressman.kr/news/articleView.html?idxno=100371",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융 스케치 롯데카드"
     },
     {
       "term": "마이데이터 활용 금리인하요구권",
-      "term_ko": "마이데이터 활용 금리인하요구권",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마이데이터 활용 금리인하요구권",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[금융 스케치] 롯데카드, 마이데이터 활용 금리인하요구권 대행 서비스...",
-              "link": "https://www.pressman.kr/news/articleView.html?idxno=100371"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%9D%B4%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%99%9C%EC%9A%A9%20%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%EC%9A%94%EA%B5%AC%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%9D%B4%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%99%9C%EC%9A%A9%20%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98%EC%9A%94%EA%B5%AC%EA%B6%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 스케치] 롯데카드, 마이데이터 활용 금리인하요구권 대행 서비스...",
-          "summary": "",
-          "link": "https://www.pressman.kr/news/articleView.html?idxno=100371",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "마이데이터 활용 금리인하요구권"
     },
     {
-      "term": "AI Demand Surges",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Demand Surges",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Nvidia Earnings Beat Expectations as AI Demand Surges, Stock Rises on Str...",
-              "link": "https://www.econotimes.com/Nvidia-Earnings-Beat-Expectations-as-AI-Demand-Surges-Stock-Rises-on-Strong-Revenue-Outlook-1734743"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Demand%20Surges",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Demand%20Surges"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Earnings Beat Expectations as AI Demand Surges, Stock Rises on Str...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Earnings-Beat-Expectations-as-AI-Demand-Surges-Stock-Rises-on-Strong-Revenue-Outlook-1734743",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Demand Surges",
+      "term_ko": "Ai Demand Surges"
     },
     {
       "term": "6연속 동결",
-      "term_ko": "6연속 동결",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "6연속 동결",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[포토] 한은, 기준금리 연 2.5% 6연속 동결",
-              "link": "https://www.ajunews.com/view/20260226105327393"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%EC%97%B0%EC%86%8D%20%EB%8F%99%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%EC%97%B0%EC%86%8D%20%EB%8F%99%EA%B2%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[포토] 한은, 기준금리 연 2.5% 6연속 동결",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260226105327393",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "6연속 동결"
     },
     {
       "term": "풍력은 제외",
-      "term_ko": "풍력은 제외",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "풍력은 제외",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%92%8D%EB%A0%A5%EC%9D%80%20%EC%A0%9C%EC%99%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%92%8D%EB%A0%A5%EC%9D%80%20%EC%A0%9C%EC%99%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "美 비상관세 무효 판결…태양광·BESS 부담 완화, EV·풍력은 제외",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "풍력은 제외"
     },
     {
       "term": "한국형 점도표",
-      "term_ko": "한국형 점도표",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국형 점도표",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-              "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%A0%90%EB%8F%84%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%A0%90%EB%8F%84%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국형 점도표"
     },
     {
       "term": "뒤 동결",
-      "term_ko": "뒤 동결",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뒤 동결",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-              "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%92%A4%20%EB%8F%99%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%92%A4%20%EB%8F%99%EA%B2%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "‘한국형 점도표’ 첫 공개…21개 중 16개 “6개월 뒤 동결””",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002605483?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뒤 동결"
     },
     {
       "term": "Kospi Opens Higher",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Opens Higher",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi opens higher on strong Nvidia earnings",
-              "link": "https://n.news.naver.com/mnews/article/640/0000084934?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Opens%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Opens%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi opens higher on strong Nvidia earnings",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000084934?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Kospi Opens Higher"
     },
     {
       "term": "Nvidia Earnings Beat",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nvidia Earnings Beat",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Nvidia Earnings Beat Expectations as AI Demand Surges, Stock Rises on Str...",
-              "link": "https://www.econotimes.com/Nvidia-Earnings-Beat-Expectations-as-AI-Demand-Surges-Stock-Rises-on-Strong-Revenue-Outlook-1734743"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nvidia%20Earnings%20Beat",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nvidia%20Earnings%20Beat"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Earnings Beat Expectations as AI Demand Surges, Stock Rises on Str...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Earnings-Beat-Expectations-as-AI-Demand-Surges-Stock-Rises-on-Strong-Revenue-Outlook-1734743",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Nvidia Earnings Beat"
     },
     {
       "term": "Oil Prices Near",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Oil Prices Near",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Rally as Nvidia Earnings Loom, Oil Prices Near Seven-Month Hi...",
-              "link": "https://www.econotimes.com/US-Stocks-Rally-as-Nvidia-Earnings-Loom-Oil-Prices-Near-Seven-Month-Highs-1734742"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Oil%20Prices%20Near",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Oil%20Prices%20Near"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Rally as Nvidia Earnings Loom, Oil Prices Near Seven-Month Hi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rally-as-Nvidia-Earnings-Loom-Oil-Prices-Near-Seven-Month-Highs-1734742",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Oil Prices Near"
     },
     {
       "term": "Open Higher",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Higher",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open higher on strong Nvidia earnings",
-              "link": "https://n.news.naver.com/mnews/article/001/0015925411?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open higher on strong Nvidia earnings",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015925411?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Open Higher"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     },
     {
       "term": "원달러 환율 급등",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-02-26T11:00:52+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-02-26T02:02:11.173Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-02-26T11:00:52+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "한은 기준금리 6연속",
+      "term_ko": "한은 기준금리 6연속"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-02-26T11:00:52+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-02-26T11:00:52+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Strong Nvidia Earnings",
+      "term_ko": "Strong Nvidia Earnings"
+    },
+    {
+      "term": "판결 태양광 BESS",
+      "term_ko": "판결 태양광 BESS"
+    },
+    {
+      "term": "부담 완화 EV",
+      "term_ko": "부담 완화 EV"
+    },
+    {
+      "term": "첫 공개 21개",
+      "term_ko": "첫 공개 21개"
+    },
+    {
+      "term": "중 16개 6개월",
+      "term_ko": "중 16개 6개월"
+    },
+    {
+      "term": "2.0% 상향 전원일치",
+      "term_ko": "2.0% 상향 전원일치"
+    },
+    {
+      "term": "동결 6개월 후",
+      "term_ko": "동결 6개월 후"
+    },
+    {
+      "term": "동결 연 2.50%",
+      "term_ko": "동결 연 2.50%"
+    },
+    {
+      "term": "기준금리 연 2.5%",
+      "term_ko": "기준금리 연 2.5%"
+    },
+    {
+      "term": "美 비상관세 무효",
+      "term_ko": "美 비상관세 무효"
+    },
+    {
+      "term": "서울데이터랩미국 증시 지수",
+      "term_ko": "서울데이터랩미국 증시 지수"
+    },
+    {
+      "term": "금융 스케치 롯데카드",
+      "term_ko": "금융 스케치 롯데카드"
+    },
+    {
+      "term": "마이데이터 활용 금리인하요구권",
+      "term_ko": "마이데이터 활용 금리인하요구권"
+    },
+    {
+      "term": "Ai Demand Surges",
+      "term_ko": "Ai Demand Surges"
+    },
+    {
+      "term": "6연속 동결",
+      "term_ko": "6연속 동결"
+    },
+    {
+      "term": "풍력은 제외",
+      "term_ko": "풍력은 제외"
+    },
+    {
+      "term": "한국형 점도표",
+      "term_ko": "한국형 점도표"
+    },
+    {
+      "term": "뒤 동결",
+      "term_ko": "뒤 동결"
+    },
+    {
+      "term": "Kospi Opens Higher",
+      "term_ko": "Kospi Opens Higher"
+    },
+    {
+      "term": "Nvidia Earnings Beat",
+      "term_ko": "Nvidia Earnings Beat"
+    },
+    {
+      "term": "Oil Prices Near",
+      "term_ko": "Oil Prices Near"
+    },
+    {
+      "term": "Open Higher",
+      "term_ko": "Open Higher"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "원달러 환율 급등",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "한은 기준금리 6연속": {
+      "en": "한은 기준금리 6연속",
+      "ko": "한은 기준금리 6연속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Strong Nvidia Earnings": {
+      "en": "Strong Nvidia Earnings",
+      "ko": "Strong Nvidia Earnings",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "판결 태양광 BESS": {
+      "en": "판결 태양광 BESS",
+      "ko": "판결 태양광 BESS",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "부담 완화 EV": {
+      "en": "부담 완화 EV",
+      "ko": "부담 완화 EV",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "첫 공개 21개": {
+      "en": "첫 공개 21개",
+      "ko": "첫 공개 21개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "중 16개 6개월": {
+      "en": "중 16개 6개월",
+      "ko": "중 16개 6개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "2.0% 상향 전원일치": {
+      "en": "2.0% 상향 전원일치",
+      "ko": "2.0% 상향 전원일치",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "동결 6개월 후": {
+      "en": "동결 6개월 후",
+      "ko": "동결 6개월 후",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "동결 연 2.50%": {
+      "en": "동결 연 2.50%",
+      "ko": "동결 연 2.50%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "기준금리 연 2.5%": {
+      "en": "기준금리 연 2.5%",
+      "ko": "기준금리 연 2.5%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "美 비상관세 무효": {
+      "en": "美 비상관세 무효",
+      "ko": "美 비상관세 무효",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "서울데이터랩미국 증시 지수": {
+      "en": "서울데이터랩미국 증시 지수",
+      "ko": "서울데이터랩미국 증시 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "금융 스케치 롯데카드": {
+      "en": "금융 스케치 롯데카드",
+      "ko": "금융 스케치 롯데카드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "마이데이터 활용 금리인하요구권": {
+      "en": "마이데이터 활용 금리인하요구권",
+      "ko": "마이데이터 활용 금리인하요구권",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Ai Demand Surges": {
+      "en": "Ai Demand Surges",
+      "ko": "Ai Demand Surges",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "6연속 동결": {
+      "en": "6연속 동결",
+      "ko": "6연속 동결",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "풍력은 제외": {
+      "en": "풍력은 제외",
+      "ko": "풍력은 제외",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "한국형 점도표": {
+      "en": "한국형 점도표",
+      "ko": "한국형 점도표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "뒤 동결": {
+      "en": "뒤 동결",
+      "ko": "뒤 동결",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Kospi Opens Higher": {
+      "en": "Kospi Opens Higher",
+      "ko": "Kospi Opens Higher",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Nvidia Earnings Beat": {
+      "en": "Nvidia Earnings Beat",
+      "ko": "Nvidia Earnings Beat",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Oil Prices Near": {
+      "en": "Oil Prices Near",
+      "ko": "Oil Prices Near",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Open Higher": {
+      "en": "Open Higher",
+      "ko": "Open Higher",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
+    },
+    "원달러 환율 급등": {
+      "en": "원달러 환율 급등",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-02-26T07:00:02.828Z"
     }
   }
 }
