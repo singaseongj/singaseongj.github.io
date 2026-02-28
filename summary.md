@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-02-28T15:40:02+09:00 (KST)**
+- Generated: **2026-02-28T21:44:53+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -250,14 +250,6 @@
 
 ### SAFE (5)
 
-**Amazon** (AMZN)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Amazon
-
 **Apple Inc.** (AAPL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -273,6 +265,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Broadcom
+
+**JPMorgan Chase** (JPM)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.4%**, 20d **-2.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=JPMorgan%20Chase
 
 **Netflix, Inc.** (NFLX)
 
@@ -292,29 +292,21 @@
 
 ### AGGRESSIVE (5)
 
-**Deckers Brands** (DECK)
+**Equity Residential** (EQR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **12.2%**, 20d **5.5%**; volatility (20d): **unknown**
+- Returns: 5d **1.0%**, 20d **-0.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Deckers%20Brands
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=Equity%20Residential
 
-**First Solar** (FSLR)
+**Synchrony Financial** (SYF)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.4%**, 20d **6.8%**; volatility (20d): **unknown**
+- Returns: 5d **4.3%**, 20d **13.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=First%20Solar
-
-**GoDaddy** (GDDY)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.8%**, 20d **-12.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=GoDaddy
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Synchrony%20Financial
 
 **Tyler Technologies** (TYL)
 
@@ -323,6 +315,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
+
+**West Pharmaceutical Services** (WST)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.4%**, 20d **3.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Healthcare**
+- News search: https://www.google.com/search?q=West%20Pharmaceutical%20Services
 
 **Wynn Resorts** (WYNN)
 
