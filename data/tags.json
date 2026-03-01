@@ -4,111 +4,6 @@
   "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "FDA 희귀약 지정",
-      "term_ko": "FDA 희귀약 지정",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "FDA 희귀약 지정",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "FDA 희귀약 지정 쾌거 퓨쳐메디신, 'FM101'로 글로벌 빅파마 조준",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=433220"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FDA%20%ED%9D%AC%EA%B7%80%EC%95%BD%20%EC%A7%80%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FDA%20%ED%9D%AC%EA%B7%80%EC%95%BD%20%EC%A7%80%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "FDA 희귀약 지정 쾌거 퓨쳐메디신, 'FM101'로 글로벌 빅파마 조준",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=433220",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "채권 파킹형 ETF",
-      "term_ko": "채권 파킹형 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "채권 파킹형 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
-              "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B1%84%EA%B6%8C%20%ED%8C%8C%ED%82%B9%ED%98%95%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B1%84%EA%B6%8C%20%ED%8C%8C%ED%82%B9%ED%98%95%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "금융주 대반전 KB",
-      "term_ko": "금융주 대반전 KB",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융주 대반전 KB",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘싸지만 오르지 않던’ 금융주 대반전…KB·신한·하나·우리 1년 새 두...",
-              "link": "https://www.betanews.net/article/view/beta202603010007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%A3%BC%20%EB%8C%80%EB%B0%98%EC%A0%84%20KB",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%A3%BC%20%EB%8C%80%EB%B0%98%EC%A0%84%20KB"
-      },
-      "top_headlines": [
-        {
-          "title": "‘싸지만 오르지 않던’ 금융주 대반전…KB·신한·하나·우리 1년 새 두...",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202603010007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "오늘의 증권소식2월 27일",
       "term_ko": "오늘의 증권소식2월 27일",
       "significance_score": 336,
@@ -118,8 +13,11 @@
         "query": "오늘의 증권소식2월 27일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "오늘의 증권소식(2월 27일)",
@@ -144,34 +42,37 @@
       ]
     },
     {
-      "term": "정부 필요시 100조+α",
-      "term_ko": "정부 필요시 100조+α",
+      "term": "리츠 도입 25년",
+      "term_ko": "리츠 도입 25년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "정부 필요시 100조+α",
+        "query": "리츠 도입 25년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "유가·환율 상승 우려…정부 \"필요시 '100조+α' 시장안정 조치\"",
-              "link": "https://n.news.naver.com/mnews/article/025/0003506057?sid=101"
+              "title": "리츠, 도입 25년 만에 시가총액 10조 첫 돌파",
+              "link": "https://www.fetv.co.kr/news/article.html?no=213925"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EB%B6%80%20%ED%95%84%EC%9A%94%EC%8B%9C%20100%EC%A1%B0%2B%CE%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EB%B6%80%20%ED%95%84%EC%9A%94%EC%8B%9C%20100%EC%A1%B0%2B%CE%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EC%B8%A0%20%EB%8F%84%EC%9E%85%2025%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EC%B8%A0%20%EB%8F%84%EC%9E%85%2025%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "유가·환율 상승 우려…정부 \"필요시 '100조+α' 시장안정 조치\"",
+          "title": "리츠, 도입 25년 만에 시가총액 10조 첫 돌파",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003506057?sid=101",
+          "link": "https://www.fetv.co.kr/news/article.html?no=213925",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -179,34 +80,37 @@
       ]
     },
     {
-      "term": "한투증권 1.3억달러 김치본드",
-      "term_ko": "한투증권 1.3억달러 김치본드",
+      "term": "만에 시가총액 10조",
+      "term_ko": "만에 시가총액 10조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한투증권 1.3억달러 김치본드",
+        "query": "만에 시가총액 10조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "한투증권, 1.3억달러 김치본드 '단독 주관'…여전사 역대 최대",
-              "link": "https://www.apnews.kr/news/articleView.html?idxno=3046310"
+              "title": "리츠, 도입 25년 만에 시가총액 10조 첫 돌파",
+              "link": "https://www.fetv.co.kr/news/article.html?no=213925"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%201.3%EC%96%B5%EB%8B%AC%EB%9F%AC%20%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%201.3%EC%96%B5%EB%8B%AC%EB%9F%AC%20%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%8B%9C%EA%B0%80%EC%B4%9D%EC%95%A1%2010%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%8B%9C%EA%B0%80%EC%B4%9D%EC%95%A1%2010%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "한투증권, 1.3억달러 김치본드 '단독 주관'…여전사 역대 최대",
+          "title": "리츠, 도입 25년 만에 시가총액 10조 첫 돌파",
           "summary": "",
-          "link": "https://www.apnews.kr/news/articleView.html?idxno=3046310",
+          "link": "https://www.fetv.co.kr/news/article.html?no=213925",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -214,34 +118,113 @@
       ]
     },
     {
-      "term": "하나 우리 1년",
-      "term_ko": "하나 우리 1년",
+      "term": "시그널 안갯속 2026년",
+      "term_ko": "시그널 안갯속 2026년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "하나 우리 1년",
+        "query": "시그널 안갯속 2026년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "‘싸지만 오르지 않던’ 금융주 대반전…KB·신한·하나·우리 1년 새 두...",
-              "link": "https://www.betanews.net/article/view/beta202603010007"
+              "title": "[시장진단] 금리 인하 시그널 안갯속, 2026년 상반기 부동산 시장 향방은",
+              "link": "https://www.gokorea.kr/news/articleView.html?idxno=859214"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%20%EC%9A%B0%EB%A6%AC%201%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%20%EC%9A%B0%EB%A6%AC%201%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EA%B7%B8%EB%84%90%20%EC%95%88%EA%B0%AF%EC%86%8D%202026%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EA%B7%B8%EB%84%90%20%EC%95%88%EA%B0%AF%EC%86%8D%202026%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "‘싸지만 오르지 않던’ 금융주 대반전…KB·신한·하나·우리 1년 새 두...",
+          "title": "[시장진단] 금리 인하 시그널 안갯속, 2026년 상반기 부동산 시장 향방은",
           "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202603010007",
+          "link": "https://www.gokorea.kr/news/articleView.html?idxno=859214",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "허물어졌다 K푸드 3년",
+      "term_ko": "허물어졌다 K푸드 3년",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "허물어졌다 K푸드 3년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"한한령 허물어졌다\"…K푸드, 3년 침묵 깨고 '중국 역습'",
+              "link": "https://n.news.naver.com/mnews/article/014/0005484605?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%97%88%EB%AC%BC%EC%96%B4%EC%A1%8C%EB%8B%A4%20K%ED%91%B8%EB%93%9C%203%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%97%88%EB%AC%BC%EC%96%B4%EC%A1%8C%EB%8B%A4%20K%ED%91%B8%EB%93%9C%203%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "\"한한령 허물어졌다\"…K푸드, 3년 침묵 깨고 '중국 역습'",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/014/0005484605?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "韓 원유 70%",
+      "term_ko": "韓 원유 70%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "韓 원유 70%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "호르무즈 해협 봉쇄에 유가 초비상…韓 원유 70% 중동에 의존",
+              "link": "https://n.news.naver.com/mnews/article/009/0005643790?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%20%EC%9B%90%EC%9C%A0%2070%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%20%EC%9B%90%EC%9C%A0%2070%25"
+      },
+      "top_headlines": [
+        {
+          "title": "호르무즈 해협 봉쇄에 유가 초비상…韓 원유 70% 중동에 의존",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/009/0005643790?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -258,8 +241,11 @@
         "query": "강철 비트코인만 외치더니",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
@@ -293,8 +279,11 @@
         "query": "마이클 세일러 솔라나",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
@@ -319,34 +308,37 @@
       ]
     },
     {
-      "term": "유가 환율 상승",
-      "term_ko": "유가 환율 상승",
+      "term": "시장진단 금리 인하",
+      "term_ko": "시장진단 금리 인하",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "유가 환율 상승",
+        "query": "시장진단 금리 인하",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "유가·환율 상승 우려…정부 \"필요시 '100조+α' 시장안정 조치\"",
-              "link": "https://n.news.naver.com/mnews/article/025/0003506057?sid=101"
+              "title": "[시장진단] 금리 인하 시그널 안갯속, 2026년 상반기 부동산 시장 향방은",
+              "link": "https://www.gokorea.kr/news/articleView.html?idxno=859214"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EA%B0%80%20%ED%99%98%EC%9C%A8%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EA%B0%80%20%ED%99%98%EC%9C%A8%20%EC%83%81%EC%8A%B9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%EC%A7%84%EB%8B%A8%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%EC%A7%84%EB%8B%A8%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98"
       },
       "top_headlines": [
         {
-          "title": "유가·환율 상승 우려…정부 \"필요시 '100조+α' 시장안정 조치\"",
+          "title": "[시장진단] 금리 인하 시그널 안갯속, 2026년 상반기 부동산 시장 향방은",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003506057?sid=101",
+          "link": "https://www.gokorea.kr/news/articleView.html?idxno=859214",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -354,34 +346,37 @@
       ]
     },
     {
-      "term": "단독 주관 여전사",
-      "term_ko": "단독 주관 여전사",
+      "term": "상반기 부동산 시장",
+      "term_ko": "상반기 부동산 시장",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "단독 주관 여전사",
+        "query": "상반기 부동산 시장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "한투증권, 1.3억달러 김치본드 '단독 주관'…여전사 역대 최대",
-              "link": "https://www.apnews.kr/news/articleView.html?idxno=3046310"
+              "title": "[시장진단] 금리 인하 시그널 안갯속, 2026년 상반기 부동산 시장 향방은",
+              "link": "https://www.gokorea.kr/news/articleView.html?idxno=859214"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EB%8F%85%20%EC%A3%BC%EA%B4%80%20%EC%97%AC%EC%A0%84%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EB%8F%85%20%EC%A3%BC%EA%B4%80%20%EC%97%AC%EC%A0%84%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EB%B0%98%EA%B8%B0%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%8B%9C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EB%B0%98%EA%B8%B0%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%8B%9C%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "한투증권, 1.3억달러 김치본드 '단독 주관'…여전사 역대 최대",
+          "title": "[시장진단] 금리 인하 시그널 안갯속, 2026년 상반기 부동산 시장 향방은",
           "summary": "",
-          "link": "https://www.apnews.kr/news/articleView.html?idxno=3046310",
+          "link": "https://www.gokorea.kr/news/articleView.html?idxno=859214",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -389,34 +384,37 @@
       ]
     },
     {
-      "term": "글로벌 빅파마 조준",
-      "term_ko": "글로벌 빅파마 조준",
+      "term": "불장도 꺾은 내수",
+      "term_ko": "불장도 꺾은 내수",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "글로벌 빅파마 조준",
+        "query": "불장도 꺾은 내수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "FDA 희귀약 지정 쾌거 퓨쳐메디신, 'FM101'로 글로벌 빅파마 조준",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=433220"
+              "title": "불장도 꺾은 내수 ‘칼바람’… 음식업·임대업 ‘줄폐업’",
+              "link": "https://n.news.naver.com/mnews/article/022/0004109352?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%B9%85%ED%8C%8C%EB%A7%88%20%EC%A1%B0%EC%A4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%B9%85%ED%8C%8C%EB%A7%88%20%EC%A1%B0%EC%A4%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EC%9E%A5%EB%8F%84%20%EA%BA%BE%EC%9D%80%20%EB%82%B4%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EC%9E%A5%EB%8F%84%20%EA%BA%BE%EC%9D%80%20%EB%82%B4%EC%88%98"
       },
       "top_headlines": [
         {
-          "title": "FDA 희귀약 지정 쾌거 퓨쳐메디신, 'FM101'로 글로벌 빅파마 조준",
+          "title": "불장도 꺾은 내수 ‘칼바람’… 음식업·임대업 ‘줄폐업’",
           "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=433220",
+          "link": "https://n.news.naver.com/mnews/article/022/0004109352?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -424,34 +422,37 @@
       ]
     },
     {
-      "term": "증시 불장인데 만족",
-      "term_ko": "증시 불장인데 만족",
+      "term": "칼바람 음식업 임대업",
+      "term_ko": "칼바람 음식업 임대업",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증시 불장인데 만족",
+        "query": "칼바람 음식업 임대업",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
-              "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101"
+              "title": "불장도 꺾은 내수 ‘칼바람’… 음식업·임대업 ‘줄폐업’",
+              "link": "https://n.news.naver.com/mnews/article/022/0004109352?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%B6%88%EC%9E%A5%EC%9D%B8%EB%8D%B0%20%EB%A7%8C%EC%A1%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%B6%88%EC%9E%A5%EC%9D%B8%EB%8D%B0%20%EB%A7%8C%EC%A1%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%BC%EB%B0%94%EB%9E%8C%20%EC%9D%8C%EC%8B%9D%EC%97%85%20%EC%9E%84%EB%8C%80%EC%97%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%BC%EB%B0%94%EB%9E%8C%20%EC%9D%8C%EC%8B%9D%EC%97%85%20%EC%9E%84%EB%8C%80%EC%97%85"
       },
       "top_headlines": [
         {
-          "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
+          "title": "불장도 꺾은 내수 ‘칼바람’… 음식업·임대업 ‘줄폐업’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/022/0004109352?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -459,104 +460,37 @@
       ]
     },
     {
-      "term": "싸지만 오르지 않던",
-      "term_ko": "싸지만 오르지 않던",
+      "term": "침묵 깨고 중국",
+      "term_ko": "침묵 깨고 중국",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "싸지만 오르지 않던",
+        "query": "침묵 깨고 중국",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "‘싸지만 오르지 않던’ 금융주 대반전…KB·신한·하나·우리 1년 새 두...",
-              "link": "https://www.betanews.net/article/view/beta202603010007"
+              "title": "\"한한령 허물어졌다\"…K푸드, 3년 침묵 깨고 '중국 역습'",
+              "link": "https://n.news.naver.com/mnews/article/014/0005484605?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%B8%EC%A7%80%EB%A7%8C%20%EC%98%A4%EB%A5%B4%EC%A7%80%20%EC%95%8A%EB%8D%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%B8%EC%A7%80%EB%A7%8C%20%EC%98%A4%EB%A5%B4%EC%A7%80%20%EC%95%8A%EB%8D%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%A8%EB%AC%B5%20%EA%B9%A8%EA%B3%A0%20%EC%A4%91%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%A8%EB%AC%B5%20%EA%B9%A8%EA%B3%A0%20%EC%A4%91%EA%B5%AD"
       },
       "top_headlines": [
         {
-          "title": "‘싸지만 오르지 않던’ 금융주 대반전…KB·신한·하나·우리 1년 새 두...",
+          "title": "\"한한령 허물어졌다\"…K푸드, 3년 침묵 깨고 '중국 역습'",
           "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202603010007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "유가 급등 美",
-      "term_ko": "유가 급등 美",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유가 급등 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EA%B0%80%20%EA%B8%89%EB%93%B1%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EA%B0%80%20%EA%B8%89%EB%93%B1%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "고용 변수 환율",
-      "term_ko": "고용 변수 환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고용 변수 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%9A%A9%20%EB%B3%80%EC%88%98%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%9A%A9%20%EB%B3%80%EC%88%98%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html",
+          "link": "https://n.news.naver.com/mnews/article/014/0005484605?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -573,8 +507,11 @@
         "query": "Hot PPI Data",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
@@ -608,8 +545,11 @@
         "query": "Weaker At 1432.2",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "Korean Won Opens Weaker at 1,432.2 Per Dollar",
@@ -643,8 +583,11 @@
         "query": "이더리움 확장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
@@ -669,34 +612,37 @@
       ]
     },
     {
-      "term": "시장안정 조치",
-      "term_ko": "시장안정 조치",
+      "term": "첫 돌파",
+      "term_ko": "첫 돌파",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "시장안정 조치",
+        "query": "첫 돌파",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "유가·환율 상승 우려…정부 \"필요시 '100조+α' 시장안정 조치\"",
-              "link": "https://n.news.naver.com/mnews/article/025/0003506057?sid=101"
+              "title": "리츠, 도입 25년 만에 시가총액 10조 첫 돌파",
+              "link": "https://www.fetv.co.kr/news/article.html?no=213925"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%EC%95%88%EC%A0%95%20%EC%A1%B0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%EC%95%88%EC%A0%95%20%EC%A1%B0%EC%B9%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AB%20%EB%8F%8C%ED%8C%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AB%20%EB%8F%8C%ED%8C%8C"
       },
       "top_headlines": [
         {
-          "title": "유가·환율 상승 우려…정부 \"필요시 '100조+α' 시장안정 조치\"",
+          "title": "리츠, 도입 25년 만에 시가총액 10조 첫 돌파",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003506057?sid=101",
+          "link": "https://www.fetv.co.kr/news/article.html?no=213925",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -704,34 +650,37 @@
       ]
     },
     {
-      "term": "역대 최대",
-      "term_ko": "역대 최대",
+      "term": "주간 경제브리핑",
+      "term_ko": "주간 경제브리핑",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "역대 최대",
+        "query": "주간 경제브리핑",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "한투증권, 1.3억달러 김치본드 '단독 주관'…여전사 역대 최대",
-              "link": "https://www.apnews.kr/news/articleView.html?idxno=3046310"
+              "title": "주간 경제브리핑",
+              "link": "https://www.tbc.co.kr/news/view?pno=20260227133434AE06659&id=203993"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%84%20%EA%B2%BD%EC%A0%9C%EB%B8%8C%EB%A6%AC%ED%95%91",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%84%20%EA%B2%BD%EC%A0%9C%EB%B8%8C%EB%A6%AC%ED%95%91"
       },
       "top_headlines": [
         {
-          "title": "한투증권, 1.3억달러 김치본드 '단독 주관'…여전사 역대 최대",
+          "title": "주간 경제브리핑",
           "summary": "",
-          "link": "https://www.apnews.kr/news/articleView.html?idxno=3046310",
+          "link": "https://www.tbc.co.kr/news/view?pno=20260227133434AE06659&id=203993",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -739,135 +688,37 @@
       ]
     },
     {
-      "term": "못 해",
-      "term_ko": "못 해",
-      "significance_score": 280,
-      "mentions": 543,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "못 해",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-02-21",
-              "timestamp": 1771599600000,
-              "value": 93.61702
-            },
-            {
-              "period": "2026-02-22",
-              "timestamp": 1771686000000,
-              "value": 82.97872
-            },
-            {
-              "period": "2026-02-23",
-              "timestamp": 1771772400000,
-              "value": 100
-            },
-            {
-              "period": "2026-02-24",
-              "timestamp": 1771858800000,
-              "value": 85.10638
-            },
-            {
-              "period": "2026-02-25",
-              "timestamp": 1771945200000,
-              "value": 100
-            },
-            {
-              "period": "2026-02-26",
-              "timestamp": 1772031600000,
-              "value": 89.3617
-            },
-            {
-              "period": "2026-02-27",
-              "timestamp": 1772118000000,
-              "value": 76.59574
-            },
-            {
-              "period": "2026-02-28",
-              "timestamp": 1772204400000,
-              "value": 91.48936
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
-              "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%BB%20%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%BB%20%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 542.5532,
-        "weekly_average_volume": 90.4255,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.012724,
-        "time_weight": 0.025122,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1772204400000
-      }
-    },
-    {
-      "term": "자금 뚝",
-      "term_ko": "자금 뚝",
+      "term": "유가 초비상",
+      "term_ko": "유가 초비상",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "자금 뚝",
+        "query": "유가 초비상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
-              "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101"
+              "title": "호르무즈 해협 봉쇄에 유가 초비상…韓 원유 70% 중동에 의존",
+              "link": "https://n.news.naver.com/mnews/article/009/0005643790?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%20%EB%9A%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%20%EB%9A%9D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EA%B0%80%20%EC%B4%88%EB%B9%84%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EA%B0%80%20%EC%B4%88%EB%B9%84%EC%83%81"
       },
       "top_headlines": [
         {
-          "title": "\"증시 불장인데 만족 못 해\"…'채권·파킹형' ETF 자금 '뚝'",
+          "title": "호르무즈 해협 봉쇄에 유가 초비상…韓 원유 70% 중동에 의존",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005484470?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/009/0005643790?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -875,140 +726,42 @@
       ]
     },
     {
-      "term": "다시 흔들린다",
-      "term_ko": "다시 흔들린다",
+      "term": "중동에 의존",
+      "term_ko": "중동에 의존",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "다시 흔들린다",
+        "query": "중동에 의존",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html"
+              "title": "호르무즈 해협 봉쇄에 유가 초비상…韓 원유 70% 중동에 의존",
+              "link": "https://n.news.naver.com/mnews/article/009/0005643790?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%8B%9C%20%ED%9D%94%EB%93%A4%EB%A6%B0%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%8B%9C%20%ED%9D%94%EB%93%A4%EB%A6%B0%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%EC%97%90%20%EC%9D%98%EC%A1%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%EC%97%90%20%EC%9D%98%EC%A1%B4"
       },
       "top_headlines": [
         {
-          "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
+          "title": "호르무즈 해협 봉쇄에 유가 초비상…韓 원유 70% 중동에 의존",
           "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html",
+          "link": "https://n.news.naver.com/mnews/article/009/0005643790?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
       ]
-    },
-    {
-      "term": "이란 공격",
-      "term_ko": "이란 공격",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이란 공격",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-02-21",
-              "timestamp": 1771599600000,
-              "value": 5.08905
-            },
-            {
-              "period": "2026-02-22",
-              "timestamp": 1771686000000,
-              "value": 8.16562
-            },
-            {
-              "period": "2026-02-23",
-              "timestamp": 1771772400000,
-              "value": 14.50381
-            },
-            {
-              "period": "2026-02-24",
-              "timestamp": 1771858800000,
-              "value": 9.90053
-            },
-            {
-              "period": "2026-02-25",
-              "timestamp": 1771945200000,
-              "value": 7.40226
-            },
-            {
-              "period": "2026-02-26",
-              "timestamp": 1772031600000,
-              "value": 7.77238
-            },
-            {
-              "period": "2026-02-27",
-              "timestamp": 1772118000000,
-              "value": 6.98588
-            },
-            {
-              "period": "2026-02-28",
-              "timestamp": 1772204400000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
-              "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%20%EA%B3%B5%EA%B2%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%20%EA%B3%B5%EA%B2%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "유가 급등·美 고용 변수 … 환율 다시 흔들린다 [美, 이란 공격]",
-          "summary": "",
-          "link": "https://biz.newdaily.co.kr/site/data/html/2026/03/01/2026030100083.html",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 146.5649,
-        "weekly_average_volume": 24.4275,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.031523,
-        "time_weight": 0.025121,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1772204400000
-      }
     },
     {
       "term": "Nvidia Slide Weigh",
@@ -1020,8 +773,11 @@
         "query": "Nvidia Slide Weigh",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
@@ -1055,8 +811,11 @@
         "query": "Korean Won Opens",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "Korean Won Opens Weaker at 1,432.2 Per Dollar",
@@ -1090,8 +849,11 @@
         "query": "Nvidia Shock Start",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "Bitcoin Shaken by Nvidia Shock, Start of a Downtrend or Just a Breather?",
@@ -1125,8 +887,11 @@
         "query": "Just A Breather",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "Bitcoin Shaken by Nvidia Shock, Start of a Downtrend or Just a Breather?",
@@ -1160,8 +925,11 @@
         "query": "Close Lower",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-01T15:47:24+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
               "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
@@ -1184,15 +952,145 @@
           "source": null
         }
       ]
+    },
+    {
+      "term": "Bitcoin Shaken",
+      "term_ko": "",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Bitcoin Shaken",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Bitcoin Shaken by Nvidia Shock, Start of a Downtrend or Just a Breather?",
+              "link": "http://coinreaders.com/219769"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bitcoin%20Shaken",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bitcoin%20Shaken"
+      },
+      "top_headlines": [
+        {
+          "title": "Bitcoin Shaken by Nvidia Shock, Start of a Downtrend or Just a Breather?",
+          "summary": "",
+          "link": "http://coinreaders.com/219769",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 인하 기대감",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-01T21:48:15+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-03-01T06:48:30.939Z",
+    "generated_at": "2026-03-01T12:49:17.455Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-01T15:47:24+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-03-01T21:48:15+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1202,12 +1100,18 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-03-01T15:47:24+09:00",
-      "fallback_sources": [],
+      "last_updated": "2026-03-01T21:48:15+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-03-01T15:47:24+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2026-03-01T21:48:15+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
       }
     }
   }
