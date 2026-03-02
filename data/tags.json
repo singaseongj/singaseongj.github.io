@@ -1,1115 +1,439 @@
 {
+  "generatedAt": "2026-03-02T06:58:25.739Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-03-02",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "특별 프로모션",
-      "term_ko": "특별 프로모션",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "특별 프로모션",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“아이오닉·코나 100만원 할인”… 현대차, 전기차 특별 프로모션",
-              "link": "https://n.news.naver.com/mnews/article/366/0001145281?sid=103"
-            },
-            {
-              "title": "현대차, 아이오닉9 ‘올해의 차 3관왕’ 기념 EV 특별 프로모션",
-              "link": "https://n.news.naver.com/mnews/article/021/0002774075?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B9%EB%B3%84%20%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B9%EB%B3%84%20%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98"
-      },
-      "top_headlines": [
-        {
-          "title": "“아이오닉·코나 100만원 할인”… 현대차, 전기차 특별 프로모션",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001145281?sid=103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "현대차, 아이오닉9 ‘올해의 차 3관왕’ 기념 EV 특별 프로모션",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/021/0002774075?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "특별 프로모션"
     },
     {
       "term": "3관왕 기념 EV",
-      "term_ko": "3관왕 기념 EV",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3관왕 기념 EV",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "현대차, 아이오닉9 ‘올해의 차 3관왕’ 기념 EV 특별 프로모션",
-              "link": "https://n.news.naver.com/mnews/article/021/0002774075?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EA%B4%80%EC%99%95%20%EA%B8%B0%EB%85%90%20EV",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EA%B4%80%EC%99%95%20%EA%B8%B0%EB%85%90%20EV"
-      },
-      "top_headlines": [
-        {
-          "title": "현대차, 아이오닉9 ‘올해의 차 3관왕’ 기념 EV 특별 프로모션",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/021/0002774075?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "3관왕 기념 EV"
     },
     {
       "term": "오늘의 증권소식2월 27일",
-      "term_ko": "오늘의 증권소식2월 27일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증권소식2월 27일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 증권소식(2월 27일)",
-              "link": "https://www.radiokorea.com/news/article.php?uid=490749"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D2%EC%9B%94%2027%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D2%EC%9B%94%2027%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증권소식(2월 27일)",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=490749",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 증권소식2월 27일"
     },
     {
       "term": "속 거래대금 30조시대",
-      "term_ko": "속 거래대금 30조시대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속 거래대금 30조시대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "빚투 경고등 속 거래대금 30조시대, '잦은 손바뀜' 변동성 키운다",
-              "link": "http://www.metroseoul.co.kr/article/20260302500125"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EA%B1%B0%EB%9E%98%EB%8C%80%EA%B8%88%2030%EC%A1%B0%EC%8B%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EA%B1%B0%EB%9E%98%EB%8C%80%EA%B8%88%2030%EC%A1%B0%EC%8B%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "빚투 경고등 속 거래대금 30조시대, '잦은 손바뀜' 변동성 키운다",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260302500125",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "속 거래대금 30조시대"
     },
     {
       "term": "아이오닉 코나 100만원",
-      "term_ko": "아이오닉 코나 100만원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아이오닉 코나 100만원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“아이오닉·코나 100만원 할인”… 현대차, 전기차 특별 프로모션",
-              "link": "https://n.news.naver.com/mnews/article/366/0001145281?sid=103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%9D%B4%EC%98%A4%EB%8B%89%20%EC%BD%94%EB%82%98%20100%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%9D%B4%EC%98%A4%EB%8B%89%20%EC%BD%94%EB%82%98%20100%EB%A7%8C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "“아이오닉·코나 100만원 할인”… 현대차, 전기차 특별 프로모션",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001145281?sid=103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "아이오닉 코나 100만원"
     },
     {
       "term": "기준금리 6연속 동결인데",
-      "term_ko": "기준금리 6연속 동결인데",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기준금리 6연속 동결인데",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "기준금리 6연속 동결인데 대출금리는 왜 오르는거야?",
-              "link": "https://n.news.naver.com/mnews/article/648/0000044877?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%206%EC%97%B0%EC%86%8D%20%EB%8F%99%EA%B2%B0%EC%9D%B8%EB%8D%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%206%EC%97%B0%EC%86%8D%20%EB%8F%99%EA%B2%B0%EC%9D%B8%EB%8D%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 6연속 동결인데 대출금리는 왜 오르는거야?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/648/0000044877?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기준금리 6연속 동결인데"
     },
     {
       "term": "중소기업 정책자금 300억",
-      "term_ko": "중소기업 정책자금 300억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중소기업 정책자금 300억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"시설투자 숨통 트일까\"…광주 중소기업 정책자금 300억 지원",
-              "link": "https://n.news.naver.com/mnews/article/277/0005727894?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%20300%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%20300%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "\"시설투자 숨통 트일까\"…광주 중소기업 정책자금 300억 지원",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005727894?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중소기업 정책자금 300억"
     },
     {
       "term": "수수료 내고 줄",
-      "term_ko": "수수료 내고 줄",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수수료 내고 줄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"수수료 내고 줄 서서 사는데\"...업비트·빗썸이 공공재?",
-              "link": "https://n.news.naver.com/mnews/article/008/0005323916?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%88%98%EB%A3%8C%20%EB%82%B4%EA%B3%A0%20%EC%A4%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%88%98%EB%A3%8C%20%EB%82%B4%EA%B3%A0%20%EC%A4%84"
-      },
-      "top_headlines": [
-        {
-          "title": "\"수수료 내고 줄 서서 사는데\"...업비트·빗썸이 공공재?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005323916?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수수료 내고 줄"
     },
     {
       "term": "강철 비트코인만 외치더니",
-      "term_ko": "강철 비트코인만 외치더니",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강철 비트코인만 외치더니",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
-              "link": "http://coinreaders.com/220087"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%B2%A0%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%A7%8C%20%EC%99%B8%EC%B9%98%EB%8D%94%EB%8B%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%B2%A0%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%A7%8C%20%EC%99%B8%EC%B9%98%EB%8D%94%EB%8B%88"
-      },
-      "top_headlines": [
-        {
-          "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
-          "summary": "",
-          "link": "http://coinreaders.com/220087",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "강철 비트코인만 외치더니"
     },
     {
       "term": "마이클 세일러 솔라나",
-      "term_ko": "마이클 세일러 솔라나",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마이클 세일러 솔라나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
-              "link": "http://coinreaders.com/220087"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%9D%B4%ED%81%B4%20%EC%84%B8%EC%9D%BC%EB%9F%AC%20%EC%86%94%EB%9D%BC%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%9D%B4%ED%81%B4%20%EC%84%B8%EC%9D%BC%EB%9F%AC%20%EC%86%94%EB%9D%BC%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
-          "summary": "",
-          "link": "http://coinreaders.com/220087",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "마이클 세일러 솔라나"
     },
     {
       "term": "잦은 손바뀜 변동성",
-      "term_ko": "잦은 손바뀜 변동성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "잦은 손바뀜 변동성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "빚투 경고등 속 거래대금 30조시대, '잦은 손바뀜' 변동성 키운다",
-              "link": "http://www.metroseoul.co.kr/article/20260302500125"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A6%EC%9D%80%20%EC%86%90%EB%B0%94%EB%80%9C%20%EB%B3%80%EB%8F%99%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A6%EC%9D%80%20%EC%86%90%EB%B0%94%EB%80%9C%20%EB%B3%80%EB%8F%99%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "빚투 경고등 속 거래대금 30조시대, '잦은 손바뀜' 변동성 키운다",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260302500125",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "잦은 손바뀜 변동성"
     },
     {
       "term": "할인 현대차 전기차",
-      "term_ko": "할인 현대차 전기차",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "할인 현대차 전기차",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“아이오닉·코나 100만원 할인”… 현대차, 전기차 특별 프로모션",
-              "link": "https://n.news.naver.com/mnews/article/366/0001145281?sid=103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A0%EC%9D%B8%20%ED%98%84%EB%8C%80%EC%B0%A8%20%EC%A0%84%EA%B8%B0%EC%B0%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A0%EC%9D%B8%20%ED%98%84%EB%8C%80%EC%B0%A8%20%EC%A0%84%EA%B8%B0%EC%B0%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "“아이오닉·코나 100만원 할인”… 현대차, 전기차 특별 프로모션",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001145281?sid=103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "할인 현대차 전기차"
     },
     {
       "term": "대출금리는 왜 오르는거야",
-      "term_ko": "대출금리는 왜 오르는거야",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대출금리는 왜 오르는거야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "기준금리 6연속 동결인데 대출금리는 왜 오르는거야?",
-              "link": "https://n.news.naver.com/mnews/article/648/0000044877?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%EB%8A%94%20%EC%99%9C%20%EC%98%A4%EB%A5%B4%EB%8A%94%EA%B1%B0%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC%EB%8A%94%20%EC%99%9C%20%EC%98%A4%EB%A5%B4%EB%8A%94%EA%B1%B0%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 6연속 동결인데 대출금리는 왜 오르는거야?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/648/0000044877?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대출금리는 왜 오르는거야"
     },
     {
       "term": "한국 금융계 이란",
-      "term_ko": "한국 금융계 이란",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 금융계 이란",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국 금융계, 이란 위기에 신속 대응…비상 지원 체제 강화",
-              "link": "https://www.tokenpost.kr/news/international/335025"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EA%B8%88%EC%9C%B5%EA%B3%84%20%EC%9D%B4%EB%9E%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EA%B8%88%EC%9C%B5%EA%B3%84%20%EC%9D%B4%EB%9E%80"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 금융계, 이란 위기에 신속 대응…비상 지원 체제 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/international/335025",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 금융계 이란"
     },
     {
       "term": "위기에 신속 대응",
-      "term_ko": "위기에 신속 대응",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "위기에 신속 대응",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국 금융계, 이란 위기에 신속 대응…비상 지원 체제 강화",
-              "link": "https://www.tokenpost.kr/news/international/335025"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%EA%B8%B0%EC%97%90%20%EC%8B%A0%EC%86%8D%20%EB%8C%80%EC%9D%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%EA%B8%B0%EC%97%90%20%EC%8B%A0%EC%86%8D%20%EB%8C%80%EC%9D%91"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 금융계, 이란 위기에 신속 대응…비상 지원 체제 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/international/335025",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "위기에 신속 대응"
     },
     {
       "term": "비상 지원 체제",
-      "term_ko": "비상 지원 체제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비상 지원 체제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국 금융계, 이란 위기에 신속 대응…비상 지원 체제 강화",
-              "link": "https://www.tokenpost.kr/news/international/335025"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%EC%83%81%20%EC%A7%80%EC%9B%90%20%EC%B2%B4%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%EC%83%81%20%EC%A7%80%EC%9B%90%20%EC%B2%B4%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 금융계, 이란 위기에 신속 대응…비상 지원 체제 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/international/335025",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비상 지원 체제"
     },
     {
       "term": "시설투자 숨통 트일까",
-      "term_ko": "시설투자 숨통 트일까",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시설투자 숨통 트일까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"시설투자 숨통 트일까\"…광주 중소기업 정책자금 300억 지원",
-              "link": "https://n.news.naver.com/mnews/article/277/0005727894?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%84%A4%ED%88%AC%EC%9E%90%20%EC%88%A8%ED%86%B5%20%ED%8A%B8%EC%9D%BC%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%84%A4%ED%88%AC%EC%9E%90%20%EC%88%A8%ED%86%B5%20%ED%8A%B8%EC%9D%BC%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"시설투자 숨통 트일까\"…광주 중소기업 정책자금 300억 지원",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005727894?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시설투자 숨통 트일까"
     },
     {
-      "term": "Hot PPI Data",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hot PPI Data",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
-              "link": "https://www.econotimes.com/US-Stocks-Close-Lower-as-Hot-PPI-Data-Nvidia-Slide-Weigh-on-Wall-Street-1734971"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hot%20PPI%20Data",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hot%20PPI%20Data"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Close-Lower-as-Hot-PPI-Data-Nvidia-Slide-Weigh-on-Wall-Street-1734971",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hot Ppi Data",
+      "term_ko": "Hot Ppi Data"
     },
     {
       "term": "빗썸이 공공재",
-      "term_ko": "빗썸이 공공재",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빗썸이 공공재",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"수수료 내고 줄 서서 사는데\"...업비트·빗썸이 공공재?",
-              "link": "https://n.news.naver.com/mnews/article/008/0005323916?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%97%EC%8D%B8%EC%9D%B4%20%EA%B3%B5%EA%B3%B5%EC%9E%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%97%EC%8D%B8%EC%9D%B4%20%EA%B3%B5%EA%B3%B5%EC%9E%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "\"수수료 내고 줄 서서 사는데\"...업비트·빗썸이 공공재?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005323916?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "빗썸이 공공재"
     },
     {
       "term": "이더리움 확장",
-      "term_ko": "이더리움 확장",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이더리움 확장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
-              "link": "http://coinreaders.com/220087"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%20%ED%99%95%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%20%ED%99%95%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "강철 비트코인만 외치더니! 마이클 세일러, 솔라나·이더리움 확장 선언...",
-          "summary": "",
-          "link": "http://coinreaders.com/220087",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이더리움 확장"
     },
     {
       "term": "빚투 경고등",
-      "term_ko": "빚투 경고등",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚투 경고등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "빚투 경고등 속 거래대금 30조시대, '잦은 손바뀜' 변동성 키운다",
-              "link": "http://www.metroseoul.co.kr/article/20260302500125"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%A0%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%A0%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "빚투 경고등 속 거래대금 30조시대, '잦은 손바뀜' 변동성 키운다",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260302500125",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "빚투 경고등"
     },
     {
       "term": "Wall Street Futures",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Tumble as U.S.-Iran Conflict Escalates and Oil Prices...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Tumble-as-US-Iran-Conflict-Escalates-and-Oil-Prices-Surge-1735055"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Tumble as U.S.-Iran Conflict Escalates and Oil Prices...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Tumble-as-US-Iran-Conflict-Escalates-and-Oil-Prices-Surge-1735055",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Wall Street Futures"
     },
     {
-      "term": "U.S.-Iran Conflict Escalates",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-Iran Conflict Escalates",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Tumble as U.S.-Iran Conflict Escalates and Oil Prices...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Tumble-as-US-Iran-Conflict-Escalates-and-Oil-Prices-Surge-1735055"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Conflict%20Escalates",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Conflict%20Escalates"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Tumble as U.S.-Iran Conflict Escalates and Oil Prices...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Tumble-as-US-Iran-Conflict-Escalates-and-Oil-Prices-Surge-1735055",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s.-iran Conflict Escalates",
+      "term_ko": "U.s.-iran Conflict Escalates"
     },
     {
       "term": "Nvidia Slide Weigh",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nvidia Slide Weigh",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
-              "link": "https://www.econotimes.com/US-Stocks-Close-Lower-as-Hot-PPI-Data-Nvidia-Slide-Weigh-on-Wall-Street-1734971"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nvidia%20Slide%20Weigh",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nvidia%20Slide%20Weigh"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Close-Lower-as-Hot-PPI-Data-Nvidia-Slide-Weigh-on-Wall-Street-1734971",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Nvidia Slide Weigh"
     },
     {
       "term": "Close Lower",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Close Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
-              "link": "https://www.econotimes.com/US-Stocks-Close-Lower-as-Hot-PPI-Data-Nvidia-Slide-Weigh-on-Wall-Street-1734971"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Close%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Close%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stocks Close Lower as Hot PPI Data, Nvidia Slide Weigh on Wall Stree...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Close-Lower-as-Hot-PPI-Data-Nvidia-Slide-Weigh-on-Wall-Street-1734971",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Close Lower"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-02T11:02:58+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-03-02T02:04:04.518Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-02T11:02:58+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "특별 프로모션",
+      "term_ko": "특별 프로모션"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-03-02T11:02:58+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-03-02T11:02:58+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "3관왕 기념 EV",
+      "term_ko": "3관왕 기념 EV"
+    },
+    {
+      "term": "오늘의 증권소식2월 27일",
+      "term_ko": "오늘의 증권소식2월 27일"
+    },
+    {
+      "term": "속 거래대금 30조시대",
+      "term_ko": "속 거래대금 30조시대"
+    },
+    {
+      "term": "아이오닉 코나 100만원",
+      "term_ko": "아이오닉 코나 100만원"
+    },
+    {
+      "term": "기준금리 6연속 동결인데",
+      "term_ko": "기준금리 6연속 동결인데"
+    },
+    {
+      "term": "중소기업 정책자금 300억",
+      "term_ko": "중소기업 정책자금 300억"
+    },
+    {
+      "term": "수수료 내고 줄",
+      "term_ko": "수수료 내고 줄"
+    },
+    {
+      "term": "강철 비트코인만 외치더니",
+      "term_ko": "강철 비트코인만 외치더니"
+    },
+    {
+      "term": "마이클 세일러 솔라나",
+      "term_ko": "마이클 세일러 솔라나"
+    },
+    {
+      "term": "잦은 손바뀜 변동성",
+      "term_ko": "잦은 손바뀜 변동성"
+    },
+    {
+      "term": "할인 현대차 전기차",
+      "term_ko": "할인 현대차 전기차"
+    },
+    {
+      "term": "대출금리는 왜 오르는거야",
+      "term_ko": "대출금리는 왜 오르는거야"
+    },
+    {
+      "term": "한국 금융계 이란",
+      "term_ko": "한국 금융계 이란"
+    },
+    {
+      "term": "위기에 신속 대응",
+      "term_ko": "위기에 신속 대응"
+    },
+    {
+      "term": "비상 지원 체제",
+      "term_ko": "비상 지원 체제"
+    },
+    {
+      "term": "시설투자 숨통 트일까",
+      "term_ko": "시설투자 숨통 트일까"
+    },
+    {
+      "term": "Hot Ppi Data",
+      "term_ko": "Hot Ppi Data"
+    },
+    {
+      "term": "빗썸이 공공재",
+      "term_ko": "빗썸이 공공재"
+    },
+    {
+      "term": "이더리움 확장",
+      "term_ko": "이더리움 확장"
+    },
+    {
+      "term": "빚투 경고등",
+      "term_ko": "빚투 경고등"
+    },
+    {
+      "term": "Wall Street Futures",
+      "term_ko": "Wall Street Futures"
+    },
+    {
+      "term": "U.s.-iran Conflict Escalates",
+      "term_ko": "U.s.-iran Conflict Escalates"
+    },
+    {
+      "term": "Nvidia Slide Weigh",
+      "term_ko": "Nvidia Slide Weigh"
+    },
+    {
+      "term": "Close Lower",
+      "term_ko": "Close Lower"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "특별 프로모션": {
+      "en": "특별 프로모션",
+      "ko": "특별 프로모션",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "3관왕 기념 EV": {
+      "en": "3관왕 기념 EV",
+      "ko": "3관왕 기념 EV",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "오늘의 증권소식2월 27일": {
+      "en": "오늘의 증권소식2월 27일",
+      "ko": "오늘의 증권소식2월 27일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "속 거래대금 30조시대": {
+      "en": "속 거래대금 30조시대",
+      "ko": "속 거래대금 30조시대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "아이오닉 코나 100만원": {
+      "en": "아이오닉 코나 100만원",
+      "ko": "아이오닉 코나 100만원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "기준금리 6연속 동결인데": {
+      "en": "기준금리 6연속 동결인데",
+      "ko": "기준금리 6연속 동결인데",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "중소기업 정책자금 300억": {
+      "en": "중소기업 정책자금 300억",
+      "ko": "중소기업 정책자금 300억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "수수료 내고 줄": {
+      "en": "수수료 내고 줄",
+      "ko": "수수료 내고 줄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "강철 비트코인만 외치더니": {
+      "en": "강철 비트코인만 외치더니",
+      "ko": "강철 비트코인만 외치더니",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "마이클 세일러 솔라나": {
+      "en": "마이클 세일러 솔라나",
+      "ko": "마이클 세일러 솔라나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "잦은 손바뀜 변동성": {
+      "en": "잦은 손바뀜 변동성",
+      "ko": "잦은 손바뀜 변동성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "할인 현대차 전기차": {
+      "en": "할인 현대차 전기차",
+      "ko": "할인 현대차 전기차",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "대출금리는 왜 오르는거야": {
+      "en": "대출금리는 왜 오르는거야",
+      "ko": "대출금리는 왜 오르는거야",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "한국 금융계 이란": {
+      "en": "한국 금융계 이란",
+      "ko": "한국 금융계 이란",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "위기에 신속 대응": {
+      "en": "위기에 신속 대응",
+      "ko": "위기에 신속 대응",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "비상 지원 체제": {
+      "en": "비상 지원 체제",
+      "ko": "비상 지원 체제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "시설투자 숨통 트일까": {
+      "en": "시설투자 숨통 트일까",
+      "ko": "시설투자 숨통 트일까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "Hot Ppi Data": {
+      "en": "Hot Ppi Data",
+      "ko": "Hot Ppi Data",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "빗썸이 공공재": {
+      "en": "빗썸이 공공재",
+      "ko": "빗썸이 공공재",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "이더리움 확장": {
+      "en": "이더리움 확장",
+      "ko": "이더리움 확장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "빚투 경고등": {
+      "en": "빚투 경고등",
+      "ko": "빚투 경고등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "Wall Street Futures": {
+      "en": "Wall Street Futures",
+      "ko": "Wall Street Futures",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "U.s.-iran Conflict Escalates": {
+      "en": "U.s.-iran Conflict Escalates",
+      "ko": "U.s.-iran Conflict Escalates",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "Nvidia Slide Weigh": {
+      "en": "Nvidia Slide Weigh",
+      "ko": "Nvidia Slide Weigh",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "Close Lower": {
+      "en": "Close Lower",
+      "ko": "Close Lower",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-02T06:58:25.739Z"
     }
   }
 }
