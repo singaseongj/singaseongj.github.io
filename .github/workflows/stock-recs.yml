@@ -580,7 +580,28 @@ jobs:
           fi
           git commit -m "chore: data update (news/fx/summary) [skip ci]"
           git pull --rebase --autostash origin "${{ github.ref_name }}"
-          git push origin HEAD:"${{ github.ref_name }}"
+
+          # Large data updates can intermittently fail with GitHub-side HTTP 500 errors.
+          # Retry push a few times with backoff instead of failing the entire workflow.
+          max_attempts=5
+          attempt=1
+          until [ "$attempt" -gt "$max_attempts" ]; do
+            echo "Push attempt ${attempt}/${max_attempts}"
+            if git push origin HEAD:"${{ github.ref_name }}"; then
+              echo "✅ Push succeeded"
+              break
+            fi
+
+            if [ "$attempt" -eq "$max_attempts" ]; then
+              echo "❌ Push failed after ${max_attempts} attempts"
+              exit 1
+            fi
+
+            sleep_for=$(( attempt * 10 ))
+            echo "Push failed; retrying in ${sleep_for}s..."
+            sleep "$sleep_for"
+            attempt=$(( attempt + 1 ))
+          done
 
       - name: Verify HEAD has fresh data
         if: always()
