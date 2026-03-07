@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-03-07T10:54:03+09:00 (KST)**
+- Generated: **2026-03-07T15:41:55+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -137,12 +137,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%EC%95%84%EC%9D%B4%EC%9D%B4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
 
-**롯데정밀화학** (004000.KS)
+**대한유화** (006650.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-10.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-32.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%A0%95%EB%B0%80%ED%99%94%ED%95%99
+- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%EC%9C%A0%ED%99%94
 
 **씨에스윈드** (112610.KS)
 
@@ -257,7 +257,7 @@
 **Berkshire Hathaway** (BRK.B)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.5%**, 20d **-0.7%**; volatility (20d): **unknown**
+- Returns: 5d **-1.2%**, 20d **-1.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Berkshire%20Hathaway
