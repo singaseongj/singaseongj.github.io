@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-03-09T22:03:18+09:00 (KST)**
+- Generated: **2026-03-10T03:56:21+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -133,19 +133,19 @@
 
 ### AGGRESSIVE (5)
 
-**F&F** (383220.KS)
+**GS건설** (006360.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-15.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=F%26F
+- News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
 
-**세아베스틸지주** (001430.KS)
+**GS리테일** (007070.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-15.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-16.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EB%B2%A0%EC%8A%A4%ED%8B%B8%EC%A7%80%EC%A3%BC
+- News search: https://www.google.com/search?q=GS%EB%A6%AC%ED%85%8C%EC%9D%BC
 
 **제일기획** (030000.KS)
 
