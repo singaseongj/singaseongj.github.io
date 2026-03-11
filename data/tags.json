@@ -1,345 +1,40 @@
 {
   "date": "2026-03-11",
   "window": "12_hours",
-  "total_phrases": 28,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "개최 DynamiK Symposium",
-      "term_ko": "개최 DynamiK Symposium",
-      "significance_score": 966,
-      "mentions": 480,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개최 DynamiK Symposium",
-        "local_headlines": {
-          "matches": 3,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "덱스콤∙카카오헬스케어 첫 공동 개최 'DynamiK Symposium' 성료",
-              "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=203281"
-            },
-            {
-              "title": "덱스콤X카카오헬스케어, 첫 공동 개최 'DynamiK Symposium' 성황리 마무리",
-              "link": "https://n.news.naver.com/mnews/article/030/0003406542?sid=101"
-            },
-            {
-              "title": "덱스콤-카카오헬스케어, 첫 공동 개최 ‘DynamiK Symposium’ 성황리 마무...",
-              "link": "https://n.news.naver.com/mnews/article/029/0003015155?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%B5%9C%20DynamiK%20Symposium",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%B5%9C%20DynamiK%20Symposium"
-      },
-      "top_headlines": [
-        {
-          "title": "덱스콤∙카카오헬스케어 첫 공동 개최 'DynamiK Symposium' 성료",
-          "summary": "",
-          "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=203281",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "덱스콤X카카오헬스케어, 첫 공동 개최 'DynamiK Symposium' 성황리 마무리",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003406542?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "덱스콤-카카오헬스케어, 첫 공동 개최 ‘DynamiK Symposium’ 성황리 마무...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/029/0003015155?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "미국 2월 CPI",
-      "term_ko": "미국 2월 CPI",
-      "significance_score": 728,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 2월 CPI",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-08",
-              "timestamp": 1772895600000,
-              "value": 87.5
-            },
-            {
-              "period": "2026-03-09",
-              "timestamp": 1772982000000,
-              "value": 100
-            },
-            {
-              "period": "2026-03-10",
-              "timestamp": 1773068400000,
-              "value": 87.5
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 미국 2월 CPI 2.4%↑ 근원 CPI 2.5%↑…'연준의 해석' 어떻게?",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=560226"
-            },
-            {
-              "title": "미국 2월 CPI 발표, 2.4%↑…나스닥 선물 하락",
-              "link": "https://www.ekn.kr/web/view.php?key=20260311025497079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%202%EC%9B%94%20CPI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%202%EC%9B%94%20CPI"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 미국 2월 CPI 2.4%↑ 근원 CPI 2.5%↑…'연준의 해석' 어떻게?",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=560226",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "미국 2월 CPI 발표, 2.4%↑…나스닥 선물 하락",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260311025497079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 275,
-        "weekly_average_volume": 91.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.020379,
-        "time_weight": 0.021727,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1773068400000
-      }
-    },
-    {
-      "term": "크립토 인사이트 EP.28",
-      "term_ko": "크립토 인사이트 EP.28",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "크립토 인사이트 EP.28",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[크립토 인사이트 EP.28] \"1달러도 안 산다\" vs \"13억달러 풀매수\"…옵션...",
-              "link": "https://www.tokenpost.kr/news/insights/338320"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%AC%EB%A6%BD%ED%86%A0%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20EP.28",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%AC%EB%A6%BD%ED%86%A0%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20EP.28"
-      },
-      "top_headlines": [
-        {
-          "title": "[크립토 인사이트 EP.28] \"1달러도 안 산다\" vs \"13억달러 풀매수\"…옵션...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/338320",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "DL이앤씨 압구정5구역 하이엔드",
-      "term_ko": "DL이앤씨 압구정5구역 하이엔드",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "DL이앤씨 압구정5구역 하이엔드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "DL이앤씨, 압구정5구역 '하이엔드 금융협약' 체결",
-              "link": "http://www.srtimes.kr/news/articleView.html?idxno=198452"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=DL%EC%9D%B4%EC%95%A4%EC%94%A8%20%EC%95%95%EA%B5%AC%EC%A0%955%EA%B5%AC%EC%97%AD%20%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=DL%EC%9D%B4%EC%95%A4%EC%94%A8%20%EC%95%95%EA%B5%AC%EC%A0%955%EA%B5%AC%EC%97%AD%20%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "DL이앤씨, 압구정5구역 '하이엔드 금융협약' 체결",
-          "summary": "",
-          "link": "http://www.srtimes.kr/news/articleView.html?idxno=198452",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "2주차 국내 ESG",
-      "term_ko": "2주차 국내 ESG",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2주차 국내 ESG",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "3월 2주차 국내 ESG 핫클립",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18185"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EC%A3%BC%EC%B0%A8%20%EA%B5%AD%EB%82%B4%20ESG",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EC%A3%BC%EC%B0%A8%20%EA%B5%AD%EB%82%B4%20ESG"
-      },
-      "top_headlines": [
-        {
-          "title": "3월 2주차 국내 ESG 핫클립",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18185",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "주총 개막 DB손보",
-      "term_ko": "주총 개막 DB손보",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주총 개막 DB손보",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%B4%9D%20%EA%B0%9C%EB%A7%89%20DB%EC%86%90%EB%B3%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%B4%9D%20%EA%B0%9C%EB%A7%89%20DB%EC%86%90%EB%B3%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "1달러도 안 산다",
-      "term_ko": "1달러도 안 산다",
+      "term": "네 마녀 24시간",
+      "term_ko": "네 마녀 24시간",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "1달러도 안 산다",
+        "query": "네 마녀 24시간",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[크립토 인사이트 EP.28] \"1달러도 안 산다\" vs \"13억달러 풀매수\"…옵션...",
-              "link": "https://www.tokenpost.kr/news/insights/338320"
+              "title": "오늘 밤 美 물가, 내일은 '네 마녀'… 24시간 롤러코스터 올라탄 국장",
+              "link": "https://www.ppss.kr/news/articleView.html?idxno=287979"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EB%8B%AC%EB%9F%AC%EB%8F%84%20%EC%95%88%20%EC%82%B0%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EB%8B%AC%EB%9F%AC%EB%8F%84%20%EC%95%88%20%EC%82%B0%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%A4%20%EB%A7%88%EB%85%80%2024%EC%8B%9C%EA%B0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%A4%20%EB%A7%88%EB%85%80%2024%EC%8B%9C%EA%B0%84"
       },
       "top_headlines": [
         {
-          "title": "[크립토 인사이트 EP.28] \"1달러도 안 산다\" vs \"13억달러 풀매수\"…옵션...",
+          "title": "오늘 밤 美 물가, 내일은 '네 마녀'… 24시간 롤러코스터 올라탄 국장",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/338320",
+          "link": "https://www.ppss.kr/news/articleView.html?idxno=287979",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -347,37 +42,37 @@
       ]
     },
     {
-      "term": "2.5% 연준의 해석",
-      "term_ko": "2.5% 연준의 해석",
+      "term": "대응 수출기업 70억원",
+      "term_ko": "대응 수출기업 70억원",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "2.5% 연준의 해석",
+        "query": "대응 수출기업 70억원",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[속보] 미국 2월 CPI 2.4%↑ 근원 CPI 2.5%↑…'연준의 해석' 어떻게?",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=560226"
+              "title": "강원도 '중동 상황 대응' 수출기업 70억원 지원",
+              "link": "https://n.news.naver.com/mnews/article/654/0000170315?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.5%25%20%EC%97%B0%EC%A4%80%EC%9D%98%20%ED%95%B4%EC%84%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.5%25%20%EC%97%B0%EC%A4%80%EC%9D%98%20%ED%95%B4%EC%84%9D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%9D%91%20%EC%88%98%EC%B6%9C%EA%B8%B0%EC%97%85%2070%EC%96%B5%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%9D%91%20%EC%88%98%EC%B6%9C%EA%B8%B0%EC%97%85%2070%EC%96%B5%EC%9B%90"
       },
       "top_headlines": [
         {
-          "title": "[속보] 미국 2월 CPI 2.4%↑ 근원 CPI 2.5%↑…'연준의 해석' 어떻게?",
+          "title": "강원도 '중동 상황 대응' 수출기업 70억원 지원",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=560226",
+          "link": "https://n.news.naver.com/mnews/article/654/0000170315?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -385,37 +80,189 @@
       ]
     },
     {
-      "term": "발표 2.4% 나스닥",
-      "term_ko": "발표 2.4% 나스닥",
+      "term": "부산항만공사 22년 연속",
+      "term_ko": "부산항만공사 22년 연속",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "발표 2.4% 나스닥",
+        "query": "부산항만공사 22년 연속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "미국 2월 CPI 발표, 2.4%↑…나스닥 선물 하락",
-              "link": "https://www.ekn.kr/web/view.php?key=20260311025497079"
+              "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
+              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%91%9C%202.4%25%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%91%9C%202.4%25%20%EB%82%98%EC%8A%A4%EB%8B%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EC%82%B0%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC%2022%EB%85%84%20%EC%97%B0%EC%86%8D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EC%82%B0%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC%2022%EB%85%84%20%EC%97%B0%EC%86%8D"
       },
       "top_headlines": [
         {
-          "title": "미국 2월 CPI 발표, 2.4%↑…나스닥 선물 하락",
+          "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
           "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260311025497079",
+          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "전년 대비 10.33%",
+      "term_ko": "전년 대비 10.33%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "전년 대비 10.33%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
+              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%85%84%20%EB%8C%80%EB%B9%84%2010.33%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%85%84%20%EB%8C%80%EB%B9%84%2010.33%25"
+      },
+      "top_headlines": [
+        {
+          "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
+          "summary": "",
+          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "주담대 고정금리 1주일새",
+      "term_ko": "주담대 고정금리 1주일새",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주담대 고정금리 1주일새",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "국고채발 금리 쇼크…주담대 고정금리 1주일새 6%대로",
+              "link": "https://n.news.naver.com/mnews/article/025/0003508472?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%201%EC%A3%BC%EC%9D%BC%EC%83%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%201%EC%A3%BC%EC%9D%BC%EC%83%88"
+      },
+      "top_headlines": [
+        {
+          "title": "국고채발 금리 쇼크…주담대 고정금리 1주일새 6%대로",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/025/0003508472?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "덱스콤 카카오헬스케어와 첫",
+      "term_ko": "덱스콤 카카오헬스케어와 첫",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "덱스콤 카카오헬스케어와 첫",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "덱스콤, 카카오헬스케어와 첫 공동 'DynamiK Symposium' 성료",
+              "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=195276"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%B1%EC%8A%A4%EC%BD%A4%20%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4%EC%99%80%20%EC%B2%AB",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%B1%EC%8A%A4%EC%BD%A4%20%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4%EC%99%80%20%EC%B2%AB"
+      },
+      "top_headlines": [
+        {
+          "title": "덱스콤, 카카오헬스케어와 첫 공동 'DynamiK Symposium' 성료",
+          "summary": "",
+          "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=195276",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "공동 DynamiK Symposium",
+      "term_ko": "공동 DynamiK Symposium",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "공동 DynamiK Symposium",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "덱스콤, 카카오헬스케어와 첫 공동 'DynamiK Symposium' 성료",
+              "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=195276"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EB%8F%99%20DynamiK%20Symposium",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EB%8F%99%20DynamiK%20Symposium"
+      },
+      "top_headlines": [
+        {
+          "title": "덱스콤, 카카오헬스케어와 첫 공동 'DynamiK Symposium' 성료",
+          "summary": "",
+          "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=195276",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -432,7 +279,7 @@
         "query": "머스크의 스페이스X 나스닥",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -470,7 +317,7 @@
         "query": "덱스콤∙카카오헬스케어 첫 공동",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -499,37 +346,37 @@
       ]
     },
     {
-      "term": "덱스콤 카카오헬스케어와 DynamiK",
-      "term_ko": "덱스콤 카카오헬스케어와 DynamiK",
+      "term": "개최 DynamiK Symposium",
+      "term_ko": "개최 DynamiK Symposium",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "덱스콤 카카오헬스케어와 DynamiK",
+        "query": "개최 DynamiK Symposium",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "덱스콤, 카카오헬스케어와 'DynamiK Symposium' 공동 개최",
-              "link": "https://www.pharmnews.com/news/articleView.html?idxno=301991"
+              "title": "덱스콤∙카카오헬스케어 첫 공동 개최 'DynamiK Symposium' 성료",
+              "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=203281"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%B1%EC%8A%A4%EC%BD%A4%20%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4%EC%99%80%20DynamiK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%B1%EC%8A%A4%EC%BD%A4%20%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4%EC%99%80%20DynamiK"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EC%B5%9C%20DynamiK%20Symposium",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EC%B5%9C%20DynamiK%20Symposium"
       },
       "top_headlines": [
         {
-          "title": "덱스콤, 카카오헬스케어와 'DynamiK Symposium' 공동 개최",
+          "title": "덱스콤∙카카오헬스케어 첫 공동 개최 'DynamiK Symposium' 성료",
           "summary": "",
-          "link": "https://www.pharmnews.com/news/articleView.html?idxno=301991",
+          "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=203281",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -546,7 +393,7 @@
         "query": "Symposium 공동 개최",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -575,37 +422,341 @@
       ]
     },
     {
-      "term": "얼라인 제안 사외이사",
-      "term_ko": "얼라인 제안 사외이사",
+      "term": "미네르바의 눈 물류단상物流斷想",
+      "term_ko": "미네르바의 눈 물류단상物流斷想",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "얼라인 제안 사외이사",
+        "query": "미네르바의 눈 물류단상物流斷想",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18"
+              "title": "[미네르바의 눈] 물류단상(物流斷想): 물류관점에서 본 이란 호르무즈해...",
+              "link": "https://www.news2day.co.kr/article/20260311500185"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%BC%EB%9D%BC%EC%9D%B8%20%EC%A0%9C%EC%95%88%20%EC%82%AC%EC%99%B8%EC%9D%B4%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%BC%EB%9D%BC%EC%9D%B8%20%EC%A0%9C%EC%95%88%20%EC%82%AC%EC%99%B8%EC%9D%B4%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%84%A4%EB%A5%B4%EB%B0%94%EC%9D%98%20%EB%88%88%20%EB%AC%BC%EB%A5%98%EB%8B%A8%EC%83%81%E7%89%A9%E6%B5%81%E6%96%B7%E6%83%B3",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%84%A4%EB%A5%B4%EB%B0%94%EC%9D%98%20%EB%88%88%20%EB%AC%BC%EB%A5%98%EB%8B%A8%EC%83%81%E7%89%A9%E6%B5%81%E6%96%B7%E6%83%B3"
       },
       "top_headlines": [
         {
-          "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
+          "title": "[미네르바의 눈] 물류단상(物流斷想): 물류관점에서 본 이란 호르무즈해...",
           "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18",
+          "link": "https://www.news2day.co.kr/article/20260311500185",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "물류관점에서 본 이란",
+      "term_ko": "물류관점에서 본 이란",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "물류관점에서 본 이란",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[미네르바의 눈] 물류단상(物流斷想): 물류관점에서 본 이란 호르무즈해...",
+              "link": "https://www.news2day.co.kr/article/20260311500185"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%BC%EB%A5%98%EA%B4%80%EC%A0%90%EC%97%90%EC%84%9C%20%EB%B3%B8%20%EC%9D%B4%EB%9E%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%BC%EB%A5%98%EA%B4%80%EC%A0%90%EC%97%90%EC%84%9C%20%EB%B3%B8%20%EC%9D%B4%EB%9E%80"
+      },
+      "top_headlines": [
+        {
+          "title": "[미네르바의 눈] 물류단상(物流斷想): 물류관점에서 본 이란 호르무즈해...",
+          "summary": "",
+          "link": "https://www.news2day.co.kr/article/20260311500185",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "롤러코스터 올라탄 국장",
+      "term_ko": "롤러코스터 올라탄 국장",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "롤러코스터 올라탄 국장",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "오늘 밤 美 물가, 내일은 '네 마녀'… 24시간 롤러코스터 올라탄 국장",
+              "link": "https://www.ppss.kr/news/articleView.html?idxno=287979"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%EC%98%AC%EB%9D%BC%ED%83%84%20%EA%B5%AD%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%EC%98%AC%EB%9D%BC%ED%83%84%20%EA%B5%AD%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "오늘 밤 美 물가, 내일은 '네 마녀'… 24시간 롤러코스터 올라탄 국장",
+          "summary": "",
+          "link": "https://www.ppss.kr/news/articleView.html?idxno=287979",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "서울시장 후보 인터뷰",
+      "term_ko": "서울시장 후보 인터뷰",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "서울시장 후보 인터뷰",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[서울시장 후보 인터뷰] 김영배 의원 \"구청장·청와대·국회 경력 총동...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=725060"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%9E%A5%20%ED%9B%84%EB%B3%B4%20%EC%9D%B8%ED%84%B0%EB%B7%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%9E%A5%20%ED%9B%84%EB%B3%B4%20%EC%9D%B8%ED%84%B0%EB%B7%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "[서울시장 후보 인터뷰] 김영배 의원 \"구청장·청와대·국회 경력 총동...",
+          "summary": "",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=725060",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "김영배 의원 구청장",
+      "term_ko": "김영배 의원 구청장",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "김영배 의원 구청장",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[서울시장 후보 인터뷰] 김영배 의원 \"구청장·청와대·국회 경력 총동...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=725060"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%98%81%EB%B0%B0%20%EC%9D%98%EC%9B%90%20%EA%B5%AC%EC%B2%AD%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%98%81%EB%B0%B0%20%EC%9D%98%EC%9B%90%20%EA%B5%AC%EC%B2%AD%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "[서울시장 후보 인터뷰] 김영배 의원 \"구청장·청와대·국회 경력 총동...",
+          "summary": "",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=725060",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "청와대 국회 경력",
+      "term_ko": "청와대 국회 경력",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "청와대 국회 경력",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[서울시장 후보 인터뷰] 김영배 의원 \"구청장·청와대·국회 경력 총동...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=725060"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EC%99%80%EB%8C%80%20%EA%B5%AD%ED%9A%8C%20%EA%B2%BD%EB%A0%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EC%99%80%EB%8C%80%20%EA%B5%AD%ED%9A%8C%20%EA%B2%BD%EB%A0%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "[서울시장 후보 인터뷰] 김영배 의원 \"구청장·청와대·국회 경력 총동...",
+          "summary": "",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=725060",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "강원도 중동 상황",
+      "term_ko": "강원도 중동 상황",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "강원도 중동 상황",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "강원도 '중동 상황 대응' 수출기업 70억원 지원",
+              "link": "https://n.news.naver.com/mnews/article/654/0000170315?sid=100"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%9B%90%EB%8F%84%20%EC%A4%91%EB%8F%99%20%EC%83%81%ED%99%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%9B%90%EB%8F%84%20%EC%A4%91%EB%8F%99%20%EC%83%81%ED%99%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "강원도 '중동 상황 대응' 수출기업 70억원 지원",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/654/0000170315?sid=100",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "흑자 달성 영업이익",
+      "term_ko": "흑자 달성 영업이익",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "흑자 달성 영업이익",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
+              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9D%91%EC%9E%90%20%EB%8B%AC%EC%84%B1%20%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9D%91%EC%9E%90%20%EB%8B%AC%EC%84%B1%20%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5"
+      },
+      "top_headlines": [
+        {
+          "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
+          "summary": "",
+          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "국고채발 금리 쇼크",
+      "term_ko": "국고채발 금리 쇼크",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "국고채발 금리 쇼크",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "국고채발 금리 쇼크…주담대 고정금리 1주일새 6%대로",
+              "link": "https://n.news.naver.com/mnews/article/025/0003508472?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EA%B3%A0%EC%B1%84%EB%B0%9C%20%EA%B8%88%EB%A6%AC%20%EC%87%BC%ED%81%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EA%B3%A0%EC%B1%84%EB%B0%9C%20%EA%B8%88%EB%A6%AC%20%EC%87%BC%ED%81%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "국고채발 금리 쇼크…주담대 고정금리 1주일새 6%대로",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/025/0003508472?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -622,7 +773,7 @@
         "query": "KOSPI Closes Higher",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -651,265 +802,37 @@
       ]
     },
     {
-      "term": "13억달러 풀매수",
-      "term_ko": "13억달러 풀매수",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "13억달러 풀매수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[크립토 인사이트 EP.28] \"1달러도 안 산다\" vs \"13억달러 풀매수\"…옵션...",
-              "link": "https://www.tokenpost.kr/news/insights/338320"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=13%EC%96%B5%EB%8B%AC%EB%9F%AC%20%ED%92%80%EB%A7%A4%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=13%EC%96%B5%EB%8B%AC%EB%9F%AC%20%ED%92%80%EB%A7%A4%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[크립토 인사이트 EP.28] \"1달러도 안 산다\" vs \"13억달러 풀매수\"…옵션...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/338320",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "2.4% 근원",
-      "term_ko": "2.4% 근원",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2.4% 근원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 미국 2월 CPI 2.4%↑ 근원 CPI 2.5%↑…'연준의 해석' 어떻게?",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=560226"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.4%25%20%EA%B7%BC%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.4%25%20%EA%B7%BC%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 미국 2월 CPI 2.4%↑ 근원 CPI 2.5%↑…'연준의 해석' 어떻게?",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=560226",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "18일 보험사",
-      "term_ko": "18일 보험사",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "18일 보험사",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=18%EC%9D%BC%20%EB%B3%B4%ED%97%98%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=18%EC%9D%BC%20%EB%B3%B4%ED%97%98%EC%82%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "성황리 마무리",
-      "term_ko": "성황리 마무리",
+      "term": "증가 외",
+      "term_ko": "증가 외",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "성황리 마무리",
+        "query": "증가 외",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "덱스콤X카카오헬스케어, 첫 공동 개최 'DynamiK Symposium' 성황리 마무리",
-              "link": "https://n.news.naver.com/mnews/article/030/0003406542?sid=101"
+              "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
+              "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%ED%99%A9%EB%A6%AC%20%EB%A7%88%EB%AC%B4%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%ED%99%A9%EB%A6%AC%20%EB%A7%88%EB%AC%B4%EB%A6%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B0%80%20%EC%99%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B0%80%20%EC%99%B8"
       },
       "top_headlines": [
         {
-          "title": "덱스콤X카카오헬스케어, 첫 공동 개최 'DynamiK Symposium' 성황리 마무리",
+          "title": "[부산항만공사] 22년 연속 흑자 달성…영업이익 전년 대비 10.33% 증가 외",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003406542?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "선물 하락",
-      "term_ko": "선물 하락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "선물 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 2월 CPI 발표, 2.4%↑…나스닥 선물 하락",
-              "link": "https://www.ekn.kr/web/view.php?key=20260311025497079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EB%AC%BC%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EB%AC%BC%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 2월 CPI 발표, 2.4%↑…나스닥 선물 하락",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260311025497079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "통과 관심",
-      "term_ko": "통과 관심",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "통과 관심",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%B5%EA%B3%BC%20%EA%B4%80%EC%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%B5%EA%B3%BC%20%EA%B4%80%EC%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "18일 보험사 주총 개막…DB손보, 얼라인 제안 사외이사 통과 관심 [2026 ...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026031121114927698a55064dd1_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "금융협약 체결",
-      "term_ko": "금융협약 체결",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융협약 체결",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-11T22:00:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "DL이앤씨, 압구정5구역 '하이엔드 금융협약' 체결",
-              "link": "http://www.srtimes.kr/news/articleView.html?idxno=198452"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%ED%98%91%EC%95%BD%20%EC%B2%B4%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%ED%98%91%EC%95%BD%20%EC%B2%B4%EA%B2%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "DL이앤씨, 압구정5구역 '하이엔드 금융협약' 체결",
-          "summary": "",
-          "link": "http://www.srtimes.kr/news/articleView.html?idxno=198452",
+          "link": "https://ilyo.co.kr/?ac=article_view&entry_id=509529",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -926,7 +849,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -949,7 +872,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -972,7 +895,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -995,7 +918,7 @@
         "query": "금리 인하 기대감",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1018,7 +941,7 @@
         "query": "비트코인 ETF 기대",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1039,21 +962,9 @@
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-03",
-              "timestamp": 1772463600000,
-              "value": 100
-            }
-          ]
-        },
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-03-11T22:00:48+09:00",
+          "last_updated": "2026-03-12T03:55:53+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1064,52 +975,56 @@
         "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
       },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.004672,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1772463600000
-      }
+      "top_headlines": []
+    },
+    {
+      "term": "미국 정부 셧다운 위기",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-12T03:55:53+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-03-11T13:01:57.246Z",
+    "generated_at": "2026-03-11T18:57:03.618Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-11T22:00:48+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-03-12T03:55:53+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 2,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-03-11T22:00:48+09:00",
+      "last_updated": "2026-03-12T03:55:53+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-03-11T22:00:48+09:00",
+        "lastUpdated": "2026-03-12T03:55:53+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
