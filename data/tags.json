@@ -1,1182 +1,425 @@
 {
+  "generatedAt": "2026-03-16T07:15:54.878Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-03-16",
   "window": "12_hours",
-  "total_phrases": 30,
-  "discovered_keywords": [
+  "total_phrases": 29,
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Oil Price Hike",
-      "term_ko": "",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Oil Price Hike",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi opens higher amid oil price hike",
-              "link": "https://n.news.naver.com/mnews/article/640/0000085704?sid=101"
-            },
-            {
-              "title": "(LEAD) KOSPI opens higher amid oil price hike",
-              "link": "https://n.news.naver.com/mnews/article/001/0015960766?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Oil%20Price%20Hike",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Oil%20Price%20Hike"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi opens higher amid oil price hike",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000085704?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) KOSPI opens higher amid oil price hike",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015960766?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Oil Price Hike"
     },
     {
       "term": "한국투자증권 IMA S4",
-      "term_ko": "한국투자증권 IMA S4",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국투자증권 IMA S4",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-12",
-              "timestamp": 1773241200000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, 'IMA S4' 상품 출시",
-              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=824461"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%20S4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%20S4"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, 'IMA S4' 상품 출시",
-          "summary": "",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=824461",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.009322,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1773241200000
-      }
+      "term_ko": "한국투자증권 IMA S4"
     },
     {
       "term": "한투증권 4차 IMA",
-      "term_ko": "한투증권 4차 IMA",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한투증권 4차 IMA",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한투증권, 4차 IMA 상품 출시...3000억 모집",
-              "link": "https://www.dailybrief.co.kr/news/articleView.html?idxno=5279"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%204%EC%B0%A8%20IMA",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%204%EC%B0%A8%20IMA"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권, 4차 IMA 상품 출시...3000억 모집",
-          "summary": "",
-          "link": "https://www.dailybrief.co.kr/news/articleView.html?idxno=5279",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한투증권 4차 IMA"
     },
     {
       "term": "공장용 엣지 AI",
-      "term_ko": "공장용 엣지 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "공장용 엣지 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Qt 그룹, 퀄컴과 협력…미래형 공장용 엣지 AI 기기 개발 간소화",
-              "link": "http://www.segyebiz.com/newsView/20260316506052?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EC%9E%A5%EC%9A%A9%20%EC%97%A3%EC%A7%80%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EC%9E%A5%EC%9A%A9%20%EC%97%A3%EC%A7%80%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Qt 그룹, 퀄컴과 협력…미래형 공장용 엣지 AI 기기 개발 간소화",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260316506052?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "공장용 엣지 AI"
     },
     {
       "term": "부동산VIEW 서울 아파트",
-      "term_ko": "부동산VIEW 서울 아파트",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산VIEW 서울 아파트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산VIEW] 서울 아파트 가격하락을 견인하는 세 가지 요인",
-              "link": "https://www.businesspost.co.kr/BP?command=article_view&num=432955"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0VIEW%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0VIEW%20%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산VIEW] 서울 아파트 가격하락을 견인하는 세 가지 요인",
-          "summary": "",
-          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=432955",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부동산VIEW 서울 아파트"
     },
     {
       "term": "기술이전 바이오 ETF",
-      "term_ko": "기술이전 바이오 ETF",
-      "significance_score": 350,
-      "mentions": 233,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기술이전 바이오 ETF",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-11",
-              "timestamp": 1773154800000,
-              "value": 1.29533
-            },
-            {
-              "period": "2026-03-12",
-              "timestamp": 1773241200000,
-              "value": 26.943
-            },
-            {
-              "period": "2026-03-13",
-              "timestamp": 1773327600000,
-              "value": 100
-            },
-            {
-              "period": "2026-03-14",
-              "timestamp": 1773414000000,
-              "value": 50.51813
-            },
-            {
-              "period": "2026-03-15",
-              "timestamp": 1773500400000,
-              "value": 53.88601
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋운용 \"기술이전 바이오 ETF, 액티브로 승부\"",
-              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=297522"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%88%A0%EC%9D%B4%EC%A0%84%20%EB%B0%94%EC%9D%B4%EC%98%A4%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%88%A0%EC%9D%B4%EC%A0%84%20%EB%B0%94%EC%9D%B4%EC%98%A4%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋운용 \"기술이전 바이오 ETF, 액티브로 승부\"",
-          "summary": "",
-          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=297522",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 232.6425,
-        "weekly_average_volume": 46.5285,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.022884,
-        "time_weight": 0.028352,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1773500400000
-      }
+      "term_ko": "기술이전 바이오 ETF"
     },
     {
       "term": "이변 비트코인 8%",
-      "term_ko": "이변 비트코인 8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이변 비트코인 8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이란 전쟁 속 금융시장 '이변'…비트코인 8%↑·금값은 하락",
-              "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000026396"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%B3%80%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%208%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%B3%80%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%208%25"
-      },
-      "top_headlines": [
-        {
-          "title": "이란 전쟁 속 금융시장 '이변'…비트코인 8%↑·금값은 하락",
-          "summary": "",
-          "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000026396",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이변 비트코인 8%"
     },
     {
       "term": "32만전자 170만닉스 간다",
-      "term_ko": "32만전자 170만닉스 간다",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "32만전자 170만닉스 간다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'32만전자'·'170만닉스' 간다…'롤코' 장세에도 목표가 올리는 증권가",
-              "link": "https://n.news.naver.com/mnews/article/629/0000481647?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=32%EB%A7%8C%EC%A0%84%EC%9E%90%20170%EB%A7%8C%EB%8B%89%EC%8A%A4%20%EA%B0%84%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=32%EB%A7%8C%EC%A0%84%EC%9E%90%20170%EB%A7%8C%EB%8B%89%EC%8A%A4%20%EA%B0%84%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'32만전자'·'170만닉스' 간다…'롤코' 장세에도 목표가 올리는 증권가",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000481647?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "32만전자 170만닉스 간다"
     },
     {
       "term": "기기 개발 간소화",
-      "term_ko": "기기 개발 간소화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기기 개발 간소화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Qt 그룹, 퀄컴과 협력…미래형 공장용 엣지 AI 기기 개발 간소화",
-              "link": "http://www.segyebiz.com/newsView/20260316506052?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EA%B8%B0%20%EA%B0%9C%EB%B0%9C%20%EA%B0%84%EC%86%8C%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EA%B8%B0%20%EA%B0%9C%EB%B0%9C%20%EA%B0%84%EC%86%8C%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "Qt 그룹, 퀄컴과 협력…미래형 공장용 엣지 AI 기기 개발 간소화",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260316506052?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기기 개발 간소화"
     },
     {
       "term": "이란 전쟁 속",
-      "term_ko": "이란 전쟁 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이란 전쟁 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이란 전쟁 속 금융시장 '이변'…비트코인 8%↑·금값은 하락",
-              "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000026396"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%20%EC%A0%84%EC%9F%81%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%20%EC%A0%84%EC%9F%81%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "이란 전쟁 속 금융시장 '이변'…비트코인 8%↑·금값은 하락",
-          "summary": "",
-          "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000026396",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이란 전쟁 속"
     },
     {
       "term": "농식품부 스마트농업 우수기업",
-      "term_ko": "농식품부 스마트농업 우수기업",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "농식품부 스마트농업 우수기업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "농식품부, '스마트농업 우수기업' 공모...31일까지 접수",
-              "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4072228"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%8D%EC%8B%9D%ED%92%88%EB%B6%80%20%EC%8A%A4%EB%A7%88%ED%8A%B8%EB%86%8D%EC%97%85%20%EC%9A%B0%EC%88%98%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%8D%EC%8B%9D%ED%92%88%EB%B6%80%20%EC%8A%A4%EB%A7%88%ED%8A%B8%EB%86%8D%EC%97%85%20%EC%9A%B0%EC%88%98%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "농식품부, '스마트농업 우수기업' 공모...31일까지 접수",
-          "summary": "",
-          "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4072228",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "농식품부 스마트농업 우수기업"
     },
     {
       "term": "가격하락을 견인하는 세",
-      "term_ko": "가격하락을 견인하는 세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가격하락을 견인하는 세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산VIEW] 서울 아파트 가격하락을 견인하는 세 가지 요인",
-              "link": "https://www.businesspost.co.kr/BP?command=article_view&num=432955"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B2%A9%ED%95%98%EB%9D%BD%EC%9D%84%20%EA%B2%AC%EC%9D%B8%ED%95%98%EB%8A%94%20%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B2%A9%ED%95%98%EB%9D%BD%EC%9D%84%20%EA%B2%AC%EC%9D%B8%ED%95%98%EB%8A%94%20%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산VIEW] 서울 아파트 가격하락을 견인하는 세 가지 요인",
-          "summary": "",
-          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=432955",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "KOSPI Opens Higher",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Opens Higher",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Opens Higher as Retail Investors Buy",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265248"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Opens%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Opens%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Opens Higher as Retail Investors Buy",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265248",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "LEAD KOSPI Opens",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD KOSPI Opens",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) KOSPI opens higher amid oil price hike",
-              "link": "https://n.news.naver.com/mnews/article/001/0015960766?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20KOSPI%20Opens",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20KOSPI%20Opens"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) KOSPI opens higher amid oil price hike",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015960766?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "협력 미래형",
-      "term_ko": "협력 미래형",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "협력 미래형",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Qt 그룹, 퀄컴과 협력…미래형 공장용 엣지 AI 기기 개발 간소화",
-              "link": "http://www.segyebiz.com/newsView/20260316506052?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%91%EB%A0%A5%20%EB%AF%B8%EB%9E%98%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%91%EB%A0%A5%20%EB%AF%B8%EB%9E%98%ED%98%95"
-      },
-      "top_headlines": [
-        {
-          "title": "Qt 그룹, 퀄컴과 협력…미래형 공장용 엣지 AI 기기 개발 간소화",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260316506052?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "금값은 하락",
-      "term_ko": "금값은 하락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값은 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이란 전쟁 속 금융시장 '이변'…비트코인 8%↑·금값은 하락",
-              "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000026396"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%EC%9D%80%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%EC%9D%80%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "이란 전쟁 속 금융시장 '이변'…비트코인 8%↑·금값은 하락",
-          "summary": "",
-          "link": "https://www.jnilbo.com/news/articleView.html?idxno=90000026396",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "상품 출시",
-      "term_ko": "상품 출시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상품 출시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, 'IMA S4' 상품 출시",
-              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=824461"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%ED%92%88%20%EC%B6%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, 'IMA S4' 상품 출시",
-          "summary": "",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=824461",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "가지 요인",
-      "term_ko": "가지 요인",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가지 요인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[부동산VIEW] 서울 아파트 가격하락을 견인하는 세 가지 요인",
-              "link": "https://www.businesspost.co.kr/BP?command=article_view&num=432955"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EC%A7%80%20%EC%9A%94%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EC%A7%80%20%EC%9A%94%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산VIEW] 서울 아파트 가격하락을 견인하는 세 가지 요인",
-          "summary": "",
-          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=432955",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "액티브로 승부",
-      "term_ko": "액티브로 승부",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "액티브로 승부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미래에셋운용 \"기술이전 바이오 ETF, 액티브로 승부\"",
-              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=297522"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%A1%ED%8B%B0%EB%B8%8C%EB%A1%9C%20%EC%8A%B9%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%A1%ED%8B%B0%EB%B8%8C%EB%A1%9C%20%EC%8A%B9%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "미래에셋운용 \"기술이전 바이오 ETF, 액티브로 승부\"",
-          "summary": "",
-          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=297522",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Retail Investors Buy",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Retail Investors Buy",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Opens Higher as Retail Investors Buy",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265248"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Retail%20Investors%20Buy",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Retail%20Investors%20Buy"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Opens Higher as Retail Investors Buy",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265248",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Middle East Tensions",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Middle East Tensions",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Rise Amid Middle East Tensions and Fed Meeting Ahead",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Amid-Middle-East-Tensions-and-Fed-Meeting-Ahead-1736322"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Middle%20East%20Tensions",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Middle%20East%20Tensions"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Rise Amid Middle East Tensions and Fed Meeting Ahead",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Amid-Middle-East-Tensions-and-Fed-Meeting-Ahead-1736322",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Fed Meeting Ahead",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Meeting Ahead",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Rise Amid Middle East Tensions and Fed Meeting Ahead",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Amid-Middle-East-Tensions-and-Fed-Meeting-Ahead-1736322"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Meeting%20Ahead",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Meeting%20Ahead"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Rise Amid Middle East Tensions and Fed Meeting Ahead",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Amid-Middle-East-Tensions-and-Fed-Meeting-Ahead-1736322",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "가격하락을 견인하는 세"
     },
     {
       "term": "Kospi Opens Higher",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Opens Higher",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi opens higher amid oil price hike",
-              "link": "https://n.news.naver.com/mnews/article/640/0000085704?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Opens%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Opens%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi opens higher amid oil price hike",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000085704?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Kospi Opens Higher"
+    },
+    {
+      "term": "Lead Kospi Opens",
+      "term_ko": "Lead Kospi Opens"
+    },
+    {
+      "term": "협력 미래형",
+      "term_ko": "협력 미래형"
+    },
+    {
+      "term": "금값은 하락",
+      "term_ko": "금값은 하락"
+    },
+    {
+      "term": "상품 출시",
+      "term_ko": "상품 출시"
+    },
+    {
+      "term": "가지 요인",
+      "term_ko": "가지 요인"
+    },
+    {
+      "term": "액티브로 승부",
+      "term_ko": "액티브로 승부"
+    },
+    {
+      "term": "Retail Investors Buy",
+      "term_ko": "Retail Investors Buy"
+    },
+    {
+      "term": "Middle East Tensions",
+      "term_ko": "Middle East Tensions"
+    },
+    {
+      "term": "Fed Meeting Ahead",
+      "term_ko": "Fed Meeting Ahead"
     },
     {
       "term": "Futures Rise",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Rise",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Rise Amid Middle East Tensions and Fed Meeting Ahead",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Amid-Middle-East-Tensions-and-Fed-Meeting-Ahead-1736322"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Rise"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Rise Amid Middle East Tensions and Fed Meeting Ahead",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-Amid-Middle-East-Tensions-and-Fed-Meeting-Ahead-1736322",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Futures Rise"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     },
     {
       "term": "원달러 환율 급등",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-16T11:15:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-03-16T02:16:35.610Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-16T11:15:24+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Oil Price Hike",
+      "term_ko": "Oil Price Hike"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-03-16T11:15:24+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-03-16T11:15:24+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "한국투자증권 IMA S4",
+      "term_ko": "한국투자증권 IMA S4"
+    },
+    {
+      "term": "한투증권 4차 IMA",
+      "term_ko": "한투증권 4차 IMA"
+    },
+    {
+      "term": "공장용 엣지 AI",
+      "term_ko": "공장용 엣지 AI"
+    },
+    {
+      "term": "부동산VIEW 서울 아파트",
+      "term_ko": "부동산VIEW 서울 아파트"
+    },
+    {
+      "term": "기술이전 바이오 ETF",
+      "term_ko": "기술이전 바이오 ETF"
+    },
+    {
+      "term": "이변 비트코인 8%",
+      "term_ko": "이변 비트코인 8%"
+    },
+    {
+      "term": "32만전자 170만닉스 간다",
+      "term_ko": "32만전자 170만닉스 간다"
+    },
+    {
+      "term": "기기 개발 간소화",
+      "term_ko": "기기 개발 간소화"
+    },
+    {
+      "term": "이란 전쟁 속",
+      "term_ko": "이란 전쟁 속"
+    },
+    {
+      "term": "농식품부 스마트농업 우수기업",
+      "term_ko": "농식품부 스마트농업 우수기업"
+    },
+    {
+      "term": "가격하락을 견인하는 세",
+      "term_ko": "가격하락을 견인하는 세"
+    },
+    {
+      "term": "Kospi Opens Higher",
+      "term_ko": "Kospi Opens Higher"
+    },
+    {
+      "term": "Lead Kospi Opens",
+      "term_ko": "Lead Kospi Opens"
+    },
+    {
+      "term": "협력 미래형",
+      "term_ko": "협력 미래형"
+    },
+    {
+      "term": "금값은 하락",
+      "term_ko": "금값은 하락"
+    },
+    {
+      "term": "상품 출시",
+      "term_ko": "상품 출시"
+    },
+    {
+      "term": "가지 요인",
+      "term_ko": "가지 요인"
+    },
+    {
+      "term": "액티브로 승부",
+      "term_ko": "액티브로 승부"
+    },
+    {
+      "term": "Retail Investors Buy",
+      "term_ko": "Retail Investors Buy"
+    },
+    {
+      "term": "Middle East Tensions",
+      "term_ko": "Middle East Tensions"
+    },
+    {
+      "term": "Fed Meeting Ahead",
+      "term_ko": "Fed Meeting Ahead"
+    },
+    {
+      "term": "Futures Rise",
+      "term_ko": "Futures Rise"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "원달러 환율 급등",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "Oil Price Hike": {
+      "en": "Oil Price Hike",
+      "ko": "Oil Price Hike",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "한국투자증권 IMA S4": {
+      "en": "한국투자증권 IMA S4",
+      "ko": "한국투자증권 IMA S4",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "한투증권 4차 IMA": {
+      "en": "한투증권 4차 IMA",
+      "ko": "한투증권 4차 IMA",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "공장용 엣지 AI": {
+      "en": "공장용 엣지 AI",
+      "ko": "공장용 엣지 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "부동산VIEW 서울 아파트": {
+      "en": "부동산VIEW 서울 아파트",
+      "ko": "부동산VIEW 서울 아파트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "기술이전 바이오 ETF": {
+      "en": "기술이전 바이오 ETF",
+      "ko": "기술이전 바이오 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "이변 비트코인 8%": {
+      "en": "이변 비트코인 8%",
+      "ko": "이변 비트코인 8%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "32만전자 170만닉스 간다": {
+      "en": "32만전자 170만닉스 간다",
+      "ko": "32만전자 170만닉스 간다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "기기 개발 간소화": {
+      "en": "기기 개발 간소화",
+      "ko": "기기 개발 간소화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "이란 전쟁 속": {
+      "en": "이란 전쟁 속",
+      "ko": "이란 전쟁 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "농식품부 스마트농업 우수기업": {
+      "en": "농식품부 스마트농업 우수기업",
+      "ko": "농식품부 스마트농업 우수기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "가격하락을 견인하는 세": {
+      "en": "가격하락을 견인하는 세",
+      "ko": "가격하락을 견인하는 세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Kospi Opens Higher": {
+      "en": "Kospi Opens Higher",
+      "ko": "Kospi Opens Higher",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Lead Kospi Opens": {
+      "en": "Lead Kospi Opens",
+      "ko": "Lead Kospi Opens",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "협력 미래형": {
+      "en": "협력 미래형",
+      "ko": "협력 미래형",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "금값은 하락": {
+      "en": "금값은 하락",
+      "ko": "금값은 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "상품 출시": {
+      "en": "상품 출시",
+      "ko": "상품 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "가지 요인": {
+      "en": "가지 요인",
+      "ko": "가지 요인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "액티브로 승부": {
+      "en": "액티브로 승부",
+      "ko": "액티브로 승부",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Retail Investors Buy": {
+      "en": "Retail Investors Buy",
+      "ko": "Retail Investors Buy",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Middle East Tensions": {
+      "en": "Middle East Tensions",
+      "ko": "Middle East Tensions",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Fed Meeting Ahead": {
+      "en": "Fed Meeting Ahead",
+      "ko": "Fed Meeting Ahead",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Futures Rise": {
+      "en": "Futures Rise",
+      "ko": "Futures Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
+    },
+    "원달러 환율 급등": {
+      "en": "원달러 환율 급등",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-16T07:15:54.878Z"
     }
   }
 }
