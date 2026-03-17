@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-03-17T11:02:31+09:00 (KST)**
+- Generated: **2026-03-17T16:05:27+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -75,7 +75,7 @@
 **아이티엠반도체** (084850.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.6%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **0.6%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%95%84%EC%9D%B4%ED%8B%B0%EC%97%A0%EB%B0%98%EB%8F%84%EC%B2%B4
@@ -92,40 +92,40 @@
 
 ### SAFE (5)
 
-**DB손해보험** (005830.KS)
-
-- News (7d): **15** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.13)**
-- Returns: 5d **-2.3%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=DB%EC%86%90%ED%95%B4%EB%B3%B4%ED%97%98
-
 **기업은행** (024110.KS)
 
 - News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.26)**
-- Returns: 5d **-1.5%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89
 
 **대한항공** (003490.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **2.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **1.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
 
 **삼성화재** (000810.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **-4.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-4.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC
 
 **코웨이** (021240.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.25)**
-- Returns: 5d **1.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **0.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%BD%94%EC%9B%A8%EC%9D%B4
+
+**현대해상** (001450.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.14)**
+- Returns: 5d **-1.6%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81
 
 ### AGGRESSIVE (5)
 
