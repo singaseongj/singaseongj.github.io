@@ -1,1177 +1,439 @@
 {
+  "generatedAt": "2026-03-20T12:58:40.102Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-03-20",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "직원 자르고 AI",
-      "term_ko": "직원 자르고 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "직원 자르고 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"직원 자르고 AI 쓴다\"...제미니, 5억 달러 적자에도 주가 상승",
-              "link": "http://coinreaders.com/225121"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%81%EC%9B%90%20%EC%9E%90%EB%A5%B4%EA%B3%A0%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%81%EC%9B%90%20%EC%9E%90%EB%A5%B4%EA%B3%A0%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "\"직원 자르고 AI 쓴다\"...제미니, 5억 달러 적자에도 주가 상승",
-          "summary": "",
-          "link": "http://coinreaders.com/225121",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "직원 자르고 AI"
     },
     {
       "term": "KB증권 업계 최초",
-      "term_ko": "KB증권 업계 최초",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KB증권 업계 최초",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KB증권, 업계 최초 '상생결제' 도입…금융기관 달라도 결제 가능",
-              "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=316624"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KB%EC%A6%9D%EA%B6%8C%20%EC%97%85%EA%B3%84%20%EC%B5%9C%EC%B4%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KB%EC%A6%9D%EA%B6%8C%20%EC%97%85%EA%B3%84%20%EC%B5%9C%EC%B4%88"
-      },
-      "top_headlines": [
-        {
-          "title": "KB증권, 업계 최초 '상생결제' 도입…금융기관 달라도 결제 가능",
-          "summary": "",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=316624",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "KB증권 업계 최초"
     },
     {
       "term": "최애 종목 TOP",
-      "term_ko": "최애 종목 TOP",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최애 종목 TOP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "엔비디아 아니고 '이것' 풀매수…서학개미 최애 종목 TOP 5",
-              "link": "https://www.wikitree.co.kr/articles/1126590"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EC%95%A0%20%EC%A2%85%EB%AA%A9%20TOP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EC%95%A0%20%EC%A2%85%EB%AA%A9%20TOP"
-      },
-      "top_headlines": [
-        {
-          "title": "엔비디아 아니고 '이것' 풀매수…서학개미 최애 종목 TOP 5",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1126590",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "최애 종목 TOP"
     },
     {
       "term": "Now KB증권 업계",
-      "term_ko": "Now KB증권 업계",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Now KB증권 업계",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[증권 & Now] KB증권, 업계 첫 상생결제 도입…생산적 금융 확대 등",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1702964"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Now%20KB%EC%A6%9D%EA%B6%8C%20%EC%97%85%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Now%20KB%EC%A6%9D%EA%B6%8C%20%EC%97%85%EA%B3%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권 & Now] KB증권, 업계 첫 상생결제 도입…생산적 금융 확대 등",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1702964",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Now KB증권 업계"
     },
     {
       "term": "감정을 이긴다 1분기",
-      "term_ko": "감정을 이긴다 1분기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "감정을 이긴다 1분기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"엔씨소프트, 실적은 감정을 이긴다…1분기 영업이익 전분기比 3352% 증가...",
-              "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=263494"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%90%EC%A0%95%EC%9D%84%20%EC%9D%B4%EA%B8%B4%EB%8B%A4%201%EB%B6%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%90%EC%A0%95%EC%9D%84%20%EC%9D%B4%EA%B8%B4%EB%8B%A4%201%EB%B6%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "\"엔씨소프트, 실적은 감정을 이긴다…1분기 영업이익 전분기比 3352% 증가...",
-          "summary": "",
-          "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=263494",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "감정을 이긴다 1분기"
     },
     {
       "term": "영업이익 전분기比 3352%",
-      "term_ko": "영업이익 전분기比 3352%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "영업이익 전분기比 3352%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"엔씨소프트, 실적은 감정을 이긴다…1분기 영업이익 전분기比 3352% 증가...",
-              "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=263494"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5%20%EC%A0%84%EB%B6%84%EA%B8%B0%E6%AF%94%203352%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5%20%EC%A0%84%EB%B6%84%EA%B8%B0%E6%AF%94%203352%25"
-      },
-      "top_headlines": [
-        {
-          "title": "\"엔씨소프트, 실적은 감정을 이긴다…1분기 영업이익 전분기比 3352% 증가...",
-          "summary": "",
-          "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=263494",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "영업이익 전분기比 3352%"
     },
     {
       "term": "투자자 멘붕 7%",
-      "term_ko": "투자자 멘붕 7%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자자 멘붕 7%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“투자자 멘붕” 7% 급락 금 신화 흔들리나",
-              "link": "https://n.news.naver.com/mnews/article/050/0000103800?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%EC%9E%90%20%EB%A9%98%EB%B6%95%207%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%EC%9E%90%20%EB%A9%98%EB%B6%95%207%25"
-      },
-      "top_headlines": [
-        {
-          "title": "“투자자 멘붕” 7% 급락 금 신화 흔들리나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000103800?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자자 멘붕 7%"
     },
     {
       "term": "국제 금값 6년",
-      "term_ko": "국제 금값 6년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국제 금값 6년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-              "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%EA%B0%92%206%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%EA%B0%92%206%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "국제 금값 6년"
     },
     {
       "term": "하락률 예상 7거래일",
-      "term_ko": "하락률 예상 7거래일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락률 예상 7거래일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-              "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%EB%A5%A0%20%EC%98%88%EC%83%81%207%EA%B1%B0%EB%9E%98%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%EB%A5%A0%20%EC%98%88%EC%83%81%207%EA%B1%B0%EB%9E%98%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하락률 예상 7거래일"
     },
     {
       "term": "뚫린 환율 1500원",
-      "term_ko": "뚫린 환율 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뚫린 환율 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“결국 뚫린 환율 1500원”…‘이것’ 따라 뉴노멀 될 수도",
-              "link": "https://n.news.naver.com/mnews/article/009/0005653401?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9A%AB%EB%A6%B0%20%ED%99%98%EC%9C%A8%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9A%AB%EB%A6%B0%20%ED%99%98%EC%9C%A8%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "“결국 뚫린 환율 1500원”…‘이것’ 따라 뉴노멀 될 수도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005653401?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뚫린 환율 1500원"
     },
     {
       "term": "넷스카우트 디도스 공격",
-      "term_ko": "넷스카우트 디도스 공격",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "넷스카우트 디도스 공격",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "넷스카우트, 디도스 공격 대응 해법 제시",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=56434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%B7%EC%8A%A4%EC%B9%B4%EC%9A%B0%ED%8A%B8%20%EB%94%94%EB%8F%84%EC%8A%A4%20%EA%B3%B5%EA%B2%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%B7%EC%8A%A4%EC%B9%B4%EC%9A%B0%ED%8A%B8%20%EB%94%94%EB%8F%84%EC%8A%A4%20%EA%B3%B5%EA%B2%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "넷스카우트, 디도스 공격 대응 해법 제시",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=56434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "넷스카우트 디도스 공격"
     },
     {
       "term": "대응 해법 제시",
-      "term_ko": "대응 해법 제시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대응 해법 제시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "넷스카우트, 디도스 공격 대응 해법 제시",
-              "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=56434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%9D%91%20%ED%95%B4%EB%B2%95%20%EC%A0%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%9D%91%20%ED%95%B4%EB%B2%95%20%EC%A0%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "넷스카우트, 디도스 공격 대응 해법 제시",
-          "summary": "",
-          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=56434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대응 해법 제시"
     },
     {
       "term": "급락 금 신화",
-      "term_ko": "급락 금 신화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급락 금 신화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“투자자 멘붕” 7% 급락 금 신화 흔들리나",
-              "link": "https://n.news.naver.com/mnews/article/050/0000103800?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%9D%BD%20%EA%B8%88%20%EC%8B%A0%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%9D%BD%20%EA%B8%88%20%EC%8B%A0%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "“투자자 멘붕” 7% 급락 금 신화 흔들리나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000103800?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "급락 금 신화"
     },
     {
       "term": "상생결제 도입 금융기관",
-      "term_ko": "상생결제 도입 금융기관",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상생결제 도입 금융기관",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KB증권, 업계 최초 '상생결제' 도입…금융기관 달라도 결제 가능",
-              "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=316624"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%83%9D%EA%B2%B0%EC%A0%9C%20%EB%8F%84%EC%9E%85%20%EA%B8%88%EC%9C%B5%EA%B8%B0%EA%B4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%83%9D%EA%B2%B0%EC%A0%9C%20%EB%8F%84%EC%9E%85%20%EA%B8%88%EC%9C%B5%EA%B8%B0%EA%B4%80"
-      },
-      "top_headlines": [
-        {
-          "title": "KB증권, 업계 최초 '상생결제' 도입…금융기관 달라도 결제 가능",
-          "summary": "",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=316624",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상생결제 도입 금융기관"
     },
     {
       "term": "달라도 결제 가능",
-      "term_ko": "달라도 결제 가능",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달라도 결제 가능",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KB증권, 업계 최초 '상생결제' 도입…금융기관 달라도 결제 가능",
-              "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=316624"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9D%BC%EB%8F%84%20%EA%B2%B0%EC%A0%9C%20%EA%B0%80%EB%8A%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9D%BC%EB%8F%84%20%EA%B2%B0%EC%A0%9C%20%EA%B0%80%EB%8A%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "KB증권, 업계 최초 '상생결제' 도입…금융기관 달라도 결제 가능",
-          "summary": "",
-          "link": "http://www.updownnews.co.kr/news/articleView.html?idxno=316624",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달라도 결제 가능"
     },
     {
       "term": "엔비디아 아니고 이것",
-      "term_ko": "엔비디아 아니고 이것",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔비디아 아니고 이것",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "엔비디아 아니고 '이것' 풀매수…서학개미 최애 종목 TOP 5",
-              "link": "https://www.wikitree.co.kr/articles/1126590"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EC%95%84%EB%8B%88%EA%B3%A0%20%EC%9D%B4%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%EC%95%84%EB%8B%88%EA%B3%A0%20%EC%9D%B4%EA%B2%83"
-      },
-      "top_headlines": [
-        {
-          "title": "엔비디아 아니고 '이것' 풀매수…서학개미 최애 종목 TOP 5",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1126590",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "엔비디아 아니고 이것"
     },
     {
       "term": "첫 상생결제 도입",
-      "term_ko": "첫 상생결제 도입",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "첫 상생결제 도입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[증권 & Now] KB증권, 업계 첫 상생결제 도입…생산적 금융 확대 등",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1702964"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AB%20%EC%83%81%EC%83%9D%EA%B2%B0%EC%A0%9C%20%EB%8F%84%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AB%20%EC%83%81%EC%83%9D%EA%B2%B0%EC%A0%9C%20%EB%8F%84%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권 & Now] KB증권, 업계 첫 상생결제 도입…생산적 금융 확대 등",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1702964",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "첫 상생결제 도입"
     },
     {
       "term": "생산적 금융 확대",
-      "term_ko": "생산적 금융 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "생산적 금융 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[증권 & Now] KB증권, 업계 첫 상생결제 도입…생산적 금융 확대 등",
-              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1702964"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%EC%82%B0%EC%A0%81%20%EA%B8%88%EC%9C%B5%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[증권 & Now] KB증권, 업계 첫 상생결제 도입…생산적 금융 확대 등",
-          "summary": "",
-          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1702964",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "생산적 금융 확대"
     },
     {
       "term": "이것 따라 뉴노멀",
-      "term_ko": "이것 따라 뉴노멀",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이것 따라 뉴노멀",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“결국 뚫린 환율 1500원”…‘이것’ 따라 뉴노멀 될 수도",
-              "link": "https://n.news.naver.com/mnews/article/009/0005653401?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EA%B2%83%20%EB%94%B0%EB%9D%BC%20%EB%89%B4%EB%85%B8%EB%A9%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EA%B2%83%20%EB%94%B0%EB%9D%BC%20%EB%89%B4%EB%85%B8%EB%A9%80"
-      },
-      "top_headlines": [
-        {
-          "title": "“결국 뚫린 환율 1500원”…‘이것’ 따라 뉴노멀 될 수도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005653401?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이것 따라 뉴노멀"
     },
     {
       "term": "주가 상승",
-      "term_ko": "주가 상승",
-      "significance_score": 280,
-      "mentions": 272,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주가 상승",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-12",
-              "timestamp": 1773241200000,
-              "value": 30.55555
-            },
-            {
-              "period": "2026-03-13",
-              "timestamp": 1773327600000,
-              "value": 33.33333
-            },
-            {
-              "period": "2026-03-14",
-              "timestamp": 1773414000000,
-              "value": 38.88888
-            },
-            {
-              "period": "2026-03-16",
-              "timestamp": 1773586800000,
-              "value": 19.44444
-            },
-            {
-              "period": "2026-03-17",
-              "timestamp": 1773673200000,
-              "value": 50
-            },
-            {
-              "period": "2026-03-18",
-              "timestamp": 1773759600000,
-              "value": 100
-            },
-            {
-              "period": "2026-03-19",
-              "timestamp": 1773846000000,
-              "value": 63.88888
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"직원 자르고 AI 쓴다\"...제미니, 5억 달러 적자에도 주가 상승",
-              "link": "http://coinreaders.com/225121"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "\"직원 자르고 AI 쓴다\"...제미니, 5억 달러 적자에도 주가 상승",
-          "summary": "",
-          "link": "http://coinreaders.com/225121",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 272.2222,
-        "weekly_average_volume": 54.4444,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.020523,
-        "time_weight": 0.025023,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1773846000000
-      }
+      "term_ko": "주가 상승"
     },
     {
       "term": "풀매수 서학개미",
-      "term_ko": "풀매수 서학개미",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "풀매수 서학개미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "엔비디아 아니고 '이것' 풀매수…서학개미 최애 종목 TOP 5",
-              "link": "https://www.wikitree.co.kr/articles/1126590"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%92%80%EB%A7%A4%EC%88%98%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%92%80%EB%A7%A4%EC%88%98%20%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "엔비디아 아니고 '이것' 풀매수…서학개미 최애 종목 TOP 5",
-          "summary": "",
-          "link": "https://www.wikitree.co.kr/articles/1126590",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "풀매수 서학개미"
     },
     {
       "term": "만에 최대",
-      "term_ko": "만에 최대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 최대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-              "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "만에 최대"
     },
     {
       "term": "연속 하락",
-      "term_ko": "연속 하락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연속 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-              "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%86%8D%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%86%8D%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "국제 금값, 6년 만에 최대 하락률 예상…7거래일 연속 하락",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260320512289?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연속 하락"
     },
     {
       "term": "Trim Earlier Gains",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trim Earlier Gains",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares trim earlier gains late Fri. morning on tech loss",
-              "link": "https://n.news.naver.com/mnews/article/001/0015971017?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trim%20Earlier%20Gains",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trim%20Earlier%20Gains"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares trim earlier gains late Fri. morning on tech loss",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015971017?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Trim Earlier Gains"
     },
     {
       "term": "Late Fri Morning",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Late Fri Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares trim earlier gains late Fri. morning on tech loss",
-              "link": "https://n.news.naver.com/mnews/article/001/0015971017?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Late%20Fri%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Late%20Fri%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares trim earlier gains late Fri. morning on tech loss",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015971017?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Late Fri Morning"
     },
     {
-      "term": "Won-Dollar Exchange Rate",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Won-Dollar Exchange Rate",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Surges as Won-Dollar Exchange Rate Drops",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265710"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Won-Dollar%20Exchange%20Rate",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Won-Dollar%20Exchange%20Rate"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Surges as Won-Dollar Exchange Rate Drops",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265710",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Won-dollar Exchange Rate",
+      "term_ko": "Won-dollar Exchange Rate"
     },
     {
-      "term": "KOSPI Surges",
-      "term_ko": "",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Surges",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Surges as Won-Dollar Exchange Rate Drops",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265710"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Surges",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Surges"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Surges as Won-Dollar Exchange Rate Drops",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=265710",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Surges",
+      "term_ko": "Kospi Surges"
     },
     {
       "term": "Tech Loss",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Loss",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares trim earlier gains late Fri. morning on tech loss",
-              "link": "https://n.news.naver.com/mnews/article/001/0015971017?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Loss",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Loss"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares trim earlier gains late Fri. morning on tech loss",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0015971017?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Tech Loss"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-20T15:56:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-03-20T06:57:56.051Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-20T15:56:49+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "직원 자르고 AI",
+      "term_ko": "직원 자르고 AI"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-03-20T15:56:49+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-03-20T15:56:49+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "KB증권 업계 최초",
+      "term_ko": "KB증권 업계 최초"
+    },
+    {
+      "term": "최애 종목 TOP",
+      "term_ko": "최애 종목 TOP"
+    },
+    {
+      "term": "Now KB증권 업계",
+      "term_ko": "Now KB증권 업계"
+    },
+    {
+      "term": "감정을 이긴다 1분기",
+      "term_ko": "감정을 이긴다 1분기"
+    },
+    {
+      "term": "영업이익 전분기比 3352%",
+      "term_ko": "영업이익 전분기比 3352%"
+    },
+    {
+      "term": "투자자 멘붕 7%",
+      "term_ko": "투자자 멘붕 7%"
+    },
+    {
+      "term": "국제 금값 6년",
+      "term_ko": "국제 금값 6년"
+    },
+    {
+      "term": "하락률 예상 7거래일",
+      "term_ko": "하락률 예상 7거래일"
+    },
+    {
+      "term": "뚫린 환율 1500원",
+      "term_ko": "뚫린 환율 1500원"
+    },
+    {
+      "term": "넷스카우트 디도스 공격",
+      "term_ko": "넷스카우트 디도스 공격"
+    },
+    {
+      "term": "대응 해법 제시",
+      "term_ko": "대응 해법 제시"
+    },
+    {
+      "term": "급락 금 신화",
+      "term_ko": "급락 금 신화"
+    },
+    {
+      "term": "상생결제 도입 금융기관",
+      "term_ko": "상생결제 도입 금융기관"
+    },
+    {
+      "term": "달라도 결제 가능",
+      "term_ko": "달라도 결제 가능"
+    },
+    {
+      "term": "엔비디아 아니고 이것",
+      "term_ko": "엔비디아 아니고 이것"
+    },
+    {
+      "term": "첫 상생결제 도입",
+      "term_ko": "첫 상생결제 도입"
+    },
+    {
+      "term": "생산적 금융 확대",
+      "term_ko": "생산적 금융 확대"
+    },
+    {
+      "term": "이것 따라 뉴노멀",
+      "term_ko": "이것 따라 뉴노멀"
+    },
+    {
+      "term": "주가 상승",
+      "term_ko": "주가 상승"
+    },
+    {
+      "term": "풀매수 서학개미",
+      "term_ko": "풀매수 서학개미"
+    },
+    {
+      "term": "만에 최대",
+      "term_ko": "만에 최대"
+    },
+    {
+      "term": "연속 하락",
+      "term_ko": "연속 하락"
+    },
+    {
+      "term": "Trim Earlier Gains",
+      "term_ko": "Trim Earlier Gains"
+    },
+    {
+      "term": "Late Fri Morning",
+      "term_ko": "Late Fri Morning"
+    },
+    {
+      "term": "Won-dollar Exchange Rate",
+      "term_ko": "Won-dollar Exchange Rate"
+    },
+    {
+      "term": "Kospi Surges",
+      "term_ko": "Kospi Surges"
+    },
+    {
+      "term": "Tech Loss",
+      "term_ko": "Tech Loss"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    }
+  ],
+  "translations": {
+    "직원 자르고 AI": {
+      "en": "직원 자르고 AI",
+      "ko": "직원 자르고 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.102Z"
+    },
+    "KB증권 업계 최초": {
+      "en": "KB증권 업계 최초",
+      "ko": "KB증권 업계 최초",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "최애 종목 TOP": {
+      "en": "최애 종목 TOP",
+      "ko": "최애 종목 TOP",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Now KB증권 업계": {
+      "en": "Now KB증권 업계",
+      "ko": "Now KB증권 업계",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "감정을 이긴다 1분기": {
+      "en": "감정을 이긴다 1분기",
+      "ko": "감정을 이긴다 1분기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "영업이익 전분기比 3352%": {
+      "en": "영업이익 전분기比 3352%",
+      "ko": "영업이익 전분기比 3352%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "투자자 멘붕 7%": {
+      "en": "투자자 멘붕 7%",
+      "ko": "투자자 멘붕 7%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "국제 금값 6년": {
+      "en": "국제 금값 6년",
+      "ko": "국제 금값 6년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "하락률 예상 7거래일": {
+      "en": "하락률 예상 7거래일",
+      "ko": "하락률 예상 7거래일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "뚫린 환율 1500원": {
+      "en": "뚫린 환율 1500원",
+      "ko": "뚫린 환율 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "넷스카우트 디도스 공격": {
+      "en": "넷스카우트 디도스 공격",
+      "ko": "넷스카우트 디도스 공격",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "대응 해법 제시": {
+      "en": "대응 해법 제시",
+      "ko": "대응 해법 제시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "급락 금 신화": {
+      "en": "급락 금 신화",
+      "ko": "급락 금 신화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "상생결제 도입 금융기관": {
+      "en": "상생결제 도입 금융기관",
+      "ko": "상생결제 도입 금융기관",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "달라도 결제 가능": {
+      "en": "달라도 결제 가능",
+      "ko": "달라도 결제 가능",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "엔비디아 아니고 이것": {
+      "en": "엔비디아 아니고 이것",
+      "ko": "엔비디아 아니고 이것",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "첫 상생결제 도입": {
+      "en": "첫 상생결제 도입",
+      "ko": "첫 상생결제 도입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "생산적 금융 확대": {
+      "en": "생산적 금융 확대",
+      "ko": "생산적 금융 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "이것 따라 뉴노멀": {
+      "en": "이것 따라 뉴노멀",
+      "ko": "이것 따라 뉴노멀",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "주가 상승": {
+      "en": "주가 상승",
+      "ko": "주가 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "풀매수 서학개미": {
+      "en": "풀매수 서학개미",
+      "ko": "풀매수 서학개미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "만에 최대": {
+      "en": "만에 최대",
+      "ko": "만에 최대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "연속 하락": {
+      "en": "연속 하락",
+      "ko": "연속 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Trim Earlier Gains": {
+      "en": "Trim Earlier Gains",
+      "ko": "Trim Earlier Gains",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Late Fri Morning": {
+      "en": "Late Fri Morning",
+      "ko": "Late Fri Morning",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Won-dollar Exchange Rate": {
+      "en": "Won-dollar Exchange Rate",
+      "ko": "Won-dollar Exchange Rate",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Kospi Surges": {
+      "en": "Kospi Surges",
+      "ko": "Kospi Surges",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Tech Loss": {
+      "en": "Tech Loss",
+      "ko": "Tech Loss",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-20T12:58:40.103Z"
     }
   }
 }
