@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-03-20T15:56:34+09:00 (KST)**
+- Generated: **2026-03-20T22:00:42+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -92,6 +92,13 @@
 
 ### SAFE (5)
 
+**GS건설** (006360.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **42.0%**, 20d **38.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=GS%EA%B1%B4%EC%84%A4
+
 **LG이노텍** (011070.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
@@ -105,13 +112,6 @@
 - Returns: 5d **59.5%**, 20d **145.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8C%80%EC%9A%B0%EA%B1%B4%EC%84%A4
-
-**롯데케미칼** (011170.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.55)**
-- Returns: 5d **21.9%**, 20d **-1.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%BC%80%EB%AF%B8%EC%B9%BC
 
 **이수페타시스** (007660.KS)
 
@@ -128,13 +128,6 @@
 - News search: https://www.google.com/search?q=%ED%95%9C%EC%A7%84%EC%B9%BC
 
 ### AGGRESSIVE (5)
-
-**CJ대한통운** (000120.KS)
-
-- News (7d): **18** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.22)**
-- Returns: 5d **1.3%**, 20d **-6.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=CJ%EB%8C%80%ED%95%9C%ED%86%B5%EC%9A%B4
 
 **DL** (DLTH)
 
@@ -156,6 +149,13 @@
 - Returns: 5d **-7.2%**, 20d **-14.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%AF%B8%EC%8A%A4%ED%86%A0%ED%99%80%EB%94%A9%EC%8A%A4
+
+**호텔신라** (008770.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **4.1%**, 20d **-7.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%98%B8%ED%85%94%EC%8B%A0%EB%9D%BC
 
 **효성티앤씨** (298020.KS)
 
