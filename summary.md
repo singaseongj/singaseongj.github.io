@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-03-20T22:00:42+09:00 (KST)**
+- Generated: **2026-03-21T03:49:07+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -132,7 +132,7 @@
 **DL** (DLTH)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **45.4%**, 20d **29.8%**; volatility (20d): **unknown**
+- Returns: 5d **38.7%**, 20d **36.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=DL
 
@@ -207,19 +207,19 @@
 
 ### AGGRESSIVE (5)
 
+**Alnylam Pharmaceuticals** (ALNY)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Alnylam%20Pharmaceuticals
+
 **Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
-
-**Ferrovial** (FER)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.5%**, 20d **-12.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Ferrovial
 
 **MicroStrategy** (MSTR)
 
@@ -281,7 +281,7 @@
 **Visa Inc.** (V)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.4%**, 20d **-6.6%**; volatility (20d): **unknown**
+- Returns: 5d **-2.9%**, 20d **-1.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Visa%20Inc.
@@ -299,7 +299,7 @@
 **Principal Financial Group** (PFG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.1%**, 20d **-10.3%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **-8.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Principal%20Financial%20Group
@@ -307,7 +307,7 @@
 **Textron** (TXT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **-12.0%**; volatility (20d): **unknown**
+- Returns: 5d **-3.8%**, 20d **-10.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Textron
