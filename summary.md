@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-03-23T22:07:09+09:00 (KST)**
+- Generated: **2026-03-24T03:56:53+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -135,23 +135,23 @@
 **DL** (DLTH)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **40.6%**, 20d **38.0%**; volatility (20d): **unknown**
+- Returns: 5d **45.1%**, 20d **37.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=DL
 
-**DN오토모티브** (007340.KS)
+**LIG넥스원** (079550.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **29.2%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.40)**
+- Returns: 5d **-3.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=DN%EC%98%A4%ED%86%A0%EB%AA%A8%ED%8B%B0%EB%B8%8C
+- News search: https://www.google.com/search?q=LIG%EB%84%A5%EC%8A%A4%EC%9B%90
 
-**제일기획** (030000.KS)
+**하나금융지주** (086790.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **-0.4%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.5%**, 20d **-17.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%A0%9C%EC%9D%BC%EA%B8%B0%ED%9A%8D
+- News search: https://www.google.com/search?q=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
 
 **한샘** (009240.KS)
 
@@ -227,7 +227,7 @@
 **Ferrovial** (FER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.7%**, 20d **-15.0%**; volatility (20d): **unknown**
+- Returns: 5d **-2.9%**, 20d **-13.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Ferrovial
 
@@ -252,7 +252,7 @@
 **Alphabet Inc.** (GOOGL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.5%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **-2.5%**, 20d **-2.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Communication Services**
 - News search: https://www.google.com/search?q=Alphabet%20Inc.
@@ -302,7 +302,7 @@
 **Packaging Corporation of America** (PKG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.7%**, 20d **-10.1%**; volatility (20d): **unknown**
+- Returns: 5d **-2.1%**, 20d **-7.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Packaging%20Corporation%20of%20America
@@ -310,7 +310,7 @@
 **Principal Financial Group** (PFG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.6%**, 20d **-8.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.0%**, 20d **-8.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Principal%20Financial%20Group
