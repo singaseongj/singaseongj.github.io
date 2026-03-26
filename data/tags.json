@@ -1,439 +1,1085 @@
 {
-  "generatedAt": "2026-03-26T13:13:54.393Z",
-  "timezone": "Asia/Seoul",
   "date": "2026-03-26",
   "window": "12_hours",
   "total_phrases": 30,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "갤럭시코퍼레이션 NYSE 부회장",
-      "term_ko": "갤럭시코퍼레이션 NYSE 부회장"
-    },
-    {
-      "term": "나스닥 이어 뉴욕증권거래소NYSE",
-      "term_ko": "나스닥 이어 뉴욕증권거래소NYSE"
-    },
-    {
-      "term": "미래에셋증권 두번째 IMA",
-      "term_ko": "미래에셋증권 두번째 IMA"
-    },
-    {
-      "term": "재경부 4월 국고채",
-      "term_ko": "재경부 4월 국고채"
-    },
-    {
-      "term": "반영해 전월比 1조",
-      "term_ko": "반영해 전월比 1조"
-    },
-    {
-      "term": "정부 4월 국고채",
-      "term_ko": "정부 4월 국고채"
-    },
-    {
-      "term": "맞아 미국 상장",
-      "term_ko": "맞아 미국 상장"
-    },
-    {
-      "term": "부회장도 갤럭시코퍼레이션 본사",
-      "term_ko": "부회장도 갤럭시코퍼레이션 본사"
-    },
-    {
-      "term": "자영업자 줄고 빚",
-      "term_ko": "자영업자 줄고 빚"
-    },
-    {
-      "term": "상품도 이틀만 조기완판",
-      "term_ko": "상품도 이틀만 조기완판"
-    },
-    {
-      "term": "거래소 기관 반도체",
-      "term_ko": "거래소 기관 반도체"
-    },
-    {
-      "term": "팔고 방산 금융",
-      "term_ko": "팔고 방산 금융"
-    },
-    {
-      "term": "샀다 수급 대전환",
-      "term_ko": "샀다 수급 대전환"
-    },
-    {
-      "term": "한은 중동 리스크",
-      "term_ko": "한은 중동 리스크"
-    },
-    {
-      "term": "물가 성장 동시",
-      "term_ko": "물가 성장 동시"
-    },
-    {
-      "term": "위협 스태그플레이션 위험",
-      "term_ko": "위협 스태그플레이션 위험"
-    },
-    {
-      "term": "Kospi Opens 3%",
-      "term_ko": "Kospi Opens 3%"
-    },
-    {
-      "term": "경쟁입찰 18조",
-      "term_ko": "경쟁입찰 18조"
-    },
-    {
-      "term": "Pharma Reports 55%",
-      "term_ko": "Pharma Reports 55%"
-    },
-    {
-      "term": "49.2m Net Loss",
-      "term_ko": "49.2m Net Loss"
-    },
-    {
-      "term": "관리 첩첩산중",
-      "term_ko": "관리 첩첩산중"
-    },
-    {
-      "term": "Iran Reviews U.s",
-      "term_ko": "Iran Reviews U.s"
-    },
-    {
-      "term": "Acquire Olaplex at",
-      "term_ko": "Acquire Olaplex at"
-    },
-    {
-      "term": "Middle East Tensions",
-      "term_ko": "Middle East Tensions"
-    },
-    {
-      "term": "Revenue Drop",
-      "term_ko": "Revenue Drop"
-    },
-    {
-      "term": "Futures Steady",
-      "term_ko": "Futures Steady"
-    },
-    {
-      "term": "Ceasefire Proposal",
-      "term_ko": "Ceasefire Proposal"
-    },
-    {
-      "term": "Advanced Talks",
-      "term_ko": "Advanced Talks"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "Ai Chip Demand Surge"
-    },
-    {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "Kospi Rebounds on Foreign Buying"
-    }
-  ],
   "discovered_keywords": [
     {
+      "term": "폴리뉴스 상생과통일포럼 제26차",
+      "term_ko": "폴리뉴스 상생과통일포럼 제26차",
+      "significance_score": 672,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "폴리뉴스 상생과통일포럼 제26차",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] '3대 금융 대전환' 이억원...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726664"
+            },
+            {
+              "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] 이억원 금융위원장 \"금융...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726642"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%B4%EB%A6%AC%EB%89%B4%EC%8A%A4%20%EC%83%81%EC%83%9D%EA%B3%BC%ED%86%B5%EC%9D%BC%ED%8F%AC%EB%9F%BC%20%EC%A0%9C26%EC%B0%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%B4%EB%A6%AC%EB%89%B4%EC%8A%A4%20%EC%83%81%EC%83%9D%EA%B3%BC%ED%86%B5%EC%9D%BC%ED%8F%AC%EB%9F%BC%20%EC%A0%9C26%EC%B0%A8"
+      },
+      "top_headlines": [
+        {
+          "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] '3대 금융 대전환' 이억원...",
+          "summary": "",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726664",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] 이억원 금융위원장 \"금융...",
+          "summary": "",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726642",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "갤럭시코퍼레이션 NYSE 부회장",
-      "term_ko": "갤럭시코퍼레이션 NYSE 부회장"
+      "term_ko": "갤럭시코퍼레이션 NYSE 부회장",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "갤럭시코퍼레이션 NYSE 부회장",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, NYSE 부회장 맞아 미국 상장 논의",
+              "link": "https://n.news.naver.com/mnews/article/025/0003511842?sid=105"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%20NYSE%20%EB%B6%80%ED%9A%8C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%20NYSE%20%EB%B6%80%ED%9A%8C%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, NYSE 부회장 맞아 미국 상장 논의",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/025/0003511842?sid=105",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "나스닥 이어 뉴욕증권거래소NYSE",
-      "term_ko": "나스닥 이어 뉴욕증권거래소NYSE"
+      "term_ko": "나스닥 이어 뉴욕증권거래소NYSE",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "나스닥 이어 뉴욕증권거래소NYSE",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "나스닥 이어 뉴욕증권거래소(NYSE) 부회장도 갤럭시코퍼레이션 본사 방...",
+              "link": "https://n.news.naver.com/mnews/article/020/0003707244?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%9D%B4%EC%96%B4%20%EB%89%B4%EC%9A%95%EC%A6%9D%EA%B6%8C%EA%B1%B0%EB%9E%98%EC%86%8CNYSE",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%9D%B4%EC%96%B4%20%EB%89%B4%EC%9A%95%EC%A6%9D%EA%B6%8C%EA%B1%B0%EB%9E%98%EC%86%8CNYSE"
+      },
+      "top_headlines": [
+        {
+          "title": "나스닥 이어 뉴욕증권거래소(NYSE) 부회장도 갤럭시코퍼레이션 본사 방...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003707244?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "미래에셋증권 두번째 IMA",
-      "term_ko": "미래에셋증권 두번째 IMA"
+      "term": "포럼 3대 금융",
+      "term_ko": "포럼 3대 금융",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "포럼 3대 금융",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] '3대 금융 대전환' 이억원...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726664"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AC%EB%9F%BC%203%EB%8C%80%20%EA%B8%88%EC%9C%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AC%EB%9F%BC%203%EB%8C%80%20%EA%B8%88%EC%9C%B5"
+      },
+      "top_headlines": [
+        {
+          "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] '3대 금융 대전환' 이억원...",
+          "summary": "",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726664",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "재경부 4월 국고채",
-      "term_ko": "재경부 4월 국고채"
+      "term": "휘발유 리터당 1934원",
+      "term_ko": "휘발유 리터당 1934원",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "휘발유 리터당 1934원",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[중동사태 한달] 휘발유 리터당 1934원…총력전 나선 정부",
+              "link": "https://n.news.naver.com/mnews/article/030/0003411877?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9C%98%EB%B0%9C%EC%9C%A0%20%EB%A6%AC%ED%84%B0%EB%8B%B9%201934%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9C%98%EB%B0%9C%EC%9C%A0%20%EB%A6%AC%ED%84%B0%EB%8B%B9%201934%EC%9B%90"
+      },
+      "top_headlines": [
+        {
+          "title": "[중동사태 한달] 휘발유 리터당 1934원…총력전 나선 정부",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/030/0003411877?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "반영해 전월比 1조",
-      "term_ko": "반영해 전월比 1조"
-    },
-    {
-      "term": "정부 4월 국고채",
-      "term_ko": "정부 4월 국고채"
+      "term": "보금자리론 금리 0.30%p",
+      "term_ko": "보금자리론 금리 0.30%p",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "보금자리론 금리 0.30%p",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "주금공, 내달부터 보금자리론 금리 0.30%p 인상",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=543078"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%20%EA%B8%88%EB%A6%AC%200.30%25p",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0%20%EA%B8%88%EB%A6%AC%200.30%25p"
+      },
+      "top_headlines": [
+        {
+          "title": "주금공, 내달부터 보금자리론 금리 0.30%p 인상",
+          "summary": "",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=543078",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "맞아 미국 상장",
-      "term_ko": "맞아 미국 상장"
+      "term_ko": "맞아 미국 상장",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "맞아 미국 상장",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, NYSE 부회장 맞아 미국 상장 논의",
+              "link": "https://n.news.naver.com/mnews/article/025/0003511842?sid=105"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%9E%EC%95%84%20%EB%AF%B8%EA%B5%AD%20%EC%83%81%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%9E%EC%95%84%20%EB%AF%B8%EA%B5%AD%20%EC%83%81%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, NYSE 부회장 맞아 미국 상장 논의",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/025/0003511842?sid=105",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "부회장도 갤럭시코퍼레이션 본사",
-      "term_ko": "부회장도 갤럭시코퍼레이션 본사"
+      "term_ko": "부회장도 갤럭시코퍼레이션 본사",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "부회장도 갤럭시코퍼레이션 본사",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "나스닥 이어 뉴욕증권거래소(NYSE) 부회장도 갤럭시코퍼레이션 본사 방...",
+              "link": "https://n.news.naver.com/mnews/article/020/0003707244?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%ED%9A%8C%EC%9E%A5%EB%8F%84%20%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%20%EB%B3%B8%EC%82%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%ED%9A%8C%EC%9E%A5%EB%8F%84%20%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%20%EB%B3%B8%EC%82%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "나스닥 이어 뉴욕증권거래소(NYSE) 부회장도 갤럭시코퍼레이션 본사 방...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003707244?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "자영업자 줄고 빚",
-      "term_ko": "자영업자 줄고 빚"
+      "term": "총력전 나선 정부",
+      "term_ko": "총력전 나선 정부",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "총력전 나선 정부",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[중동사태 한달] 휘발유 리터당 1934원…총력전 나선 정부",
+              "link": "https://n.news.naver.com/mnews/article/030/0003411877?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B4%9D%EB%A0%A5%EC%A0%84%20%EB%82%98%EC%84%A0%20%EC%A0%95%EB%B6%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B4%9D%EB%A0%A5%EC%A0%84%20%EB%82%98%EC%84%A0%20%EC%A0%95%EB%B6%80"
+      },
+      "top_headlines": [
+        {
+          "title": "[중동사태 한달] 휘발유 리터당 1934원…총력전 나선 정부",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/030/0003411877?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "상품도 이틀만 조기완판",
-      "term_ko": "상품도 이틀만 조기완판"
+      "term": "상승세 꺾인 금값",
+      "term_ko": "상승세 꺾인 금값",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "상승세 꺾인 금값",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "상승세 꺾인 금값",
+              "link": "http://www.knnews.co.kr/news/articleView.php?idxno=1485145"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%EC%84%B8%20%EA%BA%BE%EC%9D%B8%20%EA%B8%88%EA%B0%92",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%EC%84%B8%20%EA%BA%BE%EC%9D%B8%20%EA%B8%88%EA%B0%92"
+      },
+      "top_headlines": [
+        {
+          "title": "상승세 꺾인 금값",
+          "summary": "",
+          "link": "http://www.knnews.co.kr/news/articleView.php?idxno=1485145",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "거래소 기관 반도체",
-      "term_ko": "거래소 기관 반도체"
+      "term": "포럼 이억원 금융위원장",
+      "term_ko": "포럼 이억원 금융위원장",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "포럼 이억원 금융위원장",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] 이억원 금융위원장 \"금융...",
+              "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726642"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AC%EB%9F%BC%20%EC%9D%B4%EC%96%B5%EC%9B%90%20%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AC%EB%9F%BC%20%EC%9D%B4%EC%96%B5%EC%9B%90%20%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "[2026 폴리뉴스·상생과통일포럼 제26차 포럼] 이억원 금융위원장 \"금융...",
+          "summary": "",
+          "link": "https://www.polinews.co.kr/news/articleView.html?idxno=726642",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "팔고 방산 금융",
-      "term_ko": "팔고 방산 금융"
-    },
-    {
-      "term": "샀다 수급 대전환",
-      "term_ko": "샀다 수급 대전환"
-    },
-    {
-      "term": "한은 중동 리스크",
-      "term_ko": "한은 중동 리스크"
-    },
-    {
-      "term": "물가 성장 동시",
-      "term_ko": "물가 성장 동시"
-    },
-    {
-      "term": "위협 스태그플레이션 위험",
-      "term_ko": "위협 스태그플레이션 위험"
-    },
-    {
-      "term": "Kospi Opens 3%",
-      "term_ko": "Kospi Opens 3%"
-    },
-    {
-      "term": "경쟁입찰 18조",
-      "term_ko": "경쟁입찰 18조"
+      "term": "KOSPI Opens 3%",
+      "term_ko": "",
+      "significance_score": 308,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI Opens 3%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KOSPI Opens 3% Lower Amid Middle East Tensions",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=266187"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Opens%203%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Opens%203%25"
+      },
+      "top_headlines": [
+        {
+          "title": "KOSPI Opens 3% Lower Amid Middle East Tensions",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=266187",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Pharma Reports 55%",
-      "term_ko": "Pharma Reports 55%"
+      "term_ko": "",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Pharma Reports 55%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Innate Pharma Reports 55% Revenue Drop and €49.2M Net Loss for 2025",
+              "link": "https://www.econotimes.com/Innate-Pharma-Reports-55-Revenue-Drop-and-492M-Net-Loss-for-2025-1737360"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Pharma%20Reports%2055%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Pharma%20Reports%2055%25"
+      },
+      "top_headlines": [
+        {
+          "title": "Innate Pharma Reports 55% Revenue Drop and €49.2M Net Loss for 2025",
+          "summary": "",
+          "link": "https://www.econotimes.com/Innate-Pharma-Reports-55-Revenue-Drop-and-492M-Net-Loss-for-2025-1737360",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "49.2m Net Loss",
-      "term_ko": "49.2m Net Loss"
+      "term": "49.2M Net Loss",
+      "term_ko": "",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "49.2M Net Loss",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Innate Pharma Reports 55% Revenue Drop and €49.2M Net Loss for 2025",
+              "link": "https://www.econotimes.com/Innate-Pharma-Reports-55-Revenue-Drop-and-492M-Net-Loss-for-2025-1737360"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=49.2M%20Net%20Loss",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=49.2M%20Net%20Loss"
+      },
+      "top_headlines": [
+        {
+          "title": "Innate Pharma Reports 55% Revenue Drop and €49.2M Net Loss for 2025",
+          "summary": "",
+          "link": "https://www.econotimes.com/Innate-Pharma-Reports-55-Revenue-Drop-and-492M-Net-Loss-for-2025-1737360",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "관리 첩첩산중",
-      "term_ko": "관리 첩첩산중"
+      "term": "중동사태 한달",
+      "term_ko": "중동사태 한달",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "중동사태 한달",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[중동사태 한달] 휘발유 리터당 1934원…총력전 나선 정부",
+              "link": "https://n.news.naver.com/mnews/article/030/0003411877?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%EC%82%AC%ED%83%9C%20%ED%95%9C%EB%8B%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%EC%82%AC%ED%83%9C%20%ED%95%9C%EB%8B%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "[중동사태 한달] 휘발유 리터당 1934원…총력전 나선 정부",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/030/0003411877?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Iran Reviews U.s",
-      "term_ko": "Iran Reviews U.s"
+      "term": "주금공 내달부터",
+      "term_ko": "주금공 내달부터",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주금공 내달부터",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "주금공, 내달부터 보금자리론 금리 0.30%p 인상",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=543078"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B8%88%EA%B3%B5%20%EB%82%B4%EB%8B%AC%EB%B6%80%ED%84%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B8%88%EA%B3%B5%20%EB%82%B4%EB%8B%AC%EB%B6%80%ED%84%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "주금공, 내달부터 보금자리론 금리 0.30%p 인상",
+          "summary": "",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=543078",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Acquire Olaplex at",
-      "term_ko": "Acquire Olaplex at"
+      "term": "Iran Reviews U.S",
+      "term_ko": "",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Iran Reviews U.S",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "U.S. Stock Futures Steady as Iran Reviews U.S. Ceasefire Proposal",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Iran-Reviews-US-Ceasefire-Proposal-1737332"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Reviews%20U.S",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Reviews%20U.S"
+      },
+      "top_headlines": [
+        {
+          "title": "U.S. Stock Futures Steady as Iran Reviews U.S. Ceasefire Proposal",
+          "summary": "",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Iran-Reviews-US-Ceasefire-Proposal-1737332",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Acquire Olaplex At",
+      "term_ko": "",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Acquire Olaplex At",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Henkel in Advanced Talks to Acquire Olaplex at $2 Per Share",
+              "link": "https://www.econotimes.com/Henkel-in-Advanced-Talks-to-Acquire-Olaplex-at-2-Per-Share-1737328"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Acquire%20Olaplex%20At",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Acquire%20Olaplex%20At"
+      },
+      "top_headlines": [
+        {
+          "title": "Henkel in Advanced Talks to Acquire Olaplex at $2 Per Share",
+          "summary": "",
+          "link": "https://www.econotimes.com/Henkel-in-Advanced-Talks-to-Acquire-Olaplex-at-2-Per-Share-1737328",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Middle East Tensions",
-      "term_ko": "Middle East Tensions"
+      "term_ko": "",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Middle East Tensions",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KOSPI Opens 3% Lower Amid Middle East Tensions",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=266187"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Middle%20East%20Tensions",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Middle%20East%20Tensions"
+      },
+      "top_headlines": [
+        {
+          "title": "KOSPI Opens 3% Lower Amid Middle East Tensions",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=266187",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Revenue Drop",
-      "term_ko": "Revenue Drop"
+      "term_ko": "",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Revenue Drop",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Innate Pharma Reports 55% Revenue Drop and €49.2M Net Loss for 2025",
+              "link": "https://www.econotimes.com/Innate-Pharma-Reports-55-Revenue-Drop-and-492M-Net-Loss-for-2025-1737360"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Revenue%20Drop",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Revenue%20Drop"
+      },
+      "top_headlines": [
+        {
+          "title": "Innate Pharma Reports 55% Revenue Drop and €49.2M Net Loss for 2025",
+          "summary": "",
+          "link": "https://www.econotimes.com/Innate-Pharma-Reports-55-Revenue-Drop-and-492M-Net-Loss-for-2025-1737360",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Futures Steady",
-      "term_ko": "Futures Steady"
+      "term_ko": "",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Futures Steady",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "U.S. Stock Futures Steady as Iran Reviews U.S. Ceasefire Proposal",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Iran-Reviews-US-Ceasefire-Proposal-1737332"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Steady",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Steady"
+      },
+      "top_headlines": [
+        {
+          "title": "U.S. Stock Futures Steady as Iran Reviews U.S. Ceasefire Proposal",
+          "summary": "",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Iran-Reviews-US-Ceasefire-Proposal-1737332",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Ceasefire Proposal",
-      "term_ko": "Ceasefire Proposal"
+      "term_ko": "",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Ceasefire Proposal",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "U.S. Stock Futures Steady as Iran Reviews U.S. Ceasefire Proposal",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Iran-Reviews-US-Ceasefire-Proposal-1737332"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Ceasefire%20Proposal",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Ceasefire%20Proposal"
+      },
+      "top_headlines": [
+        {
+          "title": "U.S. Stock Futures Steady as Iran Reviews U.S. Ceasefire Proposal",
+          "summary": "",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Iran-Reviews-US-Ceasefire-Proposal-1737332",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Advanced Talks",
-      "term_ko": "Advanced Talks"
+      "term_ko": "",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Advanced Talks",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Henkel in Advanced Talks to Acquire Olaplex at $2 Per Share",
+              "link": "https://www.econotimes.com/Henkel-in-Advanced-Talks-to-Acquire-Olaplex-at-2-Per-Share-1737328"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Advanced%20Talks",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Advanced%20Talks"
+      },
+      "top_headlines": [
+        {
+          "title": "Henkel in Advanced Talks to Acquire Olaplex at $2 Per Share",
+          "summary": "",
+          "link": "https://www.econotimes.com/Henkel-in-Advanced-Talks-to-Acquire-Olaplex-at-2-Per-Share-1737328",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "Ai Chip Demand Surge"
+      "term": "AI chip demand surge",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "Kospi Rebounds on Foreign Buying"
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 인하 기대감",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "원달러 환율 급등",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "미국 정부 셧다운 위기",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-26T22:16:16+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "갤럭시코퍼레이션 NYSE 부회장": {
-      "en": "갤럭시코퍼레이션 NYSE 부회장",
-      "ko": "갤럭시코퍼레이션 NYSE 부회장",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2026-03-26T13:19:07.927Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2026-03-26T22:16:16+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 0,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 0,
+      "too_generic": 0
     },
-    "나스닥 이어 뉴욕증권거래소NYSE": {
-      "en": "나스닥 이어 뉴욕증권거래소NYSE",
-      "ko": "나스닥 이어 뉴욕증권거래소NYSE",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "미래에셋증권 두번째 IMA": {
-      "en": "미래에셋증권 두번째 IMA",
-      "ko": "미래에셋증권 두번째 IMA",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "재경부 4월 국고채": {
-      "en": "재경부 4월 국고채",
-      "ko": "재경부 4월 국고채",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "반영해 전월比 1조": {
-      "en": "반영해 전월比 1조",
-      "ko": "반영해 전월比 1조",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "정부 4월 국고채": {
-      "en": "정부 4월 국고채",
-      "ko": "정부 4월 국고채",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "맞아 미국 상장": {
-      "en": "맞아 미국 상장",
-      "ko": "맞아 미국 상장",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "부회장도 갤럭시코퍼레이션 본사": {
-      "en": "부회장도 갤럭시코퍼레이션 본사",
-      "ko": "부회장도 갤럭시코퍼레이션 본사",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "자영업자 줄고 빚": {
-      "en": "자영업자 줄고 빚",
-      "ko": "자영업자 줄고 빚",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "상품도 이틀만 조기완판": {
-      "en": "상품도 이틀만 조기완판",
-      "ko": "상품도 이틀만 조기완판",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "거래소 기관 반도체": {
-      "en": "거래소 기관 반도체",
-      "ko": "거래소 기관 반도체",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "팔고 방산 금융": {
-      "en": "팔고 방산 금융",
-      "ko": "팔고 방산 금융",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "샀다 수급 대전환": {
-      "en": "샀다 수급 대전환",
-      "ko": "샀다 수급 대전환",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "한은 중동 리스크": {
-      "en": "한은 중동 리스크",
-      "ko": "한은 중동 리스크",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "물가 성장 동시": {
-      "en": "물가 성장 동시",
-      "ko": "물가 성장 동시",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "위협 스태그플레이션 위험": {
-      "en": "위협 스태그플레이션 위험",
-      "ko": "위협 스태그플레이션 위험",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Kospi Opens 3%": {
-      "en": "Kospi Opens 3%",
-      "ko": "Kospi Opens 3%",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "경쟁입찰 18조": {
-      "en": "경쟁입찰 18조",
-      "ko": "경쟁입찰 18조",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Pharma Reports 55%": {
-      "en": "Pharma Reports 55%",
-      "ko": "Pharma Reports 55%",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "49.2m Net Loss": {
-      "en": "49.2m Net Loss",
-      "ko": "49.2m Net Loss",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "관리 첩첩산중": {
-      "en": "관리 첩첩산중",
-      "ko": "관리 첩첩산중",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Iran Reviews U.s": {
-      "en": "Iran Reviews U.s",
-      "ko": "Iran Reviews U.s",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Acquire Olaplex at": {
-      "en": "Acquire Olaplex at",
-      "ko": "Acquire Olaplex at",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Middle East Tensions": {
-      "en": "Middle East Tensions",
-      "ko": "Middle East Tensions",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Revenue Drop": {
-      "en": "Revenue Drop",
-      "ko": "Revenue Drop",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Futures Steady": {
-      "en": "Futures Steady",
-      "ko": "Futures Steady",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Ceasefire Proposal": {
-      "en": "Ceasefire Proposal",
-      "ko": "Ceasefire Proposal",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Advanced Talks": {
-      "en": "Advanced Talks",
-      "ko": "Advanced Talks",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Ai Chip Demand Surge": {
-      "en": "Ai Chip Demand Surge",
-      "ko": "Ai Chip Demand Surge",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
-    },
-    "Kospi Rebounds on Foreign Buying": {
-      "en": "Kospi Rebounds on Foreign Buying",
-      "ko": "Kospi Rebounds on Foreign Buying",
-      "translator": "pre-collected",
-      "cachedAt": "2026-03-26T13:13:54.393Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2026-03-26T22:16:16+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2026-03-26T22:16:16+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
+      }
     }
   }
 }
