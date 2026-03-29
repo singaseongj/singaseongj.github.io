@@ -1,1134 +1,439 @@
 {
+  "generatedAt": "2026-03-29T18:42:25.723Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-03-29",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "XRP 비트고 816억",
-      "term_ko": "XRP 비트고 816억",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "XRP 비트고 816억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=440783"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=XRP%20%EB%B9%84%ED%8A%B8%EA%B3%A0%20816%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=XRP%20%EB%B9%84%ED%8A%B8%EA%B3%A0%20816%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=440783",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "XRP 비트고 816억"
     },
     {
       "term": "6.3% 급락 AI",
-      "term_ko": "6.3% 급락 AI",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "6.3% 급락 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/344076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6.3%25%20%EA%B8%89%EB%9D%BD%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6.3%25%20%EA%B8%89%EB%9D%BD%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/344076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "6.3% 급락 AI"
     },
     {
       "term": "OECD 한국 성장률",
-      "term_ko": "OECD 한국 성장률",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "OECD 한국 성장률",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-27",
-              "timestamp": 1774537200000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-              "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=OECD%20%ED%95%9C%EA%B5%AD%20%EC%84%B1%EC%9E%A5%EB%A5%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=OECD%20%ED%95%9C%EA%B5%AD%20%EC%84%B1%EC%9E%A5%EB%A5%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.014289,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774537200000
-      }
+      "term_ko": "OECD 한국 성장률"
     },
     {
       "term": "오늘의 증권소식3월 27일",
-      "term_ko": "오늘의 증권소식3월 27일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증권소식3월 27일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 증권소식(3월 27일)",
-              "link": "https://www.radiokorea.com/news/article.php?uid=492370"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D3%EC%9B%94%2027%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D3%EC%9B%94%2027%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증권소식(3월 27일)",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=492370",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 증권소식3월 27일"
     },
     {
       "term": "주담대 고정금리 7%선",
-      "term_ko": "주담대 고정금리 7%선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 고정금리 7%선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
-              "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "주담대 고정금리 7%선"
     },
     {
       "term": "전망치 2.1%→1.7%로 낮춰",
-      "term_ko": "전망치 2.1%→1.7%로 낮춰",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전망치 2.1%→1.7%로 낮춰",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-              "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A7%9D%EC%B9%98%202.1%25%E2%86%921.7%25%EB%A1%9C%20%EB%82%AE%EC%B6%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A7%9D%EC%B9%98%202.1%25%E2%86%921.7%25%EB%A1%9C%20%EB%82%AE%EC%B6%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전망치 2.1%→1.7%로 낮춰"
     },
     {
       "term": "달러 포트폴리오 핵심",
-      "term_ko": "달러 포트폴리오 핵심",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 포트폴리오 핵심",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=440783"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%ED%95%B5%EC%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%ED%95%B5%EC%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=440783",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달러 포트폴리오 핵심"
     },
     {
       "term": "잡지 마라 ㅡ",
-      "term_ko": "잡지 마라 ㅡ",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "잡지 마라 ㅡ",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[토큰명언] \"떨어지는 칼날을 잡지 마라\" ㅡ Day 12",
-              "link": "https://www.tokenpost.kr/news/insights/344249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A1%EC%A7%80%20%EB%A7%88%EB%9D%BC%20%E3%85%A1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A1%EC%A7%80%20%EB%A7%88%EB%9D%BC%20%E3%85%A1"
-      },
-      "top_headlines": [
-        {
-          "title": "[토큰명언] \"떨어지는 칼날을 잡지 마라\" ㅡ Day 12",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/344249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "잡지 마라 ㅡ"
     },
     {
       "term": "클라우드 전환 속",
-      "term_ko": "클라우드 전환 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "클라우드 전환 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/344076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20%EC%A0%84%ED%99%98%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%20%EC%A0%84%ED%99%98%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/344076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "클라우드 전환 속"
     },
     {
       "term": "실적 부진 우려",
-      "term_ko": "실적 부진 우려",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "실적 부진 우려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/344076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%A0%81%20%EB%B6%80%EC%A7%84%20%EC%9A%B0%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%A0%81%20%EB%B6%80%EC%A7%84%20%EC%9A%B0%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/344076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "실적 부진 우려"
     },
     {
       "term": "영끌족 자영업자 애탄다",
-      "term_ko": "영끌족 자영업자 애탄다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "영끌족 자영업자 애탄다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
-              "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EB%81%8C%EC%A1%B1%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%95%A0%ED%83%84%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EB%81%8C%EC%A1%B1%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%95%A0%ED%83%84%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "영끌족 자영업자 애탄다"
     },
     {
       "term": "내달 세계국채지수 편입",
-      "term_ko": "내달 세계국채지수 편입",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "내달 세계국채지수 편입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
-              "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%8B%AC%20%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%8B%AC%20%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "내달 세계국채지수 편입"
     },
     {
       "term": "환율 안정 기대",
-      "term_ko": "환율 안정 기대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 안정 기대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
-              "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%95%88%EC%A0%95%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%95%88%EC%A0%95%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "환율 안정 기대"
     },
     {
       "term": "말랐다 부동산 중개업소",
-      "term_ko": "말랐다 부동산 중개업소",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "말랐다 부동산 중개업소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“전월세 매물 씨가 말랐다”… 부동산 중개업소 개점휴업",
-              "link": "https://n.news.naver.com/mnews/article/082/0001373300?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%90%EB%9E%90%EB%8B%A4%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%A4%91%EA%B0%9C%EC%97%85%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%90%EB%9E%90%EB%8B%A4%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%A4%91%EA%B0%9C%EC%97%85%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "“전월세 매물 씨가 말랐다”… 부동산 중개업소 개점휴업",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001373300?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "말랐다 부동산 중개업소"
     },
     {
       "term": "집값 급등기에 영끌",
-      "term_ko": "집값 급등기에 영끌",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집값 급등기에 영끌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
-              "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%EA%B8%89%EB%93%B1%EA%B8%B0%EC%97%90%20%EC%98%81%EB%81%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%EA%B8%89%EB%93%B1%EA%B8%B0%EC%97%90%20%EC%98%81%EB%81%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "집값 급등기에 영끌"
     },
     {
       "term": "주담대 금리 두배",
-      "term_ko": "주담대 금리 두배",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 금리 두배",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
-              "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%20%EB%91%90%EB%B0%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%20%EB%91%90%EB%B0%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "주담대 금리 두배"
     },
     {
       "term": "고유가 장기화 우려",
-      "term_ko": "고유가 장기화 우려",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고유가 장기화 우려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-              "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EC%9E%A5%EA%B8%B0%ED%99%94%20%EC%9A%B0%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EC%9E%A5%EA%B8%B0%ED%99%94%20%EC%9A%B0%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "고유가 장기화 우려"
     },
     {
       "term": "대폭풍 금융위기의 징조",
-      "term_ko": "대폭풍 금융위기의 징조",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대폭풍 금융위기의 징조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[농정춘추] 조용히 다가오는 대폭풍, 금융위기의 징조",
-              "link": "http://www.ikpnews.net/news/articleView.html?idxno=69975"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%ED%8F%AD%ED%92%8D%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%EC%9D%98%20%EC%A7%95%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%ED%8F%AD%ED%92%8D%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%EC%9D%98%20%EC%A7%95%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[농정춘추] 조용히 다가오는 대폭풍, 금융위기의 징조",
-          "summary": "",
-          "link": "http://www.ikpnews.net/news/articleView.html?idxno=69975",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대폭풍 금융위기의 징조"
     },
     {
-      "term": "NASDAQ Tech Selloff",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "NASDAQ Tech Selloff",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
-              "link": "https://www.econotimes.com/NASDAQ-Tech-Selloff-Correction-or-Collapse-What-Analysts-Are-Saying-1737538"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NASDAQ%20Tech%20Selloff",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NASDAQ%20Tech%20Selloff"
-      },
-      "top_headlines": [
-        {
-          "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
-          "summary": "",
-          "link": "https://www.econotimes.com/NASDAQ-Tech-Selloff-Correction-or-Collapse-What-Analysts-Are-Saying-1737538",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nasdaq Tech Selloff",
+      "term_ko": "Nasdaq Tech Selloff"
     },
     {
       "term": "자산으로 부상",
-      "term_ko": "자산으로 부상",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자산으로 부상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
-              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=440783"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%82%B0%EC%9C%BC%EB%A1%9C%20%EB%B6%80%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%82%B0%EC%9C%BC%EB%A1%9C%20%EB%B6%80%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
-          "summary": "",
-          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=440783",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자산으로 부상"
     },
     {
       "term": "Collapse What Analysts",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Collapse What Analysts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
-              "link": "https://www.econotimes.com/NASDAQ-Tech-Selloff-Correction-or-Collapse-What-Analysts-Are-Saying-1737538"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Collapse%20What%20Analysts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Collapse%20What%20Analysts"
-      },
-      "top_headlines": [
-        {
-          "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
-          "summary": "",
-          "link": "https://www.econotimes.com/NASDAQ-Tech-Selloff-Correction-or-Collapse-What-Analysts-Are-Saying-1737538",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Collapse What Analysts"
     },
     {
       "term": "Chief Signals Rotating",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Chief Signals Rotating",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Finance chief signals rotating ban for private cars if oil hits $120",
-              "link": "https://www.koreatimes.co.kr/path/A2026032914100003559"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Chief%20Signals%20Rotating",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Chief%20Signals%20Rotating"
-      },
-      "top_headlines": [
-        {
-          "title": "Finance chief signals rotating ban for private cars if oil hits $120",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026032914100003559",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Chief Signals Rotating"
     },
     {
       "term": "Private Cars If",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Private Cars If",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Finance chief signals rotating ban for private cars if oil hits $120",
-              "link": "https://www.koreatimes.co.kr/path/A2026032914100003559"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Private%20Cars%20If",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Private%20Cars%20If"
-      },
-      "top_headlines": [
-        {
-          "title": "Finance chief signals rotating ban for private cars if oil hits $120",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026032914100003559",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Private Cars If"
     },
     {
       "term": "Are Saying",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Are Saying",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
-              "link": "https://www.econotimes.com/NASDAQ-Tech-Selloff-Correction-or-Collapse-What-Analysts-Are-Saying-1737538"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Are%20Saying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Are%20Saying"
-      },
-      "top_headlines": [
-        {
-          "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
-          "summary": "",
-          "link": "https://www.econotimes.com/NASDAQ-Tech-Selloff-Correction-or-Collapse-What-Analysts-Are-Saying-1737538",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Are Saying"
     },
     {
       "term": "Oil Hits",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Oil Hits",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Finance chief signals rotating ban for private cars if oil hits $120",
-              "link": "https://www.koreatimes.co.kr/path/A2026032914100003559"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Oil%20Hits",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Oil%20Hits"
-      },
-      "top_headlines": [
-        {
-          "title": "Finance chief signals rotating ban for private cars if oil hits $120",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026032914100003559",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Oil Hits"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-03-29T12:59:28.540Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-29T21:58:24+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "XRP 비트고 816억",
+      "term_ko": "XRP 비트고 816억"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-03-29T21:58:24+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-03-29T21:58:24+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "6.3% 급락 AI",
+      "term_ko": "6.3% 급락 AI"
+    },
+    {
+      "term": "OECD 한국 성장률",
+      "term_ko": "OECD 한국 성장률"
+    },
+    {
+      "term": "오늘의 증권소식3월 27일",
+      "term_ko": "오늘의 증권소식3월 27일"
+    },
+    {
+      "term": "주담대 고정금리 7%선",
+      "term_ko": "주담대 고정금리 7%선"
+    },
+    {
+      "term": "전망치 2.1%→1.7%로 낮춰",
+      "term_ko": "전망치 2.1%→1.7%로 낮춰"
+    },
+    {
+      "term": "달러 포트폴리오 핵심",
+      "term_ko": "달러 포트폴리오 핵심"
+    },
+    {
+      "term": "잡지 마라 ㅡ",
+      "term_ko": "잡지 마라 ㅡ"
+    },
+    {
+      "term": "클라우드 전환 속",
+      "term_ko": "클라우드 전환 속"
+    },
+    {
+      "term": "실적 부진 우려",
+      "term_ko": "실적 부진 우려"
+    },
+    {
+      "term": "영끌족 자영업자 애탄다",
+      "term_ko": "영끌족 자영업자 애탄다"
+    },
+    {
+      "term": "내달 세계국채지수 편입",
+      "term_ko": "내달 세계국채지수 편입"
+    },
+    {
+      "term": "환율 안정 기대",
+      "term_ko": "환율 안정 기대"
+    },
+    {
+      "term": "말랐다 부동산 중개업소",
+      "term_ko": "말랐다 부동산 중개업소"
+    },
+    {
+      "term": "집값 급등기에 영끌",
+      "term_ko": "집값 급등기에 영끌"
+    },
+    {
+      "term": "주담대 금리 두배",
+      "term_ko": "주담대 금리 두배"
+    },
+    {
+      "term": "고유가 장기화 우려",
+      "term_ko": "고유가 장기화 우려"
+    },
+    {
+      "term": "대폭풍 금융위기의 징조",
+      "term_ko": "대폭풍 금융위기의 징조"
+    },
+    {
+      "term": "Nasdaq Tech Selloff",
+      "term_ko": "Nasdaq Tech Selloff"
+    },
+    {
+      "term": "자산으로 부상",
+      "term_ko": "자산으로 부상"
+    },
+    {
+      "term": "Collapse What Analysts",
+      "term_ko": "Collapse What Analysts"
+    },
+    {
+      "term": "Chief Signals Rotating",
+      "term_ko": "Chief Signals Rotating"
+    },
+    {
+      "term": "Private Cars If",
+      "term_ko": "Private Cars If"
+    },
+    {
+      "term": "Are Saying",
+      "term_ko": "Are Saying"
+    },
+    {
+      "term": "Oil Hits",
+      "term_ko": "Oil Hits"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "XRP 비트고 816억": {
+      "en": "XRP 비트고 816억",
+      "ko": "XRP 비트고 816억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "6.3% 급락 AI": {
+      "en": "6.3% 급락 AI",
+      "ko": "6.3% 급락 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "OECD 한국 성장률": {
+      "en": "OECD 한국 성장률",
+      "ko": "OECD 한국 성장률",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "오늘의 증권소식3월 27일": {
+      "en": "오늘의 증권소식3월 27일",
+      "ko": "오늘의 증권소식3월 27일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "주담대 고정금리 7%선": {
+      "en": "주담대 고정금리 7%선",
+      "ko": "주담대 고정금리 7%선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "전망치 2.1%→1.7%로 낮춰": {
+      "en": "전망치 2.1%→1.7%로 낮춰",
+      "ko": "전망치 2.1%→1.7%로 낮춰",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "달러 포트폴리오 핵심": {
+      "en": "달러 포트폴리오 핵심",
+      "ko": "달러 포트폴리오 핵심",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "잡지 마라 ㅡ": {
+      "en": "잡지 마라 ㅡ",
+      "ko": "잡지 마라 ㅡ",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "클라우드 전환 속": {
+      "en": "클라우드 전환 속",
+      "ko": "클라우드 전환 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "실적 부진 우려": {
+      "en": "실적 부진 우려",
+      "ko": "실적 부진 우려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "영끌족 자영업자 애탄다": {
+      "en": "영끌족 자영업자 애탄다",
+      "ko": "영끌족 자영업자 애탄다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "내달 세계국채지수 편입": {
+      "en": "내달 세계국채지수 편입",
+      "ko": "내달 세계국채지수 편입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "환율 안정 기대": {
+      "en": "환율 안정 기대",
+      "ko": "환율 안정 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "말랐다 부동산 중개업소": {
+      "en": "말랐다 부동산 중개업소",
+      "ko": "말랐다 부동산 중개업소",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "집값 급등기에 영끌": {
+      "en": "집값 급등기에 영끌",
+      "ko": "집값 급등기에 영끌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "주담대 금리 두배": {
+      "en": "주담대 금리 두배",
+      "ko": "주담대 금리 두배",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "고유가 장기화 우려": {
+      "en": "고유가 장기화 우려",
+      "ko": "고유가 장기화 우려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "대폭풍 금융위기의 징조": {
+      "en": "대폭풍 금융위기의 징조",
+      "ko": "대폭풍 금융위기의 징조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Nasdaq Tech Selloff": {
+      "en": "Nasdaq Tech Selloff",
+      "ko": "Nasdaq Tech Selloff",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "자산으로 부상": {
+      "en": "자산으로 부상",
+      "ko": "자산으로 부상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Collapse What Analysts": {
+      "en": "Collapse What Analysts",
+      "ko": "Collapse What Analysts",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Chief Signals Rotating": {
+      "en": "Chief Signals Rotating",
+      "ko": "Chief Signals Rotating",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Private Cars If": {
+      "en": "Private Cars If",
+      "ko": "Private Cars If",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Are Saying": {
+      "en": "Are Saying",
+      "ko": "Are Saying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Oil Hits": {
+      "en": "Oil Hits",
+      "ko": "Oil Hits",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-29T18:42:25.723Z"
     }
   }
 }
