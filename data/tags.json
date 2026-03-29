@@ -13,8 +13,10 @@
         "query": "XRP 비트고 816억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
@@ -48,8 +50,10 @@
         "query": "6.3% 급락 AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
@@ -74,6 +78,111 @@
       ]
     },
     {
+      "term": "ET단상 기후금융의 정체",
+      "term_ko": "ET단상 기후금융의 정체",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "ET단상 기후금융의 정체",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[ET단상] 기후금융의 정체, 이제는 '생산적 금융'으로 풀어야 한다",
+              "link": "https://n.news.naver.com/mnews/article/030/0003412305?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ET%EB%8B%A8%EC%83%81%20%EA%B8%B0%ED%9B%84%EA%B8%88%EC%9C%B5%EC%9D%98%20%EC%A0%95%EC%B2%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ET%EB%8B%A8%EC%83%81%20%EA%B8%B0%ED%9B%84%EA%B8%88%EC%9C%B5%EC%9D%98%20%EC%A0%95%EC%B2%B4"
+      },
+      "top_headlines": [
+        {
+          "title": "[ET단상] 기후금융의 정체, 이제는 '생산적 금융'으로 풀어야 한다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/030/0003412305?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "OECD 한국 성장률",
+      "term_ko": "OECD 한국 성장률",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "OECD 한국 성장률",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-03-27",
+              "timestamp": 1774537200000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "OECD, 한국 성장률, 2.1→1.7% 하향…중동발 ‘에너지 쇼크’ 직격탄",
+              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202603291525225150056"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=OECD%20%ED%95%9C%EA%B5%AD%20%EC%84%B1%EC%9E%A5%EB%A5%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=OECD%20%ED%95%9C%EA%B5%AD%20%EC%84%B1%EC%9E%A5%EB%A5%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "OECD, 한국 성장률, 2.1→1.7% 하향…중동발 ‘에너지 쇼크’ 직격탄",
+          "summary": "",
+          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202603291525225150056",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.015603,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1774537200000
+      }
+    },
+    {
       "term": "오늘의 증권소식3월 27일",
       "term_ko": "오늘의 증권소식3월 27일",
       "significance_score": 336,
@@ -83,8 +192,10 @@
         "query": "오늘의 증권소식3월 27일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "오늘의 증권소식(3월 27일)",
@@ -109,34 +220,36 @@
       ]
     },
     {
-      "term": "한달 주담대 7%",
-      "term_ko": "한달 주담대 7%",
+      "term": "어떡해 주담대 7%",
+      "term_ko": "어떡해 주담대 7%",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한달 주담대 7%",
+        "query": "어떡해 주담대 7%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "'중동 전쟁 한달' 주담대 7% 돌파…\"이제 갚을 때 됐다\"",
-              "link": "https://n.news.naver.com/mnews/article/374/0000500900?sid=101"
+              "title": "'영끌족 진짜 어떡해' 주담대 7% 돌파…중동사태 ‘불똥’",
+              "link": "https://n.news.naver.com/mnews/article/018/0006245000?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EB%8B%AC%20%EC%A3%BC%EB%8B%B4%EB%8C%80%207%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EB%8B%AC%20%EC%A3%BC%EB%8B%B4%EB%8C%80%207%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B4%EB%96%A1%ED%95%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80%207%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B4%EB%96%A1%ED%95%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80%207%25"
       },
       "top_headlines": [
         {
-          "title": "'중동 전쟁 한달' 주담대 7% 돌파…\"이제 갚을 때 됐다\"",
+          "title": "'영끌족 진짜 어떡해' 주담대 7% 돌파…중동사태 ‘불똥’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000500900?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/018/0006245000?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -144,139 +257,36 @@
       ]
     },
     {
-      "term": "주담대 고정금리 7%",
-      "term_ko": "주담대 고정금리 7%",
+      "term": "2.1→1.7% 하향 중동발",
+      "term_ko": "2.1→1.7% 하향 중동발",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주담대 고정금리 7%",
+        "query": "2.1→1.7% 하향 중동발",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "은행 주담대 고정금리 7% 돌파… 3년 5개월 만에 최고",
-              "link": "https://www.newscj.com/news/articleView.html?idxno=3389397"
+              "title": "OECD, 한국 성장률, 2.1→1.7% 하향…중동발 ‘에너지 쇼크’ 직격탄",
+              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202603291525225150056"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.1%E2%86%921.7%25%20%ED%95%98%ED%96%A5%20%EC%A4%91%EB%8F%99%EB%B0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.1%E2%86%921.7%25%20%ED%95%98%ED%96%A5%20%EC%A4%91%EB%8F%99%EB%B0%9C"
       },
       "top_headlines": [
         {
-          "title": "은행 주담대 고정금리 7% 돌파… 3년 5개월 만에 최고",
+          "title": "OECD, 한국 성장률, 2.1→1.7% 하향…중동발 ‘에너지 쇼크’ 직격탄",
           "summary": "",
-          "link": "https://www.newscj.com/news/articleView.html?idxno=3389397",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "돌파 3년 5개월",
-      "term_ko": "돌파 3년 5개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 3년 5개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "은행 주담대 고정금리 7% 돌파… 3년 5개월 만에 최고",
-              "link": "https://www.newscj.com/news/articleView.html?idxno=3389397"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%203%EB%85%84%205%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%203%EB%85%84%205%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "은행 주담대 고정금리 7% 돌파… 3년 5개월 만에 최고",
-          "summary": "",
-          "link": "https://www.newscj.com/news/articleView.html?idxno=3389397",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "자영업 대출 1092조원",
-      "term_ko": "자영업 대출 1092조원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자영업 대출 1092조원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금리 상승 직격탄…자영업 대출 1092조원·취약차주 60%",
-              "link": "http://www.segyebiz.com/newsView/20260329503977?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%98%81%EC%97%85%20%EB%8C%80%EC%B6%9C%201092%EC%A1%B0%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%98%81%EC%97%85%20%EB%8C%80%EC%B6%9C%201092%EC%A1%B0%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "금리 상승 직격탄…자영업 대출 1092조원·취약차주 60%",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260329503977?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "구윤철 7월 보유세",
-      "term_ko": "구윤철 7월 보유세",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "구윤철 7월 보유세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "구윤철 “7월 보유세 인상, 시나리오 검토 중”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004604521?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%9C%A4%EC%B2%A0%207%EC%9B%94%20%EB%B3%B4%EC%9C%A0%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%9C%A4%EC%B2%A0%207%EC%9B%94%20%EB%B3%B4%EC%9C%A0%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "구윤철 “7월 보유세 인상, 시나리오 검토 중”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004604521?sid=101",
+          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202603291525225150056",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -293,8 +303,10 @@
         "query": "달러 포트폴리오 핵심",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
@@ -328,8 +340,10 @@
         "query": "잡지 마라 ㅡ",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "[토큰명언] \"떨어지는 칼날을 잡지 마라\" ㅡ Day 12",
@@ -363,8 +377,10 @@
         "query": "클라우드 전환 속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
@@ -398,8 +414,10 @@
         "query": "실적 부진 우려",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "아이렌 주가 6.3% 급락, AI 클라우드 전환 속 실적 부진 우려",
@@ -424,34 +442,36 @@
       ]
     },
     {
-      "term": "중동발 취약 한국",
-      "term_ko": "중동발 취약 한국",
+      "term": "고금리의 역습 대출",
+      "term_ko": "고금리의 역습 대출",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "중동발 취약 한국",
+        "query": "고금리의 역습 대출",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "'중동발 취약' 한국, 성장전망 줄하향 하나",
-              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=298776"
+              "title": "[고금리의 역습] 대출·부동산·투자, '에브리싱 체인지'…빌리기에서 ...",
+              "link": "https://www.ajunews.com/view/20260329110529503"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%EB%B0%9C%20%EC%B7%A8%EC%95%BD%20%ED%95%9C%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%EB%B0%9C%20%EC%B7%A8%EC%95%BD%20%ED%95%9C%EA%B5%AD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EA%B8%88%EB%A6%AC%EC%9D%98%20%EC%97%AD%EC%8A%B5%20%EB%8C%80%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EA%B8%88%EB%A6%AC%EC%9D%98%20%EC%97%AD%EC%8A%B5%20%EB%8C%80%EC%B6%9C"
       },
       "top_headlines": [
         {
-          "title": "'중동발 취약' 한국, 성장전망 줄하향 하나",
+          "title": "[고금리의 역습] 대출·부동산·투자, '에브리싱 체인지'…빌리기에서 ...",
           "summary": "",
-          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=298776",
+          "link": "https://www.ajunews.com/view/20260329110529503",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -459,34 +479,36 @@
       ]
     },
     {
-      "term": "성장전망 줄하향 하나",
-      "term_ko": "성장전망 줄하향 하나",
+      "term": "부동산 투자 에브리싱",
+      "term_ko": "부동산 투자 에브리싱",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "성장전망 줄하향 하나",
+        "query": "부동산 투자 에브리싱",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "'중동발 취약' 한국, 성장전망 줄하향 하나",
-              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=298776"
+              "title": "[고금리의 역습] 대출·부동산·투자, '에브리싱 체인지'…빌리기에서 ...",
+              "link": "https://www.ajunews.com/view/20260329110529503"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EC%9E%A5%EC%A0%84%EB%A7%9D%20%EC%A4%84%ED%95%98%ED%96%A5%20%ED%95%98%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EC%9E%A5%EC%A0%84%EB%A7%9D%20%EC%A4%84%ED%95%98%ED%96%A5%20%ED%95%98%EB%82%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EC%97%90%EB%B8%8C%EB%A6%AC%EC%8B%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%88%AC%EC%9E%90%20%EC%97%90%EB%B8%8C%EB%A6%AC%EC%8B%B1"
       },
       "top_headlines": [
         {
-          "title": "'중동발 취약' 한국, 성장전망 줄하향 하나",
+          "title": "[고금리의 역습] 대출·부동산·투자, '에브리싱 체인지'…빌리기에서 ...",
           "summary": "",
-          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=298776",
+          "link": "https://www.ajunews.com/view/20260329110529503",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -494,34 +516,36 @@
       ]
     },
     {
-      "term": "구윤철 부동산 보유세",
-      "term_ko": "구윤철 부동산 보유세",
+      "term": "돌파 중동사태 불똥",
+      "term_ko": "돌파 중동사태 불똥",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "구윤철 부동산 보유세",
+        "query": "돌파 중동사태 불똥",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "구윤철 “부동산 보유세, 다른 정책 안 통하면 검토…다양한 의견 듣는...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002621030?sid=101"
+              "title": "'영끌족 진짜 어떡해' 주담대 7% 돌파…중동사태 ‘불똥’",
+              "link": "https://n.news.naver.com/mnews/article/018/0006245000?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%B3%B4%EC%9C%A0%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%B3%B4%EC%9C%A0%EC%84%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EC%A4%91%EB%8F%99%EC%82%AC%ED%83%9C%20%EB%B6%88%EB%98%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EC%A4%91%EB%8F%99%EC%82%AC%ED%83%9C%20%EB%B6%88%EB%98%A5"
       },
       "top_headlines": [
         {
-          "title": "구윤철 “부동산 보유세, 다른 정책 안 통하면 검토…다양한 의견 듣는...",
+          "title": "'영끌족 진짜 어떡해' 주담대 7% 돌파…중동사태 ‘불똥’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002621030?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/018/0006245000?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -529,34 +553,36 @@
       ]
     },
     {
-      "term": "다른 정책 안",
-      "term_ko": "다른 정책 안",
+      "term": "에너지 쇼크 직격탄",
+      "term_ko": "에너지 쇼크 직격탄",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "다른 정책 안",
+        "query": "에너지 쇼크 직격탄",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "구윤철 “부동산 보유세, 다른 정책 안 통하면 검토…다양한 의견 듣는...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002621030?sid=101"
+              "title": "OECD, 한국 성장률, 2.1→1.7% 하향…중동발 ‘에너지 쇼크’ 직격탄",
+              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202603291525225150056"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EB%A5%B8%20%EC%A0%95%EC%B1%85%20%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EB%A5%B8%20%EC%A0%95%EC%B1%85%20%EC%95%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%90%EB%84%88%EC%A7%80%20%EC%87%BC%ED%81%AC%20%EC%A7%81%EA%B2%A9%ED%83%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%90%EB%84%88%EC%A7%80%20%EC%87%BC%ED%81%AC%20%EC%A7%81%EA%B2%A9%ED%83%84"
       },
       "top_headlines": [
         {
-          "title": "구윤철 “부동산 보유세, 다른 정책 안 통하면 검토…다양한 의견 듣는...",
+          "title": "OECD, 한국 성장률, 2.1→1.7% 하향…중동발 ‘에너지 쇼크’ 직격탄",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002621030?sid=101",
+          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202603291525225150056",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -564,34 +590,36 @@
       ]
     },
     {
-      "term": "통하면 검토 다양한",
-      "term_ko": "통하면 검토 다양한",
+      "term": "석유공사 국책은행과 에너지",
+      "term_ko": "석유공사 국책은행과 에너지",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "통하면 검토 다양한",
+        "query": "석유공사 국책은행과 에너지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "구윤철 “부동산 보유세, 다른 정책 안 통하면 검토…다양한 의견 듣는...",
-              "link": "https://n.news.naver.com/mnews/article/016/0002621030?sid=101"
+              "title": "석유공사, 국책은행과 에너지 위기 공동 대응한다",
+              "link": "http://www.e-platform.net/news/articleView.html?idxno=101026"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%B5%ED%95%98%EB%A9%B4%20%EA%B2%80%ED%86%A0%20%EB%8B%A4%EC%96%91%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%B5%ED%95%98%EB%A9%B4%20%EA%B2%80%ED%86%A0%20%EB%8B%A4%EC%96%91%ED%95%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9D%EC%9C%A0%EA%B3%B5%EC%82%AC%20%EA%B5%AD%EC%B1%85%EC%9D%80%ED%96%89%EA%B3%BC%20%EC%97%90%EB%84%88%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9D%EC%9C%A0%EA%B3%B5%EC%82%AC%20%EA%B5%AD%EC%B1%85%EC%9D%80%ED%96%89%EA%B3%BC%20%EC%97%90%EB%84%88%EC%A7%80"
       },
       "top_headlines": [
         {
-          "title": "구윤철 “부동산 보유세, 다른 정책 안 통하면 검토…다양한 의견 듣는...",
+          "title": "석유공사, 국책은행과 에너지 위기 공동 대응한다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002621030?sid=101",
+          "link": "http://www.e-platform.net/news/articleView.html?idxno=101026",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -599,34 +627,36 @@
       ]
     },
     {
-      "term": "금리 상승 직격탄",
-      "term_ko": "금리 상승 직격탄",
+      "term": "위기 공동 대응한다",
+      "term_ko": "위기 공동 대응한다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 상승 직격탄",
+        "query": "위기 공동 대응한다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "금리 상승 직격탄…자영업 대출 1092조원·취약차주 60%",
-              "link": "http://www.segyebiz.com/newsView/20260329503977?OutUrl=naver"
+              "title": "석유공사, 국책은행과 에너지 위기 공동 대응한다",
+              "link": "http://www.e-platform.net/news/articleView.html?idxno=101026"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%20%EC%A7%81%EA%B2%A9%ED%83%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%20%EC%A7%81%EA%B2%A9%ED%83%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%EA%B8%B0%20%EA%B3%B5%EB%8F%99%20%EB%8C%80%EC%9D%91%ED%95%9C%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%EA%B8%B0%20%EA%B3%B5%EB%8F%99%20%EB%8C%80%EC%9D%91%ED%95%9C%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "금리 상승 직격탄…자영업 대출 1092조원·취약차주 60%",
+          "title": "석유공사, 국책은행과 에너지 위기 공동 대응한다",
           "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260329503977?OutUrl=naver",
+          "link": "http://www.e-platform.net/news/articleView.html?idxno=101026",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -634,34 +664,73 @@
       ]
     },
     {
-      "term": "인상 시나리오 검토",
-      "term_ko": "인상 시나리오 검토",
+      "term": "한국산업은행 수출입은행 한국석유공사",
+      "term_ko": "한국산업은행 수출입은행 한국석유공사",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "인상 시나리오 검토",
+        "query": "한국산업은행 수출입은행 한국석유공사",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "구윤철 “7월 보유세 인상, 시나리오 검토 중”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004604521?sid=101"
+              "title": "한국산업은행·수출입은행·한국석유공사, 에너지 위기 긴급 금융지원 ...",
+              "link": "http://www.ttlnews.com/news/articleView.html?idxno=3093439"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%20%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%20%EA%B2%80%ED%86%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%20%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%20%EA%B2%80%ED%86%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89%20%EC%88%98%EC%B6%9C%EC%9E%85%EC%9D%80%ED%96%89%20%ED%95%9C%EA%B5%AD%EC%84%9D%EC%9C%A0%EA%B3%B5%EC%82%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89%20%EC%88%98%EC%B6%9C%EC%9E%85%EC%9D%80%ED%96%89%20%ED%95%9C%EA%B5%AD%EC%84%9D%EC%9C%A0%EA%B3%B5%EC%82%AC"
       },
       "top_headlines": [
         {
-          "title": "구윤철 “7월 보유세 인상, 시나리오 검토 중”",
+          "title": "한국산업은행·수출입은행·한국석유공사, 에너지 위기 긴급 금융지원 ...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004604521?sid=101",
+          "link": "http://www.ttlnews.com/news/articleView.html?idxno=3093439",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "에너지 위기 긴급",
+      "term_ko": "에너지 위기 긴급",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "에너지 위기 긴급",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "한국산업은행·수출입은행·한국석유공사, 에너지 위기 긴급 금융지원 ...",
+              "link": "http://www.ttlnews.com/news/articleView.html?idxno=3093439"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%90%EB%84%88%EC%A7%80%20%EC%9C%84%EA%B8%B0%20%EA%B8%B4%EA%B8%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%90%EB%84%88%EC%A7%80%20%EC%9C%84%EA%B8%B0%20%EA%B8%B4%EA%B8%89"
+      },
+      "top_headlines": [
+        {
+          "title": "한국산업은행·수출입은행·한국석유공사, 에너지 위기 긴급 금융지원 ...",
+          "summary": "",
+          "link": "http://www.ttlnews.com/news/articleView.html?idxno=3093439",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -678,8 +747,10 @@
         "query": "NASDAQ Tech Selloff",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
@@ -704,41 +775,6 @@
       ]
     },
     {
-      "term": "취약차주 60%",
-      "term_ko": "취약차주 60%",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "취약차주 60%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금리 상승 직격탄…자영업 대출 1092조원·취약차주 60%",
-              "link": "http://www.segyebiz.com/newsView/20260329503977?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B7%A8%EC%95%BD%EC%B0%A8%EC%A3%BC%2060%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B7%A8%EC%95%BD%EC%B0%A8%EC%A3%BC%2060%25"
-      },
-      "top_headlines": [
-        {
-          "title": "금리 상승 직격탄…자영업 대출 1092조원·취약차주 60%",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260329503977?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "자산으로 부상",
       "term_ko": "자산으로 부상",
       "significance_score": 280,
@@ -748,8 +784,10 @@
         "query": "자산으로 부상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "XRP, 비트고 816억 달러 포트폴리오 핵심 자산으로 부상",
@@ -774,135 +812,36 @@
       ]
     },
     {
-      "term": "중동 전쟁",
-      "term_ko": "중동 전쟁",
-      "significance_score": 280,
-      "mentions": 416,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중동 전쟁",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-21",
-              "timestamp": 1774018800000,
-              "value": 28.40244
-            },
-            {
-              "period": "2026-03-22",
-              "timestamp": 1774105200000,
-              "value": 28.76641
-            },
-            {
-              "period": "2026-03-23",
-              "timestamp": 1774191600000,
-              "value": 100
-            },
-            {
-              "period": "2026-03-24",
-              "timestamp": 1774278000000,
-              "value": 79.57883
-            },
-            {
-              "period": "2026-03-25",
-              "timestamp": 1774364400000,
-              "value": 74.82126
-            },
-            {
-              "period": "2026-03-26",
-              "timestamp": 1774450800000,
-              "value": 71.20759
-            },
-            {
-              "period": "2026-03-27",
-              "timestamp": 1774537200000,
-              "value": 56.76589
-            },
-            {
-              "period": "2026-03-28",
-              "timestamp": 1774623600000,
-              "value": 33.93994
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'중동 전쟁 한달' 주담대 7% 돌파…\"이제 갚을 때 됐다\"",
-              "link": "https://n.news.naver.com/mnews/article/374/0000500900?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%20%EC%A0%84%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%20%EC%A0%84%EC%9F%81"
-      },
-      "top_headlines": [
-        {
-          "title": "'중동 전쟁 한달' 주담대 7% 돌파…\"이제 갚을 때 됐다\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000500900?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 416.3135,
-        "weekly_average_volume": 69.3856,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.015288,
-        "time_weight": 0.028346,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774623600000
-      }
-    },
-    {
-      "term": "때 됐다",
-      "term_ko": "때 됐다",
+      "term": "풀어야 한다",
+      "term_ko": "풀어야 한다",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "때 됐다",
+        "query": "풀어야 한다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "'중동 전쟁 한달' 주담대 7% 돌파…\"이제 갚을 때 됐다\"",
-              "link": "https://n.news.naver.com/mnews/article/374/0000500900?sid=101"
+              "title": "[ET단상] 기후금융의 정체, 이제는 '생산적 금융'으로 풀어야 한다",
+              "link": "https://n.news.naver.com/mnews/article/030/0003412305?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%95%8C%20%EB%90%90%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%95%8C%20%EB%90%90%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%92%80%EC%96%B4%EC%95%BC%20%ED%95%9C%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%92%80%EC%96%B4%EC%95%BC%20%ED%95%9C%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "'중동 전쟁 한달' 주담대 7% 돌파…\"이제 갚을 때 됐다\"",
+          "title": "[ET단상] 기후금융의 정체, 이제는 '생산적 금융'으로 풀어야 한다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000500900?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/030/0003412305?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -910,34 +849,36 @@
       ]
     },
     {
-      "term": "만에 최고",
-      "term_ko": "만에 최고",
+      "term": "영끌족 진짜",
+      "term_ko": "영끌족 진짜",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만에 최고",
+        "query": "영끌족 진짜",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "은행 주담대 고정금리 7% 돌파… 3년 5개월 만에 최고",
-              "link": "https://www.newscj.com/news/articleView.html?idxno=3389397"
+              "title": "'영끌족 진짜 어떡해' 주담대 7% 돌파…중동사태 ‘불똥’",
+              "link": "https://n.news.naver.com/mnews/article/018/0006245000?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EB%81%8C%EC%A1%B1%20%EC%A7%84%EC%A7%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EB%81%8C%EC%A1%B1%20%EC%A7%84%EC%A7%9C"
       },
       "top_headlines": [
         {
-          "title": "은행 주담대 고정금리 7% 돌파… 3년 5개월 만에 최고",
+          "title": "'영끌족 진짜 어떡해' 주담대 7% 돌파…중동사태 ‘불똥’",
           "summary": "",
-          "link": "https://www.newscj.com/news/articleView.html?idxno=3389397",
+          "link": "https://n.news.naver.com/mnews/article/018/0006245000?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -954,8 +895,10 @@
         "query": "Collapse What Analysts",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
@@ -980,34 +923,73 @@
       ]
     },
     {
-      "term": "Investors Lose Patience",
+      "term": "Chief Signals Rotating",
       "term_ko": "",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Investors Lose Patience",
+        "query": "Chief Signals Rotating",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Stocks Slide to 5th Weekly Loss as Investors Lose Patience With Iran War",
-              "link": "https://www.nytimes.com/2026/03/27/business/iran-war-stock-market-investors.html?partner=naver"
+              "title": "Finance chief signals rotating ban for private cars if oil hits $120",
+              "link": "https://www.koreatimes.co.kr/path/A2026032914100003559"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Lose%20Patience",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Lose%20Patience"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Chief%20Signals%20Rotating",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Chief%20Signals%20Rotating"
       },
       "top_headlines": [
         {
-          "title": "Stocks Slide to 5th Weekly Loss as Investors Lose Patience With Iran War",
+          "title": "Finance chief signals rotating ban for private cars if oil hits $120",
           "summary": "",
-          "link": "https://www.nytimes.com/2026/03/27/business/iran-war-stock-market-investors.html?partner=naver",
+          "link": "https://www.koreatimes.co.kr/path/A2026032914100003559",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Private Cars If",
+      "term_ko": "",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Private Cars If",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Finance chief signals rotating ban for private cars if oil hits $120",
+              "link": "https://www.koreatimes.co.kr/path/A2026032914100003559"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Private%20Cars%20If",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Private%20Cars%20If"
+      },
+      "top_headlines": [
+        {
+          "title": "Finance chief signals rotating ban for private cars if oil hits $120",
+          "summary": "",
+          "link": "https://www.koreatimes.co.kr/path/A2026032914100003559",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1024,8 +1006,10 @@
         "query": "Are Saying",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
               "title": "NASDAQ Tech Selloff: Correction or Collapse? What Analysts Are Saying",
@@ -1050,34 +1034,36 @@
       ]
     },
     {
-      "term": "Weekly Loss",
+      "term": "Oil Hits",
       "term_ko": "",
       "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Weekly Loss",
+        "query": "Oil Hits",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Stocks Slide to 5th Weekly Loss as Investors Lose Patience With Iran War",
-              "link": "https://www.nytimes.com/2026/03/27/business/iran-war-stock-market-investors.html?partner=naver"
+              "title": "Finance chief signals rotating ban for private cars if oil hits $120",
+              "link": "https://www.koreatimes.co.kr/path/A2026032914100003559"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Weekly%20Loss",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Weekly%20Loss"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Oil%20Hits",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Oil%20Hits"
       },
       "top_headlines": [
         {
-          "title": "Stocks Slide to 5th Weekly Loss as Investors Lose Patience With Iran War",
+          "title": "Finance chief signals rotating ban for private cars if oil hits $120",
           "summary": "",
-          "link": "https://www.nytimes.com/2026/03/27/business/iran-war-stock-market-investors.html?partner=naver",
+          "link": "https://www.koreatimes.co.kr/path/A2026032914100003559",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1085,109 +1071,57 @@
       ]
     },
     {
-      "term": "Iran War",
+      "term": "AI chip demand surge",
       "term_ko": "",
-      "significance_score": 224,
-      "mentions": 336,
+      "significance_score": 120,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Iran War",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-21",
-              "timestamp": 1774018800000,
-              "value": 50
-            },
-            {
-              "period": "2026-03-22",
-              "timestamp": 1774105200000,
-              "value": 35.71428
-            },
-            {
-              "period": "2026-03-23",
-              "timestamp": 1774191600000,
-              "value": 42.85714
-            },
-            {
-              "period": "2026-03-24",
-              "timestamp": 1774278000000,
-              "value": 100
-            },
-            {
-              "period": "2026-03-25",
-              "timestamp": 1774364400000,
-              "value": 42.85714
-            },
-            {
-              "period": "2026-03-26",
-              "timestamp": 1774450800000,
-              "value": 78.57142
-            },
-            {
-              "period": "2026-03-27",
-              "timestamp": 1774537200000,
-              "value": 71.42857
-            }
-          ]
-        },
+        "query": "AI chip demand surge",
         "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T11:15:46+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Stocks Slide to 5th Weekly Loss as Investors Lose Patience With Iran War",
-              "link": "https://www.nytimes.com/2026/03/27/business/iran-war-stock-market-investors.html?partner=naver"
-            }
+          "matches": 0,
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20War",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20War"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
-      "top_headlines": [
-        {
-          "title": "Stocks Slide to 5th Weekly Loss as Investors Lose Patience With Iran War",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/03/27/business/iran-war-stock-market-investors.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-03-29T16:04:41+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 335.7143,
-        "weekly_average_volume": 67.1429,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.017747,
-        "time_weight": 0.016869,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774537200000
-      }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-03-29T02:16:51.752Z",
+    "generated_at": "2026-03-29T07:05:47.109Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-29T11:15:46+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-03-29T16:04:41+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1197,12 +1131,16 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-03-29T11:15:46+09:00",
-      "fallback_sources": [],
+      "last_updated": "2026-03-29T16:04:41+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-03-29T11:15:46+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2026-03-29T16:04:41+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
       }
     }
   }
