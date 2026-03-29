@@ -13,10 +13,9 @@
         "query": "XRP 비트고 816억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -51,10 +50,9 @@
         "query": "6.3% 급락 AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -80,75 +78,6 @@
       ]
     },
     {
-      "term": "OECD 한국 성장률",
-      "term_ko": "OECD 한국 성장률",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "OECD 한국 성장률",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-27",
-              "timestamp": 1774537200000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-              "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=OECD%20%ED%95%9C%EA%B5%AD%20%EC%84%B1%EC%9E%A5%EB%A5%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=OECD%20%ED%95%9C%EA%B5%AD%20%EC%84%B1%EC%9E%A5%EB%A5%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.014289,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774537200000
-      }
-    },
-    {
       "term": "오늘의 증권소식3월 27일",
       "term_ko": "오늘의 증권소식3월 27일",
       "significance_score": 336,
@@ -158,10 +87,9 @@
         "query": "오늘의 증권소식3월 27일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -187,37 +115,36 @@
       ]
     },
     {
-      "term": "주담대 고정금리 7%선",
-      "term_ko": "주담대 고정금리 7%선",
+      "term": "고금리 증시불안 3중고",
+      "term_ko": "고금리 증시불안 3중고",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주담대 고정금리 7%선",
+        "query": "고금리 증시불안 3중고",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
-              "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101"
+              "title": "미국 가계 덮친 ‘고물가·고금리·증시불안’ 3중고… 다시 인플레이션...",
+              "link": "https://www.g-enews.com/view.php?ud=202603291319294332fbbec65dfb_1"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25%EC%84%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EC%A6%9D%EC%8B%9C%EB%B6%88%EC%95%88%203%EC%A4%91%EA%B3%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EA%B8%88%EB%A6%AC%20%EC%A6%9D%EC%8B%9C%EB%B6%88%EC%95%88%203%EC%A4%91%EA%B3%A0"
       },
       "top_headlines": [
         {
-          "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
+          "title": "미국 가계 덮친 ‘고물가·고금리·증시불안’ 3중고… 다시 인플레이션...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101",
+          "link": "https://www.g-enews.com/view.php?ud=202603291319294332fbbec65dfb_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -225,37 +152,110 @@
       ]
     },
     {
-      "term": "전망치 2.1%→1.7%로 낮춰",
-      "term_ko": "전망치 2.1%→1.7%로 낮춰",
+      "term": "7% 뚫은 주담대",
+      "term_ko": "7% 뚫은 주담대",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "전망치 2.1%→1.7%로 낮춰",
+        "query": "7% 뚫은 주담대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-              "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101"
+              "title": "7% 뚫은 주담대 금리… 수도권-지방 아파트값 1.5배 더 벌어졌다",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839976?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A7%9D%EC%B9%98%202.1%25%E2%86%921.7%25%EB%A1%9C%20%EB%82%AE%EC%B6%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A7%9D%EC%B9%98%202.1%25%E2%86%921.7%25%EB%A1%9C%20%EB%82%AE%EC%B6%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=7%25%20%EB%9A%AB%EC%9D%80%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=7%25%20%EB%9A%AB%EC%9D%80%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
+          "title": "7% 뚫은 주담대 금리… 수도권-지방 아파트값 1.5배 더 벌어졌다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839976?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "수도권-지방 아파트값 1.5배",
+      "term_ko": "수도권-지방 아파트값 1.5배",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "수도권-지방 아파트값 1.5배",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-30T03:44:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "7% 뚫은 주담대 금리… 수도권-지방 아파트값 1.5배 더 벌어졌다",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839976?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EB%8F%84%EA%B6%8C-%EC%A7%80%EB%B0%A9%20%EC%95%84%ED%8C%8C%ED%8A%B8%EA%B0%92%201.5%EB%B0%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EB%8F%84%EA%B6%8C-%EC%A7%80%EB%B0%A9%20%EC%95%84%ED%8C%8C%ED%8A%B8%EA%B0%92%201.5%EB%B0%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "7% 뚫은 주담대 금리… 수도권-지방 아파트값 1.5배 더 벌어졌다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839976?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "주담대 고정금리 7%",
+      "term_ko": "주담대 고정금리 7%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주담대 고정금리 7%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-30T03:44:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "은행 주담대 고정금리 7% 넘어… 영끌족 비명",
+              "link": "https://n.news.naver.com/mnews/article/020/0003707914?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B3%A0%EC%A0%95%EA%B8%88%EB%A6%AC%207%25"
+      },
+      "top_headlines": [
+        {
+          "title": "은행 주담대 고정금리 7% 넘어… 영끌족 비명",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003707914?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -272,10 +272,9 @@
         "query": "달러 포트폴리오 핵심",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -310,10 +309,9 @@
         "query": "잡지 마라 ㅡ",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -348,10 +346,9 @@
         "query": "클라우드 전환 속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -386,10 +383,9 @@
         "query": "실적 부진 우려",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -415,37 +411,36 @@
       ]
     },
     {
-      "term": "영끌족 자영업자 애탄다",
-      "term_ko": "영끌족 자영업자 애탄다",
+      "term": "미국 가계 덮친",
+      "term_ko": "미국 가계 덮친",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "영끌족 자영업자 애탄다",
+        "query": "미국 가계 덮친",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
-              "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101"
+              "title": "미국 가계 덮친 ‘고물가·고금리·증시불안’ 3중고… 다시 인플레이션...",
+              "link": "https://www.g-enews.com/view.php?ud=202603291319294332fbbec65dfb_1"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EB%81%8C%EC%A1%B1%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%95%A0%ED%83%84%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EB%81%8C%EC%A1%B1%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%95%A0%ED%83%84%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EA%B0%80%EA%B3%84%20%EB%8D%AE%EC%B9%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EA%B0%80%EA%B3%84%20%EB%8D%AE%EC%B9%9C"
       },
       "top_headlines": [
         {
-          "title": "주담대 고정금리 7%선… 영끌족·자영업자 애탄다",
+          "title": "미국 가계 덮친 ‘고물가·고금리·증시불안’ 3중고… 다시 인플레이션...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004116570?sid=101",
+          "link": "https://www.g-enews.com/view.php?ud=202603291319294332fbbec65dfb_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -453,37 +448,36 @@
       ]
     },
     {
-      "term": "내달 세계국채지수 편입",
-      "term_ko": "내달 세계국채지수 편입",
+      "term": "사설 이란전에 유독",
+      "term_ko": "사설 이란전에 유독",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "내달 세계국채지수 편입",
+        "query": "사설 이란전에 유독",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
-              "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101"
+              "title": "[사설] 이란전에 유독 취약한 韓 경제, 산업구조 개편 서둘러야",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839963?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%8B%AC%20%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%8B%AC%20%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%EC%9D%B4%EB%9E%80%EC%A0%84%EC%97%90%20%EC%9C%A0%EB%8F%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%EC%9D%B4%EB%9E%80%EC%A0%84%EC%97%90%20%EC%9C%A0%EB%8F%85"
       },
       "top_headlines": [
         {
-          "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
+          "title": "[사설] 이란전에 유독 취약한 韓 경제, 산업구조 개편 서둘러야",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839963?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -491,37 +485,36 @@
       ]
     },
     {
-      "term": "환율 안정 기대",
-      "term_ko": "환율 안정 기대",
+      "term": "취약한 韓 경제",
+      "term_ko": "취약한 韓 경제",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "환율 안정 기대",
+        "query": "취약한 韓 경제",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
-              "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101"
+              "title": "[사설] 이란전에 유독 취약한 韓 경제, 산업구조 개편 서둘러야",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839963?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%95%88%EC%A0%95%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%95%88%EC%A0%95%20%EA%B8%B0%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B7%A8%EC%95%BD%ED%95%9C%20%E9%9F%93%20%EA%B2%BD%EC%A0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B7%A8%EC%95%BD%ED%95%9C%20%E9%9F%93%20%EA%B2%BD%EC%A0%9C"
       },
       "top_headlines": [
         {
-          "title": "내달 ‘세계국채지수’ 편입, 환율 안정 기대",
+          "title": "[사설] 이란전에 유독 취약한 韓 경제, 산업구조 개편 서둘러야",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003436390?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839963?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -529,37 +522,36 @@
       ]
     },
     {
-      "term": "말랐다 부동산 중개업소",
-      "term_ko": "말랐다 부동산 중개업소",
+      "term": "산업구조 개편 서둘러야",
+      "term_ko": "산업구조 개편 서둘러야",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "말랐다 부동산 중개업소",
+        "query": "산업구조 개편 서둘러야",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "“전월세 매물 씨가 말랐다”… 부동산 중개업소 개점휴업",
-              "link": "https://n.news.naver.com/mnews/article/082/0001373300?sid=101"
+              "title": "[사설] 이란전에 유독 취약한 韓 경제, 산업구조 개편 서둘러야",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839963?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%90%EB%9E%90%EB%8B%A4%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%A4%91%EA%B0%9C%EC%97%85%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%90%EB%9E%90%EB%8B%A4%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%A4%91%EA%B0%9C%EC%97%85%EC%86%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%EC%97%85%EA%B5%AC%EC%A1%B0%20%EA%B0%9C%ED%8E%B8%20%EC%84%9C%EB%91%98%EB%9F%AC%EC%95%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%EC%97%85%EA%B5%AC%EC%A1%B0%20%EA%B0%9C%ED%8E%B8%20%EC%84%9C%EB%91%98%EB%9F%AC%EC%95%BC"
       },
       "top_headlines": [
         {
-          "title": "“전월세 매물 씨가 말랐다”… 부동산 중개업소 개점휴업",
+          "title": "[사설] 이란전에 유독 취약한 韓 경제, 산업구조 개편 서둘러야",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001373300?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839963?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -567,37 +559,36 @@
       ]
     },
     {
-      "term": "집값 급등기에 영끌",
-      "term_ko": "집값 급등기에 영끌",
+      "term": "가리사니 바람불 때",
+      "term_ko": "가리사니 바람불 때",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "집값 급등기에 영끌",
+        "query": "가리사니 바람불 때",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
-              "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104"
+              "title": "[가리사니] 바람불 때 모닥불 키우는 법",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839951?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%EA%B8%89%EB%93%B1%EA%B8%B0%EC%97%90%20%EC%98%81%EB%81%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%EA%B8%89%EB%93%B1%EA%B8%B0%EC%97%90%20%EC%98%81%EB%81%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%A6%AC%EC%82%AC%EB%8B%88%20%EB%B0%94%EB%9E%8C%EB%B6%88%20%EB%95%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%A6%AC%EC%82%AC%EB%8B%88%20%EB%B0%94%EB%9E%8C%EB%B6%88%20%EB%95%8C"
       },
       "top_headlines": [
         {
-          "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
+          "title": "[가리사니] 바람불 때 모닥불 키우는 법",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839951?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -605,37 +596,36 @@
       ]
     },
     {
-      "term": "주담대 금리 두배",
-      "term_ko": "주담대 금리 두배",
+      "term": "모닥불 키우는 법",
+      "term_ko": "모닥불 키우는 법",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주담대 금리 두배",
+        "query": "모닥불 키우는 법",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
-              "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104"
+              "title": "[가리사니] 바람불 때 모닥불 키우는 법",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839951?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%20%EB%91%90%EB%B0%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%20%EB%91%90%EB%B0%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EB%8B%A5%EB%B6%88%20%ED%82%A4%EC%9A%B0%EB%8A%94%20%EB%B2%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EB%8B%A5%EB%B6%88%20%ED%82%A4%EC%9A%B0%EB%8A%94%20%EB%B2%95"
       },
       "top_headlines": [
         {
-          "title": "집값 급등기에 '영끌'…\"주담대 금리, 두배 뛰었다\"",
+          "title": "[가리사니] 바람불 때 모닥불 키우는 법",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001344195?sid=104",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839951?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -643,37 +633,36 @@
       ]
     },
     {
-      "term": "고유가 장기화 우려",
-      "term_ko": "고유가 장기화 우려",
+      "term": "세계국채지수 편입 앞둔",
+      "term_ko": "세계국채지수 편입 앞둔",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고유가 장기화 우려",
+        "query": "세계국채지수 편입 앞둔",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
-              "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101"
+              "title": "세계국채지수 편입 앞둔 한국, 중동 사태·고환율이 발목 잡나",
+              "link": "https://n.news.naver.com/mnews/article/023/0003967543?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EC%9E%A5%EA%B8%B0%ED%99%94%20%EC%9A%B0%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EC%9E%A5%EA%B8%B0%ED%99%94%20%EC%9A%B0%EB%A0%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85%20%EC%95%9E%EB%91%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%EA%B3%84%EA%B5%AD%EC%B1%84%EC%A7%80%EC%88%98%20%ED%8E%B8%EC%9E%85%20%EC%95%9E%EB%91%94"
       },
       "top_headlines": [
         {
-          "title": "OECD 한국 성장률 전망치 2.1%→1.7%로 낮춰…고유가 장기화 우려",
+          "title": "세계국채지수 편입 앞둔 한국, 중동 사태·고환율이 발목 잡나",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002798209?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/023/0003967543?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -681,37 +670,110 @@
       ]
     },
     {
-      "term": "대폭풍 금융위기의 징조",
-      "term_ko": "대폭풍 금융위기의 징조",
+      "term": "한국 중동 사태",
+      "term_ko": "한국 중동 사태",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대폭풍 금융위기의 징조",
+        "query": "한국 중동 사태",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[농정춘추] 조용히 다가오는 대폭풍, 금융위기의 징조",
-              "link": "http://www.ikpnews.net/news/articleView.html?idxno=69975"
+              "title": "세계국채지수 편입 앞둔 한국, 중동 사태·고환율이 발목 잡나",
+              "link": "https://n.news.naver.com/mnews/article/023/0003967543?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%ED%8F%AD%ED%92%8D%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%EC%9D%98%20%EC%A7%95%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%ED%8F%AD%ED%92%8D%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%EC%9D%98%20%EC%A7%95%EC%A1%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A4%91%EB%8F%99%20%EC%82%AC%ED%83%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A4%91%EB%8F%99%20%EC%82%AC%ED%83%9C"
       },
       "top_headlines": [
         {
-          "title": "[농정춘추] 조용히 다가오는 대폭풍, 금융위기의 징조",
+          "title": "세계국채지수 편입 앞둔 한국, 중동 사태·고환율이 발목 잡나",
           "summary": "",
-          "link": "http://www.ikpnews.net/news/articleView.html?idxno=69975",
+          "link": "https://n.news.naver.com/mnews/article/023/0003967543?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "고환율이 발목 잡나",
+      "term_ko": "고환율이 발목 잡나",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "고환율이 발목 잡나",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-30T03:44:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "세계국채지수 편입 앞둔 한국, 중동 사태·고환율이 발목 잡나",
+              "link": "https://n.news.naver.com/mnews/article/023/0003967543?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%B4%20%EB%B0%9C%EB%AA%A9%20%EC%9E%A1%EB%82%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%B4%20%EB%B0%9C%EB%AA%A9%20%EC%9E%A1%EB%82%98"
+      },
+      "top_headlines": [
+        {
+          "title": "세계국채지수 편입 앞둔 한국, 중동 사태·고환율이 발목 잡나",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003967543?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "넘어 영끌족 비명",
+      "term_ko": "넘어 영끌족 비명",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "넘어 영끌족 비명",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-30T03:44:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "은행 주담대 고정금리 7% 넘어… 영끌족 비명",
+              "link": "https://n.news.naver.com/mnews/article/020/0003707914?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%98%EC%96%B4%20%EC%98%81%EB%81%8C%EC%A1%B1%20%EB%B9%84%EB%AA%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%98%EC%96%B4%20%EC%98%81%EB%81%8C%EC%A1%B1%20%EB%B9%84%EB%AA%85"
+      },
+      "top_headlines": [
+        {
+          "title": "은행 주담대 고정금리 7% 넘어… 영끌족 비명",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003707914?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -728,10 +790,9 @@
         "query": "NASDAQ Tech Selloff",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -766,10 +827,9 @@
         "query": "자산으로 부상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -795,6 +855,43 @@
       ]
     },
     {
+      "term": "더 벌어졌다",
+      "term_ko": "더 벌어졌다",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "더 벌어졌다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-03-30T03:44:25+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "7% 뚫은 주담대 금리… 수도권-지방 아파트값 1.5배 더 벌어졌다",
+              "link": "https://n.news.naver.com/mnews/article/005/0001839976?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%20%EB%B2%8C%EC%96%B4%EC%A1%8C%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%20%EB%B2%8C%EC%96%B4%EC%A1%8C%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "7% 뚫은 주담대 금리… 수도권-지방 아파트값 1.5배 더 벌어졌다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/005/0001839976?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "Collapse What Analysts",
       "term_ko": "",
       "significance_score": 266,
@@ -804,10 +901,9 @@
         "query": "Collapse What Analysts",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -842,10 +938,9 @@
         "query": "Chief Signals Rotating",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -880,10 +975,9 @@
         "query": "Private Cars If",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -918,10 +1012,9 @@
         "query": "Are Saying",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -956,10 +1049,9 @@
         "query": "Oil Hits",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -994,10 +1086,9 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
+          "last_updated": "2026-03-30T03:44:25+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ]
         }
       },
@@ -1006,107 +1097,15 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
       "top_headlines": []
-    },
-    {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-29T21:58:24+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-03-29T12:59:28.540Z",
+    "generated_at": "2026-03-29T18:45:27.154Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-29T21:58:24+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-03-30T03:44:25+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1116,17 +1115,15 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-03-29T21:58:24+09:00",
+      "last_updated": "2026-03-30T03:44:25+09:00",
       "fallback_sources": [
-        "trend_log",
-        "default_fallback"
+        "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-03-29T21:58:24+09:00",
+        "lastUpdated": "2026-03-30T03:44:25+09:00",
         "fallbackSources": [
-          "trend_log",
-          "default_fallback"
+          "trend_log"
         ]
       }
     }
