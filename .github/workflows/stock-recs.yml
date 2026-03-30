@@ -297,10 +297,12 @@ jobs:
           set -euo pipefail
           if [ -f fetchStockInfo.js ]; then
             # No --refresh-pools here, because we already ran buildPoolsTrendy.js
-            timeout 60 node fetchStockInfo.js --force --delay=120
+            # fetchStockInfo has internal provider budgets/retries and can exceed 60s in CI.
+            # Give it enough headroom to finish without being killed by `timeout` (exit 124).
+            timeout 240 node fetchStockInfo.js --force --delay=120
           elif [ -f src/index.js ]; then
             echo "Running modular entry (src/index.js)"
-            timeout 60 node src/index.js --force
+            timeout 240 node src/index.js --force
           else
             echo "No entrypoint found"; exit 1
           fi
