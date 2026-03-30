@@ -1,1277 +1,439 @@
 {
+  "generatedAt": "2026-03-30T19:00:48.677Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-03-30",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "시그마 리튬SGML 40만톤",
-      "term_ko": "시그마 리튬SGML 40만톤",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시그마 리튬SGML 40만톤",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시그마 리튬(SGML), 40만톤 재활용 계약…생산 정상화에 2026 반등 기대",
-              "link": "https://www.tokenpost.kr/news/market/344550"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EA%B7%B8%EB%A7%88%20%EB%A6%AC%ED%8A%ACSGML%2040%EB%A7%8C%ED%86%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EA%B7%B8%EB%A7%88%20%EB%A6%AC%ED%8A%ACSGML%2040%EB%A7%8C%ED%86%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "시그마 리튬(SGML), 40만톤 재활용 계약…생산 정상화에 2026 반등 기대",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/344550",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시그마 리튬SGML 40만톤"
     },
     {
       "term": "키움운용 KIWOOM 미국성장다우존스",
-      "term_ko": "키움운용 KIWOOM 미국성장다우존스",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "키움운용 KIWOOM 미국성장다우존스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "키움운용, KIWOOM 미국성장다우존스 ETF 출시",
-              "link": "https://n.news.naver.com/mnews/article/448/0000600071?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%A4%EC%9B%80%EC%9A%B4%EC%9A%A9%20KIWOOM%20%EB%AF%B8%EA%B5%AD%EC%84%B1%EC%9E%A5%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%A4%EC%9B%80%EC%9A%B4%EC%9A%A9%20KIWOOM%20%EB%AF%B8%EA%B5%AD%EC%84%B1%EC%9E%A5%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "키움운용, KIWOOM 미국성장다우존스 ETF 출시",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000600071?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "키움운용 KIWOOM 미국성장다우존스"
     },
     {
       "term": "KIWOOM 미국성장다우존스 ETF",
-      "term_ko": "KIWOOM 미국성장다우존스 ETF",
-      "significance_score": 350,
-      "mentions": 175,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KIWOOM 미국성장다우존스 ETF",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-28",
-              "timestamp": 1774623600000,
-              "value": 100
-            },
-            {
-              "period": "2026-03-29",
-              "timestamp": 1774710000000,
-              "value": 75
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KIWOOM 미국성장다우존스 ETF 상장...\"나스닥100+S&P500 선별 투자\"",
-              "link": "https://n.news.naver.com/mnews/article/014/0005499477?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KIWOOM%20%EB%AF%B8%EA%B5%AD%EC%84%B1%EC%9E%A5%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KIWOOM%20%EB%AF%B8%EA%B5%AD%EC%84%B1%EC%9E%A5%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "KIWOOM 미국성장다우존스 ETF 상장...\"나스닥100+S&P500 선별 투자\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005499477?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 175,
-        "weekly_average_volume": 87.5,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.027877,
-        "time_weight": 0.021579,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774710000000
-      }
+      "term_ko": "KIWOOM 미국성장다우존스 ETF"
     },
     {
       "term": "하나금융 하나은행 NH농협금융",
-      "term_ko": "하나금융 하나은행 NH농협금융",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나금융 하나은행 NH농협금융",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[브리프]신한은행 하나금융 하나은행 NH농협금융 BNK부산은행",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=351506"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20NH%EB%86%8D%ED%98%91%EA%B8%88%EC%9C%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20NH%EB%86%8D%ED%98%91%EA%B8%88%EC%9C%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "[브리프]신한은행 하나금융 하나은행 NH농협금융 BNK부산은행",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=351506",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하나금융 하나은행 NH농협금융"
     },
     {
       "term": "브리프삼성물산 현대건설 IPARK현대산업개발",
-      "term_ko": "브리프삼성물산 현대건설 IPARK현대산업개발",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "브리프삼성물산 현대건설 IPARK현대산업개발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[브리프]삼성물산 현대건설 IPARK현대산업개발 두산건설 外",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=351496"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%8C%EB%A6%AC%ED%94%84%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0%20%ED%98%84%EB%8C%80%EA%B1%B4%EC%84%A4%20IPARK%ED%98%84%EB%8C%80%EC%82%B0%EC%97%85%EA%B0%9C%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%8C%EB%A6%AC%ED%94%84%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0%20%ED%98%84%EB%8C%80%EA%B1%B4%EC%84%A4%20IPARK%ED%98%84%EB%8C%80%EC%82%B0%EC%97%85%EA%B0%9C%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[브리프]삼성물산 현대건설 IPARK현대산업개발 두산건설 外",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=351496",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "브리프삼성물산 현대건설 IPARK현대산업개발"
     },
     {
       "term": "따져보니 IMF급 환율",
-      "term_ko": "따져보니 IMF급 환율",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "따져보니 IMF급 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[따져보니] IMF급 환율 상승…주담대 금리 상승 어디까지?",
-              "link": "https://n.news.naver.com/mnews/article/448/0000600156?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%B0%EC%A0%B8%EB%B3%B4%EB%8B%88%20IMF%EA%B8%89%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%B0%EC%A0%B8%EB%B3%B4%EB%8B%88%20IMF%EA%B8%89%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[따져보니] IMF급 환율 상승…주담대 금리 상승 어디까지?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000600156?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "따져보니 IMF급 환율"
     },
     {
       "term": "6억 8910만 개",
-      "term_ko": "6억 8910만 개",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "6억 8910만 개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-              "link": "http://coinreaders.com/227623"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%EC%96%B5%208910%EB%A7%8C%20%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%EC%96%B5%208910%EB%A7%8C%20%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-          "summary": "",
-          "link": "http://coinreaders.com/227623",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "6억 8910만 개"
     },
     {
       "term": "매수세 트론 0.336달러",
-      "term_ko": "매수세 트론 0.336달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매수세 트론 0.336달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-              "link": "http://coinreaders.com/227623"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EC%88%98%EC%84%B8%20%ED%8A%B8%EB%A1%A0%200.336%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EC%88%98%EC%84%B8%20%ED%8A%B8%EB%A1%A0%200.336%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-          "summary": "",
-          "link": "http://coinreaders.com/227623",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "매수세 트론 0.336달러"
     },
     {
       "term": "반등에도 유가 115달러",
-      "term_ko": "반등에도 유가 115달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반등에도 유가 115달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 주가 선물 반등에도 유가 115달러 고공행진…중동 확...",
-              "link": "https://www.newspim.com/news/view/20260330001237"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%B1%EC%97%90%EB%8F%84%20%EC%9C%A0%EA%B0%80%20115%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%B1%EC%97%90%EB%8F%84%20%EC%9C%A0%EA%B0%80%20115%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 주가 선물 반등에도 유가 115달러 고공행진…중동 확...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260330001237",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반등에도 유가 115달러"
     },
     {
       "term": "주담대 금리 7%",
-      "term_ko": "주담대 금리 7%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 금리 7%",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-26",
-              "timestamp": 1774450800000,
-              "value": 11.11111
-            },
-            {
-              "period": "2026-03-27",
-              "timestamp": 1774537200000,
-              "value": 11.11111
-            },
-            {
-              "period": "2026-03-28",
-              "timestamp": 1774623600000,
-              "value": 15.55555
-            },
-            {
-              "period": "2026-03-29",
-              "timestamp": 1774710000000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'주담대 금리 7%' 울산 부동산 시장 긴장",
-              "link": "http://www.ujeil.com/news/articleView.html?idxno=383383"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%207%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC%207%25"
-      },
-      "top_headlines": [
-        {
-          "title": "'주담대 금리 7%' 울산 부동산 시장 긴장",
-          "summary": "",
-          "link": "http://www.ujeil.com/news/articleView.html?idxno=383383",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 137.7778,
-        "weekly_average_volume": 34.4444,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.032903,
-        "time_weight": 0.021578,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774710000000
-      }
+      "term_ko": "주담대 금리 7%"
     },
     {
       "term": "재활용 계약 생산",
-      "term_ko": "재활용 계약 생산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재활용 계약 생산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시그마 리튬(SGML), 40만톤 재활용 계약…생산 정상화에 2026 반등 기대",
-              "link": "https://www.tokenpost.kr/news/market/344550"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%ED%99%9C%EC%9A%A9%20%EA%B3%84%EC%95%BD%20%EC%83%9D%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%ED%99%9C%EC%9A%A9%20%EA%B3%84%EC%95%BD%20%EC%83%9D%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "시그마 리튬(SGML), 40만톤 재활용 계약…생산 정상화에 2026 반등 기대",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/344550",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "재활용 계약 생산"
     },
     {
       "term": "울산 부동산 시장",
-      "term_ko": "울산 부동산 시장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "울산 부동산 시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'주담대 금리 7%' 울산 부동산 시장 긴장",
-              "link": "http://www.ujeil.com/news/articleView.html?idxno=383383"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B8%EC%82%B0%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B8%EC%82%B0%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "'주담대 금리 7%' 울산 부동산 시장 긴장",
-          "summary": "",
-          "link": "http://www.ujeil.com/news/articleView.html?idxno=383383",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "울산 부동산 시장"
     },
     {
       "term": "상승 주담대 금리",
-      "term_ko": "상승 주담대 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 주담대 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[따져보니] IMF급 환율 상승…주담대 금리 상승 어디까지?",
-              "link": "https://n.news.naver.com/mnews/article/448/0000600156?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[따져보니] IMF급 환율 상승…주담대 금리 상승 어디까지?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000600156?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상승 주담대 금리"
     },
     {
       "term": "유가 상승이 부른",
-      "term_ko": "유가 상승이 부른",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유가 상승이 부른",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "유가 상승이 부른 ‘코스피 거품론’",
-              "link": "https://n.news.naver.com/mnews/article/032/0003436640?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EA%B0%80%20%EC%83%81%EC%8A%B9%EC%9D%B4%20%EB%B6%80%EB%A5%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EA%B0%80%20%EC%83%81%EC%8A%B9%EC%9D%B4%20%EB%B6%80%EB%A5%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "유가 상승이 부른 ‘코스피 거품론’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003436640?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "유가 상승이 부른"
     },
     {
       "term": "ETF 출시",
-      "term_ko": "ETF 출시",
-      "significance_score": 308,
-      "mentions": 382,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 출시",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-22",
-              "timestamp": 1774105200000,
-              "value": 29.41176
-            },
-            {
-              "period": "2026-03-23",
-              "timestamp": 1774191600000,
-              "value": 70.58823
-            },
-            {
-              "period": "2026-03-24",
-              "timestamp": 1774278000000,
-              "value": 94.11764
-            },
-            {
-              "period": "2026-03-25",
-              "timestamp": 1774364400000,
-              "value": 100
-            },
-            {
-              "period": "2026-03-26",
-              "timestamp": 1774450800000,
-              "value": 70.58823
-            },
-            {
-              "period": "2026-03-27",
-              "timestamp": 1774537200000,
-              "value": 88.23529
-            },
-            {
-              "period": "2026-03-29",
-              "timestamp": 1774710000000,
-              "value": 29.41176
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "키움운용, KIWOOM 미국성장다우존스 ETF 출시",
-              "link": "https://n.news.naver.com/mnews/article/448/0000600071?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%B6%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%B6%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "키움운용, KIWOOM 미국성장다우존스 ETF 출시",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000600071?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 382.3529,
-        "weekly_average_volume": 76.4706,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.016217,
-        "time_weight": 0.021577,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774710000000
-      }
+      "term_ko": "ETF 출시"
     },
     {
       "term": "반등 기대",
-      "term_ko": "반등 기대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반등 기대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시그마 리튬(SGML), 40만톤 재활용 계약…생산 정상화에 2026 반등 기대",
-              "link": "https://www.tokenpost.kr/news/market/344550"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%B1%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%B1%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "시그마 리튬(SGML), 40만톤 재활용 계약…생산 정상화에 2026 반등 기대",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/344550",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반등 기대"
     },
     {
       "term": "싹쓸이한 기업",
-      "term_ko": "싹쓸이한 기업",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "싹쓸이한 기업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-              "link": "http://coinreaders.com/227623"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%B9%EC%93%B8%EC%9D%B4%ED%95%9C%20%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%B9%EC%93%B8%EC%9D%B4%ED%95%9C%20%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-          "summary": "",
-          "link": "http://coinreaders.com/227623",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "싹쓸이한 기업"
     },
     {
       "term": "돌파 정조준",
-      "term_ko": "돌파 정조준",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 정조준",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-              "link": "http://coinreaders.com/227623"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EC%A0%95%EC%A1%B0%EC%A4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EC%A0%95%EC%A1%B0%EC%A4%80"
-      },
-      "top_headlines": [
-        {
-          "title": "6억 8910만 개 싹쓸이한 기업 매수세… 트론 0.336달러 돌파 정조준",
-          "summary": "",
-          "link": "http://coinreaders.com/227623",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "돌파 정조준"
     },
     {
       "term": "선별 투자",
-      "term_ko": "선별 투자",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "선별 투자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KIWOOM 미국성장다우존스 ETF 상장...\"나스닥100+S&P500 선별 투자\"",
-              "link": "https://n.news.naver.com/mnews/article/014/0005499477?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EB%B3%84%20%ED%88%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EB%B3%84%20%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "KIWOOM 미국성장다우존스 ETF 상장...\"나스닥100+S&P500 선별 투자\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005499477?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선별 투자"
     },
     {
       "term": "고공행진 중동",
-      "term_ko": "고공행진 중동",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고공행진 중동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 주가 선물 반등에도 유가 115달러 고공행진…중동 확...",
-              "link": "https://www.newspim.com/news/view/20260330001237"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%20%EC%A4%91%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EA%B3%B5%ED%96%89%EC%A7%84%20%EC%A4%91%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 주가 선물 반등에도 유가 115달러 고공행진…중동 확...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260330001237",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "고공행진 중동"
     },
     {
       "term": "두산건설 外",
-      "term_ko": "두산건설 外",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "두산건설 外",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[브리프]삼성물산 현대건설 IPARK현대산업개발 두산건설 外",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=351496"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%91%90%EC%82%B0%EA%B1%B4%EC%84%A4%20%E5%A4%96",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%91%90%EC%82%B0%EA%B1%B4%EC%84%A4%20%E5%A4%96"
-      },
-      "top_headlines": [
-        {
-          "title": "[브리프]삼성물산 현대건설 IPARK현대산업개발 두산건설 外",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=351496",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "두산건설 外"
     },
     {
       "term": "코스피 거품론",
-      "term_ko": "코스피 거품론",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 거품론",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-23",
-              "timestamp": 1774191600000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "유가 상승이 부른 ‘코스피 거품론’",
-              "link": "https://n.news.naver.com/mnews/article/032/0003436640?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EA%B1%B0%ED%92%88%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EA%B1%B0%ED%92%88%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "유가 상승이 부른 ‘코스피 거품론’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/032/0003436640?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.005254,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1774191600000
-      }
+      "term_ko": "코스피 거품론"
     },
     {
       "term": "Iran Wars Latest",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Iran Wars Latest",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Iran War’s Latest Economic Toll: Oil at $115 a Barrel",
-              "link": "https://www.nytimes.com/2026/03/30/business/dealbook/iran-war-oil-economy.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Wars%20Latest",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Wars%20Latest"
-      },
-      "top_headlines": [
-        {
-          "title": "Iran War’s Latest Economic Toll: Oil at $115 a Barrel",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/03/30/business/dealbook/iran-war-oil-economy.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Iran Wars Latest"
     },
     {
-      "term": "Toll Oil At",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Toll Oil At",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Iran War’s Latest Economic Toll: Oil at $115 a Barrel",
-              "link": "https://www.nytimes.com/2026/03/30/business/dealbook/iran-war-oil-economy.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Toll%20Oil%20At",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Toll%20Oil%20At"
-      },
-      "top_headlines": [
-        {
-          "title": "Iran War’s Latest Economic Toll: Oil at $115 a Barrel",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/03/30/business/dealbook/iran-war-oil-economy.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Toll Oil at",
+      "term_ko": "Toll Oil at"
     },
     {
       "term": "A Barrel",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "A Barrel",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Iran War’s Latest Economic Toll: Oil at $115 a Barrel",
-              "link": "https://www.nytimes.com/2026/03/30/business/dealbook/iran-war-oil-economy.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=A%20Barrel",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=A%20Barrel"
-      },
-      "top_headlines": [
-        {
-          "title": "Iran War’s Latest Economic Toll: Oil at $115 a Barrel",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/03/30/business/dealbook/iran-war-oil-economy.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "A Barrel"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term_ko": "금리 인하 기대감"
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-03-30T22:19:48+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-03-30T13:20:56.199Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-03-30T22:19:48+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "시그마 리튬SGML 40만톤",
+      "term_ko": "시그마 리튬SGML 40만톤"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-03-30T22:19:48+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-03-30T22:19:48+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "키움운용 KIWOOM 미국성장다우존스",
+      "term_ko": "키움운용 KIWOOM 미국성장다우존스"
+    },
+    {
+      "term": "KIWOOM 미국성장다우존스 ETF",
+      "term_ko": "KIWOOM 미국성장다우존스 ETF"
+    },
+    {
+      "term": "하나금융 하나은행 NH농협금융",
+      "term_ko": "하나금융 하나은행 NH농협금융"
+    },
+    {
+      "term": "브리프삼성물산 현대건설 IPARK현대산업개발",
+      "term_ko": "브리프삼성물산 현대건설 IPARK현대산업개발"
+    },
+    {
+      "term": "따져보니 IMF급 환율",
+      "term_ko": "따져보니 IMF급 환율"
+    },
+    {
+      "term": "6억 8910만 개",
+      "term_ko": "6억 8910만 개"
+    },
+    {
+      "term": "매수세 트론 0.336달러",
+      "term_ko": "매수세 트론 0.336달러"
+    },
+    {
+      "term": "반등에도 유가 115달러",
+      "term_ko": "반등에도 유가 115달러"
+    },
+    {
+      "term": "주담대 금리 7%",
+      "term_ko": "주담대 금리 7%"
+    },
+    {
+      "term": "재활용 계약 생산",
+      "term_ko": "재활용 계약 생산"
+    },
+    {
+      "term": "울산 부동산 시장",
+      "term_ko": "울산 부동산 시장"
+    },
+    {
+      "term": "상승 주담대 금리",
+      "term_ko": "상승 주담대 금리"
+    },
+    {
+      "term": "유가 상승이 부른",
+      "term_ko": "유가 상승이 부른"
+    },
+    {
+      "term": "ETF 출시",
+      "term_ko": "ETF 출시"
+    },
+    {
+      "term": "반등 기대",
+      "term_ko": "반등 기대"
+    },
+    {
+      "term": "싹쓸이한 기업",
+      "term_ko": "싹쓸이한 기업"
+    },
+    {
+      "term": "돌파 정조준",
+      "term_ko": "돌파 정조준"
+    },
+    {
+      "term": "선별 투자",
+      "term_ko": "선별 투자"
+    },
+    {
+      "term": "고공행진 중동",
+      "term_ko": "고공행진 중동"
+    },
+    {
+      "term": "두산건설 外",
+      "term_ko": "두산건설 外"
+    },
+    {
+      "term": "코스피 거품론",
+      "term_ko": "코스피 거품론"
+    },
+    {
+      "term": "Iran Wars Latest",
+      "term_ko": "Iran Wars Latest"
+    },
+    {
+      "term": "Toll Oil at",
+      "term_ko": "Toll Oil at"
+    },
+    {
+      "term": "A Barrel",
+      "term_ko": "A Barrel"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "Interest Rate Cut Expectations Rise"
+    },
+    {
+      "term": "금리 인하 기대감",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "비트코인 ETF 기대",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "시그마 리튬SGML 40만톤": {
+      "en": "시그마 리튬SGML 40만톤",
+      "ko": "시그마 리튬SGML 40만톤",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "키움운용 KIWOOM 미국성장다우존스": {
+      "en": "키움운용 KIWOOM 미국성장다우존스",
+      "ko": "키움운용 KIWOOM 미국성장다우존스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "KIWOOM 미국성장다우존스 ETF": {
+      "en": "KIWOOM 미국성장다우존스 ETF",
+      "ko": "KIWOOM 미국성장다우존스 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "하나금융 하나은행 NH농협금융": {
+      "en": "하나금융 하나은행 NH농협금융",
+      "ko": "하나금융 하나은행 NH농협금융",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "브리프삼성물산 현대건설 IPARK현대산업개발": {
+      "en": "브리프삼성물산 현대건설 IPARK현대산업개발",
+      "ko": "브리프삼성물산 현대건설 IPARK현대산업개발",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "따져보니 IMF급 환율": {
+      "en": "따져보니 IMF급 환율",
+      "ko": "따져보니 IMF급 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "6억 8910만 개": {
+      "en": "6억 8910만 개",
+      "ko": "6억 8910만 개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "매수세 트론 0.336달러": {
+      "en": "매수세 트론 0.336달러",
+      "ko": "매수세 트론 0.336달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "반등에도 유가 115달러": {
+      "en": "반등에도 유가 115달러",
+      "ko": "반등에도 유가 115달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "주담대 금리 7%": {
+      "en": "주담대 금리 7%",
+      "ko": "주담대 금리 7%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "재활용 계약 생산": {
+      "en": "재활용 계약 생산",
+      "ko": "재활용 계약 생산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "울산 부동산 시장": {
+      "en": "울산 부동산 시장",
+      "ko": "울산 부동산 시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "상승 주담대 금리": {
+      "en": "상승 주담대 금리",
+      "ko": "상승 주담대 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "유가 상승이 부른": {
+      "en": "유가 상승이 부른",
+      "ko": "유가 상승이 부른",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "ETF 출시": {
+      "en": "ETF 출시",
+      "ko": "ETF 출시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "반등 기대": {
+      "en": "반등 기대",
+      "ko": "반등 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "싹쓸이한 기업": {
+      "en": "싹쓸이한 기업",
+      "ko": "싹쓸이한 기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "돌파 정조준": {
+      "en": "돌파 정조준",
+      "ko": "돌파 정조준",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "선별 투자": {
+      "en": "선별 투자",
+      "ko": "선별 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "고공행진 중동": {
+      "en": "고공행진 중동",
+      "ko": "고공행진 중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "두산건설 外": {
+      "en": "두산건설 外",
+      "ko": "두산건설 外",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "코스피 거품론": {
+      "en": "코스피 거품론",
+      "ko": "코스피 거품론",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "Iran Wars Latest": {
+      "en": "Iran Wars Latest",
+      "ko": "Iran Wars Latest",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "Toll Oil at": {
+      "en": "Toll Oil at",
+      "ko": "Toll Oil at",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "A Barrel": {
+      "en": "A Barrel",
+      "ko": "A Barrel",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "Interest Rate Cut Expectations Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "금리 인하 기대감": {
+      "en": "금리 인하 기대감",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
+    },
+    "비트코인 ETF 기대": {
+      "en": "비트코인 ETF 기대",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-03-30T19:00:48.678Z"
     }
   }
 }
