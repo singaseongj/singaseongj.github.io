@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-03-31T22:18:39+09:00",
+  "generatedAtKST": "2026-04-01T04:05:07+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -95,8 +95,8 @@
       "ticker": "263750.KQ",
       "sector": "커뮤니케이션서비스",
       "metrics": {
-        "ret5": 6.30048465266559,
-        "ret20": -13.421052631578947,
+        "ret5": 69.53316953316954,
+        "ret20": 15,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -111,7 +111,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **6.3%**, 20d **-13.4%**; volatility (20d): **unknown**",
+        "Returns: 5d **69.5%**, 20d **15.0%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **커뮤니케이션서비스**",
         "News search: https://www.google.com/search?q=%ED%8E%84%EC%96%B4%EB%B9%84%EC%8A%A4"
@@ -294,6 +294,35 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
+      "name": "BGF리테일",
+      "ticker": "282330.KS",
+      "sector": "Consumer Staples",
+      "metrics": {
+        "ret5": 0.08051529790660225,
+        "ret20": -3.9412673879443583,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.05,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=BGF%EB%A6%AC%ED%85%8C%EC%9D%BC"
+      },
+      "bullets": [
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
+        "Returns: 5d **0.1%**, 20d **-3.9%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Consumer Staples**",
+        "News search: https://www.google.com/search?q=BGF%EB%A6%AC%ED%85%8C%EC%9D%BC"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
       "name": "기업은행",
       "ticker": "024110.KS",
       "sector": null,
@@ -345,35 +374,6 @@
         "Returns: 5d **-5.2%**, 20d **-6.5%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
-      "name": "삼성SDI",
-      "ticker": "006400.KS",
-      "sector": "Technology",
-      "metrics": {
-        "ret5": 2.6415094339622645,
-        "ret20": 0,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 20,
-        "blogs": 10,
-        "sentiment": 0.05000000000000001,
-        "momentum": "very high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1SDI"
-      },
-      "bullets": [
-        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
-        "Returns: 5d **2.6%**, 20d **0.0%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Technology**",
-        "News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1SDI"
       ]
     },
     {
@@ -801,12 +801,12 @@
     {
       "market": "NASDAQ 100",
       "bucket": "aggressive",
-      "name": "MicroStrategy",
-      "ticker": "MSTR",
+      "name": "Insmed Incorporated",
+      "ticker": "INSM",
       "sector": null,
       "metrics": {
-        "ret5": -0.670789439076325,
-        "ret20": -13.411302612480455,
+        "ret5": 2.9930538601345487,
+        "ret20": -1.1266682942708333,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -817,13 +817,13 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=MicroStrategy"
+        "searchUrl": "https://www.google.com/search?q=Insmed%20Incorporated"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**",
+        "Returns: 5d **3.0%**, 20d **-1.1%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=MicroStrategy"
+        "News search: https://www.google.com/search?q=Insmed%20Incorporated"
       ]
     },
     {
@@ -977,8 +977,8 @@
       "ticker": "DIS",
       "sector": "Communication Services",
       "metrics": {
-        "ret5": -3.70596974631464,
-        "ret20": -9.594557615785366,
+        "ret5": -0.37348336199929877,
+        "ret20": -7.037758042290035,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -993,39 +993,10 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-3.7%**, 20d **-9.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **-0.4%**, 20d **-7.0%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Communication Services**",
         "News search: https://www.google.com/search?q=Walt%20Disney%20Company%20(The)"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
-      "name": "Evergy",
-      "ticker": "EVRG",
-      "sector": "Utilities",
-      "metrics": {
-        "ret5": -0.7438029295824735,
-        "ret20": 2.7080869402954235,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Evergy"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-0.7%**, 20d **2.7%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Utilities**",
-        "News search: https://www.google.com/search?q=Evergy"
       ]
     },
     {
@@ -1035,8 +1006,8 @@
       "ticker": "LDOS",
       "sector": "Industrials",
       "metrics": {
-        "ret5": -5.137191577230701,
-        "ret20": -14.052392593516222,
+        "ret5": -2.5033089180560153,
+        "ret20": -14.1931913954786,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1051,10 +1022,39 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-5.1%**, 20d **-14.1%**; volatility (20d): **unknown**",
+        "Returns: 5d **-2.5%**, 20d **-14.2%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Industrials**",
         "News search: https://www.google.com/search?q=Leidos"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Ralph Lauren Corporation",
+      "ticker": "RL",
+      "sector": "Consumer Discretionary",
+      "metrics": {
+        "ret5": 3.894333575295667,
+        "ret20": 1.0756727304647549,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Ralph%20Lauren%20Corporation"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **3.9%**, 20d **1.1%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Consumer Discretionary**",
+        "News search: https://www.google.com/search?q=Ralph%20Lauren%20Corporation"
       ]
     },
     {
@@ -1064,8 +1064,8 @@
       "ticker": "SOLV",
       "sector": "Healthcare",
       "metrics": {
-        "ret5": -3.4099582816499656,
-        "ret20": -13.082190735699378,
+        "ret5": 1.999061070903445,
+        "ret20": -7.767264778464182,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1080,7 +1080,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-3.4%**, 20d **-13.1%**; volatility (20d): **unknown**",
+        "Returns: 5d **2.0%**, 20d **-7.8%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Healthcare**",
         "News search: https://www.google.com/search?q=Solventum"
@@ -1093,8 +1093,8 @@
       "ticker": "TYL",
       "sector": "Technology",
       "metrics": {
-        "ret5": -2.274485813028276,
-        "ret20": -3.798432521057318,
+        "ret5": 0.7582707673492667,
+        "ret20": -7.1850688083210725,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1109,7 +1109,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-2.3%**, 20d **-3.8%**; volatility (20d): **unknown**",
+        "Returns: 5d **0.8%**, 20d **-7.2%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Tyler%20Technologies"
