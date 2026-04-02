@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-02T16:13:53+09:00 (KST)**
+- Generated: **2026-04-02T22:13:07+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -25,7 +25,7 @@
 **에코프로** (086520.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.5%**, 20d **-11.4%**; volatility (20d): **unknown**
+- Returns: 5d **-2.6%**, 20d **3.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
@@ -33,7 +33,7 @@
 **정보기술** (218410.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.5%**, 20d **28.6%**; volatility (20d): **unknown**
+- Returns: 5d **5.8%**, 20d **-5.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
@@ -41,7 +41,7 @@
 **코미코** (183300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.4%**, 20d **15.0%**; volatility (20d): **unknown**
+- Returns: 5d **12.6%**, 20d **14.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%BD%94%EB%AF%B8%EC%BD%94
@@ -94,7 +94,7 @@
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.15)**
 - Returns: 5d **-11.0%**, 20d **-11.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -109,7 +109,7 @@
 
 **삼성전자** (005930.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
 - Returns: 5d **-0.9%**, 20d **-6.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -124,7 +124,7 @@
 
 **한화** (000880.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
 - Returns: 5d **-0.2%**, 20d **-13.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94
