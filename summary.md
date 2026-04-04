@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-04T16:03:16+09:00 (KST)**
+- Generated: **2026-04-04T21:55:39+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -100,26 +100,19 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80
 
-**LIG넥스원** (079550.KS)
+**동서** (026960.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.40)**
-- Returns: 5d **17.0%**, 20d **3.1%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- Returns: 5d **-1.6%**, 20d **5.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LIG%EB%84%A5%EC%8A%A4%EC%9B%90
+- News search: https://www.google.com/search?q=%EB%8F%99%EC%84%9C
 
-**두산** (000150.KS)
+**씨에스윈드** (112610.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-11.0%**, 20d **2.0%**; volatility (20d): **unknown**
+- News (7d): **11** (blogs: 10) — momentum: **high**, sentiment: **slightly negative (-0.09)**
+- Returns: 5d **-3.0%**, 20d **21.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
-
-**삼성중공업** (010140.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **5.9%**, 20d **1.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85
+- News search: https://www.google.com/search?q=%EC%94%A8%EC%97%90%EC%8A%A4%EC%9C%88%EB%93%9C
 
 **포스코인터내셔널** (047050.KS)
 
@@ -127,6 +120,13 @@
 - Returns: 5d **8.8%**, 20d **16.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90
+
+**풍산** (103140.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-2.3%**, 20d **-15.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%92%8D%EC%82%B0
 
 ### AGGRESSIVE (5)
 
