@@ -1,425 +1,1161 @@
 {
-  "generatedAt": "2026-04-06T13:08:01.468Z",
-  "timezone": "Asia/Seoul",
   "date": "2026-04-06",
   "window": "12_hours",
-  "total_phrases": 29,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "문 NH투자증권 1호",
-      "term_ko": "문 NH투자증권 1호"
-    },
-    {
-      "term": "AI 모르면 짐",
-      "term_ko": "AI 모르면 짐"
-    },
-    {
-      "term": "팔고 삼성전자 SK하이닉스",
-      "term_ko": "팔고 삼성전자 SK하이닉스"
-    },
-    {
-      "term": "회복하는 금 ETF",
-      "term_ko": "회복하는 금 ETF"
-    },
-    {
-      "term": "오프더레코드 BDC의 역설",
-      "term_ko": "오프더레코드 BDC의 역설"
-    },
-    {
-      "term": "심사문턱에 상장사들 VC",
-      "term_ko": "심사문턱에 상장사들 VC"
-    },
-    {
-      "term": "갤럭시코퍼레이션 매출 3000억",
-      "term_ko": "갤럭시코퍼레이션 매출 3000억"
-    },
-    {
-      "term": "지난해 매출 3천억",
-      "term_ko": "지난해 매출 3천억"
-    },
-    {
-      "term": "수익률 낮다 2020년",
-      "term_ko": "수익률 낮다 2020년"
-    },
-    {
-      "term": "중동발 3고 쇼크①",
-      "term_ko": "중동발 3고 쇼크①"
-    },
-    {
-      "term": "알트코인 강세 전환",
-      "term_ko": "알트코인 강세 전환"
-    },
-    {
-      "term": "신호 비트코인 우위",
-      "term_ko": "신호 비트코인 우위"
-    },
-    {
-      "term": "유니콘 밸류 입증",
-      "term_ko": "유니콘 밸류 입증"
-    },
-    {
-      "term": "리더들의 새로운 생존",
-      "term_ko": "리더들의 새로운 생존"
-    },
-    {
-      "term": "마이클 세일러 비트코인",
-      "term_ko": "마이클 세일러 비트코인"
-    },
-    {
-      "term": "거래소 기관 한화시스템",
-      "term_ko": "거래소 기관 한화시스템"
-    },
-    {
-      "term": "환율 물가 금리",
-      "term_ko": "환율 물가 금리"
-    },
-    {
-      "term": "동시 압박 한국",
-      "term_ko": "동시 압박 한국"
-    },
-    {
-      "term": "그래도 믿을 건",
-      "term_ko": "그래도 믿을 건"
-    },
-    {
-      "term": "회사채 발행 위축",
-      "term_ko": "회사채 발행 위축"
-    },
-    {
-      "term": "흑자 전환",
-      "term_ko": "흑자 전환"
-    },
-    {
-      "term": "싸라 포춘",
-      "term_ko": "싸라 포춘"
-    },
-    {
-      "term": "높아진 증권사",
-      "term_ko": "높아진 증권사"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "Ai Chip Demand Surge"
-    },
-    {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "Kospi Rebounds on Foreign Buying"
-    },
-    {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "Interest Rate Cut Expectations Rise"
-    },
-    {
-      "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감"
-    },
-    {
-      "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대"
-    },
-    {
-      "term": "원달러 환율 급등",
-      "term_ko": "원달러 환율 급등"
-    }
-  ],
+  "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "문 NH투자증권 1호",
-      "term_ko": "문 NH투자증권 1호"
-    },
-    {
-      "term": "AI 모르면 짐",
-      "term_ko": "AI 모르면 짐"
-    },
-    {
-      "term": "팔고 삼성전자 SK하이닉스",
-      "term_ko": "팔고 삼성전자 SK하이닉스"
-    },
-    {
-      "term": "회복하는 금 ETF",
-      "term_ko": "회복하는 금 ETF"
-    },
-    {
-      "term": "오프더레코드 BDC의 역설",
-      "term_ko": "오프더레코드 BDC의 역설"
-    },
-    {
-      "term": "심사문턱에 상장사들 VC",
-      "term_ko": "심사문턱에 상장사들 VC"
-    },
-    {
       "term": "갤럭시코퍼레이션 매출 3000억",
-      "term_ko": "갤럭시코퍼레이션 매출 3000억"
+      "term_ko": "갤럭시코퍼레이션 매출 3000억",
+      "significance_score": 672,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "갤럭시코퍼레이션 매출 3000억",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, 매출 3,000억 달성…전년 동기 대비 619% 성장",
+              "link": "https://n.news.naver.com/mnews/article/215/0001248063?sid=101"
+            },
+            {
+              "title": "갤럭시코퍼레이션, 매출 3000억 돌파…지드래곤 효과에 흑자 전환",
+              "link": "https://n.news.naver.com/mnews/article/092/0002417630?sid=105"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%20%EB%A7%A4%EC%B6%9C%203000%EC%96%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%20%EB%A7%A4%EC%B6%9C%203000%EC%96%B5"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, 매출 3,000억 달성…전년 동기 대비 619% 성장",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/215/0001248063?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "갤럭시코퍼레이션, 매출 3000억 돌파…지드래곤 효과에 흑자 전환",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/092/0002417630?sid=105",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "지난해 매출 3천억",
-      "term_ko": "지난해 매출 3천억"
+      "term": "블랙록 나스닥100 ETF",
+      "term_ko": "블랙록 나스닥100 ETF",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "블랙록 나스닥100 ETF",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "블랙록, 나스닥100 ETF 출시 추진…인베스코 독점에 도전",
+              "link": "https://www.tokenpost.kr/news/breaking/346763"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%94%EB%9E%99%EB%A1%9D%20%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%94%EB%9E%99%EB%A1%9D%20%EB%82%98%EC%8A%A4%EB%8B%A5100%20ETF"
+      },
+      "top_headlines": [
+        {
+          "title": "블랙록, 나스닥100 ETF 출시 추진…인베스코 독점에 도전",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/346763",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "수익률 낮다 2020년",
-      "term_ko": "수익률 낮다 2020년"
+      "term": "DH오토리드 최대주주 디에이치글로벌",
+      "term_ko": "DH오토리드 최대주주 디에이치글로벌",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "DH오토리드 최대주주 디에이치글로벌",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "DH오토리드 최대주주 디에이치글로벌, DH오토리드 주식등의 수 178만6218...",
+              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=654051"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=DH%EC%98%A4%ED%86%A0%EB%A6%AC%EB%93%9C%20%EC%B5%9C%EB%8C%80%EC%A3%BC%EC%A3%BC%20%EB%94%94%EC%97%90%EC%9D%B4%EC%B9%98%EA%B8%80%EB%A1%9C%EB%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=DH%EC%98%A4%ED%86%A0%EB%A6%AC%EB%93%9C%20%EC%B5%9C%EB%8C%80%EC%A3%BC%EC%A3%BC%20%EB%94%94%EC%97%90%EC%9D%B4%EC%B9%98%EA%B8%80%EB%A1%9C%EB%B2%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "DH오토리드 최대주주 디에이치글로벌, DH오토리드 주식등의 수 178만6218...",
+          "summary": "",
+          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=654051",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "중동발 3고 쇼크①",
-      "term_ko": "중동발 3고 쇼크①"
+      "term": "갤럭시코퍼레이션 4분기 매출",
+      "term_ko": "갤럭시코퍼레이션 4분기 매출",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "갤럭시코퍼레이션 4분기 매출",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, 4분기 매출 3000억…전년비 619%↑",
+              "link": "https://n.news.naver.com/mnews/article/025/0003514284?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%204%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98%204%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, 4분기 매출 3000억…전년비 619%↑",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/025/0003514284?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "알트코인 강세 전환",
-      "term_ko": "알트코인 강세 전환"
+      "term": "3000억 전년비 619%",
+      "term_ko": "3000억 전년비 619%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "3000억 전년비 619%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, 4분기 매출 3000억…전년비 619%↑",
+              "link": "https://n.news.naver.com/mnews/article/025/0003514284?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3000%EC%96%B5%20%EC%A0%84%EB%85%84%EB%B9%84%20619%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3000%EC%96%B5%20%EC%A0%84%EB%85%84%EB%B9%84%20619%25"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, 4분기 매출 3000억…전년비 619%↑",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/025/0003514284?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "신호 비트코인 우위",
-      "term_ko": "신호 비트코인 우위"
+      "term": "동기 대비 619%",
+      "term_ko": "동기 대비 619%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "동기 대비 619%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, 매출 3,000억 달성…전년 동기 대비 619% 성장",
+              "link": "https://n.news.naver.com/mnews/article/215/0001248063?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B8%B0%20%EB%8C%80%EB%B9%84%20619%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B8%B0%20%EB%8C%80%EB%B9%84%20619%25"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, 매출 3,000억 달성…전년 동기 대비 619% 성장",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/215/0001248063?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "유니콘 밸류 입증",
-      "term_ko": "유니콘 밸류 입증"
+      "term": "2% 예금 대신",
+      "term_ko": "2% 예금 대신",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "2% 예금 대신",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "2% 예금 대신 주식으로 ‘머니무브’…“저가 매수냐, 4% 고금리냐”",
+              "link": "https://sateconomy.co.kr/news/view/1065609009453252"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%25%20%EC%98%88%EA%B8%88%20%EB%8C%80%EC%8B%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%25%20%EC%98%88%EA%B8%88%20%EB%8C%80%EC%8B%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "2% 예금 대신 주식으로 ‘머니무브’…“저가 매수냐, 4% 고금리냐”",
+          "summary": "",
+          "link": "https://sateconomy.co.kr/news/view/1065609009453252",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "리더들의 새로운 생존",
-      "term_ko": "리더들의 새로운 생존"
+      "term": "저가 매수냐 4%",
+      "term_ko": "저가 매수냐 4%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "저가 매수냐 4%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "2% 예금 대신 주식으로 ‘머니무브’…“저가 매수냐, 4% 고금리냐”",
+              "link": "https://sateconomy.co.kr/news/view/1065609009453252"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%80%EA%B0%80%20%EB%A7%A4%EC%88%98%EB%83%90%204%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%80%EA%B0%80%20%EB%A7%A4%EC%88%98%EB%83%90%204%25"
+      },
+      "top_headlines": [
+        {
+          "title": "2% 예금 대신 주식으로 ‘머니무브’…“저가 매수냐, 4% 고금리냐”",
+          "summary": "",
+          "link": "https://sateconomy.co.kr/news/view/1065609009453252",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "마이클 세일러 비트코인",
-      "term_ko": "마이클 세일러 비트코인"
+      "term": "차주 소득 42%",
+      "term_ko": "차주 소득 42%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "차주 소득 42%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서울 주담대 차주, 소득 42% 빚 갚는 데 쓴다",
+              "link": "https://n.news.naver.com/mnews/article/032/0003438186?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B0%A8%EC%A3%BC%20%EC%86%8C%EB%93%9D%2042%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B0%A8%EC%A3%BC%20%EC%86%8C%EB%93%9D%2042%25"
+      },
+      "top_headlines": [
+        {
+          "title": "서울 주담대 차주, 소득 42% 빚 갚는 데 쓴다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/032/0003438186?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "거래소 기관 한화시스템",
-      "term_ko": "거래소 기관 한화시스템"
+      "term": "출시 추진 인베스코",
+      "term_ko": "출시 추진 인베스코",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "출시 추진 인베스코",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "블랙록, 나스닥100 ETF 출시 추진…인베스코 독점에 도전",
+              "link": "https://www.tokenpost.kr/news/breaking/346763"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EC%8B%9C%20%EC%B6%94%EC%A7%84%20%EC%9D%B8%EB%B2%A0%EC%8A%A4%EC%BD%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EC%8B%9C%20%EC%B6%94%EC%A7%84%20%EC%9D%B8%EB%B2%A0%EC%8A%A4%EC%BD%94"
+      },
+      "top_headlines": [
+        {
+          "title": "블랙록, 나스닥100 ETF 출시 추진…인베스코 독점에 도전",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/346763",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "환율 물가 금리",
-      "term_ko": "환율 물가 금리"
+      "term": "피터 쉬프 비트코인",
+      "term_ko": "피터 쉬프 비트코인",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "피터 쉬프 비트코인",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"12% vs 36%\"...세일러·피터 쉬프, 비트코인 수익률 '진실' 공방",
+              "link": "http://coinreaders.com/229030"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%BC%ED%84%B0%20%EC%89%AC%ED%94%84%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%BC%ED%84%B0%20%EC%89%AC%ED%94%84%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "\"12% vs 36%\"...세일러·피터 쉬프, 비트코인 수익률 '진실' 공방",
+          "summary": "",
+          "link": "http://coinreaders.com/229030",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "동시 압박 한국",
-      "term_ko": "동시 압박 한국"
+      "term": "수익률 진실 공방",
+      "term_ko": "수익률 진실 공방",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "수익률 진실 공방",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"12% vs 36%\"...세일러·피터 쉬프, 비트코인 수익률 '진실' 공방",
+              "link": "http://coinreaders.com/229030"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9D%B5%EB%A5%A0%20%EC%A7%84%EC%8B%A4%20%EA%B3%B5%EB%B0%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9D%B5%EB%A5%A0%20%EC%A7%84%EC%8B%A4%20%EA%B3%B5%EB%B0%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "\"12% vs 36%\"...세일러·피터 쉬프, 비트코인 수익률 '진실' 공방",
+          "summary": "",
+          "link": "http://coinreaders.com/229030",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "그래도 믿을 건",
-      "term_ko": "그래도 믿을 건"
+      "term": "강남 한강벨트 떨어지는데",
+      "term_ko": "강남 한강벨트 떨어지는데",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "강남 한강벨트 떨어지는데",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "강남·한강벨트 떨어지는데 강북은 상승 왜? [감평사의 부동산 현장진단...",
+              "link": "https://n.news.naver.com/mnews/article/024/0000104622?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EB%82%A8%20%ED%95%9C%EA%B0%95%EB%B2%A8%ED%8A%B8%20%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94%EB%8D%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EB%82%A8%20%ED%95%9C%EA%B0%95%EB%B2%A8%ED%8A%B8%20%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94%EB%8D%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "강남·한강벨트 떨어지는데 강북은 상승 왜? [감평사의 부동산 현장진단...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/024/0000104622?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "회사채 발행 위축",
-      "term_ko": "회사채 발행 위축"
+      "term": "강북은 상승 왜",
+      "term_ko": "강북은 상승 왜",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "강북은 상승 왜",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "강남·한강벨트 떨어지는데 강북은 상승 왜? [감평사의 부동산 현장진단...",
+              "link": "https://n.news.naver.com/mnews/article/024/0000104622?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EB%B6%81%EC%9D%80%20%EC%83%81%EC%8A%B9%20%EC%99%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EB%B6%81%EC%9D%80%20%EC%83%81%EC%8A%B9%20%EC%99%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "강남·한강벨트 떨어지는데 강북은 상승 왜? [감평사의 부동산 현장진단...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/024/0000104622?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "빚 갚는 데",
+      "term_ko": "빚 갚는 데",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "빚 갚는 데",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서울 주담대 차주, 소득 42% 빚 갚는 데 쓴다",
+              "link": "https://n.news.naver.com/mnews/article/032/0003438186?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%20%EA%B0%9A%EB%8A%94%20%EB%8D%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%20%EA%B0%9A%EB%8A%94%20%EB%8D%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "서울 주담대 차주, 소득 42% 빚 갚는 데 쓴다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/032/0003438186?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "골드만삭스 한은 기준금리",
+      "term_ko": "골드만삭스 한은 기준금리",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "골드만삭스 한은 기준금리",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "골드만삭스 \"한은, 기준금리 동결 전망… 물가 상승 우려 과도\"",
+              "link": "https://n.news.naver.com/mnews/article/008/0005340545?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A8%EB%93%9C%EB%A7%8C%EC%82%AD%EC%8A%A4%20%ED%95%9C%EC%9D%80%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A8%EB%93%9C%EB%A7%8C%EC%82%AD%EC%8A%A4%20%ED%95%9C%EC%9D%80%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "골드만삭스 \"한은, 기준금리 동결 전망… 물가 상승 우려 과도\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/008/0005340545?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "물가 상승 우려",
+      "term_ko": "물가 상승 우려",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "물가 상승 우려",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "골드만삭스 \"한은, 기준금리 동결 전망… 물가 상승 우려 과도\"",
+              "link": "https://n.news.naver.com/mnews/article/008/0005340545?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%BC%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EC%9A%B0%EB%A0%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%BC%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EC%9A%B0%EB%A0%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "골드만삭스 \"한은, 기준금리 동결 전망… 물가 상승 우려 과도\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/008/0005340545?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "독점에 도전",
+      "term_ko": "독점에 도전",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "독점에 도전",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "블랙록, 나스닥100 ETF 출시 추진…인베스코 독점에 도전",
+              "link": "https://www.tokenpost.kr/news/breaking/346763"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%85%EC%A0%90%EC%97%90%20%EB%8F%84%EC%A0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%85%EC%A0%90%EC%97%90%20%EB%8F%84%EC%A0%84"
+      },
+      "top_headlines": [
+        {
+          "title": "블랙록, 나스닥100 ETF 출시 추진…인베스코 독점에 도전",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/breaking/346763",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "달성 전년",
+      "term_ko": "달성 전년",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "달성 전년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, 매출 3,000억 달성…전년 동기 대비 619% 성장",
+              "link": "https://n.news.naver.com/mnews/article/215/0001248063?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EC%84%B1%20%EC%A0%84%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EC%84%B1%20%EC%A0%84%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, 매출 3,000억 달성…전년 동기 대비 619% 성장",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/215/0001248063?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "흑자 전환",
-      "term_ko": "흑자 전환"
+      "term_ko": "흑자 전환",
+      "significance_score": 280,
+      "mentions": 305,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "흑자 전환",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-03-30",
+              "timestamp": 1774796400000,
+              "value": 47.36842
+            },
+            {
+              "period": "2026-03-31",
+              "timestamp": 1774882800000,
+              "value": 78.94736
+            },
+            {
+              "period": "2026-04-01",
+              "timestamp": 1774969200000,
+              "value": 26.31578
+            },
+            {
+              "period": "2026-04-02",
+              "timestamp": 1775055600000,
+              "value": 100
+            },
+            {
+              "period": "2026-04-03",
+              "timestamp": 1775142000000,
+              "value": 31.57894
+            },
+            {
+              "period": "2026-04-04",
+              "timestamp": 1775228400000,
+              "value": 31.57894
+            },
+            {
+              "period": "2026-04-05",
+              "timestamp": 1775314800000,
+              "value": 36.8421
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "갤럭시코퍼레이션, 매출 3000억 돌파…지드래곤 효과에 흑자 전환",
+              "link": "https://n.news.naver.com/mnews/article/092/0002417630?sid=105"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9D%91%EC%9E%90%20%EC%A0%84%ED%99%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9D%91%EC%9E%90%20%EC%A0%84%ED%99%98"
+      },
+      "top_headlines": [
+        {
+          "title": "갤럭시코퍼레이션, 매출 3000억 돌파…지드래곤 효과에 흑자 전환",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/092/0002417630?sid=105",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 305.2631,
+        "weekly_average_volume": 50.8772,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.018956,
+        "time_weight": 0.021651,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1775314800000
+      }
     },
     {
-      "term": "싸라 포춘",
-      "term_ko": "싸라 포춘"
+      "term": "주식으로 머니무브",
+      "term_ko": "주식으로 머니무브",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주식으로 머니무브",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "2% 예금 대신 주식으로 ‘머니무브’…“저가 매수냐, 4% 고금리냐”",
+              "link": "https://sateconomy.co.kr/news/view/1065609009453252"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%EC%9C%BC%EB%A1%9C%20%EB%A8%B8%EB%8B%88%EB%AC%B4%EB%B8%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%EC%9C%BC%EB%A1%9C%20%EB%A8%B8%EB%8B%88%EB%AC%B4%EB%B8%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "2% 예금 대신 주식으로 ‘머니무브’…“저가 매수냐, 4% 고금리냐”",
+          "summary": "",
+          "link": "https://sateconomy.co.kr/news/view/1065609009453252",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "높아진 증권사",
-      "term_ko": "높아진 증권사"
+      "term": "감평사의 부동산",
+      "term_ko": "감평사의 부동산",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "감평사의 부동산",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "강남·한강벨트 떨어지는데 강북은 상승 왜? [감평사의 부동산 현장진단...",
+              "link": "https://n.news.naver.com/mnews/article/024/0000104622?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%90%ED%8F%89%EC%82%AC%EC%9D%98%20%EB%B6%80%EB%8F%99%EC%82%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%90%ED%8F%89%EC%82%AC%EC%9D%98%20%EB%B6%80%EB%8F%99%EC%82%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "강남·한강벨트 떨어지는데 강북은 상승 왜? [감평사의 부동산 현장진단...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/024/0000104622?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "Ai Chip Demand Surge"
+      "term": "주식등의 수",
+      "term_ko": "주식등의 수",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주식등의 수",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "DH오토리드 최대주주 디에이치글로벌, DH오토리드 주식등의 수 178만6218...",
+              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=654051"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%EB%93%B1%EC%9D%98%20%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%EB%93%B1%EC%9D%98%20%EC%88%98"
+      },
+      "top_headlines": [
+        {
+          "title": "DH오토리드 최대주주 디에이치글로벌, DH오토리드 주식등의 수 178만6218...",
+          "summary": "",
+          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=654051",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "Kospi Rebounds on Foreign Buying"
+      "term": "서울 주담대",
+      "term_ko": "서울 주담대",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "서울 주담대",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서울 주담대 차주, 소득 42% 빚 갚는 데 쓴다",
+              "link": "https://n.news.naver.com/mnews/article/032/0003438186?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%A3%BC%EB%8B%B4%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%A3%BC%EB%8B%B4%EB%8C%80"
+      },
+      "top_headlines": [
+        {
+          "title": "서울 주담대 차주, 소득 42% 빚 갚는 데 쓴다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/032/0003438186?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "Interest Rate Cut Expectations Rise"
+      "term": "AI chip demand surge",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
     },
     {
       "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감"
+      "term_ko": "금리 인하 기대감",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 인하 기대감",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+      },
+      "top_headlines": []
     },
     {
       "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대"
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
     },
     {
       "term": "원달러 환율 급등",
-      "term_ko": "원달러 환율 급등"
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-04-06T22:10:12+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "문 NH투자증권 1호": {
-      "en": "문 NH투자증권 1호",
-      "ko": "문 NH투자증권 1호",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2026-04-06T13:11:22.661Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2026-04-06T22:10:12+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 0,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 0,
+      "too_generic": 0
     },
-    "AI 모르면 짐": {
-      "en": "AI 모르면 짐",
-      "ko": "AI 모르면 짐",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "팔고 삼성전자 SK하이닉스": {
-      "en": "팔고 삼성전자 SK하이닉스",
-      "ko": "팔고 삼성전자 SK하이닉스",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "회복하는 금 ETF": {
-      "en": "회복하는 금 ETF",
-      "ko": "회복하는 금 ETF",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "오프더레코드 BDC의 역설": {
-      "en": "오프더레코드 BDC의 역설",
-      "ko": "오프더레코드 BDC의 역설",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "심사문턱에 상장사들 VC": {
-      "en": "심사문턱에 상장사들 VC",
-      "ko": "심사문턱에 상장사들 VC",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "갤럭시코퍼레이션 매출 3000억": {
-      "en": "갤럭시코퍼레이션 매출 3000억",
-      "ko": "갤럭시코퍼레이션 매출 3000억",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "지난해 매출 3천억": {
-      "en": "지난해 매출 3천억",
-      "ko": "지난해 매출 3천억",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "수익률 낮다 2020년": {
-      "en": "수익률 낮다 2020년",
-      "ko": "수익률 낮다 2020년",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "중동발 3고 쇼크①": {
-      "en": "중동발 3고 쇼크①",
-      "ko": "중동발 3고 쇼크①",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "알트코인 강세 전환": {
-      "en": "알트코인 강세 전환",
-      "ko": "알트코인 강세 전환",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "신호 비트코인 우위": {
-      "en": "신호 비트코인 우위",
-      "ko": "신호 비트코인 우위",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "유니콘 밸류 입증": {
-      "en": "유니콘 밸류 입증",
-      "ko": "유니콘 밸류 입증",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "리더들의 새로운 생존": {
-      "en": "리더들의 새로운 생존",
-      "ko": "리더들의 새로운 생존",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "마이클 세일러 비트코인": {
-      "en": "마이클 세일러 비트코인",
-      "ko": "마이클 세일러 비트코인",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "거래소 기관 한화시스템": {
-      "en": "거래소 기관 한화시스템",
-      "ko": "거래소 기관 한화시스템",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "환율 물가 금리": {
-      "en": "환율 물가 금리",
-      "ko": "환율 물가 금리",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "동시 압박 한국": {
-      "en": "동시 압박 한국",
-      "ko": "동시 압박 한국",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "그래도 믿을 건": {
-      "en": "그래도 믿을 건",
-      "ko": "그래도 믿을 건",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "회사채 발행 위축": {
-      "en": "회사채 발행 위축",
-      "ko": "회사채 발행 위축",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "흑자 전환": {
-      "en": "흑자 전환",
-      "ko": "흑자 전환",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "싸라 포춘": {
-      "en": "싸라 포춘",
-      "ko": "싸라 포춘",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "높아진 증권사": {
-      "en": "높아진 증권사",
-      "ko": "높아진 증권사",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "Ai Chip Demand Surge": {
-      "en": "Ai Chip Demand Surge",
-      "ko": "Ai Chip Demand Surge",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "Kospi Rebounds on Foreign Buying": {
-      "en": "Kospi Rebounds on Foreign Buying",
-      "ko": "Kospi Rebounds on Foreign Buying",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "Interest Rate Cut Expectations Rise": {
-      "en": "Interest Rate Cut Expectations Rise",
-      "ko": "Interest Rate Cut Expectations Rise",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "금리 인하 기대감": {
-      "en": "금리 인하 기대감",
-      "ko": "금리 인하 기대감",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "비트코인 ETF 기대": {
-      "en": "비트코인 ETF 기대",
-      "ko": "비트코인 ETF 기대",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
-    },
-    "원달러 환율 급등": {
-      "en": "원달러 환율 급등",
-      "ko": "원달러 환율 급등",
-      "translator": "pre-collected",
-      "cachedAt": "2026-04-06T13:08:01.468Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2026-04-06T22:10:12+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2026-04-06T22:10:12+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
+      }
     }
   }
 }
