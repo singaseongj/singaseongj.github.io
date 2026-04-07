@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-07T22:18:48+09:00 (KST)**
+- Generated: **2026-04-08T04:05:58+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -49,13 +49,13 @@
 
 ### AGGRESSIVE (5)
 
-**더블유씨피** (393890.KQ)
+**라이콤** (054300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **0.9%**; volatility (20d): **unknown**
+- Returns: 5d **0.2%**, 20d **-24.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EB%8D%94%EB%B8%94%EC%9C%A0%EC%94%A8%ED%94%BC
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EB%9D%BC%EC%9D%B4%EC%BD%A4
 
 **브이티** (018290.KQ)
 
@@ -221,12 +221,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
 
-**MicroStrategy** (MSTR)
+**Ferrovial** (FER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
+- Returns: 5d **5.7%**, 20d **-1.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=MicroStrategy
+- News search: https://www.google.com/search?q=Ferrovial
 
 **Thomson Reuters** (TRI)
 
@@ -254,13 +254,13 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Amphenol
 
-**Apple Inc.** (AAPL)
+**Booking Holdings** (BKNG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
+- Returns: 5d **-0.4%**, 20d **0.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Apple%20Inc.
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Booking%20Holdings
 
 **Citigroup** (C)
 
@@ -281,20 +281,12 @@
 **Lowe's** (LOW)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-1.3%**, 20d **-8.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Lowe's
 
 ### AGGRESSIVE (5)
-
-**Humana** (HUM)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.5%**, 20d **-1.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Humana
 
 **Leidos** (LDOS)
 
@@ -304,10 +296,18 @@
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Leidos
 
+**NetApp** (NTAP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.1%**, 20d **1.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=NetApp
+
 **Principal Financial Group** (PFG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **2.6%**, 20d **-0.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Principal%20Financial%20Group
