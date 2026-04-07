@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-07T16:18:39+09:00 (KST)**
+- Generated: **2026-04-07T22:18:48+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -52,7 +52,7 @@
 **더블유씨피** (393890.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **10.5%**, 20d **53.6%**; volatility (20d): **unknown**
+- Returns: 5d **1.2%**, 20d **0.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%8D%94%EB%B8%94%EC%9C%A0%EC%94%A8%ED%94%BC
@@ -60,7 +60,7 @@
 **브이티** (018290.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.6%**, 20d **-4.8%**; volatility (20d): **unknown**
+- Returns: 5d **-13.2%**, 20d **-5.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%ED%8B%B0
@@ -76,7 +76,7 @@
 **오로스테크놀로지** (322310.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.3%**, 20d **8.5%**; volatility (20d): **unknown**
+- Returns: 5d **2.2%**, 20d **5.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%98%A4%EB%A1%9C%EC%8A%A4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
@@ -221,12 +221,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
 
-**Ferrovial** (FER)
+**MicroStrategy** (MSTR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.7%**, 20d **-1.2%**; volatility (20d): **unknown**
+- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Ferrovial
+- News search: https://www.google.com/search?q=MicroStrategy
 
 **Thomson Reuters** (TRI)
 
