@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-07",
+  "date": "2026-04-08",
   "window": "12_hours",
   "total_phrases": 30,
   "discovered_keywords": [
@@ -13,7 +13,7 @@
         "query": "갤럭시코퍼레이션 4월 IPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -41,36 +41,109 @@
       ]
     },
     {
-      "term": "혼조 美10년물금리 WTI",
-      "term_ko": "혼조 美10년물금리 WTI",
+      "term": "NH투자증권 IMA 1호",
+      "term_ko": "NH투자증권 IMA 1호",
       "significance_score": 364,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "혼조 美10년물금리 WTI",
+        "query": "NH투자증권 IMA 1호",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-03-31",
+              "timestamp": 1774882800000,
+              "value": 100
+            },
+            {
+              "period": "2026-04-06",
+              "timestamp": 1775401200000,
+              "value": 85.71428
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "미국증시 장중...은행주 '혼조', 美10년물금리·WTI '상승'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163466"
+              "title": "NH투자증권 IMA 1호 완판…법인 55%·신규 자산 60% 유입",
+              "link": "https://www.newspim.com/news/view/20260408000535"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%BC%EC%A1%B0%20%E7%BE%8E10%EB%85%84%EB%AC%BC%EA%B8%88%EB%A6%AC%20WTI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%BC%EC%A1%B0%20%E7%BE%8E10%EB%85%84%EB%AC%BC%EA%B8%88%EB%A6%AC%20WTI"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%201%ED%98%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20IMA%201%ED%98%B8"
       },
       "top_headlines": [
         {
-          "title": "미국증시 장중...은행주 '혼조', 美10년물금리·WTI '상승'",
+          "title": "NH투자증권 IMA 1호 완판…법인 55%·신규 자산 60% 유입",
           "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163466",
+          "link": "https://www.newspim.com/news/view/20260408000535",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 85.7143,
+        "weekly_average_volume": 85.7143,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.04572,
+        "time_weight": 0.016869,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1775401200000
+      }
+    },
+    {
+      "term": "MD포커스 역대급 흑자",
+      "term_ko": "MD포커스 역대급 흑자",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "MD포커스 역대급 흑자",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-08T11:16:04+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[MD포커스] “역대급 흑자 뒤 균열”…외국인 119억달러 이탈 ‘경고 신...",
+              "link": "https://n.news.naver.com/mnews/article/117/0004051956?sid=103"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MD%ED%8F%AC%EC%BB%A4%EC%8A%A4%20%EC%97%AD%EB%8C%80%EA%B8%89%20%ED%9D%91%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MD%ED%8F%AC%EC%BB%A4%EC%8A%A4%20%EC%97%AD%EB%8C%80%EA%B8%89%20%ED%9D%91%EC%9E%90"
+      },
+      "top_headlines": [
+        {
+          "title": "[MD포커스] “역대급 흑자 뒤 균열”…외국인 119억달러 이탈 ‘경고 신...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/117/0004051956?sid=103",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -78,36 +151,36 @@
       ]
     },
     {
-      "term": "아마존 MS 구글",
-      "term_ko": "아마존 MS 구글",
-      "significance_score": 350,
+      "term": "작년 정산금만 650억",
+      "term_ko": "작년 정산금만 650억",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "아마존 MS 구글",
+        "query": "작년 정산금만 650억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "아마존·MS·구글 데이터센터, 기관투자자 '공시 압박'에 제동",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18472"
+              "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
+              "link": "https://m.entertain.naver.com/article/468/0001232179"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%A7%88%EC%A1%B4%20MS%20%EA%B5%AC%EA%B8%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%A7%88%EC%A1%B4%20MS%20%EA%B5%AC%EA%B8%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%91%EB%85%84%20%EC%A0%95%EC%82%B0%EA%B8%88%EB%A7%8C%20650%EC%96%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%91%EB%85%84%20%EC%A0%95%EC%82%B0%EA%B8%88%EB%A7%8C%20650%EC%96%B5"
       },
       "top_headlines": [
         {
-          "title": "아마존·MS·구글 데이터센터, 기관투자자 '공시 압박'에 제동",
+          "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
           "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18472",
+          "link": "https://m.entertain.naver.com/article/468/0001232179",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -115,36 +188,36 @@
       ]
     },
     {
-      "term": "한국 사회채권 ADB",
-      "term_ko": "한국 사회채권 ADB",
-      "significance_score": 350,
+      "term": "소속사 매출 31배",
+      "term_ko": "소속사 매출 31배",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한국 사회채권 ADB",
+        "query": "소속사 매출 31배",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "서민 집·복지 떠받치는 한국 사회채권… ADB ‘짧은 만기’ 경고",
-              "link": "https://n.news.naver.com/mnews/article/005/0001841830?sid=101"
+              "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
+              "link": "https://m.entertain.naver.com/article/468/0001232179"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%82%AC%ED%9A%8C%EC%B1%84%EA%B6%8C%20ADB",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%82%AC%ED%9A%8C%EC%B1%84%EA%B6%8C%20ADB"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EC%86%8D%EC%82%AC%20%EB%A7%A4%EC%B6%9C%2031%EB%B0%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EC%86%8D%EC%82%AC%20%EB%A7%A4%EC%B6%9C%2031%EB%B0%B0"
       },
       "top_headlines": [
         {
-          "title": "서민 집·복지 떠받치는 한국 사회채권… ADB ‘짧은 만기’ 경고",
+          "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001841830?sid=101",
+          "link": "https://m.entertain.naver.com/article/468/0001232179",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -161,7 +234,7 @@
         "query": "갤럭시코퍼레이션 매출 3000억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -198,7 +271,7 @@
         "query": "1년 만에 6배",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -226,36 +299,36 @@
       ]
     },
     {
-      "term": "美 2030조 국방",
-      "term_ko": "美 2030조 국방",
+      "term": "3월 시장안정프로그램 2.4조",
+      "term_ko": "3월 시장안정프로그램 2.4조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美 2030조 국방",
+        "query": "3월 시장안정프로그램 2.4조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "美 '2030조 국방 예산', 우주·해양 패권 재편 신호탄…방산 슈퍼사이클...",
-              "link": "https://www.g-enews.com/view.php?ud=202604071419063766fbbec65dfb_1"
+              "title": "3월 시장안정프로그램 2.4조 집행…레고랜드 사태 후 최대 규모",
+              "link": "https://www.newsway.co.kr/news/view?ud=2026040810570968499"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%202030%EC%A1%B0%20%EA%B5%AD%EB%B0%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%202030%EC%A1%B0%20%EA%B5%AD%EB%B0%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EC%9B%94%20%EC%8B%9C%EC%9E%A5%EC%95%88%EC%A0%95%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%202.4%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EC%9B%94%20%EC%8B%9C%EC%9E%A5%EC%95%88%EC%A0%95%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%202.4%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "美 '2030조 국방 예산', 우주·해양 패권 재편 신호탄…방산 슈퍼사이클...",
+          "title": "3월 시장안정프로그램 2.4조 집행…레고랜드 사태 후 최대 규모",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604071419063766fbbec65dfb_1",
+          "link": "https://www.newsway.co.kr/news/view?ud=2026040810570968499",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -263,36 +336,36 @@
       ]
     },
     {
-      "term": "오늘의 금값시세4월 8일자",
-      "term_ko": "오늘의 금값시세4월 8일자",
+      "term": "균열 외국인 119억달러",
+      "term_ko": "균열 외국인 119억달러",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "오늘의 금값시세4월 8일자",
+        "query": "균열 외국인 119억달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "오늘의 금값시세(4월 8일자) 美·이란 전쟁, 금값 하락세 \"2026년 전망은...",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3551588"
+              "title": "[MD포커스] “역대급 흑자 뒤 균열”…외국인 119억달러 이탈 ‘경고 신...",
+              "link": "https://n.news.naver.com/mnews/article/117/0004051956?sid=103"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B84%EC%9B%94%208%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B84%EC%9B%94%208%EC%9D%BC%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%A0%EC%97%B4%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20119%EC%96%B5%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%A0%EC%97%B4%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20119%EC%96%B5%EB%8B%AC%EB%9F%AC"
       },
       "top_headlines": [
         {
-          "title": "오늘의 금값시세(4월 8일자) 美·이란 전쟁, 금값 하락세 \"2026년 전망은...",
+          "title": "[MD포커스] “역대급 흑자 뒤 균열”…외국인 119억달러 이탈 ‘경고 신...",
           "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3551588",
+          "link": "https://n.news.naver.com/mnews/article/117/0004051956?sid=103",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -300,36 +373,36 @@
       ]
     },
     {
-      "term": "금값 하락세 2026년",
-      "term_ko": "금값 하락세 2026년",
+      "term": "롤러코스터 대기자금 470조",
+      "term_ko": "롤러코스터 대기자금 470조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금값 하락세 2026년",
+        "query": "롤러코스터 대기자금 470조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "오늘의 금값시세(4월 8일자) 美·이란 전쟁, 금값 하락세 \"2026년 전망은...",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3551588"
+              "title": "전쟁도 롤러코스터…대기자금 470조 \"갈 곳을 잃었다\"",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704750"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD%EC%84%B8%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD%EC%84%B8%202026%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%EB%8C%80%EA%B8%B0%EC%9E%90%EA%B8%88%20470%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%EB%8C%80%EA%B8%B0%EC%9E%90%EA%B8%88%20470%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "오늘의 금값시세(4월 8일자) 美·이란 전쟁, 금값 하락세 \"2026년 전망은...",
+          "title": "전쟁도 롤러코스터…대기자금 470조 \"갈 곳을 잃었다\"",
           "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3551588",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704750",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +410,36 @@
       ]
     },
     {
-      "term": "데이터센터 기관투자자 공시",
-      "term_ko": "데이터센터 기관투자자 공시",
-      "significance_score": 322,
+      "term": "완판 법인 55%",
+      "term_ko": "완판 법인 55%",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "데이터센터 기관투자자 공시",
+        "query": "완판 법인 55%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "아마존·MS·구글 데이터센터, 기관투자자 '공시 압박'에 제동",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18472"
+              "title": "NH투자증권 IMA 1호 완판…법인 55%·신규 자산 60% 유입",
+              "link": "https://www.newspim.com/news/view/20260408000535"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%20%EA%B8%B0%EA%B4%80%ED%88%AC%EC%9E%90%EC%9E%90%20%EA%B3%B5%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%20%EA%B8%B0%EA%B4%80%ED%88%AC%EC%9E%90%EC%9E%90%20%EA%B3%B5%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%84%ED%8C%90%20%EB%B2%95%EC%9D%B8%2055%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%84%ED%8C%90%20%EB%B2%95%EC%9D%B8%2055%25"
       },
       "top_headlines": [
         {
-          "title": "아마존·MS·구글 데이터센터, 기관투자자 '공시 압박'에 제동",
+          "title": "NH투자증권 IMA 1호 완판…법인 55%·신규 자산 60% 유입",
           "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18472",
+          "link": "https://www.newspim.com/news/view/20260408000535",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,36 +447,36 @@
       ]
     },
     {
-      "term": "뛰는 시장금리에 채권",
-      "term_ko": "뛰는 시장금리에 채권",
-      "significance_score": 322,
+      "term": "신규 자산 60%",
+      "term_ko": "신규 자산 60%",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뛰는 시장금리에 채권",
+        "query": "신규 자산 60%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "뛰는 시장금리에, 채권 발행 막막한 카드사",
-              "link": "https://n.news.naver.com/mnews/article/008/0005341151?sid=101"
+              "title": "NH투자증권 IMA 1호 완판…법인 55%·신규 자산 60% 유입",
+              "link": "https://www.newspim.com/news/view/20260408000535"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9B%B0%EB%8A%94%20%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%EC%97%90%20%EC%B1%84%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9B%B0%EB%8A%94%20%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%EC%97%90%20%EC%B1%84%EA%B6%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EA%B7%9C%20%EC%9E%90%EC%82%B0%2060%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EA%B7%9C%20%EC%9E%90%EC%82%B0%2060%25"
       },
       "top_headlines": [
         {
-          "title": "뛰는 시장금리에, 채권 발행 막막한 카드사",
+          "title": "NH투자증권 IMA 1호 완판…법인 55%·신규 자산 60% 유입",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005341151?sid=101",
+          "link": "https://www.newspim.com/news/view/20260408000535",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -411,36 +484,36 @@
       ]
     },
     {
-      "term": "발행 막막한 카드사",
-      "term_ko": "발행 막막한 카드사",
+      "term": "서울데이터랩미국 증시 지수",
+      "term_ko": "서울데이터랩미국 증시 지수",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "발행 막막한 카드사",
+        "query": "서울데이터랩미국 증시 지수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "뛰는 시장금리에, 채권 발행 막막한 카드사",
-              "link": "https://n.news.naver.com/mnews/article/008/0005341151?sid=101"
+              "title": "[서울데이터랩]미국 증시 지수 종합",
+              "link": "https://n.news.naver.com/mnews/article/081/0003633308?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%96%89%20%EB%A7%89%EB%A7%89%ED%95%9C%20%EC%B9%B4%EB%93%9C%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%96%89%20%EB%A7%89%EB%A7%89%ED%95%9C%20%EC%B9%B4%EB%93%9C%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%9E%A9%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%A7%80%EC%88%98"
       },
       "top_headlines": [
         {
-          "title": "뛰는 시장금리에, 채권 발행 막막한 카드사",
+          "title": "[서울데이터랩]미국 증시 지수 종합",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005341151?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/081/0003633308?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,134 +521,36 @@
       ]
     },
     {
-      "term": "원 달러 환율",
-      "term_ko": "원 달러 환율",
-      "significance_score": 322,
-      "mentions": 215,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원 달러 환율",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-03-31",
-              "timestamp": 1774882800000,
-              "value": 100
-            },
-            {
-              "period": "2026-04-01",
-              "timestamp": 1774969200000,
-              "value": 82.61781
-            },
-            {
-              "period": "2026-04-02",
-              "timestamp": 1775055600000,
-              "value": 77.94792
-            },
-            {
-              "period": "2026-04-03",
-              "timestamp": 1775142000000,
-              "value": 54.73239
-            },
-            {
-              "period": "2026-04-04",
-              "timestamp": 1775228400000,
-              "value": 18.03757
-            },
-            {
-              "period": "2026-04-05",
-              "timestamp": 1775314800000,
-              "value": 13.29267
-            },
-            {
-              "period": "2026-04-06",
-              "timestamp": 1775401200000,
-              "value": 50.65896
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "트럼프 시한 임박에 원·달러 환율, 하락폭 줄이며 1500원대로 마감",
-              "link": "https://n.news.naver.com/mnews/article/029/0003020471?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%20%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%20%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "트럼프 시한 임박에 원·달러 환율, 하락폭 줄이며 1500원대로 마감",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/029/0003020471?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 214.6695,
-        "weekly_average_volume": 42.9339,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.024196,
-        "time_weight": 0.019183,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1775401200000
-      }
-    },
-    {
-      "term": "예산 우주 해양",
-      "term_ko": "예산 우주 해양",
+      "term": "집행 레고랜드 사태",
+      "term_ko": "집행 레고랜드 사태",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "예산 우주 해양",
+        "query": "집행 레고랜드 사태",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "美 '2030조 국방 예산', 우주·해양 패권 재편 신호탄…방산 슈퍼사이클...",
-              "link": "https://www.g-enews.com/view.php?ud=202604071419063766fbbec65dfb_1"
+              "title": "3월 시장안정프로그램 2.4조 집행…레고랜드 사태 후 최대 규모",
+              "link": "https://www.newsway.co.kr/news/view?ud=2026040810570968499"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%EC%82%B0%20%EC%9A%B0%EC%A3%BC%20%ED%95%B4%EC%96%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%EC%82%B0%20%EC%9A%B0%EC%A3%BC%20%ED%95%B4%EC%96%91"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%ED%96%89%20%EB%A0%88%EA%B3%A0%EB%9E%9C%EB%93%9C%20%EC%82%AC%ED%83%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%ED%96%89%20%EB%A0%88%EA%B3%A0%EB%9E%9C%EB%93%9C%20%EC%82%AC%ED%83%9C"
       },
       "top_headlines": [
         {
-          "title": "美 '2030조 국방 예산', 우주·해양 패권 재편 신호탄…방산 슈퍼사이클...",
+          "title": "3월 시장안정프로그램 2.4조 집행…레고랜드 사태 후 최대 규모",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604071419063766fbbec65dfb_1",
+          "link": "https://www.newsway.co.kr/news/view?ud=2026040810570968499",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -583,36 +558,36 @@
       ]
     },
     {
-      "term": "패권 재편 신호탄",
-      "term_ko": "패권 재편 신호탄",
+      "term": "후 최대 규모",
+      "term_ko": "후 최대 규모",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "패권 재편 신호탄",
+        "query": "후 최대 규모",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "美 '2030조 국방 예산', 우주·해양 패권 재편 신호탄…방산 슈퍼사이클...",
-              "link": "https://www.g-enews.com/view.php?ud=202604071419063766fbbec65dfb_1"
+              "title": "3월 시장안정프로그램 2.4조 집행…레고랜드 사태 후 최대 규모",
+              "link": "https://www.newsway.co.kr/news/view?ud=2026040810570968499"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%A8%EA%B6%8C%20%EC%9E%AC%ED%8E%B8%20%EC%8B%A0%ED%98%B8%ED%83%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%A8%EA%B6%8C%20%EC%9E%AC%ED%8E%B8%20%EC%8B%A0%ED%98%B8%ED%83%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%84%20%EC%B5%9C%EB%8C%80%20%EA%B7%9C%EB%AA%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%84%20%EC%B5%9C%EB%8C%80%20%EA%B7%9C%EB%AA%A8"
       },
       "top_headlines": [
         {
-          "title": "美 '2030조 국방 예산', 우주·해양 패권 재편 신호탄…방산 슈퍼사이클...",
+          "title": "3월 시장안정프로그램 2.4조 집행…레고랜드 사태 후 최대 규모",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604071419063766fbbec65dfb_1",
+          "link": "https://www.newsway.co.kr/news/view?ud=2026040810570968499",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -620,36 +595,36 @@
       ]
     },
     {
-      "term": "서민 집 복지",
-      "term_ko": "서민 집 복지",
+      "term": "농업생산비 보전 추경편성",
+      "term_ko": "농업생산비 보전 추경편성",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서민 집 복지",
+        "query": "농업생산비 보전 추경편성",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "서민 집·복지 떠받치는 한국 사회채권… ADB ‘짧은 만기’ 경고",
-              "link": "https://n.news.naver.com/mnews/article/005/0001841830?sid=101"
+              "title": "농업생산비 보전 추경편성 반드시 반영해야",
+              "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64286"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%AF%BC%20%EC%A7%91%20%EB%B3%B5%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%AF%BC%20%EC%A7%91%20%EB%B3%B5%EC%A7%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%8D%EC%97%85%EC%83%9D%EC%82%B0%EB%B9%84%20%EB%B3%B4%EC%A0%84%20%EC%B6%94%EA%B2%BD%ED%8E%B8%EC%84%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%8D%EC%97%85%EC%83%9D%EC%82%B0%EB%B9%84%20%EB%B3%B4%EC%A0%84%20%EC%B6%94%EA%B2%BD%ED%8E%B8%EC%84%B1"
       },
       "top_headlines": [
         {
-          "title": "서민 집·복지 떠받치는 한국 사회채권… ADB ‘짧은 만기’ 경고",
+          "title": "농업생산비 보전 추경편성 반드시 반영해야",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001841830?sid=101",
+          "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64286",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -657,36 +632,36 @@
       ]
     },
     {
-      "term": "짧은 만기 경고",
-      "term_ko": "짧은 만기 경고",
+      "term": "중동 리스크에 금융권",
+      "term_ko": "중동 리스크에 금융권",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "짧은 만기 경고",
+        "query": "중동 리스크에 금융권",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "서민 집·복지 떠받치는 한국 사회채권… ADB ‘짧은 만기’ 경고",
-              "link": "https://n.news.naver.com/mnews/article/005/0001841830?sid=101"
+              "title": "중동 리스크에 금융권 지원 규모만 9.7조원...당국 선제대응 촉구",
+              "link": "https://www.techm.kr/news/articleView.html?idxno=150914"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%A7%EC%9D%80%20%EB%A7%8C%EA%B8%B0%20%EA%B2%BD%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%A7%EC%9D%80%20%EB%A7%8C%EA%B8%B0%20%EA%B2%BD%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EC%97%90%20%EA%B8%88%EC%9C%B5%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EC%97%90%20%EA%B8%88%EC%9C%B5%EA%B6%8C"
       },
       "top_headlines": [
         {
-          "title": "서민 집·복지 떠받치는 한국 사회채권… ADB ‘짧은 만기’ 경고",
+          "title": "중동 리스크에 금융권 지원 규모만 9.7조원...당국 선제대응 촉구",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001841830?sid=101",
+          "link": "https://www.techm.kr/news/articleView.html?idxno=150914",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -694,36 +669,36 @@
       ]
     },
     {
-      "term": "美 이란 전쟁",
-      "term_ko": "美 이란 전쟁",
+      "term": "갈 곳을 잃었다",
+      "term_ko": "갈 곳을 잃었다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美 이란 전쟁",
+        "query": "갈 곳을 잃었다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "오늘의 금값시세(4월 8일자) 美·이란 전쟁, 금값 하락세 \"2026년 전망은...",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3551588"
+              "title": "전쟁도 롤러코스터…대기자금 470조 \"갈 곳을 잃었다\"",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704750"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%9D%B4%EB%9E%80%20%EC%A0%84%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%9D%B4%EB%9E%80%20%EC%A0%84%EC%9F%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%88%20%EA%B3%B3%EC%9D%84%20%EC%9E%83%EC%97%88%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%88%20%EA%B3%B3%EC%9D%84%20%EC%9E%83%EC%97%88%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "오늘의 금값시세(4월 8일자) 美·이란 전쟁, 금값 하락세 \"2026년 전망은...",
+          "title": "전쟁도 롤러코스터…대기자금 470조 \"갈 곳을 잃었다\"",
           "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3551588",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704750",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -752,7 +727,7 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -791,7 +766,7 @@
         "week_score": 0,
         "correction_factor": 0.115911,
         "decay_factor": 1,
-        "time_weight": 0.005099,
+        "time_weight": 0.004919,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -808,7 +783,7 @@
         "query": "성장 外",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -836,36 +811,147 @@
       ]
     },
     {
-      "term": "압박에 제동",
-      "term_ko": "압박에 제동",
+      "term": "이탈 경고",
+      "term_ko": "이탈 경고",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "압박에 제동",
+        "query": "이탈 경고",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "아마존·MS·구글 데이터센터, 기관투자자 '공시 압박'에 제동",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18472"
+              "title": "[MD포커스] “역대급 흑자 뒤 균열”…외국인 119억달러 이탈 ‘경고 신...",
+              "link": "https://n.news.naver.com/mnews/article/117/0004051956?sid=103"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%95%EB%B0%95%EC%97%90%20%EC%A0%9C%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%95%EB%B0%95%EC%97%90%20%EC%A0%9C%EB%8F%99"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%83%88%20%EA%B2%BD%EA%B3%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%83%88%20%EA%B2%BD%EA%B3%A0"
       },
       "top_headlines": [
         {
-          "title": "아마존·MS·구글 데이터센터, 기관투자자 '공시 압박'에 제동",
+          "title": "[MD포커스] “역대급 흑자 뒤 균열”…외국인 119억달러 이탈 ‘경고 신...",
           "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18472",
+          "link": "https://n.news.naver.com/mnews/article/117/0004051956?sid=103",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "반드시 반영해야",
+      "term_ko": "반드시 반영해야",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "반드시 반영해야",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-08T11:16:04+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "농업생산비 보전 추경편성 반드시 반영해야",
+              "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64286"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%9C%EC%8B%9C%20%EB%B0%98%EC%98%81%ED%95%B4%EC%95%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%9C%EC%8B%9C%20%EB%B0%98%EC%98%81%ED%95%B4%EC%95%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "농업생산비 보전 추경편성 반드시 반영해야",
+          "summary": "",
+          "link": "http://www.wonyesanup.co.kr/news/articleView.html?idxno=64286",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "지원 규모만",
+      "term_ko": "지원 규모만",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "지원 규모만",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-08T11:16:04+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "중동 리스크에 금융권 지원 규모만 9.7조원...당국 선제대응 촉구",
+              "link": "https://www.techm.kr/news/articleView.html?idxno=150914"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%9B%90%20%EA%B7%9C%EB%AA%A8%EB%A7%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%9B%90%20%EA%B7%9C%EB%AA%A8%EB%A7%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "중동 리스크에 금융권 지원 규모만 9.7조원...당국 선제대응 촉구",
+          "summary": "",
+          "link": "https://www.techm.kr/news/articleView.html?idxno=150914",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "선제대응 촉구",
+      "term_ko": "선제대응 촉구",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "선제대응 촉구",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-08T11:16:04+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "중동 리스크에 금융권 지원 규모만 9.7조원...당국 선제대응 촉구",
+              "link": "https://www.techm.kr/news/articleView.html?idxno=150914"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EC%A0%9C%EB%8C%80%EC%9D%91%20%EC%B4%89%EA%B5%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EC%A0%9C%EB%8C%80%EC%9D%91%20%EC%B4%89%EA%B5%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "중동 리스크에 금융권 지원 규모만 9.7조원...당국 선제대응 촉구",
+          "summary": "",
+          "link": "https://www.techm.kr/news/articleView.html?idxno=150914",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -882,7 +968,7 @@
         "query": "Unicorns Eye Korea",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -919,7 +1005,7 @@
         "query": "U.S Futures Slip",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -956,7 +1042,7 @@
         "query": "Iran Rejects Ceasefire",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -993,7 +1079,7 @@
         "query": "Trump Deadline Looms",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -1021,43 +1107,6 @@
       ]
     },
     {
-      "term": "Samsung Other Tech",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Other Tech",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open higher on record earnings of Samsung, other tech gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0016006311?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Other%20Tech",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Other%20Tech"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open higher on record earnings of Samsung, other tech gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016006311?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Boom Brews",
       "term_ko": "",
       "significance_score": 224,
@@ -1067,7 +1116,7 @@
         "query": "Boom Brews",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -1095,80 +1144,6 @@
       ]
     },
     {
-      "term": "Open Higher",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Higher",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open higher on record earnings of Samsung, other tech gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0016006311?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open higher on record earnings of Samsung, other tech gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016006311?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Record Earnings",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Record Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-08T04:06:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open higher on record earnings of Samsung, other tech gains",
-              "link": "https://n.news.naver.com/mnews/article/001/0016006311?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Record%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Record%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open higher on record earnings of Samsung, other tech gains",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016006311?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "",
       "significance_score": 120,
@@ -1178,7 +1153,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-04-08T04:06:58+09:00",
+          "last_updated": "2026-04-08T11:16:04+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1194,10 +1169,10 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-04-07T19:08:02.118Z",
+    "generated_at": "2026-04-08T02:17:12.581Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-04-08T04:06:58+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-04-08T11:16:04+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1207,13 +1182,13 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-04-08T04:06:58+09:00",
+      "last_updated": "2026-04-08T11:16:04+09:00",
       "fallback_sources": [
         "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-04-08T04:06:58+09:00",
+        "lastUpdated": "2026-04-08T11:16:04+09:00",
         "fallbackSources": [
           "trend_log"
         ]
