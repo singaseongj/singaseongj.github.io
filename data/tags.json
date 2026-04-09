@@ -1,90 +1,149 @@
 {
-  "date": "2026-04-08",
+  "date": "2026-04-09",
   "window": "12_hours",
   "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "Futures Surge",
-      "term_ko": "",
-      "significance_score": 448,
-      "mentions": 320,
+      "term": "LH가 맡는다 750가구",
+      "term_ko": "LH가 맡는다 750가구",
+      "significance_score": 364,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Futures Surge",
+        "query": "LH가 맡는다 750가구",
         "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "U.S. Stock Futures Surge as Trump Announces Iran Ceasefire, Oil Prices Pl...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Announces-Iran-Ceasefire-Oil-Prices-Plunge-1738431"
+              "title": "'사업 지연' 난곡 정비사업, LH가 맡는다… 750가구 공급 '속도'",
+              "link": "https://n.news.naver.com/mnews/article/008/0005341963?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LH%EA%B0%80%20%EB%A7%A1%EB%8A%94%EB%8B%A4%20750%EA%B0%80%EA%B5%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LH%EA%B0%80%20%EB%A7%A1%EB%8A%94%EB%8B%A4%20750%EA%B0%80%EA%B5%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "'사업 지연' 난곡 정비사업, LH가 맡는다… 750가구 공급 '속도'",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/008/0005341963?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "KRX 거래시간 연장",
+      "term_ko": "KRX 거래시간 연장",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KRX 거래시간 연장",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-04-02",
+              "timestamp": 1775055600000,
+              "value": 100
             },
             {
-              "title": "U.S. Stock Futures Surge as Trump Postpones Iran Strikes, Ceasefire Hopes...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Postpones-Iran-Strikes-Ceasefire-Hopes-Rise-1738390"
+              "period": "2026-04-07",
+              "timestamp": 1775487600000,
+              "value": 100
             }
           ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Surge"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Surge as Trump Announces Iran Ceasefire, Oil Prices Pl...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Announces-Iran-Ceasefire-Oil-Prices-Plunge-1738431",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
         },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "KRX '거래시간 연장' 논의, 어떻게 봐야 할까 [기고]",
+              "link": "https://n.news.naver.com/mnews/article/469/0000924435?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KRX%20%EA%B1%B0%EB%9E%98%EC%8B%9C%EA%B0%84%20%EC%97%B0%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KRX%20%EA%B1%B0%EB%9E%98%EC%8B%9C%EA%B0%84%20%EC%97%B0%EC%9E%A5"
+      },
+      "top_headlines": [
         {
-          "title": "U.S. Stock Futures Surge as Trump Postpones Iran Strikes, Ceasefire Hopes...",
+          "title": "KRX '거래시간 연장' 논의, 어떻게 봐야 할까 [기고]",
           "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Postpones-Iran-Strikes-Ceasefire-Hopes-Rise-1738390",
+          "link": "https://n.news.naver.com/mnews/article/469/0000924435?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ]
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.016905,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1775487600000
+      }
     },
     {
-      "term": "AI 공익모델 흔들렸다",
-      "term_ko": "AI 공익모델 흔들렸다",
+      "term": "더벨NPL시장 권력지도 첫",
+      "term_ko": "더벨NPL시장 권력지도 첫",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "AI 공익모델 흔들렸다",
+        "query": "더벨NPL시장 권력지도 첫",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "AI 공익모델 흔들렸다…오픈AI·머스크, '영리 전환 구조' 정면충돌",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18493"
+              "title": "[더벨][NPL시장 권력지도] 첫 매각 28년 후…8조 시대 열렸지만 피크아웃...",
+              "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604062016440320109378"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EA%B3%B5%EC%9D%B5%EB%AA%A8%EB%8D%B8%20%ED%9D%94%EB%93%A4%EB%A0%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EA%B3%B5%EC%9D%B5%EB%AA%A8%EB%8D%B8%20%ED%9D%94%EB%93%A4%EB%A0%B8%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%EB%B2%A8NPL%EC%8B%9C%EC%9E%A5%20%EA%B6%8C%EB%A0%A5%EC%A7%80%EB%8F%84%20%EC%B2%AB",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%EB%B2%A8NPL%EC%8B%9C%EC%9E%A5%20%EA%B6%8C%EB%A0%A5%EC%A7%80%EB%8F%84%20%EC%B2%AB"
       },
       "top_headlines": [
         {
-          "title": "AI 공익모델 흔들렸다…오픈AI·머스크, '영리 전환 구조' 정면충돌",
+          "title": "[더벨][NPL시장 권력지도] 첫 매각 28년 후…8조 시대 열렸지만 피크아웃...",
           "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18493",
+          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604062016440320109378",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -92,37 +151,36 @@
       ]
     },
     {
-      "term": "오픈AI 머스크 영리",
-      "term_ko": "오픈AI 머스크 영리",
+      "term": "POP포럼 연금투자 타이밍보다",
+      "term_ko": "POP포럼 연금투자 타이밍보다",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "오픈AI 머스크 영리",
+        "query": "POP포럼 연금투자 타이밍보다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "AI 공익모델 흔들렸다…오픈AI·머스크, '영리 전환 구조' 정면충돌",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18493"
+              "title": "[POP포럼] \"연금투자, 타이밍보다 구조가 중요\"",
+              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=299662"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%ED%94%88AI%20%EB%A8%B8%EC%8A%A4%ED%81%AC%20%EC%98%81%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%ED%94%88AI%20%EB%A8%B8%EC%8A%A4%ED%81%AC%20%EC%98%81%EB%A6%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=POP%ED%8F%AC%EB%9F%BC%20%EC%97%B0%EA%B8%88%ED%88%AC%EC%9E%90%20%ED%83%80%EC%9D%B4%EB%B0%8D%EB%B3%B4%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=POP%ED%8F%AC%EB%9F%BC%20%EC%97%B0%EA%B8%88%ED%88%AC%EC%9E%90%20%ED%83%80%EC%9D%B4%EB%B0%8D%EB%B3%B4%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "AI 공익모델 흔들렸다…오픈AI·머스크, '영리 전환 구조' 정면충돌",
+          "title": "[POP포럼] \"연금투자, 타이밍보다 구조가 중요\"",
           "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18493",
+          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=299662",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -130,151 +188,36 @@
       ]
     },
     {
-      "term": "美국채금리 WTI 공포지수",
-      "term_ko": "美국채금리 WTI 공포지수",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美국채금리 WTI 공포지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 장중...미국증시 '껑충' vs 美국채금리·WTI·공포지수 '추락'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163526"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC%20WTI%20%EA%B3%B5%ED%8F%AC%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC%20WTI%20%EA%B3%B5%ED%8F%AC%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "美 장중...미국증시 '껑충' vs 美국채금리·WTI·공포지수 '추락'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163526",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "산업은행 하나금융 BNK경남은행",
-      "term_ko": "산업은행 하나금융 BNK경남은행",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "산업은행 하나금융 BNK경남은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[금융 이모저모] 산업은행, 하나금융, BNK경남은행, 애큐온저축은행",
-              "link": "http://www.worktoday.co.kr/news/articleView.html?idxno=83576"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89%20%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20BNK%EA%B2%BD%EB%82%A8%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89%20%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20BNK%EA%B2%BD%EB%82%A8%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "[금융 이모저모] 산업은행, 하나금융, BNK경남은행, 애큐온저축은행",
-          "summary": "",
-          "link": "http://www.worktoday.co.kr/news/articleView.html?idxno=83576",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "높은 수익 IMA",
-      "term_ko": "높은 수익 IMA",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "높은 수익 IMA",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "예금보다 높은 수익… IMA·발행어음 투자해볼까",
-              "link": "https://n.news.naver.com/mnews/article/023/0003969682?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%92%EC%9D%80%20%EC%88%98%EC%9D%B5%20IMA",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%92%EC%9D%80%20%EC%88%98%EC%9D%B5%20IMA"
-      },
-      "top_headlines": [
-        {
-          "title": "예금보다 높은 수익… IMA·발행어음 투자해볼까",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003969682?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "작년 정산금만 650억",
-      "term_ko": "작년 정산금만 650억",
+      "term": "경제읽기 결제주기 T+1",
+      "term_ko": "경제읽기 결제주기 T+1",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "작년 정산금만 650억",
+        "query": "경제읽기 결제주기 T+1",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
-              "link": "https://m.entertain.naver.com/article/468/0001232179"
+              "title": "[송치승 교수의 경제읽기] 결제주기 T+1 단축과 대처",
+              "link": "http://www.metroseoul.co.kr/article/20260409500007"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%91%EB%85%84%20%EC%A0%95%EC%82%B0%EA%B8%88%EB%A7%8C%20650%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%91%EB%85%84%20%EC%A0%95%EC%82%B0%EA%B8%88%EB%A7%8C%20650%EC%96%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%EC%9D%BD%EA%B8%B0%20%EA%B2%B0%EC%A0%9C%EC%A3%BC%EA%B8%B0%20T%2B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%EC%9D%BD%EA%B8%B0%20%EA%B2%B0%EC%A0%9C%EC%A3%BC%EA%B8%B0%20T%2B1"
       },
       "top_headlines": [
         {
-          "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
+          "title": "[송치승 교수의 경제읽기] 결제주기 T+1 단축과 대처",
           "summary": "",
-          "link": "https://m.entertain.naver.com/article/468/0001232179",
+          "link": "http://www.metroseoul.co.kr/article/20260409500007",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -282,37 +225,36 @@
       ]
     },
     {
-      "term": "소속사 매출 31배",
-      "term_ko": "소속사 매출 31배",
+      "term": "매각 28년 후",
+      "term_ko": "매각 28년 후",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "소속사 매출 31배",
+        "query": "매각 28년 후",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
-              "link": "https://m.entertain.naver.com/article/468/0001232179"
+              "title": "[더벨][NPL시장 권력지도] 첫 매각 28년 후…8조 시대 열렸지만 피크아웃...",
+              "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604062016440320109378"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EC%86%8D%EC%82%AC%20%EB%A7%A4%EC%B6%9C%2031%EB%B0%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EC%86%8D%EC%82%AC%20%EB%A7%A4%EC%B6%9C%2031%EB%B0%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EA%B0%81%2028%EB%85%84%20%ED%9B%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EA%B0%81%2028%EB%85%84%20%ED%9B%84"
       },
       "top_headlines": [
         {
-          "title": "지드래곤, 작년 정산금만 650억? 소속사 매출 31배 ‘잭팟’",
+          "title": "[더벨][NPL시장 권력지도] 첫 매각 28년 후…8조 시대 열렸지만 피크아웃...",
           "summary": "",
-          "link": "https://m.entertain.naver.com/article/468/0001232179",
+          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604062016440320109378",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -320,37 +262,36 @@
       ]
     },
     {
-      "term": "호르무즈 봉쇄 40일",
-      "term_ko": "호르무즈 봉쇄 40일",
+      "term": "8조 시대 열렸지만",
+      "term_ko": "8조 시대 열렸지만",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "호르무즈 봉쇄 40일",
+        "query": "8조 시대 열렸지만",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "호르무즈 봉쇄 40일, 세계 성장률 1.4%로 추락… 한국 수출·물가 '이중...",
-              "link": "https://www.g-enews.com/view.php?ud=202604081800187232fbbec65dfb_1"
+              "title": "[더벨][NPL시장 권력지도] 첫 매각 28년 후…8조 시대 열렸지만 피크아웃...",
+              "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604062016440320109378"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%B8%EB%A5%B4%EB%AC%B4%EC%A6%88%20%EB%B4%89%EC%87%84%2040%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%B8%EB%A5%B4%EB%AC%B4%EC%A6%88%20%EB%B4%89%EC%87%84%2040%EC%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8%EC%A1%B0%20%EC%8B%9C%EB%8C%80%20%EC%97%B4%EB%A0%B8%EC%A7%80%EB%A7%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8%EC%A1%B0%20%EC%8B%9C%EB%8C%80%20%EC%97%B4%EB%A0%B8%EC%A7%80%EB%A7%8C"
       },
       "top_headlines": [
         {
-          "title": "호르무즈 봉쇄 40일, 세계 성장률 1.4%로 추락… 한국 수출·물가 '이중...",
+          "title": "[더벨][NPL시장 권력지도] 첫 매각 28년 후…8조 시대 열렸지만 피크아웃...",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604081800187232fbbec65dfb_1",
+          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604062016440320109378",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -358,113 +299,36 @@
       ]
     },
     {
-      "term": "정부 부채 111조",
-      "term_ko": "정부 부채 111조",
+      "term": "해소 임박 15조",
+      "term_ko": "해소 임박 15조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "정부 부채 111조",
+        "query": "해소 임박 15조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "세계 정부 부채 111조 달러…금값 연일 최고가 이유는",
-              "link": "https://www.g-enews.com/view.php?ud=2026040820455728882bd56fbc3c_1"
+              "title": "삼성증권, 8년 만에 숙원 해소 임박…'15조 조달' 기회와 과제",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704892"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EB%B6%80%20%EB%B6%80%EC%B1%84%20111%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EB%B6%80%20%EB%B6%80%EC%B1%84%20111%EC%A1%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%B4%EC%86%8C%20%EC%9E%84%EB%B0%95%2015%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%B4%EC%86%8C%20%EC%9E%84%EB%B0%95%2015%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "세계 정부 부채 111조 달러…금값 연일 최고가 이유는",
+          "title": "삼성증권, 8년 만에 숙원 해소 임박…'15조 조달' 기회와 과제",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=2026040820455728882bd56fbc3c_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "대응 시장안정자금 2.4조",
-      "term_ko": "대응 시장안정자금 2.4조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대응 시장안정자금 2.4조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "지난달 중동發 불안 대응 ‘시장안정자금’ 2.4조 투입… “레고랜드 사...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003710917?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%9D%91%20%EC%8B%9C%EC%9E%A5%EC%95%88%EC%A0%95%EC%9E%90%EA%B8%88%202.4%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%9D%91%20%EC%8B%9C%EC%9E%A5%EC%95%88%EC%A0%95%EC%9E%90%EA%B8%88%202.4%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "지난달 중동發 불안 대응 ‘시장안정자금’ 2.4조 투입… “레고랜드 사...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003710917?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "전환 구조 정면충돌",
-      "term_ko": "전환 구조 정면충돌",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전환 구조 정면충돌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AI 공익모델 흔들렸다…오픈AI·머스크, '영리 전환 구조' 정면충돌",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18493"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%ED%99%98%20%EA%B5%AC%EC%A1%B0%20%EC%A0%95%EB%A9%B4%EC%B6%A9%EB%8F%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%ED%99%98%20%EA%B5%AC%EC%A1%B0%20%EC%A0%95%EB%A9%B4%EC%B6%A9%EB%8F%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 공익모델 흔들렸다…오픈AI·머스크, '영리 전환 구조' 정면충돌",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18493",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704892",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -481,15 +345,14 @@
         "query": "서울데이터랩미국 증시 지수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
               "title": "[서울데이터랩]미국 증시 지수 종합",
-              "link": "https://n.news.naver.com/mnews/article/081/0003633308?sid=101"
+              "link": "https://n.news.naver.com/mnews/article/081/0003633730?sid=101"
             }
           ]
         }
@@ -502,7 +365,7 @@
         {
           "title": "[서울데이터랩]미국 증시 지수 종합",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003633308?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/081/0003633730?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -510,37 +373,36 @@
       ]
     },
     {
-      "term": "추락 한국 수출",
-      "term_ko": "추락 한국 수출",
+      "term": "더벨현장 줌인 갤럭시코퍼레이션",
+      "term_ko": "더벨현장 줌인 갤럭시코퍼레이션",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "추락 한국 수출",
+        "query": "더벨현장 줌인 갤럭시코퍼레이션",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "호르무즈 봉쇄 40일, 세계 성장률 1.4%로 추락… 한국 수출·물가 '이중...",
-              "link": "https://www.g-enews.com/view.php?ud=202604081800187232fbbec65dfb_1"
+              "title": "[더벨][현장 줌인] 갤럭시코퍼레이션, 나스닥 상장도 검토",
+              "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604081711227080108488"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%94%EB%9D%BD%20%ED%95%9C%EA%B5%AD%20%EC%88%98%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%94%EB%9D%BD%20%ED%95%9C%EA%B5%AD%20%EC%88%98%EC%B6%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%EB%B2%A8%ED%98%84%EC%9E%A5%20%EC%A4%8C%EC%9D%B8%20%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%EB%B2%A8%ED%98%84%EC%9E%A5%20%EC%A4%8C%EC%9D%B8%20%EA%B0%A4%EB%9F%AD%EC%8B%9C%EC%BD%94%ED%8D%BC%EB%A0%88%EC%9D%B4%EC%85%98"
       },
       "top_headlines": [
         {
-          "title": "호르무즈 봉쇄 40일, 세계 성장률 1.4%로 추락… 한국 수출·물가 '이중...",
+          "title": "[더벨][현장 줌인] 갤럭시코퍼레이션, 나스닥 상장도 검토",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604081800187232fbbec65dfb_1",
+          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604081711227080108488",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -548,37 +410,36 @@
       ]
     },
     {
-      "term": "달러 금값 연일",
-      "term_ko": "달러 금값 연일",
+      "term": "나스닥 상장도 검토",
+      "term_ko": "나스닥 상장도 검토",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "달러 금값 연일",
+        "query": "나스닥 상장도 검토",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "세계 정부 부채 111조 달러…금값 연일 최고가 이유는",
-              "link": "https://www.g-enews.com/view.php?ud=2026040820455728882bd56fbc3c_1"
+              "title": "[더벨][현장 줌인] 갤럭시코퍼레이션, 나스닥 상장도 검토",
+              "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604081711227080108488"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EA%B8%88%EA%B0%92%20%EC%97%B0%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EA%B8%88%EA%B0%92%20%EC%97%B0%EC%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EB%8F%84%20%EA%B2%80%ED%86%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EB%8F%84%20%EA%B2%80%ED%86%A0"
       },
       "top_headlines": [
         {
-          "title": "세계 정부 부채 111조 달러…금값 연일 최고가 이유는",
+          "title": "[더벨][현장 줌인] 갤럭시코퍼레이션, 나스닥 상장도 검토",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=2026040820455728882bd56fbc3c_1",
+          "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202604081711227080108488",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -586,37 +447,36 @@
       ]
     },
     {
-      "term": "지난달 중동發 불안",
-      "term_ko": "지난달 중동發 불안",
+      "term": "논의 어떻게 봐야",
+      "term_ko": "논의 어떻게 봐야",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "지난달 중동發 불안",
+        "query": "논의 어떻게 봐야",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "지난달 중동發 불안 대응 ‘시장안정자금’ 2.4조 투입… “레고랜드 사...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003710917?sid=101"
+              "title": "KRX '거래시간 연장' 논의, 어떻게 봐야 할까 [기고]",
+              "link": "https://n.news.naver.com/mnews/article/469/0000924435?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EB%82%9C%EB%8B%AC%20%EC%A4%91%EB%8F%99%E7%99%BC%20%EB%B6%88%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EB%82%9C%EB%8B%AC%20%EC%A4%91%EB%8F%99%E7%99%BC%20%EB%B6%88%EC%95%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%BC%EC%9D%98%20%EC%96%B4%EB%96%BB%EA%B2%8C%20%EB%B4%90%EC%95%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%BC%EC%9D%98%20%EC%96%B4%EB%96%BB%EA%B2%8C%20%EB%B4%90%EC%95%BC"
       },
       "top_headlines": [
         {
-          "title": "지난달 중동發 불안 대응 ‘시장안정자금’ 2.4조 투입… “레고랜드 사...",
+          "title": "KRX '거래시간 연장' 논의, 어떻게 봐야 할까 [기고]",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003710917?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/469/0000924435?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -624,37 +484,36 @@
       ]
     },
     {
-      "term": "금융 이모저모",
-      "term_ko": "금융 이모저모",
-      "significance_score": 280,
+      "term": "국토부 소규모주택정비 최초",
+      "term_ko": "국토부 소규모주택정비 최초",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금융 이모저모",
+        "query": "국토부 소규모주택정비 최초",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "[금융 이모저모] 산업은행, 하나금융, BNK경남은행, 애큐온저축은행",
-              "link": "http://www.worktoday.co.kr/news/articleView.html?idxno=83576"
+              "title": "국토부, 소규모주택정비 최초 ‘공공 단독시행’ 착수",
+              "link": "https://n.news.naver.com/mnews/article/666/0000102600?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%ED%86%A0%EB%B6%80%20%EC%86%8C%EA%B7%9C%EB%AA%A8%EC%A3%BC%ED%83%9D%EC%A0%95%EB%B9%84%20%EC%B5%9C%EC%B4%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%ED%86%A0%EB%B6%80%20%EC%86%8C%EA%B7%9C%EB%AA%A8%EC%A3%BC%ED%83%9D%EC%A0%95%EB%B9%84%20%EC%B5%9C%EC%B4%88"
       },
       "top_headlines": [
         {
-          "title": "[금융 이모저모] 산업은행, 하나금융, BNK경남은행, 애큐온저축은행",
+          "title": "국토부, 소규모주택정비 최초 ‘공공 단독시행’ 착수",
           "summary": "",
-          "link": "http://www.worktoday.co.kr/news/articleView.html?idxno=83576",
+          "link": "https://n.news.naver.com/mnews/article/666/0000102600?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -662,37 +521,36 @@
       ]
     },
     {
-      "term": "발행어음 투자해볼까",
-      "term_ko": "발행어음 투자해볼까",
-      "significance_score": 280,
+      "term": "공공 단독시행 착수",
+      "term_ko": "공공 단독시행 착수",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "발행어음 투자해볼까",
+        "query": "공공 단독시행 착수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "예금보다 높은 수익… IMA·발행어음 투자해볼까",
-              "link": "https://n.news.naver.com/mnews/article/023/0003969682?sid=101"
+              "title": "국토부, 소규모주택정비 최초 ‘공공 단독시행’ 착수",
+              "link": "https://n.news.naver.com/mnews/article/666/0000102600?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C%20%ED%88%AC%EC%9E%90%ED%95%B4%EB%B3%BC%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C%20%ED%88%AC%EC%9E%90%ED%95%B4%EB%B3%BC%EA%B9%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EA%B3%B5%20%EB%8B%A8%EB%8F%85%EC%8B%9C%ED%96%89%20%EC%B0%A9%EC%88%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EA%B3%B5%20%EB%8B%A8%EB%8F%85%EC%8B%9C%ED%96%89%20%EC%B0%A9%EC%88%98"
       },
       "top_headlines": [
         {
-          "title": "예금보다 높은 수익… IMA·발행어음 투자해볼까",
+          "title": "국토부, 소규모주택정비 최초 ‘공공 단독시행’ 착수",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003969682?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/666/0000102600?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -700,37 +558,369 @@
       ]
     },
     {
-      "term": "투입 레고랜드",
-      "term_ko": "투입 레고랜드",
-      "significance_score": 280,
+      "term": "조달 기회와 과제",
+      "term_ko": "조달 기회와 과제",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "투입 레고랜드",
+        "query": "조달 기회와 과제",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "지난달 중동發 불안 대응 ‘시장안정자금’ 2.4조 투입… “레고랜드 사...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003710917?sid=101"
+              "title": "삼성증권, 8년 만에 숙원 해소 임박…'15조 조달' 기회와 과제",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704892"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%85%20%EB%A0%88%EA%B3%A0%EB%9E%9C%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%85%20%EB%A0%88%EA%B3%A0%EB%9E%9C%EB%93%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%EB%8B%AC%20%EA%B8%B0%ED%9A%8C%EC%99%80%20%EA%B3%BC%EC%A0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%EB%8B%AC%20%EA%B8%B0%ED%9A%8C%EC%99%80%20%EA%B3%BC%EC%A0%9C"
       },
       "top_headlines": [
         {
-          "title": "지난달 중동發 불안 대응 ‘시장안정자금’ 2.4조 투입… “레고랜드 사...",
+          "title": "삼성증권, 8년 만에 숙원 해소 임박…'15조 조달' 기회와 과제",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003710917?sid=101",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1704892",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "사업 지연 난곡",
+      "term_ko": "사업 지연 난곡",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "사업 지연 난곡",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "'사업 지연' 난곡 정비사업, LH가 맡는다… 750가구 공급 '속도'",
+              "link": "https://n.news.naver.com/mnews/article/008/0005341963?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%97%85%20%EC%A7%80%EC%97%B0%20%EB%82%9C%EA%B3%A1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%97%85%20%EC%A7%80%EC%97%B0%20%EB%82%9C%EA%B3%A1"
+      },
+      "top_headlines": [
+        {
+          "title": "'사업 지연' 난곡 정비사업, LH가 맡는다… 750가구 공급 '속도'",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/008/0005341963?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "코람코더원리츠 한화리츠 동반",
+      "term_ko": "코람코더원리츠 한화리츠 동반",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "코람코더원리츠 한화리츠 동반",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "코람코더원리츠·한화리츠 동반 상승… 자산 가치 재평가에 '방긋'",
+              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=444121"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EB%9E%8C%EC%BD%94%EB%8D%94%EC%9B%90%EB%A6%AC%EC%B8%A0%20%ED%95%9C%ED%99%94%EB%A6%AC%EC%B8%A0%20%EB%8F%99%EB%B0%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EB%9E%8C%EC%BD%94%EB%8D%94%EC%9B%90%EB%A6%AC%EC%B8%A0%20%ED%95%9C%ED%99%94%EB%A6%AC%EC%B8%A0%20%EB%8F%99%EB%B0%98"
+      },
+      "top_headlines": [
+        {
+          "title": "코람코더원리츠·한화리츠 동반 상승… 자산 가치 재평가에 '방긋'",
+          "summary": "",
+          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=444121",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "상승 자산 가치",
+      "term_ko": "상승 자산 가치",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "상승 자산 가치",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "코람코더원리츠·한화리츠 동반 상승… 자산 가치 재평가에 '방긋'",
+              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=444121"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EC%9E%90%EC%82%B0%20%EA%B0%80%EC%B9%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EC%9E%90%EC%82%B0%20%EA%B0%80%EC%B9%98"
+      },
+      "top_headlines": [
+        {
+          "title": "코람코더원리츠·한화리츠 동반 상승… 자산 가치 재평가에 '방긋'",
+          "summary": "",
+          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=444121",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Corp Unveils AI",
+      "term_ko": "",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Corp Unveils AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Galaxy Corp unveils AI glasses, robots in entertainment tech push",
+              "link": "https://n.news.naver.com/mnews/article/009/0005663366?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Corp%20Unveils%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Corp%20Unveils%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "Galaxy Corp unveils AI glasses, robots in entertainment tech push",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/009/0005663366?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "단축과 대처",
+      "term_ko": "단축과 대처",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "단축과 대처",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[송치승 교수의 경제읽기] 결제주기 T+1 단축과 대처",
+              "link": "http://www.metroseoul.co.kr/article/20260409500007"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EC%B6%95%EA%B3%BC%20%EB%8C%80%EC%B2%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EC%B6%95%EA%B3%BC%20%EB%8C%80%EC%B2%98"
+      },
+      "top_headlines": [
+        {
+          "title": "[송치승 교수의 경제읽기] 결제주기 T+1 단축과 대처",
+          "summary": "",
+          "link": "http://www.metroseoul.co.kr/article/20260409500007",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "할까 기고",
+      "term_ko": "할까 기고",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "할까 기고",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "KRX '거래시간 연장' 논의, 어떻게 봐야 할까 [기고]",
+              "link": "https://n.news.naver.com/mnews/article/469/0000924435?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A0%EA%B9%8C%20%EA%B8%B0%EA%B3%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A0%EA%B9%8C%20%EA%B8%B0%EA%B3%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "KRX '거래시간 연장' 논의, 어떻게 봐야 할까 [기고]",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/469/0000924435?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "구조가 중요",
+      "term_ko": "구조가 중요",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "구조가 중요",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[POP포럼] \"연금투자, 타이밍보다 구조가 중요\"",
+              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=299662"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%A1%B0%EA%B0%80%20%EC%A4%91%EC%9A%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%A1%B0%EA%B0%80%20%EC%A4%91%EC%9A%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[POP포럼] \"연금투자, 타이밍보다 구조가 중요\"",
+          "summary": "",
+          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=299662",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "재평가에 방긋",
+      "term_ko": "재평가에 방긋",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "재평가에 방긋",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "코람코더원리츠·한화리츠 동반 상승… 자산 가치 재평가에 '방긋'",
+              "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=444121"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%ED%8F%89%EA%B0%80%EC%97%90%20%EB%B0%A9%EA%B8%8B",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%ED%8F%89%EA%B0%80%EC%97%90%20%EB%B0%A9%EA%B8%8B"
+      },
+      "top_headlines": [
+        {
+          "title": "코람코더원리츠·한화리츠 동반 상승… 자산 가치 재평가에 '방긋'",
+          "summary": "",
+          "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=444121",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Entertainment Tech Push",
+      "term_ko": "",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Entertainment Tech Push",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-04-09T11:08:37+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Galaxy Corp unveils AI glasses, robots in entertainment tech push",
+              "link": "https://n.news.naver.com/mnews/article/009/0005663366?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Entertainment%20Tech%20Push",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Entertainment%20Tech%20Push"
+      },
+      "top_headlines": [
+        {
+          "title": "Galaxy Corp unveils AI glasses, robots in entertainment tech push",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/009/0005663366?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -747,10 +937,9 @@
         "query": "Amneal Marks Parkinsons",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -776,120 +965,6 @@
       ]
     },
     {
-      "term": "Trump Announces Iran",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Announces Iran",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Surge as Trump Announces Iran Ceasefire, Oil Prices Pl...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Announces-Iran-Ceasefire-Oil-Prices-Plunge-1738431"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Announces%20Iran",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Announces%20Iran"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Surge as Trump Announces Iran Ceasefire, Oil Prices Pl...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Announces-Iran-Ceasefire-Oil-Prices-Plunge-1738431",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Ceasefire Oil Prices",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Ceasefire Oil Prices",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Surge as Trump Announces Iran Ceasefire, Oil Prices Pl...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Announces-Iran-Ceasefire-Oil-Prices-Plunge-1738431"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Ceasefire%20Oil%20Prices",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Ceasefire%20Oil%20Prices"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Surge as Trump Announces Iran Ceasefire, Oil Prices Pl...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Announces-Iran-Ceasefire-Oil-Prices-Plunge-1738431",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Trump Postpones Iran",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Postpones Iran",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. Stock Futures Surge as Trump Postpones Iran Strikes, Ceasefire Hopes...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Postpones-Iran-Strikes-Ceasefire-Hopes-Rise-1738390"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Postpones%20Iran",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Postpones%20Iran"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. Stock Futures Surge as Trump Postpones Iran Strikes, Ceasefire Hopes...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Postpones-Iran-Strikes-Ceasefire-Hopes-Rise-1738390",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "2M Donation",
       "term_ko": "",
       "significance_score": 238,
@@ -899,10 +974,9 @@
         "query": "2M Donation",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -928,37 +1002,36 @@
       ]
     },
     {
-      "term": "Strikes Ceasefire",
+      "term": "Glasses Robots",
       "term_ko": "",
       "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Strikes Ceasefire",
+        "query": "Glasses Robots",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "U.S. Stock Futures Surge as Trump Postpones Iran Strikes, Ceasefire Hopes...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Postpones-Iran-Strikes-Ceasefire-Hopes-Rise-1738390"
+              "title": "Galaxy Corp unveils AI glasses, robots in entertainment tech push",
+              "link": "https://n.news.naver.com/mnews/article/009/0005663366?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strikes%20Ceasefire",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strikes%20Ceasefire"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Glasses%20Robots",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Glasses%20Robots"
       },
       "top_headlines": [
         {
-          "title": "U.S. Stock Futures Surge as Trump Postpones Iran Strikes, Ceasefire Hopes...",
+          "title": "Galaxy Corp unveils AI glasses, robots in entertainment tech push",
           "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Surge-as-Trump-Postpones-Iran-Strikes-Ceasefire-Hopes-Rise-1738390",
+          "link": "https://n.news.naver.com/mnews/article/009/0005663366?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -975,10 +1048,9 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ]
         }
       },
@@ -998,10 +1070,9 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ]
         }
       },
@@ -1021,10 +1092,9 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-04-09T04:18:44+09:00",
+          "last_updated": "2026-04-09T11:08:37+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ]
         }
       },
@@ -1033,61 +1103,15 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
-    },
-    {
-      "term": "금리 인하 기대감",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "비트코인 ETF 기대",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-04-09T04:18:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-04-08T19:19:50.542Z",
+    "generated_at": "2026-04-09T02:09:42.934Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-04-09T04:18:44+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-04-09T11:08:37+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1097,17 +1121,15 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-04-09T04:18:44+09:00",
+      "last_updated": "2026-04-09T11:08:37+09:00",
       "fallback_sources": [
-        "trend_log",
-        "default_fallback"
+        "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-04-09T04:18:44+09:00",
+        "lastUpdated": "2026-04-09T11:08:37+09:00",
         "fallbackSources": [
-          "trend_log",
-          "default_fallback"
+          "trend_log"
         ]
       }
     }
