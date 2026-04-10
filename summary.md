@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-10T22:09:21+09:00 (KST)**
+- Generated: **2026-04-11T03:54:32+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -25,7 +25,7 @@
 **에스앤에스텍** (101490.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.0%**, 20d **9.8%**; volatility (20d): **unknown**
+- Returns: 5d **26.7%**, 20d **13.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%95%A4%EC%97%90%EC%8A%A4%ED%85%8D
@@ -41,7 +41,7 @@
 **테크윙** (089030.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.3%**, 20d **16.8%**; volatility (20d): **unknown**
+- Returns: 5d **13.5%**, 20d **-16.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%85%8C%ED%81%AC%EC%9C%99
@@ -283,7 +283,7 @@
 **Philip Morris International** (PM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.5%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **0.9%**, 20d **-7.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Philip%20Morris%20International
@@ -309,7 +309,7 @@
 **NVR, Inc.** (NVR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.0%**, 20d **2.8%**; volatility (20d): **unknown**
+- Returns: 5d **1.2%**, 20d **4.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=NVR%2C%20Inc.
@@ -317,7 +317,7 @@
 **Smurfit Westrock** (SW)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.0%**, 20d **-0.1%**; volatility (20d): **unknown**
+- Returns: 5d **7.4%**, 20d **6.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Smurfit%20Westrock
