@@ -1,1147 +1,439 @@
 {
-  "date": "2026-04-09",
+  "generatedAt": "2026-04-10T02:26:29.977Z",
+  "timezone": "Asia/Seoul",
+  "date": "2026-04-10",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "미국 CPI 3월",
-      "term_ko": "미국 CPI 3월",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 CPI 3월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미국 CPI 3월 3%대 전망…이란전쟁이 쪼갠 부자와 서민 경제",
-              "link": "https://www.g-enews.com/view.php?ud=202604091947034272bd56fbc3c_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20CPI%203%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20CPI%203%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 CPI 3월 3%대 전망…이란전쟁이 쪼갠 부자와 서민 경제",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604091947034272bd56fbc3c_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미국 CPI 3월"
     },
     {
       "term": "기업 차원 XRP",
-      "term_ko": "기업 차원 XRP",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기업 차원 XRP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-              "link": "http://coinreaders.com/229724"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%20%EC%B0%A8%EC%9B%90%20XRP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%20%EC%B0%A8%EC%9B%90%20XRP"
-      },
-      "top_headlines": [
-        {
-          "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-          "summary": "",
-          "link": "http://coinreaders.com/229724",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기업 차원 XRP"
     },
     {
       "term": "재무 전략 ETF보다",
-      "term_ko": "재무 전략 ETF보다",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재무 전략 ETF보다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-              "link": "http://coinreaders.com/229724"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EB%AC%B4%20%EC%A0%84%EB%9E%B5%20ETF%EB%B3%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EB%AC%B4%20%EC%A0%84%EB%9E%B5%20ETF%EB%B3%B4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-          "summary": "",
-          "link": "http://coinreaders.com/229724",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "재무 전략 ETF보다"
     },
     {
       "term": "美증시 상승 WTI",
-      "term_ko": "美증시 상승 WTI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美증시 상승 WTI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중동 '기대-우려' 속..장중, 달러 '절하', 금값·美증시 '상승', WTI '불안...",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163598"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%8A%B9%20WTI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%8A%B9%20WTI"
-      },
-      "top_headlines": [
-        {
-          "title": "중동 '기대-우려' 속..장중, 달러 '절하', 금값·美증시 '상승', WTI '불안...",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163598",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "美증시 상승 WTI"
     },
     {
       "term": "가슴 철렁 95세",
-      "term_ko": "가슴 철렁 95세",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가슴 철렁 95세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "내 주식 -10%에 가슴 철렁? '95세 은퇴자' 버핏이 투자자에게 건넨 소중...",
-              "link": "https://www.g-enews.com/view.php?ud=202604091429106645fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EC%8A%B4%20%EC%B2%A0%EB%A0%81%2095%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EC%8A%B4%20%EC%B2%A0%EB%A0%81%2095%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "내 주식 -10%에 가슴 철렁? '95세 은퇴자' 버핏이 투자자에게 건넨 소중...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604091429106645fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "가슴 철렁 95세"
     },
     {
       "term": "44조 넘게 늘어",
-      "term_ko": "44조 넘게 늘어",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "44조 넘게 늘어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국가채무 올해 1, 2월 두 달만에 44조 넘게 늘어",
-              "link": "https://n.news.naver.com/mnews/article/020/0003711234?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=44%EC%A1%B0%20%EB%84%98%EA%B2%8C%20%EB%8A%98%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=44%EC%A1%B0%20%EB%84%98%EA%B2%8C%20%EB%8A%98%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "국가채무 올해 1, 2월 두 달만에 44조 넘게 늘어",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003711234?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "44조 넘게 늘어"
     },
     {
       "term": "前 리플 임원",
-      "term_ko": "前 리플 임원",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "前 리플 임원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-              "link": "http://coinreaders.com/229724"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E5%89%8D%20%EB%A6%AC%ED%94%8C%20%EC%9E%84%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E5%89%8D%20%EB%A6%AC%ED%94%8C%20%EC%9E%84%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-          "summary": "",
-          "link": "http://coinreaders.com/229724",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "前 리플 임원"
     },
     {
       "term": "허술한 휴전..장중 中",
-      "term_ko": "허술한 휴전..장중 中",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "허술한 휴전..장중 中",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%97%88%EC%88%A0%ED%95%9C%20%ED%9C%B4%EC%A0%84..%EC%9E%A5%EC%A4%91%20%E4%B8%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%97%88%EC%88%A0%ED%95%9C%20%ED%9C%B4%EC%A0%84..%EC%9E%A5%EC%A4%91%20%E4%B8%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "허술한 휴전..장중 中"
     },
     {
       "term": "日 홍콩 한국증시",
-      "term_ko": "日 홍콩 한국증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "日 홍콩 한국증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%97%A5%20%ED%99%8D%EC%BD%A9%20%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%97%A5%20%ED%99%8D%EC%BD%A9%20%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "日 홍콩 한국증시"
     },
     {
       "term": "회피 니켈 공급망",
-      "term_ko": "회피 니켈 공급망",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회피 니켈 공급망",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "테슬라는 감사, BYD는 회피… 니켈 공급망 전략 재편 본격화",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18505"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%ED%94%BC%20%EB%8B%88%EC%BC%88%20%EA%B3%B5%EA%B8%89%EB%A7%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%ED%94%BC%20%EB%8B%88%EC%BC%88%20%EA%B3%B5%EA%B8%89%EB%A7%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "테슬라는 감사, BYD는 회피… 니켈 공급망 전략 재편 본격화",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18505",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "회피 니켈 공급망"
     },
     {
       "term": "전략 재편 본격화",
-      "term_ko": "전략 재편 본격화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전략 재편 본격화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "테슬라는 감사, BYD는 회피… 니켈 공급망 전략 재편 본격화",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18505"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%9E%B5%20%EC%9E%AC%ED%8E%B8%20%EB%B3%B8%EA%B2%A9%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%9E%B5%20%EC%9E%AC%ED%8E%B8%20%EB%B3%B8%EA%B2%A9%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "테슬라는 감사, BYD는 회피… 니켈 공급망 전략 재편 본격화",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18505",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전략 재편 본격화"
     },
     {
       "term": "은퇴자 버핏이 투자자에게",
-      "term_ko": "은퇴자 버핏이 투자자에게",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "은퇴자 버핏이 투자자에게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "내 주식 -10%에 가슴 철렁? '95세 은퇴자' 버핏이 투자자에게 건넨 소중...",
-              "link": "https://www.g-enews.com/view.php?ud=202604091429106645fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%ED%87%B4%EC%9E%90%20%EB%B2%84%ED%95%8F%EC%9D%B4%20%ED%88%AC%EC%9E%90%EC%9E%90%EC%97%90%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%ED%87%B4%EC%9E%90%20%EB%B2%84%ED%95%8F%EC%9D%B4%20%ED%88%AC%EC%9E%90%EC%9E%90%EC%97%90%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "내 주식 -10%에 가슴 철렁? '95세 은퇴자' 버핏이 투자자에게 건넨 소중...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604091429106645fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "은퇴자 버핏이 투자자에게"
     },
     {
       "term": "휴전했는데 기름값은 왜",
-      "term_ko": "휴전했는데 기름값은 왜",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "휴전했는데 기름값은 왜",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "휴전했는데 기름값은 왜 안 내리나?… 내 지갑 갉아먹는 '전쟁 후폭풍'",
-              "link": "https://www.g-enews.com/view.php?ud=202604091426364278fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9C%B4%EC%A0%84%ED%96%88%EB%8A%94%EB%8D%B0%20%EA%B8%B0%EB%A6%84%EA%B0%92%EC%9D%80%20%EC%99%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9C%B4%EC%A0%84%ED%96%88%EB%8A%94%EB%8D%B0%20%EA%B8%B0%EB%A6%84%EA%B0%92%EC%9D%80%20%EC%99%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "휴전했는데 기름값은 왜 안 내리나?… 내 지갑 갉아먹는 '전쟁 후폭풍'",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604091426364278fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "휴전했는데 기름값은 왜"
     },
     {
       "term": "안 내리나 내",
-      "term_ko": "안 내리나 내",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안 내리나 내",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "휴전했는데 기름값은 왜 안 내리나?… 내 지갑 갉아먹는 '전쟁 후폭풍'",
-              "link": "https://www.g-enews.com/view.php?ud=202604091426364278fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%20%EB%82%B4%EB%A6%AC%EB%82%98%20%EB%82%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%20%EB%82%B4%EB%A6%AC%EB%82%98%20%EB%82%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "휴전했는데 기름값은 왜 안 내리나?… 내 지갑 갉아먹는 '전쟁 후폭풍'",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604091426364278fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "안 내리나 내"
     },
     {
       "term": "지갑 갉아먹는 전쟁",
-      "term_ko": "지갑 갉아먹는 전쟁",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지갑 갉아먹는 전쟁",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "휴전했는데 기름값은 왜 안 내리나?… 내 지갑 갉아먹는 '전쟁 후폭풍'",
-              "link": "https://www.g-enews.com/view.php?ud=202604091426364278fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EA%B0%91%20%EA%B0%89%EC%95%84%EB%A8%B9%EB%8A%94%20%EC%A0%84%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EA%B0%91%20%EA%B0%89%EC%95%84%EB%A8%B9%EB%8A%94%20%EC%A0%84%EC%9F%81"
-      },
-      "top_headlines": [
-        {
-          "title": "휴전했는데 기름값은 왜 안 내리나?… 내 지갑 갉아먹는 '전쟁 후폭풍'",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604091426364278fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "지갑 갉아먹는 전쟁"
     },
     {
       "term": "중동 기대-우려 속..장중",
-      "term_ko": "중동 기대-우려 속..장중",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중동 기대-우려 속..장중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중동 '기대-우려' 속..장중, 달러 '절하', 금값·美증시 '상승', WTI '불안...",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163598"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%20%EA%B8%B0%EB%8C%80-%EC%9A%B0%EB%A0%A4%20%EC%86%8D..%EC%9E%A5%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%20%EA%B8%B0%EB%8C%80-%EC%9A%B0%EB%A0%A4%20%EC%86%8D..%EC%9E%A5%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "중동 '기대-우려' 속..장중, 달러 '절하', 금값·美증시 '상승', WTI '불안...",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163598",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중동 기대-우려 속..장중"
     },
     {
       "term": "달러 절하 금값",
-      "term_ko": "달러 절하 금값",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 절하 금값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "중동 '기대-우려' 속..장중, 달러 '절하', 금값·美증시 '상승', WTI '불안...",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163598"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EC%A0%88%ED%95%98%20%EA%B8%88%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EC%A0%88%ED%95%98%20%EA%B8%88%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "중동 '기대-우려' 속..장중, 달러 '절하', 금값·美증시 '상승', WTI '불안...",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163598",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달러 절하 금값"
     },
     {
       "term": "나은 선택지",
-      "term_ko": "나은 선택지",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나은 선택지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-              "link": "http://coinreaders.com/229724"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%9D%80%20%EC%84%A0%ED%83%9D%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%9D%80%20%EC%84%A0%ED%83%9D%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "前 리플 임원 \"기업 차원 XRP 재무 전략, ETF보다 나은 선택지\"",
-          "summary": "",
-          "link": "http://coinreaders.com/229724",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나은 선택지"
     },
     {
       "term": "하락 유럽",
-      "term_ko": "하락 유럽",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락 유럽",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EC%9C%A0%EB%9F%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EC%9C%A0%EB%9F%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하락 유럽"
     },
     {
       "term": "美 선물",
-      "term_ko": "美 선물",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 선물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%84%A0%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%84%A0%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "허술한 '휴전'..장중 中·日·홍콩·한국증시 '하락', 유럽 & 美 선물 '위...",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=163577",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "美 선물"
     },
     {
       "term": "서민 경제",
-      "term_ko": "서민 경제",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서민 경제",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-04-02",
-              "timestamp": 1775055600000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미국 CPI 3월 3%대 전망…이란전쟁이 쪼갠 부자와 서민 경제",
-              "link": "https://www.g-enews.com/view.php?ud=202604091947034272bd56fbc3c_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%AF%BC%20%EA%B2%BD%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%AF%BC%20%EA%B2%BD%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 CPI 3월 3%대 전망…이란전쟁이 쪼갠 부자와 서민 경제",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202604091947034272bd56fbc3c_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.005098,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1775055600000
-      }
+      "term_ko": "서민 경제"
     },
     {
       "term": "국가채무 올해",
-      "term_ko": "국가채무 올해",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국가채무 올해",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국가채무 올해 1, 2월 두 달만에 44조 넘게 늘어",
-              "link": "https://n.news.naver.com/mnews/article/020/0003711234?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EA%B0%80%EC%B1%84%EB%AC%B4%20%EC%98%AC%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EA%B0%80%EC%B1%84%EB%AC%B4%20%EC%98%AC%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "국가채무 올해 1, 2월 두 달만에 44조 넘게 늘어",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003711234?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "국가채무 올해"
     },
     {
       "term": "Foreign Selling Returns",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Foreign Selling Returns",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Falls as Foreign Selling Returns on Ceasefire Jitters",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=181599"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Foreign%20Selling%20Returns",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Foreign%20Selling%20Returns"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls as Foreign Selling Returns on Ceasefire Jitters",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=181599",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Foreign Selling Returns"
     },
     {
       "term": "Gulf Crisis Fuels",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Gulf Crisis Fuels",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Asian Markets Retreat as Gulf Crisis Fuels Oil Surge and Inflation Fears",
-              "link": "https://www.econotimes.com/Asian-Markets-Retreat-as-Gulf-Crisis-Fuels-Oil-Surge-and-Inflation-Fears-1738517"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Gulf%20Crisis%20Fuels",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Gulf%20Crisis%20Fuels"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Markets Retreat as Gulf Crisis Fuels Oil Surge and Inflation Fears",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Markets-Retreat-as-Gulf-Crisis-Fuels-Oil-Surge-and-Inflation-Fears-1738517",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Gulf Crisis Fuels"
     },
     {
-      "term": "KOSPI Falls",
-      "term_ko": "",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Falls",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Falls as Foreign Selling Returns on Ceasefire Jitters",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=181599"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Falls",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Falls"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls as Foreign Selling Returns on Ceasefire Jitters",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=181599",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Falls",
+      "term_ko": "Kospi Falls"
     },
     {
       "term": "Ceasefire Jitters",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Ceasefire Jitters",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Falls as Foreign Selling Returns on Ceasefire Jitters",
-              "link": "http://www.kdfnews.com/news/articleView.html?idxno=181599"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Ceasefire%20Jitters",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Ceasefire%20Jitters"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls as Foreign Selling Returns on Ceasefire Jitters",
-          "summary": "",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=181599",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Ceasefire Jitters"
     },
     {
       "term": "Oil Surge",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Oil Surge",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Asian Markets Retreat as Gulf Crisis Fuels Oil Surge and Inflation Fears",
-              "link": "https://www.econotimes.com/Asian-Markets-Retreat-as-Gulf-Crisis-Fuels-Oil-Surge-and-Inflation-Fears-1738517"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Oil%20Surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Oil%20Surge"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Markets Retreat as Gulf Crisis Fuels Oil Surge and Inflation Fears",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Markets-Retreat-as-Gulf-Crisis-Fuels-Oil-Surge-and-Inflation-Fears-1738517",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Oil Surge"
     },
     {
       "term": "Inflation Fears",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Inflation Fears",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Asian Markets Retreat as Gulf Crisis Fuels Oil Surge and Inflation Fears",
-              "link": "https://www.econotimes.com/Asian-Markets-Retreat-as-Gulf-Crisis-Fuels-Oil-Surge-and-Inflation-Fears-1738517"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20Fears",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20Fears"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Markets Retreat as Gulf Crisis Fuels Oil Surge and Inflation Fears",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Markets-Retreat-as-Gulf-Crisis-Fuels-Oil-Surge-and-Inflation-Fears-1738517",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Inflation Fears"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-04-10T04:07:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-04-09T19:08:23.860Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-04-10T04:07:17+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "미국 CPI 3월",
+      "term_ko": "미국 CPI 3월"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-04-10T04:07:17+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-04-10T04:07:17+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "기업 차원 XRP",
+      "term_ko": "기업 차원 XRP"
+    },
+    {
+      "term": "재무 전략 ETF보다",
+      "term_ko": "재무 전략 ETF보다"
+    },
+    {
+      "term": "美증시 상승 WTI",
+      "term_ko": "美증시 상승 WTI"
+    },
+    {
+      "term": "가슴 철렁 95세",
+      "term_ko": "가슴 철렁 95세"
+    },
+    {
+      "term": "44조 넘게 늘어",
+      "term_ko": "44조 넘게 늘어"
+    },
+    {
+      "term": "前 리플 임원",
+      "term_ko": "前 리플 임원"
+    },
+    {
+      "term": "허술한 휴전..장중 中",
+      "term_ko": "허술한 휴전..장중 中"
+    },
+    {
+      "term": "日 홍콩 한국증시",
+      "term_ko": "日 홍콩 한국증시"
+    },
+    {
+      "term": "회피 니켈 공급망",
+      "term_ko": "회피 니켈 공급망"
+    },
+    {
+      "term": "전략 재편 본격화",
+      "term_ko": "전략 재편 본격화"
+    },
+    {
+      "term": "은퇴자 버핏이 투자자에게",
+      "term_ko": "은퇴자 버핏이 투자자에게"
+    },
+    {
+      "term": "휴전했는데 기름값은 왜",
+      "term_ko": "휴전했는데 기름값은 왜"
+    },
+    {
+      "term": "안 내리나 내",
+      "term_ko": "안 내리나 내"
+    },
+    {
+      "term": "지갑 갉아먹는 전쟁",
+      "term_ko": "지갑 갉아먹는 전쟁"
+    },
+    {
+      "term": "중동 기대-우려 속..장중",
+      "term_ko": "중동 기대-우려 속..장중"
+    },
+    {
+      "term": "달러 절하 금값",
+      "term_ko": "달러 절하 금값"
+    },
+    {
+      "term": "나은 선택지",
+      "term_ko": "나은 선택지"
+    },
+    {
+      "term": "하락 유럽",
+      "term_ko": "하락 유럽"
+    },
+    {
+      "term": "美 선물",
+      "term_ko": "美 선물"
+    },
+    {
+      "term": "서민 경제",
+      "term_ko": "서민 경제"
+    },
+    {
+      "term": "국가채무 올해",
+      "term_ko": "국가채무 올해"
+    },
+    {
+      "term": "Foreign Selling Returns",
+      "term_ko": "Foreign Selling Returns"
+    },
+    {
+      "term": "Gulf Crisis Fuels",
+      "term_ko": "Gulf Crisis Fuels"
+    },
+    {
+      "term": "Kospi Falls",
+      "term_ko": "Kospi Falls"
+    },
+    {
+      "term": "Ceasefire Jitters",
+      "term_ko": "Ceasefire Jitters"
+    },
+    {
+      "term": "Oil Surge",
+      "term_ko": "Oil Surge"
+    },
+    {
+      "term": "Inflation Fears",
+      "term_ko": "Inflation Fears"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    }
+  ],
+  "translations": {
+    "미국 CPI 3월": {
+      "en": "미국 CPI 3월",
+      "ko": "미국 CPI 3월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "기업 차원 XRP": {
+      "en": "기업 차원 XRP",
+      "ko": "기업 차원 XRP",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "재무 전략 ETF보다": {
+      "en": "재무 전략 ETF보다",
+      "ko": "재무 전략 ETF보다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "美증시 상승 WTI": {
+      "en": "美증시 상승 WTI",
+      "ko": "美증시 상승 WTI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "가슴 철렁 95세": {
+      "en": "가슴 철렁 95세",
+      "ko": "가슴 철렁 95세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "44조 넘게 늘어": {
+      "en": "44조 넘게 늘어",
+      "ko": "44조 넘게 늘어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "前 리플 임원": {
+      "en": "前 리플 임원",
+      "ko": "前 리플 임원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "허술한 휴전..장중 中": {
+      "en": "허술한 휴전..장중 中",
+      "ko": "허술한 휴전..장중 中",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "日 홍콩 한국증시": {
+      "en": "日 홍콩 한국증시",
+      "ko": "日 홍콩 한국증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "회피 니켈 공급망": {
+      "en": "회피 니켈 공급망",
+      "ko": "회피 니켈 공급망",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "전략 재편 본격화": {
+      "en": "전략 재편 본격화",
+      "ko": "전략 재편 본격화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "은퇴자 버핏이 투자자에게": {
+      "en": "은퇴자 버핏이 투자자에게",
+      "ko": "은퇴자 버핏이 투자자에게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.977Z"
+    },
+    "휴전했는데 기름값은 왜": {
+      "en": "휴전했는데 기름값은 왜",
+      "ko": "휴전했는데 기름값은 왜",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "안 내리나 내": {
+      "en": "안 내리나 내",
+      "ko": "안 내리나 내",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "지갑 갉아먹는 전쟁": {
+      "en": "지갑 갉아먹는 전쟁",
+      "ko": "지갑 갉아먹는 전쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "중동 기대-우려 속..장중": {
+      "en": "중동 기대-우려 속..장중",
+      "ko": "중동 기대-우려 속..장중",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "달러 절하 금값": {
+      "en": "달러 절하 금값",
+      "ko": "달러 절하 금값",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "나은 선택지": {
+      "en": "나은 선택지",
+      "ko": "나은 선택지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "하락 유럽": {
+      "en": "하락 유럽",
+      "ko": "하락 유럽",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "美 선물": {
+      "en": "美 선물",
+      "ko": "美 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "서민 경제": {
+      "en": "서민 경제",
+      "ko": "서민 경제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "국가채무 올해": {
+      "en": "국가채무 올해",
+      "ko": "국가채무 올해",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Foreign Selling Returns": {
+      "en": "Foreign Selling Returns",
+      "ko": "Foreign Selling Returns",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Gulf Crisis Fuels": {
+      "en": "Gulf Crisis Fuels",
+      "ko": "Gulf Crisis Fuels",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Kospi Falls": {
+      "en": "Kospi Falls",
+      "ko": "Kospi Falls",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Ceasefire Jitters": {
+      "en": "Ceasefire Jitters",
+      "ko": "Ceasefire Jitters",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Oil Surge": {
+      "en": "Oil Surge",
+      "ko": "Oil Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Inflation Fears": {
+      "en": "Inflation Fears",
+      "ko": "Inflation Fears",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-04-10T02:26:29.978Z"
     }
   }
 }
