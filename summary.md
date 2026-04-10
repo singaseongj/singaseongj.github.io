@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-10T16:29:13+09:00 (KST)**
+- Generated: **2026-04-10T22:09:21+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -25,7 +25,7 @@
 **에스앤에스텍** (101490.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **26.7%**, 20d **13.5%**; volatility (20d): **unknown**
+- Returns: 5d **5.0%**, 20d **9.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%95%A4%EC%97%90%EC%8A%A4%ED%85%8D
@@ -41,7 +41,7 @@
 **테크윙** (089030.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.5%**, 20d **-16.3%**; volatility (20d): **unknown**
+- Returns: 5d **13.3%**, 20d **16.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%85%8C%ED%81%AC%EC%9C%99
@@ -223,12 +223,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
 
-**Insmed Incorporated** (INSM)
+**Ferrovial** (FER)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **10.0%**, 20d **13.1%**; volatility (20d): **unknown**
+- Returns: 5d **5.7%**, 20d **-1.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Insmed%20Incorporated
+- News search: https://www.google.com/search?q=Ferrovial
 
 **Thomson Reuters** (TRI)
 
