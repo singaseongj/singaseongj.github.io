@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-13T22:27:21+09:00 (KST)**
+- Generated: **2026-04-14T04:15:56+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -17,7 +17,7 @@
 **리노공업** (058470.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.5%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
@@ -25,7 +25,7 @@
 **에코프로** (086520.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.5%**, 20d **-1.5%**; volatility (20d): **unknown**
+- Returns: 5d **-2.6%**, 20d **3.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
@@ -33,7 +33,7 @@
 **이오테크닉스** (039030.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **24.1%**, 20d **19.5%**; volatility (20d): **unknown**
+- Returns: 5d **-1.2%**, 20d **-5.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%9D%B4%EC%98%A4%ED%85%8C%ED%81%AC%EB%8B%89%EC%8A%A4
@@ -41,20 +41,20 @@
 **헬스케어** (028300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **14.1%**, 20d **19.6%**; volatility (20d): **unknown**
+- Returns: 5d **-4.8%**, 20d **-22.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4
 
 ### AGGRESSIVE (5)
 
-**HLB생명과학** (067630.KQ)
+**네오위즈** (095660.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.1%**, 20d **1.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.1%**, 20d **-15.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
+- Sector: **커뮤니케이션서비스**
+- News search: https://www.google.com/search?q=%EB%84%A4%EC%98%A4%EC%9C%84%EC%A6%88
 
 **더블유씨피** (393890.KQ)
 
@@ -209,6 +209,13 @@
 
 ### AGGRESSIVE (5)
 
+**Alnylam Pharmaceuticals** (ALNY)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.8%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Alnylam%20Pharmaceuticals
+
 **Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -222,13 +229,6 @@
 - Returns: 5d **10.0%**, 20d **13.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Insmed%20Incorporated
-
-**MicroStrategy** (MSTR)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=MicroStrategy
 
 **Thomson Reuters** (TRI)
 
@@ -275,7 +275,7 @@
 **Hilton Worldwide** (HLT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.1%**, 20d **9.9%**; volatility (20d): **unknown**
+- Returns: 5d **5.8%**, 20d **11.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Hilton%20Worldwide
@@ -283,20 +283,20 @@
 **Stryker Corporation** (SYK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.3%**, 20d **0.6%**; volatility (20d): **unknown**
+- Returns: 5d **3.9%**, 20d **2.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Stryker%20Corporation
 
 ### AGGRESSIVE (5)
 
-**Evergy** (EVRG)
+**Akamai Technologies** (AKAM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **2.7%**; volatility (20d): **unknown**
+- Returns: 5d **2.9%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Evergy
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Akamai%20Technologies
 
 **Leidos** (LDOS)
 
@@ -309,7 +309,7 @@
 **Principal Financial Group** (PFG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.9%**, 20d **6.5%**; volatility (20d): **unknown**
+- Returns: 5d **2.1%**, 20d **8.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Principal%20Financial%20Group
