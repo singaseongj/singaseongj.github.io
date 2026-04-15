@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-15T22:25:12+09:00 (KST)**
+- Generated: **2026-04-16T04:18:01+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -118,7 +118,7 @@
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Returns: 5d **0.2%**, 20d **1.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
@@ -126,7 +126,7 @@
 **포스코인터내셔널** (047050.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.20)**
-- Returns: 5d **-2.0%**, 20d **-1.6%**; volatility (20d): **unknown**
+- Returns: 5d **-1.0%**, 20d **1.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90
 
@@ -231,12 +231,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Ferrovial
 
-**MicroStrategy** (MSTR)
+**Insmed Incorporated** (INSM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
+- Returns: 5d **10.0%**, 20d **13.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=MicroStrategy
+- News search: https://www.google.com/search?q=Insmed%20Incorporated
 
 **Thomson Reuters** (TRI)
 
@@ -291,14 +291,6 @@
 
 ### AGGRESSIVE (5)
 
-**Albemarle Corporation** (ALB)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **12.2%**, 20d **27.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Materials**
-- News search: https://www.google.com/search?q=Albemarle%20Corporation
-
 **Expand Energy** (EXE)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -310,7 +302,7 @@
 **Loews Corporation** (L)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.2%**, 20d **1.6%**; volatility (20d): **unknown**
+- Returns: 5d **0.4%**, 20d **1.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Loews%20Corporation
@@ -318,7 +310,7 @@
 **LyondellBasell** (LYB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.7%**, 20d **3.1%**; volatility (20d): **unknown**
+- Returns: 5d **-1.2%**, 20d **3.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=LyondellBasell
@@ -326,8 +318,16 @@
 **PulteGroup** (PHM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.6%**, 20d **0.4%**; volatility (20d): **unknown**
+- Returns: 5d **0.5%**, 20d **-0.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=PulteGroup
+
+**Williams-Sonoma, Inc.** (WSM)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **5.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc.
 
