@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-18T16:08:08+09:00 (KST)**
+- Generated: **2026-04-18T22:03:12+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -14,6 +14,14 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EA%B3%A0%EC%98%81
+
+**에코프로** (086520.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.8%**, 20d **0.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **산업재**
+- News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
 
 **에코프로비엠** (247540.KQ)
 
@@ -39,23 +47,7 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%8B%B0%EC%94%A8%EC%BC%80%EC%9D%B4
 
-**휴젤** (145020.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.5%**, 20d **-4.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%9C%B4%EC%A0%A4
-
 ### AGGRESSIVE (5)
-
-**HLB생명과학** (067630.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.1%**, 20d **1.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
 
 **네오위즈** (095660.KQ)
 
@@ -73,13 +65,21 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%8D%94%EB%B8%94%EC%9C%A0%EC%94%A8%ED%94%BC
 
-**케이아이엔엑스** (093320.KQ)
+**비에이치** (090460.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.0%**, 20d **-5.6%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%95%84%EC%9D%B4%EC%97%94%EC%97%91%EC%8A%A4
+- News search: https://www.google.com/search?q=%EB%B9%84%EC%97%90%EC%9D%B4%EC%B9%98
+
+**엑세스바이오** (950130.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%97%91%EC%84%B8%EC%8A%A4%EB%B0%94%EC%9D%B4%EC%98%A4
 
 **휴메딕스** (200670.KQ)
 
@@ -131,13 +131,6 @@
 
 ### AGGRESSIVE (5)
 
-**DN오토모티브** (007340.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.8%**, 20d **38.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=DN%EC%98%A4%ED%86%A0%EB%AA%A8%ED%8B%B0%EB%B8%8C
-
 **SK아이이테크놀로지** (361610.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -151,6 +144,13 @@
 - Returns: 5d **-5.4%**, 20d **1.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EB%94%94%EB%B0%94%EC%9D%B4%EC%98%A4%EC%84%BC%EC%84%9C
+
+**제일기획** (030000.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.1%**, 20d **-6.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%A0%9C%EC%9D%BC%EA%B8%B0%ED%9A%8D
 
 **코스맥스** (192820.KS)
 
