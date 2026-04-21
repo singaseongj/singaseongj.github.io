@@ -1,24 +1,24 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-21T16:50:28+09:00 (KST)**
+- Generated: **2026-04-21T22:26:37+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
 
-**고영** (098460.KQ)
+**리노공업** (058470.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.3%**, 20d **15.9%**; volatility (20d): **unknown**
+- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EA%B3%A0%EC%98%81
+- News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
 
 **에코프로** (086520.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.5%**, 20d **9.9%**; volatility (20d): **unknown**
+- Returns: 5d **-2.6%**, 20d **3.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
@@ -26,7 +26,7 @@
 **에코프로비엠** (247540.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **11.5%**, 20d **14.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.5%**, 20d **11.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0
@@ -34,7 +34,7 @@
 **주성엔지니어링** (036930.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **86.9%**, 20d **53.6%**; volatility (20d): **unknown**
+- Returns: 5d **3.4%**, 20d **0.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%A3%BC%EC%84%B1%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81
@@ -257,6 +257,14 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Arista%20Networks
 
+**Boeing** (BA)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **4.4%**, 20d **4.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Boeing
+
 **Booking Holdings** (BKNG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -280,14 +288,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
-
-**Wells Fargo** (WFC)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.4%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=Wells%20Fargo
 
 ### AGGRESSIVE (5)
 
