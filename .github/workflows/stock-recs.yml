@@ -25,6 +25,7 @@ jobs:
     env:
       TZ: Asia/Seoul
       NODE_OPTIONS: --dns-result-order=ipv4first
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
       # keep deprecation warnings visible
       # Keep the run under typical 60s shells; script respects this.
       HARD_DEADLINE_MS: "55000"           # news deadline (now enforced)
