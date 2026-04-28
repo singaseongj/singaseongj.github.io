@@ -1,85 +1,77 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-28T04:23:05+09:00 (KST)**
+- Generated: **2026-04-28T11:49:02+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
 
-**레고켐바이오** (141080.KQ)
+**고영** (098460.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.0%**, 20d **3.5%**; volatility (20d): **unknown**
+- Returns: 5d **24.8%**, 20d **63.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EB%A0%88%EA%B3%A0%EC%BC%90%EB%B0%94%EC%9D%B4%EC%98%A4
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EA%B3%A0%EC%98%81
 
 **리노공업** (058470.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
+- Returns: 5d **-6.6%**, 20d **17.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
 
-**에코프로** (086520.KQ)
+**알테오젠** (196170.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **3.7%**; volatility (20d): **unknown**
+- Returns: 5d **3.9%**, 20d **-6.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **산업재**
-- News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0
 
-**이오테크닉스** (039030.KQ)
+**에스티팜** (237690.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.2%**, 20d **-5.5%**; volatility (20d): **unknown**
+- Returns: 5d **0.7%**, 20d **6.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%9D%B4%EC%98%A4%ED%85%8C%ED%81%AC%EB%8B%89%EC%8A%A4
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8B%B0%ED%8C%9C
 
-**정보기술** (403870.KQ)
+**휴젤** (145020.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.8%**, 20d **-0.6%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **11.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%ED%9C%B4%EC%A0%A4
 
 ### AGGRESSIVE (5)
 
-**HLB생명과학** (067630.KQ)
+**동진쎄미켐** (005290.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.8%**, 20d **9.2%**; volatility (20d): **unknown**
+- Returns: 5d **8.6%**, 20d **34.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EB%8F%99%EC%A7%84%EC%8E%84%EB%AF%B8%EC%BC%90
+
+**오스템임플란트** (048260.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
-- News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
+- News search: https://www.google.com/search?q=%EC%98%A4%EC%8A%A4%ED%85%9C%EC%9E%84%ED%94%8C%EB%9E%80%ED%8A%B8
 
-**NHN KCP** (060250.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.3%**, 20d **-9.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=NHN%20KCP
-
-**미래생명자원** (100790.KQ)
+**크리스탈지노믹스** (083790.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.8%**, 20d **-5.3%**; volatility (20d): **unknown**
+- Returns: 5d **-1.1%**, 20d **-1.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%83%9D%EB%AA%85%EC%9E%90%EC%9B%90
-
-**오로스테크놀로지** (322310.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.2%**, 20d **5.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%98%A4%EB%A1%9C%EC%8A%A4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
+- News search: https://www.google.com/search?q=%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%83%88%EC%A7%80%EB%85%B8%EB%AF%B9%EC%8A%A4
 
 **피엔티** (137400.KQ)
 
@@ -89,23 +81,38 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%94%BC%EC%97%94%ED%8B%B0
 
+**휴메딕스** (200670.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **4.3%**, 20d **8.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
+
 ## KOSPI
 
 ### SAFE (5)
 
-**삼성중공업** (010140.KS)
+**삼성카드** (029780.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
-- Returns: 5d **17.2%**, 20d **36.5%**; volatility (20d): **unknown**
+- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-0.7%**, 20d **0.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%B9%B4%EB%93%9C
 
-**우리금융지주** (316140.KS)
+**삼성화재** (000810.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **-7.1%**, 20d **2.3%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **2.9%**, 20d **9.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%9A%B0%EB%A6%AC%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC
+
+**코오롱인더** (120110.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.15)**
+- Returns: 5d **18.6%**, 20d **42.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%BD%94%EC%98%A4%EB%A1%B1%EC%9D%B8%EB%8D%94
 
 **키움증권** (039490.KS)
 
@@ -113,13 +120,6 @@
 - Returns: 5d **2.3%**, 20d **10.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C
-
-**현대건설** (000720.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.15)**
-- Returns: 5d **-1.7%**, 20d **15.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EA%B1%B4%EC%84%A4
 
 **효성중공업** (298040.KS)
 
@@ -129,14 +129,6 @@
 - News search: https://www.google.com/search?q=%ED%9A%A8%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85
 
 ### AGGRESSIVE (5)
-
-**Goldman Sachs** (GS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **16.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=Goldman%20Sachs
 
 **HD현대마린솔루션** (443060.KS)
 
@@ -152,17 +144,24 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=LG%EC%9D%B4%EB%85%B8%ED%85%8D
 
-**오리온** (271560.KS)
+**삼성생명** (032830.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.7%**, 20d **11.3%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **13.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8
+- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85
+
+**한화엔진** (082740.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **63.0%**, 20d **98.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%94%EC%A7%84
 
 **현대백화점** (069960.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **24.0%**, 20d **42.0%**; volatility (20d): **unknown**
+- Returns: 5d **19.0%**, 20d **38.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%B1%ED%99%94%EC%A0%90
 
@@ -170,19 +169,50 @@
 
 ### SAFE (5)
 
-**ASML Holding** (ASML)
+**Arm Holdings** (ARM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.7%**, 20d **6.7%**; volatility (20d): **unknown**
+- Returns: 5d **7.2%**, 20d **-13.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=ASML%20Holding
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Arm%20Holdings
 
-**Insmed Incorporated** (INSM)
+**Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-5.0%**, 20d **-6.6%**; volatility (20d): **unknown**
+- Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Insmed%20Incorporated
+- News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
+
+**Ferrovial** (FER)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-4.1%**, 20d **9.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Ferrovial
+
+**Shopify** (SHOP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Shopify
+
+**Zscaler** (ZS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Zscaler
+
+### AGGRESSIVE (5)
+
+**Coca-Cola Europacific Partners** (CCEP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
 
 **MicroStrategy** (MSTR)
 
@@ -205,105 +235,96 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Thomson%20Reuters
 
-### AGGRESSIVE (2)
-
-**Marvell Technology** (MRVL)
+**Zscaler** (ZS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.0%**, 20d **-8.5%**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Marvell%20Technology
-
-**Mercado Libre** (MELI)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
+- News search: https://www.google.com/search?q=Zscaler
 
 ## S&P 500
 
 ### SAFE (5)
 
-**Alphabet Inc.** (GOOGL)
+**Apple Inc.** (AAPL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.1%**, 20d **5.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Alphabet%20Inc.
-
-**Amazon** (AMZN)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Amazon
-
-**ON Semiconductor** (ON)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.6%**, 20d **-11.7%**; volatility (20d): **unknown**
+- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=ON%20Semiconductor
+- News search: https://www.google.com/search?q=Apple%20Inc.
 
-**Union Pacific Corporation** (UNP)
+**Bank of America** (BAC)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.7%**, 20d **12.7%**; volatility (20d): **unknown**
+- Returns: 5d **4.2%**, 20d **5.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Union%20Pacific%20Corporation
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Bank%20of%20America
 
-**Zoetis** (ZTS)
+**Hilton Worldwide** (HLT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.1%**, 20d **6.1%**; volatility (20d): **unknown**
+- Returns: 5d **-3.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Hilton%20Worldwide
+
+**JPMorgan Chase** (JPM)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=JPMorgan%20Chase
+
+**Stryker Corporation** (SYK)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Zoetis
+- News search: https://www.google.com/search?q=Stryker%20Corporation
 
 ### AGGRESSIVE (5)
 
-**Hershey Company (The)** (HSY)
+**Domino's** (DPZ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.0%**, 20d **-12.2%**; volatility (20d): **unknown**
+- Returns: 5d **2.2%**, 20d **-4.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://www.google.com/search?q=Hershey%20Company%20(The)
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Domino's
 
-**IDEX Corporation** (IEX)
+**eBay Inc.** (EBAY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.7%**, 20d **1.0%**; volatility (20d): **unknown**
+- Returns: 5d **-5.5%**, 20d **20.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=IDEX%20Corporation
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=eBay%20Inc.
 
-**J.B. Hunt** (JBHT)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.2%**, 20d **22.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=J.B.%20Hunt
-
-**Jacobs Solutions** (J)
+**Quanta Services** (PWR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.3%**, 20d **0.0%**; volatility (20d): **unknown**
+- Returns: 5d **5.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
-- News search: https://www.google.com/search?q=Jacobs%20Solutions
+- News search: https://www.google.com/search?q=Quanta%20Services
 
-**Leidos** (LDOS)
+**Realty Income** (O)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.0%**, 20d **-7.4%**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **3.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Leidos
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=Realty%20Income
+
+**Williams-Sonoma, Inc.** (WSM)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-4.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Williams-Sonoma%2C%20Inc.
 
