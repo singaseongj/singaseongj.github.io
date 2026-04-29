@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-29T17:18:26+09:00 (KST)**
+- Generated: **2026-04-29T22:56:11+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -26,7 +26,7 @@
 **리노공업** (058470.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.7%**, 20d **7.2%**; volatility (20d): **unknown**
+- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
@@ -42,7 +42,7 @@
 **에스엠** (041510.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.2%**, 20d **8.3%**; volatility (20d): **unknown**
+- Returns: 5d **-3.9%**, 20d **4.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%EC%97%A0
@@ -131,19 +131,19 @@
 
 ### AGGRESSIVE (5)
 
+**HS효성첨단소재** (298050.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **1.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HS%ED%9A%A8%EC%84%B1%EC%B2%A8%EB%8B%A8%EC%86%8C%EC%9E%AC
+
 **iM금융지주** (139130.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-0.5%**, 20d **13.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=iM%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
-
-**LG** (LGND)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **1.7%**, 20d **21.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG
 
 **더블유게임즈** (192080.KS)
 
@@ -152,19 +152,19 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8D%94%EB%B8%94%EC%9C%A0%EA%B2%8C%EC%9E%84%EC%A6%88
 
+**세아제강지주** (003030.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.7%**, 20d **-14.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%84%B8%EC%95%84%EC%A0%9C%EA%B0%95%EC%A7%80%EC%A3%BC
+
 **오리온** (271560.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **6.5%**, 20d **11.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8
-
-**한화엔진** (082740.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **63.0%**, 20d **98.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%94%EC%A7%84
 
 ## NASDAQ 100
 
@@ -207,42 +207,14 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Ferrovial
 
-### AGGRESSIVE (5)
+### AGGRESSIVE (1)
 
-**Marvell Technology** (MRVL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.0%**, 20d **-8.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Marvell%20Technology
-
-**MicroStrategy** (MSTR)
+**Mercado Libre** (MELI)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
+- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=MicroStrategy
-
-**Shopify** (SHOP)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Shopify
-
-**Thomson Reuters** (TRI)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.5%**, 20d **-12.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Thomson%20Reuters
-
-**Zscaler** (ZS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Zscaler
+- News search: https://www.google.com/search?q=Mercado%20Libre
 
 ## S&P 500
 
@@ -293,7 +265,7 @@
 **Norwegian Cruise Line Holdings** (NCLH)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.0%**, 20d **0.8%**; volatility (20d): **unknown**
+- Returns: 5d **-8.7%**, 20d **-7.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Norwegian%20Cruise%20Line%20Holdings
@@ -301,7 +273,7 @@
 **Principal Financial Group** (PFG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.5%**, 20d **13.4%**; volatility (20d): **unknown**
+- Returns: 5d **2.8%**, 20d **11.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Principal%20Financial%20Group
@@ -309,7 +281,7 @@
 **Prologis** (PLD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.3%**, 20d **9.9%**; volatility (20d): **unknown**
+- Returns: 5d **-1.0%**, 20d **5.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Prologis
@@ -317,7 +289,7 @@
 **Prudential Financial** (PRU)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.5%**, 20d **2.6%**; volatility (20d): **unknown**
+- Returns: 5d **2.1%**, 20d **-0.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Prudential%20Financial
@@ -325,7 +297,7 @@
 **Steris** (STE)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.1%**, 20d **0.2%**; volatility (20d): **unknown**
+- Returns: 5d **-3.5%**, 20d **-2.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Steris
