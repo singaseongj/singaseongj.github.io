@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-04-30T11:49:36+09:00 (KST)**
+- Generated: **2026-04-30T17:23:12+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -10,7 +10,7 @@
 **루닛** (328130.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **13.7%**, 20d **22.6%**; volatility (20d): **unknown**
+- Returns: 5d **15.9%**, 20d **25.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%A3%A8%EB%8B%9B
@@ -84,7 +84,7 @@
 **휴메딕스** (200670.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.9%**, 20d **9.4%**; volatility (20d): **unknown**
+- Returns: 5d **1.7%**, 20d **7.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
@@ -93,34 +93,33 @@
 
 ### SAFE (5)
 
-**LG전자** (066570.KS)
+**금호석유화학** (011780.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **9.9%**, 20d **31.2%**; volatility (20d): **unknown**
+- News (7d): **16** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.13)**
+- Returns: 5d **7.9%**, 20d **24.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=LG%EC%A0%84%EC%9E%90
+- News search: https://www.google.com/search?q=%EA%B8%88%ED%98%B8%EC%84%9D%EC%9C%A0%ED%99%94%ED%95%99
 
-**대우건설** (047040.KS)
+**대한유화** (006650.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **18.1%**, 20d **91.5%**; volatility (20d): **unknown**
+- News (7d): **18** (blogs: 10) — momentum: **very high**, sentiment: **negative (-0.39)**
+- Returns: 5d **16.5%**, 20d **46.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%8C%80%EC%9A%B0%EA%B1%B4%EC%84%A4
+- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%EC%9C%A0%ED%99%94
 
-**코오롱인더** (120110.KS)
+**대한전선** (001440.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.15)**
-- Returns: 5d **6.4%**, 20d **19.8%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **negative (-0.35)**
+- Returns: 5d **7.8%**, 20d **56.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%BD%94%EC%98%A4%EB%A1%B1%EC%9D%B8%EB%8D%94
+- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%EC%A0%84%EC%84%A0
 
-**한화생명** (088350.KS)
+**롯데케미칼** (011170.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.5%**, 20d **7.8%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.50)**
+- Returns: 5d **21.0%**, 20d **44.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85
+- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%BC%80%EB%AF%B8%EC%B9%BC
 
 **효성중공업** (298040.KS)
 
@@ -134,7 +133,7 @@
 **CJ제일제당** (097950.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.3%**, 20d **13.6%**; volatility (20d): **unknown**
+- Returns: 5d **3.8%**, 20d **12.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=CJ%EC%A0%9C%EC%9D%BC%EC%A0%9C%EB%8B%B9
 
@@ -156,14 +155,14 @@
 **SK케미칼** (285130.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.7%**, 20d **17.4%**; volatility (20d): **unknown**
+- Returns: 5d **1.7%**, 20d **16.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%EC%BC%80%EB%AF%B8%EC%B9%BC
 
 **오리온** (271560.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.5%**, 20d **12.5%**; volatility (20d): **unknown**
+- Returns: 5d **-1.3%**, 20d **10.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8
 
@@ -207,14 +206,42 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Zscaler
 
-### AGGRESSIVE (1)
+### AGGRESSIVE (5)
 
-**Mercado Libre** (MELI)
+**Marvell Technology** (MRVL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **5.0%**, 20d **-8.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
+- News search: https://www.google.com/search?q=Marvell%20Technology
+
+**MicroStrategy** (MSTR)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=MicroStrategy
+
+**Shopify** (SHOP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Shopify
+
+**Thomson Reuters** (TRI)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.5%**, 20d **-12.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Thomson%20Reuters
+
+**Zscaler** (ZS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Zscaler
 
 ## S&P 500
 
