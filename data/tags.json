@@ -1,1116 +1,439 @@
 {
+  "generatedAt": "2026-05-01T13:19:20.263Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-01",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "미 영 ECB",
-      "term_ko": "미 영 ECB",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미 영 ECB",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미·영·ECB 잇달아 금리 동결…시장금리 긴축 속 ‘인상' 여지도",
-              "link": "https://n.news.naver.com/mnews/article/025/0003520531?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EC%98%81%20ECB",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EC%98%81%20ECB"
-      },
-      "top_headlines": [
-        {
-          "title": "미·영·ECB 잇달아 금리 동결…시장금리 긴축 속 ‘인상' 여지도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003520531?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미 영 ECB"
     },
     {
       "term": "최고 연 3.4%",
-      "term_ko": "최고 연 3.4%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고 연 3.4%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[주간 금리 리포트: 시중은행] 정기예금 최고 연 3.4% '한국스탠다드차...",
-              "link": "http://www.dailypop.kr/news/articleView.html?idxno=98530"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%203.4%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%203.4%25"
-      },
-      "top_headlines": [
-        {
-          "title": "[주간 금리 리포트: 시중은행] 정기예금 최고 연 3.4% '한국스탠다드차...",
-          "summary": "",
-          "link": "http://www.dailypop.kr/news/articleView.html?idxno=98530",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "최고 연 3.4%"
     },
     {
       "term": "부동산 트렌드 1분기",
-      "term_ko": "부동산 트렌드 1분기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 트렌드 1분기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 트렌드] 1분기 서울 프라임 오피스 거래액 약 3조 원...공실률·...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=95547"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%8A%B8%EB%A0%8C%EB%93%9C%201%EB%B6%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%ED%8A%B8%EB%A0%8C%EB%93%9C%201%EB%B6%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 트렌드] 1분기 서울 프라임 오피스 거래액 약 3조 원...공실률·...",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=95547",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부동산 트렌드 1분기"
     },
     {
       "term": "거래액 약 3조",
-      "term_ko": "거래액 약 3조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래액 약 3조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 트렌드] 1분기 서울 프라임 오피스 거래액 약 3조 원...공실률·...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=95547"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%EC%95%A1%20%EC%95%BD%203%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%EC%95%A1%20%EC%95%BD%203%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 트렌드] 1분기 서울 프라임 오피스 거래액 약 3조 원...공실률·...",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=95547",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "거래액 약 3조"
     },
     {
       "term": "증권가 연말 3%",
-      "term_ko": "증권가 연말 3%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증권가 연말 3%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한은 금리 인상론 급부상…증권가 \"연말 3% 도달\" 전망",
-              "link": "https://n.news.naver.com/mnews/article/014/0005516293?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EA%B0%80%20%EC%97%B0%EB%A7%90%203%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EA%B0%80%20%EC%97%B0%EB%A7%90%203%25"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 금리 인상론 급부상…증권가 \"연말 3% 도달\" 전망",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005516293?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증권가 연말 3%"
     },
     {
       "term": "트럼프 입에 흔들",
-      "term_ko": "트럼프 입에 흔들",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "트럼프 입에 흔들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "전쟁 리스크 vs 기관 매집...비트코인, 트럼프 입에 '흔들'",
-              "link": "http://coinreaders.com/233999"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%20%EC%9E%85%EC%97%90%20%ED%9D%94%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%20%EC%9E%85%EC%97%90%20%ED%9D%94%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "전쟁 리스크 vs 기관 매집...비트코인, 트럼프 입에 '흔들'",
-          "summary": "",
-          "link": "http://coinreaders.com/233999",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "트럼프 입에 흔들"
     },
     {
       "term": "잇달아 금리 동결",
-      "term_ko": "잇달아 금리 동결",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "잇달아 금리 동결",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미·영·ECB 잇달아 금리 동결…시장금리 긴축 속 ‘인상' 여지도",
-              "link": "https://n.news.naver.com/mnews/article/025/0003520531?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%87%EB%8B%AC%EC%95%84%20%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%87%EB%8B%AC%EC%95%84%20%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "미·영·ECB 잇달아 금리 동결…시장금리 긴축 속 ‘인상' 여지도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003520531?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "잇달아 금리 동결"
     },
     {
       "term": "시장금리 긴축 속",
-      "term_ko": "시장금리 긴축 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장금리 긴축 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미·영·ECB 잇달아 금리 동결…시장금리 긴축 속 ‘인상' 여지도",
-              "link": "https://n.news.naver.com/mnews/article/025/0003520531?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%20%EA%B8%B4%EC%B6%95%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%20%EA%B8%B4%EC%B6%95%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "미·영·ECB 잇달아 금리 동결…시장금리 긴축 속 ‘인상' 여지도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003520531?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시장금리 긴축 속"
     },
     {
       "term": "주간 금리 리포트",
-      "term_ko": "주간 금리 리포트",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주간 금리 리포트",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[주간 금리 리포트: 시중은행] 정기예금 최고 연 3.4% '한국스탠다드차...",
-              "link": "http://www.dailypop.kr/news/articleView.html?idxno=98530"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%84%20%EA%B8%88%EB%A6%AC%20%EB%A6%AC%ED%8F%AC%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%84%20%EA%B8%88%EB%A6%AC%20%EB%A6%AC%ED%8F%AC%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[주간 금리 리포트: 시중은행] 정기예금 최고 연 3.4% '한국스탠다드차...",
-          "summary": "",
-          "link": "http://www.dailypop.kr/news/articleView.html?idxno=98530",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "주간 금리 리포트"
     },
     {
       "term": "포스트 파월 권력",
-      "term_ko": "포스트 파월 권력",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "포스트 파월 권력",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'포스트 파월' 권력 재편…한국도 신중 모드",
-              "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5016876"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AC%EC%8A%A4%ED%8A%B8%20%ED%8C%8C%EC%9B%94%20%EA%B6%8C%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AC%EC%8A%A4%ED%8A%B8%20%ED%8C%8C%EC%9B%94%20%EA%B6%8C%EB%A0%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "'포스트 파월' 권력 재편…한국도 신중 모드",
-          "summary": "",
-          "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5016876",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "포스트 파월 권력"
     },
     {
       "term": "재편 한국도 신중",
-      "term_ko": "재편 한국도 신중",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재편 한국도 신중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'포스트 파월' 권력 재편…한국도 신중 모드",
-              "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5016876"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%ED%8E%B8%20%ED%95%9C%EA%B5%AD%EB%8F%84%20%EC%8B%A0%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%ED%8E%B8%20%ED%95%9C%EA%B5%AD%EB%8F%84%20%EC%8B%A0%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "'포스트 파월' 권력 재편…한국도 신중 모드",
-          "summary": "",
-          "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5016876",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "재편 한국도 신중"
     },
     {
       "term": "서울 프라임 오피스",
-      "term_ko": "서울 프라임 오피스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울 프라임 오피스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[부동산 트렌드] 1분기 서울 프라임 오피스 거래액 약 3조 원...공실률·...",
-              "link": "http://www.sisacast.kr/news/articleView.html?idxno=95547"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%ED%94%84%EB%9D%BC%EC%9E%84%20%EC%98%A4%ED%94%BC%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%ED%94%84%EB%9D%BC%EC%9E%84%20%EC%98%A4%ED%94%BC%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[부동산 트렌드] 1분기 서울 프라임 오피스 거래액 약 3조 원...공실률·...",
-          "summary": "",
-          "link": "http://www.sisacast.kr/news/articleView.html?idxno=95547",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서울 프라임 오피스"
     },
     {
       "term": "한은 금리 인상론",
-      "term_ko": "한은 금리 인상론",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 금리 인상론",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한은 금리 인상론 급부상…증권가 \"연말 3% 도달\" 전망",
-              "link": "https://n.news.naver.com/mnews/article/014/0005516293?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 금리 인상론 급부상…증권가 \"연말 3% 도달\" 전망",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005516293?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한은 금리 인상론"
     },
     {
-      "term": "Skill OTTs Take",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Skill OTTs Take",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"Platforms Carry the Skill, OTTs Take the Money?\" The Paradox of K-Story",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52357"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Skill%20OTTs%20Take",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Skill%20OTTs%20Take"
-      },
-      "top_headlines": [
-        {
-          "title": "\"Platforms Carry the Skill, OTTs Take the Money?\" The Paradox of K-Story",
-          "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52357",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Skill Otts Take",
+      "term_ko": "Skill Otts Take"
     },
     {
       "term": "전쟁 리스크",
-      "term_ko": "전쟁 리스크",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전쟁 리스크",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "전쟁 리스크 vs 기관 매집...비트코인, 트럼프 입에 '흔들'",
-              "link": "http://coinreaders.com/233999"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%9F%81%20%EB%A6%AC%EC%8A%A4%ED%81%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%9F%81%20%EB%A6%AC%EC%8A%A4%ED%81%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "전쟁 리스크 vs 기관 매집...비트코인, 트럼프 입에 '흔들'",
-          "summary": "",
-          "link": "http://coinreaders.com/233999",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전쟁 리스크"
     },
     {
       "term": "시중은행 정기예금",
-      "term_ko": "시중은행 정기예금",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시중은행 정기예금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[주간 금리 리포트: 시중은행] 정기예금 최고 연 3.4% '한국스탠다드차...",
-              "link": "http://www.dailypop.kr/news/articleView.html?idxno=98530"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EC%A0%95%EA%B8%B0%EC%98%88%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EC%A0%95%EA%B8%B0%EC%98%88%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[주간 금리 리포트: 시중은행] 정기예금 최고 연 3.4% '한국스탠다드차...",
-          "summary": "",
-          "link": "http://www.dailypop.kr/news/articleView.html?idxno=98530",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시중은행 정기예금"
     },
     {
       "term": "바라보는 시각",
-      "term_ko": "바라보는 시각",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "바라보는 시각",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[김상봉 시론] 국가부채를 바라보는 시각",
-              "link": "https://n.news.naver.com/mnews/article/586/0000128256?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%94%EB%9D%BC%EB%B3%B4%EB%8A%94%20%EC%8B%9C%EA%B0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%94%EB%9D%BC%EB%B3%B4%EB%8A%94%20%EC%8B%9C%EA%B0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[김상봉 시론] 국가부채를 바라보는 시각",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/586/0000128256?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "바라보는 시각"
     },
     {
       "term": "Wall Street Rally",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Asian Stock Markets Rise Amid Wall Street Rally and U.S.-Iran Tensions",
-              "link": "https://www.econotimes.com/Asian-Stock-Markets-Rise-Amid-Wall-Street-Rally-and-US-Iran-Tensions-1740571"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Stock Markets Rise Amid Wall Street Rally and U.S.-Iran Tensions",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stock-Markets-Rise-Amid-Wall-Street-Rally-and-US-Iran-Tensions-1740571",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Wall Street Rally"
     },
     {
       "term": "Nasdaq Hit Record",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nasdaq Hit Record",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Rise as S&P 500 and Nasdaq Hit Record Highs Amid Earning...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-SP-500-and-Nasdaq-Hit-Record-Highs-Amid-Earnings-Optimism-and-Iran-Tensions-1740561"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nasdaq%20Hit%20Record",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nasdaq%20Hit%20Record"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Rise as S&P 500 and Nasdaq Hit Record Highs Amid Earning...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-SP-500-and-Nasdaq-Hit-Record-Highs-Amid-Earnings-Optimism-and-Iran-Tensions-1740561",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Nasdaq Hit Record"
     },
     {
       "term": "Stay Strong Despite",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Stay Strong Despite",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Markets Stay Strong Despite Oil Shock Concerns as Earnings Drive Investor...",
-              "link": "https://www.econotimes.com/Markets-Stay-Strong-Despite-Oil-Shock-Concerns-as-Earnings-Drive-Investor-Confidence-1740557"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Stay%20Strong%20Despite",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Stay%20Strong%20Despite"
-      },
-      "top_headlines": [
-        {
-          "title": "Markets Stay Strong Despite Oil Shock Concerns as Earnings Drive Investor...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Markets-Stay-Strong-Despite-Oil-Shock-Concerns-as-Earnings-Drive-Investor-Confidence-1740557",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Stay Strong Despite"
     },
     {
       "term": "Oil Shock Concerns",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Oil Shock Concerns",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Markets Stay Strong Despite Oil Shock Concerns as Earnings Drive Investor...",
-              "link": "https://www.econotimes.com/Markets-Stay-Strong-Despite-Oil-Shock-Concerns-as-Earnings-Drive-Investor-Confidence-1740557"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Oil%20Shock%20Concerns",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Oil%20Shock%20Concerns"
-      },
-      "top_headlines": [
-        {
-          "title": "Markets Stay Strong Despite Oil Shock Concerns as Earnings Drive Investor...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Markets-Stay-Strong-Despite-Oil-Shock-Concerns-as-Earnings-Drive-Investor-Confidence-1740557",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Oil Shock Concerns"
     },
     {
       "term": "Wall Street Surges",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Surges",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Surges to Record Highs Amid Strong Earnings and Economic Stab...",
-              "link": "https://www.econotimes.com/Wall-Street-Surges-to-Record-Highs-Amid-Strong-Earnings-and-Economic-Stability-1740547"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Surges",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Surges"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Surges to Record Highs Amid Strong Earnings and Economic Stab...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Surges-to-Record-Highs-Amid-Strong-Earnings-and-Economic-Stability-1740547",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Wall Street Surges"
     },
     {
-      "term": "U.S.-Iran Tensions",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-Iran Tensions",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Asian Stock Markets Rise Amid Wall Street Rally and U.S.-Iran Tensions",
-              "link": "https://www.econotimes.com/Asian-Stock-Markets-Rise-Amid-Wall-Street-Rally-and-US-Iran-Tensions-1740571"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Tensions",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Tensions"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Stock Markets Rise Amid Wall Street Rally and U.S.-Iran Tensions",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stock-Markets-Rise-Amid-Wall-Street-Rally-and-US-Iran-Tensions-1740571",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s.-iran Tensions",
+      "term_ko": "U.s.-iran Tensions"
     },
     {
       "term": "Futures Rise",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Rise",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Rise as S&P 500 and Nasdaq Hit Record Highs Amid Earning...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-SP-500-and-Nasdaq-Hit-Record-Highs-Amid-Earnings-Optimism-and-Iran-Tensions-1740561"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Rise"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Rise as S&P 500 and Nasdaq Hit Record Highs Amid Earning...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-SP-500-and-Nasdaq-Hit-Record-Highs-Amid-Earnings-Optimism-and-Iran-Tensions-1740561",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Futures Rise"
     },
     {
       "term": "Earnings Drive",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Earnings Drive",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Markets Stay Strong Despite Oil Shock Concerns as Earnings Drive Investor...",
-              "link": "https://www.econotimes.com/Markets-Stay-Strong-Despite-Oil-Shock-Concerns-as-Earnings-Drive-Investor-Confidence-1740557"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Earnings%20Drive",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Earnings%20Drive"
-      },
-      "top_headlines": [
-        {
-          "title": "Markets Stay Strong Despite Oil Shock Concerns as Earnings Drive Investor...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Markets-Stay-Strong-Despite-Oil-Shock-Concerns-as-Earnings-Drive-Investor-Confidence-1740557",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Earnings Drive"
     },
     {
       "term": "Platforms Carry",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Platforms Carry",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"Platforms Carry the Skill, OTTs Take the Money?\" The Paradox of K-Story",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52357"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Platforms%20Carry",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Platforms%20Carry"
-      },
-      "top_headlines": [
-        {
-          "title": "\"Platforms Carry the Skill, OTTs Take the Money?\" The Paradox of K-Story",
-          "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52357",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Platforms Carry"
     },
     {
       "term": "Record Highs",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Record Highs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Surges to Record Highs Amid Strong Earnings and Economic Stab...",
-              "link": "https://www.econotimes.com/Wall-Street-Surges-to-Record-Highs-Amid-Strong-Earnings-and-Economic-Stability-1740547"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Record%20Highs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Record%20Highs"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Surges to Record Highs Amid Strong Earnings and Economic Stab...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Surges-to-Record-Highs-Amid-Strong-Earnings-and-Economic-Stability-1740547",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Record Highs"
     },
     {
       "term": "Strong Earnings",
-      "term_ko": "",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strong Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Surges to Record Highs Amid Strong Earnings and Economic Stab...",
-              "link": "https://www.econotimes.com/Wall-Street-Surges-to-Record-Highs-Amid-Strong-Earnings-and-Economic-Stability-1740547"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strong%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strong%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Surges to Record Highs Amid Strong Earnings and Economic Stab...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Surges-to-Record-Highs-Amid-Strong-Earnings-and-Economic-Stability-1740547",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Strong Earnings"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-01T17:13:58+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-01T08:15:01.551Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-01T17:13:58+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "미 영 ECB",
+      "term_ko": "미 영 ECB"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-01T17:13:58+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-01T17:13:58+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "최고 연 3.4%",
+      "term_ko": "최고 연 3.4%"
+    },
+    {
+      "term": "부동산 트렌드 1분기",
+      "term_ko": "부동산 트렌드 1분기"
+    },
+    {
+      "term": "거래액 약 3조",
+      "term_ko": "거래액 약 3조"
+    },
+    {
+      "term": "증권가 연말 3%",
+      "term_ko": "증권가 연말 3%"
+    },
+    {
+      "term": "트럼프 입에 흔들",
+      "term_ko": "트럼프 입에 흔들"
+    },
+    {
+      "term": "잇달아 금리 동결",
+      "term_ko": "잇달아 금리 동결"
+    },
+    {
+      "term": "시장금리 긴축 속",
+      "term_ko": "시장금리 긴축 속"
+    },
+    {
+      "term": "주간 금리 리포트",
+      "term_ko": "주간 금리 리포트"
+    },
+    {
+      "term": "포스트 파월 권력",
+      "term_ko": "포스트 파월 권력"
+    },
+    {
+      "term": "재편 한국도 신중",
+      "term_ko": "재편 한국도 신중"
+    },
+    {
+      "term": "서울 프라임 오피스",
+      "term_ko": "서울 프라임 오피스"
+    },
+    {
+      "term": "한은 금리 인상론",
+      "term_ko": "한은 금리 인상론"
+    },
+    {
+      "term": "Skill Otts Take",
+      "term_ko": "Skill Otts Take"
+    },
+    {
+      "term": "전쟁 리스크",
+      "term_ko": "전쟁 리스크"
+    },
+    {
+      "term": "시중은행 정기예금",
+      "term_ko": "시중은행 정기예금"
+    },
+    {
+      "term": "바라보는 시각",
+      "term_ko": "바라보는 시각"
+    },
+    {
+      "term": "Wall Street Rally",
+      "term_ko": "Wall Street Rally"
+    },
+    {
+      "term": "Nasdaq Hit Record",
+      "term_ko": "Nasdaq Hit Record"
+    },
+    {
+      "term": "Stay Strong Despite",
+      "term_ko": "Stay Strong Despite"
+    },
+    {
+      "term": "Oil Shock Concerns",
+      "term_ko": "Oil Shock Concerns"
+    },
+    {
+      "term": "Wall Street Surges",
+      "term_ko": "Wall Street Surges"
+    },
+    {
+      "term": "U.s.-iran Tensions",
+      "term_ko": "U.s.-iran Tensions"
+    },
+    {
+      "term": "Futures Rise",
+      "term_ko": "Futures Rise"
+    },
+    {
+      "term": "Earnings Drive",
+      "term_ko": "Earnings Drive"
+    },
+    {
+      "term": "Platforms Carry",
+      "term_ko": "Platforms Carry"
+    },
+    {
+      "term": "Record Highs",
+      "term_ko": "Record Highs"
+    },
+    {
+      "term": "Strong Earnings",
+      "term_ko": "Strong Earnings"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "Ai Chip Demand Surge"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "Kospi Rebounds on Foreign Buying"
+    }
+  ],
+  "translations": {
+    "미 영 ECB": {
+      "en": "미 영 ECB",
+      "ko": "미 영 ECB",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "최고 연 3.4%": {
+      "en": "최고 연 3.4%",
+      "ko": "최고 연 3.4%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "부동산 트렌드 1분기": {
+      "en": "부동산 트렌드 1분기",
+      "ko": "부동산 트렌드 1분기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "거래액 약 3조": {
+      "en": "거래액 약 3조",
+      "ko": "거래액 약 3조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "증권가 연말 3%": {
+      "en": "증권가 연말 3%",
+      "ko": "증권가 연말 3%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "트럼프 입에 흔들": {
+      "en": "트럼프 입에 흔들",
+      "ko": "트럼프 입에 흔들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "잇달아 금리 동결": {
+      "en": "잇달아 금리 동결",
+      "ko": "잇달아 금리 동결",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "시장금리 긴축 속": {
+      "en": "시장금리 긴축 속",
+      "ko": "시장금리 긴축 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "주간 금리 리포트": {
+      "en": "주간 금리 리포트",
+      "ko": "주간 금리 리포트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "포스트 파월 권력": {
+      "en": "포스트 파월 권력",
+      "ko": "포스트 파월 권력",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "재편 한국도 신중": {
+      "en": "재편 한국도 신중",
+      "ko": "재편 한국도 신중",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "서울 프라임 오피스": {
+      "en": "서울 프라임 오피스",
+      "ko": "서울 프라임 오피스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "한은 금리 인상론": {
+      "en": "한은 금리 인상론",
+      "ko": "한은 금리 인상론",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "Skill Otts Take": {
+      "en": "Skill Otts Take",
+      "ko": "Skill Otts Take",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "전쟁 리스크": {
+      "en": "전쟁 리스크",
+      "ko": "전쟁 리스크",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.263Z"
+    },
+    "시중은행 정기예금": {
+      "en": "시중은행 정기예금",
+      "ko": "시중은행 정기예금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "바라보는 시각": {
+      "en": "바라보는 시각",
+      "ko": "바라보는 시각",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Wall Street Rally": {
+      "en": "Wall Street Rally",
+      "ko": "Wall Street Rally",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Nasdaq Hit Record": {
+      "en": "Nasdaq Hit Record",
+      "ko": "Nasdaq Hit Record",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Stay Strong Despite": {
+      "en": "Stay Strong Despite",
+      "ko": "Stay Strong Despite",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Oil Shock Concerns": {
+      "en": "Oil Shock Concerns",
+      "ko": "Oil Shock Concerns",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Wall Street Surges": {
+      "en": "Wall Street Surges",
+      "ko": "Wall Street Surges",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "U.s.-iran Tensions": {
+      "en": "U.s.-iran Tensions",
+      "ko": "U.s.-iran Tensions",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Futures Rise": {
+      "en": "Futures Rise",
+      "ko": "Futures Rise",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Earnings Drive": {
+      "en": "Earnings Drive",
+      "ko": "Earnings Drive",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Platforms Carry": {
+      "en": "Platforms Carry",
+      "ko": "Platforms Carry",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Record Highs": {
+      "en": "Record Highs",
+      "ko": "Record Highs",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Strong Earnings": {
+      "en": "Strong Earnings",
+      "ko": "Strong Earnings",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "Ai Chip Demand Surge",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "Kospi Rebounds on Foreign Buying",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-01T13:19:20.264Z"
     }
   }
 }
