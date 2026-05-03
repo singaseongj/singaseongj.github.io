@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-05-03T22:11:27+09:00 (KST)**
+- Generated: **2026-05-04T04:01:53+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -10,7 +10,7 @@
 **가온칩스** (399720.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.5%**, 20d **17.3%**; volatility (20d): **unknown**
+- Returns: 5d **8.6%**, 20d **-3.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EA%B0%80%EC%98%A8%EC%B9%A9%EC%8A%A4
@@ -26,7 +26,7 @@
 **아프리카TV** (067160.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.7%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **-2.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4TV
@@ -208,14 +208,42 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=Thomson%20Reuters
 
-### AGGRESSIVE (1)
+### AGGRESSIVE (5)
 
-**Mercado Libre** (MELI)
+**Marvell Technology** (MRVL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **5.0%**, 20d **-8.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
+- News search: https://www.google.com/search?q=Marvell%20Technology
+
+**MicroStrategy** (MSTR)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.7%**, 20d **-13.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=MicroStrategy
+
+**Shopify** (SHOP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Shopify
+
+**Thomson Reuters** (TRI)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.5%**, 20d **-12.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Thomson%20Reuters
+
+**Zscaler** (ZS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Zscaler
 
 ## S&P 500
 
