@@ -1131,6 +1131,18 @@ async function newsFromGNews(sym, q, GNEWS_API){
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
 
+async function newsFromGoogleNewsRss(sym, name){
+  const isKr = isKR(sym);
+  const hl = isKr ? 'ko' : 'en-US';
+  const gl = isKr ? 'KR' : 'US';
+  const ceid = isKr ? 'KR:ko' : 'US:en';
+  const q = `"${name}" OR ${sym}`;
+  const url = `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=${hl}&gl=${gl}&ceid=${ceid}`;
+  const txt = await withRetry(() => cachedText(url, (u)=>safeGetText(u, defaultUA), 20*60*1000, true), { max:1, baseMs:600 });
+  const items = (txt.match(/<item>/g) || []).length;
+  return { count: Math.min(items, 30), sentiment: 0, blogMentions: 0 };
+}
+
 async function newsdataArchiveFetch({
   q, qInTitle, languages = ['en', 'ko'],
   fromDate, toDate,
@@ -1486,6 +1498,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   const NAVER_SECRET = process.env.NAVER_CLIENT_SECRET || '';
   const GNEWS = process.env.GNEWS_API || '';
   const preferNaver = process.env.PREFER_NAVER === '1' || (!!NAVER_ID && !!NAVER_SECRET);
+  const providerDisabled = new Set();
 
   // Optional: one-time light probe to decide whether to try Finnhub at all
   async function softProbeFinnhub(key){
@@ -1535,11 +1548,11 @@ export async function buildNewsFeatures(symbols, opts={}){
     const addDS = (arr) => (DEEPS_API_KEY ? ['deepsearch', ...arr] : arr);
     const baseProviders = preferNaver
       ? (isKR(sym)
-          ? addDS(['naver','gnews','serpapi','kotra','newsapi','newsdata','gdelt','polygon'])      // no finnhub for KR
-          : addDS(['naver','gnews','serpapi','newsapi','newsdata','gdelt','finnhub','polygon']))
+          ? addDS(['naver','gnews','serpapi','google_rss','kotra','newsapi','newsdata','gdelt','polygon'])      // no finnhub for KR
+          : addDS(['naver','gnews','serpapi','google_rss','newsapi','newsdata','gdelt','finnhub','polygon']))
       : (isKR(sym)
-          ? addDS(['gnews','naver','serpapi','kotra','newsapi','newsdata','gdelt','polygon'])      // no finnhub for KR
-          : addDS(['gnews','polygon','serpapi','newsapi','newsdata','gdelt','finnhub','kotra','naver']));
+          ? addDS(['gnews','naver','serpapi','google_rss','kotra','newsapi','newsdata','gdelt','polygon'])      // no finnhub for KR
+          : addDS(['gnews','polygon','serpapi','google_rss','newsapi','newsdata','gdelt','finnhub','kotra','naver']));
     const providers = process.env.SKIP_GDELT === '1'
       ? baseProviders.filter(p => p !== 'gdelt')
       : baseProviders;
@@ -1551,6 +1564,7 @@ export async function buildNewsFeatures(symbols, opts={}){
       return rb - ra;
     });
     for (const p of ordered) {
+      if (providerDisabled.has(p)) continue;
       if (DEADLINE && Date.now() > DEADLINE) break;
       try {
         let v = null;
@@ -1561,6 +1575,7 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'newsdata') v = await guardedCall('newsdata', () => newsFromNewsData(sym, name));
         else if (p === 'serpapi') v = await guardedCall('serpapi', () => newsFromSerpApi(sym, name, SERPAPI));
         else if (p === 'newsapi') v = await guardedCall('newsapi', () => newsFromNewsAPI(sym, name, NEWSAPI));
+        else if (p === 'google_rss') v = await guardedCall('google_rss', () => newsFromGoogleNewsRss(sym, name));
         else if (p === 'kotra') v = await guardedCall('kotra', () => newsFromKotra(sym, q));
         else if (p === 'gdelt') v = await guardedCall('gdelt', () => newsFromGdelt(sym, q));
         else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym, keywords: keywordsMap[sym] }));
@@ -1585,6 +1600,9 @@ export async function buildNewsFeatures(symbols, opts={}){
       } catch (e) {
         lastErr = e;
         console.warn(`[news] ${sym} provider ${p} failed: ${e.message}`);
+        if (/HTTP\s(401|403|429)\b/i.test(String(e?.message || '')) || /timeout|aborted/i.test(String(e?.message || ''))) {
+          providerDisabled.add(p);
+        }
         markProvider(p, false);
       }
     }
@@ -2310,4 +2328,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     writeSignificantPhrasesJson().catch(e => { console.error(e); process.exit(1); });
   }
 }
-
