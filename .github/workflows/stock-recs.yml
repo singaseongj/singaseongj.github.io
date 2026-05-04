@@ -106,7 +106,7 @@ jobs:
         run: |
           set -Eeo pipefail
           # Fail on likely secret assignments in source code (exclude workflows/docs)
-          if git grep -nI -E '(?i)(api[_-]?key|token|secret)\s*[:=]\s*["'\''][A-Za-z0-9_\-]{12,}["'\'']' -- \
+          if git grep -nI -i -E '(api[_-]?key|token|secret)[[:space:]]*[:=][[:space:]]*["'"'"'][A-Za-z0-9_.\-/+=]{12,}["'"'"']' -- \
               ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
             echo "❌ Possible hardcoded secret detected"; exit 1
           fi
