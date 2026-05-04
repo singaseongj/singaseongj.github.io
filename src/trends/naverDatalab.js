@@ -151,10 +151,16 @@ export async function fetchNaverTrends(options, _retry = 0) {
         } catch (err) {
           if (err.name === 'AbortError') {
             console.warn(`[naver] Request timeout for group ${chunk.map(g => g.groupName).join(', ')}`);
-            console.warn('⚠️ Naver API fetch aborted (timeout or rate limit)');
-            return null;
+            const stale = await readCacheStale(cacheKey);
+            if (stale) {
+              console.warn('[naver] timeout – using stale cached response');
+              json = stale;
+            } else {
+              console.warn('⚠️ Naver API timeout without cache; using empty result for this chunk');
+              json = { results: [] };
+            }
           }
-          throw err;
+          if (!json) throw err;
         } finally {
           clearTimeout(timeout);
           const elapsed = Date.now() - start;
