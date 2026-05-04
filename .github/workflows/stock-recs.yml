@@ -104,17 +104,29 @@ jobs:
       - name: "Guard: no hardcoded secrets"
         shell: bash
         run: |
-          set -Eeo pipefail
-          # Fail on likely secret assignments in source code (exclude workflows/docs)
-          if git grep -nI -i -E '(api[_-]?key|token|secret)[[:space:]]*[:=][[:space:]]*["'"'"'][A-Za-z0-9_.\-/+=]{12,}["'"'"']' -- \
-              ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
-            echo "❌ Possible hardcoded secret detected"; exit 1
-          fi
-          # Fail if someone echoes secret env vars
-          if git grep -nI -E 'echo\s+(\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY|SERP_API_KEY)\}?|%(\1)%)' -- \
-              ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md'; then
-            echo "❌ Attempt to echo a secret environment variable"; exit 1
-          fi
+          set -Euo pipefail
+          secret_pattern='(api[_-]?key|token|secret)[[:space:]]*[:=][[:space:]]*["'"'"'][A-Za-z0-9_./+=-]{12,}["'"'"']'
+          echo_pattern='echo[[:space:]]+(\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY|SERP_API_KEY)\}?|%(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY|SERP_API_KEY)%)'
+          exclusions=( ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md' )
+
+          run_guard() {
+            local label="$1" pattern="$2"
+            set +e
+            git grep -nI -i -E "$pattern" -- "${exclusions[@]}"
+            local rc=$?
+            set -e
+            if [ "$rc" -eq 0 ]; then
+              echo "❌ ${label} detected"
+              exit 1
+            elif [ "$rc" -eq 1 ]; then
+              return 0
+            fi
+            echo "❌ secret scan command failed for ${label} (git grep exit ${rc})"
+            exit 1
+          }
+
+          run_guard "Possible hardcoded secret" "$secret_pattern"
+          run_guard "Attempt to echo a secret environment variable" "$echo_pattern"
           echo "✅ No hardcoded secrets found."
 
       - name: Setup Node

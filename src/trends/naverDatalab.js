@@ -114,6 +114,7 @@ export async function fetchNaverTrends(options, _retry = 0) {
 
   const results = [];
   let remainingBudget = Number.isFinite(budgetLeftMs) ? Math.max(0, Number(budgetLeftMs)) : Infinity;
+  const fetchStats = { attempted: chunks.length, completed: 0, skipped: 0, partial: 0 };
   for (const chunk of chunks){
     const endpoint = NAVER_URL;
     const body = {
@@ -128,6 +129,8 @@ export async function fetchNaverTrends(options, _retry = 0) {
     if (!json) {
       if (Number.isFinite(remainingBudget) && remainingBudget <= 0) {
         console.warn('[naver] budget exhausted before completing fetch; returning partial results');
+        fetchStats.skipped += chunk.length;
+        fetchStats.partial += 1;
         json = { results: [] };
       } else {
         const headers = {
@@ -192,6 +195,7 @@ export async function fetchNaverTrends(options, _retry = 0) {
         if (!json) {
           json = await res.json();
         }
+        fetchStats.completed += 1;
         await writeCache(cacheKey, json);
       }
     } else if (Number.isFinite(remainingBudget)) {
@@ -201,6 +205,7 @@ export async function fetchNaverTrends(options, _retry = 0) {
 
     results.push(json);
   }
+  console.log(`[naver] fetch summary attempted=${fetchStats.attempted}, completed=${fetchStats.completed}, skipped=${fetchStats.skipped}, partial=${fetchStats.partial}`);
 
   // Flatten and compute ASVI per group
   const seriesByGroup = new Map(); // groupName -> { dates:[], values:[] }
