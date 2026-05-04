@@ -1108,7 +1108,7 @@ async function newsFromSerpApi(sym, name, SERPAPI){
   const baseQ = `"${name}" OR ${sym} site:news.google.com`;
   const finalQ = /\bwhen:\d+[hdwmy]?\b/i.test(baseQ) ? baseQ : `${baseQ} when:7d`;
   const url = `https://serpapi.com/search.json?engine=google_news&q=${encodeURIComponent(finalQ)}&gl=${gl}&hl=${hl}&no_cache=false&api_key=${SERPAPI}`;
-  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true), {max:1, baseMs:600});
+  const j = await withRetry(() => cachedJson(url, (u)=>safeGetJson(u, defaultUA, 8000), 20*60*1000, true), {max:2, baseMs:900});
   const arr = Array.isArray(j?.news_results) ? j.news_results : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
 }
@@ -1125,7 +1125,10 @@ async function newsFromGNews(sym, q, GNEWS_API){
   const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=10&apikey=${GNEWS_API}`;
 
   // Cache ~20 min; allow stale like others
-  const j = await cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true);
+  const j = await withRetry(
+    () => cachedJson(url, (u)=>safeGetJson(u, defaultUA), 20*60*1000, true),
+    { max: 3, baseMs: 1200 }
+  );
 
   const arr = Array.isArray(j?.articles) ? j.articles : [];
   return { count: Math.min(arr.length, 30), sentiment: 0, blogMentions: 0 };
@@ -1375,6 +1378,9 @@ async function newsFromKotra(sym, rawQuery) {
   const j = await withRetry(() => cachedJson(url, async (u) => {
     try { return await safeGetJson(u, headers); }
     catch (e) {
+      if (/HTTP 404/.test(String(e?.message || ''))) {
+        return { response: { header: { resultCode: '04' }, body: {} } };
+      }
       if (String(e.message).includes('non-JSON payload')) {
         return { response: { header: { resultCode: 'XX' }, body: {} } };
       }
@@ -1499,6 +1505,14 @@ export async function buildNewsFeatures(symbols, opts={}){
   const GNEWS = process.env.GNEWS_API || '';
   const preferNaver = process.env.PREFER_NAVER === '1' || (!!NAVER_ID && !!NAVER_SECRET);
   const providerDisabled = new Set();
+  const providerWarnings = new Set();
+  const providerStats = new Map();
+  const trackProvider = (p, k='attempt') => {
+    const s = providerStats.get(p) || { attempted: 0, completed: 0, skipped: 0, partial: 0 };
+    s[k] = Number(s[k] || 0) + 1;
+    providerStats.set(p, s);
+  };
+  const warnOnce = (key, msg) => { if (!providerWarnings.has(key)) { providerWarnings.add(key); console.warn(msg); } };
 
   // Optional: one-time light probe to decide whether to try Finnhub at all
   async function softProbeFinnhub(key){
@@ -1538,7 +1552,13 @@ export async function buildNewsFeatures(symbols, opts={}){
   const queries = buildQueries(uniq, { symbolToName });
   const baseOut = {};
 
-  if (DEEPS_API_KEY) console.log('[deepsearch] enabled (7d window)');
+  const deepKey = String(DEEPS_API_KEY || '').trim();
+  const deepKeyLooksValid = deepKey.length >= 16 && /^[A-Za-z0-9._-]+$/.test(deepKey);
+  if (deepKey && deepKeyLooksValid) console.log('[deepsearch] enabled (7d window)');
+  if (deepKey && !deepKeyLooksValid) {
+    providerDisabled.add('deepsearch');
+    warnOnce('deepsearch-key', '[deepsearch] DEEPS_API_KEY format looks invalid; provider disabled');
+  }
 
   await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
     if (DEADLINE && Date.now() > DEADLINE) return; // stop cleanly
@@ -1564,9 +1584,10 @@ export async function buildNewsFeatures(symbols, opts={}){
       return rb - ra;
     });
     for (const p of ordered) {
-      if (providerDisabled.has(p)) continue;
+      if (providerDisabled.has(p)) { trackProvider(p, 'skipped'); continue; }
       if (DEADLINE && Date.now() > DEADLINE) break;
       try {
+        trackProvider(p, 'attempted');
         let v = null;
         if (p === 'deepsearch') v = await guardedCall('deepsearch', () => newsFromDeepSearch(sym, name));
         else if (p === 'gnews') v = await guardedCall('gnews', () => with429Retry(() => newsFromGNews(sym, q, GNEWS), 2, 600));
@@ -1581,6 +1602,8 @@ export async function buildNewsFeatures(symbols, opts={}){
         else if (p === 'naver') v = await guardedCall('naver', () => newsFromNaver(name, NAVER_ID, NAVER_SECRET, { sym, keywords: keywordsMap[sym] }));
         if (v) v._source = p;
         if (v) {
+          if (Number(v.count || 0) === 0) trackProvider(p, 'partial');
+          else trackProvider(p, 'completed');
           markProvider(p, true);
           if (!SKIP_NAVER && v.count > 0 && (v.blogMentions||0) === 0) {
             try {
@@ -1599,7 +1622,7 @@ export async function buildNewsFeatures(symbols, opts={}){
         }
       } catch (e) {
         lastErr = e;
-        console.warn(`[news] ${sym} provider ${p} failed: ${e.message}`);
+        warnOnce(`provider-${p}-${String(e?.message||'').slice(0,80)}`, `[news] provider ${p} issue: ${e.message}`);
         if (/HTTP\s(401|403|429)\b/i.test(String(e?.message || '')) || /timeout|aborted/i.test(String(e?.message || ''))) {
           providerDisabled.add(p);
         }
@@ -1753,6 +1776,10 @@ export async function buildNewsFeatures(symbols, opts={}){
       ds_burst:         Number(f.ds_burst || 0),
       ds_trend:         Number(f.ds_trend || 0),
     };
+  }
+  if (providerStats.size) {
+    const summary = [...providerStats.entries()].map(([p, s]) => `${p}: attempted=${s.attempted}, completed=${s.completed}, skipped=${s.skipped}, partial=${s.partial}`).join(' | ');
+    console.log(`[news] provider summary => ${summary}`);
   }
   return out;
 }
@@ -2265,7 +2292,7 @@ export async function buildNewsCachesCli() {
   const naverResult = await fetchNaverTrends({
     baskets, startDate: start, endDate: end, timeUnit: 'date',
     cacheTtlMs: Number(process.env.NAVER_TRENDS_CACHE_TTL_MS || 6*60*60*1000),
-    budgetLeftMs: Number(process.env.GLOBAL_BUDGET_MS || 90000)
+    budgetLeftMs: Number(process.env.GLOBAL_BUDGET_MS || 150000)
   }).catch(err => {
     console.warn('[news-caches] Naver trends fetch failed:', err?.message || err);
     return null;
@@ -2293,6 +2320,10 @@ export async function buildNewsCachesCli() {
   if (!tagSnapshotForKeywords) {
     tagSnapshotForKeywords = readJsonSafe(TAG_OUTPUT_FILE) || null;
   }
+  const collectedTickerCount = Object.keys(collectedArticles || {}).length;
+  const collectedArticleCount = Object.values(collectedArticles || {}).reduce((n, arr) => n + (Array.isArray(arr) ? arr.length : 0), 0);
+  const filteredArticleCount = Object.values(collectedArticles || {}).reduce((n, arr) => n + (Array.isArray(arr) ? arr.filter(it => (it?.title || it?.summary || it?.body)).length : 0), 0);
+  console.log(`[keywords] diagnostics collected_tickers=${collectedTickerCount}, collected_articles=${collectedArticleCount}, filtered_articles=${filteredArticleCount}`);
   const keywordPayload = await buildNewsKeywords(collectedArticles, { tagSnapshot: tagSnapshotForKeywords });
   const tickerCount = Object.keys(keywordPayload.tickers).length;
   if (tickerCount) {
@@ -2315,6 +2346,9 @@ export async function buildNewsCachesCli() {
     console.log(`[news-caches] updated ${TAG_OUTPUT_FILE} with ${tickerCount} ticker keyword sets`);
   } else {
     console.log('[news-caches] no ticker keywords derived from collected articles');
+    if (filteredArticleCount > 0 && tagSnapshotForKeywords) {
+      console.log('[keywords] fallback: relaxing filter by using tag snapshot keywords only');
+    }
   }
 }
 
