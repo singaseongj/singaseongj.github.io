@@ -107,7 +107,14 @@ jobs:
           set -Euo pipefail
           secret_pattern='(api[_-]?key|token|secret)[[:space:]]*[:=][[:space:]]*["'"'"'][A-Za-z0-9_./+=-]{12,}["'"'"']'
           echo_pattern='echo[[:space:]]+(\$\{?(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY|SERP_API_KEY)\}?|%(FINNHUB_API_KEY|TWELVEDATA_API_KEY|ALPHA_VANTAGE_KEY|FMP_KEY|SERP_API_KEY)%)'
-          exclusions=( ':!README.md' ':!.github/workflows/**' ':!**/*.yml' ':!**/*.yaml' ':!**/*.md' )
+          exclusions=(
+            ':!README.md'
+            ':!.github/workflows/**'
+            ':!**/*.yml'
+            ':!**/*.yaml'
+            ':!**/*.md'
+            ':!Linear_Transformation_Lab/plotly-latest.min.js'
+          )
 
           run_guard() {
             local label="$1" pattern="$2"
