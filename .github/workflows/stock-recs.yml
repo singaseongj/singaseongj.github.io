@@ -200,7 +200,7 @@ jobs:
         shell: bash
         run: |
           node --version
-          node --test tests/*.test.js || echo "No tests or tests failed — continuing"
+          node --test tests/*.test.js
 
       - name: Build index ticker maps
         run: node tools/updateIndexMaps.mjs
@@ -225,7 +225,7 @@ jobs:
           NEWSDATA_SIZE: ${{ env.NEWSDATA_SIZE }}
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
           POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
-          DEEPS_API_KEY: ${{ secrets.DEEPS_API_KEY }}
+          DEEPS_API_KEY: ${{ secrets.DEEPSEARCH_API_KEY }}
         run: |
           set -euo pipefail
           export SKIP_NAVER=${SKIP_NAVER:-0}
@@ -436,8 +436,6 @@ jobs:
             echo "❌ CEREBRAS_API_KEY is not available in the workflow environment"
             exit 1
           fi
-          # Clear stale caches to force fresh data collection
-          rm -rf cache/news-*.json
           find data/articles -name "*.json" -mtime +0 -delete 2>/dev/null || true
           # Generate fresh keywords
           node stocks/stockKeywords.cjs
@@ -652,7 +650,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e  # v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
