@@ -44,7 +44,7 @@ const NEWS_FEATURES_FILE = path.join('data', 'news-features.json');
 const NAVER_TRENDS_FILE  = path.join('data', 'naver-trends.json');
 const POLYGON_API_KEY = process.env.POLYGON_API_KEY || '';
 const polygonRest = POLYGON_API_KEY ? restClient(POLYGON_API_KEY) : null;
-const DEEPS_API_KEY = process.env.DEEPS_API_KEY || '';
+const DEEPS_API_KEY = process.env.DEEPSEARCH_API_KEY || process.env.DEEPS_API_KEY || '';
 const DEEPS_US_EXCHANGE = process.env.DEEPS_US_EXCHANGE || 'NASDAQ';
 const NEWSDATA_API_KEY = process.env.NEWSDATA_API_KEY || '';
 const DEEPL_API_KEY = (process.env.DEEPL_API_KEY || '').trim();
@@ -200,6 +200,44 @@ function buildNaverSearchQueries(sym, name, keywordsMap) {
   return deduped.slice(0, Number(process.env.NAVER_MAX_QUERY_GROUPS || 4));
 }
 
+
+function loadLocalTrendFallback(sym) {
+  try {
+    const raw = fs.readFileSync(NAVER_TRENDS_FILE, 'utf8');
+    const j = JSON.parse(raw);
+    const entry = j?.perSymbol?.[sym];
+    if (!entry) return null;
+    const ratio = Number(entry.ratio);
+    const asvi = Number(entry.asvi);
+    const spike = Number(entry.spike);
+    if (Number.isFinite(ratio) || Number.isFinite(asvi) || Number.isFinite(spike)) {
+      return {
+        ratio: Number.isFinite(ratio) ? ratio : null,
+        asvi: Number.isFinite(asvi) ? asvi : null,
+        spike: Number.isFinite(spike) ? spike : null,
+      };
+    }
+  } catch {}
+  return null;
+}
+
+function loadLocalArticleFallback(sym) {
+  try {
+    const fp = path.join('data', 'articles', `${sym}.json`);
+    const raw = fs.readFileSync(fp, 'utf8');
+    const arr = JSON.parse(raw);
+    if (!Array.isArray(arr) || !arr.length) return null;
+    const now = Date.now();
+    const recent = arr.filter((it) => {
+      const ts = new Date(it?.publishedAt || it?.pubDate || it?.date || 0).getTime();
+      if (!Number.isFinite(ts) || ts <= 0) return false;
+      return (now - ts) <= 14 * 86400000;
+    });
+    const base = recent.length ? recent : arr.slice(0, 30);
+    return { count: base.length };
+  } catch {}
+  return null;
+}
 function buildNaverBlogQuery(sym, name, keywordsMap) {
   const koTerms = gatherKoTerms(sym, name, keywordsMap);
   if (koTerms.length) {
@@ -980,6 +1018,7 @@ async function withRetry(fn,{max=2,baseMs=600,onError}={}){
     catch(e){
       last=e;
       const msg=String(e);
+      if (/\bHTTP 404\b/i.test(msg)) throw e;
       const ra=Number((e?.responseHeaders?.['retry-after'])||0);
       const is429=/HTTP 429/.test(msg);
       const wait=typeof onError==='function' ? (onError(e)||0) : 0;
@@ -1122,7 +1161,9 @@ async function newsFromGNews(sym, q, GNEWS_API){
 
   // Keep it simple and quota-friendly. You can add date filters later if needed.
   // Docs: https://gnews.io/api/v4/search?q=...&lang=...&max=...&apikey=KEY
-  const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&lang=${lang}&max=10&apikey=${GNEWS_API}`;
+  const params = new URLSearchParams({ q, lang, max: '10' });
+  console.log(`[gnews] request params: ${params.toString()}`);
+  const url = `https://gnews.io/api/v4/search?${params.toString()}&apikey=${GNEWS_API}`;
 
   // Cache ~20 min; allow stale like others
   const j = await withRetry(
@@ -1557,7 +1598,7 @@ export async function buildNewsFeatures(symbols, opts={}){
   if (deepKey && deepKeyLooksValid) console.log('[deepsearch] enabled (7d window)');
   if (deepKey && !deepKeyLooksValid) {
     providerDisabled.add('deepsearch');
-    warnOnce('deepsearch-key', '[deepsearch] DEEPS_API_KEY format looks invalid; provider disabled');
+    warnOnce('deepsearch-key', '[deepsearch] DEEPSEARCH_API_KEY format looks invalid; provider disabled');
   }
 
   await mapLimit(uniq, NEWS_CONCURRENCY, async (sym)=>{
@@ -1633,12 +1674,30 @@ export async function buildNewsFeatures(symbols, opts={}){
       if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
       const trend = await fetchPolygonTrend(sym); if (trend != null) feat.polygonTrend = trend;
       const close = await fetchPrevClose(sym);    if (close != null) feat.nasdaqClose = close;
+
+      const localTrend = loadLocalTrendFallback(sym);
+      if (localTrend) {
+        feat.naverAsvi = Number(localTrend.asvi ?? feat.naverAsvi ?? 0);
+        feat.naverSpike = Number(localTrend.spike ?? feat.naverSpike ?? 0);
+        if (Number.isFinite(localTrend.ratio) && localTrend.ratio > 0) {
+          feat.naverCount = Math.max(Number(feat.naverCount || 0), Math.round(localTrend.ratio * 1000));
+        }
+      }
+      const localArticles = loadLocalArticleFallback(sym);
+      if (localArticles?.count > 0) {
+        feat.otherCount = Math.max(Number(feat.otherCount || 0), localArticles.count);
+      }
+
       // keep DS fields non-null
       feat.ds_news7 = feat.ds_news7 ?? 0;
       feat.ds_slope7 = feat.ds_slope7 ?? 0;
       feat.ds_burst = feat.ds_burst ?? 0;
       feat.ds_trend = feat.ds_trend ?? 0;
-      if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
+      if (feat.count === 0) {
+        const fallbackCount = Number(feat.naverCount || 0) + Number(feat.otherCount || 0);
+        if (fallbackCount > 0) feat.count = fallbackCount;
+        else if (feat.polygonTrend != null || feat.nasdaqClose != null) feat.count = 1;
+      }
     }
 
     feat.naverCount = Number(feat.naverCount || ((feat._source === 'naver') ? feat.count : 0));
@@ -2276,7 +2335,12 @@ export async function buildNewsCachesCli() {
   // 1) News features (counts/sentiment/reputation etc.)
   const collectedArticles = {};
   const features = await buildNewsFeatures(symbols, { symbolToName, collectArticles: collectedArticles });
-  await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(features, null, 2));
+  const previousFeatures = readJsonSafe(NEWS_FEATURES_FILE) || {};
+  const nextFeatures = Object.keys(features || {}).length ? features : previousFeatures;
+  if (!Object.keys(features || {}).length) {
+    console.warn('[news-caches] providers failed or returned empty features; keeping previous cache');
+  }
+  await fsp.writeFile(NEWS_FEATURES_FILE, JSON.stringify(nextFeatures, null, 2));
 
   // 2) Naver trends (use company names in keyword builder & baskets)
   const KEYWORDS = await buildKeywordDict({
@@ -2300,9 +2364,15 @@ export async function buildNewsCachesCli() {
   if (!naverResult) {
     console.warn('[news-caches] skipping Naver trends write due to missing results');
   }
+  const previousTrends = readJsonSafe(NAVER_TRENDS_FILE) || {};
   const perSymbol = naverResult?.perSymbol || {};
   const rawMeta = naverResult?.raw ? Object.keys(naverResult.raw) : [];
-  await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify({ perSymbol, rawMeta }, null, 2));
+  const hasFreshTrends = Object.keys(perSymbol).length > 0;
+  const nextTrends = hasFreshTrends ? { perSymbol, rawMeta } : previousTrends;
+  if (!hasFreshTrends) {
+    console.warn('[news-caches] trend providers failed or returned empty trends; keeping previous cache');
+  }
+  await fsp.writeFile(NAVER_TRENDS_FILE, JSON.stringify(nextTrends, null, 2));
   console.log(`[news-caches] wrote ${NEWS_FEATURES_FILE} and ${NAVER_TRENDS_FILE}`);
 
   // 3) Ticker keyword snapshot merged into tags.json
