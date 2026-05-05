@@ -200,6 +200,44 @@ function buildNaverSearchQueries(sym, name, keywordsMap) {
   return deduped.slice(0, Number(process.env.NAVER_MAX_QUERY_GROUPS || 4));
 }
 
+
+function loadLocalTrendFallback(sym) {
+  try {
+    const raw = fs.readFileSync(NAVER_TRENDS_FILE, 'utf8');
+    const j = JSON.parse(raw);
+    const entry = j?.perSymbol?.[sym];
+    if (!entry) return null;
+    const ratio = Number(entry.ratio);
+    const asvi = Number(entry.asvi);
+    const spike = Number(entry.spike);
+    if (Number.isFinite(ratio) || Number.isFinite(asvi) || Number.isFinite(spike)) {
+      return {
+        ratio: Number.isFinite(ratio) ? ratio : null,
+        asvi: Number.isFinite(asvi) ? asvi : null,
+        spike: Number.isFinite(spike) ? spike : null,
+      };
+    }
+  } catch {}
+  return null;
+}
+
+function loadLocalArticleFallback(sym) {
+  try {
+    const fp = path.join('data', 'articles', `${sym}.json`);
+    const raw = fs.readFileSync(fp, 'utf8');
+    const arr = JSON.parse(raw);
+    if (!Array.isArray(arr) || !arr.length) return null;
+    const now = Date.now();
+    const recent = arr.filter((it) => {
+      const ts = new Date(it?.publishedAt || it?.pubDate || it?.date || 0).getTime();
+      if (!Number.isFinite(ts) || ts <= 0) return false;
+      return (now - ts) <= 14 * 86400000;
+    });
+    const base = recent.length ? recent : arr.slice(0, 30);
+    return { count: base.length };
+  } catch {}
+  return null;
+}
 function buildNaverBlogQuery(sym, name, keywordsMap) {
   const koTerms = gatherKoTerms(sym, name, keywordsMap);
   if (koTerms.length) {
@@ -1633,12 +1671,30 @@ export async function buildNewsFeatures(symbols, opts={}){
       if (lastErr) console.warn(`[news] providers exhausted for ${sym}. Last: ${lastErr.message}`);
       const trend = await fetchPolygonTrend(sym); if (trend != null) feat.polygonTrend = trend;
       const close = await fetchPrevClose(sym);    if (close != null) feat.nasdaqClose = close;
+
+      const localTrend = loadLocalTrendFallback(sym);
+      if (localTrend) {
+        feat.naverAsvi = Number(localTrend.asvi ?? feat.naverAsvi ?? 0);
+        feat.naverSpike = Number(localTrend.spike ?? feat.naverSpike ?? 0);
+        if (Number.isFinite(localTrend.ratio) && localTrend.ratio > 0) {
+          feat.naverCount = Math.max(Number(feat.naverCount || 0), Math.round(localTrend.ratio * 1000));
+        }
+      }
+      const localArticles = loadLocalArticleFallback(sym);
+      if (localArticles?.count > 0) {
+        feat.otherCount = Math.max(Number(feat.otherCount || 0), localArticles.count);
+      }
+
       // keep DS fields non-null
       feat.ds_news7 = feat.ds_news7 ?? 0;
       feat.ds_slope7 = feat.ds_slope7 ?? 0;
       feat.ds_burst = feat.ds_burst ?? 0;
       feat.ds_trend = feat.ds_trend ?? 0;
-      if (feat.count === 0 && (feat.polygonTrend != null || feat.nasdaqClose != null)) feat.count = 1;
+      if (feat.count === 0) {
+        const fallbackCount = Number(feat.naverCount || 0) + Number(feat.otherCount || 0);
+        if (fallbackCount > 0) feat.count = fallbackCount;
+        else if (feat.polygonTrend != null || feat.nasdaqClose != null) feat.count = 1;
+      }
     }
 
     feat.naverCount = Number(feat.naverCount || ((feat._source === 'naver') ? feat.count : 0));
