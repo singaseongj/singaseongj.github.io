@@ -39,12 +39,18 @@ async function callDeepLTranslate(text, { targetLang = 'KO', sourceLang } = {}) 
   }
 
   const params = new URLSearchParams();
-  params.append('auth_key', DEEPL_API_KEY);
   params.append('text', normalized);
   if (targetLang) params.append('target_lang', targetLang);
   if (sourceLang) params.append('source_lang', sourceLang);
 
-  const res = await fetch(DEEPL_API_URL, { method: 'POST', body: params });
+  const res = await fetch(DEEPL_API_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `DeepL-Auth-Key ${DEEPL_API_KEY}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: params,
+  });
   if (!res.ok) {
     const errText = await res.text().catch(() => '');
     throw new Error(`DeepL error ${res.status}: ${errText}`);
