@@ -12,7 +12,6 @@
 
 import { ConfigLoader } from '../src/config/config-loader.js';
 import fs from 'fs/promises';
-import path from 'path';
 
 class ConfigValidator {
   constructor() {
@@ -95,7 +94,8 @@ class ConfigValidator {
   async checkRequiredFields() {
     console.log('\nStep 3: Checking required fields');
 
-    const config = await this.loader.load('config/pools-config.json');
+    await this.loader.load('config/pools-config.json');
+    const config = this.loader.getAll();
 
     const required = [
       'version',
@@ -122,7 +122,8 @@ class ConfigValidator {
   async checkValueRanges() {
     console.log('\nStep 4: Checking value ranges');
 
-    const config = await this.loader.load('config/pools-config.json');
+    await this.loader.load('config/pools-config.json');
+    const config = this.loader.getAll();
 
     const checks = [
       {
@@ -211,7 +212,8 @@ class ConfigValidator {
   async checkTypes() {
     console.log('\nStep 5: Checking types');
 
-    const config = await this.loader.load('config/pools-config.json');
+    await this.loader.load('config/pools-config.json');
+    const config = this.loader.getAll();
 
     const typeChecks = [
       { path: 'version', type: 'string' },
@@ -250,7 +252,8 @@ class ConfigValidator {
       VERBOSE: 'true',
     };
 
-    const baseConfig = await this.loader.load('config/pools-config.json');
+    await this.loader.load('config/pools-config.json');
+    const baseConfig = this.loader.getAll();
     const overridden = this.loader.applyEnvOverrides(baseConfig, testEnv);
 
     const tests = [
@@ -272,7 +275,7 @@ class ConfigValidator {
     ];
 
     for (const test of tests) {
-      const value = this.loader.getNested(overridden, test.path);
+      const value = this.getNested(overridden, test.path);
 
       if (value === test.expected) {
         this.pass(`${test.env} → ${test.path} = ${value}`);
