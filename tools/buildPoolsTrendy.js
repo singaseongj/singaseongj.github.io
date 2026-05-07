@@ -14,6 +14,7 @@ import { buildNewsFeatures, newsScoreFromFeatures } from '../src/news/fetchByTic
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverDatalab.js';
 import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 import { fetchDeepsearchFeatures } from '../src/news/deepsearch.js';
+import { NaverSignal, NaverSignalCollector, NaverSignalCache } from '../src/signals/naver-signals.js';
 
 if (typeof fetch === 'undefined') {
   globalThis.fetch = (await import('node-fetch')).default;
@@ -861,18 +862,38 @@ for (const [name, symbol] of Object.entries(DYNAMIC_TICKER_MAP)) {
 for (const [sym, trend] of Object.entries(NAVER_TRENDS)) {
   if (!trend || typeof trend !== 'object') continue;
   const nf = (NEWS_FEATURES[sym] ||= {});
-  if (nf.naverPopularity == null && trend.naverPopularity != null) {
-    nf.naverPopularity = trend.naverPopularity;
+  if (nf.naverPopularity == null && trend.naverPopularity != null) nf.naverPopularity = trend.naverPopularity;
+  if (nf.naverSpike == null && trend.spike != null) nf.naverSpike = trend.spike;
+  if (nf.naverAsvi == null && trend.lastAsvi != null) nf.naverAsvi = trend.lastAsvi;
+  if (nf.naverPersist == null && trend.persist != null) nf.naverPersist = trend.persist;
+}
+
+const naverSignalCache = new NaverSignalCache();
+
+
+{
+  const startInit = Date.now();
+  const symbols = Array.from(new Set([
+    ...Object.keys(NAVER_TRENDS || {}),
+    ...Object.keys(NEWS_FEATURES || {})
+  ]));
+  for (const symbol of symbols) {
+    const collector = new NaverSignalCollector(symbol, {
+      NAVER_TRENDS,
+      NEWS_FEATURES,
+      isKR: isKR(symbol),
+      ASVI_NEGATIVE_FLOOR: +process.env.ASVI_NEGATIVE_FLOOR || 0,
+      fetchNaverFinanceSignals: isKR(symbol) ? (sym) => fetchNaverFinanceSignals(sym) : null
+    });
+    try {
+      const signal = collector.collect();
+      naverSignalCache.cache.set(symbol, signal);
+    } catch (e) {
+      console.warn(`[naver-signal] failed to collect ${symbol}:`, e.message);
+    }
   }
-  if (nf.naverSpike == null && trend.spike != null) {
-    nf.naverSpike = trend.spike;
-  }
-  if (nf.naverAsvi == null && trend.lastAsvi != null) {
-    nf.naverAsvi = trend.lastAsvi;
-  }
-  if (nf.naverPersist == null && trend.persist != null) {
-    nf.naverPersist = trend.persist;
-  }
+  const metricsInit = naverSignalCache.getMetrics();
+  console.log(`[naver-signals] initialized in ${Date.now() - startInit}ms:`, metricsInit);
 }
 
 let PREV_METRICS = {};
@@ -1657,34 +1678,6 @@ function toBooleanFlag(val) {
   return num != null ? num > 0 : false;
 }
 
-function mergeNaverSignals(feature = {}, trend = {}) {
-  const featurePop = toFiniteNumber(feature.naverPopularity) ?? 0;
-  const trendPop = toFiniteNumber(trend.naverPopularity ?? trend.popularity ?? trend.popularity01) ?? 0;
-  // 중복 방지: 둘 중 큰 값 선택 (합산 X)
-  const basePop = Math.max(featurePop, trendPop);
-
-  // spike/persist 보너스 추가
-  const spikeBonus = (feature.naverSpike || trend.spike) ? NAVER_SPIKE_BOOST : 0;
-  const persistBonus = (feature.naverPersist || trend.persist) ? NAVER_PERSIST_BOOST : 0;
-
-  const combined = clamp01(basePop + spikeBonus + persistBonus);
-  const asviFeature = toFiniteNumber(feature.naverAsvi);
-  const asviTrend = toFiniteNumber(trend.lastAsvi ?? trend.naverAsvi);
-  let asvi = asviFeature ?? asviTrend ?? 0;
-
-  // 음수는 0으로 처리 (하락은 무시)
-  if (asvi < ASVI_NEGATIVE_FLOOR) asvi = 0;
-
-  return {
-    combined,
-    feature: featurePop,
-    trend: trendPop,
-    asvi: asvi,
-    spike: toBooleanFlag(feature.naverSpike) || toBooleanFlag(trend.spike),
-    persist: toBooleanFlag(feature.naverPersist) || toBooleanFlag(trend.persist)
-  };
-}
-
 function roundTo(x, decimals = 4) {
   if (!Number.isFinite(x)) return 0;
   const pow = 10 ** decimals;
@@ -2051,23 +2044,43 @@ async function main(){
           offHi = shp.offHi; offLo = shp.offLo;
         }
         const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name] || {};
-        const trend = NAVER_TRENDS[sym] || {};
-        const naverFinance = isKR(sym) ? await fetchNaverFinanceSignals(sym) : { score: 0, volume: 0, amountMkrw: 0 };
-        const navSignals = mergeNaverSignals(nf, trend);
-        naverPopularity = navSignals.combined;  // 이미 spike/persist 포함됨
-        naverFinanceScore = naverFinance.score;
-        naverFinanceVolume = naverFinance.volume;
-        naverFinanceAmountMkrw = naverFinance.amountMkrw;
-        naverAsvi = navSignals.asvi;
-        naverSpike = navSignals.spike ? 1 : 0;
-        naverPersist = navSignals.persist;
-        naverBreakdown = { fromFeatures: navSignals.feature, fromTrends: navSignals.trend };
-        
-        // 한국 주식 특별 처리: naver-trends 데이터 없으면 news-features 신뢰
-        const isKRStock = /\.K[QS]$/.test(sym);
-        if (isKRStock && !trend?.naverPopularity && nf?.naverPopularity) {
-          naverPopularity = Math.max(naverPopularity, nf.naverPopularity * 1.2);
-        }
+        const signal = naverSignalCache.get(sym);
+        const naverData = (() => {
+          if (!signal || signal.popularity === 0) {
+            return {
+              naverPopularity: 0, naverAsvi: 0, naverSpike: 0, naverPersist: false,
+              naverFinanceScore: 0, naverFinanceVolume: 0, naverFinanceAmountMkrw: 0,
+              naverBreakdown: { fromFeatures: 0, fromTrends: 0, combined: 0 },
+              naverBoost: 0, confidence: 0
+            };
+          }
+          const recommended = signal.getRecommendedPopularity();
+          return {
+            naverPopularity: recommended.value,
+            naverAsvi: signal.asvi,
+            naverSpike: signal.spike ? 1 : 0,
+            naverPersist: signal.persist ? 1 : 0,
+            naverFinanceScore: signal.financeScore,
+            naverFinanceVolume: signal.financeVolume,
+            naverFinanceAmountMkrw: signal.financeAmount,
+            naverBreakdown: {
+              fromFeatures: signal.confidence.popularity >= 0.8 ? signal.popularity : 0,
+              fromTrends: signal.sources.popularity === 'trends' ? signal.popularity : 0,
+              combined: signal.popularity
+            },
+            naverBoost: signal.getBoostValue(),
+            confidence: recommended.confidence
+          };
+        })();
+
+        naverPopularity = naverData.naverPopularity;
+        naverAsvi = naverData.naverAsvi;
+        naverSpike = naverData.naverSpike;
+        naverPersist = naverData.naverPersist;
+        naverFinanceScore = naverData.naverFinanceScore;
+        naverFinanceVolume = naverData.naverFinanceVolume;
+        naverFinanceAmountMkrw = naverData.naverFinanceAmountMkrw;
+        naverBreakdown = naverData.naverBreakdown;
         if (nf) {
           newsCount = nf.count || 0;
           weightedCount = typeof nf.weightedCount === 'number' ? nf.weightedCount : newsCount;
@@ -2373,9 +2386,10 @@ async function main(){
       );
 
       // spike가 있으면 hotness 추가 부스트
-      const spikeHotBoost = names.map(n =>
-        byName[n].naverSpike ? 0.05 : 0  // spike면 +5%
-      );
+      const spikeHotBoost = names.map(n => {
+        const sig = naverSignalCache.get(byName[n].sym || nameToSymbol(n) || n);
+        return sig ? sig.getBoostValue() : 0;
+      });
 
       for (let i=0; i<names.length; i++) {
         const n = names[i];
@@ -2684,6 +2698,23 @@ async function main(){
         naverAsvi: byName[n].naverAsvi,
         naverSpike: byName[n].naverSpike,
         naverPersist: byName[n].naverPersist,
+      naverDataQuality: (() => {
+        const sig = naverSignalCache.get(byName[n].sym || nameToSymbol(n) || n);
+        if (!sig || sig.popularity === 0) return { source: 'none', confidence: 0, hasData: false };
+        const rec = sig.getRecommendedPopularity();
+        return {
+          source: rec.source,
+          confidence: Math.round(rec.confidence * 1000) / 1000,
+          hasData: true,
+          diagnostics: {
+            popularitySource: sig.sources.popularity,
+            asviSource: sig.sources.asvi,
+            spikeDetected: sig.spike,
+            persistDetected: sig.persist,
+            financeScore: sig.financeScore
+          }
+        };
+      })(),
         naverCount: byName[n].naverCount,
         naverCountKO: byName[n].naverCountKO,
         naverCountEN: byName[n].naverCountEN,
@@ -2806,6 +2837,25 @@ async function main(){
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
+
+
+  {
+    const naverMetrics = naverSignalCache.getMetrics();
+    console.log('[buildPools] naver signal summary', {
+      total: naverMetrics.totalSignals,
+      valid: naverMetrics.validSignals,
+      avgConfidence: (naverMetrics.avgConfidence * 100).toFixed(1) + '%',
+      sources: naverMetrics.sources
+    });
+    for (const market of MARKETS) {
+      const names = universe[market] || [];
+      const validSignals = names.filter(n => {
+        const sig = naverSignalCache.get(nameToSymbol(n) || n);
+        return sig && sig.isValid();
+      }).length;
+      console.log(`[buildPools] ${market} naver signals: ${validSignals}/${names.length} valid`);
+    }
+  }
 
   if (OFFLINE) {
     console.warn(`[buildPools] offline mode, leaving pools.json unchanged`);
