@@ -173,6 +173,46 @@ async function fetchHanwhaNewsCount(sym){
   );
 }
 
+function krxCodeFromSymbol(sym) {
+  const m = String(sym || '').match(/^(\d{6})\.(KS|KQ)$/i);
+  return m ? m[1] : null;
+}
+
+function parseNaverNumber(raw) {
+  if (raw == null) return null;
+  const cleaned = String(raw).replace(/,/g, '').trim();
+  const n = Number(cleaned);
+  return Number.isFinite(n) ? n : null;
+}
+
+async function fetchNaverFinanceSignals(sym) {
+  const code = krxCodeFromSymbol(sym);
+  if (!code || OFFLINE) return { score: 0, volume: 0, amountMkrw: 0 };
+  const url = `https://finance.naver.com/item/main.naver?code=${code}`;
+  try {
+    const html = await cachedJsonFetch(
+      url,
+      async u => ({ html: await fetch(u, { headers: { 'User-Agent': UA, Referer: 'https://finance.naver.com/' } }).then(r => r.text()) }),
+      TTL.newsRss,
+      true
+    );
+    const text = String(html?.html || '');
+    const volMatch = text.match(/<th[^>]*>\s*거래량\s*<\/th>\s*<td[^>]*>\s*<span[^>]*>([\d,]+)<\/span>/i)
+      || text.match(/거래량<\/em>\s*<span[^>]*>([\d,]+)<\/span>/i);
+    const amtMatch = text.match(/<th[^>]*>\s*거래대금\s*<\/th>\s*<td[^>]*>\s*<span[^>]*>([\d,]+)<\/span>/i)
+      || text.match(/거래대금<\/em>\s*<span[^>]*>([\d,]+)<\/span>/i);
+    const volume = parseNaverNumber(volMatch?.[1]) ?? 0;
+    const amountMkrw = parseNaverNumber(amtMatch?.[1]) ?? 0;
+    const vol01 = clamp01(Math.log10(Math.max(1, volume)) / 8);      // ~1e8 scale
+    const amt01 = clamp01(Math.log10(Math.max(1, amountMkrw)) / 6);   // 백만 KRW scale
+    const score = clamp01(0.65 * vol01 + 0.35 * amt01);
+    return { score, volume, amountMkrw };
+  } catch (e) {
+    console.warn(`[naver-finance] ${sym} fetch failed: ${e.message}`);
+    return { score: 0, volume: 0, amountMkrw: 0 };
+  }
+}
+
 async function fetchWikiPageviews(title){
   if (!title || OFFLINE) return 0;
   const norm = String(title).replace(/\s+/g, '_');
@@ -1590,6 +1630,9 @@ function sanitizeSignals(row) {
   row.naverCount      = nz(row.naverCount, 0);
   row.naverCountKO    = nz(row.naverCountKO, 0);
   row.naverCountEN    = nz(row.naverCountEN, 0);
+  row.naverFinanceScore = nz(row.naverFinanceScore, 0);
+  row.naverFinanceVolume = nz(row.naverFinanceVolume, 0);
+  row.naverFinanceAmountMkrw = nz(row.naverFinanceAmountMkrw, 0);
   row.wikiViews       = nz(row.wikiViews, 0);
   row.wikiScore       = nz(row.wikiScore, 0);
   row.reputationScore = Number.isFinite(row.reputationScore) ? row.reputationScore : 0.5;
@@ -1978,6 +2021,7 @@ async function main(){
       let ret5=null, ret20=null, vol20=null, turnover=null, adv20=null, close=null;
       let newsCount=0, weightedCount=0, newsScore=0, sentiment=null;
       let naverPopularity=0, naverAsvi=null, naverSpike=null, naverPersist=false;
+      let naverFinanceScore=0, naverFinanceVolume=0, naverFinanceAmountMkrw=0;
       let naverCount=0, naverCountKO=0, naverCountEN=0;
       let blogMentions=0, polygonTrend=null, nasdaqClose=null, earn=false;
       let candles=null, offHi=0, offLo=0, posHits=0, negHits=0, marketCap=null;
@@ -2008,8 +2052,12 @@ async function main(){
         }
         const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name] || {};
         const trend = NAVER_TRENDS[sym] || {};
+        const naverFinance = isKR(sym) ? await fetchNaverFinanceSignals(sym) : { score: 0, volume: 0, amountMkrw: 0 };
         const navSignals = mergeNaverSignals(nf, trend);
         naverPopularity = navSignals.combined;  // 이미 spike/persist 포함됨
+        naverFinanceScore = naverFinance.score;
+        naverFinanceVolume = naverFinance.volume;
+        naverFinanceAmountMkrw = naverFinance.amountMkrw;
         naverAsvi = navSignals.asvi;
         naverSpike = navSignals.spike ? 1 : 0;
         naverPersist = navSignals.persist;
@@ -2050,7 +2098,7 @@ async function main(){
       }
       const normSym = normIndexKey(sym || '');
       const sectorGuess = INDEX_SECTOR[normSym] || byName[name]?.sector || null;
-      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverPersist, naverBreakdown, naverCount, naverCountKO, naverCountEN, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, marketCap, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount, wikiViews, wikiScore:0, sector: sectorGuess };
+      byName[name] = { ret5, ret20, vol20, turnover, adv20, close, newsCount, weightedCount, newsScore, sentiment, naverPopularity, naverAsvi, naverSpike, naverPersist, naverBreakdown, naverCount, naverCountKO, naverCountEN, naverFinanceScore, naverFinanceVolume, naverFinanceAmountMkrw, blogMentions, polygonTrend, nasdaqClose, earn, offHi, offLo, marketCap, reputationScore: null, topKeywords: [], reputationHitIds: [], sym: sym || null, source: candles?.source || null, attempts: candles?.attempts || [], fetchMs: candles?.fetchMs || 0, ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits, negHits, fmpNewsCount, googleNewsCount, yahooNewsCount, investingNewsCount, hanwhaNewsCount, wikiViews, wikiScore:0, sector: sectorGuess };
       try {
         const ds = await fetchDeepsearchFeatures({ name, ticker: sym, market });
         Object.assign(byName[name], ds);
@@ -2070,7 +2118,7 @@ async function main(){
           newsCount:0, weightedCount:0, newsScore:0, sentiment:null, naverPopularity:0, naverAsvi:null, naverSpike:null, naverCount:0, naverCountKO:0, naverCountEN:0, blogMentions:0, polygonTrend:null, nasdaqClose:null, earn:false, offHi:0, offLo:0,
           reputationScore:null, topKeywords:[], reputationHitIds:[],
           sym:null, source:null, attempts:[], fetchMs:0,
-          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0, wikiViews:0, wikiScore:0, sector: null
+          ds_news7:0, ds_burst:0, ds_slope7:0, ds_topic:0, ds_trend:0, posHits:0, negHits:0, fmpNewsCount:0, googleNewsCount:0, yahooNewsCount:0, investingNewsCount:0, hanwhaNewsCount:0, wikiViews:0, wikiScore:0, naverFinanceScore:0, naverFinanceVolume:0, naverFinanceAmountMkrw:0, sector: null
         };
       }
       const sym = byName[n].sym || nameToSymbol(n) || n;
@@ -2156,15 +2204,18 @@ async function main(){
       const navBreak = nf.naverBreakdown || { fromFeatures: 0, fromTrends: 0 };
       const navCombined = nf.naverPopularity ?? (navBreak.fromFeatures + navBreak.fromTrends);
       const navp  = clamp01(navCombined);
+      const naverFinance01 = clamp01(nf.naverFinanceScore ?? 0);
       const blog01 = clamp01((nf.blogMentions || 0) / Math.max(1, BLOG_NORM));
       const wiki01 = clamp01((nf.wikiViews || 0)      / Math.max(1, WIKI_NORM));
       const pos01  = clamp01((nf.posHits || 0) / 10);
       const neg01  = clamp01((nf.negHits || 0) / 10);
 
       // Compose an absolute popularity/content score
-      const denom = Math.max(1e-9, ABS_W_NEWS + ABS_W_NAVPOP + ABS_W_BLOGS + ABS_W_WIKI + ABS_W_KEYPOS + ABS_W_KEYNEG);
+      const ABS_W_NAVER_FIN = Number(process.env.ABS_W_NAVER_FIN || 0.2);
+      const denom = Math.max(1e-9, ABS_W_NEWS + ABS_W_NAVPOP + ABS_W_BLOGS + ABS_W_WIKI + ABS_W_KEYPOS + ABS_W_KEYNEG + ABS_W_NAVER_FIN);
       const popAbs = (ABS_W_NEWS   * news
                     + ABS_W_NAVPOP * navp
+                    + ABS_W_NAVER_FIN * naverFinance01
                     + ABS_W_BLOGS  * blog01
                     + ABS_W_WIKI   * wiki01
                     + ABS_W_KEYPOS * pos01
