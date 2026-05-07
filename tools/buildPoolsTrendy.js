@@ -15,12 +15,17 @@ import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverD
 import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 import { fetchDeepsearchFeatures } from '../src/news/deepsearch.js';
 import { NaverSignal, NaverSignalCollector, NaverSignalCache } from '../src/signals/naver-signals.js';
+import { ConfigLoader } from '../src/config/config-loader.js';
 
 if (typeof fetch === 'undefined') {
   globalThis.fetch = (await import('node-fetch')).default;
 }
 
 fs.mkdirSync('cache', { recursive: true });
+
+
+const configLoader = await new ConfigLoader().load('config/pools-config.json', process.env);
+const cfg = (path, fallback) => configLoader.get(path, fallback);
 
 const CACHE_DIR = 'cache';
 const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
@@ -29,11 +34,11 @@ const KEYWORD_FILE_ENV = process.env.MARKET_KEYWORD_FILE || '';
 let TAG_FILE = TAG_FILE_ENV || KEYWORD_FILE_ENV || path.join('data', 'tags.json');
 const TAG_WEIGHT_INPUT = Number(process.env.TAG_EVAL_WEIGHT);
 const TAG_FREQ_WEIGHT_INPUT = Number(process.env.TAG_FREQ_WEIGHT);
-const NAVER_SPIKE_BOOST = +process.env.NAVER_SPIKE_BOOST || 0.15;  // spike 보너스
-const NAVER_PERSIST_BOOST = +process.env.NAVER_PERSIST_BOOST || 0.10;  // persist 보너스
-const ASVI_NEGATIVE_FLOOR = +process.env.ASVI_NEGATIVE_FLOOR || 0;  // 음수 처리
+const NAVER_SPIKE_BOOST = cfg('naver.spike.boost', 0.15);  // spike 보너스
+const NAVER_PERSIST_BOOST = cfg('naver.persist.boost', 0.10);  // persist 보너스
+const ASVI_NEGATIVE_FLOOR = cfg('naver.asvi.negativeFloor', 0);  // 음수 처리
 
-const VERBOSE = process.env.VERBOSE === '1';
+const VERBOSE = cfg('flags.verbose', false);
 const log = (...a) => VERBOSE && console.log(...a);
 
 const UA = 'Mozilla/5.0 (compatible; TrendPools/1.0; +https://singaseongj.github.io/stocks.html)';
@@ -548,48 +553,48 @@ function normIndexKey(sym){
 }
 function inIdx(sym, m){ return m.has(normIndexKey(sym)); }
 
-const PRIOR_W_SP500 = +process.env.PRIOR_W_SP500 || 0.50;
-const PRIOR_W_N100  = +process.env.PRIOR_W_N100  || 0.25;
-const PRIOR_W_K200  = +process.env.PRIOR_W_K200  || 0.35;
-const PRIOR_W_KQ100 = +process.env.PRIOR_W_KQ100 || 0.20;
-const PRIOR_FLOOR   = +process.env.PRIOR_FLOOR   || 0.10; // base for names in no index
-const STRUCT_FLOOR_W = +process.env.STRUCT_FLOOR_W || 0.12; // portion of scale reserved for prior
-const PREV_CARRY = +process.env.PREV_CARRY || 0.3;  // 0..1 how much of last run to keep
+const PRIOR_W_SP500 = cfg('index.priors.sp500', 0.50);
+const PRIOR_W_N100  = cfg('index.priors.nasdaq100', 0.25);
+const PRIOR_W_K200  = cfg('index.priors.kospi200', 0.35);
+const PRIOR_W_KQ100 = cfg('index.priors.kosdaq100', 0.20);
+const PRIOR_FLOOR   = cfg('index.floor', 0.10); // base for names in no index
+const STRUCT_FLOOR_W = cfg('index.structuralFloor', 0.12); // portion of scale reserved for prior
+const PREV_CARRY = cfg('carry.previous', 0.3);  // 0..1 how much of last run to keep
 
-const HOT_W_NEWS       = +process.env.HOT_W_NEWS       || 0.40;
-const HOT_W_TREND      = +process.env.HOT_W_TREND      || 0.30;
-const HOT_W_TURN       = +process.env.HOT_W_TURN       || 0.20;
-const HOT_W_WIKI       = +process.env.HOT_W_WIKI       || 0.10;
-const TREND_EXP        = +process.env.TREND_EXP        || 1.5;  // >1 makes trend more sensitive
-const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.02; // * ds_burst
-const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.04; // cap (0..1 scale)
+const HOT_W_NEWS       = cfg('weights.hotness.news', 0.40);
+const HOT_W_TREND      = cfg('weights.hotness.trend', 0.30);
+const HOT_W_TURN       = cfg('weights.hotness.turnover', 0.20);
+const HOT_W_WIKI       = cfg('weights.hotness.wiki', 0.10);
+const TREND_EXP        = cfg('trends.exponential', 1.5);  // >1 makes trend more sensitive
+const BURST_KICK_SCALE = cfg('trends.burstKick.scale', 0.02); // * ds_burst
+const BURST_KICK_MAX   = cfg('trends.burstKick.max', 0.04); // cap (0..1 scale)
 
 // --- Popularity (bounded) ---
-const POP_FLOOR_W = +process.env.POP_FLOOR_W || 0.01; // portion of scale reserved for popularity floor
-const POP_CAP     = +process.env.POP_CAP     || 0.10; // hard cap of popularity bump (0..1 scale)
+const POP_FLOOR_W = cfg('floor.popularityFloor', 0.01); // portion of scale reserved for popularity floor
+const POP_CAP     = cfg('floor.popularityCap', 0.10); // hard cap of popularity bump (0..1 scale)
 
 // =========================
 // Absolute-scoring controls
 // =========================
-const ABSOLUTE_SCORING = process.env.ABSOLUTE_SCORING !== '0'; // default ON
+const ABSOLUTE_SCORING = cfg('flags.absoluteScoring', true); // default ON
 // Stronger size bias (absolute)
-const SIZE_ABS_WEIGHT = +process.env.SIZE_ABS_WEIGHT || 0.82;  // higher => more size
-const SIZE_ABS_WEIGHT_AGGR = +process.env.SIZE_ABS_WEIGHT_AGGR || 0.5;  // 공격주용 (신규)
+const SIZE_ABS_WEIGHT = cfg('scoring.absolute.sizeWeight', 0.82);  // higher => more size
+const SIZE_ABS_WEIGHT_AGGR = cfg('scoring.absolute.sizeWeightAggressive', 0.5);  // 공격주용 (신규)
 // Market-cap range for log scaling
-const MCAP_MIN = +process.env.MCAP_MIN || 2e9;
-const MCAP_MAX = +process.env.MCAP_MAX || 6e12;       // ~5–6T puts AAPL/NVDA near the top of range
+const MCAP_MIN = cfg('marketCap.min', 2e9);
+const MCAP_MAX = cfg('marketCap.max', 6e12);       // ~5–6T puts AAPL/NVDA near the top of range
 // Normalizers for blog/wiki (count -> 0..1)
-const BLOG_NORM = +process.env.BLOG_NORM || 20;
-const WIKI_NORM = +process.env.WIKI_NORM || 80000;
+const BLOG_NORM = cfg('scoring.normalization.blogMentions', 20);
+const WIKI_NORM = cfg('scoring.normalization.wikiViews', 80000);
 // Absolute popularity mixer (normalized internally)
-const ABS_W_NEWS   = +process.env.ABS_W_NEWS   || 0.65;
-const ABS_W_NAVPOP = +process.env.ABS_W_NAVPOP || 0.50;
-const ABS_W_BLOGS  = +process.env.ABS_W_BLOGS  || 0.05;
-const ABS_W_WIKI   = +process.env.ABS_W_WIKI   || 0.02;
-const ABS_W_KEYPOS = +process.env.ABS_W_KEYPOS || 0.04;
-const ABS_W_KEYNEG = +process.env.ABS_W_KEYNEG || 0.02;
+const ABS_W_NEWS   = cfg('weights.absolute.news', 0.65);
+const ABS_W_NAVPOP = cfg('weights.absolute.naverPopularity', 0.50);
+const ABS_W_BLOGS  = cfg('weights.absolute.blogs', 0.05);
+const ABS_W_WIKI   = cfg('weights.absolute.wiki', 0.02);
+const ABS_W_KEYPOS = cfg('weights.absolute.positiveKeywords', 0.04);
+const ABS_W_KEYNEG = cfg('weights.absolute.negativeKeywords', 0.02);
 // Additive external boost (0..1 contribution added onto base)
-const EXT_MIX = +process.env.EXT_MIX || 0.35;
+const EXT_MIX = cfg('weights.external.mix', 0.35);
 
 function sizeScoreFromMcap(mcap){
   if (!Number.isFinite(mcap) || mcap <= 0) return 0;
@@ -605,11 +610,11 @@ function sizeScoreFromMcap(mcap){
 const FMP_API_KEY        = process.env.FMP_API_KEY || process.env.FMP_KEY || '';
 const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 1.5;
 // Early composition (“popularity pulse”) — heavier by default
-const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 6.0;
-const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 110; // Naver popularity is 0..1
-const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
-const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
-const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
+const NEWS_WEIGHT        = cfg('weights.early.news', 6.0);
+const POPULARITY_WEIGHT  = cfg('weights.early.popularity', 110); // Naver popularity is 0..1
+const POS_KW_WEIGHT      = cfg('weights.early.positiveKeywords', 3);
+const NEG_KW_WEIGHT      = cfg('weights.early.negativeKeywords', 1); // negative keywords count slightly
+const WIKI_WEIGHT        = cfg('weights.early.wiki', 0.2);
 // kept for legacy diagnostics; the absolute path below uses SIZE_ABS_WEIGHT instead
 const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.7;
 
@@ -981,10 +986,10 @@ for (const a of process.argv.slice(2)) {
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
   if (a.startsWith('--cooloff-ms=')) COOLOFF_MS = Number(a.split('=')[1]);
 }
-const COVERAGE_MIN = +process.env.COVERAGE_MIN || 0.15;  // loosen gate
+const COVERAGE_MIN = cfg('coverage.minimum', 0.15);  // loosen gate
 const FINAL_FRAC   = Number(process.env.FINAL_STAGE_BUDGET_FRAC || 0.02);
-const GLOBAL_BUDGET_MS = +process.env.GLOBAL_BUDGET_MS || 90000; // 90s soft budget
-const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
+const GLOBAL_BUDGET_MS = cfg('performance.globalBudgetMs', 90000); // 90s soft budget
+const MAX_CONCURRENCY = Number(cfg('performance.maxConcurrency', 3));       // lower for demo keys
 const DEMO_MODE = ARGS.has('--demo') || process.env.DEMO === '1' || !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
 const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
 const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
