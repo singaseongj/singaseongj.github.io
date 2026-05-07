@@ -58,6 +58,23 @@ node tools/buildPoolsTrendy.js --dry-run
 
 ---
 
+
+## 🤖 GitHub Actions 연동 체크
+
+`stock-recs.yml`, `daily-build.yml`, `pools-test.yml` 같은 워크플로우는 공통으로 `node tools/buildPoolsTrendy.js`를 실행합니다.  
+따라서 **워크플로우 YAML을 바꾸지 않아도**, `tools/buildPoolsTrendy.js`가 `src/signals/naver-signals.js`를 import하는 상태라면 다음 실행부터 자동으로 새 Naver signals 로직이 적용됩니다.
+
+```yaml
+- name: Build trend-aware pools
+  run: node tools/buildPoolsTrendy.js
+```
+
+권장 순서:
+1. `src/signals/naver-signals.js` 반영
+2. `tools/buildPoolsTrendy.js` 통합 변경 + 로컬 테스트 통과
+3. 커밋/푸시
+4. 스케줄 워크플로우가 자동으로 새 코드 사용
+
 ## 🔍 핵심 개선 사항
 
 ### 문제점 분석
