@@ -335,7 +335,10 @@ class NaverSignalCache {
    *   naverBoost = signal.getBoostValue();
    */
   get(symbol) {
-    return this.cache.get(symbol) ?? new NaverSignal(); // fallback
+    const raw = this.cache.get(symbol);
+    if (!raw) return new NaverSignal();
+    if (raw instanceof NaverSignal) return raw;
+    return new NaverSignal(raw);
   }
 
   clear() {
@@ -344,15 +347,23 @@ class NaverSignalCache {
 
   getMetrics() {
     const items = Array.from(this.cache.values());
+    const isSignalValid = (s) => typeof s?.isValid === 'function'
+      ? s.isValid()
+      : typeof s?.popularity === 'number' &&
+        s.popularity >= 0 &&
+        s.popularity <= 1 &&
+        typeof s?.asvi === 'number' &&
+        s.asvi >= -100 &&
+        s.asvi <= 100;
     return {
       totalSignals: items.length,
-      validSignals: items.filter(s => s.isValid()).length,
-      avgConfidence: items.reduce((s, sig) => s + sig.confidence.popularity, 0) / Math.max(1, items.length),
+      validSignals: items.filter(s => isSignalValid(s) && (s.popularity ?? 0) > 0).length,
+      avgConfidence: items.reduce((s, sig) => s + (sig?.confidence?.popularity ?? 0), 0) / Math.max(1, items.length),
       sources: {
-        trends: items.filter(s => s.sources.popularity === 'trends').length,
-        features: items.filter(s => s.sources.popularity === 'features').length,
-        finance: items.filter(s => s.sources.popularity === 'finance').length,
-        default: items.filter(s => !s.sources.popularity).length
+        trends: items.filter(s => s?.sources?.popularity === 'trends').length,
+        features: items.filter(s => s?.sources?.popularity === 'features').length,
+        finance: items.filter(s => s?.sources?.popularity === 'finance').length,
+        default: items.filter(s => !s?.sources?.popularity).length
       }
     };
   }

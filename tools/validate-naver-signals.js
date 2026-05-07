@@ -101,7 +101,7 @@ class NaverSignalValidator {
     };
 
     const collector1 = new NaverSignalCollector('TEST1', mockContext1);
-    const signal1 = collector1.collect();
+    const signal1 = await collector1.collect();
 
     this.assert(
       signal1.popularity === 0.9 && signal1.sources.popularity === 'trends',
@@ -118,7 +118,7 @@ class NaverSignalValidator {
     };
 
     const collector2 = new NaverSignalCollector('TEST2', mockContext2);
-    const signal2 = collector2.collect();
+    const signal2 = await collector2.collect();
 
     this.assert(
       signal2.popularity === 0.6 && signal2.sources.popularity === 'features',
