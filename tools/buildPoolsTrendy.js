@@ -23,6 +23,16 @@ if (typeof fetch === 'undefined') {
 
 fs.mkdirSync('cache', { recursive: true });
 
+// ---- early flags (must be defined before any helper references)
+const ARGS = new Set(process.argv.slice(2));
+const OFFLINE = ARGS.has('--offline') || process.env.OFFLINE === '1';                // skip all network
+const NO_STALE_CACHE = ARGS.has('--no-stale-cache') || process.env.NO_STALE_CACHE === '1';
+// Fine-grained TTLs for freshness control (defined early for helper safety)
+const TTL = {
+  newsRss: Number(process.env.TTL_NEWS_RSS_MS || 2*60*60*1000),   // 2h for news/RSS/HTML counts
+  wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
+  earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
+};
 
 const configLoader = new ConfigLoader();
 await configLoader.load('config/pools-config.json', process.env);
@@ -80,7 +90,7 @@ async function cachedJsonFetch(url, fetchFn, ttlMs = TTL_MS, allowStale = false)
     if (age < ttlMs) {
       return JSON.parse(fs.readFileSync(key, 'utf8'));
     }
-    if (allowStale) {
+    if (allowStale && !NO_STALE_CACHE) {
       console.warn(`[cache] serving STALE for ${url.split('?')[0]} (age=${Math.round(age/1000)}s)`);
       return JSON.parse(fs.readFileSync(key, 'utf8'));
     }
@@ -883,19 +893,26 @@ const naverSignalCache = new NaverSignalCache();
     ...Object.keys(NAVER_TRENDS || {}),
     ...Object.keys(NEWS_FEATURES || {})
   ]));
-  for (const symbol of symbols) {
-    const collector = new NaverSignalCollector(symbol, {
-      NAVER_TRENDS,
-      NEWS_FEATURES,
-      isKR: isKR(symbol),
-      ASVI_NEGATIVE_FLOOR: +process.env.ASVI_NEGATIVE_FLOOR || 0,
-      fetchNaverFinanceSignals: isKR(symbol) ? (sym) => fetchNaverFinanceSignals(sym) : null
-    });
-    try {
-      const signal = collector.collect();
-      naverSignalCache.cache.set(symbol, signal);
-    } catch (e) {
-      console.warn(`[naver-signal] failed to collect ${symbol}:`, e.message);
+  const initConcurrency = Math.max(1, Number(process.env.NAVER_SIGNAL_INIT_CONCURRENCY || 12));
+  for (let i = 0; i < symbols.length; i += initConcurrency) {
+    const batch = symbols.slice(i, i + initConcurrency);
+    const settled = await Promise.allSettled(batch.map(async (symbol) => {
+      const collector = new NaverSignalCollector(symbol, {
+        NAVER_TRENDS,
+        NEWS_FEATURES,
+        isKR: isKR(symbol),
+        ASVI_NEGATIVE_FLOOR: +process.env.ASVI_NEGATIVE_FLOOR || 0,
+        fetchNaverFinanceSignals: isKR(symbol) ? (sym) => fetchNaverFinanceSignals(sym) : null
+      });
+      const signal = await collector.collect();
+      return { symbol, signal };
+    }));
+    for (const res of settled) {
+      if (res.status === 'fulfilled') {
+        naverSignalCache.cache.set(res.value.symbol, res.value.signal);
+      } else {
+        console.warn('[naver-signal] failed to collect:', res.reason?.message || res.reason);
+      }
     }
   }
   const metricsInit = naverSignalCache.getMetrics();
@@ -964,18 +981,10 @@ async function enrichWithNaverTrends(universe, keywordDict){
 }
 
 // ---- flags
-const ARGS = new Set(process.argv.slice(2));
-const OFFLINE = ARGS.has('--offline') || process.env.OFFLINE === '1';                // skip all network
 const DRY_RUN = ARGS.has('--dry-run');
 let MAX_PER_PROVIDER = Infinity;
 let CACHE_TTL_MS = Number(process.env.CACHE_TTL_MS || 3600000);
 let COOLOFF_MS = Number(process.env.COOLOFF_MS || 60000);
-// Fine-grained TTLs for freshness control
-const TTL = {
-  newsRss: Number(process.env.TTL_NEWS_RSS_MS || 2*60*60*1000),   // 2h for news/RSS/HTML counts
-  wiki:    Number(process.env.TTL_WIKI_MS    || 6*60*60*1000),   // 6h for wiki views
-  earnings:Number(process.env.TTL_EARNINGS_MS|| 4*60*60*1000)    // 4h for earnings window
-};
 // Later-stage blend weights (used inside an additive boost — not a convex override)
 const W_NEWS        = Number(process.env.W_NEWS        || 0.55);
 const W_REPUTATION  = Number(process.env.W_REPUTATION  || 0.14);
