@@ -14,12 +14,18 @@ import { buildNewsFeatures, newsScoreFromFeatures } from '../src/news/fetchByTic
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../src/trends/naverDatalab.js';
 import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 import { fetchDeepsearchFeatures } from '../src/news/deepsearch.js';
+import { NaverSignal, NaverSignalCollector, NaverSignalCache } from '../src/signals/naver-signals.js';
+import { ConfigLoader } from '../src/config/config-loader.js';
 
 if (typeof fetch === 'undefined') {
   globalThis.fetch = (await import('node-fetch')).default;
 }
 
 fs.mkdirSync('cache', { recursive: true });
+
+
+const configLoader = await new ConfigLoader().load('config/pools-config.json', process.env);
+const cfg = (path, fallback) => configLoader.get(path, fallback);
 
 const CACHE_DIR = 'cache';
 const TTL_MS = 1000 * 60 * 60 * 12; // 12h default; can override per-call
@@ -28,11 +34,11 @@ const KEYWORD_FILE_ENV = process.env.MARKET_KEYWORD_FILE || '';
 let TAG_FILE = TAG_FILE_ENV || KEYWORD_FILE_ENV || path.join('data', 'tags.json');
 const TAG_WEIGHT_INPUT = Number(process.env.TAG_EVAL_WEIGHT);
 const TAG_FREQ_WEIGHT_INPUT = Number(process.env.TAG_FREQ_WEIGHT);
-const NAVER_SPIKE_BOOST = +process.env.NAVER_SPIKE_BOOST || 0.15;  // spike 보너스
-const NAVER_PERSIST_BOOST = +process.env.NAVER_PERSIST_BOOST || 0.10;  // persist 보너스
-const ASVI_NEGATIVE_FLOOR = +process.env.ASVI_NEGATIVE_FLOOR || 0;  // 음수 처리
+const NAVER_SPIKE_BOOST = cfg('naver.spike.boost', 0.15);  // spike 보너스
+const NAVER_PERSIST_BOOST = cfg('naver.persist.boost', 0.10);  // persist 보너스
+const ASVI_NEGATIVE_FLOOR = cfg('naver.asvi.negativeFloor', 0);  // 음수 처리
 
-const VERBOSE = process.env.VERBOSE === '1';
+const VERBOSE = cfg('flags.verbose', false);
 const log = (...a) => VERBOSE && console.log(...a);
 
 const UA = 'Mozilla/5.0 (compatible; TrendPools/1.0; +https://singaseongj.github.io/stocks.html)';
@@ -547,48 +553,48 @@ function normIndexKey(sym){
 }
 function inIdx(sym, m){ return m.has(normIndexKey(sym)); }
 
-const PRIOR_W_SP500 = +process.env.PRIOR_W_SP500 || 0.50;
-const PRIOR_W_N100  = +process.env.PRIOR_W_N100  || 0.25;
-const PRIOR_W_K200  = +process.env.PRIOR_W_K200  || 0.35;
-const PRIOR_W_KQ100 = +process.env.PRIOR_W_KQ100 || 0.20;
-const PRIOR_FLOOR   = +process.env.PRIOR_FLOOR   || 0.10; // base for names in no index
-const STRUCT_FLOOR_W = +process.env.STRUCT_FLOOR_W || 0.12; // portion of scale reserved for prior
-const PREV_CARRY = +process.env.PREV_CARRY || 0.3;  // 0..1 how much of last run to keep
+const PRIOR_W_SP500 = cfg('index.priors.sp500', 0.50);
+const PRIOR_W_N100  = cfg('index.priors.nasdaq100', 0.25);
+const PRIOR_W_K200  = cfg('index.priors.kospi200', 0.35);
+const PRIOR_W_KQ100 = cfg('index.priors.kosdaq100', 0.20);
+const PRIOR_FLOOR   = cfg('index.floor', 0.10); // base for names in no index
+const STRUCT_FLOOR_W = cfg('index.structuralFloor', 0.12); // portion of scale reserved for prior
+const PREV_CARRY = cfg('carry.previous', 0.3);  // 0..1 how much of last run to keep
 
-const HOT_W_NEWS       = +process.env.HOT_W_NEWS       || 0.40;
-const HOT_W_TREND      = +process.env.HOT_W_TREND      || 0.30;
-const HOT_W_TURN       = +process.env.HOT_W_TURN       || 0.20;
-const HOT_W_WIKI       = +process.env.HOT_W_WIKI       || 0.10;
-const TREND_EXP        = +process.env.TREND_EXP        || 1.5;  // >1 makes trend more sensitive
-const BURST_KICK_SCALE = +process.env.BURST_KICK_SCALE || 0.02; // * ds_burst
-const BURST_KICK_MAX   = +process.env.BURST_KICK_MAX   || 0.04; // cap (0..1 scale)
+const HOT_W_NEWS       = cfg('weights.hotness.news', 0.40);
+const HOT_W_TREND      = cfg('weights.hotness.trend', 0.30);
+const HOT_W_TURN       = cfg('weights.hotness.turnover', 0.20);
+const HOT_W_WIKI       = cfg('weights.hotness.wiki', 0.10);
+const TREND_EXP        = cfg('trends.exponential', 1.5);  // >1 makes trend more sensitive
+const BURST_KICK_SCALE = cfg('trends.burstKick.scale', 0.02); // * ds_burst
+const BURST_KICK_MAX   = cfg('trends.burstKick.max', 0.04); // cap (0..1 scale)
 
 // --- Popularity (bounded) ---
-const POP_FLOOR_W = +process.env.POP_FLOOR_W || 0.01; // portion of scale reserved for popularity floor
-const POP_CAP     = +process.env.POP_CAP     || 0.10; // hard cap of popularity bump (0..1 scale)
+const POP_FLOOR_W = cfg('floor.popularityFloor', 0.01); // portion of scale reserved for popularity floor
+const POP_CAP     = cfg('floor.popularityCap', 0.10); // hard cap of popularity bump (0..1 scale)
 
 // =========================
 // Absolute-scoring controls
 // =========================
-const ABSOLUTE_SCORING = process.env.ABSOLUTE_SCORING !== '0'; // default ON
+const ABSOLUTE_SCORING = cfg('flags.absoluteScoring', true); // default ON
 // Stronger size bias (absolute)
-const SIZE_ABS_WEIGHT = +process.env.SIZE_ABS_WEIGHT || 0.82;  // higher => more size
-const SIZE_ABS_WEIGHT_AGGR = +process.env.SIZE_ABS_WEIGHT_AGGR || 0.5;  // 공격주용 (신규)
+const SIZE_ABS_WEIGHT = cfg('scoring.absolute.sizeWeight', 0.82);  // higher => more size
+const SIZE_ABS_WEIGHT_AGGR = cfg('scoring.absolute.sizeWeightAggressive', 0.5);  // 공격주용 (신규)
 // Market-cap range for log scaling
-const MCAP_MIN = +process.env.MCAP_MIN || 2e9;
-const MCAP_MAX = +process.env.MCAP_MAX || 6e12;       // ~5–6T puts AAPL/NVDA near the top of range
+const MCAP_MIN = cfg('marketCap.min', 2e9);
+const MCAP_MAX = cfg('marketCap.max', 6e12);       // ~5–6T puts AAPL/NVDA near the top of range
 // Normalizers for blog/wiki (count -> 0..1)
-const BLOG_NORM = +process.env.BLOG_NORM || 20;
-const WIKI_NORM = +process.env.WIKI_NORM || 80000;
+const BLOG_NORM = cfg('scoring.normalization.blogMentions', 20);
+const WIKI_NORM = cfg('scoring.normalization.wikiViews', 80000);
 // Absolute popularity mixer (normalized internally)
-const ABS_W_NEWS   = +process.env.ABS_W_NEWS   || 0.65;
-const ABS_W_NAVPOP = +process.env.ABS_W_NAVPOP || 0.50;
-const ABS_W_BLOGS  = +process.env.ABS_W_BLOGS  || 0.05;
-const ABS_W_WIKI   = +process.env.ABS_W_WIKI   || 0.02;
-const ABS_W_KEYPOS = +process.env.ABS_W_KEYPOS || 0.04;
-const ABS_W_KEYNEG = +process.env.ABS_W_KEYNEG || 0.02;
+const ABS_W_NEWS   = cfg('weights.absolute.news', 0.65);
+const ABS_W_NAVPOP = cfg('weights.absolute.naverPopularity', 0.50);
+const ABS_W_BLOGS  = cfg('weights.absolute.blogs', 0.05);
+const ABS_W_WIKI   = cfg('weights.absolute.wiki', 0.02);
+const ABS_W_KEYPOS = cfg('weights.absolute.positiveKeywords', 0.04);
+const ABS_W_KEYNEG = cfg('weights.absolute.negativeKeywords', 0.02);
 // Additive external boost (0..1 contribution added onto base)
-const EXT_MIX = +process.env.EXT_MIX || 0.35;
+const EXT_MIX = cfg('weights.external.mix', 0.35);
 
 function sizeScoreFromMcap(mcap){
   if (!Number.isFinite(mcap) || mcap <= 0) return 0;
@@ -604,11 +610,11 @@ function sizeScoreFromMcap(mcap){
 const FMP_API_KEY        = process.env.FMP_API_KEY || process.env.FMP_KEY || '';
 const BLOG_WEIGHT        = +process.env.BLOG_WEIGHT        || 1.5;
 // Early composition (“popularity pulse”) — heavier by default
-const NEWS_WEIGHT        = +process.env.NEWS_WEIGHT        || 6.0;
-const POPULARITY_WEIGHT  = +process.env.POPULARITY_WEIGHT  || 110; // Naver popularity is 0..1
-const POS_KW_WEIGHT      = +process.env.POS_KW_WEIGHT      || 3;
-const NEG_KW_WEIGHT      = +process.env.NEG_KW_WEIGHT      || 1; // negative keywords count slightly
-const WIKI_WEIGHT        = +process.env.WIKI_WEIGHT        || 0.2;
+const NEWS_WEIGHT        = cfg('weights.early.news', 6.0);
+const POPULARITY_WEIGHT  = cfg('weights.early.popularity', 110); // Naver popularity is 0..1
+const POS_KW_WEIGHT      = cfg('weights.early.positiveKeywords', 3);
+const NEG_KW_WEIGHT      = cfg('weights.early.negativeKeywords', 1); // negative keywords count slightly
+const WIKI_WEIGHT        = cfg('weights.early.wiki', 0.2);
 // kept for legacy diagnostics; the absolute path below uses SIZE_ABS_WEIGHT instead
 const SCALE_WEIGHT       = +process.env.SCALE_WEIGHT       || 0.7;
 
@@ -861,18 +867,38 @@ for (const [name, symbol] of Object.entries(DYNAMIC_TICKER_MAP)) {
 for (const [sym, trend] of Object.entries(NAVER_TRENDS)) {
   if (!trend || typeof trend !== 'object') continue;
   const nf = (NEWS_FEATURES[sym] ||= {});
-  if (nf.naverPopularity == null && trend.naverPopularity != null) {
-    nf.naverPopularity = trend.naverPopularity;
+  if (nf.naverPopularity == null && trend.naverPopularity != null) nf.naverPopularity = trend.naverPopularity;
+  if (nf.naverSpike == null && trend.spike != null) nf.naverSpike = trend.spike;
+  if (nf.naverAsvi == null && trend.lastAsvi != null) nf.naverAsvi = trend.lastAsvi;
+  if (nf.naverPersist == null && trend.persist != null) nf.naverPersist = trend.persist;
+}
+
+const naverSignalCache = new NaverSignalCache();
+
+
+{
+  const startInit = Date.now();
+  const symbols = Array.from(new Set([
+    ...Object.keys(NAVER_TRENDS || {}),
+    ...Object.keys(NEWS_FEATURES || {})
+  ]));
+  for (const symbol of symbols) {
+    const collector = new NaverSignalCollector(symbol, {
+      NAVER_TRENDS,
+      NEWS_FEATURES,
+      isKR: isKR(symbol),
+      ASVI_NEGATIVE_FLOOR: +process.env.ASVI_NEGATIVE_FLOOR || 0,
+      fetchNaverFinanceSignals: isKR(symbol) ? (sym) => fetchNaverFinanceSignals(sym) : null
+    });
+    try {
+      const signal = collector.collect();
+      naverSignalCache.cache.set(symbol, signal);
+    } catch (e) {
+      console.warn(`[naver-signal] failed to collect ${symbol}:`, e.message);
+    }
   }
-  if (nf.naverSpike == null && trend.spike != null) {
-    nf.naverSpike = trend.spike;
-  }
-  if (nf.naverAsvi == null && trend.lastAsvi != null) {
-    nf.naverAsvi = trend.lastAsvi;
-  }
-  if (nf.naverPersist == null && trend.persist != null) {
-    nf.naverPersist = trend.persist;
-  }
+  const metricsInit = naverSignalCache.getMetrics();
+  console.log(`[naver-signals] initialized in ${Date.now() - startInit}ms:`, metricsInit);
 }
 
 let PREV_METRICS = {};
@@ -960,10 +986,10 @@ for (const a of process.argv.slice(2)) {
   if (a.startsWith('--cache-ttl-ms=')) CACHE_TTL_MS = Number(a.split('=')[1]);
   if (a.startsWith('--cooloff-ms=')) COOLOFF_MS = Number(a.split('=')[1]);
 }
-const COVERAGE_MIN = +process.env.COVERAGE_MIN || 0.15;  // loosen gate
+const COVERAGE_MIN = cfg('coverage.minimum', 0.15);  // loosen gate
 const FINAL_FRAC   = Number(process.env.FINAL_STAGE_BUDGET_FRAC || 0.02);
-const GLOBAL_BUDGET_MS = +process.env.GLOBAL_BUDGET_MS || 90000; // 90s soft budget
-const MAX_CONCURRENCY = Number(process.env.MAX_CONCURRENCY || 3);       // lower for demo keys
+const GLOBAL_BUDGET_MS = cfg('performance.globalBudgetMs', 90000); // 90s soft budget
+const MAX_CONCURRENCY = Number(cfg('performance.maxConcurrency', 3));       // lower for demo keys
 const DEMO_MODE = ARGS.has('--demo') || process.env.DEMO === '1' || !process.env.FINNHUB_API_KEY || process.env.FINNHUB_API_KEY === 'demo';
 const MIN_ADV_US = Number(process.env.MIN_ADV_US || 200000);
 const MIN_ADV_KR = Number(process.env.MIN_ADV_KR || 50000);
@@ -1657,34 +1683,6 @@ function toBooleanFlag(val) {
   return num != null ? num > 0 : false;
 }
 
-function mergeNaverSignals(feature = {}, trend = {}) {
-  const featurePop = toFiniteNumber(feature.naverPopularity) ?? 0;
-  const trendPop = toFiniteNumber(trend.naverPopularity ?? trend.popularity ?? trend.popularity01) ?? 0;
-  // 중복 방지: 둘 중 큰 값 선택 (합산 X)
-  const basePop = Math.max(featurePop, trendPop);
-
-  // spike/persist 보너스 추가
-  const spikeBonus = (feature.naverSpike || trend.spike) ? NAVER_SPIKE_BOOST : 0;
-  const persistBonus = (feature.naverPersist || trend.persist) ? NAVER_PERSIST_BOOST : 0;
-
-  const combined = clamp01(basePop + spikeBonus + persistBonus);
-  const asviFeature = toFiniteNumber(feature.naverAsvi);
-  const asviTrend = toFiniteNumber(trend.lastAsvi ?? trend.naverAsvi);
-  let asvi = asviFeature ?? asviTrend ?? 0;
-
-  // 음수는 0으로 처리 (하락은 무시)
-  if (asvi < ASVI_NEGATIVE_FLOOR) asvi = 0;
-
-  return {
-    combined,
-    feature: featurePop,
-    trend: trendPop,
-    asvi: asvi,
-    spike: toBooleanFlag(feature.naverSpike) || toBooleanFlag(trend.spike),
-    persist: toBooleanFlag(feature.naverPersist) || toBooleanFlag(trend.persist)
-  };
-}
-
 function roundTo(x, decimals = 4) {
   if (!Number.isFinite(x)) return 0;
   const pow = 10 ** decimals;
@@ -2051,23 +2049,43 @@ async function main(){
           offHi = shp.offHi; offLo = shp.offLo;
         }
         const nf = NEWS_FEATURES[sym] || NEWS_FEATURES[name] || {};
-        const trend = NAVER_TRENDS[sym] || {};
-        const naverFinance = isKR(sym) ? await fetchNaverFinanceSignals(sym) : { score: 0, volume: 0, amountMkrw: 0 };
-        const navSignals = mergeNaverSignals(nf, trend);
-        naverPopularity = navSignals.combined;  // 이미 spike/persist 포함됨
-        naverFinanceScore = naverFinance.score;
-        naverFinanceVolume = naverFinance.volume;
-        naverFinanceAmountMkrw = naverFinance.amountMkrw;
-        naverAsvi = navSignals.asvi;
-        naverSpike = navSignals.spike ? 1 : 0;
-        naverPersist = navSignals.persist;
-        naverBreakdown = { fromFeatures: navSignals.feature, fromTrends: navSignals.trend };
-        
-        // 한국 주식 특별 처리: naver-trends 데이터 없으면 news-features 신뢰
-        const isKRStock = /\.K[QS]$/.test(sym);
-        if (isKRStock && !trend?.naverPopularity && nf?.naverPopularity) {
-          naverPopularity = Math.max(naverPopularity, nf.naverPopularity * 1.2);
-        }
+        const signal = naverSignalCache.get(sym);
+        const naverData = (() => {
+          if (!signal || signal.popularity === 0) {
+            return {
+              naverPopularity: 0, naverAsvi: 0, naverSpike: 0, naverPersist: false,
+              naverFinanceScore: 0, naverFinanceVolume: 0, naverFinanceAmountMkrw: 0,
+              naverBreakdown: { fromFeatures: 0, fromTrends: 0, combined: 0 },
+              naverBoost: 0, confidence: 0
+            };
+          }
+          const recommended = signal.getRecommendedPopularity();
+          return {
+            naverPopularity: recommended.value,
+            naverAsvi: signal.asvi,
+            naverSpike: signal.spike ? 1 : 0,
+            naverPersist: signal.persist ? 1 : 0,
+            naverFinanceScore: signal.financeScore,
+            naverFinanceVolume: signal.financeVolume,
+            naverFinanceAmountMkrw: signal.financeAmount,
+            naverBreakdown: {
+              fromFeatures: signal.confidence.popularity >= 0.8 ? signal.popularity : 0,
+              fromTrends: signal.sources.popularity === 'trends' ? signal.popularity : 0,
+              combined: signal.popularity
+            },
+            naverBoost: signal.getBoostValue(),
+            confidence: recommended.confidence
+          };
+        })();
+
+        naverPopularity = naverData.naverPopularity;
+        naverAsvi = naverData.naverAsvi;
+        naverSpike = naverData.naverSpike;
+        naverPersist = naverData.naverPersist;
+        naverFinanceScore = naverData.naverFinanceScore;
+        naverFinanceVolume = naverData.naverFinanceVolume;
+        naverFinanceAmountMkrw = naverData.naverFinanceAmountMkrw;
+        naverBreakdown = naverData.naverBreakdown;
         if (nf) {
           newsCount = nf.count || 0;
           weightedCount = typeof nf.weightedCount === 'number' ? nf.weightedCount : newsCount;
@@ -2373,9 +2391,10 @@ async function main(){
       );
 
       // spike가 있으면 hotness 추가 부스트
-      const spikeHotBoost = names.map(n =>
-        byName[n].naverSpike ? 0.05 : 0  // spike면 +5%
-      );
+      const spikeHotBoost = names.map(n => {
+        const sig = naverSignalCache.get(byName[n].sym || nameToSymbol(n) || n);
+        return sig ? sig.getBoostValue() : 0;
+      });
 
       for (let i=0; i<names.length; i++) {
         const n = names[i];
@@ -2684,6 +2703,23 @@ async function main(){
         naverAsvi: byName[n].naverAsvi,
         naverSpike: byName[n].naverSpike,
         naverPersist: byName[n].naverPersist,
+      naverDataQuality: (() => {
+        const sig = naverSignalCache.get(byName[n].sym || nameToSymbol(n) || n);
+        if (!sig || sig.popularity === 0) return { source: 'none', confidence: 0, hasData: false };
+        const rec = sig.getRecommendedPopularity();
+        return {
+          source: rec.source,
+          confidence: Math.round(rec.confidence * 1000) / 1000,
+          hasData: true,
+          diagnostics: {
+            popularitySource: sig.sources.popularity,
+            asviSource: sig.sources.asvi,
+            spikeDetected: sig.spike,
+            persistDetected: sig.persist,
+            financeScore: sig.financeScore
+          }
+        };
+      })(),
         naverCount: byName[n].naverCount,
         naverCountKO: byName[n].naverCountKO,
         naverCountEN: byName[n].naverCountEN,
@@ -2806,6 +2842,25 @@ async function main(){
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
   };
+
+
+  {
+    const naverMetrics = naverSignalCache.getMetrics();
+    console.log('[buildPools] naver signal summary', {
+      total: naverMetrics.totalSignals,
+      valid: naverMetrics.validSignals,
+      avgConfidence: (naverMetrics.avgConfidence * 100).toFixed(1) + '%',
+      sources: naverMetrics.sources
+    });
+    for (const market of MARKETS) {
+      const names = universe[market] || [];
+      const validSignals = names.filter(n => {
+        const sig = naverSignalCache.get(nameToSymbol(n) || n);
+        return sig && sig.isValid();
+      }).length;
+      console.log(`[buildPools] ${market} naver signals: ${validSignals}/${names.length} valid`);
+    }
+  }
 
   if (OFFLINE) {
     console.warn(`[buildPools] offline mode, leaving pools.json unchanged`);

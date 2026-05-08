@@ -1,0 +1,223 @@
+{
+  "$schema": "pools-config.schema.json",
+  "version": "1.0.0",
+  "description": "Stock pools scoring and recommendation configuration",
+  "generatedAt": "2025-05-07T00:00:00Z",
+
+  "marketCap": {
+    "min": 2000000000,
+    "max": 6000000000000,
+    "description": "Market cap range for log scaling (2B to 6T)"
+  },
+
+  "scoring": {
+    "absolute": {
+      "enabled": true,
+      "sizeWeight": 0.82,
+      "sizeWeightAggressive": 0.5,
+      "scaleWeight": 0.7,
+      "description": "Absolute scoring (no percentile curve)"
+    },
+    "normalization": {
+      "blogMentions": 20,
+      "wikiViews": 80000,
+      "description": "Reference values for log normalization"
+    }
+  },
+
+  "weights": {
+    "absolute": {
+      "news": 0.65,
+      "naverPopularity": 0.50,
+      "blogs": 0.05,
+      "wiki": 0.02,
+      "positiveKeywords": 0.04,
+      "negativeKeywords": 0.02,
+      "naverFinance": 0.2,
+      "description": "Absolute popularity mixer weights (sum ≈ 1.0)"
+    },
+    "early": {
+      "news": 6.0,
+      "blogs": 1.5,
+      "popularity": 110,
+      "positiveKeywords": 3,
+      "negativeKeywords": 1,
+      "wiki": 0.2,
+      "description": "Early composition weights (legacy)"
+    },
+    "hotness": {
+      "news": 0.40,
+      "trend": 0.30,
+      "turnover": 0.20,
+      "wiki": 0.10,
+      "description": "Relative hotness bucket weights (for recent momentum)"
+    },
+    "external": {
+      "mix": 0.35,
+      "description": "External data boost (0..1 contribution additive)"
+    }
+  },
+
+  "naver": {
+    "spike": {
+      "boost": 0.15,
+      "description": "Spike detection bonus (+15%)"
+    },
+    "persist": {
+      "boost": 0.10,
+      "description": "Persistence detection bonus (+10%)"
+    },
+    "asvi": {
+      "negativeFloor": 0,
+      "description": "ASVI negative value floor (below this is set to 0)"
+    }
+  },
+
+  "trends": {
+    "exponential": 1.5,
+    "description": ">1 makes trend more sensitive to changes",
+    "thresholds": {
+      "t5": 0.30,
+      "t4": 0.12,
+      "t3": 0.03,
+      "t2": -0.12,
+      "description": "Trend growth thresholds for scoring"
+    },
+    "burstKick": {
+      "scale": 0.02,
+      "max": 0.04,
+      "description": "Burst detection multiplier"
+    },
+    "koreanMarketDeductPoints": 40,
+    "description": "KR market starts 40 points lower than US"
+  },
+
+  "news": {
+    "thresholds": {
+      "t5": 1.00,
+      "t4": 0.50,
+      "t3": 0.10,
+      "t2": -0.30,
+      "description": "News momentum thresholds"
+    }
+  },
+
+  "index": {
+    "priors": {
+      "sp500": 0.50,
+      "nasdaq100": 0.25,
+      "kospi200": 0.35,
+      "kosdaq100": 0.20
+    },
+    "floor": 0.10,
+    "structuralFloor": 0.12,
+    "description": "Index constituent structural priors"
+  },
+
+  "floor": {
+    "base": 15,
+    "withData": 25,
+    "indexConstituent": 40,
+    "popularityFloor": 0.01,
+    "popularityCap": 0.10,
+    "description": "Score floor and ceiling values (0..100 scale)"
+  },
+
+  "ceil": {
+    "default": 100,
+    "sp500": 100,
+    "floor": 0,
+    "roundMethod": "round",
+    "description": "round|floor|ceil for final score"
+  },
+
+  "boosts": {
+    "hotness": {
+      "enabled": true,
+      "weight": 8,
+      "description": "Recent momentum boost"
+    },
+    "liquidity": {
+      "weight": 1,
+      "description": "Structural liquidity boost"
+    },
+    "earnings": {
+      "boost": 0.02,
+      "description": "+2% for near earnings dates"
+    },
+    "sectorLift": 0.02,
+    "description": "Sector-wide average boost (modest)"
+  },
+
+  "penalties": {
+    "ineligible": -0.80,
+    "unknown": -0.12,
+    "description": "Penalties for data quality issues"
+  },
+
+  "tags": {
+    "evalWeight": 0.2,
+    "freqWeight": 0.4,
+    "keywordScoreWeight": 0.1,
+    "description": "Keyword/tag affinity weights"
+  },
+
+  "coverage": {
+    "minimum": 0.15,
+    "finalStageBudgetFrac": 0.02,
+    "description": "Coverage gates and budget allocation"
+  },
+
+  "performance": {
+    "globalBudgetMs": 90000,
+    "maxConcurrency": 3,
+    "description": "Global execution budget (90 seconds soft)",
+    "circuit": {
+      "maxErrors": 6,
+      "cooldownMs": 30000,
+      "description": "Circuit breaker (fail-safe)"
+    },
+    "timeout": {
+      "requestMs": 8000,
+      "retries": 3,
+      "backoffBaseMs": 600,
+      "description": "Network request tuning"
+    },
+    "cache": {
+      "defaultTtlMs": 3600000,
+      "cooloffMs": 60000,
+      "ttlNewsRssMs": 7200000,
+      "ttlWikiMs": 21600000,
+      "ttlEarningsMs": 14400000,
+      "description": "Cache TTL for different data types (ms)"
+    }
+  },
+
+  "filters": {
+    "liquidity": {
+      "minAdvUsd": 200000,
+      "minAdvKr": 50000,
+      "description": "Minimum average daily volume"
+    },
+    "price": {
+      "minUsd": 2,
+      "minKrw": 1000,
+      "description": "Minimum stock price"
+    }
+  },
+
+  "flags": {
+    "verbose": false,
+    "offline": false,
+    "dryRun": false,
+    "absoluteScoring": true,
+    "disableJitter": false,
+    "crossMarketDedup": true,
+    "description": "Feature flags and modes"
+  },
+
+  "carry": {
+    "previous": 0.3,
+    "description": "Fraction of last run metrics to carry forward (decay)"
+  }
+}

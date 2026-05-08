@@ -2472,7 +2472,6 @@ async function translateText(text, { targetLang, sourceLang } = {}) {
 
   console.log(`   🌐 Calling DeepL API (${sourceLang || 'auto'}→${targetLang}) for: "${normalized}"`);
   const params = new URLSearchParams();
-  params.append('auth_key', DEEPL_API_KEY);
   params.append('text', normalized);
   if (targetLang) params.append('target_lang', targetLang);
   if (sourceLang) params.append('source_lang', sourceLang);
@@ -2480,6 +2479,9 @@ async function translateText(text, { targetLang, sourceLang } = {}) {
   try {
     const res = await fetch(DEEPL_API_URL, {
       method: 'POST',
+      headers: {
+        Authorization: `DeepL-Auth-Key ${DEEPL_API_KEY}`,
+      },
       body: params,
     });
     if (!res.ok) {
