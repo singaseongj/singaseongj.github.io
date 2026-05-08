@@ -24,7 +24,8 @@ if (typeof fetch === 'undefined') {
 fs.mkdirSync('cache', { recursive: true });
 
 
-const configLoader = await new ConfigLoader().load('config/pools-config.json', process.env);
+const configLoader = new ConfigLoader();
+await configLoader.load('config/pools-config.json', process.env);
 const cfg = (path, fallback) => configLoader.get(path, fallback);
 
 const CACHE_DIR = 'cache';
