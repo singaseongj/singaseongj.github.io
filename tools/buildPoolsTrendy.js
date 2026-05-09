@@ -589,7 +589,7 @@ const POP_CAP     = cfg('floor.popularityCap', 0.10); // hard cap of popularity 
 // =========================
 const ABSOLUTE_SCORING = cfg('flags.absoluteScoring', true); // default ON
 // Stronger size bias (absolute)
-const SIZE_ABS_WEIGHT = cfg('scoring.absolute.sizeWeight', 0.82);  // higher => more size
+const SIZE_ABS_WEIGHT = cfg('scoring.absolute.sizeWeight', 0.5);  // higher => more size
 const SIZE_ABS_WEIGHT_AGGR = cfg('scoring.absolute.sizeWeightAggressive', 0.5);  // 공격주용 (신규)
 // Market-cap range for log scaling
 const MCAP_MIN = cfg('marketCap.min', 2e9);
@@ -598,8 +598,9 @@ const MCAP_MAX = cfg('marketCap.max', 6e12);       // ~5–6T puts AAPL/NVDA nea
 const BLOG_NORM = cfg('scoring.normalization.blogMentions', 20);
 const WIKI_NORM = cfg('scoring.normalization.wikiViews', 80000);
 // Absolute popularity mixer (normalized internally)
-const ABS_W_NEWS   = cfg('weights.absolute.news', 0.65);
-const ABS_W_NAVPOP = cfg('weights.absolute.naverPopularity', 0.50);
+const ABS_W_NEWS   = cfg('weights.absolute.news', 0.35);
+const ABS_W_MOMENTUM = cfg('weights.absolute.momentum', 0.25);
+const ABS_W_NAVPOP = cfg('weights.absolute.naverPopularity', 0.40);
 const ABS_W_BLOGS  = cfg('weights.absolute.blogs', 0.05);
 const ABS_W_WIKI   = cfg('weights.absolute.wiki', 0.02);
 const ABS_W_KEYPOS = cfg('weights.absolute.positiveKeywords', 0.04);
@@ -2240,10 +2241,14 @@ async function main(){
 
       // Compose an absolute popularity/content score
       const ABS_W_NAVER_FIN = Number(process.env.ABS_W_NAVER_FIN || 0.2);
-      const denom = Math.max(1e-9, ABS_W_NEWS + ABS_W_NAVPOP + ABS_W_BLOGS + ABS_W_WIKI + ABS_W_KEYPOS + ABS_W_KEYNEG + ABS_W_NAVER_FIN);
+      const trendRaw = computeTrendMomentum(nf, PREV_METRICS?.[market]?.[n]);
+      const trendScore = scoreTrend(trendRaw);
+      const momentum01 = trendScore != null ? clamp01(trendScore / 5) : 0;
+      const denom = Math.max(1e-9, ABS_W_NEWS + ABS_W_NAVPOP + ABS_W_MOMENTUM + ABS_W_BLOGS + ABS_W_WIKI + ABS_W_KEYPOS + ABS_W_KEYNEG + ABS_W_NAVER_FIN);
       const popAbs = (ABS_W_NEWS   * news
                     + ABS_W_NAVPOP * navp
                     + ABS_W_NAVER_FIN * naverFinance01
+                    + ABS_W_MOMENTUM * momentum01
                     + ABS_W_BLOGS  * blog01
                     + ABS_W_WIKI   * wiki01
                     + ABS_W_KEYPOS * pos01
