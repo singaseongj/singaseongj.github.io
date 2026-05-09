@@ -740,6 +740,14 @@ function pickDeterministic(arr, k, seed) {
   return a.slice(0, k);
 }
 
+function metricScoreFor(market, name) {
+  const metrics = poolsMetricsRaw?.markets?.[market]?.[name] || poolsMetricsRaw?.[market]?.[name];
+  if (typeof metrics?.score === 'number') return metrics.score;
+  if (typeof metrics?.score?.total === 'number') return metrics.score.total;
+  if (typeof metrics?.score?.safe === 'number') return metrics.score.safe * 100;
+  return null;
+}
+
 async function writeAtomically(dest, data) {
   const tmp = dest + '.tmp';
   await writeFile(tmp, data);
@@ -806,7 +814,21 @@ function rotateFromPools(pools, prevData) {
         const safeNames = new Set(out[market].safe.map(e => typeof e === 'string' ? e : e.name));
         candidates = candidates.filter(n => !safeNames.has(n));
       }
-      const picked = pickDeterministic(candidates, 5, `${seed}:${market}:${bucket}`);
+      // Prioritize higher-scoring names, then rotate deterministically within the top window.
+      // This avoids selecting too many low-score names when a bucket is large.
+      candidates = candidates
+        .map((name, idx) => ({ name, idx, score: metricScoreFor(market, name) }))
+        .sort((a, b) => {
+          const sa = Number.isFinite(a.score) ? a.score : -Infinity;
+          const sb = Number.isFinite(b.score) ? b.score : -Infinity;
+          if (sb !== sa) return sb - sa;
+          return a.idx - b.idx;
+        })
+        .map(v => v.name);
+
+      const topPoolSize = Math.max(5, Number(process.env.ROTATION_TOP_POOL || 12));
+      const topCandidates = candidates.slice(0, topPoolSize);
+      const picked = pickDeterministic(topCandidates.length ? topCandidates : candidates, 5, `${seed}:${market}:${bucket}`);
       out[market][bucket] = picked.map(n => {
         const sym = canonSymbol(n);
         const displayName = INDEX_NAME[sym] || n;
