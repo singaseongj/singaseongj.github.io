@@ -2702,6 +2702,16 @@ async function main(){
         byName[n].totalScore = Math.round(
           byName[n].totalScore * 0.5 + unifiedResult.score * 0.5
         );
+        byName[n].unifiedScoreData = {
+          score: unifiedResult.score,
+          ruleScore: unifiedResult.ruleScore ?? null,
+          mlScore: unifiedResult.mlScore ?? null,
+          confidence: unifiedResult.confidence ?? 0.5,
+          reasoning: unifiedResult.reasoning ?? ''
+        };
+        if (!Number.isFinite(byName[n].confidence)) {
+          byName[n].confidence = unifiedResult.confidence ?? 0.5;
+        }
       }
 
       byName[n].reasons = byName[n].reasons || {};
@@ -2880,6 +2890,8 @@ async function main(){
         components: byName[n].componentScores,
         wikiScore: byName[n].wikiScore,
         sourceReliability: byName[n].sourceReliability,
+        confidence: byName[n].confidence ?? byName[n].sourceReliability ?? 0.5,
+        unifiedScoreData: byName[n].unifiedScoreData ?? null,
         // --- diagnostics for KR penalty & floors (0..1) ---
         krPenalty01: krOff01,
         base01:            Number(((dbgBase01[n] ?? 0)).toFixed(4)),
