@@ -17,7 +17,7 @@ const HISTORY_PREFIX = 'fx_history';
 const HISTORY_MANIFEST = path.join(OUT_DIR, `${HISTORY_PREFIX}_manifest.json`);
 const LEGACY_HISTORY = path.join(OUT_DIR, 'fx_history.json');
 
-const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD', 'GOLD', 'BTC', 'SP500'];
+const SERIES_KEYS = ['USD', 'JPY100', 'EUR', 'CNY', 'GBP', 'HKD', 'GOLD', 'BTC', 'SP500', 'KOSPI'];
 const TROY_OUNCE_TO_GRAM = 31.1034768;
 
 const blankSeries = () => Object.fromEntries(SERIES_KEYS.map(key => [key, []]));
@@ -746,14 +746,14 @@ async function fetchGoldBitcoinKRW() {
   const start = Date.UTC(year, 0, 1);
   const end = now.getTime() + MS_PER_DAY;
 
-  let usdMap;
+  let usdMap = new Map();
   try {
     usdMap = await fetchUsdKrwSeries(year);
   } catch (err) {
-    throw new Error(`USD/KRW reference failed: ${err.message}`);
+    console.warn(`[FX] USD/KRW reference failed: ${err.message}`);
   }
   if (!usdMap.size) {
-    throw new Error('USD/KRW reference empty');
+    console.warn('[FX] USD/KRW reference empty; skipping KRW-converted commodity series');
   }
 
   await sleep(400);
@@ -783,7 +783,16 @@ async function fetchGoldBitcoinKRW() {
     console.warn(`[FX] S&P 500 history fetch failed: ${err.message}`);
   }
 
-  let goldSeries = goldData
+  await sleep(400);
+
+  let kospiData = null;
+  try {
+    kospiData = await fetchYahooDailySeries('^KS11', start, end);
+  } catch (err) {
+    console.warn(`[FX] KOSPI history fetch failed: ${err.message}`);
+  }
+
+  let goldSeries = (goldData && usdMap.size)
     ? convertUsdSeriesToKrw(goldData.points, usdMap, year)
         .map(point => {
           const value = Number(point?.v);
@@ -794,7 +803,7 @@ async function fetchGoldBitcoinKRW() {
         })
         .filter(Boolean)
     : [];
-  let bitcoinSeries = btcData
+  let bitcoinSeries = (btcData && usdMap.size)
     ? convertUsdSeriesToKrw(btcData.points, usdMap, year)
     : [];
   // ✅ Use raw USD index values (no KRW conversion)
@@ -810,6 +819,21 @@ async function fetchGoldBitcoinKRW() {
       mapped.push({ t: iso, v: rounded });
     }
     sp500Series = sanitizeSeriesPoints(mapped, year);
+  }
+
+
+  let kospiSeries = [];
+  if (kospiData?.points?.length) {
+    const mapped = [];
+    for (const point of kospiData.points) {
+      const iso = typeof point?.iso === 'string' ? point.iso : null;
+      const rawValue = Number(point?.value);
+      if (!iso || !Number.isFinite(rawValue)) continue;
+      const rounded = Number(rawValue.toFixed(2));
+      if (!Number.isFinite(rounded)) continue;
+      mapped.push({ t: iso, v: rounded });
+    }
+    kospiSeries = sanitizeSeriesPoints(mapped, year);
   }
 
   const btcPointIsStale = (point) => {
@@ -866,6 +890,7 @@ async function fetchGoldBitcoinKRW() {
 
   let latestGold = goldSeries.length ? goldSeries[goldSeries.length - 1] : null;
   let latestSp500 = sp500Series.length ? sp500Series[sp500Series.length - 1] : null;
+  let latestKospi = kospiSeries.length ? kospiSeries[kospiSeries.length - 1] : null;
 
   if ((!goldSeries.length || !latestGold) && process.env.DATA_API_KEY) {
     try {
@@ -892,6 +917,7 @@ async function fetchGoldBitcoinKRW() {
   if (latestGold?.t) extraLastUpdateds.push(latestGold.t);
   if (latestBitcoin?.t) extraLastUpdateds.push(latestBitcoin.t);
   if (latestSp500?.t) extraLastUpdateds.push(latestSp500.t);
+  if (latestKospi?.t) extraLastUpdateds.push(latestKospi.t);
   if (coindeskPoint?.t && !extraLastUpdateds.includes(coindeskPoint.t)) {
     extraLastUpdateds.push(coindeskPoint.t);
   }
@@ -912,9 +938,11 @@ async function fetchGoldBitcoinKRW() {
     goldSeries,
     bitcoinSeries,
     sp500Series,
+    kospiSeries,
     latestGold,
     latestBitcoin,
     latestSp500,
+    latestKospi,
     extraLastUpdateds,
   };
 }
@@ -1546,6 +1574,7 @@ async function main(){
   setItemValue('GOLD', 'Gold (1 g)', commodityData?.latestGold?.v);
   setItemValue('BTC', 'Bitcoin (1 BTC)', commodityData?.latestBitcoin?.v);
   setItemValue('SP500', 'S&P 500 (USD index)', commodityData?.latestSp500?.v);
+  setItemValue('KOSPI', 'KOSPI (KR index)', commodityData?.latestKospi?.v);
 
   for (const item of items) {
     const numeric = Number(item?.krw);
@@ -1571,6 +1600,9 @@ async function main(){
   }
   if (commodityData?.sp500Series?.length) {
     extraSeries.SP500 = commodityData.sp500Series;
+  }
+  if (commodityData?.kospiSeries?.length) {
+    extraSeries.KOSPI = commodityData.kospiSeries;
   }
   await updateHistory(out, {
     extraSeries,
