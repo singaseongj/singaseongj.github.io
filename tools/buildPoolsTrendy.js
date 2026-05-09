@@ -16,6 +16,14 @@ import { buildKeywordDict } from '../src/trends/keywordBuilder.js';
 import { fetchDeepsearchFeatures } from '../src/news/deepsearch.js';
 import { NaverSignal, NaverSignalCollector, NaverSignalCache } from '../src/signals/naver-signals.js';
 import { ConfigLoader } from '../src/config/config-loader.js';
+import { MissingDataHandler } from '../src/data/missing-data-handler.js';
+import { TechnicalIndicators } from '../src/data/technical-indicators.js';
+import { SentimentAnalyzer } from '../src/data/sentiment-analyzer.js';
+import { SectorStrength } from '../src/data/sector-strength.js';
+import { ScoreAuditor } from '../src/audit/score-auditor.js';
+import { WikipediaCollector } from '../src/data/wikipedia-collector.js';
+import { IEXCloudCollector } from '../src/data/iex-cloud-collector.js';
+import { SECEdgarSimple } from '../src/data/sec-edgar-simple.js';
 
 if (typeof fetch === 'undefined') {
   globalThis.fetch = (await import('node-fetch')).default;
@@ -589,7 +597,7 @@ const POP_CAP     = cfg('floor.popularityCap', 0.10); // hard cap of popularity 
 // =========================
 const ABSOLUTE_SCORING = cfg('flags.absoluteScoring', true); // default ON
 // Stronger size bias (absolute)
-const SIZE_ABS_WEIGHT = cfg('scoring.absolute.sizeWeight', 0.82);  // higher => more size
+const SIZE_ABS_WEIGHT = cfg('scoring.absolute.sizeWeight', 0.5);  // higher => more size
 const SIZE_ABS_WEIGHT_AGGR = cfg('scoring.absolute.sizeWeightAggressive', 0.5);  // 공격주용 (신규)
 // Market-cap range for log scaling
 const MCAP_MIN = cfg('marketCap.min', 2e9);
@@ -598,14 +606,16 @@ const MCAP_MAX = cfg('marketCap.max', 6e12);       // ~5–6T puts AAPL/NVDA nea
 const BLOG_NORM = cfg('scoring.normalization.blogMentions', 20);
 const WIKI_NORM = cfg('scoring.normalization.wikiViews', 80000);
 // Absolute popularity mixer (normalized internally)
-const ABS_W_NEWS   = cfg('weights.absolute.news', 0.65);
-const ABS_W_NAVPOP = cfg('weights.absolute.naverPopularity', 0.50);
+const ABS_W_NEWS   = cfg('weights.absolute.news', 0.35);
+const ABS_W_MOMENTUM = cfg('weights.absolute.momentum', 0.25);
+const ABS_W_NAVPOP = cfg('weights.absolute.naverPopularity', 0.40);
 const ABS_W_BLOGS  = cfg('weights.absolute.blogs', 0.05);
 const ABS_W_WIKI   = cfg('weights.absolute.wiki', 0.02);
 const ABS_W_KEYPOS = cfg('weights.absolute.positiveKeywords', 0.04);
 const ABS_W_KEYNEG = cfg('weights.absolute.negativeKeywords', 0.02);
 // Additive external boost (0..1 contribution added onto base)
 const EXT_MIX = cfg('weights.external.mix', 0.35);
+const SOURCE_CONFIDENCE_WEIGHT = cfg('weights.external.sourceConfidence', 0.08);
 
 function sizeScoreFromMcap(mcap){
   if (!Number.isFinite(mcap) || mcap <= 0) return 0;
@@ -848,7 +858,8 @@ const FEEDBACK_FILE = 'feedback.json';
 const NEWS_FEATURES_FILE = 'data/news-features.json';
 const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
 // Prefer prebuilt features if files exist (unless explicitly disabled)
-const USE_PREBUILT = process.env.USE_PREBUILT_FEATURES === '1'
+const USE_PREBUILT = ARGS.has('--use-prebuilt-features')
+  || process.env.USE_PREBUILT_FEATURES === '1'
   || (fs.existsSync('data/news-features.json') || fs.existsSync('data/naver-trends.json'));
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
@@ -865,6 +876,10 @@ try {
   const t = JSON.parse(await fsp.readFile(NAVER_TRENDS_FILE, 'utf8'));
   NAVER_TRENDS = (t && t.perSymbol) ? t.perSymbol : (t || {});
 } catch {}
+
+if (USE_PREBUILT) {
+  console.log(`[prebuilt] enabled (news=${Object.keys(NEWS_FEATURES).length}, naver=${Object.keys(NAVER_TRENDS).length})`);
+}
 
 for (const [name, symbol] of Object.entries(DYNAMIC_TICKER_MAP)) {
   if (!symbol) continue;
@@ -1524,6 +1539,27 @@ function scoreCredibility(r){
   return 1;
 }
 
+function computeFreeSourceReliability(row = {}) {
+  const hasWiki = Number(row.wikiViews || 0) > 0;
+  const hasNews = Number(row.newsCount || 0) > 0;
+  const hasFmp = Number(row.fmpNewsCount || 0) > 0;
+  const hasGoogle = Number(row.googleNewsCount || 0) > 0;
+  const hasYahooRss = Number(row.yahooNewsCount || 0) > 0;
+  const hasInvesting = Number(row.investingNewsCount || 0) > 0;
+  const hasHanwha = Number(row.hanwhaNewsCount || 0) > 0;
+  const hasNaverSignal = Number(row.naverPopularity || 0) > 0 || Number(row.naverFinanceScore || 0) > 0;
+  const hasTechnical = Number.isFinite(row.ret5) || Number.isFinite(row.ret20) || Number.isFinite(row.turnover);
+  const hasEarnings = !!row.earn;
+  let reliability = 0;
+  reliability += hasWiki ? 0.20 : 0;
+  reliability += hasEarnings ? 0.20 : 0;
+  reliability += hasTechnical ? 0.15 : 0;
+  reliability += hasNaverSignal ? 0.15 : 0;
+  reliability += (hasNews || hasFmp || hasGoogle || hasYahooRss || hasInvesting || hasHanwha) ? 0.20 : 0;
+  reliability += [hasFmp, hasGoogle, hasYahooRss, hasInvesting, hasHanwha].filter(Boolean).length >= 2 ? 0.10 : 0;
+  return clamp01(reliability);
+}
+
 const CATALYST_DICT = [
   ['earnings', /earnings beat|eps beat|guidance raise|upgraded|target hike|실적(?: 호조| 개선| 서프라이즈)|가이던스(?: 상향| 상향조정)/i],
   ['contract', /contract win|joint venture|JV|partnership|MOU|제휴|협력|계약|수주|공급|납품/i],
@@ -1799,6 +1835,34 @@ async function mapLimit(items, limit, worker) {
 
 // ---------- Main ----------
 async function main(){
+  console.log('[buildPoolsTrendy] Starting pools calculation...\n');
+  const auditLevel = process.env.AUDIT_LEVEL || 'standard';
+  const enableAudit = process.env.ENABLE_AUDIT !== 'false';
+  const missingDataHandler = new MissingDataHandler({
+    newsScore: 0.5, popularityScore: 0.4, blogScore: 0.3, wikiScore: 0.2, volumeScore: 0.5
+  });
+  const sentimentAnalyzer = new SentimentAnalyzer();
+  const sectorStrength = new SectorStrength();
+  const wikipediaCollector = new WikipediaCollector();
+  const iexCloud = new IEXCloudCollector(process.env.IEX_API_KEY);
+  const secEdgar = new SECEdgarSimple();
+  const weights = {
+    size: cfg('scoring.absolute.sizeWeight', 0.35),
+    news: cfg('weights.absolute.news', 0.25),
+    naver: cfg('weights.absolute.naverPopularity', 0.15),
+    blogs: cfg('weights.absolute.blogs', 0.05),
+    wiki: cfg('weights.absolute.wiki', 0.02),
+    technical: cfg('weights.absolute.technical', 0.12),
+    sentiment: cfg('weights.absolute.sentiment', 0.04),
+    sector: cfg('weights.absolute.sector', 0.02),
+    wikipedia: cfg('weights.absolute.wikipedia', 0.03),
+    iex: cfg('weights.absolute.iex', 0.02),
+  };
+  const weightSum = Object.values(weights).reduce((a, b) => a + b, 0);
+  console.log(`[Config] Audit Level: ${auditLevel}`);
+  console.log(`[Config] Audit Enabled: ${enableAudit}`);
+  console.log(`[Config] Weight Sum Check: ${weightSum.toFixed(3)} ✓\n`);
+
   const pools = await loadJson(POOLS_FILE);
   if (!pools){
     console.log('[buildPools] No pools.json; nothing to do.');
@@ -2240,10 +2304,14 @@ async function main(){
 
       // Compose an absolute popularity/content score
       const ABS_W_NAVER_FIN = Number(process.env.ABS_W_NAVER_FIN || 0.2);
-      const denom = Math.max(1e-9, ABS_W_NEWS + ABS_W_NAVPOP + ABS_W_BLOGS + ABS_W_WIKI + ABS_W_KEYPOS + ABS_W_KEYNEG + ABS_W_NAVER_FIN);
+      const trendRaw = computeTrendMomentum(nf, PREV_METRICS?.[market]?.[n]);
+      const trendScore = scoreTrend(trendRaw);
+      const momentum01 = trendScore != null ? clamp01(trendScore / 5) : 0;
+      const denom = Math.max(1e-9, ABS_W_NEWS + ABS_W_NAVPOP + ABS_W_MOMENTUM + ABS_W_BLOGS + ABS_W_WIKI + ABS_W_KEYPOS + ABS_W_KEYNEG + ABS_W_NAVER_FIN);
       const popAbs = (ABS_W_NEWS   * news
                     + ABS_W_NAVPOP * navp
                     + ABS_W_NAVER_FIN * naverFinance01
+                    + ABS_W_MOMENTUM * momentum01
                     + ABS_W_BLOGS  * blog01
                     + ABS_W_WIKI   * wiki01
                     + ABS_W_KEYPOS * pos01
@@ -2580,9 +2648,48 @@ async function main(){
     }
 
     for (const n of names) {
+      const sym = byName[n].sym || nameToSymbol(n) || n;
+      const audit = new ScoreAuditor(sym, n, auditLevel);
+      const historicalPrices = [];
+      const technicalResult = new TechnicalIndicators(historicalPrices).getTechnicalScore();
+      const sentimentResult = sentimentAnalyzer.analyzeNewsSentiment([]);
+      const sectorResult = sectorStrength.getSectorBoost(sym, pools[market]?.sectorMap || {});
+      const wikiResult = missingDataHandler.handleWikiViews(byName[n].wikiViews || 0);
+      const blogResult = missingDataHandler.handleBlogMentions(byName[n].blogMentions || 0);
+      const newsResult = { score: clamp01(byName[n].newsScore || 0), confidence: byName[n].newsScore ? 0.8 : 0.4 };
+      const confidence = missingDataHandler.calculateOverallConfidence({
+        news: newsResult.confidence,
+        technical: technicalResult.confidence,
+        sentiment: sentimentResult.confidence,
+        wiki: wikiResult.confidence,
+        blog: blogResult.confidence,
+      });
       const j = DISABLE_JITTER ? 0 : djitter(n);
+      const sourceReliability = computeFreeSourceReliability(byName[n]);
+      byName[n].sourceReliability = sourceReliability;
+      if (SOURCE_CONFIDENCE_WEIGHT > 0) {
+        scoreSafe[n] = clamp01(scoreSafe[n] + sourceReliability * SOURCE_CONFIDENCE_WEIGHT);
+        scoreAggr[n] = clamp01(scoreAggr[n] + sourceReliability * SOURCE_CONFIDENCE_WEIGHT * 0.9);
+      }
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
       scoreAggr[n] = clamp01(scoreAggr[n] + j);
+      const blendedComponent =
+        weights.news * newsResult.score +
+        weights.blogs * blogResult.score +
+        weights.wiki * wikiResult.score +
+        weights.technical * technicalResult.score +
+        weights.sentiment * sentimentResult.score +
+        weights.sector * sectorResult.score;
+      scoreSafe[n] = clamp01(missingDataHandler.adjustScoreByConfidence(scoreSafe[n] + blendedComponent * 0.1, confidence));
+      if (process.env.IEX_API_KEY) {
+        const iexResult = await iexCloud.getCompanySignal(sym);
+        scoreSafe[n] = clamp01(scoreSafe[n] + weights.iex * (iexResult.score || 0));
+      }
+      if ((market === 'KOSPI' || market === 'KOSDAQ')) {
+        const krPenalty = cfg('trends.koreanMarketDeductPoints', 20) / 100;
+        scoreSafe[n] = Math.max(0, scoreSafe[n] - krPenalty);
+        audit.recordStep('penalty_kr_market', scoreSafe[n], { delta: -krPenalty });
+      }
       const mapped = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
       byName[n].totalScore = (process.env.ALLOW_NEGATIVE_SCORES === '1')
         ? Math.min(100, mapped)       // allow negatives down to -20 (or lower), cap only at 100
@@ -2631,6 +2738,7 @@ async function main(){
         sig.naver = clamp01(navp || asvi || 0);
       }
       byName[n].reasons = stripNulls(byName[n].reasons);
+      if (enableAudit) byName[n].audit = auditLevel === 'minimal' ? audit.getSummary() : audit.getAudit();
     }
     const scores = names.map(n => byName[n].totalScore);
     const highCount = scores.filter(s => s > 90).length;
@@ -2762,6 +2870,7 @@ async function main(){
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
         wikiScore: byName[n].wikiScore,
+        sourceReliability: byName[n].sourceReliability,
         // --- diagnostics for KR penalty & floors (0..1) ---
         krPenalty01: krOff01,
         base01:            Number(((dbgBase01[n] ?? 0)).toFixed(4)),
@@ -2851,6 +2960,19 @@ async function main(){
       KR_OFFSET_AND_RESCALE: false
     },
     runId: todayYMD() + 'T' + new Date().toISOString().slice(11, 19)
+  };
+  metricsOut.auditConfiguration = {
+    enabled: process.env.ENABLE_AUDIT !== 'false',
+    level: process.env.AUDIT_LEVEL || 'standard',
+    timestamp: new Date().toISOString()
+  };
+  metricsOut.dataSourcesConfiguration = {
+    enabled: true,
+    timestamp: new Date().toISOString(),
+    sources: {
+      traditional: ['Market Cap', 'News', 'Naver', 'Blogs', 'Wikipedia'],
+      new: ['Technical Indicators', 'Sentiment Analysis', 'Sector Strength', 'Wikipedia Interest Score', 'IEX Cloud', 'SEC EDGAR']
+    }
   };
 
 
