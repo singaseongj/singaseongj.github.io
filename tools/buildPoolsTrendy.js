@@ -607,6 +607,7 @@ const ABS_W_KEYPOS = cfg('weights.absolute.positiveKeywords', 0.04);
 const ABS_W_KEYNEG = cfg('weights.absolute.negativeKeywords', 0.02);
 // Additive external boost (0..1 contribution added onto base)
 const EXT_MIX = cfg('weights.external.mix', 0.35);
+const SOURCE_CONFIDENCE_WEIGHT = cfg('weights.external.sourceConfidence', 0.08);
 
 function sizeScoreFromMcap(mcap){
   if (!Number.isFinite(mcap) || mcap <= 0) return 0;
@@ -1523,6 +1524,27 @@ function scoreCredibility(r){
   if (x >= 0.40) return 3;
   if (x >= 0.25) return 2;
   return 1;
+}
+
+function computeFreeSourceReliability(row = {}) {
+  const hasWiki = Number(row.wikiViews || 0) > 0;
+  const hasNews = Number(row.newsCount || 0) > 0;
+  const hasFmp = Number(row.fmpNewsCount || 0) > 0;
+  const hasGoogle = Number(row.googleNewsCount || 0) > 0;
+  const hasYahooRss = Number(row.yahooNewsCount || 0) > 0;
+  const hasInvesting = Number(row.investingNewsCount || 0) > 0;
+  const hasHanwha = Number(row.hanwhaNewsCount || 0) > 0;
+  const hasNaverSignal = Number(row.naverPopularity || 0) > 0 || Number(row.naverFinanceScore || 0) > 0;
+  const hasTechnical = Number.isFinite(row.ret5) || Number.isFinite(row.ret20) || Number.isFinite(row.turnover);
+  const hasEarnings = !!row.earn;
+  let reliability = 0;
+  reliability += hasWiki ? 0.20 : 0;
+  reliability += hasEarnings ? 0.20 : 0;
+  reliability += hasTechnical ? 0.15 : 0;
+  reliability += hasNaverSignal ? 0.15 : 0;
+  reliability += (hasNews || hasFmp || hasGoogle || hasYahooRss || hasInvesting || hasHanwha) ? 0.20 : 0;
+  reliability += [hasFmp, hasGoogle, hasYahooRss, hasInvesting, hasHanwha].filter(Boolean).length >= 2 ? 0.10 : 0;
+  return clamp01(reliability);
 }
 
 const CATALYST_DICT = [
@@ -2586,6 +2608,12 @@ async function main(){
 
     for (const n of names) {
       const j = DISABLE_JITTER ? 0 : djitter(n);
+      const sourceReliability = computeFreeSourceReliability(byName[n]);
+      byName[n].sourceReliability = sourceReliability;
+      if (SOURCE_CONFIDENCE_WEIGHT > 0) {
+        scoreSafe[n] = clamp01(scoreSafe[n] + sourceReliability * SOURCE_CONFIDENCE_WEIGHT);
+        scoreAggr[n] = clamp01(scoreAggr[n] + sourceReliability * SOURCE_CONFIDENCE_WEIGHT * 0.9);
+      }
       scoreSafe[n] = clamp01(scoreSafe[n] + j);
       scoreAggr[n] = clamp01(scoreAggr[n] + j);
       const mapped = roundScore(FLOOR + (CEIL_LOCAL - FLOOR) * scoreSafe[n]);
@@ -2767,6 +2795,7 @@ async function main(){
         fetchMs: byName[n].fetchMs,
         components: byName[n].componentScores,
         wikiScore: byName[n].wikiScore,
+        sourceReliability: byName[n].sourceReliability,
         // --- diagnostics for KR penalty & floors (0..1) ---
         krPenalty01: krOff01,
         base01:            Number(((dbgBase01[n] ?? 0)).toFixed(4)),
