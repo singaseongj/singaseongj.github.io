@@ -1,1138 +1,411 @@
 {
+  "generatedAt": "2026-05-09T07:57:01.288Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-09",
   "window": "12_hours",
   "total_phrases": 28,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Overseas IBs Korea",
-      "term_ko": "해외 IB들 한국",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "해외 IB들 한국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%B4%EC%99%B8%20IB%EB%93%A4%20%ED%95%9C%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%B4%EC%99%B8%20IB%EB%93%A4%20%ED%95%9C%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Overseas Ibs Korea",
+      "term_ko": "해외 IB들 한국"
     },
     {
-      "term": "Securities News of the DayMay 8",
-      "term_ko": "오늘의 증권소식5월 8일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증권소식5월 8일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 증권소식(5월 8일)",
-              "link": "https://www.radiokorea.com/news/article.php?uid=494915"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D5%EC%9B%94%208%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D5%EC%9B%94%208%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증권소식(5월 8일)",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=494915",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Securities News of the Daymay 8",
+      "term_ko": "오늘의 증권소식5월 8일"
     },
     {
-      "term": "0.3 percentage points in one month",
-      "term_ko": "달 만에 0.3%P",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달 만에 0.3%P",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%20%EB%A7%8C%EC%97%90%200.3%25P",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%20%EB%A7%8C%EC%97%90%200.3%25P"
-      },
-      "top_headlines": [
-        {
-          "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "0.3 Percentage Points in One Month",
+      "term_ko": "달 만에 0.3%P"
     },
     {
-      "term": "Offer an increased 2.4",
-      "term_ko": "높인 2.4% 제시",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "높인 2.4% 제시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%92%EC%9D%B8%202.4%25%20%EC%A0%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%92%EC%9D%B8%202.4%25%20%EC%A0%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Offer an Increased 2.4",
+      "term_ko": "높인 2.4% 제시"
     },
     {
-      "term": "In the second half of the year, Bollinger Sailor",
-      "term_ko": "볼린저 세일러는 하반기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "볼린저 세일러는 하반기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 5월에 탈출하라고?...존 볼린저·세일러는 \"하반기 폭등\" 주장",
-              "link": "http://coinreaders.com/235471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%BC%EB%A6%B0%EC%A0%80%20%EC%84%B8%EC%9D%BC%EB%9F%AC%EB%8A%94%20%ED%95%98%EB%B0%98%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%BC%EB%A6%B0%EC%A0%80%20%EC%84%B8%EC%9D%BC%EB%9F%AC%EB%8A%94%20%ED%95%98%EB%B0%98%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 5월에 탈출하라고?...존 볼린저·세일러는 \"하반기 폭등\" 주장",
-          "summary": "",
-          "link": "http://coinreaders.com/235471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "In the Second Half of the Year, Bollinger Sailor",
+      "term_ko": "볼린저 세일러는 하반기"
     },
     {
-      "term": "Token Quotes The most dangerous",
-      "term_ko": "토큰명언 가장 위험한",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "토큰명언 가장 위험한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[토큰명언] \"가장 위험한 순간은 모든 것이 완벽해 보일 때다\" ㅡ Day 53",
-              "link": "https://www.tokenpost.kr/news/insights/357822"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%ED%81%B0%EB%AA%85%EC%96%B8%20%EA%B0%80%EC%9E%A5%20%EC%9C%84%ED%97%98%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%ED%81%B0%EB%AA%85%EC%96%B8%20%EA%B0%80%EC%9E%A5%20%EC%9C%84%ED%97%98%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[토큰명언] \"가장 위험한 순간은 모든 것이 완벽해 보일 때다\" ㅡ Day 53",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/357822",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Token Quotes the Most Dangerous",
+      "term_ko": "토큰명언 가장 위험한"
     },
     {
-      "term": "When it looks perfect",
-      "term_ko": "완벽해 보일 때다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "완벽해 보일 때다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[토큰명언] \"가장 위험한 순간은 모든 것이 완벽해 보일 때다\" ㅡ Day 53",
-              "link": "https://www.tokenpost.kr/news/insights/357822"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%84%EB%B2%BD%ED%95%B4%20%EB%B3%B4%EC%9D%BC%20%EB%95%8C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%84%EB%B2%BD%ED%95%B4%20%EB%B3%B4%EC%9D%BC%20%EB%95%8C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[토큰명언] \"가장 위험한 순간은 모든 것이 완벽해 보일 때다\" ㅡ Day 53",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/357822",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "When It Looks Perfect",
+      "term_ko": "완벽해 보일 때다"
     },
     {
       "term": "Default Day Political",
-      "term_ko": "부도의 날 정치적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부도의 날 정치적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[회고 영화관] '국가 부도의 날', 정치적, 경제적 전쟁 영화",
-              "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=78548"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%84%EC%9D%98%20%EB%82%A0%20%EC%A0%95%EC%B9%98%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%84%EC%9D%98%20%EB%82%A0%20%EC%A0%95%EC%B9%98%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[회고 영화관] '국가 부도의 날', 정치적, 경제적 전쟁 영화",
-          "summary": "",
-          "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=78548",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부도의 날 정치적"
     },
     {
       "term": "Economic Warfare Movie",
-      "term_ko": "경제적 전쟁 영화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경제적 전쟁 영화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[회고 영화관] '국가 부도의 날', 정치적, 경제적 전쟁 영화",
-              "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=78548"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%EC%A0%81%20%EC%A0%84%EC%9F%81%20%EC%98%81%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%EC%A0%81%20%EC%A0%84%EC%9F%81%20%EC%98%81%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[회고 영화관] '국가 부도의 날', 정치적, 경제적 전쟁 영화",
-          "summary": "",
-          "link": "https://www.mediafine.co.kr/news/articleView.html?idxno=78548",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경제적 전쟁 영화"
     },
     {
       "term": "Hana Securities Hann Silver H2",
-      "term_ko": "하나證 한은 하반기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나證 한은 하반기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나證 \"한은, 하반기 매파 스탠스로 환율 하락 유도할 것\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4413933"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%E8%AD%89%20%ED%95%9C%EC%9D%80%20%ED%95%98%EB%B0%98%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%E8%AD%89%20%ED%95%9C%EC%9D%80%20%ED%95%98%EB%B0%98%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "하나證 \"한은, 하반기 매파 스탠스로 환율 하락 유도할 것\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4413933",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하나證 한은 하반기"
     },
     {
-      "term": "Currency exchange rates by hawk stance",
-      "term_ko": "매파 스탠스로 환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매파 스탠스로 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나證 \"한은, 하반기 매파 스탠스로 환율 하락 유도할 것\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4413933"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%ED%8C%8C%20%EC%8A%A4%ED%83%A0%EC%8A%A4%EB%A1%9C%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%ED%8C%8C%20%EC%8A%A4%ED%83%A0%EC%8A%A4%EB%A1%9C%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "하나證 \"한은, 하반기 매파 스탠스로 환율 하락 유도할 것\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4413933",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Currency Exchange Rates by Hawk Stance",
+      "term_ko": "매파 스탠스로 환율"
     },
     {
-      "term": "Things to drive down",
-      "term_ko": "하락 유도할 것",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락 유도할 것",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "하나證 \"한은, 하반기 매파 스탠스로 환율 하락 유도할 것\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4413933"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EC%9C%A0%EB%8F%84%ED%95%A0%20%EA%B2%83",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EC%9C%A0%EB%8F%84%ED%95%A0%20%EA%B2%83"
-      },
-      "top_headlines": [
-        {
-          "title": "하나證 \"한은, 하반기 매파 스탠스로 환율 하락 유도할 것\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4413933",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Things to Drive Down",
+      "term_ko": "하락 유도할 것"
     },
     {
-      "term": "Kim Sun-Tae Rides the Wave",
-      "term_ko": "김선태 열풍 올라탄",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김선태 열풍 올라탄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금융권 러브콜…트래블월렛도 ‘김선태 열풍’ 올라탄 사연은?[김윤주의...",
-              "link": "https://n.news.naver.com/mnews/article/243/0000097592?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%84%A0%ED%83%9C%20%EC%97%B4%ED%92%8D%20%EC%98%AC%EB%9D%BC%ED%83%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%84%A0%ED%83%9C%20%EC%97%B4%ED%92%8D%20%EC%98%AC%EB%9D%BC%ED%83%84"
-      },
-      "top_headlines": [
-        {
-          "title": "금융권 러브콜…트래블월렛도 ‘김선태 열풍’ 올라탄 사연은?[김윤주의...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/243/0000097592?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kim Sun-tae Rides the Wave",
+      "term_ko": "김선태 열풍 올라탄"
     },
     {
-      "term": "Rent by the Belgian government",
-      "term_ko": "벨기에 정부가 월세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "벨기에 정부가 월세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[슬금슬금] '국민리츠'JR글로벌리츠 , 벨기에 정부가 월세 내는데 왜 흔...",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=720190"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B2%A8%EA%B8%B0%EC%97%90%20%EC%A0%95%EB%B6%80%EA%B0%80%20%EC%9B%94%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B2%A8%EA%B8%B0%EC%97%90%20%EC%A0%95%EB%B6%80%EA%B0%80%20%EC%9B%94%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[슬금슬금] '국민리츠'JR글로벌리츠 , 벨기에 정부가 월세 내는데 왜 흔...",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=720190",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rent by the Belgian Government",
+      "term_ko": "벨기에 정부가 월세"
     },
     {
-      "term": "Slowly and steadily Kookmin Reits JR Global Reits",
-      "term_ko": "슬금슬금 국민리츠JR글로벌리츠",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "슬금슬금 국민리츠JR글로벌리츠",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[슬금슬금] '국민리츠'JR글로벌리츠 , 벨기에 정부가 월세 내는데 왜 흔...",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=720190"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%AC%EA%B8%88%EC%8A%AC%EA%B8%88%20%EA%B5%AD%EB%AF%BC%EB%A6%AC%EC%B8%A0JR%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%A6%AC%EC%B8%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%AC%EA%B8%88%EC%8A%AC%EA%B8%88%20%EA%B5%AD%EB%AF%BC%EB%A6%AC%EC%B8%A0JR%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%A6%AC%EC%B8%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[슬금슬금] '국민리츠'JR글로벌리츠 , 벨기에 정부가 월세 내는데 왜 흔...",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=720190",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Slowly and Steadily Kookmin Reits Jr Global Reits",
+      "term_ko": "슬금슬금 국민리츠JR글로벌리츠"
     },
     {
-      "term": "Trump Endorsement AI",
-      "term_ko": "트럼프 지지 AI",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Endorsement AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Dell Stock Hits Record High After Trump Endorsement, AI Server Demand Fue...",
-              "link": "https://www.econotimes.com/Dell-Stock-Hits-Record-High-After-Trump-Endorsement-AI-Server-Demand-Fuels-Rally-1741242"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Endorsement%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Endorsement%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Dell Stock Hits Record High After Trump Endorsement, AI Server Demand Fue...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Dell-Stock-Hits-Record-High-After-Trump-Endorsement-AI-Server-Demand-Fuels-Rally-1741242",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump Endorsement Ai",
+      "term_ko": "트럼프 지지 AI"
     },
     {
-      "term": "Spike claims",
-      "term_ko": "폭등 주장",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "폭등 주장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 5월에 탈출하라고?...존 볼린저·세일러는 \"하반기 폭등\" 주장",
-              "link": "http://coinreaders.com/235471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EB%93%B1%20%EC%A3%BC%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EB%93%B1%20%EC%A3%BC%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 5월에 탈출하라고?...존 볼린저·세일러는 \"하반기 폭등\" 주장",
-          "summary": "",
-          "link": "http://coinreaders.com/235471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spike Claims",
+      "term_ko": "폭등 주장"
     },
     {
       "term": "Capital Ratio Testbed",
-      "term_ko": "자본비율 시험대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자본비율 시험대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "우리금융지주, 비은행 확장에 자본비율 시험대",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16056105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%B3%B8%EB%B9%84%EC%9C%A8%20%EC%8B%9C%ED%97%98%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%B3%B8%EB%B9%84%EC%9C%A8%20%EC%8B%9C%ED%97%98%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "우리금융지주, 비은행 확장에 자본비율 시험대",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16056105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자본비율 시험대"
     },
     {
       "term": "Growth Rate One",
-      "term_ko": "성장률 한",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "성장률 한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EC%9E%A5%EB%A5%A0%20%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EC%9E%A5%EB%A5%A0%20%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "성장률 한"
     },
     {
-      "term": "Interest rate increases",
-      "term_ko": "금리 인상",
-      "significance_score": 280,
-      "mentions": 400,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인상",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-01",
-              "timestamp": 1777561200000,
-              "value": 10.98661
-            },
-            {
-              "period": "2026-05-02",
-              "timestamp": 1777647600000,
-              "value": 8.74572
-            },
-            {
-              "period": "2026-05-03",
-              "timestamp": 1777734000000,
-              "value": 11.42234
-            },
-            {
-              "period": "2026-05-04",
-              "timestamp": 1777820400000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-05",
-              "timestamp": 1777906800000,
-              "value": 54.80859
-            },
-            {
-              "period": "2026-05-06",
-              "timestamp": 1777993200000,
-              "value": 99.8755
-            },
-            {
-              "period": "2026-05-07",
-              "timestamp": 1778079600000,
-              "value": 65.2661
-            },
-            {
-              "period": "2026-05-08",
-              "timestamp": 1778166000000,
-              "value": 68.47183
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "해외 IB들, 한국 성장률 한 달 만에 0.3%P 높인 2.4% 제시… 금리 인상 카...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004126866?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 399.8444,
-        "weekly_average_volume": 66.6407,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.015722,
-        "time_weight": 0.027945,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778166000000
-      }
+      "term": "Interest Rate Increases",
+      "term_ko": "금리 인상"
     },
     {
-      "term": "Why would I pay",
-      "term_ko": "내는데 왜",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "내는데 왜",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[슬금슬금] '국민리츠'JR글로벌리츠 , 벨기에 정부가 월세 내는데 왜 흔...",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=720190"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%8A%94%EB%8D%B0%20%EC%99%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%8A%94%EB%8D%B0%20%EC%99%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[슬금슬금] '국민리츠'JR글로벌리츠 , 벨기에 정부가 월세 내는데 왜 흔...",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=720190",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Why Would I Pay",
+      "term_ko": "내는데 왜"
     },
     {
       "term": "Nasdaq Hit Record",
-      "term_ko": "나스닥 히트 기록",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nasdaq Hit Record",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "S&P 500, Nasdaq Hit Record Highs as AI Stocks Rally and Strong Jobs Data ...",
-              "link": "https://www.econotimes.com/SP-500-Nasdaq-Hit-Record-Highs-as-AI-Stocks-Rally-and-Strong-Jobs-Data-Boost-Confidence-1741248"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nasdaq%20Hit%20Record",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nasdaq%20Hit%20Record"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P 500, Nasdaq Hit Record Highs as AI Stocks Rally and Strong Jobs Data ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/SP-500-Nasdaq-Hit-Record-Highs-as-AI-Stocks-Rally-and-Strong-Jobs-Data-Boost-Confidence-1741248",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 히트 기록"
     },
     {
       "term": "Strong Jobs Data",
-      "term_ko": "강력한 채용 데이터",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strong Jobs Data",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "S&P 500, Nasdaq Hit Record Highs as AI Stocks Rally and Strong Jobs Data ...",
-              "link": "https://www.econotimes.com/SP-500-Nasdaq-Hit-Record-Highs-as-AI-Stocks-Rally-and-Strong-Jobs-Data-Boost-Confidence-1741248"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strong%20Jobs%20Data",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strong%20Jobs%20Data"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P 500, Nasdaq Hit Record Highs as AI Stocks Rally and Strong Jobs Data ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/SP-500-Nasdaq-Hit-Record-Highs-as-AI-Stocks-Rally-and-Strong-Jobs-Data-Boost-Confidence-1741248",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "강력한 채용 데이터"
     },
     {
       "term": "Hits Record High",
-      "term_ko": "사상 최고 기록 달성",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hits Record High",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Dell Stock Hits Record High After Trump Endorsement, AI Server Demand Fue...",
-              "link": "https://www.econotimes.com/Dell-Stock-Hits-Record-High-After-Trump-Endorsement-AI-Server-Demand-Fuels-Rally-1741242"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hits%20Record%20High",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hits%20Record%20High"
-      },
-      "top_headlines": [
-        {
-          "title": "Dell Stock Hits Record High After Trump Endorsement, AI Server Demand Fue...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Dell-Stock-Hits-Record-High-After-Trump-Endorsement-AI-Server-Demand-Fuels-Rally-1741242",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사상 최고 기록 달성"
     },
     {
       "term": "Wall Street Hits",
-      "term_ko": "월스트리트 히트작",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Hits",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Hits Record High as AI Chip Stocks and Strong U.S. Jobs Data ...",
-              "link": "https://www.econotimes.com/Wall-Street-Hits-Record-High-as-AI-Chip-Stocks-and-Strong-US-Jobs-Data-Boost-Markets-1741235"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Hits",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Hits"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Hits Record High as AI Chip Stocks and Strong U.S. Jobs Data ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Hits-Record-High-as-AI-Chip-Stocks-and-Strong-US-Jobs-Data-Boost-Markets-1741235",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 히트작"
     },
     {
-      "term": "Strong U.S Jobs",
-      "term_ko": "강력한 미국 일자리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strong U.S Jobs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Hits Record High as AI Chip Stocks and Strong U.S. Jobs Data ...",
-              "link": "https://www.econotimes.com/Wall-Street-Hits-Record-High-as-AI-Chip-Stocks-and-Strong-US-Jobs-Data-Boost-Markets-1741235"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strong%20U.S%20Jobs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strong%20U.S%20Jobs"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Hits Record High as AI Chip Stocks and Strong U.S. Jobs Data ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Hits-Record-High-as-AI-Chip-Stocks-and-Strong-US-Jobs-Data-Boost-Markets-1741235",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Strong U.s Jobs",
+      "term_ko": "강력한 미국 일자리"
     },
     {
-      "term": "AI Chip",
-      "term_ko": "AI 칩",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Chip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Hits Record High as AI Chip Stocks and Strong U.S. Jobs Data ...",
-              "link": "https://www.econotimes.com/Wall-Street-Hits-Record-High-as-AI-Chip-Stocks-and-Strong-US-Jobs-Data-Boost-Markets-1741235"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Chip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Chip"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Hits Record High as AI Chip Stocks and Strong U.S. Jobs Data ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Hits-Record-High-as-AI-Chip-Stocks-and-Strong-US-Jobs-Data-Boost-Markets-1741235",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Chip",
+      "term_ko": "AI 칩"
     },
     {
       "term": "Server Demand",
-      "term_ko": "서버 수요",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Server Demand",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-09T11:46:10+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Dell Stock Hits Record High After Trump Endorsement, AI Server Demand Fue...",
-              "link": "https://www.econotimes.com/Dell-Stock-Hits-Record-High-After-Trump-Endorsement-AI-Server-Demand-Fuels-Rally-1741242"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Server%20Demand",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Server%20Demand"
-      },
-      "top_headlines": [
-        {
-          "title": "Dell Stock Hits Record High After Trump Endorsement, AI Server Demand Fue...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Dell-Stock-Hits-Record-High-After-Trump-Endorsement-AI-Server-Demand-Fuels-Rally-1741242",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서버 수요"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-09T02:47:13.950Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-09T11:46:10+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 2,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Overseas Ibs Korea",
+      "term_ko": "해외 IB들 한국"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-09T11:46:10+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-09T11:46:10+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Securities News of the Daymay 8",
+      "term_ko": "오늘의 증권소식5월 8일"
+    },
+    {
+      "term": "0.3 Percentage Points in One Month",
+      "term_ko": "달 만에 0.3%P"
+    },
+    {
+      "term": "Offer an Increased 2.4",
+      "term_ko": "높인 2.4% 제시"
+    },
+    {
+      "term": "In the Second Half of the Year, Bollinger Sailor",
+      "term_ko": "볼린저 세일러는 하반기"
+    },
+    {
+      "term": "Token Quotes the Most Dangerous",
+      "term_ko": "토큰명언 가장 위험한"
+    },
+    {
+      "term": "When It Looks Perfect",
+      "term_ko": "완벽해 보일 때다"
+    },
+    {
+      "term": "Default Day Political",
+      "term_ko": "부도의 날 정치적"
+    },
+    {
+      "term": "Economic Warfare Movie",
+      "term_ko": "경제적 전쟁 영화"
+    },
+    {
+      "term": "Hana Securities Hann Silver H2",
+      "term_ko": "하나證 한은 하반기"
+    },
+    {
+      "term": "Currency Exchange Rates by Hawk Stance",
+      "term_ko": "매파 스탠스로 환율"
+    },
+    {
+      "term": "Things to Drive Down",
+      "term_ko": "하락 유도할 것"
+    },
+    {
+      "term": "Kim Sun-tae Rides the Wave",
+      "term_ko": "김선태 열풍 올라탄"
+    },
+    {
+      "term": "Rent by the Belgian Government",
+      "term_ko": "벨기에 정부가 월세"
+    },
+    {
+      "term": "Slowly and Steadily Kookmin Reits Jr Global Reits",
+      "term_ko": "슬금슬금 국민리츠JR글로벌리츠"
+    },
+    {
+      "term": "Trump Endorsement Ai",
+      "term_ko": "트럼프 지지 AI"
+    },
+    {
+      "term": "Spike Claims",
+      "term_ko": "폭등 주장"
+    },
+    {
+      "term": "Capital Ratio Testbed",
+      "term_ko": "자본비율 시험대"
+    },
+    {
+      "term": "Growth Rate One",
+      "term_ko": "성장률 한"
+    },
+    {
+      "term": "Interest Rate Increases",
+      "term_ko": "금리 인상"
+    },
+    {
+      "term": "Why Would I Pay",
+      "term_ko": "내는데 왜"
+    },
+    {
+      "term": "Nasdaq Hit Record",
+      "term_ko": "나스닥 히트 기록"
+    },
+    {
+      "term": "Strong Jobs Data",
+      "term_ko": "강력한 채용 데이터"
+    },
+    {
+      "term": "Hits Record High",
+      "term_ko": "사상 최고 기록 달성"
+    },
+    {
+      "term": "Wall Street Hits",
+      "term_ko": "월스트리트 히트작"
+    },
+    {
+      "term": "Strong U.s Jobs",
+      "term_ko": "강력한 미국 일자리"
+    },
+    {
+      "term": "Ai Chip",
+      "term_ko": "AI 칩"
+    },
+    {
+      "term": "Server Demand",
+      "term_ko": "서버 수요"
+    }
+  ],
+  "translations": {
+    "Overseas Ibs Korea": {
+      "en": "Overseas Ibs Korea",
+      "ko": "해외 IB들 한국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Securities News of the Daymay 8": {
+      "en": "Securities News of the Daymay 8",
+      "ko": "오늘의 증권소식5월 8일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "0.3 Percentage Points in One Month": {
+      "en": "0.3 Percentage Points in One Month",
+      "ko": "달 만에 0.3%P",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Offer an Increased 2.4": {
+      "en": "Offer an Increased 2.4",
+      "ko": "높인 2.4% 제시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "In the Second Half of the Year, Bollinger Sailor": {
+      "en": "In the Second Half of the Year, Bollinger Sailor",
+      "ko": "볼린저 세일러는 하반기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Token Quotes the Most Dangerous": {
+      "en": "Token Quotes the Most Dangerous",
+      "ko": "토큰명언 가장 위험한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "When It Looks Perfect": {
+      "en": "When It Looks Perfect",
+      "ko": "완벽해 보일 때다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Default Day Political": {
+      "en": "Default Day Political",
+      "ko": "부도의 날 정치적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Economic Warfare Movie": {
+      "en": "Economic Warfare Movie",
+      "ko": "경제적 전쟁 영화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Hana Securities Hann Silver H2": {
+      "en": "Hana Securities Hann Silver H2",
+      "ko": "하나證 한은 하반기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Currency Exchange Rates by Hawk Stance": {
+      "en": "Currency Exchange Rates by Hawk Stance",
+      "ko": "매파 스탠스로 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Things to Drive Down": {
+      "en": "Things to Drive Down",
+      "ko": "하락 유도할 것",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Kim Sun-tae Rides the Wave": {
+      "en": "Kim Sun-tae Rides the Wave",
+      "ko": "김선태 열풍 올라탄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Rent by the Belgian Government": {
+      "en": "Rent by the Belgian Government",
+      "ko": "벨기에 정부가 월세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Slowly and Steadily Kookmin Reits Jr Global Reits": {
+      "en": "Slowly and Steadily Kookmin Reits Jr Global Reits",
+      "ko": "슬금슬금 국민리츠JR글로벌리츠",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Trump Endorsement Ai": {
+      "en": "Trump Endorsement Ai",
+      "ko": "트럼프 지지 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Spike Claims": {
+      "en": "Spike Claims",
+      "ko": "폭등 주장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Capital Ratio Testbed": {
+      "en": "Capital Ratio Testbed",
+      "ko": "자본비율 시험대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Growth Rate One": {
+      "en": "Growth Rate One",
+      "ko": "성장률 한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Interest Rate Increases": {
+      "en": "Interest Rate Increases",
+      "ko": "금리 인상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Why Would I Pay": {
+      "en": "Why Would I Pay",
+      "ko": "내는데 왜",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Nasdaq Hit Record": {
+      "en": "Nasdaq Hit Record",
+      "ko": "나스닥 히트 기록",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Strong Jobs Data": {
+      "en": "Strong Jobs Data",
+      "ko": "강력한 채용 데이터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Hits Record High": {
+      "en": "Hits Record High",
+      "ko": "사상 최고 기록 달성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Wall Street Hits": {
+      "en": "Wall Street Hits",
+      "ko": "월스트리트 히트작",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Strong U.s Jobs": {
+      "en": "Strong U.s Jobs",
+      "ko": "강력한 미국 일자리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Ai Chip": {
+      "en": "Ai Chip",
+      "ko": "AI 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
+    },
+    "Server Demand": {
+      "en": "Server Demand",
+      "ko": "서버 수요",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-09T07:57:01.288Z"
     }
   }
 }
