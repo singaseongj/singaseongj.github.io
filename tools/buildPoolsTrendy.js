@@ -24,6 +24,7 @@ import { ScoreAuditor } from '../src/audit/score-auditor.js';
 import { WikipediaCollector } from '../src/data/wikipedia-collector.js';
 import { IEXCloudCollector } from '../src/data/iex-cloud-collector.js';
 import { SECEdgarSimple } from '../src/data/sec-edgar-simple.js';
+import { UnifiedScorer } from '../src/scoring/unified-scorer.js';
 
 if (typeof fetch === 'undefined') {
   globalThis.fetch = (await import('node-fetch')).default;
@@ -1836,6 +1837,8 @@ async function mapLimit(items, limit, worker) {
 // ---------- Main ----------
 async function main(){
   console.log('[buildPoolsTrendy] Starting pools calculation...\n');
+  const unifiedScorer = new UnifiedScorer();
+  const useUnifiedScoring = process.env.USE_UNIFIED_SCORING !== 'false';
   const auditLevel = process.env.AUDIT_LEVEL || 'standard';
   const enableAudit = process.env.ENABLE_AUDIT !== 'false';
   const missingDataHandler = new MissingDataHandler({
@@ -2694,6 +2697,12 @@ async function main(){
       byName[n].totalScore = (process.env.ALLOW_NEGATIVE_SCORES === '1')
         ? Math.min(100, mapped)       // allow negatives down to -20 (or lower), cap only at 100
         : Math.max(0, Math.min(100, mapped)); // default: 0..100
+      if (useUnifiedScoring) {
+        const unifiedResult = unifiedScorer.scoreItem(n, byName[n]);
+        byName[n].totalScore = Math.round(
+          byName[n].totalScore * 0.5 + unifiedResult.score * 0.5
+        );
+      }
 
       byName[n].reasons = byName[n].reasons || {};
       const nf = NEWS_FEATURES[byName[n].sym || nameToSymbol(n) || n] || {};
