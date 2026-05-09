@@ -3051,3 +3051,198 @@ main()
     persistConfirmedMappings();
     process.exit(0);
   });
+
+// Score calculation and source integration improvements
+
+// ============ 1. 데이터 소스 통합 강화 ============
+// 문제: finance/features 소스가 0이므로 trends만 사용 중
+// 해결: 여러 소스에서 신호를 수집하고 가중치 적용
+
+// naverSignalCache 초기화 전, 명시적 소스 수집
+async function enrichNaverSignalsWithFinance(symbol, naverTrend) {
+  // keep naverTrend parameter for future compatibility
+  void naverTrend;
+  let financeScore = 0;
+  let financeVolume = 0;
+
+  if (isKR(symbol)) {
+    try {
+      const financeData = await fetchNaverFinanceSignals(symbol);
+      if (financeData) {
+        financeScore = financeData.score ?? 0;
+        financeVolume = financeData.volume ?? 0;
+      }
+    } catch {
+      // fallback to trends-only
+    }
+  }
+
+  return { financeScore, financeVolume };
+}
+
+// ============ 2. 절대 점수 계산 개선 (0-100 스케일) ============
+function computeAbsoluteScore(components, market) {
+  const weights = {
+    news: parseFloat(process.env.ABS_W_NEWS ?? 0.25),
+    naver: parseFloat(process.env.ABS_W_NAVER ?? 0.20),
+    blog: parseFloat(process.env.ABS_W_BLOG ?? 0.08),
+    wiki: parseFloat(process.env.ABS_W_WIKI ?? 0.05),
+    technical: parseFloat(process.env.ABS_W_TECH ?? 0.18),
+    sentiment: parseFloat(process.env.ABS_W_SENT ?? 0.12),
+    sector: parseFloat(process.env.ABS_W_SECTOR ?? 0.12)
+  };
+
+  const weightSum = Object.values(weights).reduce((a, b) => a + b, 0) || 1;
+  for (const key in weights) weights[key] = weights[key] / weightSum;
+
+  let score = 0;
+  score += weights.news * (components.news ?? 20);
+  score += weights.naver * (components.naver ?? 25);
+  score += weights.blog * (components.blog ?? 15);
+  score += weights.wiki * (components.wiki ?? 10);
+  score += weights.technical * (components.technical ?? 30);
+  score += weights.sentiment * (components.sentiment ?? 25);
+  score += weights.sector * (components.sector ?? 20);
+
+  if (market === 'KOSPI' || market === 'KOSDAQ') {
+    const krDeduct = parseFloat(process.env.KR_SCORE_DEDUCT ?? 5);
+    score = Math.max(5, score - krDeduct);
+  }
+
+  return Math.round(Math.max(5, Math.min(95, score)));
+}
+
+// ============ 3. 신호별 점수 계산 명시화 ============
+function computeNaverScore(symbol, naverSignal, financeData) {
+  void symbol;
+  let confidence = 0;
+
+  let trendsScore = 0;
+  if (naverSignal && naverSignal.isValid()) {
+    const rec = naverSignal.getRecommendedPopularity();
+    trendsScore = rec.value * 100;
+    confidence = Math.max(confidence, rec.confidence);
+  }
+
+  let financeScore = 0;
+  if (financeData && financeData.financeScore) {
+    financeScore = financeData.financeScore * 100;
+    confidence = Math.max(confidence, 0.7);
+  }
+
+  let spikeBoost = 0;
+  if (naverSignal && naverSignal.spike) spikeBoost = 15;
+  if (naverSignal && naverSignal.persist) spikeBoost = Math.min(20, spikeBoost + 10);
+
+  const score = trendsScore * 0.5 + financeScore * 0.3 + spikeBoost * 0.2;
+  return {
+    score: Math.max(0, Math.min(100, score)),
+    confidence,
+    breakdown: { trendsScore, financeScore, spikeBoost, finalScore: score }
+  };
+}
+
+function computeNewsScore(newsFeatures, symbol) {
+  void symbol;
+  let score = 0;
+  let count = 0;
+
+  if (newsFeatures && newsFeatures.weightedCount) {
+    const wc = newsFeatures.weightedCount;
+    score = Math.min(100, (wc / 50) * 100);
+    count += wc;
+  }
+
+  const sources = {
+    naver: newsFeatures?.naverCount ?? 0,
+    fmp: newsFeatures?.fmpNewsCount ?? 0,
+    google: newsFeatures?.googleNewsCount ?? 0,
+    investingCom: newsFeatures?.investingNewsCount ?? 0,
+    hanwha: newsFeatures?.hanwhaNewsCount ?? 0
+  };
+  const totalFromSources = Object.values(sources).reduce((a, b) => a + b, 0);
+  const sourceWeights = { naver: 0.4, fmp: 0.2, google: 0.15, investingCom: 0.15, hanwha: 0.1 };
+
+  let weightedScore = 0;
+  for (const [src, weight] of Object.entries(sourceWeights)) {
+    const cnt = sources[src] ?? 0;
+    weightedScore += Math.min(100, (cnt / 20) * 100) * weight;
+  }
+
+  score = score * 0.6 + weightedScore * 0.4;
+  return {
+    score: Math.max(0, Math.min(100, score)),
+    count,
+    sources,
+    confidence: Math.min(0.9, totalFromSources / 30)
+  };
+}
+
+function computeTechnicalScore(metrics) {
+  let score = 50;
+  if (metrics.ret5 !== undefined) {
+    const r5 = metrics.ret5 * 100;
+    score += Math.min(20, Math.max(-20, r5 * 2));
+  }
+  if (metrics.vol20 !== undefined) {
+    const v20 = metrics.vol20 * 100;
+    if (v20 < 1) score += 5;
+    else if (v20 > 5) score -= 10;
+  }
+  if (metrics.adv20 !== undefined && metrics.adv20 > 100000) score += 10;
+  if (metrics.offHi !== undefined && metrics.offHi > 0.9) score -= 15;
+  else if (metrics.offLo !== undefined && metrics.offLo < 0.1) score += 10;
+
+  return {
+    score: Math.max(20, Math.min(80, score)),
+    components: { momentum: metrics.ret5, volatility: metrics.vol20, liquidity: metrics.adv20 }
+  };
+}
+
+function computeSentimentScore(posHits, negHits) {
+  const total = (posHits ?? 0) + (negHits ?? 0);
+  if (total === 0) return { score: 50, confidence: 0.2 };
+
+  const sentiment = (posHits - negHits) / total;
+  const score = 50 + sentiment * 30;
+  const confidence = Math.min(0.95, total / 50);
+  return {
+    score: Math.max(20, Math.min(80, score)),
+    confidence,
+    sentiment,
+    hitCount: total
+  };
+}
+
+function validateScoreRange(scores, market, stage = '') {
+  const min = Math.min(...scores);
+  const max = Math.max(...scores);
+  const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
+  const validCount = scores.filter(s => s >= 5 && s <= 95).length;
+
+  console.log(`[score-validate] ${market} ${stage}`);
+  console.log(`  Range: ${min}-${max}, Avg: ${avg.toFixed(1)}`);
+  console.log(`  Valid (5-95): ${validCount}/${scores.length}`);
+  if (max - min < 20) {
+    console.warn(`  ⚠️ Low variance: all scores cluster in ${min}-${max}`);
+    console.warn('  → Check data sources and weights');
+  }
+
+  return { min, max, avg, validCount, valid: validCount >= scores.length * 0.8 };
+}
+
+/*
+# .env 또는 GitHub Actions env
+ABS_W_NEWS=0.25
+ABS_W_NAVER=0.20
+ABS_W_BLOG=0.08
+ABS_W_WIKI=0.05
+ABS_W_TECH=0.18
+ABS_W_SENT=0.12
+ABS_W_SECTOR=0.12
+KR_SCORE_DEDUCT=5
+TTL_NEWS_RSS_MS=7200000
+TTL_WIKI_MS=21600000
+TTL_EARNINGS_MS=14400000
+ENABLE_NAVER_FINANCE_SCRAPE=1
+*/
