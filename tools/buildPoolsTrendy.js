@@ -850,7 +850,8 @@ const FEEDBACK_FILE = 'feedback.json';
 const NEWS_FEATURES_FILE = 'data/news-features.json';
 const NAVER_TRENDS_FILE  = 'data/naver-trends.json';
 // Prefer prebuilt features if files exist (unless explicitly disabled)
-const USE_PREBUILT = process.env.USE_PREBUILT_FEATURES === '1'
+const USE_PREBUILT = ARGS.has('--use-prebuilt-features')
+  || process.env.USE_PREBUILT_FEATURES === '1'
   || (fs.existsSync('data/news-features.json') || fs.existsSync('data/naver-trends.json'));
 
 const MARKETS = ["KOSPI", "KOSDAQ", "S&P 500", "NASDAQ 100"];
@@ -867,6 +868,10 @@ try {
   const t = JSON.parse(await fsp.readFile(NAVER_TRENDS_FILE, 'utf8'));
   NAVER_TRENDS = (t && t.perSymbol) ? t.perSymbol : (t || {});
 } catch {}
+
+if (USE_PREBUILT) {
+  console.log(`[prebuilt] enabled (news=${Object.keys(NEWS_FEATURES).length}, naver=${Object.keys(NAVER_TRENDS).length})`);
+}
 
 for (const [name, symbol] of Object.entries(DYNAMIC_TICKER_MAP)) {
   if (!symbol) continue;
