@@ -740,12 +740,85 @@ function pickDeterministic(arr, k, seed) {
   return a.slice(0, k);
 }
 
+
+function normalizeMetricKey(value) {
+  return String(value || '')
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, ' ')
+    .replace(/\./g, '-')
+    .replace(/\s*\(\s*B\s*\)/g, '-B')
+    .replace(/\s*\(\s*A\s*\)/g, '-A');
+}
+
+function getMarketMetricsBucket(market) {
+  return poolsMetricsRaw?.markets?.[market] || poolsMetricsRaw?.[market] || null;
+}
+
+function getMetricsForEntry(market, nameOrTicker) {
+  const bucket = getMarketMetricsBucket(market);
+  if (!bucket || !nameOrTicker) return null;
+
+  if (bucket[nameOrTicker]) return bucket[nameOrTicker];
+
+  const lookupKeys = new Set();
+  lookupKeys.add(normalizeMetricKey(nameOrTicker));
+  const canon = canonSymbol(String(nameOrTicker));
+  if (canon) {
+    lookupKeys.add(normalizeMetricKey(canon));
+    const display = INDEX_NAME[canon];
+    if (display) lookupKeys.add(normalizeMetricKey(display));
+  }
+
+  for (const [k, v] of Object.entries(bucket)) {
+    if (lookupKeys.has(normalizeMetricKey(k))) return v;
+  }
+  return null;
+}
 function metricScoreFor(market, name) {
-  const metrics = poolsMetricsRaw?.markets?.[market]?.[name] || poolsMetricsRaw?.[market]?.[name];
+  const metrics = getMetricsForEntry(market, name);
   if (typeof metrics?.score === 'number') return metrics.score;
   if (typeof metrics?.score?.total === 'number') return metrics.score.total;
   if (typeof metrics?.score?.safe === 'number') return metrics.score.safe * 100;
   return null;
+}
+
+
+function deriveRawMetricsScore(metrics) {
+  if (!metrics) return null;
+  if (typeof metrics.score === 'number') return metrics.score;
+  if (typeof metrics.score?.total === 'number') return metrics.score.total;
+  if (typeof metrics.score?.safe === 'number') return metrics.score.safe * 100;
+  return null;
+}
+
+function clamp(num, min, max) {
+  return Math.min(max, Math.max(min, num));
+}
+
+function recalculateAttractivenessScore(metrics, seedKey = '') {
+  // Map raw pool metrics into a premium recommendation band [80, 100].
+  const raw = deriveRawMetricsScore(metrics);
+  const normalizedRaw = Number.isFinite(raw) ? clamp(raw, 0, 100) / 100 : 0.6;
+
+  // Build a signal blend from pools-metrics fields when available.
+  const sentiment = Number.isFinite(metrics?.sentiment) ? clamp((metrics.sentiment + 1) / 2, 0, 1) : normalizedRaw;
+  const reputation = Number.isFinite(metrics?.reputationScore) ? clamp(metrics.reputationScore / 100, 0, 1) : normalizedRaw;
+  const blog = Number.isFinite(metrics?.blogScore)
+    ? clamp(metrics.blogScore / 100, 0, 1)
+    : (Number.isFinite(metrics?.blogMentions) ? clamp(metrics.blogMentions / 100, 0, 1) : normalizedRaw);
+  const naver = Number.isFinite(metrics?.naverScore)
+    ? clamp(metrics.naverScore / 100, 0, 1)
+    : (Number.isFinite(metrics?.naverPopularity) ? clamp(metrics.naverPopularity / 100, 0, 1) : normalizedRaw);
+
+  // Weighted quality score keeps pools-metrics as primary driver.
+  const quality = (normalizedRaw * 0.6) + (sentiment * 0.15) + (reputation * 0.15) + ((blog + naver) / 2 * 0.1);
+
+  // Tiny deterministic jitter prevents ties while staying stable day-to-day per symbol.
+  const rnd = seededRandom(String(seedKey || 'default'));
+  const jitter = (rnd() - 0.5) * 2; // [-1, +1]
+
+  return Math.round(clamp(80 + quality * 20 + jitter, 80, 100));
 }
 
 async function writeAtomically(dest, data) {
@@ -1463,12 +1536,8 @@ async function tryFetchAndEnrich() {
 
           const news = ticker ? (newsFeatures[ticker] || {}) : {};
           const trend = ticker ? (naverTrends[ticker] || {}) : {};
-          const metrics = poolsMetricsRaw.markets?.[market]?.[rawName] || poolsMetricsRaw[market]?.[rawName];
-          let baseScore = null;
-          if (typeof metrics?.score === 'number') baseScore = Math.round(metrics.score);
-          else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
-          else if (typeof metrics?.score?.safe === 'number') baseScore = Math.round(metrics.score.safe * 100);
-          if (baseScore == null) baseScore = 50;
+          const metrics = getMetricsForEntry(market, rawName);
+          const baseScore = recalculateAttractivenessScore(metrics, `${market}:${group}:${rawName}`);
 
           const reputationScore = metrics?.reputationScore ?? news.reputationScore ?? null;
           const topKeywords = (metrics?.topKeywords && metrics.topKeywords.length)
@@ -1508,12 +1577,8 @@ async function tryFetchAndEnrich() {
           if (sector) successCount++;
         } catch (err) {
           console.error(`[ERROR] ${rawName}: ${err.message}`);
-          const metrics = poolsMetricsRaw.markets?.[market]?.[rawName] || poolsMetricsRaw[market]?.[rawName];
-          let baseScore = null;
-          if (typeof metrics?.score === 'number') baseScore = Math.round(metrics.score);
-          else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
-          else if (typeof metrics?.score?.safe === 'number') baseScore = Math.round(metrics.score.safe * 100);
-          if (baseScore == null) baseScore = 50;
+          const metrics = getMetricsForEntry(market, rawName);
+          const baseScore = recalculateAttractivenessScore(metrics, `${market}:${group}:${rawName}`);
           const sentiment = Number.isFinite(metrics?.sentiment) ? +metrics.sentiment.toFixed(2) : 0;
           const blog = Number.isFinite(metrics?.blogScore)
             ? +metrics.blogScore.toFixed(2)
@@ -1591,13 +1656,8 @@ async function main() {
       for (const tier of ['safe', 'aggressive']) {
         const arr = bucket[tier] || [];
         for (const entry of arr) {
-          const metrics = poolsMetricsRaw.markets?.[market]?.[entry.name] || poolsMetricsRaw[market]?.[entry.name];
-          if (metrics) {
-            if (typeof metrics.score === 'number') entry.score = Math.round(metrics.score);
-            else if (typeof metrics.score?.total === 'number') entry.score = Math.round(metrics.score.total);
-            else if (typeof metrics.score?.safe === 'number') entry.score = Math.round(metrics.score.safe * 100);
-          }
-          if (entry.score == null) entry.score = 50;
+          const metrics = getMetricsForEntry(market, entry.name);
+          entry.score = recalculateAttractivenessScore(metrics, `${market}:${tier}:${entry.name}`);
         }
       }
     }
