@@ -740,8 +740,43 @@ function pickDeterministic(arr, k, seed) {
   return a.slice(0, k);
 }
 
+
+function normalizeMetricKey(value) {
+  return String(value || '')
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, ' ')
+    .replace(/\./g, '-')
+    .replace(/\s*\(\s*B\s*\)/g, '-B')
+    .replace(/\s*\(\s*A\s*\)/g, '-A');
+}
+
+function getMarketMetricsBucket(market) {
+  return poolsMetricsRaw?.markets?.[market] || poolsMetricsRaw?.[market] || null;
+}
+
+function getMetricsForEntry(market, nameOrTicker) {
+  const bucket = getMarketMetricsBucket(market);
+  if (!bucket || !nameOrTicker) return null;
+
+  if (bucket[nameOrTicker]) return bucket[nameOrTicker];
+
+  const lookupKeys = new Set();
+  lookupKeys.add(normalizeMetricKey(nameOrTicker));
+  const canon = canonSymbol(String(nameOrTicker));
+  if (canon) {
+    lookupKeys.add(normalizeMetricKey(canon));
+    const display = INDEX_NAME[canon];
+    if (display) lookupKeys.add(normalizeMetricKey(display));
+  }
+
+  for (const [k, v] of Object.entries(bucket)) {
+    if (lookupKeys.has(normalizeMetricKey(k))) return v;
+  }
+  return null;
+}
 function metricScoreFor(market, name) {
-  const metrics = poolsMetricsRaw?.markets?.[market]?.[name] || poolsMetricsRaw?.[market]?.[name];
+  const metrics = getMetricsForEntry(market, name);
   if (typeof metrics?.score === 'number') return metrics.score;
   if (typeof metrics?.score?.total === 'number') return metrics.score.total;
   if (typeof metrics?.score?.safe === 'number') return metrics.score.safe * 100;
@@ -1463,7 +1498,7 @@ async function tryFetchAndEnrich() {
 
           const news = ticker ? (newsFeatures[ticker] || {}) : {};
           const trend = ticker ? (naverTrends[ticker] || {}) : {};
-          const metrics = poolsMetricsRaw.markets?.[market]?.[rawName] || poolsMetricsRaw[market]?.[rawName];
+          const metrics = getMetricsForEntry(market, rawName);
           let baseScore = null;
           if (typeof metrics?.score === 'number') baseScore = Math.round(metrics.score);
           else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
@@ -1508,7 +1543,7 @@ async function tryFetchAndEnrich() {
           if (sector) successCount++;
         } catch (err) {
           console.error(`[ERROR] ${rawName}: ${err.message}`);
-          const metrics = poolsMetricsRaw.markets?.[market]?.[rawName] || poolsMetricsRaw[market]?.[rawName];
+          const metrics = getMetricsForEntry(market, rawName);
           let baseScore = null;
           if (typeof metrics?.score === 'number') baseScore = Math.round(metrics.score);
           else if (typeof metrics?.score?.total === 'number') baseScore = Math.round(metrics.score.total);
@@ -1591,7 +1626,7 @@ async function main() {
       for (const tier of ['safe', 'aggressive']) {
         const arr = bucket[tier] || [];
         for (const entry of arr) {
-          const metrics = poolsMetricsRaw.markets?.[market]?.[entry.name] || poolsMetricsRaw[market]?.[entry.name];
+          const metrics = getMetricsForEntry(market, entry.name);
           if (metrics) {
             if (typeof metrics.score === 'number') entry.score = Math.round(metrics.score);
             else if (typeof metrics.score?.total === 'number') entry.score = Math.round(metrics.score.total);
