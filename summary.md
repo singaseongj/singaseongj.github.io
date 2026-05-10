@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-05-10T22:20:18+09:00 (KST)**
+- Generated: **2026-05-11T04:05:34+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -138,6 +138,13 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=KCC
 
+**SK케미칼** (285130.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-11.2%**, 20d **2.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=SK%EC%BC%80%EB%AF%B8%EC%B9%BC
+
 **신세계** (004170.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -145,26 +152,20 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%8B%A0%EC%84%B8%EA%B3%84
 
-**오리온** (271560.KS)
+**한화에어로스페이스** (012450.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.3%**, 20d **8.6%**; volatility (20d): **unknown**
+- Returns: 5d **-8.0%**, 20d **-11.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4
 
-**태광산업** (003240.KS)
+**한화엔진** (082740.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.9%**, 20d **-5.2%**; volatility (20d): **unknown**
+- Returns: 5d **-9.5%**, 20d **70.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%83%9C%EA%B4%91%EC%82%B0%EC%97%85
-
-**한올바이오파마** (009420.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-11.0%**, 20d **-5.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%9C%EC%98%AC%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8C%8C%EB%A7%88
+- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%94%EC%A7%84
 
 ## NASDAQ 100
 
@@ -211,43 +212,45 @@
 
 ### AGGRESSIVE (5)
 
-**Booking Holdings** (BKNG)
+**Monster Beverage** (MNST)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **0.0%**; volatility (20d): **unknown**
+- Returns: 5d **-4.1%**, 20d **1.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Monster%20Beverage
+
+**Old Dominion Freight Line** (ODFL)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **5.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Old%20Dominion%20Freight%20Line
+
+**Palo Alto Networks** (PANW)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.7%**, 20d **2.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Palo%20Alto%20Networks
+
+**Ross Stores** (ROST)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.7%**, 20d **8.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Booking%20Holdings
+- News search: https://www.google.com/search?q=Ross%20Stores
 
-**Coca-Cola Europacific Partners** (CCEP)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
-
-**Comcast** (CMCSA)
+**Xcel Energy** (XEL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.6%**, 20d **4.0%**; volatility (20d): **unknown**
+- Returns: 5d **-0.4%**, 20d **0.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Comcast
-
-**CoStar Group** (CSGP)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.4%**, 20d **-7.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Real Estate**
-- News search: https://www.google.com/search?q=CoStar%20Group
-
-**Mercado Libre** (MELI)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=Xcel%20Energy
 
 ## S&P 500
 
@@ -306,7 +309,7 @@
 **Ross Stores** (ROST)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.3%**, 20d **2.1%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **8.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Ross%20Stores
