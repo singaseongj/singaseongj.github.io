@@ -17,6 +17,15 @@ function toMap(list, key = 'symbol') {
   return m;
 }
 
+function toArray(value) {
+  if (Array.isArray(value)) return value;
+  if (value && typeof value === 'object') {
+    if (Array.isArray(value.items)) return value.items;
+    if (Array.isArray(value.list)) return value.list;
+  }
+  return [];
+}
+
 function feedbackWeight(feedback, market, symbol) {
   const node = feedback?.[market]?.[symbol];
   if (!node) return 0;
@@ -126,7 +135,7 @@ export async function main() {
   };
 
   for (const [market, list] of Object.entries(pools)) {
-    const entries = (list || []).map(x => typeof x === 'string' ? { symbol: x } : { ...x });
+    const entries = toArray(list).map(x => typeof x === 'string' ? { symbol: x } : { ...x });
     const tickers = entries.map(x => x.symbol).filter(Boolean);
     const quotes = await fetchByTickers(tickers);
     const quoteMap = toMap(quotes);

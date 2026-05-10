@@ -1,7 +1,7 @@
 {
-  "date": "2026-05-09",
+  "date": "2026-05-10",
   "window": "12_hours",
-  "total_phrases": 29,
+  "total_phrases": 28,
   "discovered_keywords": [
     {
       "term": "Securities News of the DayMay 8",
@@ -13,9 +13,10 @@
         "query": "오늘의 증권소식5월 8일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -41,110 +42,37 @@
       ]
     },
     {
-      "term": "Gold price quotes for today, May 10",
-      "term_ko": "오늘의 금값시세5월 10일자",
+      "term": "Further up... 500,000 electrons 300,000 nicks",
+      "term_ko": "더 올라..50만전자 300만닉스",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "오늘의 금값시세5월 10일자",
+        "query": "더 올라..50만전자 300만닉스",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "오늘의 금값시세(5월 10일자) 금값, 연말까지 6천달러 돌파하나",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3577588"
+              "title": "더 올라?..\"50만전자·300만닉스\" 나오는 이유",
+              "link": "http://www.4th.kr/news/articleView.html?idxno=2111531"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B85%EC%9B%94%2010%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B85%EC%9B%94%2010%EC%9D%BC%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%20%EC%98%AC%EB%9D%BC..50%EB%A7%8C%EC%A0%84%EC%9E%90%20300%EB%A7%8C%EB%8B%89%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%20%EC%98%AC%EB%9D%BC..50%EB%A7%8C%EC%A0%84%EC%9E%90%20300%EB%A7%8C%EB%8B%89%EC%8A%A4"
       },
       "top_headlines": [
         {
-          "title": "오늘의 금값시세(5월 10일자) 금값, 연말까지 6천달러 돌파하나",
+          "title": "더 올라?..\"50만전자·300만닉스\" 나오는 이유",
           "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3577588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Gold price $6,000 by the end of the year",
-      "term_ko": "금값 연말까지 6천달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값 연말까지 6천달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(5월 10일자) 금값, 연말까지 6천달러 돌파하나",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3577588"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%EC%97%B0%EB%A7%90%EA%B9%8C%EC%A7%80%206%EC%B2%9C%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%EC%97%B0%EB%A7%90%EA%B9%8C%EC%A7%80%206%EC%B2%9C%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(5월 10일자) 금값, 연말까지 6천달러 돌파하나",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3577588",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "In-Depth Analysis KOSPI 7500",
-      "term_ko": "심층분석 코스피 7500선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "심층분석 코스피 7500선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[심층분석] 코스피 '7500선' 정조준…외국인 '역대급' 매수 랠리 언제까...",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=76488"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%AC%EC%B8%B5%EB%B6%84%EC%84%9D%20%EC%BD%94%EC%8A%A4%ED%94%BC%207500%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%AC%EC%B8%B5%EB%B6%84%EC%84%9D%20%EC%BD%94%EC%8A%A4%ED%94%BC%207500%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[심층분석] 코스피 '7500선' 정조준…외국인 '역대급' 매수 랠리 언제까...",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=76488",
+          "link": "http://www.4th.kr/news/articleView.html?idxno=2111531",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -161,9 +89,10 @@
         "query": "볼린저 세일러는 하반기",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -198,9 +127,10 @@
         "query": "토큰명언 가장 위험한",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -235,9 +165,10 @@
         "query": "완벽해 보일 때다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -263,36 +194,37 @@
       ]
     },
     {
-      "term": "From this month's Park Geunjong column",
-      "term_ko": "박근종 칼럼 이달부터",
+      "term": "No Iranian risk",
+      "term_ko": "이란 리스크도 못",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "박근종 칼럼 이달부터",
+        "query": "이란 리스크도 못",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[박근종 칼럼] 이달부터 본격화하는 중동발 고물가 쇼크, 경각심을 갖고...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=746986"
+              "title": "이란 리스크도 못 막은 '불장'···마통 끌어 쓰는 개미들",
+              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421012"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EC%9D%B4%EB%8B%AC%EB%B6%80%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EC%9D%B4%EB%8B%AC%EB%B6%80%ED%84%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EB%8F%84%20%EB%AA%BB",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EB%8F%84%20%EB%AA%BB"
       },
       "top_headlines": [
         {
-          "title": "[박근종 칼럼] 이달부터 본격화하는 중동발 고물가 쇼크, 경각심을 갖고...",
+          "title": "이란 리스크도 못 막은 '불장'···마통 끌어 쓰는 개미들",
           "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=746986",
+          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421012",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -300,36 +232,37 @@
       ]
     },
     {
-      "term": "In the midst of the bounty",
-      "term_ko": "축포에도 풍요 속",
+      "term": "Clogged intestines",
+      "term_ko": "막은 불장 마통",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "축포에도 풍요 속",
+        "query": "막은 불장 마통",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[비즈토크<상>] 코스피 7500 축포에도 '풍요 속 빈곤'…반도체만 쏠린 '...",
-              "link": "https://n.news.naver.com/mnews/article/629/0000497781?sid=101"
+              "title": "이란 리스크도 못 막은 '불장'···마통 끌어 쓰는 개미들",
+              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421012"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%95%ED%8F%AC%EC%97%90%EB%8F%84%20%ED%92%8D%EC%9A%94%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%95%ED%8F%AC%EC%97%90%EB%8F%84%20%ED%92%8D%EC%9A%94%20%EC%86%8D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%89%EC%9D%80%20%EB%B6%88%EC%9E%A5%20%EB%A7%88%ED%86%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%89%EC%9D%80%20%EB%B6%88%EC%9E%A5%20%EB%A7%88%ED%86%B5"
       },
       "top_headlines": [
         {
-          "title": "[비즈토크<상>] 코스피 7500 축포에도 '풍요 속 빈곤'…반도체만 쏠린 '...",
+          "title": "이란 리스크도 못 막은 '불장'···마통 끌어 쓰는 개미들",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000497781?sid=101",
+          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421012",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +270,37 @@
       ]
     },
     {
-      "term": "Poverty semiconductor-only",
-      "term_ko": "빈곤 반도체만 쏠린",
+      "term": "Drag-and-drop ants",
+      "term_ko": "끌어 쓰는 개미들",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "빈곤 반도체만 쏠린",
+        "query": "끌어 쓰는 개미들",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[비즈토크<상>] 코스피 7500 축포에도 '풍요 속 빈곤'…반도체만 쏠린 '...",
-              "link": "https://n.news.naver.com/mnews/article/629/0000497781?sid=101"
+              "title": "이란 리스크도 못 막은 '불장'···마통 끌어 쓰는 개미들",
+              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421012"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%88%EA%B3%A4%20%EB%B0%98%EB%8F%84%EC%B2%B4%EB%A7%8C%20%EC%8F%A0%EB%A6%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%88%EA%B3%A4%20%EB%B0%98%EB%8F%84%EC%B2%B4%EB%A7%8C%20%EC%8F%A0%EB%A6%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%81%8C%EC%96%B4%20%EC%93%B0%EB%8A%94%20%EA%B0%9C%EB%AF%B8%EB%93%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%81%8C%EC%96%B4%20%EC%93%B0%EB%8A%94%20%EA%B0%9C%EB%AF%B8%EB%93%A4"
       },
       "top_headlines": [
         {
-          "title": "[비즈토크<상>] 코스피 7500 축포에도 '풍요 속 빈곤'…반도체만 쏠린 '...",
+          "title": "이란 리스크도 못 막은 '불장'···마통 끌어 쓰는 개미들",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000497781?sid=101",
+          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421012",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,36 +308,37 @@
       ]
     },
     {
-      "term": "Aimed Alien Epic",
-      "term_ko": "정조준 외국인 역대급",
+      "term": "M-Coverstory KOSPI Daily",
+      "term_ko": "M-커버스토리 코스피 연일",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "정조준 외국인 역대급",
+        "query": "M-커버스토리 코스피 연일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[심층분석] 코스피 '7500선' 정조준…외국인 '역대급' 매수 랠리 언제까...",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=76488"
+              "title": "[M-커버스토리] 코스피 연일 최고치에도 체감경기 '냉랭'",
+              "link": "http://www.metroseoul.co.kr/article/20260510500053"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%A1%B0%EC%A4%80%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EC%97%AD%EB%8C%80%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%A1%B0%EC%A4%80%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EC%97%AD%EB%8C%80%EA%B8%89"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=M-%EC%BB%A4%EB%B2%84%EC%8A%A4%ED%86%A0%EB%A6%AC%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%97%B0%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=M-%EC%BB%A4%EB%B2%84%EC%8A%A4%ED%86%A0%EB%A6%AC%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%97%B0%EC%9D%BC"
       },
       "top_headlines": [
         {
-          "title": "[심층분석] 코스피 '7500선' 정조준…외국인 '역대급' 매수 랠리 언제까...",
+          "title": "[M-커버스토리] 코스피 연일 최고치에도 체감경기 '냉랭'",
           "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=76488",
+          "link": "http://www.metroseoul.co.kr/article/20260510500053",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -411,36 +346,37 @@
       ]
     },
     {
-      "term": "Renovation Pause",
-      "term_ko": "리노공업 숨 고르기",
+      "term": "Feeling the chill even at the peak",
+      "term_ko": "최고치에도 체감경기 냉랭",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "리노공업 숨 고르기",
+        "query": "최고치에도 체감경기 냉랭",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436"
+              "title": "[M-커버스토리] 코스피 연일 최고치에도 체감경기 '냉랭'",
+              "link": "http://www.metroseoul.co.kr/article/20260510500053"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85%20%EC%88%A8%20%EA%B3%A0%EB%A5%B4%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85%20%EC%88%A8%20%EA%B3%A0%EB%A5%B4%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%EC%B9%98%EC%97%90%EB%8F%84%20%EC%B2%B4%EA%B0%90%EA%B2%BD%EA%B8%B0%20%EB%83%89%EB%9E%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%EC%B9%98%EC%97%90%EB%8F%84%20%EC%B2%B4%EA%B0%90%EA%B2%BD%EA%B8%B0%20%EB%83%89%EB%9E%AD"
       },
       "top_headlines": [
         {
-          "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
+          "title": "[M-커버스토리] 코스피 연일 최고치에도 체감경기 '냉랭'",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436",
+          "link": "http://www.metroseoul.co.kr/article/20260510500053",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +384,37 @@
       ]
     },
     {
-      "term": "Semiconductors in the Flow",
-      "term_ko": "흐름 속 반도체",
+      "term": "Room for rate hikes",
+      "term_ko": "기준금리 인상 여지",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "흐름 속 반도체",
+        "query": "기준금리 인상 여지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436"
+              "title": "고물가 공포에 한은 기준금리 인상 여지↑…'매파' 신현송 체제 시험대",
+              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=126978"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9D%90%EB%A6%84%20%EC%86%8D%20%EB%B0%98%EB%8F%84%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9D%90%EB%A6%84%20%EC%86%8D%20%EB%B0%98%EB%8F%84%EC%B2%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EC%97%AC%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EC%97%AC%EC%A7%80"
       },
       "top_headlines": [
         {
-          "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
+          "title": "고물가 공포에 한은 기준금리 인상 여지↑…'매파' 신현송 체제 시험대",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436",
+          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=126978",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +422,37 @@
       ]
     },
     {
-      "term": "Keep the excitement going Monday",
-      "term_ko": "기대감 유지 월요일",
+      "term": "Hawkish Shin Hyun-song regime",
+      "term_ko": "매파 신현송 체제",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기대감 유지 월요일",
+        "query": "매파 신현송 체제",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436"
+              "title": "고물가 공포에 한은 기준금리 인상 여지↑…'매파' 신현송 체제 시험대",
+              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=126978"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%EA%B0%90%20%EC%9C%A0%EC%A7%80%20%EC%9B%94%EC%9A%94%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%EA%B0%90%20%EC%9C%A0%EC%A7%80%20%EC%9B%94%EC%9A%94%EC%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%ED%8C%8C%20%EC%8B%A0%ED%98%84%EC%86%A1%20%EC%B2%B4%EC%A0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%ED%8C%8C%20%EC%8B%A0%ED%98%84%EC%86%A1%20%EC%B2%B4%EC%A0%9C"
       },
       "top_headlines": [
         {
-          "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
+          "title": "고물가 공포에 한은 기준금리 인상 여지↑…'매파' 신현송 체제 시험대",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436",
+          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=126978",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +460,75 @@
       ]
     },
     {
-      "term": "Air on construction cost spikes",
-      "term_ko": "공사비 급등에 공기",
+      "term": "Reinstated Multifamily Transfer Tax",
+      "term_ko": "부활한 다주택자 양도세",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "공사비 급등에 공기",
+        "query": "부활한 다주택자 양도세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "공사비 급등에 공기 지연까지…주택공급 곳곳서 '병목' 경고",
-              "link": "https://n.news.naver.com/mnews/article/629/0000497792?sid=101"
+              "title": "부활한 다주택자 양도세 중과…매물 잠기나",
+              "link": "http://www.metroseoul.co.kr/article/20260510500049"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EC%82%AC%EB%B9%84%20%EA%B8%89%EB%93%B1%EC%97%90%20%EA%B3%B5%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EC%82%AC%EB%B9%84%20%EA%B8%89%EB%93%B1%EC%97%90%20%EA%B3%B5%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%ED%99%9C%ED%95%9C%20%EB%8B%A4%EC%A3%BC%ED%83%9D%EC%9E%90%20%EC%96%91%EB%8F%84%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%ED%99%9C%ED%95%9C%20%EB%8B%A4%EC%A3%BC%ED%83%9D%EC%9E%90%20%EC%96%91%EB%8F%84%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "공사비 급등에 공기 지연까지…주택공급 곳곳서 '병목' 경고",
+          "title": "부활한 다주택자 양도세 중과…매물 잠기나",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000497792?sid=101",
+          "link": "http://www.metroseoul.co.kr/article/20260510500049",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Locked or",
+      "term_ko": "중과 매물 잠기나",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "중과 매물 잠기나",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-10T11:51:04+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "부활한 다주택자 양도세 중과…매물 잠기나",
+              "link": "http://www.metroseoul.co.kr/article/20260510500049"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EA%B3%BC%20%EB%A7%A4%EB%AC%BC%20%EC%9E%A0%EA%B8%B0%EB%82%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EA%B3%BC%20%EB%A7%A4%EB%AC%BC%20%EC%9E%A0%EA%B8%B0%EB%82%98"
+      },
+      "top_headlines": [
+        {
+          "title": "부활한 다주택자 양도세 중과…매물 잠기나",
+          "summary": "",
+          "link": "http://www.metroseoul.co.kr/article/20260510500049",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -568,9 +545,10 @@
         "query": "Trump Endorsement AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -605,9 +583,10 @@
         "query": "폭등 주장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -633,36 +612,37 @@
       ]
     },
     {
-      "term": "Buying rallies",
-      "term_ko": "매수 랠리",
+      "term": "Why it's coming out",
+      "term_ko": "나오는 이유",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "매수 랠리",
+        "query": "나오는 이유",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[심층분석] 코스피 '7500선' 정조준…외국인 '역대급' 매수 랠리 언제까...",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=76488"
+              "title": "더 올라?..\"50만전자·300만닉스\" 나오는 이유",
+              "link": "http://www.4th.kr/news/articleView.html?idxno=2111531"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EC%88%98%20%EB%9E%A0%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EC%88%98%20%EB%9E%A0%EB%A6%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%98%A4%EB%8A%94%20%EC%9D%B4%EC%9C%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%98%A4%EB%8A%94%20%EC%9D%B4%EC%9C%A0"
       },
       "top_headlines": [
         {
-          "title": "[심층분석] 코스피 '7500선' 정조준…외국인 '역대급' 매수 랠리 언제까...",
+          "title": "더 올라?..\"50만전자·300만닉스\" 나오는 이유",
           "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=76488",
+          "link": "http://www.4th.kr/news/articleView.html?idxno=2111531",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -670,73 +650,37 @@
       ]
     },
     {
-      "term": "Stock price tactile",
-      "term_ko": "주가 촉각",
+      "term": "Why they're flocking",
+      "term_ko": "몰려가는 이유",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주가 촉각",
+        "query": "몰려가는 이유",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436"
+              "title": "[기원상 칼럼] 코스피 7000의 열기, 지금 서점으로 몰려가는 이유",
+              "link": "https://www.ajunews.com/view/20260510110318876"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%20%EC%B4%89%EA%B0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%20%EC%B4%89%EA%B0%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%A0%A4%EA%B0%80%EB%8A%94%20%EC%9D%B4%EC%9C%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%A0%A4%EA%B0%80%EB%8A%94%20%EC%9D%B4%EC%9C%A0"
       },
       "top_headlines": [
         {
-          "title": "리노공업, 숨 고르기 흐름 속 반도체 기대감 유지…월요일 주가 촉각 미...",
+          "title": "[기원상 칼럼] 코스피 7000의 열기, 지금 서점으로 몰려가는 이유",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=573436",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Bottleneck warnings",
-      "term_ko": "병목 경고",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "병목 경고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "공사비 급등에 공기 지연까지…주택공급 곳곳서 '병목' 경고",
-              "link": "https://n.news.naver.com/mnews/article/629/0000497792?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%91%EB%AA%A9%20%EA%B2%BD%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%91%EB%AA%A9%20%EA%B2%BD%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "공사비 급등에 공기 지연까지…주택공급 곳곳서 '병목' 경고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000497792?sid=101",
+          "link": "https://www.ajunews.com/view/20260510110318876",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -753,9 +697,10 @@
         "query": "Nasdaq Hit Record",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -790,9 +735,10 @@
         "query": "Strong Jobs Data",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -827,9 +773,10 @@
         "query": "Hits Record High",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -864,9 +811,10 @@
         "query": "Wall Street Hits",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -901,9 +849,10 @@
         "query": "Strong U.S Jobs",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -938,9 +887,10 @@
         "query": "AI Chip",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -975,9 +925,10 @@
         "query": "Server Demand",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1012,9 +963,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-10T04:04:54+09:00",
+          "last_updated": "2026-05-10T11:51:04+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1025,17 +977,40 @@
       "top_headlines": []
     },
     {
-      "term": "Rate cut expectations",
-      "term_ko": "금리 인하 기대감",
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 상승",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-10T11:51:04+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
       "significance_score": 0,
       "mentions": 0,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
+        "query": "비트코인 ETF 기대"
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
       },
       "top_headlines": []
     }
@@ -1043,28 +1018,30 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-05-09T19:05:57.195Z",
+    "generated_at": "2026-05-10T02:52:06.068Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-10T04:04:54+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-05-10T11:51:04+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
+    "similar_keywords_removed": 2,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 1,
+      "similar": 2,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-05-10T04:04:54+09:00",
+      "last_updated": "2026-05-10T11:51:04+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-05-10T04:04:54+09:00",
+        "lastUpdated": "2026-05-10T11:51:04+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
