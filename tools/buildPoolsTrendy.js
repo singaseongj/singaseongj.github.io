@@ -2788,9 +2788,17 @@ async function main(){
     function filterOutEarlier(list) {
       const out = [];
       const seen = new Set();
+      // NASDAQ 100 naturally overlaps heavily with S&P 500.
+      // If we remove all earlier-market symbols, NASDAQ pools can collapse to
+      // a very small list. Keep cross-market de-dup for other markets, but
+      // preserve NASDAQ 100 breadth by only de-duping within itself.
+      const skipCrossMarketDedup = (market === 'NASDAQ 100');
       for (const n of list) {
         const sym = nameToSymbol(n) || n; rememberMapping(n, sym);
-        if (!earlierSet.has(sym) && !seen.has(sym)) { out.push(n); seen.add(sym); }
+        if (!seen.has(sym) && (skipCrossMarketDedup || !earlierSet.has(sym))) {
+          out.push(n);
+          seen.add(sym);
+        }
       }
       return out;
     }
