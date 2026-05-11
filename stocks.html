@@ -127,6 +127,23 @@
     background: #0d5f59;
     box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.25);
   }
+
+  .title-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .rationale-link {
+    color: #2563eb;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  .rationale-link:hover,
+  .rationale-link:focus-visible {
+    color: #1d4ed8;
+  }
   .keyword-markets {
     font-size: 0.85rem;
     color: #576574;
@@ -140,7 +157,10 @@
 </head>
 <body>
   <nav><a href="index.html" aria-label="Home">&#x21A9; Home</a></nav>
-  <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
+  <div class="title-wrap">
+    <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
+    <a class="rationale-link" href="stocks/rationale.html">매력점수 계산식</a>
+  </div>
   <p class="dashboard-link"><a data-i18n="dashboardLink" href="stocks/index.html">👉 Stock News Summary Dashboard</a></p>
   <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> 2025년 9월 9일</p>
   
