@@ -1004,7 +1004,9 @@
       .then(data => {
         const fmt = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 0 });
         const parts = (data.items || []).map(it => {
-          const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}원` : '—';
+          const isPoint = ['S&P 500', 'S&P500', 'KOSPI'].includes(it.name);
+          const unit = isPoint ? 'pt' : '원';
+          const v = (typeof it.krw === 'number') ? `${fmt.format(it.krw)}${unit}` : '—';
           return `<span class="fx-item">${it.label} = ${v}</span>`;
         });
         const stamp = `<span class="fx-time">업데이트 ${String(data.lastUpdated).replace('T',' ').replace('+09:00',' KST')}</span>`;
