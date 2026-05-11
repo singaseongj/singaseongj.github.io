@@ -43,10 +43,7 @@
       <div class="formula" style="margin-top:10px;">
         composite = 통합점수 신뢰도(confidence)&gt;0.7 이면 Unified 35% 우선, 아니면 5개 축 가중합
       </div>
-      <div class="formula" style="margin-top:10px;">
-        finalScore = round(clamp(80 + (composite^0.75)*20 + jitter, 80, 100))
-      </div>
-      <p class="small">즉, pools-metrics + 뉴스/네이버 부가데이터를 함께 반영해 최종 점수(80~100)를 계산합니다.</p>
+      <p class="small">즉, pools-metrics + 뉴스/네이버 부가데이터를 함께 반영해 최종 점수를 계산합니다.</p>
     </div>
 
     <div class="card">
