@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-05-11T23:52:21+09:00 (KST)**
+- Generated: **2026-05-12T04:49:21+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,6 +93,14 @@
 
 ### SAFE (5)
 
+**HD현대일렉트릭** (267260.KS)
+
+- News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.11)**
+- Returns: 5d **8.8%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD
+
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
@@ -100,13 +108,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
-
-**삼성전기** (009150.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **8.2%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0
 
 **삼성전자** (005930.KS)
 
@@ -124,12 +125,12 @@
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
-**호텔신라** (008770.KS)
+**신세계** (004170.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **-2.0%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **9.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%98%B8%ED%85%94%EC%8B%A0%EB%9D%BC
+- News search: https://www.google.com/search?q=%EC%8B%A0%EC%84%B8%EA%B3%84
 
 ### AGGRESSIVE (5)
 
@@ -213,44 +214,44 @@
 
 ### AGGRESSIVE (5)
 
-**Mercado Libre** (MELI)
+**Axon Enterprise** (AXON)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
-
-**Monster Beverage** (MNST)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **1.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://www.google.com/search?q=Monster%20Beverage
-
-**Old Dominion Freight Line** (ODFL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **5.0%**; volatility (20d): **unknown**
+- Returns: 5d **1.2%**, 20d **2.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
-- News search: https://www.google.com/search?q=Old%20Dominion%20Freight%20Line
+- News search: https://www.google.com/search?q=Axon%20Enterprise
 
-**Workday, Inc.** (WDAY)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **-3.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Workday%2C%20Inc.
-
-**Xcel Energy** (XEL)
+**Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **0.7%**; volatility (20d): **unknown**
+- Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Xcel%20Energy
+- News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
+
+**CoStar Group** (CSGP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.4%**, 20d **-7.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=CoStar%20Group
+
+**CSX Corporation** (CSX)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-9.6%**, 20d **-7.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=CSX%20Corporation
+
+**DoorDash** (DASH)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.8%**, 20d **-0.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=DoorDash
 
 ## S&P 500
 
@@ -309,7 +310,7 @@
 **Qnity Electronics** (Q)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **9.2%**, 20d **14.1%**; volatility (20d): **unknown**
+- Returns: 5d **9.0%**, 20d **13.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Qnity%20Electronics
@@ -317,7 +318,7 @@
 **Stryker Corporation** (SYK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.8%**, 20d **-18.5%**; volatility (20d): **unknown**
+- Returns: 5d **-2.8%**, 20d **-18.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Stryker%20Corporation
@@ -333,7 +334,7 @@
 **WEC Energy Group** (WEC)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.7%**, 20d **-3.6%**; volatility (20d): **unknown**
+- Returns: 5d **-3.2%**, 20d **-3.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Utilities**
 - News search: https://www.google.com/search?q=WEC%20Energy%20Group
