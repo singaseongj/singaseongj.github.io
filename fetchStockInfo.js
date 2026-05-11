@@ -1469,17 +1469,33 @@ async function tryFetchAndEnrich() {
   const data = {};
   const log = {};
 
-  // Select stocks for each market
+  // Select highest-score stocks for each market from pools + pools-metrics.
   for (const [market, buckets] of Object.entries(POOLS)) {
     if (!hasAnyCandidates(buckets)) continue;
     data[market] = {};
-    const safeSource = buckets.safe || [];
-    const chosenSafe = safeSource.slice(0, 5);
+
+    const rankByMetricScore = (items = []) => items
+      .map((entry, idx) => ({
+        entry,
+        idx,
+        name: typeof entry === 'string' ? entry : entry?.name,
+        score: metricScoreFor(market, typeof entry === 'string' ? entry : entry?.name)
+      }))
+      .filter(x => x.name)
+      .sort((a, b) => {
+        const sa = Number.isFinite(a.score) ? a.score : -Infinity;
+        const sb = Number.isFinite(b.score) ? b.score : -Infinity;
+        if (sb !== sa) return sb - sa;
+        return a.idx - b.idx;
+      });
+
+    const rankedSafe = rankByMetricScore(buckets.safe || []);
+    const chosenSafe = rankedSafe.slice(0, 5).map(x => x.entry);
     data[market].safe = chosenSafe.map(n => (typeof n === 'string' ? { name: n } : n));
 
-    const safeNames = new Set(chosenSafe.map(n => (typeof n === 'string' ? n : n.name)));
-    let aggrSource = (buckets.aggressive || []).filter(n => !safeNames.has(typeof n === 'string' ? n : n.name));
-    const chosenAggr = aggrSource.slice(0, 5);
+    const safeNameSet = new Set(chosenSafe.map(n => normalizeMetricKey(typeof n === 'string' ? n : n?.name)));
+    const rankedAggr = rankByMetricScore((buckets.aggressive || []).filter(n => !safeNameSet.has(normalizeMetricKey(typeof n === 'string' ? n : n?.name))));
+    const chosenAggr = rankedAggr.slice(0, 5).map(x => x.entry);
     data[market].aggressive = chosenAggr.map(n => (typeof n === 'string' ? { name: n } : n));
 
     log[market] = {

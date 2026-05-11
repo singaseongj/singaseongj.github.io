@@ -21,7 +21,7 @@
   <div class="container">
     <p><a href="../stocks.html">← stocks.html로 돌아가기</a></p>
     <h1>매력점수 계산식 (쉽게 보기)</h1>
-    <p>이 페이지는 <code>pools-metrics.json</code>의 데이터와 <code>tools/buildPoolsTrendy.js</code>의 점수 공식을 기준으로, 섹션별 상위 5개 종목이 왜 높은 점수를 받는지 쉽게 설명합니다.</p>
+    <p>이 페이지는 <code>recommendations.json</code>의 점수(= <code>fetchStockInfo.js</code>가 산출한 점수)와 <code>tools/buildPoolsTrendy.js</code>의 계산 근거를 함께 보여줍니다. 섹션별 상위 5개 종목이 왜 높은 점수를 받는지 쉽게 설명합니다.</p>
 
     <div class="card">
       <h2>1) 점수 계산 핵심 구조</h2>
@@ -29,12 +29,12 @@
         인기도(pop01) = (뉴스 + 네이버인기 + 네이버금융 + 모멘텀 + 블로그 + 위키 + 긍정키워드 - 부정키워드) / 가중치합
       </div>
       <div class="formula" style="margin-top:10px;">
-        기본점수(base01) = size 가중치 × 시가총액점수(size01) + (1-size 가중치) × 인기도(pop01)
+        기본점수(base01) = 안전주: size 가중치 × 시가총액점수(size01) + (1-size 가중치) × 인기도(pop01) / 공격주: 인기도(pop01) 중심(시가총액 제외)
       </div>
       <div class="formula" style="margin-top:10px;">
         최종 totalScore(0~100) = 보정(피드백/신뢰도/누락데이터/국내시장 패널티 등) 후 0~100 구간으로 변환
       </div>
-      <p class="small">즉, <strong>크기(시총)</strong> + <strong>관심도(뉴스/검색/키워드)</strong>를 섞고, 데이터 신뢰도/시장 보정을 더해 최종 점수를 만듭니다.</p>
+      <p class="small">즉, 안전주는 <strong>크기(시총)+관심도</strong>, 공격주는 <strong>관심도 중심</strong>으로 계산하고, 데이터 신뢰도/시장 보정을 더해 최종 점수를 만듭니다.</p>
     </div>
 
     <div class="card">
@@ -52,19 +52,12 @@
 
     <div class="card">
       <h2>3) 섹션별 상위 5개 종목</h2>
-      <p class="small">표는 현재 <code>pools-metrics.json</code> 값으로 계산된 totalScore 상위 종목입니다.</p>
+      <p class="small">표의 점수는 <code>recommendations.json</code>에 저장된 점수(= fetchStockInfo 계산 결과)입니다. 계산 근거 설명은 기존과 동일합니다.</p>
       <div id="tables"></div>
     </div>
 
     <script>
       const sections = ['KOSPI', 'KOSDAQ', 'S&P 500', 'NASDAQ 100'];
-
-      function scoreOf(v) {
-        if (Number.isFinite(v?.totalScore)) return v.totalScore;
-        if (Number.isFinite(v?.score)) return v.score;
-        if (Number.isFinite(v?.significance_score)) return v.significance_score;
-        return 0;
-      }
 
       function explain(v) {
         const parts = [];
@@ -76,20 +69,31 @@
         return parts.join(', ');
       }
 
-      fetch('../pools-metrics.json')
-        .then(r => r.json())
-        .then(data => {
+      Promise.all([
+        fetch('../recommendations.json').then(r => r.json()),
+        fetch('../pools-metrics.json').then(r => r.json())
+      ])
+        .then(([recs, metrics]) => {
           const host = document.getElementById('tables');
           sections.forEach(sec => {
-            const rows = Object.entries(data[sec] || {})
-              .map(([name, v]) => ({ name, v, score: scoreOf(v) }))
+            const safe = (recs?.[sec]?.safe || []).map(x => ({ ...x, bucket: 'safe' }));
+            const aggr = (recs?.[sec]?.aggressive || []).map(x => ({ ...x, bucket: 'aggressive' }));
+            const rows = [...safe, ...aggr]
+              .filter(r => Number.isFinite(r?.score))
               .sort((a, b) => b.score - a.score)
-              .slice(0, 5);
+              .slice(0, 5)
+              .map(r => ({
+                name: r.name,
+                bucket: r.bucket,
+                score: r.score,
+                v: (metrics?.[sec] || {})[r.name] || {}
+              }));
 
             const tableRows = rows.map((r, i) => `
               <tr>
                 <td>${i + 1}</td>
                 <td>${r.name}</td>
+                <td>${r.bucket === 'safe' ? '안전주' : '공격주'}</td>
                 <td>${Number(r.score).toFixed(1)}</td>
                 <td>${explain(r.v)}</td>
               </tr>
@@ -98,8 +102,8 @@
             host.insertAdjacentHTML('beforeend', `
               <h3>${sec}</h3>
               <table>
-                <thead><tr><th>순위</th><th>티커/종목</th><th>점수</th><th>왜 점수가 높은가?</th></tr></thead>
-                <tbody>${tableRows}</tbody>
+                <thead><tr><th>순위</th><th>티커/종목</th><th>구분</th><th>점수</th><th>왜 점수가 높은가?</th></tr></thead>
+                <tbody>${tableRows || '<tr><td colspan="5">데이터 없음</td></tr>'}</tbody>
               </table>
             `);
           });
