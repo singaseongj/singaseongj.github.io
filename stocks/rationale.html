@@ -3,115 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>매력점수 계산식 안내</title>
+  <title>매력점수 계산식</title>
   <style>
-    body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',sans-serif; margin: 0; padding: 24px; color:#1f2937; line-height:1.6; }
-    .container { max-width: 1000px; margin: 0 auto; }
-    h1,h2,h3 { color:#111827; }
-    .card { background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:14px 0; }
-    .formula { background:#eef2ff; border-left:4px solid #4f46e5; padding:12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-    table { width:100%; border-collapse: collapse; margin-top:8px; }
-    th,td { border-bottom:1px solid #e5e7eb; padding:8px; text-align:left; }
-    th { background:#f3f4f6; }
-    .small { color:#6b7280; font-size:0.92rem; }
-    a { color:#2563eb; }
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',sans-serif;line-height:1.65;margin:0;padding:24px;color:#111827}
+    .wrap{max-width:960px;margin:0 auto}
+    .box{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin:12px 0}
+    code{background:#eef2ff;padding:2px 6px;border-radius:6px}
+    pre{background:#eef2ff;padding:12px;border-radius:8px;overflow:auto}
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
     <p><a href="../stocks.html">← stocks.html로 돌아가기</a></p>
-    <h1>매력점수 계산식 (쉽게 보기)</h1>
-    <p>이 페이지는 <code>recommendations.json</code>의 점수(= <code>fetchStockInfo.js</code>가 산출한 점수)와 <code>tools/buildPoolsTrendy.js</code>의 계산 근거를 함께 보여줍니다. 섹션별 상위 5개 종목이 왜 높은 점수를 받는지 쉽게 설명합니다.</p>
+    <h1>매력점수 계산식</h1>
+    <p><code>fetchStockInfo.js</code>는 <code>pools-metrics.json</code>의 모든 숫자/불리언 데이터를 종합해서 매력점수를 <strong>80~100</strong> 범위로 계산합니다.</p>
 
-    <div class="card">
-      <h2>1) 점수 계산 핵심 구조</h2>
-      <div class="formula">
-        인기도(pop01) = (뉴스 + 네이버인기 + 네이버금융 + 모멘텀 + 블로그 + 위키 + 긍정키워드 - 부정키워드) / 가중치합
-      </div>
-      <div class="formula" style="margin-top:10px;">
-        기본점수(base01) = 안전주: size 가중치 × 시가총액점수(size01) + (1-size 가중치) × 인기도(pop01) / 공격주: 인기도(pop01) 중심(시가총액 제외)
-      </div>
-      <div class="formula" style="margin-top:10px;">
-        최종 totalScore(0~100) = 보정(피드백/신뢰도/누락데이터/국내시장 패널티 등) 후 0~100 구간으로 변환
-      </div>
-      <p class="small">즉, 안전주는 <strong>크기(시총)+관심도</strong>, 공격주는 <strong>관심도 중심</strong>으로 계산하고, 데이터 신뢰도/시장 보정을 더해 최종 점수를 만듭니다.</p>
+    <div class="box">
+      <h2>공식</h2>
+      <pre>normalizedRaw = clamp(rawScore, 0, 100) / 100
+
+numericNorm(x) = if x >= 0 then (tanh(|x|)+1)/2 else (1-tanh(|x|))/2
+allSignalAvg   = average( numericNorm(v) for every numeric v in pools-metrics entry )
+boolSignalAvg  = average( 1 if b=true else 0 for every boolean b in pools-metrics entry )
+coverageBoost  = clamp((numericCount + boolCount)/80, 0, 1)
+
+composite = 0.45*normalizedRaw + 0.35*allSignalAvg + 0.10*boolSignalAvg + 0.10*coverageBoost
+vividBase = 80 + (composite^0.7) * 20
+finalScore = round(clamp(vividBase + jitter, 80, 100))</pre>
+      <p>여기서 <code>jitter</code>는 동일 점수 동률을 줄이기 위한 아주 작은 결정론적 보정값입니다.</p>
     </div>
 
-    <div class="card">
-      <h2>2) 각 항목 의미 (간단 버전)</h2>
+    <div class="box">
+      <h2>핵심 포인트</h2>
       <ul>
-        <li><strong>newsScore</strong>: 최근 뉴스가 얼마나 많은지/강한지</li>
-        <li><strong>naverPopularity, naverFinanceScore</strong>: 네이버 관심도와 금융 문맥 연관도</li>
-        <li><strong>trend/momentum</strong>: 최근 추세가 좋아지는지</li>
-        <li><strong>blog/wiki</strong>: 대중 관심(블로그/위키 조회)</li>
-        <li><strong>posHits / negHits</strong>: 긍정·부정 키워드 비율</li>
-        <li><strong>size01</strong>: 시가총액 기반 안정성/규모 점수</li>
-        <li><strong>sourceReliability / confidence</strong>: 데이터 품질 보정</li>
+        <li><strong>모든 pools-metrics 항목 반영:</strong> 중첩 객체/배열 안의 숫자·불리언까지 전부 집계</li>
+        <li><strong>점수 범위 고정:</strong> 최종 매력점수는 항상 80~100</li>
+        <li><strong>신호가 많을수록 가점:</strong> coverageBoost로 트리거 수를 추가 반영</li>
       </ul>
     </div>
-
-    <div class="card">
-      <h2>3) 섹션별 상위 5개 종목</h2>
-      <p class="small">표의 점수는 <code>recommendations.json</code>에 저장된 점수(= fetchStockInfo 계산 결과)입니다. 계산 근거 설명은 기존과 동일합니다.</p>
-      <div id="tables"></div>
-    </div>
-
-    <script>
-      const sections = ['KOSPI', 'KOSDAQ', 'S&P 500', 'NASDAQ 100'];
-
-      function explain(v) {
-        const parts = [];
-        if ((v.newsScore ?? 0) > 0.5) parts.push('뉴스 강도 높음');
-        if ((v.naverPopularity ?? 0) > 0.4) parts.push('검색/관심도 높음');
-        if ((v.marketCap ?? 0) > 0) parts.push('시총 점수 반영');
-        if ((v.posHits ?? 0) > (v.negHits ?? 0)) parts.push('긍정 키워드 우세');
-        if (!parts.length) parts.push('복합 지표 보정으로 상위권');
-        return parts.join(', ');
-      }
-
-      Promise.all([
-        fetch('../recommendations.json').then(r => r.json()),
-        fetch('../pools-metrics.json').then(r => r.json())
-      ])
-        .then(([recs, metrics]) => {
-          const host = document.getElementById('tables');
-          sections.forEach(sec => {
-            const safe = (recs?.[sec]?.safe || []).map(x => ({ ...x, bucket: 'safe' }));
-            const aggr = (recs?.[sec]?.aggressive || []).map(x => ({ ...x, bucket: 'aggressive' }));
-            const rows = [...safe, ...aggr]
-              .filter(r => Number.isFinite(r?.score))
-              .sort((a, b) => b.score - a.score)
-              .slice(0, 5)
-              .map(r => ({
-                name: r.name,
-                bucket: r.bucket,
-                score: r.score,
-                v: (metrics?.[sec] || {})[r.name] || {}
-              }));
-
-            const tableRows = rows.map((r, i) => `
-              <tr>
-                <td>${i + 1}</td>
-                <td>${r.name}</td>
-                <td>${r.bucket === 'safe' ? '안전주' : '공격주'}</td>
-                <td>${Number(r.score).toFixed(1)}</td>
-                <td>${explain(r.v)}</td>
-              </tr>
-            `).join('');
-
-            host.insertAdjacentHTML('beforeend', `
-              <h3>${sec}</h3>
-              <table>
-                <thead><tr><th>순위</th><th>티커/종목</th><th>구분</th><th>점수</th><th>왜 점수가 높은가?</th></tr></thead>
-                <tbody>${tableRows || '<tr><td colspan="5">데이터 없음</td></tr>'}</tbody>
-              </table>
-            `);
-          });
-        })
-        .catch(() => {
-          document.getElementById('tables').innerHTML = '<p>데이터를 불러오지 못했습니다.</p>';
-        });
-    </script>
   </div>
 </body>
 </html>

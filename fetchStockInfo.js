@@ -797,28 +797,63 @@ function clamp(num, min, max) {
 }
 
 function recalculateAttractivenessScore(metrics, seedKey = '') {
-  // Map raw pool metrics into a premium recommendation band [80, 100].
+  // Use every available pools-metrics signal (numeric + boolean) and map into [80, 100].
   const raw = deriveRawMetricsScore(metrics);
-  const normalizedRaw = Number.isFinite(raw) ? clamp(raw, 0, 100) / 100 : 0.6;
+  const normalizedRaw = Number.isFinite(raw) ? clamp(raw, 0, 100) / 100 : 0.65;
 
-  // Build a signal blend from pools-metrics fields when available.
-  const sentiment = Number.isFinite(metrics?.sentiment) ? clamp((metrics.sentiment + 1) / 2, 0, 1) : normalizedRaw;
-  const reputation = Number.isFinite(metrics?.reputationScore) ? clamp(metrics.reputationScore / 100, 0, 1) : normalizedRaw;
-  const blog = Number.isFinite(metrics?.blogScore)
-    ? clamp(metrics.blogScore / 100, 0, 1)
-    : (Number.isFinite(metrics?.blogMentions) ? clamp(metrics.blogMentions / 100, 0, 1) : normalizedRaw);
-  const naver = Number.isFinite(metrics?.naverScore)
-    ? clamp(metrics.naverScore / 100, 0, 1)
-    : (Number.isFinite(metrics?.naverPopularity) ? clamp(metrics.naverPopularity / 100, 0, 1) : normalizedRaw);
+  if (!metrics || typeof metrics !== 'object') {
+    const rnd = seededRandom(String(seedKey || 'default'));
+    return Math.round(clamp(80 + normalizedRaw * 20 + (rnd() - 0.5) * 1.2, 80, 100));
+  }
 
-  // Weighted quality score keeps pools-metrics as primary driver.
-  const quality = (normalizedRaw * 0.6) + (sentiment * 0.15) + (reputation * 0.15) + ((blog + naver) / 2 * 0.1);
+  const seen = new Set();
+  let numericTotal = 0;
+  let numericCount = 0;
+  let boolTotal = 0;
+  let boolCount = 0;
 
-  // Tiny deterministic jitter prevents ties while staying stable day-to-day per symbol.
+  function ingest(value, key) {
+    if (key) seen.add(key);
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      const scaled = Math.tanh(Math.abs(value));
+      const normalized = value >= 0 ? (scaled + 1) / 2 : (1 - scaled) / 2;
+      numericTotal += clamp(normalized, 0, 1);
+      numericCount += 1;
+      return;
+    }
+    if (typeof value === 'boolean') {
+      boolTotal += value ? 1 : 0;
+      boolCount += 1;
+      return;
+    }
+    if (Array.isArray(value)) {
+      for (let i = 0; i < value.length; i++) ingest(value[i], `${key || 'arr'}[${i}]`);
+      return;
+    }
+    if (value && typeof value === 'object') {
+      for (const [k, v] of Object.entries(value)) ingest(v, `${key || 'obj'}.${k}`);
+    }
+  }
+
+  for (const [k, v] of Object.entries(metrics)) ingest(v, k);
+
+  const allSignalAvg = numericCount ? (numericTotal / numericCount) : normalizedRaw;
+  const boolSignalAvg = boolCount ? (boolTotal / boolCount) : allSignalAvg;
+  const coverageBoost = clamp((numericCount + boolCount) / 80, 0, 1); // richer metrics => wider upside
+
+  const composite = clamp(
+    (normalizedRaw * 0.45) +
+    (allSignalAvg * 0.35) +
+    (boolSignalAvg * 0.10) +
+    (coverageBoost * 0.10),
+    0,
+    1
+  );
+
   const rnd = seededRandom(String(seedKey || 'default'));
-  const jitter = (rnd() - 0.5) * 2; // [-1, +1]
-
-  return Math.round(clamp(80 + quality * 20 + jitter, 80, 100));
+  const jitter = (rnd() - 0.5) * 1.2; // subtle tie-break only
+  const vivid = 80 + Math.pow(composite, 0.7) * 20;
+  return Math.round(clamp(vivid + jitter, 80, 100));
 }
 
 async function writeAtomically(dest, data) {
