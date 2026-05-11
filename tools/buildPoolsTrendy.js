@@ -2327,7 +2327,7 @@ async function main(){
 
       // Absolute base score — stronger size bias as requested
       const baseNoTags = clamp01(SIZE_ABS_WEIGHT * size01 + (1 - SIZE_ABS_WEIGHT) * pop01);
-      const baseNoTagsAggr = clamp01(SIZE_ABS_WEIGHT_AGGR * size01 + (1 - SIZE_ABS_WEIGHT_AGGR) * pop01);
+      const baseNoTagsAggr = pop01;
       const tagAffinity = computeTagAffinity(nf.topKeywords, baseNoTags);
       const base01 = TAG_EVAL_WEIGHT > 0
         ? clamp01((1 - TAG_EVAL_WEIGHT) * baseNoTags + TAG_EVAL_WEIGHT * tagAffinity)
@@ -2767,14 +2767,15 @@ async function main(){
     const minScore = Math.min(...scores), maxScore = Math.max(...scores);
     console.log(`[score-check] ${market} score range ${minScore}-${maxScore}`);
 
-    // ---- Split into safe/aggressive buckets based on market cap ----
+    // ---- Split into safe/aggressive buckets (safe uses market cap, aggressive ignores it) ----
     const total = names.length;
     const aggrCount = Math.min(total, Math.max(5, Math.ceil(total * 0.3)));
     const mcapSorted = names
       .slice()
       .sort((a, b) => (byName[b].marketCap ?? 0) - (byName[a].marketCap ?? 0));
     const safeCandidates = mcapSorted.slice(0, total - aggrCount);
-    const aggrCandidates = mcapSorted.slice(total - aggrCount);
+    const safeCandidateSet = new Set(safeCandidates);
+    const aggrCandidates = names.filter(n => !safeCandidateSet.has(n));
 
     const safeSorted = safeCandidates.sort((a, b) => scoreSafe[b] - scoreSafe[a]);
     const aggrSorted = aggrCandidates.sort((a, b) => scoreAggr[b] - scoreAggr[a]);
