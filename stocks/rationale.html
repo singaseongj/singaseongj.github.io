@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>매력점수 계산식 안내</title>
+  <style>
+    body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',sans-serif; margin: 0; padding: 24px; color:#1f2937; line-height:1.6; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    h1,h2,h3 { color:#111827; }
+    .card { background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:14px 0; }
+    .formula { background:#eef2ff; border-left:4px solid #4f46e5; padding:12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    table { width:100%; border-collapse: collapse; margin-top:8px; }
+    th,td { border-bottom:1px solid #e5e7eb; padding:8px; text-align:left; }
+    th { background:#f3f4f6; }
+    .small { color:#6b7280; font-size:0.92rem; }
+    a { color:#2563eb; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p><a href="../stocks.html">← stocks.html로 돌아가기</a></p>
+    <h1>매력점수 계산식 (쉽게 보기)</h1>
+    <p>이 페이지는 <code>pools-metrics.json</code>의 데이터와 <code>tools/buildPoolsTrendy.js</code>의 점수 공식을 기준으로, 섹션별 상위 5개 종목이 왜 높은 점수를 받는지 쉽게 설명합니다.</p>
+
+    <div class="card">
+      <h2>1) 점수 계산 핵심 구조</h2>
+      <div class="formula">
+        인기도(pop01) = (뉴스 + 네이버인기 + 네이버금융 + 모멘텀 + 블로그 + 위키 + 긍정키워드 - 부정키워드) / 가중치합
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        기본점수(base01) = size 가중치 × 시가총액점수(size01) + (1-size 가중치) × 인기도(pop01)
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        최종 totalScore(0~100) = 보정(피드백/신뢰도/누락데이터/국내시장 패널티 등) 후 0~100 구간으로 변환
+      </div>
+      <p class="small">즉, <strong>크기(시총)</strong> + <strong>관심도(뉴스/검색/키워드)</strong>를 섞고, 데이터 신뢰도/시장 보정을 더해 최종 점수를 만듭니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>2) 각 항목 의미 (간단 버전)</h2>
+      <ul>
+        <li><strong>newsScore</strong>: 최근 뉴스가 얼마나 많은지/강한지</li>
+        <li><strong>naverPopularity, naverFinanceScore</strong>: 네이버 관심도와 금융 문맥 연관도</li>
+        <li><strong>trend/momentum</strong>: 최근 추세가 좋아지는지</li>
+        <li><strong>blog/wiki</strong>: 대중 관심(블로그/위키 조회)</li>
+        <li><strong>posHits / negHits</strong>: 긍정·부정 키워드 비율</li>
+        <li><strong>size01</strong>: 시가총액 기반 안정성/규모 점수</li>
+        <li><strong>sourceReliability / confidence</strong>: 데이터 품질 보정</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3) 섹션별 상위 5개 종목</h2>
+      <p class="small">표는 현재 <code>pools-metrics.json</code> 값으로 계산된 totalScore 상위 종목입니다.</p>
+      <div id="tables"></div>
+    </div>
+
+    <script>
+      const sections = ['KOSPI', 'KOSDAQ', 'S&P 500', 'NASDAQ 100'];
+
+      function scoreOf(v) {
+        if (Number.isFinite(v?.totalScore)) return v.totalScore;
+        if (Number.isFinite(v?.score)) return v.score;
+        if (Number.isFinite(v?.significance_score)) return v.significance_score;
+        return 0;
+      }
+
+      function explain(v) {
+        const parts = [];
+        if ((v.newsScore ?? 0) > 0.5) parts.push('뉴스 강도 높음');
+        if ((v.naverPopularity ?? 0) > 0.4) parts.push('검색/관심도 높음');
+        if ((v.marketCap ?? 0) > 0) parts.push('시총 점수 반영');
+        if ((v.posHits ?? 0) > (v.negHits ?? 0)) parts.push('긍정 키워드 우세');
+        if (!parts.length) parts.push('복합 지표 보정으로 상위권');
+        return parts.join(', ');
+      }
+
+      fetch('../pools-metrics.json')
+        .then(r => r.json())
+        .then(data => {
+          const host = document.getElementById('tables');
+          sections.forEach(sec => {
+            const rows = Object.entries(data[sec] || {})
+              .map(([name, v]) => ({ name, v, score: scoreOf(v) }))
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 5);
+
+            const tableRows = rows.map((r, i) => `
+              <tr>
+                <td>${i + 1}</td>
+                <td>${r.name}</td>
+                <td>${Number(r.score).toFixed(1)}</td>
+                <td>${explain(r.v)}</td>
+              </tr>
+            `).join('');
+
+            host.insertAdjacentHTML('beforeend', `
+              <h3>${sec}</h3>
+              <table>
+                <thead><tr><th>순위</th><th>티커/종목</th><th>점수</th><th>왜 점수가 높은가?</th></tr></thead>
+                <tbody>${tableRows}</tbody>
+              </table>
+            `);
+          });
+        })
+        .catch(() => {
+          document.getElementById('tables').innerHTML = '<p>데이터를 불러오지 못했습니다.</p>';
+        });
+    </script>
+  </div>
+</body>
+</html>
