@@ -796,65 +796,182 @@ function clamp(num, min, max) {
   return Math.min(max, Math.max(min, num));
 }
 
-function recalculateAttractivenessScore(metrics, seedKey = '') {
-  // Use every available pools-metrics signal (numeric + boolean) and map into [80, 100].
-  const raw = deriveRawMetricsScore(metrics);
-  const normalizedRaw = Number.isFinite(raw) ? clamp(raw, 0, 100) / 100 : 0.65;
 
+function normalizeFinancialMetric(value, { min, max }) {
+  if (!Number.isFinite(value)) return 0.5;
+  const clamped = clamp(value, min, max);
+  return (clamped - min) / (max - min);
+}
+
+function normalizeVolatility(vol) {
+  if (!Number.isFinite(vol)) return 0.5;
+  return clamp(1 - (vol / 0.15), 0, 1);
+}
+
+function normalizeADV(adv) {
+  if (!Number.isFinite(adv) || adv <= 0) return 0.3;
+  const logAdv = Math.log10(adv);
+  return clamp((logAdv - 4) / 3, 0, 1);
+}
+
+function normalizeNewsCount(rawCount, weightedCount) {
+  const count = Number.isFinite(weightedCount) ? weightedCount : rawCount;
+  if (!Number.isFinite(count) || count === 0) return 0.2;
+
+  if (count < 5) return 0.3;
+  if (count <= 20) return clamp(count / 25, 0.5, 1.0);
+  if (count <= 50) return 0.9;
+  return clamp(100 / count, 0.5, 0.9);
+}
+
+function normalizeSentiment(sentiment, posHits, negHits) {
+  let sentimentScore = 0.5;
+
+  if (Number.isFinite(sentiment)) {
+    sentimentScore = clamp((sentiment + 1) / 2, 0, 1);
+  } else if (Number.isFinite(posHits) && Number.isFinite(negHits)) {
+    const total = posHits + negHits;
+    if (total > 0) {
+      sentimentScore = posHits / total;
+    }
+  }
+
+  return sentimentScore;
+}
+
+function normalizeWikiViews(views) {
+  if (!Number.isFinite(views) || views === 0) return 0.1;
+  const logViews = Math.log10(views + 1);
+  return clamp((logViews - 1) / 3.7, 0, 1);
+}
+
+function recalculateAttractivenessScore(metrics, seedKey = '') {
   if (!metrics || typeof metrics !== 'object') {
     const rnd = seededRandom(String(seedKey || 'default'));
-    return Math.round(clamp(80 + normalizedRaw * 20 + (rnd() - 0.5) * 1.2, 80, 100));
+    return Math.round(clamp(80 + (rnd() - 0.5) * 20, 80, 100));
   }
 
-  const seen = new Set();
-  let numericTotal = 0;
-  let numericCount = 0;
-  let boolTotal = 0;
-  let boolCount = 0;
+  const ret5Score = normalizeFinancialMetric(metrics.ret5, { min: -20, max: 30 });
+  const ret20Score = normalizeFinancialMetric(metrics.ret20, { min: -10, max: 15 });
+  const vol20Score = normalizeVolatility(metrics.vol20);
+  const turnoverScore = normalizeFinancialMetric(metrics.turnover, { min: 0.3, max: 1.5 });
+  const adv20Score = normalizeADV(metrics.adv20);
 
-  function ingest(value, key) {
-    if (key) seen.add(key);
-    if (typeof value === 'number' && Number.isFinite(value)) {
-      const scaled = Math.tanh(Math.abs(value));
-      const normalized = value >= 0 ? (scaled + 1) / 2 : (1 - scaled) / 2;
-      numericTotal += clamp(normalized, 0, 1);
-      numericCount += 1;
-      return;
-    }
-    if (typeof value === 'boolean') {
-      boolTotal += value ? 1 : 0;
-      boolCount += 1;
-      return;
-    }
-    if (Array.isArray(value)) {
-      for (let i = 0; i < value.length; i++) ingest(value[i], `${key || 'arr'}[${i}]`);
-      return;
-    }
-    if (value && typeof value === 'object') {
-      for (const [k, v] of Object.entries(value)) ingest(v, `${key || 'obj'}.${k}`);
-    }
-  }
-
-  for (const [k, v] of Object.entries(metrics)) ingest(v, k);
-
-  const allSignalAvg = numericCount ? (numericTotal / numericCount) : normalizedRaw;
-  const boolSignalAvg = boolCount ? (boolTotal / boolCount) : allSignalAvg;
-  const coverageBoost = clamp((numericCount + boolCount) / 80, 0, 1); // richer metrics => wider upside
-
-  const composite = clamp(
-    (normalizedRaw * 0.45) +
-    (allSignalAvg * 0.35) +
-    (boolSignalAvg * 0.10) +
-    (coverageBoost * 0.10),
+  const financialComposite = clamp(
+    (ret5Score * 0.25 + ret20Score * 0.25 + vol20Score * 0.15 +
+     turnoverScore * 0.20 + adv20Score * 0.15) / 1.0,
     0,
     1
   );
 
+  const newsCountScore = normalizeNewsCount(metrics.rawNewsCount, metrics.newsCount);
+  const newsScoreValue = Number.isFinite(metrics.newsScore)
+    ? clamp(metrics.newsScore, 0, 1)
+    : 0;
+  const sentimentScore = normalizeSentiment(metrics.sentiment, metrics.posHits, metrics.negHits);
+  const googleNewsScore = normalizeNewsCount(metrics.googleNewsCount, null);
+
+  const newsComposite = clamp(
+    (newsCountScore * 0.30 + newsScoreValue * 0.40 +
+     sentimentScore * 0.20 + googleNewsScore * 0.10) / 1.0,
+    0,
+    1
+  );
+
+  const naverPopScore = clamp(metrics.naverPopularity || 0, 0, 1);
+  const naverAsviScore = clamp(metrics.naverAsvi || 0, 0, 1);
+  const naverSpikeBonus = (metrics.naverSpike > 0.5 ? 0.15 : 0) +
+                          (metrics.naverPersist ? 0.1 : 0);
+  const naverCountScore = normalizeNewsCount(metrics.naverCount, null);
+  const naverDataQualityBonus = metrics.naverDataQuality?.confidence
+    ? clamp(metrics.naverDataQuality.confidence * 0.2, 0, 0.2)
+    : 0;
+
+  const naverComposite = clamp(
+    (naverPopScore * 0.35 + naverAsviScore * 0.25 + naverCountScore * 0.20 +
+     naverSpikeBonus * 0.15 + naverDataQualityBonus * 0.05) / 1.0,
+    0,
+    1
+  );
+
+  const blogScore = clamp(Number.isFinite(metrics.blogScore) ? metrics.blogScore : (metrics.blogMentions || 0) / 100, 0, 1);
+  const wikiScore = clamp(metrics.wikiScore || 0, 0, 1);
+  const wikiViewScore = normalizeWikiViews(metrics.wikiViews);
+
+  const contentComposite = clamp(
+    (blogScore * 0.40 + wikiScore * 0.35 + wikiViewScore * 0.25) / 1.0,
+    0,
+    1
+  );
+
+  const reputationValue = Number.isFinite(metrics.reputationScore)
+    ? clamp(metrics.reputationScore, 0, 1)
+    : 0.5;
+  const sourceReliabilityBonus = metrics.sourceReliability
+    ? clamp(metrics.sourceReliability * 0.15, 0, 0.15)
+    : 0;
+  const eligibilityBonus = metrics.eligible?.eligible
+    ? (metrics.eligible.advOk && metrics.eligible.priceOk ? 0.15 : 0.05)
+    : -0.1;
+
+  const qualityComposite = clamp(
+    (reputationValue * 0.50 + sourceReliabilityBonus + eligibilityBonus) / 0.65,
+    0,
+    1
+  );
+
+  const unifiedScore = metrics.unifiedScoreData?.score
+    ? clamp(metrics.unifiedScoreData.score / 100, 0, 1)
+    : null;
+  const unifiedConfidence = metrics.unifiedScoreData?.confidence
+    ? clamp(metrics.unifiedScoreData.confidence, 0, 1)
+    : 0;
+
+  let compositeScore;
+  if (unifiedScore !== null && unifiedConfidence > 0.7) {
+    compositeScore = clamp(
+      (unifiedScore * 0.35) +
+      (financialComposite * 0.20) +
+      (newsComposite * 0.18) +
+      (naverComposite * 0.15) +
+      (contentComposite * 0.07) +
+      (qualityComposite * 0.05),
+      0,
+      1
+    );
+  } else {
+    compositeScore = clamp(
+      (financialComposite * 0.22) +
+      (newsComposite * 0.25) +
+      (naverComposite * 0.20) +
+      (contentComposite * 0.15) +
+      (qualityComposite * 0.18),
+      0,
+      1
+    );
+  }
+
   const rnd = seededRandom(String(seedKey || 'default'));
-  const jitter = (rnd() - 0.5) * 1.2; // subtle tie-break only
-  const vivid = 80 + Math.pow(composite, 0.7) * 20;
-  return Math.round(clamp(vivid + jitter, 80, 100));
+  const jitter = (rnd() - 0.5) * 1.2;
+  const vivid = 80 + Math.pow(compositeScore, 0.75) * 20;
+  const finalScore = Math.round(clamp(vivid + jitter, 80, 100));
+
+  if (process.env.DEBUG_SCORING === '1') {
+    console.log(`[SCORE_DEBUG] seedKey=${seedKey}`);
+    console.log(`  Financial: ${(financialComposite * 100).toFixed(1)}%`);
+    console.log(`  News: ${(newsComposite * 100).toFixed(1)}%`);
+    console.log(`  Naver: ${(naverComposite * 100).toFixed(1)}%`);
+    console.log(`  Content: ${(contentComposite * 100).toFixed(1)}%`);
+    console.log(`  Quality: ${(qualityComposite * 100).toFixed(1)}%`);
+    if (unifiedScore !== null) {
+      console.log(`  Unified (conf=${unifiedConfidence.toFixed(2)}): ${(unifiedScore * 100).toFixed(1)}%`);
+    }
+    console.log(`  Composite: ${(compositeScore * 100).toFixed(1)}% -> Final: ${finalScore}`);
+  }
+
+  return finalScore;
 }
+
 
 async function writeAtomically(dest, data) {
   const tmp = dest + '.tmp';
@@ -1588,7 +1705,12 @@ async function tryFetchAndEnrich() {
           const news = ticker ? (newsFeatures[ticker] || {}) : {};
           const trend = ticker ? (naverTrends[ticker] || {}) : {};
           const metrics = getMetricsForEntry(market, rawName);
-          const baseScore = recalculateAttractivenessScore(metrics, `${market}:${group}:${rawName}`);
+          const enrichedMetrics = {
+            ...metrics,
+            ...(newsFeatures[ticker] || {}),
+            ...(naverTrends[ticker] || {})
+          };
+          const baseScore = recalculateAttractivenessScore(enrichedMetrics, `${market}:${group}:${rawName}`);
 
           const reputationScore = metrics?.reputationScore ?? news.reputationScore ?? null;
           const topKeywords = (metrics?.topKeywords && metrics.topKeywords.length)
@@ -1629,7 +1751,12 @@ async function tryFetchAndEnrich() {
         } catch (err) {
           console.error(`[ERROR] ${rawName}: ${err.message}`);
           const metrics = getMetricsForEntry(market, rawName);
-          const baseScore = recalculateAttractivenessScore(metrics, `${market}:${group}:${rawName}`);
+          const enrichedMetrics = {
+            ...metrics,
+            ...(newsFeatures[ticker] || {}),
+            ...(naverTrends[ticker] || {})
+          };
+          const baseScore = recalculateAttractivenessScore(enrichedMetrics, `${market}:${group}:${rawName}`);
           const sentiment = Number.isFinite(metrics?.sentiment) ? +metrics.sentiment.toFixed(2) : 0;
           const blog = Number.isFinite(metrics?.blogScore)
             ? +metrics.blogScore.toFixed(2)

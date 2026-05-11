@@ -19,34 +19,34 @@
 </head>
 <body>
   <div class="container">
-    <p><a href="../stocks.html">← stocks.html로 돌아가기</a></p>
+    <p><a href="../stocks.html">돌아가기</a></p>
     <h1>매력점수 계산식 (쉽게 보기)</h1>
     <p>이 페이지는 <code>recommendations.json</code>의 점수(= <code>fetchStockInfo.js</code>가 산출한 점수)와 <code>tools/buildPoolsTrendy.js</code>의 계산 근거를 함께 보여줍니다. 섹션별 상위 5개 종목이 왜 높은 점수를 받는지 쉽게 설명합니다.</p>
 
     <div class="card">
-      <h2>0) pools-metrics 전체 반영 공식 (현재 fetchStockInfo 기준)</h2>
+      <h2>0) 전체 반영 공식</h2>
       <div class="formula">
-        normalizedRaw = clamp(rawScore, 0, 100) / 100
+        금융 = 0.25*ret5 + 0.25*ret20 + 0.15*저변동성 + 0.20*turnover + 0.15*ADV
       </div>
       <div class="formula" style="margin-top:10px;">
-        numericNorm(x) = x≥0 ? (tanh(|x|)+1)/2 : (1-tanh(|x|))/2
+        뉴스 = 0.30*뉴스량 + 0.40*newsScore + 0.20*sentiment + 0.10*googleNews
       </div>
       <div class="formula" style="margin-top:10px;">
-        allSignalAvg = pools-metrics 엔트리의 모든 숫자값(중첩 객체/배열 포함)을 numericNorm 후 평균
+        네이버 = 0.35*인기도 + 0.25*ASVI + 0.20*뉴스량 + 0.15*스파이크 + 0.05*품질보너스
       </div>
       <div class="formula" style="margin-top:10px;">
-        boolSignalAvg = pools-metrics 엔트리의 모든 불리언값을 (true=1, false=0)로 평균
+        콘텐츠 = 0.40*blog + 0.35*wiki + 0.25*wikiViews(log)
       </div>
       <div class="formula" style="margin-top:10px;">
-        coverageBoost = clamp((numericCount + boolCount) / 80, 0, 1)
+        품질 = (0.50*reputation + sourceReliabilityBonus + eligibilityBonus) / 0.65
       </div>
       <div class="formula" style="margin-top:10px;">
-        composite = 0.45*normalizedRaw + 0.35*allSignalAvg + 0.10*boolSignalAvg + 0.10*coverageBoost
+        composite = 통합점수 신뢰도(confidence)&gt;0.7 이면 Unified 35% 우선, 아니면 5개 축 가중합
       </div>
       <div class="formula" style="margin-top:10px;">
-        finalScore = round(clamp(80 + (composite^0.7)*20 + jitter, 80, 100))
+        finalScore = round(clamp(80 + (composite^0.75)*20 + jitter, 80, 100))
       </div>
-      <p class="small">즉, 모든 pools-metrics 신호를 통합하면서도 최종 매력점수는 80~100 구간에서 표현됩니다.</p>
+      <p class="small">즉, pools-metrics + 뉴스/네이버 부가데이터를 함께 반영해 최종 점수(80~100)를 계산합니다.</p>
     </div>
 
     <div class="card">
@@ -64,15 +64,14 @@
     </div>
 
     <div class="card">
-      <h2>2) 각 항목 의미 (간단 버전)</h2>
+      <h2>2) 각 항목 의미</h2>
       <ul>
-        <li><strong>newsScore</strong>: 최근 뉴스가 얼마나 많은지/강한지</li>
-        <li><strong>naverPopularity, naverFinanceScore</strong>: 네이버 관심도와 금융 문맥 연관도</li>
-        <li><strong>trend/momentum</strong>: 최근 추세가 좋아지는지</li>
-        <li><strong>blog/wiki</strong>: 대중 관심(블로그/위키 조회)</li>
-        <li><strong>posHits / negHits</strong>: 긍정·부정 키워드 비율</li>
-        <li><strong>size01</strong>: 시가총액 기반 안정성/규모 점수</li>
-        <li><strong>sourceReliability / confidence</strong>: 데이터 품질 보정</li>
+        <li><strong>Financial</strong>: ret5/ret20(모멘텀), vol20(리스크), turnover/adv20(유동성)</li>
+        <li><strong>News & Sentiment</strong>: 뉴스량 최적 구간, newsScore 품질, 감정도/긍부정 단어</li>
+        <li><strong>Naver Ecosystem</strong>: naverPopularity, naverAsvi, naverSpike/naverPersist, naverCount</li>
+        <li><strong>Blog & Wiki</strong>: blogScore·blogMentions, wikiScore, wikiViews 로그 정규화</li>
+        <li><strong>Reputation & Quality</strong>: reputationScore, sourceReliability, eligible 조건 보너스</li>
+        <li><strong>Unified Score</strong>: unifiedScoreData(score/confidence)가 충분히 신뢰될 때 핵심 가중치로 반영</li>
       </ul>
     </div>
 
