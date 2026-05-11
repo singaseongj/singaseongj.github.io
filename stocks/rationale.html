@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>매력점수 계산식 안내</title>
+  <style>
+    body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',sans-serif; margin: 0; padding: 24px; color:#1f2937; line-height:1.6; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    h1,h2,h3 { color:#111827; }
+    .card { background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:14px 0; }
+    .formula { background:#eef2ff; border-left:4px solid #4f46e5; padding:12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    table { width:100%; border-collapse: collapse; margin-top:8px; }
+    th,td { border-bottom:1px solid #e5e7eb; padding:8px; text-align:left; }
+    th { background:#f3f4f6; }
+    .small { color:#6b7280; font-size:0.92rem; }
+    a { color:#2563eb; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p><a href="../stocks.html">돌아가기</a></p>
+    <h1>매력점수 계산식</h1>
+    <p>이 페이지는 항목의 점수와 계산 근거를 함께 보여줍니다. 섹션별 상위 5개 종목이 왜 높은 점수를 받는지 설명합니다.</p>
+
+    <div class="card">
+      <h2>0) 전체 반영 공식</h2>
+      <div class="formula">
+        금융 = 0.25*ret5 + 0.25*ret20 + 0.15*저변동성 + 0.20*turnover + 0.15*ADV
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        뉴스 = 0.30*뉴스량 + 0.40*newsScore + 0.20*sentiment + 0.10*googleNews
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        네이버 = 0.35*인기도 + 0.25*ASVI + 0.20*뉴스량 + 0.15*스파이크 + 0.05*품질보너스
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        콘텐츠 = 0.40*blog + 0.35*wiki + 0.25*wikiViews(log)
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        품질 = (0.50*reputation + sourceReliabilityBonus + eligibilityBonus) / 0.65
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        composite = 통합점수 신뢰도(confidence)&gt;0.7 이면 Unified 35% 우선, 아니면 5개 축 가중합
+      </div>
+      <p class="small">즉, pools-metrics + 뉴스/네이버 부가데이터를 함께 반영해 최종 점수를 계산합니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>1) 점수 계산 핵심 구조</h2>
+      <div class="formula">
+        인기도(pop01) = (뉴스 + 네이버인기 + 네이버금융 + 모멘텀 + 블로그 + 위키 + 긍정키워드 - 부정키워드) / 가중치합
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        기본점수(base01) = 안전주: size 가중치 × 시가총액점수(size01) + (1-size 가중치) × 인기도(pop01) / 공격주: 인기도(pop01) 중심(시가총액 제외)
+      </div>
+      <div class="formula" style="margin-top:10px;">
+        최종 totalScore(0~100) = 보정(피드백/신뢰도/누락데이터/국내시장 패널티 등) 후 0~100 구간으로 변환
+      </div>
+      <p class="small">즉, 안전주는 <strong>크기(시총)+관심도</strong>, 공격주는 <strong>관심도 중심</strong>으로 계산하고, 데이터 신뢰도/시장 보정을 더해 최종 점수를 만듭니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>2) 각 항목 의미</h2>
+      <ul>
+        <li><strong>Financial</strong>: ret5/ret20(모멘텀), vol20(리스크), turnover/adv20(유동성)</li>
+        <li><strong>News & Sentiment</strong>: 뉴스량 최적 구간, newsScore 품질, 감정도/긍부정 단어</li>
+        <li><strong>Naver Ecosystem</strong>: naverPopularity, naverAsvi, naverSpike/naverPersist, naverCount</li>
+        <li><strong>Blog & Wiki</strong>: blogScore·blogMentions, wikiScore, wikiViews 로그 정규화</li>
+        <li><strong>Reputation & Quality</strong>: reputationScore, sourceReliability, eligible 조건 보너스</li>
+        <li><strong>Unified Score</strong>: unifiedScoreData(score/confidence)가 충분히 신뢰될 때 핵심 가중치로 반영</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3) 섹션별 상위 5개 종목</h2>
+      <p class="small">표의 점수는 분석하여 계산된 점수입니다. 계산 근거 설명은 기존과 동일합니다.</p>
+      <div id="tables"></div>
+    </div>
+
+    <script>
+      const sections = ['KOSPI', 'KOSDAQ', 'S&P 500', 'NASDAQ 100'];
+
+      function explain(v) {
+        const parts = [];
+        if ((v.newsScore ?? 0) > 0.5) parts.push('뉴스 강도 높음');
+        if ((v.naverPopularity ?? 0) > 0.4) parts.push('검색/관심도 높음');
+        if ((v.marketCap ?? 0) > 0) parts.push('시총 점수 반영');
+        if ((v.posHits ?? 0) > (v.negHits ?? 0)) parts.push('긍정 키워드 우세');
+        if (!parts.length) parts.push('복합 지표 보정으로 상위권');
+        return parts.join(', ');
+      }
+
+      Promise.all([
+        fetch('../recommendations.json').then(r => r.json()),
+        fetch('../pools-metrics.json').then(r => r.json())
+      ])
+        .then(([recs, metrics]) => {
+          const host = document.getElementById('tables');
+          sections.forEach(sec => {
+            const safe = (recs?.[sec]?.safe || []).map(x => ({ ...x, bucket: 'safe' }));
+            const aggr = (recs?.[sec]?.aggressive || []).map(x => ({ ...x, bucket: 'aggressive' }));
+            const rows = [...safe, ...aggr]
+              .filter(r => Number.isFinite(r?.score))
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 5)
+              .map(r => ({
+                name: r.name,
+                bucket: r.bucket,
+                score: r.score,
+                v: (metrics?.[sec] || {})[r.name] || {}
+              }));
+
+            const tableRows = rows.map((r, i) => `
+              <tr>
+                <td>${i + 1}</td>
+                <td>${r.name}</td>
+                <td>${r.bucket === 'safe' ? '안전주' : '공격주'}</td>
+                <td>${Number(r.score).toFixed(1)}</td>
+                <td>${explain(r.v)}</td>
+              </tr>
+            `).join('');
+
+            host.insertAdjacentHTML('beforeend', `
+              <h3>${sec}</h3>
+              <table>
+                <thead><tr><th>순위</th><th>티커/종목</th><th>구분</th><th>점수</th><th>왜 점수가 높은가?</th></tr></thead>
+                <tbody>${tableRows || '<tr><td colspan="5">데이터 없음</td></tr>'}</tbody>
+              </table>
+            `);
+          });
+        })
+        .catch(() => {
+          document.getElementById('tables').innerHTML = '<p>데이터를 불러오지 못했습니다.</p>';
+        });
+    </script>
+  </div>
+</body>
+</html>

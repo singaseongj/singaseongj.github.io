@@ -133,6 +133,7 @@
 <body>
   <nav><a href="index.html" aria-label="Home">&#x21A9; Home</a></nav>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
+  <p class="dashboard-link"><a href="stocks/rationale.html">매력점수 계산식</a></p>
   <p class="dashboard-link"><a data-i18n="dashboardLink" href="stocks/index.html">👉 Stock News Summary Dashboard</a></p>
   <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> {{CURRENT_DATE}}</p>
   
@@ -205,7 +206,7 @@
         recsError: '추천 데이터를 불러오지 못했습니다.',
         safe: '안전주',
         aggressive: '공격주',
-        pickNote: '안전주는 변동성이 낮고 최근 수익률이 안정적인 종목, 공격주는 모멘텀과 거래대금이 높은 종목입니다.',
+        pickNote: '안전주는 시가총액과 인기도를 반영한 대형주, 공격주는 시가총액을 제외한 키워드와 인기도를 기반으로 한 종목입니다.',
         updated: '업데이트: ',
         visitsToday: '오늘 방문: {daily} | 총 방문: {total}',
         noPicks: 'No picks available',
