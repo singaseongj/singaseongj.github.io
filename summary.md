@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-05-12T23:25:06+09:00 (KST)**
+- Generated: **2026-05-13T04:53:02+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -103,7 +103,7 @@
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
 - Returns: 5d **26.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -214,43 +214,43 @@
 
 ### AGGRESSIVE (5)
 
-**Linde plc** (LIN)
+**Airbnb** (ABNB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.1%**, 20d **3.5%**; volatility (20d): **unknown**
+- Returns: 5d **3.9%**, 20d **-3.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Materials**
-- News search: https://www.google.com/search?q=Linde%20plc
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Airbnb
 
-**Mercado Libre** (MELI)
+**ASML Holding** (ASML)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **6.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
+- News search: https://www.google.com/search?q=ASML%20Holding
 
-**Shopify** (SHOP)
+**Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
+- Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Shopify
+- News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
 
-**Take-Two Interactive** (TTWO)
+**Comcast** (CMCSA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.5%**, 20d **3.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.6%**, 20d **4.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Take-Two%20Interactive
+- News search: https://www.google.com/search?q=Comcast
 
-**Xcel Energy** (XEL)
+**CoStar Group** (CSGP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **0.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.4%**, 20d **-7.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Xcel%20Energy
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=CoStar%20Group
 
 ## S&P 500
 
@@ -275,7 +275,7 @@
 **Invesco** (IVZ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.3%**, 20d **13.2%**; volatility (20d): **unknown**
+- Returns: 5d **6.0%**, 20d **15.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Invesco
@@ -283,7 +283,7 @@
 **L3Harris** (LHX)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.7%**, 20d **-14.3%**; volatility (20d): **unknown**
+- Returns: 5d **2.1%**, 20d **-13.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=L3Harris
@@ -291,7 +291,7 @@
 **Linde plc** (LIN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.1%**, 20d **0.0%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **0.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Linde%20plc
@@ -301,7 +301,7 @@
 **Prologis** (PLD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **3.8%**; volatility (20d): **unknown**
+- Returns: 5d **2.7%**, 20d **4.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Prologis
@@ -325,7 +325,7 @@
 **Xcel Energy** (XEL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.2%**, 20d **-0.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.9%**, 20d **0.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Utilities**
 - News search: https://www.google.com/search?q=Xcel%20Energy
