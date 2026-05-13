@@ -1,1089 +1,425 @@
 {
+  "generatedAt": "2026-05-13T08:44:25.069Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-13",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Open Sharply Lower",
-      "term_ko": "급격히 낮게 열기",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Sharply Lower",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on U.S. losses, Middle East uncert...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016073538?sid=104"
-            },
-            {
-              "title": "Seoul shares open sharply lower on U.S. losses, Middle East uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0016073456?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Sharply%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Sharply%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on U.S. losses, Middle East uncert...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016073538?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Seoul shares open sharply lower on U.S. losses, Middle East uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016073456?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "급격히 낮게 열기"
     },
     {
-      "term": "U.S Losses Middle",
-      "term_ko": "미국 손실 중간",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Losses Middle",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on U.S. losses, Middle East uncert...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016073538?sid=104"
-            },
-            {
-              "title": "Seoul shares open sharply lower on U.S. losses, Middle East uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0016073456?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Losses%20Middle",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Losses%20Middle"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on U.S. losses, Middle East uncert...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016073538?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Seoul shares open sharply lower on U.S. losses, Middle East uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016073456?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Losses Middle",
+      "term_ko": "미국 손실 중간"
     },
     {
-      "term": "Warrior ESG Bonds",
-      "term_ko": "여전사 ESG 채권",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "여전사 ESG 채권",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "여전사 ESG 채권 발행 '뚝'…상생금융 진정성 시험대",
-              "link": "http://www.newstomato.com/ReadNews.aspx?no=1300370&inflow=N"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AC%EC%A0%84%EC%82%AC%20ESG%20%EC%B1%84%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AC%EC%A0%84%EC%82%AC%20ESG%20%EC%B1%84%EA%B6%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "여전사 ESG 채권 발행 '뚝'…상생금융 진정성 시험대",
-          "summary": "",
-          "link": "http://www.newstomato.com/ReadNews.aspx?no=1300370&inflow=N",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Warrior Esg Bonds",
+      "term_ko": "여전사 ESG 채권"
     },
     {
-      "term": "1500 for skyrocketing oil prices",
-      "term_ko": "치솟는 국제유가에 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "치솟는 국제유가에 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "다시 치솟는 국제유가에 1500원 목전 둔 환율",
-              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=127042"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%98%EC%86%9F%EB%8A%94%20%EA%B5%AD%EC%A0%9C%EC%9C%A0%EA%B0%80%EC%97%90%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%98%EC%86%9F%EB%8A%94%20%EA%B5%AD%EC%A0%9C%EC%9C%A0%EA%B0%80%EC%97%90%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "다시 치솟는 국제유가에 1500원 목전 둔 환율",
-          "summary": "",
-          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=127042",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1500 for Skyrocketing Oil Prices",
+      "term_ko": "치솟는 국제유가에 1500원"
     },
     {
-      "term": "Korea growth rate 1.9%→2.5",
-      "term_ko": "韓 성장률 1.9%→2.5%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "韓 성장률 1.9%→2.5%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "반도체 호황에 韓 성장률 '1.9%→2.5%'…경상수지 2400억달러 육박",
-              "link": "https://www.newspim.com/news/view/20260513000706"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%20%EC%84%B1%EC%9E%A5%EB%A5%A0%201.9%25%E2%86%922.5%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%20%EC%84%B1%EC%9E%A5%EB%A5%A0%201.9%25%E2%86%922.5%25"
-      },
-      "top_headlines": [
-        {
-          "title": "반도체 호황에 韓 성장률 '1.9%→2.5%'…경상수지 2400억달러 육박",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260513000706",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Korea Growth Rate 1.9%→2.5",
+      "term_ko": "韓 성장률 1.9%→2.5%"
     },
     {
-      "term": "Current account balance nears $240 billion",
-      "term_ko": "경상수지 2400억달러 육박",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경상수지 2400억달러 육박",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "반도체 호황에 韓 성장률 '1.9%→2.5%'…경상수지 2400억달러 육박",
-              "link": "https://www.newspim.com/news/view/20260513000706"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%83%81%EC%88%98%EC%A7%80%202400%EC%96%B5%EB%8B%AC%EB%9F%AC%20%EC%9C%A1%EB%B0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%83%81%EC%88%98%EC%A7%80%202400%EC%96%B5%EB%8B%AC%EB%9F%AC%20%EC%9C%A1%EB%B0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "반도체 호황에 韓 성장률 '1.9%→2.5%'…경상수지 2400억달러 육박",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260513000706",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Current Account Balance Nears $240 Billion",
+      "term_ko": "경상수지 2400억달러 육박"
     },
     {
-      "term": "S&P500 Futures US-China",
-      "term_ko": "S&P500 선물 미중",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "S&P500 선물 미중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, 미중 정상회담 앞두고 하락",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4414569"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%84%A0%EB%AC%BC%20%EB%AF%B8%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%84%A0%EB%AC%BC%20%EB%AF%B8%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 미중 정상회담 앞두고 하락",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4414569",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "S&p500 Futures Us-china",
+      "term_ko": "S&P500 선물 미중"
     },
     {
-      "term": "Startup rate 1.6 percentage points",
-      "term_ko": "스타트업 금리 1.6%p",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스타트업 금리 1.6%p",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"지역 스타트업 금리 1.6%p 인하\"…주금공·부산銀, 동반성장 협약",
-              "link": "https://n.news.naver.com/mnews/article/003/0013941876?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EA%B8%88%EB%A6%AC%201.6%25p",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EA%B8%88%EB%A6%AC%201.6%25p"
-      },
-      "top_headlines": [
-        {
-          "title": "\"지역 스타트업 금리 1.6%p 인하\"…주금공·부산銀, 동반성장 협약",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013941876?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Startup Rate 1.6 Percentage Points",
+      "term_ko": "스타트업 금리 1.6%p"
     },
     {
-      "term": "Base rate 3.5% p.a.",
-      "term_ko": "기준금리 연 3.5%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기준금리 연 3.5%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "씨티, 내년 상반기 한은 기준금리 연 3.5% 전망",
-              "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=78657"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%97%B0%203.5%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%97%B0%203.5%25"
-      },
-      "top_headlines": [
-        {
-          "title": "씨티, 내년 상반기 한은 기준금리 연 3.5% 전망",
-          "summary": "",
-          "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=78657",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Base Rate 3.5% P.a.",
+      "term_ko": "기준금리 연 3.5%"
     },
     {
       "term": "Currency Exchange Rate",
-      "term_ko": "목전 둔 환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "목전 둔 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "다시 치솟는 국제유가에 1500원 목전 둔 환율",
-              "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=127042"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A9%EC%A0%84%20%EB%91%94%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A9%EC%A0%84%20%EB%91%94%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "다시 치솟는 국제유가에 1500원 목전 둔 환율",
-          "summary": "",
-          "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=127042",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "목전 둔 환율"
     },
     {
-      "term": "Issuance Tuk Win-Win Finance",
-      "term_ko": "발행 뚝 상생금융",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "발행 뚝 상생금융",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "여전사 ESG 채권 발행 '뚝'…상생금융 진정성 시험대",
-              "link": "http://www.newstomato.com/ReadNews.aspx?no=1300370&inflow=N"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%96%89%20%EB%9A%9D%20%EC%83%81%EC%83%9D%EA%B8%88%EC%9C%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%96%89%20%EB%9A%9D%20%EC%83%81%EC%83%9D%EA%B8%88%EC%9C%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "여전사 ESG 채권 발행 '뚝'…상생금융 진정성 시험대",
-          "summary": "",
-          "link": "http://www.newstomato.com/ReadNews.aspx?no=1300370&inflow=N",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Issuance Tuk Win-win Finance",
+      "term_ko": "발행 뚝 상생금융"
     },
     {
-      "term": "Dips ahead of summit",
-      "term_ko": "정상회담 앞두고 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정상회담 앞두고 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, 미중 정상회담 앞두고 하락",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4414569"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%83%81%ED%9A%8C%EB%8B%B4%20%EC%95%9E%EB%91%90%EA%B3%A0%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%83%81%ED%9A%8C%EB%8B%B4%20%EC%95%9E%EB%91%90%EA%B3%A0%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 미중 정상회담 앞두고 하락",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4414569",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dips Ahead of Summit",
+      "term_ko": "정상회담 앞두고 하락"
     },
     {
       "term": "Inha Goldsmith Busan Bank",
-      "term_ko": "인하 주금공 부산銀",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인하 주금공 부산銀",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"지역 스타트업 금리 1.6%p 인하\"…주금공·부산銀, 동반성장 협약",
-              "link": "https://n.news.naver.com/mnews/article/003/0013941876?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%95%98%20%EC%A3%BC%EA%B8%88%EA%B3%B5%20%EB%B6%80%EC%82%B0%E9%8A%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%95%98%20%EC%A3%BC%EA%B8%88%EA%B3%B5%20%EB%B6%80%EC%82%B0%E9%8A%80"
-      },
-      "top_headlines": [
-        {
-          "title": "\"지역 스타트업 금리 1.6%p 인하\"…주금공·부산銀, 동반성장 협약",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013941876?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인하 주금공 부산銀"
     },
     {
-      "term": "Citi in the first half of next year",
-      "term_ko": "씨티 내년 상반기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "씨티 내년 상반기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "씨티, 내년 상반기 한은 기준금리 연 3.5% 전망",
-              "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=78657"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%94%A8%ED%8B%B0%20%EB%82%B4%EB%85%84%20%EC%83%81%EB%B0%98%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%94%A8%ED%8B%B0%20%EB%82%B4%EB%85%84%20%EC%83%81%EB%B0%98%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "씨티, 내년 상반기 한은 기준금리 연 3.5% 전망",
-          "summary": "",
-          "link": "http://www.newsfc.co.kr/news/articleView.html?idxno=78657",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Citi in the First Half of Next Year",
+      "term_ko": "씨티 내년 상반기"
     },
     {
-      "term": "KOSPI Falls Below",
-      "term_ko": "코스피 지수 하락",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Falls Below",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Falls Below 7,400 on Foreign Selling",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269327"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Falls%20Below",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Falls%20Below"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls Below 7,400 on Foreign Selling",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269327",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Falls Below",
+      "term_ko": "코스피 지수 하락"
     },
     {
       "term": "Strong Q1 Earnings",
-      "term_ko": "1분기 실적 호조",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Strong Q1 Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Arteris Stock Surges After Strong Q1 Earnings Beat and Higher 2026 Outloo...",
-              "link": "https://www.econotimes.com/Arteris-Stock-Surges-After-Strong-Q1-Earnings-Beat-and-Higher-2026-Outlook-1741521"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Strong%20Q1%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Strong%20Q1%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "Arteris Stock Surges After Strong Q1 Earnings Beat and Higher 2026 Outloo...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Arteris-Stock-Surges-After-Strong-Q1-Earnings-Beat-and-Higher-2026-Outlook-1741521",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "1분기 실적 호조"
     },
     {
-      "term": "Authenticity testing ground",
-      "term_ko": "진정성 시험대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "진정성 시험대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "여전사 ESG 채권 발행 '뚝'…상생금융 진정성 시험대",
-              "link": "http://www.newstomato.com/ReadNews.aspx?no=1300370&inflow=N"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%84%EC%A0%95%EC%84%B1%20%EC%8B%9C%ED%97%98%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%84%EC%A0%95%EC%84%B1%20%EC%8B%9C%ED%97%98%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "여전사 ESG 채권 발행 '뚝'…상생금융 진정성 시험대",
-          "summary": "",
-          "link": "http://www.newstomato.com/ReadNews.aspx?no=1300370&inflow=N",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Authenticity Testing Ground",
+      "term_ko": "진정성 시험대"
     },
     {
       "term": "Shared Growth Agreements",
-      "term_ko": "동반성장 협약",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동반성장 협약",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"지역 스타트업 금리 1.6%p 인하\"…주금공·부산銀, 동반성장 협약",
-              "link": "https://n.news.naver.com/mnews/article/003/0013941876?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EB%B0%98%EC%84%B1%EC%9E%A5%20%ED%98%91%EC%95%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EB%B0%98%EC%84%B1%EC%9E%A5%20%ED%98%91%EC%95%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "\"지역 스타트업 금리 1.6%p 인하\"…주금공·부산銀, 동반성장 협약",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013941876?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동반성장 협약"
     },
     {
       "term": "Hot Inflation Data",
-      "term_ko": "핫 인플레이션 데이터",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hot Inflation Data",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Slip as Iran Tensions and Hot Inflation Data Pressure Wa...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-and-Hot-Inflation-Data-Pressure-Wall-Street-1741526"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hot%20Inflation%20Data",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hot%20Inflation%20Data"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Slip as Iran Tensions and Hot Inflation Data Pressure Wa...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-and-Hot-Inflation-Data-Pressure-Wall-Street-1741526",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "핫 인플레이션 데이터"
     },
     {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on U.S. losses, Middle East uncert...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016073538?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on U.S. losses, Middle East uncert...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016073538?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
     },
     {
       "term": "Futures Slip",
-      "term_ko": "선물 전표",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Slip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Slip as Iran Tensions and Hot Inflation Data Pressure Wa...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-and-Hot-Inflation-Data-Pressure-Wall-Street-1741526"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Slip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Slip"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Slip as Iran Tensions and Hot Inflation Data Pressure Wa...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-and-Hot-Inflation-Data-Pressure-Wall-Street-1741526",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 전표"
     },
     {
       "term": "Iran Tensions",
-      "term_ko": "이란 긴장",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Iran Tensions",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Slip as Iran Tensions and Hot Inflation Data Pressure Wa...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-and-Hot-Inflation-Data-Pressure-Wall-Street-1741526"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Tensions",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Tensions"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Slip as Iran Tensions and Hot Inflation Data Pressure Wa...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-and-Hot-Inflation-Data-Pressure-Wall-Street-1741526",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이란 긴장"
     },
     {
       "term": "Foreign Selling",
-      "term_ko": "해외 판매",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Foreign Selling",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Falls Below 7,400 on Foreign Selling",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269327"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Foreign%20Selling",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Foreign%20Selling"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls Below 7,400 on Foreign Selling",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269327",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "해외 판매"
     },
     {
       "term": "East Uncertainties",
-      "term_ko": "동쪽의 불확실성",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "East Uncertainties",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares open sharply lower on U.S. losses, Middle East uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0016073456?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=East%20Uncertainties",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=East%20Uncertainties"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares open sharply lower on U.S. losses, Middle East uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016073456?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동쪽의 불확실성"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-13T11:58:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-13T02:59:10.669Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-13T11:58:03+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Open Sharply Lower",
+      "term_ko": "급격히 낮게 열기"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-13T11:58:03+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-13T11:58:03+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "U.s Losses Middle",
+      "term_ko": "미국 손실 중간"
+    },
+    {
+      "term": "Warrior Esg Bonds",
+      "term_ko": "여전사 ESG 채권"
+    },
+    {
+      "term": "1500 for Skyrocketing Oil Prices",
+      "term_ko": "치솟는 국제유가에 1500원"
+    },
+    {
+      "term": "Korea Growth Rate 1.9%→2.5",
+      "term_ko": "韓 성장률 1.9%→2.5%"
+    },
+    {
+      "term": "Current Account Balance Nears $240 Billion",
+      "term_ko": "경상수지 2400억달러 육박"
+    },
+    {
+      "term": "S&p500 Futures Us-china",
+      "term_ko": "S&P500 선물 미중"
+    },
+    {
+      "term": "Startup Rate 1.6 Percentage Points",
+      "term_ko": "스타트업 금리 1.6%p"
+    },
+    {
+      "term": "Base Rate 3.5% P.a.",
+      "term_ko": "기준금리 연 3.5%"
+    },
+    {
+      "term": "Currency Exchange Rate",
+      "term_ko": "목전 둔 환율"
+    },
+    {
+      "term": "Issuance Tuk Win-win Finance",
+      "term_ko": "발행 뚝 상생금융"
+    },
+    {
+      "term": "Dips Ahead of Summit",
+      "term_ko": "정상회담 앞두고 하락"
+    },
+    {
+      "term": "Inha Goldsmith Busan Bank",
+      "term_ko": "인하 주금공 부산銀"
+    },
+    {
+      "term": "Citi in the First Half of Next Year",
+      "term_ko": "씨티 내년 상반기"
+    },
+    {
+      "term": "Kospi Falls Below",
+      "term_ko": "코스피 지수 하락"
+    },
+    {
+      "term": "Strong Q1 Earnings",
+      "term_ko": "1분기 실적 호조"
+    },
+    {
+      "term": "Authenticity Testing Ground",
+      "term_ko": "진정성 시험대"
+    },
+    {
+      "term": "Shared Growth Agreements",
+      "term_ko": "동반성장 협약"
+    },
+    {
+      "term": "Hot Inflation Data",
+      "term_ko": "핫 인플레이션 데이터"
+    },
+    {
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
+    },
+    {
+      "term": "Futures Slip",
+      "term_ko": "선물 전표"
+    },
+    {
+      "term": "Iran Tensions",
+      "term_ko": "이란 긴장"
+    },
+    {
+      "term": "Foreign Selling",
+      "term_ko": "해외 판매"
+    },
+    {
+      "term": "East Uncertainties",
+      "term_ko": "동쪽의 불확실성"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "Open Sharply Lower": {
+      "en": "Open Sharply Lower",
+      "ko": "급격히 낮게 열기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "U.s Losses Middle": {
+      "en": "U.s Losses Middle",
+      "ko": "미국 손실 중간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Warrior Esg Bonds": {
+      "en": "Warrior Esg Bonds",
+      "ko": "여전사 ESG 채권",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "1500 for Skyrocketing Oil Prices": {
+      "en": "1500 for Skyrocketing Oil Prices",
+      "ko": "치솟는 국제유가에 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Korea Growth Rate 1.9%→2.5": {
+      "en": "Korea Growth Rate 1.9%→2.5",
+      "ko": "韓 성장률 1.9%→2.5%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Current Account Balance Nears $240 Billion": {
+      "en": "Current Account Balance Nears $240 Billion",
+      "ko": "경상수지 2400억달러 육박",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "S&p500 Futures Us-china": {
+      "en": "S&p500 Futures Us-china",
+      "ko": "S&P500 선물 미중",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Startup Rate 1.6 Percentage Points": {
+      "en": "Startup Rate 1.6 Percentage Points",
+      "ko": "스타트업 금리 1.6%p",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Base Rate 3.5% P.a.": {
+      "en": "Base Rate 3.5% P.a.",
+      "ko": "기준금리 연 3.5%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Currency Exchange Rate": {
+      "en": "Currency Exchange Rate",
+      "ko": "목전 둔 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Issuance Tuk Win-win Finance": {
+      "en": "Issuance Tuk Win-win Finance",
+      "ko": "발행 뚝 상생금융",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Dips Ahead of Summit": {
+      "en": "Dips Ahead of Summit",
+      "ko": "정상회담 앞두고 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Inha Goldsmith Busan Bank": {
+      "en": "Inha Goldsmith Busan Bank",
+      "ko": "인하 주금공 부산銀",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Citi in the First Half of Next Year": {
+      "en": "Citi in the First Half of Next Year",
+      "ko": "씨티 내년 상반기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Kospi Falls Below": {
+      "en": "Kospi Falls Below",
+      "ko": "코스피 지수 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Strong Q1 Earnings": {
+      "en": "Strong Q1 Earnings",
+      "ko": "1분기 실적 호조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Authenticity Testing Ground": {
+      "en": "Authenticity Testing Ground",
+      "ko": "진정성 시험대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Shared Growth Agreements": {
+      "en": "Shared Growth Agreements",
+      "ko": "동반성장 협약",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Hot Inflation Data": {
+      "en": "Hot Inflation Data",
+      "ko": "핫 인플레이션 데이터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Lead Seoul": {
+      "en": "Lead Seoul",
+      "ko": "LEAD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Futures Slip": {
+      "en": "Futures Slip",
+      "ko": "선물 전표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Iran Tensions": {
+      "en": "Iran Tensions",
+      "ko": "이란 긴장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Foreign Selling": {
+      "en": "Foreign Selling",
+      "ko": "해외 판매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "East Uncertainties": {
+      "en": "East Uncertainties",
+      "ko": "동쪽의 불확실성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-13T08:44:25.069Z"
     }
   }
 }
