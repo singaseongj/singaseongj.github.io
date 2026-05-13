@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-05-13T23:35:29+09:00 (KST)**
+- Generated: **2026-05-14T04:56:54+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,6 +93,22 @@
 
 ### SAFE (5)
 
+**HD현대일렉트릭** (267260.KS)
+
+- News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.11)**
+- Returns: 5d **-7.8%**, 20d **27.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD
+
+**LG화학** (051910.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-8.5%**, 20d **14.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Materials**
+- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
+
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
@@ -100,21 +116,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
-
-**대한항공** (003490.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **4.9%**, 20d **7.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
-
-**삼성SDI** (006400.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-9.2%**, 20d **32.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1SDI
 
 **삼성전자** (005930.KS)
 
@@ -124,12 +125,13 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
-**유한양행** (000100.KS)
+**셀트리온** (068270.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.20)**
-- Returns: 5d **-3.5%**, 20d **-8.0%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- Returns: 5d **-2.2%**, 20d **-2.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89
+- Sector: **Healthcare**
+- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
 ### AGGRESSIVE (5)
 
@@ -212,43 +214,44 @@
 
 ### AGGRESSIVE (5)
 
-**Mercado Libre** (MELI)
+**Cisco** (CSCO)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Mercado%20Libre
-
-**Old Dominion Freight Line** (ODFL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **5.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Old%20Dominion%20Freight%20Line
-
-**Qualcomm** (QCOM)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.8%**, 20d **0.4%**; volatility (20d): **unknown**
+- Returns: 5d **2.0%**, 20d **0.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Qualcomm
+- News search: https://www.google.com/search?q=Cisco
 
-**Shopify** (SHOP)
+**Coca-Cola Europacific Partners** (CCEP)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.9%**, 20d **13.7%**; volatility (20d): **unknown**
+- Returns: 5d **-4.3%**, 20d **-10.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=Shopify
+- News search: https://www.google.com/search?q=Coca-Cola%20Europacific%20Partners
 
-**Xcel Energy** (XEL)
+**Comcast** (CMCSA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **0.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.6%**, 20d **4.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Comcast
+
+**CoStar Group** (CSGP)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.4%**, 20d **-7.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=CoStar%20Group
+
+**Exelon** (EXC)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.1%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Utilities**
-- News search: https://www.google.com/search?q=Xcel%20Energy
+- News search: https://www.google.com/search?q=Exelon
 
 ## S&P 500
 
@@ -281,7 +284,7 @@
 **Coherent Corp.** (COHR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **14.8%**, 20d **28.3%**; volatility (20d): **unknown**
+- Returns: 5d **17.4%**, 20d **31.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Coherent%20Corp.
@@ -299,7 +302,7 @@
 **Otis Worldwide** (OTIS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.8%**, 20d **-9.9%**; volatility (20d): **unknown**
+- Returns: 5d **-4.4%**, 20d **-9.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Otis%20Worldwide
@@ -307,7 +310,7 @@
 **Regency Centers** (REG)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.9%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **-3.0%**, 20d **-3.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Regency%20Centers
@@ -315,7 +318,7 @@
 **Solventum** (SOLV)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.9%**, 20d **8.8%**; volatility (20d): **unknown**
+- Returns: 5d **5.0%**, 20d **7.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Solventum
