@@ -783,6 +783,47 @@ function metricScoreFor(market, name) {
   return null;
 }
 
+function isUsMegaIndexMarket(market) {
+  const m = String(market || '').toUpperCase();
+  return m === 'S&P 500' || m === 'NASDAQ 100';
+}
+
+function metricScoreForSelection(market, name, bucket = 'safe') {
+  const metrics = getMetricsForEntry(market, name);
+  if (!metrics) return -Infinity;
+
+  const baseScore = Number.isFinite(metricScoreFor(market, name))
+    ? metricScoreFor(market, name)
+    : (Number.isFinite(deriveRawMetricsScore(metrics)) ? deriveRawMetricsScore(metrics) : 50);
+
+  // Global signals that make ranking more dynamic than a single static score.
+  const naverPopularity = clamp(Number(metrics.naverPopularity) || 0, 0, 1);
+  const naverAsvi = clamp(Number(metrics.naverAsvi) || 0, 0, 1);
+  const naverSpike = clamp(Number(metrics.naverSpike) || 0, 0, 1);
+  const unified = clamp((Number(metrics.unifiedScoreData?.score) || 0) / 100, 0, 1);
+  const adv = normalizeADV(metrics.adv20);
+  const sentiment = normalizeSentiment(metrics.sentiment, metrics.posHits, metrics.negHits);
+  const ret20 = normalizeFinancialMetric(metrics.ret20, { min: -10, max: 15 });
+
+  // For S&P 500 / NASDAQ 100, intentionally weight popularity + attention more.
+  if (isUsMegaIndexMarket(market)) {
+    const popularityComposite = (
+      naverPopularity * 0.45 +
+      naverAsvi * 0.20 +
+      naverSpike * 0.15 +
+      sentiment * 0.10 +
+      adv * 0.10
+    );
+    const momentumComposite = (ret20 * 0.60 + unified * 0.40);
+    const bucketBias = bucket === 'aggressive' ? (momentumComposite * 10) : 0;
+    return baseScore * 0.50 + popularityComposite * 35 + momentumComposite * 15 + bucketBias;
+  }
+
+  // Other markets keep a conservative blend.
+  const qualityBlend = (unified * 0.45 + sentiment * 0.20 + adv * 0.20 + ret20 * 0.15);
+  return baseScore * 0.75 + qualityBlend * 25;
+}
+
 
 function deriveRawMetricsScore(metrics) {
   if (!metrics) return null;
@@ -1042,7 +1083,7 @@ function rotateFromPools(pools, prevData) {
       // Prioritize higher-scoring names, then rotate deterministically within the top window.
       // This avoids selecting too many low-score names when a bucket is large.
       candidates = candidates
-        .map((name, idx) => ({ name, idx, score: metricScoreFor(market, name) }))
+        .map((name, idx) => ({ name, idx, score: metricScoreForSelection(market, name, bucket) }))
         .sort((a, b) => {
           const sa = Number.isFinite(a.score) ? a.score : -Infinity;
           const sb = Number.isFinite(b.score) ? b.score : -Infinity;
@@ -1626,12 +1667,12 @@ async function tryFetchAndEnrich() {
     if (!hasAnyCandidates(buckets)) continue;
     data[market] = {};
 
-    const rankByMetricScore = (items = []) => items
+    const rankByMetricScore = (items = [], bucket = 'safe') => items
       .map((entry, idx) => ({
         entry,
         idx,
         name: typeof entry === 'string' ? entry : entry?.name,
-        score: metricScoreFor(market, typeof entry === 'string' ? entry : entry?.name)
+        score: metricScoreForSelection(market, typeof entry === 'string' ? entry : entry?.name, bucket)
       }))
       .filter(x => x.name)
       .sort((a, b) => {
@@ -1641,12 +1682,12 @@ async function tryFetchAndEnrich() {
         return a.idx - b.idx;
       });
 
-    const rankedSafe = rankByMetricScore(buckets.safe || []);
+    const rankedSafe = rankByMetricScore(buckets.safe || [], 'safe');
     const chosenSafe = rankedSafe.slice(0, 5).map(x => x.entry);
     data[market].safe = chosenSafe.map(n => (typeof n === 'string' ? { name: n } : n));
 
     const safeNameSet = new Set(chosenSafe.map(n => normalizeMetricKey(typeof n === 'string' ? n : n?.name)));
-    const rankedAggr = rankByMetricScore((buckets.aggressive || []).filter(n => !safeNameSet.has(normalizeMetricKey(typeof n === 'string' ? n : n?.name))));
+    const rankedAggr = rankByMetricScore((buckets.aggressive || []).filter(n => !safeNameSet.has(normalizeMetricKey(typeof n === 'string' ? n : n?.name))), 'aggressive');
     const chosenAggr = rankedAggr.slice(0, 5).map(x => x.entry);
     data[market].aggressive = chosenAggr.map(n => (typeof n === 'string' ? { name: n } : n));
 
