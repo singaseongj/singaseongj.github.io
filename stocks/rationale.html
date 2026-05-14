@@ -5,61 +5,350 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>매력점수 계산식 안내</title>
   <style>
-    body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',sans-serif; margin: 0; padding: 24px; color:#1f2937; line-height:1.6; }
-    .container { max-width: 1000px; margin: 0 auto; }
-    h1,h2,h3 { color:#111827; }
-    .card { background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:14px 0; }
-    .formula { background:#eef2ff; border-left:4px solid #4f46e5; padding:12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-    table { width:100%; border-collapse: collapse; margin-top:8px; }
-    th,td { border-bottom:1px solid #e5e7eb; padding:8px; text-align:left; }
-    th { background:#f3f4f6; }
-    .small { color:#6b7280; font-size:0.92rem; }
-    a { color:#2563eb; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',sans-serif; 
+      color: #1f2937; 
+      line-height: 1.6;
+      background: #f9fafb;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    h1, h2, h3 { color: #111827; margin-top: 24px; margin-bottom: 12px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 16px; }
+    
+    .card { 
+      background: white; 
+      border: 1px solid #e5e7eb; 
+      border-radius: 12px; 
+      padding: 20px; 
+      margin: 16px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    
+    .formula { 
+      background: #eef2ff; 
+      border-left: 4px solid #4f46e5; 
+      padding: 12px 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin-top: 12px;
+      background: white;
+    }
+    th, td { 
+      border-bottom: 1px solid #e5e7eb; 
+      padding: 10px; 
+      text-align: left;
+      font-size: 14px;
+    }
+    th { 
+      background: #f3f4f6; 
+      font-weight: 600;
+      color: #374151;
+    }
+    tr:last-child td { border-bottom: none; }
+    
+    .small { color: #6b7280; font-size: 0.92rem; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    /* ─────────────────────────────── */
+    /* Comparison Chart Styles */
+    /* ─────────────────────────────── */
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .comparison-card {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .comparison-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px;
+      font-weight: 600;
+      font-size: 15px;
+      text-align: center;
+    }
+    
+    .comparison-card:nth-child(2) .comparison-header {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    .weight-item {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f3f4f6;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .weight-item:last-child {
+      border-bottom: none;
+    }
+    
+    .weight-bar-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .weight-bar {
+      height: 20px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: white;
+      font-weight: 500;
+      font-size: 12px;
+      padding-right: 6px;
+    }
+    
+    .weight-label {
+      min-width: 80px;
+      font-size: 13px;
+      color: #374151;
+      font-weight: 500;
+    }
+    
+    .weight-percent {
+      min-width: 40px;
+      text-align: right;
+      font-weight: 600;
+      font-size: 13px;
+      color: #111827;
+    }
+    
+    /* Color schemes for weight bars */
+    .naver-bar { background: linear-gradient(90deg, #10b981 0%, #34d399 100%); }
+    .financial-bar { background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%); }
+    .news-bar { background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%); }
+    
+    .comparison-details {
+      padding: 16px;
+      background: #f9fafb;
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+    
+    .comparison-details ul {
+      margin-left: 16px;
+    }
+    
+    .comparison-details li {
+      margin: 4px 0;
+    }
+    
+    @media (max-width: 768px) {
+      .comparison-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      background: #f3f4f6;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    
+    .back-link:hover {
+      background: #e5e7eb;
+    }
+    
+    .section-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+    
+    .section-item {
+      padding: 12px;
+      background: #f3f4f6;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <p><a href="../stocks.html">돌아가기</a></p>
-    <h1>매력점수 계산식</h1>
+    <a href="../stocks.html" class="back-link">← 돌아가기</a>
+    <h1>매력점수 계산식 안내</h1>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- NEW: Comparison Chart -->
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="card">
+      <h2>📊 점수 계산 방식 비교 (개선 버전)</h2>
+      
+      <div class="comparison-container">
+        <!-- Korean Stocks -->
+        <div class="comparison-card">
+          <div class="comparison-header">한국주식 (KOSPI, KOSDAQ)</div>
+          
+          <div class="weight-item">
+            <div class="weight-label">Naver 지표</div>
+            <div class="weight-bar-container">
+              <div class="weight-bar naver-bar" style="width: 55%;">55%</div>
+            </div>
+            <div class="weight-percent">55%</div>
+          </div>
+          
+          <div class="weight-item">
+            <div class="weight-label">Financial</div>
+            <div class="weight-bar-container">
+              <div class="weight-bar financial-bar" style="width: 35%;">35%</div>
+            </div>
+            <div class="weight-percent">35%</div>
+          </div>
+          
+          <div class="weight-item">
+            <div class="weight-label">News</div>
+            <div class="weight-bar-container">
+              <div class="weight-bar news-bar" style="width: 10%;">10%</div>
+            </div>
+            <div class="weight-percent">10%</div>
+          </div>
+          
+          <div class="comparison-details">
+            <strong>Naver 지표 (55%)</strong>
+            <ul>
+              <li>인기도 (40%)</li>
+              <li>검색량지수 ASVI (30%)</li>
+              <li>뉴스 수 (15%)</li>
+              <li>급등락 감지 (10%)</li>
+              <li>데이터 신뢰도 (5%)</li>
+            </ul>
+            <strong style="display:block; margin-top:8px;">Financial (35%)</strong>
+            <ul>
+              <li>5일 수익률 (30%)</li>
+              <li>20일 수익률 (30%)</li>
+              <li>변동성 (15%)</li>
+              <li>거래량 회전율 (15%)</li>
+              <li>평균일일거래량 (10%)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- US Stocks -->
+        <div class="comparison-card">
+          <div class="comparison-header">미국주식 (S&P 500, NASDAQ 100)</div>
+          
+          <div class="weight-item">
+            <div class="weight-label">Naver 지표</div>
+            <div class="weight-bar-container">
+              <div class="weight-bar naver-bar" style="width: 50%;">50%</div>
+            </div>
+            <div class="weight-percent">50%</div>
+          </div>
+          
+          <div class="weight-item">
+            <div class="weight-label">Financial</div>
+            <div class="weight-bar-container">
+              <div class="weight-bar financial-bar" style="width: 35%;">35%</div>
+            </div>
+            <div class="weight-percent">35%</div>
+          </div>
+          
+          <div class="weight-item">
+            <div class="weight-label">News & Rep</div>
+            <div class="weight-bar-container">
+              <div class="weight-bar news-bar" style="width: 15%;">15%</div>
+            </div>
+            <div class="weight-percent">15%</div>
+          </div>
+          
+          <div class="comparison-details">
+            <strong>Naver 지표 (50%)</strong>
+            <ul>
+              <li>인기도 (50%)</li>
+              <li>검색량지수 ASVI (35%)</li>
+              <li>뉴스 수 (15%)</li>
+            </ul>
+            <strong style="display:block; margin-top:8px;">Financial (35%)</strong>
+            <ul>
+              <li>5일 수익률 (35%)</li>
+              <li>20일 수익률 (35%)</li>
+              <li>변동성 (20%)</li>
+              <li>평균일일거래량 (10%)</li>
+            </ul>
+            <strong style="display:block; margin-top:8px;">News & Reputation (15%)</strong>
+            <ul>
+              <li>뉴스 수량 (30%)</li>
+              <li>뉴스 점수 (35%)</li>
+              <li>감정 분석 (20%)</li>
+              <li>기업 평판 (15%)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <!-- Original content below -->
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
 
     <div class="card">
-      <h2>0) 전체 반영 공식</h2>
+      <h2>0️⃣ 전체 반영 공식</h2>
       <div class="formula">
-        금융 = 0.25*ret5 + 0.25*ret20 + 0.15*저변동성 + 0.20*turnover + 0.15*ADV
+금융 = 0.25×ret5 + 0.25×ret20 + 0.15×저변동성 + 0.20×turnover + 0.15×ADV
       </div>
-      <div class="formula" style="margin-top:10px;">
-        뉴스 = 0.30*뉴스량 + 0.40*newsScore + 0.20*sentiment + 0.10*googleNews
+      <div class="formula">
+뉴스 = 0.30×뉴스량 + 0.40×newsScore + 0.20×sentiment + 0.10×googleNews
       </div>
-      <div class="formula" style="margin-top:10px;">
-        네이버 = 0.35*인기도 + 0.25*ASVI + 0.20*뉴스량 + 0.15*스파이크 + 0.05*품질보너스
+      <div class="formula">
+네이버 = 0.35×인기도 + 0.25×ASVI + 0.20×뉴스량 + 0.15×스파이크 + 0.05×품질보너스
       </div>
-      <div class="formula" style="margin-top:10px;">
-        콘텐츠 = 0.40*blog + 0.35*wiki + 0.25*wikiViews(log)
+      <div class="formula">
+콘텐츠 = 0.40×blog + 0.35×wiki + 0.25×wikiViews(log)
       </div>
-      <div class="formula" style="margin-top:10px;">
-        품질 = (0.50*reputation + sourceReliabilityBonus + eligibilityBonus) / 0.65
+      <div class="formula">
+품질 = (0.50×reputation + sourceReliabilityBonus + eligibilityBonus) / 0.65
       </div>
-      <div class="formula" style="margin-top:10px;">
-        composite = 통합점수 신뢰도(confidence)&gt;0.7 이면 Unified 35% 우선, 아니면 5개 축 가중합
+      <div class="formula">
+composite = 통합점수 신뢰도(confidence)>0.7 이면 Unified 35% 우선, 아니면 5개 축 가중합
       </div>
     </div>
 
     <div class="card">
-      <h2>1) 점수 계산 핵심 구조</h2>
+      <h2>1️⃣ 점수 계산 핵심 구조</h2>
       <div class="formula">
-        인기도(pop01) = (뉴스 + 네이버인기 + 네이버금융 + 모멘텀 + 블로그 + 위키 + 긍정키워드 - 부정키워드) / 가중치합
+인기도(pop01) = (뉴스 + 네이버인기 + 네이버금융 + 모멘텀 + 블로그 + 위키 + 긍정키워드 - 부정키워드) / 가중치합
       </div>
-      <div class="formula" style="margin-top:10px;">
-        기본점수(base01) = 안전주: size 가중치 × 시가총액점수(size01) + (1-size 가중치) × 인기도(pop01) / 공격주: 인기도(pop01) 중심(시가총액 제외)
+      <div class="formula">
+기본점수(base01) = 안전주: size 가중치 × 시가총액점수(size01) + (1-size 가중치) × 인기도(pop01) / 공격주: 인기도(pop01) 중심(시가총액 제외)
       </div>
-      <div class="formula" style="margin-top:10px;">
-        최종 totalScore(0~100) = 보정(피드백/신뢰도/누락데이터/국내시장 패널티 등) 후 0~100 구간으로 변환
+      <div class="formula">
+최종 totalScore(0~100) = 보정(피드백/신뢰도/누락데이터/국내시장 패널티 등) 후 0~100 구간으로 변환
       </div>
     </div>
 
     <div class="card">
-      <h2>2) 각 항목 의미</h2>
-      <ul>
+      <h2>2️⃣ 각 항목 의미</h2>
+      <ul style="margin-left: 16px; line-height: 1.8;">
         <li><strong>Financial</strong>: ret5/ret20(모멘텀), vol20(리스크), turnover/adv20(유동성)</li>
         <li><strong>News & Sentiment</strong>: 뉴스량 최적 구간, newsScore 품질, 감정도/긍부정 단어</li>
         <li><strong>Naver Ecosystem</strong>: naverPopularity, naverAsvi, naverSpike/naverPersist, naverCount</li>
@@ -70,7 +359,7 @@
     </div>
 
     <div class="card">
-      <h2>3) 섹션별 상위 5개 종목</h2>
+      <h2>3️⃣ 섹션별 상위 5개 종목</h2>
       <div id="tables"></div>
     </div>
 
@@ -112,8 +401,8 @@
                 <td>${i + 1}</td>
                 <td>${r.name}</td>
                 <td>${r.bucket === 'safe' ? '안전주' : '공격주'}</td>
-                <td>${Number(r.score).toFixed(1)}</td>
-                <td>${explain(r.v)}</td>
+                <td><strong>${Number(r.score).toFixed(1)}</strong></td>
+                <td class="small">${explain(r.v)}</td>
               </tr>
             `).join('');
 
@@ -127,7 +416,7 @@
           });
         })
         .catch(() => {
-          document.getElementById('tables').innerHTML = '<p>데이터를 불러오지 못했습니다.</p>';
+          document.getElementById('tables').innerHTML = '<p style="color:#ef4444;">데이터를 불러오지 못했습니다. (recommendations.json, pools-metrics.json이 필요합니다)</p>';
         });
     </script>
   </div>
