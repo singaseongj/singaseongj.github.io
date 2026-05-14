@@ -13,9 +13,10 @@
         "query": "At New Peak",
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -62,9 +63,10 @@
         "query": "Just Shy",
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -102,36 +104,75 @@
       ]
     },
     {
-      "term": "Korea Securities & Exchange 24 hours live",
-      "term_ko": "한국투자증권 24시간 실시간",
+      "term": "Next IPO",
+      "term_ko": "속 차기 IPO",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "속 차기 IPO",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-15T04:50:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "뉴욕증시 장중...CBRS '대폭등' 속, 차기 IPO 이슈 '급부각'",
+              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165295"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EC%B0%A8%EA%B8%B0%20IPO",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EC%B0%A8%EA%B8%B0%20IPO"
+      },
+      "top_headlines": [
+        {
+          "title": "뉴욕증시 장중...CBRS '대폭등' 속, 차기 IPO 이슈 '급부각'",
+          "summary": "",
+          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165295",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "600 billion to shipbuilding partners",
+      "term_ko": "조선업 협력사에 6000억",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한국투자증권 24시간 실시간",
+        "query": "조선업 협력사에 6000억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
-              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779"
+              "title": "우리·신한은행, 조선업 협력사에 6,000억 상생금융 지원",
+              "link": "https://www.dongponews.net/news/articleView.html?idxno=58030"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%2024%EC%8B%9C%EA%B0%84%20%EC%8B%A4%EC%8B%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%2024%EC%8B%9C%EA%B0%84%20%EC%8B%A4%EC%8B%9C%EA%B0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%EC%84%A0%EC%97%85%20%ED%98%91%EB%A0%A5%EC%82%AC%EC%97%90%206000%EC%96%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%EC%84%A0%EC%97%85%20%ED%98%91%EB%A0%A5%EC%82%AC%EC%97%90%206000%EC%96%B5"
       },
       "top_headlines": [
         {
-          "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
+          "title": "우리·신한은행, 조선업 협력사에 6,000억 상생금융 지원",
           "summary": "",
-          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779",
+          "link": "https://www.dongponews.net/news/articleView.html?idxno=58030",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -139,213 +180,37 @@
       ]
     },
     {
-      "term": "Kakao Bank-Seoul Shinbo KRW 125 billion",
-      "term_ko": "카카오뱅크-서울신보 1250억 원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "카카오뱅크-서울신보 1250억 원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "카카오뱅크-서울신보, 1250억 원 규모 지원 협약 外",
-              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30778"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B1%85%ED%81%AC-%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%B3%B4%201250%EC%96%B5%20%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B1%85%ED%81%AC-%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%B3%B4%201250%EC%96%B5%20%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "카카오뱅크-서울신보, 1250억 원 규모 지원 협약 外",
-          "summary": "",
-          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30778",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Why is Article 15 of the Mutual",
-      "term_ko": "왜 상호금융서도 15조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "왜 상호금융서도 15조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“자고 일어나면 돈버는 증시 놔두고 왜”…상호금융서도 15조 빠졌다",
-              "link": "https://n.news.naver.com/mnews/article/009/0005680316?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%9C%20%EC%83%81%ED%98%B8%EA%B8%88%EC%9C%B5%EC%84%9C%EB%8F%84%2015%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%9C%20%EC%83%81%ED%98%B8%EA%B8%88%EC%9C%B5%EC%84%9C%EB%8F%84%2015%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "“자고 일어나면 돈버는 증시 놔두고 왜”…상호금융서도 15조 빠졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005680316?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "International gold quotes",
-      "term_ko": "국제 금 시세",
-      "significance_score": 322,
-      "mentions": 374,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국제 금 시세",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-06",
-              "timestamp": 1777993200000,
-              "value": 94.67108
-            },
-            {
-              "period": "2026-05-07",
-              "timestamp": 1778079600000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-08",
-              "timestamp": 1778166000000,
-              "value": 87.08906
-            },
-            {
-              "period": "2026-05-09",
-              "timestamp": 1778252400000,
-              "value": 31.19577
-            },
-            {
-              "period": "2026-05-10",
-              "timestamp": 1778338800000,
-              "value": 12.75298
-            },
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 71.6431
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 89.34545
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 82.34152
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
-              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%20%EC%8B%9C%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%20%EC%8B%9C%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
-          "summary": "",
-          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 374.3679,
-        "weekly_average_volume": 62.3946,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.016456,
-        "time_weight": 0.021194,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778598000000
-      }
-    },
-    {
-      "term": "Lookup service only",
-      "term_ko": "조회 서비스 단독",
+      "term": "The international order has been shaken up③.",
+      "term_ko": "뒤흔든 국제 질서③",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "조회 서비스 단독",
+        "query": "뒤흔든 국제 질서③",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
-              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779"
+              "title": "지난 1세기 석유가 뒤흔든 국제 질서③ [홍영식의 이슈 워치]",
+              "link": "https://n.news.naver.com/mnews/article/050/0000106161?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%ED%9A%8C%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%8B%A8%EB%8F%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%ED%9A%8C%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%8B%A8%EB%8F%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%92%A4%ED%9D%94%EB%93%A0%20%EA%B5%AD%EC%A0%9C%20%EC%A7%88%EC%84%9C%E2%91%A2",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%92%A4%ED%9D%94%EB%93%A0%20%EA%B5%AD%EC%A0%9C%20%EC%A7%88%EC%84%9C%E2%91%A2"
       },
       "top_headlines": [
         {
-          "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
+          "title": "지난 1세기 석유가 뒤흔든 국제 질서③ [홍영식의 이슈 워치]",
           "summary": "",
-          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779",
+          "link": "https://n.news.naver.com/mnews/article/050/0000106161?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -353,36 +218,37 @@
       ]
     },
     {
-      "term": "Korea Financial Holdings Performance Edition",
-      "term_ko": "한국금융지주 실적 판",
+      "term": "Issue Watch by Youngsik Hong",
+      "term_ko": "홍영식의 이슈 워치",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한국금융지주 실적 판",
+        "query": "홍영식의 이슈 워치",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "한국금융지주 실적 판 키운 한투증권···증권 호황 뒤엔 의존도 리스...",
-              "link": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=253772"
+              "title": "지난 1세기 석유가 뒤흔든 국제 질서③ [홍영식의 이슈 워치]",
+              "link": "https://n.news.naver.com/mnews/article/050/0000106161?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC%20%EC%8B%A4%EC%A0%81%20%ED%8C%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC%20%EC%8B%A4%EC%A0%81%20%ED%8C%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%8D%EC%98%81%EC%8B%9D%EC%9D%98%20%EC%9D%B4%EC%8A%88%20%EC%9B%8C%EC%B9%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%8D%EC%98%81%EC%8B%9D%EC%9D%98%20%EC%9D%B4%EC%8A%88%20%EC%9B%8C%EC%B9%98"
       },
       "top_headlines": [
         {
-          "title": "한국금융지주 실적 판 키운 한투증권···증권 호황 뒤엔 의존도 리스...",
+          "title": "지난 1세기 석유가 뒤흔든 국제 질서③ [홍영식의 이슈 워치]",
           "summary": "",
-          "link": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=253772",
+          "link": "https://n.news.naver.com/mnews/article/050/0000106161?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -390,36 +256,37 @@
       ]
     },
     {
-      "term": "Kiwun Hantu Securities",
-      "term_ko": "키운 한투증권 증권",
+      "term": "Ants stung",
+      "term_ko": "개미가 쏘아 올린",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "키운 한투증권 증권",
+        "query": "개미가 쏘아 올린",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "한국금융지주 실적 판 키운 한투증권···증권 호황 뒤엔 의존도 리스...",
-              "link": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=253772"
+              "title": "개미가 쏘아 올린 공, 증권사 '실적 잭팟'으로 돌아왔다",
+              "link": "https://n.news.naver.com/mnews/article/008/0005358033?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%A4%EC%9A%B4%20%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20%EC%A6%9D%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%A4%EC%9A%B4%20%ED%95%9C%ED%88%AC%EC%A6%9D%EA%B6%8C%20%EC%A6%9D%EA%B6%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EB%AF%B8%EA%B0%80%20%EC%8F%98%EC%95%84%20%EC%98%AC%EB%A6%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EB%AF%B8%EA%B0%80%20%EC%8F%98%EC%95%84%20%EC%98%AC%EB%A6%B0"
       },
       "top_headlines": [
         {
-          "title": "한국금융지주 실적 판 키운 한투증권···증권 호황 뒤엔 의존도 리스...",
+          "title": "개미가 쏘아 올린 공, 증권사 '실적 잭팟'으로 돌아왔다",
           "summary": "",
-          "link": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=253772",
+          "link": "https://n.news.naver.com/mnews/article/008/0005358033?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -427,36 +294,37 @@
       ]
     },
     {
-      "term": "NYSE Preview Nvidia",
-      "term_ko": "뉴욕증시 프리뷰 엔비디아",
+      "term": "Public Securities Firm Performance",
+      "term_ko": "공 증권사 실적",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 엔비디아",
+        "query": "공 증권사 실적",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴욕증시 프리뷰, 엔비디아·시스코 급등에 美 주가 선물 상승…다우 5...",
-              "link": "https://www.newspim.com/news/view/20260514001361"
+              "title": "개미가 쏘아 올린 공, 증권사 '실적 잭팟'으로 돌아왔다",
+              "link": "https://n.news.naver.com/mnews/article/008/0005358033?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%20%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EC%8B%A4%EC%A0%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%20%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EC%8B%A4%EC%A0%81"
       },
       "top_headlines": [
         {
-          "title": "뉴욕증시 프리뷰, 엔비디아·시스코 급등에 美 주가 선물 상승…다우 5...",
+          "title": "개미가 쏘아 올린 공, 증권사 '실적 잭팟'으로 돌아왔다",
           "summary": "",
-          "link": "https://www.newspim.com/news/view/20260514001361",
+          "link": "https://n.news.naver.com/mnews/article/008/0005358033?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -464,36 +332,37 @@
       ]
     },
     {
-      "term": "Cisco Soars on 美",
-      "term_ko": "시스코 급등에 美",
+      "term": "Keunjong Park Column Semiconductor",
+      "term_ko": "박근종 칼럼 반도체",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "시스코 급등에 美",
+        "query": "박근종 칼럼 반도체",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴욕증시 프리뷰, 엔비디아·시스코 급등에 美 주가 선물 상승…다우 5...",
-              "link": "https://www.newspim.com/news/view/20260514001361"
+              "title": "[박근종 칼럼] 반도체 호황에 가린 물가 상승, 재정 악화, 고용 절벽의 ...",
+              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=747522"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%8A%A4%EC%BD%94%20%EA%B8%89%EB%93%B1%EC%97%90%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%8A%A4%EC%BD%94%20%EA%B8%89%EB%93%B1%EC%97%90%20%E7%BE%8E"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EB%B0%98%EB%8F%84%EC%B2%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EB%B0%98%EB%8F%84%EC%B2%B4"
       },
       "top_headlines": [
         {
-          "title": "뉴욕증시 프리뷰, 엔비디아·시스코 급등에 美 주가 선물 상승…다우 5...",
+          "title": "[박근종 칼럼] 반도체 호황에 가린 물가 상승, 재정 악화, 고용 절벽의 ...",
           "summary": "",
-          "link": "https://www.newspim.com/news/view/20260514001361",
+          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=747522",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -501,36 +370,37 @@
       ]
     },
     {
-      "term": "Stock futures rise",
-      "term_ko": "주가 선물 상승",
+      "term": "Rising Financial Deterioration",
+      "term_ko": "상승 재정 악화",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주가 선물 상승",
+        "query": "상승 재정 악화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "뉴욕증시 프리뷰, 엔비디아·시스코 급등에 美 주가 선물 상승…다우 5...",
-              "link": "https://www.newspim.com/news/view/20260514001361"
+              "title": "[박근종 칼럼] 반도체 호황에 가린 물가 상승, 재정 악화, 고용 절벽의 ...",
+              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=747522"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC%20%EC%83%81%EC%8A%B9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EC%9E%AC%EC%A0%95%20%EC%95%85%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EC%9E%AC%EC%A0%95%20%EC%95%85%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "뉴욕증시 프리뷰, 엔비디아·시스코 급등에 美 주가 선물 상승…다우 5...",
+          "title": "[박근종 칼럼] 반도체 호황에 가린 물가 상승, 재정 악화, 고용 절벽의 ...",
           "summary": "",
-          "link": "https://www.newspim.com/news/view/20260514001361",
+          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=747522",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -538,36 +408,37 @@
       ]
     },
     {
-      "term": "Scale support agreements",
-      "term_ko": "규모 지원 협약",
+      "term": "Seeing the world through Wonsoon Heo's economy",
+      "term_ko": "허원순의 경제로 세상보기",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "규모 지원 협약",
+        "query": "허원순의 경제로 세상보기",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "카카오뱅크-서울신보, 1250억 원 규모 지원 협약 外",
-              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30778"
+              "title": "[허원순의 경제로 세상보기] 수출 흑자 행진에도 고공 환율, '확장재정...",
+              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870172"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%9C%EB%AA%A8%20%EC%A7%80%EC%9B%90%20%ED%98%91%EC%95%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%9C%EB%AA%A8%20%EC%A7%80%EC%9B%90%20%ED%98%91%EC%95%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%97%88%EC%9B%90%EC%88%9C%EC%9D%98%20%EA%B2%BD%EC%A0%9C%EB%A1%9C%20%EC%84%B8%EC%83%81%EB%B3%B4%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%97%88%EC%9B%90%EC%88%9C%EC%9D%98%20%EA%B2%BD%EC%A0%9C%EB%A1%9C%20%EC%84%B8%EC%83%81%EB%B3%B4%EA%B8%B0"
       },
       "top_headlines": [
         {
-          "title": "카카오뱅크-서울신보, 1250억 원 규모 지원 협약 外",
+          "title": "[허원순의 경제로 세상보기] 수출 흑자 행진에도 고공 환율, '확장재정...",
           "summary": "",
-          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30778",
+          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870172",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -575,36 +446,37 @@
       ]
     },
     {
-      "term": "A preview of thisDaily NewspaperStrike Crisis",
-      "term_ko": "미리보는 이데일리 신문파업위기",
+      "term": "Domestic Treasury rates",
+      "term_ko": "국내 국고채 금리",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "미리보는 이데일리 신문파업위기",
+        "query": "국내 국고채 금리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미리보는 이데일리 신문]파업위기 주춤한 삼전 시총추월 노리는 하닉",
-              "link": "https://n.news.naver.com/mnews/article/018/0006281739?sid=101"
+              "title": "국내 국고채 금리 상승… 일본 금리 급등과 유가 상승 여파",
+              "link": "https://www.tokenpost.kr/news/economy/359769"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8%ED%8C%8C%EC%97%85%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8%ED%8C%8C%EC%97%85%EC%9C%84%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EA%B5%AD%EA%B3%A0%EC%B1%84%20%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EA%B5%AD%EA%B3%A0%EC%B1%84%20%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "[미리보는 이데일리 신문]파업위기 주춤한 삼전 시총추월 노리는 하닉",
+          "title": "국내 국고채 금리 상승… 일본 금리 급등과 유가 상승 여파",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006281739?sid=101",
+          "link": "https://www.tokenpost.kr/news/economy/359769",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -612,36 +484,37 @@
       ]
     },
     {
-      "term": "Overtaking the three-legged stallion",
-      "term_ko": "주춤한 삼전 시총추월",
+      "term": "Spikes and rising oil prices",
+      "term_ko": "급등과 유가 상승",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주춤한 삼전 시총추월",
+        "query": "급등과 유가 상승",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미리보는 이데일리 신문]파업위기 주춤한 삼전 시총추월 노리는 하닉",
-              "link": "https://n.news.naver.com/mnews/article/018/0006281739?sid=101"
+              "title": "국내 국고채 금리 상승… 일본 금리 급등과 유가 상승 여파",
+              "link": "https://www.tokenpost.kr/news/economy/359769"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%B6%A4%ED%95%9C%20%EC%82%BC%EC%A0%84%20%EC%8B%9C%EC%B4%9D%EC%B6%94%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%B6%A4%ED%95%9C%20%EC%82%BC%EC%A0%84%20%EC%8B%9C%EC%B4%9D%EC%B6%94%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%EA%B3%BC%20%EC%9C%A0%EA%B0%80%20%EC%83%81%EC%8A%B9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%EA%B3%BC%20%EC%9C%A0%EA%B0%80%20%EC%83%81%EC%8A%B9"
       },
       "top_headlines": [
         {
-          "title": "[미리보는 이데일리 신문]파업위기 주춤한 삼전 시총추월 노리는 하닉",
+          "title": "국내 국고채 금리 상승… 일본 금리 급등과 유가 상승 여파",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006281739?sid=101",
+          "link": "https://www.tokenpost.kr/news/economy/359769",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -658,9 +531,10 @@
         "query": "KOSPI Ends Near",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -695,9 +569,10 @@
         "query": "LD KOSPI Ends",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -732,9 +607,10 @@
         "query": "LEAD KOSPI Ends",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -769,9 +645,10 @@
         "query": "Systems Raises 5.55B",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -797,36 +674,37 @@
       ]
     },
     {
-      "term": "Provided by 外",
-      "term_ko": "제공 外",
+      "term": "Emerging issues",
+      "term_ko": "이슈 급부각",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "제공 外",
+        "query": "이슈 급부각",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
-              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779"
+              "title": "뉴욕증시 장중...CBRS '대폭등' 속, 차기 IPO 이슈 '급부각'",
+              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165295"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EA%B3%B5%20%E5%A4%96",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EA%B3%B5%20%E5%A4%96"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%8A%88%20%EA%B8%89%EB%B6%80%EA%B0%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%8A%88%20%EA%B8%89%EB%B6%80%EA%B0%81"
       },
       "top_headlines": [
         {
-          "title": "한국투자증권, '24시간 실시간 국제 금 시세' 조회 서비스 단독 제공 外",
+          "title": "뉴욕증시 장중...CBRS '대폭등' 속, 차기 IPO 이슈 '급부각'",
           "summary": "",
-          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=30779",
+          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165295",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -834,36 +712,37 @@
       ]
     },
     {
-      "term": "Leave the stock market alone",
-      "term_ko": "증시 놔두고",
+      "term": "Back to the Jackpot",
+      "term_ko": "잭팟으로 돌아왔다",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증시 놔두고",
+        "query": "잭팟으로 돌아왔다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“자고 일어나면 돈버는 증시 놔두고 왜”…상호금융서도 15조 빠졌다",
-              "link": "https://n.news.naver.com/mnews/article/009/0005680316?sid=101"
+              "title": "개미가 쏘아 올린 공, 증권사 '실적 잭팟'으로 돌아왔다",
+              "link": "https://n.news.naver.com/mnews/article/008/0005358033?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EB%86%94%EB%91%90%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EB%86%94%EB%91%90%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AD%ED%8C%9F%EC%9C%BC%EB%A1%9C%20%EB%8F%8C%EC%95%84%EC%99%94%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AD%ED%8C%9F%EC%9C%BC%EB%A1%9C%20%EB%8F%8C%EC%95%84%EC%99%94%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "“자고 일어나면 돈버는 증시 놔두고 왜”…상호금융서도 15조 빠졌다",
+          "title": "개미가 쏘아 올린 공, 증권사 '실적 잭팟'으로 돌아왔다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005680316?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/008/0005358033?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -871,36 +750,113 @@
       ]
     },
     {
-      "term": "Aiming for Harnik",
-      "term_ko": "노리는 하닉",
+      "term": "Higher exchange rates",
+      "term_ko": "고공 환율",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "노리는 하닉",
+        "query": "고공 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미리보는 이데일리 신문]파업위기 주춤한 삼전 시총추월 노리는 하닉",
-              "link": "https://n.news.naver.com/mnews/article/018/0006281739?sid=101"
+              "title": "[허원순의 경제로 세상보기] 수출 흑자 행진에도 고공 환율, '확장재정...",
+              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870172"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%B8%EB%A6%AC%EB%8A%94%20%ED%95%98%EB%8B%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%B8%EB%A6%AC%EB%8A%94%20%ED%95%98%EB%8B%89"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EA%B3%B5%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EA%B3%B5%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "[미리보는 이데일리 신문]파업위기 주춤한 삼전 시총추월 노리는 하닉",
+          "title": "[허원순의 경제로 세상보기] 수출 흑자 행진에도 고공 환율, '확장재정...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006281739?sid=101",
+          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870172",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Woori Shinhan Bank",
+      "term_ko": "우리 신한은행",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "우리 신한은행",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-15T04:50:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "우리·신한은행, 조선업 협력사에 6,000억 상생금융 지원",
+              "link": "https://www.dongponews.net/news/articleView.html?idxno=58030"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A6%AC%20%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A6%AC%20%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89"
+      },
+      "top_headlines": [
+        {
+          "title": "우리·신한은행, 조선업 협력사에 6,000억 상생금융 지원",
+          "summary": "",
+          "link": "https://www.dongponews.net/news/articleView.html?idxno=58030",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Win-Win Financing",
+      "term_ko": "상생금융 지원",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "상생금융 지원",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-15T04:50:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "우리·신한은행, 조선업 협력사에 6,000억 상생금융 지원",
+              "link": "https://www.dongponews.net/news/articleView.html?idxno=58030"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%83%9D%EA%B8%88%EC%9C%B5%20%EC%A7%80%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%83%9D%EA%B8%88%EC%9C%B5%20%EC%A7%80%EC%9B%90"
+      },
+      "top_headlines": [
+        {
+          "title": "우리·신한은행, 조선업 협력사에 6,000억 상생금융 지원",
+          "summary": "",
+          "link": "https://www.dongponews.net/news/articleView.html?idxno=58030",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -917,9 +873,10 @@
         "query": "Chip Giants Rally",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -945,43 +902,6 @@
       ]
     },
     {
-      "term": "New Peak Above",
-      "term_ko": "새로운 피크 위",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "New Peak Above",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI ends at new peak above 7,900 amid U.S.-China summit",
-              "link": "https://n.news.naver.com/mnews/article/001/0016077701?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=New%20Peak%20Above",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=New%20Peak%20Above"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI ends at new peak above 7,900 amid U.S.-China summit",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016077701?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Largest IPO",
       "term_ko": "최대 규모의 IPO",
       "significance_score": 252,
@@ -991,9 +911,10 @@
         "query": "Largest IPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1019,43 +940,6 @@
       ]
     },
     {
-      "term": "U.S.-China Summit",
-      "term_ko": "미중 정상회담",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-China Summit",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-14T23:10:17+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI ends at new peak above 7,900 amid U.S.-China summit",
-              "link": "https://n.news.naver.com/mnews/article/001/0016077701?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-China%20Summit",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-China%20Summit"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI ends at new peak above 7,900 amid U.S.-China summit",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016077701?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -1065,9 +949,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1087,9 +972,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1109,9 +995,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-14T23:10:17+09:00",
+          "last_updated": "2026-05-15T04:50:13+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1120,15 +1007,61 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Bitcoin ETF Expectations",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-15T04:50:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Dollar exchange rate spikes",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-15T04:50:13+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-05-14T14:11:26.519Z",
+    "generated_at": "2026-05-14T19:52:09.586Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-14T23:10:17+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-05-15T04:50:13+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 1,
     "removal_breakdown": {
@@ -1138,15 +1071,17 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-05-14T23:10:17+09:00",
+      "last_updated": "2026-05-15T04:50:13+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-05-14T23:10:17+09:00",
+        "lastUpdated": "2026-05-15T04:50:13+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
