@@ -1,1179 +1,425 @@
 {
+  "generatedAt": "2026-05-15T08:49:51.462Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-15",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "CME from Bitcoin to Stellar",
-      "term_ko": "비트코인부터 스텔라까지 CME",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인부터 스텔라까지 CME",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인부터 스텔라까지…CME·나스닥 '암호화폐 지수 선물' 6월 선봬",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=666119"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%B6%80%ED%84%B0%20%EC%8A%A4%ED%85%94%EB%9D%BC%EA%B9%8C%EC%A7%80%20CME",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%B6%80%ED%84%B0%20%EC%8A%A4%ED%85%94%EB%9D%BC%EA%B9%8C%EC%A7%80%20CME"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인부터 스텔라까지…CME·나스닥 '암호화폐 지수 선물' 6월 선봬",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=666119",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cme From Bitcoin to Stellar",
+      "term_ko": "비트코인부터 스텔라까지 CME"
     },
     {
       "term": "Index Futures June",
-      "term_ko": "지수 선물 6월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지수 선물 6월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인부터 스텔라까지…CME·나스닥 '암호화폐 지수 선물' 6월 선봬",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=666119"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%88%98%20%EC%84%A0%EB%AC%BC%206%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%88%98%20%EC%84%A0%EB%AC%BC%206%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인부터 스텔라까지…CME·나스닥 '암호화폐 지수 선물' 6월 선봬",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=666119",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "지수 선물 6월"
     },
     {
-      "term": "4 months of equity funding",
-      "term_ko": "주식 자금 4개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주식 자금 4개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 활황에도 나간다…외국인 주식 자금 4개월 연속 이탈",
-              "link": "https://n.news.naver.com/mnews/article/018/0006282192?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%20%EC%9E%90%EA%B8%88%204%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%20%EC%9E%90%EA%B8%88%204%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 활황에도 나간다…외국인 주식 자금 4개월 연속 이탈",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006282192?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4 Months of Equity Funding",
+      "term_ko": "주식 자금 4개월"
     },
     {
-      "term": "Dollar back to 1500 won",
-      "term_ko": "달러 다시 1500원선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 다시 1500원선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "원화 강세 숨고르기…원·달러 다시 1500원선 넘본다",
-              "link": "https://news.mtn.co.kr/news-detail/2026051509205981992"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EB%8B%A4%EC%8B%9C%201500%EC%9B%90%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EB%8B%A4%EC%8B%9C%201500%EC%9B%90%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "원화 강세 숨고르기…원·달러 다시 1500원선 넘본다",
-          "summary": "",
-          "link": "https://news.mtn.co.kr/news-detail/2026051509205981992",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar Back to 1500 Won",
+      "term_ko": "달러 다시 1500원선"
     },
     {
       "term": "Gold Price Quote May 15",
-      "term_ko": "금값시세 5월 15일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값시세 5월 15일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금값시세] 5월 15일, 약세 확대 한국금거래소 전 품목 하락",
-              "link": "https://www.tournews21.com/news/articleView.html?idxno=135103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8%205%EC%9B%94%2015%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8%205%EC%9B%94%2015%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[금값시세] 5월 15일, 약세 확대 한국금거래소 전 품목 하락",
-          "summary": "",
-          "link": "https://www.tournews21.com/news/articleView.html?idxno=135103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금값시세 5월 15일"
     },
     {
-      "term": "Going up and down on the stock market",
-      "term_ko": "코스피 활황에도 나간다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 활황에도 나간다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 활황에도 나간다…외국인 주식 자금 4개월 연속 이탈",
-              "link": "https://n.news.naver.com/mnews/article/018/0006282192?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%ED%99%9C%ED%99%A9%EC%97%90%EB%8F%84%20%EB%82%98%EA%B0%84%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%ED%99%9C%ED%99%A9%EC%97%90%EB%8F%84%20%EB%82%98%EA%B0%84%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 활황에도 나간다…외국인 주식 자금 4개월 연속 이탈",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006282192?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Going Up and Down on the Stock Market",
+      "term_ko": "코스피 활황에도 나간다"
     },
     {
-      "term": "Hiding currency strength",
-      "term_ko": "원화 강세 숨고르기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원화 강세 숨고르기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "원화 강세 숨고르기…원·달러 다시 1500원선 넘본다",
-              "link": "https://news.mtn.co.kr/news-detail/2026051509205981992"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%ED%99%94%20%EA%B0%95%EC%84%B8%20%EC%88%A8%EA%B3%A0%EB%A5%B4%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%ED%99%94%20%EA%B0%95%EC%84%B8%20%EC%88%A8%EA%B3%A0%EB%A5%B4%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "원화 강세 숨고르기…원·달러 다시 1500원선 넘본다",
-          "summary": "",
-          "link": "https://news.mtn.co.kr/news-detail/2026051509205981992",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hiding Currency Strength",
+      "term_ko": "원화 강세 숨고르기"
     },
     {
-      "term": "Foreign Korean stocks",
-      "term_ko": "외국인 한국 주식",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외국인 한국 주식",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-07",
-              "timestamp": 1778079600000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-08",
-              "timestamp": 1778166000000,
-              "value": 31
-            },
-            {
-              "period": "2026-05-09",
-              "timestamp": 1778252400000,
-              "value": 23
-            },
-            {
-              "period": "2026-05-10",
-              "timestamp": 1778338800000,
-              "value": 13
-            },
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 37
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 25
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 19
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 10
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "외국인 한국 주식 매도 흐름 약해져",
-              "link": "https://n.news.naver.com/mnews/article/028/0002805245?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%95%9C%EA%B5%AD%20%EC%A3%BC%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%95%9C%EA%B5%AD%20%EC%A3%BC%EC%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "외국인 한국 주식 매도 흐름 약해져",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002805245?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 127,
-        "weekly_average_volume": 21.1667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.034814,
-        "time_weight": 0.027712,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778684400000
-      }
+      "term": "Foreign Korean Stocks",
+      "term_ko": "외국인 한국 주식"
     },
     {
       "term": "Sell Flow Weakens",
-      "term_ko": "매도 흐름 약해져",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매도 흐름 약해져",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "외국인 한국 주식 매도 흐름 약해져",
-              "link": "https://n.news.naver.com/mnews/article/028/0002805245?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%8F%84%20%ED%9D%90%EB%A6%84%20%EC%95%BD%ED%95%B4%EC%A0%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%8F%84%20%ED%9D%90%EB%A6%84%20%EC%95%BD%ED%95%B4%EC%A0%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "외국인 한국 주식 매도 흐름 약해져",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002805245?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "매도 흐름 약해져"
     },
     {
-      "term": "Weak gold price on the Korea Exchange",
-      "term_ko": "한국거래소 금시세 약세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국거래소 금시세 약세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국거래소 금시세, 약세 국제 금값 하락 영향 확대",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16061806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%EC%95%BD%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%EC%95%BD%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소 금시세, 약세 국제 금값 하락 영향 확대",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16061806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Weak Gold Price on the Korea Exchange",
+      "term_ko": "한국거래소 금시세 약세"
     },
     {
-      "term": "Falling international gold prices",
-      "term_ko": "국제 금값 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국제 금값 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국거래소 금시세, 약세 국제 금값 하락 영향 확대",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16061806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EC%A0%9C%20%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소 금시세, 약세 국제 금값 하락 영향 확대",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16061806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Falling International Gold Prices",
+      "term_ko": "국제 금값 하락"
     },
     {
-      "term": "Upside concerns escalate",
-      "term_ko": "상승 우려 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 우려 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "4월 글로벌 물가 상승 우려 확대… 주요국 국채금리 상승하고 달러 약세",
-              "link": "https://n.news.naver.com/mnews/article/366/0001164577?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EC%9A%B0%EB%A0%A4%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EC%9A%B0%EB%A0%A4%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "4월 글로벌 물가 상승 우려 확대… 주요국 국채금리 상승하고 달러 약세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001164577?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Upside Concerns Escalate",
+      "term_ko": "상승 우려 확대"
     },
     {
-      "term": "Sovereign interest rates in major economies are rising",
-      "term_ko": "주요국 국채금리 상승하고",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주요국 국채금리 상승하고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "4월 글로벌 물가 상승 우려 확대… 주요국 국채금리 상승하고 달러 약세",
-              "link": "https://n.news.naver.com/mnews/article/366/0001164577?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%9A%94%EA%B5%AD%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%ED%95%98%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%9A%94%EA%B5%AD%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%ED%95%98%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "4월 글로벌 물가 상승 우려 확대… 주요국 국채금리 상승하고 달러 약세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001164577?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sovereign Interest Rates in Major Economies Are Rising",
+      "term_ko": "주요국 국채금리 상승하고"
     },
     {
       "term": "Weakness Expands Korea Gold Exchange",
-      "term_ko": "약세 확대 한국금거래소",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "약세 확대 한국금거래소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금값시세] 5월 15일, 약세 확대 한국금거래소 전 품목 하락",
-              "link": "https://www.tournews21.com/news/articleView.html?idxno=135103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%BD%EC%84%B8%20%ED%99%95%EB%8C%80%20%ED%95%9C%EA%B5%AD%EA%B8%88%EA%B1%B0%EB%9E%98%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%BD%EC%84%B8%20%ED%99%95%EB%8C%80%20%ED%95%9C%EA%B5%AD%EA%B8%88%EA%B1%B0%EB%9E%98%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[금값시세] 5월 15일, 약세 확대 한국금거래소 전 품목 하락",
-          "summary": "",
-          "link": "https://www.tournews21.com/news/articleView.html?idxno=135103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "약세 확대 한국금거래소"
     },
     {
-      "term": "All items drop",
-      "term_ko": "전 품목 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전 품목 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금값시세] 5월 15일, 약세 확대 한국금거래소 전 품목 하락",
-              "link": "https://www.tournews21.com/news/articleView.html?idxno=135103"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%20%ED%92%88%EB%AA%A9%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%20%ED%92%88%EB%AA%A9%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "[금값시세] 5월 15일, 약세 확대 한국금거래소 전 품목 하락",
-          "summary": "",
-          "link": "https://www.tournews21.com/news/articleView.html?idxno=135103",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "All Items Drop",
+      "term_ko": "전 품목 하락"
     },
     {
-      "term": "Samsung Electronics SK",
-      "term_ko": "삼성전자 SK",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Electronics SK",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Samsung Electronics, SK hynix fall as foreigners offload holdings",
-              "link": "https://n.news.naver.com/mnews/article/009/0005680519?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Electronics%20SK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Electronics%20SK"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Electronics, SK hynix fall as foreigners offload holdings",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005680519?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Electronics Sk",
+      "term_ko": "삼성전자 SK"
     },
     {
-      "term": "Koreas KOSPI Enters",
-      "term_ko": "한국 코스피 진입",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Koreas KOSPI Enters",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Korea’s KOSPI enters era of 8,000 points",
-              "link": "https://en.asiatoday.co.kr/view.php?key=20260515001006314"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Koreas%20KOSPI%20Enters",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Koreas%20KOSPI%20Enters"
-      },
-      "top_headlines": [
-        {
-          "title": "Korea’s KOSPI enters era of 8,000 points",
-          "summary": "",
-          "link": "https://en.asiatoday.co.kr/view.php?key=20260515001006314",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Koreas Kospi Enters",
+      "term_ko": "한국 코스피 진입"
     },
     {
       "term": "Vượt Mốc 8.000",
-      "term_ko": "",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Vượt Mốc 8.000",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Chỉ số KOSPI lần đầu tiên vượt mốc 8.000 điểm, lập kỷ l&",
-              "link": "https://vn.asiatoday.co.kr/view.php?key=20260515001008129"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=V%C6%B0%E1%BB%A3t%20M%E1%BB%91c%208.000",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=V%C6%B0%E1%BB%A3t%20M%E1%BB%91c%208.000"
-      },
-      "top_headlines": [
-        {
-          "title": "Chỉ số KOSPI lần đầu tiên vượt mốc 8.000 điểm, lập kỷ l&",
-          "summary": "",
-          "link": "https://vn.asiatoday.co.kr/view.php?key=20260515001008129",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Vượt Mốc 8.000"
     },
     {
       "term": "Nasdaq Cryptocurrencies",
-      "term_ko": "나스닥 암호화폐",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 암호화폐",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인부터 스텔라까지…CME·나스닥 '암호화폐 지수 선물' 6월 선봬",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=666119"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인부터 스텔라까지…CME·나스닥 '암호화폐 지수 선물' 6월 선봬",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=666119",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 암호화폐"
     },
     {
       "term": "Churn",
-      "term_ko": "연속 이탈",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연속 이탈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 활황에도 나간다…외국인 주식 자금 4개월 연속 이탈",
-              "link": "https://n.news.naver.com/mnews/article/018/0006282192?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%86%8D%20%EC%9D%B4%ED%83%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%86%8D%20%EC%9D%B4%ED%83%88"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 활황에도 나간다…외국인 주식 자금 4개월 연속 이탈",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006282192?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연속 이탈"
     },
     {
-      "term": "Amplify your impact",
-      "term_ko": "영향 확대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "영향 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국거래소 금시세, 약세 국제 금값 하락 영향 확대",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16061806"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%ED%96%A5%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%ED%96%A5%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소 금시세, 약세 국제 금값 하락 영향 확대",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16061806",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amplify Your Impact",
+      "term_ko": "영향 확대"
     },
     {
-      "term": "Weak dollar",
-      "term_ko": "달러 약세",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 약세",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-07",
-              "timestamp": 1778079600000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-08",
-              "timestamp": 1778166000000,
-              "value": 24.24242
-            },
-            {
-              "period": "2026-05-09",
-              "timestamp": 1778252400000,
-              "value": 15.15151
-            },
-            {
-              "period": "2026-05-10",
-              "timestamp": 1778338800000,
-              "value": 18.18181
-            },
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 45.45454
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 27.27272
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 18.18181
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 18.18181
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "4월 글로벌 물가 상승 우려 확대… 주요국 국채금리 상승하고 달러 약세",
-              "link": "https://n.news.naver.com/mnews/article/366/0001164577?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EC%95%BD%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EC%95%BD%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "4월 글로벌 물가 상승 우려 확대… 주요국 국채금리 상승하고 달러 약세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001164577?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 142.4242,
-        "weekly_average_volume": 23.7374,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.032155,
-        "time_weight": 0.027709,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778684400000
-      }
+      "term": "Weak Dollar",
+      "term_ko": "달러 약세"
     },
     {
       "term": "Pct Late Fri",
-      "term_ko": "금요일 늦은 시간",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Pct Late Fri",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KOSPI down over 3 pct late Fri. morning after topping historic 8,000 poin...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016079192?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Pct%20Late%20Fri",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Pct%20Late%20Fri"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI down over 3 pct late Fri. morning after topping historic 8,000 poin...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016079192?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금요일 늦은 시간"
     },
     {
       "term": "Foreigners Offload Holdings",
-      "term_ko": "외국인 오프로드 보유",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Foreigners Offload Holdings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Samsung Electronics, SK hynix fall as foreigners offload holdings",
-              "link": "https://n.news.naver.com/mnews/article/009/0005680519?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Foreigners%20Offload%20Holdings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Foreigners%20Offload%20Holdings"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Electronics, SK hynix fall as foreigners offload holdings",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005680519?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "외국인 오프로드 보유"
     },
     {
       "term": "Wall Street Hits",
-      "term_ko": "월스트리트 히트작",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Hits",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Hits Record Highs as Nvidia China Chip Sales Boost Market Opt...",
-              "link": "https://www.econotimes.com/Wall-Street-Hits-Record-Highs-as-Nvidia-China-Chip-Sales-Boost-Market-Optimism-1741771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Hits",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Hits"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Hits Record Highs as Nvidia China Chip Sales Boost Market Opt...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Hits-Record-Highs-as-Nvidia-China-Chip-Sales-Boost-Market-Optimism-1741771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 히트작"
     },
     {
       "term": "Nvidia China Chip",
-      "term_ko": "엔비디아 중국 칩",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nvidia China Chip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Hits Record Highs as Nvidia China Chip Sales Boost Market Opt...",
-              "link": "https://www.econotimes.com/Wall-Street-Hits-Record-Highs-as-Nvidia-China-Chip-Sales-Boost-Market-Optimism-1741771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nvidia%20China%20Chip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nvidia%20China%20Chip"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Hits Record Highs as Nvidia China Chip Sales Boost Market Opt...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Hits-Record-Highs-as-Nvidia-China-Chip-Sales-Boost-Market-Optimism-1741771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "엔비디아 중국 칩"
     },
     {
       "term": "Lần Đầu Tiên",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Lần Đầu Tiên",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Chỉ số KOSPI lần đầu tiên vượt mốc 8.000 điểm, lập kỷ l&",
-              "link": "https://vn.asiatoday.co.kr/view.php?key=20260515001008129"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=L%E1%BA%A7n%20%C4%90%E1%BA%A7u%20Ti%C3%AAn",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=L%E1%BA%A7n%20%C4%90%E1%BA%A7u%20Ti%C3%AAn"
-      },
-      "top_headlines": [
-        {
-          "title": "Chỉ số KOSPI lần đầu tiên vượt mốc 8.000 điểm, lập kỷ l&",
-          "summary": "",
-          "link": "https://vn.asiatoday.co.kr/view.php?key=20260515001008129",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Lần Đầu Tiên"
     },
     {
       "term": "Điểm Lập Kỷ",
-      "term_ko": "",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Điểm Lập Kỷ",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Chỉ số KOSPI lần đầu tiên vượt mốc 8.000 điểm, lập kỷ l&",
-              "link": "https://vn.asiatoday.co.kr/view.php?key=20260515001008129"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%C4%90i%E1%BB%83m%20L%E1%BA%ADp%20K%E1%BB%B7",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%C4%90i%E1%BB%83m%20L%E1%BA%ADp%20K%E1%BB%B7"
-      },
-      "top_headlines": [
-        {
-          "title": "Chỉ số KOSPI lần đầu tiên vượt mốc 8.000 điểm, lập kỷ l&",
-          "summary": "",
-          "link": "https://vn.asiatoday.co.kr/view.php?key=20260515001008129",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Điểm Lập Kỷ"
     },
     {
       "term": "Topping Historic",
-      "term_ko": "역사 토핑",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Topping Historic",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-15T12:04:18+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KOSPI down over 3 pct late Fri. morning after topping historic 8,000 poin...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016079192?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Topping%20Historic",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Topping%20Historic"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI down over 3 pct late Fri. morning after topping historic 8,000 poin...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016079192?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "역사 토핑"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-15T03:05:28.531Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-15T12:04:18+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Cme From Bitcoin to Stellar",
+      "term_ko": "비트코인부터 스텔라까지 CME"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-15T12:04:18+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-15T12:04:18+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Index Futures June",
+      "term_ko": "지수 선물 6월"
+    },
+    {
+      "term": "4 Months of Equity Funding",
+      "term_ko": "주식 자금 4개월"
+    },
+    {
+      "term": "Dollar Back to 1500 Won",
+      "term_ko": "달러 다시 1500원선"
+    },
+    {
+      "term": "Gold Price Quote May 15",
+      "term_ko": "금값시세 5월 15일"
+    },
+    {
+      "term": "Going Up and Down on the Stock Market",
+      "term_ko": "코스피 활황에도 나간다"
+    },
+    {
+      "term": "Hiding Currency Strength",
+      "term_ko": "원화 강세 숨고르기"
+    },
+    {
+      "term": "Foreign Korean Stocks",
+      "term_ko": "외국인 한국 주식"
+    },
+    {
+      "term": "Sell Flow Weakens",
+      "term_ko": "매도 흐름 약해져"
+    },
+    {
+      "term": "Weak Gold Price on the Korea Exchange",
+      "term_ko": "한국거래소 금시세 약세"
+    },
+    {
+      "term": "Falling International Gold Prices",
+      "term_ko": "국제 금값 하락"
+    },
+    {
+      "term": "Upside Concerns Escalate",
+      "term_ko": "상승 우려 확대"
+    },
+    {
+      "term": "Sovereign Interest Rates in Major Economies Are Rising",
+      "term_ko": "주요국 국채금리 상승하고"
+    },
+    {
+      "term": "Weakness Expands Korea Gold Exchange",
+      "term_ko": "약세 확대 한국금거래소"
+    },
+    {
+      "term": "All Items Drop",
+      "term_ko": "전 품목 하락"
+    },
+    {
+      "term": "Samsung Electronics Sk",
+      "term_ko": "삼성전자 SK"
+    },
+    {
+      "term": "Koreas Kospi Enters",
+      "term_ko": "한국 코스피 진입"
+    },
+    {
+      "term": "Vượt Mốc 8.000",
+      "term_ko": "Vượt Mốc 8.000"
+    },
+    {
+      "term": "Nasdaq Cryptocurrencies",
+      "term_ko": "나스닥 암호화폐"
+    },
+    {
+      "term": "Churn",
+      "term_ko": "연속 이탈"
+    },
+    {
+      "term": "Amplify Your Impact",
+      "term_ko": "영향 확대"
+    },
+    {
+      "term": "Weak Dollar",
+      "term_ko": "달러 약세"
+    },
+    {
+      "term": "Pct Late Fri",
+      "term_ko": "금요일 늦은 시간"
+    },
+    {
+      "term": "Foreigners Offload Holdings",
+      "term_ko": "외국인 오프로드 보유"
+    },
+    {
+      "term": "Wall Street Hits",
+      "term_ko": "월스트리트 히트작"
+    },
+    {
+      "term": "Nvidia China Chip",
+      "term_ko": "엔비디아 중국 칩"
+    },
+    {
+      "term": "Lần Đầu Tiên",
+      "term_ko": "Lần Đầu Tiên"
+    },
+    {
+      "term": "Điểm Lập Kỷ",
+      "term_ko": "Điểm Lập Kỷ"
+    },
+    {
+      "term": "Topping Historic",
+      "term_ko": "역사 토핑"
+    }
+  ],
+  "translations": {
+    "Cme From Bitcoin to Stellar": {
+      "en": "Cme From Bitcoin to Stellar",
+      "ko": "비트코인부터 스텔라까지 CME",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Index Futures June": {
+      "en": "Index Futures June",
+      "ko": "지수 선물 6월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "4 Months of Equity Funding": {
+      "en": "4 Months of Equity Funding",
+      "ko": "주식 자금 4개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Dollar Back to 1500 Won": {
+      "en": "Dollar Back to 1500 Won",
+      "ko": "달러 다시 1500원선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Gold Price Quote May 15": {
+      "en": "Gold Price Quote May 15",
+      "ko": "금값시세 5월 15일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Going Up and Down on the Stock Market": {
+      "en": "Going Up and Down on the Stock Market",
+      "ko": "코스피 활황에도 나간다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Hiding Currency Strength": {
+      "en": "Hiding Currency Strength",
+      "ko": "원화 강세 숨고르기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Foreign Korean Stocks": {
+      "en": "Foreign Korean Stocks",
+      "ko": "외국인 한국 주식",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Sell Flow Weakens": {
+      "en": "Sell Flow Weakens",
+      "ko": "매도 흐름 약해져",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Weak Gold Price on the Korea Exchange": {
+      "en": "Weak Gold Price on the Korea Exchange",
+      "ko": "한국거래소 금시세 약세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Falling International Gold Prices": {
+      "en": "Falling International Gold Prices",
+      "ko": "국제 금값 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Upside Concerns Escalate": {
+      "en": "Upside Concerns Escalate",
+      "ko": "상승 우려 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Sovereign Interest Rates in Major Economies Are Rising": {
+      "en": "Sovereign Interest Rates in Major Economies Are Rising",
+      "ko": "주요국 국채금리 상승하고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Weakness Expands Korea Gold Exchange": {
+      "en": "Weakness Expands Korea Gold Exchange",
+      "ko": "약세 확대 한국금거래소",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "All Items Drop": {
+      "en": "All Items Drop",
+      "ko": "전 품목 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Samsung Electronics Sk": {
+      "en": "Samsung Electronics Sk",
+      "ko": "삼성전자 SK",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Koreas Kospi Enters": {
+      "en": "Koreas Kospi Enters",
+      "ko": "한국 코스피 진입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Vượt Mốc 8.000": {
+      "en": "Vượt Mốc 8.000",
+      "ko": "Vượt Mốc 8.000",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Nasdaq Cryptocurrencies": {
+      "en": "Nasdaq Cryptocurrencies",
+      "ko": "나스닥 암호화폐",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Churn": {
+      "en": "Churn",
+      "ko": "연속 이탈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Amplify Your Impact": {
+      "en": "Amplify Your Impact",
+      "ko": "영향 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Weak Dollar": {
+      "en": "Weak Dollar",
+      "ko": "달러 약세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Pct Late Fri": {
+      "en": "Pct Late Fri",
+      "ko": "금요일 늦은 시간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Foreigners Offload Holdings": {
+      "en": "Foreigners Offload Holdings",
+      "ko": "외국인 오프로드 보유",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Wall Street Hits": {
+      "en": "Wall Street Hits",
+      "ko": "월스트리트 히트작",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Nvidia China Chip": {
+      "en": "Nvidia China Chip",
+      "ko": "엔비디아 중국 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Lần Đầu Tiên": {
+      "en": "Lần Đầu Tiên",
+      "ko": "Lần Đầu Tiên",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Điểm Lập Kỷ": {
+      "en": "Điểm Lập Kỷ",
+      "ko": "Điểm Lập Kỷ",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
+    },
+    "Topping Historic": {
+      "en": "Topping Historic",
+      "ko": "역사 토핑",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-15T08:49:51.462Z"
     }
   }
 }
