@@ -802,6 +802,7 @@ function metricScoreForSelection(market, name, bucket = 'safe') {
   const naverSpike = clamp(Number(metrics.naverSpike) || 0, 0, 1);
   const unified = clamp((Number(metrics.unifiedScoreData?.score) || 0) / 100, 0, 1);
   const adv = normalizeADV(metrics.adv20);
+  const marketCapScore = normalizeMarketCap(Number(metrics.marketCap));
   const sentiment = normalizeSentiment(metrics.sentiment, metrics.posHits, metrics.negHits);
   const ret20 = normalizeFinancialMetric(metrics.ret20, { min: -10, max: 15 });
 
@@ -815,13 +816,15 @@ function metricScoreForSelection(market, name, bucket = 'safe') {
       adv * 0.10
     );
     const momentumComposite = (ret20 * 0.60 + unified * 0.40);
+    const safeStabilityBias = bucket === 'safe' ? marketCapScore * 12 : 0;
     const bucketBias = bucket === 'aggressive' ? (momentumComposite * 10) : 0;
-    return baseScore * 0.50 + popularityComposite * 35 + momentumComposite * 15 + bucketBias;
+    return baseScore * 0.50 + popularityComposite * 35 + momentumComposite * 15 + safeStabilityBias + bucketBias;
   }
 
   // Other markets keep a conservative blend.
-  const qualityBlend = (unified * 0.45 + sentiment * 0.20 + adv * 0.20 + ret20 * 0.15);
-  return baseScore * 0.75 + qualityBlend * 25;
+  const qualityBlend = (unified * 0.40 + sentiment * 0.20 + adv * 0.15 + ret20 * 0.10 + marketCapScore * 0.15);
+  const safeStabilityBias = bucket === 'safe' ? marketCapScore * 10 : 0;
+  return baseScore * 0.75 + qualityBlend * 25 + safeStabilityBias;
 }
 
 
@@ -853,6 +856,12 @@ function normalizeADV(adv) {
   if (!Number.isFinite(adv) || adv <= 0) return 0.3;
   const logAdv = Math.log10(adv);
   return clamp((logAdv - 4) / 3, 0, 1);
+}
+
+function normalizeMarketCap(marketCap) {
+  if (!Number.isFinite(marketCap) || marketCap <= 0) return 0.2;
+  const logCap = Math.log10(marketCap);
+  return clamp((logCap - 9) / 4, 0, 1);
 }
 
 function normalizeNewsCount(rawCount, weightedCount) {
@@ -1699,7 +1708,50 @@ async function tryFetchAndEnrich() {
     const safeNameSet = new Set(chosenSafe.map(n => normalizeMetricKey(typeof n === 'string' ? n : n?.name)));
     const rankedAggr = rankByMetricScore((buckets.aggressive || []).filter(n => !safeNameSet.has(normalizeMetricKey(typeof n === 'string' ? n : n?.name))), 'aggressive');
     const chosenAggr = rankedAggr.slice(0, 5).map(x => x.entry);
-    data[market].aggressive = chosenAggr.map(n => (typeof n === 'string' ? { name: n } : n));
+
+    // Rebalance by attractiveness score: if an aggressive pick scores above a safe pick,
+    // promote it to safe and demote the lower safe one to aggressive.
+    const toName = entry => (typeof entry === 'string' ? entry : entry?.name);
+    const safeWithScore = chosenSafe.map((entry, idx) => ({
+      entry,
+      idx,
+      name: toName(entry),
+      score: metricScoreForSelection(market, toName(entry), 'safe')
+    })).filter(x => x.name);
+    let aggrWithScore = chosenAggr.map((entry, idx) => ({
+      entry,
+      idx,
+      name: toName(entry),
+      score: metricScoreForSelection(market, toName(entry), 'safe')
+    })).filter(x => x.name);
+
+    for (const ag of aggrWithScore.slice().sort((a, b) => b.score - a.score || a.idx - b.idx)) {
+      const lowestSafe = safeWithScore
+        .slice()
+        .sort((a, b) => a.score - b.score || a.idx - b.idx)
+        .find(s => !normalizeMetricKey(s.name).includes(normalizeMetricKey(ag.name)) && normalizeMetricKey(s.name) !== normalizeMetricKey(ag.name));
+      if (!lowestSafe) continue;
+      if (!(Number.isFinite(ag.score) && Number.isFinite(lowestSafe.score) && ag.score > lowestSafe.score)) continue;
+
+      const safeIdx = safeWithScore.findIndex(x => normalizeMetricKey(x.name) === normalizeMetricKey(lowestSafe.name));
+      if (safeIdx === -1) continue;
+      const demoted = safeWithScore[safeIdx];
+      safeWithScore[safeIdx] = { ...ag };
+      aggrWithScore = aggrWithScore
+        .filter(x => normalizeMetricKey(x.name) !== normalizeMetricKey(ag.name))
+        .concat([{ ...demoted }]);
+    }
+
+    const finalSafe = safeWithScore.slice(0, 5).map(x => x.entry);
+    const finalSafeSet = new Set(finalSafe.map(x => normalizeMetricKey(toName(x))));
+    const finalAggr = aggrWithScore
+      .filter(x => !finalSafeSet.has(normalizeMetricKey(x.name)))
+      .sort((a, b) => b.score - a.score || a.idx - b.idx)
+      .slice(0, 5)
+      .map(x => x.entry);
+
+    data[market].safe = finalSafe.map(n => (typeof n === 'string' ? { name: n } : n));
+    data[market].aggressive = finalAggr.map(n => (typeof n === 'string' ? { name: n } : n));
 
     log[market] = {
       safe: data[market].safe?.map(x => x.name) || [],
