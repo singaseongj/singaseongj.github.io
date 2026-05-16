@@ -1675,6 +1675,32 @@ function validateRecommendations(out) {
   }
 }
 
+function dedupeMarketBuckets(marketData = {}) {
+  const normalizeEntryName = entry => normalizeMetricKey(typeof entry === 'string' ? entry : entry?.name);
+  const seenSafe = new Set();
+  const dedupedSafe = [];
+
+  for (const entry of Array.isArray(marketData.safe) ? marketData.safe : []) {
+    const key = normalizeEntryName(entry);
+    if (!key || seenSafe.has(key)) continue;
+    seenSafe.add(key);
+    dedupedSafe.push(entry);
+  }
+
+  const seenAggressive = new Set();
+  const dedupedAggressive = [];
+  for (const entry of Array.isArray(marketData.aggressive) ? marketData.aggressive : []) {
+    const key = normalizeEntryName(entry);
+    if (!key || seenSafe.has(key) || seenAggressive.has(key)) continue;
+    seenAggressive.add(key);
+    dedupedAggressive.push(entry);
+  }
+
+  marketData.safe = dedupedSafe;
+  marketData.aggressive = dedupedAggressive;
+  return marketData;
+}
+
 // Main data fetching function
 async function tryFetchAndEnrich() {
   const POOLS = await loadPools();
@@ -1752,6 +1778,7 @@ async function tryFetchAndEnrich() {
 
     data[market].safe = finalSafe.map(n => (typeof n === 'string' ? { name: n } : n));
     data[market].aggressive = finalAggr.map(n => (typeof n === 'string' ? { name: n } : n));
+    dedupeMarketBuckets(data[market]);
 
     log[market] = {
       safe: data[market].safe?.map(x => x.name) || [],
