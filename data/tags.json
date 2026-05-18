@@ -1,1204 +1,439 @@
 {
+  "generatedAt": "2026-05-18T19:45:53.812Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-18",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "GAM Xanadu Quantum",
-      "term_ko": "GAM 자나두 퀀텀",
-      "significance_score": 700,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "GAM 자나두 퀀텀",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[GAM] 자나두 퀀텀 ② 전략적 파트너십 통한 기술 성과 극대화",
-              "link": "https://www.newspim.com/news/view/20260519000002"
-            },
-            {
-              "title": "[GAM] 자나두 퀀텀 ① 세계 최초 상장 광자 양자컴퓨팅 기업",
-              "link": "https://www.newspim.com/news/view/20260519000001"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=GAM%20%EC%9E%90%EB%82%98%EB%91%90%20%ED%80%80%ED%85%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=GAM%20%EC%9E%90%EB%82%98%EB%91%90%20%ED%80%80%ED%85%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[GAM] 자나두 퀀텀 ② 전략적 파트너십 통한 기술 성과 극대화",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260519000002",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "[GAM] 자나두 퀀텀 ① 세계 최초 상장 광자 양자컴퓨팅 기업",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260519000001",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gam Xanadu Quantum",
+      "term_ko": "GAM 자나두 퀀텀"
     },
     {
-      "term": "Wind farm acquisition leads to AI",
-      "term_ko": "풍력발전소 인수로 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "풍력발전소 인수로 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "솔루나, 1분기 매출 늘었지만 적자 확대…풍력발전소 인수로 AI 캠퍼스 ...",
-              "link": "https://www.tokenpost.kr/news/market/360851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%86%8C%20%EC%9D%B8%EC%88%98%EB%A1%9C%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%86%8C%20%EC%9D%B8%EC%88%98%EB%A1%9C%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "솔루나, 1분기 매출 늘었지만 적자 확대…풍력발전소 인수로 AI 캠퍼스 ...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/360851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Wind Farm Acquisition Leads to Ai",
+      "term_ko": "풍력발전소 인수로 AI"
     },
     {
-      "term": "Soluna Q1 revenue",
-      "term_ko": "솔루나 1분기 매출",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "솔루나 1분기 매출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "솔루나, 1분기 매출 늘었지만 적자 확대…풍력발전소 인수로 AI 캠퍼스 ...",
-              "link": "https://www.tokenpost.kr/news/market/360851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%94%EB%A3%A8%EB%82%98%201%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%94%EB%A3%A8%EB%82%98%201%EB%B6%84%EA%B8%B0%20%EB%A7%A4%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "솔루나, 1분기 매출 늘었지만 적자 확대…풍력발전소 인수로 AI 캠퍼스 ...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/360851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Soluna Q1 Revenue",
+      "term_ko": "솔루나 1분기 매출"
     },
     {
-      "term": "No, but the exchange rate is 1500 won",
-      "term_ko": "아닌데 환율 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아닌데 환율 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "‘초강달러’ 아닌데 환율 1500원… 한국 경제 ‘복합 불안’ 커졌다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001849709?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%8B%8C%EB%8D%B0%20%ED%99%98%EC%9C%A8%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%8B%8C%EB%8D%B0%20%ED%99%98%EC%9C%A8%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "‘초강달러’ 아닌데 환율 1500원… 한국 경제 ‘복합 불안’ 커졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001849709?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "No, But the Exchange Rate Is 1500 Won",
+      "term_ko": "아닌데 환율 1500원"
     },
     {
-      "term": "Gold price quotes for today, May 19",
-      "term_ko": "오늘의 금값시세5월 19일자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세5월 19일자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(5월 19일자) 금값 상승 기대감 \"2026년 전망\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3585765"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B85%EC%9B%94%2019%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B85%EC%9B%94%2019%EC%9D%BC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(5월 19일자) 금값 상승 기대감 \"2026년 전망\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3585765",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Price Quotes for Today, May 19",
+      "term_ko": "오늘의 금값시세5월 19일자"
     },
     {
       "term": "Upside Expectations 2026",
-      "term_ko": "상승 기대감 2026년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 기대감 2026년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(5월 19일자) 금값 상승 기대감 \"2026년 전망\"",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3585765"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%8C%80%EA%B0%90%202026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EA%B8%B0%EB%8C%80%EA%B0%90%202026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(5월 19일자) 금값 상승 기대감 \"2026년 전망\"",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3585765",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상승 기대감 2026년"
     },
     {
-      "term": "Strategic partnerships",
-      "term_ko": "② 전략적 파트너십",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "② 전략적 파트너십",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[GAM] 자나두 퀀텀 ② 전략적 파트너십 통한 기술 성과 극대화",
-              "link": "https://www.newspim.com/news/view/20260519000002"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E2%91%A1%20%EC%A0%84%EB%9E%B5%EC%A0%81%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%8B%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E2%91%A1%20%EC%A0%84%EB%9E%B5%EC%A0%81%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%8B%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[GAM] 자나두 퀀텀 ② 전략적 파트너십 통한 기술 성과 극대화",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260519000002",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Strategic Partnerships",
+      "term_ko": "② 전략적 파트너십"
     },
     {
-      "term": "World's first",
-      "term_ko": "① 세계 최초",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "① 세계 최초",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[GAM] 자나두 퀀텀 ① 세계 최초 상장 광자 양자컴퓨팅 기업",
-              "link": "https://www.newspim.com/news/view/20260519000001"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E2%91%A0%20%EC%84%B8%EA%B3%84%20%EC%B5%9C%EC%B4%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E2%91%A0%20%EC%84%B8%EA%B3%84%20%EC%B5%9C%EC%B4%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[GAM] 자나두 퀀텀 ① 세계 최초 상장 광자 양자컴퓨팅 기업",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260519000001",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "World's First",
+      "term_ko": "① 세계 최초"
     },
     {
       "term": "Listed Photon Quantum Computing",
-      "term_ko": "상장 광자 양자컴퓨팅",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상장 광자 양자컴퓨팅",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[GAM] 자나두 퀀텀 ① 세계 최초 상장 광자 양자컴퓨팅 기업",
-              "link": "https://www.newspim.com/news/view/20260519000001"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%20%EA%B4%91%EC%9E%90%20%EC%96%91%EC%9E%90%EC%BB%B4%ED%93%A8%ED%8C%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%20%EA%B4%91%EC%9E%90%20%EC%96%91%EC%9E%90%EC%BB%B4%ED%93%A8%ED%8C%85"
-      },
-      "top_headlines": [
-        {
-          "title": "[GAM] 자나두 퀀텀 ① 세계 최초 상장 광자 양자컴퓨팅 기업",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260519000001",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "상장 광자 양자컴퓨팅"
     },
     {
-      "term": "NYSE Preview Me",
-      "term_ko": "뉴욕증시 프리뷰 미",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 미 주가 선물 일제 반등…이란 협상 기대에 유가·금...",
-              "link": "https://www.newspim.com/news/view/20260518001258"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 미 주가 선물 일제 반등…이란 협상 기대에 유가·금...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260518001258",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview Me",
+      "term_ko": "뉴욕증시 프리뷰 미"
     },
     {
-      "term": "Stock futures simultaneous",
-      "term_ko": "주가 선물 일제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주가 선물 일제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 미 주가 선물 일제 반등…이란 협상 기대에 유가·금...",
-              "link": "https://www.newspim.com/news/view/20260518001258"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC%20%EC%9D%BC%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC%20%EC%9D%BC%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 미 주가 선물 일제 반등…이란 협상 기대에 유가·금...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260518001258",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Futures Simultaneous",
+      "term_ko": "주가 선물 일제"
     },
     {
       "term": "Rebounding Iran Deal",
-      "term_ko": "반등 이란 협상",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반등 이란 협상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 미 주가 선물 일제 반등…이란 협상 기대에 유가·금...",
-              "link": "https://www.newspim.com/news/view/20260518001258"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%B1%20%EC%9D%B4%EB%9E%80%20%ED%98%91%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%B1%20%EC%9D%B4%EB%9E%80%20%ED%98%91%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 미 주가 선물 일제 반등…이란 협상 기대에 유가·금...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260518001258",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반등 이란 협상"
     },
     {
-      "term": "Increased but widening deficit",
-      "term_ko": "늘었지만 적자 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "늘었지만 적자 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "솔루나, 1분기 매출 늘었지만 적자 확대…풍력발전소 인수로 AI 캠퍼스 ...",
-              "link": "https://www.tokenpost.kr/news/market/360851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8A%98%EC%97%88%EC%A7%80%EB%A7%8C%20%EC%A0%81%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8A%98%EC%97%88%EC%A7%80%EB%A7%8C%20%EC%A0%81%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "솔루나, 1분기 매출 늘었지만 적자 확대…풍력발전소 인수로 AI 캠퍼스 ...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/360851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Increased But Widening Deficit",
+      "term_ko": "늘었지만 적자 확대"
     },
     {
-      "term": "Tokenization wars already",
-      "term_ko": "토큰화 전쟁 이미",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "토큰화 전쟁 이미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"토큰화 전쟁, 이미 시작됐다\"...JP모건·코인베이스도 블록체인 금융 대...",
-              "link": "http://coinreaders.com/237060"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%ED%81%B0%ED%99%94%20%EC%A0%84%EC%9F%81%20%EC%9D%B4%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%ED%81%B0%ED%99%94%20%EC%A0%84%EC%9F%81%20%EC%9D%B4%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "\"토큰화 전쟁, 이미 시작됐다\"...JP모건·코인베이스도 블록체인 금융 대...",
-          "summary": "",
-          "link": "http://coinreaders.com/237060",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tokenization Wars Already",
+      "term_ko": "토큰화 전쟁 이미"
     },
     {
-      "term": "Coinbase is also a blockchain finance",
-      "term_ko": "코인베이스도 블록체인 금융",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코인베이스도 블록체인 금융",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"토큰화 전쟁, 이미 시작됐다\"...JP모건·코인베이스도 블록체인 금융 대...",
-              "link": "http://coinreaders.com/237060"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%9D%B8%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%8F%84%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EA%B8%88%EC%9C%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%9D%B8%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%8F%84%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EA%B8%88%EC%9C%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "\"토큰화 전쟁, 이미 시작됐다\"...JP모건·코인베이스도 블록체인 금융 대...",
-          "summary": "",
-          "link": "http://coinreaders.com/237060",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Coinbase Is Also a Blockchain Finance",
+      "term_ko": "코인베이스도 블록체인 금융"
     },
     {
-      "term": "Global government bond rates",
-      "term_ko": "글로벌 국채 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "글로벌 국채 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "글로벌 국채 금리 일제히 급등… 증시 ‘새 뇌관’ 되나",
-              "link": "https://n.news.naver.com/mnews/article/023/0003977126?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EA%B5%AD%EC%B1%84%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EA%B5%AD%EC%B1%84%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "글로벌 국채 금리 일제히 급등… 증시 ‘새 뇌관’ 되나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003977126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Global Government Bond Rates",
+      "term_ko": "글로벌 국채 금리"
     },
     {
-      "term": "Stock markets surge in unison",
-      "term_ko": "일제히 급등 증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "일제히 급등 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "글로벌 국채 금리 일제히 급등… 증시 ‘새 뇌관’ 되나",
-              "link": "https://n.news.naver.com/mnews/article/023/0003977126?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EA%B8%89%EB%93%B1%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EA%B8%89%EB%93%B1%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "글로벌 국채 금리 일제히 급등… 증시 ‘새 뇌관’ 되나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003977126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Markets Surge in Unison",
+      "term_ko": "일제히 급등 증시"
     },
     {
-      "term": "Become a new primer",
-      "term_ko": "새 뇌관 되나",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "새 뇌관 되나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "글로벌 국채 금리 일제히 급등… 증시 ‘새 뇌관’ 되나",
-              "link": "https://n.news.naver.com/mnews/article/023/0003977126?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%88%20%EB%87%8C%EA%B4%80%20%EB%90%98%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%88%20%EB%87%8C%EA%B4%80%20%EB%90%98%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "글로벌 국채 금리 일제히 급등… 증시 ‘새 뇌관’ 되나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003977126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Become a New Primer",
+      "term_ko": "새 뇌관 되나"
     },
     {
       "term": "Financial Crisis Levels",
-      "term_ko": "금융위기 수준까지 뛴",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융위기 수준까지 뛴",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금융위기 수준까지 뛴 美 국채 금리… “증시 최대 복병 떠올라”",
-              "link": "https://n.news.naver.com/mnews/article/020/0003720523?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%20%EC%88%98%EC%A4%80%EA%B9%8C%EC%A7%80%20%EB%9B%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%20%EC%88%98%EC%A4%80%EA%B9%8C%EC%A7%80%20%EB%9B%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위기 수준까지 뛴 美 국채 금리… “증시 최대 복병 떠올라”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003720523?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융위기 수준까지 뛴"
     },
     {
-      "term": "US Treasury rates",
-      "term_ko": "美 국채 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 국채 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금융위기 수준까지 뛴 美 국채 금리… “증시 최대 복병 떠올라”",
-              "link": "https://n.news.naver.com/mnews/article/020/0003720523?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위기 수준까지 뛴 美 국채 금리… “증시 최대 복병 떠올라”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003720523?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Treasury Rates",
+      "term_ko": "美 국채 금리"
     },
     {
       "term": "Stock Market Maximum Double Bottles",
-      "term_ko": "증시 최대 복병",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 최대 복병",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금융위기 수준까지 뛴 美 국채 금리… “증시 최대 복병 떠올라”",
-              "link": "https://n.news.naver.com/mnews/article/020/0003720523?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%B5%9C%EB%8C%80%20%EB%B3%B5%EB%B3%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%B5%9C%EB%8C%80%20%EB%B3%B5%EB%B3%91"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위기 수준까지 뛴 美 국채 금리… “증시 최대 복병 떠올라”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003720523?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증시 최대 복병"
     },
     {
-      "term": "Rising interest rates",
-      "term_ko": "금리 오른다는데 변동금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 오른다는데 변동금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금리 오른다는데… 변동금리 대출 급증",
-              "link": "https://n.news.naver.com/mnews/article/023/0003977127?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%98%A4%EB%A5%B8%EB%8B%A4%EB%8A%94%EB%8D%B0%20%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%98%A4%EB%A5%B8%EB%8B%A4%EB%8A%94%EB%8D%B0%20%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "금리 오른다는데… 변동금리 대출 급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003977127?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Interest Rates",
+      "term_ko": "금리 오른다는데 변동금리"
     },
     {
       "term": "South Korea Economic Composite",
-      "term_ko": "한국 경제 복합",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 경제 복합",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "‘초강달러’ 아닌데 환율 1500원… 한국 경제 ‘복합 불안’ 커졌다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001849709?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EA%B2%BD%EC%A0%9C%20%EB%B3%B5%ED%95%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EA%B2%BD%EC%A0%9C%20%EB%B3%B5%ED%95%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "‘초강달러’ 아닌데 환율 1500원… 한국 경제 ‘복합 불안’ 커졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001849709?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 경제 복합"
     },
     {
       "term": "Ulsan Namgu-gap By-election",
-      "term_ko": "울산 남구갑 보궐선거",
-      "significance_score": 322,
-      "mentions": 209,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "울산 남구갑 보궐선거",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 43.75
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 31.25
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 59.375
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 40.625
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 34.375
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "울산 남구갑 보궐선거 공약 경쟁",
-              "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1057100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B8%EC%82%B0%20%EB%82%A8%EA%B5%AC%EA%B0%91%20%EB%B3%B4%EA%B6%90%EC%84%A0%EA%B1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B8%EC%82%B0%20%EB%82%A8%EA%B5%AC%EA%B0%91%20%EB%B3%B4%EA%B6%90%EC%84%A0%EA%B1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "울산 남구갑 보궐선거 공약 경쟁",
-          "summary": "",
-          "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1057100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 209.375,
-        "weekly_average_volume": 41.875,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.024618,
-        "time_weight": 0.02058,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778943600000
-      }
+      "term_ko": "울산 남구갑 보궐선거"
     },
     {
-      "term": "Loan spikes",
-      "term_ko": "대출 급증",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대출 급증",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금리 오른다는데… 변동금리 대출 급증",
-              "link": "https://n.news.naver.com/mnews/article/023/0003977127?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EA%B8%89%EC%A6%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EA%B8%89%EC%A6%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "금리 오른다는데… 변동금리 대출 급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003977127?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Loan Spikes",
+      "term_ko": "대출 급증"
     },
     {
-      "term": "Increased anxiety",
-      "term_ko": "불안 커졌다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불안 커졌다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "‘초강달러’ 아닌데 환율 1500원… 한국 경제 ‘복합 불안’ 커졌다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001849709?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EC%95%88%20%EC%BB%A4%EC%A1%8C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EC%95%88%20%EC%BB%A4%EC%A1%8C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "‘초강달러’ 아닌데 환율 1500원… 한국 경제 ‘복합 불안’ 커졌다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001849709?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Increased Anxiety",
+      "term_ko": "불안 커졌다"
     },
     {
-      "term": "Pledge competitions",
-      "term_ko": "공약 경쟁",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "공약 경쟁",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "울산 남구갑 보궐선거 공약 경쟁",
-              "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1057100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EC%95%BD%20%EA%B2%BD%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EC%95%BD%20%EA%B2%BD%EC%9F%81"
-      },
-      "top_headlines": [
-        {
-          "title": "울산 남구갑 보궐선거 공약 경쟁",
-          "summary": "",
-          "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1057100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Pledge Competitions",
+      "term_ko": "공약 경쟁"
     },
     {
       "term": "Global Bond Yields",
-      "term_ko": "글로벌 채권 수익률",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Global Bond Yields",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Global Bond Yields Surge, Pressuring Korean Stocks",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269648"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Global%20Bond%20Yields",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Global%20Bond%20Yields"
-      },
-      "top_headlines": [
-        {
-          "title": "Global Bond Yields Surge, Pressuring Korean Stocks",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269648",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "글로벌 채권 수익률"
     },
     {
       "term": "Surge Pressuring Korean",
-      "term_ko": "서지 압력 한국어",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Surge Pressuring Korean",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Global Bond Yields Surge, Pressuring Korean Stocks",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269648"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Surge%20Pressuring%20Korean",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Surge%20Pressuring%20Korean"
-      },
-      "top_headlines": [
-        {
-          "title": "Global Bond Yields Surge, Pressuring Korean Stocks",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269648",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서지 압력 한국어"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-19T00:34:20+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-18T15:35:30.702Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-19T00:34:20+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Gam Xanadu Quantum",
+      "term_ko": "GAM 자나두 퀀텀"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-19T00:34:20+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-19T00:34:20+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Wind Farm Acquisition Leads to Ai",
+      "term_ko": "풍력발전소 인수로 AI"
+    },
+    {
+      "term": "Soluna Q1 Revenue",
+      "term_ko": "솔루나 1분기 매출"
+    },
+    {
+      "term": "No, But the Exchange Rate Is 1500 Won",
+      "term_ko": "아닌데 환율 1500원"
+    },
+    {
+      "term": "Gold Price Quotes for Today, May 19",
+      "term_ko": "오늘의 금값시세5월 19일자"
+    },
+    {
+      "term": "Upside Expectations 2026",
+      "term_ko": "상승 기대감 2026년"
+    },
+    {
+      "term": "Strategic Partnerships",
+      "term_ko": "② 전략적 파트너십"
+    },
+    {
+      "term": "World's First",
+      "term_ko": "① 세계 최초"
+    },
+    {
+      "term": "Listed Photon Quantum Computing",
+      "term_ko": "상장 광자 양자컴퓨팅"
+    },
+    {
+      "term": "Nyse Preview Me",
+      "term_ko": "뉴욕증시 프리뷰 미"
+    },
+    {
+      "term": "Stock Futures Simultaneous",
+      "term_ko": "주가 선물 일제"
+    },
+    {
+      "term": "Rebounding Iran Deal",
+      "term_ko": "반등 이란 협상"
+    },
+    {
+      "term": "Increased But Widening Deficit",
+      "term_ko": "늘었지만 적자 확대"
+    },
+    {
+      "term": "Tokenization Wars Already",
+      "term_ko": "토큰화 전쟁 이미"
+    },
+    {
+      "term": "Coinbase Is Also a Blockchain Finance",
+      "term_ko": "코인베이스도 블록체인 금융"
+    },
+    {
+      "term": "Global Government Bond Rates",
+      "term_ko": "글로벌 국채 금리"
+    },
+    {
+      "term": "Stock Markets Surge in Unison",
+      "term_ko": "일제히 급등 증시"
+    },
+    {
+      "term": "Become a New Primer",
+      "term_ko": "새 뇌관 되나"
+    },
+    {
+      "term": "Financial Crisis Levels",
+      "term_ko": "금융위기 수준까지 뛴"
+    },
+    {
+      "term": "Us Treasury Rates",
+      "term_ko": "美 국채 금리"
+    },
+    {
+      "term": "Stock Market Maximum Double Bottles",
+      "term_ko": "증시 최대 복병"
+    },
+    {
+      "term": "Rising Interest Rates",
+      "term_ko": "금리 오른다는데 변동금리"
+    },
+    {
+      "term": "South Korea Economic Composite",
+      "term_ko": "한국 경제 복합"
+    },
+    {
+      "term": "Ulsan Namgu-gap By-election",
+      "term_ko": "울산 남구갑 보궐선거"
+    },
+    {
+      "term": "Loan Spikes",
+      "term_ko": "대출 급증"
+    },
+    {
+      "term": "Increased Anxiety",
+      "term_ko": "불안 커졌다"
+    },
+    {
+      "term": "Pledge Competitions",
+      "term_ko": "공약 경쟁"
+    },
+    {
+      "term": "Global Bond Yields",
+      "term_ko": "글로벌 채권 수익률"
+    },
+    {
+      "term": "Surge Pressuring Korean",
+      "term_ko": "서지 압력 한국어"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    }
+  ],
+  "translations": {
+    "Gam Xanadu Quantum": {
+      "en": "Gam Xanadu Quantum",
+      "ko": "GAM 자나두 퀀텀",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.812Z"
+    },
+    "Wind Farm Acquisition Leads to Ai": {
+      "en": "Wind Farm Acquisition Leads to Ai",
+      "ko": "풍력발전소 인수로 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Soluna Q1 Revenue": {
+      "en": "Soluna Q1 Revenue",
+      "ko": "솔루나 1분기 매출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "No, But the Exchange Rate Is 1500 Won": {
+      "en": "No, But the Exchange Rate Is 1500 Won",
+      "ko": "아닌데 환율 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Gold Price Quotes for Today, May 19": {
+      "en": "Gold Price Quotes for Today, May 19",
+      "ko": "오늘의 금값시세5월 19일자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Upside Expectations 2026": {
+      "en": "Upside Expectations 2026",
+      "ko": "상승 기대감 2026년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Strategic Partnerships": {
+      "en": "Strategic Partnerships",
+      "ko": "② 전략적 파트너십",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "World's First": {
+      "en": "World's First",
+      "ko": "① 세계 최초",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Listed Photon Quantum Computing": {
+      "en": "Listed Photon Quantum Computing",
+      "ko": "상장 광자 양자컴퓨팅",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Nyse Preview Me": {
+      "en": "Nyse Preview Me",
+      "ko": "뉴욕증시 프리뷰 미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Stock Futures Simultaneous": {
+      "en": "Stock Futures Simultaneous",
+      "ko": "주가 선물 일제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Rebounding Iran Deal": {
+      "en": "Rebounding Iran Deal",
+      "ko": "반등 이란 협상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Increased But Widening Deficit": {
+      "en": "Increased But Widening Deficit",
+      "ko": "늘었지만 적자 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Tokenization Wars Already": {
+      "en": "Tokenization Wars Already",
+      "ko": "토큰화 전쟁 이미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Coinbase Is Also a Blockchain Finance": {
+      "en": "Coinbase Is Also a Blockchain Finance",
+      "ko": "코인베이스도 블록체인 금융",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Global Government Bond Rates": {
+      "en": "Global Government Bond Rates",
+      "ko": "글로벌 국채 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Stock Markets Surge in Unison": {
+      "en": "Stock Markets Surge in Unison",
+      "ko": "일제히 급등 증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Become a New Primer": {
+      "en": "Become a New Primer",
+      "ko": "새 뇌관 되나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Financial Crisis Levels": {
+      "en": "Financial Crisis Levels",
+      "ko": "금융위기 수준까지 뛴",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Us Treasury Rates": {
+      "en": "Us Treasury Rates",
+      "ko": "美 국채 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Stock Market Maximum Double Bottles": {
+      "en": "Stock Market Maximum Double Bottles",
+      "ko": "증시 최대 복병",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Rising Interest Rates": {
+      "en": "Rising Interest Rates",
+      "ko": "금리 오른다는데 변동금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "South Korea Economic Composite": {
+      "en": "South Korea Economic Composite",
+      "ko": "한국 경제 복합",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Ulsan Namgu-gap By-election": {
+      "en": "Ulsan Namgu-gap By-election",
+      "ko": "울산 남구갑 보궐선거",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Loan Spikes": {
+      "en": "Loan Spikes",
+      "ko": "대출 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Increased Anxiety": {
+      "en": "Increased Anxiety",
+      "ko": "불안 커졌다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Pledge Competitions": {
+      "en": "Pledge Competitions",
+      "ko": "공약 경쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Global Bond Yields": {
+      "en": "Global Bond Yields",
+      "ko": "글로벌 채권 수익률",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Surge Pressuring Korean": {
+      "en": "Surge Pressuring Korean",
+      "ko": "서지 압력 한국어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T19:45:53.813Z"
     }
   }
 }
