@@ -1,1221 +1,439 @@
 {
+  "generatedAt": "2026-05-18T10:01:27.773Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-18",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Nvidia Earnings",
-      "term_ko": "Nvidia 수익",
-      "significance_score": 448,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nvidia Earnings",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-              "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927"
-            },
-            {
-              "title": "Wall Street Futures Slip as Nvidia Earnings and U.S.-Iran Tensions Weigh ...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Nvidia-Earnings-and-US-Iran-Tensions-Weigh-on-Markets-1741916"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nvidia%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nvidia%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Wall Street Futures Slip as Nvidia Earnings and U.S.-Iran Tensions Weigh ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Nvidia-Earnings-and-US-Iran-Tensions-Weigh-on-Markets-1741916",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Nvidia 수익"
     },
     {
-      "term": "Jump to US FTC",
-      "term_ko": "뛰자 美 FTC",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뛰자 美 FTC",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18910"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9B%B0%EC%9E%90%20%E7%BE%8E%20FTC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9B%B0%EC%9E%90%20%E7%BE%8E%20FTC"
-      },
-      "top_headlines": [
-        {
-          "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18910",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Jump to Us Ftc",
+      "term_ko": "뛰자 美 FTC"
     },
     {
-      "term": "Keika KB Cha Cha Cha Cha 順",
-      "term_ko": "케이카 KB차차차 順",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "케이카 KB차차차 順",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "중고차 2026년 5월 브랜드평판...엔카, 케이카, KB차차차 順",
-              "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225452"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BC%80%EC%9D%B4%EC%B9%B4%20KB%EC%B0%A8%EC%B0%A8%EC%B0%A8%20%E9%A0%86",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BC%80%EC%9D%B4%EC%B9%B4%20KB%EC%B0%A8%EC%B0%A8%EC%B0%A8%20%E9%A0%86"
-      },
-      "top_headlines": [
-        {
-          "title": "중고차 2026년 5월 브랜드평판...엔카, 케이카, KB차차차 順",
-          "summary": "",
-          "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225452",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Keika Kb Cha Cha Cha Cha 順",
+      "term_ko": "케이카 KB차차차 順"
     },
     {
-      "term": "S&P500 Futures Rates",
-      "term_ko": "S&P500 선물 금리",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "S&P500 선물 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S&P500 선물, 금리 급등세에 하락…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415427"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%84%A0%EB%AC%BC%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%84%A0%EB%AC%BC%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 금리 급등세에 하락…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415427",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "S&p500 Futures Rates",
+      "term_ko": "S&P500 선물 금리"
     },
     {
       "term": "Used Cars May 2026",
-      "term_ko": "중고차 2026년 5월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중고차 2026년 5월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "중고차 2026년 5월 브랜드평판...엔카, 케이카, KB차차차 順",
-              "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225452"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EA%B3%A0%EC%B0%A8%202026%EB%85%84%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EA%B3%A0%EC%B0%A8%202026%EB%85%84%205%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "중고차 2026년 5월 브랜드평판...엔카, 케이카, KB차차차 順",
-          "summary": "",
-          "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225452",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중고차 2026년 5월"
     },
     {
       "term": "Hyundai Marine Q1 Surprise",
-      "term_ko": "현대해상 1분기 깜짝",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현대해상 1분기 깜짝",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "현대해상, 1분기 깜짝 실적에 장중 14%대 급등[특징주]",
-              "link": "https://www.newsway.co.kr/news/view?ud=2026051811150484654"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81%201%EB%B6%84%EA%B8%B0%20%EA%B9%9C%EC%A7%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EB%8C%80%ED%95%B4%EC%83%81%201%EB%B6%84%EA%B8%B0%20%EA%B9%9C%EC%A7%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "현대해상, 1분기 깜짝 실적에 장중 14%대 급등[특징주]",
-          "summary": "",
-          "link": "https://www.newsway.co.kr/news/view?ud=2026051811150484654",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "현대해상 1분기 깜짝"
     },
     {
-      "term": "14% intraday vs.",
-      "term_ko": "실적에 장중 14%대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "실적에 장중 14%대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "현대해상, 1분기 깜짝 실적에 장중 14%대 급등[특징주]",
-              "link": "https://www.newsway.co.kr/news/view?ud=2026051811150484654"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%A0%81%EC%97%90%20%EC%9E%A5%EC%A4%91%2014%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%A0%81%EC%97%90%20%EC%9E%A5%EC%A4%91%2014%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "현대해상, 1분기 깜짝 실적에 장중 14%대 급등[특징주]",
-          "summary": "",
-          "link": "https://www.newsway.co.kr/news/view?ud=2026051811150484654",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "14% Intraday Vs.",
+      "term_ko": "실적에 장중 14%대"
     },
     {
-      "term": "U.S. 10-Year Treasury Bond",
-      "term_ko": "미국 10년 국채",
-      "significance_score": 336,
-      "mentions": 368,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 10년 국채",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-10",
-              "timestamp": 1778338800000,
-              "value": 5.4945
-            },
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 36.63003
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 50.54945
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 68.86446
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 43.95604
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 70.32967
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 34.43223
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 10년 국채 금리 4.6% 찍어…외국인 2.5조 코스피 매도",
-              "link": "https://n.news.naver.com/mnews/article/008/0005359244?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%2010%EB%85%84%20%EA%B5%AD%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%2010%EB%85%84%20%EA%B5%AD%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 10년 국채 금리 4.6% 찍어…외국인 2.5조 코스피 매도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005359244?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 368.1318,
-        "weekly_average_volume": 61.3553,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.016649,
-        "time_weight": 0.027304,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778943600000
-      }
+      "term": "U.s. 10-year Treasury Bond",
+      "term_ko": "미국 10년 국채"
     },
     {
-      "term": "Take an interest rate of 4.6",
-      "term_ko": "금리 4.6% 찍어",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 4.6% 찍어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 10년 국채 금리 4.6% 찍어…외국인 2.5조 코스피 매도",
-              "link": "https://n.news.naver.com/mnews/article/008/0005359244?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%204.6%25%20%EC%B0%8D%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%204.6%25%20%EC%B0%8D%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 10년 국채 금리 4.6% 찍어…외국인 2.5조 코스피 매도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005359244?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Take an Interest Rate of 4.6",
+      "term_ko": "금리 4.6% 찍어"
     },
     {
-      "term": "Foreigners 2.5 trillion KOSPI",
-      "term_ko": "외국인 2.5조 코스피",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외국인 2.5조 코스피",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "미국 10년 국채 금리 4.6% 찍어…외국인 2.5조 코스피 매도",
-              "link": "https://n.news.naver.com/mnews/article/008/0005359244?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%202.5%EC%A1%B0%20%EC%BD%94%EC%8A%A4%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%202.5%EC%A1%B0%20%EC%BD%94%EC%8A%A4%ED%94%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 10년 국채 금리 4.6% 찍어…외국인 2.5조 코스피 매도",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005359244?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Foreigners 2.5 Trillion Kospi",
+      "term_ko": "외국인 2.5조 코스피"
     },
     {
-      "term": "After rebounding‥Exchange rate 1500 won",
-      "term_ko": "후 반등‥환율 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "후 반등‥환율 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 급락 후 반등‥환율 1,500원 돌파",
-              "link": "https://n.news.naver.com/mnews/article/214/0001499627?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%84%20%EB%B0%98%EB%93%B1%E2%80%A5%ED%99%98%EC%9C%A8%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%84%20%EB%B0%98%EB%93%B1%E2%80%A5%ED%99%98%EC%9C%A8%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 급락 후 반등‥환율 1,500원 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001499627?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "After Rebounding‥exchange Rate 1500 Won",
+      "term_ko": "후 반등‥환율 1500원"
     },
     {
-      "term": "Apple Qualcomm chips",
-      "term_ko": "애플 퀄컴 칩",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "애플 퀄컴 칩",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18910"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%A0%ED%94%8C%20%ED%80%84%EC%BB%B4%20%EC%B9%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%A0%ED%94%8C%20%ED%80%84%EC%BB%B4%20%EC%B9%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18910",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Apple Qualcomm Chips",
+      "term_ko": "애플 퀄컴 칩"
     },
     {
-      "term": "Arm used to sell blueprints",
-      "term_ko": "설계도 팔던 Arm",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "설계도 팔던 Arm",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18910"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A4%EA%B3%84%EB%8F%84%20%ED%8C%94%EB%8D%98%20Arm",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A4%EA%B3%84%EB%8F%84%20%ED%8C%94%EB%8D%98%20Arm"
-      },
-      "top_headlines": [
-        {
-          "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18910",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Arm Used to Sell Blueprints",
+      "term_ko": "설계도 팔던 Arm"
     },
     {
-      "term": "Down on the rise 美",
-      "term_ko": "급등세에 하락 美",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급등세에 하락 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S&P500 선물, 금리 급등세에 하락…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415427"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%EC%84%B8%EC%97%90%20%ED%95%98%EB%9D%BD%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%EC%84%B8%EC%97%90%20%ED%95%98%EB%9D%BD%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 금리 급등세에 하락…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415427",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Down on the Rise 美",
+      "term_ko": "급등세에 하락 美"
     },
     {
-      "term": "ZeroToN buy-to-let marketplace",
-      "term_ko": "제로투엔 매입임대주택 시장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제로투엔 매입임대주택 시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "제로투엔, 매입임대주택 시장 겨냥한 실무서 출간",
-              "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205333"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EB%A1%9C%ED%88%AC%EC%97%94%20%EB%A7%A4%EC%9E%85%EC%9E%84%EB%8C%80%EC%A3%BC%ED%83%9D%20%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EB%A1%9C%ED%88%AC%EC%97%94%20%EB%A7%A4%EC%9E%85%EC%9E%84%EB%8C%80%EC%A3%BC%ED%83%9D%20%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "제로투엔, 매입임대주택 시장 겨냥한 실무서 출간",
-          "summary": "",
-          "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205333",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Zeroton Buy-to-let Marketplace",
+      "term_ko": "제로투엔 매입임대주택 시장"
     },
     {
-      "term": "Publish a targeted practice book",
-      "term_ko": "겨냥한 실무서 출간",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "겨냥한 실무서 출간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "제로투엔, 매입임대주택 시장 겨냥한 실무서 출간",
-              "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205333"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%A8%EB%83%A5%ED%95%9C%20%EC%8B%A4%EB%AC%B4%EC%84%9C%20%EC%B6%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%A8%EB%83%A5%ED%95%9C%20%EC%8B%A4%EB%AC%B4%EC%84%9C%20%EC%B6%9C%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "제로투엔, 매입임대주택 시장 겨냥한 실무서 출간",
-          "summary": "",
-          "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205333",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Publish a Targeted Practice Book",
+      "term_ko": "겨냥한 실무서 출간"
     },
     {
-      "term": "Samsung Electronics SK",
-      "term_ko": "삼성전자 SK",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Electronics SK",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Samsung Electronics, SK hynix slide on U.S. tech sell-off",
-              "link": "https://n.news.naver.com/mnews/article/009/0005681424?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Electronics%20SK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Electronics%20SK"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Electronics, SK hynix slide on U.S. tech sell-off",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005681424?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Electronics Sk",
+      "term_ko": "삼성전자 SK"
     },
     {
-      "term": "LEAD KOSPI Opens",
-      "term_ko": "LEAD 코스피 오픈",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD KOSPI Opens",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) KOSPI opens sharply lower amid inflation woes, U.S. losses",
-              "link": "https://n.news.naver.com/mnews/article/001/0016082684?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20KOSPI%20Opens",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20KOSPI%20Opens"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) KOSPI opens sharply lower amid inflation woes, U.S. losses",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016082684?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Kospi Opens",
+      "term_ko": "LEAD 코스피 오픈"
     },
     {
-      "term": "Knife drawn",
-      "term_ko": "칼 뽑았다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "칼 뽑았다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18910"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%BC%20%EB%BD%91%EC%95%98%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%BC%20%EB%BD%91%EC%95%98%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "애플·퀄컴 칩 설계도 팔던 Arm, 직접 선수로 뛰자…美 FTC 칼 뽑았다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18910",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Knife Drawn",
+      "term_ko": "칼 뽑았다"
     },
     {
-      "term": "KOSPI plunges",
-      "term_ko": "코스피 급락",
-      "significance_score": 280,
-      "mentions": 202,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 급락",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 0.41212
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 6.21136
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 0.7065
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 88.10715
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 5.23991
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 1.61907
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피, 급락 후 반등‥환율 1,500원 돌파",
-              "link": "https://n.news.naver.com/mnews/article/214/0001499627?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 급락 후 반등‥환율 1,500원 돌파",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001499627?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 201.884,
-        "weekly_average_volume": 33.6473,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.025248,
-        "time_weight": 0.027302,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778943600000
-      }
+      "term": "Kospi Plunges",
+      "term_ko": "코스피 급락"
     },
     {
       "term": "Wall Street Futures",
-      "term_ko": "월스트리트 선물",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Futures Slip as Nvidia Earnings and U.S.-Iran Tensions Weigh ...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Nvidia-Earnings-and-US-Iran-Tensions-Weigh-on-Markets-1741916"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Slip as Nvidia Earnings and U.S.-Iran Tensions Weigh ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Nvidia-Earnings-and-US-Iran-Tensions-Weigh-on-Markets-1741916",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 선물"
     },
     {
-      "term": "U.S.-Iran Tensions Weigh",
-      "term_ko": "미국-이란 긴장 고조",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-Iran Tensions Weigh",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Futures Slip as Nvidia Earnings and U.S.-Iran Tensions Weigh ...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Nvidia-Earnings-and-US-Iran-Tensions-Weigh-on-Markets-1741916"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Tensions%20Weigh",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Tensions%20Weigh"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Slip as Nvidia Earnings and U.S.-Iran Tensions Weigh ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Slip-as-Nvidia-Earnings-and-US-Iran-Tensions-Weigh-on-Markets-1741916",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s.-iran Tensions Weigh",
+      "term_ko": "미국-이란 긴장 고조"
     },
     {
-      "term": "U.S Tech Sell-off",
-      "term_ko": "미국 기술 매각",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Tech Sell-off",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Samsung Electronics, SK hynix slide on U.S. tech sell-off",
-              "link": "https://n.news.naver.com/mnews/article/009/0005681424?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Tech%20Sell-off",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Tech%20Sell-off"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Electronics, SK hynix slide on U.S. tech sell-off",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005681424?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Tech Sell-off",
+      "term_ko": "미국 기술 매각"
     },
     {
       "term": "Kospi Opens Lower",
-      "term_ko": "코스피 하락 개장",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Opens Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Kospi opens lower due to inflation, U.S. losses from ongoing Middle East ...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000088558?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Opens%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Opens%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi opens lower due to inflation, U.S. losses from ongoing Middle East ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000088558?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 하락 개장"
     },
     {
-      "term": "Inflation U.S Losses",
-      "term_ko": "인플레이션 미국 손실",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Inflation U.S Losses",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Kospi opens lower due to inflation, U.S. losses from ongoing Middle East ...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000088558?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20U.S%20Losses",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20U.S%20Losses"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi opens lower due to inflation, U.S. losses from ongoing Middle East ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000088558?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Inflation U.s Losses",
+      "term_ko": "인플레이션 미국 손실"
     },
     {
       "term": "Ongoing Middle East",
-      "term_ko": "진행 중인 중동",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Ongoing Middle East",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Kospi opens lower due to inflation, U.S. losses from ongoing Middle East ...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000088558?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Ongoing%20Middle%20East",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Ongoing%20Middle%20East"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi opens lower due to inflation, U.S. losses from ongoing Middle East ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000088558?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "진행 중인 중동"
     },
     {
-      "term": "Inflation Woes U.S",
-      "term_ko": "인플레이션 걱정 미국",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Inflation Woes U.S",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) KOSPI opens sharply lower amid inflation woes, U.S. losses",
-              "link": "https://n.news.naver.com/mnews/article/001/0016082684?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20Woes%20U.S",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20Woes%20U.S"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) KOSPI opens sharply lower amid inflation woes, U.S. losses",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016082684?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Inflation Woes U.s",
+      "term_ko": "인플레이션 걱정 미국"
     },
     {
-      "term": "AI Boom",
-      "term_ko": "AI 붐",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Boom",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-              "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Boom",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Boom"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Boom",
+      "term_ko": "AI 붐"
     },
     {
       "term": "Retail Sales",
-      "term_ko": "소매 판매",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Retail Sales",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-              "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Retail%20Sales",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Retail%20Sales"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "소매 판매"
     },
     {
       "term": "Inflation Shape",
-      "term_ko": "인플레이션 모양",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Inflation Shape",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-18T12:36:43+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-              "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20Shape",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20Shape"
-      },
-      "top_headlines": [
-        {
-          "title": "Nvidia Earnings and Retail Sales in Focus as AI Boom and Inflation Shape ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nvidia-Earnings-and-Retail-Sales-in-Focus-as-AI-Boom-and-Inflation-Shape-US-Stock-Market-1741927",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인플레이션 모양"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-18T03:37:49.444Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-18T12:36:43+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Nvidia Earnings",
+      "term_ko": "Nvidia 수익"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-18T12:36:43+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-18T12:36:43+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Jump to Us Ftc",
+      "term_ko": "뛰자 美 FTC"
+    },
+    {
+      "term": "Keika Kb Cha Cha Cha Cha 順",
+      "term_ko": "케이카 KB차차차 順"
+    },
+    {
+      "term": "S&p500 Futures Rates",
+      "term_ko": "S&P500 선물 금리"
+    },
+    {
+      "term": "Used Cars May 2026",
+      "term_ko": "중고차 2026년 5월"
+    },
+    {
+      "term": "Hyundai Marine Q1 Surprise",
+      "term_ko": "현대해상 1분기 깜짝"
+    },
+    {
+      "term": "14% Intraday Vs.",
+      "term_ko": "실적에 장중 14%대"
+    },
+    {
+      "term": "U.s. 10-year Treasury Bond",
+      "term_ko": "미국 10년 국채"
+    },
+    {
+      "term": "Take an Interest Rate of 4.6",
+      "term_ko": "금리 4.6% 찍어"
+    },
+    {
+      "term": "Foreigners 2.5 Trillion Kospi",
+      "term_ko": "외국인 2.5조 코스피"
+    },
+    {
+      "term": "After Rebounding‥exchange Rate 1500 Won",
+      "term_ko": "후 반등‥환율 1500원"
+    },
+    {
+      "term": "Apple Qualcomm Chips",
+      "term_ko": "애플 퀄컴 칩"
+    },
+    {
+      "term": "Arm Used to Sell Blueprints",
+      "term_ko": "설계도 팔던 Arm"
+    },
+    {
+      "term": "Down on the Rise 美",
+      "term_ko": "급등세에 하락 美"
+    },
+    {
+      "term": "Zeroton Buy-to-let Marketplace",
+      "term_ko": "제로투엔 매입임대주택 시장"
+    },
+    {
+      "term": "Publish a Targeted Practice Book",
+      "term_ko": "겨냥한 실무서 출간"
+    },
+    {
+      "term": "Samsung Electronics Sk",
+      "term_ko": "삼성전자 SK"
+    },
+    {
+      "term": "Lead Kospi Opens",
+      "term_ko": "LEAD 코스피 오픈"
+    },
+    {
+      "term": "Knife Drawn",
+      "term_ko": "칼 뽑았다"
+    },
+    {
+      "term": "Kospi Plunges",
+      "term_ko": "코스피 급락"
+    },
+    {
+      "term": "Wall Street Futures",
+      "term_ko": "월스트리트 선물"
+    },
+    {
+      "term": "U.s.-iran Tensions Weigh",
+      "term_ko": "미국-이란 긴장 고조"
+    },
+    {
+      "term": "U.s Tech Sell-off",
+      "term_ko": "미국 기술 매각"
+    },
+    {
+      "term": "Kospi Opens Lower",
+      "term_ko": "코스피 하락 개장"
+    },
+    {
+      "term": "Inflation U.s Losses",
+      "term_ko": "인플레이션 미국 손실"
+    },
+    {
+      "term": "Ongoing Middle East",
+      "term_ko": "진행 중인 중동"
+    },
+    {
+      "term": "Inflation Woes U.s",
+      "term_ko": "인플레이션 걱정 미국"
+    },
+    {
+      "term": "Ai Boom",
+      "term_ko": "AI 붐"
+    },
+    {
+      "term": "Retail Sales",
+      "term_ko": "소매 판매"
+    },
+    {
+      "term": "Inflation Shape",
+      "term_ko": "인플레이션 모양"
+    }
+  ],
+  "translations": {
+    "Nvidia Earnings": {
+      "en": "Nvidia Earnings",
+      "ko": "Nvidia 수익",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Jump to Us Ftc": {
+      "en": "Jump to Us Ftc",
+      "ko": "뛰자 美 FTC",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Keika Kb Cha Cha Cha Cha 順": {
+      "en": "Keika Kb Cha Cha Cha Cha 順",
+      "ko": "케이카 KB차차차 順",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "S&p500 Futures Rates": {
+      "en": "S&p500 Futures Rates",
+      "ko": "S&P500 선물 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Used Cars May 2026": {
+      "en": "Used Cars May 2026",
+      "ko": "중고차 2026년 5월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Hyundai Marine Q1 Surprise": {
+      "en": "Hyundai Marine Q1 Surprise",
+      "ko": "현대해상 1분기 깜짝",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "14% Intraday Vs.": {
+      "en": "14% Intraday Vs.",
+      "ko": "실적에 장중 14%대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "U.s. 10-year Treasury Bond": {
+      "en": "U.s. 10-year Treasury Bond",
+      "ko": "미국 10년 국채",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Take an Interest Rate of 4.6": {
+      "en": "Take an Interest Rate of 4.6",
+      "ko": "금리 4.6% 찍어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Foreigners 2.5 Trillion Kospi": {
+      "en": "Foreigners 2.5 Trillion Kospi",
+      "ko": "외국인 2.5조 코스피",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "After Rebounding‥exchange Rate 1500 Won": {
+      "en": "After Rebounding‥exchange Rate 1500 Won",
+      "ko": "후 반등‥환율 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Apple Qualcomm Chips": {
+      "en": "Apple Qualcomm Chips",
+      "ko": "애플 퀄컴 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.773Z"
+    },
+    "Arm Used to Sell Blueprints": {
+      "en": "Arm Used to Sell Blueprints",
+      "ko": "설계도 팔던 Arm",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Down on the Rise 美": {
+      "en": "Down on the Rise 美",
+      "ko": "급등세에 하락 美",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Zeroton Buy-to-let Marketplace": {
+      "en": "Zeroton Buy-to-let Marketplace",
+      "ko": "제로투엔 매입임대주택 시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Publish a Targeted Practice Book": {
+      "en": "Publish a Targeted Practice Book",
+      "ko": "겨냥한 실무서 출간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Samsung Electronics Sk": {
+      "en": "Samsung Electronics Sk",
+      "ko": "삼성전자 SK",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Lead Kospi Opens": {
+      "en": "Lead Kospi Opens",
+      "ko": "LEAD 코스피 오픈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Knife Drawn": {
+      "en": "Knife Drawn",
+      "ko": "칼 뽑았다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Kospi Plunges": {
+      "en": "Kospi Plunges",
+      "ko": "코스피 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Wall Street Futures": {
+      "en": "Wall Street Futures",
+      "ko": "월스트리트 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "U.s.-iran Tensions Weigh": {
+      "en": "U.s.-iran Tensions Weigh",
+      "ko": "미국-이란 긴장 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "U.s Tech Sell-off": {
+      "en": "U.s Tech Sell-off",
+      "ko": "미국 기술 매각",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Kospi Opens Lower": {
+      "en": "Kospi Opens Lower",
+      "ko": "코스피 하락 개장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Inflation U.s Losses": {
+      "en": "Inflation U.s Losses",
+      "ko": "인플레이션 미국 손실",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Ongoing Middle East": {
+      "en": "Ongoing Middle East",
+      "ko": "진행 중인 중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Inflation Woes U.s": {
+      "en": "Inflation Woes U.s",
+      "ko": "인플레이션 걱정 미국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Ai Boom": {
+      "en": "Ai Boom",
+      "ko": "AI 붐",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Retail Sales": {
+      "en": "Retail Sales",
+      "ko": "소매 판매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
+    },
+    "Inflation Shape": {
+      "en": "Inflation Shape",
+      "ko": "인플레이션 모양",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-18T10:01:27.774Z"
     }
   }
 }
