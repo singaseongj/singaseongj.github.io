@@ -1,8 +1,46 @@
 {
   "date": "2026-05-19",
   "window": "12_hours",
-  "total_phrases": 29,
+  "total_phrases": 28,
   "discovered_keywords": [
+    {
+      "term": "Iran Tensions AI",
+      "term_ko": "이란 긴장 AI",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "이란 긴장 AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-20T00:02:09+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%20%EA%B8%B4%EC%9E%A5%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%20%EA%B8%B4%EC%9E%A5%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
+          "summary": "",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
     {
       "term": "Quantifying AI environmental impact",
       "term_ko": "AI 환경영향 정량화",
@@ -13,7 +51,7 @@
         "query": "AI 환경영향 정량화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -42,141 +80,37 @@
       ]
     },
     {
-      "term": "Single-Strategy Leveraged ETFs",
-      "term_ko": "단일종목 레버리지 ETF",
-      "significance_score": 350,
-      "mentions": 357,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "단일종목 레버리지 ETF",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 62
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 64
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 96
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 78
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 33
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 26
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 60
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 단일종목 레버리지 ETF 출시 앞두고 과도한 빚투 경계해야",
-              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202605191619103510346"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EC%9D%BC%EC%A2%85%EB%AA%A9%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EC%9D%BC%EC%A2%85%EB%AA%A9%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 단일종목 레버리지 ETF 출시 앞두고 과도한 빚투 경계해야",
-          "summary": "",
-          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202605191619103510346",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 357,
-        "weekly_average_volume": 59.5,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.017007,
-        "time_weight": 0.023389,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779030000000
-      }
-    },
-    {
-      "term": "Financial Weathervane BNK Busan Bank",
-      "term_ko": "금융 풍향계 BNK부산은행",
+      "term": "Sell Bomb KOSPI",
+      "term_ko": "매도 폭탄 KOSPI",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금융 풍향계 BNK부산은행",
+        "query": "매도 폭탄 KOSPI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[금융 풍향계] BNK부산은행, 지역 중소기업 M&A 금융지원 外",
-              "link": "https://www.ekn.kr/web/view.php?key=20260519020376165"
+              "title": "외국인·기관 '7조원' 역대급 매도 폭탄…KOSPI 주도주 무차별 청산에 7...",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77382"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%ED%92%8D%ED%96%A5%EA%B3%84%20BNK%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%ED%92%8D%ED%96%A5%EA%B3%84%20BNK%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%8F%84%20%ED%8F%AD%ED%83%84%20KOSPI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%8F%84%20%ED%8F%AD%ED%83%84%20KOSPI"
       },
       "top_headlines": [
         {
-          "title": "[금융 풍향계] BNK부산은행, 지역 중소기업 M&A 금융지원 外",
+          "title": "외국인·기관 '7조원' 역대급 매도 폭탄…KOSPI 주도주 무차별 청산에 7...",
           "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260519020376165",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77382",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -184,37 +118,37 @@
       ]
     },
     {
-      "term": "Household Debt, Section 1993, and",
-      "term_ko": "가계빚 1993조 또",
+      "term": "7 trillion in foreign institutions",
+      "term_ko": "외국인 기관 7조원",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "가계빚 1993조 또",
+        "query": "외국인 기관 7조원",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "가계빚 1993조 '또 역대 최대'...주담대·신용대출 증가에 1분기 14조↑",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=304912"
+              "title": "외국인·기관 '7조원' 역대급 매도 폭탄…KOSPI 주도주 무차별 청산에 7...",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77382"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B3%84%EB%B9%9A%201993%EC%A1%B0%20%EB%98%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B3%84%EB%B9%9A%201993%EC%A1%B0%20%EB%98%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B8%B0%EA%B4%80%207%EC%A1%B0%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B8%B0%EA%B4%80%207%EC%A1%B0%EC%9B%90"
       },
       "top_headlines": [
         {
-          "title": "가계빚 1993조 '또 역대 최대'...주담대·신용대출 증가에 1분기 14조↑",
+          "title": "외국인·기관 '7조원' 역대급 매도 폭탄…KOSPI 주도주 무차별 청산에 7...",
           "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=304912",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77382",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -222,37 +156,37 @@
       ]
     },
     {
-      "term": "Q1 on credit growth",
-      "term_ko": "신용대출 증가에 1분기",
+      "term": "In the midst of a $7 trillion sell-off",
+      "term_ko": "7조 매도 폭탄속",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "신용대출 증가에 1분기",
+        "query": "7조 매도 폭탄속",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "가계빚 1993조 '또 역대 최대'...주담대·신용대출 증가에 1분기 14조↑",
-              "link": "https://www.thepublic.kr/news/articleView.html?idxno=304912"
+              "title": "'7조 매도 폭탄'속 숨은 진주…외국인·기관, 경기방어주·밸류업 금융주...",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77384"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%20%EC%A6%9D%EA%B0%80%EC%97%90%201%EB%B6%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%20%EC%A6%9D%EA%B0%80%EC%97%90%201%EB%B6%84%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=7%EC%A1%B0%20%EB%A7%A4%EB%8F%84%20%ED%8F%AD%ED%83%84%EC%86%8D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=7%EC%A1%B0%20%EB%A7%A4%EB%8F%84%20%ED%8F%AD%ED%83%84%EC%86%8D"
       },
       "top_headlines": [
         {
-          "title": "가계빚 1993조 '또 역대 최대'...주담대·신용대출 증가에 1분기 14조↑",
+          "title": "'7조 매도 폭탄'속 숨은 진주…외국인·기관, 경기방어주·밸류업 금융주...",
           "summary": "",
-          "link": "https://www.thepublic.kr/news/articleView.html?idxno=304912",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77384",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -260,37 +194,37 @@
       ]
     },
     {
-      "term": "than the default 84% deposit",
-      "term_ko": "디폴트옵션 84% 예금보다",
+      "term": "Highlights from the week of May 3",
+      "term_ko": "5월 3주 주요",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "디폴트옵션 84% 예금보다",
+        "query": "5월 3주 주요",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "디폴트옵션 84% 예금보다 수익률 낮아…사전지정 족쇄 풀어야",
-              "link": "https://n.news.naver.com/mnews/article/018/0006285429?sid=101"
+              "title": "5월 3주 주요 제조업 전망",
+              "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=40865"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%94%ED%8F%B4%ED%8A%B8%EC%98%B5%EC%85%98%2084%25%20%EC%98%88%EA%B8%88%EB%B3%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%94%ED%8F%B4%ED%8A%B8%EC%98%B5%EC%85%98%2084%25%20%EC%98%88%EA%B8%88%EB%B3%B4%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9B%94%203%EC%A3%BC%20%EC%A3%BC%EC%9A%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9B%94%203%EC%A3%BC%20%EC%A3%BC%EC%9A%94"
       },
       "top_headlines": [
         {
-          "title": "디폴트옵션 84% 예금보다 수익률 낮아…사전지정 족쇄 풀어야",
+          "title": "5월 3주 주요 제조업 전망",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006285429?sid=101",
+          "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=40865",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -298,37 +232,37 @@
       ]
     },
     {
-      "term": "1 billion KOSPI trades",
-      "term_ko": "코스피 10억도 거래",
+      "term": "Is 8000 a short-term bubble?",
+      "term_ko": "단기 버블인가 8000선",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스피 10억도 거래",
+        "query": "단기 버블인가 8000선",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "하루 50조 오가는 코스피…10억도 거래 안되는 종목이 43%",
-              "link": "https://n.news.naver.com/mnews/article/014/0005523822?sid=101"
+              "title": "[르포 대한민국] 구조적 도약인가 단기 버블인가… 8000선 터치한 코스...",
+              "link": "https://n.news.naver.com/mnews/article/023/0003977316?sid=103"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%2010%EC%96%B5%EB%8F%84%20%EA%B1%B0%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%2010%EC%96%B5%EB%8F%84%20%EA%B1%B0%EB%9E%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EA%B8%B0%20%EB%B2%84%EB%B8%94%EC%9D%B8%EA%B0%80%208000%EC%84%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EA%B8%B0%20%EB%B2%84%EB%B8%94%EC%9D%B8%EA%B0%80%208000%EC%84%A0"
       },
       "top_headlines": [
         {
-          "title": "하루 50조 오가는 코스피…10억도 거래 안되는 종목이 43%",
+          "title": "[르포 대한민국] 구조적 도약인가 단기 버블인가… 8000선 터치한 코스...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005523822?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/023/0003977316?sid=103",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -336,75 +270,37 @@
       ]
     },
     {
-      "term": "43% of stocks that shouldn't be",
-      "term_ko": "안되는 종목이 43%",
-      "significance_score": 336,
+      "term": "Nvidia shake to tune",
+      "term_ko": "조정에 엔비디아 흔들",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "안되는 종목이 43%",
+        "query": "조정에 엔비디아 흔들",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "하루 50조 오가는 코스피…10억도 거래 안되는 종목이 43%",
-              "link": "https://n.news.naver.com/mnews/article/014/0005523822?sid=101"
+              "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
+              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EB%90%98%EB%8A%94%20%EC%A2%85%EB%AA%A9%EC%9D%B4%2043%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EB%90%98%EB%8A%94%20%EC%A2%85%EB%AA%A9%EC%9D%B4%2043%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%EC%A0%95%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%9D%94%EB%93%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%EC%A0%95%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%9D%94%EB%93%A4"
       },
       "top_headlines": [
         {
-          "title": "하루 50조 오가는 코스피…10억도 거래 안되는 종목이 43%",
+          "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005523822?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "4 million NIS 500,000 E Ghana",
-      "term_ko": "400만닉스 50만전자 가나",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "400만닉스 50만전자 가나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "400만닉스·50만전자 가나… 반도체 목표주가 줄줄이 상향",
-              "link": "https://n.news.naver.com/mnews/article/014/0005523823?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=400%EB%A7%8C%EB%8B%89%EC%8A%A4%2050%EB%A7%8C%EC%A0%84%EC%9E%90%20%EA%B0%80%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=400%EB%A7%8C%EB%8B%89%EC%8A%A4%2050%EB%A7%8C%EC%A0%84%EC%9E%90%20%EA%B0%80%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "400만닉스·50만전자 가나… 반도체 목표주가 줄줄이 상향",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005523823?sid=101",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -421,7 +317,7 @@
         "query": "노스볼트 자산 인수한",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -459,7 +355,7 @@
         "query": "美 라이텐 유럽",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -497,7 +393,7 @@
         "query": "배터리 시장 공략",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -526,37 +422,37 @@
       ]
     },
     {
-      "term": "Preset low yields",
-      "term_ko": "수익률 낮아 사전지정",
+      "term": "Hidden pearl foreigners",
+      "term_ko": "숨은 진주 외국인",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "수익률 낮아 사전지정",
+        "query": "숨은 진주 외국인",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "디폴트옵션 84% 예금보다 수익률 낮아…사전지정 족쇄 풀어야",
-              "link": "https://n.news.naver.com/mnews/article/018/0006285429?sid=101"
+              "title": "'7조 매도 폭탄'속 숨은 진주…외국인·기관, 경기방어주·밸류업 금융주...",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77384"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9D%B5%EB%A5%A0%20%EB%82%AE%EC%95%84%20%EC%82%AC%EC%A0%84%EC%A7%80%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9D%B5%EB%A5%A0%20%EB%82%AE%EC%95%84%20%EC%82%AC%EC%A0%84%EC%A7%80%EC%A0%95"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%A8%EC%9D%80%20%EC%A7%84%EC%A3%BC%20%EC%99%B8%EA%B5%AD%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%A8%EC%9D%80%20%EC%A7%84%EC%A3%BC%20%EC%99%B8%EA%B5%AD%EC%9D%B8"
       },
       "top_headlines": [
         {
-          "title": "디폴트옵션 84% 예금보다 수익률 낮아…사전지정 족쇄 풀어야",
+          "title": "'7조 매도 폭탄'속 숨은 진주…외국인·기관, 경기방어주·밸류업 금융주...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006285429?sid=101",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77384",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -564,37 +460,37 @@
       ]
     },
     {
-      "term": "Avoid excessive",
-      "term_ko": "출시 앞두고 과도한",
+      "term": "Institutional Defensive Stock Valuation",
+      "term_ko": "기관 경기방어주 밸류업",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "출시 앞두고 과도한",
+        "query": "기관 경기방어주 밸류업",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설] 단일종목 레버리지 ETF 출시 앞두고 과도한 빚투 경계해야",
-              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202605191619103510346"
+              "title": "'7조 매도 폭탄'속 숨은 진주…외국인·기관, 경기방어주·밸류업 금융주...",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77384"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EC%8B%9C%20%EC%95%9E%EB%91%90%EA%B3%A0%20%EA%B3%BC%EB%8F%84%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EC%8B%9C%20%EC%95%9E%EB%91%90%EA%B3%A0%20%EA%B3%BC%EB%8F%84%ED%95%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EA%B4%80%20%EA%B2%BD%EA%B8%B0%EB%B0%A9%EC%96%B4%EC%A3%BC%20%EB%B0%B8%EB%A5%98%EC%97%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EA%B4%80%20%EA%B2%BD%EA%B8%B0%EB%B0%A9%EC%96%B4%EC%A3%BC%20%EB%B0%B8%EB%A5%98%EC%97%85"
       },
       "top_headlines": [
         {
-          "title": "[사설] 단일종목 레버리지 ETF 출시 앞두고 과도한 빚투 경계해야",
+          "title": "'7조 매도 폭탄'속 숨은 진주…외국인·기관, 경기방어주·밸류업 금융주...",
           "summary": "",
-          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202605191619103510346",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77384",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -602,37 +498,37 @@
       ]
     },
     {
-      "term": "Regional SME M&A",
-      "term_ko": "지역 중소기업 M&A",
+      "term": "No midnight news briefing",
+      "term_ko": "자정 뉴스브리핑 미",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "지역 중소기업 M&A",
+        "query": "자정 뉴스브리핑 미",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[금융 풍향계] BNK부산은행, 지역 중소기업 M&A 금융지원 外",
-              "link": "https://www.ekn.kr/web/view.php?key=20260519020376165"
+              "title": "[자정 뉴스브리핑] 미 백악관 관계자는 전략적 비트코인 비축과 관련해...",
+              "link": "https://www.tokenpost.kr/news/briefing/361274"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%97%AD%20%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20M%26A",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%97%AD%20%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20M%26A"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%A0%95%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EB%AF%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%A0%95%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EB%AF%B8"
       },
       "top_headlines": [
         {
-          "title": "[금융 풍향계] BNK부산은행, 지역 중소기업 M&A 금융지원 外",
+          "title": "[자정 뉴스브리핑] 미 백악관 관계자는 전략적 비트코인 비축과 관련해...",
           "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260519020376165",
+          "link": "https://www.tokenpost.kr/news/briefing/361274",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -640,37 +536,37 @@
       ]
     },
     {
-      "term": "Unshackle",
-      "term_ko": "족쇄 풀어야",
-      "significance_score": 280,
+      "term": "White House officials said the strategic",
+      "term_ko": "백악관 관계자는 전략적",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "족쇄 풀어야",
+        "query": "백악관 관계자는 전략적",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "디폴트옵션 84% 예금보다 수익률 낮아…사전지정 족쇄 풀어야",
-              "link": "https://n.news.naver.com/mnews/article/018/0006285429?sid=101"
+              "title": "[자정 뉴스브리핑] 미 백악관 관계자는 전략적 비트코인 비축과 관련해...",
+              "link": "https://www.tokenpost.kr/news/briefing/361274"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B1%EC%87%84%20%ED%92%80%EC%96%B4%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B1%EC%87%84%20%ED%92%80%EC%96%B4%EC%95%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%B1%EC%95%85%EA%B4%80%20%EA%B4%80%EA%B3%84%EC%9E%90%EB%8A%94%20%EC%A0%84%EB%9E%B5%EC%A0%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%B1%EC%95%85%EA%B4%80%20%EA%B4%80%EA%B3%84%EC%9E%90%EB%8A%94%20%EC%A0%84%EB%9E%B5%EC%A0%81"
       },
       "top_headlines": [
         {
-          "title": "디폴트옵션 84% 예금보다 수익률 낮아…사전지정 족쇄 풀어야",
+          "title": "[자정 뉴스브리핑] 미 백악관 관계자는 전략적 비트코인 비축과 관련해...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006285429?sid=101",
+          "link": "https://www.tokenpost.kr/news/briefing/361274",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -678,37 +574,37 @@
       ]
     },
     {
-      "term": "Debt to watch out for",
-      "term_ko": "빚투 경계해야",
-      "significance_score": 280,
+      "term": "Lepo South Korea Structural",
+      "term_ko": "르포 대한민국 구조적",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "빚투 경계해야",
+        "query": "르포 대한민국 구조적",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설] 단일종목 레버리지 ETF 출시 앞두고 과도한 빚투 경계해야",
-              "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202605191619103510346"
+              "title": "[르포 대한민국] 구조적 도약인가 단기 버블인가… 8000선 터치한 코스...",
+              "link": "https://n.news.naver.com/mnews/article/023/0003977316?sid=103"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%84%ED%95%B4%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%84%ED%95%B4%EC%95%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A5%B4%ED%8F%AC%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B5%AC%EC%A1%B0%EC%A0%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A5%B4%ED%8F%AC%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B5%AC%EC%A1%B0%EC%A0%81"
       },
       "top_headlines": [
         {
-          "title": "[사설] 단일종목 레버리지 ETF 출시 앞두고 과도한 빚투 경계해야",
+          "title": "[르포 대한민국] 구조적 도약인가 단기 버블인가… 8000선 터치한 코스...",
           "summary": "",
-          "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202605191619103510346",
+          "link": "https://n.news.naver.com/mnews/article/023/0003977316?sid=103",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -716,37 +612,113 @@
       ]
     },
     {
-      "term": "Financing 外",
-      "term_ko": "금융지원 外",
-      "significance_score": 280,
+      "term": "Citibank Korea's benchmark interest rate",
+      "term_ko": "씨티은행 한국은행의 기준금리",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금융지원 外",
+        "query": "씨티은행 한국은행의 기준금리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[금융 풍향계] BNK부산은행, 지역 중소기업 M&A 금융지원 外",
-              "link": "https://www.ekn.kr/web/view.php?key=20260519020376165"
+              "title": "씨티은행, 한국은행의 기준금리 동결 가능성 제기...2027년 연 3.5% 전망",
+              "link": "https://www.tokenpost.kr/news/economy/361272"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%A7%80%EC%9B%90%20%E5%A4%96",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%A7%80%EC%9B%90%20%E5%A4%96"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%94%A8%ED%8B%B0%EC%9D%80%ED%96%89%20%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%EC%9D%98%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%94%A8%ED%8B%B0%EC%9D%80%ED%96%89%20%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%EC%9D%98%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "[금융 풍향계] BNK부산은행, 지역 중소기업 M&A 금융지원 外",
+          "title": "씨티은행, 한국은행의 기준금리 동결 가능성 제기...2027년 연 3.5% 전망",
           "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260519020376165",
+          "link": "https://www.tokenpost.kr/news/economy/361272",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "3.5% per annum",
+      "term_ko": "연 3.5%",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "연 3.5%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-20T00:02:09+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "씨티은행, 한국은행의 기준금리 동결 가능성 제기...2027년 연 3.5% 전망",
+              "link": "https://www.tokenpost.kr/news/economy/361272"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%203.5%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%203.5%25"
+      },
+      "top_headlines": [
+        {
+          "title": "씨티은행, 한국은행의 기준금리 동결 가능성 제기...2027년 연 3.5% 전망",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/economy/361272",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Freeze potential",
+      "term_ko": "동결 가능성",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "동결 가능성",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-20T00:02:09+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "씨티은행, 한국은행의 기준금리 동결 가능성 제기...2027년 연 3.5% 전망",
+              "link": "https://www.tokenpost.kr/news/economy/361272"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%20%EA%B0%80%EB%8A%A5%EC%84%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%20%EA%B0%80%EB%8A%A5%EC%84%B1"
+      },
+      "top_headlines": [
+        {
+          "title": "씨티은행, 한국은행의 기준금리 동결 가능성 제기...2027년 연 3.5% 전망",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/economy/361272",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -763,7 +735,7 @@
         "query": "Heavy Foreign Sell-off",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -792,44 +764,6 @@
       ]
     },
     {
-      "term": "When Would Koreas",
-      "term_ko": "한국",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "When Would Koreas",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "When Would Korea's Bull Market Exit?",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269711"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=When%20Would%20Koreas",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=When%20Would%20Koreas"
-      },
-      "top_headlines": [
-        {
-          "title": "When Would Korea's Bull Market Exit?",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269711",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "KOSPI Drops",
       "term_ko": "코스피 지수 하락",
       "significance_score": 252,
@@ -839,7 +773,7 @@
         "query": "KOSPI Drops",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -868,120 +802,6 @@
       ]
     },
     {
-      "term": "Slide Ahead",
-      "term_ko": "앞서 슬라이드",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Slide Ahead",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Asian Stocks Mixed as Tech Shares Slide Ahead of Nvidia Earnings",
-              "link": "https://www.econotimes.com/Asian-Stocks-Mixed-as-Tech-Shares-Slide-Ahead-of-Nvidia-Earnings-1742039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Slide%20Ahead",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Slide%20Ahead"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Stocks Mixed as Tech Shares Slide Ahead of Nvidia Earnings",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stocks-Mixed-as-Tech-Shares-Slide-Ahead-of-Nvidia-Earnings-1742039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Nvidia Earnings",
-      "term_ko": "Nvidia 수익",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nvidia Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Asian Stocks Mixed as Tech Shares Slide Ahead of Nvidia Earnings",
-              "link": "https://www.econotimes.com/Asian-Stocks-Mixed-as-Tech-Shares-Slide-Ahead-of-Nvidia-Earnings-1742039"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nvidia%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nvidia%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "Asian Stocks Mixed as Tech Shares Slide Ahead of Nvidia Earnings",
-          "summary": "",
-          "link": "https://www.econotimes.com/Asian-Stocks-Mixed-as-Tech-Shares-Slide-Ahead-of-Nvidia-Earnings-1742039",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Trump-Xi Summit",
-      "term_ko": "트럼프-시진핑 정상회담",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump-Xi Summit",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T18:44:37+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Outcome of Trump-Xi summit and impact on Korean economy",
-              "link": "https://www.koreatimes.co.kr/path/A2026051811240002196"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump-Xi%20Summit",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump-Xi%20Summit"
-      },
-      "top_headlines": [
-        {
-          "title": "Outcome of Trump-Xi summit and impact on Korean economy",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026051811240002196",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -991,7 +811,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1014,7 +834,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1037,7 +857,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1060,7 +880,7 @@
         "query": "비트코인 ETF 기대",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1083,7 +903,7 @@
         "query": "원달러 환율 급등",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-19T18:44:37+09:00",
+          "last_updated": "2026-05-20T00:02:09+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1095,32 +915,78 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
       },
       "top_headlines": []
+    },
+    {
+      "term": "U.S. government shutdown crisis",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-20T00:02:09+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "South Korean stocks rebound",
+      "term_ko": "한국 증시 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국 증시 반등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-20T00:02:09+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-05-19T09:45:46.891Z",
+    "generated_at": "2026-05-19T15:03:14.451Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-19T18:44:37+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-05-20T00:02:09+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
+    "similar_keywords_removed": 2,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 1,
+      "similar": 2,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-05-19T18:44:37+09:00",
+      "last_updated": "2026-05-20T00:02:09+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-05-19T18:44:37+09:00",
+        "lastUpdated": "2026-05-20T00:02:09+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
