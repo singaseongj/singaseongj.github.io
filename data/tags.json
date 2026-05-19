@@ -1,1157 +1,439 @@
 {
+  "generatedAt": "2026-05-19T09:42:03.549Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-19",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Ripple US SEC",
-      "term_ko": "리플 美 SEC",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "리플 美 SEC",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A6%AC%ED%94%8C%20%E7%BE%8E%20SEC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A6%AC%ED%94%8C%20%E7%BE%8E%20SEC"
-      },
-      "top_headlines": [
-        {
-          "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ripple Us Sec",
+      "term_ko": "리플 美 SEC"
     },
     {
-      "term": "Tokenization Review on XRP Leisure",
-      "term_ko": "토큰화 검토에 XRP레저",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "토큰화 검토에 XRP레저",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%ED%81%B0%ED%99%94%20%EA%B2%80%ED%86%A0%EC%97%90%20XRP%EB%A0%88%EC%A0%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%ED%81%B0%ED%99%94%20%EA%B2%80%ED%86%A0%EC%97%90%20XRP%EB%A0%88%EC%A0%80"
-      },
-      "top_headlines": [
-        {
-          "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tokenization Review on Xrp Leisure",
+      "term_ko": "토큰화 검토에 XRP레저"
     },
     {
-      "term": "Buying BTC from publicly traded companies",
-      "term_ko": "상장사 BTC 매집",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상장사 BTC 매집",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "상장사 BTC 매집 경쟁 본격화…트럼프 일가 '아메리칸 비트코인' 15위 진...",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667085"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%EC%82%AC%20BTC%20%EB%A7%A4%EC%A7%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%EC%82%AC%20BTC%20%EB%A7%A4%EC%A7%91"
-      },
-      "top_headlines": [
-        {
-          "title": "상장사 BTC 매집 경쟁 본격화…트럼프 일가 '아메리칸 비트코인' 15위 진...",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667085",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Buying Btc From Publicly Traded Companies",
+      "term_ko": "상장사 BTC 매집"
     },
     {
-      "term": "Brokerage firm IB performance falters",
-      "term_ko": "증권사 IB실적 흔들",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증권사 IB실적 흔들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "높아진 IPO 문턱에 증권사 IB실적 흔들…신규상장 24→9건 ‘급감’",
-              "link": "https://www.ceoscoredaily.com/page/view/2026051816301459951"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%82%AC%20IB%EC%8B%A4%EC%A0%81%20%ED%9D%94%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%82%AC%20IB%EC%8B%A4%EC%A0%81%20%ED%9D%94%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "높아진 IPO 문턱에 증권사 IB실적 흔들…신규상장 24→9건 ‘급감’",
-          "summary": "",
-          "link": "https://www.ceoscoredaily.com/page/view/2026051816301459951",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Brokerage Firm Ib Performance Falters",
+      "term_ko": "증권사 IB실적 흔들"
     },
     {
-      "term": "MOU with Convenience Club",
-      "term_ko": "컨비니언스 클럽과 MOU",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "컨비니언스 클럽과 MOU",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[프롭테크 뉴스브리핑] 스위트스팟, 컬처 컨비니언스 클럽과 MOU",
-              "link": "https://www.asiatime.co.kr/article/20260519500140"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BB%A8%EB%B9%84%EB%8B%88%EC%96%B8%EC%8A%A4%20%ED%81%B4%EB%9F%BD%EA%B3%BC%20MOU",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BB%A8%EB%B9%84%EB%8B%88%EC%96%B8%EC%8A%A4%20%ED%81%B4%EB%9F%BD%EA%B3%BC%20MOU"
-      },
-      "top_headlines": [
-        {
-          "title": "[프롭테크 뉴스브리핑] 스위트스팟, 컬처 컨비니언스 클럽과 MOU",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260519500140",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mou with Convenience Club",
+      "term_ko": "컨비니언스 클럽과 MOU"
     },
     {
       "term": "15th in American Bitcoin",
-      "term_ko": "아메리칸 비트코인 15위",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아메리칸 비트코인 15위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "상장사 BTC 매집 경쟁 본격화…트럼프 일가 '아메리칸 비트코인' 15위 진...",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667085"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B8%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%2015%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B8%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%2015%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "상장사 BTC 매집 경쟁 본격화…트럼프 일가 '아메리칸 비트코인' 15위 진...",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667085",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "아메리칸 비트코인 15위"
     },
     {
-      "term": "GoldQuotes.com Gold Price May",
-      "term_ko": "금시세닷컴 금값 5월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금시세닷컴 금값 5월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금시세닷컴 금값, 5월 19일 반등 18K와 은 시세 동반 상승",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=520225"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%8B%9C%EC%84%B8%EB%8B%B7%EC%BB%B4%20%EA%B8%88%EA%B0%92%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%8B%9C%EC%84%B8%EB%8B%B7%EC%BB%B4%20%EA%B8%88%EA%B0%92%205%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "금시세닷컴 금값, 5월 19일 반등 18K와 은 시세 동반 상승",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=520225",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Goldquotes.com Gold Price May",
+      "term_ko": "금시세닷컴 금값 5월"
     },
     {
-      "term": "18K Gold Price May",
-      "term_ko": "18K 금시세 5월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "18K 금시세 5월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "18K 금시세, 5월 19일 상승 한국표준금거래소 강세 흐름",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=520226"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%205%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 5월 19일 상승 한국표준금거래소 강세 흐름",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=520226",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "18k Gold Price May",
+      "term_ko": "18K 금시세 5월"
     },
     {
-      "term": "KOSDAQ up 19 days",
-      "term_ko": "19일 상승 한국표준금거래소",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "19일 상승 한국표준금거래소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "18K 금시세, 5월 19일 상승 한국표준금거래소 강세 흐름",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=520226"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=19%EC%9D%BC%20%EC%83%81%EC%8A%B9%20%ED%95%9C%EA%B5%AD%ED%91%9C%EC%A4%80%EA%B8%88%EA%B1%B0%EB%9E%98%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=19%EC%9D%BC%20%EC%83%81%EC%8A%B9%20%ED%95%9C%EA%B5%AD%ED%91%9C%EC%A4%80%EA%B8%88%EA%B1%B0%EB%9E%98%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 5월 19일 상승 한국표준금거래소 강세 흐름",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=520226",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kosdaq Up 19 Days",
+      "term_ko": "19일 상승 한국표준금거래소"
     },
     {
-      "term": "New listings plummet from 24 to 9",
-      "term_ko": "신규상장 24→9건 급감",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신규상장 24→9건 급감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "높아진 IPO 문턱에 증권사 IB실적 흔들…신규상장 24→9건 ‘급감’",
-              "link": "https://www.ceoscoredaily.com/page/view/2026051816301459951"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EA%B7%9C%EC%83%81%EC%9E%A5%2024%E2%86%929%EA%B1%B4%20%EA%B8%89%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EA%B7%9C%EC%83%81%EC%9E%A5%2024%E2%86%929%EA%B1%B4%20%EA%B8%89%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "높아진 IPO 문턱에 증권사 IB실적 흔들…신규상장 24→9건 ‘급감’",
-          "summary": "",
-          "link": "https://www.ceoscoredaily.com/page/view/2026051816301459951",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "New Listings Plummet From 24 to 9",
+      "term_ko": "신규상장 24→9건 급감"
     },
     {
-      "term": "S&P500 Futures Trump",
-      "term_ko": "S&P500 선물 트럼프",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "S&P500 선물 트럼프",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, 트럼프 이란 공격 보류에 상승…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415645"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%84%A0%EB%AC%BC%20%ED%8A%B8%EB%9F%BC%ED%94%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%84%A0%EB%AC%BC%20%ED%8A%B8%EB%9F%BC%ED%94%84"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 트럼프 이란 공격 보류에 상승…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415645",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "S&p500 Futures Trump",
+      "term_ko": "S&P500 선물 트럼프"
     },
     {
       "term": "Michael Berry Nasdaq",
-      "term_ko": "마이클 버리 나스닥",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마이클 버리 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "마이클 버리 \"나스닥, 닷컴 버블 붕괴 전야 다시 왔다\"...비트코인도 '초...",
-              "link": "http://coinreaders.com/237235"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%9D%B4%ED%81%B4%20%EB%B2%84%EB%A6%AC%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%9D%B4%ED%81%B4%20%EB%B2%84%EB%A6%AC%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "마이클 버리 \"나스닥, 닷컴 버블 붕괴 전야 다시 왔다\"...비트코인도 '초...",
-          "summary": "",
-          "link": "http://coinreaders.com/237235",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "마이클 버리 나스닥"
     },
     {
-      "term": "The bursting of the dot-com bubble",
-      "term_ko": "닷컴 버블 붕괴",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "닷컴 버블 붕괴",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-11",
-              "timestamp": 1778425200000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 72.72727
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 27.27272
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "마이클 버리 \"나스닥, 닷컴 버블 붕괴 전야 다시 왔다\"...비트코인도 '초...",
-              "link": "http://coinreaders.com/237235"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B7%EC%BB%B4%20%EB%B2%84%EB%B8%94%20%EB%B6%95%EA%B4%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B7%EC%BB%B4%20%EB%B2%84%EB%B8%94%20%EB%B6%95%EA%B4%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "마이클 버리 \"나스닥, 닷컴 버블 붕괴 전야 다시 왔다\"...비트코인도 '초...",
-          "summary": "",
-          "link": "http://coinreaders.com/237235",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 27.2727,
-        "weekly_average_volume": 27.2727,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.101118,
-        "time_weight": 0.006407,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1778598000000
-      }
+      "term": "The Bursting of the Dot-com Bubble",
+      "term_ko": "닷컴 버블 붕괴"
     },
     {
       "term": "Spotlight Stocks On-chain",
-      "term_ko": "주목 주식 온체인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주목 주식 온체인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%AA%A9%20%EC%A3%BC%EC%8B%9D%20%EC%98%A8%EC%B2%B4%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%AA%A9%20%EC%A3%BC%EC%8B%9D%20%EC%98%A8%EC%B2%B4%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "주목 주식 온체인"
     },
     {
-      "term": "Understanding Digital Asset InsightsDigital",
-      "term_ko": "이해붕의 디지털자산 인사이트디지털",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이해붕의 디지털자산 인사이트디지털",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[이해붕의 디지털자산 인사이트]디지털 금융 시대: 금융의 온-체인화가...",
-              "link": "https://www.newsway.co.kr/news/view?ud=2026051909541181232"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%95%B4%EB%B6%95%EC%9D%98%20%EB%94%94%EC%A7%80%ED%84%B8%EC%9E%90%EC%82%B0%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%EB%94%94%EC%A7%80%ED%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%95%B4%EB%B6%95%EC%9D%98%20%EB%94%94%EC%A7%80%ED%84%B8%EC%9E%90%EC%82%B0%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%EB%94%94%EC%A7%80%ED%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[이해붕의 디지털자산 인사이트]디지털 금융 시대: 금융의 온-체인화가...",
-          "summary": "",
-          "link": "https://www.newsway.co.kr/news/view?ud=2026051909541181232",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Understanding Digital Asset Insightsdigital",
+      "term_ko": "이해붕의 디지털자산 인사이트디지털"
     },
     {
-      "term": "The competition is in full swing Trump",
-      "term_ko": "경쟁 본격화 트럼프",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경쟁 본격화 트럼프",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "상장사 BTC 매집 경쟁 본격화…트럼프 일가 '아메리칸 비트코인' 15위 진...",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667085"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%9F%81%20%EB%B3%B8%EA%B2%A9%ED%99%94%20%ED%8A%B8%EB%9F%BC%ED%94%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%9F%81%20%EB%B3%B8%EA%B2%A9%ED%99%94%20%ED%8A%B8%EB%9F%BC%ED%94%84"
-      },
-      "top_headlines": [
-        {
-          "title": "상장사 BTC 매집 경쟁 본격화…트럼프 일가 '아메리칸 비트코인' 15위 진...",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667085",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Competition Is in Full Swing Trump",
+      "term_ko": "경쟁 본격화 트럼프"
     },
     {
-      "term": "Accompanying silver price",
-      "term_ko": "은 시세 동반",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "은 시세 동반",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "금시세닷컴 금값, 5월 19일 반등 18K와 은 시세 동반 상승",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=520225"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%20%EC%8B%9C%EC%84%B8%20%EB%8F%99%EB%B0%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%20%EC%8B%9C%EC%84%B8%20%EB%8F%99%EB%B0%98"
-      },
-      "top_headlines": [
-        {
-          "title": "금시세닷컴 금값, 5월 19일 반등 18K와 은 시세 동반 상승",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=520225",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Accompanying Silver Price",
+      "term_ko": "은 시세 동반"
     },
     {
-      "term": "Proptech news briefing sweet spots",
-      "term_ko": "프롭테크 뉴스브리핑 스위트스팟",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "프롭테크 뉴스브리핑 스위트스팟",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[프롭테크 뉴스브리핑] 스위트스팟, 컬처 컨비니언스 클럽과 MOU",
-              "link": "https://www.asiatime.co.kr/article/20260519500140"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%84%EB%A1%AD%ED%85%8C%ED%81%AC%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EC%8A%A4%EC%9C%84%ED%8A%B8%EC%8A%A4%ED%8C%9F",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%84%EB%A1%AD%ED%85%8C%ED%81%AC%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EC%8A%A4%EC%9C%84%ED%8A%B8%EC%8A%A4%ED%8C%9F"
-      },
-      "top_headlines": [
-        {
-          "title": "[프롭테크 뉴스브리핑] 스위트스팟, 컬처 컨비니언스 클럽과 MOU",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260519500140",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Proptech News Briefing Sweet Spots",
+      "term_ko": "프롭테크 뉴스브리핑 스위트스팟"
     },
     {
       "term": "Korean Issued Middle East",
-      "term_ko": "한국물 발행 중동",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국물 발행 중동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "보증채부터 P-CBO까지…지속되는 한국물 발행, 중동 긴장은 여전",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415646"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EB%AC%BC%20%EB%B0%9C%ED%96%89%20%EC%A4%91%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EB%AC%BC%20%EB%B0%9C%ED%96%89%20%EC%A4%91%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "보증채부터 P-CBO까지…지속되는 한국물 발행, 중동 긴장은 여전",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415646",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국물 발행 중동"
     },
     {
-      "term": "Rising US Treasury rates",
-      "term_ko": "상승 美 국채금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상승 美 국채금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, 트럼프 이란 공격 보류에 상승…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415645"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 트럼프 이란 공격 보류에 상승…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415645",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Us Treasury Rates",
+      "term_ko": "상승 美 국채금리"
     },
     {
-      "term": "Eve again",
-      "term_ko": "전야 다시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전야 다시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "마이클 버리 \"나스닥, 닷컴 버블 붕괴 전야 다시 왔다\"...비트코인도 '초...",
-              "link": "http://coinreaders.com/237235"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%95%BC%20%EB%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%95%BC%20%EB%8B%A4%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "마이클 버리 \"나스닥, 닷컴 버블 붕괴 전야 다시 왔다\"...비트코인도 '초...",
-          "summary": "",
-          "link": "http://coinreaders.com/237235",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Eve Again",
+      "term_ko": "전야 다시"
     },
     {
-      "term": "Trade anticipation",
-      "term_ko": "거래 기대감",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래 기대감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "리플, 美 SEC 토큰화 검토에 XRP레저 주목…\"주식 온체인 거래 기대감\"",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575529",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trade Anticipation",
+      "term_ko": "거래 기대감"
     },
     {
-      "term": "Bullish flow",
-      "term_ko": "강세 흐름",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강세 흐름",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "18K 금시세, 5월 19일 상승 한국표준금거래소 강세 흐름",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=520226"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%84%B8%20%ED%9D%90%EB%A6%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%84%B8%20%ED%9D%90%EB%A6%84"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 5월 19일 상승 한국표준금거래소 강세 흐름",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=520226",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bullish Flow",
+      "term_ko": "강세 흐름"
     },
     {
-      "term": "The tension is still there",
-      "term_ko": "긴장은 여전",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "긴장은 여전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "보증채부터 P-CBO까지…지속되는 한국물 발행, 중동 긴장은 여전",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415646"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B4%EC%9E%A5%EC%9D%80%20%EC%97%AC%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B4%EC%9E%A5%EC%9D%80%20%EC%97%AC%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "보증채부터 P-CBO까지…지속되는 한국물 발행, 중동 긴장은 여전",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4415646",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Tension Is Still There",
+      "term_ko": "긴장은 여전"
     },
     {
       "term": "Iran Tensions Keep",
-      "term_ko": "이란의 긴장은 계속됩니다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Iran Tensions Keep",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Steady as Nvidia Earnings and Iran Tensions Keep Investo...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Nvidia-Earnings-and-Iran-Tensions-Keep-Investors-on-Edge-1742012"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Tensions%20Keep",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Tensions%20Keep"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Steady as Nvidia Earnings and Iran Tensions Keep Investo...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Nvidia-Earnings-and-Iran-Tensions-Keep-Investors-on-Edge-1742012",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이란의 긴장은 계속됩니다"
     },
     {
       "term": "Futures Steady",
-      "term_ko": "선물 안정적",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Steady",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Steady as Nvidia Earnings and Iran Tensions Keep Investo...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Nvidia-Earnings-and-Iran-Tensions-Keep-Investors-on-Edge-1742012"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Steady",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Steady"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Steady as Nvidia Earnings and Iran Tensions Keep Investo...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Nvidia-Earnings-and-Iran-Tensions-Keep-Investors-on-Edge-1742012",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 안정적"
     },
     {
       "term": "Nvidia Earnings",
-      "term_ko": "Nvidia 수익",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nvidia Earnings",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Steady as Nvidia Earnings and Iran Tensions Keep Investo...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Nvidia-Earnings-and-Iran-Tensions-Keep-Investors-on-Edge-1742012"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nvidia%20Earnings",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nvidia%20Earnings"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Steady as Nvidia Earnings and Iran Tensions Keep Investo...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Steady-as-Nvidia-Earnings-and-Iran-Tensions-Keep-Investors-on-Edge-1742012",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Nvidia 수익"
     },
     {
-      "term": "Trump-Xi Summit",
-      "term_ko": "트럼프-시진핑 정상회담",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump-Xi Summit",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Outcome of Trump-Xi summit and impact on Korean economy",
-              "link": "https://www.koreatimes.co.kr/path/A2026051811240002196"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump-Xi%20Summit",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump-Xi%20Summit"
-      },
-      "top_headlines": [
-        {
-          "title": "Outcome of Trump-Xi summit and impact on Korean economy",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026051811240002196",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump-xi Summit",
+      "term_ko": "트럼프-시진핑 정상회담"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-19T12:03:16+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-19T03:04:28.925Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-19T12:03:16+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ripple Us Sec",
+      "term_ko": "리플 美 SEC"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-19T12:03:16+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-19T12:03:16+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Tokenization Review on Xrp Leisure",
+      "term_ko": "토큰화 검토에 XRP레저"
+    },
+    {
+      "term": "Buying Btc From Publicly Traded Companies",
+      "term_ko": "상장사 BTC 매집"
+    },
+    {
+      "term": "Brokerage Firm Ib Performance Falters",
+      "term_ko": "증권사 IB실적 흔들"
+    },
+    {
+      "term": "Mou with Convenience Club",
+      "term_ko": "컨비니언스 클럽과 MOU"
+    },
+    {
+      "term": "15th in American Bitcoin",
+      "term_ko": "아메리칸 비트코인 15위"
+    },
+    {
+      "term": "Goldquotes.com Gold Price May",
+      "term_ko": "금시세닷컴 금값 5월"
+    },
+    {
+      "term": "18k Gold Price May",
+      "term_ko": "18K 금시세 5월"
+    },
+    {
+      "term": "Kosdaq Up 19 Days",
+      "term_ko": "19일 상승 한국표준금거래소"
+    },
+    {
+      "term": "New Listings Plummet From 24 to 9",
+      "term_ko": "신규상장 24→9건 급감"
+    },
+    {
+      "term": "S&p500 Futures Trump",
+      "term_ko": "S&P500 선물 트럼프"
+    },
+    {
+      "term": "Michael Berry Nasdaq",
+      "term_ko": "마이클 버리 나스닥"
+    },
+    {
+      "term": "The Bursting of the Dot-com Bubble",
+      "term_ko": "닷컴 버블 붕괴"
+    },
+    {
+      "term": "Spotlight Stocks On-chain",
+      "term_ko": "주목 주식 온체인"
+    },
+    {
+      "term": "Understanding Digital Asset Insightsdigital",
+      "term_ko": "이해붕의 디지털자산 인사이트디지털"
+    },
+    {
+      "term": "The Competition Is in Full Swing Trump",
+      "term_ko": "경쟁 본격화 트럼프"
+    },
+    {
+      "term": "Accompanying Silver Price",
+      "term_ko": "은 시세 동반"
+    },
+    {
+      "term": "Proptech News Briefing Sweet Spots",
+      "term_ko": "프롭테크 뉴스브리핑 스위트스팟"
+    },
+    {
+      "term": "Korean Issued Middle East",
+      "term_ko": "한국물 발행 중동"
+    },
+    {
+      "term": "Rising Us Treasury Rates",
+      "term_ko": "상승 美 국채금리"
+    },
+    {
+      "term": "Eve Again",
+      "term_ko": "전야 다시"
+    },
+    {
+      "term": "Trade Anticipation",
+      "term_ko": "거래 기대감"
+    },
+    {
+      "term": "Bullish Flow",
+      "term_ko": "강세 흐름"
+    },
+    {
+      "term": "The Tension Is Still There",
+      "term_ko": "긴장은 여전"
+    },
+    {
+      "term": "Iran Tensions Keep",
+      "term_ko": "이란의 긴장은 계속됩니다"
+    },
+    {
+      "term": "Futures Steady",
+      "term_ko": "선물 안정적"
+    },
+    {
+      "term": "Nvidia Earnings",
+      "term_ko": "Nvidia 수익"
+    },
+    {
+      "term": "Trump-xi Summit",
+      "term_ko": "트럼프-시진핑 정상회담"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    }
+  ],
+  "translations": {
+    "Ripple Us Sec": {
+      "en": "Ripple Us Sec",
+      "ko": "리플 美 SEC",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Tokenization Review on Xrp Leisure": {
+      "en": "Tokenization Review on Xrp Leisure",
+      "ko": "토큰화 검토에 XRP레저",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Buying Btc From Publicly Traded Companies": {
+      "en": "Buying Btc From Publicly Traded Companies",
+      "ko": "상장사 BTC 매집",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Brokerage Firm Ib Performance Falters": {
+      "en": "Brokerage Firm Ib Performance Falters",
+      "ko": "증권사 IB실적 흔들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Mou with Convenience Club": {
+      "en": "Mou with Convenience Club",
+      "ko": "컨비니언스 클럽과 MOU",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "15th in American Bitcoin": {
+      "en": "15th in American Bitcoin",
+      "ko": "아메리칸 비트코인 15위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Goldquotes.com Gold Price May": {
+      "en": "Goldquotes.com Gold Price May",
+      "ko": "금시세닷컴 금값 5월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "18k Gold Price May": {
+      "en": "18k Gold Price May",
+      "ko": "18K 금시세 5월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Kosdaq Up 19 Days": {
+      "en": "Kosdaq Up 19 Days",
+      "ko": "19일 상승 한국표준금거래소",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "New Listings Plummet From 24 to 9": {
+      "en": "New Listings Plummet From 24 to 9",
+      "ko": "신규상장 24→9건 급감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "S&p500 Futures Trump": {
+      "en": "S&p500 Futures Trump",
+      "ko": "S&P500 선물 트럼프",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Michael Berry Nasdaq": {
+      "en": "Michael Berry Nasdaq",
+      "ko": "마이클 버리 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "The Bursting of the Dot-com Bubble": {
+      "en": "The Bursting of the Dot-com Bubble",
+      "ko": "닷컴 버블 붕괴",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Spotlight Stocks On-chain": {
+      "en": "Spotlight Stocks On-chain",
+      "ko": "주목 주식 온체인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Understanding Digital Asset Insightsdigital": {
+      "en": "Understanding Digital Asset Insightsdigital",
+      "ko": "이해붕의 디지털자산 인사이트디지털",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "The Competition Is in Full Swing Trump": {
+      "en": "The Competition Is in Full Swing Trump",
+      "ko": "경쟁 본격화 트럼프",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Accompanying Silver Price": {
+      "en": "Accompanying Silver Price",
+      "ko": "은 시세 동반",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Proptech News Briefing Sweet Spots": {
+      "en": "Proptech News Briefing Sweet Spots",
+      "ko": "프롭테크 뉴스브리핑 스위트스팟",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Korean Issued Middle East": {
+      "en": "Korean Issued Middle East",
+      "ko": "한국물 발행 중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Rising Us Treasury Rates": {
+      "en": "Rising Us Treasury Rates",
+      "ko": "상승 美 국채금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Eve Again": {
+      "en": "Eve Again",
+      "ko": "전야 다시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Trade Anticipation": {
+      "en": "Trade Anticipation",
+      "ko": "거래 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Bullish Flow": {
+      "en": "Bullish Flow",
+      "ko": "강세 흐름",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "The Tension Is Still There": {
+      "en": "The Tension Is Still There",
+      "ko": "긴장은 여전",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Iran Tensions Keep": {
+      "en": "Iran Tensions Keep",
+      "ko": "이란의 긴장은 계속됩니다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Futures Steady": {
+      "en": "Futures Steady",
+      "ko": "선물 안정적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Nvidia Earnings": {
+      "en": "Nvidia Earnings",
+      "ko": "Nvidia 수익",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Trump-xi Summit": {
+      "en": "Trump-xi Summit",
+      "ko": "트럼프-시진핑 정상회담",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-19T09:42:03.549Z"
     }
   }
 }
