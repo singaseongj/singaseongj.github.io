@@ -755,6 +755,20 @@ function getMarketMetricsBucket(market) {
   return poolsMetricsRaw?.markets?.[market] || poolsMetricsRaw?.[market] || null;
 }
 
+function topMetricNamesForMarket(market, limit = 40) {
+  const bucket = getMarketMetricsBucket(market);
+  if (!bucket || typeof bucket !== 'object') return [];
+  return Object.entries(bucket)
+    .map(([name, metrics]) => ({
+      name,
+      score: metricScoreForSelection(market, name, 'safe')
+    }))
+    .filter(x => x.name && Number.isFinite(x.score))
+    .sort((a, b) => b.score - a.score || String(a.name).localeCompare(String(b.name)))
+    .slice(0, Math.max(1, limit))
+    .map(x => x.name);
+}
+
 function getMetricsForEntry(market, nameOrTicker) {
   const bucket = getMarketMetricsBucket(market);
   if (!bucket || !nameOrTicker) return null;
@@ -1712,6 +1726,15 @@ async function tryFetchAndEnrich() {
     if (!hasAnyCandidates(buckets)) continue;
     data[market] = {};
 
+    const poolsSafe = Array.isArray(buckets.safe) ? buckets.safe : [];
+    const poolsAggressive = Array.isArray(buckets.aggressive) ? buckets.aggressive : [];
+    const metricLeaders = isUsMegaIndexMarket(market)
+      ? topMetricNamesForMarket(market, Number(process.env.US_METRIC_CANDIDATES || 50))
+      : [];
+
+    const combinedSafe = [...poolsSafe, ...metricLeaders];
+    const combinedAggressive = [...poolsAggressive, ...metricLeaders];
+
     const rankByMetricScore = (items = [], bucket = 'safe') => items
       .map((entry, idx) => ({
         entry,
@@ -1727,12 +1750,12 @@ async function tryFetchAndEnrich() {
         return a.idx - b.idx;
       });
 
-    const rankedSafe = rankByMetricScore(buckets.safe || [], 'safe');
+    const rankedSafe = rankByMetricScore(combinedSafe, 'safe');
     const chosenSafe = rankedSafe.slice(0, 5).map(x => x.entry);
     data[market].safe = chosenSafe.map(n => (typeof n === 'string' ? { name: n } : n));
 
     const safeNameSet = new Set(chosenSafe.map(n => normalizeMetricKey(typeof n === 'string' ? n : n?.name)));
-    const rankedAggr = rankByMetricScore((buckets.aggressive || []).filter(n => !safeNameSet.has(normalizeMetricKey(typeof n === 'string' ? n : n?.name))), 'aggressive');
+    const rankedAggr = rankByMetricScore(combinedAggressive.filter(n => !safeNameSet.has(normalizeMetricKey(typeof n === 'string' ? n : n?.name))), 'aggressive');
     const chosenAggr = rankedAggr.slice(0, 5).map(x => x.entry);
 
     // Rebalance by attractiveness score: if an aggressive pick scores above a safe pick,
