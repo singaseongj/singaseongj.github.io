@@ -1690,12 +1690,30 @@ function validateRecommendations(out) {
 }
 
 function dedupeMarketBuckets(marketData = {}) {
-  const normalizeEntryName = entry => normalizeMetricKey(typeof entry === 'string' ? entry : entry?.name);
+  // Resolve the canonical ticker for a name-only entry using the static map.
+  // Falls back to the normalized name when no ticker mapping exists.
+  // This ensures "ADP" and "Automatic Data Processing" collapse to the same key.
+  const canonKey = entry => {
+    const raw = typeof entry === 'string' ? entry : entry?.name;
+    if (!raw) return '';
+    // If the entry already carries a resolved ticker, use it directly.
+    const existingTicker = typeof entry === 'object' ? entry?.ticker : null;
+    if (existingTicker) return normalizeMetricKey(existingTicker);
+    // Otherwise try to resolve via static TICKER_MAP (name → ticker).
+    const mapped = TICKER_MAP[raw] || TICKER_MAP[normalizeKey(raw)];
+    if (mapped) return normalizeMetricKey(mapped);
+    // Last resort: if the raw value looks like a ticker itself, use it as-is.
+    const canon = canonSymbol(raw);
+    if (/^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(canon) || /^\d{6}\.K[QS]$/.test(canon)) {
+      return normalizeMetricKey(canon);
+    }
+    return normalizeMetricKey(raw);
+  };
   const seenSafe = new Set();
   const dedupedSafe = [];
 
   for (const entry of Array.isArray(marketData.safe) ? marketData.safe : []) {
-    const key = normalizeEntryName(entry);
+    const key = canonKey(entry);
     if (!key || seenSafe.has(key)) continue;
     seenSafe.add(key);
     dedupedSafe.push(entry);
@@ -1704,7 +1722,7 @@ function dedupeMarketBuckets(marketData = {}) {
   const seenAggressive = new Set();
   const dedupedAggressive = [];
   for (const entry of Array.isArray(marketData.aggressive) ? marketData.aggressive : []) {
-    const key = normalizeEntryName(entry);
+    const key = canonKey(entry);
     if (!key || seenSafe.has(key) || seenAggressive.has(key)) continue;
     seenAggressive.add(key);
     dedupedAggressive.push(entry);
