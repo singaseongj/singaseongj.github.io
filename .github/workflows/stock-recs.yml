@@ -202,8 +202,13 @@ jobs:
           node --version
           node --test tests/*.test.js
 
-      - name: Build index ticker maps
-        run: node tools/updateIndexMaps.mjs
+      - name: Refresh index ticker maps (src/maps.indexes.json)
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          node tools/updateIndexMaps.mjs
+          test -s src/maps.indexes.json
+          node -e "const m=require('./src/maps.indexes.json'); console.log('[indexes] updatedAt=', m.updatedAt || 'n/a')"
         env:
           FMP_KEY: ${{ secrets.FMP_KEY }}
 
