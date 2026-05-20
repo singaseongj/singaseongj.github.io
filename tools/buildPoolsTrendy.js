@@ -682,11 +682,30 @@ const MEGA_CAP_FALLBACK = {
 // Set of tickers that should always be treated as eligible (liquid mega-caps).
 const MEGA_CAP_TICKERS = new Set(Object.keys(MEGA_CAP_FALLBACK));
 
+function stripLegalSuffix(name) {
+  return (name || '')
+    .replace(/\s*\([^)]*\)\s*$/, '')
+    .replace(/[,.]?\s*(Inc|Corp|Ltd|LLC|LLP|PLC|AG|SA|NV|SE|Co|Company|Group|Holdings?|Incorporated|Limited|Partners?|Trust|Bancorp|Bancshares|Financial|Technologies|Technology|Solutions|Services|Industries|International|Worldwide|Entertainment|Communications|Systems|Networks?|Energy|Resources?|Healthcare|Pharmaceuticals?|Biosciences?|Therapeutics?|Laboratories?|Labs?)\b.*/i, '')
+    .replace(/\.com$/i, '')
+    .trim();
+}
+
+function nameVariantsForLookup(nm) {
+  const variants = new Set([nm]);
+  const s1 = stripLegalSuffix(nm);
+  if (s1 && s1 !== nm) variants.add(s1);
+  const s2 = stripLegalSuffix(s1);
+  if (s2 && s2 !== s1) variants.add(s2);
+  return variants;
+}
+
 for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
   for (const nm of names) {
     SYMBOL_TO_NAME[sym] = SYMBOL_TO_NAME[sym] || nm;
-    const nk = normalizeKey(nm);
-    if (!NAME_TO_SYMBOL[nk]) NAME_TO_SYMBOL[nk] = sym;
+    for (const variant of nameVariantsForLookup(nm)) {
+      const nk = normalizeKey(variant);
+      if (!NAME_TO_SYMBOL[nk]) NAME_TO_SYMBOL[nk] = sym;
+    }
   }
 }
 
@@ -703,7 +722,9 @@ function persistNameToSymbolBaseline() {
   // 1) Index constituents (S&P 500 / Nasdaq-100 / KRX)
   for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
     add(sym, sym);
-    for (const nm of names) add(nm, sym);
+    for (const nm of names) {
+      for (const variant of nameVariantsForLookup(nm)) add(variant, sym);
+    }
   }
 
   // 2) Existing learned mappings + static TICKER_MAP
