@@ -1689,25 +1689,37 @@ function validateRecommendations(out) {
   }
 }
 
+function stripLegalSuffixForDedup(name) {
+  return (name || '')
+    .replace(/\s*\([^)]*\)\s*$/, '')
+    .replace(/[,.]?\s*(Inc|Corp|Ltd|LLC|LLP|PLC|AG|SA|NV|SE|Co|Company|Group|Holdings?|Incorporated|Limited|Partners?|Trust|Bancorp|Bancshares|Financial|Technologies|Technology|Solutions|Services|Industries|International|Worldwide|Entertainment|Communications|Systems|Networks?|Energy|Resources?|Healthcare|Pharmaceuticals?|Biosciences?|Therapeutics?|Laboratories?|Labs?)\b.*/i, '')
+    .replace(/\.com$/i, '')
+    .trim();
+}
+
 function dedupeMarketBuckets(marketData = {}) {
-  // Resolve the canonical ticker for a name-only entry using the static map.
-  // Falls back to the normalized name when no ticker mapping exists.
-  // This ensures "ADP" and "Automatic Data Processing" collapse to the same key.
   const canonKey = entry => {
     const raw = typeof entry === 'string' ? entry : entry?.name;
     if (!raw) return '';
-    // If the entry already carries a resolved ticker, use it directly.
-    const existingTicker = typeof entry === 'object' ? entry?.ticker : null;
-    if (existingTicker) return normalizeMetricKey(existingTicker);
-    // Otherwise try to resolve via static TICKER_MAP (name → ticker).
+    // 1. Already has a resolved ticker
+    const ticker = typeof entry === 'object' ? entry?.ticker : null;
+    if (ticker) return normalizeMetricKey(ticker);
+    // 2. TICKER_MAP lookup by full name
     const mapped = TICKER_MAP[raw] || TICKER_MAP[normalizeKey(raw)];
     if (mapped) return normalizeMetricKey(mapped);
-    // Last resort: if the raw value looks like a ticker itself, use it as-is.
+    // 3. TICKER_MAP lookup after stripping legal suffix ("EOG Resources" → "EOG")
+    const stripped = stripLegalSuffixForDedup(raw);
+    if (stripped !== raw) {
+      const mappedStripped = TICKER_MAP[stripped] || TICKER_MAP[normalizeKey(stripped)];
+      if (mappedStripped) return normalizeMetricKey(mappedStripped);
+    }
+    // 4. Bare ticker shape check
     const canon = canonSymbol(raw);
     if (/^[A-Z]{1,5}(\.[A-Z]{1,3})?$/.test(canon) || /^\d{6}\.K[QS]$/.test(canon)) {
       return normalizeMetricKey(canon);
     }
-    return normalizeMetricKey(raw);
+    // 5. Normalize the stripped name — "EOG Resources" strips to "EOG", same key as bare "EOG"
+    return normalizeMetricKey(stripped || raw);
   };
   const seenSafe = new Set();
   const dedupedSafe = [];
