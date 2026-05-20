@@ -1,1219 +1,397 @@
 {
-  "date": "2026-05-19",
+  "generatedAt": "2026-05-20T03:02:24.662Z",
+  "timezone": "Asia/Seoul",
+  "date": "2026-05-20",
   "window": "12_hours",
   "total_phrases": 27,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "U.S. Treasury rates",
-      "term_ko": "미국 국채금리",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 국채금리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 31.16723
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 33.37718
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 30.87783
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 52.31079
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 35.20126
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 19.26685
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485"
-            },
-            {
-              "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 237.6567,
-        "weekly_average_volume": 47.5313,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.022548,
-        "time_weight": 0.018878,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779030000000
-      }
+      "term": "U.s. Treasury Rates",
+      "term_ko": "미국 국채금리"
     },
     {
-      "term": "NYSE drops",
-      "term_ko": "뉴욕증시 하락",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 하락",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485"
-            },
-            {
-              "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Drops",
+      "term_ko": "뉴욕증시 하락"
     },
     {
       "term": "Semiconductor Stocks Wide",
-      "term_ko": "반도체주 활짝",
-      "significance_score": 560,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체주 활짝",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485"
-            },
-            {
-              "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%ED%99%9C%EC%A7%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%ED%99%9C%EC%A7%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "미국 국채금리 '요동'...장중, 뉴욕증시 '하락' vs 반도체주 '활짝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165485",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반도체주 활짝"
     },
     {
-      "term": "Iran Tensions AI",
-      "term_ko": "이란 긴장 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이란 긴장 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%20%EA%B8%B4%EC%9E%A5%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%20%EA%B8%B4%EC%9E%A5%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Iran Tensions Ai",
+      "term_ko": "이란 긴장 AI"
     },
     {
-      "term": "Quantifying AI environmental impact",
-      "term_ko": "AI 환경영향 정량화",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 환경영향 정량화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AI 환경영향 정량화 선구자 루치오니, \"온디바이스 AI가 대안\"",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=18939"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%ED%99%98%EA%B2%BD%EC%98%81%ED%96%A5%20%EC%A0%95%EB%9F%89%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%ED%99%98%EA%B2%BD%EC%98%81%ED%96%A5%20%EC%A0%95%EB%9F%89%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 환경영향 정량화 선구자 루치오니, \"온디바이스 AI가 대안\"",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=18939",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Quantifying Ai Environmental Impact",
+      "term_ko": "AI 환경영향 정량화"
     },
     {
-      "term": "U.S. equity markets: 4 major indexes down",
-      "term_ko": "미국증시 장중..4대지수 하락",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국증시 장중..4대지수 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국증시 장중..4대지수 '하락', 마이크론 '껑충', 美국채금리 '점프'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165484"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%A4%91..4%EB%8C%80%EC%A7%80%EC%88%98%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%EC%A6%9D%EC%8B%9C%20%EC%9E%A5%EC%A4%91..4%EB%8C%80%EC%A7%80%EC%88%98%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "미국증시 장중..4대지수 '하락', 마이크론 '껑충', 美국채금리 '점프'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165484",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Equity Markets: 4 Major Indexes Down",
+      "term_ko": "미국증시 장중..4대지수 하락"
     },
     {
       "term": "G7 Meeting Middle East",
-      "term_ko": "G7 회의 중동",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "G7 회의 중동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "G7 회의, 중동 분쟁에 따른 글로벌 경제 불확실성 경고",
-              "link": "https://www.tokenpost.kr/news/international/361332"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=G7%20%ED%9A%8C%EC%9D%98%20%EC%A4%91%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=G7%20%ED%9A%8C%EC%9D%98%20%EC%A4%91%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "G7 회의, 중동 분쟁에 따른 글로벌 경제 불확실성 경고",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/international/361332",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "G7 회의 중동"
     },
     {
-      "term": "5 along the price line",
-      "term_ko": "가격선 따라 5개",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가격선 따라 5개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 아파트, 가격선 따라 5개 시장으로 분화…전세난은 중저가, 유동성...",
-              "link": "https://www.betanews.net/article/view/beta202605200002"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B2%A9%EC%84%A0%20%EB%94%B0%EB%9D%BC%205%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B2%A9%EC%84%A0%20%EB%94%B0%EB%9D%BC%205%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 아파트, 가격선 따라 5개 시장으로 분화…전세난은 중저가, 유동성...",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202605200002",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "5 Along the Price Line",
+      "term_ko": "가격선 따라 5개"
     },
     {
       "term": "Morning of May 19",
-      "term_ko": "5월 19일 모닝",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5월 19일 모닝",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "5월 19일 모닝 뉴스 헤드라인",
-              "link": "https://www.radiokorea.com/news/article.php?uid=495668"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9B%94%2019%EC%9D%BC%20%EB%AA%A8%EB%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9B%94%2019%EC%9D%BC%20%EB%AA%A8%EB%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "5월 19일 모닝 뉴스 헤드라인",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=495668",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "5월 19일 모닝"
     },
     {
-      "term": "Nvidia shake to tune",
-      "term_ko": "조정에 엔비디아 흔들",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "조정에 엔비디아 흔들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B0%EC%A0%95%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%9D%94%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B0%EC%A0%95%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%9D%94%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 이란 긴장·AI 조정에 엔비디아 흔들",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16065540",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nvidia Shake to Tune",
+      "term_ko": "조정에 엔비디아 흔들"
     },
     {
-      "term": "Sell US Treasuries of oil-importing countries",
-      "term_ko": "원유수입국 美국채 팔아",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원유수입국 美국채 팔아",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "원유수입국, 美국채 팔아 '환율 방어'",
-              "link": "https://n.news.naver.com/mnews/article/008/0005360208?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EC%9C%A0%EC%88%98%EC%9E%85%EA%B5%AD%20%E7%BE%8E%EA%B5%AD%EC%B1%84%20%ED%8C%94%EC%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EC%9C%A0%EC%88%98%EC%9E%85%EA%B5%AD%20%E7%BE%8E%EA%B5%AD%EC%B1%84%20%ED%8C%94%EC%95%84"
-      },
-      "top_headlines": [
-        {
-          "title": "원유수입국, 美국채 팔아 '환율 방어'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005360208?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sell Us Treasuries of Oil-importing Countries",
+      "term_ko": "원유수입국 美국채 팔아"
     },
     {
-      "term": "Global by dispute",
-      "term_ko": "분쟁에 따른 글로벌",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "분쟁에 따른 글로벌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "G7 회의, 중동 분쟁에 따른 글로벌 경제 불확실성 경고",
-              "link": "https://www.tokenpost.kr/news/international/361332"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%84%EC%9F%81%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%84%EC%9F%81%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "G7 회의, 중동 분쟁에 따른 글로벌 경제 불확실성 경고",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/international/361332",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Global by Dispute",
+      "term_ko": "분쟁에 따른 글로벌"
     },
     {
       "term": "Economic Uncertainty Warning",
-      "term_ko": "경제 불확실성 경고",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경제 불확실성 경고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "G7 회의, 중동 분쟁에 따른 글로벌 경제 불확실성 경고",
-              "link": "https://www.tokenpost.kr/news/international/361332"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%20%EA%B2%BD%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%20%EA%B2%BD%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "G7 회의, 중동 분쟁에 따른 글로벌 경제 불확실성 경고",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/international/361332",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경제 불확실성 경고"
     },
     {
-      "term": "Exchange rate defense",
-      "term_ko": "환율 방어",
-      "significance_score": 280,
-      "mentions": 235,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 방어",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 29.41176
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 50.98039
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 19.60784
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 15.68627
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 13.72549
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 86.2745
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "원유수입국, 美국채 팔아 '환율 방어'",
-              "link": "https://n.news.naver.com/mnews/article/008/0005360208?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EB%B0%A9%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EB%B0%A9%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "원유수입국, 美국채 팔아 '환율 방어'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005360208?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 235.2941,
-        "weekly_average_volume": 47.0588,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.022705,
-        "time_weight": 0.018876,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779030000000
-      }
+      "term": "Exchange Rate Defense",
+      "term_ko": "환율 방어"
     },
     {
       "term": "Apartments in Seoul",
-      "term_ko": "서울 아파트",
-      "significance_score": 280,
-      "mentions": 440,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울 아파트",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 77.79783
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 76.35379
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 91.87725
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 71.29963
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 89.71119
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 87.36462
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 아파트, 가격선 따라 5개 시장으로 분화…전세난은 중저가, 유동성...",
-              "link": "https://www.betanews.net/article/view/beta202605200002"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 아파트, 가격선 따라 5개 시장으로 분화…전세난은 중저가, 유동성...",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202605200002",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 440.2527,
-        "weekly_average_volume": 88.0505,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014707,
-        "time_weight": 0.018876,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779030000000
-      }
+      "term_ko": "서울 아파트"
     },
     {
-      "term": "News headlines",
-      "term_ko": "뉴스 헤드라인",
-      "significance_score": 280,
-      "mentions": 165,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴스 헤드라인",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-12",
-              "timestamp": 1778511600000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 45
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 40
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 55
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 25
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 45
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "5월 19일 모닝 뉴스 헤드라인",
-              "link": "https://www.radiokorea.com/news/article.php?uid=495668"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%8A%A4%20%ED%97%A4%EB%93%9C%EB%9D%BC%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%8A%A4%20%ED%97%A4%EB%93%9C%EB%9D%BC%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "5월 19일 모닝 뉴스 헤드라인",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=495668",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 165,
-        "weekly_average_volume": 41.25,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.029037,
-        "time_weight": 0.018876,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779030000000
-      }
+      "term": "News Headlines",
+      "term_ko": "뉴스 헤드라인"
     },
     {
       "term": "Heavy Foreign Sell-off",
-      "term_ko": "외국인 대량 매도",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Heavy Foreign Sell-off",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Drops Over 3% Amid Heavy Foreign Sell-off, Falling to 7,200 Level",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269729"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Heavy%20Foreign%20Sell-off",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Heavy%20Foreign%20Sell-off"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Drops Over 3% Amid Heavy Foreign Sell-off, Falling to 7,200 Level",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269729",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "외국인 대량 매도"
     },
     {
       "term": "When Would Koreas",
-      "term_ko": "한국",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "When Would Koreas",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "When Would Korea's Bull Market Exit?",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269711"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=When%20Would%20Koreas",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=When%20Would%20Koreas"
-      },
-      "top_headlines": [
-        {
-          "title": "When Would Korea's Bull Market Exit?",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269711",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국"
     },
     {
-      "term": "KOSPI Drops",
-      "term_ko": "코스피 지수 하락",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Drops",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KOSPI Drops Over 3% Amid Heavy Foreign Sell-off, Falling to 7,200 Level",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269729"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Drops",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Drops"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Drops Over 3% Amid Heavy Foreign Sell-off, Falling to 7,200 Level",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269729",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Drops",
+      "term_ko": "코스피 지수 하락"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
-      "term": "Ramping up semiconductor investments",
-      "term_ko": "반도체 투자 확대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 투자 확대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Ramping Up Semiconductor Investments",
+      "term_ko": "반도체 투자 확대"
     },
     {
-      "term": "AI chip race",
-      "term_ko": "인공지능 칩 경쟁",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인공지능 칩 경쟁",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-20T04:57:45+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Race",
+      "term_ko": "인공지능 칩 경쟁"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-19T19:58:48.297Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-20T04:57:45+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 3,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 3,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "U.s. Treasury Rates",
+      "term_ko": "미국 국채금리"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-20T04:57:45+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-20T04:57:45+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Nyse Drops",
+      "term_ko": "뉴욕증시 하락"
+    },
+    {
+      "term": "Semiconductor Stocks Wide",
+      "term_ko": "반도체주 활짝"
+    },
+    {
+      "term": "Iran Tensions Ai",
+      "term_ko": "이란 긴장 AI"
+    },
+    {
+      "term": "Quantifying Ai Environmental Impact",
+      "term_ko": "AI 환경영향 정량화"
+    },
+    {
+      "term": "U.s. Equity Markets: 4 Major Indexes Down",
+      "term_ko": "미국증시 장중..4대지수 하락"
+    },
+    {
+      "term": "G7 Meeting Middle East",
+      "term_ko": "G7 회의 중동"
+    },
+    {
+      "term": "5 Along the Price Line",
+      "term_ko": "가격선 따라 5개"
+    },
+    {
+      "term": "Morning of May 19",
+      "term_ko": "5월 19일 모닝"
+    },
+    {
+      "term": "Nvidia Shake to Tune",
+      "term_ko": "조정에 엔비디아 흔들"
+    },
+    {
+      "term": "Sell Us Treasuries of Oil-importing Countries",
+      "term_ko": "원유수입국 美국채 팔아"
+    },
+    {
+      "term": "Global by Dispute",
+      "term_ko": "분쟁에 따른 글로벌"
+    },
+    {
+      "term": "Economic Uncertainty Warning",
+      "term_ko": "경제 불확실성 경고"
+    },
+    {
+      "term": "Exchange Rate Defense",
+      "term_ko": "환율 방어"
+    },
+    {
+      "term": "Apartments in Seoul",
+      "term_ko": "서울 아파트"
+    },
+    {
+      "term": "News Headlines",
+      "term_ko": "뉴스 헤드라인"
+    },
+    {
+      "term": "Heavy Foreign Sell-off",
+      "term_ko": "외국인 대량 매도"
+    },
+    {
+      "term": "When Would Koreas",
+      "term_ko": "한국"
+    },
+    {
+      "term": "Kospi Drops",
+      "term_ko": "코스피 지수 하락"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "Ramping Up Semiconductor Investments",
+      "term_ko": "반도체 투자 확대"
+    },
+    {
+      "term": "Ai Chip Race",
+      "term_ko": "인공지능 칩 경쟁"
+    }
+  ],
+  "translations": {
+    "U.s. Treasury Rates": {
+      "en": "U.s. Treasury Rates",
+      "ko": "미국 국채금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Nyse Drops": {
+      "en": "Nyse Drops",
+      "ko": "뉴욕증시 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Semiconductor Stocks Wide": {
+      "en": "Semiconductor Stocks Wide",
+      "ko": "반도체주 활짝",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Iran Tensions Ai": {
+      "en": "Iran Tensions Ai",
+      "ko": "이란 긴장 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Quantifying Ai Environmental Impact": {
+      "en": "Quantifying Ai Environmental Impact",
+      "ko": "AI 환경영향 정량화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "U.s. Equity Markets: 4 Major Indexes Down": {
+      "en": "U.s. Equity Markets: 4 Major Indexes Down",
+      "ko": "미국증시 장중..4대지수 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "G7 Meeting Middle East": {
+      "en": "G7 Meeting Middle East",
+      "ko": "G7 회의 중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "5 Along the Price Line": {
+      "en": "5 Along the Price Line",
+      "ko": "가격선 따라 5개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Morning of May 19": {
+      "en": "Morning of May 19",
+      "ko": "5월 19일 모닝",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Nvidia Shake to Tune": {
+      "en": "Nvidia Shake to Tune",
+      "ko": "조정에 엔비디아 흔들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Sell Us Treasuries of Oil-importing Countries": {
+      "en": "Sell Us Treasuries of Oil-importing Countries",
+      "ko": "원유수입국 美국채 팔아",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Global by Dispute": {
+      "en": "Global by Dispute",
+      "ko": "분쟁에 따른 글로벌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Economic Uncertainty Warning": {
+      "en": "Economic Uncertainty Warning",
+      "ko": "경제 불확실성 경고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Exchange Rate Defense": {
+      "en": "Exchange Rate Defense",
+      "ko": "환율 방어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Apartments in Seoul": {
+      "en": "Apartments in Seoul",
+      "ko": "서울 아파트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "News Headlines": {
+      "en": "News Headlines",
+      "ko": "뉴스 헤드라인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Heavy Foreign Sell-off": {
+      "en": "Heavy Foreign Sell-off",
+      "ko": "외국인 대량 매도",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "When Would Koreas": {
+      "en": "When Would Koreas",
+      "ko": "한국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Kospi Drops": {
+      "en": "Kospi Drops",
+      "ko": "코스피 지수 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "U.s. Government Shutdown Crisis": {
+      "en": "U.s. Government Shutdown Crisis",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Ramping Up Semiconductor Investments": {
+      "en": "Ramping Up Semiconductor Investments",
+      "ko": "반도체 투자 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
+    },
+    "Ai Chip Race": {
+      "en": "Ai Chip Race",
+      "ko": "인공지능 칩 경쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T03:02:24.662Z"
     }
   }
 }
