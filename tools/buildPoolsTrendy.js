@@ -669,6 +669,19 @@ for (const r of INDEX_ROWS) {
   if (r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
 }
 
+// Static fallback market caps (USD) for mega-caps whose live fetch may fail.
+// Used when INDEX_MARKETCAP and nf.marketCap are both missing.
+// Update quarterly — precision is not required, just order-of-magnitude correctness.
+const MEGA_CAP_FALLBACK = {
+  AAPL: 3.2e12, MSFT: 3.1e12, NVDA: 2.9e12, AMZN: 2.1e12,
+  GOOGL: 2.1e12, GOOG: 2.1e12, META: 1.4e12, TSLA: 1.0e12,
+  AVGO: 9e11, 'BRK-B': 1.0e12, JPM: 7e11, LLY: 7e11,
+  V: 6e11, UNH: 5e11, XOM: 5e11, MA: 5e11,
+  JNJ: 4e11, PG: 4e11, COST: 4e11, HD: 4e11,
+};
+// Set of tickers that should always be treated as eligible (liquid mega-caps).
+const MEGA_CAP_TICKERS = new Set(Object.keys(MEGA_CAP_FALLBACK));
+
 for (const [sym, names] of Object.entries(INDEX_SYMBOL_NAMES)) {
   for (const nm of names) {
     SYMBOL_TO_NAME[sym] = SYMBOL_TO_NAME[sym] || nm;
@@ -1151,6 +1164,9 @@ function isKR(symbolOrName) {
 function isUS(symbolOrName) {
   // US-ish symbols: letters, optional dot/dash, but not KR suffix
   return /^[A-Z][A-Z.\-]{0,6}$/.test(String(symbolOrName)) && !/\.K[QS]$/.test(String(symbolOrName));
+}
+function isUsMegaIndexMarket(market) {
+  return /^US(?:_|$)/.test(String(market || '').toUpperCase());
 }
 
 // TwelveData expects colon format for KRX (e.g., 005930:KS, 091990:KQ)
@@ -2269,6 +2285,17 @@ async function main(){
     }).length;
     console.log(`[metrics] ${market} processed=${processed.size}/${names.length} withSignals=${withSignals}`);
 
+    // Warn about US mega-caps that came back with no price/adv data — useful for diagnosing fetch failures.
+    if (isUsMegaIndexMarket(market)) {
+      for (const n of names) {
+        const m = byName[n];
+        const sym = m?.sym;
+        if (sym && MEGA_CAP_TICKERS.has(sym) && !Number.isFinite(m.adv20) && !Number.isFinite(m.close)) {
+          console.warn(`[DATA-GAP] ${market}/${n} (${sym}): no price/adv data after all providers — using mega-cap fallback`);
+        }
+      }
+    }
+
     // Eligibility flags (for *ranking*, not for whether we score)
     const eligibility = {};
     names.forEach(n => {
@@ -2277,8 +2304,11 @@ async function main(){
       const isKRName = sym ? isKR(sym) : false;
       const advKnown   = Number.isFinite(m.adv20);
       const priceKnown = Number.isFinite(m.close);
-      const advOk   = advKnown   && (m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym)));
-      const priceOk = priceKnown && (m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD));
+      // Mega-cap tickers with known fallback market cap are always considered eligible:
+      // their liquidity is beyond question even when live price fetch fails.
+      const isMegaCap = !isKRName && sym && MEGA_CAP_TICKERS.has(sym);
+      const advOk   = isMegaCap || (advKnown   && (m.adv20 >= (isKRName ? MIN_ADV_KR : MIN_ADV_US) || (sym && ALLOWLIST.has(sym))));
+      const priceOk = isMegaCap || (priceKnown && (m.close >= (isKRName ? MIN_PRICE_KRW : MIN_PRICE_USD)));
       eligibility[n] = { advOk, priceOk, advKnown, priceKnown, eligible: (advOk && priceOk) };
     });
 
@@ -2291,7 +2321,7 @@ async function main(){
     names.forEach((n) => {
       const nf = byName[n];
       const sym = nf.sym || nameToSymbol(n) || n;
-      const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? nf.marketCap ?? 0;
+      const mcap = INDEX_MARKETCAP[normIndexKey(sym)] ?? nf.marketCap ?? MEGA_CAP_FALLBACK[sym] ?? 0;
       nf.marketCap = mcap;
 
       // Pull core content signals
