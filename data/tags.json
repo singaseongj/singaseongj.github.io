@@ -1,1187 +1,425 @@
 {
+  "generatedAt": "2026-05-20T20:15:31.178Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-20",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "21 days of FOMC minutes",
-      "term_ko": "FOMC 의사록 21일",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "FOMC 의사록 21일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "연준 FOMC 의사록 21일 공개…금리 경로 이견 주목",
-              "link": "https://www.tokenpost.kr/news/breaking/361725"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FOMC%20%EC%9D%98%EC%82%AC%EB%A1%9D%2021%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FOMC%20%EC%9D%98%EC%82%AC%EB%A1%9D%2021%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "연준 FOMC 의사록 21일 공개…금리 경로 이견 주목",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/361725",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "21 Days of Fomc Minutes",
+      "term_ko": "FOMC 의사록 21일"
     },
     {
-      "term": "Open AI for Polymarket as a prediction market",
-      "term_ko": "예측시장으로 폴리마켓 오픈AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "예측시장으로 폴리마켓 오픈AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비상장사 가치도 예측시장으로…폴리마켓, 오픈AI·앤트로픽 시장 개설",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667542"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%EC%B8%A1%EC%8B%9C%EC%9E%A5%EC%9C%BC%EB%A1%9C%20%ED%8F%B4%EB%A6%AC%EB%A7%88%EC%BC%93%20%EC%98%A4%ED%94%88AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%EC%B8%A1%EC%8B%9C%EC%9E%A5%EC%9C%BC%EB%A1%9C%20%ED%8F%B4%EB%A6%AC%EB%A7%88%EC%BC%93%20%EC%98%A4%ED%94%88AI"
-      },
-      "top_headlines": [
-        {
-          "title": "비상장사 가치도 예측시장으로…폴리마켓, 오픈AI·앤트로픽 시장 개설",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667542",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Open Ai for Polymarket As a Prediction Market",
+      "term_ko": "예측시장으로 폴리마켓 오픈AI"
     },
     {
       "term": "Medical Device Industry News May",
-      "term_ko": "의료기기업계 소식 5월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "의료기기업계 소식 5월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[의료기기업계 소식] 5월 20일",
-              "link": "http://www.doctorstimes.com/news/articleView.html?idxno=238165"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%98%EB%A3%8C%EA%B8%B0%EA%B8%B0%EC%97%85%EA%B3%84%20%EC%86%8C%EC%8B%9D%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%98%EB%A3%8C%EA%B8%B0%EA%B8%B0%EC%97%85%EA%B3%84%20%EC%86%8C%EC%8B%9D%205%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[의료기기업계 소식] 5월 20일",
-          "summary": "",
-          "link": "http://www.doctorstimes.com/news/articleView.html?idxno=238165",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "의료기기업계 소식 5월"
     },
     {
-      "term": "U.S. 30-Year Treasury Bond",
-      "term_ko": "미국 30년물 국채",
-      "significance_score": 336,
-      "mentions": 295,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 30년물 국채",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 21.62162
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 40.54054
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 62.16216
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 35.13513
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 27.02702
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-19",
-              "timestamp": 1779116400000,
-              "value": 70.27027
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 30년물 국채 금리 5.19% 돌파… 2007년 금융위기 전야 이후 최고",
-              "link": "https://www.g-enews.com/view.php?ud=2026052013024549912bd56fbc3c_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%2030%EB%85%84%EB%AC%BC%20%EA%B5%AD%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%2030%EB%85%84%EB%AC%BC%20%EA%B5%AD%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 30년물 국채 금리 5.19% 돌파… 2007년 금융위기 전야 이후 최고",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=2026052013024549912bd56fbc3c_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 294.5946,
-        "weekly_average_volume": 58.9189,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.01943,
-        "time_weight": 0.020799,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779116400000
-      }
+      "term": "U.s. 30-year Treasury Bond",
+      "term_ko": "미국 30년물 국채"
     },
     {
       "term": "Interest Rates Break 5.19",
-      "term_ko": "금리 5.19% 돌파",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 5.19% 돌파",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 30년물 국채 금리 5.19% 돌파… 2007년 금융위기 전야 이후 최고",
-              "link": "https://www.g-enews.com/view.php?ud=2026052013024549912bd56fbc3c_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%205.19%25%20%EB%8F%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%205.19%25%20%EB%8F%8C%ED%8C%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 30년물 국채 금리 5.19% 돌파… 2007년 금융위기 전야 이후 최고",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=2026052013024549912bd56fbc3c_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리 5.19% 돌파"
     },
     {
-      "term": "Eve of the 2007 financial crisis",
-      "term_ko": "2007년 금융위기 전야",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2007년 금융위기 전야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 30년물 국채 금리 5.19% 돌파… 2007년 금융위기 전야 이후 최고",
-              "link": "https://www.g-enews.com/view.php?ud=2026052013024549912bd56fbc3c_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2007%EB%85%84%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%20%EC%A0%84%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2007%EB%85%84%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%20%EC%A0%84%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 30년물 국채 금리 5.19% 돌파… 2007년 금융위기 전야 이후 최고",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=2026052013024549912bd56fbc3c_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Eve of the 2007 Financial Crisis",
+      "term_ko": "2007년 금융위기 전야"
     },
     {
       "term": "Rising Russell 2000",
-      "term_ko": "동반 상승 러셀2000",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동반 상승 러셀2000",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[속보]미국증시, 다우·S&P·나스닥 동반 상승…러셀2000 1%대 강세",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576042"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EB%B0%98%20%EC%83%81%EC%8A%B9%20%EB%9F%AC%EC%85%802000",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EB%B0%98%20%EC%83%81%EC%8A%B9%20%EB%9F%AC%EC%85%802000"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]미국증시, 다우·S&P·나스닥 동반 상승…러셀2000 1%대 강세",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576042",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "동반 상승 러셀2000"
     },
     {
-      "term": "Financial Market Map Hwasung KOSPI 200",
-      "term_ko": "금융시장도 화색 코스피200",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융시장도 화색 코스피200",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼성전자 노조 총파업 유보에 금융시장도 '화색'…코스피200 야간선물 상...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=740556"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%EB%8F%84%20%ED%99%94%EC%83%89%20%EC%BD%94%EC%8A%A4%ED%94%BC200",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%EB%8F%84%20%ED%99%94%EC%83%89%20%EC%BD%94%EC%8A%A4%ED%94%BC200"
-      },
-      "top_headlines": [
-        {
-          "title": "삼성전자 노조 총파업 유보에 금융시장도 '화색'…코스피200 야간선물 상...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=740556",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Financial Market Map Hwasung Kospi 200",
+      "term_ko": "금융시장도 화색 코스피200"
     },
     {
-      "term": "7 flour collusion",
-      "term_ko": "밀가루 담합 7개",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "밀가루 담합 7개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"먹거리 담합은 무관용\"... 정부, '밀가루 담합' 7개 제분사 정책자금 끊...",
-              "link": "http://www.youngnong.co.kr/news/articleView.html?idxno=59687"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%80%EA%B0%80%EB%A3%A8%20%EB%8B%B4%ED%95%A9%207%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%80%EA%B0%80%EB%A3%A8%20%EB%8B%B4%ED%95%A9%207%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"먹거리 담합은 무관용\"... 정부, '밀가루 담합' 7개 제분사 정책자금 끊...",
-          "summary": "",
-          "link": "http://www.youngnong.co.kr/news/articleView.html?idxno=59687",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "7 Flour Collusion",
+      "term_ko": "밀가루 담합 7개"
     },
     {
-      "term": "Stock trading giant",
-      "term_ko": "주식 거래 거대한",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주식 거래 거대한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "마이클 버리 \"블록체인서 주식 거래, 거대한 버블로 붕괴한다\"...인간성...",
-              "link": "http://coinreaders.com/237600"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%20%EA%B1%B0%EB%9E%98%20%EA%B1%B0%EB%8C%80%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%20%EA%B1%B0%EB%9E%98%20%EA%B1%B0%EB%8C%80%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "마이클 버리 \"블록체인서 주식 거래, 거대한 버블로 붕괴한다\"...인간성...",
-          "summary": "",
-          "link": "http://coinreaders.com/237600",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Trading Giant",
+      "term_ko": "주식 거래 거대한"
     },
     {
-      "term": "Create an antropic market",
-      "term_ko": "앤트로픽 시장 개설",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "앤트로픽 시장 개설",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비상장사 가치도 예측시장으로…폴리마켓, 오픈AI·앤트로픽 시장 개설",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667542"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%A4%ED%8A%B8%EB%A1%9C%ED%94%BD%20%EC%8B%9C%EC%9E%A5%20%EA%B0%9C%EC%84%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%A4%ED%8A%B8%EB%A1%9C%ED%94%BD%20%EC%8B%9C%EC%9E%A5%20%EA%B0%9C%EC%84%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "비상장사 가치도 예측시장으로…폴리마켓, 오픈AI·앤트로픽 시장 개설",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=667542",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Create an Antropic Market",
+      "term_ko": "앤트로픽 시장 개설"
     },
     {
-      "term": "Breaking NewsUS StocksDow S&P",
-      "term_ko": "속보미국증시 다우 S&P",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속보미국증시 다우 S&P",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[속보]미국증시, 다우·S&P·나스닥 동반 상승…러셀2000 1%대 강세",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576042"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%EB%B3%B4%EB%AF%B8%EA%B5%AD%EC%A6%9D%EC%8B%9C%20%EB%8B%A4%EC%9A%B0%20S%26P",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%EB%B3%B4%EB%AF%B8%EA%B5%AD%EC%A6%9D%EC%8B%9C%20%EB%8B%A4%EC%9A%B0%20S%26P"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]미국증시, 다우·S&P·나스닥 동반 상승…러셀2000 1%대 강세",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576042",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Breaking Newsus Stocksdow S&p",
+      "term_ko": "속보미국증시 다우 S&P"
     },
     {
       "term": "Shadowy High Interest Rates",
-      "term_ko": "이면의 그늘 고금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이면의 그늘 고금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'서울 집값 신고가' 이면의 그늘…고금리·세폭탄에 멍드는 주택시장",
-              "link": "https://www.ziksir.com/news/articleView.html?idxno=134465"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%A9%B4%EC%9D%98%20%EA%B7%B8%EB%8A%98%20%EA%B3%A0%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%A9%B4%EC%9D%98%20%EA%B7%B8%EB%8A%98%20%EA%B3%A0%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "'서울 집값 신고가' 이면의 그늘…고금리·세폭탄에 멍드는 주택시장",
-          "summary": "",
-          "link": "https://www.ziksir.com/news/articleView.html?idxno=134465",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이면의 그늘 고금리"
     },
     {
-      "term": "Housing market bruised by tax bombs",
-      "term_ko": "세폭탄에 멍드는 주택시장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "세폭탄에 멍드는 주택시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'서울 집값 신고가' 이면의 그늘…고금리·세폭탄에 멍드는 주택시장",
-              "link": "https://www.ziksir.com/news/articleView.html?idxno=134465"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B8%ED%8F%AD%ED%83%84%EC%97%90%20%EB%A9%8D%EB%93%9C%EB%8A%94%20%EC%A3%BC%ED%83%9D%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B8%ED%8F%AD%ED%83%84%EC%97%90%20%EB%A9%8D%EB%93%9C%EB%8A%94%20%EC%A3%BC%ED%83%9D%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "'서울 집값 신고가' 이면의 그늘…고금리·세폭탄에 멍드는 주택시장",
-          "summary": "",
-          "link": "https://www.ziksir.com/news/articleView.html?idxno=134465",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Housing Market Bruised by Tax Bombs",
+      "term_ko": "세폭탄에 멍드는 주택시장"
     },
     {
       "term": "Samsung Electronics Union General Strike",
-      "term_ko": "삼성전자 노조 총파업",
-      "significance_score": 322,
-      "mentions": 240,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼성전자 노조 총파업",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-13",
-              "timestamp": 1778598000000,
-              "value": 40.22988
-            },
-            {
-              "period": "2026-05-14",
-              "timestamp": 1778684400000,
-              "value": 28.73563
-            },
-            {
-              "period": "2026-05-15",
-              "timestamp": 1778770800000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-16",
-              "timestamp": 1778857200000,
-              "value": 26.43678
-            },
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 17.24137
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 55.17241
-            },
-            {
-              "period": "2026-05-19",
-              "timestamp": 1779116400000,
-              "value": 41.37931
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼성전자 노조 총파업 유보에 금융시장도 '화색'…코스피200 야간선물 상...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=740556"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EB%85%B8%EC%A1%B0%20%EC%B4%9D%ED%8C%8C%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EB%85%B8%EC%A1%B0%20%EC%B4%9D%ED%8C%8C%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "삼성전자 노조 총파업 유보에 금융시장도 '화색'…코스피200 야간선물 상...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=740556",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 240.2299,
-        "weekly_average_volume": 48.046,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.022381,
-        "time_weight": 0.020798,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779116400000
-      }
+      "term_ko": "삼성전자 노조 총파업"
     },
     {
       "term": "Midnight News Briefing Trump",
-      "term_ko": "자정 뉴스브리핑 트럼프",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자정 뉴스브리핑 트럼프",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[자정 뉴스브리핑] 트럼프, 핀테크·암호화폐 기업의 미국 결제망 접근...",
-              "link": "https://www.tokenpost.kr/news/briefing/361732"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%A0%95%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%ED%8A%B8%EB%9F%BC%ED%94%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%A0%95%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%ED%8A%B8%EB%9F%BC%ED%94%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[자정 뉴스브리핑] 트럼프, 핀테크·암호화폐 기업의 미국 결제망 접근...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/briefing/361732",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자정 뉴스브리핑 트럼프"
     },
     {
-      "term": "Bullish in the 1% range",
-      "term_ko": "1%대 강세",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1%대 강세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[속보]미국증시, 다우·S&P·나스닥 동반 상승…러셀2000 1%대 강세",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576042"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%25%EB%8C%80%20%EA%B0%95%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%25%EB%8C%80%20%EA%B0%95%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]미국증시, 다우·S&P·나스닥 동반 상승…러셀2000 1%대 강세",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576042",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bullish in the 1% Range",
+      "term_ko": "1%대 강세"
     },
     {
       "term": "Milling Policy Fund",
-      "term_ko": "제분사 정책자금",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제분사 정책자금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"먹거리 담합은 무관용\"... 정부, '밀가루 담합' 7개 제분사 정책자금 끊...",
-              "link": "http://www.youngnong.co.kr/news/articleView.html?idxno=59687"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EB%B6%84%EC%82%AC%20%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EB%B6%84%EC%82%AC%20%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "\"먹거리 담합은 무관용\"... 정부, '밀가루 담합' 7개 제분사 정책자금 끊...",
-          "summary": "",
-          "link": "http://www.youngnong.co.kr/news/articleView.html?idxno=59687",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "제분사 정책자금"
     },
     {
-      "term": "U.S. payment networks",
-      "term_ko": "미국 결제망",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 결제망",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[자정 뉴스브리핑] 트럼프, 핀테크·암호화폐 기업의 미국 결제망 접근...",
-              "link": "https://www.tokenpost.kr/news/briefing/361732"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EA%B2%B0%EC%A0%9C%EB%A7%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EA%B2%B0%EC%A0%9C%EB%A7%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[자정 뉴스브리핑] 트럼프, 핀테크·암호화폐 기업의 미국 결제망 접근...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/briefing/361732",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Payment Networks",
+      "term_ko": "미국 결제망"
     },
     {
-      "term": "Noting dissent",
-      "term_ko": "이견 주목",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이견 주목",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "연준 FOMC 의사록 21일 공개…금리 경로 이견 주목",
-              "link": "https://www.tokenpost.kr/news/breaking/361725"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EA%B2%AC%20%EC%A3%BC%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EA%B2%AC%20%EC%A3%BC%EB%AA%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "연준 FOMC 의사록 21일 공개…금리 경로 이견 주목",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/breaking/361725",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Noting Dissent",
+      "term_ko": "이견 주목"
     },
     {
       "term": "Boston Dynamics Becomes",
-      "term_ko": "보스턴 다이내믹스가 되다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Boston Dynamics Becomes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Boston Dynamics Becomes Focus of Hyundai Chairman Chung's Succession Stra...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269825"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Boston%20Dynamics%20Becomes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Boston%20Dynamics%20Becomes"
-      },
-      "top_headlines": [
-        {
-          "title": "Boston Dynamics Becomes Focus of Hyundai Chairman Chung's Succession Stra...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269825",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "보스턴 다이내믹스가 되다"
     },
     {
       "term": "Hyundai Chairman Chungs",
-      "term_ko": "정몽구 현대 회장",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hyundai Chairman Chungs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Boston Dynamics Becomes Focus of Hyundai Chairman Chung's Succession Stra...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269825"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hyundai%20Chairman%20Chungs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hyundai%20Chairman%20Chungs"
-      },
-      "top_headlines": [
-        {
-          "title": "Boston Dynamics Becomes Focus of Hyundai Chairman Chung's Succession Stra...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269825",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "정몽구 현대 회장"
     },
     {
       "term": "Polymarket Launches Prediction",
-      "term_ko": "폴리마켓 출시 예측",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Polymarket Launches Prediction",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Polymarket Launches Prediction Markets Tied to Private Companies",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=45710"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Polymarket%20Launches%20Prediction",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Polymarket%20Launches%20Prediction"
-      },
-      "top_headlines": [
-        {
-          "title": "Polymarket Launches Prediction Markets Tied to Private Companies",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=45710",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "폴리마켓 출시 예측"
     },
     {
       "term": "Private Companies",
-      "term_ko": "민간 기업",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Private Companies",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Polymarket Launches Prediction Markets Tied to Private Companies",
-              "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=45710"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Private%20Companies",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Private%20Companies"
-      },
-      "top_headlines": [
-        {
-          "title": "Polymarket Launches Prediction Markets Tied to Private Companies",
-          "summary": "",
-          "link": "http://www.smarttimes.co.kr/news/articleView.html?idxno=45710",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "민간 기업"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-21T00:04:03+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-20T15:05:07.970Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-21T00:04:03+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "21 Days of Fomc Minutes",
+      "term_ko": "FOMC 의사록 21일"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-21T00:04:03+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-21T00:04:03+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Open Ai for Polymarket As a Prediction Market",
+      "term_ko": "예측시장으로 폴리마켓 오픈AI"
+    },
+    {
+      "term": "Medical Device Industry News May",
+      "term_ko": "의료기기업계 소식 5월"
+    },
+    {
+      "term": "U.s. 30-year Treasury Bond",
+      "term_ko": "미국 30년물 국채"
+    },
+    {
+      "term": "Interest Rates Break 5.19",
+      "term_ko": "금리 5.19% 돌파"
+    },
+    {
+      "term": "Eve of the 2007 Financial Crisis",
+      "term_ko": "2007년 금융위기 전야"
+    },
+    {
+      "term": "Rising Russell 2000",
+      "term_ko": "동반 상승 러셀2000"
+    },
+    {
+      "term": "Financial Market Map Hwasung Kospi 200",
+      "term_ko": "금융시장도 화색 코스피200"
+    },
+    {
+      "term": "7 Flour Collusion",
+      "term_ko": "밀가루 담합 7개"
+    },
+    {
+      "term": "Stock Trading Giant",
+      "term_ko": "주식 거래 거대한"
+    },
+    {
+      "term": "Create an Antropic Market",
+      "term_ko": "앤트로픽 시장 개설"
+    },
+    {
+      "term": "Breaking Newsus Stocksdow S&p",
+      "term_ko": "속보미국증시 다우 S&P"
+    },
+    {
+      "term": "Shadowy High Interest Rates",
+      "term_ko": "이면의 그늘 고금리"
+    },
+    {
+      "term": "Housing Market Bruised by Tax Bombs",
+      "term_ko": "세폭탄에 멍드는 주택시장"
+    },
+    {
+      "term": "Samsung Electronics Union General Strike",
+      "term_ko": "삼성전자 노조 총파업"
+    },
+    {
+      "term": "Midnight News Briefing Trump",
+      "term_ko": "자정 뉴스브리핑 트럼프"
+    },
+    {
+      "term": "Bullish in the 1% Range",
+      "term_ko": "1%대 강세"
+    },
+    {
+      "term": "Milling Policy Fund",
+      "term_ko": "제분사 정책자금"
+    },
+    {
+      "term": "U.s. Payment Networks",
+      "term_ko": "미국 결제망"
+    },
+    {
+      "term": "Noting Dissent",
+      "term_ko": "이견 주목"
+    },
+    {
+      "term": "Boston Dynamics Becomes",
+      "term_ko": "보스턴 다이내믹스가 되다"
+    },
+    {
+      "term": "Hyundai Chairman Chungs",
+      "term_ko": "정몽구 현대 회장"
+    },
+    {
+      "term": "Polymarket Launches Prediction",
+      "term_ko": "폴리마켓 출시 예측"
+    },
+    {
+      "term": "Private Companies",
+      "term_ko": "민간 기업"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "21 Days of Fomc Minutes": {
+      "en": "21 Days of Fomc Minutes",
+      "ko": "FOMC 의사록 21일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Open Ai for Polymarket As a Prediction Market": {
+      "en": "Open Ai for Polymarket As a Prediction Market",
+      "ko": "예측시장으로 폴리마켓 오픈AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Medical Device Industry News May": {
+      "en": "Medical Device Industry News May",
+      "ko": "의료기기업계 소식 5월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "U.s. 30-year Treasury Bond": {
+      "en": "U.s. 30-year Treasury Bond",
+      "ko": "미국 30년물 국채",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Interest Rates Break 5.19": {
+      "en": "Interest Rates Break 5.19",
+      "ko": "금리 5.19% 돌파",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Eve of the 2007 Financial Crisis": {
+      "en": "Eve of the 2007 Financial Crisis",
+      "ko": "2007년 금융위기 전야",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Rising Russell 2000": {
+      "en": "Rising Russell 2000",
+      "ko": "동반 상승 러셀2000",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Financial Market Map Hwasung Kospi 200": {
+      "en": "Financial Market Map Hwasung Kospi 200",
+      "ko": "금융시장도 화색 코스피200",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "7 Flour Collusion": {
+      "en": "7 Flour Collusion",
+      "ko": "밀가루 담합 7개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Stock Trading Giant": {
+      "en": "Stock Trading Giant",
+      "ko": "주식 거래 거대한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Create an Antropic Market": {
+      "en": "Create an Antropic Market",
+      "ko": "앤트로픽 시장 개설",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Breaking Newsus Stocksdow S&p": {
+      "en": "Breaking Newsus Stocksdow S&p",
+      "ko": "속보미국증시 다우 S&P",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Shadowy High Interest Rates": {
+      "en": "Shadowy High Interest Rates",
+      "ko": "이면의 그늘 고금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Housing Market Bruised by Tax Bombs": {
+      "en": "Housing Market Bruised by Tax Bombs",
+      "ko": "세폭탄에 멍드는 주택시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Samsung Electronics Union General Strike": {
+      "en": "Samsung Electronics Union General Strike",
+      "ko": "삼성전자 노조 총파업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Midnight News Briefing Trump": {
+      "en": "Midnight News Briefing Trump",
+      "ko": "자정 뉴스브리핑 트럼프",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Bullish in the 1% Range": {
+      "en": "Bullish in the 1% Range",
+      "ko": "1%대 강세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Milling Policy Fund": {
+      "en": "Milling Policy Fund",
+      "ko": "제분사 정책자금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "U.s. Payment Networks": {
+      "en": "U.s. Payment Networks",
+      "ko": "미국 결제망",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Noting Dissent": {
+      "en": "Noting Dissent",
+      "ko": "이견 주목",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Boston Dynamics Becomes": {
+      "en": "Boston Dynamics Becomes",
+      "ko": "보스턴 다이내믹스가 되다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Hyundai Chairman Chungs": {
+      "en": "Hyundai Chairman Chungs",
+      "ko": "정몽구 현대 회장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Polymarket Launches Prediction": {
+      "en": "Polymarket Launches Prediction",
+      "ko": "폴리마켓 출시 예측",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Private Companies": {
+      "en": "Private Companies",
+      "ko": "민간 기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-20T20:15:31.178Z"
     }
   }
 }
